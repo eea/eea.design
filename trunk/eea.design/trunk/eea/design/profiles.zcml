@@ -4,9 +4,17 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="eea.soer"
+      title="eea.design"
       directory="profiles/default"
-      description="Extension profile for eea.soer"
+      description="Extension profile for eea.design"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="test_migration"
+      title="eea.design migration"
+      directory="profiles/test_migration"
+      description="Extension test profile for eea.design"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 

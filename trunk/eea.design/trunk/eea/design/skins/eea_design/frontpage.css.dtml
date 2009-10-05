@@ -5,6 +5,10 @@
   <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
 */
 
+body.frontpage .documentActions {
+    display: none;
+}
+
 body.frontpage #highlights-block {
    padding: 0;
    margin: -1em 0em;
