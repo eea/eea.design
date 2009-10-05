@@ -64,7 +64,7 @@
 
 
 <!-- The wrapper div. It contains the three columns. -->
-<div id="portal-columns" tal:attributes="class python:test(inApplication, 'visualColumnHideOneTwo', test(onFrontpage, 'visualColumnHideNone', hidecolumns))"
+<div id="portal-columns" tal:attributes="class python:test(inApplication, 'visualColumnHideOneTwo', test(onFrontpage, 'visualColumnHideOneTwo', hidecolumns))"
      tal:define="plone_view context/@@plone">
 
     <!-- start of the main and left columns -->
@@ -179,7 +179,7 @@
         <!-- start of the left (by default at least) column -->
         <div id="portal-column-one"
              metal:define-slot="column_one_slot"
-             tal:condition="python:test(not inApplication and sl or onFrontpage)">
+             tal:condition="python:test(not inApplication and sl and not onFrontpage)">
             <div class="visualPadding">
                 <metal:portlets define-slot="portlets_one_slot">
                     <metal:leftportlets use-macro="here/portlets_fetcher/macros/left_column">
@@ -197,7 +197,7 @@
     <!-- start of right (by default at least) column -->
     <div id="portal-column-two"
          metal:define-slot="column_two_slot"
-         tal:condition="python:test(not inApplication and sr or onFrontpage)">
+         tal:condition="python:test(not inApplication and sr and not onFrontpage)">
         <div class="visualPadding">
             <metal:portlets define-slot="portlets_two_slot">
                 <metal:rightportlets metal:use-macro="here/portlets_fetcher/macros/right_column">

@@ -6,39 +6,6 @@
   </head>
   <body>
 
-    <div metal:fill-slot="portlets_one_slot">
-      <tal:english condition="python:language == 'en'"
-         tal:define="global frontpage_view context/@@frontpage_highlights;">
-       <metal:rss use-macro="here/portlet_promotions/macros/all" />
-       <metal:rss use-macro="here/portlet_calendar/macros/portlet" />
-       </tal:english>
-
-        <tal:localsite condition="python: language != 'en'">
-	     <metal:rss use-macro="here/portlet_promotions/macros/all" />
-             <tal:publications define="specific nocall:context/publications/latest|nothing;
-	                               feeds specific/@@smartfolder_portlets|nothing"
-	                       repeat="portlet feeds"
-   			       tal:condition="specific">
-	         <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
-             </tal:publications>
-        </tal:localsite>
-    </div>
-
-    <div metal:fill-slot="portlets_two_slot">
-     <tal:localsite condition="python: language == 'en'">
-       <metal:rss use-macro="here/portlet_gazette/macros/portlet" />
-       <metal:ecotip use-macro="here/portlet_ecotip/macros/portlet" />
-       <metal:rss use-macro="here/portlet_all_rss/macros/portlet" />
-    </tal:localsite>
-
-       <div id="english-news" tal:condition="python: language != 'en'" i18n:domain="eea.translations">
-        <strong i18n:translate="Latest addition">Latest addition</strong><br/><strong i18n:translate="EEA main website">EEA main website</strong> 
-        (<strong i18n:translate="English">English</strong>)
-        <tal:portlets repeat="portlet context/@@latesthighlightsInEnglish_portlets">
-        <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
-        </tal:portlets>
-       </div>
-    </div>
 
 
 
@@ -50,9 +17,7 @@
             </div>
             	<div id="highlights-block"  tal:define="global frontpage_view context/@@frontpage_highlights;">
                         <div  id="top-news-area" class="column-area">
-                                                <div metal:use-macro="here/highlight_macros/macros/high">
-                                                        Top Highlights
-                                                </div>
+                               <metal:rss use-macro="here/portlet_promotions/macros/all" />
                         </div>
                         <div id="articles-area" class="column-area">
                                                <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
@@ -71,6 +36,9 @@
                         </div>
 			<div id="highlights-area" class="column-area">
 						<h2 class="column-title" i18n:translate="News">News</h2>
+                        <div metal:use-macro="here/highlight_macros/macros/high">
+                                Top Highlights
+                        </div>
 						<div metal:use-macro="here/highlight_macros/macros/middle">
 							Middle Highlights
 						</div>
