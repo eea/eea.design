@@ -1,0 +1,128 @@
+/*
+  Style for the front page highlights/news.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+body.frontpage #highlights-block {
+   padding: 0;
+   margin: -1em 0em;
+}
+
+#highlights-block h1 a,
+#highlights-block h2 a,
+#highlights-block h3 a {
+    color: &dtml-linkHeadingColor;!important;
+	background: none;
+}
+
+#highlights-block h1 a:hover,
+#highlights-block h2 a:hover,
+#highlights-block h3 a:hover {
+    /* border-bottom: 1px &dtml-linkHeadingColor; solid;*/
+    text-decoration: underline;
+    border: none;
+}
+
+#highlights-block .column-title { 
+  border-bottom:1px solid #E9EFCD;
+}
+
+#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks{
+  margin:0.5em 0 0 1px;
+}
+
+#highlights-block h3 { 
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#highlights-block h2 { 
+    font-size: 160%;
+    margin: 0.25em 0;
+    border: none;
+}
+
+#articles-area, #highlights-area {
+    width:49%
+}
+
+#articles-area {
+    float:right;
+    clear:right;
+}
+
+#highlights-block .shortNewsTitle {
+    margin-top: 0.5em;
+}
+
+#highlights-area {
+ float: left;
+}
+
+
+#highlights-block .date {
+    font-size: x-small;
+    color:&dtml-discreetColor;;
+}
+
+.highlightMiddle {
+    margin: 0 0em 1em 0em;
+}
+
+.highlightHigh {
+    display: block;
+    padding: 0em 0em;
+    margin: 0 0 0em -1em;
+}
+.highlightHigh .visualPadding {
+    padding: 0 1em 1em 1em;
+}
+
+
+#highlights-block .highlightHigh h2 {
+    font-size: 250%;
+    margin-top: 0;
+}
+#highlights-block .highlightHigh .relatedLinks{
+    font-size: 160%;
+}
+
+#highlights-middle .highlightMiddleL {
+    //float:left;
+    //width: 47%;
+    padding: 0 0 1em 0;
+}
+
+#highlights-middle .highlightMiddleR {
+    //float:right;
+    //width: 47%;
+    padding: 0 0 1em 0;
+}
+
+#highlights-middle ul.relatedLinks {
+    margin-bottom: -1.5em;
+}
+
+
+#highlights-middle .date {
+    display: block;
+    margin-bottom: 0em;
+}
+
+.highlights ul {
+    list-style: none;
+    margin: 0;
+}
+
+.highlights ul li  {
+    padding-left: 8em;
+}
+
+.highlights ul li .date  {
+    float: left;
+    margin: 0 0 0 -8em;
+}
+
+/* </dtml-with> */
