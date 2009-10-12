@@ -70,11 +70,8 @@ a.noHover {
 .portlet-promotions .portletHeader {
     background-color: <dtml-var greyBackgroundColor missing="#eeeeee">;
    padding-left: 0.5em;
-   border: 1px solid &dtml-globalBorderColor;;
-   border-bottom: none;
 }
 .portlet-promotions .portlet {
-   border: 1px solid &dtml-globalBorderColor;;
    padding: 0 0.5em 0.5em 0.5em;
    display: block;
 }

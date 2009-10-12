@@ -23,7 +23,6 @@
 /* Generic portlet style */
 
 .portlet, dl.portlet {
-    border: 1px solid &dtml-globalBorderColor;;
     margin: 1px 0 1em 0;
     padding: 0.3em;
 }
