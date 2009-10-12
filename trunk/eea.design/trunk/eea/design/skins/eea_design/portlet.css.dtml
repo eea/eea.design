@@ -67,6 +67,7 @@ a.noHover {
    background-color: #fff;
    padding: 0 0 0 0;
 }
+
 .portlet-promotions .portletHeader {
     background-color: <dtml-var greyBackgroundColor missing="#eeeeee">;
    padding-left: 0.5em;
