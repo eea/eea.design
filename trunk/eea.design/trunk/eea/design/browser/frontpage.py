@@ -176,6 +176,8 @@ class Frontpage(BrowserView):
             theme = themes[0]
             if theme in cPromos:
                 continue
+            if theme == 'default':
+                continue
 
             info = {
                 'id' : i.id,

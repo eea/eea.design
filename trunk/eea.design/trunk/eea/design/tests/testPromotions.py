@@ -8,7 +8,7 @@ from Products.EEAContentTypes.config import *
 from eea.design.tests.base import EEAMegaTestCase
 from eea.design.browser.frontpage import Frontpage
 from eea.themecentre.interfaces import IThemeCentre, IThemeCentreSchema
-from eea.promotion.interfaces import IPromotable
+from eea.promotion.interfaces import IPromotable, IPromotion
 #from Products.EEAContentTypes.browser.frontpage import Frontpage
 from Products.CMFCore.utils import getToolByName
 from Globals import package_home
@@ -67,7 +67,6 @@ class TestPromotions(EEAMegaTestCase):
                 'url': folder.absolute_url(),
             }
 
-
             promotions = []
             for i in range(0, 2):
                 info = {
@@ -87,7 +86,6 @@ class TestPromotions(EEAMegaTestCase):
     def test_getPromotions(self):
         view = Frontpage(self.portal, self.app.REQUEST)
         result = view.getPromotions()
-        import pdb; pdb.set_trace()
 
         result_categories = [i['category']['Title'] for i in result]
         result_promotions = [i['promotions'][0]['Title'] for i in result]
@@ -97,6 +95,26 @@ class TestPromotions(EEAMegaTestCase):
 
         self.failIf(expected_categories != result_categories, result_categories)
         self.failIf(expected_promotions != result_promotions, result_promotions)
+
+    def test_internalPromotions(self):
+        folder = self.folder['energy']
+        internal_promo = folder[folder.invokeFactory('News Item', id='internal_promo')]
+        now = DateTime()
+        internal_promo.setEffectiveDate(now)
+        internal_promo.setTitle('Internal Promotion')
+        alsoProvides(internal_promo, IPromotable)
+        internal_promo.restrictedTraverse("@@createPromotion")()
+        IPromotion(internal_promo).locations = [u'Front Page']
+        self.portal.portal_workflow.doActionFor(internal_promo, 'publish')
+
+        view = Frontpage(self.portal, self.app.REQUEST)
+        result = view.getPromotions()
+
+        result_categories = [i['category']['Title'] for i in result]
+        result_promotions = [i['promotions'][0]['Title'] for i in result]
+
+        expected_categories = ['Agriculture', 'Air pollution', 'Biodiversity', 'Chemicals', 'Energy']
+        expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Internal Promotion']
 
 
 def test_suite():
