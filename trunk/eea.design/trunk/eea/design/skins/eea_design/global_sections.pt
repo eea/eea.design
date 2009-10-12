@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+
+<!-- THE SECTION TABS DEFINITION -->
+<div metal:define-macro="portal_tabs"
+     tal:omit-tag=""
+     tal:define="selected_tabs python:here.selectedTabs('index_html', here, portal_tabs);
+                 selected_portal_tab selected_tabs/portal;
+                 site	 options/site|request/site|here/navigationmanager_site|string:default;
+                 tabselected options/tabselected|request/tabselected|context/navigationmanager_menuid|string:default;
+                 navigationmanager nocall:here/portal_navigationmanager|nothing;
+                 portal_nodes python:navigationmanager.getTree(site,tabselected);"
+     tal:condition="portal_nodes">
+
+<!-- h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5 -->
+<ul id="portal-globalnav">
+    <tal:tabs tal:repeat="node portal_nodes">
+        <!-- TAB LOOP -->
+        <li tal:define="tab nocall:node/item" class="plain"
+            tal:attributes="class python:test(node['selected'], 'selected', 'plain')">
+          <tal:noSubmenu tal:condition="not: node/children"><a href="" title="" class="dropTab"
+                 tal:attributes="href tab/url;
+                                 title tab/description|nothing;"><span class="tabTitleText" tal:content="tab/title">Tab Name:</span></a>
+          </tal:noSubmenu>
+          <tal:withSubmenu tal:condition="node/children">
+            <a href=""
+                 title=""
+                 class="dropTab"
+                 onmouseover="showMenu('dropDivName')"
+                 onmouseout="hideMenu('dropDivName')"
+                 tal:attributes="href tab/url;
+                    title tab/description|nothing;
+                    onmouseover string:showMenu('portaltab-${tab/id}');
+                    onmouseout string:hideMenu('portaltab-${tab/id}');"><span class="tabTitleText" tal:content="tab/title">Tab Name:</span><img tal:attributes="src python:test(node['selected'], portal_url+'/downarrow_sel.gif', portal_url+'/downarrow.gif')" title="" alt="" /></a>
+            <div id="dropDivName"
+                 class="tabMenuContent"
+                 tal:attributes="id string:portaltab-${tab/id};">
+                <ul class="popper2">
+                    <li onmouseover="showMenu( oDiv )"
+                        onmouseout="hideMenu( oDiv )"
+                        class="dropMenuContent">
+
+                        <ul onmouseover="showMenu( oDiv )"
+                            class="dropMenuItem">
+                                <tal:submenu tal:repeat="childnode node/children"><li 
+                                                tal:define="tab nocall:childnode/item;
+						            fallback childnode/fallback"
+					        tal:attributes="class python:test(fallback, 'fallback', '')"><a href="" title="" onmouseover="showMenu( oDiv )"
+                                            tal:attributes="href tab/url;
+                                                            title tab/description|nothing"
+                                            tal:define="linkText python:test(fallback, tab['title']+ ' (%s)' % childnode['fallbackLanguage'], tab['title']);"
+                                            tal:content="linkText">Menu Item</a></li>
+                                </tal:submenu>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            </tal:withSubmenu>
+        </li>
+    </tal:tabs>
+</ul>
+</div>
+</body>
+</html>
