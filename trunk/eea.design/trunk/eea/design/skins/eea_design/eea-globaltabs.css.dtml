@@ -6,7 +6,7 @@
 #portal-globalnav li a:visited {
     color: &dtml-linkColor;;
     text-decoration:none;
-    font-weight: normal;
+    font-weight: bold;
 }
 #portal-globalnav li.plain a.dropTab,
 #portal-globalnav li.plain a.dropTab:hover {
@@ -29,17 +29,16 @@
     padding: 0px;
     margin: 0 0 0 0em;
     background-color: #00446a;
-    min-height: 2.05em;
+    min-height: 3.0em;
 }
 
 #portal-globalnav li{
-    padding:3px 5px 3px 5px;
+    padding:8px 10px 8px 10px;
     display: block;
     float: left;
-    min-width: 8.5em;
+    min-width: 11.5em;
     background-color: #00446a;
     text-align: center;
-    border-right: 1px solid white;
     height: 1.5em;
 }
 
