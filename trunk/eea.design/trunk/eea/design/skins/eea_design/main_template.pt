@@ -222,10 +222,6 @@
   Footer
 </div>
 
-<div id="portal-colophon" metal:use-macro="here/colophon/macros/colophon">
-  The colophon area - contains details about the production of
-  the site. Typically "powered by" buttons, standards, tools used.
-</div>
 
 </div>
 
