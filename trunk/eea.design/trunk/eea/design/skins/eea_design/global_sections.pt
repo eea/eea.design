@@ -20,44 +20,10 @@
         <!-- TAB LOOP -->
         <li tal:define="tab nocall:node/item" class="plain"
             tal:attributes="class python:test(node['selected'], 'selected', 'plain')">
-          <tal:noSubmenu tal:condition="not: node/children"><a href="" title="" class="dropTab"
+          <tal:noSubmenu><a href="" title="" class="dropTab"
                  tal:attributes="href tab/url;
                                  title tab/description|nothing;"><span class="tabTitleText" tal:content="tab/title">Tab Name:</span></a>
           </tal:noSubmenu>
-          <tal:withSubmenu tal:condition="node/children">
-            <a href=""
-                 title=""
-                 class="dropTab"
-                 onmouseover="showMenu('dropDivName')"
-                 onmouseout="hideMenu('dropDivName')"
-                 tal:attributes="href tab/url;
-                    title tab/description|nothing;
-                    onmouseover string:showMenu('portaltab-${tab/id}');
-                    onmouseout string:hideMenu('portaltab-${tab/id}');"><span class="tabTitleText" tal:content="tab/title">Tab Name:</span><img tal:attributes="src python:test(node['selected'], portal_url+'/downarrow_sel.gif', portal_url+'/downarrow.gif')" title="" alt="" /></a>
-            <div id="dropDivName"
-                 class="tabMenuContent"
-                 tal:attributes="id string:portaltab-${tab/id};">
-                <ul class="popper2">
-                    <li onmouseover="showMenu( oDiv )"
-                        onmouseout="hideMenu( oDiv )"
-                        class="dropMenuContent">
-
-                        <ul onmouseover="showMenu( oDiv )"
-                            class="dropMenuItem">
-                                <tal:submenu tal:repeat="childnode node/children"><li 
-                                                tal:define="tab nocall:childnode/item;
-						            fallback childnode/fallback"
-					        tal:attributes="class python:test(fallback, 'fallback', '')"><a href="" title="" onmouseover="showMenu( oDiv )"
-                                            tal:attributes="href tab/url;
-                                                            title tab/description|nothing"
-                                            tal:define="linkText python:test(fallback, tab['title']+ ' (%s)' % childnode['fallbackLanguage'], tab['title']);"
-                                            tal:content="linkText">Menu Item</a></li>
-                                </tal:submenu>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            </tal:withSubmenu>
         </li>
     </tal:tabs>
 </ul>
