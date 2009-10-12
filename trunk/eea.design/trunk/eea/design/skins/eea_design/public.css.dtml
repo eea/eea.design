@@ -396,6 +396,10 @@ float:right;
     /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;*/
 }
 
+#siteaction-contactus {
+    font-weight: bold;
+}
+
 #portal-personaltools-wrapper {
     clear: both;
 }
