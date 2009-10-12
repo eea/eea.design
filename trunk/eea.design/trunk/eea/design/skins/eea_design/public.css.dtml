@@ -252,8 +252,15 @@ float:right;
 /* End edit form elements */
 
 #visual-portal-wrapper {
-    margin: 0;
+    min-width: 1024px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
+}
+
+.portlet-promotions {
+    width: 202px;
 }
 
 /* Logo properties */
