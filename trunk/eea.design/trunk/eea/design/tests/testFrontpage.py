@@ -31,21 +31,11 @@ import os, sys
 if __name__ == '__main__':
     execfile(os.path.join(sys.path[0], 'framework.py'))
 
-##code-section module-header #fill in your manual code here
-##/code-section module-header
-
-#
-# Test-cases for class(es) Frontpage
-#
 from Testing import ZopeTestCase
 from Products.EEAContentTypes.config import *
-from Products.EEAContentTypes.tests.EEAContentTypeTestCase import EEAContentTypeTestCase
-
-# Import the tested classes
-from Products.EEAContentTypes.browser.frontpage import Frontpage
+from eea.design.tests.base import EEAMegaTestCase
+from eea.design.browser.frontpage import Frontpage
 from Products.CMFCore.utils import getToolByName
-
-##code-section module-beforeclass #fill in your manual code here
 from Globals import package_home
 from DateTime import DateTime
 from pprint import pprint
@@ -55,14 +45,10 @@ from lovely.memcached.event import InvalidateCacheEvent
 
 image = open(os.path.join(package_home(product_globals),'tests', 'image.png'),'rb')
 image = image.read()
-##/code-section module-beforeclass
 
 
-class testFrontpage(EEAContentTypeTestCase):
+class TestFrontPage(EEAMegaTestCase):
     """Test-cases for class(es) Frontpage."""
-
-    ##code-section class-header_testFrontpage #fill in your manual code here
-    ##/code-section class-header_testFrontpage
 
     def afterSetUp(self):
         highlight = {'type': 'Highlight', 'id' : 'high%s', 'text' : 'data%s',
@@ -74,7 +60,6 @@ class testFrontpage(EEAContentTypeTestCase):
             title = highlight['title'] % i
             self.folder.invokeFactory('Highlight', id=id, text=text,
                                       title=title)
-
 
         self.folder.invokeFactory('Image', id='image1', image=image, title='Image title')
         self.workflow = self.portal.portal_workflow
@@ -181,22 +166,6 @@ class testFrontpage(EEAContentTypeTestCase):
         message = '%s != %s' % (result, answer)
         self.failIf( result != answer, message )
 
-        # publish two days ago
-        self.folder.high2.setEffectiveDate(now-2)
-        self.folder.high2.reindexObject()
-        # we should get the same result since we will use the cached version of
-        # getLow method
-        result = [ (high['id'], high['getVisibilityLevel']) for high in view.getLow() ]
-        message = '%s != %s' % (result, answer)
-        self.failIf( result != answer, message )
-
-        # we send a notify that a highlight is changed and we should get new result
-        notify(ObjectModifiedEvent(self.folder.high2))        
-        # add the old one to the end since it's oldest
-        # we also need to remove one extra from all highlights since it's move to the end
-        answer = highlights[self.noOfHigh+self.noOfMedium+1:]
-        answer.append(('high2', 'top'))
-        answer = answer[:10]
         result = [ (high['id'], high['getVisibilityLevel']) for high in view.getLow() ]
         message = '%s != %s' % (result, answer)
         self.failIf( result != answer, message )
@@ -214,118 +183,11 @@ class testFrontpage(EEAContentTypeTestCase):
         message = '%s != %s' % (result, answer)
         self.failIf( result != answer, message )
 
-    # from class Frontpage:
-    def test_getPromotions(self):
-        self.setRoles('Manager')
-        promotion = { 'type': 'Promotion', 'id' : 'promo%s', 'description' : 'desc%s',
-                     'title' : 'Foo%s', 'url' : 'url%s' , 'image' : None, 'imageCaption' : 'imgC%s'}
-        #promotion['imglink'] = '<a class="portletHeader hide-promo"><br class="clearAll"><a style="display: none" /><a href="%(img_url)s"><img src="%(img_url)s" /></a>'
-        groups = {'edu' : 'Education',
-                  'service' : 'Service' }
-
-        answer = []
-
-        start = end = 0
-        for gId, gTitle in groups.items():
-            end += 5
-            self.folder.invokeFactory('Folder', id=gId, title=gTitle)
-            folder = getattr(self.folder, gId)
-            self.workflow.doActionFor(folder, 'publish')
-            category = { 'id' : gId,
-                         'Title' : gTitle,
-                         'macro': 'here/portlet_promotions/macros/portlet',
-                         'path' : '/%s' % folder.absolute_url(1),
-                         'url' : folder.absolute_url() }
-            cPromos = []
-
-            for i in range(start, end):
-                id= promotion['id'] % i
-                description = promotion['description'] % i
-                title = promotion['title'] % i
-                url = promotion['url'] % i
-                promo = {'id' : id, 'Description' : description,
-                         'Title' : title, 'url' : url }
-                id = folder.invokeFactory(promotion['type'], image=image, **promo)
-                promoObj = getattr(folder, id)
-                promoObj.setTitle(promo['Title'])
-                promoObj.setDescription(promo['Description'])
-                promo['image'] = promoObj.absolute_url() + '/image'
-                cPromos.append(promo)
-                self.workflow.doActionFor(promoObj, 'publish')
-            answer.append({ 'category' : category,
-                            'promotions' : cPromos})
-            start = end
-
-        self.portal.portal_properties.frontpage_properties.promotionFolder = '/'.join(self.folder.getPhysicalPath())
-        view = Frontpage(self.portal, self.app.REQUEST)
-        result = view.getPromotions()
-        for cp in result:
-            c, promos = cp.values()
-            for p in promos:
-                del p['style']
-                del p['imglink']
-
-        message = '%s != %s' % (result, answer)
-        self.failIf(result != answer, message)
-
-        self.portal.portal_properties.frontpage_properties.promotionFolder = '/'.join(self.folder.getPhysicalPath())[7:]
-        view = Frontpage(self.portal, self.app.REQUEST)
-        result = view.getPromotions()
-        for cp in result:
-            c, promos = cp.values()
-            for p in promos:
-                del p['style']
-                del p['imglink']
-
-        message = '%s != %s' % (result, answer)
-        self.failIf(result != answer, message)
-
-        # lets change a promotion and check if the cache is invalidated
-        promo = self.folder['edu']['promo5']
-        promo.setTitle('New title')
-        promo.reindexObject()
-        notify(ObjectModifiedEvent(promo))
-        answer[1]['promotions'][0]['Title'] = 'New title'
         
-        view = Frontpage(self.portal, self.app.REQUEST)
-        result = view.getPromotions()
-        for cp in result:
-            c, promos = cp.values()
-            for p in promos:
-                del p['style']
-                del p['imglink']
-
-        
-        message = '%s != %s' % (result, answer)
-        self.failIf(result != answer, message)
-
-
-        # lets unpublish a whole folder and see if the cache is invalidatede
-        promoFolder = self.folder['edu']
-        self.workflow.doActionFor(promoFolder, 'hide')
-        notify(ObjectModifiedEvent(promoFolder))
-        
-        message = '%s != %s' % (result, answer)
-        self.failIf(result != answer, message)
-        
-
 def test_suite():
     from unittest import TestSuite, makeSuite
-    suite = makeSuite(testFrontpage)
-
-    from Products.PloneTestCase import layer
-    from Products.PloneTestCase import setup
-
-    if setup.USELAYER:
-        if not hasattr(suite, 'layer'):
-                suite.layer = layer.PloneSite
-
+    suite = makeSuite(TestFrontPage)
     return  TestSuite(suite)
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer
 
 if __name__ == '__main__':
     framework()
-
-

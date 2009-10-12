@@ -63,6 +63,7 @@ a.noHover {
 }
 
 .portlet-promotions {
+   float: left;
    background-color: #fff;
    padding: 0 0 0 0;
 }

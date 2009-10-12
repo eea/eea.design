@@ -40,6 +40,9 @@ from Products.Five import BrowserView
 from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 from Products.EEAContentTypes.promotion import getPromotionFolder
 
+from eea.themecentre.interfaces import IThemeTagging
+from eea.themecentre.interfaces import IThemeCentreSchema
+
 class Frontpage(BrowserView):
     """
     """
@@ -65,7 +68,6 @@ class Frontpage(BrowserView):
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
         self.now = DateTime()
 
-    @cache(cacheKeyHighlights)
     def getHigh(self,portaltypes=('Highlight', 'PressRelease'),scale='thumb'):
         visibilityLevel='top'
         results =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfHigh]
@@ -75,7 +77,6 @@ class Frontpage(BrowserView):
 
         return highlights
 
-    @cache(cacheKeyHighlights)
     def getMedium(self,portaltypes=('Highlight', 'PressRelease'),scale='thumb'):
         visibilityLevel=[ 'top', 'middle' ]
         result =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfMedium + self.noOfHigh]
@@ -89,7 +90,6 @@ class Frontpage(BrowserView):
 
         return highlights[:self.noOfMedium]
 
-    @cache(cacheKeyHighlights)
     def getLow(self,portaltypes=('Highlight', 'PressRelease'),scale='dummy'):
         visibilityLevel=[ 'top', 'middle', 'bottom' ]
         otherIds = [ h['id'] for h in self.getMedium(portaltypes) ]
@@ -133,80 +133,73 @@ class Frontpage(BrowserView):
         results =  self.getLow(('Article',))
         return results
 
-
-    @cache(cacheKeyPromotions)
     def getPromotions(self):
-        if self.promotionFolder is None:
-            return
-
         # Each folder in quicklinks represents a category:
-        categories = []
-        query = {'path' : { 'query': self.promotionFolder, 'depth' : 2 },
-                 'review_state' : 'published',
-                 'portal_type': ['Folder'],
-                 'sort_on' : 'getObjPositionInParent',
-                 'effectiveRange' : self.now}
+        query = {
+            'object_provides': 'eea.themecentre.interfaces.IThemeCentre',
+            'review_state' : 'published',
+            'effectiveRange' : self.now,
+        }
         result = self.catalog.searchResults(query)
-        for t in result:
-            macro = getattr(t, 'promotion_macro', None)
-            categories.append( { 'id' : t.id,
-                                 'Title' : t.Title,
-                                 'url' : t.getURL(),
-                                 'path' : t.getPath(),
-                                 'macro' : macro or 'here/portlet_promotions/macros/portlet' } )
 
-        # External promotions
-        query = {'path' : { 'query': self.promotionFolder, 'depth' : 2 },
-                 'review_state' : 'published',
-                 'object_provides': 'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
-                 'sort_on' : 'getObjPositionInParent',
-                 'effectiveRange' : self.now}
-        result1 = self.catalog.searchResults(query)
+        categories = {}
+        for i in result:
+            themecentre = IThemeCentreSchema(i.getObject())
+            category = {
+                'id': themecentre.tags,
+                'Title': i.Title,
+                'url': i.getURL(),
+                'path': i.getPath(),
+                'macro': 'here/portlet_promotions/macros/portlet',
+            }
+            categories[i.id] = category
 
         # Internal promotions
-        query = {'object_provides': 'eea.promotion.interfaces.IPromoted',
-                 'review_state': 'published',
-                 'effectiveRange' : self.now}
-        result2 = self.catalog.searchResults(query)
+        query = {
+            'object_provides': {'query': ['eea.promotion.interfaces.IPromoted','Products.EEAContentTypes.content.interfaces.IExternalPromotion'], 'operator': 'or'},
+            'review_state': 'published',
+            'sort_on': 'effective',
+            'effectiveRange' : self.now,
+        }
+        result = self.catalog.searchResults(query)
 
         cPromos = {}
-        for t in result1 + result2:
-            obj = t.getObject()
+        for i in result:
+            obj = i.getObject()
             promo = IPromotion(obj)
             if not promo.display_on_frontpage:
                 continue
-            if promo.frontpage_section is None or promo.frontpage_section == '':
+
+            themes = IThemeTagging(obj).tags
+            if len(themes) == 0:
                 continue
-            parentPath = promo.frontpage_section
-            promos = cPromos.get(parentPath, [])
+            theme = themes[0]
+            if theme in cPromos:
+                continue
 
-            # To produce valid HTML and make the promotion slider work, we
-            # make sure that the id is unique to the category
-            ids = [i['id'] for i in promos]
-            unique_id = t.getId
-            i = 0
-            while unique_id in ids:
-                i += 1
-                unique_id = '%s-%i' % (t.getId, i)
+            info = {
+                'id' : i.id,
+                'Description' : i.Description,
+                'Title' : i.Title,
+                'url' : promo.url,
+                'style' : 'display: none;',
+                'imglink' : getMultiAdapter((obj, obj.REQUEST),
+                     name='promo_imglink')('thumb'),
+                'image' : i.getURL() + '/image',
+            }
+            cPromos[theme] = [info]
 
-            info = {'id' : unique_id,
-                    'Description' : t.Description,
-                    'Title' : t.Title,
-                    'url' : promo.url,
-                    'style' : 'display: none;',
-                    'imglink' : getMultiAdapter((obj, obj.REQUEST),
-                         name='promo_imglink')('thumb'),
-                    'image' : t.getURL() + '/image' }
-            promos.append(info)
-            cPromos[parentPath] = promos
+            if len(cPromos.keys()) == 5:
+                break
 
         promotions = []
-        for category in categories:
-            promos = cPromos.get(category['path'], None)
+        for theme, promos in cPromos.items():
             if promos is not None:
                 promos[0]['style'] = 'display: block;'
-                promotions.append({ 'category' : category,
+                promotions.append({ 'category' : categories[theme],
                                     'promotions' : promos })
+        # Sort alphabetically on category title
+        promotions.sort(lambda x, y: cmp(x['category']['Title'].lower(), y['category']['Title'].lower()))
         return promotions
 
     def _getTeaserMedia(self, high, scale):

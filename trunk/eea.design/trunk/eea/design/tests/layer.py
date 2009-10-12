@@ -1,4 +1,4 @@
-from Testing.ZopeTestCase import app, close, installProduct
+from Testing import ZopeTestCase
 from Products.Five import zcml
 from Products.Five import fiveconfigure
 from Products.CMFCore.utils import getToolByName
@@ -6,13 +6,11 @@ from Products.PloneTestCase.layer import PloneSite
 from transaction import commit
 
 
-
 class MigrationLayer(PloneSite):
-    """ layer for integration tests with LinguaPlone """
 
     @classmethod
     def setUp(cls):
-        root = app()
+        root = ZopeTestCase.app()
         portal = root.plone
         profile = 'profile-eea.design:test_migration'
         tool = getToolByName(portal, 'portal_setup')
@@ -23,7 +21,7 @@ class MigrationLayer(PloneSite):
         assert 'eea-highlights.css' in css.getResourceIds()
         # and commit the changes
         commit()
-        close(root)
+        ZopeTestCase.close(root)
 
     @classmethod
     def tearDown(cls):
