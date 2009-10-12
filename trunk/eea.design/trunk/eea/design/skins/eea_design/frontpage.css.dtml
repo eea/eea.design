@@ -14,6 +14,10 @@ body.frontpage #highlights-block {
    margin: -1em 0em;
 }
 
+body.frontpage #portal-columns {
+    padding: 0 !important;
+}
+
 #highlights-block h1 a,
 #highlights-block h2 a,
 #highlights-block h3 a {
