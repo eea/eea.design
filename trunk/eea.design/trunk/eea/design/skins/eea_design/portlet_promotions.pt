@@ -119,7 +119,7 @@
             <span tal:attributes="id string:next-${catId}" class="promo-next">&nbsp;&nbsp;&nbsp;</span>
         </dt>
         <tal:promotions repeat="promo promotions">
-        <dd class="portletItem hide-promo" id=""
+        <dd class="portletItem" id=""
             tal:attributes="id string:${catId}-${promo/id}"
             tal:define="imglink promo/imglink|nothing">
             <metal:imglink tal:condition="imglink" tal:replace="structure imglink">

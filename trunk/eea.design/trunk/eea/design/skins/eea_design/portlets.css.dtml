@@ -58,10 +58,6 @@
     display: block;
 }
 
-.portlet-promotions dl.portlet .hide-promo {
-    display: none;
-}
-
 .portlet-promotions dl.portlet .promo-count {
     color: green;
 }
