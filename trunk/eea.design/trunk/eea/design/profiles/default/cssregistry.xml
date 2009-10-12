@@ -3,4 +3,7 @@
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" id="frontpage.css" media="all" rel="stylesheet"
     rendering="import" />
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" id="footer.css" media="all" rel="stylesheet"
+    rendering="import" />
 </object>
