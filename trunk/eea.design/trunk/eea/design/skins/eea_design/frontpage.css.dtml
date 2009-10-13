@@ -34,6 +34,8 @@ body.frontpage #portal-columns {
 
 #highlights-block .column-title { 
   border-bottom:1px solid #E9EFCD;
+  background-image: url(portlet_bg.png);
+  padding: 1em 0 1em 1em;
 }
 
 #highlights-high ul.relatedLinks, #articles-high ul.relatedLinks{
@@ -75,13 +77,13 @@ body.frontpage #portal-columns {
 }
 
 .highlightMiddle {
-    margin: 0 0em 1em 0em;
+    margin: 0 0em 1em 1em;
 }
 
 .highlightHigh {
     display: block;
     padding: 0em 0em;
-    margin: 0 0 0em -1em;
+    margin: 0 0 0em 0em;
 }
 .highlightHigh .visualPadding {
     padding: 0 1em 1em 1em;

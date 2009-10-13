@@ -7,6 +7,19 @@
    padding: 90px 0 0 0;
 }
 
+#portal-footer table td {
+   vertical-align: top;
+   padding: 1em;
+}
+
+#portal-footer table td.first {
+   width: 15em;
+}
+
+#portal-footer table td.last { 
+   width: 12em;
+}
+
 #portal-footer {
     background: &dtml-darkBackgroundColor;;
     float: none;
@@ -125,6 +138,11 @@
 
 }
 
+#portal-footer #portlet-subscribtion a { 
+    color: &dtml-linkColor;;
+}
 
-
+#portal-footer h2 {
+   color: white;
+}
 /* </dtml-with> */
