@@ -107,27 +107,10 @@
 	       		tal:attributes="href hl/getUrl"
 	       		tal:content="hl/getNewsTitle">
 	       			Highlight Title</a></h3>
-  
-	    <div class="figure-left">
-	              <tal:image define="figure hl/media|nothing;
-                               figure_link hl/getUrl;
-                               figure_scale string:thumb;"
-	                     condition="figure">
-                   <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
-                 </tal:image>    
-            </div>
 	   	     <span class="date" 
                   tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
 	    	  tal:content="date">07 Dec 2005 </span> 
 	    	              
-             <p class="teaser">
-
-                 <span tal:replace="structure hl/getTeaser">Teaser</span>
-		 <a href="" title=""
-                   tal:attributes="href hl/getUrl;
-	                           title hl/getNewsTitle" class="moreLink"
-                   i18n:translate="box_morelink">More</a>
-		<br clear="all" /></p>
        </div>
     </metal:items>
 </div>

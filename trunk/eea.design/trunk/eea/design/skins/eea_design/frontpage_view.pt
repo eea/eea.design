@@ -27,9 +27,6 @@
                                                 <div metal:use-macro="here/highlight_macros/macros/middleArticles">
                                                         Middle articles
                                                 </div>
-                                                <div metal:use-macro="here/highlight_macros/macros/lowArticles">
-                                                        Low articles
-                                                </div>
                                                 <div class="portletFooter">
                                                      <p><a href="articles" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
                                                 </div>
@@ -43,9 +40,6 @@
 							Middle Highlights
 						</div>
 			                        <div class="visualClear"><!-- &nbsp; --></div>
-						<div metal:use-macro="here/highlight_macros/macros/low">
-							Bottom Highlights
-						</div>
                                                 <div class="portletFooter">
                                                      <p><a href="highlights" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
                                                 </div>
