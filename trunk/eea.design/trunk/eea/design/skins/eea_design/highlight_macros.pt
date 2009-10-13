@@ -30,7 +30,6 @@
     		tal:condition="highlights" 
     		tal:repeat="hl highlights">
          <div class="visualPadding">
-          <metal:themes use-macro="here/highlight_macros/macros/themes" />
           <h2 class="highlight">
 	       <a href="#" class="noPrint"
                   tal:attributes="href hl/getUrl"
@@ -101,7 +100,6 @@
 		
      <div class="highlightMiddle">
   
-       <metal:themes use-macro="here/highlight_macros/macros/themes" />
 	    <h3 class="highlight">
 	       <a href="#" class="noPrint"
 	       		tal:attributes="href hl/getUrl"
@@ -128,8 +126,6 @@
 
      <div class="highlightMiddle shortNews">
             
-            <metal:themes use-macro="here/highlight_macros/macros/themes" />
-
              <h3 class="shortNewsTitle">
              <a href="#" class="noPrint"
                         tal:attributes="href hl/getUrl"
