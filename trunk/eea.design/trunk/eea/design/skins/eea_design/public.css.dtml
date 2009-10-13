@@ -335,6 +335,17 @@ float:right;
     text-align: center;
 }
 
+#searchbox_terminology {
+   background: transparent url(search_bg.jpg) no-repeat 50% 50%;
+   padding: 5px 0 5px 60px;
+   height: 2em;
+}
+
+#searchbox_terminology input {
+   width: 340px;
+   border: none; 
+   margin-right: 40px;
+}
 
 /*  IE7 fixes */
 * + html #region-content,
