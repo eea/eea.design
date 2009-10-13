@@ -471,6 +471,7 @@ float:right;
     padding-left: 2em;
     clear: both;
     background: white;
+    display: none;
 }
 
 #region-content #portal-breadcrumbs {
