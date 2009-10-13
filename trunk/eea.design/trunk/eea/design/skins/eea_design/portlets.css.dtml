@@ -54,6 +54,10 @@
     background-image: url(&dtml-portal_url;/arrowDown.gif);
 }
 
+.portlet-promotions dl.portlet .hide-promo { 
+    display: none; 
+} 
+
 .portlet-promotions dl.portlet .active-promo {
     display: block;
 }
