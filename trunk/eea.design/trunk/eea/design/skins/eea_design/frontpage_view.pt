@@ -19,6 +19,7 @@
                         <div  id="top-news-area" class="column-area">
                                <metal:rss use-macro="here/portlet_promotions/macros/all" />
                         </div>
+                        <div class="visualClear"><!-- &nbsp; --></div>
                         <div id="articles-area" class="column-area">
                                                <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
                                                <div metal:use-macro="here/highlight_macros/macros/highArticles">
