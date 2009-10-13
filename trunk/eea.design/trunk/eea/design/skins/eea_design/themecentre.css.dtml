@@ -1,0 +1,182 @@
+/*
+  This file is based on the ploneCustom.css.dtml shipped with Plone.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* YOUR CSS RULES START HERE */
+
+#content .content-column-one {
+    float: left;
+    width: 48%;
+    padding-right: 1em;
+}
+
+#content .content-column-two {
+    float: right;
+    width: 48%;
+}
+
+#themes-object {
+   float: right;
+   clear: right;
+   width: 17em;
+   margin-right: 0;
+   padding: 7px;
+}
+
+#themes-related dt img {
+   float: left;
+   margin: 0 0.5em 0.2em 0;
+}
+
+.media-nav-icon {
+    float: left;
+    margin-right: 5px;
+}
+
+#portlet-multimedia-tree dd ul li {
+   clear: both;
+   padding: 2px 0;
+}
+
+
+body.section-themes #themes-sitemap h2 {
+   clear: both;
+}
+
+body.section-themes h2 {
+   padding: 1em 0 0 0;
+   margin-bottom: 0.5em;
+}
+
+.contentColumnOne {
+float:left;
+width:47%;
+}
+
+.contentColumnTwo {
+float:right;
+width:47%;
+}
+
+/* New design of portlets for now only under themes */
+
+body.section-themes .portlet-promotions .portlet {
+   border: 0;
+   background: #f0f4f5;
+}
+
+body.section-themes .portlet-promotions a.portletHeader {
+   display: block;
+   text-align:left;
+}
+
+#portlet-navigation-tree .promo-nav-portlet  .portletHeader {
+background:transparent;
+font-size:1.2em;
+margin-bottom:0pt;
+margin-top:0pt;
+padding:0.5em 0.2em 0.5em 0.5em;
+}
+
+#themepromo-portlet a:hover{
+background:transparent;
+}
+
+
+body.section-themes .portlet-rss .portletHeader {
+   background: &dtml-headerBackgroundColor;;
+   padding: 0.5em;
+}
+
+body.section-themes .portlet-rss .portletItem {
+   padding-left: 0.5em;
+}
+
+
+dt.portletSubMenuHeader {
+margin:0 0 0.5em 1em;
+}
+
+.switchThemeMenu {
+    background-image: url(&dtml-portal_url;/arrow-up-blue.gif);
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    padding: 0.5em 0.2em 0.5em 0;
+    cursor:pointer;
+    margin-left:2em;
+    hight:2em;
+    line-height:2em;
+    clear:left;
+    margin-top:-2.2em;
+    padding-left:2em;
+    position: relative;
+}
+
+#portlet-navigation-tree .switchTheme a:hover {
+background:transparent;
+}
+
+#switchThemeDrop {
+ margin: 0 0 0 2em;
+}
+
+.commonThemes {
+    font-size: 65%;
+    color: grey;
+}
+
+.allitems dt {
+    font-weight: bold;
+}
+
+.theme-article-section {
+    clear: left;
+}
+
+.theme-article-image {
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+    border: 1px solid black;
+}
+
+.articleSection {
+/*    clear: left; */
+}
+
+body.section-themes #content div.plain div,
+body.section-themes #content div.plain p,
+body.section-themes #content div.plain h2 {
+    clear: left;
+}
+
+body.section-themes #content div.plain div div,
+body.section-themes #content div.plain div p,
+body.section-themes #content div.plain p div,
+body.section-themes #content div.plain p p {
+    clear: none;
+}
+
+body.section-themes #content .image-left {
+    clear: none;
+    float: left;
+}
+
+body.section-themes #content .image-left div {
+/*    float: left; */
+}
+
+body.section-themes #content div.plain blockquote {
+    width: 50%;
+    margin: 0 0 0 10%;
+}
+
+/* YOUR CSS RULES STOP HERE */
+
+/* </dtml-with> */
+
+/* Latest version of the documentation on pre-defined properties from Plone 
+   can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */
+
