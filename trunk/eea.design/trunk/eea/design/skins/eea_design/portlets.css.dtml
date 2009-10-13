@@ -28,7 +28,7 @@
 }
 
 .portlet-promotions img {
-    width: 191px;
+    width: 190px;
     height: 108px;
 }
 
@@ -149,10 +149,6 @@ text-align:right;
 color:&dtml-linkVisitedColor; !important;
 }
 
-.portletHeader a:hover {
-text-decoration: underline;
-}
-
 .portletItem a {
     display: block;
 }
@@ -218,7 +214,7 @@ dd.portletFooter a:visited {
 }
 
 .portlet-promotions .portletHeader a {
-    font-size: 0.75em;
+    font-size: 0.8em;
 }
 
 .portlet-promotions div.portletHeader {
@@ -316,6 +312,7 @@ dl.portlet-navigation-tree {
     margin: 0;
     border-bottom: 1px dashed #ccc;
 }
+
 
 .navTreeItem a,
 dd.portletItem .navTreeItem a {

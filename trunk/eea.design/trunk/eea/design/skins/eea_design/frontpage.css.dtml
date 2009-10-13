@@ -35,7 +35,7 @@ body.frontpage #portal-columns {
 #highlights-block .column-title { 
   border-bottom:1px solid #E9EFCD;
   background-image: url(portlet_bg.png);
-  padding: 1em 0 1em 1em;
+  padding: 1em 0 1em 0.5em;
 }
 
 #highlights-high ul.relatedLinks, #articles-high ul.relatedLinks{

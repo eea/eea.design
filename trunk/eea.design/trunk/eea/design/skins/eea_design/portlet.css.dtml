@@ -42,7 +42,7 @@ a.noHover {
    display:inline;
 }
 
-#content .portletItem a {
+#content dt.portletItem a {
    font-weight: normal;
 }
 
@@ -69,7 +69,6 @@ a.noHover {
 }
 
 .portlet-promotions .portletHeader {
-    background-color: <dtml-var greyBackgroundColor missing="#eeeeee">;
    padding-left: 0.5em;
 }
 .portlet-promotions .portlet {
