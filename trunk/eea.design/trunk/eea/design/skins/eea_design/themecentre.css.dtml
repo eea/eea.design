@@ -87,7 +87,6 @@ background:transparent;
 
 
 body.section-themes .portlet-rss .portletHeader {
-   background: &dtml-headerBackgroundColor;;
    padding: 0.5em;
 }
 
