@@ -33,7 +33,7 @@
       <div class="visualClear"><!-- &nbsp; --></div>      
    </div>      
    
-   <tal:searchbox tal:condition="not: onFrontpage">
+   <tal:searchbox tal:condition="not: onFrontpage|nothing">
        <div metal:use-macro="here/global_searchbox/macros/quick_search">
               The quicksearch box, normally placed at the top right
           </div>
