@@ -9,7 +9,7 @@ from eea.design.tests.base import EEAMegaTestCase
 from eea.design.browser.frontpage import Frontpage
 from eea.themecentre.interfaces import IThemeCentre, IThemeCentreSchema
 from eea.promotion.interfaces import IPromotable, IPromotion
-#from Products.EEAContentTypes.browser.frontpage import Frontpage
+from p4a.video.interfaces import IVideoEnhanced
 from Products.CMFCore.utils import getToolByName
 from Globals import package_home
 from DateTime import DateTime
@@ -115,6 +115,26 @@ class TestPromotions(EEAMegaTestCase):
 
         expected_categories = ['Agriculture', 'Air pollution', 'Biodiversity', 'Chemicals', 'Energy']
         expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Internal Promotion']
+
+    def test_filter_videos(self):
+        """Videos should be filtered out to not conflict with frontpage multimedia area"""
+        vid = self.folder[self.folder.invokeFactory('File', id='video')]
+        vid.setTitle('Vid (filter me out plz)')
+        alsoProvides(vid, IVideoEnhanced)
+        alsoProvides(vid, IPromotable)
+
+        now = DateTime()
+        vid.setEffectiveDate(now)
+
+        vid.restrictedTraverse("@@createPromotion")()
+        IPromotion(vid).locations = [u'Front Page']
+        self.portal.portal_workflow.doActionFor(vid, 'publish')
+
+        view = Frontpage(self.portal, self.app.REQUEST)
+        result = view.getPromotions()
+
+        result_promotions = [i['promotions'][0]['Title'] for i in result]
+        expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Foo0']
 
 
 def test_suite():

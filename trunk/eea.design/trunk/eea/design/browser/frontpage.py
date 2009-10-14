@@ -41,6 +41,7 @@ from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlight
 from Products.EEAContentTypes.promotion import getPromotionFolder
 from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 
+from p4a.video.interfaces import IVideoEnhanced
 from eea.themecentre.interfaces import IThemeTagging
 from eea.themecentre.interfaces import IThemeCentreSchema
 
@@ -160,6 +161,7 @@ class Frontpage(BrowserView):
             'object_provides': {'query': ['eea.promotion.interfaces.IPromoted','Products.EEAContentTypes.content.interfaces.IExternalPromotion'], 'operator': 'or'},
             'review_state': 'published',
             'sort_on': 'effective',
+            'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
         result = self.catalog.searchResults(query)
@@ -168,6 +170,9 @@ class Frontpage(BrowserView):
         for i in result:
             obj = i.getObject()
             promo = IPromotion(obj)
+
+            if IVideoEnhanced.providedBy(obj):
+                continue
             if not promo.display_on_frontpage:
                 continue
 
@@ -187,7 +192,7 @@ class Frontpage(BrowserView):
                 'url' : promo.url,
                 'style' : 'display: none;',
                 'imglink' : getMultiAdapter((obj, obj.REQUEST),
-                     name='promo_imglink')('thumb'),
+                     name='promo_imglink')('preview'),
                 'image' : i.getURL() + '/image',
             }
             cPromos[theme] = [info]
@@ -223,7 +228,7 @@ class Frontpage(BrowserView):
 
         obj = result.pop(0).getObject()
         info = {
-            'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('preview'),
+            'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('wide'),
             'title': obj.title,
             'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
         }
@@ -232,7 +237,7 @@ class Frontpage(BrowserView):
         for i in result[:3]:
             obj = i.getObject()
             info = {
-                'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('thumb'),
+                'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('wide'),
                 'title': obj.title,
                 'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
             }
