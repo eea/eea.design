@@ -6,6 +6,7 @@ from zope.interface import alsoProvides
 from Globals import package_home
 from DateTime import DateTime
 from OFS.Image import Image
+from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from p4a.video.interfaces import IVideoEnhanced
 from p4a.video.interfaces import IVideo
 from eea.design.tests.base import EEAMegaTestCase
@@ -35,6 +36,15 @@ class TestMultimedia(EEAMegaTestCase):
 
             vid.reindexObject()
             self.portal.portal_workflow.doActionFor(vid, 'publish')
+
+        # Flash animations should be sorted away
+        swf = self.folder[self.folder.invokeFactory('File', id='swf')]
+        swf.setTitle('swf object (sort me out)')
+        alsoProvides(swf, IVideoEnhanced)
+        alsoProvides(swf, IFlashAnimation)
+        swf.setEffectiveDate(now)
+        swf.reindexObject()
+        self.portal.portal_workflow.doActionFor(swf, 'publish')
 
         view = Frontpage(self.portal, self.app.REQUEST)
         self.result = view.getMultimedia()

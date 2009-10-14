@@ -219,7 +219,7 @@ class Frontpage(BrowserView):
             'effectiveRange' : self.now,
         }
         result = self.catalog(query)
-        result = [i for i in result if not IFlashAnimation.implementedBy(i.getObject())]
+        result = [i for i in result if not IFlashAnimation.providedBy(i.getObject())]
 
         obj = result.pop(0).getObject()
         info = {
@@ -227,21 +227,16 @@ class Frontpage(BrowserView):
             'title': obj.title,
             'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
         }
-        output = []
-        output.append(info)
+        output = [info]
 
-        for i in result:
+        for i in result[:3]:
             obj = i.getObject()
-            if IFlashAnimation.providedBy(obj):
-                continue
             info = {
                 'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('thumb'),
                 'title': obj.title,
                 'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
             }
             output.append(info)
-            if len(output) == 4:
-                break
         return output
 
     def _getTeaserMedia(self, high, scale):
