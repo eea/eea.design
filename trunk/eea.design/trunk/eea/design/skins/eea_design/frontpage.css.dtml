@@ -17,6 +17,26 @@ body.frontpage #portal-columns {
     padding: 0 !important;
 }
 
+body.frontpage #multimedia-highlights * {
+    border: none;
+}
+
+body.frontpage #multimedia-highlights img {
+    width: 325px;
+    height: 183px;
+    margin: 0 0;
+}
+
+body.frontpage #multimedia-highlights ul img {
+    width: 89px;
+    height: 50px;
+}
+
+body.frontpage #multimedia-highlights ul {
+    width: 89px;
+    float: right;
+}
+
 #highlights-block h1 a,
 #highlights-block h2 a,
 #highlights-block h3 a {
@@ -120,13 +140,10 @@ body.frontpage #portal-columns {
     margin-bottom: 0em;
 }
 
-.highlights ul {
+body.frontpage ul {
     list-style: none;
+    list-style-image: none;
     margin: 0;
-}
-
-.highlights ul li  {
-    padding-left: 8em;
 }
 
 .highlights ul li .date  {

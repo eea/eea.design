@@ -39,6 +39,7 @@ from eea.promotion.interfaces import IPromotion
 from Products.Five import BrowserView
 from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 from Products.EEAContentTypes.promotion import getPromotionFolder
+from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 
 from eea.themecentre.interfaces import IThemeTagging
 from eea.themecentre.interfaces import IThemeCentreSchema
@@ -203,6 +204,45 @@ class Frontpage(BrowserView):
         # Sort alphabetically on category title
         promotions.sort(lambda x, y: cmp(x['category']['Title'].lower(), y['category']['Title'].lower()))
         return promotions
+
+    def getMultimedia(self):
+        """Returns 4 latest videos
+
+        The first one is shown with a larger image, the other three in normal size.
+        See ticket #2700
+        """
+        query = {
+            'object_provides': 'p4a.video.interfaces.IVideoEnhanced',
+            'review_state': 'published',
+            'sort_on': 'effective',
+            'sort_order' : 'reverse',
+            'effectiveRange' : self.now,
+        }
+        result = self.catalog(query)
+        result = [i for i in result if not IFlashAnimation.implementedBy(i.getObject())]
+
+        obj = result.pop(0).getObject()
+        info = {
+            'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('preview'),
+            'title': obj.title,
+            'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
+        }
+        output = []
+        output.append(info)
+
+        for i in result:
+            obj = i.getObject()
+            if IFlashAnimation.providedBy(obj):
+                continue
+            info = {
+                'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('thumb'),
+                'title': obj.title,
+                'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
+            }
+            output.append(info)
+            if len(output) == 4:
+                break
+        return output
 
     def _getTeaserMedia(self, high, scale):
         obj = high.getObject()

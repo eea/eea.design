@@ -19,6 +19,9 @@ class IFrontPageHighlights(Interface):
     def getPromotions():
         """ Return all published promotions and group them in categories.
             Categories are defined by the folders containing the promotions. """
+
+    def getMultimedia():
+        """ Return 4 latest videos. """
             
     def getHighArticles():
         """ Return the published articles with visibility `top` and that

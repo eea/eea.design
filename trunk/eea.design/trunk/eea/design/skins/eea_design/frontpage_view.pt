@@ -21,13 +21,14 @@
                         </div>
                         <div class="visualClear"><!-- &nbsp; --></div>
                         <div id="articles-area" class="column-area">
+                                               <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Multimedia</h2>
+                                               <div metal:use-macro="here/highlight_macros/macros/multimedia">
+                                                   Multimedia
+                                               </div>
                                                <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
                                                <div metal:use-macro="here/highlight_macros/macros/highArticles">
-							Top articles
-						</div>
-                                                <div metal:use-macro="here/highlight_macros/macros/middleArticles">
-                                                        Middle articles
-                                                </div>
+                                                   Top articles
+                                               </div>
                                                 <div class="portletFooter">
                                                      <p><a href="articles" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
                                                 </div>
@@ -37,9 +38,9 @@
                         <div metal:use-macro="here/highlight_macros/macros/high">
                                 Top Highlights
                         </div>
-						<div metal:use-macro="here/highlight_macros/macros/middle">
-							Middle Highlights
-						</div>
+                        <div metal:use-macro="here/highlight_macros/macros/middle">
+                            Middle Highlights
+                        </div>
 			                        <div class="visualClear"><!-- &nbsp; --></div>
                                                 <div class="portletFooter">
                                                      <p><a href="highlights" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
