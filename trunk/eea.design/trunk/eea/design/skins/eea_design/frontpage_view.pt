@@ -17,7 +17,7 @@
             </div>
             	<div id="highlights-block"  tal:define="global frontpage_view context/@@frontpage_highlights;">
                         <div  id="top-news-area" class="column-area">
-                               <metal:rss use-macro="here/portlet_promotions/macros/all" />
+                               <metal:promotions use-macro="here/portlet_promotions/macros/all" />
                         </div>
                         <div class="visualClear"><!-- &nbsp; --></div>
                         <div id="articles-area" class="column-area">
