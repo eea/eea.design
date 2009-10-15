@@ -61,11 +61,10 @@ class TestMultimedia(EEAMegaTestCase):
         self.failIf(titles != expected_titles, titles)
 
     def test_sizes(self):
-        """First vid is preview sized, other three thumb sized"""
+        """Image links should be widescreen"""
         imglinks = [i['imglink'] for i in self.result]
-        self.failIf('image_preview' not in imglinks[0], imglinks[0])
-        for i in imglinks[1:4]:
-            self.failIf('image_thumb' not in i, i)
+        for i in imglinks:
+            self.failIf('image_wide' not in i, i)
 
 
 def test_suite():

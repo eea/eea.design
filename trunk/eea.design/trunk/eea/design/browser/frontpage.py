@@ -211,11 +211,6 @@ class Frontpage(BrowserView):
         return promotions
 
     def getMultimedia(self):
-        """Returns 4 latest videos
-
-        The first one is shown with a larger image, the other three in normal size.
-        See ticket #2700
-        """
         query = {
             'object_provides': 'p4a.video.interfaces.IVideoEnhanced',
             'review_state': 'published',
@@ -226,15 +221,8 @@ class Frontpage(BrowserView):
         result = self.catalog(query)
         result = [i for i in result if not IFlashAnimation.providedBy(i.getObject())]
 
-        obj = result.pop(0).getObject()
-        info = {
-            'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('wide'),
-            'title': obj.title,
-            'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
-        }
-        output = [info]
-
-        for i in result[:3]:
+        output = []
+        for i in result[:4]:
             obj = i.getObject()
             info = {
                 'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('wide'),
