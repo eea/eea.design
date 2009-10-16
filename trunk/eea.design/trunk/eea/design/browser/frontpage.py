@@ -135,40 +135,63 @@ class Frontpage(BrowserView):
         results =  self.getLow(('Article',))
         return results
 
+    def _getCampaignPromotion(self):
+        ret = self.context.restrictedTraverse('@@globalPromotion')()
+        if ret == None:
+            return None
+        portal_url = getToolByName(aq_inner(self.context), 'portal_url')
+        portal = portal_url.getPortalObject()
+        img = getattr(self.context, 'campaign-banner', None)
+        if img != None:
+            wf = getToolByName(portal, 'portal_workflow', None)
+            hist = wf.getHistoryOf('plone_workflow', img)
+            if hist[-1]['review_state'] == 'published':
+                return ret
+        return None
+
     def getPromotions(self):
-        # Each folder in quicklinks represents a category:
+        campaign = self._getCampaignPromotion()
+        if campaign != None:
+            return campaign
+
+        # Each theme represents a category
         query = {
             'object_provides': 'eea.themecentre.interfaces.IThemeCentre',
-            'review_state' : 'published',
-            'effectiveRange' : self.now,
+            'review_state': 'published',
+            'effectiveRange': self.now,
         }
-        result = self.catalog.searchResults(query)
+        result = self.catalog(query)
 
         categories = {}
-        for i in result:
-            themecentre = IThemeCentreSchema(i.getObject())
+        for brain in result:
+            themecentre = IThemeCentreSchema(brain.getObject())
             category = {
-                'id': themecentre.tags,
-                'Title': i.Title,
-                'url': i.getURL(),
-                'path': i.getPath(),
+                'id': themecentre.tags, # ThemeCentres are only tagged with one theme
+                'Title': brain.Title,
+                'url': brain.getURL(),
+                'path': brain.getPath(),
                 'macro': 'here/portlet_promotions/macros/portlet',
             }
-            categories[i.id] = category
+            categories[brain.id] = category
 
-        # Internal promotions
         query = {
-            'object_provides': {'query': ['eea.promotion.interfaces.IPromoted','Products.EEAContentTypes.content.interfaces.IExternalPromotion'], 'operator': 'or'},
+            'object_provides': {
+                'query': [
+                    'eea.promotion.interfaces.IPromoted',
+                    'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
+                ],
+                'operator': 'or',
+            },
             'review_state': 'published',
             'sort_on': 'effective',
             'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
-        result = self.catalog.searchResults(query)
+        result = self.catalog(query)
 
         cPromos = {}
-        for i in result:
-            obj = i.getObject()
+        for brain in result:
+            obj = brain.getObject()
             promo = IPromotion(obj)
 
             if IVideoEnhanced.providedBy(obj):
@@ -186,14 +209,14 @@ class Frontpage(BrowserView):
                 continue
 
             info = {
-                'id' : i.id,
-                'Description' : i.Description,
-                'Title' : i.Title,
+                'id' : brain.id,
+                'Description' : brain.Description,
+                'Title' : brain.Title,
                 'url' : promo.url,
                 'style' : 'display: none;',
                 'imglink' : getMultiAdapter((obj, obj.REQUEST),
                      name='promo_imglink')('preview'),
-                'image' : i.getURL() + '/image',
+                'image' : brain.getURL() + '/image',
             }
             cPromos[theme] = [info]
 
@@ -204,8 +227,11 @@ class Frontpage(BrowserView):
         for theme, promos in cPromos.items():
             if promos is not None:
                 promos[0]['style'] = 'display: block;'
-                promotions.append({ 'category' : categories[theme],
-                                    'promotions' : promos })
+                promotions.append({
+                    'category' : categories[theme],
+                    'promotions' : promos
+                })
+
         # Sort alphabetically on category title
         promotions.sort(lambda x, y: cmp(x['category']['Title'].lower(), y['category']['Title'].lower()))
         return promotions
@@ -222,11 +248,11 @@ class Frontpage(BrowserView):
         result = [i for i in result if not IFlashAnimation.providedBy(i.getObject())]
 
         output = []
-        for i in result[:4]:
-            obj = i.getObject()
+        for brain in result[:4]:
+            obj = brain.getObject()
             info = {
                 'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('wide'),
-                'title': obj.title,
+                'title': brain.Title,
                 'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
             }
             output.append(info)

@@ -87,12 +87,19 @@
 </div>
 </metal:portlet>
 
-<metal:portlet define-macro="all" tal:condition="frontpage_view|nothing">
-<tal:promotionCategories repeat="promos frontpage_view/getPromotions">
-    <tal:category tal:define="catInfo promos/category;
-                              category catInfo;
+<metal:portlet define-macro="global_promotion"
+               tal:condition="promotions|nothing"
+               tal:define="promo python:promotions[0];">
+    <a href="#" title="" tal:attributes="href promo/url; title promo/Title">
+        <img src="global-promotion-image" alt="" tal:attributes="alt promo/Title" />
+    </a>
+</metal:portlet>
+
+<metal:portlet define-macro="all" tal:condition="promotions|nothing">
+<tal:promotionCategories repeat="promos promotions">
+    <tal:category tal:define="category promos/category;
                               promotions promos/promotions">
-        <metal:promotionCategory use-macro="python:path(catInfo['macro'])" />
+        <metal:promotionCategory use-macro="python:path(category['macro'])" />
     </tal:category>
 </tal:promotionCategories>
 </metal:portlet>

@@ -8,7 +8,7 @@ from Products.EEAContentTypes.config import *
 from eea.design.tests.base import EEAMegaTestCase
 from eea.design.browser.frontpage import Frontpage
 from eea.themecentre.interfaces import IThemeCentre, IThemeCentreSchema
-from eea.promotion.interfaces import IPromotable, IPromotion
+from eea.promotion.interfaces import IPromotable, IPromoted, IPromotion
 from p4a.video.interfaces import IVideoEnhanced
 from Products.CMFCore.utils import getToolByName
 from Globals import package_home
@@ -83,9 +83,10 @@ class TestPromotions(EEAMegaTestCase):
                 promoObj.setEffectiveDate(now-1-category_i-i)
                 self.portal.portal_workflow.doActionFor(promoObj, 'publish')
 
+        self.view = Frontpage(self.portal, self.app.REQUEST)
+
     def test_getPromotions(self):
-        view = Frontpage(self.portal, self.app.REQUEST)
-        result = view.getPromotions()
+        result = self.view.getPromotions()
 
         result_categories = [i['category']['Title'] for i in result]
         result_promotions = [i['promotions'][0]['Title'] for i in result]
@@ -107,8 +108,7 @@ class TestPromotions(EEAMegaTestCase):
         IPromotion(internal_promo).locations = [u'Front Page']
         self.portal.portal_workflow.doActionFor(internal_promo, 'publish')
 
-        view = Frontpage(self.portal, self.app.REQUEST)
-        result = view.getPromotions()
+        result = self.view.getPromotions()
 
         result_categories = [i['category']['Title'] for i in result]
         result_promotions = [i['promotions'][0]['Title'] for i in result]
@@ -130,11 +130,46 @@ class TestPromotions(EEAMegaTestCase):
         IPromotion(vid).locations = [u'Front Page']
         self.portal.portal_workflow.doActionFor(vid, 'publish')
 
-        view = Frontpage(self.portal, self.app.REQUEST)
-        result = view.getPromotions()
+        result = self.view.getPromotions()
 
         result_promotions = [i['promotions'][0]['Title'] for i in result]
         expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Foo0']
+
+    def test_campaign_mode(self):
+        """Campaign mode test
+        
+        If a global promotion is found and the 'campaign-banner' image
+        has been uploaded and published, we show this campaign promotion instead
+        of the regular 5.
+        """
+        item = self.folder[self.folder.invokeFactory('News Item', id='campaign-item')]
+        alsoProvides(item, IPromotable)
+        alsoProvides(item, IPromoted)
+        promo = IPromotion(item)
+        self.portal.portal_workflow.doActionFor(item, 'publish')
+        item.reindexObject()
+
+        self.assertEquals(promo.display_globally, False)
+        promo.locations = [u'Global']
+        self.assertEquals(promo.display_globally, True)
+
+        # We should still get back the 5 regular promotions because there's no
+        # campaign banner uploaded
+        result = self.view.getPromotions()
+        self.assertEquals(len(result), 5)
+
+        # Lets upload such an image. Because we leave it unpublished, we still
+        # get back the 5 regular promotions
+        img = self.portal[self.portal.invokeFactory('Image', id='campaign-banner')]
+        self.assertEquals(len(result), 5)
+
+        # When we publish the campaign banner, the frontpage promotion area
+        # switches to campaign mode
+        self.portal.portal_workflow.doActionFor(img, 'publish')
+        img.reindexObject()
+        result = self.view.getPromotions()
+        self.assertEquals(len(result), 1, len(result))
+        self.assertEquals(result[0]['id'], item.id, result)
 
 
 def test_suite():
