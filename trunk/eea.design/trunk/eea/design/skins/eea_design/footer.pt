@@ -4,6 +4,22 @@
 
 <div id="footer-wrapper"  metal:define-macro="portal_footer" i18n:domain="eea.translations">
   <div id="portal-footer">
+    <metal:ecotip use-macro="context/portlet_ecotip/macros/portlet" />
+<p>
+    <tal:address i18n:translate="European Environment Agency, Kongens Nytorv 6, DK - 1050 Copenhagen K, Denmark - Phone: +45 3336 7100"> European Environment Agency (EEA), Kongens Nytorv 6, 1050 
+Copenhagen K, Denmark - Phone: +45 3336 7100</tal:address><br />
+    <tal:comments i18n:translate="comments_to">Comments to</tal:comments> <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>.<br />
+<br /><a href="http://www.eea.europa.eu/copyright" xmlns:cc="http://creativecommons.org/ns#" tal:attributes="href string:${local_site}/legal/copyright" rel="cc:morePermissions"><tal:translate 
+i18n:translate="Legal notice">Legal notice</tal:translate></a>, <a href="http://www.eea.europa.eu/disclaimer" tal:attributes="href string:${local_site}/legal/disclaimer" title="Disclaimer" i18n:translate="Disclaimer" i18n:attributes="title">Disclaimer</a>, <a href="http://www.eea.europa.eu/privacy/" tal:attributes="href string:${local_site}/legal/privacy" title="Privacy policy" i18n:translate="Privacy policy" i18n:attributes="title">Privacy policy</a>
+   </p>
+
+
+      <a href="http://www.eea.europa.eu"
+         tal:attributes="href local_site|portal_url">
+               <img src="logobtm.gif" class="image-right" alt="EEA Logo" 
+                           tal:define="lang python:request.get('LANGUAGE','en')"
+                                       tal:attributes="src python: lang=='en' and 'http://www.eea.europa.eu/logobtm.gif' or '%s/++resource++eea.translations.images/logobtm-%s.gif' % (portal_url, lang)"/></a>
+<div class="visualClear"></div>
    <table><tr>   <td>
    <h2>EEA<br /> Networks</h2>
    <ul>
@@ -12,11 +28,13 @@
      <li><a href="http://etc-lusi.eionet.europa.eu">Land Use and Spatial Information</a></li>
      <li><a href="http://etc-scp.eionet.europa.eu">Sustainable Consumption and Production</a></li>
      <li><a href="http://water.eionet.europa.eu">Water</a></li>
-</ul>     </td>
+</ul>     
+ <metal:feedback use-macro="context/portlet_translationfeedback/macros/portlet" />
+</td>
 <td>
 <div class="visualClear">
 <div class="contentColumnOne">
-<h2>What is happening?<br />Environmental issues</h2>
+<a href="">What is happening?<br />Environmental issues</a>
 <ul><li><a href="resolveuid/0d2e3d3da1d2f8f1cc4f029a27b931d0">Air pollution</a></li><li><a href="resolveuid/cd6bef0c97b6c8ea3e216267af7f1605">Biodiversity</a></li><li><a href="resolveuid/619d5ebc70dbdf9895dda7c815c5364b">Chemicals</a></li><li><a href="resolveuid/6723e6872d33d022a07eeae0e235ac48">Climate change</a></li><li><a href="resolveuid/25f41725a7916d7368797edf78f06cad">Environment and health</a></li><li><a title="Land use" class="internal-link" href="resolveuid/5412da76e31aedcea4ce1d520518604f">Land use</a></li><li><a href="resolveuid/c64f9ed39bae175c77ee5fe3729472f6">Natural resources</a></li><li><a href="resolveuid/5757e1ebd370ac9f0b9d9c4c41667304">Noise</a></li><li><a href="resolveuid/e1129312d1ed476a3c54cf1c256e972f">Soil</a></li><li><a href="resolveuid/912645e2479b571df739342b290cabbc">Waste and material resources</a></li><li><a href="resolveuid/b6ef38c3f2e84948314b397d7668ea41">Water</a></li><li><a href="resolveuid/057759082066e8d4cc5ff7f3f8364442">Various other issues</a></li></ul>
 </div>
 <div class="contentColumnTwo">
@@ -37,20 +55,8 @@ Across environmental issues and sectors</h2>
 </div>
 </td>
 
-<td class="last">    <metal:subscription use-macro="context/portlet_subscription/macros/portlet" />  <p>
-    <tal:address i18n:translate="European Environment Agency, Kongens Nytorv 6, DK - 1050 Copenhagen K, Denmark - Phone: +45 3336 7100"> European Environment Agency (EEA), Kongens Nytorv 6, 1050 
-Copenhagen K, Denmark - Phone: +45 3336 7100</tal:address><br />
-    <tal:comments i18n:translate="comments_to">Comments to</tal:comments> <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>.<br />
-<br /><a href="http://www.eea.europa.eu/copyright" xmlns:cc="http://creativecommons.org/ns#" tal:attributes="href string:${local_site}/legal/copyright" rel="cc:morePermissions"><tal:translate 
-i18n:translate="Legal notice">Legal notice</tal:translate></a>, <a href="http://www.eea.europa.eu/disclaimer" tal:attributes="href string:${local_site}/legal/disclaimer" title="Disclaimer" i18n:translate="Disclaimer" i18n:attributes="title">Disclaimer</a>, <a href="http://www.eea.europa.eu/privacy/" tal:attributes="href string:${local_site}/legal/privacy" title="Privacy policy" i18n:translate="Privacy policy" i18n:attributes="title">Privacy policy</a>
-   </p>
-
-
-      <a href="http://www.eea.europa.eu"
-         tal:attributes="href local_site|portal_url">
-               <img src="logobtm.gif" class="image-right" alt="EEA Logo" 
-                           tal:define="lang python:request.get('LANGUAGE','en')"
-                                       tal:attributes="src python: lang=='en' and 'http://www.eea.europa.eu/logobtm.gif' or '%s/++resource++eea.translations.images/logobtm-%s.gif' % (portal_url, lang)"/></a></td>
+<td class="last">    <metal:subscription use-macro="context/portlet_gazette/macros/portlet" />  
+</td>
    </tr>
    </table>
   </div>
