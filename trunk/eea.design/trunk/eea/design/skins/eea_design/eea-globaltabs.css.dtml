@@ -23,17 +23,18 @@
 
 
 #portal-globalnav {
+    font-size: 1.2em;
     display: block;
     width: 100%;
     list-style: none;
     padding: 0px;
     margin: 0 0 0 0em;
     background-color: #00446a;
-    min-height: 3.0em;
+    min-height: 4em;
 }
 
 #portal-globalnav li{
-    padding:8px 10px 8px 10px;
+    padding: 15px 10px;
     margin-bottom: 0;
     display: block;
     float: left;
@@ -125,7 +126,7 @@
 }
 
 .popper2 .listHead{
-    font-size:12px;
+    font-size: 12px;
     margin:10px -6px 0 6px;
     padding:0 0 4px 9px;
     border-bottom:1px solid #b2b2b2;
