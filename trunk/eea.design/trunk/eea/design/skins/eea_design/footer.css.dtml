@@ -3,7 +3,6 @@
 
 #footer-wrapper {
    background: #fff url(footer.jpg) no-repeat; 
-   height: 27em;
    padding: 90px 0 0 0;
 }
 
@@ -12,20 +11,13 @@
    padding: 1em;
 }
 
-#portal-footer table td.first {
-   width: 15em;
-}
-
-#portal-footer table td.last { 
-   width: 12em;
-}
 
 #portal-footer {
     background: &dtml-darkBackgroundColor;;
     float: none;
     line-height: 1.2em;
     margin: 0 0em 1em 0em;
-    padding: 1em;
+    padding: 2em 1em;
     text-align: left;
     font-size:x-small;
     color:white;
@@ -82,7 +74,6 @@
 
 #portal-colophon .colophonWrapper {
     display: table;
-    margin: 0 auto;
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -130,19 +121,19 @@
     background-image: url(&dtml-portal_url;/colophon_anybrowser.png);
 }
 
-#portal-footer #portlet-subscribtion {
-   width: 17em;
-   float: left;
-   margin: 0 1em 0 0;
-   padding: 7px;
-
+#portal-footer #portlet-ecotip {
+   font-size: 150%;
+   width: 70%;
+   margin: 0 auto;
 }
 
-#portal-footer #portlet-subscribtion a { 
-    color: &dtml-linkColor;;
+#portal-footer #portlet-ecotip .portletFooter {
+  border: none;
+  padding: 0;
 }
 
-#portal-footer h2 {
-   color: white;
+#portal-footer #portlet-ecotip dt {
+   display: none;
 }
+
 /* </dtml-with> */

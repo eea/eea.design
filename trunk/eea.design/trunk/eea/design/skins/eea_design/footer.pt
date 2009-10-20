@@ -2,36 +2,40 @@
       i18n:domain="eea.translations">
 <body>
 
-<div id="footer-wrapper"  metal:define-macro="portal_footer" i18n:domain="eea.translations">
+<metal:footer   metal:define-macro="portal_footer" i18n:domain="eea.translations">
+<div id="footer-wrapper">
   <div id="portal-footer">
     <metal:ecotip use-macro="context/portlet_ecotip/macros/portlet" />
-<p>
-    <tal:address i18n:translate="European Environment Agency, Kongens Nytorv 6, DK - 1050 Copenhagen K, Denmark - Phone: +45 3336 7100"> European Environment Agency (EEA), Kongens Nytorv 6, 1050 
-Copenhagen K, Denmark - Phone: +45 3336 7100</tal:address><br />
-    <tal:comments i18n:translate="comments_to">Comments to</tal:comments> <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>.<br />
-<br /><a href="http://www.eea.europa.eu/copyright" xmlns:cc="http://creativecommons.org/ns#" tal:attributes="href string:${local_site}/legal/copyright" rel="cc:morePermissions"><tal:translate 
-i18n:translate="Legal notice">Legal notice</tal:translate></a>, <a href="http://www.eea.europa.eu/disclaimer" tal:attributes="href string:${local_site}/legal/disclaimer" title="Disclaimer" i18n:translate="Disclaimer" i18n:attributes="title">Disclaimer</a>, <a href="http://www.eea.europa.eu/privacy/" tal:attributes="href string:${local_site}/legal/privacy" title="Privacy policy" i18n:translate="Privacy policy" i18n:attributes="title">Privacy policy</a>
-   </p>
-
 
       <a href="http://www.eea.europa.eu"
          tal:attributes="href local_site|portal_url">
                <img src="logobtm.gif" class="image-right" alt="EEA Logo" 
                            tal:define="lang python:request.get('LANGUAGE','en')"
                                        tal:attributes="src python: lang=='en' and 'http://www.eea.europa.eu/logobtm.gif' or '%s/++resource++eea.translations.images/logobtm-%s.gif' % (portal_url, lang)"/></a>
+
 <div class="visualClear"></div>
-   <table><tr>   <td>
-   <h2>EEA<br /> Networks</h2>
-   <ul>
-     <li><a href="http://air-climate.eionet.europa.eu">Air and Climate Change</a></li>
-     <li><a href="http://biodiversity.eionet.europa.eu">Biological Diversity</a></li>
-     <li><a href="http://etc-lusi.eionet.europa.eu">Land Use and Spatial Information</a></li>
-     <li><a href="http://etc-scp.eionet.europa.eu">Sustainable Consumption and Production</a></li>
-     <li><a href="http://water.eionet.europa.eu">Water</a></li>
-</ul>     
- <metal:feedback use-macro="context/portlet_translationfeedback/macros/portlet" />
-</td>
-<td>
+  </div>
+</div>
+<div class="visualClear"></div>
+<div>
+<p>
+    <tal:address i18n:translate="European Environment Agency, Kongens Nytorv 6, DK - 1050 Copenhagen K, Denmark - Phone: +45 3336 7100"> European Environment Agency (EEA), Kongens Nytorv 6, 1050 
+Copenhagen K, Denmark - Phone: +45 3336 7100</tal:address><br />
+     <img src="eu-flag.gif" alt="EU flag" class="image-left" style="width: 50px"/>The European Environment Agency (EEA) is an agency of the European Union.<br />Our task is to provide sound, independent information on the environment.<br clear="all" />
+    <tal:comments i18n:translate="comments_to">Comments to</tal:comments> <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>.<br />
+<br /><a href="http://www.eea.europa.eu/copyright" xmlns:cc="http://creativecommons.org/ns#" tal:attributes="href string:${local_site}/legal/copyright" rel="cc:morePermissions"><tal:translate 
+i18n:translate="Legal notice">Legal notice</tal:translate></a>, <a href="http://www.eea.europa.eu/disclaimer" tal:attributes="href string:${local_site}/legal/disclaimer" title="Disclaimer" i18n:translate="Disclaimer" i18n:attributes="title">Disclaimer</a>, <a href="http://www.eea.europa.eu/privacy/" tal:attributes="href string:${local_site}/legal/privacy" title="Privacy policy" i18n:translate="Privacy policy" i18n:attributes="title">Privacy policy</a>
+   </p>
+
+<metal:colophon use-macro="context/colophon/macros/colophon" />
+
+
+</div>
+</metal:footer>
+</body>
+</html>
+
+
 <div class="visualClear">
 <div class="contentColumnOne">
 <a href="">What is happening?<br />Environmental issues</a>
@@ -53,13 +57,3 @@ Across environmental issues and sectors</h2>
 <ul><li><a title="Environmental technology" class="internal-link" href="resolveuid/0742501c1bd96c82e8bb993ee49f120c">Environmental technology</a><br /></li><li><a href="resolveuid/f68e62dd80ecbc75f123197e48ef3ceb">Policy instruments<br /></a></li><li><a href="resolveuid/bd4c672611920251e0ae681dfcbfd285">Environmental scenarios</a></li></ul>
 </div>
 </div>
-</td>
-
-<td class="last">    <metal:subscription use-macro="context/portlet_gazette/macros/portlet" />  
-</td>
-   </tr>
-   </table>
-  </div>
-</div>
-</body>
-</html>
