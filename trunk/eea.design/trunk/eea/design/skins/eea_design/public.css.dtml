@@ -16,6 +16,15 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+#tagline {
+    color: &dtml-linkHeadingColor;;
+    font-size: 125%;
+    font-weight: bold;
+    float: right;
+    padding-top: 2em;
+    padding-right: 1em;
+}
+
 .documentContent {
     padding: 0em 1em 2em 1em !important;
     background: &dtml-backgroundColor;;
