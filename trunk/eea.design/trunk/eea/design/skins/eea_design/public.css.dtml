@@ -329,7 +329,7 @@ float:right;
 #portal-column-content #portal-searchbox {
     float: none;
     clear: auto;
-    padding: 25px 0;
+    padding: 14px 0;
     margin: 0;
     background-color: #b9e148;
     text-align: center;
