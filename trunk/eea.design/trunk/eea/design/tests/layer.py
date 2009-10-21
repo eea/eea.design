@@ -19,6 +19,7 @@ class MigrationLayer(PloneSite):
         # make sure it's loaded...
         css = getToolByName(portal, 'portal_css')
         assert 'eea-highlights.css' in css.getResourceIds()
+        assert 'portlet.css' in css.getResourceIds()
         # and commit the changes
         commit()
         ZopeTestCase.close(root)

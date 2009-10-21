@@ -5,10 +5,14 @@ eea.design migration from EEADesign2006
   >>> css = self.portal.portal_css
   >>> 'eea-highlights.css' in css.getResourceIds()
   True
+  >>> 'portlet.css' in css.getResourceIds()
+  True
   >>> from Products.CMFCore.utils import getToolByName
   >>> profile = 'profile-eea.design:default'
   >>> tool = getToolByName(portal, 'portal_setup')
   >>> tool.setImportContext(profile)
   >>> _ = tool.runImportStep('migrate_from_eeadesign2006')
   >>> 'eea-highlights.css' in css.getResourceIds()
+  False
+  >>> 'portlet.css' in css.getResourceIds()
   False

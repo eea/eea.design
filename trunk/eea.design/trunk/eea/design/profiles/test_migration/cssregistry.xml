@@ -3,4 +3,7 @@
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" id="eea-highlights.css" media="all" rel="stylesheet"
     rendering="import" />
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" id="portlet.css" media="all" rel="stylesheet"
+    rendering="import" />
 </object>
