@@ -26,8 +26,8 @@
 }
 
 .documentContent {
-    padding: 0em 1em 2em 1em !important;
     background: &dtml-backgroundColor;;
+    padding: 0em 1em 2em 1em;
 }
 
 #translation-disclaimer .note {
@@ -265,10 +265,6 @@ float:right;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-}
-
-.portlet-promotions {
-    width: 200px;
 }
 
 /* Logo properties */

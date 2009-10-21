@@ -5,6 +5,36 @@
   <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
 */
 
+body.frontpage .documentContent {
+    padding: 0;
+}
+
+#top-news-area .portlet-promotions .portletHeader a {
+    color: &dtml-linkHeadingColor;;
+}
+
+#top-news-area .portlet-promotions {
+    margin-left: 24px;
+    width: 175px;
+}
+
+#top-news-area .portlet-promotions img {
+    width: 175px;
+    height: 105px;
+}
+
+#top-news-area {
+    background-image: url(frontpage_promotions_bg.png);
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+#main-content {
+    background-image: url(frontpage_content_bg.png);
+    background-position: bottom left;
+}
+
 body.frontpage .documentActions {
     display: none;
 }
@@ -74,7 +104,8 @@ body.frontpage #multimedia-highlights ul {
 }
 
 #articles-area, #highlights-area {
-    width:49%
+    width: 480px;
+    padding: 0 1em 1em 1em;
 }
 
 #articles-area {

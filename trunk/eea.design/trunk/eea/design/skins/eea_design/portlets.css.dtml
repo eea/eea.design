@@ -27,11 +27,6 @@
     padding: 0.3em;
 }
 
-.portlet-promotions img {
-    width: 190px;
-    height: 108px;
-}
-
 .portlet-promotions .portletHeader a,
 .portlet-promotions .portletHeader a:visited {
     text-decoration: none;
@@ -611,7 +606,6 @@ a.noHover {
 
 .portlet-promotions {
    float: left;
-   background-color: #fff;
    padding: 0 0 0 0;
 }
 
@@ -619,7 +613,6 @@ a.noHover {
    padding-left: 0.5em;
 }
 .portlet-promotions .portlet {
-   padding: 0 0.5em 0.5em 0.5em;
    display: block;
 }
 .portlet-promotions .portlet a.portletHeader{
