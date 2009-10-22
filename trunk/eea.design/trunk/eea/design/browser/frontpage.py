@@ -37,7 +37,6 @@ from Products.CMFCore.utils import getToolByName
 from eea.promotion.interfaces import IPromotion
 
 from Products.Five import BrowserView
-from Products.EEAContentTypes.promotion import getPromotionFolder
 from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 
 from p4a.video.interfaces import IVideoEnhanced
@@ -56,7 +55,6 @@ class Frontpage(BrowserView):
         portal_properties = getToolByName(context, 'portal_properties')
         frontpage_properties = getattr(portal_properties, 'frontpage_properties')
 
-        self.promotionFolder = getPromotionFolder(context)
         self.promotions = []
         self.portal_url = getToolByName(aq_inner(context), 'portal_url')()
         
@@ -273,48 +271,3 @@ class Frontpage(BrowserView):
                   'sort_order' : 'reverse',
                   'effectiveRange' : self.now }
         return self.catalog.searchResults(query)
-        
-    
-
-
-class FrontpageCache(BrowserView):
-    """ This view knows how to get the last modified date for the root of the
-        site. The date is used by squid for caching the front page. """
-
-    def modified(self):
-        catalog = getToolByName(self.context, 'portal_catalog')
-        portal_props = getToolByName(self.context, 'portal_properties')
-        frontpage_props = getattr(portal_props, 'frontpage_properties')
-        utool = getToolByName(self.context, 'portal_url')
-
-        root = utool.getPortalObject()
-        rss = getattr(root, 'rss', None)
-        promotionFolder = frontpage_props.getProperty('promotionFolder', None)
-        query1 = query2 = query3 = None
-
-        if rss:
-            query1 = { 'portal_type': ['RSSFeedRecipe'],
-                       'path': { 'query': '/'.join(rss.getPhysicalPath()),
-                                 'depth': 1 },
-                       'sort_on': 'modified' }
-        query2 = { 'portal_type': ['Highlight', 'PressRelease'],
-                   'sort_on': 'effective',
-                   'review_state': 'published',
-                   'effectiveRange': DateTime() }
-        if promotionFolder:
-            query3 = { 'portal_type': ['Promotion'],
-                       'path': { 'query': promotionFolder, 'depth': 2 },
-                       'review_state': 'published',
-                       'sort_on': 'modified' }
-
-        dates = []
-        for query in filter(None, (query1, query2, query3)):
-            res = catalog.searchResults(query)
-            if res:
-                dates.append(res[-1].modified)
-
-        if dates:
-            return max(dates)
-        else:
-            return None
-
