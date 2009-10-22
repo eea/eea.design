@@ -5,47 +5,63 @@
   <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
 */
 
+/* General frontpage
+******************************************************************************/
+
 body.frontpage .documentContent {
     padding: 0;
+}
+
+body.frontpage ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+}
+
+/* The 5 frontpage promtions
+******************************************************************************/
+
+#top-news-area {
+    background-image: url(frontpage_promotions_bg.png);
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    width: 1024px;
+    height: 200px;
+    overflow: hidden;
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
 }
 
+#top-news-area .portletHeader {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    background: transparent;
+}
+
 #top-news-area .portlet-promotions {
-    margin-left: 24px;
-    width: 175px;
+    /* #top-news-area is 1024px, so each promotion can take 204 px width. */
+    width: 192px;
+    _width: 190px; /* IE6 */
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#top-news-area .portlet,
+#top-news-area dl.portlet {
+    margin: 0;
+    padding: 0;
 }
 
 #top-news-area .portlet-promotions img {
-    width: 175px;
-    height: 105px;
+    width: 100%; /* 192 or 190px depending on IE6 or not */
+    height: 108px;
 }
 
-#top-news-area {
-    background-image: url(frontpage_promotions_bg.png);
-    background-repeat: no-repeat;
-    margin-bottom: 20px;
-    height: 200px;
-}
-
-#main-content {
-    background-image: url(frontpage_content_bg.png);
-    background-position: bottom left;
-}
-
-body.frontpage .documentActions {
-    display: none;
-}
-
-body.frontpage #highlights-block {
-   padding: 0;
-}
-
-body.frontpage #portal-columns {
-    padding: 0 !important;
-}
+/* Frontpage multimedia area
+******************************************************************************/
 
 body.frontpage #multimedia-highlights * {
     border: none;
@@ -67,6 +83,26 @@ body.frontpage #multimedia-highlights ul {
     float: right;
 }
 
+/* Frontpage highlights
+******************************************************************************/
+
+#main-content {
+    background-image: url(frontpage_content_bg.png);
+    background-position: bottom left;
+}
+
+body.frontpage .documentActions {
+    display: none;
+}
+
+body.frontpage #highlights-block {
+   padding: 0;
+}
+
+body.frontpage #portal-columns {
+    padding: 0 !important;
+}
+
 #highlights-block h1 a,
 #highlights-block h2 a,
 #highlights-block h3 a {
@@ -77,19 +113,18 @@ body.frontpage #multimedia-highlights ul {
 #highlights-block h1 a:hover,
 #highlights-block h2 a:hover,
 #highlights-block h3 a:hover {
-    /* border-bottom: 1px &dtml-linkHeadingColor; solid;*/
     text-decoration: underline;
     border: none;
 }
 
 #highlights-block .column-title { 
-  border-bottom:1px solid #E9EFCD;
-  background-image: url(portlet_bg.png);
-  padding: 1em 0 1em 0.5em;
+    border-bottom:1px solid #E9EFCD;
+    background-image: url(portlet_bg.png);
+    padding: 1em 0 1em 0.5em;
 }
 
-#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks{
-  margin:0.5em 0 0 1px;
+#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks {
+    margin:0.5em 0 0 1px;
 }
 
 #highlights-block h3 { 
@@ -121,7 +156,6 @@ body.frontpage #multimedia-highlights ul {
  float: left;
 }
 
-
 #highlights-block .date {
     font-size: x-small;
     color:&dtml-discreetColor;;
@@ -136,10 +170,10 @@ body.frontpage #multimedia-highlights ul {
     padding: 0em 0em;
     margin: 0 0 0em 0em;
 }
+
 .highlightHigh .visualPadding {
     padding: 0 1em 1em 1em;
 }
-
 
 #highlights-block .highlightHigh h2 {
     font-size: 250%;
@@ -169,12 +203,6 @@ body.frontpage #multimedia-highlights ul {
 #highlights-middle .date {
     display: block;
     margin-bottom: 0em;
-}
-
-body.frontpage ul {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
 }
 
 .highlights ul li .date  {
