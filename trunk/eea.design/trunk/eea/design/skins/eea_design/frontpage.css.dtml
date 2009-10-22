@@ -18,7 +18,7 @@ body.frontpage ul {
     margin: 0;
 }
 
-/* The 5 frontpage promtions
+/* Frontpage promotions
 ******************************************************************************/
 
 #top-news-area {
@@ -63,24 +63,39 @@ body.frontpage ul {
 /* Frontpage multimedia area
 ******************************************************************************/
 
-body.frontpage #multimedia-highlights * {
+#multimedia-highlights * {
     border: none;
 }
 
-body.frontpage #multimedia-highlights img {
+#multimedia-highlights .tileImage {
+    padding: 0 0;
+    margin: 0 0;
+}
+
+#multimedia-highlights ul {
+    width: 89px;
+    height: 183px;
+    float: right;
+}
+
+#multimedia-highlights img {
     width: 325px;
     height: 183px;
     margin: 0 0;
 }
 
-body.frontpage #multimedia-highlights ul img {
+#multimedia-highlights ul img {
     width: 89px;
     height: 50px;
 }
 
-body.frontpage #multimedia-highlights ul {
-    width: 89px;
-    float: right;
+#multimedia-highlights ul li {
+    height: 50px;
+    margin-bottom: 18px;
+}
+
+#multimedia-highlights ul .last {
+    margin-bottom: 0;
 }
 
 /* Frontpage highlights
@@ -118,7 +133,7 @@ body.frontpage #portal-columns {
 }
 
 #highlights-block .column-title { 
-    border-bottom:1px solid #E9EFCD;
+    border-bottom:1px solid #e0ded5;
     background-image: url(portlet_bg.png);
     padding: 1em 0 1em 0.5em;
 }

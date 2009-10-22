@@ -157,9 +157,11 @@
     </h3>
     <div>
         <ul>
-        <metal:items tal:repeat="vid three_other">
-            <li><tal:imglink tal:replace="structure vid/imglink"/></li>
-        </metal:items>
+            <metal:items tal:repeat="vid three_other" >
+                <li class="vidthumb" tal:define="last repeat/vid/end" tal:attributes="class python:test(last, 'vidthumb last', 'vidthumb')">
+                    <tal:imglink tal:replace="structure vid/imglink"/>
+                </li>
+            </metal:items>
         </ul>
         <tal:imglink tal:replace="structure first_vid/imglink"/>
         <div class="visualClear"><!-- --></div>
