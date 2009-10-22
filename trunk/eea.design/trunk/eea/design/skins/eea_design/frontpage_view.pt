@@ -13,7 +13,7 @@
                 Document actions (print, sendto etc)
             </div>
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
-                <div id="top-news-area" class="column-area" tal:define="global promotions frontpage_view/getPromotions">
+                <div id="top-news-area" tal:define="global promotions frontpage_view/getPromotions">
                     <tal:dummy tal:condition="python:len(promotions) == 1">
                         <metal:promotions use-macro="here/portlet_promotions/macros/campaign" />
                     </tal:dummy>
@@ -25,11 +25,11 @@
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
                         <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Multimedia">Multimedia</h2>
-                        <div metal:use-macro="here/highlight_macros/macros/multimedia">
+                        <div metal:use-macro="here/frontpage_macros/macros/multimedia">
                             Multimedia
                         </div>
                         <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
-                        <div metal:use-macro="here/highlight_macros/macros/highArticles">
+                        <div metal:use-macro="here/frontpage_macros/macros/highArticles">
                             Top articles
                         </div>
                         <div class="portletFooter">
@@ -38,10 +38,10 @@
                     </div>
                     <div id="highlights-area" class="column-area">
                         <h2 class="column-title" i18n:translate="News">News</h2>
-                        <div metal:use-macro="here/highlight_macros/macros/high">
+                        <div metal:use-macro="here/frontpage_macros/macros/high">
                             Top Highlights
                         </div>
-                        <div metal:use-macro="here/highlight_macros/macros/middle">
+                        <div metal:use-macro="here/frontpage_macros/macros/middle">
                             Middle Highlights
                         </div>
                         <div class="visualClear"><!-- &nbsp; --></div>

@@ -37,7 +37,7 @@ class TestMultimedia(EEAMegaTestCase):
             vid.reindexObject()
             self.portal.portal_workflow.doActionFor(vid, 'publish')
 
-        # Flash animations should be sorted away
+        # Flash animations should be filtered out
         swf = self.folder[self.folder.invokeFactory('File', id='swf')]
         swf.setTitle('swf object (sort me out)')
         alsoProvides(swf, IVideoEnhanced)

@@ -18,6 +18,50 @@ body.frontpage ul {
     margin: 0;
 }
 
+#highlights-block h1 a,
+#highlights-block h2 a,
+#highlights-block h3 a {
+    color: &dtml-linkHeadingColor;!important;
+	background: none;
+}
+
+#highlights-block h1 a:hover,
+#highlights-block h2 a:hover,
+#highlights-block h3 a:hover {
+    text-decoration: underline;
+    border: none;
+}
+
+#highlights-block .column-title { 
+    border-bottom: 1px solid #e0ded5;
+    background-image: url(portlet_bg.png);
+    padding: 1em 0 1em 0.5em;
+}
+
+#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks {
+    margin:0.5em 0 0 1px;
+}
+
+#highlights-block h3 { 
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#highlights-block h2 { 
+    font-size: 160%;
+    margin: 0.25em 0;
+    border: none;
+}
+
+#highlights-block .shortNewsTitle {
+    margin-top: 0.5em;
+}
+
+#highlights-block .date {
+    font-size: x-small;
+    color:&dtml-discreetColor;;
+}
+
 /* Frontpage promotions
 ******************************************************************************/
 
@@ -27,7 +71,6 @@ body.frontpage ul {
     margin-bottom: 20px;
     width: 1024px;
     height: 200px;
-    overflow: hidden;
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
@@ -60,16 +103,48 @@ body.frontpage ul {
     height: 108px;
 }
 
-/* Frontpage multimedia area
+/* Frontpage main content
 ******************************************************************************/
 
-#multimedia-highlights * {
-    border: none;
+.column-area {
+    width: 480px;
+    padding: 0 1em 1em 1em;
 }
+
+#articles-area {
+    float: right;
+    clear: right;
+}
+
+#highlights-area {
+    float: left;
+}
+
+#main-content {
+    background-image: url(frontpage_content_bg.png);
+    background-position: bottom left;
+}
+
+body.frontpage .documentActions {
+    display: none;
+}
+
+body.frontpage #highlights-block {
+   padding: 0;
+}
+
+body.frontpage #portal-columns {
+    padding: 0 !important;
+}
+
+
+/* Frontpage multimedia area
+******************************************************************************/
 
 #multimedia-highlights .tileImage {
     padding: 0 0;
     margin: 0 0;
+    border: none;
 }
 
 #multimedia-highlights ul {
@@ -98,83 +173,8 @@ body.frontpage ul {
     margin-bottom: 0;
 }
 
-/* Frontpage highlights
+/* Frontpage news and articles
 ******************************************************************************/
-
-#main-content {
-    background-image: url(frontpage_content_bg.png);
-    background-position: bottom left;
-}
-
-body.frontpage .documentActions {
-    display: none;
-}
-
-body.frontpage #highlights-block {
-   padding: 0;
-}
-
-body.frontpage #portal-columns {
-    padding: 0 !important;
-}
-
-#highlights-block h1 a,
-#highlights-block h2 a,
-#highlights-block h3 a {
-    color: &dtml-linkHeadingColor;!important;
-	background: none;
-}
-
-#highlights-block h1 a:hover,
-#highlights-block h2 a:hover,
-#highlights-block h3 a:hover {
-    text-decoration: underline;
-    border: none;
-}
-
-#highlights-block .column-title { 
-    border-bottom:1px solid #e0ded5;
-    background-image: url(portlet_bg.png);
-    padding: 1em 0 1em 0.5em;
-}
-
-#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks {
-    margin:0.5em 0 0 1px;
-}
-
-#highlights-block h3 { 
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-#highlights-block h2 { 
-    font-size: 160%;
-    margin: 0.25em 0;
-    border: none;
-}
-
-#articles-area, #highlights-area {
-    width: 480px;
-    padding: 0 1em 1em 1em;
-}
-
-#articles-area {
-    float:right;
-    clear:right;
-}
-
-#highlights-block .shortNewsTitle {
-    margin-top: 0.5em;
-}
-
-#highlights-area {
- float: left;
-}
-
-#highlights-block .date {
-    font-size: x-small;
-    color:&dtml-discreetColor;;
-}
 
 .highlightMiddle {
     margin: 0 0em 1em 1em;
@@ -213,7 +213,6 @@ body.frontpage #portal-columns {
 #highlights-middle ul.relatedLinks {
     margin-bottom: -1.5em;
 }
-
 
 #highlights-middle .date {
     display: block;
