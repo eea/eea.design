@@ -71,17 +71,16 @@ body.frontpage ul {
     margin-bottom: 20px;
     width: 1024px;
     height: 200px;
+    font-size: 120%;
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
 }
 
-#top-news-area .portletHeader {
-    padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    background: transparent;
+#top-news-area div.portletHeader {
+    padding: 0.5em 0 0.5em 0.2em;
+    background: transparent url(portlet_bg.png) repeat-x;
 }
 
 #top-news-area .portlet-promotions {
