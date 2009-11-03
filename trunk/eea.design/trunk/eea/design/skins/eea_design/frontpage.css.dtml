@@ -32,7 +32,7 @@ body.frontpage ul {
     border: none;
 }
 
-#highlights-block .column-title { 
+#highlights-block .column-title {
     border-bottom: 1px solid #e0ded5;
     background-image: url(portlet_bg.png);
     padding: 1em 0 1em 0.5em;
@@ -42,7 +42,7 @@ body.frontpage ul {
     margin:0.5em 0 0 1px;
 }
 
-#highlights-block h3 { 
+#highlights-block h3 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -136,7 +136,6 @@ body.frontpage #portal-columns {
     padding: 0 !important;
 }
 
-
 /* Frontpage multimedia area
 ******************************************************************************/
 
@@ -193,7 +192,8 @@ body.frontpage #portal-columns {
     font-size: 250%;
     margin-top: 0;
 }
-#highlights-block .highlightHigh .relatedLinks{
+
+#highlights-block .highlightHigh .relatedLinks {
     font-size: 160%;
 }
 
@@ -218,7 +218,7 @@ body.frontpage #portal-columns {
     margin-bottom: 0em;
 }
 
-.highlights ul li .date  {
+.highlights ul li .date {
     float: left;
     margin: 0 0 0 -8em;
 }
