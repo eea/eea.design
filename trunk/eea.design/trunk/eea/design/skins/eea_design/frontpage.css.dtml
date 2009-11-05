@@ -8,6 +8,11 @@
 /* General frontpage
 ******************************************************************************/
 
+/* This div sneaks in a padding for IE it seems. */
+body.frontpage #region-content {
+    padding: 0 0 !important;
+}
+
 body.frontpage .documentContent {
     padding: 0;
 }
@@ -66,10 +71,9 @@ body.frontpage ul {
 ******************************************************************************/
 
 #top-news-area {
-    background-image: url(frontpage_promotions_bg.png);
     background-repeat: no-repeat;
     margin-bottom: 20px;
-    width: 1024px;
+    width: 100%;
     height: 200px;
     font-size: 120%;
 }
@@ -84,11 +88,7 @@ body.frontpage ul {
 }
 
 #top-news-area .portlet-promotions {
-    /* #top-news-area is 1024px, so each promotion can take 204 px width. */
-    width: 192px;
-    _width: 190px; /* IE6 */
-    margin-left: 6px;
-    margin-right: 6px;
+    width: 20%;
 }
 
 #top-news-area .portlet,
@@ -98,16 +98,16 @@ body.frontpage ul {
 }
 
 #top-news-area .portlet-promotions img {
-    width: 100%; /* 192 or 190px depending on IE6 or not */
-    height: 108px;
+    width: 100%;
 }
 
 /* Frontpage main content
 ******************************************************************************/
 
 .column-area {
-    width: 480px;
-    padding: 0 1em 1em 1em;
+    width: 48%;
+    padding: 0 0;
+    margin: 0 0;
 }
 
 #articles-area {
@@ -117,11 +117,6 @@ body.frontpage ul {
 
 #highlights-area {
     float: left;
-}
-
-#main-content {
-    background-image: url(frontpage_content_bg.png);
-    background-position: bottom left;
 }
 
 body.frontpage .documentActions {

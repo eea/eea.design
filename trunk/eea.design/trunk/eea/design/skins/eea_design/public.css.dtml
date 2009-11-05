@@ -261,7 +261,11 @@ float:right;
 /* End edit form elements */
 
 #visual-portal-wrapper {
-    width: 1024px;
+    /* We also set max/min width in design.js because IE doens't
+     * understand the CSS. So if you change these values, make sure to change
+     * design.js too. TODO: use dtml*/
+    max-width: 1280px;
+    min-width: 972px;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
