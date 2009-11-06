@@ -333,6 +333,7 @@ float:right;
     text-transform: &dtml-textTransform;;
     white-space: nowrap;
     z-index: 2;
+    font-size: 1.2em;
 }
 
 #portal-column-content #portal-searchbox {
@@ -344,16 +345,25 @@ float:right;
     text-align: center;
 }
 
+#portal-searchbox a {
+    text-transform: none;
+    text-decoration: underline;
+    color: #444;
+    border: none;
+    font-size: 80%;
+}
+
+
 #searchbox_terminology {
-   background: transparent url(search_bg.jpg) no-repeat 50% 50%;
-   padding: 5px 0 5px 60px;
-   height: 2em;
+
 }
 
 #searchbox_terminology input {
-   width: 340px;
+   width: 366px;
+   background: transparent url(search_bg.png) no-repeat 50% 50%;
    border: none; 
-   margin-right: 40px;
+   padding: 5px 0 5px 30px;
+   
 }
 
 /*  IE7 fixes */

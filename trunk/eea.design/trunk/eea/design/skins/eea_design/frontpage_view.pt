@@ -17,14 +17,13 @@
                     <tal:dummy tal:condition="python:len(promotions) == 1">
                         <metal:promotions use-macro="here/portlet_promotions/macros/campaign" />
                     </tal:dummy>
-                    <tal:dummy tal:condition="python:len(promotions) == 5">
+                    <tal:dummy tal:condition="python:len(promotions) &gt; 1">
                         <metal:promotions use-macro="here/portlet_promotions/macros/all" />
                     </tal:dummy>
                 </div>
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-                        <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Multimedia">Multimedia</h2>
                         <div metal:use-macro="here/frontpage_macros/macros/multimedia">
                             Multimedia
                         </div>

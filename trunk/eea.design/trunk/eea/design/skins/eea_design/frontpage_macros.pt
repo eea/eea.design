@@ -107,9 +107,13 @@
 <div metal:define-macro="multimedia" 
 		class="highlightMiddle shortNews"
 		id="multimedia-highlights" 
-		tal:define="vids frontpage_view/getMultimedia;
-                    first_vid python:vids[0];
-                    three_other python:vids[1:];">
+		tal:define="vids frontpage_view/getMultimedia;"
+                tal:condition="vids|nothing">
+		    
+    <tal:defines  
+        tal:define="first_vid python:vids[0];
+ 	            three_other python:vids[1:];">
+    <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Multimedia">Multimedia</h2>
     <h3 class="shortNewsTitle">
         <a class="thickbox"
             href="#"
@@ -130,6 +134,7 @@
         </div>
         <div class="visualClear"><!-- --></div>
     </div>
+    </tal:defines>
 </div>
 
 </body>
