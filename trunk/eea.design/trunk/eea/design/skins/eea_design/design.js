@@ -15,6 +15,8 @@ $(window).resize(function() {
         wrapper.width(DESIGN_MAX_WIDTH);
     }
 
+    var topNewsArea = $('#top-news-area');
+    topNewsArea.height(topNewsArea.width() * 0.1);
     // Layout of top promotions. For some reason IE got a tiny margin to the
     // right (worked if I set the .portlet-promotion width to 19%), when
     // doing this in pure CSS. Don't know why. Think it's us who are setting
