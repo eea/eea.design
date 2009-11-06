@@ -134,36 +134,23 @@ body.frontpage #portal-columns {
 /* Frontpage multimedia area
 ******************************************************************************/
 
-#multimedia-highlights .tileImage {
-    padding: 0 0;
-    margin: 0 0;
-    border: none;
+#big_vid {
+    float: left;
+    width: 70%;
 }
 
 #multimedia-highlights ul {
-    width: 89px;
-    height: 183px;
     float: right;
+    width: 20%;
 }
 
+#multimedia-highlights .tileImage,
+#multimedia-highlights ul li,
 #multimedia-highlights img {
-    width: 325px;
-    height: 183px;
-    margin: 0 0;
-}
-
-#multimedia-highlights ul img {
-    width: 89px;
-    height: 50px;
-}
-
-#multimedia-highlights ul li {
-    height: 50px;
-    margin-bottom: 18px;
-}
-
-#multimedia-highlights ul .last {
-    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
 }
 
 /* Frontpage news and articles

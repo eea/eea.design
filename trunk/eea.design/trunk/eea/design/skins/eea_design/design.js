@@ -24,12 +24,23 @@ $(window).resize(function() {
     var margin = $('#top-news-area').width() * 0.05; // 5% margin
     var w = ($('#top-news-area').width() - 4 * margin) / 5;
     $('#top-news-area .portlet-promotions').width(w);
-    $('#top-news-area .portlet-promotions').css('marginRight', Math.floor(margin) + 'px');
+    $('#top-news-area .portlet-promotions:lt(4)').css('marginRight', Math.floor(margin) + 'px');
     $('#top-news-area .portlet-promotions:last').css({'marginRight': '0', 'float': 'right'});
+
+    // Multimedia highlights layout
+    //var wrapper_w = $("#multimedia-highlights").width();
+    //var big_img = $("#multimedia-highlights img:last").width(0.7 * wrapper_w);
+    //$("#multimedia-highlights ul").width(0.2 * wrapper_w).height(big_img.height());
+    //$("#multimedia-highlights ul img").width(0.2 * wrapper_w);
 
     // Make sure the height of our images stick to 16:9. Can be removed when
     // we have correct aspect ratio on the uploaded images.
     $("#multimedia-highlights img, #top-news-area img").each(function(i) {
         $(this).height((9/16) * $(this).width());
     });
+
+    // Add margins so that the #multimedia-highlights ul fill up the same height as the #big_vid.
+    // TODO: why does the ul look a little bit too big in IE6 and 7?
+    var margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
+    $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
 });

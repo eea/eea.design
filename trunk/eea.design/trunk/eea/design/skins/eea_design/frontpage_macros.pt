@@ -125,7 +125,9 @@
                 </li>
             </metal:items>
         </ul>
-        <tal:imglink tal:replace="structure first_vid/imglink"/>
+        <div id="big_vid">
+            <tal:imglink tal:replace="structure first_vid/imglink"/>
+        </div>
         <div class="visualClear"><!-- --></div>
     </div>
 </div>
