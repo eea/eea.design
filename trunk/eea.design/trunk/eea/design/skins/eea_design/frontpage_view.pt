@@ -20,6 +20,7 @@
                     <tal:dummy tal:condition="python:len(promotions) &gt; 1">
                         <metal:promotions use-macro="here/portlet_promotions/macros/all" />
                     </tal:dummy>
+                    <div class="visualClear"><!-- &nbsp; --></div>
                 </div>
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
