@@ -3,8 +3,9 @@
 <body>
 
 <metal:footer   metal:define-macro="portal_footer" i18n:domain="eea.translations">
+<br clear="all" />
 <div id="footer-wrapper">
-  <div id="bg-wrapper">
+   <div id="bg-wrapper">
       <div id="portal-footer">
         <metal:ecotip use-macro="context/portlet_ecotip/macros/portlet" />
 

@@ -2,13 +2,14 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 #footer-wrapper {
-    background: url(footer_left.jpg) no-repeat;
+    background: white url(footer_left.jpg) no-repeat;
     margin: 0;
     padding: 0;
+    clear: both;
 }
 
 #bg-wrapper {
-    background: url(footer_right.jpg) no-repeat top right;
+    background: transparent url(footer_right.jpg) no-repeat top right;
     padding: 90px 0 0 0;
     margin: 0;
 }
@@ -39,6 +40,7 @@
 }
 
 #portal-footer a {
+    text-transform: none;
     text-decoration: underline;
     color: white;
     border: none;
