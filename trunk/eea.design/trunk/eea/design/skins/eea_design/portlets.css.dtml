@@ -651,7 +651,6 @@ a.noHover {
    float: right;
    clear: right;
    border: 0;
-   width: 19em;
    font-size: 100%;
 }
 
