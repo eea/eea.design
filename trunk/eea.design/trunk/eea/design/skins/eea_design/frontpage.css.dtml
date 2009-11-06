@@ -73,18 +73,19 @@ body.frontpage ul {
 #top-news-area {
     background-repeat: no-repeat;
     height: 200px;
+    font-size: 1.2em;
     width: 100%;
     margin-bottom: 7em;
-    font-size: 120%;
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
+
 }
 
 #top-news-area div.portletHeader {
     padding: 0.5em 0 0.5em 0.2em;
-    background: transparent url(portlet_bg.png) repeat-x;
+    background: transparent url(promotion_bg.png) repeat-x bottom left;
 }
 
 #top-news-area .portlet-promotions {
@@ -130,6 +131,7 @@ body.frontpage #highlights-block {
 body.frontpage #portal-columns {
     padding: 0 !important;
 }
+
 
 /* Frontpage multimedia area
 ******************************************************************************/
@@ -179,26 +181,6 @@ body.frontpage #portal-columns {
     font-size: 160%;
 }
 
-#highlights-middle .highlightMiddleL {
-    //float:left;
-    //width: 47%;
-    padding: 0 0 1em 0;
-}
-
-#highlights-middle .highlightMiddleR {
-    //float:right;
-    //width: 47%;
-    padding: 0 0 1em 0;
-}
-
-#highlights-middle ul.relatedLinks {
-    margin-bottom: -1.5em;
-}
-
-#highlights-middle .date {
-    display: block;
-    margin-bottom: 0em;
-}
 
 .highlights ul li .date {
     float: left;
