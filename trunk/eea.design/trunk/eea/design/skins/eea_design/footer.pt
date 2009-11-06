@@ -4,20 +4,23 @@
 
 <metal:footer   metal:define-macro="portal_footer" i18n:domain="eea.translations">
 <div id="footer-wrapper">
-  <div id="portal-footer">
-    <metal:ecotip use-macro="context/portlet_ecotip/macros/portlet" />
+  <div id="bg-wrapper">
+      <div id="portal-footer">
+        <metal:ecotip use-macro="context/portlet_ecotip/macros/portlet" />
 
-      <a href="http://www.eea.europa.eu"
-         tal:attributes="href local_site|portal_url">
-               <img src="logobtm.gif" class="image-right" alt="EEA Logo" 
-                           tal:define="lang python:request.get('LANGUAGE','en')"
-                                       tal:attributes="src python: lang=='en' and 'http://www.eea.europa.eu/logobtm.gif' or '%s/++resource++eea.translations.images/logobtm-%s.gif' % (portal_url, lang)"/></a>
+          <a href="http://www.eea.europa.eu"
+             tal:attributes="href local_site|portal_url">
+                   <img src="logobtm.gif" class="image-right" alt="EEA Logo" 
+                        tal:define="lang python:request.get('LANGUAGE','en')"
+                        tal:attributes="src python: lang=='en' and 'http://www.eea.europa.eu/logobtm.gif' or '%s/++resource++eea.translations.images/logobtm-%s.gif' % (portal_url, lang)"/>
+          </a>
 
-<div class="visualClear"></div>
+          <div class="visualClear"></div>
+      </div>
   </div>
 </div>
 <div class="visualClear"></div>
-<div>
+<div id="colophon-wrapper">
 <p>
     <tal:address i18n:translate="European Environment Agency, Kongens Nytorv 6, DK - 1050 Copenhagen K, Denmark - Phone: +45 3336 7100"> European Environment Agency (EEA), Kongens Nytorv 6, 1050 
 Copenhagen K, Denmark - Phone: +45 3336 7100</tal:address><br />

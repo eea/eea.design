@@ -2,26 +2,37 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 #footer-wrapper {
-   background: #fff url(footer.jpg) no-repeat; 
-   padding: 90px 0 0 0;
+    background: url(footer_left.jpg) no-repeat;
+    margin: 0;
+    padding: 0;
 }
 
-#portal-footer table td {
-   vertical-align: top;
-   padding: 1em;
+#bg-wrapper {
+    background: url(footer_right.jpg) no-repeat top right;
+    padding: 90px 0 0 0;
+    margin: 0;
 }
-
 
 #portal-footer {
-    background: &dtml-darkBackgroundColor;;
     float: none;
-    line-height: 1.2em;
+    padding: 2em;
+    background: #95B229;
+    color: white;
     margin: 0 0em 1em 0em;
-    padding: 2em 1em;
-    text-align: left;
-    font-size:x-small;
-    color:white;
 }
+
+/*
+#portal-footer {
+   background: &dtml-darkBackgroundColor;;
+   float: none;
+   line-height: 1.2em;
+   margin: 0 0em 1em 0em;
+   padding: 2em 1em;
+   text-align: left;
+   font-size: x-small;
+   color: white;
+}
+*/
 
 #portal-footer .image-right {
    margin-top: 1em;
