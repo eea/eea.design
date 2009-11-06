@@ -45,7 +45,7 @@
                            src string:${portal_url}/${logo}" />
 
       <p id="tagline" condition="onFrontpage" i18n:translate="eea_tagline">
-          Tagline/slogan goes here...
+           Timely data, information and knowledge
       </p>
 
       <a metal:use-macro="here/global_logo/macros/portal_logo">
