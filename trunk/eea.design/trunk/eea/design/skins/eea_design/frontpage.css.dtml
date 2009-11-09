@@ -125,10 +125,16 @@ body.frontpage ul {
 #articles-area {
     float: right;
     clear: right;
+    background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
+    padding: 0 1em 1em 0;
+    height: 495px;
 }
 
 #highlights-area {
     float: left;
+    background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
+    padding: 0 1em 1em 0;
+    height: 495px;
 }
 
 body.frontpage .documentActions {
@@ -198,4 +204,7 @@ body.frontpage #portal-columns {
     margin: 0 0 0 -8em;
 }
 
+#highlights-block .portletFooter {
+    padding-right: 1em;
+}
 /* </dtml-with> */
