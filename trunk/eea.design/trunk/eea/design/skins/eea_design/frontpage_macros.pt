@@ -114,14 +114,14 @@
         tal:define="first_vid python:vids[0];
  	            three_other python:vids[1:];">
     <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Multimedia">Multimedia</h2>
-    <h3 class="shortNewsTitle">
+    <h3 class="shortNewsTitle visualPadding">
         <a class="thickbox"
             href="#"
             tal:content="first_vid/title"
             tal:attributes="href first_vid/url">
         </a>
     </h3>
-    <div>
+    <div class="visualPadding">
         <ul>
             <metal:items tal:repeat="vid three_other" >
                 <li class="vidthumb" tal:define="last repeat/vid/end" tal:attributes="class python:test(last, 'vidthumb last', 'vidthumb')">
