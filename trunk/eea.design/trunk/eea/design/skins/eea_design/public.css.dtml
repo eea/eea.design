@@ -16,9 +16,9 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-#tagline {
-    color: &dtml-linkHeadingColor;;
-    font-size: 100%;
+#tagline { 
+    color: white;
+    font-size: 120%;
     font-weight: bold;
     padding-top: 2em;
     padding-right: 1em;
@@ -28,8 +28,10 @@
 }
 
 .frontpage #tagline {
+    color: &dtml-linkHeadingColor;;
     float: right;
     position: static;
+    font-size: 120%;
 }
 
 .documentContent {
@@ -282,7 +284,7 @@ float:right;
 /* Logo properties */
 
 .portal-logo {
-    background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat;
+    background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat 0 8px;
     border: 0;
     margin: 0px 0 0 7px;
     padding: 0;
@@ -295,7 +297,7 @@ float:right;
     border: 0;
     margin: 0;
     padding: 0;
-    padding-top: <dtml-var "_[logoName].height">px;
+    padding-top: <dtml-var "_[logoName].height + 16">px;
     height: 0px !important;
     width: <dtml-var "_[logoName].width">px;
     cursor: pointer;
@@ -317,6 +319,7 @@ float:right;
 #cross-site-top {
     background-color: white;
     margin-top: 1px;
+    padding: 5px 0;
 }
 
 /* The skin switcher at the top, only shows up if you have multiple skins available */
@@ -366,7 +369,7 @@ float:right;
    width: 366px;
    background: transparent url(search_bg.png) no-repeat 50% 50%;
    border: none; 
-   padding: 7px 0 7px 30px;
+   padding: 9px 0 9px 30px;
    font-size: 0.8em;   
 }
 
