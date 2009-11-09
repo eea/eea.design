@@ -34,11 +34,10 @@
 }
 
 #portal-globalnav li{
-    padding: 1.25em 10px;
+    padding: 1.25em 2em;
     margin-bottom: 0;
     display: block;
     float: left;
-    min-width: 11.5em;
     background-color: #00446a;
     text-align: center;
     height: 1.5em;
