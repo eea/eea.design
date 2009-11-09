@@ -365,8 +365,8 @@ float:right;
    width: 366px;
    background: transparent url(search_bg.png) no-repeat 50% 50%;
    border: none; 
-   padding: 5px 0 5px 30px;
-   
+   padding: 7px 0 7px 30px;
+   font-size: 0.8em;   
 }
 
 /*  IE7 fixes */
