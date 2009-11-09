@@ -143,7 +143,7 @@ class Frontpage(BrowserView):
         if img != None:
             wf = getToolByName(portal, 'portal_workflow', None)
             hist = wf.getHistoryOf('plone_workflow', img)
-            if hist[-1]['review_state'] == 'published':
+            if hist[-1]['review_state'] == 'published' or 'force_campaign' in self.request:
                 return ret
         return None
 
@@ -303,7 +303,6 @@ class Frontpage(BrowserView):
                 result['media']['getScale'] = media.getScale(scale).tag()
                     
         return result
-
 
     def _getItemsWithVisibility(self, visibilityLevel, portaltypes, interfaces=None):
         """ get items of certain content types and/or interface and certain visibility level. """
