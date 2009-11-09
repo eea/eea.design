@@ -22,8 +22,9 @@
     font-weight: bold;
     padding-top: 2em;
     padding-right: 1em;
-    position: absolute;
-    left: 350px;
+    position: relative;
+    left: 300px;
+    float: left;
 }
 
 .frontpage #tagline {
