@@ -34,7 +34,7 @@
 }
 
 #portal-globalnav li{
-    padding: 15px 10px;
+    padding: 1.25em 10px;
     margin-bottom: 0;
     display: block;
     float: left;
