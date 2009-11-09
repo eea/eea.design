@@ -6,7 +6,12 @@
 <div id="portal-searchbox" metal:define-macro="quick_search">
 
 <form action="http://glossary.eea.europa.eu/terminology/sitesearch" tal:attributes="action python:'http://glossary.'+request.get('LANGUAGE', 'en')+'.eea.europa.eu/terminology/sitesearch'" id="searchbox_terminology" name="searchform">
+<tal:translated condition="python:request.get('LANGUAGE','en') != 'en'">
   <input onFocus="global_searchbox_focus(this)" onBlur="global_searchbox_blur(this)" type="text" name="term" size="35" i18n:attributes="title Search;" title="Search Europe's Environment" />
+</tal:translated>
+<tal:notranslation condition="python:request.get('LANGUAGE','en') == 'en'">
+  <input onFocus="global_searchbox_focus(this)" onBlur="global_searchbox_blur(this)" type="text" name="term" size="35" title="Search Europe's Environment" />
+</tal:notranslation>
   <input class="searchButton"
                type="submit"
                tabindex=""
