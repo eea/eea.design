@@ -301,8 +301,12 @@ float:right;
     height: 0px !important;
     width: <dtml-var "_[logoName].width">px;
     cursor: pointer;
+    position: relative;
+    left: -195px;
+}
 
-
+body.frontpage .portal-logo a {
+    left: 0;
 }
 
 .portal-logo a:hover {
