@@ -121,19 +121,17 @@ body.frontpage ul {
     padding: 0 0;
     margin: 0 0;
     height: 510px;
+    background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
+    padding: 0 1em 1em 0;
 }
 
 #articles-area {
     float: right;
     clear: right;
-    background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
-    padding: 0 1em 1em 0;
 }
 
 #highlights-area {
     float: left;
-    background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
-    padding: 0 1em 1em 0;
 }
 
 body.frontpage .documentActions {
