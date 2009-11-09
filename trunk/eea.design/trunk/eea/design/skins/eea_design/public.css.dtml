@@ -271,6 +271,7 @@ float:right;
     /* We also set max/min width in design.js because IE doens't
      * understand the CSS. So if you change these values, make sure to change
      * design.js too. TODO: use dtml*/
+    width: 98%;
     max-width: 1280px;
     min-width: 972px;
     margin-left: auto;
