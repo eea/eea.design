@@ -74,7 +74,6 @@
 }
 
 #portal-colophon ul {
-    display: table-row;
     list-style-type: none;
 }
 
@@ -86,7 +85,6 @@
 }
 
 #portal-colophon .colophonWrapper {
-    display: table;
     border-collapse: collapse;
     border-spacing: 0;
 }
