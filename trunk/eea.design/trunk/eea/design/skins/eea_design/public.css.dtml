@@ -18,11 +18,17 @@
 
 #tagline {
     color: &dtml-linkHeadingColor;;
-    font-size: 125%;
+    font-size: 100%;
     font-weight: bold;
-    float: right;
     padding-top: 2em;
     padding-right: 1em;
+    position: absolute;
+    left: 350px;
+}
+
+.frontpage #tagline {
+    float: right;
+    position: static;
 }
 
 .documentContent {
@@ -353,10 +359,6 @@ float:right;
     font-size: 80%;
 }
 
-
-#searchbox_terminology {
-
-}
 
 #searchbox_terminology input {
    width: 366px;
