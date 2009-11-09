@@ -13,6 +13,7 @@
           accesskey="6"
           tal:attributes="href string:${request/ACTUAL_URL}#eea-portlet-navigation-tree"
           i18n:translate="label_skiptonavigation">Skip to navigation</a>
+
      
    <div id="cross-site-top">
       <metal:lang metal:use-macro="here/portlet_chooselang/macros/portlet">
@@ -44,8 +45,8 @@
            tal:attributes="alt portal_properties/title;
                            src string:${portal_url}/${logo}" />
 
-      <p id="tagline" condition="onFrontpage" i18n:translate="eea_tagline">
-           Timely data, information and knowledge
+      <p id="tagline" i18n:translate="eea_tagline">
+           Timely data,<br />information and knowledge
       </p>
 
       <a metal:use-macro="here/global_logo/macros/portal_logo">
