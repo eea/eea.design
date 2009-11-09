@@ -43,6 +43,7 @@ div.documentActions,
 #portal-colophon,
 #top-news-area,
 #multimedia-highlights,
+.moreLink,
 .skipnav,
 .visualNoPrint,
 .visualClear {
@@ -136,4 +137,14 @@ a img {
 }
 h2.highlight {
     padding-top: 1em;
+}
+
+#articles-high, #articles-high * {
+    padding: 0;
+    margin: 0;
+}
+
+#print-warning {
+    display: block;
+    margin-bottom: 1em;
 }

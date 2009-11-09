@@ -57,6 +57,11 @@
 <body tal:attributes="class python:here.getSectionFromURL(plone_view);
                       dir python:test(isRTL, 'rtl', 'ltr')">
 
+<div id="print-warning" i18n:domain="eea.translations">
+    <p i18n:translate="print_warning">
+        Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
+    </p>
+</div>
 
 <div id="visual-portal-wrapper">
 
