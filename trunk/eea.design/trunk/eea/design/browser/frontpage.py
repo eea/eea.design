@@ -60,6 +60,7 @@ class Frontpage(BrowserView):
         
         self.noOfHigh = frontpage_properties.getProperty('noOfHigh', 3)
         self.noOfMedium = frontpage_properties.getProperty('noOfMedium', 4)
+        self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
         self.now = DateTime()
 
     def getHigh(self,portaltypes=('Highlight', 'PressRelease'),scale='thumb'):
@@ -88,6 +89,49 @@ class Frontpage(BrowserView):
         """ return a defined number of high visibility articles items """
         results =  self.getHigh(('Article',),'thumb')
         return results
+
+    def getLow(self,portaltypes=('Highlight', 'PressRelease'),scale='dummy'): 
+        visibilityLevel=[ 'top', 'middle', 'bottom' ] 
+        otherIds = [ h['id'] for h in self.getMedium(portaltypes) ] 
+        otherIds.extend( [ h['id'] for h in self.getHigh(portaltypes) ] ) 
+        result =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfHigh + self.noOfMedium + self.noOfLow] 
+        highlights = [] 
+
+        for high in result: 
+            # remove highlights that are display as top or middle 
+            if high['id'] not in otherIds: 
+                obj = high.getObject() 
+                adapter = queryMultiAdapter((obj, self.request), name=u'themes-object', default=None) 
+                themes = [] 
+                if adapter is not None: 
+                   themes = adapter.short_items() 
+
+                highlights.append( { 'id' : high['id'], 
+                 'getUrl' : high['getUrl'] or high.getURL(), 
+                 'getNewsTitle' : high['getNewsTitle'], 
+                 'getTeaser' : high['getTeaser'], 
+                 'effective' : high['effective'], 
+                 'expires' : high['expires'], 
+                 'getVisibilityLevel' : high['getVisibilityLevel'], 
+                 'themes':themes, 
+                  }) 
+
+        return highlights[:self.noOfLow] 
+
+    def getMediumArticles(self): 
+        """ return a defined number of medium visibility articles items """ 
+        results =  self.getMedium(('Article',)) 
+        return results 
+ 
+    def getLowArticles(self): 
+        """ return a defined number of low visibility articles items """ 
+        results =  self.getLow(('Article',)) 
+        return results 
+
+    def _getHighlights(self, visibilityLevel): 
+        """ Deprecated: use more generic _getItemsWithVisibility method instead. """ 
+        results=self._getItemsWithVisibility(visibilityLevel,('Highlight', 'PressRelease')) 
+        return results 
 
     def _getCampaignPromotion(self):
         ret = self.context.restrictedTraverse('@@globalPromotion')()

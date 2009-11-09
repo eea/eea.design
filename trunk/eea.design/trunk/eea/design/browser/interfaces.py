@@ -25,3 +25,18 @@ class IFrontPageHighlights(Interface):
             haven't expired. Sort by publish date and return the number
             that is configured in portal_properties.frontpage_properties.
         """
+
+    def getLow(): 
+        """ return the published highlights with visibility bottom. """ 
+
+    def getMediumArticles(): 
+        """ Return the published articles with visibility `middle` and that 
+            haven't expired. Sort by publish date and return the number 
+            that is configured in portal_properties.frontpage_properties. 
+        """ 
+
+    def getLowArticles(): 
+        """ Return the published articles with visibility `bottom` and that 
+            haven't expired. Sort by publish date and return the number 
+            that is configured in portal_properties.frontpage_properties. 
+        """ 
