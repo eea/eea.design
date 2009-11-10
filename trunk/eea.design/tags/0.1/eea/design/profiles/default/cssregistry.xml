@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_css" meta_type="Stylesheets Registry">
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" id="frontpage.css" media="all" rel="stylesheet"
+    rendering="import"
+    insert-after="textLarge.css" />
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" id="footer.css" media="all" rel="stylesheet"
+    rendering="import" 
+    insert-after="frontpage.css"/>
+</object>

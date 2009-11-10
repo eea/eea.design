@@ -1,0 +1,75 @@
+ <html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+           
+<div id="portal-top" i18n:domain="plone" metal:define-macro="eea">
+      
+      <a href="#documentContent" class="hiddenStructure"
+          accesskey="2"
+          i18n:translate="label_skiptocontent">Skip to content.</a>
+      
+      <a class="hiddenStructure"
+          accesskey="6"
+          tal:attributes="href string:${request/ACTUAL_URL}#eea-portlet-navigation-tree"
+          i18n:translate="label_skiptonavigation">Skip to navigation</a>
+
+     
+   <div id="cross-site-top">
+      <metal:lang metal:use-macro="here/portlet_chooselang/macros/portlet">
+          Global language selector for local sitesc
+      </metal:lang>
+
+      <div metal:use-macro="here/global_externalsites/macros/external_sites">
+          Eionet, EW ..
+      </div>
+
+      <div metal:use-macro="here/global_externalsites/macros/etcs_sites">
+          dropdown for ETCs ..
+      </div>
+
+      <div metal:use-macro="here/global_siteactions/macros/site_actions">
+          Faq, sitemap ..
+      </div>
+      <div class="visualClear"><!-- &nbsp; --></div>      
+   </div>      
+   
+   <tal:searchbox tal:condition="not: onFrontpage|nothing">
+       <div metal:use-macro="here/global_searchbox/macros/quick_search">
+              The quicksearch box, normally placed at the top right
+          </div>
+  </tal:searchbox>
+      
+      <img src="" alt="" id="printLogo"
+           tal:define="logo python:'++resource++eea.translations.images/printlogo-%s.gif' % language"
+           tal:attributes="alt portal_properties/title;
+                           src string:${portal_url}/${logo}" />
+
+      <p id="tagline" i18n:translate="eea_tagline">
+           Timely data,<br />information and knowledge
+      </p>
+
+      <a metal:use-macro="here/global_logo/macros/portal_logo">
+          The portal logo, linked to the portal root
+      </a>
+
+      <div metal:use-macro="here/global_sections/macros/portal_tabs">
+          The global sections tabs. (Welcome, News etc)
+      </div>
+
+   <tal:forCMS tal:condition="not: isAnon|nothing">
+      <div metal:use-macro="here/global_personalbar/macros/personal_bar" >
+          The personal bar. (log in, logout etc...)
+      </div>
+
+      <div metal:use-macro="here/global_pathbar/macros/path_bar">
+             The breadcrumb navigation ("you are here")
+       </div>
+   </tal:forCMS>
+  </div>
+  
+
+  
+ </body>
+ </html>
+

@@ -1,0 +1,26 @@
+=======================================
+eea.design migration from EEADesign2006
+=======================================
+
+Removal of CSS:
+
+  >>> css = self.portal.portal_css
+  >>> 'eea-highlights.css' in css.getResourceIds()
+  True
+  >>> 'portlet.css' in css.getResourceIds()
+  True
+  >>> from Products.CMFCore.utils import getToolByName
+  >>> profile = 'profile-eea.design:default'
+  >>> tool = getToolByName(portal, 'portal_setup')
+  >>> tool.setImportContext(profile)
+  >>> _ = tool.runAllImportSteps()
+  >>> 'eea-highlights.css' in css.getResourceIds()
+  False
+  >>> 'portlet.css' in css.getResourceIds()
+  False
+
+Addition of JS:
+
+  >>> js = self.portal.portal_javascripts
+  >>> 'design.js' in js.getResourceIds()
+  True

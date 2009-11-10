@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+
+<!-- THE SECTION TABS DEFINITION -->
+<div metal:define-macro="portal_tabs"
+     tal:omit-tag=""
+     tal:define="selected_tabs python:here.selectedTabs('index_html', here, portal_tabs);
+                 selected_portal_tab selected_tabs/portal;
+                 site	 options/site|request/site|here/navigationmanager_site|string:default;
+                 tabselected options/tabselected|request/tabselected|context/navigationmanager_menuid|string:default;
+                 navigationmanager nocall:here/portal_navigationmanager|nothing;
+                 portal_nodes python:navigationmanager.getTree(site,tabselected);"
+     tal:condition="portal_nodes">
+
+<!-- h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5 -->
+<ul id="portal-globalnav">
+    <tal:tabs tal:repeat="node portal_nodes">
+        <!-- TAB LOOP -->
+        <li tal:define="tab nocall:node/item" class="plain"
+            tal:attributes="class python:test(node['selected'], 'selected', 'plain')">
+          <tal:noSubmenu><a href="" title="" class="dropTab"
+                 tal:attributes="href tab/url;
+                                 title tab/description|nothing;"><span class="tabTitleText" tal:content="tab/title">Tab Name:</span></a>
+          </tal:noSubmenu>
+        </li>
+    </tal:tabs>
+</ul>
+</div>
+</body>
+</html>
