@@ -28,9 +28,9 @@ __author__ = """unknown <unknown>"""
 __docformat__ = 'plaintext'
 
 from zope.component import queryMultiAdapter, getMultiAdapter
-from plone.memoize.ram import cache
+from eea.cache import cache
 
-from Acquisition import aq_inner, aq_parent
+from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 
@@ -38,6 +38,7 @@ from eea.promotion.interfaces import IPromotion
 
 from Products.Five import BrowserView
 from Products.EEAContentTypes.content.interfaces import IFlashAnimation
+from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 
 from p4a.video.interfaces import IVideoEnhanced
 from eea.themecentre.interfaces import IThemeTagging
@@ -63,6 +64,7 @@ class Frontpage(BrowserView):
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
         self.now = DateTime()
 
+    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getHigh(self,portaltypes=('Highlight', 'PressRelease'),scale='thumb'):
         visibilityLevel='top'
         results =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfHigh]
@@ -72,6 +74,7 @@ class Frontpage(BrowserView):
 
         return highlights
 
+    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getMedium(self,portaltypes=('Highlight', 'PressRelease'),scale='thumb'):
         visibilityLevel=[ 'top', 'middle' ]
         result =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfMedium + self.noOfHigh]
@@ -90,6 +93,7 @@ class Frontpage(BrowserView):
         results =  self.getHigh(('Article',),'thumb')
         return results
 
+    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getLow(self,portaltypes=('Highlight', 'PressRelease'),scale='dummy'): 
         visibilityLevel=[ 'top', 'middle', 'bottom' ] 
         otherIds = [ h['id'] for h in self.getMedium(portaltypes) ] 
@@ -147,6 +151,7 @@ class Frontpage(BrowserView):
                 return ret
         return None
 
+    @cache(cacheKeyPromotions)
     def getPromotions(self):
         campaign = self._getCampaignPromotion()
         if campaign != None:
