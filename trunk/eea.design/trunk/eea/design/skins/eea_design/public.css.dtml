@@ -29,6 +29,7 @@
     position: relative;
     left: 300px;
     float: left;
+    font-style: italic;
 }
 
 .frontpage #tagline {
