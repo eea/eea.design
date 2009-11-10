@@ -327,6 +327,7 @@ body.frontpage .portal-logo a {
 #cross-site-top {
     background-color: white;
     margin-top: 1px;
+    height: 30px;
     padding: 5px 0;
 }
 
