@@ -1,8 +1,15 @@
 Changelog
 =========
 
-0.1 - Unreleased
-----------------
+0.2 - (2009-11-10)
+------------------
+
+ * print.css added
+ * tagline fixes
+ * a-z glossary link style
+
+0.1 - (2009-11-10)
+------------------
 
 * Initial release
 
