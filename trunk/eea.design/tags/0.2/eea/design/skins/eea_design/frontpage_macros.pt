@@ -1,0 +1,141 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+      
+<body>
+
+<div metal:define-macro="high" 
+		id="highlights-high" 
+		class="highlights"
+		tal:define="highlights frontpage_view/getHigh;
+		            plone_view nocall:plone_view|here;">
+	
+    <div class="highlightHigh" metal:define-macro="highnews"
+    		tal:condition="highlights" 
+    		tal:repeat="hl highlights">
+         <div class="visualPadding">
+          <h2 class="highlight">
+	       <a href="#" class="noPrint"
+                  tal:attributes="href hl/getUrl"
+                  tal:content="hl/getNewsTitle">
+	       			Highlight Title</a></h2>
+   
+            <div class="figure-left">
+                      <tal:image define="figure hl/media|nothing;
+                               figure_link hl/getUrl;
+                               figure_scale string:thumb;"
+                             condition="figure">
+                   <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
+                 </tal:image>
+            </div>
+
+	
+	   <span class="date" 
+              tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+              tal:content="date"> 07 Dec 2005 </span>
+           <p class="teaser">
+	       <span tal:replace="structure hl/getTeaser">Teaser</span>
+               <a href="" title=""
+                  tal:attributes="href hl/getUrl;
+	                          title hl/getNewsTitle" class="moreLink"
+                  i18n:translate="box_morelink">More</a>
+               <br clear="all" /></p>
+         </div>
+        <div class="visualClear"><!-- --></div>
+     </div>
+</div>
+
+<div metal:define-macro="highArticles" 
+		id="articles-high" 
+		class="highlights"
+		tal:define="highlights frontpage_view/getHighArticles;
+		            plone_view nocall:plone_view|here;">
+    <metal:items use-macro="here/frontpage_macros/macros/middlenews-short" />
+</div>
+
+<div metal:define-macro="middle" 
+        class="highlights"
+		id="highlights-middle" 
+		tal:define="highlights frontpage_view/getMedium;
+		            plone_view nocall:plone_view|here">
+
+  <metal:items  define-macro="middlenews"
+                tal:condition="highlights"
+                tal:repeat="hl highlights">
+		
+     <div class="highlightMiddle">
+  
+	    <h3 class="highlight">
+	       <a href="#" class="noPrint"
+	       		tal:attributes="href hl/getUrl"
+	       		tal:content="hl/getNewsTitle">
+	       			Highlight Title</a></h3>
+	   	     <span class="date" 
+                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+	    	  tal:content="date">07 Dec 2005 </span> 
+	    	              
+       </div>
+    </metal:items>
+</div>
+
+<div metal:define-macro="middle-short"
+        class="highlights"
+                id="highlights-middle"
+                tal:define="highlights frontpage_view/getMedium;
+                            plone_view nocall:plone_view|here">
+
+  <metal:items  define-macro="middlenews-short"
+                tal:condition="highlights"
+                tal:repeat="hl highlights">
+
+     <div class="highlightMiddle shortNews">
+            
+             <h3 class="shortNewsTitle">
+             <a href="#" class="noPrint"
+                        tal:attributes="href hl/getUrl"
+                        tal:content="hl/getNewsTitle">
+                                Highlight Title</a></h3>
+
+             <span class="date"
+                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])"
+                  tal:content="date">07 Dec 2005 </span>
+             <br clear="all" />
+       </div>
+    </metal:items>
+</div>
+
+<div metal:define-macro="multimedia" 
+		class="highlightMiddle shortNews"
+		id="multimedia-highlights" 
+		tal:define="vids frontpage_view/getMultimedia;"
+                tal:condition="vids|nothing">
+		    
+    <tal:defines  
+        tal:define="first_vid python:vids[0];
+ 	            three_other python:vids[1:];">
+    <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Multimedia">Multimedia</h2>
+    <h3 class="shortNewsTitle visualPadding">
+        <a class="thickbox"
+            href="#"
+            tal:content="first_vid/title"
+            tal:attributes="href first_vid/url">
+        </a>
+    </h3>
+    <div class="visualPadding">
+        <ul>
+            <metal:items tal:repeat="vid three_other" >
+                <li class="vidthumb" tal:define="last repeat/vid/end" tal:attributes="class python:test(last, 'vidthumb last', 'vidthumb')">
+                    <tal:imglink tal:replace="structure vid/imglink"/>
+                </li>
+            </metal:items>
+        </ul>
+        <div id="big_vid">
+            <tal:imglink tal:replace="structure first_vid/imglink"/>
+        </div>
+        <div class="visualClear"><!-- --></div>
+    </div>
+    </tal:defines>
+</div>
+
+</body>
+</html>
