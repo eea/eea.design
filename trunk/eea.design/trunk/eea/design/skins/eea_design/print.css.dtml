@@ -41,8 +41,7 @@ div.documentActions,
 .documentByLine,
 .netscape4,
 #portal-colophon,
-#top-news-area,
-#multimedia-highlights,
+body.frontpage .portlet-promotions,
 .moreLink,
 .skipnav,
 .visualNoPrint,
@@ -58,6 +57,12 @@ body {
     width: auto;
 }
 
+#portal-visual-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2, h3, h4, h5, h6
 {
     border: none;
@@ -66,11 +71,11 @@ h1, h2, h3, h4, h5, h6
 }
 
 div, p, ul, dl, ol {
-    width: auto ! important;
+    width: auto !important;
 }
 
 * html #content {
-    width: auto ! important;
+    width: auto !important;
 }
 
 ul, ol, dl {
@@ -80,7 +85,6 @@ ul, ol, dl {
 ul { 
     list-style-type: square;
 }
-
 
 .documentDescription {
     font-weight: bold;
@@ -99,9 +103,11 @@ table.listing td {
     border: 1pt solid black;
     border-collapse: collapse;
 }
+
 td a img {
     display: none;
 }
+
 a {
     color: Black !important;
     text-decoration: none !important;
@@ -111,9 +117,11 @@ a:link, a:visited {
     color: #520;
     background: transparent;
 }
+
 a img {
     border: none;
 }
+
 #content {
     white-space: normal;
 }
@@ -123,28 +131,29 @@ a img {
     content: '';
 }
 
-
 #printLogo {
-    display: block ! important;
+    display: block !important;
     float: right;
     width: 7.5cm;
 }
 
-#highlights-middle .highlightMiddleR,
-#highlights-middle .highlightMiddleL {
-    float: none !important;
-    width: 100%;
-}
 h2.highlight {
     padding-top: 1em;
-}
-
-#articles-high, #articles-high * {
-    padding: 0;
-    margin: 0;
 }
 
 #print-warning {
     display: block;
     margin-bottom: 1em;
+}
+
+body.frontpage .column-area,
+.portlet-rss {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 1em;
+}
+
+.portlet-rss * {
+    clear: both;
 }
