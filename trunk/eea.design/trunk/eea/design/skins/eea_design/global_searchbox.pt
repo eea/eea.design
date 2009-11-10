@@ -27,7 +27,7 @@ environment" />
                 />
   <br clear="all" />
 <tal:notfrontpage condition="not:onFrontpage|nothing">
-  <a href="http://glossary.eea.europa.eu/"
+  <a class="azglossary" href="http://glossary.eea.europa.eu/"
      tal:attributes="href python:'http://glossary.%s.eea.europa.eu'%request.get('LANGUAGE', 'en')"
      >A-Z Glossary</a>
 </tal:notfrontpage>

@@ -39,6 +39,10 @@
     font-size: 120%;
 }
 
+.azglossary {
+    padding-right: 3.5em;
+}
+
 .documentContent {
     background: &dtml-backgroundColor;;
     padding: 0em 1em 2em 1em;
