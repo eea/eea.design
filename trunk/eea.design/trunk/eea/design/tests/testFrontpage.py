@@ -100,13 +100,13 @@ class TestFrontPage(EEAMegaTestCase):
         self.failIf( result != answer, message )
 
         # only display ONE top highlight
-        self.portal.portal_properties.frontpage_properties.noOfHigh =  1
+        self.portal.portal_properties.frontpage_properties.noOfHigh =  2
         # we need to invalidate cache
         notify(InvalidateCacheEvent(raw=True, dependencies=['frontpage-highlights']))
         view = Frontpage(self.portal, self.app.REQUEST)
         brains = view.getHigh()
         result = [ high['id'] for high in brains ]
-        answer = highlights[:1]
+        answer = highlights[:2]
         message = '%s != %s' % (result, answer)
         self.failIf( result != answer, message )
 
