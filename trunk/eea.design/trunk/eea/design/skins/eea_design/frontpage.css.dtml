@@ -120,7 +120,6 @@ body.frontpage ul {
     width: 48%;
     margin: 0 0;
     padding: 0 1em 1em 0;
-    height: 510px;
     background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
 }
 

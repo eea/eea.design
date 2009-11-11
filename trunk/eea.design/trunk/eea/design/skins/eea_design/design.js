@@ -37,4 +37,8 @@ $(window).resize(function() {
     // TODO: why does the ul look a little bit too big in IE6 and 7?
     var margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
     $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
+
+    // Make sure both frontpage columns have the same height:
+    var largest_column_height = Math.max($("#articles-area").height(), $("#highlights-area").height());
+    $(".frontpage .column-area").height(largest_column_height);
 });

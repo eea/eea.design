@@ -4,6 +4,7 @@ Changelog
 0.3 - (Unreleased)
 ------------------
 
+ * Fixed content overflow in frontpage column areas. [thuliper]
  * Fixed document actions position too high #2792. [thuliper]
  * Fixed bug where promotions on theme pages sometimes took up too little width. [thuliper]
 
