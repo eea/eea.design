@@ -88,8 +88,8 @@
 </metal:portlet>
 
 <metal:portlet define-macro="campaign"
-               tal:condition="promotions|nothing"
-               tal:define="promo python:promotions[0];">
+               tal:condition="campaign|nothing"
+               tal:define="promo python:campaign[0];">
     <a id="campaign-banner" href="#" title="" tal:attributes="href promo/url; title promo/Title">
         <img src="campaign-banner" alt="" tal:attributes="alt promo/Title" />
     </a>

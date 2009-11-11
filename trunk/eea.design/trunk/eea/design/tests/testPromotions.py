@@ -153,21 +153,22 @@ class TestPromotions(EEAMegaTestCase):
         promo.locations = [u'Global']
         self.assertEquals(promo.display_globally, True)
 
-        # We should still get back the 5 regular promotions because there's no
-        # campaign banner uploaded
-        result = self.view.getPromotions()
-        self.assertEquals(len(result), 5)
+        # There's no campaign banner, so we shouldn't get back any campaign
+        # promotion:
+        result = self.view.getCampaign()
+        self.assertEquals(result, None)
 
-        # Lets upload such an image. Because we leave it unpublished, we still
-        # get back the 5 regular promotions
+        # Let's upload the banner. Because we leave it unpublished, it still
+        # doesn't work:
         img = self.portal[self.portal.invokeFactory('Image', id='campaign-banner')]
-        self.assertEquals(len(result), 5)
+        result = self.view.getCampaign()
+        self.assertEquals(result, None)
 
         # When we publish the campaign banner, the frontpage promotion area
         # switches to campaign mode
         self.portal.portal_workflow.doActionFor(img, 'publish')
         img.reindexObject()
-        result = self.view.getPromotions()
+        result = self.view.getCampaign()
         self.assertEquals(len(result), 1, len(result))
         self.assertEquals(result[0]['id'], item.id, result)
 

@@ -137,7 +137,7 @@ class Frontpage(BrowserView):
         results=self._getItemsWithVisibility(visibilityLevel,('Highlight', 'PressRelease')) 
         return results 
 
-    def _getCampaignPromotion(self):
+    def getCampaign(self):
         ret = self.context.restrictedTraverse('@@globalPromotion')()
         if ret == None:
             return None
@@ -153,10 +153,6 @@ class Frontpage(BrowserView):
 
     @cache(cacheKeyPromotions)
     def getPromotions(self):
-        campaign = self._getCampaignPromotion()
-        if campaign != None:
-            return campaign
-
         # Each theme represents a category
         query = {
             'object_provides': 'eea.themecentre.interfaces.IThemeCentre',

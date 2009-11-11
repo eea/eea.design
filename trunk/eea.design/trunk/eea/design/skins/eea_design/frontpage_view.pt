@@ -13,11 +13,11 @@
                 Document actions (print, sendto etc)
             </div>
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
-                <div id="top-news-area" tal:define="global promotions frontpage_view/getPromotions">
-                    <tal:dummy tal:condition="python:len(promotions) == 1 or 'force_campaign' in request">
+                <div id="top-news-area" tal:define="global promotions frontpage_view/getPromotions; global campaign frontpage_view/getCampaign">
+                    <tal:dummy tal:condition="campaign">
                         <metal:promotions use-macro="here/portlet_promotions/macros/campaign" />
                     </tal:dummy>
-                    <tal:dummy tal:condition="python:len(promotions) &gt; 1 and 'force_campaign' not in request">
+                    <tal:dummy tal:condition="not: campaign">
                         <metal:promotions use-macro="here/portlet_promotions/macros/all" />
                     </tal:dummy>
                     <div class="visualClear"><!-- &nbsp; --></div>
