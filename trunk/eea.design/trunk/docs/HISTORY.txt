@@ -4,6 +4,7 @@ Changelog
 0.3 - (Unreleased)
 ------------------
 
+ * Fixed document actions position too high #2792. [thuliper]
  * Fixed bug where promotions on theme pages sometimes took up too little width. [thuliper]
 
 0.2 - (2009-11-10)
