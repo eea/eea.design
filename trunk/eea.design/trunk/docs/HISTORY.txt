@@ -4,6 +4,7 @@ Changelog
 0.3 - (Unreleased)
 ------------------
 
+ * Fixed searchbox not removing default text when focused. [thuliper]
  * Fixed campaign mode/regular promotions logic so that it does not crash when there's only one promotion. [thuliper]
  * Fixed content overflow in frontpage column areas. [thuliper]
  * Fixed document actions position too high #2792. [thuliper]

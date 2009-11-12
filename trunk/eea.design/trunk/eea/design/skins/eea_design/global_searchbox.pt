@@ -12,12 +12,10 @@
      >A-Z Glossary</a>
 </tal:notfrontpage>
 <tal:translated condition="python:request.get('LANGUAGE','en') != 'en'">
-  <input onFocus="global_searchbox_focus(this)" onBlur="global_searchbox_blur(this)" type="text" name="term" size="35" i18n:attributes="title 
-Search;" title="Search Europe's environment" />
+  <input type="text" name="term" size="35" i18n:attributes="title Search;" title="Search Europe's environment" />
 </tal:translated>
 <tal:notranslation condition="python:request.get('LANGUAGE','en') == 'en'">
-  <input onFocus="global_searchbox_focus(this)" onBlur="global_searchbox_blur(this)" type="text" name="term" size="35" title="Search Europe's 
-environment" />
+  <input type="text" name="term" size="35" title="Search Europe's environment" />
 </tal:notranslation>
   <input class="searchButton"
                type="submit"
