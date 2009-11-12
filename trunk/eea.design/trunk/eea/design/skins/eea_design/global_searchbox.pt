@@ -1,36 +1,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
       i18n:domain="eea.translations">
-
 <body>
+
 <!-- THE SEARCHBOX DEFINITION -->
 <div id="portal-searchbox" metal:define-macro="quick_search">
-
-<form action="http://glossary.eea.europa.eu/terminology/sitesearch" tal:attributes="action python:'http://glossary.'+request.get('LANGUAGE', 'en')+'.eea.europa.eu/terminology/sitesearch'" id="searchbox_terminology" name="searchform">
-<tal:notfrontpage condition="onFrontpage|nothing">
-  <a href="http://glossary.eea.europa.eu/"
-     tal:attributes="href python:'http://glossary.%s.eea.europa.eu'%request.get('LANGUAGE', 'en')"
-     >A-Z Glossary</a>
-</tal:notfrontpage>
-<tal:translated condition="python:request.get('LANGUAGE','en') != 'en'">
-  <input type="text" name="term" size="35" i18n:attributes="title Search;" title="Search Europe's environment" />
-</tal:translated>
-<tal:notranslation condition="python:request.get('LANGUAGE','en') == 'en'">
-  <input type="text" name="term" size="35" title="Search Europe's environment" />
-</tal:notranslation>
-  <input class="searchButton"
-               type="submit"
-               tabindex=""
-               value=""
-               tal:attributes="tabindex tabindex/next"
-                />
-  <br clear="all" />
-<tal:notfrontpage condition="not:onFrontpage|nothing">
-  <a class="azglossary" href="http://glossary.eea.europa.eu/"
-     tal:attributes="href python:'http://glossary.%s.eea.europa.eu'%request.get('LANGUAGE', 'en')"
-     >A-Z Glossary</a>
-</tal:notfrontpage>
-</form>
-
+    <form action="http://glossary.eea.europa.eu/terminology/sitesearch" tal:attributes="action python:'http://glossary.'+request.get('LANGUAGE', 'en')+'.eea.europa.eu/terminology/sitesearch'" id="searchbox_terminology" name="searchform">
+        <tal:notfrontpage condition="onFrontpage|nothing">
+            <a href="http://glossary.eea.europa.eu/"
+               tal:attributes="href python:'http://glossary.%s.eea.europa.eu'%request.get('LANGUAGE', 'en')"
+               >A-Z Glossary</a>
+        </tal:notfrontpage>
+        <tal:translated condition="python:request.get('LANGUAGE','en') != 'en'">
+            <input type="text" name="term" size="35" i18n:attributes="title Search;" title="Search Europe's environment" />
+        </tal:translated>
+        <tal:notranslation condition="python:request.get('LANGUAGE','en') == 'en'">
+            <input type="text" name="term" size="35" title="Search Europe's environment" />
+        </tal:notranslation>
+            <input class="searchButton"
+                   type="submit"
+                   tabindex=""
+                   value=""
+                   tal:attributes="tabindex tabindex/next"
+                   />
+            <br clear="all" />
+        <tal:notfrontpage condition="not:onFrontpage|nothing">
+            <a class="azglossary" href="http://glossary.eea.europa.eu/"
+               tal:attributes="href python:'http://glossary.%s.eea.europa.eu'%request.get('LANGUAGE', 'en')"
+               >A-Z Glossary</a>
+        </tal:notfrontpage>
+    </form>
 </div>
+
 </body>
 </html>
