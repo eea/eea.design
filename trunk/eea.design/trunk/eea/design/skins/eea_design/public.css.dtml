@@ -36,7 +36,7 @@
     color: &dtml-linkHeadingColor;;
     float: right;
     position: static;
-    font-size: 120%;
+    width: 16em;
 }
 
 .azglossary {
