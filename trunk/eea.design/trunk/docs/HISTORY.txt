@@ -4,6 +4,7 @@ Changelog
 0.3 - (Unreleased)
 ------------------
 
+ * Display info/warning dialog before printing #2791. [thuliper]
  * Removed frontpage multimedia from print.css - it didn't layout correctly in IE. [thuliper]
  * Fixed searchbox not removing default text when focused. [thuliper]
  * Fixed campaign mode/regular promotions logic so that it does not crash when there's only one promotion. [thuliper]

@@ -24,3 +24,5 @@ Addition of JS:
   >>> js = self.portal.portal_javascripts
   >>> 'design.js' in js.getResourceIds()
   True
+  >>> 'print_warning.js' in js.getResourceIds()
+  True
