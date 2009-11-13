@@ -4,12 +4,13 @@ Changelog
 0.3 - (Unreleased)
 ------------------
 
+ * Removed frontpage multimedia from print.css - it didn't layout correctly in IE. [thuliper]
  * Fixed searchbox not removing default text when focused. [thuliper]
  * Fixed campaign mode/regular promotions logic so that it does not crash when there's only one promotion. [thuliper]
  * Fixed content overflow in frontpage column areas. [thuliper]
  * Fixed document actions position too high #2792. [thuliper]
  * Fixed bug where promotions on theme pages sometimes took up too little width. [thuliper]
- * Fixed horizontal scrollbar on frontpage in IE7/8
+ * Fixed horizontal scrollbar on frontpage in IE7/8. [vincisas]
 
 0.2 - (2009-11-10)
 ------------------

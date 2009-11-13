@@ -41,13 +41,14 @@ div.documentActions,
 .documentByLine,
 .netscape4,
 #portal-colophon,
+#multimedia-highlights,
 body.frontpage .portlet-promotions,
 .moreLink,
 .skipnav,
 .visualNoPrint,
 .visualClear {
     /* Hides all the elements irrelevant for printing */
-    display: none;
+    display: none !important;
 }
 
 body {
