@@ -78,11 +78,6 @@
         <!-- start of main content block -->
         <div id="portal-column-content" 
              tal:define="tabindex python:Iterator(pos=0, mainSlot=True)">
-           <tal:searchbox tal:condition="onFrontpage">
-               <div metal:use-macro="here/global_searchbox/macros/quick_search">
-                      The quicksearch box, normally placed at the top right
-                  </div>
-          </tal:searchbox>
 
            <tal:breadcrumbs tal:condition="inApplication">
               <metal:base use-macro="here/global_pathbar/macros/path_bar" />
