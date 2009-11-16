@@ -20,25 +20,6 @@
     display: none;
 }
 
-#tagline { 
-    color: white;
-    font-size: 120%;
-    font-weight: bold;
-    padding-top: 2em;
-    padding-right: 1em;
-    position: relative;
-    left: 300px;
-    float: left;
-    font-style: italic;
-}
-
-.frontpage #tagline {
-    color: &dtml-linkHeadingColor;;
-    float: right;
-    position: static;
-    width: 16em;
-}
-
 .azglossary {
     padding-right: 3.5em;
 }
@@ -312,10 +293,6 @@ float:right;
     cursor: pointer;
     position: relative;
     left: -195px;
-}
-
-body.frontpage .portal-logo a {
-    left: 0;
 }
 
 .portal-logo a:hover {

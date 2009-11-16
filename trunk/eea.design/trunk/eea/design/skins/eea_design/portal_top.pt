@@ -45,10 +45,6 @@
            tal:attributes="alt portal_properties/title;
                            src string:${portal_url}/${logo}" />
 
-      <p id="tagline" i18n:translate="eea_tagline">
-           Timely data,<br />information and knowledge
-      </p>
-
       <a metal:use-macro="here/global_logo/macros/portal_logo">
           The portal logo, linked to the portal root
       </a>
