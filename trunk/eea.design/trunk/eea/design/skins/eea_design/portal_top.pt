@@ -34,11 +34,11 @@
       <div class="visualClear"><!-- &nbsp; --></div>      
    </div>      
    
-   <tal:searchbox tal:condition="not: onFrontpage|nothing">
+   <tal:searchbox>
        <div metal:use-macro="here/global_searchbox/macros/quick_search">
               The quicksearch box, normally placed at the top right
           </div>
-  </tal:searchbox>
+   </tal:searchbox>
       
       <img src="" alt="" id="printLogo"
            tal:define="logo python:'++resource++eea.translations.images/printlogo-%s.gif' % language"
