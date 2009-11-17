@@ -1,6 +1,15 @@
 var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
+$(document).ready(function() {
+    // Show view in fullscreen for /data-and-maps/figure and /data-and-maps/data
+    var r = /data-and-maps\/(figures|data)\/?$/;
+    if (r.test(window.location.pathname)) {
+        $('body').addClass('fullscreen');
+        $('#icon-full_screen').parent().remove();
+    }
+});
+
 $(window).load(function() {
     $(window).resize();
 });

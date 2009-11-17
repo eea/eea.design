@@ -4,6 +4,8 @@ Changelog
 0.3 - (Unreleased)
 ------------------
 
+ * Made /data-and-maps/figures and /data-and-maps/data show in fullscreen. [thuliper]
+ * Removed tagline and frontpage-searchbox. [demarant]
  * Display info/warning dialog before printing #2791. [thuliper]
  * Removed frontpage multimedia from print.css - it didn't layout correctly in IE. [thuliper]
  * Fixed searchbox not removing default text when focused. [thuliper]
