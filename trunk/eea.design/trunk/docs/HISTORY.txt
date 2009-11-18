@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3 - (Unreleased)
+0.3 - (2009-11-18)
 ------------------
 
  * Made /data-and-maps/figures and /data-and-maps/data show in fullscreen. [thuliper]
