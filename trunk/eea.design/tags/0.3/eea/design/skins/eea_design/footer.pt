@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="eea.translations">
+<body>
+
+<metal:footer   metal:define-macro="portal_footer" i18n:domain="eea.translations">
+<br clear="all" />
+<div id="footer-wrapper">
+   <div id="bg-wrapper">
+      <div id="portal-footer">
+        <metal:ecotip use-macro="context/portlet_ecotip/macros/portlet" />
+
+          <a href="http://www.eea.europa.eu"
+             tal:attributes="href local_site|portal_url">
+                   <img src="logobtm.gif" class="image-right" alt="EEA Logo" 
+                        tal:define="lang python:request.get('LANGUAGE','en')"
+                        tal:attributes="src python: lang=='en' and 'http://www.eea.europa.eu/logobtm.gif' or '%s/++resource++eea.translations.images/logobtm-%s.gif' % (portal_url, lang)"/>
+          </a>
+
+          <div class="visualClear"></div>
+      </div>
+  </div>
+</div>
+<div class="visualClear"></div>
+<div id="colophon-wrapper">
+<p>
+    <tal:address i18n:translate="European Environment Agency, Kongens Nytorv 6, DK - 1050 Copenhagen K, Denmark - Phone: +45 3336 7100"> European Environment Agency (EEA), Kongens Nytorv 6, 1050 
+Copenhagen K, Denmark - Phone: +45 3336 7100</tal:address><br />
+     <img src="http://www.eea.europa.eu/eu-flag.gif" alt="EU flag" class="image-left" style="width: 50px"/>The European Environment Agency (EEA) is an agency of the European Union.<br clear="all" />
+    <tal:comments i18n:translate="comments_to">Comments to</tal:comments> <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>.<br />
+<br /><a href="http://www.eea.europa.eu/copyright" xmlns:cc="http://creativecommons.org/ns#" tal:attributes="href string:${local_site}/legal/copyright" rel="cc:morePermissions"><tal:translate 
+i18n:translate="Legal notice">Legal notice</tal:translate></a>, <a href="http://www.eea.europa.eu/disclaimer" tal:attributes="href string:${local_site}/legal/disclaimer" title="Disclaimer" i18n:translate="Disclaimer" i18n:attributes="title">Disclaimer</a>, <a href="http://www.eea.europa.eu/privacy/" tal:attributes="href string:${local_site}/legal/privacy" title="Privacy policy" i18n:translate="Privacy policy" i18n:attributes="title">Privacy policy</a>
+   </p>
+
+<metal:colophon use-macro="context/colophon/macros/colophon" />
+
+
+</div>
+</metal:footer>
+</body>
+</html>
+
+
+<div class="visualClear">
+<div class="contentColumnOne">
+<a href="">What is happening?<br />Environmental issues</a>
+<ul><li><a href="resolveuid/0d2e3d3da1d2f8f1cc4f029a27b931d0">Air pollution</a></li><li><a href="resolveuid/cd6bef0c97b6c8ea3e216267af7f1605">Biodiversity</a></li><li><a href="resolveuid/619d5ebc70dbdf9895dda7c815c5364b">Chemicals</a></li><li><a href="resolveuid/6723e6872d33d022a07eeae0e235ac48">Climate change</a></li><li><a href="resolveuid/25f41725a7916d7368797edf78f06cad">Environment and health</a></li><li><a title="Land use" class="internal-link" href="resolveuid/5412da76e31aedcea4ce1d520518604f">Land use</a></li><li><a href="resolveuid/c64f9ed39bae175c77ee5fe3729472f6">Natural resources</a></li><li><a href="resolveuid/5757e1ebd370ac9f0b9d9c4c41667304">Noise</a></li><li><a href="resolveuid/e1129312d1ed476a3c54cf1c256e972f">Soil</a></li><li><a href="resolveuid/912645e2479b571df739342b290cabbc">Waste and material resources</a></li><li><a href="resolveuid/b6ef38c3f2e84948314b397d7668ea41">Water</a></li><li><a href="resolveuid/057759082066e8d4cc5ff7f3f8364442">Various other issues</a></li></ul>
+</div>
+<div class="contentColumnTwo">
+<h2>Why is it happening?<br />Sectors and activities</h2>
+<ul><li><a href="resolveuid/47c19827e0f4e840c77ae6281f124f50">Agriculture</a></li><li><a href="resolveuid/3cdc3686b331e7d580f9ade779c72ad9">Energy</a></li><li><a href="resolveuid/61d1a9fbb975c5f3032dae362b3fff3b">Fisheries</a></li><li><a href="resolveuid/5608e23801e3ac58668f8db1bdc0dc66">Household consumption</a></li><li><a href="resolveuid/701da5f4fedf304c23433cba18a76fa2">Industry</a></li><li><a href="resolveuid/e6a0723e37a75edc6a5387f8881eb183">Population and economy</a></li><li><a href="resolveuid/29c22f68b31a59ba5e93f965ae506868">Tourism</a></li><li><a href="resolveuid/ca85d70438bcda31f0014606bced7455">Transport</a></li></ul>
+</div>
+</div>
+<div class="visualClear">
+<div class="contentColumnOne">
+<h2>Environment in different regions and specific areas</h2>
+<ul><li><a href="resolveuid/c79b3492043943b66cffa48c47f4c3a2">Coasts and seas</a></li><li><a href="resolveuid/515694fae21c1d760e5179a63291750b">Specific regions</a></li><li><a href="resolveuid/e1a9f122c53c04739892f0e81a902989">Urban environment</a></li></ul>
+</div>
+<div class="contentColumnTwo">
+<h2>
+Across environmental issues and sectors</h2>
+<ul><li><a title="Environmental technology" class="internal-link" href="resolveuid/0742501c1bd96c82e8bb993ee49f120c">Environmental technology</a><br /></li><li><a href="resolveuid/f68e62dd80ecbc75f123197e48ef3ceb">Policy instruments<br /></a></li><li><a href="resolveuid/bd4c672611920251e0ae681dfcbfd285">Environmental scenarios</a></li></ul>
+</div>
+</div>

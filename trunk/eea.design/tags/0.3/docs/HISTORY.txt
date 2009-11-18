@@ -1,0 +1,29 @@
+Changelog
+=========
+
+0.3 - (2009-11-18)
+------------------
+
+ * Made /data-and-maps/figures and /data-and-maps/data show in fullscreen. [thuliper]
+ * Removed tagline and frontpage-searchbox. [demarant]
+ * Display info/warning dialog before printing #2791. [thuliper]
+ * Removed frontpage multimedia from print.css - it didn't layout correctly in IE. [thuliper]
+ * Fixed searchbox not removing default text when focused. [thuliper]
+ * Fixed campaign mode/regular promotions logic so that it does not crash when there's only one promotion. [thuliper]
+ * Fixed content overflow in frontpage column areas. [thuliper]
+ * Fixed document actions position too high #2792. [thuliper]
+ * Fixed bug where promotions on theme pages sometimes took up too little width. [thuliper]
+ * Fixed horizontal scrollbar on frontpage in IE7/8. [vincisas]
+
+0.2 - (2009-11-10)
+------------------
+
+ * print.css added
+ * tagline fixes
+ * a-z glossary link style
+
+0.1 - (2009-11-10)
+------------------
+
+* Initial release
+
