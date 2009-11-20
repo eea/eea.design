@@ -207,17 +207,14 @@ class Frontpage(BrowserView):
             if theme == 'default':
                 continue
 
-            info = {
+            cPromos[theme] = [{
                 'id' : brain.id,
                 'Description' : brain.Description,
                 'Title' : brain.Title,
                 'url' : promo.url,
-                'style' : 'display: none;',
-                'imglink' : getMultiAdapter((obj, obj.REQUEST),
-                     name='promo_imglink')('preview'),
-                'image' : brain.getURL() + '/image',
-            }
-            cPromos[theme] = [info]
+                'absolute_url' : brain.getURL(),
+                'is_video' : IVideoEnhanced.providedBy(obj),
+            }]
 
             if len(cPromos.keys()) == 5:
                 break
@@ -225,7 +222,6 @@ class Frontpage(BrowserView):
         promotions = []
         for theme, promos in cPromos.items():
             if promos is not None:
-                promos[0]['style'] = 'display: block;'
                 promotions.append({
                     'category' : categories[theme],
                     'promotions' : promos
@@ -250,9 +246,9 @@ class Frontpage(BrowserView):
         for brain in result[:4]:
             obj = brain.getObject()
             info = {
-                'imglink': getMultiAdapter((obj, obj.REQUEST), name='imglink')('wide'),
                 'title': brain.Title,
-                'url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
+                'url': brain.getURL(),
+                'listing_url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
             }
             output.append(info)
         return output

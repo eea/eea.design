@@ -125,12 +125,16 @@
         <ul>
             <metal:items tal:repeat="vid three_other" >
                 <li class="vidthumb" tal:define="last repeat/vid/end" tal:attributes="class python:test(last, 'vidthumb last', 'vidthumb')">
-                    <tal:imglink tal:replace="structure vid/imglink"/>
+                    <a class="thickbox" href="" tal:attributes="href vid/listing_url">
+                        <img src="" tal:attributes="src string:${vid/url}/image_wide" />
+                    </a>
                 </li>
             </metal:items>
         </ul>
         <div id="big_vid">
-            <tal:imglink tal:replace="structure first_vid/imglink"/>
+            <a class="thickbox" href="" tal:attributes="href first_vid/listing_url">
+                <img src="" tal:attributes="src string:${first_vid/url}/image_wide" />
+            </a>
         </div>
         <div class="visualClear"><!-- --></div>
     </div>

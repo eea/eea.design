@@ -128,20 +128,24 @@
         <tal:promotions repeat="promo promotions">
         <dd class="portletItem hide-promo" id=""
             tal:attributes="id string:${catId}-${promo/id}"
-            tal:define="imglink promo/imglink|nothing">
-            <metal:imglink tal:condition="imglink" tal:replace="structure imglink">
-            <tal:comment>
-                <a href="" class="portletHeader" title="Promo Description">
-                    Promo Title
-                    <br clear="all" />
-                </a>
-                <a href="imgurl" class="portletHeader" title="Promo Description">
-                    Promo Title
-                    <br clear="all" />
-                    <img src="" alt="Image Caption"/>
-                </a>
-            </tal:comment>
-            </metal:imglink>
+            tal:define="imgsize imgsize|string:image_thumb;
+                        imgurl string:${promo/absolute_url}/${imgsize}">
+            <a tal:attributes="href promo/url;
+                               title promo/Description;
+                               class python:test(promo['is_video'], 'thickbox', '')">
+               <img tal:attributes="src imgurl; title promo/Title; alt promo/Title"/>
+            </a>
+            <a class="portletHeader"
+               tal:attributes="href promo/url;
+                               title promo/Description;
+                               class python:test(promo['is_video'], 'portletHeader thickbox', 'portletHeader')"
+               tal:content="promo/Title">
+                [Promo Title]
+                <br clear="all" />
+            </a>
+            <a style="display: none;" tal:attributes="href imgurl">
+                Image link
+            </a>
         </dd>
         </tal:promotions>
     </dl>

@@ -18,7 +18,8 @@
                         <tal:dummy tal:condition="campaign">
                             <metal:promotions use-macro="here/portlet_promotions/macros/campaign" />
                         </tal:dummy>
-                        <tal:dummy tal:condition="not: campaign">
+                        <tal:dummy tal:condition="not: campaign"
+                                   tal:define="global imgsize string:image_preview">
                             <metal:promotions use-macro="here/portlet_promotions/macros/all" />
                         </tal:dummy>
                     <div class="visualClear"><!-- &nbsp; --></div>

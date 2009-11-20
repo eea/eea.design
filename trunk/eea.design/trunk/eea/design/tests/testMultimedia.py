@@ -60,12 +60,6 @@ class TestMultimedia(EEAMegaTestCase):
         expected_titles = ['Vid 0', 'Vid 1', 'Vid 2', 'Vid 3']
         self.failIf(titles != expected_titles, titles)
 
-    def test_sizes(self):
-        """Image links should be widescreen"""
-        imglinks = [i['imglink'] for i in self.result]
-        for i in imglinks:
-            self.failIf('image_wide' not in i, i)
-
 
 def test_suite():
     from unittest import TestSuite, makeSuite
