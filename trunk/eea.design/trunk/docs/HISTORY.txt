@@ -4,6 +4,7 @@ Changelog
 0.4 - (Unreleased)
 ------------------
 
+ * Fit current navigation in lowest supported resolution [vincisas]
 
 0.3 - (2009-11-18)
 ------------------

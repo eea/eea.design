@@ -34,13 +34,14 @@
 }
 
 #portal-globalnav li{
-    padding: 1.25em 2em;
+    padding: 1.25em 1.6em;
     margin-bottom: 0;
     display: block;
     float: left;
     background-color: #00446a;
     text-align: center;
     height: 1.5em;
+    white-space: nowrap;
 }
 
 #portal-globalnav li.selected {
