@@ -68,8 +68,12 @@
     background-image: url(&dtml-portal_url;/arrowUp.gif);
 }
 
-.portlet-promotions a.portletHeader, #portlet-navigation-tree .promo-nav-portlet a.portletHeader {
+#portlet-navigation-tree .promo-nav-portlet a.portletHeader {
     padding-left: 0;
+}
+
+.frontpage .portlet-promotions a.portletHeader{
+    display: none;
 }
 
 .portletItem {
@@ -209,7 +213,7 @@ dd.portletFooter a:visited {
 }
 
 .portlet-promotions .portletHeader a {
-    font-size: 0.8em;
+    font-size: 0.75em;
 }
 
 .portlet-promotions div.portletHeader {
@@ -615,9 +619,6 @@ a.noHover {
 }
 .portlet-promotions .portlet {
    display: block;
-}
-.portlet-promotions .portlet a.portletHeader{
-   background: #fff;
 }
 
 /* can be removed - new classes used */

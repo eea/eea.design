@@ -74,7 +74,7 @@ body.frontpage ul {
     background-repeat: no-repeat;
     font-size: 1.2em;
     width: 100%;
-    margin-bottom: 1em;
+    margin: 0 0 1em 0;
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
@@ -83,7 +83,7 @@ body.frontpage ul {
 }
 
 #top-news-area div.portletHeader {
-    padding: 0.5em 0 0.5em 0.2em;
+    padding: 0.25em 0 0.5em 0.2em;
     background: transparent url(promotion_bg.png) repeat-x bottom left;
 }
 
