@@ -15,10 +15,10 @@
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
                 <tal:promos condition="python:request.get('LANGUAGE','en') == 'en'">
                     <div id="top-news-area" tal:define="global promotions frontpage_view/getPromotions; global campaign frontpage_view/getCampaign">
-                        <tal:dummy tal:condition="campaign">
+                        <tal:dummy tal:condition="python:campaign and 'force_promotions' not in request">
                             <metal:promotions use-macro="here/portlet_promotions/macros/campaign" />
                         </tal:dummy>
-                        <tal:dummy tal:condition="not: campaign"
+                        <tal:dummy tal:condition="python:not campaign or 'force_promotions' in request"
                                    tal:define="global imgsize string:image_preview">
                             <metal:promotions use-macro="here/portlet_promotions/macros/all" />
                         </tal:dummy>
