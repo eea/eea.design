@@ -133,8 +133,8 @@
 }
 
 #portal-footer #portlet-ecotip {
-   font-size: 150%;
-   width: 70%;
+   font-size: 120%;
+   width: 75%;
    margin: 0 auto;
 }
 
