@@ -16,6 +16,16 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.tooltip { 
+    display: none; 
+    background: transparent url(&dtml-portal_url;/++resource++tools/black_arrow.png); 
+    font-size: 12px; 
+    height: 70px; 
+    width :160px; 
+    padding :25px; 
+    color: #fff;     
+}
+
 #print-warning {
     display: none;
 }

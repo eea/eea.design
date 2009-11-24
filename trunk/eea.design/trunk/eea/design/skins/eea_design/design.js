@@ -2,12 +2,24 @@ var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
 $(document).ready(function() {
-    // Show view in fullscreen for /data-and-maps/figure and /data-and-maps/data
+    // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(window.location.pathname)) {
         $('body').addClass('fullscreen');
         $('#icon-full_screen').parent().remove();
     }
+
+    // Add tooltips for the top frontpage promotions:
+    $("#top-news-area .portlet-promotions").each(function(i) {
+        var title = $(this).find("img").attr("title");
+        var tooltip = $('<div class="tooltip"><p>' + title + '</p></div>');
+        $(this).find("a, img").attr("title", ""); // Don't use removeAttr, IE still remembers it
+        $(this).after(tooltip);
+        $(this).tooltip({
+            effect: 'slide',
+            offset: [40, 0]
+        });
+    });
 });
 
 $(window).load(function() {
