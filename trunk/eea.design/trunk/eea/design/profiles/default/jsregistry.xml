@@ -4,9 +4,9 @@
     enabled="True" expression="" id="global_searchbox.js" inline="False"
     position-after="cssQuery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
-    enabled="True" expression="python: request.get('jsdisable','') != 'jquery'" id="design.js" inline="False"
-    position-after="++resource++jquery-1.3.2.js"/>
+    enabled="True" expression="python: portal.portal_membership.isAnonymousUser() and request.get('jsdisable','') != 'jquery'" id="design.js" inline="False"
+    position-before="++resource++thickbox_prepare.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="python: request.get('jsdisable','') != 'jquery'" id="print_warning.js" inline="False"
-    position-after="design.js"/>
+    position-after="promotions.js"/>
 </object>
