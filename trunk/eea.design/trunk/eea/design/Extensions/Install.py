@@ -3,7 +3,7 @@ import transaction
 
 
 PROFILE = 'eea.design:default'
-PRODUCT_DEPENDENCIES = []
+PRODUCT_DEPENDENCIES = ['eea.jquery']
 
 
 def install(self, reinstall=False):
