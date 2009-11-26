@@ -10,16 +10,18 @@ $(document).ready(function() {
     }
 
     // Add tooltips for the top frontpage promotions:
-    $("#top-news-area .portlet-promotions").each(function(i) {
-        var title = $(this).find("img").attr("title");
-        var tooltip = $('<div class="tooltip"><p>' + title + '</p></div>');
-        $(this).find("a, img").attr("title", ""); // Don't use removeAttr, IE still remembers it
-        $(this).after(tooltip);
-        $(this).tooltip({
-            effect: 'slide',
-            offset: [40, 0]
+    if ($.fn.tooltip !== undefined) {
+        $("#top-news-area .portlet-promotions").each(function(i) {
+            var title = $(this).find("img").attr("title");
+            var tooltip = $('<div class="tooltip"><p>' + title + '</p></div>');
+            $(this).find("a, img").attr("title", ""); // Don't use removeAttr, IE still remembers it
+            $(this).after(tooltip);
+            $(this).tooltip({
+                effect: 'slide',
+                offset: [40, 0]
+            });
         });
-    });
+    }
 });
 
 $(window).load(function() {
