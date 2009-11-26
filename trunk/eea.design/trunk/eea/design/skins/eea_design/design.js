@@ -9,8 +9,29 @@ $(document).ready(function() {
         $('#icon-full_screen').parent().remove();
     }
 
-    // Add tooltips for the top frontpage promotions:
+    // Add tooltips for the top frontpage promotions and multimedia area:
     if ($.fn.tooltip !== undefined) {
+        var img = $("#big_vid img");
+        var title = img.attr("title");
+        img.after($('<div class="tooltip">' + title + '</div>'))
+        img.attr("title", ""); // Don't use removeAttr, IE still remembers it
+        img.tooltip({
+            effect: 'slide',
+            offset: [0, 0]
+        });
+
+        $("#multimedia-highlights ul img").each(function(i) {
+            var img = $(this);
+            var title = img.attr("title");
+            img.after($('<div class="tooltip side-tooltip">' + title + '</div>'))
+            img.attr("title", ""); // Don't use removeAttr, IE still remembers it
+            img.tooltip({
+                effect: 'slide',
+                position: 'center left',
+                offset: [0, 0]
+            });
+        });
+
         $("#top-news-area .portlet-promotions").each(function(i) {
             var title = $(this).find("img").attr("title");
             var tooltip = $('<div class="tooltip"><p>' + title + '</p></div>');

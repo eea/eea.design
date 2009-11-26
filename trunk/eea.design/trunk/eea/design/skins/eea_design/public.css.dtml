@@ -26,6 +26,16 @@
     color: #fff;     
 }
 
+.side-tooltip { 
+    display: none; 
+    background: transparent url(&dtml-portal_url;/++resource++tools/black_arrow_side.png); 
+    font-size: 12px; 
+    width: 85px; 
+    height: 175px; 
+    padding: 15px; 
+    color: #fff;     
+}
+
 #print-warning {
     display: none;
 }

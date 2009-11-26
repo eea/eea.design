@@ -4,6 +4,7 @@ Changelog
 0.4 - (Unreleased)
 ------------------
 
+ * Added tooltips for multimedia area #2769 [thuliper]
  * Added jQuery Tools tooltips to frontpage promotions. #2824 [thuliper]
  * Fit current navigation in lowest supported resolution [vincisas]
 
