@@ -18,16 +18,16 @@
 
 .tooltip { 
     display: none; 
-    background: transparent url(&dtml-portal_url;/++resource++tools/black_arrow.png); 
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow.png); 
     font-size: 12px; 
     height: 70px; 
     width :160px; 
     padding :25px; 
-    color: #fff;     
+    color: white;
 }
 
 .side-tooltip { 
-    background: transparent url(&dtml-portal_url;/++resource++tools/black_arrow_side.png); 
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_side.png); 
     padding-right: 45px;
 }
 
