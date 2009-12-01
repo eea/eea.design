@@ -152,6 +152,54 @@
 </div>
 </metal:portlet>
 
+<metal:portlet define-macro="frontpage_promotion" tal:condition="promotions|nothing">
+<div class="portlet-promotions"
+     tal:define="category catInfo|category|nothing;
+                 categoryUrl category/url|category/absolute_url|nothing;
+                 catId category/id|string:themepromo">
+
+    <dl class="portlet promo-nav-portlet" id=""
+        tal:attributes="id string:${catId}-portlet"
+        tal:define="promo_number python:len(promotions)">
+        <dt tal:condition="python:promo_number > 1">
+            <span tal:attributes="id string:prev-${catId}" class="promo-prev">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+            <span tal:attributes="id string:count-${catId}-portlet" class="promo-count">0/0</span>&nbsp;&nbsp;
+            <span tal:attributes="id string:next-${catId}" class="promo-next">&nbsp;&nbsp;&nbsp;</span>
+        </dt>
+        <tal:promotions repeat="promo promotions">
+        <dd class="portletItem hide-promo" id=""
+            tal:attributes="id string:${catId}-${promo/id}"
+            tal:define="imgsize imgsize|string:image_thumb;
+                        imgurl string:${promo/absolute_url}/${imgsize}">
+            <a tal:attributes="href promo/url;
+                               title promo/Description;
+                               class python:test(promo['is_video'], 'thickbox', '')">
+               <img tal:attributes="src imgurl; title promo/Title; alt promo/Title"/>
+            </a>
+            <a class="portletHeader"
+               tal:attributes="href promo/url;
+                               title promo/Description;
+                               class python:test(promo['is_video'], 'portletHeader thickbox', 'portletHeader')"
+               tal:content="promo/Title">
+                [Promo Title]
+                <br clear="all" />
+            </a>
+            <a style="display: none;" tal:attributes="href imgurl">
+                Image link
+            </a>
+        </dd>
+        </tal:promotions>
+    </dl>
+
+    <div class="portletHeader" tal:condition="category/Title|nothing">
+        <a href="" title=""
+           tal:attributes="href categoryUrl;
+                           title category/Title"
+           tal:content="category/Title">Category</a>
+    </div>
+</div>
+</metal:portlet>
+
 <metal:portlet define-macro="tabportlet">
     <dl class="portlet portlet-tabs" id="portlet-tabstxx">
         <dt class="portletHeader selected">
