@@ -28,7 +28,7 @@
 
 .side-tooltip { 
     background: transparent url(&dtml-portal_url;/++resource++tools/black_arrow_side.png); 
-    width: 180px; 
+    padding-right: 45px;
 }
 
 #print-warning {
