@@ -1,0 +1,116 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+  lang="en-US"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="plone">
+
+<body>
+
+<div metal:fill-slot="main">
+<metal:main_macro define-macro="main">
+
+  <div metal:use-macro="here/document_actions/macros/document_actions">
+    Document actions (print, sendto etc) </div>
+
+  <h1 tal:content="here/pretty_title_or_id" class="documentFirstHeading">Title or id</h1>
+
+  <div tal:content="here/Description" tal:condition="here/Description" class="documentDescription">
+    Description
+  </div>
+  <metal:listingmacro define-macro="listing" tal:define="
+    folderContents folderContents|nothing">
+
+  <tal:folderContents condition="folderContents" tal:define="
+    batch folderContents">
+    <div metal:use-macro="here/batch_macros/macros/navigation" />
+    <tal:images tal:repeat="brain folderContents">
+      <tal:entry tal:define="
+        obj brain/getObject;
+        display obj/@@imgview/display|nothing;
+        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        <div tal:attributes="class python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'">
+          <a tal:condition="display" tal:attributes="
+            href obj/absolute_url;
+            class python:test(is_video, 'thickbox', '');
+            title obj/pretty_title_or_id">
+            <span class="photoAlbumEntryWrapper">
+            <img style="border: none" tal:attributes="
+              title obj/pretty_title_or_id;
+              alt obj/pretty_title_or_id;
+              src string:${obj/absolute_url}/image_thumb"/>
+            </span>
+            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+          </a>
+          <a tal:condition="not:display" tal:attributes="
+            href obj/absolute_url;
+            title obj/pretty_title_or_id">
+            <span class="photoAlbumEntryWrapper">
+            <img style="border: none" tal:attributes="
+              title obj/pretty_title_or_id;
+              alt obj/pretty_title_or_id;
+              src string:${portal_url}/atct_album_blank.jpg"/>
+            </span>
+            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+          </a>
+        </div>
+      </tal:entry>
+    </tal:images>
+    <div class="visualClear"><!-- --></div>
+    <div metal:use-macro="here/batch_macros/macros/navigation" />
+  </tal:folderContents>
+
+  <tal:noFolderContents tal:condition="not:folderContents" tal:define="
+    result python:here.atctListAlbum(images=1, others=1);
+    images result/images;
+    otherContents result/others;
+    Batch python:modules['Products.CMFPlone'].Batch;
+    b_start python:request.get('b_start', 0);
+    batch python:Batch(images, 12, int(b_start), orphan=1)">
+
+  <div tal:condition="images"
+    metal:use-macro="here/batch_macros/macros/navigation" />
+
+  <tal:albumsimages tal:condition="images">
+    <tal:images tal:condition="batch" tal:repeat="brain batch">
+      <tal:entry tal:define="obj brain/getObject;
+        display obj/@@imgview/display|nothing;
+        imglink obj/@@album_imglink|nothing">
+      <div class="photoAlbumEntry photoAlbumFolder" tal:condition="python:display and imglink and brain.is_folderish">
+        <metal:imglink tal:replace="structure imglink" />
+      </div>
+      <div class="photoAlbumEntry" tal:condition="python:display and imglink and not brain.is_folderish">
+        <metal:imglink tal:replace="structure imglink" />
+      </div>
+      </tal:entry>
+    </tal:images>
+    <div class="visualClear"><!-- --></div>
+  </tal:albumsimages>
+
+  <p class="discreet"
+    i18n:domain="atcontenttypes"
+    i18n:translate="text_no_albums_uploaded"
+    tal:condition="python:not images">
+      No albums or photos uploaded yet.
+  </p>
+
+  <div tal:condition="images"
+    metal:use-macro="here/batch_macros/macros/navigation" />
+
+  <tal:listing condition="otherContents"
+    define="folderContents otherContents">
+  <metal:listing metal:use-macro="here/folder_listing/macros/listing">
+    <metal:empty metal:fill-slot="no_items_in_listing"></metal:empty>
+  </metal:listing>
+
+  </tal:listing>
+  </tal:noFolderContents>
+
+  </metal:listingmacro>
+
+  <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
+
+</metal:main_macro>
+</div>
+
+</body>
+
+</html>

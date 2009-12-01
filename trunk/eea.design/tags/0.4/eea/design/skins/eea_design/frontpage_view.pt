@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      i18n:domain="plone"
+      metal:use-macro="here/main_template/macros/master">
+    <head>
+    </head>
+    <body>
+
+    <div metal:fill-slot="main">
+        <h1 class="hiddenStructure" tal:content="context/Title">EEA Home page</h1>
+        <tal:main-macro metal:define-macro="main">
+            <div metal:use-macro="here/document_actions/macros/document_actions">
+                Document actions (print, sendto etc)
+            </div>
+            <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
+                <tal:promos condition="python:request.get('LANGUAGE','en') == 'en'">
+                    <div id="top-news-area" tal:define="global promotions frontpage_view/getPromotions; global campaign frontpage_view/getCampaign">
+                        <tal:dummy tal:condition="python:campaign and 'force_promotions' not in request">
+                            <metal:promotions use-macro="here/portlet_promotions/macros/campaign" />
+                        </tal:dummy>
+                        <tal:dummy tal:condition="python:not campaign or 'force_promotions' in request"
+                                   tal:define="global imgsize string:image_preview">
+                            <metal:promotions use-macro="here/portlet_promotions/macros/all" />
+                        </tal:dummy>
+                    <div class="visualClear"><!-- &nbsp; --></div>
+                    </div>
+                </tal:promos>
+                <div id="main-content">
+                    <div class="visualClear"><!-- &nbsp; --></div>
+                    <div id="articles-area" class="column-area">
+                        <div metal:use-macro="here/frontpage_macros/macros/multimedia">
+                            Multimedia
+                        </div>
+                        <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
+                        <div metal:use-macro="here/frontpage_macros/macros/highArticles">
+                            Top articles
+                        </div>
+                        <div class="portletFooter">
+                            <p><a href="articles" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
+                        </div>
+                    </div>
+                    <div id="highlights-area" class="column-area">
+                        <h2 class="column-title" i18n:translate="News">News</h2>
+                        <div metal:use-macro="here/frontpage_macros/macros/high">
+                            Top Highlights
+                        </div>
+                        <div metal:use-macro="here/frontpage_macros/macros/middle">
+                            Middle Highlights
+                        </div>
+                        <div class="visualClear"><!-- &nbsp; --></div>
+                        <div class="portletFooter">
+                             <p><a href="highlights" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
+                        </div>
+                    </div>
+                    <div class="visualClear"><!-- &nbsp; --></div>
+                </div>
+            </div>
+        </tal:main-macro>
+    </div>
+
+    </body>
+</html>

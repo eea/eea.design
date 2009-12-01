@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_skins tool -->
+
+<!-- Change the value of these parameters to modify portal_skins behavior:
+ - allow_any: change it to True if you want users to be able to select the
+   skin to use from their personal preferences management page. In the ZMI,
+   this value is known as 'Skin flexibility'.
+ - cookie_persistence: change it to True if you want to make the skin cookie
+   persist indefinitely. In the ZMI, this value is known as 'Skin Cookie
+   persistence'. -->
+<object name="portal_skins" meta_type="Plone Skins Tool" allow_any="False"
+   cookie_persistence="False" 
+   request_varname="plone_skin">
+
+ <!-- This list registers the folders that are stored in the skins directory
+   of your product (on the filesystem) as Filesystem Directory Views within the
+   portal_skins tool, so that they become usable as skin layers. -->
+ <object name="eea_design" meta_type="Filesystem Directory View"
+     directory="design/skins/eea_design"/>
+ <object name="eea_images" meta_type="Filesystem Directory View"
+     directory="design/skins/eea_images"/>
+
+ <skin-path name="EEADesign2006">
+  <layer name="eea_design" insert-before="*" />
+  <layer name="eea_images" insert-before="*" />
+ </skin-path>
+ <skin-path name="Plone Default">
+  <layer name="eea_design" insert-after="EEAContentTypes_public" />
+  <layer name="eea_images" insert-before="*" />
+ </skin-path>
+</object>
