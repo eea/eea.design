@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4 - (Unreleased)
+0.4 - (2009-12-01)
 ------------------
 
  * Added tooltips for multimedia area #2769 [thuliper]
