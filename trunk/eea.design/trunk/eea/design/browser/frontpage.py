@@ -169,7 +169,7 @@ class Frontpage(BrowserView):
                 'Title': brain.Title,
                 'url': brain.getURL(),
                 'path': brain.getPath(),
-                'macro': 'here/portlet_promotions/macros/frontpage_promotion',
+                'macro': 'here/portlet_promotions/macros/portlet',
             }
             categories[brain.id] = category
 

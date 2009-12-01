@@ -77,15 +77,18 @@ body.frontpage ul {
     margin: 1em 0 1em 0;
 }
 
+#top-news-area dd a {
+    text-align: center;
+}
+
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
-
 }
 
 #top-news-area div.portletHeader {
     padding: 0.25em 0 0.5em 0.2em;
     background: transparent url(promotion_bg.png) repeat-x bottom left;
-    text-align: center;
+    padding-left: 1em;
 }
 
 #top-news-area .portlet-promotions {
@@ -99,7 +102,8 @@ body.frontpage ul {
 }
 
 #top-news-area .portlet-promotions img {
-    width: 100%;
+    margin-top: 1em;
+    width: 80%;
 }
 
 /* Campaign mode

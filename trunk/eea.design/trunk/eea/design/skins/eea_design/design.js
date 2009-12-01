@@ -65,7 +65,8 @@ $(window).resize(function() {
     // an IE specific margin/padding somewhere, but right now I don't have the
     // time nor tools to find out where.
     // --Per Thulin, 2009-11-05
-    var margin = $('#top-news-area').width() * 0.03;
+    //var margin = $('#top-news-area').width() * 0.03;
+    var margin = 0;
     var w = ($('#top-news-area').width() - 4 * margin) / 5;
     $('#top-news-area .portlet-promotions').width(w);
     $('#top-news-area .portlet-promotions:lt(4)').css('marginRight', Math.floor(margin) + 'px');
