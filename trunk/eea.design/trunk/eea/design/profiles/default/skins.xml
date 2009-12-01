@@ -25,7 +25,7 @@
   <layer name="eea_images" insert-before="*" />
  </skin-path>
  <skin-path name="Plone Default">
-  <layer name="eea_design" insert-after="EEAContentTypes_public" />
+  <layer name="eea_design" insert-after="eeadesign2006_js" />
   <layer name="eea_images" insert-before="*" />
  </skin-path>
 </object>
