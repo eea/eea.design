@@ -59,18 +59,11 @@ $(window).resize(function() {
         wrapper.width(DESIGN_MAX_WIDTH);
     }
 
-    // Layout of top promotions. For some reason IE got a tiny margin to the
-    // right (worked if I set the .portlet-promotion width to 19%), when
-    // doing this in pure CSS. Don't know why. Think it's us who are setting
-    // an IE specific margin/padding somewhere, but right now I don't have the
-    // time nor tools to find out where.
-    // --Per Thulin, 2009-11-05
-    //var margin = $('#top-news-area').width() * 0.03;
-    var margin = 0;
-    var w = ($('#top-news-area').width() - 4 * margin) / 5;
+    // IE 6/7 has problems setting the 5 promotions to 20% width in some
+    // window sizes. This is prabably due to a rounding error, but it
+    // works if we do the same design with JS.
+    var w = $('#top-news-area').width() / $('#top-news-area .portlet-promotions').length;
     $('#top-news-area .portlet-promotions').width(w);
-    $('#top-news-area .portlet-promotions:lt(4)').css('marginRight', Math.floor(margin) + 'px');
-    $('#top-news-area .portlet-promotions:last').css({'marginRight': '0', 'float': 'right'});
 
     // Make sure the height of our images stick to 16:9. Can be removed when
     // we have correct aspect ratio on the uploaded images.
