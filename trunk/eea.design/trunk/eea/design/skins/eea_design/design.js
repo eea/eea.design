@@ -11,15 +11,6 @@ $(document).ready(function() {
 
     // Add tooltips for the top frontpage promotions and multimedia area:
     if ($.fn.tooltip !== undefined) {
-        var img = $("#big_vid img");
-        var title = img.attr("title");
-        img.after($('<div class="tooltip">' + title + '</div>'))
-        img.attr("title", ""); // Don't use removeAttr, IE still remembers it
-        img.tooltip({
-            effect: 'slide',
-            offset: [0, 0]
-        });
-
         $("#multimedia-highlights ul img").each(function(i) {
             var img = $(this);
             var title = img.attr("title");
@@ -28,6 +19,15 @@ $(document).ready(function() {
             img.tooltip({
                 effect: 'slide',
                 position: 'center left',
+                offset: [0, 0]
+            });
+        });
+        $("#big_vid").each(function(i) {
+            var title = $(this).find('img').attr("title");
+            $(this).after($('<div class="tooltip">' + title + '</div>'))
+            $(this).find('img').attr("title", ""); // Don't use removeAttr, IE still remembers it
+            $(this).tooltip({
+                effect: 'slide',
                 offset: [0, 0]
             });
         });
