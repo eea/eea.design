@@ -62,8 +62,10 @@ $(window).resize(function() {
     // IE 6/7 has problems setting the 5 promotions to 20% width in some
     // window sizes. This is prabably due to a rounding error, but it
     // works if we do the same design with JS.
-    var w = $('#top-news-area').width() / $('#top-news-area .portlet-promotions').length;
-    $('#top-news-area .portlet-promotions').width(w);
+    if ($.browser.msie == true) {
+        var w = $('#top-news-area').width() / $('#top-news-area .portlet-promotions').length;
+        $('#top-news-area .portlet-promotions').width(w).css('marginRight', '0');
+    }
 
     // Make sure the height of our images stick to 16:9. Can be removed when
     // we have correct aspect ratio on the uploaded images.
