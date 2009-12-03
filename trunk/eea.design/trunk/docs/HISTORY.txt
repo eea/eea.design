@@ -4,6 +4,9 @@ Changelog
 0.5 - (Unreleased)
 ------------------
 
+ * Hardcoded list of promotions to show how it looks with correct images. #2824 [thuliper]
+ * Use new green tooltips from eea.jquery. #2840 [thuliper]
+ * New smaller image layout of frontpage promotions. #2840 [thuliper]
 
 0.4 - (2009-12-01)
 ------------------
