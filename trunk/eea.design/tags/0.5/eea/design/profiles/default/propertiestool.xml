@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+ <object name="frontpage_properties" meta_type="Plone Property Sheet">
+  <property name="noOfHigh" type="int">1</property>
+  <property name="noOfMedium" type="int">2</property>
+  <property name="noOfLow" type="int">3</property>
+ </object>
+</object>
