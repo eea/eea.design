@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.5 - (Unreleased)
+0.5 - (2009-12-04)
 ------------------
 
  * Hardcoded list of promotions to show how it looks with correct images. #2824 [thuliper]
