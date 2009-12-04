@@ -101,8 +101,7 @@ body.frontpage ul {
     width: 100%;
 }
 
-#top-news-area .portlet-promotions img,
-#top-news-area .portletHeader {
+#top-news-area .portlet-promotions img {
     margin-top: 1em;
 }
 

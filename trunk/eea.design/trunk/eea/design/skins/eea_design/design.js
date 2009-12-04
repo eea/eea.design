@@ -59,6 +59,8 @@ $(window).resize(function() {
         wrapper.width(DESIGN_MAX_WIDTH);
     }
 
+    // Layout of top promotions. It's safer to do this in JS as there was some rounding issues
+    // with IE in window sizes that wasn't dividible by 5.
     var margin = $('#top-news-area').width() * 0.03;
     var w = ($('#top-news-area').width() - 4 * margin) / 5;
     $('#top-news-area .portlet-promotions').width(w);
