@@ -23,7 +23,7 @@ $(document).ready(function() {
         });
         $("#big_vid").each(function(i) {
             var title = $(this).find('img').attr("title");
-            $(this).after($('<div class="tooltip">' + title + '</div>'))
+            $(this).after($('<div class="tooltip">' + title + '</div>'));
             $(this).find('img').attr("title", ""); // Don't use removeAttr, IE still remembers it
             $(this).tooltip({
                 effect: 'slide'
@@ -59,13 +59,11 @@ $(window).resize(function() {
         wrapper.width(DESIGN_MAX_WIDTH);
     }
 
-    // IE 6/7 has problems setting the 5 promotions to 20% width in some
-    // window sizes. This is prabably due to a rounding error, but it
-    // works if we do the same design with JS.
-    if ($.browser.msie == true) {
-        var w = $('#top-news-area').width() / $('#top-news-area .portlet-promotions').length;
-        $('#top-news-area .portlet-promotions').width(w).css('marginRight', '0');
-    }
+    var margin = $('#top-news-area').width() * 0.03;
+    var w = ($('#top-news-area').width() - 4 * margin) / 5;
+    $('#top-news-area .portlet-promotions').width(w);
+    $('#top-news-area .portlet-promotions:lt(4)').css('marginRight', Math.floor(margin) + 'px');
+    $('#top-news-area .portlet-promotions:last').css({'marginRight': '0', 'float': 'right'});
 
     // Make sure the height of our images stick to 16:9. Can be removed when
     // we have correct aspect ratio on the uploaded images.

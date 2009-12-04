@@ -77,10 +77,6 @@ body.frontpage ul {
     margin: 1em 0 1em 0;
 }
 
-#top-news-area dd a { 
-    text-align: center; 
-} 
-
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
 }
@@ -102,8 +98,12 @@ body.frontpage ul {
 }
 
 #top-news-area .portlet-promotions img {
+    width: 100%;
+}
+
+#top-news-area .portlet-promotions img,
+#top-news-area .portletHeader {
     margin-top: 1em;
-    width: 80%;
 }
 
 /* Campaign mode
