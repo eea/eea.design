@@ -18,8 +18,7 @@ $(document).ready(function() {
             img.attr("title", ""); // Don't use removeAttr, IE still remembers it
             img.tooltip({
                 effect: 'slide',
-                position: 'center left',
-                offset: [0, 0]
+                position: 'center left'
             });
         });
         $("#big_vid").each(function(i) {
@@ -27,19 +26,20 @@ $(document).ready(function() {
             $(this).after($('<div class="tooltip">' + title + '</div>'))
             $(this).find('img').attr("title", ""); // Don't use removeAttr, IE still remembers it
             $(this).tooltip({
-                effect: 'slide',
-                offset: [0, 0]
+                effect: 'slide'
             });
         });
 
-        $("#top-news-area .portlet-promotions").each(function(i) {
-            var title = $(this).find("img").attr("title");
+        $("#top-news-area .portlet-promotions img").each(function(i) {
+            // We want to place the tooltip markup after the <a> element
+            // instead of inside it after the image. This is because otherwise the
+            // link-css will be applied to the text inside the tooltip.
+            var title = $(this).attr("title");
             var tooltip = $('<div class="tooltip"><p>' + title + '</p></div>');
-            $(this).find("a, img").attr("title", ""); // Don't use removeAttr, IE still remembers it
+            $(this).attr("title", "").parent().attr("title", ""); // Don't use removeAttr, IE still remembers it
             $(this).after(tooltip);
             $(this).tooltip({
-                effect: 'slide',
-                offset: [40, 0]
+                effect: 'slide'
             });
         });
     }
