@@ -24,6 +24,7 @@
     width :160px; 
     padding :25px; 
     color: white;
+    text-align: left;
 }
 
 .side-tooltip { 

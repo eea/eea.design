@@ -77,6 +77,10 @@ body.frontpage ul {
     margin: 1em 0 1em 0;
 }
 
+#top-news-area dd a { 
+    text-align: center; 
+} 
+
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
 }
