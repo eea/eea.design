@@ -26,10 +26,12 @@
       <tal:entry tal:define="
         obj brain/getObject;
         display obj/@@imgview/display|nothing;
+        urlview obj/@@url;
+        listing_url urlview/listing_url;
         is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
         <div tal:attributes="class python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'">
           <a tal:condition="display" tal:attributes="
-            href obj/absolute_url;
+            href listing_url; 
             class python:test(is_video, 'thickbox', '');
             title obj/pretty_title_or_id">
             <span class="photoAlbumEntryWrapper">
@@ -41,7 +43,7 @@
             <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
           </a>
           <a tal:condition="not:display" tal:attributes="
-            href obj/absolute_url;
+            href listing_url;
             title obj/pretty_title_or_id">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
@@ -74,10 +76,12 @@
       <tal:entry tal:define="
         obj brain/getObject;
         display obj/@@imgview/display|nothing;
+        urlview obj/@@url;
+        listing_url urlview/listing_url;
         is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
         <div tal:attributes="class python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'">
           <a tal:condition="display" tal:attributes="
-            href obj/absolute_url;
+            href listing_url;
             class python:test(is_video, 'thickbox', '');
             title obj/pretty_title_or_id">
             <span class="photoAlbumEntryWrapper">
@@ -89,7 +93,7 @@
             <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
           </a>
           <a tal:condition="not:display" tal:attributes="
-            href obj/absolute_url;
+            href listing_url;
             title obj/pretty_title_or_id">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
