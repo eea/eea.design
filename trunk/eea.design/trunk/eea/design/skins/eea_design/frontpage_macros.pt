@@ -141,5 +141,41 @@
     </tal:defines>
 </div>
 
+    
+<div metal:define-macro="spotlight" class="highlightMiddle shortNews" id="multimedia-highlights">
+    <h2 class="column-title">In the spotlight</h2>
+    <h3 class="shortNewsTitle visualPadding">
+        <a href="http://www.eea.europa.eu/cop15">EEA and the COP15 climate change conference</a>
+    </h3>
+    <div class="visualPadding">
+        <ul>
+            <li class="vidthumb">
+                <a class="thickbox" href="http://www.eea.europa.eu/multimedia/explore-the-noise/view">
+                    <img src="http://www.eea.europa.eu/multimedia/explore-the-noise/image_wide" title="Explore the NOISE">
+                </a>
+            </li>
+        
+            <li class="vidthumb">
+                <a class="thickbox" href="http://www.eea.europa.eu/multimedia/cycling-the-city/view">
+                    <img src="http://www.eea.europa.eu/multimedia/cycling-the-city/image_wide" title="Cycling the city">
+                </a>
+            </li>
+        
+            <li class="vidthumb last">
+                <a class="thickbox" href="http://www.eea.europa.eu/multimedia/climate-change-2014-time-to-act/view">
+                    <img src="http://www.eea.europa.eu/multimedia/climate-change-2014-time-to-act/image_wide" title="Climate change — time to act">
+                </a>
+            </li>
+        </ul>
+        <div id="big_vid">
+            <a href="http://www.eea.europa.eu/cop15">
+                <img style="border: 1px solid #E0DED5;" src="http://www.eea.europa.eu/cop15/intro/theme_image" title="EEA and the COP15 climate change conference">
+            </a>
+        </div>
+        <div class="visualClear"><!-- --></div>
+    </div>
+</div>
+
+
 </body>
 </html>

@@ -28,8 +28,8 @@
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-                        <div metal:use-macro="here/frontpage_macros/macros/multimedia">
-                            Multimedia
+                        <div metal:use-macro="here/frontpage_macros/macros/spotlight">
+                            Spotlight
                         </div>
                         <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
                         <div metal:use-macro="here/frontpage_macros/macros/highArticles">
