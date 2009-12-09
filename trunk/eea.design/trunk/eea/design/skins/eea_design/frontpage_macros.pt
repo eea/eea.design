@@ -156,19 +156,19 @@
         
             <li class="vidthumb">
                 <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
-                    <img src="http://www.eea.europa.eu/sandbox/thuliper/one-degree-matters/image_preview" title="Film: One Degree Matters">
+                    <img src="http://www.eea.europa.eu/cop15/spotlight/one-degree-matters/image_preview" title="Film: One Degree Matters">
                 </a>
             </li>
         
             <li class="vidthumb last">
                 <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
-                    <img src="http://www.eea.europa.eu/sandbox/thuliper/environment-atlas/image_preview" title="Film: Environmental Atlas of Europe">
+                    <img src="http://www.eea.europa.eu/cop15/spotlight/environment-atlas/image_preview" title="Film: Environmental Atlas of Europe">
                 </a>
             </li>
         </ul>
         <div id="big_vid">
             <a href="http://www.eea.europa.eu/cop15">
-                <img src="http://www.eea.europa.eu/sandbox/thuliper/cop15-spotlight-image" title="EEA and the COP15 climate change conference">
+                <img src="http://www.eea.europa.eu/cop15/spotlight/cop15-spotlight-image" title="EEA and the COP15 climate change conference">
             </a>
         </div>
         <div class="visualClear"><!-- --></div>
