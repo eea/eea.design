@@ -54,6 +54,7 @@
                     </div>
                     <div class="visualClear"><!-- &nbsp; --></div>
                 </div>
+                <tal:tooltip-script tal:replace="structure context/design_fastedit"/>
             </div>
         </tal:main-macro>
     </div>

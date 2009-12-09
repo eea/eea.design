@@ -8,41 +8,6 @@ $(document).ready(function() {
         $('body').addClass('fullscreen');
         $('#icon-full_screen').parent().remove();
     }
-
-    // Add tooltips for the top frontpage promotions and multimedia area:
-    if ($.fn.tooltip !== undefined) {
-        $("#multimedia-highlights ul img").each(function(i) {
-            var img = $(this);
-            var title = img.attr("title");
-            img.after($('<div class="tooltip side-tooltip">' + title + '</div>'))
-            img.attr("title", ""); // Don't use removeAttr, IE still remembers it
-            img.tooltip({
-                effect: 'slide',
-                position: 'center left'
-            });
-        });
-        $("#big_vid").each(function(i) {
-            var title = $(this).find('img').attr("title");
-            $(this).after($('<div class="tooltip">' + title + '</div>'));
-            $(this).find('img').attr("title", ""); // Don't use removeAttr, IE still remembers it
-            $(this).tooltip({
-                effect: 'slide'
-            });
-        });
-
-        $("#top-news-area .portlet-promotions img").each(function(i) {
-            // We want to place the tooltip markup after the <a> element
-            // instead of inside it after the image. This is because otherwise the
-            // link-css will be applied to the text inside the tooltip.
-            var title = $(this).attr("title");
-            var tooltip = $('<div class="tooltip"><p>' + title + '</p></div>');
-            $(this).attr("title", "").parent().attr("title", ""); // Don't use removeAttr, IE still remembers it
-            $(this).after(tooltip);
-            $(this).tooltip({
-                effect: 'slide'
-            });
-        });
-    }
 });
 
 $(window).load(function() {
