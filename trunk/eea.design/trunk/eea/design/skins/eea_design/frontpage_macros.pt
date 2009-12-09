@@ -149,20 +149,20 @@
     <div class="visualPadding">
         <ul>
             <li class="vidthumb">
-                <a class="thickbox" href="http://www.eea.europa.eu/multimedia/explore-the-noise/view">
-                    <img src="http://www.eea.europa.eu/multimedia/explore-the-noise/image_wide" title="Explore the NOISE">
+                <a href="http://www.eea.europa.eu/cop15/">
+                    <img src="http://www.eea.europa.eu/cop15/intro/theme_image" title="[cop-15]">
                 </a>
             </li>
         
             <li class="vidthumb">
-                <a class="thickbox" href="http://www.eea.europa.eu/multimedia/cycling-the-city/view">
-                    <img src="http://www.eea.europa.eu/multimedia/cycling-the-city/image_wide" title="Cycling the city">
+                <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
+                    <img src="http://www.eea.europa.eu/sandbox/thuliper/one-degree-matters/image_preview" title="[one-degree-matter-film]">
                 </a>
             </li>
         
             <li class="vidthumb last">
-                <a class="thickbox" href="http://www.eea.europa.eu/multimedia/climate-change-2014-time-to-act/view">
-                    <img src="http://www.eea.europa.eu/multimedia/climate-change-2014-time-to-act/image_wide" title="Climate change — time to act">
+                <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
+                    <img src="http://www.eea.europa.eu/sandbox/thuliper/environment-atlas/image_preview" title="[the-atlas-film]">
                 </a>
             </li>
         </ul>
