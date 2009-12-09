@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      i18n:domain="plone"
+      metal:use-macro="here/main_template/macros/master">
+    <head>
+    </head>
+    <body>
+
+    <div metal:fill-slot="main">
+        <tal:main-macro metal:define-macro="main">
+
+        <div class="panel" id="tip-siteaction-subscriptions">
+	          <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
+        </div>
+
+        <div class="panel" id="tip-siteaction-contactus">
+	          <metal:portlet use-macro="context/portlet_translationfeedback/macros/portlet" />
+        </div>
+
+        <div class="panel" id="tip-siteaction-events"
+	     tal:define="events nocall:context/events/environmental-events-calendar">
+                <h3>Upcoming environmental events</h3>
+          	<tal:map replace="structure events/@@geoEventsMap" />
+		<a href="" title="Submit an 
+		environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
+
+        </div>
+
+        </tal:main-macro>
+    </div>
+
+    </body>
+</html>

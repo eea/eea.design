@@ -328,6 +328,23 @@ float:right;
     padding: 5px 0;
 }
 
+/* drop down panels for portal siteactions */
+.panel {
+     min-width: 200px;
+     padding: 10px;
+     background: white;
+     display: none;
+     min-height: 250px;
+     border: 1px solid #95b229;
+     border-style: none solid solid solid;
+}
+
+#tip-siteaction-events {
+     min-width: 600px;
+     width: 600px;
+     min-height: 430px;
+}
+
 /* The skin switcher at the top, only shows up if you have multiple skins available */
 
 #portal-skinswitcher {
