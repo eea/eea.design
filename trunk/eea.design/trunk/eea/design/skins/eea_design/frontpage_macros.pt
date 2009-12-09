@@ -150,19 +150,19 @@
         <ul>
             <li class="vidthumb">
                 <a href="http://www.eea.europa.eu/cop15/">
-                    <img src="http://www.eea.europa.eu/cop15/intro/theme_image" title="[cop-15]">
+                    <img style="border: 1px solid #E0DED5" src="http://www.eea.europa.eu/cop15/intro/theme_image" title="EEA and the COP15 climate change conference">
                 </a>
             </li>
         
             <li class="vidthumb">
                 <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
-                    <img src="http://www.eea.europa.eu/sandbox/thuliper/one-degree-matters/image_preview" title="[one-degree-matter-film]">
+                    <img src="http://www.eea.europa.eu/sandbox/thuliper/one-degree-matters/image_preview" title="Film: One Degree Matters">
                 </a>
             </li>
         
             <li class="vidthumb last">
                 <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
-                    <img src="http://www.eea.europa.eu/sandbox/thuliper/environment-atlas/image_preview" title="[the-atlas-film]">
+                    <img src="http://www.eea.europa.eu/sandbox/thuliper/environment-atlas/image_preview" title="Film: Environmental Atlas of Europe">
                 </a>
             </li>
         </ul>
