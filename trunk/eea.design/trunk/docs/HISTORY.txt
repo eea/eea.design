@@ -3,6 +3,7 @@ Changelog
 
 0.6 - (Unreleased)
 ------------------
+ * Map tooltip not shown where there is already an events map on the page. [ghicaale #2771]
 
 0.5 - (2009-12-04)
 ------------------

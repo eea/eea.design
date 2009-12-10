@@ -10,21 +10,24 @@
         <tal:main-macro metal:define-macro="main">
 
         <div class="panel" id="tip-siteaction-subscriptions">
-	          <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
+                  <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
         </div>
 
         <div class="panel" id="tip-siteaction-contactus">
-	          <metal:portlet use-macro="context/portlet_translationfeedback/macros/portlet" />
+                  <metal:portlet use-macro="context/portlet_translationfeedback/macros/portlet" />
         </div>
 
-        <div class="panel" id="tip-siteaction-events"
-	     tal:define="events nocall:context/events/environmental-events-calendar">
-                <h3>Upcoming environmental events</h3>
-          	<tal:map replace="structure events/@@geoEventsMap" />
-		<a href="" title="Submit an 
-		environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
-
-        </div>
+        <tal:mapShow condition="python:not context.getId() in ['events',
+                                                               'environmental-events-calendar',
+                                                               'cop15-events']">
+                <div class="panel" id="tip-siteaction-events"
+                     tal:define="events nocall:context/events/environmental-events-calendar">
+                                <h3>Upcoming environmental events</h3>
+                                  <tal:map replace="structure events/@@geoEventsMap" />
+                                <a href="" title="Submit an
+                                environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
+                </div>
+        </tal:mapShow>
 
         </tal:main-macro>
     </div>
