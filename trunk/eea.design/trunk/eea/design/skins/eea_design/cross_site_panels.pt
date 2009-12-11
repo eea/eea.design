@@ -76,7 +76,7 @@
 
         <tal:mapShow condition="python:not context.getId() in ['events',
                                                                'environmental-events-calendar',
-                                                               'cop15-events']">
+                                                               'cop15-events'] and isAnon">
                 <div class="panel" id="tip-siteaction-events"
                      tal:define="events nocall:context/events/environmental-events-calendar">
                                 <h3>Upcoming environmental events</h3>
