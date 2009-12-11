@@ -99,7 +99,6 @@ body.frontpage ul {
 
 #top-news-area .portlet-promotions img {
     width: 100%;
-    margin-top: 1em;
 }
 
 /* Campaign mode
