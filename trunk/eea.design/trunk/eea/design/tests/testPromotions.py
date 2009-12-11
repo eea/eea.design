@@ -4,12 +4,14 @@ if __name__ == '__main__':
 
 from zope.interface import alsoProvides
 from Testing import ZopeTestCase
+from OFS.Image import Image
 from Products.EEAContentTypes.config import *
 from eea.design.tests.base import EEAMegaTestCase
 from eea.design.browser.frontpage import Frontpage
 from eea.themecentre.interfaces import IThemeCentre, IThemeCentreSchema
 from eea.promotion.interfaces import IPromotable, IPromoted, IPromotion
 from p4a.video.interfaces import IVideoEnhanced
+from p4a.video.interfaces import IVideo
 from Products.CMFCore.utils import getToolByName
 from Globals import package_home
 from DateTime import DateTime
@@ -101,6 +103,7 @@ class TestPromotions(EEAMegaTestCase):
         folder = self.folder['energy']
         internal_promo = folder[folder.invokeFactory('News Item', id='internal_promo')]
         now = DateTime()
+        internal_promo.setImage(image)
         internal_promo.setEffectiveDate(now)
         internal_promo.setTitle('Internal Promotion')
         alsoProvides(internal_promo, IPromotable)
@@ -122,6 +125,10 @@ class TestPromotions(EEAMegaTestCase):
         vid.setTitle('Vid (filter me out plz)')
         alsoProvides(vid, IVideoEnhanced)
         alsoProvides(vid, IPromotable)
+
+        img = Image('foobar', 'Foobar', image)
+        p4vid = IVideo(vid)
+        p4vid.video_image = img
 
         now = DateTime()
         vid.setEffectiveDate(now)

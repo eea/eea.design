@@ -8,8 +8,8 @@
     position-after="cssQuery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="python: portal.portal_membership.isAnonymousUser() and request.get('jsdisable','') != 'jquery'" id="design.js" inline="False"
-    position-before="++resource++thickbox_prepare.js"/>
+    position-before="cssQuery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="python: request.get('jsdisable','') != 'jquery'" id="print_warning.js" inline="False"
-    position-after="promotions.js"/>
+    position-after="cssQuery.js"/>
 </object>

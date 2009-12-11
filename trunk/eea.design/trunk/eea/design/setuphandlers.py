@@ -2,6 +2,10 @@ from Products.CMFCore.utils import getToolByName
 
 
 def migrate_from_eeadesign2006(context):
+    # only run this step if we are in eea.design profile
+    if context.readDataFile('eea.design_various.txt') is None:
+        return
+
     portal =  context.getSite()
     css =  portal.portal_css
     css.manage_removeStylesheet('eea-highlights.css')
