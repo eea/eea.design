@@ -330,6 +330,7 @@ float:right;
 
 /* drop down panels for portal siteactions */
 .panel {
+     color: black;
      min-width: 200px;
      padding: 10px;
      background: white;
@@ -451,19 +452,6 @@ float:right;
     text-transform: none;
 }
 
-#portal-siteactions li.selected a {
-    background-color: &dtml-globalBackgroundColor;;
-    color: &dtml-globalFontColor;;
-    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;*/
-}
-
-#portal-externalsites li a:hover,
-#portal-siteactions li a:hover {
-    /*background-color: &dtml-globalBackgroundColor;;*/
-    background: #fff;
-    color: &dtml-globalFontColor;;
-    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;*/
-}
 
 #siteaction-contactus {
     font-weight: bold;

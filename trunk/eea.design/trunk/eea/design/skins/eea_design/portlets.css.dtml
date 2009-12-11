@@ -644,7 +644,6 @@ a.noHover {
    background-image: url(box-arrow-mouse-left.gif);
 }*/
 
-#portlet-etcs-sites,
 #portlet-chooselang {
    background: transparent;
    color:black;
@@ -656,14 +655,7 @@ a.noHover {
    font-size: 100%;
 }
 
-#portlet-etcs-sites form,
-#portlet-etcs-sites {
-   float: left;
-   clear: none;
-   margin: 0 0 0 0.5em;
-}
-
-#portlet-chooselang dt, #portlet-etcs-sites dt {
+#portlet-chooselang dt {
    display: none;
 }
 
@@ -671,33 +663,17 @@ a.noHover {
    margin-bottom: 5px;
 }
 
-#portlet-chooselang select,  #portlet-etcs-sites select  {
+#portlet-chooselang select {
    font-size: 110%;
 }
 
-#chooseetc,
 #chooselang {
    list-style-image: none;
    list-style-type: none;
-   float: left;
    margin: 0;
    padding: 0;
 }
-#chooseetc li,
-#chooselang li {
-   float: left;
-   width: 2em;
-   margin: 2px;
-   padding: 0.2em ! important;
-   background-color: white;
-}
 
-#chooseetc li a,
-#chooselang li a {
-   color: orange;
-   margin: 0.2em;
-   font-weight: bold;
-}
 
 #portal-column-two .portletTabHead,
 #portal-column-two .portletTabHead_current {

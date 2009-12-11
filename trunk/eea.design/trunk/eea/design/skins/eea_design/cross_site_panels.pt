@@ -9,12 +9,69 @@
     <div metal:fill-slot="main">
         <tal:main-macro metal:define-macro="main">
 
+	<div class="panel" id="tip-siteaction-etcssites">
+        <ul>
+	<li><a href="#">Select European Topic Centre (ETC)</a></li>
+	<li><a href="http://air-climate.eionet.europa.eu">Air and Climate Change</a></li>
+	<li><a href="http://biodiversity.eionet.europa.eu">Biological Diversity</a></li>
+	<li><a href="http://etc-lusi.eionet.europa.eu">Land Use and Spatial Information</a></li>
+	<li><a href="http://etc-scp.eionet.europa.eu">Sustainable Consumption and Production</a></li>
+	<li><a href="http://water.eionet.europa.eu">Water</a></li>      
+	</ul>
+        </div>
+
         <div class="panel" id="tip-siteaction-subscriptions">
                   <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
         </div>
 
         <div class="panel" id="tip-siteaction-contactus">
-                  <metal:portlet use-macro="context/portlet_translationfeedback/macros/portlet" />
+          <table>
+          <tr>
+	    <td style="width: 45%;">
+	      <h2><img width="47" height="47" alt="Write us" src="/images/write-us"/> Write to us</h2>
+
+	      <p><strong>For the public:</strong></p>
+
+	      <ul>
+		<li>
+		  <p><a target="_self" href="/help/infocentre/enquiries">Ask your question<br/>
+		  </a></p>
+		</li>
+	      </ul>
+
+	      <br/>
+	      <strong>For media and journalists:</strong><br/>
+	      <ul>
+		<li><span class="link-mailto"><a href="mailto:Oscar.Romero@eea.europa.eu">Òscar Romero
+		      Sanchez</a></span> Press officer</li>
+
+		<li><span class="link-mailto"><a href="mailto:gulcin.karadeniz@eea.europa.eu">Gülçin
+		      Karadeniz</a></span> Press officer</li>
+	      </ul>
+
+	      <br/>
+	      <a href="/about-us/who/staff-list" class="internal-link" title="Staff list"><strong>Contact EEA
+		  staff</strong></a><br/>
+	      <br/>
+	      <p><strong><a target="_self" href="../help/contact-info">Contact the
+		    web team</a></strong></p>
+
+	      <strong><br/>
+	    </strong></td>
+	    <td style="vertical-align: top;"><br/>
+	    </td>
+	    <td style="vertical-align: top;">
+	      <h2><img width="47" height="47" alt="Call us" src="/images/call-us"/> Call us</h2>
+
+	      <strong>Reception:<br/>
+		<br/>
+		Phone:</strong> (+45) 33 36 71 00<br/>
+	      <strong>Fax:</strong> (+45) 33 36 71 99<br/>
+	      <br/>
+	      <strong><a target="_self" href="../help/infocentre/index_html"><br/>
+	    </a></strong></td>
+	  </tr>
+          </table>
         </div>
 
         <tal:mapShow condition="python:not context.getId() in ['events',
@@ -28,6 +85,19 @@
                                 environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
                 </div>
         </tal:mapShow>
+
+      <div class="panel" id="tip-siteaction-chooselang">
+       <tal:languages define="languages here/@@translatedSites">
+            <ul id="chooselang">
+          	<tal:languages repeat="lang languages">
+	           <li><a href="" 
+                          tal:content="python: '%s (%s)' % (lang['lang'], lang['langcode'])"
+                          tal:attributes="href lang/url;
+                                          title lang/lang"></a></li>
+                </tal:languages> 
+            </ul>
+         </tal:languages>
+       </div>
 
         </tal:main-macro>
     </div>

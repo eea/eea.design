@@ -16,16 +16,8 @@
 
      
    <div id="cross-site-top">
-      <metal:lang metal:use-macro="here/portlet_chooselang/macros/portlet">
-          Global language selector for local sitesc
-      </metal:lang>
-
       <div metal:use-macro="here/global_externalsites/macros/external_sites">
           Eionet, EW ..
-      </div>
-
-      <div metal:use-macro="here/global_externalsites/macros/etcs_sites">
-          dropdown for ETCs ..
       </div>
 
       <div metal:use-macro="here/global_siteactions/macros/site_actions">
