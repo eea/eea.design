@@ -1,17 +1,4 @@
 $(document).ready(function() {
-    // Custom effect to quickly show the panel on mouseover, but slowly
-    // fade away on mouseout. This provides quick navigation and makes it easier
-    // to see where the panel is going.
-    $.tools.tooltip.addEffect("sharpInFadeOut", 
-        function(done) { 
-            this.getTip().show();
-            done.call(); 
-        }, 
-        function(done) { 
-            this.getTip().fadeOut('fast');
-        } 
-    );
-
     function panel(i) {
         var a = $(this);
         var tooltip = $('#tip-' + a.parent().attr('id'));
@@ -27,11 +14,11 @@ $(document).ready(function() {
             a.tooltip({
                 tip: tooltip[0],
                 position: 'bottom center',
-                offset: [0, 0],
+                offset: [10, 0],
+                delay: 1000,
                 events: {
                     tooltip: 'mouseover' 
                 },
-                effect: 'sharpInFadeOut',
                 onShow: function(e) {
                     a.parent().addClass("selected");
                 },
