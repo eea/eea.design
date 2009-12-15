@@ -331,19 +331,24 @@ float:right;
 /* drop down panels for portal siteactions */
 .panel {
      color: black;
-     min-width: 200px;
+     min-width: 150px;
      padding: 10px;
-     background: white;
+     background: white url(portlet_bg.png) repeat-x;
      display: none;
-     min-height: 250px;
-     border: 1px solid #95b229;
+     min-height: 200px;
+     border: 1px solid #ccc;
      border-style: none solid solid solid;
+     -moz-box-shadow: 0px 0px 8px 2px #888;
 }
 
 #tip-siteaction-events {
      min-width: 600px;
      width: 600px;
      min-height: 430px;
+}
+
+#tip-siteaction-subscriptions #portlet-subscribtion {
+    background: transparent;
 }
 
 /* The skin switcher at the top, only shows up if you have multiple skins available */
