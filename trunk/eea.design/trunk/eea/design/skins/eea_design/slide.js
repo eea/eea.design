@@ -9,25 +9,12 @@ $(document).ready(function() {
                 a.parent().addClass("selected");
             });
 
-            var offsets = {
-                'tip-siteaction-eionet': [0, 0],
-                'tip-siteaction-envirowindows': [0, 0],
-                'tip-siteaction-etcssites': [0, 0],
-                'tip-siteaction-subscriptions': [0, 0],
-                'tip-siteaction-contactus': [0, 0],
-                'tip-siteaction-chooselang': [0, 0]
-            }
-
-            console.log(tooltip.width());
-
-            console.log(tooltip.attr('id') + ' -> ' + offsets[tooltip.attr('id')]);
-
             // the tooltip panel should have the id in form of
             // tip-SITEACTION-ID
             a.tooltip({
                 tip: tooltip[0],
                 position: 'bottom center',
-                offset: offsets[tooltip.attr('id')],
+                offset: [0, 0],
                 events: {
                     tooltip: 'mouseover' 
                 },
