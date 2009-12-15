@@ -9,7 +9,7 @@
     <div metal:fill-slot="main">
         <tal:main-macro metal:define-macro="main">
 
-	<div class="panel" id="tip-siteaction-etcssites">
+	<div class="panel shadow" id="tip-siteaction-etcssites">
         <ul>
 	<li><a href="#">Select European Topic Centre (ETC)</a></li>
 	<li><a href="http://air-climate.eionet.europa.eu">Air and Climate Change</a></li>
@@ -20,11 +20,11 @@
 	</ul>
         </div>
 
-        <div class="panel" id="tip-siteaction-subscriptions">
+        <div class="panel shadow" id="tip-siteaction-subscriptions">
                   <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
         </div>
 
-        <div class="panel" id="tip-siteaction-contactus">
+        <div class="panel shadow" id="tip-siteaction-contactus">
           <table>
           <tr>
 	    <td style="width: 45%;">
@@ -77,7 +77,7 @@
         <tal:mapShow condition="python:not context.getId() in ['events',
                                                                'environmental-events-calendar',
                                                                'cop15-events'] and isAnon">
-                <div class="panel" id="tip-siteaction-events"
+                <div class="panel shadow" id="tip-siteaction-events"
                      tal:define="events nocall:context/events/environmental-events-calendar">
                                 <h3>Upcoming environmental events</h3>
                                   <tal:map replace="structure events/@@geoEventsMap" />
@@ -86,7 +86,7 @@
                 </div>
         </tal:mapShow>
 
-      <div class="panel" id="tip-siteaction-chooselang">
+      <div class="panel shadow" id="tip-siteaction-chooselang">
        <tal:languages define="languages here/@@translatedSites">
             <ul id="chooselang">
           	<tal:languages repeat="lang languages">
