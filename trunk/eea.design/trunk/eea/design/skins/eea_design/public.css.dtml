@@ -329,20 +329,31 @@ float:right;
 }
 
 .shadow {
-    -moz-box-shadow: 0px 0px 8px 2px #888;
-    -webkit-box-shadow: 0px 0px 8px 2px #888;
+    -moz-box-shadow: 0 10px 60px 0 #333;
+    -webkit-box-shadow: 0 10px 60px 0 #333;
 }
 
 /* drop down panels for portal siteactions */
 .panel {
-     color: black;
-     min-width: 150px;
-     padding: 10px;
-     background: white url(portlet_bg.png) repeat-x;
-     display: none;
-     min-height: 200px;
-     border: 1px solid #ccc;
-     border-style: none solid solid solid;
+    display: none;
+}
+
+.panel-top {
+    margin: auto auto;
+    background: transparent url(/panel_arrow.png);
+    width: 50px;
+    height: 25px;
+    z-index: 1;
+    position: relative;
+    top: 1px;
+}
+
+.panel-content {
+    background: white url(/portlet_bg.png) repeat-x;
+    color: black;
+    min-width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
 #tip-siteaction-events {

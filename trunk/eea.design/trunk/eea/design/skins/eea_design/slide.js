@@ -14,8 +14,9 @@ $(document).ready(function() {
             a.tooltip({
                 tip: tooltip[0],
                 position: 'bottom center',
-                offset: [10, 0],
+                offset: [0, 0],
                 delay: 1000,
+                effect: 'fade',
                 events: {
                     tooltip: 'mouseover' 
                 },
