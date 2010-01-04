@@ -712,7 +712,6 @@ a.noHover {
    border-top:none;
 }
 #portal-column-two #portlet-chooselang dl dd,
-#portal-column-two #portlet-subscribtion dl dd,
 #portal-column-two .portlet-rss dd {
    margin: 0 0 0 0;
 }
@@ -736,6 +735,9 @@ a.noHover {
    float: left;
 }
 
+#portlet-subscribtion dd {
+    margin-bottom: 0.5em;
+}
 
 #portlet-subscribtion input.subscriptionButton {
    background: url(&dtml-portal_url;/search-arrow.gif) no-repeat top left;

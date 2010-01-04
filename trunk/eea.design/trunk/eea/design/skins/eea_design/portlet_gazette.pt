@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body tal:define="Iterator python:modules['Products.CMFPlone'].IndexIterator;
+                  tabindex python:Iterator(mainSlot=False)">
+
+<div metal:define-macro="portlet"
+     tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous');
+                 nl_objects python: [brain.getObject() for brain in nl_brains if brain.getObject()];
+                 nl_unique python: len(nl_objects) == 1"
+     tal:condition="nl_objects">
+
+<dl class="portlet gradientBG" id="portlet-subscribtion" tal:define="includeSocialMedia includeSocialMedia|context/includeSocialMedia|nothing">
+    <dt>Sign up now!</dt>
+    <dd class="portletItem">Get notifications on new reports and products.</dd>
+    <dd class="portletItem">
+        <form action="register_newsletter"
+              name="subscription"
+              method="post"
+              tal:attributes="action string:$portal_url/register_newsletter">
+
+            <tal:block tal:condition="nl_unique">
+              <input type="hidden" name="nlpath" value="#"
+                     tal:attributes="value python: '/'.join(nl_objects[0].getPhysicalPath())" />
+            </tal:block>
+            <tal:block tal:condition="python:len(nl_objects) == 1"
+                      tal:define="newsletter python:nl_objects[0]">
+                 <input type="hidden" name="format_test" tal:attributes="value newsletter/default_format" />
+            </tal:block>
+
+            <tal:block tal:condition="not: nl_unique">
+            <div class="field">
+              <label for="nlpath" i18n:translate="label_choose_newsletter">Choose a newsletter</label> <br />
+              <select name="nlpath" id="nlpath">
+                <option value="#"
+                  tal:repeat="newsletter nl_objects"
+                  tal:content="newsletter/Title"
+                  tal:attributes="value python: '/'.join(newsletter.getPhysicalPath())">
+                </option>
+              </select>
+            </div>
+            </tal:block>
+
+             <div class="field">
+              <label for="email" class="hiddenStructure" i18n:translate="label_email">Email</label>
+              <input type="text" 
+                     name="email" 
+                     id="email"  
+                     alt="Email address"
+                     value="Enter email"
+                     size="20" 
+                     tal:attributes="tabindex tabindex/next" 
+                     i18n:attributes="alt label_email;" />
+
+        <input class="subscriptionButton"
+               type="submit"
+               tabindex=""
+               name="submit"
+               value=""
+               alt="Subscribe"
+               tal:attributes="tabindex tabindex/next"
+               i18n:attributes="alt label_subscribe"/>
+             </div>
+        </form>
+    </dd>
+
+    <tal:social-media tal:condition="includeSocialMedia">
+        <dt>Social media</dt>
+        <dd>
+            <img src="/twitter16x16.png" alt="Twitter logo"/> Follow us on <a href="http://twitter.com/euenvironment">Twitter</a>
+        </dd>
+        <dd>
+            <img src="/youtube16x16.png" alt="YouTube logo"/> Watch our <a href="http://www.youtube.com/user/EEAvideos">YouTube channel</a>
+        </dd>
+        <dd>
+            <img src="/rss.gif" alt="RSS logo"/> Subscribe to our <a href="http://www.eea.europa.eu/highlights.rdf">RSS feed</a>
+        </dd>
+    </tal:social-media>
+
+    <dd class="portletFooter" style="padding-bottom: 0.5em"
+        tal:condition="nl_unique">
+     
+        <a href="#" class="moreLink" tal:attributes="href string:$portal_url/subscription/news-feeds">
+            <span i18n:translate="rss_feeds">RSS Feeds</span></a> <a href="#" class="moreLink" tal:attributes="href python: nl_objects[0].absolute_url() + '/view'">
+            <span i18n:translate="label_visit_archives">Archive</span></a>
+   
+    </dd>
+    
+</dl>
+
+</div>
+</body>
+</html>

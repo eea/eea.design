@@ -27,7 +27,7 @@
         <div class="panel" id="tip-siteaction-subscriptions">
             <div class="panel-top">
             </div>
-            <div class="panel-content shadow">
+            <div class="panel-content shadow" tal:define="includeSocialMedia python:True">
                   <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
             </div>
         </div>

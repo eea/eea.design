@@ -356,6 +356,15 @@ float:right;
     border: 1px solid #ccc;
 }
 
+.panel #portlet-subscribtion {
+    margin: 0;
+}
+
+.panel #portlet-subscribtion .portletFooter {
+    margin-bottom: 0;
+    margin-bottom: 0;
+}
+
 #tip-siteaction-events {
      min-width: 600px;
      width: 600px;
