@@ -51,24 +51,19 @@
 	      </ul>
 
 	      <br/>
-	      <strong>For media and journalists:</strong><br/>
+	      <strong style="white-space: nowrap">For media and journalists:</strong><br/>
 	      <ul>
-		<li><span class="link-mailto"><a href="mailto:Oscar.Romero@eea.europa.eu">Òscar Romero
-		      Sanchez</a></span> Press officer</li>
-
-		<li><span class="link-mailto"><a href="mailto:gulcin.karadeniz@eea.europa.eu">Gülçin
-		      Karadeniz</a></span> Press officer</li>
+              <li>
+                <p><a target="_self" href="/pressroom">Press room<br/>
+                </a></p>
+              </li>
 	      </ul>
 
 	      <br/>
-	      <a href="/about-us/who/staff-list" class="internal-link" title="Staff list"><strong>Contact EEA
-		  staff</strong></a><br/>
-	      <br/>
-	      <p><strong><a target="_self" href="../help/contact-info">Contact the
-		    web team</a></strong></p>
-
-	      <strong><br/>
-	    </strong></td>
+	      <a href="/about-us/who/staff-list" class="internal-link" title="Staff list"><strong>Contact EEA staff</strong></a><br/>
+	      <a href="/help/contact-info" class="internal-link"><strong>Contact the web team</strong></a><br/>
+          <a href="/help/eea-help-centre/faqs" class="internal-link"><strong>FAQ</strong></a><br/>
+        </td>
 	    <td style="vertical-align: top;"><br/>
 	    </td>
 	    <td style="vertical-align: top;">
