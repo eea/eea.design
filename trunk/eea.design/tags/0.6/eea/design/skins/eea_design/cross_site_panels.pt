@@ -1,0 +1,121 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      i18n:domain="plone"
+      metal:use-macro="here/main_template/macros/master">
+    <head>
+    </head>
+    <body>
+
+    <div metal:fill-slot="main">
+        <tal:main-macro metal:define-macro="main">
+
+	<div class="panel" id="tip-siteaction-etcssites">
+        <div class="panel-top">
+        </div>
+        <div class="panel-content shadow">
+        <ul>
+	<li><a href="#">Select European Topic Centre (ETC)</a></li>
+	<li><a href="http://air-climate.eionet.europa.eu">Air and Climate Change</a></li>
+	<li><a href="http://biodiversity.eionet.europa.eu">Biological Diversity</a></li>
+	<li><a href="http://etc-lusi.eionet.europa.eu">Land Use and Spatial Information</a></li>
+	<li><a href="http://etc-scp.eionet.europa.eu">Sustainable Consumption and Production</a></li>
+	<li><a href="http://water.eionet.europa.eu">Water</a></li>      
+	</ul>
+    </div>
+        </div>
+
+        <div class="panel" id="tip-siteaction-subscriptions">
+            <div class="panel-top">
+            </div>
+            <div class="panel-content shadow" tal:define="includeSocialMedia python:True">
+                  <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
+            </div>
+        </div>
+
+        <div class="panel" id="tip-siteaction-contactus">
+            <div class="panel-top">
+            </div>
+            <div class="panel-content shadow">
+          <table>
+          <tr>
+	    <td style="width: 45%;">
+	      <h2><img width="47" height="47" alt="Write us" src="/images/write-us"/> Write to us</h2>
+
+	      <p><strong>For the public:</strong></p>
+
+	      <ul>
+		<li>
+		  <p><a target="_self" href="/help/infocentre/enquiries">Ask your question<br/>
+		  </a></p>
+		</li>
+	      </ul>
+
+	      <br/>
+	      <strong style="white-space: nowrap">For media and journalists:</strong><br/>
+	      <ul>
+              <li>
+                <p><a target="_self" href="/pressroom">Press room<br/>
+                </a></p>
+              </li>
+	      </ul>
+
+	      <br/>
+	      <a href="/about-us/who/staff-list" class="internal-link" title="Staff list"><strong>Contact EEA staff</strong></a><br/>
+	      <a href="/help/contact-info" class="internal-link"><strong>Contact the web team</strong></a><br/>
+          <a href="/help/eea-help-centre/faqs" class="internal-link"><strong>FAQ</strong></a><br/>
+        </td>
+	    <td style="vertical-align: top;"><br/>
+	    </td>
+	    <td style="vertical-align: top;">
+	      <h2><img width="47" height="47" alt="Call us" src="/images/call-us"/> Call us</h2>
+
+	      <strong>Reception:<br/>
+		<br/>
+		Phone:</strong> (+45) 33 36 71 00<br/>
+	      <strong>Fax:</strong> (+45) 33 36 71 99<br/>
+	      <br/>
+	      <strong><a target="_self" href="../help/infocentre/index_html"><br/>
+	    </a></strong></td>
+	  </tr>
+          </table>
+          </div>
+        </div>
+
+        <tal:mapShow condition="python:not context.getId() in ['events',
+                                                               'environmental-events-calendar',
+                                                               'cop15-events'] and isAnon">
+                <div class="panel" id="tip-siteaction-events"
+                     tal:define="events nocall:context/events/environmental-events-calendar">
+                        <div class="panel-top">
+                        </div>
+                        <div class="panel-content shadow">
+                                <h3>Upcoming environmental events</h3>
+                                  <tal:map replace="structure events/@@geoEventsMap" />
+                                <a href="" title="Submit an
+                                environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
+                  </div>
+                </div>
+        </tal:mapShow>
+
+      <div class="panel" id="tip-siteaction-chooselang">
+          <div class="panel-top">
+          </div>
+          <div class="panel-content shadow">
+       <tal:languages define="languages here/@@translatedSites">
+            <ul id="chooselang">
+          	<tal:languages repeat="lang languages">
+	           <li><a href="" 
+                          tal:content="python: '%s (%s)' % (lang['lang'], lang['langcode'])"
+                          tal:attributes="href lang/url;
+                                          title lang/lang"></a></li>
+                </tal:languages> 
+            </ul>
+         </tal:languages>
+         </div>
+       </div>
+
+        </tal:main-macro>
+    </div>
+
+    </body>
+</html>

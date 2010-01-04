@@ -1,0 +1,47 @@
+Changelog
+=========
+
+0.6 - (2010-01-04)
+------------------
+ * Map tooltip not shown where there is already an events map on the page. [ghicaale #2771]
+
+0.5 - (2009-12-04)
+------------------
+
+ * Hardcoded list of promotions to show how it looks with correct images. #2824 [thuliper]
+ * Use new green tooltips from eea.jquery. #2840 [thuliper]
+ * New smaller image layout of frontpage promotions. #2840 [thuliper]
+
+0.4 - (2009-12-01)
+------------------
+
+ * Added tooltips for multimedia area #2769 [thuliper]
+ * Added jQuery Tools tooltips to frontpage promotions. #2824 [thuliper]
+ * Fit current navigation in lowest supported resolution [vincisas]
+
+0.3 - (2009-11-18)
+------------------
+
+ * Made /data-and-maps/figures and /data-and-maps/data show in fullscreen. [thuliper]
+ * Removed tagline and frontpage-searchbox. [demarant]
+ * Display info/warning dialog before printing #2791. [thuliper]
+ * Removed frontpage multimedia from print.css - it didn't layout correctly in IE. [thuliper]
+ * Fixed searchbox not removing default text when focused. [thuliper]
+ * Fixed campaign mode/regular promotions logic so that it does not crash when there's only one promotion. [thuliper]
+ * Fixed content overflow in frontpage column areas. [thuliper]
+ * Fixed document actions position too high #2792. [thuliper]
+ * Fixed bug where promotions on theme pages sometimes took up too little width. [thuliper]
+ * Fixed horizontal scrollbar on frontpage in IE7/8. [vincisas]
+
+0.2 - (2009-11-10)
+------------------
+
+ * print.css added
+ * tagline fixes
+ * a-z glossary link style
+
+0.1 - (2009-11-10)
+------------------
+
+* Initial release
+

@@ -1,0 +1,290 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+<metal:portlet define-macro="portlet-unused">
+<div class="dropShadow">
+ <dl class="portlet">
+    <dt class="portletHeader">
+      <span class="portletContentNavigation">
+       <a href="" title="previous"><img src="box-arrows.gif" alt="previous/next" /></a>
+      </span>
+        For kids
+    </dt>
+    <dd class="portletItem">
+        <img id="agents" src="http://www/images/teaser_leftbox_eco_agents.gif" alt="Eco agents logo" width="100%"/>
+    </dd>
+
+    <dd class="portletItem subHeader">
+        <a href="" title="">Ecoagent</a>
+    </dd>
+    <dd class="portletItem">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+        <a href="" title=""
+           tal:attributes="href here/absolute_url;
+                           title string:more" class="moreLink">More</a>
+    </dd>
+ </dl>
+</div>
+</metal:portlet>
+
+<metal:portlet define-macro="promotion-list" tal:condition="nocall:promotionCategoryFolder|nothing">
+<div class="portlet-promotions"
+    tal:define="res promotionCategoryFolder/@@oneCategoryPromotions;
+                category res/category;
+                promotions res/promotions">
+
+<dl class="portlet" id=""
+    tal:attributes="id string:${category/id}-portlet">
+    <dt class="portletHeader">
+        <a href="" title=""
+           tal:attributes="href category/url;
+                           title category/Title"
+           tal:content="category/Title">Category</a>
+    </dt>
+
+    <tal:promotions repeat="promo promotions">
+    <dd class="portletItem" id=""
+        tal:attributes="id promo/id;">
+        <a href="" title="" class="portletHeader"
+           tal:attributes="href promo/url;
+                           title promo/Description">
+        <tal:title tal:content="promo/Title">Title</tal:title><br clear="all" /></a>
+    </dd>
+    </tal:promotions>
+</dl>
+</div>
+</metal:portlet>
+
+<metal:portlet define-macro="promotion-list-one-image" tal:condition="promotions|nothing">
+<div class="portlet-promotions portlet-promotions-one-image"
+     tal:define="category catInfo|category;
+                 categoryUrl category/url|category/absolute_url;">
+
+    <div class="portletHeader">
+        <a href="" title=""
+           tal:attributes="href categoryUrl;
+                           title category/Title"
+           tal:content="category/Title">Category</a>
+    </div>
+
+<dl class="portlet" id=""
+    tal:attributes="id string:${category/id}-portlet">
+    <tal:promotions repeat="promo promotions">
+    <dd class="portletItem" id=""
+        tal:attributes="id promo/id;">
+        <a href="" title="" class="portletHeader"
+           tal:attributes="href promo/url;
+                           title promo/Description">
+        <tal:title tal:content="promo/Title">Title</tal:title><br clear="all" />
+        <img src="http://www.eea.europa.eu/images/epeadiabox.jpg" alt=""
+             tal:attributes="src promo/image;
+                             alt promo/imageCaption|promo/Title;"
+             tal:condition="repeat/promo/start" /></a>
+    </dd>
+    </tal:promotions>
+</dl>
+</div>
+</metal:portlet>
+
+<metal:portlet define-macro="campaign"
+               tal:condition="campaign|nothing"
+               tal:define="promo python:campaign[0];">
+    <a id="campaign-banner" href="#" title="" tal:attributes="href promo/url; title promo/Title">
+        <img src="campaign-banner" alt="" tal:attributes="alt promo/Title" />
+    </a>
+</metal:portlet>
+
+<metal:portlet define-macro="all" tal:condition="promotions|nothing">
+<tal:promotionCategories repeat="promos promotions">
+    <tal:category tal:define="category promos/category;
+                              promotions promos/promotions">
+        <metal:promotionCategory use-macro="python:path(category['macro'])" />
+    </tal:category>
+</tal:promotionCategories>
+</metal:portlet>
+
+<metal:portlet define-macro="portlet" tal:condition="promotions|nothing">
+<div class="portlet-promotions"
+     tal:define="category catInfo|category|nothing;
+                 categoryUrl category/url|category/absolute_url|nothing;
+                 catId category/id|string:themepromo">
+
+    <div class="portletHeader" tal:condition="category/Title|nothing">
+        <a href="" title=""
+           tal:attributes="href categoryUrl;
+                           title category/Title"
+           tal:content="category/Title">Category</a>
+    </div>
+
+    <dl class="portlet promo-nav-portlet" id=""
+        tal:attributes="id string:${catId}-portlet"
+        tal:define="promo_number python:len(promotions)">
+        <dt tal:condition="python:promo_number > 1">
+            <span tal:attributes="id string:prev-${catId}" class="promo-prev">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+            <span tal:attributes="id string:count-${catId}-portlet" class="promo-count">0/0</span>&nbsp;&nbsp;
+            <span tal:attributes="id string:next-${catId}" class="promo-next">&nbsp;&nbsp;&nbsp;</span>
+        </dt>
+        <tal:promotions repeat="promo promotions">
+        <dd class="portletItem hide-promo" id=""
+            tal:attributes="id string:${catId}-${promo/id}"
+            tal:define="imgsize imgsize|string:image_thumb;
+                        imgurl string:${promo/absolute_url}/${imgsize}">
+            <a tal:attributes="href promo/url;
+                               title promo/Description;
+                               class python:test(promo['is_video'], 'thickbox', '')">
+               <img tal:attributes="src imgurl; title promo/Title; alt promo/Title"/>
+            </a>
+            <a class="portletHeader"
+               tal:attributes="href promo/url;
+                               title promo/Description;
+                               class python:test(promo['is_video'], 'portletHeader thickbox', 'portletHeader')"
+               tal:content="promo/Title">
+                [Promo Title]
+                <br clear="all" />
+            </a>
+            <a style="display: none;" tal:attributes="href imgurl">
+                Image link
+            </a>
+        </dd>
+        </tal:promotions>
+    </dl>
+</div>
+</metal:portlet>
+
+<metal:portlet define-macro="hardcoded_promotions">
+    <div class="portlet-promotions">
+
+        <div class="portletHeader">
+            <a href="http://www.eea.europa.eu/themes/air">Air pollution</a>
+        </div>
+
+        <dl id="air-portlet" class="portlet promo-nav-portlet">
+            
+            
+            <dd id="not-just-hot-air" class="portletItem">
+                <a title="Visit our air pollution website" href="http://www.eea.europa.eu/articles/not-just-hot-air">
+                    <img title="Visit our air pollution website" alt="Visit our air pollution website" src="http://www.eea.europa.eu/highlights/ozone-pollution-is-declining-2014-but-not-everywhere/image_preview"/>
+                </a>
+                <a title="Visit our air pollution website" href="http://www.eea.europa.eu/articles/not-just-hot-air" class="portletHeader">Visit our air pollution site</a>
+                <a href="http://www.eea.europa.eu/articles/not-just-hot-air/image_preview" style="display: none;" title="">
+                    Image link
+                </a>
+            </dd>
+            
+        </dl>
+    </div>
+
+    <div class="portlet-promotions">
+
+        <div class="portletHeader">
+            <a href="http://www.eea.europa.eu/themes/biodiversity">Biodiversity</a>
+        </div>
+
+        <dl id="biodiversity-portlet" class="portlet promo-nav-portlet">
+            
+            
+            <dd id="assessing-biodiversity" class="portletItem">
+                <a title="Visit our biodiversity website" href="http://www.eea.europa.eu/highlights/assessing-biodiversity">
+                    <img title="Visit our biodiversity website" alt="Visit our biodiversity website" src="http://www.eea.europa.eu/themes/biodiversity/image_preview"/>
+                </a>
+                <a title="Visit our biodiversity website" href="http://www.eea.europa.eu/highlights/assessing-biodiversity" class="portletHeader">Visit our biodiversity website</a>
+                <a href="http://www.eea.europa.eu/themes/biodiversity/image_preview" style="display: none;" title="">
+                    Image link
+                </a>
+            </dd>
+            
+        </dl>
+    </div>
+
+    <div class="portlet-promotions">
+
+        <div class="portletHeader">
+            <a href="http://www.eea.europa.eu/themes/climate">Climate change</a>
+        </div>
+
+        <dl id="climate-portlet" class="portlet promo-nav-portlet">
+            
+            
+            <dd id="new-estimates-confirm-the-declining-trend-in-eu-greenhouse-gas-emissions" class="portletItem">
+                <a title="Visit our climate change website" href="http://www.eea.europa.eu/highlights/new-estimates-confirm-the-declining-trend-in-eu-greenhouse-gas-emissions">
+                    <img title="Visit our climate change website" alt="Visit our climate change website" src="http://www.eea.europa.eu/themes/climate/image_preview"/>
+                </a>
+                <a title="Visit our climate change website" href="http://www.eea.europa.eu/highlights/new-estimates-confirm-the-declining-trend-in-eu-greenhouse-gas-emissions" class="portletHeader">Visit our climate change website</a>
+                <a href="http://www.eea.europa.eu/themes/climate/image_preview" style="display: none;" title="">
+                    Image link
+                </a>
+            </dd>
+            
+        </dl>
+    </div>
+
+    <div class="portlet-promotions">
+
+        <div class="portletHeader">
+            <a href="http://www.eea.europa.eu/themes/landuse">Land use</a>
+        </div>
+
+        <dl id="landuse-portlet" class="portlet promo-nav-portlet">
+            
+            
+            <dd id="discover-europe2019s-landscape-through-satellite-and-ground-level-pictures-1" class="portletItem">
+                <a title="Visit our land use website" href="http://www.eea.europa.eu/highlights/discover-europe2019s-landscape-through-satellite-and-ground-level-pictures-1">
+                    <img title="Visit our land use website" alt="Visit our land use website" src="http://www.eea.europa.eu/themes/landuse/image_preview"/>
+                </a>
+                <a title="Visit our land use website" href="http://www.eea.europa.eu/highlights/discover-europe2019s-landscape-through-satellite-and-ground-level-pictures-1" class="portletHeader">Visit our land use website</a>
+                <a href="http://www.eea.europa.eu/themes/landuse/image_preview" style="display: none;" title="">
+                    Image link
+                </a>
+            </dd>
+            
+        </dl>
+    </div>
+
+    <div class="portlet-promotions">
+
+        <div class="portletHeader">
+            <a href="http://www.eea.europa.eu/themes/water">Water</a>
+        </div>
+
+        <dl id="water-portlet" class="portlet promo-nav-portlet">
+            
+            
+            <dd id="heading-for-your-favourite-beach-is-the-bathing-water-clean" class="portletItem">
+                <a title="Visit our water website" href="http://www.eea.europa.eu/highlights/heading-for-your-favourite-beach-is-the-bathing-water-clean">
+                    <img title="Visit our water website" alt="Visit our water website" src="http://www.eea.europa.eu/themes/water/welcome-to-water-information-system-for-europe-wise/theme_image/image_preview"/>
+                </a>
+                <a title="Visit our water website" href="http://www.eea.europa.eu/highlights/heading-for-your-favourite-beach-is-the-bathing-water-clean" class="portletHeader">Visit our water website</a>
+                <a href="http://www.eea.europa.eu/themes/water/welcome-to-water-information-system-for-europe-wise/theme_image/image_preview" style="display: none;" title="">
+                    Image link
+                </a>
+            </dd>
+            
+        </dl>
+    </div>
+
+</metal:portlet>
+
+<metal:portlet define-macro="tabportlet">
+    <dl class="portlet portlet-tabs" id="portlet-tabstxx">
+        <dt class="portletHeader selected">
+            <a href="#">1</a>
+        </dt>
+        <dt class="portletHeader">
+            <a href="#">2</a>
+        </dt>
+        <dt class="portletHeader">
+            <a href="#">3</a>
+        </dt>
+        <dd class="portletItem" id="portletitem-rectis">
+            Some text
+        </dd>
+        <dd class="portletItem selected" id="portletitem-skovis">
+            <img src="agents.gif" alt="Eco agents logo" />
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+        </dd>
+    </dl>
+</metal:portlet>
+
+</body>
+</html>
