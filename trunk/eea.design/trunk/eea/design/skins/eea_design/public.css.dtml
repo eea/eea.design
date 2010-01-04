@@ -348,6 +348,10 @@ float:right;
     top: 1px;
 }
 
+.panel .portletFooter {
+    margin-top: 1em;
+}
+
 .panel-content {
     background: white url(/portlet_bg.png) repeat-x;
     color: black;

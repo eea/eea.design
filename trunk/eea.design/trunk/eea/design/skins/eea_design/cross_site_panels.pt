@@ -78,6 +78,9 @@
 	    </a></strong></td>
 	  </tr>
           </table>
+          <div class="portletFooter">
+              <a class="moreLink" href="/address.html"><span>More</span></a>
+          </div>
           </div>
         </div>
 
@@ -85,7 +88,7 @@
                                                                'environmental-events-calendar',
                                                                'cop15-events'] and isAnon">
                 <div class="panel" id="tip-siteaction-events"
-                     tal:define="events nocall:context/events/environmental-events-calendar" style="width: 250px">
+                     tal:define="events nocall:context/events/environmental-events-calendar" style="width: 580px">
                         <div class="panel-top">
                         </div>
                         <div class="panel-content shadow">

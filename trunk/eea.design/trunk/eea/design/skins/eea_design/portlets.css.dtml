@@ -120,13 +120,13 @@ dt.portletItem {
     line-height:1em;
 }
 
-dd.portletFooter {
-border-color:&dtml-lightGreyDivisionColor;;
-border-style:dotted none none;
-border-width:1px;
-margin:0em;
-padding:1em 1em;
-text-align:right;
+.portletFooter {
+    border-color:&dtml-lightGreyDivisionColor;;
+    border-style:dotted none none;
+    border-width:1px;
+    margin:0em;
+    padding:1em 1em;
+    text-align:right;
 }
 
 .portletItemDetails {
