@@ -94,7 +94,7 @@
                     tal:condition="nocall:specific">
                     <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
                 </tal:publications>
-                <a href="" title="Submit an environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
+                <a id="submit-event-link" class="moreLink" href="" title="Submit an environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent"><span>Submit a new event</span></a>
             </div>
         </div>
 

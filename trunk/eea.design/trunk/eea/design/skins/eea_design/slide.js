@@ -39,4 +39,11 @@ $(document).ready(function() {
     }
     $("#portal-siteactions a").each(panel);
     $("#portal-externalsites a").each(panel);
+
+    // since we use the standard events_portlet, we can't place the
+    // submit-event-link in its footer initially
+    var footer = $("#tip-siteaction-events .portletFooter");
+    var submitLink = $("#tip-siteaction-events #submit-event-link");
+    submitLink.remove().css('margin-right', '0.5em');
+    footer.prepend(submitLink);
 });

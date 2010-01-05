@@ -329,8 +329,8 @@ float:right;
 }
 
 .shadow {
-    -moz-box-shadow: 0 10px 60px 0 #333;
-    -webkit-box-shadow: 0 10px 60px 0 #333;
+    -moz-box-shadow: 0 10px 50px 0 #333;
+    -webkit-box-shadow: 0 10px 50px 0 #333;
 }
 
 /* drop down panels for portal siteactions */
