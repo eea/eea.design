@@ -84,21 +84,19 @@
           </div>
         </div>
 
-        <tal:mapShow condition="python:not context.getId() in ['events',
-                                                               'environmental-events-calendar',
-                                                               'cop15-events'] and isAnon">
-                <div class="panel" id="tip-siteaction-events"
-                     tal:define="events nocall:context/events/environmental-events-calendar" style="width: 580px">
-                        <div class="panel-top">
-                        </div>
-                        <div class="panel-content shadow">
-                                <h3>Upcoming environmental events</h3>
-                                  <tal:map replace="structure events/@@geoEventsMap" />
-                                <a href="" title="Submit an
-                                environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
-                  </div>
-                </div>
-        </tal:mapShow>
+        <div class="panel" id="tip-siteaction-events" style="width: 200px">
+            <div class="panel-top">
+            </div>
+            <div class="panel-content shadow">
+                <tal:publications define="specific nocall:context/events/environmental-events-calendar|nothing;
+                    feeds specific/@@smartfolder_portlets|nothing"
+                    repeat="portlet feeds"
+                    tal:condition="nocall:specific">
+                    <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
+                </tal:publications>
+                <a href="" title="Submit an environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a>
+            </div>
+        </div>
 
       <div class="panel" id="tip-siteaction-chooselang" style="width: 125px">
           <div class="panel-top">

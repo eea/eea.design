@@ -374,7 +374,8 @@ float:right;
      min-height: 430px;
 }
 
-#tip-siteaction-subscriptions #portlet-subscribtion {
+.panel .portlet,
+.panel .portletHeader {
     background: transparent;
 }
 
