@@ -4,6 +4,8 @@ Changelog
 0.7 - (Unreleased)
 ------------------
 
+ * Slide panels for cross-side-top menu. [vincisas, thuliper #2771, #2881]
+
 0.6 - (2010-01-04)
 ------------------
  * Map tooltip not shown where there is already an events map on the page. [ghicaale #2771]
