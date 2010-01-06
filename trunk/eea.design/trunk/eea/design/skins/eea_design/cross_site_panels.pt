@@ -45,7 +45,7 @@
 
 	      <ul>
 		<li>
-		  <p><a target="_self" href="/help/infocentre/enquiries">Ask your question<br/>
+		  <p><a target="_self" tal:attributes="href string:$portal_url/help/infocentre/enquiries">Ask your question<br/>
 		  </a></p>
 		</li>
 	      </ul>
@@ -54,15 +54,15 @@
 	      <strong style="white-space: nowrap">For media and journalists:</strong><br/>
 	      <ul>
               <li>
-                <p><a target="_self" href="/pressroom">Press room<br/>
+                <p><a target="_self" tal:attributes="href string:$portal_url/pressroom">Press room<br/>
                 </a></p>
               </li>
 	      </ul>
 
 	      <br/>
-	      <a href="/about-us/who/staff-list" class="internal-link" title="Staff list"><strong>Contact EEA staff</strong></a><br/>
-	      <a href="/help/contact-info" class="internal-link"><strong>Contact the web team</strong></a><br/>
-          <a href="/help/eea-help-centre/faqs" class="internal-link"><strong>FAQ</strong></a><br/>
+	      <a tal:attributes="href string:$portal_url/about-us/who/staff-list" class="internal-link" title="Staff list"><strong>Contact EEA staff</strong></a><br/>
+	      <a tal:attributes="href string:$portal_url/help/contact-info" class="internal-link"><strong>Contact the web team</strong></a><br/>
+          <a tal:attributes="href string:$portal_url/help/eea-help-centre/faqs" class="internal-link"><strong>FAQ</strong></a><br/>
         </td>
 	    <td style="vertical-align: top;"><br/>
 	    </td>
@@ -74,12 +74,12 @@
 		Phone:</strong> (+45) 33 36 71 00<br/>
 	      <strong>Fax:</strong> (+45) 33 36 71 99<br/>
 	      <br/>
-	      <strong><a target="_self" href="../help/infocentre/index_html"><br/>
+	      <strong><a target="_self" tal:attributes="href string:$portal_url/help/infocentre/index_html"><br/>
 	    </a></strong></td>
 	  </tr>
           </table>
           <div class="portletFooter">
-              <a class="moreLink" href="/address.html"><span>More</span></a>
+              <a class="moreLink" tal:attributes="href string:$portal_url/address.html"><span>More</span></a>
           </div>
           </div>
         </div>

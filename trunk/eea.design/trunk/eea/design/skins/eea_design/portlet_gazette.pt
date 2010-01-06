@@ -68,13 +68,13 @@
     <tal:social-media tal:condition="includeSocialMedia">
         <dt>Social media</dt>
         <dd>
-            <img src="/twitter16x16.png" alt="Twitter logo"/> Follow us on <a href="http://twitter.com/euenvironment">Twitter</a>
+            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter logo"/> Follow us on <a href="http://twitter.com/euenvironment">Twitter</a>
         </dd>
         <dd>
-            <img src="/youtube16x16.png" alt="YouTube logo"/> Watch our <a href="http://www.youtube.com/user/EEAvideos">YouTube channel</a>
+            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube logo"/> Watch our <a href="http://www.youtube.com/user/EEAvideos">YouTube channel</a>
         </dd>
         <dd>
-            <img src="/rss.gif" alt="RSS logo"/> Subscribe to our <a href="http://www.eea.europa.eu/highlights.rdf">RSS feed</a>
+            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo"/> Subscribe to our <a href="http://www.eea.europa.eu/highlights.rdf">RSS feed</a>
         </dd>
     </tal:social-media>
 
