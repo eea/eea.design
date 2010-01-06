@@ -20,7 +20,8 @@
     folderContents folderContents|nothing">
 
   <tal:folderContents condition="folderContents" tal:define="
-    batch folderContents">
+    batch folderContents;
+    figure_context python:test(context.portal_type == 'EEAFigure', True, False)">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
@@ -29,9 +30,11 @@
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
-        <div tal:attributes="class python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'">
+        <div tal:define="css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
+                         album_class python:not display and figure_context and 'figuresPhotoAlbumEntry' or css"
+             tal:attributes="class album_class">
           <a tal:condition="display" tal:attributes="
-            href listing_url; 
+            href listing_url;
             class python:test(is_video, 'thickbox', '');
             title obj/pretty_title_or_id">
             <span class="photoAlbumEntryWrapper">
@@ -42,7 +45,7 @@
             </span>
             <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
           </a>
-          <a tal:condition="not:display" tal:attributes="
+          <a tal:condition="python:(not display) and not figure_context" tal:attributes="
             href listing_url;
             title obj/pretty_title_or_id">
             <span class="photoAlbumEntryWrapper">
@@ -53,6 +56,30 @@
             </span>
             <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
           </a>
+          <!-- Download figure -->
+          <div class="figuresPhotoAlbumEntryTitle" tal:define="
+            doc brain/getObject;
+            item_url brain/getURL;
+            item_title_or_id brain/pretty_title_or_id;
+            field python:doc.getFile();
+            size field/get_size;
+            icon field/getBestIcon | nothing;"
+            tal:condition="python:(not display) and size and figure_context">
+
+            <div class="figuresByLine" tal:define="
+              displaySize nocall:here/@@displaySize;
+              size python:displaySize(size);
+              ctype python:doc.lookupMime(field.getContentType());">
+              <img tal:condition="icon"
+                tal:attributes="src string:${context/portal_url}/$icon"/>
+              <span tal:content="ctype" /><br />
+              <span tal:content="size" />
+            </div>
+            <a tal:attributes="
+              href string:$item_url/at_download/file;
+              title item_title_or_id"
+              tal:content="item_title_or_id" />
+          </div>
         </div>
       </tal:entry>
     </tal:images>
