@@ -343,7 +343,7 @@ float:right;
     background: transparent url(/panel_arrow.png);
     width: 50px;
     height: 25px;
-    z-index: 1;
+    z-index: 3;
     position: relative;
     top: 1px;
 }
