@@ -36,10 +36,10 @@
           <a tal:condition="display" tal:attributes="
             href listing_url;
             class python:test(is_video, 'thickbox', '');
-            title obj/pretty_title_or_id">
+            title brain/Description">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title obj/pretty_title_or_id;
+              title brain/Description;
               alt obj/pretty_title_or_id;
               src string:${obj/absolute_url}/image_thumb"/>
             </span>
@@ -47,10 +47,10 @@
           </a>
           <a tal:condition="python:(not display) and not figure_context" tal:attributes="
             href listing_url;
-            title obj/pretty_title_or_id">
+            title brain/Description">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title obj/pretty_title_or_id;
+                title brain/Description;
               alt obj/pretty_title_or_id;
               src string:${portal_url}/atct_album_blank.jpg"/>
             </span>
@@ -77,7 +77,7 @@
             </div>
             <a tal:attributes="
               href string:$item_url/at_download/file;
-              title item_title_or_id"
+              title brain/Description"
               tal:content="item_title_or_id" />
           </div>
         </div>
@@ -110,10 +110,10 @@
           <a tal:condition="display" tal:attributes="
             href listing_url;
             class python:test(is_video, 'thickbox', '');
-            title obj/pretty_title_or_id">
+            title brain/Description">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title obj/pretty_title_or_id;
+              title brain/Description;
               alt obj/pretty_title_or_id;
               src string:${obj/absolute_url}/image_thumb"/>
             </span>
@@ -121,10 +121,10 @@
           </a>
           <a tal:condition="not:display" tal:attributes="
             href listing_url;
-            title obj/pretty_title_or_id">
+            title brain/Description">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title obj/pretty_title_or_id;
+              title brain/Description;
               alt obj/pretty_title_or_id;
               src string:${portal_url}/atct_album_blank.jpg"/>
             </span>
