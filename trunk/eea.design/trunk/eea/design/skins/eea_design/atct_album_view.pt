@@ -26,7 +26,7 @@
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
         obj brain/getObject;
-        desc_or_title brain/Description|obj/pretty_title_or_id;
+        desc_or_title python:brain.Description or obj.pretty_title_or_id;
         display obj/@@imgview/display|nothing;
         urlview obj/@@url;
         listing_url urlview/listing_url;
@@ -103,7 +103,7 @@
     <tal:images tal:condition="batch" tal:repeat="brain batch">
       <tal:entry tal:define="
         obj brain/getObject;
-        desc_or_title brain/Description|obj/pretty_title_or_id;
+        desc_or_title python:brain.Description or obj.pretty_title_or_id;
         display obj/@@imgview/display|nothing;
         urlview obj/@@url;
         listing_url urlview/listing_url;
