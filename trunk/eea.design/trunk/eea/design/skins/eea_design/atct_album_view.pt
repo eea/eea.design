@@ -26,6 +26,7 @@
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
         obj brain/getObject;
+        desc_or_title brain/Description|obj/pretty_title_or_id;
         display obj/@@imgview/display|nothing;
         urlview obj/@@url;
         listing_url urlview/listing_url;
@@ -36,10 +37,10 @@
           <a tal:condition="display" tal:attributes="
             href listing_url;
             class python:test(is_video, 'thickbox', '');
-            title brain/Description">
+            title desc_or_title">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title brain/Description;
+              title desc_or_title;
               alt obj/pretty_title_or_id;
               src string:${obj/absolute_url}/image_thumb"/>
             </span>
@@ -47,10 +48,10 @@
           </a>
           <a tal:condition="python:(not display) and not figure_context" tal:attributes="
             href listing_url;
-            title brain/Description">
+            title desc_or_title">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-                title brain/Description;
+                title desc_or_title;
               alt obj/pretty_title_or_id;
               src string:${portal_url}/atct_album_blank.jpg"/>
             </span>
@@ -77,7 +78,7 @@
             </div>
             <a tal:attributes="
               href string:$item_url/at_download/file;
-              title brain/Description"
+              title desc_or_title"
               tal:content="item_title_or_id" />
           </div>
         </div>
@@ -102,6 +103,7 @@
     <tal:images tal:condition="batch" tal:repeat="brain batch">
       <tal:entry tal:define="
         obj brain/getObject;
+        desc_or_title brain/Description|obj/pretty_title_or_id;
         display obj/@@imgview/display|nothing;
         urlview obj/@@url;
         listing_url urlview/listing_url;
@@ -110,10 +112,10 @@
           <a tal:condition="display" tal:attributes="
             href listing_url;
             class python:test(is_video, 'thickbox', '');
-            title brain/Description">
+            title desc_or_title">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title brain/Description;
+              title desc_or_title;
               alt obj/pretty_title_or_id;
               src string:${obj/absolute_url}/image_thumb"/>
             </span>
@@ -121,10 +123,10 @@
           </a>
           <a tal:condition="not:display" tal:attributes="
             href listing_url;
-            title brain/Description">
+            title desc_or_title">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title brain/Description;
+              title desc_or_title;
               alt obj/pretty_title_or_id;
               src string:${portal_url}/atct_album_blank.jpg"/>
             </span>
