@@ -61,8 +61,8 @@
             doc brain/getObject;
             item_url brain/getURL;
             item_title_or_id brain/pretty_title_or_id;
-            field python:doc.getFile();
-            size field/get_size;
+            field doc/getFile | nothing;
+            size field/get_size | nothing;
             icon field/getBestIcon | nothing;"
             tal:condition="python:(not display) and size and figure_context">
 
