@@ -17,7 +17,6 @@
                     position: 'bottom center',
                     offset: [0, 0],
                     delay: 1000,
-                    effect: 'fade',
                     events: {
                         tooltip: 'mouseover' 
                     },
