@@ -697,9 +697,17 @@ float:right;
     margin: 1em 0em;
     padding: 0.5em 1em 0.5em 3em;
     vertical-align: middle;
-    background-image: url(&dtml-portal_url;/info_icon.gif);
+    background-image: url(&dtml-portal_url;/information.png);
     background-repeat: no-repeat;
     background-position: 5px 50%;
+}
+
+.informationMessage {
+    background-color: #ffffff;
+}
+
+.warningMessage {
+    font-size: 160%;    
 }
 
 .portalMessage a {

@@ -3,7 +3,7 @@ Changelog
 
 0.7 - (Unreleased)
 ------------------
-
+ * Portal message for version info now uses two different class styles, one for warning and one for just information. [demarant, #2389]
  * Download figure if no thumb on atct_album_view. [ghicaale #2897]
  * Slide panels for cross-side-top menu. [vincisas, thuliper #2771, #2881]
 
