@@ -39,7 +39,7 @@
           <table>
           <tr>
 	    <td style="width: 45%;">
-	      <h2><img width="47" height="47" alt="Write us" src="/images/write-us"/> Write to us</h2>
+             <h2><img width="47" height="47" alt="Write us" tal:attributes="src string:$portal_url/images/write-us"/> Write to us</h2>
 
 	      <p><strong>For the public:</strong></p>
 
@@ -67,7 +67,7 @@
 	    <td style="vertical-align: top;"><br/>
 	    </td>
 	    <td style="vertical-align: top;">
-	      <h2><img width="47" height="47" alt="Call us" src="/images/call-us"/> Call us</h2>
+             <h2><img width="47" height="47" alt="Call us" tal:attributes="src string:$portal_url/images/call-us"/> Call us</h2>
 
 	      <strong>Reception:<br/>
 		<br/>
