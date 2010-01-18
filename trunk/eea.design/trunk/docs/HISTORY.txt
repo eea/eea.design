@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.7 - (Unreleased)
+0.7 - (2010-01-18)
 ------------------
  * Portal message for version info now uses two different class styles, one for warning and one for just information. [demarant, #2389]
  * Download figure if no thumb on atct_album_view. [ghicaale #2897]
