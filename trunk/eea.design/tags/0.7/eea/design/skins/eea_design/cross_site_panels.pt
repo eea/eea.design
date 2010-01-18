@@ -1,0 +1,122 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      i18n:domain="plone"
+      metal:use-macro="here/main_template/macros/master">
+    <head>
+    </head>
+    <body>
+
+    <div metal:fill-slot="main">
+        <tal:main-macro metal:define-macro="main">
+
+	<div class="panel" id="tip-siteaction-etcssites" style="width: 240px">
+        <div class="panel-top">
+        </div>
+        <div class="panel-content shadow">
+        <ul>
+	<li><a href="#">Select European Topic Centre (ETC)</a></li>
+	<li><a href="http://air-climate.eionet.europa.eu">Air and Climate Change</a></li>
+	<li><a href="http://biodiversity.eionet.europa.eu">Biological Diversity</a></li>
+	<li><a href="http://etc-lusi.eionet.europa.eu">Land Use and Spatial Information</a></li>
+	<li><a href="http://etc-scp.eionet.europa.eu">Sustainable Consumption and Production</a></li>
+	<li><a href="http://water.eionet.europa.eu">Water</a></li>      
+	</ul>
+    </div>
+        </div>
+
+        <div class="panel" id="tip-siteaction-subscriptions" style="width: 240px">
+            <div class="panel-top">
+            </div>
+            <div class="panel-content shadow" tal:define="includeSocialMedia python:True">
+                  <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
+            </div>
+        </div>
+
+        <div class="panel" id="tip-siteaction-contactus" style="width: 320px">
+            <div class="panel-top">
+            </div>
+            <div class="panel-content shadow">
+          <table>
+          <tr>
+	    <td style="width: 45%;">
+             <h2><img width="47" height="47" alt="Write us" tal:attributes="src string:$portal_url/images/write-us"/> Write to us</h2>
+
+	      <p><strong>For the public:</strong></p>
+
+	      <ul>
+		<li>
+		  <p><a target="_self" tal:attributes="href string:$portal_url/help/infocentre/enquiries">Ask your question<br/>
+		  </a></p>
+		</li>
+	      </ul>
+
+	      <br/>
+	      <strong style="white-space: nowrap">For media and journalists:</strong><br/>
+	      <ul>
+              <li>
+                <p><a target="_self" tal:attributes="href string:$portal_url/pressroom">Press room<br/>
+                </a></p>
+              </li>
+	      </ul>
+
+	      <br/>
+	      <a tal:attributes="href string:$portal_url/about-us/who/staff-list" class="internal-link" title="Staff list"><strong>Contact EEA staff</strong></a><br/>
+	      <a tal:attributes="href string:$portal_url/help/contact-info" class="internal-link"><strong>Contact the web team</strong></a><br/>
+          <a tal:attributes="href string:$portal_url/help/eea-help-centre/faqs" class="internal-link"><strong>FAQ</strong></a><br/>
+        </td>
+	    <td style="vertical-align: top;"><br/>
+	    </td>
+	    <td style="vertical-align: top;">
+             <h2><img width="47" height="47" alt="Call us" tal:attributes="src string:$portal_url/images/call-us"/> Call us</h2>
+
+	      <strong>Reception:<br/>
+		<br/>
+		Phone:</strong> (+45) 33 36 71 00<br/>
+	      <strong>Fax:</strong> (+45) 33 36 71 99<br/>
+	      <br/>
+	      <strong><a target="_self" tal:attributes="href string:$portal_url/help/infocentre/index_html"><br/>
+	    </a></strong></td>
+	  </tr>
+          </table>
+          <div class="portletFooter">
+              <a class="moreLink" tal:attributes="href string:$portal_url/address.html"><span>More</span></a>
+          </div>
+          </div>
+        </div>
+
+        <div class="panel" id="tip-siteaction-events" style="width: 450px">
+            <div class="panel-top">
+            </div>
+            <div class="panel-content shadow">
+                <tal:publications define="specific nocall:context/events/environmental-events-calendar|nothing;
+                    feeds specific/@@smartfolder_portlets|nothing"
+                    repeat="portlet feeds"
+                    tal:condition="nocall:specific">
+                    <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
+                </tal:publications>
+                <a id="submit-event-link" class="moreLink" href="" title="Submit an environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent"><span>Submit a new event</span></a>
+            </div>
+        </div>
+
+      <div class="panel" id="tip-siteaction-chooselang" style="width: 125px">
+          <div class="panel-top">
+          </div>
+          <div class="panel-content shadow">
+       <tal:languages define="languages here/@@translatedSites">
+            <ul id="chooselang">
+          	<tal:languages repeat="lang languages">
+	           <li><a href="" 
+                          tal:content="python: '%s (%s)' % (lang['lang'], lang['langcode'])"
+                          tal:attributes="href lang/url;
+                                          title lang/lang"></a></li>
+                </tal:languages> 
+            </ul>
+         </tal:languages>
+         </div>
+       </div>
+
+        </tal:main-macro>
+    </div>
+
+    </body>
+</html>
