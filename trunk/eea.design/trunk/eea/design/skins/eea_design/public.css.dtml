@@ -17,6 +17,16 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 
+/* There was a name clash between addthis and our external links */
+#addthis .link-external {
+    background: none;
+    padding: 0;
+}
+
+#addthis .span {
+    display: inline;
+}
+
 .tooltip { 
     display: none; 
     background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow.png); 
@@ -335,12 +345,12 @@ float:right;
 }
 
 /* drop down panels for portal siteactions */
-.panel {
+#cross-site-top .panel {
     display: none;
     z-index: 100;
 }
 
-.panel-top {
+#cross-site-top .panel-top {
     margin: auto auto;
     background: transparent url(&dtml-portal_url;/panel_arrow.png);
     width: 50px;
@@ -349,22 +359,22 @@ float:right;
     top: 1px;
 }
 
-.panel .portletFooter {
+#cross-site-top .panel .portletFooter {
     margin-top: 1em;
 }
 
-.panel-content {
+#cross-site-top .panel-content {
     background: white url(&dtml-portal_url;/portlet_bg.png) repeat-x;
     color: black;
     padding: 10px;
     border: 1px solid #ccc;
 }
 
-.panel #portlet-subscribtion {
+#cross-site-top .panel #portlet-subscribtion {
     margin: 0;
 }
 
-.panel #portlet-subscribtion .portletFooter {
+#cross-site-top .panel #portlet-subscribtion .portletFooter {
     margin-bottom: 0;
     margin-bottom: 0;
 }
@@ -375,8 +385,8 @@ float:right;
      min-height: 430px;
 }
 
-.panel .portlet,
-.panel .portletHeader {
+#cross-site-top .panel .portlet,
+#cross-site-top .panel .portletHeader {
     background: transparent;
 }
 
