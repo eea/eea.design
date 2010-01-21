@@ -88,7 +88,7 @@
             <div class="panel-top">
             </div>
             <div class="panel-content shadow">
-                <tal:publications define="specific nocall:context/events/environmental-events-calendar|nothing;
+                <tal:publications define="specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;
                     feeds specific/@@smartfolder_portlets|nothing"
                     repeat="portlet feeds"
                     tal:condition="nocall:specific">

@@ -4,6 +4,7 @@ Changelog
 0.8 - (Unreleased)
 ------------------
 
+ * Fixed event pop up to not rely on acquisition to reach the events Rich Topic [thuliper]
  * Fixed name CSS class name clash with Kupu [thuliper]
 
 0.7 - (2010-01-18)
