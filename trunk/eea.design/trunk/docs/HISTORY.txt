@@ -4,6 +4,8 @@ Changelog
 0.8 - (Unreleased)
 ------------------
 
+ * Fixed name CSS class name clash with Kupu [thuliper]
+
 0.7 - (2010-01-18)
 ------------------
  * Portal message for version info now uses two different class styles, one for warning and one for just information. [demarant, #2389]
