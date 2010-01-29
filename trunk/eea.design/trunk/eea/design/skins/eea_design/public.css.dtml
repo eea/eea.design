@@ -17,14 +17,9 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 
-/* There was a name clash between addthis and our external links */
-#addthis .link-external {
-    background: none;
-    padding: 0;
-}
-
-#addthis .span {
-    display: inline;
+/* Override jquery.ui style */
+.ui-widget-content a {
+    color: #2A6495 !important;
 }
 
 .tooltip { 
