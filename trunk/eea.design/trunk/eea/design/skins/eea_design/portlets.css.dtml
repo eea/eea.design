@@ -740,9 +740,9 @@ a.noHover {
 }
 
 #portlet-subscribtion input.subscriptionButton {
-   background: url(&dtml-portal_url;/search-arrow.gif) no-repeat top left;
+   background: url(&dtml-portal_url;/search_btn_small.png) no-repeat top left;
    border: none;
-   width: 19px;
+   width: 30px;
    height: 19px;
    margin: 0 8px 0 2px;
    padding: 0;
