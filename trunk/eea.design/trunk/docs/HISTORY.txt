@@ -4,6 +4,7 @@ Changelog
 0.8 - (Unreleased)
 ------------------
 
+ * Added gallery_view to show folder items in a slide show [thuliper #2937]
  * Customized jquery.ui panel style to use our blue color on links. [thuliper]
  * Fixed event pop up to not rely on acquisition to reach the events Rich Topic [thuliper]
  * Fixed name CSS class name clash with Kupu [thuliper]

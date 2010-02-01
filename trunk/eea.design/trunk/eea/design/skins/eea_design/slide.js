@@ -32,8 +32,8 @@
             // remove panel if user clicks outside it
             $(document).click(function(e) {
                 var target = $(e.target);
-                if (!target.is('.panel') && !target.parents('.panel').length) {
-                    $('.panel').fadeOut('fast');
+                if (!target.is('#cross-site-top .panel') && !target.parents('#cross-site-top .panel').length) {
+                    $('#cross-site-top .panel').fadeOut('fast');
                 }
             });
         }
