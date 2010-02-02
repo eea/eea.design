@@ -16,6 +16,16 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+/* arrow search input */ 
+#portal-searchbox input.searchButton { 
+    background: url(&dtml-portal_url;/search_btn.png) no-repeat top left; 
+    border: none; 
+    width: 41px; 
+    height: 26px; 
+    margin: 0 8px 0 2px; 
+    padding: 0;
+    cursor: pointer; 
+} 
 
 /* Override jquery.ui style */
 .ui-widget-content a {
