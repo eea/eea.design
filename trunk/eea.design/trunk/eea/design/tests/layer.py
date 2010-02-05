@@ -1,6 +1,4 @@
 from Testing import ZopeTestCase
-from Products.Five import zcml
-from Products.Five import fiveconfigure
 from Products.CMFCore.utils import getToolByName
 from Products.PloneTestCase.layer import PloneSite
 from transaction import commit
