@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<import-steps>
+ <import-step id="migrate_from_eeadesign2006"
+              version="20091005-01"
+              handler="eea.design.setuphandlers.migrate_from_eeadesign2006"
+              title="eea.design: migrate_from_eeadesign2006">
+    migrate_from_eeadesign2006
+ </import-step>
+</import-steps>

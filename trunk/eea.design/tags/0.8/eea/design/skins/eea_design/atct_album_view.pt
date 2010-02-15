@@ -1,0 +1,169 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+  lang="en-US"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="plone">
+
+<body>
+
+<div metal:fill-slot="main">
+<metal:main_macro define-macro="main">
+
+  <div metal:use-macro="here/document_actions/macros/document_actions">
+    Document actions (print, sendto etc) </div>
+
+  <h1 tal:content="here/pretty_title_or_id" class="documentFirstHeading">Title or id</h1>
+
+  <div tal:content="here/Description" tal:condition="here/Description" class="documentDescription">
+    Description
+  </div>
+  <metal:listingmacro define-macro="listing" tal:define="
+    folderContents folderContents|nothing">
+
+  <tal:folderContents condition="folderContents" tal:define="
+    batch folderContents;
+    figure_context python:test(context.portal_type == 'EEAFigure', True, False)">
+    <div metal:use-macro="here/batch_macros/macros/navigation" />
+    <tal:images tal:repeat="brain folderContents">
+      <tal:entry tal:define="
+        obj brain/getObject;
+        desc_or_title python:brain.Description or obj.pretty_title_or_id;
+        display obj/@@imgview/display|nothing;
+        urlview obj/@@url;
+        listing_url urlview/listing_url;
+        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        <div tal:define="css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
+                         album_class python:not display and figure_context and 'figuresPhotoAlbumEntry' or css"
+             tal:attributes="class album_class">
+          <a tal:condition="display" tal:attributes="
+            href listing_url;
+            class python:test(is_video, 'thickbox', '');
+            title desc_or_title">
+            <span class="photoAlbumEntryWrapper">
+            <img style="border: none" tal:attributes="
+              title desc_or_title;
+              alt obj/pretty_title_or_id;
+              src string:${obj/absolute_url}/image_thumb"/>
+            </span>
+            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+          </a>
+          <a tal:condition="python:(not display) and not figure_context" tal:attributes="
+            href listing_url;
+            title desc_or_title">
+            <span class="photoAlbumEntryWrapper">
+            <img style="border: none" tal:attributes="
+                title desc_or_title;
+              alt obj/pretty_title_or_id;
+              src string:${portal_url}/atct_album_blank.jpg"/>
+            </span>
+            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+          </a>
+          <!-- Download figure -->
+          <div class="figuresPhotoAlbumEntryTitle" tal:define="
+            doc brain/getObject;
+            item_url brain/getURL;
+            item_title_or_id brain/pretty_title_or_id;
+            field doc/getFile | nothing;
+            size field/get_size | nothing;
+            icon field/getBestIcon | nothing;"
+            tal:condition="python:(not display) and size and figure_context">
+
+            <div class="figuresByLine" tal:define="
+              displaySize nocall:here/@@displaySize;
+              size python:displaySize(size);
+              ctype python:doc.lookupMime(field.getContentType());">
+              <img tal:condition="icon"
+                tal:attributes="src string:${context/portal_url}/$icon"/>
+              <span tal:content="ctype" /><br />
+              <span tal:content="size" />
+            </div>
+            <a tal:attributes="
+              href string:$item_url/at_download/file;
+              title desc_or_title"
+              tal:content="item_title_or_id" />
+          </div>
+        </div>
+      </tal:entry>
+    </tal:images>
+    <div class="visualClear"><!-- --></div>
+    <div metal:use-macro="here/batch_macros/macros/navigation" />
+  </tal:folderContents>
+
+  <tal:noFolderContents tal:condition="not:folderContents" tal:define="
+    result python:here.atctListAlbum(images=1, others=1);
+    images result/images;
+    otherContents result/others;
+    Batch python:modules['Products.CMFPlone'].Batch;
+    b_start python:request.get('b_start', 0);
+    batch python:Batch(images, 12, int(b_start), orphan=1)">
+
+  <div tal:condition="images"
+    metal:use-macro="here/batch_macros/macros/navigation" />
+
+  <tal:albumsimages tal:condition="images">
+    <tal:images tal:condition="batch" tal:repeat="brain batch">
+      <tal:entry tal:define="
+        obj brain/getObject;
+        desc_or_title python:brain.Description or obj.pretty_title_or_id;
+        display obj/@@imgview/display|nothing;
+        urlview obj/@@url;
+        listing_url urlview/listing_url;
+        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        <div tal:attributes="class python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'">
+          <a tal:condition="display" tal:attributes="
+            href listing_url;
+            class python:test(is_video, 'thickbox', '');
+            title desc_or_title">
+            <span class="photoAlbumEntryWrapper">
+            <img style="border: none" tal:attributes="
+              title desc_or_title;
+              alt obj/pretty_title_or_id;
+              src string:${obj/absolute_url}/image_thumb"/>
+            </span>
+            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+          </a>
+          <a tal:condition="not:display" tal:attributes="
+            href listing_url;
+            title desc_or_title">
+            <span class="photoAlbumEntryWrapper">
+            <img style="border: none" tal:attributes="
+              title desc_or_title;
+              alt obj/pretty_title_or_id;
+              src string:${portal_url}/atct_album_blank.jpg"/>
+            </span>
+            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+          </a>
+        </div>
+      </tal:entry>
+    </tal:images>
+    <div class="visualClear"><!-- --></div>
+  </tal:albumsimages>
+
+  <p class="discreet"
+    i18n:domain="atcontenttypes"
+    i18n:translate="text_no_albums_uploaded"
+    tal:condition="python:not images">
+      No albums or photos uploaded yet.
+  </p>
+
+  <div tal:condition="images"
+    metal:use-macro="here/batch_macros/macros/navigation" />
+
+  <tal:listing condition="otherContents"
+    define="folderContents otherContents">
+  <metal:listing metal:use-macro="here/folder_listing/macros/listing">
+    <metal:empty metal:fill-slot="no_items_in_listing"></metal:empty>
+  </metal:listing>
+
+  </tal:listing>
+  </tal:noFolderContents>
+
+  </metal:listingmacro>
+
+  <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
+
+</metal:main_macro>
+</div>
+
+</body>
+
+</html>
