@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.8 - (Unreleased)
+0.8 - (2010-02-15)
 ------------------
 
  * New search box image [thuliper #2952]
