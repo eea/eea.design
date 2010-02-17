@@ -1,27 +1,6 @@
 <script type="text/javascript">
     $(document).ready(function() {
-        if ($.fn.tooltip !== undefined) {
-            // Spotlight area:
-            $("#multimedia-highlights ul img").each(function(i) {
-                var img = $(this);
-                var title = img.attr("title");
-                img.after($('<div class="tooltip side-tooltip">' + title + '</div>'))
-                img.attr("title", ""); // Don't use removeAttr, IE still remembers it
-                img.tooltip({
-                    effect: 'slide',
-                    position: 'center left'
-                });
-            });
-            $("#big_vid").each(function(i) {
-                var title = $(this).find('img').attr("title");
-                $(this).after($('<div class="tooltip">' + title + '</div>'));
-                $(this).find('img').attr("title", ""); // Don't use removeAttr, IE still remembers it
-                $(this).tooltip({
-                    effect: 'slide'
-                });
-            });
-        }
-        // Visual bar:
+        // Remove tooltips from the visual bar. EEA hasn't decided yet if they want them or not.
         $("#top-news-area .portlet-promotions img").each(function(i) {
             $(this).attr("title", "").parent().attr("title", ""); // Don't use removeAttr, IE still remembers it
         });

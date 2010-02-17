@@ -32,21 +32,34 @@
     color: #2A6495 !important;
 }
 
-.tooltip { 
+/* Tooltips */
+.eea-tooltip-markup-top,
+.eea-tooltip-markup-bottom,
+.eea-tooltip-markup-left,
+.eea-tooltip-markup-right {
     display: none; 
-    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow.png); 
     font-size: 12px; 
     height: 70px; 
-    width :160px; 
-    padding :25px; 
+    width: 160px; 
+    padding: 25px; 
     color: white;
     text-align: left;
     text-decoration: none;
 }
-
-.side-tooltip { 
-    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_side.png); 
+.eea-tooltip-markup-top {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_top.png); 
+}
+.eea-tooltip-markup-bottom {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_bottom.png); 
+    margin-top: 15px;
+}
+.eea-tooltip-markup-left { 
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_left.png); 
     padding-right: 45px;
+}
+.eea-tooltip-markup-right { 
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_right.png); 
+    padding-left: 45px;
 }
 
 #print-warning {
