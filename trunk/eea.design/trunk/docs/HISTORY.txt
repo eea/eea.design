@@ -4,7 +4,8 @@ Changelog
 0.9 - (Unreleased)
 ------------------
 
- * Generalized the tooltip system #3003 [thuliper]
+ * Separated galleryview/tooltip integration into more descriptive files enabled for CMS [thuliper, #3007]
+ * Generalized the tooltip system [thuliper, #3003]
 
 0.8 - (2010-02-15)
 ------------------

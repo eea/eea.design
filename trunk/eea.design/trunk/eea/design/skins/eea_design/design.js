@@ -8,50 +8,6 @@ $(document).ready(function() {
         $('body').addClass('fullscreen');
         $('#icon-full_screen').parent().remove();
     }
-
-    if ($.fn.galleryView !== undefined) {
-        $('#galleryView').galleryView({
-            panel_width: 768,
-            panel_height: 511,
-            frame_width: 50,
-            frame_height: 50,
-            transition_speed: 350,
-            transition_interval: 0
-        });
-    }
-    if ($.fn.tooltip !== undefined) {
-        $(".eea-tooltip-top").each(function(i) {
-            var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-top">' + title + '</div>'));
-            $(this).tooltip({
-                effect: 'slide'
-            });
-        });
-        $(".eea-tooltip-bottom").each(function(i) {
-            var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-bottom">' + title + '</div>'));
-            $(this).tooltip({
-                effect: 'slide',
-                position: 'bottom center'
-            });
-        });
-        $(".eea-tooltip-left").each(function(i) {
-            var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-left">' + title + '</div>'));
-            $(this).tooltip({
-                effect: 'slide',
-                position: 'center left'
-            });
-        });
-        $(".eea-tooltip-right").each(function(i) {
-            var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-right">' + title + '</div>'));
-            $(this).tooltip({
-                effect: 'slide',
-                position: 'center right'
-            });
-        });
-    }
 });
 
 $(window).load(function() {
