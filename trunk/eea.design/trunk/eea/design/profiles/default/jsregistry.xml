@@ -13,6 +13,9 @@
     enabled="True" expression="" id="eea-galleryview.js" inline="False"
     position-after="cssQuery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-autoscroll.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="python: portal.portal_membership.isAnonymousUser() and request.get('jsdisable','') != 'jquery'" id="design.js" inline="False"
     position-before="cssQuery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
