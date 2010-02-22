@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="eea.translations">
+<body>
+
+<metal:footer   metal:define-macro="portal_footer" i18n:domain="eea.translations">
+<br clear="all" />
+<div id="footer-wrapper">
+   <div id="bg-wrapper">
+      <div id="portal-footer">
+        <metal:ecotip use-macro="context/portlet_ecotip/macros/portlet" />
+      </div>
+  </div>
+</div>
+<div class="visualClear"></div>
+<div id="colophon-wrapper">
+<p>
+    <tal:address i18n:translate="European Environment Agency, Kongens Nytorv 6, DK - 1050 Copenhagen K, Denmark - Phone: +45 3336 7100"> European Environment Agency (EEA), Kongens Nytorv 6, 1050 
+Copenhagen K, Denmark - Phone: +45 3336 7100</tal:address><br />
+     <img src="http://www.eea.europa.eu/eu-flag.gif" alt="EU flag" class="image-left" style="width: 50px"/>The European Environment Agency (EEA) is an agency of the European Union.<br clear="all" />
+    <tal:comments i18n:translate="comments_to">Comments to</tal:comments> <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>.<br />
+<br /><a href="http://www.eea.europa.eu/copyright" xmlns:cc="http://creativecommons.org/ns#" tal:attributes="href string:${local_site}/legal/copyright" rel="cc:morePermissions"><tal:translate 
+i18n:translate="Legal notice">Legal notice</tal:translate></a>, <a href="http://www.eea.europa.eu/disclaimer" tal:attributes="href string:${local_site}/legal/disclaimer" title="Disclaimer" i18n:translate="Disclaimer" i18n:attributes="title">Disclaimer</a>, <a href="http://www.eea.europa.eu/privacy/" tal:attributes="href string:${local_site}/legal/privacy" title="Privacy policy" i18n:translate="Privacy policy" i18n:attributes="title">Privacy policy</a>
+   </p>
+
+<metal:colophon use-macro="context/colophon/macros/colophon" />
+
+</div>
+</metal:footer>
+</body>
+</html>
+
