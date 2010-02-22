@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.9 - (Unreleased)
+0.9 - (2010-02-22)
 ------------------
 
  * Autoscroll browser down to element classed 'autoscroll-to-here' #3011
