@@ -17,11 +17,12 @@
     Description
   </div>
   <metal:listingmacro define-macro="listing" tal:define="
+    figure_context figure_context|nothing;
     folderContents folderContents|nothing">
 
   <tal:folderContents condition="folderContents" tal:define="
     batch folderContents;
-    figure_context python:test(context.portal_type == 'EEAFigure', True, False)">
+    figure_context python:figure_context or context.portal_type == 'EEAFigure'">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
@@ -65,21 +66,24 @@
             field doc/getFile | nothing;
             size field/get_size | nothing;
             icon field/getBestIcon | nothing;"
-            tal:condition="python:(not display) and size and figure_context">
+            tal:condition="python:(not display) and figure_context">
 
-            <div class="figuresByLine" tal:define="
-              displaySize nocall:here/@@displaySize;
-              size python:displaySize(size);
-              ctype python:doc.lookupMime(field.getContentType());">
-              <img tal:condition="icon"
-                tal:attributes="src string:${context/portal_url}/$icon"/>
-              <span tal:content="ctype" /><br />
-              <span tal:content="size" />
+            <div class="figuresByLine">
+              <tal:size tal:condition="size" tal:define="
+                displaySize nocall:here/@@displaySize;
+                size python:size and displaySize(size);
+                ctype python:size and doc.lookupMime(field.getContentType());">
+                <img tal:condition="icon"
+                  tal:attributes="src string:${context/portal_url}/$icon"/>
+                <span tal:content="ctype" /><br />
+                <span tal:content="size" />
+              </tal:size>
             </div>
-            <a tal:attributes="
-              href string:$item_url/at_download/file;
-              title desc_or_title"
-              tal:content="item_title_or_id" />
+            <a tal:define="suffix python:size and '/at_download/file' or ''"
+              tal:attributes="
+                href string:$item_url$suffix;
+                title desc_or_title"
+                tal:content="item_title_or_id" />
           </div>
         </div>
       </tal:entry>
