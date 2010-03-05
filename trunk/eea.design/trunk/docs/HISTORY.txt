@@ -4,6 +4,7 @@ Changelog
 1.0 - (Unreleased)
 ------------------
 
+ * Show cross-site-menu panels on mouseclick instead of hover [thuliper, #3039]
  * Implemented flexible tooltips in order to be able to add variable length tooltips [voineali, #2986]
  * Prepend ecotip link in footer w/ portal_url so that it works w/ template_service [thuliper, #3038]
  * removed frontpage properties from profile, properties are now managed via zmi [demarant]

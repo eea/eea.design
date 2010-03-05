@@ -6,10 +6,6 @@
             if (tooltip.length > 0) {
                 a.attr("title","").attr("href", "#");
 
-                a.mouseover(function() {
-                    a.parent().addClass("selected");
-                });
-
                 // the tooltip panel should have the id in form of
                 // tip-SITEACTION-ID
                 a.tooltip({
@@ -18,13 +14,7 @@
                     offset: [0, 0],
                     delay: 1000,
                     events: {
-                        tooltip: 'mouseover' 
-                    },
-                    onShow: function(e) {
-                        a.parent().addClass("selected");
-                    },
-                    onBeforeHide: function(e, i) {
-                        a.parent().removeClass("selected");
+                        def: 'click, blur'
                     }
                 });
             }
@@ -32,7 +22,7 @@
             // remove panel if user clicks outside it
             $(document).click(function(e) {
                 var target = $(e.target);
-                if (!target.is('#cross-site-top .panel') && !target.parents('#cross-site-top .panel').length) {
+                if (!target.is('#cross-site-top .panel') && !target.parents('#cross-site-top .panel, #cross-site-top').length) {
                     $('#cross-site-top .panel').fadeOut('fast');
                 }
             });
