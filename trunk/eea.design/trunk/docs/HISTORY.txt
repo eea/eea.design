@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0 - (Unreleased)
+1.0 - (2010-03-08)
 ------------------
 
  * Show cross-site-menu panels on mouseclick instead of hover [thuliper, #3039]
