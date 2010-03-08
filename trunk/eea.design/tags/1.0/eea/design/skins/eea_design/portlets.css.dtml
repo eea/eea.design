@@ -1,0 +1,754 @@
+/*
+** Plone style sheet - Portlets
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** You should preferrably use ploneCustom.css to add your own CSS classes and to
+** customize your portal, as these are the base fundaments of Plone, and will
+** change and be refined in newer versions. Keeping your changes in
+** ploneCustom.css will make it easier to upgrade.
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* The new portlet CSS - these will be switched to non-qualified classes
+   (ie. .portlet, not dl.portlet) once the old portlet layout is removed in
+   Plone 2.5. ~limi */
+
+/* Generic portlet style */
+
+.portlet, dl.portlet {
+    margin: 1px 0 1em 0;
+    padding: 0.3em;
+}
+
+.portlet-promotions .portletHeader a,
+.portlet-promotions .portletHeader a:visited {
+    text-decoration: none;
+}
+
+.portlet-promotions dl.portlet {
+    margin-top: 0;
+    padding-top: 0.3em;
+}
+
+.portlet-promotions dl.portlet dt{
+    text-align: center;
+    background-color: #E9EFCD;
+}
+
+.portlet-promotions dl.portlet .promo-prev {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url(&dtml-portal_url;/arrowDown.gif);
+}
+
+.portlet-promotions dl.portlet .hide-promo { 
+    display: none; 
+} 
+
+.portlet-promotions dl.portlet .active-promo {
+    display: block;
+}
+
+.portlet-promotions dl.portlet .promo-count {
+    color: green;
+}
+
+.portlet-promotions dl.portlet .promo-next {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url(&dtml-portal_url;/arrowUp.gif);
+}
+
+#portlet-navigation-tree .promo-nav-portlet a.portletHeader {
+    padding-left: 0;
+}
+
+.frontpage .portlet-promotions a.portletHeader{
+    display: none;
+}
+
+.portletItem {
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+dt.portletItem {
+   margin: 0.5em 0 0 0;
+}
+
+.portletHeader {
+    background-image: url(portlet_bg.png);
+    font-weight:normal;
+    padding: 0;
+    margin-bottom:0.2em;
+    margin-left:0;
+    line-height: 1.1em;
+    font: bold 1.3em &dtml-fontFamily;;
+    color:&dtml-fontColor;;
+}
+#portlet-navigation-tree .portletHeader,
+.portlet-navigation-tree .portletHeader {
+   font-size: 1.2em;
+   padding:0.5em 0.2em 0.5em 0.5em;
+   margin-top:0;
+   margin-bottom:0;
+   background: #d0df86;
+}
+
+#portlet-navigation-tree #firstHeader {
+   background: #ffffff url(&dtml-portal_url;/white-green.gif) repeat-x bottom left;
+   padding: 1em 0.5em 1em 0.5em;
+   font-size: 1.6em;
+}
+
+.portletFooter {
+    margin: 0em;
+    padding: 0;
+    text-align: right;
+    border: 0;
+    clear: both;
+    font-size:x-small;
+    line-height:1em;
+}
+
+.portletFooter {
+    border-color:&dtml-lightGreyDivisionColor;;
+    border-style:dotted none none;
+    border-width:1px;
+    margin:0em;
+    padding:1em 1em;
+    text-align:right;
+}
+
+.portletItemDetails {
+    text-align: right;
+    display: block;
+}
+
+.portletItemDetails {
+    text-align: right;
+    display: block;
+}
+
+
+/* link style in portlets */
+
+#portlet-login .portletHeader a,
+#portlet-login .portletHeader a:visited,
+#portlet-login .portletHeader a:active {
+color:&dtml-linkVisitedColor; !important;
+}
+
+.portletItem a {
+    display: block;
+}
+dd.portletItem a,
+dd.portletFooter a {
+    border-bottom: none;
+}
+.portlet a, dl.portlet a {
+    text-decoration: none;
+}
+
+.portlet a:visited {
+    color:&dtml-linkColor;;
+}
+
+dd.portletItem a:visited,
+dd.portletFooter a:visited {
+    color: &dtml-linkColor;;
+}
+
+#portal-column-two .portletHeader a,
+#portal-column-two .portletHeader a:link,
+#portal-column-two .portletHeader a:visited,
+#portal-column-two .portletHeader a:active,
+#portal-column-two .portletHeader a:hover,
+#portal-column-one .portletHeader a,
+#portal-column-one .portletHeader a:link,
+#portal-column-one .portletHeader a:visited,
+#portal-column-one .portletHeader a:active,
+#portal-column-one .portletHeader a:hover  {
+    color: &dtml-linkHeadingColor;;
+    text-decoration: none;
+}
+
+
+/* Rounded plone tab navigation with images -
+** probably this style will be removed
+** use class="roundedBox" and nifty script instead.
+** (nifty does the trick
+** without images.)
+*/
+.portlet-tabs .portletHeader {
+    display: block;
+    border: none;
+    background: transparent url(&dtml-portal_url;/green-left.gif) top left  no-repeat;
+    padding: 0 0 0 12px;
+    margin: 0;
+    float: left;
+    font-weight: normal;
+}
+
+.portlet-tabs .portletHeader a {
+    display: block;
+    background:  transparent url(&dtml-portal_url;/green-right.gif) top right no-repeat;
+    padding: 3px 15px 3px 0;
+    width: auto;
+    min-width: 2em;
+    text-align: center;
+    overflow: hidden;
+    font: normal x-small Verdana;
+    color: white;
+
+}
+
+.portlet-promotions .portletHeader a {
+    font-size: 0.75em;
+}
+
+.portlet-promotions div.portletHeader {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.portlet-tabs .portletItem {
+    border: 1px solid &dtml-globalBorderColor;;
+    border-top: none;
+    margin: 0 1px;
+    clear: both;
+    padding-left: 7em;
+    display: none;
+    height: 8.5em;
+}
+
+.portlet-tabs dd.selected {
+    display: block;
+}
+
+.portlet-tabs .selected a {
+    background:  transparent url(&dtml-portal_url;/on02-right.gif) top right no-repeat;
+    color: #495b6b;
+}
+
+.portlet-tabs dt.selected {
+    background:  transparent url(&dtml-portal_url;/on02-left.gif) top left no-repeat;
+}
+
+dl#portlet-navigation-tree,
+dl.portlet-navigation-tree {
+    border: none;
+}
+
+#portlet-navigation-tree li {
+    background: transparent;
+    display: block;
+}
+
+#portlet-navigation-tree .portletItem {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+#portlet-navigation-tree li a,
+.portlet-navigation-tree li a {
+    color: #495b6b;
+    border: none;
+    padding-left: 2em;
+    background: transparent url(arrow-normal.png) 1em no-repeat;
+}
+
+#portlet-navigation-tree a:hover {
+    color: &dtml-linkHoverColor;;
+    background-color: &dtml-linkHoverBGColor;;
+}
+
+#portlet-navigation-tree .portletHeader a:hover {
+    background-color: transparent;
+ }
+
+#portlet-navigation-tree .navTreeCurrentItem {
+    color: &dtml-linkHoverColor;;
+    background-color: &dtml-linkHoverBGColor;;
+}
+
+/* END of portlet with tabs */
+
+
+/* New navtree styles */
+
+.portletNavigationTree {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    line-height: 1em;
+}
+
+.navTree {
+    list-style: none;
+    list-style-image: none;
+    margin-top: 1px;
+}
+
+.navTree li {
+    margin-bottom: 1px;
+}
+
+.navTreeItem {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+
+.navTreeItem a,
+dd.portletItem .navTreeItem a {
+    display: block;
+    text-decoration: none;
+    padding-top: 0.2em;
+    padding-bottom: 0.25em;
+    font-weight: bold;
+}
+
+.navTreeItem a:hover,
+dd.portletItem .navTreeItem a:hover {
+}
+
+li.navTreeCurrentItem {
+    display: block;
+    padding: 0 0 0 1px;
+    margin: 0 0 2px -1px;
+}
+li.navTreeCurrentItem a,
+li.navTreeCurrentItem a:hover {
+    display: block;
+    min-height: 1.6em;
+    line-height: 1.6em;
+    height: auto;
+    font-weight: bold;
+}
+ul.navTreeLevel3, ul.navTreeLevel4, ul.navTreeLevel5 {
+    border-top: 1px dashed #ccc;
+}
+.navTreeLevel3 a.navItemLevel2,
+.navTreeLevel3 a.navItemLevel2:hover {
+    margin-left: 1.5em;
+}
+.navTreeLevel4 a.navItemLevel3,
+.navTreeLevel5 a.navItemLevel4,
+.navTreeLevel4 a.navItemLevel3:hover,
+.navTreeLevel5 a.navItemLevel4:hover {
+    margin-left: 3em;
+    font-size: 0.8em;
+}
+
+/* Another workaround for broken Internet Explorer */
+
+* html li.navTreeCurrentItem a,
+* html li.navTreeCurrentItem a:hover {
+    height: 1.6em;
+}
+
+
+.navTreeLevel0 { margin: 0; }
+.navTreeLevel1 { }
+.navTreeLevel2 { }
+.navTreeLevel0,
+.navTreeLevel3 { background: white; }
+.navTreeLevel4 { background: white; }
+.navTreeLevel5 { background: white; }
+/* .navTreeLevel5 { margin-left: 0.75em; } */
+
+
+/*
+** Calendar elements - used in the calendar rendering
+*/
+.portlet-calendar div.portletHeader {
+    background-color: <dtml-var greyBackgroundColor missing="#eeeeee">;
+    font-weight:normal;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0.3em;
+    margin-bottom:0;
+    margin-left:0;
+    line-height: 1.1em;
+    font: bold 1.3em &dtml-fontFamily;;
+    color:&dtml-fontColor;;
+    border: 1px solid &dtml-globalBorderColor;;
+    border-bottom: none;
+}
+.portlet-calendar .portletHeader a {
+font-size: 0.75em;
+}
+
+.dayPopup {
+    background-color: &dtml-helpBackgroundColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; Black;
+    padding: 0.2em;
+    position: absolute;
+    visibility: hidden;
+    width: 12em;
+    z-index: 2;
+}
+.date {
+    font-weight: bold;
+    color:&dtml-discreetColor;
+}
+
+.ploneCalendar {
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    margin: 0 0 0 1px;
+    border-collapse: collapse;
+    width: 99%;
+}
+.ploneCalendar a {
+    text-decoration: none;
+}
+.ploneCalendar a:hover {
+    text-decoration: none;
+}
+
+.ploneCalendar th {
+    background-color: &dtml-globalBackgroundColor;;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.6em;
+}
+.ploneCalendar td {
+    background-color: transparent;
+    width: 1.5em;
+    text-align: right;
+    padding: 2px;
+}
+.ploneCalendar .weekdays td {
+    background-color: &dtml-globalBackgroundColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-style: &dtml-borderStyle; none;
+    text-align: center;
+    padding: 2px;
+}
+.ploneCalendar .event {
+    background-color: &dtml-globalBackgroundColor;;
+    font-weight: bold;
+}
+.ploneCalendar .todayevent {
+    background-color: &dtml-globalBackgroundColor;;
+    border: 2px &dtml-borderStyle; #ffa500;
+    font-weight: bold;
+}
+.ploneCalendar .todaynoevent {
+    border-collapse: collapse;
+    border: 2px &dtml-borderStyle; #ffa500;
+}
+.ploneCalendar #calendar-month a {
+    text-decoration: underline;
+}
+.ploneCalendar #calendar-previous {
+    background-image: url(&dtml-portal_url;/arrowLeft.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.ploneCalendar #calendar-next {
+    background-image: url(&dtml-portal_url;/arrowRight.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.ploneCalendar #calendar-previous a,
+.ploneCalendar #calendar-next a {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: <dtml-var "_['arrowLeft.gif'].height">px;
+    height: 0px !important;
+    height /**/: <dtml-var "_['arrowLeft.gif'].height">px;
+    cursor: pointer;
+}
+.ploneCalendar #calendar-next a {
+    padding-top: <dtml-var "_['arrowRight.gif'].height">px;
+    height: 0px !important;
+    height /**/: <dtml-var "_['arrowRight.gif'].height">px;
+}
+
+#portal-column-one .centered a {
+   font-weight: bold;
+   text-decoration: none;
+   padding-left: 3em;
+}
+
+span.promoNumber,
+span.promoNumber:visited {
+   height: 1.8em;
+   line-height: 1.8em;
+   margin-left: 3px;
+   margin-top: -20px;
+   text-align: center;
+   line-height: 2em;
+   background: #e6f0fa;
+   color: #1a3771;
+   padding: 0.2em  0.4em;
+   outline: none;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+span.promoNext, span.promoPrev,
+span.promoNext:visited, span.promoPrev:visited {
+   height: 1.8em;
+   line-height: 1.8em;
+   margin-left: 3px;
+   margin-top: -20px;
+   text-align: center;
+   line-height: 2em;
+   background: #95B229;
+   color: #1a3771;
+   padding: 0.2em  0.2em;
+   outline: none;
+   font-weight: bold;
+   font-size: 0.8em;
+   cursor: pointer;
+}
+
+span.promoNumber_current,
+span.promoNumber_current:visited {
+   width: 2em;
+   height: 1.8em;
+   line-height: 1.8em;
+   background: #93bee8;
+   color: #fff;
+   margin-left: 3px;
+   margin-top: -20px;
+   text-align: center;
+   padding: 0.2em  0.4em;
+   outline: none;
+   font-weight: bold;
+}
+.promo_controls {
+   text-align: right;
+   margin-bottom: 0pt;
+}
+
+.portletSubmenu {
+   margin-left: 1em;
+}
+
+.portletSubmenu ul {
+    list-style-image: url(arrow-normal.png);
+}
+
+a.noHover {
+   background: none;
+}
+/* EEA specific portlet classes */
+.portlet .link,
+.portlet .thumbnail-right {
+   float: right;
+   margin: 6px 0 0 8px;
+   font-size: x-small;
+   clear: right;
+}
+.portlet .thumbnail-right a { 
+   border: none;
+}
+
+.portlet .date {
+   font-weight: bold;
+   font-size: x-small;
+}
+
+.portlet dt.portletItem {
+   clear: both;
+}
+.portlet dd.portletSeparator {
+   clear: both;
+   border-bottom: 1px dotted &dtml-globalBorderColor;;
+   margin:0;
+   padding:0;
+}
+.portlet a.portletHeader {
+   font-size: 1em;
+   padding-bottom: 0.4em;
+}
+
+.portlet-rss  a {
+   display:inline;
+}
+
+#content dt.portletItem a {
+   font-weight: normal;
+}
+
+.portlet-rss .portletFooter {
+   padding-top: 0.7em;
+   padding-bottom: 0;
+}
+
+#portlet-subscribtion {
+   padding:0.5em;
+   height: auto;
+}
+
+.portlet-rss .portletHeader,
+.portlet-promotions .portletHeader {
+   margin-bottom: 0;
+   padding: 0.3em 0;
+}
+
+.portlet-promotions {
+   float: left;
+   padding: 0 0 0 0;
+   width: 100%;
+}
+
+.portlet-promotions .portletHeader {
+   padding-left: 0.5em;
+}
+.portlet-promotions .portlet {
+   display: block;
+}
+
+/* can be removed - new classes used */
+/*.portlet-promotions a.previous,
+.portlet-promotions a.next {
+   float: right;
+   display: block;
+   background: white url(box-arrow-right.gif) top right no-repeat;
+   margin: -10px 0 0 0;
+   height: 23px;
+   width: 17px;
+}
+.portlet-promotions a.next:hover {
+   background-image: url(box-arrow-mouse-right.gif);
+}
+
+
+.portlet-promotions a.previous {
+   background-image: url(box-arrow-left.gif);
+}
+
+.portlet-promotions a.previous:hover {
+   background-image: url(box-arrow-mouse-left.gif);
+}*/
+
+#portlet-chooselang {
+   background: transparent;
+   color:black;
+   margin: 0 13px 0 0;
+   padding: 0.5em 0;
+   float: right;
+   clear: right;
+   border: 0;
+   font-size: 100%;
+}
+
+#portlet-chooselang dt {
+   display: none;
+}
+
+#portlet-subscribtion dt {
+   margin-bottom: 5px;
+}
+
+#portlet-chooselang select {
+   font-size: 110%;
+}
+
+#chooselang {
+   list-style-image: none;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+
+#portal-column-two .portletTabHead,
+#portal-column-two .portletTabHead_current {
+   float: left;
+   border: 1px solid #bebebe;
+   width: 9.7em;
+   *width: 10.7em; /* targets IE6 and 7 */
+   height: 23px;
+   *height: 17px; /* targets IE6 and 7 */
+   display: block;
+   padding: 2px 2px 1px 2px;
+   margin-top: -27px;
+   margin-left: 0.2em;
+   text-align: center;
+   font: bold 0.8em &dtml-fontFamily;;
+   color: &dtml-fontColor;;
+   line-height: 20px;
+   white-space: nowrap;
+}
+#portal-column-two .portletTabHead {
+   background: #e9efcd;
+   cursor: pointer;
+}
+#portal-column-two .portletTabHead_current {
+   background: #fff;
+   border-bottom: 1px solid #fff;
+}
+#portal-column-two .portlet {
+   margin: 0 0 0.7em 0;
+   padding: 0.4em;
+}
+#portal-column-two dl dd dl.portlet {
+   margin: 0;
+   padding: 0.4em;
+   border: 1px solid #bebebe;
+   border-top:none;
+}
+#portal-column-two #portlet-chooselang dl dd,
+#portal-column-two .portlet-rss dd {
+   margin: 0 0 0 0;
+}
+#portal-column-two dl.portlet-rss {
+   margin: 0 0 0.6em 0;
+   padding: 0;
+   background: url(&dtml-portal_url;/tabhead-bg.gif) repeat-x left top;
+   border: none;
+}
+#portal-column-two dl.portlet-rss-dbl {
+   margin: 0 0 0.6em 0;
+   padding: 0;
+   padding-top: 28px;
+   _padding-top: 27px; /* IE6 */
+   background: url(&dtml-portal_url;/tabhead-bg.gif) repeat-x left top;
+   border: none;
+}
+.portletFooter .feedButton {
+   margin: -12px 0 0 0;
+   background: none;
+   float: left;
+}
+
+#portlet-subscribtion dd {
+    margin-bottom: 0.5em;
+}
+
+#portlet-subscribtion input.subscriptionButton {
+   background: url(&dtml-portal_url;/search_btn_small.png) no-repeat top left;
+   border: none;
+   width: 30px;
+   height: 19px;
+   margin: 0 8px 0 2px;
+   padding: 0;
+   cursor:pointer;
+}
+
+/* </dtml-with>
+** YOUR CSS RULES STOP HERE
+*/
