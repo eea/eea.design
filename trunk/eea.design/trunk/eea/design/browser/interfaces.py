@@ -43,3 +43,8 @@ class IFrontPageHighlights(Interface):
             haven't expired. Sort by publish date and return the number 
             that is configured in portal_properties.frontpage_properties. 
         """ 
+
+
+class ISubFolderView(Interface):
+    """Marker interface for SubFolderView
+    """

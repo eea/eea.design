@@ -2,12 +2,20 @@
            xmlns:five="http://namespaces.zope.org/five"
            xmlns:browser="http://namespaces.zope.org/browser">
 
-    <browser:page
-           for="*"
-           name="frontpage_highlights"
-           class=".frontpage.Frontpage"
-           permission="zope.Public"
-           allowed_interface=".interfaces.IFrontPageHighlights"
-         />
+  <browser:page
+    for="*"
+    name="frontpage_highlights"
+    class=".frontpage.Frontpage"
+    permission="zope.Public"
+    allowed_interface=".interfaces.IFrontPageHighlights"
+    />
+
+  <browser:page
+    for="*"
+    name="subfolder_view"
+    class=".subfolder_view.SubFolderView"
+    template="subfolder_view.pt"
+    permission="zope.Public"
+    />
 
 </configure>
