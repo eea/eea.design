@@ -4,6 +4,7 @@ Changelog
 1.1 - (Unreleased)
 ------------------
 
+ * Tweaks for gallery-fancybox to work better on small resolutions [thuliper]
  * New subfolder_view for listing contents of subfolders [thuliper, #3102]
 
 1.0 - (2010-03-08)

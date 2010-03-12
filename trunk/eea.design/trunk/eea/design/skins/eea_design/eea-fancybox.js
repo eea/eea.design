@@ -10,6 +10,8 @@ $(document).ready(function() {
             margin: 0,
             width: 780,
             height: 580,
+            scrolling: 'no',
+            autoScale: false,
             autoDimensions: false
         });
     });
