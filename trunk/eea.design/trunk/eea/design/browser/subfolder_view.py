@@ -1,3 +1,4 @@
+from Products.CMFPlone import Batch
 from Products.Five import BrowserView
 
 
@@ -19,8 +20,7 @@ class SubFolderView(BrowserView):
     """ View that shows the contents of all subfolders in the context folder
     """
 
-    @property
-    def folder_contents(self):
+    def folder_contents(self, b_size=5):
         """Get the folderish items in cachable list/dict format"""
         ret = []
         for brain in self.context.getFolderContents():
@@ -32,4 +32,6 @@ class SubFolderView(BrowserView):
                     'portal_type': brain.portal_type,
                     'contents': _get_contents(brain),
                 })
-        return ret
+        b_start = self.request.get('b_start', 0)
+        batch = Batch(ret, b_size, int(b_start), orphan=0)
+        return batch
