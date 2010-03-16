@@ -12,10 +12,10 @@
 
   <browser:page
     for="*"
-    name="subfolder_view"
-    class=".subfolder_view.SubFolderView"
-    template="subfolder_view.pt"
+    name="subfolder_view_logic"
+    class=".subfolder_view_logic.SubFolderView"
     permission="zope.Public"
+    allowed_interface=".interfaces.ISubFolderView"
     />
 
 </configure>

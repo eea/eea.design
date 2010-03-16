@@ -48,3 +48,6 @@ class IFrontPageHighlights(Interface):
 class ISubFolderView(Interface):
     """Marker interface for SubFolderView
     """
+
+    def folder_contents(size_limit):
+        """ Return the subfolder contents of the context folder """
