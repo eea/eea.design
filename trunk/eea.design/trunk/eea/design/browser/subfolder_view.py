@@ -26,13 +26,12 @@ class SubFolderView(BrowserView):
         for brain in self.context.getFolderContents():
             if brain.portal_type in ['Folder', 'Topic', 'RichTopic']:
                 contents = _get_contents(brain)
-                if len(contents) > size_limit:
-                    contents = contents[size_limit:]
                 ret.append({
                     'title': brain.Title,
                     'description': brain.Description,
                     'url': brain.getURL(),
                     'portal_type': brain.portal_type,
-                    'contents': contents,
+                    'contents': contents[:size_limit],
+                    'has_more': len(contents) > size_limit,
                 })
         return ret
