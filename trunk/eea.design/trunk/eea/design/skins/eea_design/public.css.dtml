@@ -16,6 +16,11 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.subfolder .moreLink {
+    float: left;
+    margin: 1em 0em 2em 1em;
+}
+
 /* arrow search input */
 #portal-searchbox input.searchButton {
     background: url(&dtml-portal_url;/search_btn.png) no-repeat top left;
