@@ -24,7 +24,7 @@
 
         <div class="visualClear"></div>
 
-        <tal:block tal:define="size_limit python:10">
+        <tal:block tal:define="size_limit python:3">
             <div class="subfolder" tal:repeat="folder python:view.folder_contents(size_limit)">
                 <h2 tal:content="folder/title">Articles</h2>
                 <p tal:content="folder/description"></p>

@@ -22,6 +22,7 @@ class SubFolderView(BrowserView):
 
     def folder_contents(self, size_limit=10):
         """Get the folderish items in cachable list/dict format"""
+        size_limit = int(self.request.get('size_limit', size_limit))
         ret = []
         for brain in self.context.getFolderContents():
             if brain.portal_type in ['Folder', 'Topic', 'RichTopic']:
