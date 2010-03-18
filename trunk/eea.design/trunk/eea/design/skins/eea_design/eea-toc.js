@@ -23,7 +23,7 @@ $(document).ready(function() {
         }
 
         var hText = $(el).find('a').text() || $(el).text();
-        var hId = 'toc-' + i;
+        var hId = $(el).attr('id') || 'toc-' + i;
         var li = $('<li><a>' + hText + '</a></li>');
         currentList.append(li);
         li.find('a').attr('href', '#' + hId);
