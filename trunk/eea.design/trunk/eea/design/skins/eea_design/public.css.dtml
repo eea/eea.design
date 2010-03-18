@@ -16,19 +16,6 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-#document-toc .toc-h1 {
-    margin-left: 0em;
-}
-#document-toc .toc-h2 {
-    margin-left: 0em;
-}
-#document-toc .toc-h3 {
-    margin-left: 1em;
-}
-#document-toc .toc-h4 {
-    margin-left: 2em;
-}
-
 .subfolder .moreLink {
     float: left;
     margin: 1em 0em 2em 1em;
