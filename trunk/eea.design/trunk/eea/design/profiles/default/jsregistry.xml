@@ -7,6 +7,9 @@
     enabled="True" expression="" id="slide.js" inline="False"
     position-after="cssQuery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-toc.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="eea-tooltips.js" inline="False"
     position-after="cssQuery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
