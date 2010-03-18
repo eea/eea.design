@@ -5,12 +5,12 @@
 
 <metal:portlet metal:define-macro="portlet">
 
-  <dl id="document-toc" class="portlet toc" style="display: none">
+  <dl id="document-toc" class="portlet toc">
     <dt class="portletHeader"
         i18n:translate="label_tableofcontents">Contents</dt>
     <dd class="portletItem">
-      <ul>
-      </ul>
+      <ol>
+      </ol>
     </dd>
   </dl>
 

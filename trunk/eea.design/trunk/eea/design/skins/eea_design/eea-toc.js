@@ -1,24 +1,30 @@
 /* The table of contents portlet finds all h1, h2, h3, h4 tags inside
  * the #region-content div.
  */
-function addHeaders(ul, hTag) {
-    $('#region-content').find(hTag).not('.exclude-from-toc').each(function(i) {
-        hText = $(this).html();
-        hId = $(this).attr('id') || hTag + '-' + i;
-        $(this).attr('id', hId);
-        var li = $('<li><a href="#">' + hText + '</a></li>');
-        var a = li.find('a');
-        a.attr('href', '#' + hId);
-        a.addClass('toc-' + hTag);
-        ul.append(li)
-    });
-}
-
 $(document).ready(function() {
-    $('#document-toc').each(function() {
-        $(this).show();
-        var ul = $(this).find('.portletItem ul');
-        addHeaders(ul, 'h2');
-        addHeaders(ul, 'h3');
-    })
+    var currentList = $('#document-toc .portletItem ol');
+    var hLevel = 1;
+    $('#region-content').find('h1, h2, h3, h4').each(function(i, el) {
+        var tagName = el.tagName.toLowerCase();
+        var newLevel = parseInt(tagName[1]);
+
+        if (newLevel > hLevel) {
+            hLevel = newLevel;
+            var newList = $('<ol></ol>');
+            currentList.append(newList);
+            currentList = newList;
+        }
+
+        if (newLevel < hLevel) {
+            hLevel = newLevel;
+            currentList = currentList.parent();
+        }
+
+        var hText = $(el).find('a').text() || $(el).text();
+        var hId = 'toc-' + i;
+        var li = $('<li><a>' + hText + '</a></li>');
+        currentList.append(li);
+        li.find('a').attr('href', '#' + hId);
+        $(el).attr('id', hId);
+    });
 })
