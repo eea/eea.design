@@ -1,12 +1,14 @@
 /* The table of contents portlet finds all h1, h2, h3, h4 tags inside
- * the #region-content div.
+ * the #region-content div. The script works with headers that have
+ * <a> children.
  */
 $(document).ready(function() {
     var currentList = $('#document-toc .portletItem ol');
-    var hLevel = 1;
-    $('#region-content').find('h1, h2, h3, h4').each(function(i, el) {
+    var hLevel = null;
+    $('#region-content').find('h2, h3, h4').each(function(i, el) {
         var tagName = el.tagName.toLowerCase();
         var newLevel = parseInt(tagName[1]);
+        hLevel = hLevel || newLevel;
 
         if (newLevel > hLevel) {
             hLevel = newLevel;
