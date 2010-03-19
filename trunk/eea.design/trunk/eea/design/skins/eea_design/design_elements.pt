@@ -143,6 +143,10 @@
         <p>Warning! Core meltdown at EEA HQ, code super-duper-red</p>
     </div>
 
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+        table of contents
+    </div>
+
     </metal:main-macro>
     </div>
 </body>
