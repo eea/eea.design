@@ -1,0 +1,149 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+    <div metal:fill-slot="main">
+    <metal:main-macro define-macro="main">
+
+    <h1 class="autoscroll-to-here">Welcome to EEA Web design elements, your browser should have autoscrolled down to me</h1>
+    <div class="documentDescription">This page shows common html markup, css classes and javascripts we use across the EEA website. See example code and use Firefox Firebug plugin to inspect elements code.</div>
+
+    <h2>Quotations</h2>
+    <blockquote>
+    <p>Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.</p>
+    <p class="source">Stavros Dimas, Commissioner for Environment</p>
+    </blockquote>
+
+    <h2>Gallery view</h2>
+    <ul id="galleryView">
+        <li>
+            <span class="panel-overlay">Overlay text goes here</span>
+            <img src="monkey-with-makeup" />
+        </li>
+        <li><img src="mr-monkey" /></li>
+    </ul>
+    <pre>
+&lt;ul id=&quot;galleryView&quot;&gt;
+    &lt;li&gt;
+        &lt;span class=&quot;panel-overlay&quot;&gt;Overlay text goes here&lt;/span&gt;
+        &lt;img src=&quot;mr-monkey&quot; /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;monkey-with-makeup&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+
+    <h2>Fancybox pop-ups</h2>
+    <div style="display:none">
+        <div id="hidden-popup" style="width:250px;height:150px">
+            Hello World!
+        </div>
+    </div>
+    <h4>Arbitrary HTML</h4>
+    <p>You can have arbitrary HTML in the pop-ups:</p>
+    <p>
+    <a class="fancybox" href="#hidden-popup">
+        Click me!
+    </a>
+    <h4>Image pop-ups</h4>
+    <p>
+        If the a-tag hrefs to an image, it will be displayed in the popup.
+        Be careful though, if the URL does not end with an image extension,
+        fancybox will hang.
+    </p>
+    <a class="fancybox" href="http://farm3.static.flickr.com/2181/2168980899_1508c84aac.jpg">
+        <img src="http://farm3.static.flickr.com/2181/2168980899_1508c84aac_t.jpg" />
+    </a>
+
+    <h2>Video pop-ups</h2>
+    <a href="/multimedia/electric-car" class="thickbox">
+        <img src="/multimedia/electric-car/image_wide" />
+    </a>
+    <pre>
+&lt;a href=&quot;http://www.eea.europa.eu/multimedia/electric-car&quot; class=&quot;thickbox&quot;&gt
+    &lt;img src=&quot;http://www.eea.europa.eu/multimedia/electric-car/image_wide&quot; /&gt
+&lt;/a&gt
+    </pre>
+
+    <h2>Tooltips</h2>
+    <img src="fish" title="Tooltips can go right" class="eea-tooltip-left" />
+    <img src="fish" title="Tooltips can go up" class="eea-tooltip-top" />
+    <img src="fish" title="Tooltips can go down" class="eea-tooltip-bottom" />
+    <img src="fish" title="Tooltips can go left" class="eea-tooltip-right" />
+    <pre>
+&lt;img src=&quot;fish&quot; class=&quot;eea-tooltip-left&quot; title=&quot;Tooltips can go right&quot; /&gt;
+&lt;img src=&quot;fish&quot; class=&quot;eea-tooltip-top&quot; title=&quot;Tooltips can go up&quot; /&gt;
+&lt;img src=&quot;fish&quot; class=&quot;eea-tooltip-bottom&quot; title=&quot;Tooltips can go down&quot; /&gt;
+&lt;img src=&quot;fish&quot; class=&quot;eea-tooltip-right&quot; title=&quot;Tooltips can go left&quot; /&gt;
+    </pre>
+
+    <h2>Flexible tooltips</h2>
+    <img src="fish" class="eea-flexible-tooltip-left" title="The name given to the resource. Typically, a title will be a name by which the resource is formally known" />
+    <img src="fish" class="eea-flexible-tooltip-top" title="The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content" />
+    <img src="fish" class="eea-flexible-tooltip-bottom" title="Short description of the data resource" />
+    <img src="fish" class="eea-flexible-tooltip-right" title="Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights" />
+    <pre>
+&lt;img src=&quot;fish&quot; class=&quot;eea-flexible-tooltip-left&quot; title=&quot;The name given to the resource. Typically, a title will be a name by which the resource is formally known&quot; /&gt;
+&lt;img src=&quot;fish&quot; class=&quot;eea-flexible-tooltip-top&quot; title=&quot;The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content&quot; /&gt;
+&lt;img src=&quot;fish&quot; class=&quot;eea-flexible-tooltip-bottom&quot; title=&quot;Short description of the data resource&quot; /&gt;
+&lt;img src=&quot;fish&quot; class=&quot;eea-flexible-tooltip-right&quot; title=&quot;Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights&quot; /&gt;
+    </pre>
+
+    <h2>Sortable tables</h2>
+    <table class="listing">
+        <thead>
+            <tr><th>Product</th><th>Price</th></tr> 
+        </thead>
+        <tbody>
+            <tr><td>Ice cream</td><td>50</td></tr>
+            <tr><td>Pony</td><td>75</td></tr>
+            <tr><td>Car</td><td>9999999</td></tr>
+        </tbody>
+    </table>
+    <pre>
+&lt;table class=&quot;listing&quot;&gt
+    &lt;thead&gt
+        &lt;tr&gt;&lt;th&gt;Product&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt; 
+    &lt;/thead&gt
+    &lt;tbody&gt
+        &lt;tr&gt;&lt;td&gt;Ice cream&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Pony&lt;/td&gt;&lt;td&gt;75&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Car&lt;/td&gt;&lt;td&gt;9999999&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+    </pre>
+
+    <h2>Basic text styles</h2>
+    <h1>This is a h1</h1>
+    <h2>This is a h2</h2>
+    <h3>This is a h3</h3>
+    <h4>This is a h4</h4>
+    <p>This is a paragraph. <a href="#" class="moreLink">This is a moreLink</a></p>
+    
+    <h2>Image scales</h2>
+    <p>image_large<br/><img src="giraffe/image_large" /></p>
+    <p>image_preview<br/><img src="giraffe/image_preview" /></p>
+    <p>image_mini<br/><img src="giraffe/image_mini" /></p>
+    <p>image_thumb<br/><img src="giraffe/image_thumb" /></p>
+    <p>image_tile<br/><img src="giraffe/image_tile" /></p>
+    <p>image_icon<br/><img src="giraffe/image_icon" /></p>
+    <p>image_listing<br/><img src="giraffe/image_listing" /></p>
+    <p>image_thumb (videos get play button and black borders applied correctly)<br/><img src="/multimedia/rain-on-snow-environmental-atlas-of-europe-2014-sweden/image_thumb" /></p>
+    <p>image_wide (only available for videos)<br/><img src="/multimedia/rain-on-snow-environmental-atlas-of-europe-2014-sweden/image_wide" /></p>
+
+    <h2>Portal messages</h2>
+    <div class="portalMessage">
+        <p>Settings have been applied<p/>
+    </div>
+    <div class="portalMessage informationMessage">
+        <p>Your screensaver has been upgraded, please consider to restart your computer ... Have a good day</p>
+    </div>
+    <div class="portalMessage warningMessage">
+        <p>Warning! Core meltdown at EEA HQ, code super-duper-red</p>
+    </div>
+
+    </metal:main-macro>
+    </div>
+</body>
+</html>
