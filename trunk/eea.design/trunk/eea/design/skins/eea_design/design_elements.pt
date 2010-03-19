@@ -147,7 +147,44 @@
         table of contents
     </div>
 
+    <h2>Auto-Link-Icons</h2>
+    <p>Link types are automatically detected on client side by a javascript which will add the necessary class icon before the link. Here you see some examples:</p>
+    <h3>Icons based on protocols</h3>
+    <p>
+        <a href="http://www.externalsite.eu">external link</a>,
+        <a href="https://www.externalsite.eu">secure link</a>, 
+        <a href="ftp://externalsite.eu">FTP link</a>,
+        <a href="callto://externalsite.eu">callto link</a>, 
+        <a href="mailto:any@any.eu">mailto link</a>
+        <br />
+        <strong>Test links</strong>: <a href="https://www.eea.europa.eu">new EEA domain link</a>, <a href="https://www.eea.europa.eu/document.pdf">PDF on new EEA domain link</a>, <a href="https://reports.eea.europa.eu/document.ppt">Presentation on old EEA domain</a>
+    </p>
+    <h3>Some popular file extensions</h3>
+    <p>
+        <a href="/document.pdf">PDF document</a>,
+        <a href="/doc.doc">Word document</a>, 
+        <a href="/pres.zip">Zip archive</a>,
+        <a href="/doc.xls">Excel link</a>, 
+        <a href="/download.asp?fileid=456&filetype=.pdf">Fake PDF file extension</a> (just add file extension in the URL as query at the end!), 
+    </p>
+    <p>There are more icons detected, see <a href="all_icons">list of all icons available</a></p>
+
     </metal:main-macro>
+    </div>
+
+    <h2>Scope / Local search</h2>
+    <div class="localSearch lightBGC">
+        <h4>Search on data set and application</h4>
+        <form method="get" action="available.asp" id="form2" name="form2">
+            <input type="hidden" name="type" value="search" />
+            <div class="field">
+                <label>Title</label>
+                <div class="formHelp">Enter one or more keywords for a search. Use of AND/OR is supported.</div>
+                <div></div>
+                <input type="text" name="search" value="" size="30" maxlength="50" tabindex="1" />
+                <input type="submit" value="Search" class="searchButton" id="Submit2" name="Submit2" tabindex="2" />
+            </div> 
+        </form>
     </div>
 </body>
 </html>
