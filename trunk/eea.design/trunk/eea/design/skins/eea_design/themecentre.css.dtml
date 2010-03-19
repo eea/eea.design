@@ -94,11 +94,6 @@ body.section-themes .portlet-rss .portletItem {
    padding-left: 0.5em;
 }
 
-
-dt.portletSubMenuHeader {
-margin:0 0 0.5em 1em;
-}
-
 .switchThemeMenu {
     background-image: url(&dtml-portal_url;/arrow-up-blue.gif);
     background-repeat: no-repeat;

@@ -96,6 +96,7 @@ dt.portletItem {
     color:&dtml-fontColor;;
 }
 #portlet-navigation-tree .portletHeader,
+#portlet-navigation-tree .portletSubMenuHeader,
 .portlet-navigation-tree .portletHeader {
    font-size: 1.2em;
    padding:0.5em 0.2em 0.5em 0.5em;
