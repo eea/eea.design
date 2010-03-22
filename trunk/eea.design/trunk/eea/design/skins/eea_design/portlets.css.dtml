@@ -27,11 +27,6 @@
     padding: 0.3em;
 }
 
-.eea-accordion-portlet {
-    margin: 0;
-    padding: 0;
-}
-
 .portlet-promotions .portletHeader a,
 .portlet-promotions .portletHeader a:visited {
     text-decoration: none;
@@ -753,6 +748,21 @@ a.noHover {
    margin: 0 8px 0 2px;
    padding: 0;
    cursor:pointer;
+}
+
+.eea-accordion-portlet {
+    margin: 0;
+    padding: 0;
+}
+.eea-accordion-portlet .eea-accordion-header .tile {
+    cursor: pointer;
+    padding-left: 20px;
+    background-image: url(&dtml-portal_url;/accordion_right.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.eea-active-accordion .eea-accordion-header .tile {
+    background-image: url(&dtml-portal_url;/accordion_down.png);
 }
 
 /* </dtml-with>
