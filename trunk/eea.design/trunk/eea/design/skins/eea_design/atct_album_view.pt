@@ -27,7 +27,8 @@
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
         obj brain/getObject;
-        desc_or_title python:brain.Description or obj.pretty_title_or_id;
+        obj_title python:obj.pretty_title_or_id();
+        desc_or_title python:brain.Description or obj_title;
         display obj/@@imgview/display|nothing;
         urlview obj/@@url;
         listing_url urlview/listing_url;
@@ -38,10 +39,10 @@
           <a tal:condition="display" tal:attributes="
             href listing_url;
             class python:test(is_video, 'thickbox', '');
-            title desc_or_title">
+            title python:figure_context and obj_title or desc_or_title">
             <span class="photoAlbumEntryWrapper">
             <img style="border: none" tal:attributes="
-              title desc_or_title;
+              title python:figure_context and obj_title or desc_or_title;
               alt obj/pretty_title_or_id;
               src string:${obj/absolute_url}/image_thumb"/>
             </span>

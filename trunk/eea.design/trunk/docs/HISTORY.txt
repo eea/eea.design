@@ -4,6 +4,8 @@ Changelog
 1.2 - (Unreleased)
 ------------------
 
+ * Fixed atct_album_view title when used in figure context as it is used by
+   fancybox [voineali #3156]
  * Added table of contents portlet [thuliper, #3076]
 
 1.1 - (2010-03-16)
