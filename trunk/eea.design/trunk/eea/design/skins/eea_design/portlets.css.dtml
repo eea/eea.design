@@ -22,9 +22,14 @@
 
 /* Generic portlet style */
 
-.portlet, dl.portlet {
+.portlet {
     margin: 1px 0 1em 0;
     padding: 0.3em;
+}
+
+.eea-accordion-portlet {
+    margin: 0;
+    padding: 0;
 }
 
 .portlet-promotions .portletHeader a,
