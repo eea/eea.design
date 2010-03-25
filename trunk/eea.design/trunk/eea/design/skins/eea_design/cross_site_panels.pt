@@ -9,12 +9,12 @@
     <div metal:fill-slot="main">
         <tal:main-macro metal:define-macro="main">
 
-	<div class="panel" id="tip-siteaction-etcssites" style="width: 240px">
+	<div class="panel" id="tip-siteaction-etcssites" style="width: 270px">
         <div class="panel-top">
         </div>
         <div class="panel-content shadow">
+        <h4 style="margin:0 0 1em 0;">Select European Topic Centre (ETC)</h4>
         <ul>
-	<li><a href="#">Select European Topic Centre (ETC)</a></li>
 	<li><a href="http://air-climate.eionet.europa.eu">Air and Climate Change</a></li>
 	<li><a href="http://biodiversity.eionet.europa.eu">Biological Diversity</a></li>
 	<li><a href="http://etc-lusi.eionet.europa.eu">Land Use and Spatial Information</a></li>
