@@ -4,7 +4,7 @@
         // Disable cross-site-panels for IE6.
         // TODO: remove this snippet when we completely drop suuport for IE6.
         if ($.browser.msie && parseInt($.browser.version) < 7) {
-            return
+            return;
         }
 
         function panel(i) {
