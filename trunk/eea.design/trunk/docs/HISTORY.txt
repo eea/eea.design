@@ -7,6 +7,7 @@ Changelog
 1.2 - (2010-03-26)
 ------------------
 
+ * Fix bug where first link in ETC (cross-site-menu) was not clickable [thuliper, #3177]
  * Disable cross site menu popups for IE6 [thuliper, #3175]
  * Fixed atct_album_view title when used in figure context as it is used by
    fancybox [voineali #3156]
