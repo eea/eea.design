@@ -310,7 +310,6 @@ dl.portlet-navigation-tree {
     display: block;
     padding: 0;
     margin: 0;
-    border-bottom: 1px dashed #ccc;
 }
 
 
@@ -339,9 +338,6 @@ li.navTreeCurrentItem a:hover {
     line-height: 1.6em;
     height: auto;
     font-weight: bold;
-}
-ul.navTreeLevel3, ul.navTreeLevel4, ul.navTreeLevel5 {
-    border-top: 1px dashed #ccc;
 }
 .navTreeLevel3 a.navItemLevel2,
 .navTreeLevel3 a.navItemLevel2:hover {
