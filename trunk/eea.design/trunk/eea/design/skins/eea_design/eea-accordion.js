@@ -1,10 +1,14 @@
 $(document).ready(function() {
+    var navTreeCurrentItem = $('.navTreeCurrentItem');
+    var openAccordionPortlet = $('.eea-accordion-portlet:first');
+
     // If the URL ends with 'dc', we open the data center accordion section.
     if (/\/dc$/.test(window.location.pathname)) {
-       $('#portlet-navigation-tree-data-center-services').addClass('eea-active-accordion');
-    } else {
-        $('.eea-accordion-portlet:first').addClass('eea-active-accordion');
+        openAccordionPortlet = $('#portlet-navigation-tree-data-center-services');
+    } else if (navTreeCurrentItem) {
+        openAccordionPortlet = navTreeCurrentItem.parents('.eea-accordion-portlet');
     }
+    openAccordionPortlet.addClass('eea-active-accordion');
     $('.eea-accordion-portlet').not('.eea-active-accordion').find('.eea-accordion-content').hide();
 
     $('.eea-accordion-header').click(function() {
