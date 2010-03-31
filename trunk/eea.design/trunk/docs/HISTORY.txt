@@ -4,6 +4,7 @@ Changelog
 1.3 - (unreleased)
 ------------------
 
+ * Make accordion scroll the page to the top when clicked [thuliper, #3169]
  * Automatically open accordion section where there's a selected navigation item [thuliper, #3168]
 
 1.2 - (2010-03-26)

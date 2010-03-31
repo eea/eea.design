@@ -16,6 +16,7 @@ $(document).ready(function() {
         if (!portletClicked.hasClass('.eea-active-accordion')) {
             $('.eea-active-accordion').removeClass('eea-active-accordion').find('.eea-accordion-content').slideUp();
             portletClicked.addClass('eea-active-accordion').find('.eea-accordion-content').slideDown();
+            $('html,body').animate({scrollTop: 0}, 1000);
         }
     });
 });
