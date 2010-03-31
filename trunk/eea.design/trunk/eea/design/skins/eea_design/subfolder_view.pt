@@ -24,27 +24,33 @@
 
         <div class="visualClear"></div>
 
-        <div class="subfolder" tal:repeat="folder python:view.folder_contents(size_limit=10)">
-            <h2 tal:content="folder/title">Articles</h2>
-            <p class="subfolder-description" tal:condition="folder/description" tal:content="folder/description"></p>
-            <div class="subfolder-contents" tal:define="folderContents folder/contents">
-                <div class="photoAlbumEntry"
-                     tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
-                     tal:repeat="item folderContents">
-                     <a tal:attributes="href item/url;
-                                        title item/description;
-                                        class python:item['portal_type'] == 'EyewitnessStory' and 'gallery-fancybox' or ''">
-                        <span class="photoAlbumEntryWrapper">
-                            <img tal:attributes="src string:${item/url}/image_thumb"/>
-                        </span>
-                        <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
-                    </a>
+        <metal:listingmacro define-macro="listing">
+            <tal:foldercontents define="folderContents folderContents|python:view.folder_contents(size_limit=10)">
+
+                <div class="subfolder" tal:repeat="folder folderContents">
+                    <h2 tal:content="folder/title">Articles</h2>
+                    <p class="subfolder-description" tal:condition="folder/description" tal:content="folder/description"></p>
+                    <div class="subfolder-contents" tal:define="folderContents folder/contents">
+                        <div class="photoAlbumEntry"
+                             tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
+                             tal:repeat="item folderContents">
+                             <a tal:attributes="href item/url;
+                                                title item/description;
+                                                class python:item['portal_type'] == 'EyewitnessStory' and 'gallery-fancybox' or ''">
+                                <span class="photoAlbumEntryWrapper">
+                                    <img tal:attributes="src string:${item/url}/image_thumb"/>
+                                </span>
+                                <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
+                            </a>
+                        </div>
+                        <div class="visualClear"></div>
+                    </div>
+                    <a class="moreLink" tal:condition="folder/has_more" i18n:translate="box_morelink" tal:attributes="href folder/url">Read more</a>
+                    <div class="visualClear"></div>
                 </div>
-                <div class="visualClear"></div>
-            </div>
-            <a class="moreLink" tal:condition="folder/has_more" i18n:translate="box_morelink" tal:attributes="href folder/url">Read more</a>
-            <div class="visualClear"></div>
-        </div>
+
+            </tal:foldercontents>
+        </metal:listingmacro>
 
     </metal:main-macro>
     </div>
