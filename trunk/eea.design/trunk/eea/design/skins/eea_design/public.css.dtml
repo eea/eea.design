@@ -16,6 +16,36 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+#smart-view-switch a {
+    padding-left: 20px;
+    border: none;
+    background-position: left center;
+}
+#smart-view-switch .selected a {
+    color: black;
+    font-weight: bold;
+}
+#smart-listing a {
+    background: url(&dtml-portal_url;/application_side_list.png) no-repeat;
+}
+#smart-summary a {
+    background: url(&dtml-portal_url;/application_view_list.png) no-repeat;
+}
+#smart-album a {
+    background: url(&dtml-portal_url;/application_view_tile.png) no-repeat;
+}
+
+.eea-horizontal-list li {
+    display: inline;
+    margin-right: 1em;
+}
+
+.eea-no-list-style {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 1em 0;
+}
+
 .subfolder .moreLink {
     float: left;
     margin: 1em 0em 2em 1em;
