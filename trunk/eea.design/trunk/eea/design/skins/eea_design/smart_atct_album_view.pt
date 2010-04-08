@@ -1,0 +1,2 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+<div metal:use-macro="here/atct_album_view/macros/main"></div>
