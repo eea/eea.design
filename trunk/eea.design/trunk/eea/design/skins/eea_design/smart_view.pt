@@ -8,7 +8,7 @@
         <metal:main-macro define-macro="main" tal:define="template request/template|string:folder_listing">
 
         <ul id="eea-template-switch">
-            <li><a tal:attributes="href string:${context/absolute_url}/smart_folder_listing">folder_listing</a></li>
+            <li class="selected"><a tal:attributes="href string:${context/absolute_url}/smart_folder_listing">folder_listing</a></li>
             <li><a tal:attributes="href string:${context/absolute_url}/smart_folder_summary_view">folder_summary_view</a></li>
             <li><a tal:attributes="href string:${context/absolute_url}/smart_atct_album_view">atct_album_view</a></li>
         </ul>
