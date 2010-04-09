@@ -24,6 +24,7 @@
 #smart-view-switch .selected a {
     color: black;
     font-weight: bold;
+    cursor: auto;
 }
 #smart-listing a {
     background: url(&dtml-portal_url;/application_side_list.png) no-repeat;

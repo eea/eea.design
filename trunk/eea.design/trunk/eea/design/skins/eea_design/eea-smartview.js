@@ -1,11 +1,23 @@
 $(document).ready(function() {
-    $('#smart-view-switch a').click(function(e) {
-        e.preventDefault();
+
+    function loadContent(url) {
         $('#smart-view-content').fadeOut('fast');
-        $('#smart-view-switch .selected').removeClass('selected');
-        $(this).parent().addClass('selected');
-        $.get($(this).attr('href'), function(data) {
+        $.get(url, function(data) {
             $('#smart-view-content').html('').append(data).fadeIn();
         }, 'html');
+    }
+
+    $('#smart-view-switch a').click(function(e) {
+        $('#smart-view-switch .selected').removeClass('selected');
+        $(this).parent().addClass('selected');
+        e.preventDefault();
+        loadContent($(this).attr('href'));
     });
+
+    // Also handle click on any batch bar that will pop up
+    $('.listingBar a').live('click', function(e) {
+        e.preventDefault();
+        loadContent($(this).attr('href'));
+    });
+
 });
