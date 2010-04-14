@@ -5,6 +5,12 @@ $(document).ready(function() {
         var themesURL = window.location.href.split('/themes/')[0] + '/themes';
         var themeCentreURL = themesURL + '/' + themeName; 
         var dcFolderURL = themeCentreURL + '/dc';
+
+        // If the DC folder is showing, we don't need to do anything
+        if (window.location.href == dcFolderURL) {
+            return;
+        }
+
         $('#region-content').fadeOut();
         $.get(dcFolderURL + '/dc_view_main_macro', function(data) {
             $('#region-content').empty().append(data).fadeIn();
@@ -37,5 +43,9 @@ $(document).ready(function() {
             loadDataCentreOverview();
         }
     });
+
+    if (window.location.hash == '#dc') {
+        $('#portlet-navigation-tree-data-center-services .eea-accordion-header').click();
+    }
 
 });
