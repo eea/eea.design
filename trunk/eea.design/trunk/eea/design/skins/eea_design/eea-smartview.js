@@ -3,7 +3,7 @@ $(document).ready(function() {
     function loadContent(url) {
         $('#smart-view-content').fadeOut('fast');
         $.get(url, function(data) {
-            $('#smart-view-content').html('').append(data).fadeIn();
+            $('#smart-view-content').empty().append(data).fadeIn();
         }, 'html');
     }
 
