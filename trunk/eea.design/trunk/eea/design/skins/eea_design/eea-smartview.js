@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
     function loadContent(url) {
-        $('#smart-view-content').fadeOut('fast');
+        $('#smart-view-content').html('<img src="++resource++faceted_images/ajax-loader.gif" />');
         $.get(url, function(data) {
-            $('#smart-view-content').empty().append(data).fadeIn();
+            $('#smart-view-content').html(data);
         }, 'html');
     }
 
