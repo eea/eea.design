@@ -3,7 +3,7 @@ $(document).ready(function() {
     function loadDataCentreOverview() {
         var themeName = window.location.href.split('/themes/')[1].split('/')[0];
         var themesURL = window.location.href.split('/themes/')[0] + '/themes';
-        var themeCentreURL = themesURL + '/' + themeName; 
+        var themeCentreURL = themesURL + '/' + themeName;
         var dcFolderURL = themeCentreURL + '/dc';
 
         // If the DC folder is showing, we don't need to do anything
@@ -11,9 +11,9 @@ $(document).ready(function() {
             return;
         }
 
-        $('#region-content').fadeOut();
+        $('#region-content').html('<img src="++resource++faceted_images/ajax-loader.gif" />');
         $.get(dcFolderURL + '/dc_view_main_macro', function(data) {
-            $('#region-content').empty().append(data).fadeIn();
+            $('#region-content').html(data).fadeIn();
             window.location.hash = 'dc';
         }, 'html');
     }
