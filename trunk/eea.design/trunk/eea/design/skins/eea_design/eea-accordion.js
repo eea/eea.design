@@ -29,14 +29,21 @@ $(document).ready(function() {
 
     // Open accordion menu when clicked
     $('.eea-accordion-header').click(function() {
+        var portletHeaderClicked = $(this);
         var portletClicked = $(this).parent();
         if (portletClicked.hasClass('.eea-active-accordion')) {
             return;
         }
 
+        // Show the new accordion section and scroll the page if the content
+        // does not fit in the viewport.
         $('.eea-active-accordion').removeClass('eea-active-accordion').find('.eea-accordion-content').slideUp();
-        portletClicked.addClass('eea-active-accordion').find('.eea-accordion-content').slideDown();
-        $('html,body').animate({scrollTop: 0}, 1000);
+        portletClicked.addClass('eea-active-accordion').find('.eea-accordion-content').slideDown("normal", function() {
+            var y = portletHeaderClicked.offset().top;
+            if ($(window).scrollTop() > y) {
+                $('html,body').animate({scrollTop: y}, 1000);
+            }
+        });
 
         // Load DC overview with AJAX if the DC section is clicked
         if (portletClicked.attr('id') == 'portlet-navigation-tree-data-center-services') {
