@@ -783,30 +783,10 @@ float:right;
     margin: 0 1em 0 0;
 }
 
-
-.documentActions {
-    margin: -3em 0 0.5em 0;
-    padding: 0;
-    text-align: right;
-}
-
-.frontpage .documentActions {
-    margin: -3em 0 0.5em 0em;
-    float: right;
-}
-
-.section-copyright .documentActions,
-.section-privacy .documentActions,
-.section-disclaimer .documentActions,
-.section-pressroom .documentActions {
-    margin: -3em 0 -1.25em 0;
-    padding: 0em 0em 0.5em 0em;
-}
-
 .documentActions ul {
-    margin: 1px 0 2px 0;
+    margin: 0;
     padding: 0;
-    display: block;
+    float: left;
 }
 
 .documentActions li {
@@ -820,6 +800,22 @@ float:right;
 .documentActions a {
     border: none !important;
     text-decoration: none;
+}
+
+/* Top documentActions should show languageCodes */
+.documentActions ul {
+    display: none;
+}
+.documentActions .languageCodes {
+    display: block;
+}
+
+/* Bottom documentActions should show the actions */
+#belowContent .documentActions ul {
+    display: block;
+}
+#belowContent .documentActions .languageCodes {
+    display: none;
 }
 
 /* .system-message and #error-handling are reST error indicators */
