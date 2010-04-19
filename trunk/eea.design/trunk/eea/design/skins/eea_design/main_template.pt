@@ -170,6 +170,7 @@
                         <div metal:use-macro="here/document_actions/macros/document_actions">
                             Document actions (print, sendto etc)
                         </div>
+                        <div class="visualClear"></div>
                     </div>
                     
                     <div metal:use-macro="here/document_relateditems/macros/feeds">
