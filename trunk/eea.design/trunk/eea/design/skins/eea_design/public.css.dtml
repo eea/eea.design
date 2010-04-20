@@ -817,6 +817,10 @@ float:right;
 #belowContent .documentActions .languageCodes {
     display: none;
 }
+#belowContent {
+    padding: 0.5em 0 0 0;
+    border-top: 1px solid #E9EFCD;
+}
 
 /* .system-message and #error-handling are reST error indicators */
 
