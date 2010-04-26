@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
     function loadDataCentreOverview() {
-        var themeName = window.location.href.split('/themes/')[1].split('/')[0];
-        var themesURL = window.location.href.split('/themes/')[0] + '/themes';
+        var noHashURL = window.location.href.split('#')[0];
+        var themeName = noHashURL.split('/themes/')[1].split('/')[0];
+        var themesURL = noHashURL.split('/themes/')[0] + '/themes';
         var themeCentreURL = themesURL + '/' + themeName;
         var dcFolderURL = themeCentreURL + '/dc';
 
