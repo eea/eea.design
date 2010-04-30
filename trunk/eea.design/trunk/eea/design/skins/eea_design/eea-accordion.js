@@ -1,29 +1,18 @@
 $(document).ready(function() {
 
-    function loadDataCentreOverview() {
-        var noHashURL = window.location.href.split('#')[0];
-        var themeName = noHashURL.split('/themes/')[1].split('/')[0];
-        var themesURL = noHashURL.split('/themes/')[0] + '/themes';
-        var themeCentreURL = themesURL + '/' + themeName;
-        var dcFolderURL = themeCentreURL + '/dc';
-
-        // If the DC folder is showing, we don't need to do anything
-        if (window.location.href == dcFolderURL) {
-            return;
-        }
-
-        $('#region-content').html('<img src="++resource++faceted_images/ajax-loader.gif" />');
-        $.get(dcFolderURL + '/dc_view_main_macro', function(data) {
-            $('#region-content').html(data).fadeIn();
-            window.location.hash = 'dc';
-        }, 'html');
-    }
+    var noHashURL = window.location.href.split('#')[0];
+    var themeName = noHashURL.split('/themes/')[1].split('/')[0];
+    var themesURL = noHashURL.split('/themes/')[0] + '/themes';
+    var themeCentreURL = themesURL + '/' + themeName;
+    var dcFolderURL = themeCentreURL + '/dc';
 
     // Only show content of the active accordion
     var navTreeCurrentItem = $('.navTreeCurrentItem');
     var openAccordionPortlet = $('.eea-accordion-portlet:first');
     if (navTreeCurrentItem) {
         openAccordionPortlet = navTreeCurrentItem.parents('.eea-accordion-portlet');
+    } else if (window.location.href == dcFolderURL) {
+        openAccordionPortlet = $('#portlet-navigation-tree-data-center-services');
     }
     openAccordionPortlet.addClass('eea-active-accordion');
     $('.eea-accordion-portlet').not('.eea-active-accordion').find('.eea-accordion-content').hide();
@@ -48,12 +37,12 @@ $(document).ready(function() {
 
         // Load DC overview with AJAX if the DC section is clicked
         if (portletClicked.attr('id') == 'portlet-navigation-tree-data-center-services') {
-            loadDataCentreOverview();
+            // If the DC folder is showing, we don't need to do anything
+            if (window.location.href == dcFolderURL) {
+                return;
+            }
+            window.location.href = dcFolderURL;
         }
     });
-
-    if (window.location.hash == '#dc') {
-        $('#portlet-navigation-tree-data-center-services .eea-accordion-header').click();
-    }
 
 });
