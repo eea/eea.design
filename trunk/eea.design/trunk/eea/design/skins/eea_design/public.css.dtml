@@ -50,6 +50,7 @@
 .subfolder .moreLink {
     float: left;
     margin: 1em 0em 2em 1em;
+    font-weight: bold;
 }
 
 /* arrow search input */
