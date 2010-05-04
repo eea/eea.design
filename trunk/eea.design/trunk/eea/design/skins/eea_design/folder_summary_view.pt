@@ -75,8 +75,6 @@
                                    ">
 
                     <a class="tileImage"
-                       tal:define="display item_object/@@imgview/display|nothing;"
-                       tal:condition="display"
                        tal:attributes="href item_url;
                                        title item_title_or_id;
                                        alt item_title_or_id;
