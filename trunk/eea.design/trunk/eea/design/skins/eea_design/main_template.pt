@@ -122,6 +122,7 @@
                            </metal:bodytext>
 
                            <div id="belowContent">
+                               <h2 i18n:translate="share_with_others">Share with others</h2>
                                <div metal:use-macro="here/document_actions/macros/document_actions">
                                    Document actions (print, sendto etc)
                                </div>
@@ -167,6 +168,7 @@
                     </metal:bodytext>
 
                     <div id="belowContent">
+                        <h2 i18n:translate="share_with_others">Share with others</h2>
                         <div metal:use-macro="here/document_actions/macros/document_actions">
                             Document actions (print, sendto etc)
                         </div>
