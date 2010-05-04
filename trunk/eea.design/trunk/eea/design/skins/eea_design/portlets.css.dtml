@@ -750,15 +750,16 @@ a.noHover {
     margin: 0;
     padding: 0;
 }
+.eea-accordion-header {
+    padding: 0.5em 0.2em 0.5em 20px;
+}
 .eea-accordion-portlet .eea-accordion-header .tile {
     cursor: pointer;
-    padding-left: 20px;
-    background-image: url(&dtml-portal_url;/accordion_right.png);
-    background-repeat: no-repeat;
-    background-position: center left;
+    padding: 0 0 0 20px;
+    background: #D0DF86 url(&dtml-portal_url;/accordion_right.png) no-repeat center left;
 }
 .eea-active-accordion .eea-accordion-header .tile {
-    background-image: url(&dtml-portal_url;/accordion_down.png);
+    background: #D0DF86 url(&dtml-portal_url;/accordion_down.png) no-repeat center left;
 }
 
 /* </dtml-with>
