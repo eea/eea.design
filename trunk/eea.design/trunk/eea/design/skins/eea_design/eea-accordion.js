@@ -35,9 +35,8 @@ $(document).ready(function() {
             }
         });
 
-        // Load DC overview with AJAX if the DC section is clicked
+        // Load DC overview with when the DC section is clicked
         if (portletClicked.attr('id') == 'portlet-navigation-tree-data-center-services') {
-            // If the DC folder is showing, we don't need to do anything
             if (window.location.href == dcFolderURL) {
                 return;
             }
