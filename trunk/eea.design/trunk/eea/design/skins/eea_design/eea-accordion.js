@@ -6,6 +6,9 @@ $(document).ready(function() {
     var themeCentreURL = themesURL + '/' + themeName;
     var dcFolderURL = themeCentreURL + '/dc';
 
+    // Locate the accordion content (See #3308).
+    $('.eea-accordion-portlet').children('dd').not('.exclude-from-eea-accordion').addClass('eea-accordion-content');
+
     // Only show content of the active accordion
     var navTreeCurrentItem = $('.navTreeCurrentItem');
     var openAccordionPortlet = $('.eea-accordion-portlet:first');
