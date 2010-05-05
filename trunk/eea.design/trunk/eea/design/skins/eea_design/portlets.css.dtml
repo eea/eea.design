@@ -606,7 +606,6 @@ a.noHover {
 }
 
 .portlet-promotions {
-   float: left;
    padding: 0 0 0 0;
    width: 100%;
 }
@@ -747,19 +746,21 @@ a.noHover {
 }
 
 .eea-accordion-portlet {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .eea-accordion-header {
-    padding: 0.5em 0.2em 0.5em 20px;
+    padding: 0.5em 0.2em 0.5em 0.2em !important;
+    margin: 0 !important;
 }
 .eea-accordion-portlet .eea-accordion-header .tile {
     cursor: pointer;
-    padding: 0 0 0 20px;
-    background: #D0DF86 url(&dtml-portal_url;/accordion_right.png) no-repeat center left;
+    padding: 0 0 0 20px !important;
+    margin: 0 !important;
+    background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll left center #D0DF86 !important;
 }
 .eea-active-accordion .eea-accordion-header .tile {
-    background: #D0DF86 url(&dtml-portal_url;/accordion_down.png) no-repeat center left;
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll left center #D0DF86 !important;
 }
 
 /* </dtml-with>

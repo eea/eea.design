@@ -53,6 +53,7 @@
     </dd>
     </tal:promotions>
 </dl>
+<div class="visualClear"></div>
 </div>
 </metal:portlet>
 
@@ -149,6 +150,7 @@
         </dd>
         </tal:promotions>
     </dl>
+    <div class="visualClear"></div>
 </div>
 </metal:portlet>
 
