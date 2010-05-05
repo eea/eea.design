@@ -66,6 +66,7 @@ width:47%;
 body.section-themes .portlet-promotions .portlet {
    border: 0;
    background: #f0f4f5;
+   margin: 0;
 }
 
 body.section-themes .portlet-promotions a.portletHeader {
