@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    // The following URL code crashes if 'themes' is not in URL
+    if (!$('body').hasClass('section-themes')) {
+        return;
+    }
+
     var noHashURL = window.location.href.split('#')[0];
     var themeName = noHashURL.split('/themes/')[1].split('/')[0];
     var themesURL = noHashURL.split('/themes/')[0] + '/themes';
