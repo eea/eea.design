@@ -328,8 +328,8 @@ dd.portletItem .navTreeItem a:hover {
 
 li.navTreeCurrentItem {
     display: block;
-    padding: 0 0 0 1px;
-    margin: 0 0 2px -1px;
+    padding: 0;
+    margin: 0;
 }
 li.navTreeCurrentItem a,
 li.navTreeCurrentItem a:hover {
@@ -746,21 +746,21 @@ a.noHover {
 }
 
 .eea-accordion-portlet {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
 }
 .eea-accordion-header {
-    padding: 0.5em 0.2em 0.5em 0.2em !important;
-    margin: 0 !important;
+    padding: 0.5em 0.2em 0.5em 0.2em;
+    margin: 0;
 }
 .eea-accordion-portlet .eea-accordion-header .tile {
     cursor: pointer;
-    padding: 0 0 0 20px !important;
-    margin: 0 !important;
-    background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll left center #D0DF86 !important;
+    padding: 0 0 0 20px;
+    margin: 0;
+    background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll left center #D0DF86;
 }
 .eea-active-accordion .eea-accordion-header .tile {
-    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll left center #D0DF86 !important;
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll left center #D0DF86;
 }
 
 /* </dtml-with>
