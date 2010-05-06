@@ -17,76 +17,40 @@
     Description
   </div>
   <metal:listingmacro define-macro="listing" tal:define="
-    figure_context figure_context|nothing;
+    entry_macro entry_macro|nothing;
     folderContents folderContents|nothing">
 
-  <tal:folderContents condition="folderContents" tal:define="
-    batch folderContents;
-    figure_context python:figure_context or context.portal_type == 'EEAFigure'">
+  <tal:folderContents condition="folderContents" tal:define="batch folderContents">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
         obj brain/getObject;
         obj_title python:obj.pretty_title_or_id();
         desc_or_title python:brain.Description or obj_title;
-        display obj/@@imgview/display|nothing;
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
-        <div tal:define="css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
-                         album_class python:not display and figure_context and 'figuresPhotoAlbumEntry' or css"
-             tal:attributes="class album_class">
-          <a tal:condition="display" tal:attributes="
-            href listing_url;
-            class python:test(is_video, 'thickbox', '');
-            title python:figure_context and obj_title or desc_or_title">
-            <span class="photoAlbumEntryWrapper">
-            <img style="border: none" tal:attributes="
-              title python:figure_context and obj_title or desc_or_title;
-              alt obj/pretty_title_or_id;
-              src string:${obj/absolute_url}/image_thumb"/>
-            </span>
-            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
-          </a>
-          <a tal:condition="python:(not display) and not figure_context" tal:attributes="
-            href listing_url;
-            title desc_or_title">
-            <span class="photoAlbumEntryWrapper">
-            <img style="border: none" tal:attributes="
-                title desc_or_title;
-              alt obj/pretty_title_or_id;
-              src string:${portal_url}/atct_album_blank.jpg"/>
-            </span>
-            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
-          </a>
-          <!-- Download figure -->
-          <div class="figuresPhotoAlbumEntryTitle" tal:define="
-            doc brain/getObject;
-            item_url brain/getURL;
-            item_title_or_id brain/pretty_title_or_id;
-            field doc/getFile | nothing;
-            size field/get_size | nothing;
-            icon field/getBestIcon | nothing;"
-            tal:condition="python:(not display) and figure_context">
-
-            <div class="figuresByLine">
-              <tal:size tal:condition="size" tal:define="
-                displaySize nocall:here/@@displaySize;
-                size python:size and displaySize(size);
-                ctype python:size and doc.lookupMime(field.getContentType());">
-                <img tal:condition="icon"
-                  tal:attributes="src string:${context/portal_url}/$icon"/>
-                <span tal:content="ctype" /><br />
-                <span tal:content="size" />
-              </tal:size>
-            </div>
-            <a tal:define="suffix python:size and '/at_download/file' or ''"
-              tal:attributes="
-                href string:$item_url$suffix;
-                title desc_or_title"
-                tal:content="item_title_or_id" />
+        <tal:if condition="entry_macro">
+          <metal:custom use-macro="entry_macro" />
+        </tal:if>
+        <tal:elif condition="not:entry_macro">
+          <div tal:define="
+            css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
+            tal:attributes="class css">
+            <a tal:attributes="
+              href listing_url;
+              class python:test(is_video, 'thickbox', '');
+              title python:desc_or_title">
+              <span class="photoAlbumEntryWrapper">
+              <img style="border: none" tal:attributes="
+                title python:desc_or_title;
+                alt obj/pretty_title_or_id;
+                src string:${obj/absolute_url}/image_thumb"/>
+              </span>
+              <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+            </a>
           </div>
-        </div>
+        </tal:elif>
       </tal:entry>
     </tal:images>
     <div class="visualClear"><!-- --></div>
@@ -109,12 +73,11 @@
       <tal:entry tal:define="
         obj brain/getObject;
         desc_or_title python:brain.Description or obj.pretty_title_or_id;
-        display obj/@@imgview/display|nothing;
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
         <div tal:attributes="class python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'">
-          <a tal:condition="display" tal:attributes="
+          <a tal:attributes="
             href listing_url;
             class python:test(is_video, 'thickbox', '');
             title desc_or_title">
@@ -123,17 +86,6 @@
               title desc_or_title;
               alt obj/pretty_title_or_id;
               src string:${obj/absolute_url}/image_thumb"/>
-            </span>
-            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
-          </a>
-          <a tal:condition="not:display" tal:attributes="
-            href listing_url;
-            title desc_or_title">
-            <span class="photoAlbumEntryWrapper">
-            <img style="border: none" tal:attributes="
-              title desc_or_title;
-              alt obj/pretty_title_or_id;
-              src string:${portal_url}/atct_album_blank.jpg"/>
             </span>
             <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
           </a>
