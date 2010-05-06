@@ -17,7 +17,7 @@
     Description
   </div>
   <metal:listingmacro define-macro="listing" tal:define="
-    entry_macro entry_macro|nothing;
+    entry_macro entry_macro | here/atct_albumentry/macros/entry;
     folderContents folderContents|nothing">
 
   <tal:folderContents condition="folderContents" tal:define="batch folderContents">
@@ -30,27 +30,7 @@
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
-        <tal:if condition="entry_macro">
-          <metal:custom use-macro="entry_macro" />
-        </tal:if>
-        <tal:elif condition="not:entry_macro">
-          <div tal:define="
-            css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
-            tal:attributes="class css">
-            <a tal:attributes="
-              href listing_url;
-              class python:test(is_video, 'thickbox', '');
-              title python:desc_or_title">
-              <span class="photoAlbumEntryWrapper">
-              <img style="border: none" tal:attributes="
-                title python:desc_or_title;
-                alt obj/pretty_title_or_id;
-                src string:${obj/absolute_url}/image_thumb"/>
-              </span>
-              <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
-            </a>
-          </div>
-        </tal:elif>
+        <metal:entry use-macro="entry_macro" />
       </tal:entry>
     </tal:images>
     <div class="visualClear"><!-- --></div>
@@ -76,20 +56,7 @@
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
-        <div tal:attributes="class python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'">
-          <a tal:attributes="
-            href listing_url;
-            class python:test(is_video, 'thickbox', '');
-            title desc_or_title">
-            <span class="photoAlbumEntryWrapper">
-            <img style="border: none" tal:attributes="
-              title desc_or_title;
-              alt obj/pretty_title_or_id;
-              src string:${obj/absolute_url}/image_thumb"/>
-            </span>
-            <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
-          </a>
-        </div>
+        <metal:entry use-macro="entry_macro" />
       </tal:entry>
     </tal:images>
     <div class="visualClear"><!-- --></div>

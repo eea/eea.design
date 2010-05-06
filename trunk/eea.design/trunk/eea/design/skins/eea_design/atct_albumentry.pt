@@ -1,0 +1,18 @@
+<metal:entry define-macro="entry">
+  <div tal:define="
+    css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
+    tal:attributes="class css">
+    <a tal:attributes="
+      href listing_url;
+      class python:test(is_video, 'thickbox', '');
+      title python:desc_or_title">
+      <span class="photoAlbumEntryWrapper">
+      <img style="border: none" tal:attributes="
+        title python:desc_or_title;
+        alt obj/pretty_title_or_id;
+        src string:${obj/absolute_url}/image_thumb"/>
+      </span>
+      <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+    </a>
+  </div>
+</metal:entry>
