@@ -4,6 +4,9 @@ Changelog
 1.3 - (unreleased)
 ------------------
 
+ * Integrated eea-accordion with new theme data centres [thuliper]
+ * Beginning of smart_view [thuliper, #3185]
+ * Document actions now at the bottom [thuliper, #3151]
  * Make atct_album_view use valentine.imagescales v0.3 fallback image solution [voineali #3305]
  * Make accordion scroll the page to the top when clicked [thuliper, #3169]
  * Automatically open accordion section where there's a selected navigation item [thuliper, #3168]
