@@ -1,0 +1,19 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+
+<metal:portlet metal:define-macro="portlet">
+
+  <dl id="document-toc" class="portlet toc">
+    <dt class="portletHeader"
+        i18n:translate="label_tableofcontents">Contents</dt>
+    <dd class="portletItem">
+      <ol>
+      </ol>
+    </dd>
+  </dl>
+
+</metal:portlet>
+</body>
+</html>
