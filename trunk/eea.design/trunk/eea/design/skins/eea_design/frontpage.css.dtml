@@ -89,6 +89,7 @@ body.frontpage ul {
 
 #top-news-area .portlet-promotions {
     width: 20%;
+    float: left;
 }
 
 #top-news-area .portlet,
