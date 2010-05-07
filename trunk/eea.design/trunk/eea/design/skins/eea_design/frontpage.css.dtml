@@ -132,7 +132,8 @@ body.frontpage ul {
     float: left;
 }
 
-body.frontpage .documentActions {
+body.frontpage .documentActions,
+body.frontpage #belowContent {
     display: none;
 }
 
