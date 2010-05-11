@@ -25,8 +25,6 @@ $(document).ready(function() {
     });
 
     $(window).bind('hashchange', function(e) {
-        console.log($.bbq);
-        console.log($.bbq.getState('smartView'));
         var smartView = $.bbq.getState('smartView');
         if (smartView) {
             $('#smart-view-switch a[href=' + smartView + ']').click();
