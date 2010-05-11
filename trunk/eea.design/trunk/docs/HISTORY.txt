@@ -2,6 +2,9 @@ Changelog
 =========
 
 1.4 - (unreleased)
+------------------
+
+ * Add history and bookmark support in smart_view [thuliper, #3238]
 
 1.3 - (2010-05-07)
 ------------------
