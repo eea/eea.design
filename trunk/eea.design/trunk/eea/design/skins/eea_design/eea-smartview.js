@@ -11,10 +11,10 @@ $(document).ready(function() {
         $('#smart-view-switch .selected').removeClass('selected');
         $(this).parent().addClass('selected');
         e.preventDefault();
-        var template = $(this).attr('href');
-        loadContent(template);
+        var smartView = $(this).attr('href');
+        loadContent(smartView);
         $.bbq.pushState({
-            'template': template
+            'smartView': smartView
         });
     });
 
@@ -26,10 +26,10 @@ $(document).ready(function() {
 
     $(window).bind('hashchange', function(e) {
         console.log($.bbq);
-        console.log($.bbq.getState('template'));
-        var template = $.bbq.getState('template');
-        if (template) {
-            $('#smart-view-switch a[href=' + template + ']').click();
+        console.log($.bbq.getState('smartView'));
+        var smartView = $.bbq.getState('smartView');
+        if (smartView) {
+            $('#smart-view-switch a[href=' + smartView + ']').click();
         }
     });
 
