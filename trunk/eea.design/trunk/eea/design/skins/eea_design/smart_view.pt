@@ -8,9 +8,9 @@
         <metal:main-macro define-macro="main" tal:define="template request/template|string:folder_listing">
 
         <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style">
-            <li id="smart-listing" class="selected"><a tal:attributes="href string:${context/absolute_url}/smart_folder_listing">Listing</a></li>
-            <li id="smart-summary"><a tal:attributes="href string:${context/absolute_url}/smart_folder_summary_view">Summary</a></li>
-            <li id="smart-album"><a tal:attributes="href string:${context/absolute_url}/smart_atct_album_view">Album</a></li>
+            <li id="smart-listing" class="selected"><a tal:attributes="href string:smart_folder_listing">Listing</a></li>
+            <li id="smart-summary"><a tal:attributes="href string:smart_folder_summary_view">Summary</a></li>
+            <li id="smart-album"><a tal:attributes="href string:smart_atct_album_view">Album</a></li>
         </ul>
 
         <div id="smart-view-content">
