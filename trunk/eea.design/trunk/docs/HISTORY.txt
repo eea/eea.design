@@ -4,6 +4,7 @@ Changelog
 1.4 - (unreleased)
 ------------------
 
+ * smart_view now works with subfolder_view [thuliper, #3321]
  * Add history and bookmark support in smart_view [thuliper, #3238]
 
 1.3 - (2010-05-07)

@@ -35,6 +35,9 @@
 #smart-album a {
     background: url(&dtml-portal_url;/application_view_tile.png) no-repeat;
 }
+#smart-subfolder a {
+    background: url(&dtml-portal_url;/application_view_tile.png) no-repeat;
+}
 
 .eea-horizontal-list li {
     display: inline;

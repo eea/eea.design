@@ -11,6 +11,7 @@
             <li id="smart-listing" class="selected"><a tal:attributes="href string:smart_folder_listing">Listing</a></li>
             <li id="smart-summary"><a tal:attributes="href string:smart_folder_summary_view">Summary</a></li>
             <li id="smart-album"><a tal:attributes="href string:smart_atct_album_view">Album</a></li>
+            <li id="smart-subfolder"><a tal:attributes="href string:smart_subfolder_view">Subfolder</a></li>
         </ul>
 
         <div id="smart-view-content">
