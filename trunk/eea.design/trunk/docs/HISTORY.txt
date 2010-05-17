@@ -4,6 +4,7 @@ Changelog
 1.4 - (unreleased)
 ------------------
 
+ * JSTOC is now collapsable [thuliper, #3076]
  * smart_view now works with subfolder_view [thuliper, #3321]
  * Add history and bookmark support in smart_view [thuliper, #3238]
 
