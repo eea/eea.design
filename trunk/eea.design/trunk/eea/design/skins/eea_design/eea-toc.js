@@ -24,9 +24,9 @@ $(document).ready(function() {
 
         var hText = $(el).find('a').text() || $(el).text();
         var li = $('<li><a>' + hText + '</a></li>');
-        currentList.append(li);
         var hId = $(el).attr('id') || 'toc-' + i;
-        li.find('a').attr('href', '#' + hId);
+        li.find('a').attr('href', location.href + '#' + hId);
+        currentList.append(li);
         $(el).attr('id', hId);
     });
 
