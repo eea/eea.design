@@ -33,7 +33,7 @@ $(document).ready(function() {
     // The collapsable-portlet functionality should probably be moved to it's
     // own file, but I'm thinking maybe we should merge it with eea-accordion
     // in the future.
-    $('.collapsable-portlet portletHeader').click(function() {
+    $('.collapsable-portlet .portletHeader').click(function() {
         var portletClicked = $(this).parents('.portlet');
         portletClicked.toggleClass('collapsed');
     });
