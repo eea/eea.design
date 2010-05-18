@@ -25,6 +25,7 @@
 #document-toc {
     margin: 1em 0;
     border: 1px solid #E9EFCD;
+    float: left;
 }
 
 .collapsable-portlet .portletHeader {

@@ -15,6 +15,7 @@
                     </ol>
                 </dd>
             </dl>
+            <div class="visualClear">&nbsp;</div>
 
         </metal:portlet>
     </body>
