@@ -27,7 +27,8 @@ $(document).ready(function() {
         var hText = $(el).find('a').text() || $(el).text();
         var li = $('<li><a>' + hText + '</a></li>');
         var hId = $(el).attr('id') || 'toc-' + i;
-        li.find('a').attr('href', location.href + '#' + hId);
+        var urlWIthoutHash = location.protocol + '//' + location.host + location.pathname;
+        li.find('a').attr('href', urlWIthoutHash + '#' + hId);
         currentList.append(li);
         $(el).attr('id', hId);
     });
