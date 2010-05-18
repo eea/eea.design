@@ -7,7 +7,8 @@ $(document).ready(function() {
     var currentList = $('#document-toc .portletItem ol');
     var hLevel = null;
     var lists = {'root': currentList}
-    $('#region-content').find('h2, h3, h4').each(function(i, el) {
+    var queryString = $('#document-toc #queryString').html();
+    $('#region-content').find(queryString).each(function(i, el) {
         var newLevel = parseInt(el.tagName[1]);
         hLevel = hLevel || newLevel;
 

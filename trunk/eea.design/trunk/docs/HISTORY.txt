@@ -4,6 +4,7 @@ Changelog
 1.4 - (unreleased)
 ------------------
 
+ * Can now conifigure which headers JSTOC will pick up [thuliper, #3206]
  * JSTOC now uses absolute URLs [thuliper, #3242]
  * JSTOC is now collapsable [thuliper, #3076]
  * smart_view now works with subfolder_view [thuliper, #3321]
