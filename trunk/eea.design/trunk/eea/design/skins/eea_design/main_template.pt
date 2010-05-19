@@ -121,13 +121,6 @@
                               Page body text
                            </metal:bodytext>
 
-                           <div id="belowContent">
-                               <h2 i18n:translate="share_with_others">Share with others</h2>
-                               <div metal:use-macro="here/document_actions/macros/document_actions">
-                                   Document actions (print, sendto etc)
-                               </div>
-                           </div>
-
                           <div metal:use-macro="here/document_relateditems/macros/feeds">
                             show related feeds if they exist
                           </div>
@@ -135,6 +128,13 @@
                           <div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">
                              show all (back and forward refs) related items if they exist
                           </div>
+			  
+                           <div id="belowContent">
+                               <h2 i18n:translate="share_with_others">Share with others</h2>
+                               <div metal:use-macro="here/document_actions/macros/document_actions">
+                                   Document actions (print, sendto etc)
+                               </div>
+                           </div>
 
                            <metal:sub metal:define-slot="sub">
                                <metal:discussion use-macro="here/viewThreadsAtBottom/macros/discussionView" />
@@ -167,14 +167,6 @@
                         Page body text
                     </metal:bodytext>
 
-                    <div id="belowContent">
-                        <h2 i18n:translate="share_with_others">Share with others</h2>
-                        <div metal:use-macro="here/document_actions/macros/document_actions">
-                            Document actions (print, sendto etc)
-                        </div>
-                        <div class="visualClear"></div>
-                    </div>
-                    
                     <div metal:use-macro="here/document_relateditems/macros/feeds">
  	                show related feeds if they exist
                     </div>
@@ -182,7 +174,15 @@
                     <div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">
                        show all (back and forward refs) related items if they exist
                     </div>
-                    
+
+                    <div id="belowContent">
+                        <h2 i18n:translate="share_with_others">Share with others</h2>
+                        <div metal:use-macro="here/document_actions/macros/document_actions">
+                            Document actions (print, sendto etc)
+                        </div>
+                        <div class="visualClear"></div>
+                    </div>
+		    
                      <metal:sub metal:define-slot="sub">
                         <metal:discussion use-macro="here/viewThreadsAtBottom/macros/discussionView" />
                     </metal:sub>
