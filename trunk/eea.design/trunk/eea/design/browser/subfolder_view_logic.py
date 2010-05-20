@@ -20,11 +20,13 @@ class SubFolderView(BrowserView):
     """ View that shows the contents of all subfolders in the context folder
     """
 
-    def folder_contents(self, size_limit=10):
+    def folder_contents(self, size_limit=10, folderContents=None):
         """Get the folderish items in cachable list/dict format"""
         size_limit = int(self.request.get('size_limit', size_limit))
         ret = []
-        for brain in self.context.getFolderContents():
+        if folderContents == None:
+            folderContents = self.context.getFolderContents()
+        for brain in folderContents:
             if brain.portal_type in ['Folder', 'Topic', 'RichTopic']:
                 contents = _get_contents(brain)
                 ret.append({

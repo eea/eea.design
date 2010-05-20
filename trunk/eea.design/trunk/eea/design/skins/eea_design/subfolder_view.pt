@@ -24,16 +24,16 @@
 
         <div class="visualClear"></div>
 
-        <metal:listingmacro define-macro="listing">
-            <tal:foldercontents define="folderContents folderContents|python:view.folder_contents(size_limit=10)">
+        <metal:listingmacro define-macro="listing" tal:define="folderContents folderContents|python:None">
+            <tal:foldercontents tal:define="formattedFolderContents python:view.folder_contents(size_limit=10, folderContents=folderContents)">
 
-                <div class="subfolder" tal:repeat="folder folderContents">
+                <div class="subfolder" tal:repeat="folder formattedFolderContents">
                     <h2 tal:content="folder/title">Articles</h2>
                     <p class="subfolder-description" tal:condition="folder/description" tal:content="folder/description"></p>
-                    <div class="subfolder-contents" tal:define="folderContents folder/contents">
+                    <div class="subfolder-contents" tal:define="formattedFolderContents folder/contents">
                         <div class="photoAlbumEntry"
                              tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
-                             tal:repeat="item folderContents">
+                             tal:repeat="item formattedFolderContents">
                              <a tal:attributes="href item/url;
                                                 title item/description;
                                                 class python:item['portal_type'] == 'EyewitnessStory' and 'gallery-fancybox' or ''">
