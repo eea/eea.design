@@ -51,3 +51,15 @@ class ISubFolderView(Interface):
 
     def folder_contents(size_limit):
         """ Return the subfolder contents of the context folder """
+
+
+class ISmartView(Interface):
+	
+    def getTemplate():
+        """  """
+
+    def getListingMacro():
+        """  """
+
+    def getMainMacro():
+        """  """

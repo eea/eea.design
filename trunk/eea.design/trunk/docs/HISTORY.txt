@@ -4,6 +4,7 @@ Changelog
 1.4 - (unreleased)
 ------------------
 
+ * Integrate smart_view with faceted navigation [thuliper, #3340]
  * Can now conifigure which headers JSTOC will pick up [thuliper, #3206]
  * JSTOC now uses absolute URLs [thuliper, #3242]
  * JSTOC is now collapsable [thuliper, #3076]

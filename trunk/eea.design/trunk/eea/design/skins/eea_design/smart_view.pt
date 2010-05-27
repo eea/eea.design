@@ -5,30 +5,39 @@
 
 <body>
     <div metal:fill-slot="main">
-        <metal:main-macro define-macro="main" tal:define="template request/template|string:folder_listing">
+        <metal:main-macro define-macro="main">
 
-        <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style">
-            <li id="smart-listing" class="selected"><a tal:attributes="href string:smart_folder_listing">Listing</a></li>
-            <li id="smart-summary"><a tal:attributes="href string:smart_folder_summary_view">Summary</a></li>
-            <li id="smart-album"><a tal:attributes="href string:smart_atct_album_view">Album</a></li>
-            <li id="smart-subfolder"><a tal:attributes="href string:smart_subfolder_view">Subfolder</a></li>
-        </ul>
+            <h1 tal:content="object_title" class="documentFirstHeading">
+                Title or id
+            </h1>
 
-        <div id="smart-view-content">
-            <tal:folder_listing tal:condition="python:template == 'folder_listing'">
-                <metal:main use-macro="here/folder_listing/macros/main"/>
-            </tal:folder_listing>
+            <div metal:use-macro="here/document_actions/macros/document_actions">
+                Document actions (print, sendto etc)
+            </div>
 
-            <tal:folder_summary_view tal:condition="python:template == 'folder_summary_view'">
-                <metal:main use-macro="here/folder_summary_view/macros/main"/>
-            </tal:folder_summary_view>
+            <div class="visualClear"></div>
 
-            <tal:atct_album_view tal:condition="python:template == 'atct_album_view'">
-                <metal:main use-macro="here/atct_album_view/macros/main"/>
-            </tal:atct_album_view>
-        </div>
+            <p class="documentDescription"
+               tal:content="here/Description"
+               tal:condition="here/Description">
+                Description
+            </p>
 
-    </metal:main-macro>
+            <div class="visualClear"></div>
+
+            <metal:listing define-macro="listing">
+                <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style">
+                    <li id="smart-listing" class="selected"><a tal:attributes="href string:smart_folder_listing">Listing</a></li>
+                    <li id="smart-summary"><a tal:attributes="href string:smart_folder_summary_view">Summary</a></li>
+                    <li id="smart-album"><a tal:attributes="href string:smart_atct_album_view">Album</a></li>
+                    <li id="smart-subfolder"><a tal:attributes="href string:smart_subfolder_view">Subfolder</a></li>
+                </ul>
+                <span id="smart-view-content" tal:define="smartView context/@@smart_view_logic">
+                    <metal:block metal:use-macro="smartView/getListingMacro" />
+                </span>
+            </metal:listing>
+
+        </metal:main-macro>
     </div>
 </body>
 </html>

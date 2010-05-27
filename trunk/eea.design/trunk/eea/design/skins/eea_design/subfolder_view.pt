@@ -5,7 +5,7 @@
 
 <body>
     <div metal:fill-slot="main">
-    <metal:main-macro define-macro="main" tal:define="view here/@@subfolder_view_logic">
+    <metal:main-macro define-macro="main">
         <h1 tal:content="object_title" class="documentFirstHeading">
             Title or id
         </h1>
@@ -24,8 +24,9 @@
 
         <div class="visualClear"></div>
 
-        <metal:listingmacro define-macro="listing" tal:define="folderContents folderContents|python:None">
-            <tal:foldercontents tal:define="formattedFolderContents python:view.folder_contents(size_limit=10, folderContents=folderContents)">
+        <metal:listingmacro define-macro="listing" tal:define="subfolderView context/@@subfolder_view_logic;
+                                                               folderContents folderContents|python:None">
+            <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents)">
 
                 <div class="subfolder" tal:repeat="folder formattedFolderContents">
                     <h2 tal:content="folder/title">Articles</h2>

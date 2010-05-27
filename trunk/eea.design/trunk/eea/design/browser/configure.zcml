@@ -18,4 +18,12 @@
     allowed_interface=".interfaces.ISubFolderView"
     />
 
+  <browser:page
+    for="*"
+    name="smart_view_logic"
+    class=".smart_view_logic.SmartView"
+    permission="zope.Public"
+    allowed_interface=".interfaces.ISmartView"
+    />
+
 </configure>
