@@ -37,10 +37,8 @@ $(document).ready(function() {
         }
     }).trigger('hashchange');
 
-    if (Faceted.Window.width) {
-        $(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt) {
-            markSelectedButton();
-        });
-    }
+    $(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt) {
+        markSelectedButton();
+    });
 
 });
