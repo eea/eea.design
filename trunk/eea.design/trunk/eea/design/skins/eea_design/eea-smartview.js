@@ -26,26 +26,16 @@ $(document).ready(function() {
         $.bbq.pushState({
             'smartTemplate': $(this).attr('href')
         });
-        markSelectedButton();
-        // If we run smart view w/o faceted navigation, we make our own
-        // AJAX query
-        if (!Faceted.Window.width) {
-            loadContent();
-        }
     });
 
     $(window).bind('hashchange', function(e) {
         // If faceted navigation is enabled, we don't have to make our own
         // AJAX request.
         if (!Faceted.Window.width) {
-            var smartTemplate = $.bbq.getState('smartTemplate');
-            if (smartTemplate) {
-                $('#smart-view-switch a[href=' + smartTemplate + ']').click();
-            }
+            markSelectedButton();
+            loadContent();
         }
-    });
-
-    $(window).trigger('hashchange'); 
+    }).trigger('hashchange');
 
     $(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){
         markSelectedButton();
