@@ -48,7 +48,6 @@
                         </a>
                     </li>
                 </ul>
-                <div class="visualClear">&nbsp;</div>
                 <span id="smart-view-content">
                     <metal:block metal:use-macro="smartView/getListingMacro" />
                 </span>
