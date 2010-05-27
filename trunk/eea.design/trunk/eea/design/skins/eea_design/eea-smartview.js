@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    function markSelectedButton() {
+        var smartTemplate = $.bbq.getState('smartTemplate');
+        $('#smart-view-switch .selected').removeClass('selected');
+        $('#smart-view-switch a[href=' + smartTemplate + ']').parent().addClass('selected');
+    }
+
     function loadContent() {
         $('#smart-view-content').html('<img src="++resource++faceted_images/ajax-loader.gif" />');
         var url = $.param.querystring($.bbq.getState('smartTemplate'), $.param.querystring());
@@ -15,11 +21,10 @@ $(document).ready(function() {
 
     $('#smart-view-switch a').live('click', function(e) {
         e.preventDefault();
-        $('#smart-view-switch .selected').removeClass('selected');
-        $(this).parent().addClass('selected');
         $.bbq.pushState({
             'smartTemplate': $(this).attr('href')
         });
+        markSelectedButton();
         // If we run smart view w/o faceted navigation, we make our own
         // AJAX query
         if (!Faceted.Window.width) {
@@ -28,14 +33,20 @@ $(document).ready(function() {
     });
 
     $(window).bind('hashchange', function(e) {
-        var smartTemplate = $.bbq.getState('smartTemplate');
-        if (smartTemplate) {
-            $('#smart-view-switch a[href=' + smartTemplate + ']').click();
+        // If faceted navigation is enabled, we don't have to make our own
+        // AJAX request.
+        if (!Faceted.Window.width) {
+            var smartTemplate = $.bbq.getState('smartTemplate');
+            if (smartTemplate) {
+                $('#smart-view-switch a[href=' + smartTemplate + ']').click();
+            }
         }
     });
 
-   if (!Faceted.Window.width) {
-       $(window).trigger('hashchange'); 
-   }
+    $(window).trigger('hashchange'); 
+
+    $(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){
+        markSelectedButton();
+    });
 
 });
