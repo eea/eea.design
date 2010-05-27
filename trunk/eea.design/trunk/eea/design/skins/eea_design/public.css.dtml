@@ -28,7 +28,7 @@
     cursor: auto;
 }
 #smart-view-switch li.selected {
-    background: #eee;
+    border: 1px solid #E9EFCD;
 }
 #smart-view-switch a img {
     margin: 0;
