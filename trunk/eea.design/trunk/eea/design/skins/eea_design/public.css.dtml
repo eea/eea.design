@@ -16,32 +16,28 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-#smart-view-switch a {
-    padding-left: 20px;
-    border: none;
-    background-position: left center;
+#smart-view-switch {
+    margin: 0.5em 0;
+    height: 32px;
 }
-#smart-view-switch .selected a {
-    color: black;
-    font-weight: bold;
+
+#smart-view-switch a {
+    border: none;
+}
+#smart-view-switch li.selected a {
     cursor: auto;
 }
-#smart-listing a {
-    background: url(&dtml-portal_url;/application_side_list.png) no-repeat;
+#smart-view-switch li.selected {
+    background: #eee;
 }
-#smart-summary a {
-    background: url(&dtml-portal_url;/application_view_list.png) no-repeat;
-}
-#smart-album a {
-    background: url(&dtml-portal_url;/application_view_tile.png) no-repeat;
-}
-#smart-subfolder a {
-    background: url(&dtml-portal_url;/application_view_tile.png) no-repeat;
+#smart-view-switch a img {
+    margin: 0;
+    padding: 0;
 }
 
 .eea-horizontal-list li {
-    display: inline;
-    margin-right: 1em;
+    float: left;
+    margin: 0 0.5em 0 0;
 }
 
 .eea-no-list-style {
