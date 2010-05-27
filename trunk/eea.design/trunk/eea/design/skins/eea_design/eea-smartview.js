@@ -2,8 +2,10 @@ $(document).ready(function() {
 
     function markSelectedButton() {
         var smartTemplate = $.bbq.getState('smartTemplate');
-        $('#smart-view-switch .selected').removeClass('selected');
-        $('#smart-view-switch a[href=' + smartTemplate + ']').parent().addClass('selected');
+        if (smartTemplate) {
+            $('#smart-view-switch .selected').removeClass('selected');
+            $('#smart-view-switch a[href=' + smartTemplate + ']').parent().addClass('selected');
+        }
     }
 
     function loadContent() {
