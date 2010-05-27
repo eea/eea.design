@@ -60,6 +60,3 @@ class ISmartView(Interface):
 
     def getListingMacro():
         """  """
-
-    def getMainMacro():
-        """  """
