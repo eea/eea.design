@@ -2,10 +2,8 @@ $(document).ready(function() {
 
     function markSelectedButton() {
         var smartTemplate = $.bbq.getState('smartTemplate');
-        if (smartTemplate) {
-            $('#smart-view-switch .selected').removeClass('selected');
-            $('#smart-view-switch a[href=' + smartTemplate + ']').parent().addClass('selected');
-        }
+        $('#smart-view-switch .selected').removeClass('selected');
+        $('#smart-view-switch a[href=' + smartTemplate + ']').parent().addClass('selected');
     }
 
     function loadContent() {
@@ -32,13 +30,17 @@ $(document).ready(function() {
         // If faceted navigation is enabled, we don't have to make our own
         // AJAX request.
         if (!Faceted.Window.width) {
-            markSelectedButton();
-            loadContent();
+            if ($.bbq.getState('smartTemplate')) {
+                markSelectedButton();
+                loadContent();
+            }
         }
     }).trigger('hashchange');
 
-    $(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){
-        markSelectedButton();
-    });
+    if (Faceted.Window.width) {
+        $(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt) {
+            markSelectedButton();
+        });
+    }
 
 });
