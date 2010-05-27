@@ -5,13 +5,16 @@ class SmartView(BrowserView):
     """
     """
 
-    def getTemplate(self):
-        s = 'folder_listing'
+    def getTemplateName(self):
         if 'smartTemplate' in self.request:
-            s = self.request['smartTemplate']
+            return self.request['smartTemplate']
         elif self.context.hasProperty('defaultSmartTemplate'):
-            s = self.context.getProperty('defaultSmartTemplate')
-        return getattr(self.context, s)
+            return self.context.getProperty('defaultSmartTemplate')
+        return 'folder_listing'
+
+    def getTemplate(self):
+        name = self.getTemplateName()
+        return getattr(self.context, name)
 
     def getListingMacro(self):
         template = self.getTemplate()

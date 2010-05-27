@@ -25,14 +25,14 @@
 
             <div class="visualClear"></div>
 
-            <metal:listing define-macro="listing">
-                <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style">
-                    <li id="smart-listing" class="selected"><a tal:attributes="href string:smart_folder_listing">Listing</a></li>
-                    <li id="smart-summary"><a tal:attributes="href string:smart_folder_summary_view">Summary</a></li>
-                    <li id="smart-album"><a tal:attributes="href string:smart_atct_album_view">Album</a></li>
-                    <li id="smart-subfolder"><a tal:attributes="href string:smart_subfolder_view">Subfolder</a></li>
+            <metal:listing define-macro="listing" tal:define="smartView context/@@smart_view_logic">
+                <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style" tal:define="templateName smartView/getTemplateName">
+                    <li id="smart-listing" tal:attributes="class python:(templateName.endswith('folder_listing') and 'selected') or ''"><a tal:attributes="href string:smart_folder_listing">Listing</a></li>
+                    <li id="smart-summary" tal:attributes="class python:(templateName.endswith('folder_summary_view') and 'selected') or ''"><a tal:attributes="href string:smart_folder_summary_view">Summary</a></li>
+                    <li id="smart-album" tal:attributes="class python:(templateName.endswith('atct_album_view') and 'selected') or ''"><a tal:attributes="href string:smart_atct_album_view">Album</a></li>
+                    <li id="smart-subfolder" tal:attributes="class python:(templateName.endswith('subfolder_view') and 'selected') or ''"><a tal:attributes="href string:smart_subfolder_view">Subfolder</a></li>
                 </ul>
-                <span id="smart-view-content" tal:define="smartView context/@@smart_view_logic">
+                <span id="smart-view-content">
                     <metal:block metal:use-macro="smartView/getListingMacro" />
                 </span>
             </metal:listing>

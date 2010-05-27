@@ -54,6 +54,9 @@ class ISubFolderView(Interface):
 
 
 class ISmartView(Interface):
+
+    def getTemplateName():
+        """  """
 	
     def getTemplate():
         """  """

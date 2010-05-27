@@ -29,16 +29,10 @@ $(document).ready(function() {
     $(window).bind('hashchange', function(e) {
         // If faceted navigation is enabled, we don't have to make our own
         // AJAX request.
-        if (!Faceted.Window.width) {
-            if ($.bbq.getState('smartTemplate')) {
-                markSelectedButton();
-                loadContent();
-            }
+        if (!Faceted.Window.width && ($.bbq.getState('smartTemplate') !== undefined)) {
+            markSelectedButton();
+            loadContent();
         }
     }).trigger('hashchange');
-
-    $(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt) {
-        markSelectedButton();
-    });
 
 });
