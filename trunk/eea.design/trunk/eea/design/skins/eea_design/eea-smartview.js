@@ -29,6 +29,14 @@ $(document).ready(function() {
         $.bbq.pushState({
             'smartTemplate': url
         });
+        // #3370 - IE7 does not pick up on hash changes
+        var ie6or7 = $.browser.msie && (parseInt($.browser.version) <= 7);
+        if (Faceted.Window.width && ie6or7) {
+            //Faceted.URLHandler.hash_changed(); <-- No effect
+            Faceted.Query = Faceted.URLHandler.hash2query(location.hash);
+            $(Faceted.Events).trigger(Faceted.Events.QUERY_CHANGED);
+            Faceted.Form.do_form_query();
+        }
     });
 
     $(window).bind('hashchange', function(e) {
