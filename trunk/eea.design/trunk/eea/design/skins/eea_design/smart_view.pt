@@ -26,7 +26,7 @@
             <div class="visualClear"></div>
 
             <metal:listing define-macro="listing" tal:define="smartView context/@@smart_view_logic">
-                <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style" tal:define="templateName smartView/getTemplateName">
+                <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style eea-rounded-corners" tal:define="templateName smartView/getTemplateName">
                     <li tal:attributes="class python:(templateName.endswith('folder_listing') and 'selected') or ''">
                         <span class="hiddenStructure template-id">smart_folder_listing</span>
                         <img src="folder_listing_icon.png"/>
@@ -39,7 +39,7 @@
                         <span class="hiddenStructure template-id">smart_atct_album_view</span>
                         <img src="atct_album_view_icon.png"/>
                     </li>
-                    <li tal:attributes="class python:(templateName.endswith('subfolder_view') and 'selected') or ''">
+                    <li tal:attributes="class python:(templateName.endswith('subfolder_view') and 'last selected') or 'last'">
                         <span class="hiddenStructure template-id">smart_subfolder_view</span>
                         <img src="subfolder_view_icon.png"/>
                     </li>

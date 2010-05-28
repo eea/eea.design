@@ -18,23 +18,36 @@
 
 #smart-view-switch {
     margin: 0.5em 0;
+    width: 131px;
     height: 32px;
+    background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
+    border: 1px solid #ccc;
 }
 #smart-view-switch li {
-    background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
     cursor: pointer;
+    border-right: 1px solid #ccc;
+    margin: 0;
 }
-#smart-view-switch li.selected {
-    border: 1px solid #E9EFCD;
-    cursor: auto;
+#smart-view-switch li.last {
+    border-right: 0;
 }
 #smart-view-switch li img {
     margin: 0;
     padding: 0;
     opacity: 0.5;
 }
+#smart-view-switch li.selected {
+    background: white;
+}
 #smart-view-switch li.selected img {
     opacity: 1;
+}
+
+.eea-rounded-corners {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .eea-horizontal-list li {
