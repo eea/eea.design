@@ -3,7 +3,12 @@ $(document).ready(function() {
     function markSelectedButton() {
         var smartTemplate = $.bbq.getState('smartTemplate');
         $('#smart-view-switch .selected').removeClass('selected');
-        $('#smart-view-switch a[href=' + smartTemplate + ']').parent().addClass('selected');
+        $('#smart-view-switch li').each(function(e) {
+            var templateID = $.trim($(this).text());
+            if (templateID == smartTemplate) {
+                $(this).addClass('selected');
+            }
+        });
     }
 
     function loadContent() {
@@ -19,11 +24,10 @@ $(document).ready(function() {
         }, 'html');
     }
 
-    $('#smart-view-switch a').live('click', function(e) {
-        alert('should be preventing this defualt event');
-        e.preventDefault();
+    $('#smart-view-switch li').live('click', function(e) {
+        var url = $(this).find('.template-id').text();
         $.bbq.pushState({
-            'smartTemplate': $(this).attr('href')
+            'smartTemplate': url
         });
     });
 

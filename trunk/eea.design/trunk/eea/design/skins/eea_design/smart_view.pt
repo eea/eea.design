@@ -28,24 +28,20 @@
             <metal:listing define-macro="listing" tal:define="smartView context/@@smart_view_logic">
                 <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style" tal:define="templateName smartView/getTemplateName">
                     <li tal:attributes="class python:(templateName.endswith('folder_listing') and 'selected') or ''">
-                        <a href="smart_folder_listing">
-                            <img src="folder_listing_icon.png"/>
-                        </a>
+                        <span class="hiddenStructure template-id">smart_folder_listing</span>
+                        <img src="folder_listing_icon.png"/>
                     </li>
                     <li tal:attributes="class python:(templateName.endswith('folder_summary_view') and 'selected') or ''">
-                        <a href="smart_folder_summary_view">
-                            <img src="folder_summary_view_icon.png"/>
-                        </a>
+                        <span class="hiddenStructure template-id">smart_folder_summary_view</span>
+                        <img src="folder_summary_view_icon.png"/>
                     </li>
                     <li tal:attributes="class python:(templateName.endswith('atct_album_view') and 'selected') or ''">
-                        <a href="smart_atct_album_view">
-                            <img src="atct_album_view_icon.png"/>
-                        </a>
+                        <span class="hiddenStructure template-id">smart_atct_album_view</span>
+                        <img src="atct_album_view_icon.png"/>
                     </li>
                     <li tal:attributes="class python:(templateName.endswith('subfolder_view') and 'selected') or ''">
-                        <a href="smart_subfolder_view">
-                            <img src="subfolder_view_icon.png"/>
-                        </a>
+                        <span class="hiddenStructure template-id">smart_subfolder_view</span>
+                        <img src="subfolder_view_icon.png"/>
                     </li>
                 </ul>
                 <span id="smart-view-content">
