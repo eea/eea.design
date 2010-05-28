@@ -18,7 +18,7 @@ $(document).ready(function() {
             $('#smart-view-content').html(data);
             $('.listingBar a').each(function(i) {
                 var batchQueryString = $.param.querystring($(this).attr('href'));
-                var newUrl = $.param.querystring(location.href, batchQueryString)
+                var newUrl = $.param.querystring(location.href, batchQueryString);
                 $(this).attr('href', newUrl);
             });
         }, 'html');
