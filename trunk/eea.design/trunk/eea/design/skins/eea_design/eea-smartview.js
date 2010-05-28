@@ -3,7 +3,7 @@ $(document).ready(function() {
     function markSelectedButton() {
         var smartTemplate = $.bbq.getState('smartTemplate');
         $('#smart-view-switch .selected').removeClass('selected');
-        $('#smart-view-switch li').each(function(e) {
+        $('#smart-view-switch li').each(function(i) {
             var templateID = $.trim($(this).text());
             if (templateID == smartTemplate) {
                 $(this).addClass('selected');
