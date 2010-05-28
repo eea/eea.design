@@ -20,6 +20,7 @@ $(document).ready(function() {
     }
 
     $('#smart-view-switch a').live('click', function(e) {
+        alert('should be preventing this defualt event');
         e.preventDefault();
         $.bbq.pushState({
             'smartTemplate': $(this).attr('href')

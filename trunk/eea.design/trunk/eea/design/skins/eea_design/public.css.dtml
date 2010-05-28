@@ -20,19 +20,25 @@
     margin: 0.5em 0;
     height: 32px;
 }
-
-#smart-view-switch a {
-    border: none;
-}
-#smart-view-switch li.selected a {
-    cursor: auto;
+#smart-view-switch li {
+    background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
 }
 #smart-view-switch li.selected {
     border: 1px solid #E9EFCD;
 }
+#smart-view-switch li.selected a {
+    cursor: auto;
+}
+#smart-view-switch a {
+    border: none;
+}
 #smart-view-switch a img {
     margin: 0;
     padding: 0;
+    opacity: 0.5;
+}
+#smart-view-switch li.selected img {
+    opacity: 1;
 }
 
 .eea-horizontal-list li {
