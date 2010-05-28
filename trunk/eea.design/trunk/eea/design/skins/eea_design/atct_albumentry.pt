@@ -5,10 +5,10 @@
     <a tal:attributes="
       href listing_url;
       class python:test(is_video, 'thickbox', '');
-      title python:desc_or_title">
+      title desc_or_title">
       <span class="photoAlbumEntryWrapper">
       <img style="border: none" tal:attributes="
-        title python:desc_or_title;
+        title desc_or_title;
         alt obj/pretty_title_or_id;
         src string:${obj/absolute_url}/image_thumb"/>
       </span>
