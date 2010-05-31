@@ -24,18 +24,44 @@
 
         <div class="visualClear"></div>
 
-        <metal:listingmacro define-macro="listing" tal:define="subfolderView context/@@subfolder_view_logic;
+        <metal:listingmacro define-macro="listing" tal:define="subfolderView subfolderView|context/@@subfolder_view_logic;
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents)">
 
-                <div class="subfolder" tal:repeat="folder formattedFolderContents">
-                    <h2 tal:content="folder/title">Articles</h2>
-                    <p class="subfolder-description" tal:condition="folder/description" tal:content="folder/description"></p>
-                    <div class="subfolder-contents" tal:define="formattedFolderContents folder/contents">
+
+                <div class="subfolder" tal:repeat="child formattedFolderContents/folderish">
+                    <h2><a tal:content="python:'%s (%i)' % (child['title'], child['nitems'])" tal:attributes="href child/listing_url"></a></h2>
+                    <p class="subfolder-description" tal:condition="child/description" tal:content="child/description"></p>
+                    <div class="subfolder-contents" tal:define="subFolderContents child/contents">
+                        <p tal:condition="not:child/nitems">No items to display.</p>
                         <div class="photoAlbumEntry"
                              tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
-                             tal:repeat="item formattedFolderContents">
-                             <a tal:attributes="href item/url;
+                             tal:repeat="item subFolderContents">
+                             <a tal:attributes="href item/listing_url;
+                                                title item/description;
+                                                class python:item['portal_type'] == 'EyewitnessStory' and 'gallery-fancybox' or ''">
+                                <span class="photoAlbumEntryWrapper">
+                                    <img tal:attributes="src python: item['portal_type'] == 'FeedItem' and item['image'] or '%s/image_thumb' % item['url']"/>
+                                </span>
+                                <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
+                            </a>
+                        </div>
+                        <div class="visualClear"></div>
+                    </div>
+                    <a class="moreLink" tal:condition="child/has_more" i18n:translate="box_morelink" tal:attributes="href child/listing_url">Read more</a>
+                    <div class="visualClear"></div>
+                </div>
+
+                <div tal:define="nitems python:len(formattedFolderContents['nonfolderish'])"
+                     tal:condition="nitems"
+                     id="nonfolderish-subfolder-view-items"
+                     class="subfolder">
+                    <h2 tal:content="python:'Other resources (%i)' % nitems"></h2>
+                    <div class="subfolder-contents" tal:define="nonFolderishItems formattedFolderContents/nonfolderish">
+                        <div class="photoAlbumEntry"
+                             tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
+                             tal:repeat="item nonFolderishItems">
+                             <a tal:attributes="href item/listing_url;
                                                 title item/description;
                                                 class python:item['portal_type'] == 'EyewitnessStory' and 'gallery-fancybox' or ''">
                                 <span class="photoAlbumEntryWrapper">
@@ -46,7 +72,6 @@
                         </div>
                         <div class="visualClear"></div>
                     </div>
-                    <a class="moreLink" tal:condition="folder/has_more" i18n:translate="box_morelink" tal:attributes="href folder/url">Read more</a>
                     <div class="visualClear"></div>
                 </div>
 
