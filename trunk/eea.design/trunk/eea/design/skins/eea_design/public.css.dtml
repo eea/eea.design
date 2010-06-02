@@ -25,7 +25,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin: 0.83em 0;
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     padding-bottom: 0.25em;
-    color:#2D749C;
+    color: #2D749C;
     background: transparent;
 }
 
@@ -962,7 +962,7 @@ float:right;
 }
 
 .tileItem {
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
     padding-top: 0.5em;
     margin-top: 0.5em;
 }
