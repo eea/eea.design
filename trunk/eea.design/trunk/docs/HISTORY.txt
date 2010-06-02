@@ -4,6 +4,7 @@ Changelog
 1.4 - (unreleased)
 ------------------
 
+ * Moved #auto-related portlet to below content [thuliper, #2764]
  * Merged subfolder_view and dc_view [thuliper, #3372]
  * Integrate smart_view with faceted navigation [thuliper, #3340]
  * Can now conifigure which headers JSTOC will pick up [thuliper, #3206]

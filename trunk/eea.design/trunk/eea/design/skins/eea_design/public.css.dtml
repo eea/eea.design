@@ -20,6 +20,21 @@ body.section-signals #nonfolderish-subfolder-view-items {
     display: none;
 }
 
+#belowContent .portletHeader {
+    font-size: 130%;
+    margin: 0.83em 0;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    padding-bottom: 0.25em;
+    color:#2D749C;
+    background: transparent;
+}
+
+#belowContent .portlet {
+    float: none;
+    width: 100%;
+    padding: 0;
+}
+
 #smart-view-switch {
     margin: 0.5em 0;
     width: 131px;
