@@ -25,9 +25,9 @@ $(document).ready(function() {
     }
 
     $('#smart-view-switch li').live('click', function(e) {
-        var url = $(this).find('.template-id').text();
+        var smartTemplate = $(this).find('.template-id').text();
         $.bbq.pushState({
-            'smartTemplate': url
+            'smartTemplate': smartTemplate
         });
         // #3370 - IE7 does not pick up on hash changes
         var ie6or7 = $.browser.msie && (parseInt($.browser.version) <= 7);
@@ -37,6 +37,7 @@ $(document).ready(function() {
             $(Faceted.Events).trigger(Faceted.Events.QUERY_CHANGED);
             Faceted.Form.do_form_query();
         }
+        createCookie('smartTemplate', smartTemplate);
     });
 
     $(window).bind('hashchange', function(e) {
@@ -47,5 +48,11 @@ $(document).ready(function() {
             loadContent();
         }
     }).trigger('hashchange');
+
+    if ($.bbq.getState('smartTemplate') === undefined && readCookie('smartTemplate')) {
+        $.bbq.pushState({
+            'smartTemplate': readCookie('smartTemplate')
+        })
+    }
 
 });
