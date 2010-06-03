@@ -16,6 +16,16 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.only-ie6 {
+    display: none;
+}
+* html .only-ie6 {
+    display: block;
+}
+* html .no-ie6 {
+    display: none;
+}
+
 body.section-signals #nonfolderish-subfolder-view-items {
     display: none;
 }

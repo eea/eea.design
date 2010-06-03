@@ -29,19 +29,23 @@
                 <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style eea-rounded-corners" tal:define="templateName smartView/getTemplateName">
                     <li tal:attributes="class python:(templateName.endswith('folder_listing') and 'selected') or ''">
                         <span style="display:none" class="template-id">smart_folder_listing</span>
-                        <img i18n:attributes="title alt" title="Listing" alt="Listing" src="folder_listing_icon.png"/>
+                        <img class="no-ie6" i18n:attributes="title alt" title="Listing" alt="Listing" src="folder_listing_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title alt" title="Listing" alt="Listing" src="ie6_folder_listing_icon.png"/>
                     </li>
                     <li tal:attributes="class python:(templateName.endswith('folder_summary_view') and 'selected') or ''">
                         <span style="display:none" class="template-id">smart_folder_summary_view</span>
-                        <img i18n:attributes="title alt" title="Summary view" alt="Summary view" src="folder_summary_view_icon.png"/>
+                        <img class="no-ie6" i18n:attributes="title alt" title="Summary view" alt="Summary view" src="folder_summary_view_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title alt" title="Summary view" alt="Summary view" src="ie6_folder_summary_view_icon.png"/>
                     </li>
                     <li tal:attributes="class python:(templateName.endswith('atct_album_view') and 'selected') or ''">
                         <span style="display:none" class="template-id">smart_atct_album_view</span>
-                        <img i18n:attributes="title alt" title="Album view" alt="Album view" src="atct_album_view_icon.png"/>
+                        <img class="no-ie6" i18n:attributes="title alt" title="Album view" alt="Album view" src="atct_album_view_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title alt" title="Album view" alt="Album view" src="ie6_atct_album_view_icon.png"/>
                     </li>
                     <li tal:attributes="class python:(templateName.endswith('subfolder_view') and 'last selected') or 'last'">
                         <span style="display:none" class="template-id">smart_subfolder_view</span>
-                        <img i18n:attributes="title alt" title="Folder overview" alt="Folder overview" src="subfolder_view_icon.png"/>
+                        <img class="no-ie6" i18n:attributes="title alt" title="Folder overview" alt="Folder overview" src="subfolder_view_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title alt" title="Folder overview" alt="Folder overview" src="ie6_subfolder_view_icon.png"/>
                     </li>
                 </ul>
                 <span id="smart-view-content">
