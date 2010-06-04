@@ -186,10 +186,6 @@
                          show all (back and forward refs) related items if they exist
                       </div>
 
-                       <div metal:use-macro="here/document_relateditems/macros/feeds">
-                           show related feeds if they exist
-                       </div>
-
                        <div metal:use-macro="here/document_relateditems/macros/auto">
                            show all (back and forward refs) related items if they exist
                        </div>
