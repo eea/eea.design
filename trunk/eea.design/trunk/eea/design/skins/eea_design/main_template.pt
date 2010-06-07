@@ -131,7 +131,7 @@
                               </div>
 
                                <div metal:use-macro="here/document_relateditems/macros/auto">
-                                   show all (back and forward refs) related items if they exist
+                                   show latest items of same content type and themes.
                                </div>
 
                                <h2 i18n:translate="share_with_others">Share with others</h2>
@@ -183,7 +183,7 @@
                       </div>
 
                        <div metal:use-macro="here/document_relateditems/macros/auto">
-                           show all (back and forward refs) related items if they exist
+                           show latest items of same content type and themes.
                        </div>
 
                        <h2 i18n:translate="share_with_others">Share with others</h2>
