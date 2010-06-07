@@ -26,6 +26,7 @@
     margin: 1em 0;
     border: 1px solid #E9EFCD;
     float: left;
+    width: 25em;
 }
 
 .collapsable-portlet .portletHeader {

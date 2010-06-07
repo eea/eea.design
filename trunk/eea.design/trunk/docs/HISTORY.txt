@@ -4,6 +4,7 @@ Changelog
 1.4 - (unreleased)
 ------------------
 
+ * Fixed width for TOC area so that long titles are not spanning entire page [demarant].
  * Removed redundant related feeds macro in below content area [demarant, #3208].
  * Moved #auto-related portlet to below content [thuliper, #2764]
  * Merged subfolder_view and dc_view [thuliper, #3372]
