@@ -11,6 +11,14 @@ $(document).ready(function() {
         });
     }
 
+    function loadCookieSetttings() {
+        if ($.bbq.getState('smartTemplate') === undefined && readCookie('smartTemplate')) {
+            $.bbq.pushState({
+                'smartTemplate': readCookie('smartTemplate')
+            });
+        }
+    }
+
     function loadContent() {
         $('#smart-view-content').html('<img src="++resource++faceted_images/ajax-loader.gif" />');
         var url = $.param.querystring($.bbq.getState('smartTemplate'), $.param.querystring());
@@ -32,13 +40,16 @@ $(document).ready(function() {
         // #3370 - IE7 does not pick up on hash changes
         var ie6or7 = $.browser.msie && (parseInt($.browser.version) <= 7);
         if (Faceted.Window.width && ie6or7) {
-            //Faceted.URLHandler.hash_changed(); <-- No effect
             Faceted.Query = Faceted.URLHandler.hash2query(location.hash);
             $(Faceted.Events).trigger(Faceted.Events.QUERY_CHANGED);
             Faceted.Form.do_form_query();
         }
         createCookie('smartTemplate', smartTemplate);
     });
+
+    if ( $('#smart-view-switch').length ) {
+        loadCookieSetttings();
+    }
 
     $(window).bind('hashchange', function(e) {
         // If faceted navigation is enabled, we don't have to make our own
@@ -48,11 +59,5 @@ $(document).ready(function() {
             loadContent();
         }
     }).trigger('hashchange');
-
-    if ($.bbq.getState('smartTemplate') === undefined && readCookie('smartTemplate')) {
-        $.bbq.pushState({
-            'smartTemplate': readCookie('smartTemplate')
-        })
-    }
 
 });
