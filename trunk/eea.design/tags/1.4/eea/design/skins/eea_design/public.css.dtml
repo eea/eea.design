@@ -1,0 +1,1417 @@
+/*
+** Plone style sheet - Public-facing Elements
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** You should preferrably use ploneCustom.css to add your own CSS classes and to
+** customize your portal, as these are the base fundaments of Plone, and will
+** change and be refined in newer versions. Keeping your changes in
+** ploneCustom.css will make it easier to upgrade.
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+.only-ie6 {
+    display: none;
+}
+* html .only-ie6 {
+    display: block;
+}
+* html .no-ie6 {
+    display: none;
+}
+
+body.section-signals #nonfolderish-subfolder-view-items {
+    display: none;
+}
+
+#belowContent .portletHeader {
+    font-size: 130%;
+    margin: 0.83em 0;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    padding-bottom: 0.25em;
+    color: #2D749C;
+    background: transparent;
+}
+
+#belowContent .portlet {
+    float: none;
+    width: 100%;
+    padding: 0;
+}
+
+#smart-view-switch {
+    margin: 0.5em 0;
+    width: 131px;
+    height: 32px;
+    background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
+    border: 1px solid #ccc;
+}
+#smart-view-switch li {
+    cursor: pointer;
+    border-right: 1px solid #ccc;
+    margin: 0;
+}
+#smart-view-switch li.last {
+    border-right: 0;
+}
+#smart-view-switch li img {
+    margin: 0;
+    padding: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+#smart-view-switch li.selected {
+    background: white;
+}
+#smart-view-switch li.selected img {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.eea-rounded-corners {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.eea-horizontal-list li {
+    float: left;
+    margin: 0 0.5em 0 0;
+}
+
+.eea-no-list-style {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 1em 0;
+}
+
+.subfolder .moreLink {
+    float: left;
+    margin: 1em 0em 2em 1em;
+    font-weight: bold;
+}
+
+/* arrow search input */
+#portal-searchbox input.searchButton {
+    background: url(&dtml-portal_url;/search_btn.png) no-repeat top left;
+    border: none;
+    width: 41px;
+    height: 26px;
+    margin: 0 8px 0 2px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Override jquery.ui style */
+.ui-widget-content a {
+    color: #2A6495 !important;
+}
+
+/* Inflexible tooltips */
+
+.eea-tooltip-markup-top,
+.eea-tooltip-markup-bottom,
+.eea-tooltip-markup-left,
+.eea-tooltip-markup-right {
+    display: none;
+    font-size: 12px;
+    height: 70px;
+    width: 160px;
+    padding: 25px;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+}
+.eea-tooltip-markup-top {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_top.png);
+}
+.eea-tooltip-markup-bottom {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_bottom.png);
+    margin-top: 15px;
+}
+.eea-tooltip-markup-left {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_left.png);
+    padding-right: 45px;
+}
+.eea-tooltip-markup-right {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_right.png);
+    padding-left: 45px;
+}
+
+/* Flexible tooltips */
+
+.eea-tooltip-markup {
+  display: none;
+}
+
+.eea-tooltip-markup .tooltip-box-br {
+  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-bottom-right.png) no-repeat right bottom;
+  position:relative;
+  max-height:1000px;
+  min-height:50px;
+  min-width:100px;
+  width:250px;
+  padding-bottom:3px;
+}
+
+.eea-tooltip-markup .tooltip-box-tl {
+  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-top-left.png) no-repeat left top;
+  position:relative;
+  left:-30px;
+  top:-20px;
+  margin-right:-19px;
+  max-height:1000px;
+  min-height:50px;
+  min-width:100px;
+  width: 269px;
+}
+
+.eea-tooltip-markup .tooltip-box-rcontent {
+  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-left.png) no-repeat left center;
+  position: relative;
+  top: 11px;
+  padding:2em 1em 2em 3em;
+  text-align:justify;
+  font-size: 12px;
+  color:#ffffff;
+}
+
+.eea-tooltip-markup .tooltip-box-lcontent {
+  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-right.png) no-repeat right center;
+  position: relative;
+  top: 11px;
+  right: -31px;
+  padding:2em 3.5em 2em 1em;
+  text-align:justify;
+  font-size: 12px;
+  color:#ffffff;
+}
+
+.eea-tooltip-markup .tooltip-box-bcontent {
+  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-top.png) no-repeat center top;
+  color:#FFFFFF;
+  font-size:12px;
+  left:10px;
+  padding:2.5em 1.5em 1em 2.5em;
+  position:relative;
+  text-align:justify;
+  top:-2px;
+}
+
+.eea-tooltip-markup .tooltip-box-tcontent {
+  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-bottom.png) no-repeat center bottom;
+  bottom:-22px;
+  color:#FFFFFF;
+  font-size:12px;
+  left:10px;
+  padding:0.5em 1.5em 2.5em 2.5em;
+  position:relative;
+  text-align:justify;
+}
+
+/* */
+
+#print-warning {
+    display: none;
+}
+
+.azglossary {
+    padding-right: 5.3em;
+}
+
+.documentContent {
+    background: &dtml-backgroundColor;;
+    padding: 0em 1em 2em 1em;
+}
+
+#translation-disclaimer .note {
+   background:transparent url(http://glossary.eea.europa.eu/misc_/EEAGlossary/note_ico.gif) no-repeat scroll 0.3em 50%;
+   padding:0.2em 0.3em 0.3em 22px;
+   color:#8F8F8F;
+   font-size:1em;
+   border: 1px solid #efefef;
+}
+#translation-disclaimer {
+   margin: 0 1em 0 1em;
+}
+
+/* related styles amd flowplayer videos style */
+
+.media-player {
+   text-align:center;
+}
+
+.media-player .embeddedvideo {
+   width: 320px;
+   height: 240px;
+   margin: auto;
+}
+
+.mediacaption {
+   background-color:#efefef;
+   text-align:left;
+   padding:3px;
+   margin: auto;
+}
+
+.related-in-content-area .portlet {
+   margin-left: 2em;
+}
+
+#auto-related .tileImage,
+#related-multimedia .tileImage {
+    float: none;
+}
+
+#related-portlets {
+    float: right;
+    margin-left: 2em;
+    clear: right;
+}
+
+#auto-related,
+#related-multimedia,
+#related-pages {
+    float: right;
+    clear: right;
+    width: 17em;
+    padding: 7px;
+    background-color:white;
+}
+
+#auto-related .portletItem {
+    padding-bottom:0.5em;
+}
+
+
+#related-portlets #auto-related,
+#related-portlets #related-multimedia,
+#related-portlets #related-pages,
+#related-portlets #themes-object {
+    float: none;
+    clear: none;
+    margin-left: 2em;
+}
+
+#auto-related h2,
+#related-multimedia h2,
+#related-pages h2 {
+    margin-top: 0;
+}
+
+#related-multimedia-top dd.embeddedMedia,
+#related-multimedia dd.embeddedMedia,
+.portlet dd.embeddedMedia {
+    background-color:#ffffff;
+    border:#aaaaaa 1px dotted;
+    padding:0px;
+    text-align:center;
+}
+
+#related-multimedia-top dd.embeddedMedia {
+    float: left;
+    margin-left:0.25em;
+    margin:0.5em 0em 0.5em 0.25em;
+}
+
+.portlet dd.embeddedMedia {
+    margin-bottom: 1em;
+}
+
+#related-multimedia-top {
+    border:none;
+    margin:0;
+    padding;0;
+}
+
+dd.embeddedMedia .magnify {
+    float: right;
+}
+
+#media-content-spacer {
+    clear: left;
+    padding-top: 1em;
+}
+
+/* Links with differently colored link underlines - only for content */
+.flowplayer a,
+.documentContent p a,
+.documentContent ul li a,
+.documentContent td a {
+    text-decoration: none !important;
+    border-bottom: 1px &dtml-linkUnderlineColor; solid;
+}
+
+.documentContent a:hover,
+.documentContent ul li a:hover,
+.documentContent td a:hover {
+    border-bottom: 1px &dtml-linkUnderlineHoverColor; solid;
+}
+
+dl a, dd a, dt a {
+    border: none !important;
+}
+dl a:hover, dd a:hover, dt a:hover {
+    color: &dtml-linkUnderlineHoverColor; !important;
+    text-decoration: underline !important;
+}
+
+a.moreLink {
+background: url(&dtml-portal_url;/bcpil.gif) no-repeat center right;
+padding-right: 1em;
+}
+
+/* End links */
+
+/* The edit form elements */
+.field {
+    top: 0;
+    left: 0;
+    margin: 0 1em 1em 0;
+}
+
+.field .field {
+    margin: 1em 0 0 0;
+}
+
+.fieldRequired {
+    background: url(&dtml-portal_url;/required.gif) center left no-repeat;
+    padding: 0 0 0 8px;
+    color: &dtml-backgroundColor;;
+}
+
+
+.fieldUploadFile {
+    text-align: right;
+    margin-right: 0.75em;
+    display: none;
+}
+
+.fieldTextFormat {
+    text-align: right;
+    margin-right: 0.75em
+}
+
+.formHelp {
+    font-size: 90%;
+    color: &dtml-discreetColor;;
+    margin: 0 0 0.2em 0;
+}
+
+.formHelp:hover {
+    color: &dtml-fontColor;;
+    cursor: default;
+}
+
+.formControls {
+   margin: 1em 0;
+}
+
+.error {
+    /* Class for error indication in forms */
+    background-color: &dtml-notifyBackgroundColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-notifyBorderColor;;
+    padding: 1em;
+    margin: 0 0 1em 0;
+    width: 95%;
+}
+
+.error .fieldRequired {
+    color: &dtml-notifyBackgroundColor;;
+}
+
+/* thickbox styles overwrites */
+#TB_ajaxWindowTitle {
+    font-weight: bold;
+    font-size:1em;
+    height: 1em;
+    overflow: hidden;
+}
+
+
+/* portlet for translation feedback */
+#translationfeedback textarea, #translationfeedback input#sender_from_address {
+ width:97%;
+ margin-bottom:0.1em;
+}
+
+#portlet-translationfeedback {
+margin-left:0.25em;
+margin-right:0.25em;
+}
+#translationfeedback input.standalone {
+float:right;
+}
+
+/* Code to work around IE's lacking support of sub-elements of the input element */
+.noborder,
+.documentEditable * .noborder {
+    border: none;
+    margin: 0;
+    background: none;
+    background-color: transparent;
+}
+
+/* End edit form elements */
+
+#visual-portal-wrapper {
+    /* We also set max/min width in design.js because IE doens't
+     * understand the CSS. So if you change these values, make sure to change
+     * design.js too. TODO: use dtml*/
+    width: 98%;
+    max-width: 1280px;
+    min-width: 972px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+/* Logo properties */
+
+.portal-logo {
+    background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat 0 8px;
+    border: 0;
+    margin: 0px 0 0 7px;
+    padding: 0;
+}
+
+.portal-logo a {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: <dtml-var "_[logoName].height + 16">px;
+    height: 0px !important;
+    width: <dtml-var "_[logoName].width">px;
+    cursor: pointer;
+}
+
+.portal-logo a:hover {
+     /* no background highlight on logo */
+    background-color: transparent;
+}
+
+#portal-top {
+    margin: 0;
+    padding: 0;
+    background: url(&dtml-portal_url;/headerbg.gif) repeat-y top right #95b229;
+}
+
+#cross-site-top {
+    background-color: white;
+    margin-top: 1px;
+    height: 30px;
+    padding: 5px 0;
+}
+
+.shadow {
+    -moz-box-shadow: 0 10px 50px 0 #333;
+    -webkit-box-shadow: 0 10px 50px 0 #333;
+}
+
+/* drop down panels for portal siteactions */
+#cross-site-top .panel {
+    display: none;
+    z-index: 100;
+}
+
+#cross-site-top .panel-top {
+    margin: auto auto;
+    background: transparent url(&dtml-portal_url;/panel_arrow.png);
+    width: 50px;
+    height: 25px;
+    position: relative;
+    top: 1px;
+}
+
+#cross-site-top .panel .portletFooter {
+    margin-top: 1em;
+}
+
+#cross-site-top .panel-content {
+    background: white url(&dtml-portal_url;/portlet_bg.png) repeat-x;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#cross-site-top .panel #portlet-subscribtion {
+    margin: 0;
+}
+
+#cross-site-top .panel #portlet-subscribtion .portletFooter {
+    margin-bottom: 0;
+    margin-bottom: 0;
+}
+
+#tip-siteaction-events {
+     min-width: 600px;
+     width: 600px;
+     min-height: 430px;
+}
+
+#cross-site-top .panel .portlet,
+#cross-site-top .panel .portletHeader {
+    background: transparent;
+}
+
+#tip-siteaction-etcssites li,
+#tip-siteaction-chooselang li {
+    margin-left: 1em;
+    list-style-image: url(bullet.gif);
+}
+
+/* The skin switcher at the top, only shows up if you have multiple skins available */
+
+#portal-skinswitcher {
+}
+
+#portal-skinswitcher a {
+    display: block;
+    float: left;
+}
+
+/* Searchbox style and positioning */
+
+#portal-searchbox {
+    float: right;
+    clear: right;
+    background-color: transparent;
+    margin: 25px 0 0 0;
+    padding: 0 10px 0 0;
+    text-align: right;
+    text-transform: &dtml-textTransform;;
+    white-space: nowrap;
+    z-index: 2;
+    font-size: 1.2em;
+}
+
+#portal-column-content #portal-searchbox {
+    float: none;
+    clear: auto;
+    padding: 14px 0;
+    margin: 0;
+    background-color: #b9e148;
+    text-align: center;
+}
+
+#portal-searchbox a {
+    text-transform: none;
+    text-decoration: underline;
+    color: #444;
+    border: none;
+    font-size: 80%;
+}
+
+
+#searchbox_terminology input {
+   width: 366px;
+   background: transparent url(search_bg.png) no-repeat 50% 50%;
+   border: none;
+   padding: 9px 0 9px 30px;
+   font-size: 0.8em;
+}
+
+/*  IE7 fixes */
+* + html #region-content,
+* + html #portal-searchbox {
+    overflow: hidden;
+}
+
+#portal-advanced-search {
+    margin-top: 0.2em;
+    clear: both;
+}
+
+#portal-advanced-search a {
+    color: &dtml-discreetColor;;
+    text-decoration: none;
+    text-transform: &dtml-textTransform;;
+}
+
+/* Site-wide action menu - font size, contact, index, sitemap etc */
+
+
+#portal-externalsites,
+#portal-siteactions {
+    background-color: white;
+    white-space: nowrap;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 3px 0 3px 0;
+    height: auto;
+    line-height: normal;
+    float: right;
+    padding: 3px 10px 3px 0;
+}
+
+#portal-externalsites {
+    float: left;
+    padding: 3px 0 3px 10px
+}
+
+#portal-externalsites li,
+#portal-siteactions li {
+    display: inline;
+    color: white;
+    border-right: 1px solid &dtml-darkBackgroundColor;;
+    padding: 0 0.5em;
+}
+
+#portal-externalsites li a,
+#portal-siteactions li a {
+    background-color: transparent;
+    color: black;
+    height: auto;
+    text-decoration: none;
+    text-transform: none;
+}
+
+
+#siteaction-contactus {
+    font-weight: bold;
+}
+
+#portal-personaltools-wrapper {
+    clear: both;
+}
+#portal-personaltools {
+    /* Bar with personalized menu (user preferences, favorites etc) */
+    background-color: &dtml-globalBackgroundColor;;
+    border-top-color: &dtml-globalBorderColor;;
+    border-top-style: &dtml-borderStyle;;
+    border-top-width: &dtml-borderWidth;;
+    border-bottom-color: &dtml-globalBorderColor;;
+    border-bottom-style: &dtml-borderStyle;;
+    border-bottom-width: &dtml-borderWidth;;
+    line-height: 1.6em;
+    color: &dtml-fontColor;;
+    padding: 0em 3em 0em 3em;
+    margin: 0;
+    text-align: right;
+    text-transform: &dtml-textTransform;;
+    list-style: none;
+}
+
+#portal-personaltools .portalUser {
+    background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
+    padding-left: 15px;
+}
+
+#portal-personaltools .portalNotLoggedIn {
+    /* Used on all descriptions relevant to those not logged in */
+    color: &dtml-fontColor;;
+    padding: 0;
+    background: transparent;
+    background-image: none;
+}
+
+#portal-personaltools li {
+    color: &dtml-globalFontColor;;
+    margin-left: 1em;
+    display: inline;
+}
+
+#portal-personaltools li a {
+    text-decoration: none;
+    color: &dtml-globalFontColor;;
+}
+
+#portal-personaltools .visualIconPadding {
+    padding-left: 10px;
+}
+
+.visualCaseSensitive {
+    text-transform: none;
+}
+
+
+#portal-breadcrumbs {
+    /* The path bar, including breadcrumbs and add to favorites */
+    border: none;
+    line-height: 1.6em;
+    margin: 0 0 1em 0em;
+    padding-left: 2em;
+    clear: both;
+    background: white;
+    display: none;
+}
+
+#region-content #portal-breadcrumbs {
+    /* The path bar, including breadcrumbs and add to favorites */
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-left: 0em;
+}
+
+#portal-breadcrumbs a {
+    text-decoration: none;
+}
+
+.breadcrumbSeparator {
+    font-size: 120%;
+}
+
+.addFavorite {
+    vertical-align: bottom;
+}
+
+#content-news h1 {
+    margin-bottom: 1em;
+}
+
+/* Only h5/h6 headlines in the content area should have the discreet color */
+
+#content h5,
+#content h6 {
+    color: &dtml-fontColor;;
+}
+
+.newsItem {
+    margin-bottom: 1em;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+.newsImage {
+    border: 1px solid black;
+}
+
+.newsImageContainer {
+    float:right;
+    margin: 0 0 0.5em 1em;
+    width: 202px;
+}
+
+.newsContent {
+    padding: 0 1em 1em 1em;
+}
+
+.newsContent ul,
+.newsContent li {
+    display: block;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+.newsAbout {
+    display: block;
+    color: &dtml-discreetColor;;
+    font-size: &dtml-fontSmallSize;;
+    padding: 0;
+    margin-top: 0;
+    list-style: none;
+    list-style-image: none;
+    float: right;
+    text-align: right;
+}
+
+.newsAbout li {
+    display: inline;
+}
+
+.newsFooter {
+
+}
+
+.newsFooter li {
+    display: inline;
+    margin: 0 1em 0 0;
+}
+
+.documentActions ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.documentActions li {
+    display: inline;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+.documentActions a {
+    border: none !important;
+    text-decoration: none;
+}
+
+/* Top documentActions should show languageCodes */
+.documentActions ul {
+    display: none;
+}
+.documentActions .languageCodes {
+    display: block;
+}
+
+/* Bottom documentActions should show the actions */
+#belowContent .documentActions ul {
+    display: block;
+}
+#belowContent .documentActions .languageCodes {
+    display: none;
+}
+
+/* .system-message and #error-handling are reST error indicators */
+
+.portalMessage,
+.system-message,
+#error-handling {
+    background-color: &dtml-notifyBackgroundColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-notifyBorderColor;;
+    color: &dtml-fontColor;;
+    font-size: &dtml-fontSmallSize;;
+    font-weight: bold;
+    margin: 1em 0em;
+    padding: 0.5em 1em 0.5em 3em;
+    vertical-align: middle;
+    background-image: url(&dtml-portal_url;/information.png);
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+}
+
+.informationMessage {
+    background-color: #ffffff;
+}
+
+.warningMessage {
+    font-size: 160%;
+}
+
+.portalMessage a {
+    color: &dtml-fontColor;;
+}
+
+.documentDescription {
+    /* The summary text describing the document */
+    font-weight: bold;
+    display: block;
+    margin: 0em 0em 0.5em 0em;
+    line-height: 1.5em;
+    font-size:125%;
+}
+
+.documentByLine {
+    font-size: &dtml-fontSmallSize;;
+    font-weight: normal;
+    color: &dtml-discreetColor;;
+    margin: 0em 0em 0.5em 0em;
+    clear: both;
+}
+
+.discussion {
+    margin-top: 1em;
+}
+
+.even {
+    background-color: &dtml-evenRowBackgroundColor;;
+}
+
+.odd {
+    background-color: &dtml-oddRowBackgroundColor;;
+}
+
+.visualHighlight {
+    background-color: &dtml-evenRowBackgroundColor;;
+}
+
+.discreet {
+    color: &dtml-discreetColor;;
+    font-size: &dtml-fontSmallSize;;
+    font-weight: normal;
+}
+
+/* Batch selector */
+
+.listingBar {
+    background-color: &dtml-globalBackgroundColor;;
+    border-color: &dtml-globalBorderColor;;
+    border-style: &dtml-borderStyle;;
+    border-width: &dtml-borderWidth;;
+    padding: 0em 1em;
+    text-align: center;
+    text-transform: &dtml-textTransform;;
+    vertical-align: top;
+    margin: 1em 0em;
+    font-size: 94%;
+    clear: both;
+}
+
+.listingBar span.previous,
+.listingPrevious {
+    text-align: left;
+    float: left;
+    margin-right: 1em;
+}
+
+.listingBar span.next,
+.listingNext {
+    text-align: right;
+    float: right;
+    margin-left: 1em;
+}
+
+.listingBar img {
+    vertical-align: middle;
+}
+
+.listingBar a {
+    text-decoration: none;
+}
+
+.tileItem {
+    border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
+    padding-top: 0.5em;
+    margin-top: 0.5em;
+}
+
+.tileHeadline {
+    border: none;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+#relatedItems .tileHeadline {
+    font-size: 130%;
+    margin: 0.6em 0;
+}
+
+.tileHeadline a {
+    text-decoration: none;
+}
+
+.tileBody {
+    margin-bottom: 0.5em;
+}
+
+.tileImage {
+    float: left;
+    margin: 1em 1em 0em 0em;
+    border: 1px solid &dtml-globalBorderColor;;
+}
+
+#relatedItems .visualClear {
+  padding-bottom: 1.5em;
+}
+
+.eventDetails {
+}
+
+/* Useful deviations from regular style on elements */
+
+/* List classes without markers */
+
+ul.visualNoMarker,
+ol.visualNoMarker {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0.5em 0 0 0;
+    line-height: 1em;
+}
+
+textarea.proportional {
+    font: 100% <dtml-var fontFamily>;
+}
+
+.productCredits {
+    text-align: right;
+    font-size: &dtml-fontSmallSize;;
+    clear: both;
+    font-weight: normal;
+    color: &dtml-discreetColor;;
+}
+
+.feedButton {
+    display: block;
+    float: right;
+    margin-top: 1px;
+}
+
+.poweredBy {
+    display: block;
+    clear: both;
+    font-size: &dtml-fontSmallSize;;
+    font-weight: normal;
+    color: &dtml-discreetColor;;
+    text-align: right;
+}
+
+/* Sitemap styles */
+
+#portal-sitemap {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    font-size: 90%;
+    border: none;
+}
+
+#portal-sitemap a,
+#portal-sitemap .portletNavigationTree ,
+#portal-sitemap .portletNavigationTree  li.navTreeItem {
+  border: 0;
+}
+
+#portal-sitemap > li > a {
+   font-size: 1.4em;
+   font-weight: bold;
+}
+
+
+#portal-sitemap > li {
+   border: 0;
+   margin-left: 1em;
+   padding-bottom: 2em;
+}
+
+#portal-sitemap .navTreeLevel1 {
+    padding-left: 1em;
+    border: 0.5em solid &dtml-globalBorderColor;;
+    margin: 0 0 0 0.5em;
+}
+
+#portal-sitemap .navTreeLevel2 {
+    padding-left: 1em;
+    border-left: 0.5em solid &dtml-globalBackgroundColor;;
+    margin: 0 0 0 0.6em;
+}
+
+/* Accessibility and visual enhancement elements */
+
+.hiddenStructure {
+    display: block;
+    background: transparent;
+    background-image: none; /* safari bug */
+    border: none;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px 0 0 -1px;
+    width: 1px;
+}
+
+.contentViews .hiddenStructure,
+.contentActions .hiddenStructure {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+}
+
+.hiddenLabel {
+    display: block;
+    background: transparent;
+    background-image: none; /* safari bug */
+    border: none;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px 0 0 -1px;
+    width: 1px;
+}
+
+/* Album view classes */
+
+.photoAlbumEntry {
+    float: left;
+    height: 195px;
+    width: 143px;
+    margin: 0em;
+    padding: 0px 6px 0px 9px;
+    text-align: center;
+    background-image: url('&dtml-portal_url;/polaroid-single.png');
+    background-repeat: no-repeat;
+}
+
+.photoAlbumEntry img {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+.photoAlbumEntryWrapper {
+    /*display: block;*/
+    height: 130px;
+    width: 128px;
+    margin-bottom: 7px;
+}
+
+.photoAlbumEntry a {
+    display: block;
+    text-decoration: none;
+    font-size: &dtml-fontSmallSize;;
+    height: 169px;
+    width: 130px;
+    margin: 16px auto 0px;
+}
+
+.photoAlbumFolder {
+    background-image: url('&dtml-portal_url;/polaroid-multi.png');
+    background-repeat: no-repeat;
+}
+
+.photoAlbumEntryTitle {
+    display: block;
+    overflow: hidden;
+    width: 128px;
+    height: 3.6em;
+    margin-top: 0.4em;
+    font-weight: bold;
+}
+
+/* bigger title for products section */
+.section-products .photoAlbumEntryTitle {
+    font-size:160%;
+}
+
+/* Link types */
+
+.link-plain {
+    background-image: none;
+    padding: 0;
+}
+
+.link-parent {
+    display: block;
+    background: transparent url(&dtml-portal_url;/arrowUp.gif) 4px 5px no-repeat;
+    padding: 1px 0px 10px 16px;
+    font-size: &dtml-fontSmallSize;;
+    text-decoration: none;
+}
+
+.link-user {
+    background: transparent url(&dtml-portal_url;/user.gif) 0 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-external {
+    background: transparent url(&dtml-portal_url;/link_icon.gif) 0px 1px no-repeat;
+    /* right aligned */
+    padding: 1px 0px 1px 19px;
+    background-position: 3px left;
+}
+/** html .link-external {
+    background-position: top left;
+}*/
+
+
+.link-https {
+    background: transparent url(&dtml-portal_url;/lock_icon.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-mailto {
+    background: transparent url(&dtml-portal_url;/mail_icon.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-news {
+    background: transparent url(&dtml-portal_url;/topic_icon.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-ftp {
+    background: transparent url(&dtml-portal_url;/file_icon.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-irc {
+    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-callto {
+    background: transparent url(&dtml-portal_url;/phone_icon.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-webcal {
+    background: transparent url(&dtml-portal_url;/event_icon.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+.link-feed, .link-rss, .link-rdf, .link-xml{
+    background: transparent url(&dtml-portal_url;/rss.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 18px;
+}
+
+.link-comment {
+    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) center left no-repeat;
+    padding: 1px 0px 1px 16px !important; /* value:  */
+}
+
+.link-anchor {
+    color: &dtml-discreetColor;;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* Common file types icon */
+.link-pdf {
+    background: transparent url(&dtml-portal_url;/pdf.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 16px;
+}
+.link-doc, .link-dot, .link-wiz {
+    background: transparent url(&dtml-portal_url;/doc.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+
+.link-aif, .link-aifc, .link-aiff {
+    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+
+.link-gif, .link-jpe, .link-jpeg, .link-jpg, .link-png {
+    background: transparent url(&dtml-portal_url;/image.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-m4a, .link-mp2, .link-mp3, .link-mpega, .link-mpga {
+    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-m3u {
+    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-m1v, .link-mpa, .link-mpe, .link-mpeg, .link-mpg {
+    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-mp4 {
+    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-asf, .link-asx {
+    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-avi {
+    background: transparent url(&dtml-portal_url;/avi.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-xlb, .link-xls, .link-xlt, .link-csv {
+    background: transparent url(&dtml-portal_url;/xls.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-ppa, .link-pps, .link-ppt, .link-pwz {
+    background: transparent url(&dtml-portal_url;/ppt.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-wmv, .link-wmf {
+    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-mov, .link-qt {
+    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-rgb {
+    background: transparent url(&dtml-portal_url;/image.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-ram, .link-rm {
+    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-ai, .link-eps, .link-ps {
+    background: transparent url(&dtml-portal_url;/ps.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-swf, .link-swfl {
+    background: transparent url(&dtml-portal_url;/application.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-tif, .link-tiff {
+    background: transparent url(&dtml-portal_url;/image.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-wav {
+    background: transparent url(&dtml-portal_url;/wav.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-zip {
+    background: transparent url(&dtml-portal_url;/zip.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-mdb, .link-dbf {
+    background: transparent url(&dtml-portal_url;/application.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-rar {
+    background: transparent url(&dtml-portal_url;/rar.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-txt {
+    background: transparent url(&dtml-portal_url;/txt.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+
+
+
+/* For ghosted elements */
+.visualGhosted {
+    opacity: 0.2;
+    -moz-opacity: 0.2;
+    -khtml-opacity: 0.2;
+}
+
+/* Kupu image alignment classes */
+
+.image-left {
+   float: left;
+   clear: both;
+   margin: 0.5em 1em 0.5em 0;
+   border: 0;
+}
+
+.image-inline {
+   float: none;
+}
+
+.image-right {
+   float: right;
+   clear: both;
+   margin: 0.5em;
+   border: 0;
+}
+
+
+html.kupu-html,
+body.kupu {
+    font-size: 100%;
+    min-width: 55em;
+}
+
+.linkbox {
+    margin-top: 2em;
+    border: 1px dashed;
+}
+
+/* style for geoposition */
+.mapContainer {
+    margin-right: 3em;
+}
+
+.mapContainer #map_yahoo {
+    border: 1px solid black;
+    height: 300px;
+}
+
+.mapContainer #map_google {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+.media-single-item {
+    margin-bottom: 1em;
+}
+
+.media-single-item dt {
+    float: left;
+    padding-right: 0.5em;
+}
+
+.media-single-item dd,
+.media-single-item dt {
+    color: #9a9a99;
+    font-size: 90%;
+    line-height: 1.1;
+    margin: 0pt 0pt 0.2em;
+}
+
+.richDocumentDescription {
+    margin-top: 1em;
+    width: 65%;
+}
+
+/* </dtml-with> */
+
