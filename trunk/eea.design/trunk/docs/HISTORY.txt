@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4 - (unreleased)
+1.4 - (2010-06-16)
 ------------------
 
  * Fixed width for TOC area so that long titles are not spanning entire page [demarant].
