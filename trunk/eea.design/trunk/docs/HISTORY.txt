@@ -4,6 +4,8 @@ Changelog
 1.5 - (unreleased)
 ------------------
 
+ * subfolder_view now use default page if one exists [thuliper, #3318]
+
 1.4 - (2010-06-16)
 ------------------
 

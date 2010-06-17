@@ -4,15 +4,14 @@ from Products.Five import BrowserView
 from eea.rdfrepository.interfaces import IFeed
 from Products.EEAContentTypes.interfaces import IFeedPortletInfo
 
-def _get_contents(folder_brain, size_limit, request, facetednav=None):
+def _get_contents(obj, size_limit, request, facetednav=None):
     """Get contents of folderish brain (cachable list/dict format)"""
-    obj = folder_brain.getObject()
     if facetednav:
         query = facetednav.default_criteria
         brains = facetednav.query(batch=False, sort=True, **query)
-    elif folder_brain.portal_type == 'Folder':
+    elif obj.portal_type == 'Folder':
         brains = obj.getFolderContents()
-    elif folder_brain.portal_type in ['Topic', 'RichTopic']:
+    elif obj.portal_type in ['Topic', 'RichTopic']:
         brains = obj.queryCatalog()
     return [{
         'title': brain.Title,
@@ -45,16 +44,19 @@ class SubFolderView(BrowserView):
             if brain.getURL() == self.context.absolute_url():
                 continue
             obj = brain.getObject()
+            defaultPage = obj.getDefaultPage()
+            if defaultPage:
+                obj = getattr(obj, defaultPage)
             listing_url = getMultiAdapter((obj, self.request), name=u'url').listing_url
             facetednav = queryMultiAdapter((obj, self.request), name=u'faceted_query')
-            if (brain.portal_type in ['Folder', 'Topic', 'RichTopic']) or facetednav:
-                contents, nitems = _get_contents(brain, size_limit, self.request, facetednav)
+            if (obj.portal_type in ['Folder', 'Topic', 'RichTopic']) or facetednav:
+                contents, nitems = _get_contents(obj, size_limit, self.request, facetednav)
                 ret['folderish'].append({
-                    'title': brain.Title,
-                    'description': brain.Description,
-                    'url': brain.getURL(),
+                    'title': obj.Title(),
+                    'description': obj.Description(),
+                    'url': obj.absolute_url(),
                     'listing_url': listing_url,
-                    'portal_type': brain.portal_type,
+                    'portal_type': obj.portal_type,
                     'contents': contents,
                     'has_more': nitems > size_limit,
                     'nitems': nitems,
@@ -67,11 +69,11 @@ class SubFolderView(BrowserView):
                         if relatedObj.portal_type == 'RSSFeedRecipe':
                             feed = IFeedPortletInfo(IFeed(relatedObj))
                             ret['folderish'].append({
-                                'title': brain.Title,
-                                'description': brain.Description,
-                                'url': brain.getURL(),
+                                'title': obj.Title(),
+                                'description': obj.Description(),
+                                'url': obj.absolute_url(),
                                 'listing_url': listing_url,
-                                'portal_type': brain.portal_type,
+                                'portal_type': obj.portal_type,
                                 'contents': [ {'title': item.title,
                                                'description': item.title,
                                                'url': item.url,
@@ -85,10 +87,10 @@ class SubFolderView(BrowserView):
                             foundRSSFeedRecipe = True
                 if (not relatedObjects) or (not foundRSSFeedRecipe):
                     ret['nonfolderish'].append({
-                        'title': brain.Title,
-                        'description': brain.Description,
-                        'url': brain.getURL(),
+                        'title': obj.Title(),
+                        'description': obj.Description(),
+                        'url': obj.absolute_url(),
                         'listing_url': listing_url,
-                        'portal_type': brain.portal_type,
+                        'portal_type': obj.portal_type,
                     })
         return ret
