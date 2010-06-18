@@ -21,7 +21,6 @@
             var a = $(this);
             var buttonID = a.parent().attr('id');
             var tooltip = $('#tip-' + buttonID);
-            console.log(buttonID, isCurrentPageTranslated());
 
             // 'Contact us' link should go to old translated page because the
             // pop up is hardcoded in english. #2954
