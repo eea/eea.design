@@ -6,6 +6,7 @@
 $(document).ready(function() {
 
     $('#document-toc').each(function() {
+        var tocID = $(this).attr('id');
         var currentList = $(this).find('.portletItem ol');
         var hLevel = null;
         var lists = {'root': currentList};
@@ -26,13 +27,20 @@ $(document).ready(function() {
                 currentList = lists[newLevel] || lists['root'];
             }
 
-            var hText = $(el).find('a').text() || $(el).text();
+            var h = $(el);
+            var hText = h.find('a').text() || h.text();
             var li = $('<li><a>' + hText + '</a></li>');
-            var hId = $(el).attr('id') || 'toc-' + i;
+            var hId = h.attr('id') || 'toc-' + i;
             var urlWithoutHash = location.protocol + '//' + location.host + location.pathname;
             li.find('a').attr('href', urlWithoutHash + '#' + hId);
             currentList.append(li);
-            $(el).attr('id', hId);
+            h.attr('id', hId);
+
+            var wrapper = $('<div class="toc-header-wrapper"></div>');
+            var backButton = $('<a class="back-to-toc-button"/>').attr('href', urlWithoutHash + "#" + tocID).attr('title', "Back to table of contents");
+            h.before(wrapper);
+            wrapper.append(backButton);
+            h.remove().appendTo(wrapper);
         });
 
         // The collapsable-portlet functionality should probably be moved to it's
