@@ -21,7 +21,7 @@ $(document).ready(function() {
             currentList = newList;
         } else if (newLevel < hLevel) {
             hLevel = newLevel;
-            currentList = lists[newLevel] || lists['root']
+            currentList = lists[newLevel] || lists['root'];
         }
 
         var hText = $(el).find('a').text() || $(el).text();
