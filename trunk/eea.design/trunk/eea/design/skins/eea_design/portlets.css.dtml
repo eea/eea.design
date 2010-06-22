@@ -29,13 +29,6 @@
     width: 25em;
 }
 
-.back-to-toc-button:hover h1,
-.back-to-toc-button:hover h2,
-.back-to-toc-button:hover h3,
-.back-to-toc-button:hover h4 {
-    background: url(&dtml-portal_url;/arrow_up_12x12.png) right center no-repeat;
-}
-
 .collapsable-portlet .portletHeader {
     cursor: pointer;
     padding: 0 20px 0 0;

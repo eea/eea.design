@@ -42,8 +42,8 @@ $(document).ready(function() {
                 backButton.removeClass('eea-template');
                 backButton.attr('href', urlWithoutHash + "#" + tocID)
                 backButton.attr('title', "Back to table of contents");
-                h.before(backButton);
-                h.remove().appendTo(backButton);
+                backButton.appendTo(h);
+                h.addClass('header-with-go-back-button');
             }
         });
 
