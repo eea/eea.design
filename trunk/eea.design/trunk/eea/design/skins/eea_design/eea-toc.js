@@ -36,7 +36,10 @@ $(document).ready(function() {
             currentList.append(li);
             h.attr('id', hId);
 
-            var backButton = $('<a class="link-without-style back-to-toc-button"/>').attr('href', urlWithoutHash + "#" + tocID).attr('title', "Back to table of contents");
+            var backButton = $('.eea-template.back-to-toc-button').clone();
+            backButton.removeClass('eea-template');
+            backButton.attr('href', urlWithoutHash + "#" + tocID)
+            backButton.attr('title', "Back to table of contents");
             h.before(backButton);
             h.remove().appendTo(backButton);
         });

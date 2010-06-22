@@ -31,6 +31,10 @@
     text-decoration: none;
 }
 
+.eea-template {
+    display: none;
+}
+
 body.section-signals #nonfolderish-subfolder-view-items {
     display: none;
 }

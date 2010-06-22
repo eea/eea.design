@@ -63,6 +63,9 @@
     </p>
 </div>
 
+<a class="eea-template back-to-toc-button" href="#document-toc" title="Back to table of contents" i18n:attributes="title">
+</a>
+
 <div id="visual-portal-wrapper">
 
 <metal:portal-top use-macro="here/portal_top/macros/eea" />
