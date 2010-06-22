@@ -26,6 +26,11 @@
     display: none;
 }
 
+.link-without-style {
+    /* plz add more link style elimination */
+    text-decoration: none;
+}
+
 body.section-signals #nonfolderish-subfolder-view-items {
     display: none;
 }

@@ -36,11 +36,9 @@ $(document).ready(function() {
             currentList.append(li);
             h.attr('id', hId);
 
-            var wrapper = $('<div class="toc-header-wrapper"></div>');
-            var backButton = $('<a class="back-to-toc-button"/>').attr('href', urlWithoutHash + "#" + tocID).attr('title', "Back to table of contents");
-            h.before(wrapper);
-            wrapper.append(backButton);
-            h.remove().appendTo(wrapper);
+            var backButton = $('<a class="link-without-style back-to-toc-button"/>').attr('href', urlWithoutHash + "#" + tocID).attr('title', "Back to table of contents");
+            h.before(backButton);
+            h.remove().appendTo(backButton);
         });
 
         // The collapsable-portlet functionality should probably be moved to it's

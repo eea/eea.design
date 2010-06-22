@@ -29,12 +29,11 @@
     width: 25em;
 }
 
-.toc-header-wrapper .back-to-toc-button {
-    background: url(&dtml-portal_url;/home_12x12.png) left bottom no-repeat;
-    width: 12px;
-    height: 16px;
-    margin-right: 10px;
-    float: left;
+.back-to-toc-button:hover h1,
+.back-to-toc-button:hover h2,
+.back-to-toc-button:hover h3,
+.back-to-toc-button:hover h4 {
+    background: url(&dtml-portal_url;/arrow_up_12x12.png) right center no-repeat;
 }
 
 .collapsable-portlet .portletHeader {
