@@ -36,12 +36,15 @@ $(document).ready(function() {
             currentList.append(li);
             h.attr('id', hId);
 
+            /* Each header gets a 'back to table of contents' button. */
             var backButton = $('.eea-template.back-to-toc-button').clone();
-            backButton.removeClass('eea-template');
-            backButton.attr('href', urlWithoutHash + "#" + tocID)
-            backButton.attr('title', "Back to table of contents");
-            h.before(backButton);
-            h.remove().appendTo(backButton);
+            if (backButton.length) {
+                backButton.removeClass('eea-template');
+                backButton.attr('href', urlWithoutHash + "#" + tocID)
+                backButton.attr('title', "Back to table of contents");
+                h.before(backButton);
+                h.remove().appendTo(backButton);
+            }
         });
 
         // The collapsable-portlet functionality should probably be moved to it's
