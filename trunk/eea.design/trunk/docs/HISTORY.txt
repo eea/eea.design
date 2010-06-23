@@ -4,6 +4,7 @@ Changelog
 1.5 - (unreleased)
 ------------------
 
+ * JSTOC now has a back-to-table-of-contents button [thuliper, #3426]
  * contact-us panel deactivated for translated sites [thuliper, #2954]
  * subfolder_view now use default page if one exists [thuliper, #3318]
 
