@@ -31,7 +31,6 @@
     margin: 0 0 0 0em;
     background: url(&dtml-portal_url;/globalnav.png) repeat-x #00446a;
     min-height: 4em;
-    text-shadow: black 0px 0px 3px;
 }
 
 #portal-globalnav li{
@@ -42,10 +41,12 @@
     text-align: center;
     height: 1.5em;
     white-space: nowrap;
+    text-shadow: black 0px 0px 3px;
 }
 
 #portal-globalnav li.selected {
     background-color: white;
+    text-shadow: none;
 }
 
 #portal-globalnav li .popper2 li a:hover,
