@@ -1,0 +1,130 @@
+/*
+** Tableless Column Layout for CSS2 capable Browsers
+** Based on http://www.positioniseverything.net/ordered-floats.html by Big John.
+*/
+
+/* <dtml-with base_properties> */
+
+body {
+    min-width: <dtml-var portalMinWidth missing="70em">;
+}
+#portal-columns {
+    width: auto;
+    padding: 1em 0 0 0 ! important;
+}
+#visual-column-wrapper {
+    float: left;
+    width: 100%;
+    margin-right: -<dtml-var columnTwoWidth missing="16em">;
+}
+#portal-column-content {
+    width: 100%;
+    float: right;
+    margin-left: -<dtml-var columnOneWidth missing="16em">;
+}
+
+#portal-column-content #content {
+    margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 <dtml-var columnOneWidth missing="16em">;
+}
+
+#portal-column-one {
+    float: left;
+    width: <dtml-var columnOneWidth missing="16em">;
+    overflow: hidden;
+}
+
+#portal-column-two {
+    float: right;
+    width: <dtml-var columnTwoWidth missing="16em">;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* padding - thanks to the w3c box model :P */
+
+#portal-column-content  {
+    padding: 0em 0em 0em 0em;
+}
+
+#portal-column-one .visualPadding {
+    padding: 0;
+}
+
+#portal-column-two .visualPadding {
+    padding: 0em 1em 1em 0em;
+}
+
+.frontpage #portal-column-one .visualPadding {
+    padding: 0em 0em 1em 1em;
+}
+.frontpage #portal-column-two .visualPadding {
+    padding: 0em 1em 1em 0em;
+}
+
+/* hide columns */
+
+body.longwordlanguage .visualColumnHideOneTwo #portal-column-content #content,
+.visualColumnHideOneTwo #portal-column-content #content {
+    margin: 0;
+}
+
+body.longwordlanguage .visualColumnHideOne #portal-column-content #content,
+.visualColumnHideOne #portal-column-content #content {
+    margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 0;
+}
+
+body.longwordlanguage .visualColumnHideTwo #portal-column-content #content,
+.visualColumnHideTwo #portal-column-content #content {
+    margin: 0 0 0 <dtml-var columnOneWidth missing="16em">;
+}
+
+/* longword languages */
+
+body.longwordlanguage #visual-column-wrapper {
+    margin-right: -22em;
+}
+body.longwordlanguage #portal-column-content {
+    width: 100%;
+    float: right;
+    margin-left: -22em;
+}
+
+body.longwordlanguage #portal-column-content #content {
+    margin: 0 22em;
+}
+
+body.longwordlanguage #portal-column-one {
+    width: 22em;
+}
+
+body.longwordlanguage #portal-column-two {
+    width: 22em;
+}
+
+body.longwordlanguage .visualColumnHideOne #portal-column-content #content {
+    margin: 0 22em 0 0;
+}
+
+body.longwordlanguage .visualColumnHideTwo #portal-column-content #content {
+    margin: 0 0 0 22em;
+}
+
+/* fullscreen */
+
+body.fullscreen #portal-column-one,
+body.fullscreen #portal-column-two {
+    display: none;
+}
+body.fullscreen #visual-column-wrapper {
+    margin-right: 0;
+}
+body.fullscreen #portal-column-content {
+    margin-left: 0;
+}
+body.fullscreen .visualColumnHideOne #portal-column-content #content,
+body.fullscreen .visualColumnHideTwo #portal-column-content #content,
+body.fullscreen #portal-column-content #content {
+    margin: 0;
+}
+
+/* </dtml-with> */
