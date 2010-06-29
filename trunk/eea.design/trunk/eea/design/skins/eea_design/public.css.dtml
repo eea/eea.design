@@ -480,6 +480,7 @@ float:right;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    overflow: hidden;
 }
 
 /* Logo properties */

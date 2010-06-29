@@ -380,9 +380,9 @@ li.navTreeCurrentItem a:hover {
 .navTreeLevel1 { }
 .navTreeLevel2 { }
 .navTreeLevel0,
-.navTreeLevel3 { background: white; }
-.navTreeLevel4 { background: white; }
-.navTreeLevel5 { background: white; }
+.navTreeLevel3 { background: transparent; }
+.navTreeLevel4 { background: transparent; }
+.navTreeLevel5 { background: transparent; }
 /* .navTreeLevel5 { margin-left: 0.75em; } */
 
 
@@ -629,6 +629,7 @@ a.noHover {
 
 .portlet-promotions .portletHeader {
    padding-left: 0.5em;
+   background: transparent;
 }
 .portlet-promotions .portlet {
    display: block;

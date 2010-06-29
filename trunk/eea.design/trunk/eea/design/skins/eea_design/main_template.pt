@@ -215,11 +215,15 @@
                             metal:define-slot="column_one_slot"
                             tal:condition="python:test(not inApplication and sl and not onFrontpage)">
                             <div class="visualPadding">
-                                <metal:portlets define-slot="portlets_one_slot">
-                                    <metal:leftportlets use-macro="here/portlets_fetcher/macros/left_column">
-                                        This instruction gets the portlets (boxes) for the left column.
-                                    </metal:leftportlets>
-                                </metal:portlets>
+                                <div id="slide-menu">
+                                    <metal:portlets define-slot="portlets_one_slot">
+                                        <metal:leftportlets use-macro="here/portlets_fetcher/macros/left_column">
+                                            This instruction gets the portlets (boxes) for the left column.
+                                        </metal:leftportlets>
+                                    </metal:portlets>
+                                </div>
+                                <div id="slide-button"></div>
+                                <div class="visualClear"></div>
                             </div>
                         </div>
                         <!-- end of the left (by default at least) column -->
