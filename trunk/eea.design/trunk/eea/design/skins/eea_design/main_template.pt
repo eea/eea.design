@@ -220,7 +220,6 @@
                                         This instruction gets the portlets (boxes) for the left column.
                                     </metal:leftportlets>
                                 </metal:portlets>
-                                &nbsp;
                             </div>
                         </div>
                         <!-- end of the left (by default at least) column -->
@@ -238,7 +237,6 @@
                                     This instruction gets the portlets (boxes) for the right column.
                                 </metal:rightportlets>
                             </metal:portlets>
-                            &nbsp;
                         </div>
                     </div>
                     <!-- end of the right (by default at least) column -->
