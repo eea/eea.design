@@ -1,0 +1,159 @@
+/*
+** Plone Print style sheet for CSS2-capable browsers.
+** Copyright Plone Foundation, et al
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** You should preferrably use ploneCustom.css to add your own CSS classes and to
+** customize your portal, as these are the base fundaments of Plone, and will 
+** change and be refined in newer versions. Keeping your changes in
+** ploneCustom.css will make it easier to upgrade. 
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+
+#auto-related,
+#related-multimedia,
+.languageCodes,
+#themes-object,
+#cross-site-top,
+#portal-footer img,
+#portal-siteactions,
+.hiddenStructure,
+#portal-searchbox,
+#portal-globalnav .plain,
+#portal-globalnav .selected,
+#portal-globalnav,
+#portal-personaltools,
+#portal-breadcrumbs,
+#portal-column-one,
+#portal-column-two,
+.contentViews,
+.contentActions,
+.help,
+.legend,
+div.portalMessage,
+div.portalWarningMessage,
+div.portalStopMessage,
+div.documentActions,
+.documentByLine,
+.netscape4,
+#portal-colophon,
+#multimedia-highlights,
+body.frontpage .portlet-promotions,
+.moreLink,
+.skipnav,
+.visualNoPrint,
+.visualClear {
+    /* Hides all the elements irrelevant for printing */
+    display: none !important;
+}
+
+body {
+    font-family: Baskerville, Georgia, Garamond, Times, serif;
+    font-size: 11pt;
+    min-width: 10cm;
+    width: auto;
+}
+
+#portal-visual-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    border: none;
+    font-family: Baskerville, Georgia, Garamond, Times, serif;
+    width: auto;
+}
+
+div, p, ul, dl, ol {
+    width: auto !important;
+}
+
+* html #content {
+    width: auto !important;
+}
+
+ul, ol, dl {
+    padding-right: 0.5em;	
+}
+
+ul { 
+    list-style-type: square;
+}
+
+.documentDescription {
+    font-weight: bold;
+}
+
+pre {
+    border: 1pt dotted black;
+    white-space: pre;
+    font-size: 8pt;
+    overflow: auto;
+    padding: 1em 0;
+}
+
+table.listing,
+table.listing td {
+    border: 1pt solid black;
+    border-collapse: collapse;
+}
+
+td a img {
+    display: none;
+}
+
+a {
+    color: Black !important;
+    text-decoration: none !important;
+}
+
+a:link, a:visited {
+    color: #520;
+    background: transparent;
+}
+
+a img {
+    border: none;
+}
+
+#content {
+    white-space: normal;
+}
+
+#content a.noPrint:link:after, 
+#content a.noPrint:visited:after {
+    content: '';
+}
+
+#printLogo {
+    display: block !important;
+    float: right;
+    width: 7.5cm;
+}
+
+h2.highlight {
+    padding-top: 1em;
+}
+
+#print-warning {
+    display: none;
+}
+
+body.frontpage .column-area,
+.portlet-rss {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 1em;
+}
+
+.portlet-rss * {
+    clear: both;
+}
