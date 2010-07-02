@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.6 - (Unreleased)
+1.6 - (2010-07-02)
 ------------------
  * Commented "document_relateditems/macros/auto" in main_template.pt [ghicaale, #3468]
 
