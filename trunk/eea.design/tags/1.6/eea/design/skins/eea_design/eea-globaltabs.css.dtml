@@ -1,0 +1,142 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+#portal-globalnav li.selected .popper2 li a,
+#portal-globalnav li a:link,
+#portal-globalnav li a:visited {
+    color: &dtml-linkColor;;
+    text-decoration:none;
+    font-weight: bold;
+}
+#portal-globalnav li.plain a.dropTab,
+#portal-globalnav li.plain a.dropTab:hover {
+    color: #fff;
+}
+#portal-globalnav li.selected a.dropTab,
+#portal-globalnav li.selected a.dropTab:hover {
+    color:#DE7800;
+    font-weight: bold;
+}
+#portal-globalnav li a.dropTab:hover {
+    text-decoration: underline;
+}
+
+
+#portal-globalnav {
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: 0 0 0 0em;
+    background: url(&dtml-portal_url;/globalnav.png) repeat-x #00446a;
+    min-height: 4em;
+}
+
+#portal-globalnav li{
+    padding: 1.25em 1.6em;
+    margin-bottom: 0;
+    display: block;
+    float: left;
+    text-align: center;
+    height: 1.5em;
+    white-space: nowrap;
+    text-shadow: black 0px 0px 3px;
+}
+
+#portal-globalnav li.selected {
+    background-color: white;
+    text-shadow: none;
+}
+
+#portal-globalnav li .popper2 li a:hover,
+#portal-globalnav li a:hover{
+    color:#DE7800;
+    text-decoration: underline;
+}
+
+.tabMenuContent {
+    display:none;
+    margin:0;
+    background-color:#ffffff;
+} 
+
+#portal-globalnav li .widePopper{
+    width:15em;
+    _width:12em;
+
+}
+
+#portal-globalnav li .widePopper li ul li a:hover{
+    background:#F0ECE1;
+    color:#000000;
+}
+
+#switchThemeDrop .popper2,
+#portal-globalnav li .popper2{
+    position: absolute;
+    z-index: 1000;
+    margin: 0px 0 0 -0.5em;
+    padding: 0;
+    background-color: #eeeeee;
+}
+
+#switchThemeDrop .popper2 {
+    margin-left: 0;
+    width: 25em;
+}
+
+#switchThemeDrop .popper2 li,
+#portal-globalnav li .popper2 li{
+    margin:1px;
+    padding:0;
+    line-height: 1.5em;
+    width:18em;
+    text-align: left;
+    background-color: #eeeeee;
+    height: 1.7em;
+    float: none;
+    display: block;
+}
+
+#portal-globalnav li .popper2 li.fallback a:link,
+#portal-globalnav li .popper2 li.fallback a:visited,
+#portal-globalnav li .popper2 li.fallback a:active,
+#portal-globalnav li .popper2 li.fallback a {
+    color: #6ea8d9;
+}
+
+#switchThemeDrop .popper2 li{
+    width: 25em;
+}
+#portal-globalnav li .popper2 li a{
+    padding:5px 15px 5px 2em;
+    margin:0;
+    background: none;
+}
+
+#portal-globalnav li .popper2 li ul{
+    margin:0;
+    padding:0;
+    line-height: 1em;
+}
+#portal-globalnav li .popper2 li ul li{
+    clear:both;
+    margin:0;
+    line-height: 1em;
+}
+
+.popper2 .listHead{
+    font-size: 12px;
+    margin:10px -6px 0 6px;
+    padding:0 0 4px 9px;
+    border-bottom:1px solid #b2b2b2;
+}
+
+#portal-globalnav li li a {
+    display:block;
+    margin:0;
+    width:15em;
+}
+
+/* </dtml-with> */
