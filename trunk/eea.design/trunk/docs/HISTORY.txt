@@ -3,6 +3,7 @@ Changelog
 
 1.6 - (Unreleased)
 ------------------
+ * Commented "document_relateditems/macros/auto" in main_template.pt [ghicaale, #3468]
 
 
 1.5 - (2010-07-01)

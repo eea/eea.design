@@ -133,9 +133,10 @@
                                                                 show all (back and forward refs) related items if they exist
                                                             </div>
 
-                                                            <div metal:use-macro="here/document_relateditems/macros/auto">
+							    <!-- Commented due to #3468 -->
+                                                            <!-- div metal:use-macro="here/document_relateditems/macros/auto">
                                                                 show latest items of same content type and themes.
-                                                            </div>
+                                                            </div -->
 
                                                             <h2 i18n:translate="share_with_others">Share with others</h2>
                                                             <div metal:use-macro="here/document_actions/macros/document_actions">
@@ -185,9 +186,10 @@
                                                     show all (back and forward refs) related items if they exist
                                                 </div>
 
-                                                <div metal:use-macro="here/document_relateditems/macros/auto">
+						<!-- Commented due to #3468 -->
+                                                <!-- div metal:use-macro="here/document_relateditems/macros/auto">
                                                     show latest items of same content type and themes.
-                                                </div>
+                                                </div -->
 
                                                 <h2 i18n:translate="share_with_others">Share with others</h2>
                                                 <div metal:use-macro="here/document_actions/macros/document_actions">
