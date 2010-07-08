@@ -1,0 +1,268 @@
+<metal:page define-macro="master"><metal:doctype define-slot="doctype"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></metal:doctype>
+    <metal:block define-slot="top_slot" />
+    <metal:block use-macro="here/global_defines/macros/defines" />
+    <html xmlns="http://www.w3.org/1999/xhtml"
+        xml:lang="en"
+        lang="en"
+        tal:define="webapp_view here/@@main_webapplication;
+        inApplication here/@@inApplication;
+        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view')">
+
+
+        <tal:cache tal:define="lang language;
+            charset site_properties/default_charset|string:utf-8">
+            <metal:cache use-macro="here/global_cache_settings/macros/cacheheaders">
+                Get the global cache headers located in global_cache_settings.
+            </metal:cache>
+        </tal:cache>
+
+        <head metal:use-macro="here/header/macros/html_header">
+
+            <metal:fillbase fill-slot="base">
+                <metal:baseslot define-slot="base">
+                    <base href="" tal:attributes="href here/renderBase" />
+                </metal:baseslot>
+            </metal:fillbase>
+
+            <metal:headslot fill-slot="head_slot"
+                tal:define="lang language;
+                charset site_properties/default_charset|string:utf-8">
+                <tal:anonymousNoBorder condition="isAnon|nothing">
+                    <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
+                </tal:anonymousNoBorder>
+
+
+                <metal:headslot define-slot="head_slot" />
+                <!-- A slot where you can insert elements in the header from a template -->
+            </metal:headslot>
+
+            <metal:cssslot fill-slot="css_slot">
+                <!-- A slot where you can insert CSS in the header from a template -->
+                <metal:cssslot define-slot="css_slot" />
+                <link href="application.css" rel="stylesheet" type="text/css"
+                    tal:attributes="href string:$portal_url/++resource++application.css" 
+                    tal:condition="inApplication"/>
+            </metal:cssslot>
+
+
+            <metal:javascriptslot fill-slot="javascript_head_slot">
+
+                <!-- A slot where you can insert javascript in the header from a template -->
+                <metal:javascriptslot define-slot="javascript_head_slot" />
+
+            </metal:javascriptslot>
+
+        </head>
+
+        <body tal:attributes="class python:here.getSectionFromURL(plone_view);
+            dir python:test(isRTL, 'rtl', 'ltr')">
+
+            <div id="print-warning" i18n:domain="eea.translations">
+                <p i18n:translate="print_warning">
+                    Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
+                </p>
+            </div>
+
+            <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title">
+            </a>
+
+            <div id="visual-portal-wrapper">
+
+                <metal:portal-top use-macro="here/portal_top/macros/eea" />
+
+
+                <!-- The wrapper div. It contains the three columns. -->
+                <div id="portal-columns" tal:attributes="class python:test(inApplication, 'visualColumnHideOneTwo', test(onFrontpage, 'visualColumnHideOneTwo', hidecolumns))"
+                    tal:define="plone_view context/@@plone">
+
+                    <!-- start of the main and left columns -->
+                    <div id="visual-column-wrapper">
+
+                        <!-- start of main content block -->
+                        <div id="portal-column-content" 
+                            tal:define="tabindex python:Iterator(pos=0, mainSlot=True)">
+
+                            <tal:breadcrumbs tal:condition="inApplication">
+                                <metal:base use-macro="here/global_pathbar/macros/path_bar" />
+                            </tal:breadcrumbs>
+
+                            <tal:webapplication-menu condition="inApplication">
+                                <metal:menu use-macro="here/webapp_menu/macros/menu">
+                                    Application menu
+                                </metal:menu>
+                            </tal:webapplication-menu>
+
+                            <metal:block define-slot="content">
+                                <div id="content" 
+                                    metal:define-macro="content"
+                                    tal:define="show_border python:here.showEditableBorder(template_id=template_id, actions=actions );"
+                                    tal:attributes="class python:test(show_border,'documentEditable','')">
+
+                                    <div class="documentContent panels" id="region-content">
+                                        <tal:breadcrumbs tal:condition="not:inApplication">
+                                            <metal:base use-macro="here/global_pathbar/macros/path_bar" />
+                                        </tal:breadcrumbs>
+
+                                        <tal:contentcontainers condition="view/menu|nothing">
+                                            <tal:otherpages repeat="page view/menu">
+                                                <div id="" 
+                                                    class=""
+                                                    tal:attributes="id string:panel_portaltab_${page/tabId};
+                                                    class page/class;">
+                                                    <tal:default condition="python: page['id'] in here.absolute_url()">
+                                                        <a name="documentContent"></a>
+
+                                                        <div metal:use-macro="here/global_statusmessage/macros/portal_message">
+                                                            Portal status message
+                                                        </div>
+
+                                                        <metal:header metal:define-slot="header" tal:content="nothing">
+                                                            Visual Header
+                                                        </metal:header>
+
+                                                        <metal:bodytext metal:define-slot="main" tal:content="nothing">
+                                                            Page body text
+                                                        </metal:bodytext>
+
+                                                        <div id="belowContent">
+                                                            <div metal:use-macro="here/document_relateditems/macros/feeds">
+                                                                show related feeds if they exist
+                                                            </div>
+
+                                                            <div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">
+                                                                show all (back and forward refs) related items if they exist
+                                                            </div>
+
+							    <!-- Commented due to #3468 -->
+                                                            <!-- div metal:use-macro="here/document_relateditems/macros/auto">
+                                                                show latest items of same content type and themes.
+                                                            </div -->
+
+                                                            <h2 i18n:translate="share_with_others">Share with others</h2>
+                                                            <div metal:use-macro="here/document_actions/macros/document_actions">
+                                                                Document actions (print, sendto etc)
+                                                            </div>
+
+                                                            <div class="visualClear"></div>
+                                                        </div>
+
+                                                        <metal:sub metal:define-slot="sub">
+                                                            <metal:discussion use-macro="here/viewThreadsAtBottom/macros/discussionView" />
+                                                        </metal:sub>
+                                                    </tal:default>
+                                                </div>
+                                            </tal:otherpages>
+                                        </tal:contentcontainers>
+
+                                        <tal:noajax condition="not: view/menu|nothing">
+                                            <tal:tabs  define="submenu here/@@application_submenu_direct;">
+                                                <tal:submenu condition="python:len(submenu) &gt; 1 and inApplication">
+                                                    <metal:menu use-macro="here/webapp_menu/macros/submenu">
+                                                        Application menu
+                                                    </metal:menu>
+                                                </tal:submenu>
+                                            </tal:tabs>
+
+                                            <a name="documentContent"></a>
+
+                                            <div metal:use-macro="here/global_statusmessage/macros/portal_message">
+                                                Portal status message
+                                            </div>
+
+                                            <metal:header metal:define-slot="header" tal:content="nothing">
+                                                Visual Header
+                                            </metal:header>
+
+                                            <metal:bodytext metal:define-slot="main" tal:content="nothing">
+                                                Page body text
+                                            </metal:bodytext>
+
+                                            <div id="belowContent">
+                                                <div metal:use-macro="here/document_relateditems/macros/feeds">
+                                                    show related feeds if they exist
+                                                </div>
+
+                                                <div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">
+                                                    show all (back and forward refs) related items if they exist
+                                                </div>
+
+						<!-- Commented due to #3468 -->
+                                                <!-- div metal:use-macro="here/document_relateditems/macros/auto">
+                                                    show latest items of same content type and themes.
+                                                </div -->
+
+                                                <h2 i18n:translate="share_with_others">Share with others</h2>
+                                                <div metal:use-macro="here/document_actions/macros/document_actions">
+                                                    Document actions (print, sendto etc)
+                                                </div>
+
+                                                <div class="visualClear"></div>
+                                            </div>
+
+                                            <metal:sub metal:define-slot="sub">
+                                                <metal:discussion use-macro="here/viewThreadsAtBottom/macros/discussionView" />
+                                            </metal:sub>
+                                        </tal:noajax>
+
+                                    </div>
+
+                                </div>
+
+                            </metal:block>
+                        </div>
+                        <!-- end of main content block -->
+
+                        <!-- start of the left (by default at least) column -->
+                        <div id="portal-column-one"
+                            metal:define-slot="column_one_slot"
+                            tal:condition="python:test(not inApplication and sl and not onFrontpage)">
+                            <div class="visualPadding">
+                                <div id="slide-menu">
+                                    <metal:portlets define-slot="portlets_one_slot">
+                                        <metal:leftportlets use-macro="here/portlets_fetcher/macros/left_column">
+                                            This instruction gets the portlets (boxes) for the left column.
+                                        </metal:leftportlets>
+                                    </metal:portlets>
+                                </div>
+                                <div id="slide-button"></div>
+                                <div class="visualClear"></div>
+                            </div>
+                        </div>
+                        <!-- end of the left (by default at least) column -->
+
+                    </div>
+                    <!-- end of the main and left columns -->
+
+                    <!-- start of right (by default at least) column -->
+                    <div id="portal-column-two"
+                        metal:define-slot="column_two_slot"
+                        tal:condition="python:test(not inApplication and sr and not onFrontpage)">
+                        <div class="visualPadding">
+                            <metal:portlets define-slot="portlets_two_slot">
+                                <metal:rightportlets metal:use-macro="here/portlets_fetcher/macros/right_column">
+                                    This instruction gets the portlets (boxes) for the right column.
+                                </metal:rightportlets>
+                            </metal:portlets>
+                        </div>
+                    </div>
+                    <!-- end of the right (by default at least) column -->
+
+                    <div class="visualClear"><!-- --></div>
+
+                </div>
+                <!-- end column wrapper -->
+
+                <div i18n:domain="eea.translations" tal:condition="python:language != 'en'" id="translation-disclaimer">
+                    <p class="note" i18n:translate="page_translated_by">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
+                </div>
+
+                <div id="portal-footer" metal:use-macro="here/footer/macros/portal_footer">
+                    Footer
+                </div>
+
+
+            </div>
+
+        </body>
+    </html>
+</metal:page>
