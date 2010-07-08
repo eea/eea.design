@@ -1,6 +1,9 @@
 Changelog
 =========
 
+1.8 - (Unreleased)
+------------------
+
 1.7 - (2010-07-08)
 ------------------
  * thinner global nav [demarant]
