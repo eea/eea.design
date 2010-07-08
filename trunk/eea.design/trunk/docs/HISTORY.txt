@@ -3,6 +3,7 @@ Changelog
 
 1.7 - (Unreleased)
 ------------------
+ * reduced the spaces used by the cross-site-top area [demarant]
 
 1.6 - (2010-07-02)
 ------------------

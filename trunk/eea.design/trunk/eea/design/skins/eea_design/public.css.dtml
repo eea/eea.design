@@ -518,9 +518,9 @@ float:right;
 
 #cross-site-top {
     background-color: white;
-    margin-top: 1px;
-    height: 30px;
-    padding: 5px 0;
+    margin-top: 2px;
+    height: 25px;
+    padding: 0;
 }
 
 .shadow {
@@ -657,16 +657,16 @@ float:right;
     white-space: nowrap;
     list-style-image: none;
     list-style-type: none;
-    margin: 3px 0 3px 0;
+    margin: 4px 0 4px 0;
     height: auto;
     line-height: normal;
     float: right;
-    padding: 3px 10px 3px 0;
+    padding: 0px 10px 0px 0;
 }
 
 #portal-externalsites {
     float: left;
-    padding: 3px 0 3px 10px
+    padding: 0px 0 0px 10px
 }
 
 #portal-externalsites li,
