@@ -30,16 +30,16 @@
     padding: 0px;
     margin: 0 0 0 0em;
     background: url(&dtml-portal_url;/globalnav.png) repeat-x #00446a;
-    min-height: 4em;
+    min-height: 3em;
 }
 
 #portal-globalnav li{
-    padding: 1.25em 1.6em;
+    padding: 0.7em 1.6em 0.7em 1.2em;
     margin-bottom: 0;
     display: block;
     float: left;
     text-align: center;
-    height: 1.5em;
+    height: 1.6em;
     white-space: nowrap;
     text-shadow: black 0px 0px 3px;
 }
