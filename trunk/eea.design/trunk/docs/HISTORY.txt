@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.7 - (Unreleased)
+1.7 - (2010-07-08)
 ------------------
  * thinner global nav [demarant]
  * reduced the spaces used by the cross-site-top area [demarant]
