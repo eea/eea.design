@@ -3,8 +3,7 @@
  * - The script works with subheaders
  * - The script works with headers with nested <a> tags
  */
-$(document).ready(function() {
-
+function build_toc(){
     $('#document-toc').each(function() {
         var tocID = $(this).attr('id');
         var currentList = $(this).find('.portletItem ol');
@@ -55,5 +54,8 @@ $(document).ready(function() {
             portletClicked.toggleClass('collapsed');
         });
     });
+}
 
+$(document).ready(function() {
+    build_toc();
 })
