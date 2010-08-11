@@ -4,7 +4,7 @@
     tal:attributes="class css">
     <a tal:attributes="
       href listing_url;
-      class python:test(is_video, 'thickbox', '');
+      class python:test(is_video, 'video-fancybox', '');
       title desc_or_title">
       <span class="photoAlbumEntryWrapper">
       <img style="border: none" tal:attributes="

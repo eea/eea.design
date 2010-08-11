@@ -57,11 +57,11 @@
     </a>
 
     <h2>Video pop-ups</h2>
-    <a href="/multimedia/electric-car" class="thickbox">
+    <a href="/multimedia/electric-car" class="video-fancybox">
         <img src="/multimedia/electric-car/image_wide" />
     </a>
     <pre>
-&lt;a href=&quot;http://www.eea.europa.eu/multimedia/electric-car&quot; class=&quot;thickbox&quot;&gt
+&lt;a href=&quot;http://www.eea.europa.eu/multimedia/electric-car&quot; class=&quot;video-fancybox&quot;&gt
     &lt;img src=&quot;http://www.eea.europa.eu/multimedia/electric-car/image_wide&quot; /&gt
 &lt;/a&gt
     </pre>
