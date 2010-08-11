@@ -3,12 +3,14 @@ Changelog
 
 1.9 - (unreleased)
 ------------------
- * refactored eea-toc.js to be able to rebuild it on the fly
 
+ * Use new fancybox based video popup [thuliper, #3040]
+ * Refactored eea-toc.js to be able to rebuild it on the fly [tiberich, #3518]
 
 1.8 - (2010-08-04)
 ------------------
 
+ * Hidable left menu [thuliper, #3436]
  * fixed all images to have righ metadata file with cache setting. added bash script for later use. [demarant]
  * added image icon for creative common license to improve speed [demarant]
 
