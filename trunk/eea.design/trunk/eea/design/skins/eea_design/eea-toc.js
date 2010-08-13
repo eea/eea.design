@@ -36,13 +36,15 @@ function build_toc(){
             h.attr('id', hId);
 
             /* Each header gets a 'back to table of contents' button. */
-            var backButton = $('.eea-template.back-to-toc-button').clone();
-            if (backButton.length) {
-                backButton.removeClass('eea-template');
-                backButton.attr('href', urlWithoutHash + "#" + tocID)
-                backButton.attr('title', "Back to table of contents");
-                backButton.appendTo(h);
-                h.addClass('header-with-go-back-button');
+            if (!h.find('.back-to-toc-button').length) {
+                var backButton = $('.eea-template.back-to-toc-button').clone();
+                if (backButton.length) {
+                    backButton.removeClass('eea-template');
+                    backButton.attr('href', urlWithoutHash + "#" + tocID)
+                    backButton.attr('title', "Back to table of contents");
+                    backButton.appendTo(h);
+                    h.addClass('header-with-go-back-button');
+                }
             }
         });
 

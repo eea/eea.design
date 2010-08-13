@@ -4,8 +4,9 @@ Changelog
 1.9 - (unreleased)
 ------------------
 
+ * [Fix] Fix a problem with back-to-toc links when the TOC was regenerated
  * Use new fancybox based video popup [thuliper, #3040]
- * Refactored eea-toc.js to be able to rebuild it on the fly [tiberich, #3518]
+ * [Feature] Refactored eea-toc.js to be able to rebuild it on the fly [tiberich, #3518]
 
 1.8 - (2010-08-04)
 ------------------
