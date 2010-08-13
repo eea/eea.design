@@ -27,7 +27,7 @@ function build_toc(){
             }
 
             var h = $(el);
-            var hText = h.find('a').text() || h.text();
+            var hText = $.trim(h.find('a').text()) || h.text();
             var li = $('<li><a>' + hText + '</a></li>');
             var hId = h.attr('id') || 'toc-' + i;
             var urlWithoutHash = location.protocol + '//' + location.host + location.pathname;
