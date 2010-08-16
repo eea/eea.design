@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.9 - (unreleased)
+1.9 - (2010-08-16)
 ------------------
 
  * [Fix] Fix a problem with back-to-toc links when the TOC was regenerated
