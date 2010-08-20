@@ -89,7 +89,7 @@
 
                         <a href="#"
                            tal:attributes="href item_url;
-                                           class item_css_class"
+                                           class string:$item_css_class reviewstate-${item_wf_state}"
                            tal:content="item_title_or_id">
                             Item Title
                         </a>
