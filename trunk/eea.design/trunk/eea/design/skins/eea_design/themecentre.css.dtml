@@ -95,6 +95,15 @@ body.section-themes .portlet-rss .portletItem {
    padding-left: 0.5em;
 }
 
+body.section-themes #content dt.portletItem img {
+    margin-right: 1em;
+    float: left;
+    margin-bottom: 1em;
+}
+
+body.section-themes #content dt.portletItem a {
+}
+
 .switchThemeMenu {
     background-image: url(&dtml-portal_url;/arrow-up-blue.gif);
     background-repeat: no-repeat;
