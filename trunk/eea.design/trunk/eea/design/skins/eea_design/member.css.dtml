@@ -1,0 +1,71 @@
+/*
+** Plone style sheet - styles for logged-in users
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** You should preferrably use ploneCustom.css to add your own CSS classes and to
+** customize your portal, as these are the base fundaments of Plone, and will
+** change and be refined in newer versions. Keeping your changes in
+** ploneCustom.css will make it easier to upgrade.
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* workflow state colors */
+
+.state-private,
+.eea-ref-selecteditems .state-private,
+#relatedItems-popup .state-private
+{
+    color: Red !important;
+}
+.state-visible 
+.eea-ref-selecteditems .state-visible,
+#relatedItems-popup .state-visible
+{
+    color: #74AE0B !important;
+}
+.state-published,
+.eea-ref-selecteditems .state-published,
+#relatedItems-popup .state-published
+{
+    color: &dtml-linkColor; !important;
+}
+.state-pending 
+.eea-ref-selecteditems .state-pending,
+#relatedItems-popup .state-pending
+{
+    color: #FFA500 !important;
+}
+.state-expired 
+.eea-ref-selecteditems .state-expired,
+#relatedItems-popup .state-expired
+{
+    color: &dtml-discreetColor; !important;
+}
+.syndicated 
+.eea-ref-selecteditems .state-syndicated,
+#relatedItems-popup .state-syndicated
+{
+    color: #008000 !important;
+}
+
+.state-published_eionet, 
+.eea-ref-selecteditems .state-published_eionet,
+#relatedItems-popup .state-published_eionet
+{
+  color: blue ! important;
+}
+
+.state-draft,
+.eea-ref-selecteditems .state-draft,
+#relatedItems-popup .state-draft
+{
+  color: red ! important;
+}
+/* </dtml-with> */

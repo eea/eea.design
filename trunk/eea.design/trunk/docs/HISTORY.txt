@@ -3,7 +3,8 @@ Changelog
 
 2.0 - (unreleased)
 ------------------
- * Add class for review state to folder_summary_view macros. [tiberich #3561]
+ * [Feature] Add class for review state to folder_summary_view macros. [tiberich #3561]
+ * [Feature] Override default with custom implementation members.css [tiberich #3561]
 
 1.9 - (2010-08-16)
 ------------------
