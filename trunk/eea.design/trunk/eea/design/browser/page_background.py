@@ -15,10 +15,10 @@ class PageBackground(BrowserView):
             mapping = annotations[KEY] = PersistentDict({'locations': []})
         self.mapping = mapping
 
-    def getBackground(self):
+    def getBackgroundURL(self):
         return self.mapping.get('page_background')
 
-    def setBackground(self, url):
+    def setBackgroundURL(self, url):
         self.mapping['page_background'] = url
 
     def __call__(self):

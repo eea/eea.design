@@ -10,9 +10,9 @@ class TestPageBackground(EEAMegaTestCase):
     def test_setBackground(self):
         context = self.testPage
         view = context.restrictedTraverse('@@page_background')
-        self.failUnless(view.getBackground() == None)
+        self.failUnless(view.getBackgroundURL() == None)
         url = 'http://www.eea.europa.eu/themes/water/waves.gif'
-        view.setBackground(url)
+        view.setBackgroundURL(url)
         self.failUnless(view.getBackground() == url)
 
 def test_suite():
