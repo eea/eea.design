@@ -18,54 +18,37 @@
 
 /* workflow state colors */
 
-.state-private,
-.eea-ref-selecteditems .state-private,
-#relatedItems-popup .state-private
+/* all states that are about author drafting stages goes here */
+.state-private, .state-draft, .state-published_eionet, .state-retracted, .state-published_internally, .state-rejected
 {
     color: Red !important;
 }
+
 .state-visible 
-.eea-ref-selecteditems .state-visible,
-#relatedItems-popup .state-visible
 {
     color: #74AE0B !important;
 }
-.state-published,
-.eea-ref-selecteditems .state-published,
-#relatedItems-popup .state-published
+
+.state-published
 {
     color: &dtml-linkColor; !important;
 }
-.state-pending 
-.eea-ref-selecteditems .state-pending,
-#relatedItems-popup .state-pending
+
+/* all states that are about reviewing/approvals get same color and goes here */
+.state-pending, .state-content_pending, .state-new, .state-submitted, .state-sent, .state-proof_reading, .state-webqa_pending
 {
     color: #FFA500 !important;
 }
+
 .state-expired 
-.eea-ref-selecteditems .state-expired,
-#relatedItems-popup .state-expired
 {
     color: &dtml-discreetColor; !important;
 }
+
 .syndicated 
-.eea-ref-selecteditems .state-syndicated,
-#relatedItems-popup .state-syndicated
 {
     color: #008000 !important;
 }
 
-.state-published_eionet, 
-.eea-ref-selecteditems .state-published_eionet,
-#relatedItems-popup .state-published_eionet
-{
-  color: blue ! important;
-}
 
-.state-draft,
-.eea-ref-selecteditems .state-draft,
-#relatedItems-popup .state-draft
-{
-  color: red ! important;
-}
 /* </dtml-with> */
