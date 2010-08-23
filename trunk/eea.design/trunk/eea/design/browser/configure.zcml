@@ -26,4 +26,12 @@
     allowed_interface=".interfaces.ISmartView"
     />
 
+  <browser:page
+    for="*"
+    name="page_background"
+    class=".page_background.PageBackground"
+    permission="zope.Public"
+    allowed_interface=".interfaces.IPageBackground"
+    />
+
 </configure>

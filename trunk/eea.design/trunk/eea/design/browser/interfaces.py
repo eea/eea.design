@@ -63,3 +63,8 @@ class ISmartView(Interface):
 
     def getListingMacro():
         """  """
+
+class IPageBackground(Interface):
+
+    def page_background(url):
+        """ """
