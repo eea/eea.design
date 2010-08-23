@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+    <div metal:fill-slot="main">
+    <metal:main-macro define-macro="main">
+        <h1 class="documentFirstHeading">
+            Background image settings for "<span tal:content="object_title"/>"
+        </h1>
+
+        <div class="visualClear"></div>
+
+        <form method="post" action="./@@page_background" tal:define="view nocall:context/@@page_background">
+            <label for="url">URL to background image</label>
+            <input type="text" name="url" tal:attributes="value view/getBackgroundURL"/>
+            <br/>
+            <input type="submit" value="Update design"/>
+        </form>
+
+    </metal:main-macro>
+    </div>
+
+</body>
+</html>

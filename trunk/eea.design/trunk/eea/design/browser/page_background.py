@@ -22,4 +22,6 @@ class PageBackground(BrowserView):
         self.mapping['page_background'] = url
 
     def __call__(self):
-        import pdb; pdb.set_trace()
+        url = self.request.form.get('url', None)
+        if url != None:
+            self.setBackgroundURL(url)
