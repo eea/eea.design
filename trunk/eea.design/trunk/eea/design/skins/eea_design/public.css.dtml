@@ -120,7 +120,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* Override jquery.ui style */
 .ui-widget-content a {
-    color: #2A6495 !important;
+    color: #2A6495;
 }
 
 /* Inflexible tooltips */
