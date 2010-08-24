@@ -12,7 +12,9 @@ class AnnotationView(BrowserView):
         annotations = IAnnotations(context.getCanonical())
         mapping = annotations.get(KEY)
         if mapping is None:
-            mapping = annotations[KEY] = PersistentDict({'locations': []})
+            mapping = annotations[KEY] = PersistentDict({
+                'page_background': None,
+            })
         self.mapping = mapping
 
 class PageDesignView(AnnotationView):
