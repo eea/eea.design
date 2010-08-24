@@ -64,11 +64,12 @@ class ISmartView(Interface):
     def getListingMacro():
         """  """
 
-
-class IPageBackground(Interface):
-
-    def setBackgroundURL(url):
-        """ """
+class IPageDesignView(Interface):
 
     def getBackgroundURL(url):
+        """ """
+
+class IPageDesignEditView(Interface):
+
+    def setBackgroundURL(url):
         """ """

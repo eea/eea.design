@@ -28,10 +28,18 @@
 
   <browser:page
     for="*"
-    name="page_background"
-    class=".page_background.PageBackground"
+    name="edit_page_design"
+    class=".page_background.PageDesignEditView"
+    permission="cmf.ModifyPortalContent"
+    allowed_interface=".interfaces.IPageDesignEditView"
+    />
+
+  <browser:page
+    for="*"
+    name="page_design"
+    class=".page_background.PageDesignView"
     permission="zope.Public"
-    allowed_interface=".interfaces.IPageBackground"
+    allowed_interface=".interfaces.IPageDesignView"
     />
 
 </configure>

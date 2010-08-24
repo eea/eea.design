@@ -8,12 +8,12 @@
     <div metal:fill-slot="main">
     <metal:main-macro define-macro="main">
         <h1 class="documentFirstHeading">
-            Background image settings for "<span tal:content="object_title"/>"
+            Page design settings for "<span tal:content="object_title"/>"
         </h1>
 
         <div class="visualClear"></div>
 
-        <form method="post" action="./@@page_background" tal:define="view nocall:context/@@page_background">
+        <form method="post" action="./@@edit_page_design" tal:define="view nocall:context/@@page_design">
             <label for="url">URL to background image</label>
             <input type="text" name="url" tal:attributes="value view/getBackgroundURL"/>
             <br/>
