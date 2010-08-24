@@ -9,11 +9,12 @@ class TestPageBackground(EEAMegaTestCase):
 
     def test_setBackground(self):
         context = self.testPage
-        view = context.restrictedTraverse('@@page_background')
+        view = context.restrictedTraverse('@@page_design')
         self.failUnless(view.getBackgroundURL() == None)
         url = 'http://www.eea.europa.eu/themes/water/waves.gif'
-        view.setBackgroundURL(url)
-        self.failUnless(view.getBackground() == url)
+        editView = context.restrictedTraverse('@@edit_page_design')
+        editView.setBackgroundURL(url)
+        self.failUnless(view.getBackgroundURL() == url)
 
 def test_suite():
     from unittest import TestSuite, makeSuite
