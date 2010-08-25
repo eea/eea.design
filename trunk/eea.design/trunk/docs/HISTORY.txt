@@ -3,15 +3,17 @@ Changelog
 
 2.0 - (unreleased)
 ------------------
- * [Feature] Add class for review state to folder_summary_view macros. [tiberich #3561]
- * [Feature] Override default with custom implementation members.css [tiberich #3561]
+ * Feature: Updated the templates so now we can allow discussion
+     on objects [ghicaale #3509]
+ * Feature: Add class for review state to folder_summary_view macros. [tiberich #3561]
+ * Feature: Override default with custom implementation members.css [tiberich #3561]
 
 1.9 - (2010-08-16)
 ------------------
 
- * [Fix] Fix a problem with back-to-toc links when the TOC was regenerated
- * Use new fancybox based video popup [thuliper, #3040]
- * [Feature] Refactored eea-toc.js to be able to rebuild it on the fly [tiberich, #3518]
+ * Bug fix: Fixed a problem with back-to-toc links when the TOC was regenerated
+ * Feature: Use new fancybox based video popup [thuliper, #3040]
+ * Feature: Refactored eea-toc.js to be able to rebuild it on the fly [tiberich, #3518]
 
 1.8 - (2010-08-04)
 ------------------
