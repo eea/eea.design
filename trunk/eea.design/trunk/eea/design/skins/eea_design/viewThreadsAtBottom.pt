@@ -7,12 +7,16 @@
      tal:omit-tag=""
      tal:define="userHasReplyPermission python:checkPermission('Reply to item', context);
                  portal_discussion context/portal_discussion;
-                 isDiscussionAllowed python:portal_discussion.isDiscussionAllowedFor(here);
+                 isDiscussionAllowed python:portal_discussion.isDiscussionAllowedFor(context);
                  isAnon portal/portal_membership/isAnonymousUser">
+
+    <tal:message condition="python:isAnon and isDiscussionAllowed">
+        <p i18n:translate="" class="portalMessage">Log in to see comments</p>
+    </tal:message>
 
     <tal:allowed tal:define="replies python:here.getReplyReplies(here)">
         <div class="discussion"
-             tal:condition="python:replies or (userHasReplyPermission and isDiscussionAllowed) or (isAnon and not userHasReplyPermission and isDiscussionAllowed)">
+             tal:condition="python:userHasReplyPermission">
             <form name="reply"
                   action=""
                   method="post"
