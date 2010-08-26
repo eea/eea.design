@@ -3,8 +3,8 @@ Changelog
 
 2.0 - (unreleased)
 ------------------
- * Feature: Updated the templates so now we can allow discussion
-     on objects [ghicaale #3509]
+ * Feature: Various portal messages added related to comments functionality [ghicaale #3509]
+ * Feature: Updated the templates so now we can allow discussion on objects [ghicaale #3509]
  * Feature: Add class for review state to folder_summary_view macros. [tiberich #3561]
  * Feature: Override default with custom implementation members.css [tiberich #3561]
 
