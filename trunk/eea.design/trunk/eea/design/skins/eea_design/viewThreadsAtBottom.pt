@@ -8,7 +8,11 @@
      tal:define="userHasReplyPermission python:checkPermission('Reply to item', context);
                  portal_discussion context/portal_discussion;
                  isDiscussionAllowed python:portal_discussion.isDiscussionAllowedFor(context);
-                 isAnon portal/portal_membership/isAnonymousUser">
+                 isAnon portal/portal_membership/isAnonymousUser;
+                 template_id options/template_id | template/getId | nothing;
+                 view_template_id plone_view/getViewTemplateId;
+                 isViewTemplate python:template_id==view_template_id or template_id=='index'"
+    tal:condition="isViewTemplate">
 
     <!-- Comments anchor -->
     <a id="eea-comments" tal:condition="python:isDiscussionAllowed or not isAnon"></a>
