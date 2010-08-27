@@ -40,14 +40,23 @@ function addPortalMessage() {
     </tal:bottomMessage>
 
     <!-- Log in for comments -->
-    <tal:login define="pss modules/Products/PythonScripts/standard">
+    <tal:login define="pss modules/Products/PythonScripts/standard"
+               condition="python:isAnon and isDiscussionAllowed">
         <div>
             <a href="login_form" title="Log in to add comments"
                tal:attributes="href python:'%s/login_form?came_from=%s' %
                                            (here.portal_url(),
                                            pss.url_quote(request['URL'] + '#eea-comments'))"
                i18n:attributes="title label_login_to_add_comments"
-               i18n:translate="">Log in to add comments</a>
+               i18n:translate=""
+               style="border: 1px solid rgb(204, 204, 204);
+                      padding: 5px;
+                      font-size: 1.2em;
+                      background-color: #F5821F;
+                      font-family: verdana,sans-serif;
+                      font-weight: bold;
+                      color: #F9F99D;
+                      text-decoration: none">Log in to add comments</a>
         </div>
     </tal:login>
 
