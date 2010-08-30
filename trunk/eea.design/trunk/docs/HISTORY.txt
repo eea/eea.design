@@ -3,6 +3,7 @@ Changelog
 
 2.0 - (unreleased)
 ------------------
+ * Change: Better style for commenting features. [demarant]
  * Feature: Users with role "CommentsEditor" upon login will keep "EEADesign200"
      skin and will be redirected on comments section [ghicaale #3509]
  * Feature: Various portal messages added related to comments functionality [ghicaale #3509]

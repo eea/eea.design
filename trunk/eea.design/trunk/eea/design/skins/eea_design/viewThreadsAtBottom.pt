@@ -15,7 +15,7 @@
     tal:condition="isViewTemplate">
 
     <!-- Comments anchor -->
-    <a id="eea-comments" tal:condition="python:isDiscussionAllowed or not isAnon"></a>
+    <h2 id="eea-comments" tal:condition="python:isDiscussionAllowed or not isAnon">Comments</h2>
 
     <!-- Top portal message -->
     <script language="javascript" type="text/javascript"
@@ -27,7 +27,7 @@ jQuery(document).ready(function() {
 
 function addPortalMessage() {
   context = jQuery('#region-content').children(':first');
-  message = jQuery('<p>See the comments <a href=\'${context/absolute_url}#eea-comments\'>below</a></p>');
+  message = jQuery('<p>This item is open for comments. See the comments <a href=\'${context/absolute_url}#eea-comments\'>section below</a></p>');
   message.addClass('portalMessage');
   context.before(message);
 };
@@ -36,14 +36,16 @@ function addPortalMessage() {
 
     <!-- Bottom portal message -->
     <tal:bottomMessage condition="python:isAnon and isDiscussionAllowed">
-        <p class="portalMessage" i18n:translate="">Log in to see comments.</p>
+        <div class="portalMessage" i18n:translate="">
+         <p>In order to see and add comments you need to log in with your Eionet account. You can request an Eionet account via helpdesk at eionet.europa.eu</p>
+        </div>
     </tal:bottomMessage>
 
     <!-- Log in for comments -->
     <tal:login define="pss modules/Products/PythonScripts/standard"
                condition="python:isAnon and isDiscussionAllowed">
         <div>
-            <a href="login_form" title="Log in to add comments"
+            <a href="login_form" title="Log in to see/add comments"
                tal:attributes="href python:'%s/login_form?came_from=%s' %
                                            (here.portal_url(),
                                            pss.url_quote(request['URL'] + '#eea-comments'))"
@@ -56,7 +58,7 @@ function addPortalMessage() {
                       font-family: verdana,sans-serif;
                       font-weight: bold;
                       color: #F9F99D;
-                      text-decoration: none">Log in to add comments</a>
+                      text-decoration: none">Log in to see/add comments</a>
         </div>
     </tal:login>
 
@@ -73,7 +75,7 @@ function addPortalMessage() {
                   <input class="standalone"
                          style="margin-bottom: 1.25em;"
                          type="submit"
-                         value="Add Comment"
+                         value="Add new comment"
                          i18n:attributes="value label_add_comment;"
                          />
             </form>
@@ -115,7 +117,7 @@ function addPortalMessage() {
                           tal:condition="python:userHasReplyPermission and isDiscussionAllowed">
                         <input class="standalone"
                                type="submit"
-                               value="Reply"
+                               value="Reply to this comment"
                                i18n:attributes="value label_reply;"
                                />
                     </form>
