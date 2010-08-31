@@ -42,6 +42,7 @@
                 <link href="application.css" rel="stylesheet" type="text/css"
                     tal:attributes="href string:$portal_url/++resource++application.css"
                     tal:condition="inApplication"/>
+                <metal:pagedesign use-macro="here/page_design_macros/macros/pagedesign"/>
             </metal:cssslot>
 
 
