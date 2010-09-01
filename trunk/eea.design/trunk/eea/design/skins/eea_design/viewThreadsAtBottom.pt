@@ -80,6 +80,10 @@ function addPortalMessage() {
                          />
             </form>
 
+            <tal:noreplies condition="not:replies">
+                <p i18n:translate="">No comments.</p>
+            </tal:noreplies>
+
             <tal:getreplies repeat="reply_dict replies">
                 <div class="comment" style=""
                     tal:define="indent python:reply_dict['depth']*2;
