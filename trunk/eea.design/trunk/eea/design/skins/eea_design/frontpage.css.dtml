@@ -67,6 +67,11 @@ body.frontpage ul {
     color:&dtml-discreetColor;;
 }
 
+/* don't show dates on articles on frontpage as they are not like news */
+#articles-high .date {
+    visibility:hidden;
+}
+
 /* Frontpage promotions
 ******************************************************************************/
 
