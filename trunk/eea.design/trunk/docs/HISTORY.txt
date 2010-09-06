@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0 - (unreleased)
+2.0 - (2010-09-06)
 ------------------
  * Change: Better style for commenting features. [demarant]
  * Feature: Users with role "CommentsEditor" upon login will keep "EEADesign200"
