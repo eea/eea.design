@@ -1166,6 +1166,15 @@ textarea.proportional {
     margin: 16px auto 0px;
 }
 
+.photoAlbumEntryPreview,
+.photoAlbumEntryPreview a,
+.photoAlbumEntryPreview .photoAlbumEntryTitle {
+    height: auto;
+    width: auto;
+    background-image: none;
+    margin: 0.5em  0 2em 0;
+}
+
 .photoAlbumFolder {
     background-image: url('&dtml-portal_url;/polaroid-multi.png');
     background-repeat: no-repeat;
