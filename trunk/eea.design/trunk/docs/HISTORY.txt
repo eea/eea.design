@@ -3,6 +3,7 @@ Changelog
 
 2.1 - (unreleased)
 ------------------
+ * Change: Better style for commenting features, fixes #3721. [demarant]
 
 2.0 - (2010-09-06)
 ------------------
