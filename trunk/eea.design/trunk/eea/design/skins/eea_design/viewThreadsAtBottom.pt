@@ -34,18 +34,12 @@ function addPortalMessage() {
        //-->
 "></script>
 
-    <!-- Bottom portal message -->
-    <tal:bottomMessage condition="python:isAnon and isDiscussionAllowed">
-        <div class="portalMessage" i18n:translate="">
-         <p>In order to see and add comments you need to log in with your Eionet account. You can request an Eionet account via helpdesk at eionet.europa.eu</p>
-        </div>
-    </tal:bottomMessage>
 
     <!-- Log in for comments -->
     <tal:login define="pss modules/Products/PythonScripts/standard"
                condition="python:isAnon and isDiscussionAllowed">
         <div>
-            <a href="login_form" title="Log in to see/add comments"
+            <a href="login_form" title="Log in with your Eionet password to see/add comments"
                tal:attributes="href python:'%s/login_form?came_from=%s' %
                                            (here.portal_url(),
                                            pss.url_quote(request['URL'] + '#eea-comments'))"
@@ -58,7 +52,7 @@ function addPortalMessage() {
                       font-family: verdana,sans-serif;
                       font-weight: bold;
                       color: #F9F99D;
-                      text-decoration: none">Log in to see/add comments</a>
+                      text-decoration: none">Log in with your Eionet password to see/add comments</a>
         </div>
     </tal:login>
 
