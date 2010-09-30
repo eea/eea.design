@@ -16,6 +16,10 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.section-soer .portlet {
+    height: 200px;
+}
+
 .only-ie6 {
     display: none;
 }
