@@ -14,36 +14,42 @@
                 Title or id
             </h1>
 
-            <p class="documentDescription"
-               tal:content="here/Description"
-               tal:condition="here/Description">
-                Description
-            </p>
-
             <div class="visualClear"></div>
 
+            <div id="tag-cloud">
+                <div id="tag-cloud-content">
+                    tag cloud ...
+                </div>
+            </div>
             <div id="boxes">
                 <div class="content-column-one">
                     <dl class="portlet">
-                        <dt class="portletHeader">Box header</dt>
-                        <dd class="portletItem">Box item</dd>
+                        <dt class="portletHeader">Search box</dt>
+                        <dd class="portletItem">...</dd>
                     </dl>
                     <dl class="portlet">
-                        <dt class="portletHeader">Box header</dt>
-                        <dd class="portletItem">Box item</dd>
+                        <dt class="portletHeader">Key fact</dt>
+                        <dd class="portletItem">...</dd>
                     </dl>
                 </div>
-                <div id="content-column-two">
+                <div class="content-column-two">
                     <dl class="portlet">
-                        <dt class="portletHeader">Box header</dt>
-                        <dd class="portletItem">Box item</dd>
+                        <dt class="portletHeader">Video</dt>
+                        <dd class="portletItem">...</dd>
                     </dl>
                     <dl class="portlet">
-                        <dt class="portletHeader">Box header</dt>
-                        <dd class="portletItem">Box item</dd>
+                        <dt class="portletHeader">Message</dt>
+                        <dd class="portletItem">...</dd>
                     </dl>
                 </div>
                 <div class="visualClear"></div>
+                <div id="synthesis-report">
+                    <h2>Synthesis report</h2>
+                    <p>This synthesis of SOER core elements focuses on the state of Europe's environment, the increased complexity of remaining environmental challenges, and future opportunities.</p>
+                </div>
+                <div id="free-text-space">
+                    <p>Free text space</p>
+                </div>
             </div>
 
         </metal:main-macro>
