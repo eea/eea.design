@@ -789,6 +789,10 @@ float:right;
     margin-left: 0em;
 }
 
+#region-content {
+    border: none;
+}
+
 #portal-breadcrumbs a {
     text-decoration: none;
 }
