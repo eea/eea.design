@@ -33,9 +33,11 @@
                     </dl>
                 </div>
                 <div class="content-column-two">
-                    <dl class="portlet">
+                    <dl class="portlet" id="video-portlet">
                         <dt class="portletHeader">Video</dt>
-                        <dd class="portletItem">...</dd>
+                        <dd class="portletItem" tal:define="html context/soer_video/getText|nothing">
+                            <tal:vidhtml tal:condition="html" tal:replace="structure html"/>
+                        </dd>
                     </dl>
                     <dl class="portlet">
                         <dt class="portletHeader">Message</dt>
