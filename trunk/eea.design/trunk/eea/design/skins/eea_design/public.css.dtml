@@ -19,9 +19,6 @@
 .section-soer #content .portlet {
     height: 200px;
 }
-.section-soer #synthesis-report {
-    margin-bottom: 1em;
-}
 .section-soer #boxes {
     width: 75%;
 }
@@ -35,10 +32,11 @@
     padding: 1em;
     height: 300px;
 }
-.section-soer #tag-cloud-content,
-.section-soer #synthesis-report,
-.section-soer #free-text-space {
+.section-soer #tag-cloud-content {
     border: 1px dashed #ccc;
+}
+.section-soer #free-text-space {
+    min-height: 150px;
 }
 
 .only-ie6 {

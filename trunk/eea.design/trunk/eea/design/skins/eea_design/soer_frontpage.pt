@@ -43,12 +43,8 @@
                     </dl>
                 </div>
                 <div class="visualClear"></div>
-                <div id="synthesis-report">
-                    <h2>Synthesis report</h2>
-                    <p>This synthesis of SOER core elements focuses on the state of Europe's environment, the increased complexity of remaining environmental challenges, and future opportunities.</p>
-                </div>
-                <div id="free-text-space">
-                    <p>Free text space</p>
+                <div id="free-text-space" tal:define="txt context/getText|nothing">
+                    <p tal:condition="txt" tal:replace="structure txt">[Free text]</p>
                 </div>
             </div>
 
