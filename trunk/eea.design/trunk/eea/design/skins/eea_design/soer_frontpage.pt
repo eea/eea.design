@@ -26,13 +26,13 @@
                     <dl class="portlet">
                         <dt class="portletHeader">Search box</dt>
                         <dd class="portletItem">
-                            <form method="get" post="./search-1">
+                            <form method="get" action="./search-1">
                                 <p>
                                     <input type="text" name="q" />
                                     <input type="submit" name="search" value="search" />
                                 </p>
                             </form>
-                            <form method="get" post="./search-1">
+                            <form method="get" action="./search-1">
                                 <strong>Browse SOER by topic</strong>
                                 <br/>
                                 <select name="topic">
