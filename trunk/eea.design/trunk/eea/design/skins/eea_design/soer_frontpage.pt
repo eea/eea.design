@@ -21,7 +21,7 @@
                     tag cloud ...
                 </div>
             </div>
-            <div id="boxes">
+            <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic">
                 <div class="content-column-one">
                     <dl class="portlet">
                         <dt class="portletHeader">Search box</dt>
@@ -36,18 +36,18 @@
                                 <strong>Browse SOER by topic</strong>
                                 <br/>
                                 <select name="topic">
-                                    <option value="1">Lorem ipsum</option>
-                                    <option value="2">Lorem ipsum</option>
-                                    <option value="3">Lorem ipsum</option>
+                                    <tal:block tal:repeat="item view/getSoerTopics">
+                                        <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
+                                    </tal:block>
                                 </select>
                                 <br/>
                                 <br/>
                                 <strong>Browse SOER geographically</strong>
                                 <br/>
                                 <select name="geo">
-                                    <option value="1">Lorem ipsum</option>
-                                    <option value="2">Lorem ipsum</option>
-                                    <option value="3">Lorem ipsum</option>
+                                    <tal:block tal:repeat="item view/getSoerLocations">
+                                        <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
+                                    </tal:block>
                                 </select>
                                 <br/>
                                 <br/>

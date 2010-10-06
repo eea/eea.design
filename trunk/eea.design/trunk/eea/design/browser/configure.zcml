@@ -4,6 +4,14 @@
 
   <browser:page
     for="*"
+    name="soer_frontpage_logic"
+    class=".soer_frontpage.SoerFrontpage"
+    permission="zope.Public"
+    allowed_interface=".interfaces.ISoerFrontpage"
+    />
+
+  <browser:page
+    for="*"
     name="frontpage_highlights"
     class=".frontpage.Frontpage"
     permission="zope.Public"

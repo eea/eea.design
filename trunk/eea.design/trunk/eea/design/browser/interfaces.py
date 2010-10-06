@@ -1,5 +1,13 @@
 from zope.interface import Interface
 
+class ISoerFrontpage(Interface):
+
+    def getSoerTopics():
+        pass
+
+    def getSoerLocations():
+        pass
+
 class IFrontPageHighlights(Interface):
 
     def getHigh():
