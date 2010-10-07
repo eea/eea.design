@@ -14,7 +14,7 @@ $(document).ready(function() {
     $('#topic-search input[type=submit]').click(function(e) {
         e.preventDefault();
         var keywords = $('#topic-search select').val();
-        var url = $('#search-url').html() + '#c2=' + keywords;
+        var url = $('#search-url').html() + '#c0=' + keywords;
         window.location.href = url;
     });
 
