@@ -32,33 +32,38 @@
                     <dl class="portlet">
                         <dt class="portletHeader">Search box</dt>
                         <dd class="portletItem">
-                            <form method="get" action="./search">
+                            <span id="search-url" tal:content="view/getSearchURL"></span>
+                            <form id="free-text-search" method="get" tal:attributes="action view/getSearchURL">
+                                <strong>Free text search</strong>
+                                <br/>
                                 <p>
                                     <input type="text" name="q" />
-                                    <input type="submit" name="search" value="search" />
+                                    <input type="submit" name="search" value="Go!" />
                                 </p>
                             </form>
-                            <form method="get" action="./search">
-                                <span id="search-url" tal:content="view/getSearchURL"></span>
+                            <form id="topic-search" method="get" tal:attributes="action view/getSearchURL">
                                 <strong>Browse SOER by topic</strong>
                                 <br/>
+                                <p>
                                 <select name="topic">
                                     <tal:block tal:repeat="item view/getSoerTopics">
                                         <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
                                     </tal:block>
                                 </select>
-                                <br/>
-                                <br/>
+                                <input type="submit" value="Go!"/>
+                                </p>
+                            </form>
+                            <form id="geo-search" method="get" tal:attributes="action view/getSearchURL">
                                 <strong>Browse SOER geographically</strong>
                                 <br/>
+                                <p>
                                 <select name="geo">
                                     <tal:block tal:repeat="item view/getSoerLocations">
                                         <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
                                     </tal:block>
                                 </select>
-                                <br/>
-                                <br/>
-                                <input type="submit" value="Browse"/>
+                                <input type="submit" value="Go!"/>
+                                </p>
                             </form>
                         </dd>
                     </dl>
