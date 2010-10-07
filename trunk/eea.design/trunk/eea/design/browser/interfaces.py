@@ -2,6 +2,9 @@ from zope.interface import Interface
 
 class ISoerFrontpage(Interface):
 
+    def getSearchURL():
+        pass
+
     def getSoerTopics():
         pass
 

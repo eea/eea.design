@@ -22,6 +22,9 @@
 .section-soer #boxes {
     width: 75%;
 }
+.section-soer #search-url {
+    display: none;
+}
 .section-soer #tag-cloud {
     width: 24%;
     margin-left: 1em;

@@ -39,6 +39,7 @@
                                 </p>
                             </form>
                             <form method="get" action="./search">
+                                <span id="search-url" tal:content="view/getSearchURL"></span>
                                 <strong>Browse SOER by topic</strong>
                                 <br/>
                                 <select name="topic">

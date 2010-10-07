@@ -2,6 +2,9 @@ from Products.Five import BrowserView
 
 class SoerFrontpage(BrowserView):
 
+    def getSearchURL(self):
+        return self.context.absolute_url() + '/search'
+
     def getSoerTopics(self):
         return [
             {
