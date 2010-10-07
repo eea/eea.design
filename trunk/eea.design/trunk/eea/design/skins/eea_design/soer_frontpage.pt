@@ -43,7 +43,6 @@
                             </form>
                             <form id="topic-search" method="get" tal:attributes="action view/getSearchURL">
                                 <strong>Browse SOER by topic</strong>
-                                <br/>
                                 <p>
                                 <select name="topic">
                                     <tal:block tal:repeat="item view/getSoerTopics">
