@@ -37,7 +37,7 @@
                     tip: tooltip[0],
                     position: 'bottom center',
                     offset: [0, 0],
-                    delay: 1000,
+                    delay: 10000000,
                     events: {
                         def: 'click, blur'
                     }
