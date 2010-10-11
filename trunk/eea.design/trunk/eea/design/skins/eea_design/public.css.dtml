@@ -16,6 +16,11 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+/* see #3722 */
+body.section-atlas #visual-column-wrapper {
+    float: none;
+}
+
 .section-soer #content .portlet {
     min-height: 235px;
 }
