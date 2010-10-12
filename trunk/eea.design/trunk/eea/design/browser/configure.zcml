@@ -4,6 +4,14 @@
 
   <browser:page
     for="*"
+    name="soer_topic_search_logic"
+    class=".soer_topic_search_logic.SoerTopicSearch"
+    permission="zope.Public"
+    allowed_interface=".interfaces.ISoerTopicSearch"
+    />
+
+  <browser:page
+    for="*"
     name="soer_frontpage_logic"
     class=".soer_frontpage.SoerFrontpage"
     permission="zope.Public"

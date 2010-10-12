@@ -8,12 +8,12 @@
 
 <body>
     <div metal:fill-slot="main">
-        <metal:main-macro define-macro="main" tal:define="topic request/topic">
+        <metal:main-macro define-macro="main" tal:define="view context/@@soer_topic_search_logic">
 
-            <h1 tal:content="topic"></h1>
+            <h1 tal:content="view/getTopicLabel"></h1>
 
             <p class="documentDescription">
-                Below you will find all SOER content related to <span tal:content="topic"/>
+                Below you will find all SOER content related to <span tal:content="view/getTopicLabel"/>
             </p>
 
             <div class="visualClear"></div>

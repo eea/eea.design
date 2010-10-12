@@ -1,5 +1,10 @@
 from zope.interface import Interface
 
+class ISoerTopicSearch(Interface):
+
+    def getTopicLabel():
+        pass
+
 class ISoerFrontpage(Interface):
 
     def getSearchURL():
