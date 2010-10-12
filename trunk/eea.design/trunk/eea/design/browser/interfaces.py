@@ -5,6 +5,9 @@ class ISoerFrontpage(Interface):
     def getSearchURL():
         pass
 
+    def getTopicSearchURL():
+        pass
+
     def getSoerTopics():
         pass
 

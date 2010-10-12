@@ -11,13 +11,6 @@ $(document).ready(function() {
         window.location.href = url;
     });
 
-    $('#topic-search input[type=submit]').click(function(e) {
-        e.preventDefault();
-        var keywords = $('#topic-search select').val();
-        var url = $('#search-url').html() + '#c0=' + keywords;
-        window.location.href = url;
-    });
-
     $('#geo-search input[type=submit]').click(function(e) {
         e.preventDefault();
         var keywords = $('#geo-search select').val();

@@ -41,7 +41,7 @@
                                     <input type="submit" name="search" value="Go!" />
                                 </p>
                             </form>
-                            <form id="topic-search" method="get" tal:attributes="action view/getSearchURL">
+                            <form id="topic-search" method="get" tal:attributes="action view/getTopicSearchURL">
                                 <strong>Browse SOER by topic</strong>
                                 <p>
                                 <select name="topic">

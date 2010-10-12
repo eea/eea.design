@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+</head>
+
+<body>
+    <div metal:fill-slot="main">
+        <metal:main-macro define-macro="main" tal:define="topic request/topic">
+
+            <h1 tal:content="topic"></h1>
+
+            <p class="documentDescription">
+                Below you will find all SOER content related to <span tal:content="topic"/>
+            </p>
+
+            <div class="visualClear"></div>
+
+            <h2>Synthesis</h2>
+            [list]
+
+            <h2>Europe's environment: thematic assessments</h2>
+            [list]
+
+            <h2>Europe and the world: global megatrends</h2>
+            [list]
+
+            <h2>Country environment</h2>
+            [list]
+
+        </metal:main-macro>
+    </div>
+</body>
+
+</html>

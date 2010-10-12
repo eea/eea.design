@@ -5,6 +5,9 @@ class SoerFrontpage(BrowserView):
     def getSearchURL(self):
         return self.context.absolute_url() + '/search'
 
+    def getTopicSearchURL(self):
+        return self.context.absolute_url() + '/soer_topic_search'
+
     def getSoerTopics(self):
         return [
             {
