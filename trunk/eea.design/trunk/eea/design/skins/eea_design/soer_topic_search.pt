@@ -19,16 +19,28 @@
             <div class="visualClear"></div>
 
             <h2>Synthesis</h2>
-            [list]
+            <div tal:repeat="item view/getSynthesisReport">
+                <img tal:attributes="src item/imgURL"/>
+                <strong tal:content="item/title"/>
+            </div>
 
             <h2>Europe's environment: thematic assessments</h2>
-            [list]
+            <div tal:repeat="item view/getThematicAssesments">
+                <img tal:attributes="src item/imgURL"/>
+                <strong tal:content="item/title"/>
+            </div>
 
             <h2>Europe and the world: global megatrends</h2>
-            [list]
+            <div tal:repeat="item view/getGlobalMegatrends">
+                <img tal:attributes="src item/imgURL"/>
+                <strong tal:content="item/title"/>
+            </div>
 
             <h2>Country environment</h2>
-            [list]
+            <div tal:repeat="item view/getCountryEnvironment">
+                <img tal:attributes="src item/imgURL"/>
+                <strong tal:content="item/title"/>
+            </div>
 
         </metal:main-macro>
     </div>

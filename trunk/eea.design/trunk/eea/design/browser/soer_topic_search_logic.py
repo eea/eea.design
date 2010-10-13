@@ -19,3 +19,19 @@ class SoerTopicSearch(BrowserView):
     def getTopicLabel(self):
         tag = self.request.get('topic')
         return LABELS.get(tag, tag)
+
+    def getSynthesisReport(self):
+        tag = self.request.get('topic')
+        return []
+
+    def getThematicAssesments(self):
+        tag = self.request.get('topic')
+        return []
+
+    def getGlobalMegatrends(self):
+        tag = self.request.get('topic')
+        return []
+
+    def getCountryEnvironment(self):
+        tag = self.request.get('topic')
+        return []

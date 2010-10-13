@@ -5,6 +5,18 @@ class ISoerTopicSearch(Interface):
     def getTopicLabel():
         pass
 
+    def getSynthesisReport():
+        pass
+
+    def getThematicAssesments():
+        pass
+
+    def getGlobalMegatrends():
+        pass
+
+    def getCountryEnvironment():
+        pass
+
 class ISoerFrontpage(Interface):
 
     def getSearchURL():
