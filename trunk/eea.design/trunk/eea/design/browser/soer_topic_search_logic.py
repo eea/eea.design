@@ -1,3 +1,4 @@
+from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
 LABELS = {
@@ -34,4 +35,13 @@ class SoerTopicSearch(BrowserView):
 
     def getCountryEnvironment(self):
         tag = self.request.get('topic')
-        return []
+        ret = []
+        countries = getattr(self.context, 'countries', None)
+        if countries != None:
+            for brain in countries.getFolderContents()[:5]:
+                ret.append({
+                    'url': brain.getURL(),
+                    'title': brain.Title,
+                    'description': brain.Description,
+                })
+        return ret
