@@ -19,12 +19,15 @@
             <div class="visualClear"></div>
 
             <h2>Synthesis</h2>
-            <div tal:repeat="item view/getSynthesisReport">
-                <a href="item/url">
-                    <img tal:attributes="src python: item['url'] + '/image_thumb'"/>
-                    <strong tal:content="item/title"/>
+            <div class="photoAlbumEntry" tal:repeat="item view/getSynthesisReport">
+                <a tal:attributes="href item/url; title item/description">
+                    <span class="photoAlbumEntryWrapper">
+                        <img tal:attributes="src python: item['url'] + '/image_thumb'"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
                 </a>
             </div>
+            <div class="visualClear"></div>
 
             <h2>Europe's environment: thematic assessments</h2>
             <div tal:repeat="item view/getThematicAssesments">
