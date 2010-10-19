@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.3-dev - (unreleased)
+----------------------
+
 2.2 - (2010-10-19)
 ------------------
  * Fixed bug where pop up panels would dissapear. [thuliper, #3216]
