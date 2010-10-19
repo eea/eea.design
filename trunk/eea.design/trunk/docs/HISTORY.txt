@@ -4,6 +4,7 @@ Changelog
 2.2-dev - (unreleased)
 ----------------------
  * Fixed bug where pop up panels would dissapear. [thuliper, #3216]
+ * Bug fix: fixed print stylesheeet for Firefox [tiberich #3369]
 
 2.1 - (2010-09-29)
 ------------------

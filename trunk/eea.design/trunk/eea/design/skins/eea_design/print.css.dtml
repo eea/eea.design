@@ -157,3 +157,29 @@ body.frontpage .column-area,
 .portlet-rss * {
     clear: both;
 }
+
+
+/* indicators styles */
+
+.documentEditable .documentContent {
+    border:none !important;
+}
+#portal-column-content {
+    margin:0 !important;
+}
+body {
+    background-image:none !important;
+}
+#box-classification {
+    float:none !important;
+}
+div.metadata-switch {
+    display:none !important;
+}
+.keyMessage {
+    page-break-inside:avoid !important;
+}
+.indicator-figure-plus-container {
+    page-break-inside:avoid !important;
+}
+
