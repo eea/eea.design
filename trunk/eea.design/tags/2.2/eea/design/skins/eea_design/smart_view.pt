@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+    <div metal:fill-slot="main">
+        <metal:main-macro define-macro="main">
+
+            <h1 tal:content="object_title" class="documentFirstHeading">
+                Title or id
+            </h1>
+
+            <div metal:use-macro="here/document_actions/macros/document_actions">
+                Document actions (print, sendto etc)
+            </div>
+
+            <div class="visualClear"></div>
+
+            <p class="documentDescription"
+               tal:content="here/Description"
+               tal:condition="here/Description">
+                Description
+            </p>
+
+            <div class="visualClear"></div>
+
+            <metal:listing define-macro="listing" tal:define="smartView context/@@smart_view_logic">
+                <ul id="smart-view-switch" class="eea-horizontal-list eea-no-list-style eea-rounded-corners" tal:define="templateName smartView/getTemplateName">
+                    <li tal:attributes="class python:(templateName.endswith('folder_listing') and 'selected') or ''">
+                        <span style="display:none" class="template-id">smart_folder_listing</span>
+                        <img class="no-ie6" i18n:attributes="title; alt" title="Listing" alt="Listing" src="folder_listing_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title; alt" title="Listing" alt="Listing" src="ie6_folder_listing_icon.png"/>
+                    </li>
+                    <li tal:attributes="class python:(templateName.endswith('folder_summary_view') and 'selected') or ''">
+                        <span style="display:none" class="template-id">smart_folder_summary_view</span>
+                        <img class="no-ie6" i18n:attributes="title; alt" title="Summary view" alt="Summary view" src="folder_summary_view_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title; alt" title="Summary view" alt="Summary view" src="ie6_folder_summary_view_icon.png"/>
+                    </li>
+                    <li tal:attributes="class python:(templateName.endswith('atct_album_view') and 'selected') or ''">
+                        <span style="display:none" class="template-id">smart_atct_album_view</span>
+                        <img class="no-ie6" i18n:attributes="title; alt" title="Album view" alt="Album view" src="atct_album_view_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title; alt" title="Album view" alt="Album view" src="ie6_atct_album_view_icon.png"/>
+                    </li>
+                    <li tal:attributes="class python:(templateName.endswith('subfolder_view') and 'last selected') or 'last'">
+                        <span style="display:none" class="template-id">smart_subfolder_view</span>
+                        <img class="no-ie6" i18n:attributes="title; alt" title="Folder overview" alt="Folder overview" src="subfolder_view_icon.png"/>
+                        <img class="only-ie6" i18n:attributes="title; alt" title="Folder overview" alt="Folder overview" src="ie6_subfolder_view_icon.png"/>
+                    </li>
+                </ul>
+                <span id="smart-view-content">
+                    <metal:block metal:use-macro="smartView/getListingMacro" />
+                </span>
+            </metal:listing>
+
+        </metal:main-macro>
+    </div>
+</body>
+</html>
