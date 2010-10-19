@@ -68,8 +68,8 @@
                     </dl>
                     <dl class="portlet">
                         <dt class="portletHeader">Key fact</dt>
-                        <dd class="portletItem">
-                            Despite improvements in some regions, diffuse pollution from agriculture remains a major cause of the poor water quality currently observed in parts of Europe.
+                        <dd class="portletItem" tal:repeat="item view/getKeyFacts">
+                            <span tal:content="item/text"></span>
                         </dd>
                     </dl>
                 </div>
@@ -82,8 +82,8 @@
                     </dl>
                     <dl class="portlet">
                         <dt class="portletHeader">Message</dt>
-                        <dd class="portletItem">
-                            The prospects for Europe's environment are mixed but there are opportunities to make the environment more resilient to future risks and changes.
+                        <dd class="portletItem" tal:repeat="item view/getMessages">
+                            <span tal:content="item/text"></span>
                         </dd>
                     </dl>
                 </div>

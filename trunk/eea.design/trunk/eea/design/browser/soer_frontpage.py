@@ -8,6 +8,20 @@ class SoerFrontpage(BrowserView):
     def getTopicSearchURL(self):
         return self.context.absolute_url() + '/soer_topic_search'
 
+    def getMessages(self):
+        ret = []
+        ret.append({
+            'text': "The prospects for Europe's environment are mixed but there are opportunities to make the environment more resilient to future risks and changes.",
+        })
+        return ret
+
+    def getKeyFacts(self):
+        ret = []
+        ret.append({
+            'text': "Despite improvements in some regions, diffuse pollution from agriculture remains a major cause of the poor water quality currently observed in parts of Europe.",
+        })
+        return ret
+
     def getSoerTopics(self):
         return [
             {

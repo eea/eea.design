@@ -22,6 +22,12 @@ class ISoerFrontpage(Interface):
     def getSearchURL():
         pass
 
+    def getKeyFacts():
+        pass
+
+    def getMessages():
+        pass
+
     def getTopicSearchURL():
         pass
 
