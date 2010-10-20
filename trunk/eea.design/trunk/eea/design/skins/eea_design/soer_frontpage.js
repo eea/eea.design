@@ -31,7 +31,7 @@ $(document).ready(function() {
         // Start positions
         portlet.find('.portletItem').each(function(i, elem) {
             var p = i * portlet.width();
-            p += 50; // 50 px just to be sure its outside
+            p += 100; // 100 px just to be sure its outside
             if (i == 0) {
                 p = 0;
             }
@@ -55,8 +55,7 @@ $(document).ready(function() {
             current.removeClass('selected');
             next.addClass('selected');
 
-            var p = (currentIndex - nextIndex) * portlet.width();
-            current.animate({'left': p});
+            current.animate({'left': -(portlet.width()+100)});
             next.animate({'left': 0});
         });
 
@@ -74,8 +73,8 @@ $(document).ready(function() {
             current.removeClass('selected');
             next.addClass('selected');
 
-            var p = portlet.width() + 50;
-            current.animate({'left': p});
+            var p = portlet.width() + 100;
+            current.animate({'left': portlet.width() + 100});
             next.animate({'left': 0});
         });
 

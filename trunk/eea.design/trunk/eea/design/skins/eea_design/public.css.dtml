@@ -29,9 +29,10 @@ body.section-atlas #visual-column-wrapper {
 }
 .slidePortlet .portletItem {
     position: absolute;
-    margin: 0;
-    padding: 10px 30px;
-    min-height: 200px;
+    margin: 1em 2em;
+    padding: 0;
+    width: 85%;
+    font-size: 115%;
 }
 .slidePortlet .slideButton {
     position: absolute;
