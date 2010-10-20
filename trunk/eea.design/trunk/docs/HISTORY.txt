@@ -3,15 +3,16 @@ Changelog
 
 2.3-dev - (unreleased)
 ----------------------
+ * Bug fix: fixed 404s on loading images in eea template on devels [ghicaale #3697]
 
 2.2 - (2010-10-19)
 ------------------
- * Fixed bug where pop up panels would dissapear. [thuliper, #3216]
+ * Bug fix: fixed bug where pop up panels would dissapear. [thuliper #3216]
  * Bug fix: fixed print stylesheeet for Firefox [tiberich #3369]
 
 2.1 - (2010-09-29)
 ------------------
- * Change: Better style for commenting features, fixes #3721. [demarant]
+ * Change: Better style for commenting features [demarant #3721]
 
 2.0 - (2010-09-06)
 ------------------
