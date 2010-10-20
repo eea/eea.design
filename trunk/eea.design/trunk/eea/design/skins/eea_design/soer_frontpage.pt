@@ -66,10 +66,10 @@
                             </form>
                         </dd>
                     </dl>
-                    <dl class="portlet">
+                    <dl class="portlet slidePortlet">
                         <dt class="portletHeader">Key fact</dt>
                         <dd class="portletItem" tal:repeat="item view/getKeyFacts">
-                            <span tal:content="item/text"></span>
+                            <span tal:replace="structure item/text"></span>
                         </dd>
                     </dl>
                 </div>
@@ -80,10 +80,10 @@
                             <tal:vidhtml tal:condition="html" tal:replace="structure html"/>
                         </dd>
                     </dl>
-                    <dl class="portlet">
+                    <dl class="portlet slidePortlet">
                         <dt class="portletHeader">Message</dt>
                         <dd class="portletItem" tal:repeat="item view/getMessages">
-                            <span tal:content="item/text"></span>
+                            <span tal:replace="structure item/text"></span>
                         </dd>
                     </dl>
                 </div>

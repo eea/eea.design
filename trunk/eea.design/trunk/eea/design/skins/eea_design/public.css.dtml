@@ -21,6 +21,24 @@ body.section-atlas #visual-column-wrapper {
     float: none;
 }
 
+.slidePortlet {
+    position: relative;
+    overflow: hidden;
+}
+.slidePortlet .portletItem {
+    position: absolute;
+    top: 60px;
+    margin: 0;
+    padding: 0;
+}
+.slidePortlet button {
+    position: absolute;
+    top: 30px;
+}
+.slidePortlet button.next {
+    right: 0;
+}
+
 .section-soer #content .portlet {
     min-height: 235px;
 }
