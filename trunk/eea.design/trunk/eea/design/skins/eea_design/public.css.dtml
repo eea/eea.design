@@ -36,7 +36,8 @@ body.section-atlas #visual-column-wrapper {
 }
 .slidePortlet .slideButton {
     position: absolute;
-    top: 35px;
+    top: 30px;
+    margin: 4px;
     width: 8px;
     height: 8px;
     background: url('&dtml-portal_url;/arrow_left_8x8.png');
