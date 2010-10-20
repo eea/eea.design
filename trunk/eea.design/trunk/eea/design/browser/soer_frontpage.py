@@ -16,9 +16,8 @@ class SoerFrontpage(BrowserView):
             'portal_type': 'SOERMessage',
         })
         for brain in brains:
-            obj = brain.getObject()
             ret.append({
-                'text': obj.CookedBody(),
+                'text': brain.Description,
             })
         return ret
 
@@ -29,9 +28,8 @@ class SoerFrontpage(BrowserView):
             'portal_type': 'SOERKeyFact',
         })
         for brain in brains:
-            obj = brain.getObject()
             ret.append({
-                'text': obj.CookedBody(),
+                'text': brain.Description,
             })
         return ret
 
