@@ -23,8 +23,8 @@ $(document).ready(function() {
 
     $('.slidePortlet').each(function() {
         var portlet = $(this);
-        var b1 = $('<button class="next">Next</button>');
-        var b2 = $('<button class="prev">Prev</button>');
+        var b1 = $('<span class="slideButton next"></span>');
+        var b2 = $('<span class="slideButton prev"></span>');
         portlet.append(b1);
         portlet.append(b2);
 

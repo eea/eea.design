@@ -24,19 +24,26 @@ body.section-atlas #visual-column-wrapper {
 .slidePortlet {
     position: relative;
     overflow: hidden;
+    padding: 0;
 }
 .slidePortlet .portletItem {
     position: absolute;
-    top: 60px;
     margin: 0;
-    padding: 0;
+    padding: 10px 30px;
+    width: 100%;
+    min-height: 200px;
 }
-.slidePortlet button {
+.slidePortlet .slideButton {
     position: absolute;
-    top: 30px;
+    top: 35px;
+    width: 8px;
+    height: 8px;
+    background: url('&dtml-portal_url;/arrow_left_8x8.png');
+    cursor: pointer;
 }
-.slidePortlet button.next {
+.slidePortlet .slideButton.next {
     right: 0;
+    background: url('&dtml-portal_url;/arrow_right_8x8.png');
 }
 
 .section-soer #content .portlet {
