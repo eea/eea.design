@@ -16,8 +16,12 @@ class SoerFrontpage(BrowserView):
             'portal_type': 'SOERMessage',
         })
         for brain in brains:
+            text = brain.Description
+            if len(text) > 400:
+                text = text[:400] + '...'
             ret.append({
-                'text': brain.Description,
+                'text': text,
+                'url': brain.getURL,
             })
         return ret
 
@@ -28,8 +32,12 @@ class SoerFrontpage(BrowserView):
             'portal_type': 'SOERKeyFact',
         })
         for brain in brains:
+            text = brain.Description
+            if len(text) > 400:
+                text = text[:400] + '...'
             ret.append({
-                'text': brain.Description,
+                'text': text,
+                'url': brain.getURL,
             })
         return ret
 
