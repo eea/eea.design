@@ -21,10 +21,11 @@ body.section-atlas #visual-column-wrapper {
     float: none;
 }
 
-.slidePortlet {
+.portlet.slidePortlet {
     position: relative;
     overflow: hidden;
     padding: 0;
+    background: #dcecf4;
 }
 .slidePortlet .portletItem {
     position: absolute;
