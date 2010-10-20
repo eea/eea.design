@@ -1,3 +1,4 @@
+from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
 class SoerFrontpage(BrowserView):
@@ -10,16 +11,28 @@ class SoerFrontpage(BrowserView):
 
     def getMessages(self):
         ret = []
-        ret.append({
-            'text': "The prospects for Europe's environment are mixed but there are opportunities to make the environment more resilient to future risks and changes.",
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog({
+            'portal_type': 'SOERMessage',
         })
+        for brain in brains:
+            obj = brain.getObject()
+            ret.append({
+                'text': obj.CookedBody(),
+            })
         return ret
 
     def getKeyFacts(self):
         ret = []
-        ret.append({
-            'text': "Despite improvements in some regions, diffuse pollution from agriculture remains a major cause of the poor water quality currently observed in parts of Europe.",
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog({
+            'portal_type': 'SOERKeyFact',
         })
+        for brain in brains:
+            obj = brain.getObject()
+            ret.append({
+                'text': obj.CookedBody(),
+            })
         return ret
 
     def getSoerTopics(self):
