@@ -76,6 +76,10 @@ body.section-atlas #visual-column-wrapper {
 .section-soer #free-text-space {
     min-height: 150px;
 }
+.section-soer .photoAlbumEntry {
+    background: white url(&dtml-portal_url;/shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
+    padding: 10px;
+}
 
 .only-ie6 {
     display: none;
