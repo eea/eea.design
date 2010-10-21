@@ -32,8 +32,7 @@
                     <dl class="portlet">
                         <dt class="portletHeader">Search box</dt>
                         <dd class="portletItem">
-                            <span id="search-url" tal:content="view/getSearchURL"></span>
-                            <form id="free-text-search" method="get" tal:attributes="action view/getSearchURL">
+                            <form id="free-text-search" method="get" action="search">
                                 <strong>Free text search</strong>
                                 <br/>
                                 <p>
@@ -41,7 +40,7 @@
                                     <input type="submit" name="search" value="Go!" />
                                 </p>
                             </form>
-                            <form id="topic-search" method="get" tal:attributes="action view/getTopicSearchURL">
+                            <form id="topic-search" method="get" action="soer_topic_search">
                                 <strong>Browse SOER by topic</strong>
                                 <p>
                                 <select name="topic">
@@ -52,7 +51,7 @@
                                 <input type="submit" value="Go!"/>
                                 </p>
                             </form>
-                            <form id="geo-search" method="get" tal:attributes="action view/getSearchURL">
+                            <form id="geo-search" method="get" action="search">
                                 <strong>Browse SOER geographically</strong>
                                 <br/>
                                 <p>

@@ -7,14 +7,14 @@ $(document).ready(function() {
     $('#free-text-search input[type=submit]').click(function(e) {
         e.preventDefault();
         var searchTerm = $('#free-text-search input[type=text]').val();
-        var url = $('#search-url').html() + '#c1=' + searchTerm;
+        var url = window.location.href + '/search' + '#c1=' + searchTerm;
         window.location.href = url;
     });
 
     $('#geo-search input[type=submit]').click(function(e) {
         e.preventDefault();
         var keywords = $('#geo-search select').val();
-        var url = $('#search-url').html() + '#c3=' + keywords;
+        var url = window.location.href + '/search' + '#c3=' + keywords;
         window.location.href = url;
     });
 
