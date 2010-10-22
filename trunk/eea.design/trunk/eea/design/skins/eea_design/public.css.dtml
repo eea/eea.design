@@ -29,23 +29,31 @@ body.section-atlas #visual-column-wrapper {
 }
 .slidePortlet .portletItem {
     position: absolute;
-    margin: 1em 2em;
+    margin: 0;
     padding: 0;
-    width: 85%;
+    width: 100%;
     font-size: 115%;
+}
+.slidePortlet .portletItem span {
+    display: block;
+    padding: 10px 25px;
 }
 .slidePortlet .slideButton {
     position: absolute;
-    top: 30px;
+    top: 40%;
     margin: 4px;
+    padding: 10px 2px;
     width: 8px;
     height: 8px;
-    background: url('&dtml-portal_url;/arrow_left_8x8.png');
+    background: url('&dtml-portal_url;/arrow_left_8x8.png') no-repeat center center #fff;
     cursor: pointer;
+    border: 1px solid white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 .slidePortlet .slideButton.next {
     right: 0;
-    background: url('&dtml-portal_url;/arrow_right_8x8.png');
+    background-image: url('&dtml-portal_url;/arrow_right_8x8.png');
 }
 
 .section-soer #content .portlet {

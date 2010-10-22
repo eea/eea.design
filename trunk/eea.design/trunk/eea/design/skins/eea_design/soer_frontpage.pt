@@ -68,7 +68,9 @@
                     <dl class="portlet slidePortlet">
                         <dt class="portletHeader">Key fact</dt>
                         <dd class="portletItem" tal:repeat="item view/getKeyFacts">
-                            <span tal:replace="structure item/text"></span>
+                            <span>
+                                <span tal:replace="structure item/text"></span>
+                            </span>
                         </dd>
                     </dl>
                 </div>
@@ -82,7 +84,9 @@
                     <dl class="portlet slidePortlet">
                         <dt class="portletHeader">Message</dt>
                         <dd class="portletItem" tal:repeat="item view/getMessages">
-                            <span tal:replace="structure item/text"></span>
+                            <span>
+                                <span tal:replace="structure item/text"></span>
+                            </span>
                         </dd>
                     </dl>
                 </div>
