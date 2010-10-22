@@ -3,10 +3,20 @@ from Products.Five import BrowserView
 
 class SoerFrontpage(BrowserView):
 
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+        utils = getToolByName(context, 'plone_utils')
+        if utils.isDefaultPage(context):
+            self.soer = context.aq_parent
+        else:
+            self.soer = context
+
     def getMessages(self):
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
+            'path': '/'.join(self.soer.getPhysicalPath()),
             'portal_type': 'SOERMessage',
         })
         for brain in brains:
@@ -23,6 +33,7 @@ class SoerFrontpage(BrowserView):
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
+            'path': '/'.join(self.soer.getPhysicalPath()),
             'portal_type': 'SOERKeyFact',
         })
         for brain in brains:

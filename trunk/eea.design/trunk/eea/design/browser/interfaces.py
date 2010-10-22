@@ -19,16 +19,10 @@ class ISoerTopicSearch(Interface):
 
 class ISoerFrontpage(Interface):
 
-    def getSearchURL():
-        pass
-
     def getKeyFacts():
         pass
 
     def getMessages():
-        pass
-
-    def getTopicSearchURL():
         pass
 
     def getSoerTopics():
