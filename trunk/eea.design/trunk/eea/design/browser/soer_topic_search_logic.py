@@ -1,3 +1,4 @@
+import random
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
@@ -71,10 +72,24 @@ class SoerTopicSearch(BrowserView):
         return ret
 
     def getCountryEnvironment(self):
+        countries = getattr(self.soer, 'countries', None)
+        countries = countries.getFolderContents({
+            'portal_type': 'Folder',
+        })
+
+        randoms = []
+        count = 0
+        while len(randoms) < 5:
+            count += 1
+            if count > 100: # Avoid infinite loop
+                break
+            item = random.choice(countries)
+            if not item in randoms:
+                randoms.append(item)
+
         ret = []
-        countries = getattr(self.context, 'countries', None)
         if countries != None:
-            for brain in countries.getFolderContents()[:5]:
+            for brain in randoms:
                 ret.append({
                     'url': brain.getURL(),
                     'title': brain.Title,
