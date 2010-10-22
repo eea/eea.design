@@ -71,6 +71,26 @@ class SoerTopicSearch(BrowserView):
             })
         return ret
 
+    def getGlobalMegatrends(self):
+        tag = self.request.get('topic')
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog({
+            'path': '/'.join(self.soer.getPhysicalPath()),
+            'portal_type': 'File',
+            'Subject': {
+                'query': ['SOER2010', 'global megatrends', tag],
+                'operator': 'and',
+            },
+        })
+        ret = []
+        for brain in brains[:5]:
+            ret.append({
+                'url': brain.getURL(),
+                'title': brain.Title,
+                'description': brain.Description,
+            })
+        return ret
+
     def getCountryEnvironment(self):
         countries = getattr(self.soer, 'countries', None)
         countries = countries.getFolderContents({
