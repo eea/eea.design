@@ -94,25 +94,17 @@ class SoerTopicSearch(BrowserView):
     def getCountryEnvironment(self):
         countries = getattr(self.soer, 'countries', None)
         countries = countries.getFolderContents({
-            'portal_type': 'Folder',
+            'portal_type': 'SOERCountry',
         })
 
-        randoms = []
-        count = 0
-        while len(randoms) < 5:
-            count += 1
-            if count > 100: # Avoid infinite loop
-                break
-            item = random.choice(countries)
-            if not item in randoms:
-                randoms.append(item)
+        randoms = countries[:5]
+        random.shuffle(randoms)
 
         ret = []
-        if countries != None:
-            for brain in randoms:
-                ret.append({
-                    'url': brain.getURL(),
-                    'title': brain.Title,
-                    'description': brain.Description,
-                })
+        for brain in randoms:
+            ret.append({
+                'url': brain.getURL(),
+                'title': brain.Title,
+                'description': brain.Description,
+            })
         return ret
