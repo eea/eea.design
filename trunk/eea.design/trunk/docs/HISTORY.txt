@@ -1,8 +1,9 @@
 Changelog
 =========
 
-2.3-dev - (unreleased)
+2.3 - (2010-10-25)
 ----------------------
+ * SOER 2010 frontpage milestone 1 [thuliper]
  * Bug fix: fixed 404s on loading images in eea template on devels [ghicaale #3697]
 
 2.2 - (2010-10-19)
