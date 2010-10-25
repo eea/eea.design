@@ -32,13 +32,16 @@ class SoerTopicSearch(BrowserView):
         return LABELS.get(tag, tag)
 
     def getSynthesisReport(self):
-        tag = self.request.get('topic')
+        tags = ['SOER2010', 'synthesis']
+        topic = self.request.get('topic', None)
+        if topic != None:
+            tags += [i.strip() for i in topic.split(',')]
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
             'path': '/'.join(self.soer.getPhysicalPath()),
             'portal_type': ['File', 'ATFile'],
             'Subject': {
-                'query': ['SOER2010', 'synthesis', tag],
+                'query': tags,
                 'operator': 'and',
             },
         })
@@ -52,13 +55,16 @@ class SoerTopicSearch(BrowserView):
         return ret
 
     def getThematicAssesments(self):
-        tag = self.request.get('topic')
+        tags = ['SOER2010', 'thematic assessment']
+        topic = self.request.get('topic', None)
+        if topic != None:
+            tags += [i.strip() for i in topic.split(',')]
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
             'path': '/'.join(self.soer.getPhysicalPath()),
             'portal_type': 'File',
             'Subject': {
-                'query': ['SOER2010', 'thematic assessment', tag],
+                'query': tags,
                 'operator': 'and',
             },
         })
@@ -72,13 +78,16 @@ class SoerTopicSearch(BrowserView):
         return ret
 
     def getGlobalMegatrends(self):
-        tag = self.request.get('topic')
+        tags = ['SOER2010', 'global megatrends']
+        topic = self.request.get('topic', None)
+        if topic != None:
+            tags += [i.strip() for i in topic.split(',')]
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
             'path': '/'.join(self.soer.getPhysicalPath()),
             'portal_type': 'File',
             'Subject': {
-                'query': ['SOER2010', 'global megatrends', tag],
+                'query': tags,
                 'operator': 'and',
             },
         })
