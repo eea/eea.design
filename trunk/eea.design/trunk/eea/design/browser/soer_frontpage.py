@@ -101,8 +101,8 @@ class SoerFrontpage(BrowserView):
                 'tags': 'country name',
             },
             {
-                'label': 'Region name (alpine region, Carpathians, Baltic sea)',
-                'tags': 'region name',
+                'label': 'Former Yugoslav Republic of Macedonia',
+                'tags': 'macedonia',
             },
             {
                 'label': 'Europe',
