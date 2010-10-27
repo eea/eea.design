@@ -29,12 +29,11 @@
             </div>
             <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic">
                 <div class="content-column-one">
-                    <dl class="portlet">
+                    <dl class="portlet" id="soerSearchBox">
                         <dt class="portletHeader">Search box</dt>
                         <dd class="portletItem">
                             <form id="free-text-search" method="get" action="search">
                                 <strong>Free text search</strong>
-                                <br/>
                                 <p>
                                     <input type="text" name="q" />
                                     <input type="submit" name="search" value="Go!" />
@@ -53,7 +52,6 @@
                             </form>
                             <form id="geo-search" method="get" action="search">
                                 <strong>Browse SOER geographically</strong>
-                                <br/>
                                 <p>
                                 <select name="geo">
                                     <tal:block tal:repeat="item view/getSoerLocations">

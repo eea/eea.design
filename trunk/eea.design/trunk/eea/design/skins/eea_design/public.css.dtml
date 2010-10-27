@@ -21,6 +21,15 @@ body.section-atlas #visual-column-wrapper {
     float: none;
 }
 
+#soerSearchBox strong {
+    display: block;
+    margin: 5px 0;
+}
+
+#soerSearchBox .portletHeader {
+    margin-bottom: 10px;
+}
+
 .portlet.slidePortlet {
     position: relative;
     overflow: hidden;
