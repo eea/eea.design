@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    if ( $('body').hasClass('section-soer') == false ) {
+    if ( !$('body').hasClass('section-soer') && !$('body').hasClass('section-soer-draft') ) {
         return;
     }
 

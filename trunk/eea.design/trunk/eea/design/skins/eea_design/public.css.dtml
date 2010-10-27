@@ -56,35 +56,41 @@ body.section-atlas #visual-column-wrapper {
     background-image: url('&dtml-portal_url;/arrow_right_8x8.png');
 }
 
-.section-soer #boxes .portlet {
+.section-soer #boxes .portlet,
+.section-soer-draft #boxes .portlet {
     min-height: 235px;
 }
-.section-soer #boxes {
+.section-soer #boxes,
+.section-soer-draft #boxes {
     width: 75%;
 }
-.section-soer #search-url {
+.section-soer #search-url,
+.section-soer-draft #search-url {
     display: none;
 }
-.section-soer #tag-cloud {
+.section-soer #tag-cloud,
+.section-soer-draft #tag-cloud {
     width: 24%;
     margin-left: 1em;
     float: right;
 }
-.section-soer #video-portlet img {
+.section-soer #video-portlet img,
+.section-soer-draft #video-portlet img {
     width: 100%;
 }
-.section-soer #tag-cloud-content {
+.section-soer #tag-cloud-content,
+.section-soer-draft #tag-cloud-content {
     margin-top: 3px;
     padding: 1em;
     height: 300px;
-}
-.section-soer #tag-cloud-content {
     border: 1px dashed #ccc;
 }
-.section-soer #free-text-space {
+.section-soer #free-text-space,
+.section-soer-draft #free-text-space {
     min-height: 150px;
 }
-.section-soer .photoAlbumEntry {
+.section-soer .photoAlbumEntry,
+.section-soer-draft .photoAlbumEntry {
     background: white url(&dtml-portal_url;/shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
     padding: 10px;
 }
