@@ -58,7 +58,7 @@ body.section-atlas #visual-column-wrapper {
 
 .section-soer #boxes .portlet,
 .section-soer-draft #boxes .portlet {
-    min-height: 235px;
+    height: 250px;
 }
 .section-soer #boxes,
 .section-soer-draft #boxes {
@@ -1513,6 +1513,11 @@ body.kupu {
 .richDocumentDescription {
     margin-top: 1em;
     width: 65%;
+}
+
+body.section-soer #visual-portal-wrapper,
+body.section-soer-draft #visual-portal-wrapper {
+    width: 972px;
 }
 
 /* </dtml-with> */
