@@ -31,7 +31,7 @@ class SoerTopicSearch(BrowserView):
         return LABELS.get(tag, tag)
 
     def getSynthesisReport(self):
-        tags = ['SOER2010', 'synthesis']
+        tags = ['synthesis']
         topic = self.request.get('topic', None)
         if topic != None:
             tags += [i.strip() for i in topic.split(',')]
@@ -41,9 +41,10 @@ class SoerTopicSearch(BrowserView):
             'portal_type': ['File', 'ATFile'],
             'Subject': {
                 'query': tags,
-                'operator': 'and',
+                'operator': 'or',
             },
         })
+        brains = [brain for brain in brains if 'SOER2010' in brain.Subject]
         ret = []
         for brain in brains[:1]:
             ret.append({
@@ -54,7 +55,7 @@ class SoerTopicSearch(BrowserView):
         return ret
 
     def getThematicAssesments(self):
-        tags = ['SOER2010', 'thematic assessment']
+        tags = ['thematic assessment']
         topic = self.request.get('topic', None)
         if topic != None:
             tags += [i.strip() for i in topic.split(',')]
@@ -64,9 +65,10 @@ class SoerTopicSearch(BrowserView):
             'portal_type': 'File',
             'Subject': {
                 'query': tags,
-                'operator': 'and',
+                'operator': 'or',
             },
         })
+        brains = [brain for brain in brains if 'SOER2010' in brain.Subject]
         ret = []
         for brain in brains[:5]:
             ret.append({
@@ -77,7 +79,7 @@ class SoerTopicSearch(BrowserView):
         return ret
 
     def getGlobalMegatrends(self):
-        tags = ['SOER2010', 'global megatrends']
+        tags = ['global megatrends']
         topic = self.request.get('topic', None)
         if topic != None:
             tags += [i.strip() for i in topic.split(',')]
@@ -87,9 +89,10 @@ class SoerTopicSearch(BrowserView):
             'portal_type': 'File',
             'Subject': {
                 'query': tags,
-                'operator': 'and',
+                'operator': 'or',
             },
         })
+        brains = [brain for brain in brains if 'SOER2010' in brain.Subject]
         ret = []
         for brain in brains[:5]:
             ret.append({
