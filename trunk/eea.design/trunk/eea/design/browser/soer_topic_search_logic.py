@@ -1,4 +1,3 @@
-import random
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
@@ -106,11 +105,8 @@ class SoerTopicSearch(BrowserView):
             'portal_type': 'SOERCountry',
         })
 
-        randoms = countries[:5]
-        random.shuffle(randoms)
-
         ret = []
-        for brain in randoms:
+        for brain in countries:
             ret.append({
                 'url': brain.getURL(),
                 'title': brain.Title,
