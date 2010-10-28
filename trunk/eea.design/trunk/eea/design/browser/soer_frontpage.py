@@ -16,7 +16,6 @@ class SoerFrontpage(BrowserView):
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
-            'path': '/'.join(self.soer.getPhysicalPath()),
             'portal_type': 'SOERMessage',
         })
         for brain in brains:
@@ -33,7 +32,6 @@ class SoerFrontpage(BrowserView):
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
-            'path': '/'.join(self.soer.getPhysicalPath()),
             'portal_type': 'SOERKeyFact',
         })
         for brain in brains:
