@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.5-dev - (unreleased)
+----------------------
+
 2.4 - (2010-11-05)
 ------------------
 r18506 thuliper	The 'country environment' section now lists part-C content tagged with
