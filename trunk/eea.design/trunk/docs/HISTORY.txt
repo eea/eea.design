@@ -1,8 +1,16 @@
 Changelog
 =========
 
-2.4-dev - (unreleased)
-----------------------
+2.4 - (2010-11-05)
+------------------
+r18506 thuliper	The 'country environment' section now lists part-C content tagged with
+r18500 thuliper Removed path from catalog query so the query should be bullet proof now :)
+r18499 thuliper Only require SOER2010 plus ONE of the passed in keywords. Refs #3797
+r18498 thuliper Display all countries in alphabetical order. Fixes #3800
+r18497 thuliper More padding on search box titles/labels. Refs #3798
+r18496 thuliper Avoid long item in drop down. Refs #3798
+r18495 thuliper Fixed size on #visual-portal-wrapper and video box. Refs #3798
+r18494 thuliper Also support 'soer-draft' as the name of the soer frontpage folder, refs
 
 2.3 - (2010-10-25)
 ----------------------
