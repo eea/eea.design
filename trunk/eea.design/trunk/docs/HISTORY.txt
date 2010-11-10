@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.6-dev - (unreleased)
+----------------------
+
 2.5 - (2010-11-10)
 ------------------
  * titles changed for key facts and messages on soer frontpage #3830 [vincisas]
