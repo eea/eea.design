@@ -1,0 +1,45 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page
+    for="*"
+    name="soer_topic_search_logic"
+    class=".soer_topic_search_logic.SoerTopicSearch"
+    permission="zope.Public"
+    allowed_interface=".interfaces.ISoerTopicSearch"
+    />
+
+  <browser:page
+    for="*"
+    name="soer_frontpage_logic"
+    class=".soer_frontpage.SoerFrontpage"
+    permission="zope.Public"
+    allowed_interface=".interfaces.ISoerFrontpage"
+    />
+
+  <browser:page
+    for="*"
+    name="frontpage_highlights"
+    class=".frontpage.Frontpage"
+    permission="zope.Public"
+    allowed_interface=".interfaces.IFrontPageHighlights"
+    />
+
+  <browser:page
+    for="*"
+    name="subfolder_view_logic"
+    class=".subfolder_view_logic.SubFolderView"
+    permission="zope.Public"
+    allowed_interface=".interfaces.ISubFolderView"
+    />
+
+  <browser:page
+    for="*"
+    name="smart_view_logic"
+    class=".smart_view_logic.SmartView"
+    permission="zope.Public"
+    allowed_interface=".interfaces.ISmartView"
+    />
+
+</configure>
