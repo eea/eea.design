@@ -21,7 +21,8 @@ class SoerFrontpage(BrowserView):
         for brain in brains:
             text = brain.Description
             if len(text) > 400:
-                text = text[:400] + '...'
+                lastSpaceAfter390 = text.find(' ', 390)
+                text = text[:lastSpaceAfter390] + '...'
             ret.append({
                 'text': text,
                 'url': brain.getURL,
