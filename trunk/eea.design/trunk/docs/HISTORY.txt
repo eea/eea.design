@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.6-dev - (unreleased)
-----------------------
+2.6 - (2010-11-11)
+------------------
  * text of key messages and key facts cut after x words #3833 [vincisas]
  * More link added to key facts and key messages. We had to shorten number of characters to max 380 to fit the 'more' link. fixes #3834 [vincisas]
  * First occurence of selected key word is marked bold. fixes #3835 [vincisas]
