@@ -1,0 +1,8 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Remove tooltips from the visual bar. EEA hasn't decided yet if they want them or not.
+        $("#top-news-area .portlet-promotions img").each(function(i) {
+            $(this).attr("title", "").parent().attr("title", ""); // Don't use removeAttr, IE still remembers it
+        });
+    });
+</script>
