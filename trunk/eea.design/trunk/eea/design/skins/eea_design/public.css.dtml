@@ -35,6 +35,7 @@ body.section-atlas #visual-column-wrapper {
     overflow: hidden;
     padding: 0;
     background: #dcecf4;
+    height: 250px ! important;
 }
 .slidePortlet .portletItem {
     position: absolute;
@@ -65,9 +66,14 @@ body.section-atlas #visual-column-wrapper {
     background-image: url('&dtml-portal_url;/arrow_right_8x8.png');
 }
 
+.section-soer .slidePortlet a.moreLink,
+.section-soer-draft .slidePortlet a.moreLink {
+    float: right;
+}
+
 .section-soer #boxes .portlet,
 .section-soer-draft #boxes .portlet {
-    height: 250px;
+    height: 180px;
 }
 .section-soer #boxes,
 .section-soer-draft #boxes {

@@ -68,6 +68,8 @@
                         <dd class="portletItem" tal:repeat="item view/getKeyFacts">
                             <span>
                                 <span tal:replace="structure item/text"></span>
+				<a href="" title="Read more of the key fact" class="moreLink"
+				   tal:attributes="href item/url">more</a>
                             </span>
                         </dd>
                     </dl>
@@ -84,6 +86,8 @@
                         <dd class="portletItem" tal:repeat="item view/getMessages">
                             <span>
                                 <span tal:replace="structure item/text"></span>
+				<a href="" title="Read more of the key message" class="moreLink"
+				   tal:attributes="href item/url">more</a>
                             </span>
                         </dd>
                     </dl>

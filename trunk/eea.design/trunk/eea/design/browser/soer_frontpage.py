@@ -1,6 +1,8 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
+LIMIT_CHARS = 380
+    
 class SoerFrontpage(BrowserView):
 
     def __init__(self, context, request):
@@ -12,6 +14,15 @@ class SoerFrontpage(BrowserView):
         else:
             self.soer = context
 
+    def _prepareText(self, brain):
+        text = brain.Description
+        if len(text) > LIMIT_CHARS:
+            lastSpace = text.find(' ', LIMIT_CHARS-10)
+            text = text[:lastSpace] + '...'
+        for keyword in brain.Subject:
+            text = text.replace(keyword, '<b>%s</b>' % keyword, 1)
+        return text
+        
     def getMessages(self):
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
@@ -19,10 +30,7 @@ class SoerFrontpage(BrowserView):
             'portal_type': 'SOERMessage',
         })
         for brain in brains:
-            text = brain.Description
-            if len(text) > 400:
-                lastSpaceAfter390 = text.find(' ', 390)
-                text = text[:lastSpaceAfter390] + '...'
+            text = self._prepareText(brain)
             ret.append({
                 'text': text,
                 'url': brain.getURL,
@@ -36,9 +44,7 @@ class SoerFrontpage(BrowserView):
             'portal_type': 'SOERKeyFact',
         })
         for brain in brains:
-            text = brain.Description
-            if len(text) > 400:
-                text = text[:400] + '...'
+            text = self._prepareText(brain)
             ret.append({
                 'text': text,
                 'url': brain.getURL,
