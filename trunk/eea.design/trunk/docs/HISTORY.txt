@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.7-dev (unreleased)
+--------------------
+
 2.6 - (2010-11-11)
 ------------------
  * text of key messages and key facts cut after x words #3833 [vincisas]
