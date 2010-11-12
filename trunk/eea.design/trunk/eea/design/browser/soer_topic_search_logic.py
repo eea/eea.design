@@ -105,8 +105,8 @@ class SoerTopicSearch(BrowserView):
     def getCountryEnvironment(self):
         tags = []
         topic = self.request.get('topic', None)
-        if topic != None:
-            tags += [i.strip() for i in topic.split(',')]
+        if topic == None:
+            return []
 
         countries = getattr(self.soer, 'countries', None)
         countries = countries.getFolderContents({
@@ -114,23 +114,12 @@ class SoerTopicSearch(BrowserView):
         })
 
         ret = []
-        catalog = getToolByName(self.context, 'portal_catalog')
         for country in countries:
-            brains = catalog({
-                'path': '/'.join(country.getObject().getPhysicalPath()),
-                'object_provides': 'eea.soer.content.interfaces.ISOERReport',
-                'Subject': {
-                    'query': tags,
-                    'operator': 'or',
-                },
-            })
-            for brain in brains:
-                if not 'SOER2010' in brain.Subject:
-                    continue
-                ret.append({
-                    'url': brain.getURL(),
-                    'title': '%s - %s' % (country.Title, brain.Title),
-                    'description': brain.Description,
+            ret.append({
+                    'url': '%s/soertopic_view?topic=%s' % (country.getURL(), topic),
+                    'image' : country.getURL(),
+                    'title': '%s' % country.Title,
+                    'description': '%s - %s' % (country.Title, topic),
                 })
 
         # Sort alphabetically on country name

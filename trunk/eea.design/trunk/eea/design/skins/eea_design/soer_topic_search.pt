@@ -55,7 +55,7 @@
             <div class="photoAlbumEntry" tal:repeat="item view/getCountryEnvironment">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
-                        <img tal:attributes="src python: item['url'] + '/image_thumb'"/>
+                        <img tal:attributes="src python: item['image'] + '/image_thumb'"/>
                     </span>
                     <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
                 </a>
