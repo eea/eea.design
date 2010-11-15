@@ -18,8 +18,10 @@
 
             <div class="visualClear"></div>
 
+	    <tal:synthesis define="result view/getSynthesisReport"
+			   condition="result">
             <h2>Synthesis</h2>
-            <div class="photoAlbumEntry" tal:repeat="item view/getSynthesisReport">
+            <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
                         <img tal:attributes="src python: item['url'] + '/image_thumb'"/>
@@ -28,9 +30,12 @@
                 </a>
             </div>
             <div class="visualClear"></div>
+	    </tal:synthesis>
 
+	    <tal:europe define="result view/getThematicAssesments"
+			condition="result">
             <h2>Europe's environment: thematic assessments</h2>
-            <div class="photoAlbumEntry" tal:repeat="item view/getThematicAssesments">
+            <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
                         <img tal:attributes="src python: item['url'] + '/image_thumb'"/>
@@ -39,9 +44,12 @@
                 </a>
             </div>
             <div class="visualClear"></div>
+	    </tal:europe>
 
+	    <tal:globaltrends define="result view/getGlobalMegatrends"
+			      condition="result">
             <h2>Europe and the world: global megatrends</h2>
-            <div class="photoAlbumEntry" tal:repeat="item view/getGlobalMegatrends">
+            <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
                         <img tal:attributes="src python: item['url'] + '/image_thumb'"/>
@@ -50,9 +58,12 @@
                 </a>
             </div>
             <div class="visualClear"></div>
+	    </tal:globaltrends>
 
+	    <tal:partc define="result view/getCountryEnvironment"
+		       condition="result">
             <h2>Country environment</h2>
-            <div class="photoAlbumEntry" tal:repeat="item view/getCountryEnvironment">
+            <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
                         <img tal:attributes="src python: item['image'] + '/image_thumb'"/>
@@ -61,6 +72,7 @@
                 </a>
             </div>
             <div class="visualClear"></div>
+            </tal:partc>
         </metal:main-macro>
     </div>
 </body>

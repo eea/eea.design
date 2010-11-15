@@ -15,6 +15,15 @@ LABELS = {
     'global megatrends': 'Global megatrends',
 }
 
+PARTC_TOPIC_MAP = {
+    'climate change': 'climate change',
+    'nature and biodiversity': 'biodiversity',
+    'land use': 'land',
+    'material resources, natural resources, waste': 'waste',
+    'freshwater quality, water resources': 'freshwater',
+    'air pollution': 'air pollution',
+    }
+
 class SoerTopicSearch(BrowserView):
 
     def __init__(self, context, request):
@@ -105,7 +114,7 @@ class SoerTopicSearch(BrowserView):
     def getCountryEnvironment(self):
         tags = []
         topic = self.request.get('topic', None)
-        if topic == None:
+        if topic == None or topic not in PARTC_TOPIC_MAP.keys(): 
             return []
 
         countries = getattr(self.soer, 'countries', None)
@@ -116,10 +125,10 @@ class SoerTopicSearch(BrowserView):
         ret = []
         for country in countries:
             ret.append({
-                    'url': '%s/soertopic_view?topic=%s' % (country.getURL(), topic),
+                    'url': '%s/soertopic_view?topic=%s' % (country.getURL(), PARTC_TOPIC_MAP.get(topic)),
                     'image' : country.getURL(),
                     'title': '%s' % country.Title,
-                    'description': '%s - %s' % (country.Title, topic),
+                    'description': '%s - %s' % (country.Title, PARTC_TOPIC_MAP.get(topic)),
                 })
 
         # Sort alphabetically on country name
