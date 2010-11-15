@@ -40,7 +40,7 @@
                                 </p>
                             </form>
                             <form id="topic-search" method="get" action="soer_topic_search">
-                                <strong>Browse SOER by topic</strong>
+                                <strong>Browse by topic</strong>
                                 <p>
                                 <select name="topic">
                                     <tal:block tal:repeat="item view/getSoerTopics">
@@ -50,22 +50,19 @@
                                 <input type="submit" value="Go!"/>
                                 </p>
                             </form>
-                            <form id="geo-search" method="get" action="search">
-                                <strong>Browse SOER geographically</strong>
-                                <p>
-                                <select name="geo">
-                                    <tal:block tal:repeat="item view/getSoerLocations">
-                                        <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
-                                    </tal:block>
-                                </select>
-                                <input type="submit" value="Go!"/>
-                                </p>
+			    <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
+                            <form onsubmit="$('#browsegeo').click(); return false;">
+			        <strong>Browse geographically</strong>
+                                <input type="submit" value="Go!" onclick=""/>
                             </form>
+                            <div class="hiddenStructure">
+			      <metal:geographically use-macro="context/soer_geographically/macros/main" /> 
+			    </div>
                         </dd>
                     </dl>
                     <dl class="portlet slidePortlet">
                         <dt class="portletHeader">Key facts</dt>
-                        <dd class="portletItem" tal:repeat="item view/getKeyFacts">
+                        <dd class="portletItem" style="left: 370px;"  tal:repeat="item view/getKeyFacts">
                             <span>
                                 <span tal:replace="structure item/text"></span>
 				<a href="" title="Read more of the key fact" class="moreLink"
@@ -83,7 +80,7 @@
                     </dl>
                     <dl class="portlet slidePortlet">
                         <dt class="portletHeader">Key messages</dt>
-                        <dd class="portletItem" tal:repeat="item view/getMessages">
+                        <dd class="portletItem" style="left: 370px;" tal:repeat="item view/getMessages">
                             <span>
                                 <span tal:replace="structure item/text"></span>
 				<a href="" title="Read more of the key message" class="moreLink"

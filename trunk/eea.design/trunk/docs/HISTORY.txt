@@ -4,6 +4,7 @@ Changelog
 2.7-dev (unreleased)
 --------------------
  * map soer topic menu to partc topics and hide any sections that do not have results. #3838 [vincisas]
+ * browse geographically menu as fancybox popup. #3796 [vincisas]
 
 2.6 - (2010-11-11)
 ------------------
