@@ -25,8 +25,10 @@ $(document).ready(function() {
         var portlet = $(this);
         var b1 = $('<span class="slideButton next"></span>');
         var b2 = $('<span class="slideButton prev"></span>');
+        var play = $('<div class="slideButton play"></div>');
         portlet.append(b1);
         portlet.append(b2);
+        portlet.append(play);
 
         // Start positions
         portlet.find('.portletItem').each(function(i, elem) {
@@ -78,6 +80,17 @@ $(document).ready(function() {
             next.animate({'left': 0});
         });
 
-    });
+	var playID;
+        play.toggle(function() {
+		$(this).attr('class', 'slideButton play pause')
+		playID = setInterval(function() {
+			b1.click();}, 3000);
+	    }, function() {
+		$(this).attr('class', 'slideButton play')
+		clearInterval(playID);
+	    });
+		    
+	});
 
 });
+

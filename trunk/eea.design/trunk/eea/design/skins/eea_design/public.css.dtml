@@ -66,9 +66,24 @@ body.section-atlas #visual-column-wrapper {
     background-image: url('&dtml-portal_url;/arrow_right_8x8.png');
 }
 
+.slidePortlet .slideButton.play {
+    bottom: 2px;
+    left: 138px;
+    margin: 4px auto;
+    position: absolute;
+    top: auto;
+    border: 0;
+    padding: 4px;
+    background: transparent url('&dtml-portal_url;/control_play.png') no-repeat center center;
+}
+
+.slidePortlet .slideButton.play.pause {
+    background: transparent url('&dtml-portal_url;/control_pause.png') no-repeat center center;
+}
+
 .section-soer .slidePortlet a.moreLink,
 .section-soer-draft .slidePortlet a.moreLink {
-    float: right;
+    display: inline;
 }
 
 .section-soer #boxes .portlet,

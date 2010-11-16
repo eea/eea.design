@@ -22,11 +22,6 @@
 
             <div class="visualClear"></div>
 
-            <div id="tag-cloud">
-                <div id="tag-cloud-content">
-                    tag cloud ...
-                </div>
-            </div>
             <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic">
                 <div class="content-column-one">
                     <dl class="portlet" id="soerSearchBox">
