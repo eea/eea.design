@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.8-dev (unreleased)
+--------------------
+
 2.7 - (2010-11-16)
 ------------------
  * map soer topic menu to partc topics and hide any sections that do not have results. #3838 [vincisas]
