@@ -5,6 +5,7 @@ Changelog
 --------------------
  * map soer topic menu to partc topics and hide any sections that do not have results. #3838 [vincisas]
  * browse geographically menu as fancybox popup. #3796 [vincisas]
+ * fixed topic search for soer frontpage, made sure the required keywords were queried with AND and then filtered on the 'optionals' #3852 [vincisas]
 
 2.6 - (2010-11-11)
 ------------------

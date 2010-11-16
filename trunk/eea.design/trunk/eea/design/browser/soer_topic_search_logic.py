@@ -39,77 +39,46 @@ class SoerTopicSearch(BrowserView):
         tag = self.request.get('topic')
         return LABELS.get(tag, tag)
 
-    def getSynthesisReport(self):
-        tags = ['synthesis']
-        topic = self.request.get('topic', None)
-        if topic != None:
-            tags += [i.strip() for i in topic.split(',')]
+    def _searchForContent(self, tag, count):
+        tags = ['SOER2010', tag]
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
-            'path': '/'.join(self.soer.getPhysicalPath()),
-            'portal_type': ['File', 'ATFile'],
             'Subject': {
                 'query': tags,
-                'operator': 'or',
+                'operator': 'and',
             },
         })
-        brains = [brain for brain in brains if 'SOER2010' in brain.Subject]
+
+        result = []
+        topic = self.request.get('topic', None)
+        if topic != None:
+            optional_tags = [i.strip() for i in topic.split(',')]
+            for brain in brains:
+                if len(result) >= count:
+                    break
+                for tag in optional_tags:
+                    if tag in brain.Subject:
+                        result.append(brain)
+        else:
+            result = brains
         ret = []
-        for brain in brains[:1]:
+        for brain in result[:count]:
             ret.append({
                 'url': brain.getURL(),
                 'title': brain.Title,
                 'description': brain.Description,
             })
         return ret
+
+
+    def getSynthesisReport(self):
+        return self._searchForContent('synthesis', 1)
 
     def getThematicAssesments(self):
-        tags = ['thematic assessment']
-        topic = self.request.get('topic', None)
-        if topic != None:
-            tags += [i.strip() for i in topic.split(',')]
-        catalog = getToolByName(self.context, 'portal_catalog')
-        brains = catalog({
-            'path': '/'.join(self.soer.getPhysicalPath()),
-            'portal_type': 'File',
-            'Subject': {
-                'query': tags,
-                'operator': 'or',
-            },
-        })
-        brains = [brain for brain in brains if 'SOER2010' in brain.Subject]
-        ret = []
-        for brain in brains[:5]:
-            ret.append({
-                'url': brain.getURL(),
-                'title': brain.Title,
-                'description': brain.Description,
-            })
-        return ret
+        return self._searchForContent('thematic assessment', 5)
 
     def getGlobalMegatrends(self):
-        tags = ['global megatrends']
-        topic = self.request.get('topic', None)
-        if topic != None:
-            tags += [i.strip() for i in topic.split(',')]
-        catalog = getToolByName(self.context, 'portal_catalog')
-        brains = catalog({
-            'path': '/'.join(self.soer.getPhysicalPath()),
-            'portal_type': 'File',
-            'Subject': {
-                'query': tags,
-                'operator': 'or',
-            },
-        })
-        brains = [brain for brain in brains if 'SOER2010' in brain.Subject]
-        ret = []
-        for brain in brains[:5]:
-            ret.append({
-                'url': brain.getURL(),
-                'title': brain.Title,
-                'description': brain.Description,
-            })
-        return ret
+        return self._searchForContent('global megatrends', 5)
 
     def getCountryEnvironment(self):
         tags = []
