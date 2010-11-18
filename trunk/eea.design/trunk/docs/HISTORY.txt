@@ -3,6 +3,7 @@ Changelog
 
 2.8-dev (unreleased)
 --------------------
+ * Feature: Added 'portlet_soer_tagcloud' in order to be used with SOER frontpage [#3860 voineali]
 
 2.7 - (2010-11-16)
 ------------------

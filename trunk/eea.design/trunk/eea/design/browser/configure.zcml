@@ -19,6 +19,13 @@
     />
 
   <browser:page
+    for="zope.interface.Interface"
+    name="soer_tagcloud"
+    class=".tagcloud.TagCloud"
+    permission="zope.Public"
+    />
+
+  <browser:page
     for="*"
     name="frontpage_highlights"
     class=".frontpage.Frontpage"
