@@ -27,11 +27,12 @@ Usage:
 
 <tal:faceted define="
   faceted_path faceted_path | python:getattr(here, 'faceted_path', '');
-  ancestor python:faceted_path and here.restrictedTraverse(faceted_path, '');">
-  <tal:tagcloud condition="ancestor" define="
-    ancestor_url python: ancestor and ancestor.absolute_url();
-    tagcloud nocall:here/@@soer_tagcloud;">
-    <div tal:content="structure python:tagcloud(ancestor)"></div>
+  ancestor python:faceted_path and here.restrictedTraverse(faceted_path, '');
+  ancestor_url python:ancestor and ancestor.absolute_url() or '';
+  tagcloud nocall:here/@@soer_tagcloud;
+  content python:ancestor and tagcloud(ancestor) or '';">
+  <tal:tagcloud condition="content">
+    <div tal:content="structure content"></div>
     <script type="text/javascript" tal:content="string:
       jQuery(document).ready(function(){
         url = '$ancestor_url';
@@ -42,7 +43,7 @@ Usage:
         });
       });"></script>
   </tal:tagcloud>
-  <tal:tagcloud condition="not:ancestor">
+  <tal:tagcloud condition="not:content">
     <div tal:content="string:ERROR: faceted_path=$faceted_path is invalid" />
   </tal:tagcloud>
 </tal:faceted>

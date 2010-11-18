@@ -17,8 +17,9 @@ class TagCloud(BrowserView):
             return ''
 
         cid = ''
-        for cid, criterion in criteria.items():
+        for key, criterion in criteria.items():
             if criterion.get('widget', '') == 'tagscloud':
+                cid = key
                 break
 
         if not cid:
