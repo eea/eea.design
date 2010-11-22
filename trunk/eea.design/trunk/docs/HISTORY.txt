@@ -3,7 +3,8 @@ Changelog
 
 2.9-dev - (unreleased)
 ----------------------
-
+ * BUG FIX: Layout fix for geo popup on SOER homepage #3876 [vincisas]
+ 
 2.8 - (2010-11-19)
 ------------------
  * Feature: Added 'portlet_soer_tagcloud' in order to be used with SOER frontpage [#3860 voineali]

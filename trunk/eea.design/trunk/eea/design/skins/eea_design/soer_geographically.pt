@@ -12,7 +12,7 @@
  <metal:sitemap-content metal:define-macro="main">
     <h1 i18n:translate="title_soer_geographically">Browse SOER geographically</h1>
     
-    <ul id="portal-sitemap">
+    <ul id="portal-sitemap" style="width: 550px;">
             <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Regions</span>
                <ul>
 		<li><a href="">Alpine region</a></li>
