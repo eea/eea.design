@@ -2,6 +2,7 @@ Changelog
 =========
 2.10-dev - (unreleased)
 -----------------------
+ * BUG FIX: layout fix for sliding portlets, play button was overlapping, give more height, fixes #3888. [demarant]
 
 2.9 - (2010-11-22)
 ------------------

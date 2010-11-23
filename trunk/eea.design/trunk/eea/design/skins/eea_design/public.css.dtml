@@ -35,7 +35,7 @@ body.section-atlas #visual-column-wrapper {
     overflow: hidden;
     padding: 0;
     background: #dcecf4;
-    height: 250px ! important;
+    height: 270px ! important;
 }
 .slidePortlet .portletItem {
     position: absolute;
