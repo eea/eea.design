@@ -31,7 +31,7 @@ body.section-atlas #visual-column-wrapper {
     margin-bottom: 10px;
 }
 
-#c13_widget {
+#geo1_widget {
     text-transform: uppercase;
 }
 
