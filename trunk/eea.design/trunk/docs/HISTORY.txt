@@ -8,6 +8,7 @@ Changelog
  * Bug fix: the topic result page for SOER2010 frontpage must include only certain types, fixes #3894 [demarant] 
  * BUG FIX: layout fix for sliding portlets, play button was overlapping, give more height, fixes #3888. [demarant]
  * SOER2010 key messages and key facts: play slower #3899 [vincisas]
+ * SOER2010 make key facts and key messages appear in randomly on SOER homepage #3892 [vincisas]
 
 2.9 - (2010-11-22)
 ------------------

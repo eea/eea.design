@@ -31,16 +31,18 @@ $(document).ready(function() {
         portlet.append(play);
 
         // Start positions
+	var randomnumber=Math.floor(Math.random()* portlet.find('.portletItem').length);
         portlet.find('.portletItem').each(function(i, elem) {
-            var p = i * portlet.width();
+	    var p = (i+1) * portlet.width();
             p += 100; // 100 px just to be sure its outside
-            if (i == 0) {
-                p = 0;
-            }
-            $(elem).css('left', p);
-        });
+	    if( i == randomnumber) {
+		$(elem).addClass('selected');
+		$(elem).css('left', 0);
+	    } else {
+		$(elem).css('left', p);
+	    }
 
-        portlet.find('.portletItem:first').addClass('selected');
+        });
 
         b1.click(function() {
             var current = portlet.find('.portletItem.selected');
