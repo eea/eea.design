@@ -84,7 +84,7 @@ $(document).ready(function() {
         play.toggle(function() {
 		$(this).attr('class', 'slideButton play pause')
 		playID = setInterval(function() {
-			b1.click();}, 5000);
+			b1.click();}, 15000);
 	    }, function() {
 		$(this).attr('class', 'slideButton play')
 		clearInterval(playID);
