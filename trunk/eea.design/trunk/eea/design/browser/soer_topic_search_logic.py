@@ -43,6 +43,7 @@ class SoerTopicSearch(BrowserView):
         tags = ['SOER2010', tag]
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
+            'portal_type': ['Report','File', 'ATFile'], 
             'Subject': {
                 'query': tags,
                 'operator': 'and',
