@@ -21,6 +21,7 @@ body.section-atlas #visual-column-wrapper {
     float: none;
 }
 
+/* specific SOER2010 design */
 #soerSearchBox strong {
     display: block;
     margin: 5px 0;
@@ -28,6 +29,10 @@ body.section-atlas #visual-column-wrapper {
 
 #soerSearchBox .portletHeader {
     margin-bottom: 10px;
+}
+
+#c13_widget {
+    text-transform: uppercase;
 }
 
 .portlet.slidePortlet {
