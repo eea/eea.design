@@ -2,6 +2,7 @@ Changelog
 =========
 2.10-dev - (unreleased)
 -----------------------
+ * Bug fix: layout of key facts boxes, limit the text length from 380 to 320 after some more testing refs #3888 [demarant]
  * Change: style: make all countries names uppercase in soer countries facet, for conformity [demarant]
  * Bug fix: the topic result page for SOER2010 frontpage must include only certain types, fixes #3894 [demarant] 
  * BUG FIX: layout fix for sliding portlets, play button was overlapping, give more height, fixes #3888. [demarant]
