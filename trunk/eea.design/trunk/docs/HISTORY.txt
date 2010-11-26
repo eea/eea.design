@@ -1,7 +1,8 @@
 Changelog
 =========
-2.10-dev - (unreleased)
------------------------
+
+2.10 - (2010-11-26)
+-------------------
  * Change: Added more links under facts/messages boxes and other boxes on SOER frontpage [demarant]
  * Bug fix: re-enabled the soer frontpage tag cloud and adjusted its design [demarant]
  * Bug fix: The tagcloud portlet's items are not updated according with the counting [voineali #3860]
