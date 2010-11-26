@@ -1,0 +1,215 @@
+Changelog
+=========
+
+2.10 - (2010-11-26)
+-------------------
+ * Change: Added more links under facts/messages boxes and other boxes on SOER frontpage [demarant]
+ * Bug fix: re-enabled the soer frontpage tag cloud and adjusted its design [demarant]
+ * Bug fix: The tagcloud portlet's items are not updated according with the counting [voineali #3860]
+ * Change: longer delay when playing keyfacts/keymessages [demarant]
+ * Bug fix: layout of key facts boxes, limit the text length from 380 to 320 after some more testing refs #3888 [demarant]
+ * Change: style: make all countries names uppercase in soer countries facet, for conformity [demarant]
+ * Bug fix: the topic result page for SOER2010 frontpage must include only certain types, fixes #3894 [demarant]
+ * BUG FIX: layout fix for sliding portlets, play button was overlapping, give more height, fixes #3888. [demarant]
+ * SOER2010 key messages and key facts: play slower #3899 [vincisas]
+ * SOER2010 make key facts and key messages appear in randomly on SOER homepage #3892 [vincisas]
+
+2.9 - (2010-11-22)
+------------------
+ * BUG FIX: Layout fix for geo popup on SOER homepage #3876 [vincisas]
+
+2.8 - (2010-11-19)
+------------------
+ * Feature: Added 'portlet_soer_tagcloud' in order to be used with SOER frontpage [#3860 voineali]
+
+2.7 - (2010-11-16)
+------------------
+ * map soer topic menu to partc topics and hide any sections that do not have results. #3838 [vincisas]
+ * browse geographically menu as fancybox popup. #3796 [vincisas]
+ * fixed topic search for soer frontpage, made sure the required keywords were queried with AND and then filtered on the 'optionals' #3852 [vincisas]
+ * play/pause buttons for key message and key fact slide portlets #3840 [vincisas]
+
+2.6 - (2010-11-11)
+------------------
+ * text of key messages and key facts cut after x words #3833 [vincisas]
+ * More link added to key facts and key messages. We had to shorten number of characters to max 380 to fit the 'more' link. fixes #3834 [vincisas]
+ * First occurence of selected key word is marked bold. fixes #3835 [vincisas]
+ * Top portlets on soer frontpage have lower height now, fixes #3836 [vincisas]
+
+2.5 - (2010-11-10)
+------------------
+ * titles changed for key facts and messages on soer frontpage #3830 [vincisas]
+
+2.4 - (2010-11-05)
+------------------
+r18506 thuliper	The 'country environment' section now lists part-C content tagged with
+r18500 thuliper Removed path from catalog query so the query should be bullet proof now :)
+r18499 thuliper Only require SOER2010 plus ONE of the passed in keywords. Refs #3797
+r18498 thuliper Display all countries in alphabetical order. Fixes #3800
+r18497 thuliper More padding on search box titles/labels. Refs #3798
+r18496 thuliper Avoid long item in drop down. Refs #3798
+r18495 thuliper Fixed size on #visual-portal-wrapper and video box. Refs #3798
+r18494 thuliper Also support 'soer-draft' as the name of the soer frontpage folder, refs
+
+2.3 - (2010-10-25)
+----------------------
+ * SOER 2010 frontpage milestone 1 [thuliper]
+ * Bug fix: fixed 404s on loading images in eea template on devels [ghicaale #3697]
+
+2.2 - (2010-10-19)
+------------------
+ * Bug fix: fixed bug where pop up panels would dissapear. [thuliper #3216]
+ * Bug fix: fixed print stylesheeet for Firefox [tiberich #3369]
+
+2.1 - (2010-09-29)
+------------------
+ * Change: Better style for commenting features [demarant #3721]
+
+2.0 - (2010-09-06)
+------------------
+ * Change: Better style for commenting features. [demarant]
+ * Feature: Users with role "CommentsEditor" upon login will keep "EEADesign200"
+     skin and will be redirected on comments section [ghicaale #3509]
+ * Feature: Various portal messages added related to comments functionality [ghicaale #3509]
+ * Feature: Updated the templates so now we can allow discussion on objects [ghicaale #3509]
+ * Feature: Add class for review state to folder_summary_view macros. [tiberich #3561]
+ * Feature: Override default with custom implementation members.css [tiberich #3561]
+
+1.9 - (2010-08-16)
+------------------
+ * Bug fix: Fixed a problem with back-to-toc links when the TOC was regenerated
+ * Feature: Use new fancybox based video popup [thuliper, #3040]
+ * Feature: Refactored eea-toc.js to be able to rebuild it on the fly [tiberich, #3518]
+
+1.8 - (2010-08-04)
+------------------
+ * Feature: Hidable left menu [thuliper, #3436]
+ * Bug fix: Fixed all images to have righ metadata file with cache setting.
+     Added bash script for later use. [demarant]
+ * Feature: Added image icon for creative common license to improve speed [demarant]
+
+1.7 - (2010-07-08)
+------------------
+ * Change: Thinner global nav [demarant]
+ * Change: Reduced the spaces used by the cross-site-top area [demarant]
+
+1.6 - (2010-07-02)
+------------------
+ * Change: Commented "document_relateditems/macros/auto" in main_template.pt [ghicaale, #3468]
+
+1.5 - (2010-07-01)
+------------------
+ * Feature: New globalnav style [thuliper, #3463]
+ * Feature: JSTOC now has a back-to-table-of-contents button [thuliper, #3426]
+ * Change: contact-us panel deactivated for translated sites [thuliper, #2954]
+ * Change: subfolder_view now use default page if one exists [thuliper, #3318]
+
+1.4 - (2010-06-16)
+------------------
+ * Bug fix: Fixed width for TOC area so that long titles are not spanning entire page [demarant].
+ * Change: Removed redundant related feeds macro in below content area [demarant, #3208].
+ * Change: Moved #auto-related portlet to below content [thuliper, #2764]
+ * Change: Merged subfolder_view and dc_view [thuliper, #3372]
+ * Feature: Integrate smart_view with faceted navigation [thuliper, #3340]
+ * Feature: Can now conifigure which headers JSTOC will pick up [thuliper, #3206]
+ * Change: JSTOC now uses absolute URLs [thuliper, #3242]
+ * Feature: JSTOC is now collapsable [thuliper, #3076]
+ * Change: smart_view now works with subfolder_view [thuliper, #3321]
+ * Feature: Add history and bookmark support in smart_view [thuliper, #3238]
+
+1.3 - (2010-05-07)
+------------------
+ * Feature: Integrated eea-accordion with new theme data centres [thuliper]
+ * Feature: Beginning of smart_view [thuliper, #3185]
+ * Change: Document actions now at the bottom [thuliper, #3151]
+ * Change: Make atct_album_view use valentine.imagescales v0.3 fallback image solution [voineali #3305]
+ * Feature: Make accordion scroll the page to the top when clicked [thuliper, #3169]
+ * Feature: Automatically open accordion section where there's a selected
+     navigation item [thuliper, #3168]
+
+1.2 - (2010-03-26)
+------------------
+ * Bug fix: Fixed bug where first link in ETC (cross-site-menu) was not clickable [thuliper, #3177]
+ * Change: Disabled cross site menu popups for IE6 [thuliper, #3175]
+ * Bug fix: Fixed atct_album_view title when used in figure context as it is used by
+   fancybox [voineali #3156]
+ * Feature: Added table of contents portlet [thuliper, #3076]
+
+1.1 - (2010-03-16)
+------------------
+ * Change: Tweaks for gallery-fancybox to work better on small resolutions [thuliper]
+ * Feature: New subfolder_view for listing contents of subfolders [thuliper, #3102]
+
+1.0 - (2010-03-08)
+------------------
+ * Change: Show cross-site-menu panels on mouseclick instead of hover [thuliper, #3039]
+ * Feature: Implemented flexible tooltips in order to be able to add variable
+     length tooltips [voineali, #2986]
+ * Bug fix: Prepend ecotip link in footer with portal_url so that it works
+     with template_service [thuliper, #3038]
+ * Change: Removed frontpage properties from profile, properties are now
+     managed via zmi [demarant]
+ * Change: Update atct_album_view macro in order to be used with eea.dataservice
+     fancybox [voineali, #2924]
+
+0.9 - (2010-02-22)
+------------------
+ * Feature: Autoscroll browser down to element classed 'autoscroll-to-here' #3011
+ * Feature: Separated galleryview/tooltip integration into more descriptive
+     files enabled for CMS [thuliper, #3007]
+ * Change: Generalized the tooltip system [thuliper, #3003]
+
+0.8 - (2010-02-15)
+------------------
+ * Feature: New search box image [thuliper #2952]
+ * Change: Customized jquery.ui panel style to use our blue color on links. [thuliper]
+ * Bug fix: Fixed event pop up to not rely on acquisition to reach the events Rich Topic [thuliper]
+ * Bug fix: Fixed name CSS class name clash with Kupu [thuliper]
+
+0.7 - (2010-01-18)
+------------------
+ * Feature: Portal message for version info now uses two different class styles,
+     one for warning and one for just information. [demarant, #2389]
+ * Feature: Download figure if no thumb on atct_album_view. [ghicaale #2897]
+ * Feature: Slide panels for cross-side-top menu. [vincisas, thuliper #2771, #2881]
+
+0.6 - (2010-01-04)
+------------------
+ * Bug fix: Map tooltip not shown where there is already an events map on the page. [ghicaale #2771]
+
+0.5 - (2009-12-04)
+------------------
+ * Change: Hardcoded list of promotions to show how it looks with correct images. #2824 [thuliper]
+ * Feature: Use new green tooltips from eea.jquery. #2840 [thuliper]
+ * Change: New smaller image layout of frontpage promotions. #2840 [thuliper]
+
+0.4 - (2009-12-01)
+------------------
+ * Feature: Added tooltips for multimedia area #2769 [thuliper]
+ * Feature: Added jQuery Tools tooltips to frontpage promotions. #2824 [thuliper]
+ * Bug fix: Fit current navigation in lowest supported resolution [vincisas]
+
+0.3 - (2009-11-18)
+------------------
+ * Feature: Made /data-and-maps/figures and /data-and-maps/data show in fullscreen. [thuliper]
+ * Change: Removed tagline and frontpage-searchbox. [demarant]
+ * Feature: Display info/warning dialog before printing #2791. [thuliper]
+ * Change: Removed frontpage multimedia from print.css - it didn't layout correctly in IE. [thuliper]
+ * Bug fix: Fixed searchbox not removing default text when focused. [thuliper]
+ * Bug fix: Fixed campaign mode/regular promotions logic so that it does
+     not crash when there's only one promotion. [thuliper]
+ * Bug fix: Fixed content overflow in frontpage column areas. [thuliper]
+ * Bug fix: Fixed document actions position too high #2792. [thuliper]
+ * Bug fix: Fixed bug where promotions on theme pages sometimes took up too little width. [thuliper]
+ * Bug fix: Fixed horizontal scrollbar on frontpage in IE7/8. [vincisas]
+
+0.2 - (2009-11-10)
+------------------
+ * Feature: print.css added
+ * Bug fix: tagline fixes
+ * Feature: a-z glossary link style
+
+0.1 - (2009-11-10)
+------------------
+ * Initial release
+

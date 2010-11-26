@@ -1,0 +1,60 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  i18n:domain="plone">
+<body>
+
+<tal:comment condition="nothing"><!--
+Tagcloud portlet.
+
+Keyword arguments:
+faceted_path -- Relative path to a faceted navigable folder that has at least
+                one tagscloud facet.
+
+                This can be also set as context property if you want to use
+                this portlet with Folder left or right slots.
+
+Usage:
+
+  <tal:tags define="
+    faceted_path string:relative/path/to/faceted/navigation">
+
+    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
+
+  </tal:tags>
+
+--></tal:comment>
+<metal:portlet metal:define-macro="portlet">
+
+<tal:faceted define="
+  faceted_path faceted_path | python:getattr(here, 'faceted_path', '');
+  ancestor python:faceted_path and here.restrictedTraverse(faceted_path, '');
+  ancestor_url python:ancestor and ancestor.absolute_url() or '';
+  tagcloud nocall:here/@@soer_tagcloud;
+  content python:ancestor and tagcloud(ancestor) or '';">
+  <tal:tagcloud condition="content">
+    <div tal:content="structure content"></div>
+    <script type="text/javascript" tal:content="string:
+      jQuery(document).ready(function(){
+        url = '$ancestor_url';
+        Faceted.BASEURL = url.replace(/\/+$$/, '') + '/';
+        Faceted.initializeTagsCloudWidget();
+        jQuery.each(Faceted.Widgets, function(i, w){
+          if(w.count != undefined){
+            w.count();
+          }
+        });
+        jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
+          url = url + '#' + jQuery.param(Faceted.Query);
+          window.location = url;
+        });
+      });"></script>
+  </tal:tagcloud>
+  <tal:tagcloud condition="not:content">
+    <div tal:content="string:ERROR: faceted_path=$faceted_path is invalid" />
+  </tal:tagcloud>
+</tal:faceted>
+
+</metal:portlet>
+
+</body>
+</html>
