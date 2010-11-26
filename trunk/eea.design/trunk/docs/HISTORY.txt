@@ -2,6 +2,8 @@ Changelog
 =========
 2.10-dev - (unreleased)
 -----------------------
+ * Change: Added more links under facts/messages boxes and other boxes on SOER frontpage [demarant]
+ * Bug fix: re-enabled the soer frontpage tag cloud and adjusted its design [demarant]
  * Bug fix: The tagcloud portlet's items are not updated according with the counting [voineali #3860]
  * Change: longer delay when playing keyfacts/keymessages [demarant]
  * Bug fix: layout of key facts boxes, limit the text length from 380 to 320 after some more testing refs #3888 [demarant]

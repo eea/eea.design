@@ -106,7 +106,7 @@ body.section-atlas #visual-column-wrapper {
 .section-soer #tag-cloud,
 .section-soer-draft #tag-cloud {
     width: 24%;
-    margin-left: 1em;
+    margin-left: 0.5em;
     float: right;
 }
 .section-soer #video-portlet img,
@@ -115,10 +115,8 @@ body.section-atlas #visual-column-wrapper {
 }
 .section-soer #tag-cloud-content,
 .section-soer-draft #tag-cloud-content {
-    margin-top: 3px;
-    padding: 1em;
+    margin-top: -10px;
     height: 300px;
-    border: 1px dashed #ccc;
 }
 .section-soer #free-text-space,
 .section-soer-draft #free-text-space {

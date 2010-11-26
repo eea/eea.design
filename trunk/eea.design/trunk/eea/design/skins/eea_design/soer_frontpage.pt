@@ -21,11 +21,16 @@
             </p>
 
             <div class="visualClear"></div>
+            <div id="tag-cloud"> 
+	 	 <div id="tag-cloud-content" tal:define="faceted_path string:soer/search"> 
+	 	                    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
+	 	 </div>
+            </div>
 
             <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic">
                 <div class="content-column-one">
                     <dl class="portlet" id="soerSearchBox">
-                        <dt class="portletHeader">Search box</dt>
+                        <dt class="portletHeader">Search SOER</dt>
                         <dd class="portletItem">
                             <form id="free-text-search" method="get" action="search">
                                 <strong>Free text search</strong>
@@ -53,6 +58,7 @@
                             <div class="hiddenStructure">
 			      <metal:geographically use-macro="context/soer_geographically/macros/main" /> 
 			    </div>
+                              <span><a title="Advanced search" class="internal-link moreLink" href="resolveuid/50e782ab04ad85d4b501698fa136b66d">Advanced search</a></span>
                         </dd>
                     </dl>
                     <dl class="portlet slidePortlet">
@@ -65,6 +71,7 @@
                             </span>
                         </dd>
                     </dl>
+                    <p><a title="All key facts" class="internal-link moreLink" href="resolveuid/10fa976d921e0e9a44d329a927835668">All key facts</a></p>
                 </div>
                 <div class="content-column-two">
                     <dl class="portlet" id="video-portlet">
@@ -83,6 +90,7 @@
                             </span>
                         </dd>
                     </dl>
+                    <p><a title="All key messages" class="internal-link moreLink" href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c">All key messages</a></p>
                 </div>
                 <div class="visualClear"></div>
                 <div id="free-text-space" tal:define="txt context/getText|nothing">
