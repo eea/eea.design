@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.11-dev - (unreleased)
+-----------------------
+
 2.10 - (2010-11-26)
 -------------------
  * Change: Added more links under facts/messages boxes and other boxes on SOER frontpage [demarant]
