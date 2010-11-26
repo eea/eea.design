@@ -36,7 +36,13 @@ Usage:
     <script type="text/javascript" tal:content="string:
       jQuery(document).ready(function(){
         url = '$ancestor_url';
+        Faceted.BASEURL = url.replace(/\/+$$/, '') + '/';
         Faceted.initializeTagsCloudWidget();
+        jQuery.each(Faceted.Widgets, function(i, w){
+          if(w.count != undefined){
+            w.count();
+          }
+        });
         jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
           url = url + '#' + jQuery.param(Faceted.Query);
           window.location = url;

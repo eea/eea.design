@@ -2,10 +2,11 @@ Changelog
 =========
 2.10-dev - (unreleased)
 -----------------------
+ * Bug fix: The tagcloud portlet's items are not updated according with the counting [voineali #3860]
  * Change: longer delay when playing keyfacts/keymessages [demarant]
  * Bug fix: layout of key facts boxes, limit the text length from 380 to 320 after some more testing refs #3888 [demarant]
  * Change: style: make all countries names uppercase in soer countries facet, for conformity [demarant]
- * Bug fix: the topic result page for SOER2010 frontpage must include only certain types, fixes #3894 [demarant] 
+ * Bug fix: the topic result page for SOER2010 frontpage must include only certain types, fixes #3894 [demarant]
  * BUG FIX: layout fix for sliding portlets, play button was overlapping, give more height, fixes #3888. [demarant]
  * SOER2010 key messages and key facts: play slower #3899 [vincisas]
  * SOER2010 make key facts and key messages appear in randomly on SOER homepage #3892 [vincisas]
@@ -13,7 +14,7 @@ Changelog
 2.9 - (2010-11-22)
 ------------------
  * BUG FIX: Layout fix for geo popup on SOER homepage #3876 [vincisas]
- 
+
 2.8 - (2010-11-19)
 ------------------
  * Feature: Added 'portlet_soer_tagcloud' in order to be used with SOER frontpage [#3860 voineali]
