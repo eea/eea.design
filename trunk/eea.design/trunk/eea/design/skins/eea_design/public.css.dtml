@@ -93,7 +93,7 @@ body.section-atlas #visual-column-wrapper {
 
 .section-soer #boxes .portlet,
 .section-soer-draft #boxes .portlet {
-    height: 180px;
+    height: 190px;
 }
 .section-soer #boxes,
 .section-soer-draft #boxes {
