@@ -1,7 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
-LIMIT_CHARS = 320
+LIMIT_CHARS = 300
     
 class SoerFrontpage(BrowserView):
 
