@@ -29,14 +29,14 @@
 
             <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic">
                 <div class="content-column-one">
-                    <dl class="portlet" id="soerSearchBox">
-                        <dt class="portletHeader">Search SOER</dt>
+                    <dl class="portlet" id="soerSearchBox" style="padding:0px;">
+                        <dt class="portletHeader" style="padding:5px;">Search SOER</dt>
                         <dd class="portletItem">
                             <form id="free-text-search" method="get" action="search">
                                 <strong>Free text search</strong>
                                 <p>
                                     <input type="text" name="q" />
-                                    <input type="submit" name="search" value="Go!" />
+                                    <input type="submit" style="cursor: pointer; cursor: hand;" name="search" value="Go!" />
                                 </p>
                             </form>
                             <form id="topic-search" method="get" action="soer_topic_search">
@@ -47,22 +47,21 @@
                                         <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
                                     </tal:block>
                                 </select>
-                                <input type="submit" value="Go!"/>
+                                <input type="submit" style="cursor: pointer; cursor: hand;" value="Go!"/>
                                 </p>
                             </form>
 			    <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
                             <form onsubmit="$('#browsegeo').click(); return false;">
-			        <strong>Browse geographically</strong>
-                                <input type="submit" value="Go!" onclick=""/>
+                                <p style="margin-top:10px"><input type="submit" style="cursor: pointer; cursor: hand;" value="Browse geographically..." onclick=""/></p>
                             </form>
                             <div class="hiddenStructure">
 			      <metal:geographically use-macro="context/soer_geographically/macros/main" /> 
 			    </div>
-                              <span><a title="Advanced search" class="internal-link moreLink" href="resolveuid/50e782ab04ad85d4b501698fa136b66d">Advanced search</a></span>
+                              <span><a title="Advanced search" style="float:right;" class="internal-link moreLink" href="resolveuid/50e782ab04ad85d4b501698fa136b66d">Advanced search</a></span>
                         </dd>
                     </dl>
                     <dl class="portlet slidePortlet">
-                        <dt class="portletHeader">Key facts</dt>
+                        <dt class="portletHeader" style="padding:5px;">Key facts</dt>
                         <dd class="portletItem" style="left: 370px;"  tal:repeat="item view/getKeyFacts">
                             <span>
                                 <span tal:replace="structure item/text"></span>
@@ -74,14 +73,14 @@
                     <p><a title="All key facts" class="internal-link moreLink" href="resolveuid/10fa976d921e0e9a44d329a927835668">All key facts</a></p>
                 </div>
                 <div class="content-column-two">
-                    <dl class="portlet" id="video-portlet">
+                    <dl class="portlet" id="video-portlet" style="padding:0px;">
                         <dt class="portletHeader">Video</dt>
                         <dd class="portletItem" tal:define="html context/soer_video/getText|nothing">
                             <tal:vidhtml tal:condition="html" tal:replace="structure html"/>
                         </dd>
                     </dl>
                     <dl class="portlet slidePortlet">
-                        <dt class="portletHeader">Key messages</dt>
+                        <dt class="portletHeader" style="padding:5px;">Key messages</dt>
                         <dd class="portletItem" style="left: 370px;" tal:repeat="item view/getMessages">
                             <span>
                                 <span tal:replace="structure item/text"></span>
