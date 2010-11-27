@@ -7,7 +7,7 @@ $(document).ready(function() {
     $('#free-text-search input[type=submit]').click(function(e) {
         e.preventDefault();
         var searchTerm = $('#free-text-search input[type=text]').val();
-        var url = window.location.href + '/search' + '#c1=' + searchTerm;
+        var url = window.location.href + '/search' + '#c4=' + searchTerm;
         window.location.href = url;
     });
 
@@ -86,7 +86,7 @@ $(document).ready(function() {
         play.toggle(function() {
 		$(this).attr('class', 'slideButton play pause')
 		playID = setInterval(function() {
-			b1.click();}, 15000);
+			b1.click();}, 7000);
 	    }, function() {
 		$(this).attr('class', 'slideButton play')
 		clearInterval(playID);
