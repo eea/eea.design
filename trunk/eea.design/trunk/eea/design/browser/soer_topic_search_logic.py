@@ -57,9 +57,13 @@ class SoerTopicSearch(BrowserView):
             for brain in brains:
                 if len(result) >= count:
                     break
+                optionalAppended = False
                 for tag in optional_tags:
                     if tag in brain.Subject:
                         result.append(brain)
+                        optionalAppended = True
+                    if optionalAppended:
+                        break
         else:
             result = brains
         ret = []
@@ -73,13 +77,13 @@ class SoerTopicSearch(BrowserView):
 
 
     def getSynthesisReport(self):
-        return self._searchForContent('synthesis', 1)
+        return self._searchForContent('synthesis', 10)
 
     def getThematicAssesments(self):
-        return self._searchForContent('thematic assessment', 5)
+        return self._searchForContent('thematic assessment', 30)
 
     def getGlobalMegatrends(self):
-        return self._searchForContent('global megatrends', 5)
+        return self._searchForContent('global megatrends', 30)
 
     def getCountryEnvironment(self):
         tags = []
