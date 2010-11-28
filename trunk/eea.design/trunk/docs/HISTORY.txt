@@ -3,6 +3,7 @@ Changelog
 
 2.11-dev - (unreleased)
 -----------------------
+ * Bug fix: disabled enter key event on soer frontpage free text search, since it was not working, fixes #3916 [demarant]
  * Bug fix: max characters for soer boxes is lowered to 300, fixes #3888 [demarant]
  * Bug fix: fixed many layout issues on soer frontpage,synched from custom, fixes #3912 [demarant]
  * Change: compromised time of 7s for message portlet slide on soer frontpage [demarant]

@@ -35,7 +35,7 @@
                             <form id="free-text-search" method="get" action="search">
                                 <strong>Free text search</strong>
                                 <p>
-                                    <input type="text" name="q" />
+                                    <input type="text" name="q" onKeyPress="return disableEnterKey(event)" />
                                     <input type="submit" style="cursor: pointer; cursor: hand;" name="search" value="Go!" />
                                 </p>
                             </form>
