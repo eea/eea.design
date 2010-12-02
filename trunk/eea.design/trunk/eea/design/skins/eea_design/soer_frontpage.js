@@ -31,19 +31,12 @@ $(document).ready(function() {
         portlet.append(play);
 
         // Start positions
-	var randomnumber=Math.floor(Math.random()* portlet.find('.portletItem').length);
-        portlet.find('.portletItem').each(function(i, elem) {
-	    var p = (i+1) * portlet.width();
-            p += 100; // 100 px just to be sure its outside
-	    if( i == randomnumber) {
-		$(elem).addClass('selected');
-		$(elem).css('left', 0);
-	    } else {
-		$(elem).css('left', p);
-	    }
-
-        });
-
+	var items = portlet.find('.portletItem');
+	var randomnumber=Math.floor(Math.random()*items.length);
+	var elem = items[randomnumber];
+	$(elem).addClass('selected');
+	$(elem).css('left', 0);
+	
         b1.click(function() {
             var current = portlet.find('.portletItem.selected');
             var next = current.next('.portletItem');
