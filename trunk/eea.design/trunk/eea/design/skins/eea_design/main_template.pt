@@ -126,6 +126,10 @@
                                                         </metal:bodytext>
 
                                                         <div id="belowContent">
+                                                            <div metal:use-macro="here/document_relateditems/macros/pages">
+                                                                show related feeds if they exist
+                                                            </div>
+
                                                             <div metal:use-macro="here/document_relateditems/macros/feeds">
                                                                 show related feeds if they exist
                                                             </div>
