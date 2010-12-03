@@ -12,6 +12,7 @@ Changelog
  * removed unnecessary loop in soer_fronpage.js that was putting IE8 on it knees #3931 [vincisas]
  * added related pages at the bottom since the related portlets are removed in document_view in ZMI custom #3927 [vincisas]
  * remove related items code from file_view, we have everything in main_template. #3926 [vincisas]
+ * Change: customized at_download.py to raise NotFound instead of raising errors [tiberich #3934]
 
 2.10 - (2010-11-26)
 -------------------
