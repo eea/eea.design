@@ -6,13 +6,13 @@
     </head>
     <body>
 
-    <div metal:fill-slot="main">MMMMM
+    <div metal:fill-slot="main">
         <h1 class="hiddenStructure" tal:content="context/Title">EEA Home page</h1>
         <tal:main-macro metal:define-macro="main">
             <div metal:use-macro="here/document_actions/macros/document_actions">
                 Document actions (print, sendto etc)
             </div>
-            <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">XXXXXX
+            <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
                 <tal:promos condition="python:request.get('LANGUAGE','en') == 'en'">
                     <div id="top-news-area" tal:define="global promotions frontpage_view/getPromotions; global campaign frontpage_view/getCampaign">
                         <tal:dummy tal:condition="python:campaign and 'force_promotions' not in request">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div id="highlights-area" class="column-area">
-                        <h2 class="column-title" i18n:translate="News">News xxx</h2>
+                        <h2 class="column-title" i18n:translate="News">News</h2>
                         <div metal:use-macro="here/frontpage_macros/macros/high">
                             Top Highlights
                         </div>
