@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.11-dev - (unreleased)
------------------------
+2.11 - (2010-12-06)
+-------------------
  * Change: renamed the soer search template to advanced-search, since search is plone reserved and stopped working [demarant]
  * Bug fix: disabled enter key event on soer frontpage free text search, since it was not working, fixes #3916 [demarant]
  * Bug fix: max characters for soer boxes is lowered to 300, fixes #3888 [demarant]
