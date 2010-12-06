@@ -677,6 +677,10 @@ float:right;
     border: 1px solid #ccc;
 }
 
+#portal-column-one #portlet-subscribtion {
+    margin-top:20px;
+}
+
 #cross-site-top .panel #portlet-subscribtion {
     margin: 0;
 }
