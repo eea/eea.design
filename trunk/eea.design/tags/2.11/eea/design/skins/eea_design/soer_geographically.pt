@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+</head>
+
+<body>
+
+<metal:main fill-slot="main">
+ <metal:sitemap-content metal:define-macro="main">
+    <h1 i18n:translate="title_soer_geographically">Browse SOER geographically</h1>
+    
+    <ul id="portal-sitemap" style="width: 550px;">
+            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Regions</span>
+               <ul>
+		<li><a href="">Alpine region</a></li>
+		<li><a href="">Carpathians</a></li>
+		<li><a href="">Baltic sea</a></li>
+   	       </ul>
+	       <br/>
+	       <a href="europe">Europe</a><br/>
+	       <br/>
+	       <a href="europe-and-the-world">World</a>
+            </li>
+            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Countries A-F</span>
+               <ul>
+		<li><a href="countries/al/" title="Albania">Albania</a></li>
+		<li><a href="countries/at/" title="Austria">Austria</a></li>
+		<li><a href="countries/be/" title="Belgium">Belgium</a></li>
+		<li><a href="countries/ba/" title="Bosnia and Herzegovina">Bosnia and Herzegovina</a></li>
+		<li><a href="countries/bg/" title="Bulgaria">Bulgaria</a></li>
+		<li><a href="countries/hr/" title="Croatia">Croatia</a></li>
+		<li><a href="countries/cy/" title="Cyprus">Cyprus</a></li>
+		<li><a href="countries/cz/" title="Czech Republic">Czech Republic</a></li>
+		<li><a href="countries/dk/" title="Denmark">Denmark</a></li>
+		<li><a href="countries/ee/" title="Estonia">Estonia</a></li>
+		<li><a href="countries/fi/" title="Finland">Finland</a></li>
+		<li><a href="countries/mk/" title="Former Yugoslav Republic of Macedonia">Former Yugoslav Republic of Macedonia</a></li>
+		<li><a href="countries/fr/" title="France">France</a></li>
+   	       </ul>            </li>
+            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Countries G-M</span>
+               <ul>
+		<li><a href="countries/de/" title="Germany">Germany</a></li>
+		<li><a href="countries/gr/" title="Greece">Greece</a></li>
+		<li><a href="countries/hu/" title="Hungary">Hungary</a></li>
+		<li><a href="countries/is/" title="Iceland">Iceland</a></li>
+		<li><a href="countries/ie/" title="Ireland">Ireland</a></li>
+		<li><a href="countries/it/" title="Italy">Italy</a></li>
+		<li><a href="countries/lv/" title="Latvia">Latvia</a></li>
+		<li><a href="countries/li/" title="Liechtenstein">Liechtenstein</a></li>
+		<li><a href="countries/lt/" title="Lithuania">Lithuania</a></li>
+		<li><a href="countries/lu/" title="Luxembourg">Luxembourg</a></li>
+		<li><a href="countries/mt/" title="Malta">Malta</a></li>
+		<li><a href="countries/me/" title="Montenegro">Montenegro</a></li>
+   	       </ul>
+            </li>
+            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Countries L-Y</span>
+               <ul>
+		<li><a href="countries/nl/" title="Netherlands">Netherlands</a></li>
+		<li><a href="countries/no/" title="Norway">Norway</a></li>
+		<li><a href="countries/pl/" title="Poland">Poland</a></li>
+		<li><a href="countries/pt/" title="Portugal">Portugal</a></li>
+		<li><a href="countries/ro/" title="Romania">Romania</a></li>
+		<li><a href="countries/rs/" title="Serbia">Serbia</a></li>
+		<li><a href="countries/sk/" title="Slovakia">Slovakia</a></li>
+		<li><a href="countries/si/" title="Slovenia">Slovenia</a></li>
+		<li><a href="countries/es/" title="Spain">Spain</a></li>
+		<li><a href="countries/se/" title="Sweden">Sweden</a></li>
+		<li><a href="countries/ch/" title="Switzerland">Switzerland</a></li>
+		<li><a href="countries/tr/" title="Turkey">Turkey</a></li>
+		<li><a href="countries/gb/" title="United Kingdom ">United Kingdom</a></li>
+   	       </ul>
+            </li>
+    </ul>
+ </metal:sitemap-content>
+</metal:main>
+
+</body>
+
+</html>
