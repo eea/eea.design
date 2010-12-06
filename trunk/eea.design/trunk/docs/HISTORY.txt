@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.12-dev - (unreleased)
+-----------------------
+
 2.11 - (2010-12-06)
 -------------------
  * Change: renamed the soer search template to advanced-search, since search is plone reserved and stopped working [demarant]
