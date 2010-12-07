@@ -15,9 +15,9 @@
     <ul id="portal-sitemap" style="width: 550px;">
             <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Regions</span>
                <ul>
-		<li><a href="">Alpine region</a></li>
-		<li><a href="">Carpathians</a></li>
-		<li><a href="">Baltic sea</a></li>
+		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&c11=DiversityReport&c11=FlexibilityReport&c12=all&c5=&b_start=0&c15=alpine">Alpine region</a></li>
+		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&c11=DiversityReport&c11=FlexibilityReport&c12=all&c5=&b_start=0&c15=carpathian">Carpathians</a></li>
+		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&c11=DiversityReport&c11=FlexibilityReport&c12=all&c5=&b_start=0&c15=baltic">Baltic sea</a></li>
    	       </ul>
 	       <br/>
 	       <a href="europe">Europe</a><br/>
