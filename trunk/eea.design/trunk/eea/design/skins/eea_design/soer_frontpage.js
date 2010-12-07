@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    if ( !$('body').hasClass('section-soer') && !$('body').hasClass('section-soer-draft') ) {
+	if ( !$('body').hasClass('section-soer') && !$('body').hasClass('section-soer-draft') && !$('body').hasClass('.slidePortlet') ) {
         return;
     }
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
         var portlet = $(this);
         var b1 = $('<span class="slideButton next"></span>');
         var b2 = $('<span class="slideButton prev"></span>');
-        var play = $('<div class="slideButton play"></div>');
+        var play = $('<div class="slideButton play pause"></div>');
         portlet.append(b1);
         portlet.append(b2);
         portlet.append(play);
@@ -73,21 +73,22 @@ $(document).ready(function() {
             var p = portlet.width() + 100;
             current.animate({'left': portlet.width() + 100});
             next.animate({'left': 0});
-        });
-
-	var playID;
-        play.toggle(function() {
-		$(this).attr('class', 'slideButton play pause')
-		playID = setInterval(function() {
-			b1.click();}, 7000);
-	    }, function() {
-		$(this).attr('class', 'slideButton play')
-		clearInterval(playID);
 	    });
-		    
-	});
+        
 
-});
+        var playID;
+        play.toggle(function() {
+		$(this).attr('class', 'slideButton play');
+		clearInterval(playID);
+	    }, function() {
+		$(this).attr('class', 'slideButton play pause');
+		playID = setInterval(function() {
+			    b1.click();}, 10000);
+	    });
+        playID = setInterval(function() {
+		b1.click();}, 10000);
+   });
+});	
 
 function disableEnterKey(e)
 {
