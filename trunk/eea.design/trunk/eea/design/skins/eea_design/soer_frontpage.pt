@@ -22,7 +22,7 @@
 
             <div class="visualClear"></div>
             <div id="tag-cloud"> 
-	 	 <div id="tag-cloud-content" tal:define="faceted_path string:soer/search"> 
+	 	 <div id="tag-cloud-content" tal:define="faceted_path string:soer/advanced-search"> 
 	 	                    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
 	 	 </div>
             </div>
@@ -35,7 +35,7 @@
                             <form id="free-text-search" method="get" action="advanced-search">
                                 <strong>Free text search</strong>
                                 <p>
-                                    <input type="text" name="q" onKeyPress="return disableEnterKey(event)" />
+                                    <input type="text" name="#c4" onKeyPress="return disableEnterKey(event)" />
                                     <input type="submit" style="cursor: pointer; cursor: hand;" name="search" value="Go!" />
                                 </p>
                             </form>
@@ -52,12 +52,12 @@
                             </form>
 			    <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
                             <form onsubmit="$('#browsegeo').click(); return false;">
-                                <p style="margin-top:10px"><input type="submit" style="cursor: pointer; cursor: hand;" value="Browse geographically..." onclick=""/></p>
+                                <p style="margin-top:8px"><input type="submit" style="cursor: pointer; cursor: hand;" value="Browse geographically..." onclick=""/></p>
                             </form>
                             <div class="hiddenStructure">
 			      <metal:geographically use-macro="context/soer_geographically/macros/main" /> 
 			    </div>
-                              <span><a title="Advanced search" style="float:right;" class="internal-link moreLink" href="resolveuid/50e782ab04ad85d4b501698fa136b66d">Advanced search</a></span>
+                            <span><a title="Advanced search" style="float:right;" class="moreLink" href="./advanced-search">Advanced search</a></span>
                         </dd>
                     </dl>
                     <dl class="portlet slidePortlet">
