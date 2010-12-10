@@ -12,7 +12,7 @@ function build_toc(){
         var queryString = $(this).find(' #queryString').html();
 
         $('#region-content').find(queryString).each(function(i, el) {
-            var newLevel = parseInt(el.tagName.charAt(1));
+            var newLevel = parseInt(el.tagName.charAt(1), 10);
             hLevel = hLevel || newLevel;
 
             if (newLevel > hLevel) {
@@ -23,7 +23,7 @@ function build_toc(){
                 currentList = newList;
             } else if (newLevel < hLevel) {
                 hLevel = newLevel;
-                currentList = lists[newLevel] || lists['root'];
+                currentList = lists[newLevel] || lists.root;
             }
 
             var h = $(el);
@@ -40,7 +40,7 @@ function build_toc(){
                 var backButton = $('.eea-template.back-to-toc-button').clone();
                 if (backButton.length) {
                     backButton.removeClass('eea-template');
-                    backButton.attr('href', urlWithoutHash + "#" + tocID)
+                    backButton.attr('href', urlWithoutHash + "#" + tocID);
                     backButton.attr('title', "Back to table of contents");
                     backButton.appendTo(h);
                     h.addClass('header-with-go-back-button');
@@ -60,4 +60,4 @@ function build_toc(){
 
 $(document).ready(function() {
     build_toc();
-})
+});

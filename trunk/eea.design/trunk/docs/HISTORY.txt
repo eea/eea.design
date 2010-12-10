@@ -3,6 +3,7 @@ Changelog
 
 2.12-dev - (unreleased)
 -----------------------
+ * Bug fix: Fixed jslint warnings [voineali #3821]
 
 2.11 - (2010-12-06)
 -------------------

@@ -11,7 +11,7 @@ var warning_displayed = false;
 
 window.onbeforeprint = function() {
     var warning_text = $.trim($("#print-warning p").html());
-    if (warning_displayed == false) {
+    if (warning_displayed === false) {
         alert(warning_text);
     }
 };

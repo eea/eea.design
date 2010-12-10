@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	if ( !$('body').hasClass('section-soer') && !$('body').hasClass('section-soer-draft') && !$('body').hasClass('.slidePortlet') ) {
+    if ( !$('body').hasClass('section-soer') && !$('body').hasClass('section-soer-draft') && !$('body').hasClass('.slidePortlet') ) {
         return;
     }
 
@@ -31,12 +31,12 @@ $(document).ready(function() {
         portlet.append(play);
 
         // Start positions
-	var items = portlet.find('.portletItem');
-	var randomnumber=Math.floor(Math.random()*items.length);
-	var elem = items[randomnumber];
-	$(elem).addClass('selected');
-	$(elem).css('left', 0);
-	
+    var items = portlet.find('.portletItem');
+    var randomnumber=Math.floor(Math.random()*items.length);
+    var elem = items[randomnumber];
+    $(elem).addClass('selected');
+    $(elem).css('left', 0);
+
         b1.click(function() {
             var current = portlet.find('.portletItem.selected');
             var next = current.next('.portletItem');
@@ -63,7 +63,7 @@ $(document).ready(function() {
             var currentIndex = portlet.find('.portletItem').index(current);
             var nextIndex = portlet.find('.portletItem').index(next);
 
-            if (currentIndex == 0) {
+            if (currentIndex === 0) {
                 return;
             }
 
@@ -73,30 +73,30 @@ $(document).ready(function() {
             var p = portlet.width() + 100;
             current.animate({'left': portlet.width() + 100});
             next.animate({'left': 0});
-	    });
-        
+        });
+
 
         var playID;
         play.toggle(function() {
-		$(this).attr('class', 'slideButton play');
-		clearInterval(playID);
-	    }, function() {
-		$(this).attr('class', 'slideButton play pause');
-		playID = setInterval(function() {
-			    b1.click();}, 10000);
-	    });
+        $(this).attr('class', 'slideButton play');
+        clearInterval(playID);
+        }, function() {
+        $(this).attr('class', 'slideButton play pause');
         playID = setInterval(function() {
-		b1.click();}, 10000);
+            b1.click();}, 10000);
+        });
+        playID = setInterval(function() {
+        b1.click();}, 10000);
    });
-});	
+});
 
-function disableEnterKey(e)
+var disableEnterKey = function(e)
 {
-     var key;      
-     if(window.event)
-          key = window.event.keyCode; //IE
-     else
-          key = e.which; //firefox      
-
-     return (key != 13);
-}
+    var key;
+    if(window.event){
+        key = window.event.keyCode; //IE
+    }else{
+        key = e.which; //firefox
+    }
+    return (key != 13);
+};

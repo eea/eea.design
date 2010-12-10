@@ -27,7 +27,7 @@ $(window).resize(function() {
     // Layout of top promotions. It's safer to do this in JS as there was some rounding issues
     // with IE in window sizes that wasn't dividible by 5.
     var margin = $('#top-news-area').width() * 0.03;
-    var w = ($('#top-news-area').width() - 4 * margin) / 5;
+    w = ($('#top-news-area').width() - 4 * margin) / 5;
     $('#top-news-area .portlet-promotions').width(w);
     $('#top-news-area .portlet-promotions:lt(4)').css('marginRight', Math.floor(margin) + 'px');
     $('#top-news-area .portlet-promotions:last').css({'marginRight': '0', 'float': 'right'});
@@ -40,7 +40,7 @@ $(window).resize(function() {
 
     // Add margins so that the #multimedia-highlights ul fill up the same height as the #big_vid.
     // TODO: why does the ul look a little bit too big in IE6 and 7?
-    var margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
+    margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
     $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
 
     // Make sure both frontpage columns have the same height:

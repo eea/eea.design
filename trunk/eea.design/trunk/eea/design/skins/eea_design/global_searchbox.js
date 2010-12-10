@@ -4,8 +4,8 @@
 
 function global_searchbox_init() {
     var form = document.getElementById('searchbox_terminology');
-    if (form == null) {
-        return
+    if (form === null) {
+        return;
     }
     var term = form.term;
     var search_label = term.title + "...";
@@ -15,7 +15,7 @@ function global_searchbox_init() {
         }
     };
     term.onblur = function() {
-        if (this.value == "") {
+        if (this.value === "") {
             this.value = search_label;
         }
     };

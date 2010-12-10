@@ -38,7 +38,7 @@ $(document).ready(function() {
             'smartTemplate': smartTemplate
         });
         // #3370 - IE7 does not pick up on hash changes
-        var ie6or7 = $.browser.msie && (parseInt($.browser.version) <= 7);
+        var ie6or7 = $.browser.msie && (parseInt($.browser.version, 10) <= 7);
         if (Faceted.Window.width && ie6or7) {
             Faceted.Query = Faceted.URLHandler.hash2query(location.hash);
             $(Faceted.Events).trigger(Faceted.Events.QUERY_CHANGED);
