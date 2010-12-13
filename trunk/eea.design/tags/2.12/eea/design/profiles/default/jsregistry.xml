@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="global_searchbox.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="soer_frontpage.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="slide.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-smartview.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-accordion.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-fullscreen.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-toc.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-tooltips.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-galleryview.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-autoscroll.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-fancybox.js" inline="False"
+    position-after="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="python: portal.portal_membership.isAnonymousUser() and request.get('jsdisable','') != 'jquery'" id="design.js" inline="False"
+    position-before="cssQuery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="python: request.get('jsdisable','') != 'jquery'" id="print_warning.js" inline="False"
+    position-after="cssQuery.js"/>
+</object>
