@@ -1,0 +1,66 @@
+Tag cloud
+=========
+This package provides a way to re-use eea.facetednavigation tagscloud facet as a
+plone portlet.
+
+Usage:
+
+  <tal:tags define="
+    faceted_path string:relative/path/to/faceted/navigation">
+
+    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
+
+  </tal:tags>
+
+Imports
+-------
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> from eea.facetednavigation.interfaces import IWidgetsInfo
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+    >>> from Products.Five.testbrowser import Browser
+    >>> from Products.PloneTestCase import PloneTestCase
+
+Set up
+------
+
+  Add sandbox
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'sandbox', title='Sandbox faceted navigation')
+    >>> sandbox = portal._getOb(fid)
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+    >>> fid = portal.invokeFactory('Folder', 'sandbox-test', title='Sandbox faceted navigation')
+    >>> sandbox2 = portal._getOb(fid)
+
+Get out portlet
+---------------
+
+    >>> portlet = sandbox2.restrictedTraverse('portlet_soer_tagcloud')
+    >>> portlet()
+    '...ERROR: faceted_path= is invalid...'
+
+So we didn't provide a value for faceted_path. Let's set it on context:
+
+    >>> faceted_path = sandbox.absolute_url(1).replace('plone/', '')
+    >>> sandbox2.faceted_path = faceted_path
+
+But we didn't define any tagscloud facet in sandbox that's why we'll still
+get an error:
+
+    >>> portlet()
+    '...ERROR: faceted_path=sandbox is invalid...'
+
+So let's add a tagscloud facet:
+
+    >>> cid = ICriteria(sandbox).add('tagscloud', 'left',
+    ...     index='portal_type', catalog='portal_catalog')
+
+And now our portlet:
+
+    >>> portlet()
+    u'...faceted-tagscloud-widget...'
