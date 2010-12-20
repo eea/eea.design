@@ -52,4 +52,9 @@ $(document).ready(function() {
         }
     });
 
+    // Auto fullscreen
+    if ( $('body').hasClass('fullscreen') ) {
+        $('#slide-button').click();
+    }
+
 });
