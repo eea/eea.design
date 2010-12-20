@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.15-dev - (unreleased)
+-----------------------
+
 2.14 - (2010-12-20)
 -------------------
  * Bug fix: Auto fullscreen if body has CSS class 'fullscreen' [voineali #4007]
