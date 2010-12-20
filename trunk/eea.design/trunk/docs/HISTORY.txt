@@ -7,6 +7,7 @@ Changelog
 2.12 - (2010-12-13)
 -------------------
  * Bug fix: Fixed jslint warnings [voineali #3821]
+ * Feature: Added protection script against being trapped in other site's frames [demarant]
 
 2.11 - (2010-12-06)
 -------------------
