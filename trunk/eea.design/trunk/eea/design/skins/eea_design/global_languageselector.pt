@@ -6,7 +6,7 @@
 <!-- LANGUAGE SWITCHER DEFINITION -->
 
 <metal:language define-macro="language"
-                tal:condition="context/isTranslatable">
+   tal:condition="python:(context.getId() != 'portal_languages') and context.isTranslatable()">
 <tal:languages  tal:define="data context/languageSelectorData;
                             translations python:len(context.getTranslationLanguages()) &gt; 1">
 
@@ -34,7 +34,7 @@
             <a href=""
                tal:attributes="href lang/change_url;
                                title lang/alt;
-			       class python:test(not available, 'noTranslation', 'translated')"
+               class python:test(not available, 'noTranslation', 'translated')"
                tal:omit-tag="lang/current"><tal:langcode  tal:content="lang/Language">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a></li>
       </tal:cms>
     </ul>
