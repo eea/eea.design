@@ -1,0 +1,81 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+
+<!-- LANGUAGE SWITCHER DEFINITION -->
+
+<metal:language define-macro="language"
+   tal:condition="python:(context.getId() != 'portal_languages') and context.isTranslatable()">
+<tal:languages  tal:define="data context/languageSelectorData;
+                            translations python:len(context.getTranslationLanguages()) &gt; 1">
+
+   <tal:anonLanguageCodes tal:condition="python:test(translations and isAnon)">
+    <ul class="languageCodes">
+      <tal:anonymous tal:repeat="lang data">
+          <li tal:attributes="class python:test(lang['current'],'selected',None)"
+              tal:condition="lang/available">
+            <a href="" class="translated"
+               tal:attributes="href lang/change_url;
+                               title lang/alt"
+               tal:omit-tag="lang/current"
+               tal:content="lang/Language">Language code
+            </a></li>
+      </tal:anonymous>
+   </ul>
+   <div class="visualClear"><!-- --></div>
+   </tal:anonLanguageCodes>
+
+   <tal:admin tal:condition="not: isAnon">
+    <ul class="languageCodes">
+      <tal:cms tal:repeat="lang data">
+          <li tal:attributes="class python:test(lang['current'],'selected','')"
+              tal:define="available lang/available">
+            <a href=""
+               tal:attributes="href lang/change_url;
+                               title lang/alt;
+               class python:test(not available, 'noTranslation', 'translated')"
+               tal:omit-tag="lang/current"><tal:langcode  tal:content="lang/Language">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a></li>
+      </tal:cms>
+    </ul>
+</tal:admin>
+
+</tal:languages>
+</metal:language>
+
+<metal:frontpage define-macro="frontpagelanguagejs">
+<tal:languages  tal:define="data transobj/languageSelectorData;
+                            translations python:len(transobj.getTranslationLanguages()) &gt; 7"
+      tal:condition="python:context.plone_utils.isTranslatable(transobj) and isAnon and translations">
+
+   <tal:manyLangCodes tal:condition="python:test(len(data) &gt; 7)">
+     <tal:langcodesform replace="structure context/global_languageselector_js" />
+   </tal:manyLangCodes>
+
+
+</tal:languages>
+</metal:frontpage>
+
+<metal:frontpage define-macro="frontpagelanguage">
+<tal:languages  tal:define="data transobj/languageSelectorData;
+                            translations python:len(transobj.getTranslationLanguages()) &gt; 1"
+      tal:condition="python:context.plone_utils.isTranslatable(transobj) and isAnon and translations">
+
+   <noscript tal:omit-tag="python:test(len(data) &lt; 8)">
+   <span class="languageCodes">
+      <tal:anonymous tal:repeat="lang data">
+          <span tal:condition="python: lang['available']" tal:omit-tag="">
+            <a href=""
+               tal:attributes="href lang/change_url;
+                               title lang/alt"
+               tal:content="lang/Language">Language code
+            </a></span>
+      </tal:anonymous>
+   </span>
+   </noscript>
+
+</tal:languages>
+</metal:frontpage>
+
+</body>
+</html>
