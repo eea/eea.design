@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.15-dev - (unreleased)
------------------------
+2.15 - (2010-12-21)
+-------------------
  * Bug fix: Fixed error when using portal language settings [voineali #4016]
 
 2.14 - (2010-12-20)
