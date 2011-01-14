@@ -3,6 +3,7 @@ Changelog
 
 2.16-dev - (unreleased)
 -----------------------
+ * Bug fix: made toc portlet width fuluid to play better on smaller screens and within indicators [demarant]
 
 2.15 - (2010-12-21)
 -------------------
