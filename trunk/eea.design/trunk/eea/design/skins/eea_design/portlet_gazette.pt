@@ -13,7 +13,12 @@
 
 <dl class="portlet gradientBG" id="portlet-subscribtion" tal:define="includeSocialMedia includeSocialMedia|context/includeSocialMedia|nothing">
     <dt>Sign up now!</dt>
-    <dd class="portletItem">Get notifications on new reports and products.</dd>
+    <dd class="portletItem">Get notifications on new reports and products.
+      <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="subscribers_no">
+        More then <span i18n:name="nr" tal:define="div python:len(subscribers) > 1000 and 1000 or 1"
+          tal:content="python:(len(subscribers)/div) * div">1000</span> subscribers receive this.
+      </span>
+    </dd>
     <dd class="portletItem">
         <form action="register_newsletter"
               name="subscription"
