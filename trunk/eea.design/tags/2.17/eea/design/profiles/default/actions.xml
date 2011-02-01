@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool">
+ <action-provider name="portal_actions">
+  <action title="Contact us" action_id="contactus"
+     category="site_actions"
+     condition_expr=""
+     url_expr="string:http://www.eea.europa.eu/address.html" visible="True">
+   <permission>View</permission>
+  </action>
+  <action title="EEA homepage in your language" action_id="chooselang"
+     category="site_actions"
+     condition_expr=""
+     url_expr="string:http://www.eea.europa.eu/chooselang" visible="True">
+   <permission>View</permission>
+  </action>
+  <action title="European Topic Centres" action_id="etcssites"
+     category="externalsite_actions"
+     condition_expr=""
+     url_expr="string:http://www.eionet.europa.eu/topics" visible="True">
+   <permission>View</permission>
+  </action>
+ </action-provider>
+</object>
