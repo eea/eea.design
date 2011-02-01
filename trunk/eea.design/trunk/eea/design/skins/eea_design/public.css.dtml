@@ -281,6 +281,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .eea-tooltip-markup {
   display: none;
+  z-index: 100;
 }
 
 .eea-tooltip-markup .tooltip-box-br {
