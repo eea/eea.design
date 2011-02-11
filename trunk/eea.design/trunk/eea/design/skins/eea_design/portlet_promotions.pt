@@ -133,13 +133,13 @@
                         imgurl string:${promo/absolute_url}/${imgsize}">
             <a tal:attributes="href promo/url;
                                title promo/Description;
-                               class python:test(promo['is_video'], 'thickbox', '')">
+                               class python:test(promo['is_video'], 'video-fancybox', '')">
                <img tal:attributes="src imgurl; title promo/Title; alt promo/Title"/>
             </a>
             <a class="portletHeader"
                tal:attributes="href promo/url;
                                title promo/Description;
-                               class python:test(promo['is_video'], 'portletHeader thickbox', 'portletHeader')"
+                               class python:test(promo['is_video'], 'portletHeader fancybox', 'portletHeader')"
                tal:content="promo/Title">
                 [Promo Title]
                 <br clear="all" />

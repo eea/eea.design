@@ -560,15 +560,6 @@ padding-right: 1em;
     color: &dtml-notifyBackgroundColor;;
 }
 
-/* thickbox styles overwrites */
-#TB_ajaxWindowTitle {
-    font-weight: bold;
-    font-size:1em;
-    height: 1em;
-    overflow: hidden;
-}
-
-
 /* portlet for translation feedback */
 #translationfeedback textarea, #translationfeedback input#sender_from_address {
  width:97%;
