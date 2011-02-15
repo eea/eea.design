@@ -39,7 +39,7 @@
                     offset: [0, 0],
                     delay: 10000000,
                     events: {
-                        def: 'click, blur'
+                        def: 'focus, blur'
                     }
                 });
             }

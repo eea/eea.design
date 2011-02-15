@@ -5,6 +5,7 @@ Changelog
 -----------------------
  * WIP: replaced thickbox with fancybox [ichimdav #3773]
  * Bug fix: layout fix in soer figures map view [tiberich #4065]
+ * Bug fix: fix behaviour of tooltips in portalactions [tiberich #4132]
 
 2.17 - (2011-02-01)
 -------------------
