@@ -14,21 +14,15 @@
             </div>
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
                 <tal:promos condition="python:request.get('LANGUAGE','en') == 'en'">
-                    <div id="top-news-area" tal:define="global promotions frontpage_view/getPromotions; global campaign frontpage_view/getCampaign">
-                        <tal:dummy tal:condition="python:campaign and 'force_promotions' not in request">
-                            <metal:promotions use-macro="here/portlet_promotions/macros/campaign" />
-                        </tal:dummy>
-                        <tal:dummy tal:condition="python:not campaign or 'force_promotions' in request"
-                                   tal:define="global imgsize string:image_preview">
+                    <div id="top-news-area">
                             <metal:promotions use-macro="here/portlet_promotions/macros/hardcoded_promotions" />
-                        </tal:dummy>
                     <div class="visualClear"><!-- &nbsp; --></div>
                     </div>
                 </tal:promos>
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-                        <div metal:use-macro="here/frontpage_macros/macros/spotlight">
+                        <div metal:use-macro="here/spotlight_film_macros/macros/spotlight">
                             Spotlight
                         </div>
                         <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
@@ -54,10 +48,11 @@
                     </div>
                     <div class="visualClear"><!-- &nbsp; --></div>
                 </div>
-                <tal:tooltip-script tal:replace="structure context/design_fastedit"/>
+                <tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>
             </div>
         </tal:main-macro>
     </div>
 
     </body>
 </html>
+

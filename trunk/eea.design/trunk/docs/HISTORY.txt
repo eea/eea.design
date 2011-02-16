@@ -3,7 +3,7 @@ Changelog
 
 2.18-dev - (unreleased)
 -----------------------
- * Change: brought changes from production for portlets_promotions & replaced thickbox [ichimdav #3773]
+ * Change: brought changes from production & replaced thickbox [ichimdav #3773]
  * Change: replaced thickbox with fancybox [ichimdav #3773]
  * Bug fix: layout fix in soer figures map view [tiberich #4065]
  * Bug fix: fix behaviour of tooltips in portalactions [tiberich #4132]

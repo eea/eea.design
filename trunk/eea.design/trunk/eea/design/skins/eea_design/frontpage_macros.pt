@@ -13,8 +13,8 @@
     <div class="highlightHigh" metal:define-macro="highnews"
     		tal:condition="highlights" 
     		tal:repeat="hl highlights">
-         <div class="visualPadding">
-          <h2 class="highlight">
+         <div class="visualPadding" style="padding:0 1em 0;">
+          <h2 class="highlight"  style="font-size:150%;">
 	       <a href="#" class="noPrint"
                   tal:attributes="href hl/getUrl"
                   tal:content="hl/getNewsTitle">
@@ -113,7 +113,7 @@
     <tal:defines  
         tal:define="first_vid python:vids[0];
  	            three_other python:vids[1:];">
-    <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Multimedia">Multimedia</h2>
+    <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="inthespotlight">In the spotlight</h2>
     <h3 class="shortNewsTitle visualPadding">
         <a class="video-fancybox"
             href="#"
@@ -141,39 +141,6 @@
     </tal:defines>
 </div>
 
-<div metal:define-macro="spotlight" class="highlightMiddle shortNews" id="multimedia-highlights">
-    <h2 class="column-title">In the spotlight</h2>
-    <h3 class="shortNewsTitle visualPadding">
-        <a href="http://www.eea.europa.eu/cop15">EEA and the COP15 climate change conference</a>
-    </h3>
-    <div class="visualPadding">
-        <ul>
-            <li class="vidthumb">
-                <a href="http://www.eea.europa.eu/cop15/">
-                    <img style="border: 1px solid #E0DED5" src="http://www.eea.europa.eu/cop15/intro/theme_image" title="EEA and the COP15 climate change conference" class="eea-tooltip-left">
-                </a>
-            </li>
-        
-            <li class="vidthumb">
-                <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
-                    <img src="http://www.eea.europa.eu/cop15/spotlight/one-degree-matters/image_preview" title="Film: One Degree Matters" class="eea-tooltip-left">
-                </a>
-            </li>
-        
-            <li class="vidthumb last">
-                <a href="http://www.eea.europa.eu/cop15/bend-the-trend/">
-                    <img src="http://www.eea.europa.eu/cop15/spotlight/environment-atlas/image_preview" title="Film: Environmental Atlas of Europe" class="eea-tooltip-left">
-                </a>
-            </li>
-        </ul>
-        <div id="big_vid">
-            <a href="http://www.eea.europa.eu/cop15">
-                <img src="http://www.eea.europa.eu/cop15/spotlight/cop15-spotlight-image" title="EEA and the COP15 climate change conference" class="eea-tooltip-top">
-            </a>
-        </div>
-        <div class="visualClear"><!-- --></div>
-    </div>
-</div>
-
 </body>
 </html>
+
