@@ -33,15 +33,23 @@
 
                 // the tooltip panel should have the id in form of
                 // tip-SITEACTION-ID
-                a.tooltip({
-                    tip: tooltip[0],
-                    position: 'bottom center',
-                    offset: [0, 0],
-                    delay: 10000000,
-                    events: {
-                        def: 'focus, blur'
-                    }
-                });
+                // chrome 9 doesn't support focus event anymore so we give it click
+            if (navigator.userAgent.indexOf('Chrome/') > 0) {
+                var fordef = 'click, blur';
+            } else {
+                var fordef = 'focus, blur';
+            }
+
+            a.tooltip({
+                tip: tooltip[0],
+                position: 'bottom center',
+                offset: [0, 0],
+                delay: 10000000,
+                events: {
+                    def: fordef
+                }
+            });
+
             }
 
             // remove panel if user clicks outside it
