@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="eea.design"
+      directory="profiles/default"
+      description="Extension profile for eea.design"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="test_migration"
+      title="eea.design migration"
+      directory="profiles/test_migration"
+      description="Extension test profile for eea.design"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>
