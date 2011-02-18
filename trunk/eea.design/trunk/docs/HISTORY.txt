@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.18-dev - (unreleased)
------------------------
+2.18 - (2011-02-18)
+-------------------
  * Bug fix: fix fancybox pop-up for chrome 9 [ichimdav #4132] 
  * Change: brought changes from production & replaced thickbox [ichimdav #3773]
  * Change: replaced thickbox with fancybox [ichimdav #3773]
