@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.20-dev - (unreleased)
+-----------------------
+
 2.19 - (2011-02-18)
 -------------------
  * Bug fix: fixed slide.js scoping issues [ichimdav] 
