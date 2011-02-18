@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<action-icons>
+ <action-icon category="plone" action_id="contactus"
+              title="Contact us" priority="0"
+              icon_expr="mail_icon.gif"/>
+ <action-icon category="plone" action_id="subscriptions"
+              title="Glossary" priority="0"
+              icon_expr="newsitem_icon.gif"/>
+</action-icons>
