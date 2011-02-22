@@ -138,12 +138,12 @@
                                                                 show all (back and forward refs) related items if they exist
                                                             </div>
 
-							    <!-- Commented due to #3468 -->
+                                                            <!-- Commented due to #3468 -->
                                                             <!-- div metal:use-macro="here/document_relateditems/macros/auto">
                                                                 show latest items of same content type and themes.
                                                             </div -->
 
-                                                            <h2 i18n:translate="share_with_others">Share with others</h2>
+                                                            <h2 i18n:translate="share_with_others" class="share-title">Share with others</h2>
                                                             <div metal:use-macro="here/document_actions/macros/document_actions">
                                                                 Document actions (print, sendto etc)
                                                             </div>
@@ -191,12 +191,12 @@
                                                     show all (back and forward refs) related items if they exist
                                                 </div>
 
-						<!-- Commented due to #3468 -->
+                                                <!-- Commented due to #3468 -->
                                                 <!-- div metal:use-macro="here/document_relateditems/macros/auto">
                                                     show latest items of same content type and themes.
                                                 </div -->
 
-                                                <h2 i18n:translate="share_with_others">Share with others</h2>
+                                                <h2 i18n:translate="share_with_others" class="share-title">Share with others</h2>
                                                 <div metal:use-macro="here/document_actions/macros/document_actions">
                                                     Document actions (print, sendto etc)
                                                 </div>
