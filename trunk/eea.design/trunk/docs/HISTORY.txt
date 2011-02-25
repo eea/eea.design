@@ -3,6 +3,7 @@ Changelog
 
 2.20-dev - (unreleased)
 -----------------------
+ * Change: removed traces of RDFEvent of PloneRDFCalendar due to cleanup [ichimdav #2931]
  * Change: added specific CSS class for "Share with others" so it can be
      skiped on print [ghicaale #4152]
 

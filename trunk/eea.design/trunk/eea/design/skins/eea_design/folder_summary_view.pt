@@ -95,7 +95,7 @@
                         </a>
                     </h2>
 
-                 <span class="date" tal:condition="python:item_published != 'None' and  item_type not in ('Event', 'QuickEvent', 'RDFEvent', 'Promotion', 'Rich Topic','Smart Folder',)">
+                 <span class="date" tal:condition="python:item_published != 'None' and  item_type not in ('Event', 'QuickEvent', 'Promotion', 'Rich Topic','Smart Folder',)">
                                 <span tal:replace="python:toLocalizedTime(item_published)">
                                   August 16, 2001 at 23:35:59
                                 </span>
