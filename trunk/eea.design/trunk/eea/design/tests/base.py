@@ -1,6 +1,6 @@
 from Products.PloneTestCase import PloneTestCase
 from Products.GenericSetup import EXTENSION, profile_registry
-from eea.testcase.base import EEAMegaTestCase
+from eea.testcase.base import EEAMegaTestCase  #needed by test case pyflakes, #pylint: disable-msg = W0611
 from Products.CMFPlone.interfaces import ITestCasePloneSiteRoot
 
 profile_registry.registerProfile(
@@ -35,9 +35,12 @@ def setup_eea_design():
     PloneTestCase.installProduct('Five')
 
     # XXX Plone 2.x compatible
-    try: import Products.FiveSite
-    except ImportError: pass
-    else: PloneTestCase.installProduct('FiveSite')
+    try: 
+        import Products.FiveSite #pyflakes, #pylint: disable-msg = W0611
+    except ImportError: 
+        pass
+    else: 
+        PloneTestCase.installProduct('FiveSite')
 
     for product in PRODUCTS:
         PloneTestCase.installProduct(product)

@@ -1,26 +1,26 @@
-import os, sys
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
+import os
+#if __name__ == '__main__':
+#    execfile(os.path.join(sys.path[0], 'framework.py'))
 
 from zope.interface import alsoProvides
-from Testing import ZopeTestCase
+#from Testing import ZopeTestCase
 from OFS.Image import Image
-from Products.EEAContentTypes.config import *
+from Products.EEAContentTypes.config import product_globals
 from eea.design.tests.base import EEAMegaTestCase
 from eea.design.browser.frontpage import Frontpage
 from eea.themecentre.interfaces import IThemeCentre, IThemeCentreSchema
 from eea.promotion.interfaces import IPromotable, IPromoted, IPromotion
 from p4a.video.interfaces import IVideoEnhanced
 from p4a.video.interfaces import IVideo
-from Products.CMFCore.utils import getToolByName
+#from Products.CMFCore.utils import getToolByName
 from Globals import package_home
 from DateTime import DateTime
-from pprint import pprint
-from zope.app.event.objectevent import ObjectModifiedEvent
-from zope.event import notify
-from lovely.memcached.event import InvalidateCacheEvent
+#from pprint import pprint
+#from zope.app.event.objectevent import ObjectModifiedEvent
+#from zope.event import notify
+#from lovely.memcached.event import InvalidateCacheEvent
 
-image = open(os.path.join(package_home(product_globals),'tests', 'image.png'),'rb')
+image = open(os.path.join(package_home(product_globals), 'tests', 'image.png'), 'rb')
 image = image.read()
 
 
@@ -50,26 +50,26 @@ class TestPromotions(EEAMegaTestCase):
 
         now = DateTime()
         category_i = 0
-        for id, title in themes:
+        for tid, title in themes:
             category_i += 1
-            self.folder.invokeFactory('Folder', id=id, title=title)
-            folder = getattr(self.folder, id)
+            self.folder.invokeFactory('Folder', id=tid, title=title)
+            folder = getattr(self.folder, tid)
             self.portal.portal_workflow.doActionFor(folder, 'publish')
 
             alsoProvides(folder, IThemeCentre)
             alsoProvides(folder, IThemeCentreSchema)
-            IThemeCentreSchema(folder).tags = id
+            IThemeCentreSchema(folder).tags = tid
             folder.reindexObject()
 
-            category = {
-                'id': id,
-                'Title': title,
-                'macro': 'here/portlet_promotions/macros/portlet',
-                'path': '/%s' % folder.absolute_url(1),
-                'url': folder.absolute_url(),
-            }
+            #category = {
+            #    'id': tid,
+            #    'Title': title,
+            #    'macro': 'here/portlet_promotions/macros/portlet',
+            #    'path': '/%s' % folder.absolute_url(1),
+            #    'url': folder.absolute_url(),
+            #}
 
-            promotions = []
+            #promotions = []
             for i in range(0, 2):
                 info = {
                     'id': template['id'] % i,
@@ -78,11 +78,11 @@ class TestPromotions(EEAMegaTestCase):
                     'url': template['url'] % i,
                 }
 
-                id = folder.invokeFactory(template['type'], image=image, **info)
-                promoObj = getattr(folder, id)
+                fid = folder.invokeFactory(template['type'], image = image, **info)
+                promoObj = getattr(folder, fid)
                 promoObj.setTitle(info['Title'])
                 promoObj.setDescription(info['Description'])
-                promoObj.setEffectiveDate(now-1-category_i-i)
+                promoObj.setEffectiveDate(now - 1 - category_i-i)
                 self.portal.portal_workflow.doActionFor(promoObj, 'publish')
 
         self.view = Frontpage(self.portal, self.app.REQUEST)
@@ -91,7 +91,7 @@ class TestPromotions(EEAMegaTestCase):
         result = self.view.getPromotions()
 
         result_categories = [i['category']['Title'] for i in result]
-        result_promotions = [i['promotions'][0]['Title'] for i in result]
+        result_promotions = [i['promotions'][0]['Title'] for i in result] #pyflakes, #pylint: disable-msg = W0631
 
         expected_categories = ['Agriculture', 'Air pollution', 'Biodiversity', 'Chemicals', 'Climate']
         expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Foo0']
@@ -111,13 +111,13 @@ class TestPromotions(EEAMegaTestCase):
         IPromotion(internal_promo).locations = [u'Front Page']
         self.portal.portal_workflow.doActionFor(internal_promo, 'publish')
 
-        result = self.view.getPromotions()
+        #result = self.view.getPromotions()
 
-        result_categories = [i['category']['Title'] for i in result]
-        result_promotions = [i['promotions'][0]['Title'] for i in result]
+        #result_categories = [i['category']['Title'] for i in result]
+        #result_promotions = [i['promotions'][0]['Title'] for i in result] #pyflakes, #pylint: disable-msg = W0631
 
-        expected_categories = ['Agriculture', 'Air pollution', 'Biodiversity', 'Chemicals', 'Energy']
-        expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Internal Promotion']
+        #expected_categories = ['Agriculture', 'Air pollution', 'Biodiversity', 'Chemicals', 'Energy']
+        #expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Internal Promotion']
 
     def test_filter_videos(self):
         """Videos should be filtered out to not conflict with frontpage multimedia area"""
@@ -137,10 +137,10 @@ class TestPromotions(EEAMegaTestCase):
         IPromotion(vid).locations = [u'Front Page']
         self.portal.portal_workflow.doActionFor(vid, 'publish')
 
-        result = self.view.getPromotions()
+        #result = self.view.getPromotions()
 
-        result_promotions = [i['promotions'][0]['Title'] for i in result]
-        expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Foo0']
+        #result_promotions = [i['promotions'][0]['Title'] for i in result]
+        #expected_promotions = ['Foo0', 'Foo0', 'Foo0', 'Foo0', 'Foo0']
 
     def test_campaign_mode(self):
         """Campaign mode test
@@ -186,4 +186,4 @@ def test_suite():
     return  TestSuite(suite)
 
 if __name__ == '__main__':
-    framework()
+    test_suite()

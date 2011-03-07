@@ -1,6 +1,6 @@
 import doctest
 import unittest
-from base import MigrationTestCase
+from eea.design.tests.base import MigrationTestCase
 from Testing.ZopeTestCase import FunctionalDocFileSuite
 
 OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |

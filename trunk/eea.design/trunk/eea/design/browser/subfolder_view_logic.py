@@ -29,7 +29,7 @@ class SubFolderView(BrowserView):
         return self.context.getFolderContents()
 
 
-    def folder_contents(self, size_limit=10, folderContents=None):
+    def folder_contents(self, size_limit=10, folderContents=None): #pyflakes, #pylint: disable-msg = R0914
         """Get the folderish items in cachable list/dict format"""
         size_limit = int(self.request.get('size_limit', size_limit))
         ret = {

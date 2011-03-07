@@ -13,9 +13,9 @@ def migrate_from_eeadesign2006(context):
 
     # remove old actions since we can't do it with GenericSetup
     atool = getToolByName(portal, 'portal_actions')
-    actions =[ a.id for a in  atool.listActions()]
+    actions = [ a.id for a in  atool.listActions()]
     actionPos = []
-    for a in ['glossary', 'sitemap','faq']:
+    for a in ['glossary', 'sitemap', 'faq']:
         if a in actions:
             actionPos.append(actions.index(a))
     if actionPos:

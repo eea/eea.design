@@ -47,7 +47,7 @@ from eea.themecentre.interfaces import IThemeCentreSchema
 class Frontpage(BrowserView):
     """
     """
-    __implements__ = (getattr(BrowserView,'__implements__',()),)
+    __implements__ = (getattr(BrowserView, '__implements__', ()), )
 
     def __init__(self, context, request):
         BrowserView.__init__(self, context, request)
@@ -65,9 +65,9 @@ class Frontpage(BrowserView):
         self.now = DateTime()
 
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getHigh(self,portaltypes=('Highlight', 'PressRelease'),scale='thumb'):
-        visibilityLevel='top'
-        results =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfHigh]
+    def getHigh(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb'):
+        visibilityLevel = 'top'
+        results =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfHigh]
         highlights = []
         for high in results:
             highlights.append ( self._getTeaserMedia(high, scale) )
@@ -75,12 +75,12 @@ class Frontpage(BrowserView):
         return highlights
 
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getMedium(self,portaltypes=('Highlight', 'PressRelease'),scale='thumb'):
-        visibilityLevel=[ 'top', 'middle' ]
-        result =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfMedium + self.noOfHigh]
+    def getMedium(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb'):
+        visibilityLevel = [ 'top', 'middle' ]
+        result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfMedium + self.noOfHigh]
         topIds = [ h['id'] for h in self.getHigh(portaltypes) ]
         highlights = []
-        topRemoved = 0
+        #topRemoved = 0
         for high in result:
             # remove the self.noOfHigh top highlights from the result, they are displayd on top
             if high['id'] not in topIds:
@@ -90,15 +90,15 @@ class Frontpage(BrowserView):
 
     def getHighArticles(self):
         """ return a defined number of high visibility articles items """
-        results =  self.getHigh(('Article',),'thumb')
+        results =  self.getHigh(('Article', ), 'thumb')
         return results
 
-    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getLow(self,portaltypes=('Highlight', 'PressRelease'),scale='dummy'): 
-        visibilityLevel=[ 'top', 'middle', 'bottom' ] 
+    @cache(cacheKeyHighlights, dependencies = ['frontpage-highlights'])
+    def getLow(self, portaltypes = ('Highlight', 'PressRelease'), scale='dummy'): 
+        visibilityLevel = [ 'top', 'middle', 'bottom' ] 
         otherIds = [ h['id'] for h in self.getMedium(portaltypes) ] 
-        otherIds.extend( [ h['id'] for h in self.getHigh(portaltypes) ] ) 
-        result =  self._getItemsWithVisibility(visibilityLevel,portaltypes)[:self.noOfHigh + self.noOfMedium + self.noOfLow] 
+        otherIds.extend( [ h['id'] for h in self.getHigh(portaltypes) ] )  #pyflakes, #pylint: disable-msg = W0631
+        result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfHigh + self.noOfMedium + self.noOfLow] 
         highlights = [] 
 
         for high in result: 
@@ -108,7 +108,7 @@ class Frontpage(BrowserView):
                 adapter = queryMultiAdapter((obj, self.request), name=u'themes-object', default=None) 
                 themes = [] 
                 if adapter is not None: 
-                   themes = adapter.short_items() 
+                    themes = adapter.short_items() 
 
                 highlights.append( { 'id' : high['id'], 
                  'getUrl' : high['getUrl'] or high.getURL(), 
@@ -124,17 +124,17 @@ class Frontpage(BrowserView):
 
     def getMediumArticles(self): 
         """ return a defined number of medium visibility articles items """ 
-        results =  self.getMedium(('Article',)) 
+        results =  self.getMedium(('Article', )) 
         return results 
  
     def getLowArticles(self): 
         """ return a defined number of low visibility articles items """ 
-        results =  self.getLow(('Article',)) 
+        results =  self.getLow(('Article', )) 
         return results 
 
     def _getHighlights(self, visibilityLevel): 
         """ Deprecated: use more generic _getItemsWithVisibility method instead. """ 
-        results=self._getItemsWithVisibility(visibilityLevel,('Highlight', 'PressRelease')) 
+        results = self._getItemsWithVisibility(visibilityLevel, ('Highlight', 'PressRelease')) 
         return results 
 
     def getCampaign(self):

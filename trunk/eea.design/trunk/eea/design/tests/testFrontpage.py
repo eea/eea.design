@@ -27,22 +27,22 @@
 __author__ = """unknown <unknown>"""
 __docformat__ = 'plaintext'
 
-import os, sys
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
+import os
+#if __name__ == '__main__':
+#    execfile(os.path.join(sys.path[0], 'framework.py'))
 
-from Testing import ZopeTestCase
-from Products.EEAContentTypes.config import *
+#from Testing import ZopeTestCase
+from Products.EEAContentTypes.config import product_globals
 from eea.design.tests.base import EEAMegaTestCase
 from eea.design.browser.frontpage import Frontpage
 from Products.CMFCore.utils import getToolByName
 from Globals import package_home
-from DateTime import DateTime
+#from DateTime import DateTime
 from zope.app.event.objectevent import ObjectModifiedEvent
 from zope.event import notify
 from lovely.memcached.event import InvalidateCacheEvent
 
-image = open(os.path.join(package_home(product_globals),'tests', 'image.png'),'rb')
+image = open(os.path.join(package_home(product_globals), 'tests', 'image.png'), 'rb')
 image = image.read()
 
 
@@ -54,10 +54,10 @@ class TestFrontPage(EEAMegaTestCase):
                      'title' : 'Foo%s',
                      'teaser' : 'teaser%s'}
         for i in range(15):
-            id=highlight['id'] % i
+            hid = highlight['id'] % i
             text = highlight['text'] % i
             title = highlight['title'] % i
-            self.folder.invokeFactory('Highlight', id=id, text=text,
+            self.folder.invokeFactory('Highlight', id=hid, text=text,
                                       title=title)
 
         self.folder.invokeFactory('Image', id='image1', image=image, title='Image title')
@@ -67,7 +67,7 @@ class TestFrontPage(EEAMegaTestCase):
         frontpage_properties = getattr(portal_properties, 'frontpage_properties')
         self.noOfHigh = 1
         self.noOfMedium = 4
-        frontpage_properties.manage_changeProperties(noOfHigh=self.noOfHigh,noOfMedium=self.noOfMedium)
+        frontpage_properties.manage_changeProperties(noOfHigh = self.noOfHigh, noOfMedium = self.noOfMedium)
 
     # from class Frontpage:
     def test_getHigh(self):
@@ -90,12 +90,12 @@ class TestFrontPage(EEAMegaTestCase):
         self.failIf( result != answer, message )
 
         result = [ str(high['getTeaser']) for high in brains ]
-        answer = [ 'teaserhigh0','teaserhigh1', 'teaserhigh2' ][:self.noOfHigh]
+        answer = [ 'teaserhigh0', 'teaserhigh1', 'teaserhigh2' ][:self.noOfHigh]
         message = '%s != %s' % (result, answer)
         self.failIf( result != answer, message )
 
         result = [ str(high['getUrl']) for high in brains ]
-        answer = [ getattr(self.folder, hid).absolute_url() for hid in highlights[:self.noOfHigh] ]
+        answer = [ getattr(self.folder, hid).absolute_url() for hid in highlights[:self.noOfHigh] ] #pyflakes, #pylint: disable-msg = W0631
         message = '%s != %s' % (result, answer)
         self.failIf( result != answer, message )
 
@@ -113,7 +113,7 @@ class TestFrontPage(EEAMegaTestCase):
     # from class Frontpage:
     def test_getMedium(self):
         highlights = [ ('high%s' % i, 'top') for i in range(5) ]
-        highlights.extend([ ('high%s' % i, 'middle') for i in range(5,10) ])
+        highlights.extend([ ('high%s' % i, 'middle') for i in range(5, 10) ]) #pyflakes, #pylint: disable-msg = W0631
         for hid, level in highlights:
             high = getattr(self.folder, hid)
             high.setVisibilityLevel(level)
@@ -129,7 +129,7 @@ class TestFrontPage(EEAMegaTestCase):
         self.failIf( result != answer, message )
 
         result = [ str(high['getUrl']) for high in middle ]
-        answer = [ getattr(self.folder, hid).absolute_url() for hid,foo in answer ]
+        answer = [ getattr(self.folder, hid).absolute_url() for hid, _unused in answer ] #pyflakes, #pylint: disable-msg = W0631
         message = '%s != %s' % (result, answer)
         self.failIf( result != answer, message )
 
@@ -150,4 +150,4 @@ def test_suite():
     return  TestSuite(suite)
 
 if __name__ == '__main__':
-    framework()
+    test_suite()

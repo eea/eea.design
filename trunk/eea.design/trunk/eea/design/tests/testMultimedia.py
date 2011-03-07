@@ -1,6 +1,6 @@
-import os, sys
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
+import os
+#if __name__ == '__main__':
+#    execfile(os.path.join(sys.path[0], 'framework.py'))
 
 from zope.interface import alsoProvides
 from Globals import package_home
@@ -23,7 +23,7 @@ class TestMultimedia(EEAMegaTestCase):
         self.setRoles('Manager')
         now = DateTime()
         for i in range(0, 5):
-            vid = self.folder[self.folder.invokeFactory('File', id='vid%i' % i)]
+            vid = self.folder[self.folder.invokeFactory('File', id = 'vid%i' % i)]
             alsoProvides(vid, IVideoEnhanced)
             vid.setTitle('Vid %i' % i)
 
@@ -67,4 +67,4 @@ def test_suite():
     return  TestSuite(suite)
 
 if __name__ == '__main__':
-    framework()
+    test_suite()

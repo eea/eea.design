@@ -5,7 +5,7 @@ LIMIT_CHARS = 300
     
 class SoerFrontpage(BrowserView):
 
-    def __init__(self, context, request):
+    def __init__(self, context, request): #pyflakes, #pylint: disable-msg = W0231
         self.context = context
         self.request = request
         utils = getToolByName(context, 'plone_utils')
