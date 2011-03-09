@@ -1,0 +1,4 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+<metal:listing-macro define-macro="listing">
+    <div metal:use-macro="here/subfolder_view/macros/listing"></div>
+</metal:listing-macro>
