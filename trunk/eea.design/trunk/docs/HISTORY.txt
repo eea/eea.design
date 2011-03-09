@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.22-dev - (unreleased)
+-----------------------
+
 2.21 - (2011-03-09)
 -------------------
  * Change: cleaned up package for pylint & pyflakes violations [ichimdav #4140 #4141]
