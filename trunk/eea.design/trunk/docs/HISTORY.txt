@@ -3,6 +3,7 @@ Changelog
 
 2.22-dev - (unreleased)
 -----------------------
+ * Bug fix: Added translation domain to ZCML files [voineali #4139]
 
 2.21 - (2011-03-09)
 -------------------
