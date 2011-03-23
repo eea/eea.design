@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="eea.design">
+
+     <object name="eea_design" meta_type="Filesystem Directory View"
+         directory="eea.design:skins/eea_design"/>
+     <object name="eea_images" meta_type="Filesystem Directory View"
+         directory="eea.design:skins/eea_images"/>
+
+     <skin-path name="eea.design" based-on="Sunburst Theme">
+        <layer name="eea_design" insert-after="custom" />
+        <layer name="eea_images" insert-before="eea_design" />
+     </skin-path>
+</object>
