@@ -3,51 +3,93 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="eea.design">
 
-  <!-- 'eea.design' Zope 3 browser layer
-    Register views, viewlets and resources for this layer to make sure
-    they only apply to the 'eea.design' theme.
-    You can also use this layer to override default Plone browser views
-    and viewlets only within the 'eea.design' theme.
-  -->
+
   <interface
       interface=".interfaces.IThemeSpecific"
       type="zope.publisher.interfaces.browser.IBrowserSkinType"
       name="eea.design"
       />
-  
-  <!-- Viewlets registration -->
-  <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-  <browser:viewlet
-      name="eea.someviewlet"
-      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      class=".viewlets.MyViewlet"
-      layer=".interfaces.IThemeSpecific"
-      permission="zope2.View"
-      />
-  -->
 
-  <!-- Zope 3 browser resources -->
 
-  <!-- Resource directory for images
-    See eea/design/browser/images/README.txt
-    for more information about registering images as Zope 3 browser
-    resources.
-  -->
+<!-- Resource directories -->
+
   <browser:resourceDirectory
       name="eea.design.images"
       directory="images"
       layer=".interfaces.IThemeSpecific"
       />
 
-  <!-- Resource directory for stylesheets
-    See eea/design/browser/stylesheets/README.txt
-    for more information about registering stylesheets as Zope 3 browser
-    resources.
-  -->
   <browser:resourceDirectory
       name="eea.design.stylesheets"
       directory="stylesheets"
       layer=".interfaces.IThemeSpecific"
       />
+  <browser:resourceDirectory
+      name="eea.design.templates"
+      directory="templates"
+      layer=".interfaces.IThemeSpecific"
+      />
 
+
+      <!-- Viewlets registration -->
+
+    <browser:viewlet
+        name="eea.cross_site_top"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        template="templates/cross_site_top.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+      />
+
+    <browser:viewlet
+        name="eea.site_actions"
+        for="*"
+        class=".viewlets.SiteActionViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        template="templates/site_actions.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+/>
+
+
+    <browser:viewlet
+        name="eea.colophon"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        template="templates/colophon.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+      />
+
+    <browser:viewlet
+        name="eea.footer"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        template="templates/footer.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+      />
+
+    <browser:page
+        name="global_externalsites"
+        for="*"
+        template="templates/global_externalsites.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+      />
+
+    <browser:page
+        name="cross_site_panels"
+        for="*"
+        template="templates/cross_site_panels.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+      />
+
+    <browser:page
+        name="global_siteactions"
+        for="*"
+        template="templates/global_siteactions.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+      />
 </configure>

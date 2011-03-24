@@ -1,0 +1,41 @@
+
+<ul metal:define-macro="external_sites"
+    id="portal-externalsites"
+    tal:define="externalsite_actions actions/externalsite_actions|nothing;
+                putils context/plone_utils;
+                getIconFor nocall:putils/getIconFor;
+                accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
+    tal:condition="externalsite_actions">
+
+    <li tal:repeat="saction externalsite_actions"
+        tal:attributes="id string:siteaction-${saction/id}"><a
+           href=""
+           tal:define="title saction/title;
+                       id saction/id;
+                       icon python:getIconFor('plone', saction['id'], None);
+                       accesskey python: accesskeys.get(id, '');"
+           i18n:attributes="title"
+           i18n:translate=""
+           tal:attributes="href saction/url;
+                           title title;
+                           accesskey accesskey;"
+           ><tal:title tal:content="title"
+>Site action</tal:title>
+</a><tal:separator tal:condition="not: repeat/saction/end"> | </tal:separator></li>
+
+</ul>
+<div metal:define-macro="etcs_sites" tal:omit-tag="">
+ <dl id="portlet-etcs-sites">
+    <dt>
+         European Topic Centres:
+    </dt>
+    <dd class="portletItem">
+           <tal:chooslangscript replace="structure here/select_etc_js" />     
+           <noscript>
+            <ul id="chooseetc">        	
+	           <li><a href="http://www.eionet.europa.eu/topics" title="European Topic Centres">European Topic Centres</a></li>
+            </ul>
+           </noscript>
+    </dd>    
+ </dl>
+</div>

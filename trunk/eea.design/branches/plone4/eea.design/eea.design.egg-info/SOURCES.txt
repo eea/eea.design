@@ -1,7 +1,12 @@
 MANIFEST.in
 README.txt
+eea.design-configure.zcml
 setup.cfg
 setup.py
+docs/HISTORY.txt
+docs/INSTALL.txt
+docs/LICENSE.GPL
+docs/LICENSE.txt
 eea/__init__.py
 eea.design.egg-info/PKG-INFO
 eea.design.egg-info/SOURCES.txt
@@ -27,6 +32,8 @@ eea/design/browser/viewlets.py
 eea/design/browser/images/README.txt
 eea/design/browser/stylesheets/README.txt
 eea/design/browser/stylesheets/main.css
+eea/design/browser/templates/colophon.pt
+eea/design/browser/templates/footer.pt
 eea/design/locales/README.txt
 eea/design/profiles/default/cssregistry.xml
 eea/design/profiles/default/eea.design_various.txt
@@ -36,4 +43,5 @@ eea/design/profiles/default/skins.xml
 eea/design/profiles/default/viewlets.xml
 eea/design/skins/eea_design/CONTENT.txt
 eea/design/skins/eea_design/base_properties.props
+eea/design/skins/eea_design/main_template.pt
 eea/design/skins/eea_images/CONTENT.txt

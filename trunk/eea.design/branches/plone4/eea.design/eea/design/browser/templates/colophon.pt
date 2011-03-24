@@ -1,0 +1,52 @@
+<div id="portal-colophon"
+     metal:define-macro="colophon"
+     i18n:domain="plone">
+<metal:slot define-slot="colophon" />
+
+<div class="colophonWrapper">
+
+    <p>&nbsp;</p>
+    <p class="discreet">
+      This site conforms to the following standards:
+    </p>
+
+    <ul>
+  <li>
+  <a rel="license"
+ href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
+ title="Creative Commons Attribution License">
+     <img alt="Creative Commons Attribution License"
+          style="border-width: 0pt;"
+          src="http://www.eea.europa.eu/creativecommons-by-2.5-dk-80x15.png" /></a>
+  </li>
+  <li>
+<a href="http://www.w3.org/WAI/WCAG1AA-Conformance"
+   title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.">
+  WCAG
+</a> (<a title="Accessibility" accesskey="0" href="http://www.eea.europa.eu/accessibility-info">Accessibility</a>) |
+  </li>
+  <li>
+<a href="http://validator.w3.org/check/referer"
+   title="This Plone site is valid XHTML.">
+  Valid XHTML
+</a> |
+  </li>
+  <li>
+<a href="http://jigsaw.w3.org/css-validator/check/referer"
+   title="This Plone site was built with valid CSS.">
+  Valid CSS
+</a> |
+  </li>
+  <li>
+<a href="http://plone.org/browsersupport"
+   title="This Plone site is usable in any web browser.">
+  Usable in any browser
+</a>
+  </li>
+</ul>
+</div>
+   <a href="/login_form" title="CMS login">CMS login</a>
+
+</div>
+
+

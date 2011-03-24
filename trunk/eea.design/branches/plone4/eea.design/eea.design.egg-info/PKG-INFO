@@ -1,10 +1,10 @@
 Metadata-Version: 1.0
 Name: eea.design
-Version: 2.22
+Version: 3.0-dev
 Summary: Plone4 theme for EEAWebsite
-Home-page: http://svn.plone.org/svn/collective/
-Author: UNKNOWN
-Author-email: UNKNOWN
+Home-page: http://svn.eionet.europa.eu/projects/Zope
+Author: European Environment Agency
+Author-email: webadmin@eea.europa.eu
 License: GPL
 Description: Introduction
         ============
@@ -19,6 +19,7 @@ Description: Introduction
         
         - Initial release
         
+Keywords: eea design plone zope
 Platform: UNKNOWN
 Classifier: Framework :: Plone
 Classifier: Programming Language :: Python
