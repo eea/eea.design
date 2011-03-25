@@ -22,10 +22,33 @@
       ResourceRegistries/tools/CSSRegistry.py for the latest list of all
       available keys and default values.
       -->
- <stylesheet title=""
-    id="++resource++eea.design.stylesheets/main.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>
+    <stylesheet title=""
+        id="++resource++eea.design.stylesheets/main.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        enabled="1" expression=""/>
+
+    <stylesheet title=""
+        id="frontpage.css"
+        media="all" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        enabled="1" expression=""
+        position-after="footer.css"
+         />
+
+    <stylesheet title=""
+         id="footer.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        enabled="1" expression=""
+        position-after="eea-globaltabs.css" />
+
+    <stylesheet title=""
+        id="eea-globaltabs.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        enabled="1" expression=""
+        position-after="RTL.css"
+      />
 
 </object>

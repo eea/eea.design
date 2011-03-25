@@ -2,28 +2,51 @@ title:string=eea.design's color, font, logo and border defaults
 
 plone_skin:string=eea.design
 
-logoName:string=logo.jpg
+logoName:string=logo.gif
 
 fontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 fontBaseSize:string=69%
 fontColor:string=Black
 fontSmallSize:string=85%
 
-backgroundColor:string=White
+#different headings colors
+linkHeadingColor:string=#00446a
+headingColor:string=#2d749c
+headingFontFamily:string= Verdana, Lucida, Helvetica, Arial, sans-serif
 
-linkColor:string=#436976
-linkActiveColor:string=Red
-linkVisitedColor:string=Purple
+backgroundColor:string=transparent
+
+#general divisions colors
+lightGreyDivisionColor:string=#cccccc
+
+#general bgc for boxes and portlets
+lightBackgroundColor:string=#ecf3d0
+mediumBackgroundColor:string=#e9efcd
+darkBackgroundColor:string=#95b229
+greyBackgroundColor:string=#eeeeee
+headerBackgroundColor:string=#F0F4F5
+
+#top navigation colors
+tabBackgroundColor:string=#ebf2e4
+
+#link colors
+linkColor:string=#2a6495
+linkActiveColor:string=#f5821f
+linkVisitedColor:string=#8e004d
+linkHoverColor:string=#8e004d
+linkHoverBGColor:string=#e9efcd
+linkUnderlineColor:string=#a6bacd
+linkUnderlineHoverColor:string=#8e004d
 
 borderWidth:string=1px
 borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
-globalBorderColor:string=#8cacbb
-globalBackgroundColor:string=#dee7ec
-globalFontColor:string=#436976
+globalBorderColor:string=#cccccc
+globalGreenBorderColor:string=#9db481
+globalBackgroundColor:string=#e9efcd
+globalFontColor:string=#000000
 
-headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 
 contentViewBorderColor:string=#74ae0b
 contentViewBackgroundColor:string=#cde2a7
@@ -33,11 +56,11 @@ inputFontColor:string=Black
 
 textTransform:string=lowercase
 
-evenRowBackgroundColor:string=#eef3f5
+evenRowBackgroundColor:string=#f6f6f6
 oddRowBackgroundColor:string=transparent
 
 notifyBorderColor:string=#ffa500
-notifyBackgroundColor:string=#ffce7b
+notifyBackgroundColor:string=#febe86
 
 discreetColor:string=#76797c
 helpBackgroundColor:string=#ffffe1

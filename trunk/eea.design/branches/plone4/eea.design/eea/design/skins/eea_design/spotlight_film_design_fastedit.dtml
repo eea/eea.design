@@ -1,0 +1,24 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Embed the vimeo film:
+        //flashembed("spotlight-film", "http://vimeo.com/moogaloop.swf?clip_id=8119882&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=&amp;fullscreen=1")
+
+        // No tooltips for visual bar:
+        $("#top-news-area .portlet-promotions img").each(function(i) {
+            $(this).attr("title", "").parent().attr("title", ""); // Don't use removeAttr, IE still remembers it
+        });
+    });
+    $(window).resize(function() {
+        //var vid = $("#big_vid object, #big_vid embed");
+        //var vid_w  = 0.7 * $('.column-area').width();
+        //vid.attr("width", vid_w); // 70 % of spotlight box
+        //vid.attr("height", (9/16) * vid_w);
+
+        // Align thumbnails to the right wiht the embedded player height
+        var margin = ($('#spotlight-film-wrapper').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
+        $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
+
+        //$(".frontpage .column-area").height(510);
+    });
+</script>
+

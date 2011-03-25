@@ -4,9 +4,9 @@
        Eionet, EW ..
    </div>
 
-   <div metal:use-macro="here/global_siteactions/macros/site_actions">
-       Faq, sitemap ..
-   </div>
+   <!--<div metal:use-macro="here/global_siteactions/macros/site_actions">-->
+       <!--Faq, sitemap ..-->
+   <!--</div>-->
    <div metal:use-macro="here/cross_site_panels/macros/main">
        dropdown for ETCs ..
    </div>

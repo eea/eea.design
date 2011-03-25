@@ -4,32 +4,28 @@
      -->
 
 <object>
-  <!-- portalheader order -->
-  <order manager="plone.portalheader" skinname="eea.design"
-         based-on="Plone Default">
+    <!-- portalheader order -->
+    <order manager="plone.portalheader" skinname="eea.design"
+           based-on="Plone Default">
 
-      <viewlet name="eea.site_actions"
-             insert-before="plone.skip_links" />
-       <viewlet name="eea.cross_site_top"
-             insert-before="plone.skip_links" />
-  </order>
-  <!-- end portalheader order -->
+        <viewlet name="plone.site_actions"
+                 insert-before="plone.skip_links"/>
+        <viewlet name="eea.cross_site_top"
+                 insert-before="plone.skip_links"/>
+    </order>
+    <!-- end portalheader order -->
 
-  <hidden manager="plone.portalheader" skinname="eea.design">
+    <hidden manager="plone.portalheader" skinname="eea.design">
 
-  </hidden>
+    </hidden>
 
-  <order manager="plone.portalfooter" skinname="eea.design"
-         based-on="Plone Default">
-              <viewlet name="eea.footer" insert-before="*" />
-                <viewlet name="eea.colophon" insert-before="*" />
-  </order>
+    <order manager="plone.portalfooter" skinname="eea.design"
+           based-on="Plone Default">
+    </order>
 
-  <hidden manager="plone.portalfooter" skinname="eea.design">
-        <viewlet name="plone.footer" />
-        <viewlet name="plone.colophon" />
-        <viewlet name="plone.site_actions" />
-  </hidden>
+    <hidden manager="plone.portalfooter" skinname="eea.design">
+        <viewlet name="plone.site_actions"/>
+    </hidden>
 
 
 </object>

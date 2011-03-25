@@ -1,95 +1,169 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="eea.design">
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:browser="http://namespaces.zope.org/browser"
+        i18n_domain="eea.design">
 
 
-  <interface
-      interface=".interfaces.IThemeSpecific"
-      type="zope.publisher.interfaces.browser.IBrowserSkinType"
-      name="eea.design"
-      />
+    <interface
+            interface=".interfaces.IThemeSpecific"
+            type="zope.publisher.interfaces.browser.IBrowserSkinType"
+            name="eea.design"
+            />
 
 
-<!-- Resource directories -->
+    <!-- Resource directories -->
 
-  <browser:resourceDirectory
-      name="eea.design.images"
-      directory="images"
-      layer=".interfaces.IThemeSpecific"
-      />
+    <browser:resourceDirectory
+            name="eea.design.images"
+            directory="images"
+            layer=".interfaces.IThemeSpecific"
+            />
 
-  <browser:resourceDirectory
-      name="eea.design.stylesheets"
-      directory="stylesheets"
-      layer=".interfaces.IThemeSpecific"
-      />
-  <browser:resourceDirectory
-      name="eea.design.templates"
-      directory="templates"
-      layer=".interfaces.IThemeSpecific"
-      />
+    <browser:resourceDirectory
+            name="eea.design.stylesheets"
+            directory="stylesheets"
+            layer=".interfaces.IThemeSpecific"
+            />
+    <browser:resourceDirectory
+            name="eea.design.templates"
+            directory="templates"
+            layer=".interfaces.IThemeSpecific"
+            />
 
 
-      <!-- Viewlets registration -->
-
-    <browser:viewlet
-        name="eea.cross_site_top"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        template="templates/cross_site_top.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-      />
+    <!-- Viewlets registration -->
 
     <browser:viewlet
-        name="eea.site_actions"
-        for="*"
-        class=".viewlets.SiteActionViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        template="templates/site_actions.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-/>
+            name="eea.cross_site_top"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            template="templates/cross_site_top.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
+
+    <browser:viewlet
+            name="plone.site_actions"
+            for="*"
+            class=".viewlets.SiteActionViewlet"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            template="templates/site_actions.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
 
 
     <browser:viewlet
-        name="eea.colophon"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        template="templates/colophon.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-      />
+            name="plone.colophon"
+            manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+            template="templates/colophon.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
 
     <browser:viewlet
-        name="eea.footer"
-        for="*"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        template="templates/footer.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-      />
+            name="plone.footer"
+            for="*"
+            manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+            template="templates/footer.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
+
+    
+    <!-- Browser pages -->
+    <browser:page
+            name="global_externalsites"
+            for="*"
+            template="templates/global_externalsites.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
 
     <browser:page
-        name="global_externalsites"
-        for="*"
-        template="templates/global_externalsites.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-      />
+            name="cross_site_panels"
+            for="*"
+            template="templates/cross_site_panels.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
 
     <browser:page
-        name="cross_site_panels"
-        for="*"
-        template="templates/cross_site_panels.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-      />
+            name="global_siteactions"
+            for="*"
+            template="templates/global_siteactions.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
 
     <browser:page
-        name="global_siteactions"
-        for="*"
-        template="templates/global_siteactions.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-      />
+            name="frontpage_macros"
+            for="*"
+            template="templates/frontpage_macros.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
+
+    <browser:page
+            name="frontpage_view"
+            for="*"
+            template="templates/frontpage_view.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
+    <browser:page
+            for="*"
+            name="frontpage_highlights"
+            class=".frontpage.Frontpage"
+            permission="zope.Public"
+            allowed_interface=".interfaces.IFrontPageHighlights"
+            />
+
+    <browser:page
+            for="*"
+            name="soer_topic_search_logic"
+            class=".soer_topic_search_logic.SoerTopicSearch"
+            permission="zope.Public"
+            allowed_interface=".interfaces.ISoerTopicSearch"
+            />
+
+    <browser:page
+            for="*"
+            name="soer_frontpage_logic"
+            class=".soer_frontpage.SoerFrontpage"
+            permission="zope.Public"
+            allowed_interface=".interfaces.ISoerFrontpage"
+            />
+
+    <browser:page
+            for="zope.interface.Interface"
+            name="soer_tagcloud"
+            class=".tagcloud.TagCloud"
+            permission="zope.Public"
+            />
+
+
+    <browser:page
+            for="*"
+            name="subfolder_view_logic"
+            class=".subfolder_view_logic.SubFolderView"
+            permission="zope.Public"
+            allowed_interface=".interfaces.ISubFolderView"
+            />
+
+    <browser:page
+            for="*"
+            name="smart_view_logic"
+            class=".smart_view_logic.SmartView"
+            permission="zope.Public"
+            allowed_interface=".interfaces.ISmartView"
+            />
+
+    <!-- added for plone 4 migration -->
+    <browser:page
+            for="*"
+            name="inApplication"
+            class=".main.Main"
+            permission="zope.Public"
+            attribute="inApplication"
+            />
 </configure>
