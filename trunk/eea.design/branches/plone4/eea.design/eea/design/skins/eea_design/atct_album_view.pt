@@ -1,0 +1,101 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+  lang="en-US"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="plone">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:main_macro define-macro="content-core"
+     tal:define="result python:here.atctListAlbum(images=1, folders=1, subimages=0, others=1);
+                 images result/images;
+                 albums result/folders;
+                 otherContents result/others;
+                 Batch python:modules['Products.CMFPlone'].Batch;
+                 b_start python:request.get('b_start', 0);
+                 kssClassesView context/@@kss_field_decorator_view;
+                 getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                 templateId template/getId;
+                 batch python:Batch(images, 12, int(b_start), orphan=1)">
+
+    <div metal:define-macro="text-field-view"
+             id="parent-fieldname-text" class="stx"
+             tal:define="kss_class python:getKssClasses('text',
+                         templateId=templateId, macro='text-field-view');
+                         has_text exists:context/aq_explicit/getText;
+                         text python:has_text and here.getText() or ''"
+             tal:condition="text"
+             tal:attributes="class python:test(here.Format() in ('text/structured',
+                                                   'text/x-rst', ), 'stx' + kss_class, 'plain' + kss_class)">
+            <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+    </div>
+
+  <metal:listingmacro define-macro="listing" tal:define="
+    entry_macro  here/atct_albumentry/macros/entry;
+    folderContents folderContents|nothing">
+<!-- ichimdav foldercontents fails for now -->
+  <tal:folderContents condition="folderContents" tal:define="batch folderContents">
+    <div metal:use-macro="here/batch_macros/macros/navigation" />
+    <tal:images tal:repeat="brain folderContents">
+      <tal:entry tal:define="
+        obj brain/getObject;
+        obj_title python:obj.pretty_title_or_id();
+        desc_or_title python:brain.Description or obj_title;
+        urlview obj/@@url;
+        listing_url urlview/listing_url;
+        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        <metal:entry use-macro="entry_macro" />
+      </tal:entry>
+    </tal:images>
+    <div class="visualClear"><!-- --></div>
+    <!--<div metal:use-macro="here/batch_macros/macros/navigation" />-->
+  </tal:folderContents>
+
+  <tal:noFolderContents tal:condition="not:folderContents">
+
+  <!--<div tal:condition="images"-->
+    <!--metal:use-macro="here/batch_macros/macros/navigation" />-->
+
+  <tal:albumsimages tal:condition="images">
+    <tal:images tal:condition="batch" tal:repeat="brain batch">
+      <tal:entry tal:define="
+        obj brain/getObject;
+        desc_or_title python:brain.Description or obj.pretty_title_or_id;
+        urlview obj/@@url;
+        listing_url urlview/listing_url;
+        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        <metal:entry use-macro="entry_macro" />
+      </tal:entry>
+    </tal:images>
+    <div class="visualClear"><!-- --></div>
+  </tal:albumsimages>
+
+  <p class="discreet"
+    i18n:domain="atcontenttypes"
+    i18n:translate="text_no_albums_uploaded"
+    tal:condition="python:not images">
+      No albums or photos uploaded yet.
+  </p>
+
+  <div tal:condition="images"
+    metal:use-macro="here/batch_macros/macros/navigation" />
+
+  <tal:listing condition="otherContents"
+    define="folderContents otherContents">
+  <metal:listing metal:use-macro="here/folder_listing/macros/listing">
+    <metal:empty metal:fill-slot="no_items_in_listing"></metal:empty>
+  </metal:listing>
+
+  </tal:listing>
+  </tal:noFolderContents>
+
+  </metal:listingmacro>
+
+  <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
+
+</metal:main_macro>
+</metal:content-core>
+
+</body>
+
+</html>

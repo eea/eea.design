@@ -97,7 +97,7 @@ class Frontpage(BrowserView):
     def getLow(self, portaltypes = ('Highlight', 'PressRelease'), scale='dummy'): 
         visibilityLevel = [ 'top', 'middle', 'bottom' ] 
         otherIds = [ h['id'] for h in self.getMedium(portaltypes) ] 
-        otherIds.extend( [ h['id'] for h in self.getHigh(portaltypes) ] )  #pyflakes, #pylint: disable-msg = W0631
+        otherIds.extend( [ high['id'] for high in self.getHigh(portaltypes) ] )
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfHigh + self.noOfMedium + self.noOfLow] 
         highlights = [] 
 
@@ -118,7 +118,7 @@ class Frontpage(BrowserView):
                  'expires' : high['expires'], 
                  'getVisibilityLevel' : high['getVisibilityLevel'], 
                  'themes':themes, 
-                  }) 
+                  })
 
         return highlights[:self.noOfLow] 
 
@@ -139,12 +139,12 @@ class Frontpage(BrowserView):
 
     def getCampaign(self):
         ret = self.context.restrictedTraverse('@@globalPromotion')()
-        if ret == None:
+        if ret is None:
             return None
         portal_url = getToolByName(aq_inner(self.context), 'portal_url')
         portal = portal_url.getPortalObject()
         img = getattr(self.context, 'campaign-banner', None)
-        if img != None:
+        if img is not None:
             wf = getToolByName(portal, 'portal_workflow', None)
             hist = wf.getHistoryOf('plone_workflow', img)
             if hist[-1]['review_state'] == 'published' or 'force_campaign' in self.request:
@@ -199,7 +199,7 @@ class Frontpage(BrowserView):
                 continue
 
             themes = IThemeTagging(obj).tags
-            if len(themes) == 0:
+            if not len(themes):
                 continue
             theme = themes[0]
             if theme in cPromos:

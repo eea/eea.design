@@ -3,7 +3,7 @@
         xmlns:browser="http://namespaces.zope.org/browser"
         i18n_domain="eea.design">
 
-
+<include package="plone.app.portlets" />
     <interface
             interface=".interfaces.IThemeSpecific"
             type="zope.publisher.interfaces.browser.IBrowserSkinType"
@@ -69,8 +69,25 @@
             permission="zope2.View"
             />
 
-    
+    <browser:viewlet
+        name="plone.searchbox"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.SearchBoxViewlet"
+        template="templates/global_searchbox.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+    />
+   
     <!-- Browser pages -->
+   
+    <browser:page
+        for="plone.portlets.interfaces.ILocalPortletAssignable"
+        class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+        name="manage-footer-portlets"
+        template="templates/manage-footer.pt"
+        permission="plone.app.portlets.ManagePortlets"
+    />
+    
     <browser:page
             name="global_externalsites"
             for="*"

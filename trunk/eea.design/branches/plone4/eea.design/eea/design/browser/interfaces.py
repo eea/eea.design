@@ -1,5 +1,8 @@
+from plone.app.portlets.interfaces import IColumn
 from plone.theme.interfaces import IDefaultPloneLayer
 from zope.interface import Interface
+from plone.portlets.interfaces import IPortletManager
+
 
 class IThemeSpecific(IDefaultPloneLayer):
     """Marker interface that defines a Zope 3 browser layer.
@@ -9,46 +12,54 @@ class IThemeSpecific(IDefaultPloneLayer):
     """
 
 
+class IFooterPortletManager(IPortletManager, IColumn):
+    """we need our own portlet manager for the footer area.
+    we also import Icolumn to get the portlets that are defined
+    for the column area, otherwise we only get two portlets
+    ( static and collection )
+    """
+
+
 class ISoerTopicSearch(Interface):
 
-    def getTopicLabel():#pyflakes, #pylint: disable-msg = E0211
+    def getTopicLabel():
         pass
 
-    def getSynthesisReport():#pyflakes, #pylint: disable-msg = E0211
+    def getSynthesisReport():
         pass
 
-    def getThematicAssesments(): #pyflakes, #pylint: disable-msg = E0211
+    def getThematicAssesments():
         pass
 
-    def getGlobalMegatrends(): #pyflakes, #pylint: disable-msg = E0211
+    def getGlobalMegatrends():
         pass
 
-    def getCountryEnvironment(): #pyflakes, #pylint: disable-msg = E0211
+    def getCountryEnvironment():
         pass
 
 class ISoerFrontpage(Interface):
 
-    def getKeyFacts(): #pyflakes, #pylint: disable-msg = E0211
+    def getKeyFacts():
         pass
 
-    def getMessages(): #pyflakes, #pylint: disable-msg = E0211
+    def getMessages():
         pass
 
-    def getSoerTopics(): #pyflakes, #pylint: disable-msg = E0211
+    def getSoerTopics():
         pass
 
-    def getSoerLocations(): #pyflakes, #pylint: disable-msg = E0211
+    def getSoerLocations():
         pass
 
 class IFrontPageHighlights(Interface):
 
-    def getHigh(): #pyflakes, #pylint: disable-msg = E0211
+    def getHigh():
         """ Return the published highlights with visibility `top` and that
             haven't expired. Sort by publish date and return the number
             that is configured in portal_properties.frontpage_properties.
         """
 
-    def getMedium(): #pyflakes, #pylint: disable-msg = E0211
+    def getMedium():
         """ Return highlights with visibility `middle` and the ones with
             `top` that are left over because of the configuration in
             portal_properties.frontpage_properties. """
@@ -57,28 +68,28 @@ class IFrontPageHighlights(Interface):
         """ Return all published promotions and group them in categories.
             Categories are defined by the folders containing the promotions. """
 
-    def getCampaign(): #pyflakes, #pylint: disable-msg = E0211
+    def getCampaign():
         """ Return the campaign promotion if there is one. """
 
-    def getMultimedia(): #pyflakes, #pylint: disable-msg = E0211
+    def getMultimedia():
         """ Return 4 latest videos. """
 
-    def getHighArticles(): #pyflakes, #pylint: disable-msg = E0211
+    def getHighArticles():
         """ Return the published articles with visibility `top` and that
             haven't expired. Sort by publish date and return the number
             that is configured in portal_properties.frontpage_properties.
         """
 
-    def getLow():  #pyflakes, #pylint: disable-msg = E0211
+    def getLow():
         """ return the published highlights with visibility bottom. """
 
-    def getMediumArticles():  #pyflakes, #pylint: disable-msg = E0211
+    def getMediumArticles():
         """ Return the published articles with visibility `middle` and that
             haven't expired. Sort by publish date and return the number
             that is configured in portal_properties.frontpage_properties.
         """
 
-    def getLowArticles():  #pyflakes, #pylint: disable-msg = E0211
+    def getLowArticles():
         """ Return the published articles with visibility `bottom` and that
             haven't expired. Sort by publish date and return the number
             that is configured in portal_properties.frontpage_properties.
@@ -89,18 +100,18 @@ class ISubFolderView(Interface):
     """Marker interface for SubFolderView
     """
 
-    def folder_contents(size_limit): #pyflakes, #pylint: disable-msg = E0211, E0213
+    def folder_contents(size_limit):
         """ Return the subfolder contents of the context folder """
 
 
 class ISmartView(Interface):
 
-    def getTemplateName(): #pyflakes, #pylint: disable-msg = E0211
+    def getTemplateName():
         """  """
 
-    def getTemplate(): #pyflakes, #pylint: disable-msg = E0211
+    def getTemplate():
         """  """
 
-    def getListingMacro(): #pyflakes, #pylint: disable-msg = E0211
+    def getListingMacro():
         """  """
 

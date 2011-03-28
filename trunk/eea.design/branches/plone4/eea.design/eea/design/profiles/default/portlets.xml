@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<portlets>
+ <portletmanager
+   name="plone.footer"
+   type="eea.design.browser.interfaces.IFooterPortletManager"
+ />
+</portlets>

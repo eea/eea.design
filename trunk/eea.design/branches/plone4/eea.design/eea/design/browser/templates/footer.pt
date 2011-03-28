@@ -10,6 +10,7 @@
 
                 <div id="portal-footer">
                     <!--<metal:ecotip  use-macro="context/portlet_ecotip/macros/portlet"/>-->
+                    <tal:block replace="structure provider:plone.footer" />
                 </div>
             </div>
 

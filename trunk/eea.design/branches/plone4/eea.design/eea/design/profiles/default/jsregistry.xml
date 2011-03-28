@@ -1,27 +1,50 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration for the portal_javascripts tool.
-     -->
 
-<object name="portal_javascripts">
-
- <!-- Javascript files that will be registered with the
-      portal_javascripts tool are defined here. You can also specify values
-      for existing resources if you need to modify some of their properties.
-      Javascript elements accept these parameters:
-      - 'id' (required): same rules as for stylesheets (see
-        'cssregistry.xml').
-      - 'expression' (optional - default: ''): a tal condition.
-      - 'inline' (optional - default: False)
-      - 'enabled' (optional - default: True): boolean
-      - 'cookable' (optional - default: True): boolean (aka 'merging allowed')
-      See registerScript() arguments in ResourceRegistries/tools/JSRegistry.py
-      for the latest list of all available keys and default values.
-      -->
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
- <javascript
-    id="++resource++eea.design.javascripts/something.js"
-    cacheable="False" compression="safe" cookable="False"
-    enabled="True" expression=""  inline="False"/>
--->
-
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+  <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="promotions.js" inline="False"
+    position-after="iefixes.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="global_searchbox.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="soer_frontpage.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="slide.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-smartview.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-accordion.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-fullscreen.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-toc.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-tooltips.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-galleryview.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-autoscroll.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-fancybox.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="framebreak.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="python: portal.portal_membership.isAnonymousUser() and request.get('jsdisable','') != 'jquery'" id="design.js" inline="False"
+    position-before="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="python: request.get('jsdisable','') != 'jquery'" id="print_warning.js" inline="False"
+    position-after="promotions.js"/>
 </object>
+
