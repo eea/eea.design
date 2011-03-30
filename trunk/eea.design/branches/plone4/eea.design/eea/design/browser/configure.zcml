@@ -51,6 +51,14 @@
             permission="zope2.View"
             />
 
+    <browser:viewlet
+            name="plone.logo"
+            class=".viewlets.LogoViewlet"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            template="templates/logo.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
 
     <browser:viewlet
             name="plone.colophon"
@@ -112,21 +120,7 @@
             permission="zope2.View"
             />
 
-    <browser:page
-            name="frontpage_macros"
-            for="*"
-            template="templates/frontpage_macros.pt"
-            layer=".interfaces.IThemeSpecific"
-            permission="zope2.View"
-            />
-
-    <browser:page
-            name="frontpage_view"
-            for="*"
-            template="templates/frontpage_view.pt"
-            layer=".interfaces.IThemeSpecific"
-            permission="zope2.View"
-            />
+   
     <browser:page
             for="*"
             name="frontpage_highlights"

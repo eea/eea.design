@@ -14,7 +14,30 @@
         checkPermission nocall: context/portal_membership/checkPermission;
         site_properties context/portal_properties/site_properties;
         ajax_load request/ajax_load | nothing;
-        ajax_include_head request/ajax_include_head | nothing"
+        ajax_include_head request/ajax_include_head | nothing;
+        template_id template/getId;
+        normalizeString nocall:plone_view/normalizeString;
+        toLocalizedTime nocall:plone_view/toLocalizedTime;
+        portal_properties context/portal_properties;
+        site_properties portal_properties/site_properties;
+        here_url context_state/object_url;
+        portal portal_state/portal;
+        isAnon portal_state/anonymous;
+        member portal_state/member;
+        actions python:context.portal_actions.listFilteredActionsFor(context);
+        mtool context/portal_membership;
+        wtool context/portal_workflow;
+        wf_state context_state/workflow_state;
+        default_language portal_state/default_language;
+        is_editable context_state/is_editable;
+        isContextDefaultPage context_state/is_default_page;
+        object_title context_state/object_title;
+        putils context/plone_utils;
+        ztu modules/ZTUtils;
+        acl_users nocall: context/acl_users;
+        ifacetool context/portal_interface;
+        syntool context/portal_syndication;
+        "
     tal:attributes="lang lang;">
 
     <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">
@@ -26,6 +49,8 @@
 
     <!-- Forces IE8+ into newest rendering engine even if on an intranet. This has to be defined before any script/style tags. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no" />
 
     <metal:baseslot define-slot="base">
         <base tal:attributes="href plone_view/renderBase" /><!--[if lt IE 7]></base><![endif]-->
@@ -75,12 +100,18 @@
             <div tal:replace="structure provider:plone.portaltop" />
 </div>
         </div>
-    <div id="portal-columns" class="row">
+
+    <div id="portal-columns" class="row" >
 
         <div id="portal-column-content" class="cell" tal:attributes="class python:sunburst_view.getColumnsClass(view)">
 
             <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" />
-
+            <!-- <tal:webapplication-menu condition="inApplication">
+                    <metal:menu use-macro="here/webapp_menu/macros/menu">
+                        Application menu
+                    </metal:menu>
+                </tal:webapplication-menu>
+            -->
             <metal:block define-slot="content">
                 <div metal:define-macro="content"
                     tal:define="show_border context/@@plone/showEditableBorder; show_border python:show_border and not ajax_load"
@@ -151,7 +182,7 @@
             <div id="portal-column-one"
                  class="cell width-1:4 position-0"
                  metal:define-slot="column_one_slot"
-                 tal:condition="sl"
+                 tal:condition="python:test(sl)"
                  tal:attributes="class python:isRTL and 'cell width-1:4 position-3:4' or 'cell width-1:4 position-0'">
                 <div class="visualPadding">
                     <div id="slide-menu">
@@ -168,7 +199,7 @@
         <div id="portal-column-two"
             class="cell width-1:4 position-3:4"
             metal:define-slot="column_two_slot"
-            tal:condition="sr"
+            tal:condition="python:test(sr)"
             tal:attributes="class python:isRTL and 'cell width-1:4 position-0' or 'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
                 <tal:block replace="structure provider:plone.rightcolumn" />
@@ -177,6 +208,10 @@
         </tal:notajax>
     </div>
 
+
+    <div i18n:domain="eea.translations" tal:condition="python:lang != 'en'" id="translation-disclaimer">
+        <p class="note" i18n:translate="page_translated_by">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
+    </div>
 
     <metal:block i18n:domain="plone" tal:condition="not:ajax_load">
         <div tal:replace="structure provider:plone.portalfooter" />

@@ -1,3 +1,5 @@
+<tal:block tal:define="foo python:request.set('disable_plone.leftcolumn', 1);
+            bar python:request.set('disable_plone.rightcolumn', 1);"/>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
       i18n:domain="plone"
@@ -9,9 +11,7 @@
     <div metal:fill-slot="main">
         <h1 class="hiddenStructure" tal:content="context/Title">EEA Home page</h1>
         <tal:main-macro metal:define-macro="main">
-            <!--<div metal:use-macro="here/document_actions/macros/document_actions">-->
-                <!--Document actions (print, sendto etc)-->
-            <!--</div>-->
+          
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
                 <tal:promos condition="python:request.get('LANGUAGE','en') == 'en'">
                     <div id="top-news-area">

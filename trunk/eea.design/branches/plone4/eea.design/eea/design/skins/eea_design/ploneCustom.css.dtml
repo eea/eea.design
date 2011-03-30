@@ -970,11 +970,12 @@ float:right;
 .documentActions ul {
     margin: 0;
     padding: 0;
-    float: left;
+    float: right;
+    display: inline-block;
 }
 
 .documentActions li {
-    display: inline;
+    display: inline-block !important;
     list-style: none;
     list-style-image: none;
     margin: 0;
@@ -987,9 +988,9 @@ float:right;
 }
 
 /* Top documentActions should show languageCodes */
-.documentActions ul {
-    display: none;
-}
+/*.documentActions ul {*/
+    /*display: none;*/
+/*}*/
 .documentActions .languageCodes {
     display: block;
 }

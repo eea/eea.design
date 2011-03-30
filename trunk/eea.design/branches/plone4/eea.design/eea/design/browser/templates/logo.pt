@@ -1,0 +1,15 @@
+<a metal:define-macro="portal_logo"
+   id="portal-logo"
+   title="Home"
+   accesskey="1"
+   tal:attributes="href view/navigation_root_url"
+   i18n:domain="plone"
+   i18n:attributes="title">
+     <img src="" alt="" id="printLogo"
+           tal:define="
+           lang  context/@@plone_portal_state/language;
+           portal_url context/@@plone_portal_state/portal_url;
+           portal_properties context/portal_properties;
+           logo python:'++resource++eea.translations.images/printlogo-%s.gif' % lang"
+           tal:attributes="alt portal_properties/title;
+                           src string:${portal_url}/${logo}" /></a>
