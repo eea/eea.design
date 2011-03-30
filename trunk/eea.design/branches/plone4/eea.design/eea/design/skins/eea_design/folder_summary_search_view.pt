@@ -7,14 +7,19 @@
 
     <div metal:fill-slot="main">
     <metal:main-macro define-macro="main">
-      <tal:isEmpty tal:condition="python: isEmpty and isAnon and len(context.getTranslations()) &gt; 1">
-         <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />
-      </tal:isEmpty>
+      <!-- disabled until EEAAdmin is ported to plone 4-->
+        <!--<tal:isEmpty tal:condition="python: isEmpty and isAnon and len(context.getTranslations()) &gt; 1">-->
+         <!--<tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />-->
+      <!--</tal:isEmpty>-->
 
         <h1 tal:content="object_title" class="documentFirstHeading">
             Title or id
         </h1>
-
+        <p class="documentDescription"
+           tal:content="here/Description"
+           tal:condition="here/Description">
+            Description
+        </p>
 
 <script type="text/javascript">
 function addSearchterm() {
@@ -55,14 +60,11 @@ function addSearchterm() {
         Up one level
         </a>
 
-        <p class="documentDescription"
-           tal:content="here/Description"
-           tal:condition="here/Description">
-            Description
-        </p>
+
 
        <div metal:use-macro="here/folder_summary_view/macros/listing" />
-       <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
+       <metal:subtopics use-macro="context/atct_topic_view/macros/folderlisting_macro" />
+
     </metal:main-macro>
     </div>
 

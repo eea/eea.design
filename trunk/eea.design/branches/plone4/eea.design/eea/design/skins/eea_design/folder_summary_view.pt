@@ -15,11 +15,36 @@
       <!--</tal:isEmpty>-->
         <metal:block use-macro="context/folder_listing/macros/content-core">
             <!-- we don't want the dl -->
+           
             <metal:entries fill-slot="entries">
+
+<metal:listingmacro define-macro="listing">
+    <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
+	                    contentFilter python:contentFilter and dict(contentFilter) or {};
+                        limit_display limit_display|request/limit_display|nothing;
+                        limit_display python:limit_display and int(limit_display) or None;
+                        more_url more_url|request/more_url|string:folder_contents;
+                        is_a_topic python:context.portal_type=='Topic';
+                        folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
+                        site_properties context/portal_properties/site_properties;
+                        use_view_action site_properties/typesUseViewActionInListings|python:();
+                        Batch python:modules['Products.CMFPlone'].Batch;
+                        b_start python:request.get('b_start', 0);
+                        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 15, int(b_start), orphan=1);
+                        isAnon context/@@plone_portal_state/anonymous;
+                        normalizeString nocall: context/plone_utils/normalizeString;
+                        toLocalizedTime nocall: context/@@plone/toLocalizedTime;
+                        show_about python:not isAnon or site_properties.allowAnonymousViewAbout;
+                        navigation_root_url context/@@plone_portal_state/navigation_root_url;
+                        pas_member context/@@pas_member;">
+    <tal:listing condition="batch">
+              
+
                 <metal:block use-macro="context/folder_listing/macros/entries">
+
                     <metal:entry fill-slot="entry">
-                        <!-- Navigation -->
-                                   <!--<div metal:use-macro="here/batch_macros/macros/navigation" />-->
+
+
 
                 <div class="tileItem visualIEFloatFix"
                      tal:define="item_object item/getObject;
@@ -59,7 +84,7 @@
                         </a>
 
                     </h2>
-                    
+
                     <span class="date"
                           tal:condition="python:item_published != 'None' and  item_type not in ('Event', 'QuickEvent', 'Promotion', 'Rich Topic','Smart Folder',)">
                         <span tal:replace="python:toLocalizedTime(item_published)">
@@ -136,13 +161,30 @@
                         </a>
                     </p>
 
-                    <div class="visualClear"><!-- --></div>
+                    <div class="visualClear" style="padding-bottom:1.0em;"><!-- --></div>
 
                 </div>
+
+
                     </metal:entry>
                 </metal:block>
+
+            </tal:listing>
+             <metal:empty metal:define-slot="no_items_in_listing">
+                 <p class="discreet"
+                    tal:condition="not: folderContents"
+                    i18n:translate="description_no_items_in_folder">
+                     There are currently no items in this folder.
+                 </p>
+             </metal:empty>
+
+             </tal:foldercontents>
+             </metal:listingmacro>
+
             </metal:entries>
+
         </metal:block>
+
     </metal:content-core>
 
 </body>

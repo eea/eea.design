@@ -52,10 +52,37 @@
             />
 
     <browser:viewlet
+            name="plone.searchbox"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            class="plone.app.layout.viewlets.common.SearchBoxViewlet"
+            template="templates/global_searchbox.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
+
+     <browser:viewlet
             name="plone.logo"
             class=".viewlets.LogoViewlet"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
             template="templates/logo.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
+
+    <browser:viewlet
+            name="plone.global_sections"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            class=".viewlets.GlobalSectionsViewlet"
+            template="templates/sections.pt"
+            layer=".interfaces.IThemeSpecific"
+            permission="zope2.View"
+            />
+
+    <browser:viewlet
+            name="plone.abovecontenttitle.documentactions"
+            class=".viewlets.DocumentActionsViewlet"
+            manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+            template="templates/document_actions.pt"
             layer=".interfaces.IThemeSpecific"
             permission="zope2.View"
             />
@@ -76,16 +103,8 @@
             layer=".interfaces.IThemeSpecific"
             permission="zope2.View"
             />
-
-    <browser:viewlet
-        name="plone.searchbox"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class="plone.app.layout.viewlets.common.SearchBoxViewlet"
-        template="templates/global_searchbox.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-    />
    
+
     <!-- Browser pages -->
    
     <browser:page
