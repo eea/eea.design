@@ -63,29 +63,7 @@ class SubFolderView(BrowserView):
                 })
             else:
                 relatedObjects = obj.getRelatedItems()
-                foundRSSFeedRecipe = False
-                if relatedObjects:
-                    for relatedObj in  relatedObjects:
-                        if relatedObj.portal_type == 'RSSFeedRecipe':
-                            feed = IFeedPortletInfo(IFeed(relatedObj))
-                            ret['folderish'].append({
-                                'title': obj.Title(),
-                                'description': obj.Description(),
-                                'url': obj.absolute_url(),
-                                'listing_url': listing_url,
-                                'portal_type': obj.portal_type,
-                                'contents': [ {'title': item.title,
-                                               'description': item.title,
-                                               'url': item.url,
-                                               'listing_url': item.url,
-                                               'image' : item.image,
-                                               'portal_type': 'FeedItem',
-                                               } for item in feed.items[:size_limit] ],
-                                'nitems': len(feed.items),
-                                'has_more': len(feed.items) > size_limit,
-                            })
-                            foundRSSFeedRecipe = True
-                if (not relatedObjects) or (not foundRSSFeedRecipe):
+                if not relatedObjects:
                     ret['nonfolderish'].append({
                         'title': obj.Title(),
                         'description': obj.Description(),
