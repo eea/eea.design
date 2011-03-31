@@ -39,11 +39,13 @@
         syntool context/portal_syndication;
         "
     tal:attributes="lang lang;">
-
+        <!--webapp_view here/@@main_webapplication;
+        inApplication here/@@inApplication;
+        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view')"-->
     <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">
     Get the global cache headers located in global_cache_settings.
     </metal:cache>
-
+  
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -63,9 +65,26 @@
         <tal:comment replace="nothing">
             Various slots where you can insert elements in the header from a template.
         </tal:comment>
+
         <metal:topslot define-slot="top_slot" />
-        <metal:headslot define-slot="head_slot" />
-        <metal:styleslot define-slot="style_slot" />
+
+        <metal:headslot define-slot="head_slot"
+            tal:define="
+            charset site_properties/default_charset|string:utf-8">
+            <tal:anonymousNoBorder condition="isAnon|nothing">
+                <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
+            </tal:anonymousNoBorder>
+        </metal:headslot>
+
+        <metal:style_slot define-slot="style_slot">
+            <!--<link href="application.css" rel="stylesheet" type="text/css"-->
+                <!--tal:attributes="href string:$portal_url/++resource++application.css"-->
+                <!--tal:condition="inApplication"/>-->
+            <metal:pagedesign use-macro="here/page_design_macros/macros/pagedesign" />
+
+        </metal:style_slot>
+
+
         <metal:javascriptslot define-slot="javascript_head_slot" />
 
         <meta name="viewport" content="width=device-width; initial-scale=0.6666; maximum-scale=1.0; minimum-scale=0.6666" />
@@ -126,7 +145,7 @@
                     </div>
 
                     <metal:slot define-slot="body">
-                        <div id="content">
+                        <div id="content"  class="documentContent panels">
 
                             <metal:header define-slot="header" tal:content="nothing">
                             Visual Header
@@ -173,6 +192,16 @@
                        Don't use it in your custom templates.
                     </metal:sub>
                 </div>
+
+                <!--<tal:noajax condition="not: view/menu|nothing">-->
+                <!--<tal:tabs define="submenu here/@@application_submenu_direct;">-->
+                    <!--<tal:submenu-->
+                            <!--condition="python:len(submenu) &gt; 1 and inApplication">-->
+                        <!--<metal:menu use-macro="here/webapp_menu/macros/submenu">-->
+                            <!--Application menu-->
+                        <!--</metal:menu>-->
+                    <!--</tal:submenu>-->
+                <!--</tal:tabs>-->
             </metal:block>
 
             <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" tal:condition="not:ajax_load" />
