@@ -73,24 +73,26 @@
         </form>
     </dd>
 
-        <dt>Social media</dt>
+         <dt>Follow us</dt>
         <dd>
-            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter logo"/> Follow us on <a href="http://twitter.com/euenvironment">Twitter</a>
+            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon"/> <a href="http://twitter.com/euenvironment">Twitter</a>
         </dd>
         <dd>
-            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube logo"/> Watch our <a href="http://www.youtube.com/user/EEAvideos">YouTube channel</a>
+            <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon"/> <a href="http://www.facebook.com/pages/European-Environment-Agency/113006845445297">Facebook</a>
         </dd>
         <dd>
-            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo"/> Subscribe to our <a href="http://www.eea.europa.eu/highlights.rdf">RSS feed</a>
+            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon"/> <a href="http://www.youtube.com/user/EEAvideos">YouTube channel</a>
         </dd>
-
+        <dd>
+            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds">
+            <span i18n:translate="rss_feeds">RSS Feeds</span></a>
+        </dd>
 
     <dd class="portletFooter" style="padding-bottom: 0.5em"
         tal:condition="nl_unique">
      
-        <a href="#" class="moreLink" tal:attributes="href string:$portal_url/subscription/news-feeds">
-            <span i18n:translate="rss_feeds">RSS Feeds</span></a> <a href="#" class="moreLink" tal:attributes="href python: nl_objects[0].absolute_url() + '/view'">
-            <span i18n:translate="label_visit_archives">Archive</span></a>
+         <a href="#" class="moreLink" tal:attributes="href python: nl_objects[0].absolute_url() + '/view'">
+            <span i18n:translate="label_visit_archives">Notifications archive</span></a>
    
     </dd>
     
