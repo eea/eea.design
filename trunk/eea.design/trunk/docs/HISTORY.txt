@@ -4,6 +4,7 @@ Changelog
 2.22-dev - (unreleased)
 -----------------------
  * Bug fix: Added translation domain to ZCML files [voineali #4139]
+ * Change: Added API link "for developers" to the footer [demarant]
 
 2.21 - (2011-03-09)
 -------------------
