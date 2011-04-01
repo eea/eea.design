@@ -199,7 +199,7 @@
             allowed_interface=".interfaces.ISmartView"
             />
 
-    <!-- added for plone 4 migration -->
+    <!-- added for plone 4 migration to be deleted from here -->
     <browser:page
             for="*"
             name="inApplication"
@@ -207,4 +207,13 @@
             permission="zope.Public"
             attribute="inApplication"
             />
+    
+    <browser:page
+         for="*"
+         name="url"
+         class=".url.URL"
+         permission="zope2.View"
+         allowed_attributes="listing_url object_url is_external css_class"
+     />
+
 </configure>

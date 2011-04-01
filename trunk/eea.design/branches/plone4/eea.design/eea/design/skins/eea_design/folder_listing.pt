@@ -47,6 +47,8 @@
                         b_start python:request.get('b_start', 0);
                         batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);
                         isAnon context/@@plone_portal_state/anonymous;
+                        template_id template/getId;
+                        plone_view context/@@plone;
                         normalizeString nocall: context/plone_utils/normalizeString;
                         toLocalizedTime nocall: context/@@plone/toLocalizedTime;
                         show_about python:not isAnon or site_properties.allowAnonymousViewAbout;
@@ -62,8 +64,9 @@
         Up one level
         </a>
         <!-- Navigation -->
-            <div metal:use-macro="here/batch_macros/macros/navigation" />
+        <div metal:use-macro="here/batch_macros/macros/navigation" />
         <dl metal:define-slot="entries">
+
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
             <tal:block tal:define="item_url item/getURL|item/absolute_url;
                                    item_id item/getId|item/id;
@@ -74,6 +77,7 @@
                                    item_modified item/ModificationDate;
                                    item_published item/EffectiveDate|item/getEffectiveDate;
                                    item_created item/CreationDate;
+                                    plone_view context/@@plone;
                                    item_icon python:plone_view.getIcon(item);
                                    item_type_class python:'contenttype-' + normalizeString(item_type);
                                    item_wf_state item/review_state|python: context.portal_workflow.getInfoFor(item, 'review_state', '');
@@ -82,6 +86,7 @@
                                    item_start item/start|item/StartDate|nothing;
                                    item_end item/end|item/EndDate|nothing;
                                    not_show_empty not_show_empty|nothing;
+                                 
                                    item_sametime python: item_start == item_end;
                                    item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False"
                     tal:condition="python: not isAnon or not not_show_empty or not getattr(item, 'is_empty', False)">
