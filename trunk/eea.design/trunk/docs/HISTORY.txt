@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.23-dev - (unreleased)
+-----------------------
+
 2.22 - (2011-04-01)
 -------------------
  * Cleanup: Removed PloneRSSPortlet [voineali #4169]
