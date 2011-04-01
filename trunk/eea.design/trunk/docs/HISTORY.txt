@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.22-dev - (unreleased)
------------------------
+2.22 - (2011-04-01)
+-------------------
  * Cleanup: Removed PloneRSSPortlet [voineali #4169]
  * Bug fix: Added translation domain to ZCML files [voineali #4139]
  * Change: Added API link "for developers" to the footer [demarant]
