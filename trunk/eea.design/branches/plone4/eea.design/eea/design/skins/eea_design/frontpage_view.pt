@@ -15,7 +15,7 @@
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
                 <tal:promos condition="python:request.get('LANGUAGE','en') == 'en'">
                     <div id="top-news-area">
-                            <!--<metal:promotions use-macro="here/portlet_promotions/macros/hardcoded_promotions" />-->
+                            <metal:promotions use-macro="here/portlet_promotions/macros/hardcoded_promotions" />
                     <div class="visualClear"><!-- &nbsp; --></div>
                     </div>
                 </tal:promos>

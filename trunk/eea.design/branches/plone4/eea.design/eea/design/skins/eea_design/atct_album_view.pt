@@ -31,11 +31,11 @@
     </div>
 
   <metal:listingmacro define-macro="listing" tal:define="
-    entry_macro  here/atct_albumentry/macros/entry;
+    entry_macro  context/atct_albumentry/macros/entry;
     folderContents folderContents|nothing">
 <!-- ichimdav foldercontents fails for now -->
   <tal:folderContents condition="folderContents" tal:define="batch folderContents">
-    <!--<div metal:use-macro="here/batch_macros/macros/navigation" />-->
+    <div metal:use-macro="here/batch_macros/macros/navigation" />
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
         obj brain/getObject;
@@ -48,27 +48,74 @@
       </tal:entry>
     </tal:images>
     <div class="visualClear"><!-- --></div>
-    <!--<div metal:use-macro="here/batch_macros/macros/navigation" />-->
+    <div metal:use-macro="here/batch_macros/macros/navigation" />
   </tal:folderContents>
 
-  <tal:noFolderContents tal:condition="not:folderContents">
+  <tal:noFolderContents tal:condition="not:folderContents" tal:define="
+    result python:here.atctListAlbum(images=1, others=1);
+    images result/images;
+    otherContents result/others;
+    Batch python:modules['Products.CMFPlone'].Batch;
+    b_start python:request.get('b_start', 0);
+    batch python:Batch(images, 12, int(b_start), orphan=1)">
 
-  <!--<div tal:condition="images"-->
-    <!--metal:use-macro="here/batch_macros/macros/navigation" />-->
+  <div tal:condition="images"
+    metal:use-macro="here/batch_macros/macros/navigation" />
 
-  <tal:albumsimages tal:condition="images">
-    <tal:images tal:condition="batch" tal:repeat="brain batch">
-      <tal:entry >
-        <!--tal:define="" obj brain/getObject;-->
+  <!--<tal:albumsimages tal:condition="images">-->
+    <!--<tal:images tal:condition="batch" tal:repeat="brain batch">-->
+      <!--<tal:entry tal:define="-->
+        <!--obj brain/getObject;-->
         <!--desc_or_title python:brain.Description or obj.pretty_title_or_id;-->
         <!--urlview obj/@@url;-->
         <!--listing_url urlview/listing_url;-->
         <!--is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">-->
-        <metal:entry use-macro="entry_macro" />
-      </tal:entry>
-    </tal:images>
-    <div class="visualClear"><!-- --></div>
-  </tal:albumsimages>
+
+        <!--<metal:entry use-macro="entry_macro" />-->
+      <!--</tal:entry>-->
+    <!--</tal:images>-->
+    <!--<div class="visualClear">&lt;!&ndash; &ndash;&gt;</div>-->
+  <!--</tal:albumsimages>-->
+      <tal:images tal:condition="batch" tal:repeat="image batch">
+          <div class="photoAlbumEntry">
+              <a tal:define="id python:int(b_start)+int(repeat['image'].number()-1)"
+                 tal:attributes="href string:${image/absolute_url}/view;
+                                              title image/Description">
+                  <span class="photoAlbumEntryWrapper">
+                      <img src="" alt=""
+                           tal:replace="structure python:image.tag(scale='thumb', title=image.Description())"/>
+                  </span>
+                  <span class="photoAlbumEntryTitle"
+                        tal:content="image/pretty_title_or_id">
+                      Title
+                  </span>
+              </a>
+          </div>
+      </tal:images>
+
+      <div class="photoAlbum" tal:condition="albums">
+          <tal:albums tal:repeat="album albums">
+              <div class="photoAlbumEntry photoAlbumFolder"
+                   tal:define="image_brains_in_album python:album.atctListAlbum(subimages=1)['subimages'];
+                             number_of_images python:len(image_brains_in_album);
+                             random python:modules['random'];
+                             random_image python:number_of_images and random.choice(image_brains_in_album).getObject() or None">
+                  <a tal:attributes="href album/getURL;
+                                           title album/Description">
+                      <span class="photoAlbumEntryWrapper">
+                          <img src="" alt=""
+                               tal:condition="number_of_images"
+                               tal:replace="structure python:random_image.tag(scale='thumb', title=album.Description)"/>
+                      </span>
+                      <span class="photoAlbumEntryTitle">
+                          <tal:title content="album/pretty_title_or_id">Title
+                          </tal:title>
+                          (<tal:number content="number_of_images"/>)
+                      </span>
+                  </a>
+              </div>
+          </tal:albums>
+      </div>
 
   <p class="discreet"
     i18n:domain="atcontenttypes"

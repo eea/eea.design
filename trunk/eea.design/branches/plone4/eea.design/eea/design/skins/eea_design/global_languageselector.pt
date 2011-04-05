@@ -6,8 +6,11 @@
 <!-- LANGUAGE SWITCHER DEFINITION -->
 
 <metal:language define-macro="language"
-   tal:condition="python:(context.getId() != 'portal_languages') and context.isTranslatable()">
-<tal:languages  tal:define="data context/languageSelectorData;
+   >
+<!--tal:condition="python:(context.getId() != 'portal_languages') and context.isTranslatable()">-->
+    <tal:languages  tal:define="data context/@@languageSelector;
+                            portal_state context/@@plone_portal_state;
+                            isAnon portal_state/anonymous;
                             translations python:len(context.getTranslationLanguages()) &gt; 1">
 
    <tal:anonLanguageCodes tal:condition="python:test(translations and isAnon)">

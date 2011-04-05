@@ -35,6 +35,7 @@ eea/design/browser/soer_frontpage.py
 eea/design/browser/soer_topic_search_logic.py
 eea/design/browser/subfolder_view_logic.py
 eea/design/browser/tagcloud.py
+eea/design/browser/url.py
 eea/design/browser/viewlet.pt
 eea/design/browser/viewlets.py
 eea/design/browser/images/README.txt
@@ -92,6 +93,11 @@ eea/design/skins/eea_design/global_searchbox.js
 eea/design/skins/eea_design/main_template.pt
 eea/design/skins/eea_design/page_design_macros.pt
 eea/design/skins/eea_design/ploneCustom.css.dtml
+eea/design/skins/eea_design/portlet_ecotip.pt
+eea/design/skins/eea_design/portlet_gazette.pt
+eea/design/skins/eea_design/portlet_promotions.pt
+eea/design/skins/eea_design/portlet_soer_tagcloud.pt
+eea/design/skins/eea_design/portlet_toc.pt
 eea/design/skins/eea_design/print_warning.js
 eea/design/skins/eea_design/promotions.js
 eea/design/skins/eea_design/slide.js

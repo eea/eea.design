@@ -125,7 +125,32 @@
         template="templates/manage-footer.pt"
         permission="plone.app.portlets.ManagePortlets"
     />
-    
+    <!-- langugages -->
+    <browser:page
+           for="*"
+           name="translatedSitesLanguages"
+           class=".language.Languages"
+           permission="zope.Public"
+           attribute="getTranslatedSitesLanguages"
+         />
+
+    <browser:page
+           for="*"
+           name="translatedSites"
+           class=".language.Languages"
+           permission="zope.Public"
+           attribute="getLocalSites"
+         />
+
+    <browser:page
+           for="*"
+           name="languageSelector"
+           class=".language.LanguageSelectorData"
+           permission="zope.Public"
+           attribute="data"
+         />
+
+
     <browser:page
             name="global_externalsites"
             for="*"

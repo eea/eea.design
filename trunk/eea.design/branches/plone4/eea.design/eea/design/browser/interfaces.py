@@ -116,7 +116,7 @@ class ISmartView(Interface):
         """  """
 
 
-# this interface comes from EEAContentTypes/browser/interfaces.py
+# these interfaces come from EEAContentTypes/browser/interfaces.py
 # TODO; delete this interface when EEAContentTypes is ported to Plone4
 
 class IURL(Interface):
@@ -132,3 +132,11 @@ class IURL(Interface):
 
     def css_class():
         """ Returns a class name that should be present in anchor links """
+
+class ILanguages(Interface):
+
+    def getTranslationLanguages():
+        """ Return languages for translation. """
+
+    def getTranslatedSitesLanguages():
+        """ Return languages for translated sites.  """

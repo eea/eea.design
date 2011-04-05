@@ -2,8 +2,7 @@
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       i18n:domain="plone">
-<body tal:define="Iterator python:modules['Products.CMFPlone'].IndexIterator;
-                  tabindex python:Iterator(mainSlot=False)">
+<body >
 
 <div metal:define-macro="portlet"
      tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous');
@@ -58,16 +57,16 @@
                      alt="Email address"
                      value="Enter email"
                      size="20" 
-                     tal:attributes="tabindex tabindex/next" 
+
                      i18n:attributes="alt label_email;" />
 
         <input class="subscriptionButton"
                type="submit"
-               tabindex=""
+
                name="submit"
                value=""
                alt="Subscribe"
-               tal:attributes="tabindex tabindex/next"
+
                i18n:attributes="alt label_subscribe"/>
              </div>
         </form>

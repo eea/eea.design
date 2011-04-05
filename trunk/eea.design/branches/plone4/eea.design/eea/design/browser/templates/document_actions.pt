@@ -24,7 +24,7 @@
             </ul>
         </tal:docactions>
 
-        <tal:lang tal:condition="exists: here/global_languageselector">
+        <tal:lang tal:condition="exists: context/global_languageselector">
             <metal:lang
                     use-macro="context/global_languageselector/macros/language">
                 Language selector

@@ -37,7 +37,7 @@ class SubFolderView(BrowserView):
             'nonfolderish': [],
         }
 
-        if folderContents == None:
+        if folderContents is None:
             folderContents = self.get_start_items()
 
         for brain in folderContents:

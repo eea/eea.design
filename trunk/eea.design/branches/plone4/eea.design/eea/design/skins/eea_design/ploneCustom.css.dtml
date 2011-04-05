@@ -16,6 +16,9 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+
+/* ichimdav: these styles were previously in public.css */
+
 /* see #3722 */
 body.section-atlas #visual-column-wrapper {
     float: none;
@@ -987,6 +990,7 @@ float:right;
     text-decoration: none;
 }
 
+/* TODO: see about hiding logic for document actions */
 /* Top documentActions should show languageCodes */
 /*.documentActions ul {*/
     /*display: none;*/
@@ -1566,7 +1570,7 @@ body.section-soer-draft #visual-portal-wrapper {
     width: 972px;
 }
 
-/* david columns.css slider-definitions */
+/* ichimdav columns.css slider-definitions */
 
 /* padding - thanks to the w3c box model :P */
 
