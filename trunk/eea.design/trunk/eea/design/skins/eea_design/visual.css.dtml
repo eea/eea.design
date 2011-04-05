@@ -653,4 +653,16 @@ body.frontpage .documentActions ul#languageCodes {
     display: block;
 }
 
+/* wysiwyg editor allowed specific styles */
+
+#content .callout {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-left: 1em solid #CCCCCC;
+    clear: both;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+
+
 /* </dtml-with> */

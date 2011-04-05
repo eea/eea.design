@@ -3,6 +3,8 @@ Changelog
 
 2.23-dev - (unreleased)
 -----------------------
+ * Feature: Added style for pull-out which is used via kupu/tinymce [demarant]
+ * Change: Soer topic search must return also documents/pages from synthesis report [demarant]
 
 2.22 - (2011-04-01)
 -------------------
