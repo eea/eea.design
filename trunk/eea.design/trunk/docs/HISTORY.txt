@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.24-dev - (unreleased)
+-----------------------
+
 2.23 - (2011-04-07)
 -------------------
  * Feature: Added style for pull-out which is used via kupu/tinymce [demarant]
