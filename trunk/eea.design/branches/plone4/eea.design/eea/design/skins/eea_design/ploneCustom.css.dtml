@@ -1659,5 +1659,17 @@ body.longwordlanguage .visualColumnHideTwo #portal-column-content #content {
     float: left;
 }
 
+div.listingBar a:hover {
+    background: transparent;
+    color: #8E004D !important;
+    border-bottom: 1px solid #8E004D !important;
+}
+#content a:hover, dl.portlet a:hover {
+    color: #8E004D !important;
+}
+div.listingBar a {
+    border: 0px;
+}
+
 /* </dtml-with> */
 

@@ -67,9 +67,9 @@
     text-align: center;
 }
 
-.portlet-promotions dl.portlet .hide-promo { 
-    display: none; 
-} 
+.portlet-promotions dl.portlet .hide-promo {
+    display: none;
+}
 
 .portlet-promotions dl.portlet .active-promo {
     display: block;
@@ -570,7 +570,7 @@ a.noHover {
    font-size: x-small;
    clear: right;
 }
-.portlet .thumbnail-right a { 
+.portlet .thumbnail-right a {
    border: none;
 }
 

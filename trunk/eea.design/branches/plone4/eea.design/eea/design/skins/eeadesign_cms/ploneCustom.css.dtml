@@ -1,0 +1,54 @@
+body {
+    background: white url(eeacms-banner.gif) top left repeat-y ! important;
+    padding-left:  <dtml-var "_['eeacms-banner.gif'].width">px !important;
+}
+
+#portal-globalnav li{
+        width: auto;
+	margin: 0 0.25em 0 0;
+}
+
+#portal-column-one .visualPadding,
+#portal-column-two .visualPadding {
+   padding: 0.5em;
+}
+
+#portal-column-content {
+    margin-left: -22em;
+}
+
+#content {
+    padding: 0.5em;
+}
+
+.navTreeItem a, dd.portletItem .navTreeItem a {
+    border-color: white;
+}
+
+body.section-SITE .documentActions {
+    float: right;
+    margin: 0.4em 1em 0 0.5em;
+    padding: 0;
+    text-align: right;
+}
+
+#portlet-navigation-tree li a,
+.portlet-navigation-tree li a {
+    background: none;
+}
+
+.portletNavigationTree {
+    line-height: 1.5em;
+}
+
+*:first-child+html .documentActions {
+    padding-top: 1em;
+}
+    
+.documentActions {
+    float:right;
+}
+
+.documentEditable .documentContent {
+padding: 1em;
+}
