@@ -232,13 +232,14 @@
             permission="zope.Public"
             attribute="inApplication"
             />
-    
+
+
     <browser:page
-         for="*"
-         name="url"
-         class=".url.URL"
-         permission="zope2.View"
-         allowed_attributes="listing_url object_url is_external css_class"
-     />
+            for="*"
+            name="url"
+            class=".url.URL"
+            permission="zope2.View"
+            allowed_attributes="listing_url object_url is_external css_class"
+            />
 
 </configure>
