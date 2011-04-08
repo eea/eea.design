@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<div metal:fill-slot="main">
+<p>This file contains links that should be marked in different ways by the mark_special_link.js script.
+This is to test and verify that it works. Try it with <br />
+<a href="http://localhost:8080/www/SITE/themes/test_languagelinks">Normal</a>
+<a href="http://localhost:8080/www/sv/test_languagelinks">Swedish site</a>
+<br />
+</p>
+<a href="http://themes.eea.europa.eu/IMS/ISpecs/ISpecification20080704102557/IAssessment1226434796626/view_content_pub">English themes IMS link </a>
+<br />
+<a href="http://themes.es.eea.europa.eu/IMS/ISpecs/ISpecification20080704102557/IAssessment1226434796626/view_content_pub">Spanish  themes IMS link </a>
+<br />
+<a href="http://www.eea.europa.eu/tr/themes">Turkish  subfolder </a>
+<br />
+<a href="http://ims.eionet.europa.eu/IMS/ISpecs/ISpecification20080704102557/IAssessment1226435272033">English eionet </a>
+<br />
+<a href="http://glossary.sv.eea.europa.eu/">Swedish glossary </a>
+<br />
+
+</div>
+
+</body>
+</html>

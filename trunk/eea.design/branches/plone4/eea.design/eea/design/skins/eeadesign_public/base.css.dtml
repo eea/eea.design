@@ -1,0 +1,169 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+body {
+    font: 70% Verdana, Arial, Helvetica, sans-serif;
+    color: &dtml-fontColor;;
+    margin:0;
+    padding:0px;
+    background-color: &dtml-backgroundColor;;
+}
+
+a { color: &dtml-linkColor;; }
+a:link { color: &dtml-linkColor;; }
+a:visited { color: &dtml-linkVisitedColor;; }
+a:hover { color: &dtml-linkHoverColor;; }
+a:active { color: &dtml-linkActiveColor;; }
+
+p {
+    font-family:  Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 0 0.75em 0;
+    line-height: 1.5em;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+/* no horisontal lines allowed, only used as spacer, separation is done with headings or bg colors */
+hr {
+    border: none 0;
+    border-top: 1px solid white;/*invisible border*/
+    height: 0px;
+    margin: 0.5em 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: &dtml-headingColor;;
+    font-weight: bold;
+    background-color: transparent;
+    font-family: &dtml-headingFontFamily;;
+}
+
+h1 { 
+    color: #00446a;
+    font-size: 150%; margin: 0.67em 0; 
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    padding-bottom: 0.25em;
+    padding-right:4em; /* to avoid overlapping with document actions */}
+    
+h2 {
+    font-size: 130%;
+    margin: 0.83em 0;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    padding-bottom: 0.25em;}
+h3 {
+    font-size: 125%;
+    margin: 1em 0;}
+h4 {
+    font-size: 110%;
+    margin: 1.33em 0;
+    color: #000;}
+h5 { 
+    font-size: 100%;
+    margin: 1.67em 0;
+    color: #000;}
+h6 { 
+    font-size: 85%;
+    margin: 2.33em 0;
+    color: #000;}
+
+
+
+ul {
+    line-height: 1.5em;
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+    list-style-image: url(&dtml-portal_url;/bullet.gif);
+    list-style-type: square;
+}
+
+ol {
+    line-height: 1.5em;
+    margin: 0.5em 0 0 2.5em;
+    padding: 0;
+    list-style-image: none;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+abbr, acronym, .explain {
+    text-decoration:none;
+    border-bottom: 1px dotted Black;
+    color: Black;
+    background-color: transparent;
+    cursor: help;
+}
+
+strong {font-weight: bold;}
+
+q {
+    font-family: Baskerville, Georgia, serif;
+    font-style: italic;
+    font-size: 120%;
+}
+
+
+code {
+    font-family: Monaco, "Courier New", Courier, monospace;
+    font-size: 120%;
+    color: Black;
+    background-color: &dtml-globalBackgroundColor;;
+    padding: 0 0.1em;
+}
+
+pre {
+    font-family: Monaco, "Courier New", Courier, monospace;
+    font-size: 100%;
+    padding: 1em;
+    color: Black;
+    background-color: &dtml-globalBackgroundColor;;
+    overflow: auto;
+}
+
+ins {
+    color: green;
+    text-decoration: none;
+}
+
+del {
+    color: red;
+    text-decoration: line-through;
+}
+
+
+/* Form elements */
+
+label {
+    font-weight: bold;
+}
+
+input {                                                                       
+    font-family: Verdana;
+    visibility: visible;
+    border: 1px solid &dtml-globalBorderColor;;
+    color: &dtml-fontColor;;
+    vertical-align: middle;
+    background: White url(&dtml-portal_url;/input_background.gif) repeat-x;   
+} 
+
+select {                                                                       
+    border: 1px solid &dtml-globalBorderColor;;
+    color: &dtml-fontColor;;
+    vertical-align: top;
+    background: white;
+}
+
+/* END OF BASE.CSS RULES </dtml-with> */

@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+      <metal:block fill-slot="top_slot"
+                   tal:define="dummy python:request.set('disable_border',1);
+                               disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                               disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+
+<metal:main fill-slot="main">
+
+    <h1 class="documentFirstHeading"
+        i18n:translate="heading_advanced_search">Advanced search for content</h1>
+
+    <div class="documentDescription" i18n:translate="description_advanced_search">
+        This search form is disabled
+    </div>
+
+    <div id="content-core">
+
+        <metal:define define-macro="form">
+
+      
+
+        </metal:define>
+    </div>
+</metal:main>
+
+</html>
