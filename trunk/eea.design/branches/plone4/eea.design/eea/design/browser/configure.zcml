@@ -1,6 +1,7 @@
 <configure
         xmlns="http://namespaces.zope.org/zope"
         xmlns:browser="http://namespaces.zope.org/browser"
+        xmlns:plone="http://namespaces.plone.org/plone"
         i18n_domain="eea.design">
 
 <include package="plone.app.portlets" />
@@ -242,4 +243,16 @@
             allowed_attributes="listing_url object_url is_external css_class"
             />
 
+        <!-- Customized portlets -->
+    <plone:portlet
+        name="portlets.Navigation"
+        interface="plone.app.portlets.portlets.navigation.INavigationPortlet"
+        assignment="plone.app.portlets.portlets.navigation.Assignment"
+        renderer="eea.design.browser.navigation.EEANavRenderer"
+        addview="plone.app.portlets.portlets.navigation.AddForm"
+        editview="plone.app.portlets.portlets.navigation.EditForm"
+        />
+
+
+ 
 </configure>

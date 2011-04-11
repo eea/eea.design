@@ -1,0 +1,72 @@
+<tal:block i18n:domain="plone">
+<!--
+    <metal:header define-macro="header"
+         i18n:domain="plone"
+         tal:define="view context/@@navigationHeader;
+                     displayLogo view/shouldDisplayLogo">
+
+        <a href="#" class="tile"
+           tal:condition="python: not displayLogo and not title"
+           tal:attributes="href string:${root/absolute_url}/sitemap"
+           i18n:translate="box_navigation">Navigation</a>
+        <a href="#" class="tile"
+           tal:condition="python: title and not displayLogo"
+           tal:attributes="href root/getUrl|root/absolute_url"
+           tal:content="title">Themes</a>
+        <a href="#" class="tile"
+           tal:condition="displayLogo"
+           tal:attributes="href view/logoLinkUrl">
+            <img src="" id="subsite-logo"
+               tal:attributes="src view/logoUrl;
+                               title view/title|nothing;
+                               alt view/title|string:subsite logo" />
+        </a>
+    </metal:header>
+-->
+
+<dl class="portlet portletNavigationTree" id="portlet-navigation-tree"
+    tal:define="root view/navigation_root">
+
+    <!--<metal:globalPromotion use-macro="here/portlet_globalpromotion/macros/portlet" />-->
+
+    <dt class="portletHeader" id="firstHeader"
+        tal:attributes="class python:view.hasName() and 'portletHeader' or 'portletHeader hiddenStructure'">
+        <span class="portletTopLeft"></span>
+        <a href="#"
+           class="tile"
+           tal:attributes="href string:${root/absolute_url}/sitemap;"
+           tal:content="view/title"
+           i18n:translate="">Navigation</a>
+
+        <!--<metal:header use-macro="here/portlet_navigation/macros/header" />-->
+
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem lastItem">
+        <ul class="navTree navTreeLevel0">
+            <li tal:define="selectedClass view/root_item_class;
+                            li_class python:selectedClass and ' navTreeCurrentNode' or '';"
+                tal:condition="view/include_top"
+                tal:attributes="class string:navTreeItem navTreeTopNode${li_class}">
+                <div tal:define="rootIsPortal view/root_is_portal;">
+                   <a tal:attributes="href root/absolute_url;
+                                      title root/Description;
+                                      class string:contenttype-plone-site $selectedClass;">
+                   <span tal:omit-tag=""
+                         tal:condition="rootIsPortal"
+                         i18n:translate="tabs_home">Home</span>
+                   <span tal:condition="not:rootIsPortal"
+                         tal:replace="root/Title">Root item title</span>
+                   </a>
+                </div>
+            </li>
+            <li tal:replace="structure view/createNavTree">
+                SUBTREE
+            </li>
+        </ul>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+</tal:block>

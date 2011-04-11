@@ -7,9 +7,13 @@
          directory="eea.design:skins/eea_design"/>
      <object name="eea_images" meta_type="Filesystem Directory View"
          directory="eea.design:skins/eea_images"/>
+    <object name="eeadesign_green_images" meta_type="Filesystem Directory View"
+             directory="eea.design:skins/eeadesign_green_images"/>
+
 
      <skin-path name="eea.design" based-on="Sunburst Theme">
         <layer name="eea_design" insert-after="custom" />
         <layer name="eea_images" insert-before="eea_design" />
+        <layer name="eeadesign_green_images" insert-after="eea_images" />
      </skin-path>
 </object>

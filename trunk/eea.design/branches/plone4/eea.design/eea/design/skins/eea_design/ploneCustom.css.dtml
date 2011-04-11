@@ -1671,5 +1671,19 @@ div.listingBar a {
     border: 0px;
 }
 
+/* ichimdav added from public */
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+    padding: 0px;
+    border-bottom: 0em;
+    line-height: 2em;
+}
+
+.navTreeItem a, dd.portletItem .navTreeItem a {
+    padding: 0px;
+}
+
+dl.portlet ul.navTree .navTreeCurrentItem {
+    margin: 0px;
+}
 /* </dtml-with> */
 
