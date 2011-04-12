@@ -44,7 +44,7 @@ body.section-SITE .documentActions {
 *:first-child+html .documentActions {
     padding-top: 1em;
 }
-    
+
 .documentActions {
     float:right;
 }

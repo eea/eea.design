@@ -120,7 +120,9 @@
 </div>
         </div>
 
-    <div id="portal-columns" class="row" >
+    <div id="portal-columns" class="row"  >
+        <!-- start of the main and left columns -->
+        <div id="visual-column-wrapper">
 
         <div id="portal-column-content" class="cell" tal:attributes="class python:sunburst_view.getColumnsClass(view)">
 
@@ -237,7 +239,8 @@
         </tal:notajax>
     </div>
 
-
+ </div>
+    <!-- end column wrapper -->
     <div i18n:domain="eea.translations" tal:condition="python:lang != 'en'" id="translation-disclaimer">
         <p class="note" i18n:translate="page_translated_by">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
     </div>

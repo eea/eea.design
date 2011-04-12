@@ -1671,11 +1671,23 @@ div.listingBar a {
     border: 0px;
 }
 
+div.width-full {
+    width: 100%;
+}
+
+div.position-0 {
+    margin-left: -100%;
+}
 /* ichimdav added from public */
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
     padding: 0px;
     border-bottom: 0em;
-    line-height: 2em;
+    line-height: 1.5em;
+    margin: 0px;
+}
+
+dl.portlet ul.navTreeLevel1 .navTreeItem {
+    line-height: 1.5em;
 }
 
 .navTreeItem a, dd.portletItem .navTreeItem a {
@@ -1684,6 +1696,12 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 
 dl.portlet ul.navTree .navTreeCurrentItem {
     margin: 0px;
+}
+
+
+
+#portal-colophon {
+    clear:both;
 }
 /* </dtml-with> */
 

@@ -88,7 +88,7 @@
    <element value="index_html"/>
    <element value="index.html"/>
    <element value="index.htm"/>
-   <element value="FrontPage"/>
+   <element value="frontpage_view"/>
   </property>
   <property name="search_results_description_length" type="int">160</property>
   <property name="ellipsis" type="string">...</property>

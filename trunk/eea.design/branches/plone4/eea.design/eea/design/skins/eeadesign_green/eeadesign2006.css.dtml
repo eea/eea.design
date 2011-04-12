@@ -97,36 +97,36 @@ margin: 1em auto;
 }
 
 /*
-* Forms Buttons 
+* Forms Buttons
 */
 .documentEditable * input.searchButton,
-.documentEditable * input.context, 
-.documentEditable * input.destructive, 
+.documentEditable * input.context,
+.documentEditable * input.destructive,
 .documentEditable * input.standalone,
-input.context, 
-input.destructive, 
-input.standalone {                                                          
+input.context,
+input.destructive,
+input.standalone {
     cursor: pointer;
     background:#f5821f;
-    color:white;                                                                                                       
+    color:white;
     text-transform: &dtml-textTransform;;
 	border:1px solid;
 	border-color:#FC9 #630 #330 #F96;
 	padding:0.3em;
 	font: bold 1.2em verdana,sans-serif;
-	text-decoration:none;                                 
+	text-decoration:none;
 }
 
-/* when pressing switch the borders to give press effect 
-input.context:active,  
-input.destructive:active, 
+/* when pressing switch the borders to give press effect
+input.context:active,
+input.destructive:active,
 input.standalone:active {
  	border-color:#630 #FC9 #F96 #330;
 }
 */
 
 input.context:hover, 
-input.destructive:hover, 
+input.destructive:hover,
 input.standalone:hover {
  	color: #F9F99D;
 }
@@ -135,6 +135,6 @@ input.standalone:hover {
 
 /* </dtml-with> */
 
-/* Latest version of the documentation on pre-defined properties from Plone 
+/* Latest version of the documentation on pre-defined properties from Plone
    can be found in CMFPlone/skins/plone_styles/ploneCustom.css */
 

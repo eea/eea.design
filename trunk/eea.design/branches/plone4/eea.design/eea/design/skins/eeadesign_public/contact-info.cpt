@@ -22,8 +22,7 @@
 
     <div class="documentDescription"
          tal:condition="portal/description"
-         tal:content="portal/description">If you have any questions or comments about the EEA website, fill in the form
-         below.</div>
+         tal:content="portal/description"></div>
 
    
     <div tal:condition="not:email_from_address">
@@ -38,7 +37,8 @@
     <div tal:condition="email_from_address">
 
         <div i18n:translate="description_contact_site_owner">
-            Fill in this form to contact the site owners.
+            If you have any questions or comments about the EEA website, fill in the form
+         below.
         </div>
         <div id="content-core">
             <form name="feedback_form"
