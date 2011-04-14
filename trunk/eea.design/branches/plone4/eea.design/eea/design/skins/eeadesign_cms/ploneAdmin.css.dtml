@@ -1,3 +1,13 @@
+
+
+/* http://localhost:8080/new/portal_css/ploneCustom.css?original=1 */
+/* */
+/* */
+
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
 body {
     background: white url(eeacms-banner.gif) top left repeat-y ! important;
     padding-left:  <dtml-var "_['eeacms-banner.gif'].width">px !important;
@@ -14,7 +24,7 @@ body {
 }
 
 #portal-column-content {
-    margin-left: -22em;
+    /*margin-left: -22em;*/
 }
 
 #content {
@@ -52,3 +62,10 @@ body.section-SITE .documentActions {
 .documentEditable .documentContent {
 padding: 1em;
 }
+
+
+
+
+/* </dtml-with>
+** YOUR CSS RULES STOP HERE
+*/

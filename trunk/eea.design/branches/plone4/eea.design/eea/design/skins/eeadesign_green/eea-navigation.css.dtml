@@ -11,8 +11,8 @@ a.navItemLevel1current,
     background: url("arrow-normal.png") no-repeat scroll 1em 50% #E9EFCD !important;
 }
 
-#eea-portlet-navigation-tree a, 
-#eea-portlet-navigation-tree a:active, 
+#eea-portlet-navigation-tree a,
+#eea-portlet-navigation-tree a:active,
 #eea-portlet-navigation-tree a:visited  {
     color:&dtml-fontColor;;
 }
@@ -75,7 +75,7 @@ a.navItemLevel1current,
 
 #eea-portlet-navigation-tree .roundedBox a {
     padding: 0.5em 0.5em;
-} 
+}
 #eea-portlet-navigation-tree .roundedBox {
     margin-bottom:0.3em;
 }

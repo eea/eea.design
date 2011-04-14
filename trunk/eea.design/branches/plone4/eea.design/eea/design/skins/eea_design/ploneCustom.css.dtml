@@ -1698,10 +1698,11 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     margin: 0px;
 }
 
-
-
-#portal-colophon {
-    clear:both;
+div.managePortletsLink, a.managePortletsFallback {
+    background: transparent;
 }
+
+
+
 /* </dtml-with> */
 

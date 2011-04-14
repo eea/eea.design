@@ -61,7 +61,8 @@
     float: none;
     margin: 0em 0em 2em 0em;
     padding: 0.5em 0em 1em 0em;
-    text-align: left;
+    text-align: center;
+    clear:both;
 }
 
 #portal-colophon ul,
@@ -88,8 +89,11 @@
 #portal-colophon .colophonWrapper {
     border-collapse: collapse;
     border-spacing: 0;
+    text-align: left;
 }
-
+#portal-colophon .discreet {
+    text-align: center;
+}
 #portal-colophon .colophonIcon {
     display: block; /* This is for Mozilla, as it doesn't support
                        inline-block. The colophon icons aren't in

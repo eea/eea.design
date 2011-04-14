@@ -5,7 +5,7 @@
 
 <object>
     <!-- portalheader order -->
-    <order manager="plone.portalheader" skinname="EEADesign2006"
+    <order manager="plone.portalheader" skinname="*"
            based-on="Plone Default">
 
         <viewlet name="plone.site_actions"
@@ -16,17 +16,15 @@
     </order>
     <!-- end portalheader order -->
 
-    <hidden manager="plone.portalheader" skinname="EEADesign2006">
 
-    </hidden>
-
-    <order manager="plone.portalfooter" skinname="EEADesign2006"
-           based-on="Plone Default">
-    </order>
-
-    <hidden manager="plone.portalfooter" skinname="EEADesign2006">
+    <!-- portalfooter hiddenmanagers -->
+    <hidden manager="plone.portalfooter" skinname="EEADesign2006" >
         <viewlet name="plone.site_actions"/>
     </hidden>
-
+    
+   <hidden manager="plone.portalfooter" skinname="EEADesignCMS" >
+        <viewlet name="plone.site_actions"/>
+    </hidden>
+     <!-- end portalfooter hiddenmanagers -->
 
 </object>

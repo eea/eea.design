@@ -31,7 +31,7 @@ roles = member.getRolesInContext(context)
 if ['Authenticated'] == roles:
     REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesign2006', path=REQUEST['BASEPATH1'] + '/' + portal(1))
 else:
-    REQUEST.RESPONSE.setCookie('plone_skin', 'Plone Default', path=REQUEST['BASEPATH1'] + '/' + portal(1))
+    REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesignCMS', path=REQUEST['BASEPATH1'] + '/' + portal(1))
 came_from = REQUEST.get('came_from', None)
 ### eea
 
@@ -54,7 +54,9 @@ if came_from is not None:
     if not context.portal_url.isURLInPortal(came_from):
         came_from = ''
 
-if came_from:
+
+js_enabled = REQUEST.get('js_enabled','1') != '0'
+if came_from and js_enabled:
     # If javascript is not enabled, it is possible that cookies are not enabled.
     # If cookies aren't enabled, the redirect will log the user out, and confusion
     # may arise.  Redirect only if we know for sure that cookies are enabled.

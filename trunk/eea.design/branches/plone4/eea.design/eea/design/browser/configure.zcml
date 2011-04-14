@@ -5,30 +5,36 @@
         i18n_domain="eea.design">
 
 <include package="plone.app.portlets" />
+
+
     <interface
-            interface=".interfaces.IThemeSpecific"
+            interface=".interfaces.ICMSSpecific"
+            name="EEADesignCMS"
+            />
+
+    <interface
+            interface=".interfaces.IEEADesignCommon"
             type="zope.publisher.interfaces.browser.IBrowserSkinType"
             name="EEADesign2006"
             />
-
 
     <!-- Resource directories -->
 
     <browser:resourceDirectory
             name="eea.design.images"
             directory="images"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             />
 
     <browser:resourceDirectory
             name="eea.design.stylesheets"
             directory="stylesheets"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             />
     <browser:resourceDirectory
             name="eea.design.templates"
             directory="templates"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             />
 
 
@@ -38,7 +44,7 @@
             name="eea.cross_site_top"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
             template="templates/cross_site_top.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -48,7 +54,7 @@
             class=".viewlets.SiteActionViewlet"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
             template="templates/site_actions.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -57,7 +63,7 @@
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
             class="plone.app.layout.viewlets.common.SearchBoxViewlet"
             template="templates/global_searchbox.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -66,7 +72,7 @@
             class=".viewlets.LogoViewlet"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
             template="templates/logo.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -75,7 +81,7 @@
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
             class=".viewlets.GlobalSectionsViewlet"
             template="templates/sections.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -85,7 +91,7 @@
            class="plone.app.layout.viewlets.content.ContentRelatedItems"
            view="plone.app.layout.globals.interfaces.IViewView"
            template="templates/pl_document_relateditems.pt"
-           layer=".interfaces.IThemeSpecific"
+           layer=".interfaces.IEEADesignCommon"
            permission="zope2.View"
            />
     
@@ -94,7 +100,7 @@
             class=".viewlets.DocumentActionsViewlet"
             manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
             template="templates/document_actions.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -103,7 +109,7 @@
             name="plone.colophon"
             manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
             template="templates/colophon.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -112,7 +118,7 @@
             for="*"
             manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
             template="templates/footer.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
    
@@ -156,7 +162,7 @@
             name="global_externalsites"
             for="*"
             template="templates/global_externalsites.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -164,7 +170,7 @@
             name="cross_site_panels"
             for="*"
             template="templates/cross_site_panels.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 
@@ -172,7 +178,7 @@
             name="global_siteactions"
             for="*"
             template="templates/global_siteactions.pt"
-            layer=".interfaces.IThemeSpecific"
+            layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
 

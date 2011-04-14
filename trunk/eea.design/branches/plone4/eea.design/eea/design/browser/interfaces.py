@@ -1,16 +1,17 @@
 from plone.app.portlets.interfaces import IColumn
-from plone.theme.interfaces import IDefaultPloneLayer
 from zope.interface import Interface
 from plone.portlets.interfaces import IPortletManager
 
 
-class IThemeSpecific(IDefaultPloneLayer):
-    """Marker interface that defines a Zope 3 browser layer.
-       If you need to register a viewlet only for the
-       "eea.design" theme, this interface must be its layer
-       (in design/viewlets/configure.zcml).
+class IEEADesignCommon(Interface):
+    """Marker interface that defines a common Zope 3 browser layer, which
+    will contain resources specific for common theme use
     """
 
+class ICMSSpecific(IEEADesignCommon):
+    """Marker interface that defines a Zope 3 browser layer, which
+    will contain resources specific for CMS use
+    """
 
 class IFooterPortletManager(IPortletManager, IColumn):
     """we need our own portlet manager for the footer area.

@@ -32,4 +32,15 @@
         position-after="RTL.css"
       />
 
+     <stylesheet title=""
+        id="ploneAdmin.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        enabled="1"
+        expression="python:here.portal_url.getPortalObject().getCurrentSkinName()==&quot;EEADesignCMS&quot;"
+        position-after="ploneCustom.css"
+      />
+
+    
+
 </object>
