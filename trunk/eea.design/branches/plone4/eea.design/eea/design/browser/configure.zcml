@@ -9,6 +9,7 @@
 
     <interface
             interface=".interfaces.ICMSSpecific"
+            type="zope.publisher.interfaces.browser.IBrowserSkinType"
             name="EEADesignCMS"
             />
 
@@ -31,6 +32,7 @@
             directory="stylesheets"
             layer=".interfaces.IEEADesignCommon"
             />
+
     <browser:resourceDirectory
             name="eea.design.templates"
             directory="templates"

@@ -22,13 +22,16 @@
                  directory="eea.design:skins/eeadesign_public_cmsandwww" />
     <object name="eeadesign_cms" meta_type="Filesystem Directory View"
                  directory="eea.design:skins/eeadesign_cms" />
-
+    <object name="eeadesign_cms" meta_type="Filesystem Directory View"
+                 directory="eea.design:skins/eeadesign_style_docs" />
+    
     <skin-path name="EEADesign2006" based-on="Sunburst Theme">
         <layer name="eea_design" insert-after="custom" />
         <layer name="eea_images" insert-after="eea_design"/>
         <layer name="eeadesign_templates" insert-after="eea_images" />
         <layer name="eeadesign_js" insert-after="eeadesign_templates" />
         <layer name="eeadesign_green_images" insert-after="eeadesign_js" />
+        <layer name="eeadesign_style_docs" insert-after="eeadesign_green_images" />
         <layer name="eeadesign_public" insert-after="eeadesign_green_images" />
         <layer name="eeadesign_green" insert-after="eeadesign_public" />
         <layer name="eeadesign_public_cmsandwww" insert-after="eeadesign_green" />
@@ -41,6 +44,7 @@
         <layer name="eeadesign_templates" insert-after="eea_images" />
         <layer name="eeadesign_js" insert-after="eeadesign_templates" />
         <layer name="eeadesign_green_images" insert-after="eeadesign_js" />
+        <layer name="eeadesign2006_style_docs" insert-after="eeadesign_green_images" />
         <layer name="eeadesign_public" insert-after="eeadesign_green_images" />
         <layer name="eeadesign_green" insert-after="eeadesign_public" />
         <layer name="eeadesign_public_cmsandwww" insert-after="eeadesign_green" />

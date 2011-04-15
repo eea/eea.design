@@ -1,0 +1,1 @@
+pictures and pages for style reference documentation

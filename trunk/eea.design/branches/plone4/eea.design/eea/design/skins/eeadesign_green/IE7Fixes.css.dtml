@@ -1,0 +1,86 @@
+/* Stylesheet with Internet Explorer 7 - specific workarounds.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+*:first-child+html .portlet-rss .portletFooter {
+    padding-bottom: 0.7em;
+}
+*:first-child+html #portal-column-two .portletTabHead,
+*:first-child+html #portal-column-two .portletTabHead_current {
+    margin-top: -21px;
+}
+*:first-child+html .portlet .portletItem #selectlang_form{
+    margin: 0;
+}
+*:first-child+html #portlet-subscribtion {
+    min-height: 10em;
+}
+
+*:first-child+html .portlet-promotions div.portletHeader {
+    padding-top: 0em;
+}
+*:first-child+html .ploneCalendar {
+    margin: 0 0 0 0; 
+    width: 100%;
+}
+
+*:first-child+html .item-content {
+    zoom: 1
+}
+
+*:first-child+html #portal-globalnav li.plain a.dropTab img,
+*:first-child+html #portal-globalnav li.plain a.dropTab:hover img,
+*:first-child+html #portal-globalnav li.selected a.dropTab img,
+*:first-child+html #portal-globalnav li.selected a.dropTab:hover img {
+    padding-top: 2px;
+}
+
+*:first-child+html .link-pdf, .link-doc,
+ .link-dot, .link-wiz, .link-aif, .link-aifc, .link-aiff,
+ .link-gif, .link-jpe, .link-jpeg, .link-jpg, .link-png,
+ .link-m4a, .link-mp2, .link-mp3, .link-mpega, .link-mpga,
+ .link-m3u, .link-m1v, .link-mpa, .link-mpe, .link-mpeg, .link-mpg,
+ .link-mp4, .link-asf, .link-asx, .link-avi, .link-xlb, .link-xls,
+ .link-xlt, .link-csv, .link-ppa, .link-pps, .link-ppt, .link-pwz,
+ .link-wmv, .link-wmf, .link-mov, .link-qt, .link-rgb, .link-ram,
+ .link-rm, .link-ai, .link-eps, .link-ps, .link-swf, .link-swfl,
+ .link-tif, .link-tiff, .link-wav, .link-zip, .link-mdb, .link-dbf,
+ .link-rar, .link-txt, .link-external {
+    zoom: 1
+}
+
+*:first-child+html .portlet-rss .portletFooter a.feedButton img {
+    margin: -12px 0 0 0;
+}
+
+*:first-child+html #portlet-etcs-sites,
+*:first-child+html #portlet-chooselang {
+    font-size: 70%;
+}
+
+*:first-child+html .hiddenStructure { /* This is necessary to eliminate the 1px high object in
+                      the document flow in place of .hiddenStructure block objects */
+/*    position: absolute; */
+    height: 2px;
+}
+
+*:first-child+html .documentContent {
+    padding: 0em 1em 3em 1em !important;
+}
+
+*:first-child+html .section-copyright .documentActions,
+*:first-child+html .section-privacy .documentActions,
+*:first-child+html .section-disclaimer .documentActions {
+    margin: -3em 0 -1.1em 0em;
+    padding: 0em 0em 0.5em 0em;
+}
+*:first-child+html .section-pressroom .documentActions {
+    margin: -3em 0 -0.9em 0em;
+    padding: 0em 0em 0.5em 0em;
+}
+
+/* </dtml-with> 
+** YOUR CSS RULES STOP HERE 
+*/

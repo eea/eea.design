@@ -41,6 +41,11 @@
         position-after="ploneCustom.css"
       />
 
-    
+    <!-- disabled generated.css for now -->
+    <!--<stylesheet title="" cacheable="True" compression="safe" cookable="True"-->
+       <!--enabled="on" expression="not: portal/portal_membership/isAnonymousUser"-->
+       <!--id="generated.css" media="all" rel="stylesheet" rendering="import"-->
+       <!--position-after="ploneCustom.css"/>-->
+
 
 </object>
