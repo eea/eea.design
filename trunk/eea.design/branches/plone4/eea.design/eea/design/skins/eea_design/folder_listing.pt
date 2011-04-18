@@ -57,14 +57,14 @@
     <tal:listing condition="batch">
  <a href=""
            class="link-parent"
-           tal:define="parent_url python:test(isAnon, None, here.navigationParent(here, template_id))"
+           tal:define="parent_url python:test(isAnon, None, context.navigationParent(context, template_id))"
            tal:condition="parent_url"
            tal:attributes="href parent_url"
            i18n:translate="go_to_parent_url">
         Up one level
         </a>
         <!-- Navigation -->
-        <div metal:use-macro="here/batch_macros/macros/navigation" />
+        <div metal:use-macro="context/batch_macros/macros/navigation" />
         <dl metal:define-slot="entries">
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
@@ -226,3 +226,4 @@
 
 </body>
 </html>
+
