@@ -280,14 +280,6 @@
             />
 
     <!-- Customized portlets -->
-    <plone:portlet
-            name="portlets.Navigation"
-            interface="plone.app.portlets.portlets.navigation.INavigationPortlet"
-            assignment="plone.app.portlets.portlets.navigation.Assignment"
-            renderer="eea.design.browser.navigation.EEANavRenderer"
-            addview="plone.app.portlets.portlets.navigation.AddForm"
-            editview="plone.app.portlets.portlets.navigation.EditForm"
-            />
 
     <!-- Special renderer for the CMS Navigation Portlet -->
     <plone:portletRenderer
@@ -295,6 +287,13 @@
             class=".portlets.CMSNavigationPortlet"
             layer=".interfaces.IEEADesignCMS"
             />
+
+    <plone:portletRenderer
+            portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
+            class=".portlets.EEANavigationPortlet"
+            layer=".interfaces.IEEADesignCommon"
+            />
+
     <!-- ADAPTERS -->
     <!-- make an adapter for our very own renderer -->
     <adapter

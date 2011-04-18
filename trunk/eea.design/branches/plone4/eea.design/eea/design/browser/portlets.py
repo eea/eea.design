@@ -8,8 +8,19 @@ from plone.app.portlets.manager import ColumnPortletManagerRenderer
 from eea.design.browser.interfaces import IFooterPortletManager
 
 class CMSNavigationPortlet(Renderer):
+    """
+    A renderer for the CMS footer portlet
+    """
     _template = ViewPageTemplateFile("templates/navigation.pt")
     recurse = ViewPageTemplateFile("templates/navigation_recurse_cms.pt")
+
+
+class EEANavigationPortlet(Renderer):
+    """
+    A renderer for the public footer portlet
+    """
+    _template = ViewPageTemplateFile("templates/navigation.pt")
+    recurse = ViewPageTemplateFile("templates/navigation_recurse.pt")
 
 
 class EEAFooterPortletRenderer(ColumnPortletManagerRenderer):
