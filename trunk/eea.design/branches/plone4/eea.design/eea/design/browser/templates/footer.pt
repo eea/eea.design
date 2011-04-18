@@ -11,6 +11,14 @@
                 <div id="portal-footer">
                     <!--<metal:ecotip  use-macro="context/portlet_ecotip/macros/portlet"/>-->
                     <tal:block replace="structure provider:plone.footer" />
+                    <div class="managePortletsLink"
+                       tal:condition="view/canManagePortlets">
+                        <a href=""
+                           class="managePortletsFallback"
+                           tal:attributes="href view/manageUrl"
+                           i18n:translate="manage-footer-portlet-link">Manage footer portlets</a>
+                    </div>
+                 
                 </div>
             </div>
 

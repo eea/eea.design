@@ -1699,7 +1699,8 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 }
 
 dl.portlet ul.navTree .navTreeCurrentItem {
-    margin: 0px;
+    margin: 0em ;
+    border-left: 0px;
 }
 
 div.managePortletsLink, a.managePortletsFallback {

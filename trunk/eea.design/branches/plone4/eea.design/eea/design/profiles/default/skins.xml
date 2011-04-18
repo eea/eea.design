@@ -22,7 +22,7 @@
                  directory="eea.design:skins/eeadesign_public_cmsandwww" />
     <object name="eeadesign_cms" meta_type="Filesystem Directory View"
                  directory="eea.design:skins/eeadesign_cms" />
-    <object name="eeadesign_cms" meta_type="Filesystem Directory View"
+    <object name="eeadesign_style_docs" meta_type="Filesystem Directory View"
                  directory="eea.design:skins/eeadesign_style_docs" />
     
     <skin-path name="EEADesign2006" based-on="Sunburst Theme">

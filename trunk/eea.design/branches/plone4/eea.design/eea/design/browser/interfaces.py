@@ -8,7 +8,7 @@ class IEEADesignCommon(Interface):
     will contain resources specific for common theme use
     """
 
-class ICMSSpecific(IEEADesignCommon):
+class IEEADesignCMS(IEEADesignCommon):
     """Marker interface that defines a Zope 3 browser layer, which
     will contain resources specific for CMS use
     """

@@ -4,11 +4,11 @@
         xmlns:plone="http://namespaces.plone.org/plone"
         i18n_domain="eea.design">
 
-<include package="plone.app.portlets" />
+    <include package="plone.app.portlets"/>
 
 
     <interface
-            interface=".interfaces.ICMSSpecific"
+            interface=".interfaces.IEEADesignCMS"
             type="zope.publisher.interfaces.browser.IBrowserSkinType"
             name="EEADesignCMS"
             />
@@ -51,6 +51,15 @@
             />
 
     <browser:viewlet
+            name="plone.skip_links"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            class="plone.app.layout.viewlets.common.SkipLinksViewlet"
+            template="templates/skip_links.pt"
+            layer=".interfaces.IEEADesignCommon"
+            permission="zope2.View"
+            />
+
+    <browser:viewlet
             name="plone.site_actions"
             for="*"
             class=".viewlets.SiteActionViewlet"
@@ -69,7 +78,16 @@
             permission="zope2.View"
             />
 
-     <browser:viewlet
+    <browser:viewlet
+            name="plone.searchbox"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            class="plone.app.layout.viewlets.common.SearchBoxViewlet"
+            template="templates/searchbox_cms.pt"
+            layer=".interfaces.IEEADesignCMS"
+            permission="zope2.View"
+            />
+
+    <browser:viewlet
             name="plone.logo"
             class=".viewlets.LogoViewlet"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
@@ -88,15 +106,15 @@
             />
 
     <browser:viewlet
-           name="plone.belowcontentbody.relateditems"
-           manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-           class="plone.app.layout.viewlets.content.ContentRelatedItems"
-           view="plone.app.layout.globals.interfaces.IViewView"
-           template="templates/pl_document_relateditems.pt"
-           layer=".interfaces.IEEADesignCommon"
-           permission="zope2.View"
-           />
-    
+            name="plone.belowcontentbody.relateditems"
+            manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+            class="plone.app.layout.viewlets.content.ContentRelatedItems"
+            view="plone.app.layout.globals.interfaces.IViewView"
+            template="templates/pl_document_relateditems.pt"
+            layer=".interfaces.IEEADesignCommon"
+            permission="zope2.View"
+            />
+
     <browser:viewlet
             name="plone.abovecontenttitle.documentactions"
             class=".viewlets.DocumentActionsViewlet"
@@ -106,6 +124,16 @@
             permission="zope2.View"
             />
 
+    <browser:viewlet
+            name="plone.comments"
+            for="Products.CMFCore.interfaces.IContentish"
+            manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+            view="plone.app.layout.globals.interfaces.IViewView"
+            class="plone.app.layout.viewlets.comments.CommentsViewlet"
+            template="templates/comments.pt"
+            layer=".interfaces.IEEADesignCommon"
+            permission="zope2.View"
+            />
 
     <browser:viewlet
             name="plone.colophon"
@@ -117,47 +145,47 @@
 
     <browser:viewlet
             name="plone.footer"
-            for="*"
+            class=".viewlets.FooterPortletsViewlet"
             manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-            template="templates/footer.pt"
             layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
-   
+
 
     <!-- Browser pages -->
-   
+
     <browser:page
-        for="plone.portlets.interfaces.ILocalPortletAssignable"
-        class="plone.app.portlets.browser.manage.ManageContextualPortlets"
-        name="manage-footer-portlets"
-        template="templates/manage-footer.pt"
-        permission="plone.app.portlets.ManagePortlets"
-    />
+            name="manage-portlets-footer"
+            for="plone.portlets.interfaces.ILocalPortletAssignable"
+            class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+            template="templates/manage_footer.pt"
+            permission="plone.app.portlets.ManagePortlets"
+            />
+
     <!-- langugages -->
     <browser:page
-           for="*"
-           name="translatedSitesLanguages"
-           class=".language.Languages"
-           permission="zope.Public"
-           attribute="getTranslatedSitesLanguages"
-         />
+            for="*"
+            name="translatedSitesLanguages"
+            class=".language.Languages"
+            permission="zope.Public"
+            attribute="getTranslatedSitesLanguages"
+            />
 
     <browser:page
-           for="*"
-           name="translatedSites"
-           class=".language.Languages"
-           permission="zope.Public"
-           attribute="getLocalSites"
-         />
+            for="*"
+            name="translatedSites"
+            class=".language.Languages"
+            permission="zope.Public"
+            attribute="getLocalSites"
+            />
 
     <browser:page
-           for="*"
-           name="languageSelector"
-           class=".language.LanguageSelectorData"
-           permission="zope.Public"
-           attribute="data"
-         />
+            for="*"
+            name="languageSelector"
+            class=".language.LanguageSelectorData"
+            permission="zope.Public"
+            attribute="data"
+            />
 
 
     <browser:page
@@ -184,7 +212,7 @@
             permission="zope2.View"
             />
 
-   
+
     <browser:page
             for="*"
             name="frontpage_highlights"
@@ -251,16 +279,27 @@
             allowed_attributes="listing_url object_url is_external css_class"
             />
 
-        <!-- Customized portlets -->
+    <!-- Customized portlets -->
     <plone:portlet
-        name="portlets.Navigation"
-        interface="plone.app.portlets.portlets.navigation.INavigationPortlet"
-        assignment="plone.app.portlets.portlets.navigation.Assignment"
-        renderer="eea.design.browser.navigation.EEANavRenderer"
-        addview="plone.app.portlets.portlets.navigation.AddForm"
-        editview="plone.app.portlets.portlets.navigation.EditForm"
+            name="portlets.Navigation"
+            interface="plone.app.portlets.portlets.navigation.INavigationPortlet"
+            assignment="plone.app.portlets.portlets.navigation.Assignment"
+            renderer="eea.design.browser.navigation.EEANavRenderer"
+            addview="plone.app.portlets.portlets.navigation.AddForm"
+            editview="plone.app.portlets.portlets.navigation.EditForm"
+            />
+
+    <!-- Special renderer for the CMS Navigation Portlet -->
+    <plone:portletRenderer
+            portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
+            class=".portlets.CMSNavigationPortlet"
+            layer=".interfaces.IEEADesignCMS"
+            />
+    <!-- ADAPTERS -->
+    <!-- make an adapter for our very own renderer -->
+    <adapter
+        factory="eea.design.browser.portlets.EEAFooterPortletRenderer"
+        provides="plone.portlets.interfaces.IPortletManagerRenderer"
         />
 
-
- 
 </configure>

@@ -1919,33 +1919,33 @@ div.overlay .formControls a {
 */
 
 .contenttype-document {
-    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px 0px url(contenttypes-sprite.png);
 }
 .contenttype-event {
-    background: no-repeat transparent 0px -212px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -216px url(contenttypes-sprite.png);
 }
  .contenttype-folder {
-    background: no-repeat transparent 0px -644px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -648px url(contenttypes-sprite.png);
 }
 .contenttype-link {
-    background: no-repeat transparent 0px -1076px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1080px url(contenttypes-sprite.png);
 }
 .contenttype-news-item {
-    background: no-repeat transparent 0px -1292px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1296px url(contenttypes-sprite.png);
 }
 .contenttype-plone-site {
-    background: no-repeat transparent 0px -1508px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1512px url(contenttypes-sprite.png);
 }
 .contenttype-topic {
-    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1728px url(contenttypes-sprite.png);
 }
 
 /* These should only appear in the add menu */
 #plone-contentmenu-factories .contenttype-file {
-    background: no-repeat transparent 0px -428px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -431px url(contenttypes-sprite.png);
 }
 #plone-contentmenu-factories .contenttype-image {
-    background: no-repeat transparent 0px -860px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -862px url(contenttypes-sprite.png);
 }
 
 .contenttype-document,

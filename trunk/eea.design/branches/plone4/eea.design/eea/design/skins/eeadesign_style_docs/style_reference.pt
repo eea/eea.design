@@ -161,7 +161,7 @@
                               <div class="documentDescription">This is the description or introduction for this page. It is styled as teaser.</div>
 <tal:figure-right 
      tal:define="global figure python:getattr(here, 'lynx.jpg');">                        
-                 <metal:thefigure use-macro="here/media_macros/macros/figure-right" />       
+                 <!--<metal:thefigure use-macro="here/media_macros/macros/figure-right" />       -->
 </tal:figure-right>
 <p>
 Here is 2<sup>nd</sup> paragraph. Lorem ipsum dolor 
@@ -189,7 +189,7 @@ quotation. This is a long quotation. This is a long quotation.
 <h2>Heading of level 2</h2>
 <div class="figure-right" 
      tal:define="global figure python:getattr(here, 'mbi_highlight_small.jpg');">                        
-                 <metal:thefigure use-macro="here/media_macros/macros/figure-plus" />       
+                 <!--<metal:thefigure use-macro="here/media_macros/macros/figure-plus" />       -->
 </div>
 
 <p>
