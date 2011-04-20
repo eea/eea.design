@@ -61,10 +61,8 @@
 
     <browser:viewlet
             name="plone.site_actions"
-            for="*"
             class=".viewlets.SiteActionViewlet"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-            template="templates/site_actions.pt"
             layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
@@ -91,7 +89,6 @@
             name="plone.logo"
             class=".viewlets.LogoViewlet"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-            template="templates/logo.pt"
             layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
@@ -100,7 +97,6 @@
             name="plone.global_sections"
             manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
             class=".viewlets.GlobalSectionsViewlet"
-            template="templates/sections.pt"
             layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />
@@ -119,7 +115,14 @@
             name="plone.abovecontenttitle.documentactions"
             class=".viewlets.DocumentActionsViewlet"
             manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-            template="templates/document_actions.pt"
+            layer=".interfaces.IEEADesignCommon"
+            permission="zope2.View"
+            />
+
+    <browser:viewlet
+            name="plone.belowcontenttitle.documentbyline"
+            manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+            class=".viewlets.DocumentBylineViewlet"
             layer=".interfaces.IEEADesignCommon"
             permission="zope2.View"
             />

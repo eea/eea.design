@@ -24,6 +24,11 @@ class DocumentActionsViewlet(content.DocumentActionsViewlet):
     render = ViewPageTemplateFile('templates/document_actions.pt')
 
 
+class DocumentBylineViewlet(content.DocumentBylineViewlet):
+    """A custom version of the document-byline class
+    """
+    render = ViewPageTemplateFile('templates/document_byline.pt')
+
 class FooterPortletsViewlet(common.ViewletBase):
     render = ViewPageTemplateFile('templates/footer.pt')
 
