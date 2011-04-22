@@ -303,10 +303,12 @@ dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {
     color: black;
-    display: block;
+    display: inline; /* ichimdav rule for calendar */
     border: none;
 }
-
+.ploneCalendar tbody {
+    padding-bottom: 1em;
+}
 dl.portlet dd.portletItem,
 dl.portlet dd.portletFooter,
 dl.portletError dd {

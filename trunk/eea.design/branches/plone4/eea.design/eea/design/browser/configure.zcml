@@ -228,15 +228,6 @@
             />
 
     <browser:page
-            name="global_siteactions"
-            for="*"
-            template="templates/global_siteactions.pt"
-            layer=".interfaces.IEEADesignCommon"
-            permission="zope2.View"
-            />
-
-
-    <browser:page
             for="*"
             name="frontpage_highlights"
             class=".frontpage.Frontpage"
@@ -314,6 +305,12 @@
     <plone:portletRenderer
             portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
             class=".portlets.EEANavigationPortlet"
+            layer=".interfaces.IEEADesignCommon"
+            />
+
+    <plone:portletRenderer
+            portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"
+            template="templates/calendar.pt"
             layer=".interfaces.IEEADesignCommon"
             />
 
