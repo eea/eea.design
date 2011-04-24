@@ -6,7 +6,7 @@
                   tabindex python:Iterator(mainSlot=False)">
 
 <div metal:define-macro="portlet"
-     tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous');
+     tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous' getId='eea_main_subscription');
                  nl_objects python: [brain.getObject() for brain in nl_brains if brain.getObject()];
                  nl_unique python: len(nl_objects) == 1"
      tal:condition="nl_objects">

@@ -3,6 +3,7 @@ Changelog
 
 2.24-dev - (unreleased)
 -----------------------
+ * Bug fix: now portlet_gazette find only the NewsletterTheme with id='eea_main_subscription' [ghicaale]
 
 2.23 - (2011-04-07)
 -------------------
