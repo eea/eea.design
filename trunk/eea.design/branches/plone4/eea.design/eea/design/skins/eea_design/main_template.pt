@@ -7,7 +7,7 @@
     tal:define="portal_state context/@@plone_portal_state;
         context_state context/@@plone_context_state;
         plone_view context/@@plone;
-        lang portal_state/language;
+        language portal_state/language;
         view nocall:view | nocall: plone_view;
         dummy python: plone_view.mark_view(view);
         portal_url portal_state/portal_url;
@@ -38,7 +38,7 @@
         ifacetool context/portal_interface;
         syntool context/portal_syndication;
         "
-    tal:attributes="lang lang;">
+    tal:attributes="lang language;">
         <!--webapp_view here/@@main_webapplication;
         inApplication here/@@inApplication;
         onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view')"-->
@@ -97,7 +97,7 @@
                   sr python:plone_view.have_portlets('plone.rightcolumn', view);
                   body_class python:plone_view.bodyClass(template, view);
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
-    tal:attributes="class python:here.getSectionFromURL(plone_view);
+    tal:attributes="class body_class;
                     dir python:isRTL and 'rtl' or 'ltr'">
 
 <!--<div id="print-warning" i18n:domain="eea.translations">-->
@@ -207,6 +207,7 @@
                         <!--</metal:menu>-->
                     <!--</tal:submenu>-->
                 <!--</tal:tabs>-->
+                <!--</tal:noajax>-->
             </metal:block>
 
             <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" tal:condition="not:ajax_load" />
@@ -246,7 +247,7 @@
     <div class="visualClear"><!-- --></div>
  </div>
     <!-- end column wrapper -->
-    <div i18n:domain="eea.translations" tal:condition="python:lang != 'en'" id="translation-disclaimer">
+    <div i18n:domain="eea.translations" tal:condition="python:language != 'en'" id="translation-disclaimer">
         <p class="note" i18n:translate="page_translated_by">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
     </div>
 

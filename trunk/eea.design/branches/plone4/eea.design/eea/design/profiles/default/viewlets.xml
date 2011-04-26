@@ -27,5 +27,8 @@
         <viewlet name="plone.colophon"/>
     </hidden>
      <!-- end portalfooter hiddenmanagers -->
+    <hidden manager="plone.htmlhead.links" skinname="*" >
+          <viewlet name="plone.links.author"/>
+      </hidden>
 
 </object>

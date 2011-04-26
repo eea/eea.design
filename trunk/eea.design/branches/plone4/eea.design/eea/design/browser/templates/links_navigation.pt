@@ -1,0 +1,13 @@
+<tal:navigation define="navigation_root_url view/navigation_root_url"
+                i18n:domain="plone">
+    <link rel="home"
+          href=""
+          title="Front page"
+          tal:attributes="href string:$navigation_root_url" />
+
+    <link rel="contents"
+          href=""
+          title="Site Map"
+          tal:attributes="href string:$navigation_root_url/sitemap" />
+    <link rel="dave" />
+</tal:navigation>

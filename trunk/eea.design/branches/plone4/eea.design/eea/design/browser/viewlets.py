@@ -1,7 +1,10 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets import common, content
+from plone.app.layout.links import viewlets as links
 from zope.component import getMultiAdapter
 from Products.CMFCore.utils import getToolByName
+from cgi import escape
+from Products.CMFPlone.utils import safe_unicode
 
 class SiteActionsViewlet(common.SiteActionsViewlet):
     """A custom version of the site-actions class
@@ -17,6 +20,21 @@ class GlobalSectionsCMSViewlet(common.GlobalSectionsViewlet):
     """A custom version of the global-sections class
     """
     render = ViewPageTemplateFile('templates/sections_cms.pt')
+
+class TitleViewlet(common.TitleViewlet):
+    """A custom version of the site-actions class
+    """
+    index = ViewPageTemplateFile('templates/title.pt')
+    def update(self):
+        portal_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_portal_state')
+        context_state = getMultiAdapter((self.context, self.request),
+                                         name=u'plone_context_state')
+        page_title = escape(safe_unicode(context_state.object_title()))
+        portal_title = escape(safe_unicode(portal_state.portal_title()))
+        self.page_title = page_title
+        self.portal_title = portal_title
+
 
 class DocumentActionsViewlet(content.DocumentActionsViewlet):
     """A custom version of the document-actions class
@@ -42,3 +60,7 @@ class FooterPortletsViewlet(common.ViewletBase):
         ## This is the way it's done in plone.app.portlets.manager, so we'll do the same
         mt = getToolByName(self.context, 'portal_membership')
         self.canManagePortlets = mt.checkPermission('Portlets: Manage portlets', self.context)
+
+
+class SearchViewlet(links.SearchViewlet):
+    _template = ViewPageTemplateFile('templates/links_search.pt')
