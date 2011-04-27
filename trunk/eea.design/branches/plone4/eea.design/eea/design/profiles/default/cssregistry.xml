@@ -46,13 +46,14 @@
     <!--enabled="on" expression="not: portal/portal_membership/isAnonymousUser"-->
     <!--id="generated.css" media="all" rel="stylesheet" rendering="import"-->
     <!--position-after="ploneCustom.css"/>-->
-    <stylesheet
-            id="IE7Fixes.css"
-            media="screen" rel="stylesheet" rendering="import"
-            cacheable="True" compression="safe" cookable="True"
-            conditionalcomment="IE 7"
-            expression="exists: portal/IE7Fixes.css"
-            position-after="IEFixes.css"/>
+    <stylesheet title=""
+                id="IE7Fixes.css"
+                media="screen" rel="stylesheet" rendering="import"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment="IE 7"
+                expression="exists: portal/IE7Fixes.css"
+                position-after="IEFixes.css"
+            />
 
 
 </object>

@@ -9,5 +9,4 @@
           href=""
           title="Site Map"
           tal:attributes="href string:$navigation_root_url/sitemap" />
-    <link rel="dave" />
-</tal:navigation>
+ </tal:navigation>
