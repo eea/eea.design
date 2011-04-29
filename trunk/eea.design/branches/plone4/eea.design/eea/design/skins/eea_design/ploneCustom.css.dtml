@@ -677,6 +677,10 @@ float:right;
     border: 1px solid #ccc;
 }
 
+#portal-columns {
+    padding-top: 1em;
+}
+
 #portal-column-one #portlet-subscribtion {
     margin-top:20px;
 }

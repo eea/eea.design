@@ -301,13 +301,13 @@
             />
 
     <!-- added for plone 4 migration to be deleted from here -->
-    <browser:page
-            for="*"
-            name="inApplication"
-            class=".main.Main"
-            permission="zope.Public"
-            attribute="inApplication"
-            />
+    <!--<browser:page-->
+    <!--        for="*"-->
+    <!--        name="inApplication"-->
+    <!--        class=".main.Main"-->
+    <!--        permission="zope.Public"-->
+    <!--        attribute="inApplication"-->
+    <!--        />-->
 
 
     <browser:page
