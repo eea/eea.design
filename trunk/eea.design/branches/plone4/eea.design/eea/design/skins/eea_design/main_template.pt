@@ -180,7 +180,7 @@
                                      Generic KSS Title. Is rendered with class="documentFirstHeading".
                                  </h1>
                              </metal:title>
-                             <div tal:replace="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+                             <!--<div tal:replace="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />-->
 
                              <metal:description define-slot="content-description">
                                  <metal:comment tal:content="nothing">

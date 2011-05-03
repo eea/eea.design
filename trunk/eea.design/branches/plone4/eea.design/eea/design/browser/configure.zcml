@@ -318,6 +318,13 @@
             allowed_attributes="listing_url object_url is_external css_class"
             />
 
+    <browser:page
+            for="*"
+            name="skinchanger"
+            class=".changeskin.SkinChanger"
+            permission="zope2.View"
+            allowed_attributes="changeskin switchSkin"
+            />
     <!-- Customized portlets -->
 
     <!-- Special renderer for the CMS Navigation Portlet -->
@@ -345,5 +352,8 @@
         factory="eea.design.browser.portlets.EEAFooterPortletRenderer"
         provides="plone.portlets.interfaces.IPortletManagerRenderer"
         />
-
+<subscriber
+ for="plone.app.layout.navigation.interfaces.INavigationRoot
+ zope.app.publication.interfaces.IBeforeTraverseEvent"
+ handler=".changeskin.setskin" />
 </configure>

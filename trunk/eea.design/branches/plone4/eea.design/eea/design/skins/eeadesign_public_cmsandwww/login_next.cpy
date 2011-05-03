@@ -26,12 +26,18 @@ if membership_tool.isAnonymousUser():
 portal = context.portal_url
 member = membership_tool.getAuthenticatedMember()
 roles = member.getRolesInContext(context)
-
+portal_skins = context.portal_skins
 # If user has ONLY ['Authenticated'] role than regard as "Anonymous" and keep EEADesign2006 skin
 if ['Authenticated'] == roles:
+    #portal_skins.changeSkin("EEADesign2006", REQUEST)
     REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesign2006', path=REQUEST['BASEPATH1'] + '/' + portal(1))
+    #context.restrictedTraverse('@@skinchanger').changeskin('eeadesign2006')
+    context.restrictedTraverse('@@skinchanger').switchSkin(context)
 else:
     REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesignCMS', path=REQUEST['BASEPATH1'] + '/' + portal(1))
+    #context.restrictedTraverse('@@skinchanger').changeskin('eeadesigncms')
+    context.restrictedTraverse('@@skinchanger').switchSkin(context)
+    
 came_from = REQUEST.get('came_from', None)
 ### eea
 
@@ -55,15 +61,14 @@ if came_from is not None:
         came_from = ''
 
 
-js_enabled = REQUEST.get('js_enabled','1') != '0'
-if came_from and js_enabled:
+if came_from:
     # If javascript is not enabled, it is possible that cookies are not enabled.
     # If cookies aren't enabled, the redirect will log the user out, and confusion
     # may arise.  Redirect only if we know for sure that cookies are enabled.
 
     util.addPortalMessage(_(u'Welcome! You are now logged in.'))
-    if not query:
-        query += 'portal_status_message=Welcome! You are now logged in.'
+    #if not query:
+    #    query += 'portal_status_message=Welcome! You are now logged in.'
     came_from = util.urlunparse((scheme, location, path, parameters, query, fragment))
 
     # redirect immediately
