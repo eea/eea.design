@@ -3,8 +3,7 @@
 
 <body>
 <div metal:define-macro="menu"
-     tal:define="document_actions actions/document_actions|nothing;
-                 portal_tabs here/@@application_menu;"
+     tal:define="portal_tabs here/@@application_menu;"
      tal:omit-tag=""
      tal:condition="portal_tabs">
     <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
@@ -26,8 +25,7 @@
 
 
 <div metal:define-macro="submenu"
-     tal:define="document_actions actions/document_actions|nothing;
-                 portal_tabs context/@@application_submenu_direct;
+     tal:define="portal_tabs context/@@application_submenu_direct;
 		 contextId context/getId"
      tal:omit-tag=""
      tal:condition="portal_tabs">

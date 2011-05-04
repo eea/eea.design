@@ -13,10 +13,11 @@ from Products.CMFCore.utils import getToolByName
 REQUEST = context.REQUEST
 
 #### eea logout and change skin to EEADesign2006
-portal_skins = getToolByName(context, 'portal_skins')
-portal_skins.changeSkin("EEADesign2006", REQUEST)
-context.restrictedTraverse('@@skinchanger').changeskin('eeadesign2006')
+#portal_skins = getToolByName(context, 'portal_skins')
+#portal_skins.changeSkin("EEADesign2006", REQUEST)
+#context.restrictedTraverse('@@skinchanger').changeskin('eeadesign2006')
 #### end eea
+
 mt = getToolByName(context, 'portal_membership')
 mt.logoutUser(REQUEST=REQUEST)
 
