@@ -1,6 +1,6 @@
 <ul metal:define-macro="external_sites"
     id="portal-externalsites"
-    tal:define="externalsite_actions python:context.portal_actions.listFilteredActionsFor(context)['externalsite_actions'];
+    tal:define="externalsite_actions python: context.portal_actions.listFilteredActionsFor(context).get('externalsite_actions', '');
                 putils context/plone_utils;
                 getIconFor nocall:putils/getIconFor;
                 accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
