@@ -1,133 +1,82 @@
-from Acquisition import aq_base
 from Products.CMFCore.utils import getToolByName
+from Products.CMFDefault.interfaces import ICMFDefaultSkin
 from Products.Five import BrowserView
-from eea.design.browser.interfaces import IEEADesignCommon, IEEADesignCMS
+from eea.design.browser.interfaces import IEEADesignPublic, IEEADesignCMS
+from plone.theme.interfaces import IDefaultPloneLayer
+from plone.theme.layer import mark_layer as base_mark_layer
 from zope.component import queryUtility
-from zope.interface import directlyProvides, noLongerProvides, providedBy
+from zope.interface import directlyProvidedBy
+from zope.interface import directlyProvides
 from zope.publisher.interfaces.browser import IBrowserSkinType
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
-#from AccessControl import getSecurityManager, Unauthorized
 
 import logging
-
 logger = logging.getLogger("eea.design")
 
-SKINS = {
-        'EEADesign2006':IEEADesignCommon,
-        'EEADesignCMS':IEEADesignCommon,
+
+class TestSkin(BrowserView):
+    def __call__(self):
+        """test view for cms skin """
+        return "is CMS indeed"
+
+
+default_layers = (
+    IDefaultPloneLayer,
+    ICMFDefaultSkin,
+    IDefaultBrowserLayer,
+    )
+
+eea_skins = {
+        'EEADesign2006':IEEADesignPublic,
+        'EEADesignCMS':IEEADesignCMS,
     }
 
+def change_skin(site, request):
 
-class SkinChanger(BrowserView):
-    """Utilities to change the skin
+    skin_name = request.cookies.get('plone_skin')
+    if not skin_name:
+        skin_name = 'EEADesign2006'
+        #logger.warning("Could not get skin name, using default skin")
+    else:
+        #logger.info("Using skin %s" % skin_name)
+
+    skin = queryUtility(IBrowserSkinType, name=skin_name)
+    if skin is not None:
+        layer_ifaces = []
+        default_ifaces = []
+        # We need to make sure IDefaultPloneLayer comes after
+        # any other layers, even if they don't explicitly extend it.
+        if IDefaultPloneLayer in skin.__iro__:
+            default_ifaces += [IDefaultPloneLayer]
+        for layer in directlyProvidedBy(request):
+            if layer in default_layers:
+                default_ifaces.append(layer)
+            elif IBrowserSkinType.providedBy(layer):
+                continue
+            else:
+                layer_ifaces.append(layer)
+        ifaces = [skin,] + layer_ifaces + default_ifaces
+        directlyProvides(request, *ifaces)
+
+
+#import datetime
+def mark_layer(site, event):
+    """Mark the request with a layer corresponding to the current skin,
+    as set in the portal_skins tool.
     """
+    #print "event", datetime.datetime.now()
+    if getattr(event.request, "_eeaplonetheme_", False):
+        return
+    event.request._eeaplonetheme_ = True
 
-    def changeSkin(self, skin_name):
-        """Sets the specified skin in the request
-        """
+    portal_skins = getToolByName(site, 'portal_skins', None)
+    if portal_skins is not None:
+        skin_name = site.getCurrentSkinName()
 
-        if not skin_name in SKINS:
-            logger.warn("Can't change skin to %s, skin unknown" % skin_name)
+        #we don't want to change the skin unless we have an EEA site
+        if skin_name in eea_skins:
+            change_skin(site, event.request)
             return
 
-        for iface in SKINS.values():
-            noLongerProvides(self.request, iface)
-
-        iface = SKINS[skin_name]
-        ifaces = [iface] + [list(providedBy(self.request))]
-
-        directlyProvides(self.request, ifaces)
-
-        #if skinname == "eeadesign2006":
-            #alsoProvides(self.request, IEEADesignCommon)
-            #portal_skins = getToolByName(self.context, 'portal_skins')
-            #portal_skins.changeSkin("EEADesign2006", self.request)
-
-        #if skinname == "eeadesigncms":
-            #alsoProvides(self.request, IEEADesignCMS)
-            #portal_skins = getToolByName(self.context, 'portal_skins')
-            #portal_skins.changeSkin("EEADesignCMS", self.request)
-
-    def switchSkin(self):
-        """Records the prefered skin in the member properties
-        """
-
-        skins_tool = getToolByName(self.context, 'portal_skins')
-        mtool = getToolByName(self.context, 'portal_membership')
-        member = mtool.getAuthenticatedMember()
-
-        member.setProperties(portal_skin = 'EEADesignCMS')
-        skins_tool.updateSkinCookie()
-
-        self.changeSkin('EEADesignCMS')
-
-        #if not hasattr(aq_base(member), 'portal_skin'):
-            #member.setProperties(portal_skin = 'EEADesignCMS')
-
-        #portal_skin = member.portal_skin
-        #if portal_skin == 'EEADesign2006':
-            #member.setProperties(portal_skin = 'EEADesignCMS')
-        #else:
-            #member.setProperties(portal_skin = 'EEADesign2006')
-
-        #skins_tool.updateSkinCookie()
-
-
-#def setskin(site, event):
-    #"""Eventhandler to set the skin"""
-
-    #skin_name = find_skin(site, event.request)
-    #portal = getToolByName(site, 'portal_url').getPortalObject()
-    #portal.changeSkin(skin_name, event.request)
-
-
-#def find_skin(site, request):
-
-    ## define possible skins
-    #PROJECT_THEME = 'EEADesign2006'
-    #AFDELING_THEME = 'EEADesignCMS'
-    #DEFAULT='EEADesignCMS'
-    #skins=[PROJECT_THEME, AFDELING_THEME]
-
-    ## map portal_type to theme
-    #mapping={
-        #'Folder': PROJECT_THEME,
-        #'Image': AFDELING_THEME,
-    #}
-
-    #if not request.TraversalRequestNameStack:
-        #return DEFAULT
-
-    ## reverse to look from the root up
-    #stack=[]
-    #stack.extend(request.TraversalRequestNameStack)
-    #stack.extend(site.getPhysicalPath())
-    #stack=[x for x in stack if x and x!='/' and x!='virtual_hosting']
-    #stack.append('')
-    #stack=stack[::-1]
-
-    ## support portal_css and portal_js
-    #for item in stack:
-        #if item in skins:
-            #return item
-
-    ## check objects
-    #portal_catalog = getToolByName(site, 'portal_catalog')
-    #while stack:
-        #item=stack.pop()
-        #path = '/'.join(stack)
-
-        #query={}
-        #query['id']=str(item)
-        #query['path'] = {'query' : path}
-
-        #brains = portal_catalog.unrestrictedSearchResults(query)
-        #if brains:
-            #brain=brains[0]
-            #portal_type=brain.portal_type
-            #try:
-                #return mapping[portal_type]
-            #except:
-                #pass
-
-    #return DEFAULT
+        base_mark_layer(site, event)

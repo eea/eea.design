@@ -3,13 +3,16 @@ from zope.interface import Interface
 from plone.portlets.interfaces import IPortletManager
 from plone.theme.interfaces import IDefaultPloneLayer
 
+class IEEACommonLayer(Interface):
+    """Common layer
+    """
 
-class IEEADesignCommon(IDefaultPloneLayer):
+class IEEADesignPublic(IDefaultPloneLayer): #IEEACommonLayer, 
     """Marker interface that defines a common Zope 3 browser layer, which
     will contain resources specific for common theme use
     """
 
-class IEEADesignCMS(IEEADesignCommon):
+class IEEADesignCMS(IDefaultPloneLayer):    #IEEACommonLayer, 
     """Marker interface that defines a Zope 3 browser layer, which
     will contain resources specific for CMS use
     """

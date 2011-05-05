@@ -4,8 +4,9 @@ when this product is installed. -->
 <layers>
 
     <layer name="EEADesign2006"
-           interface="eea.design.browser.interfaces.IEEADesignCommon" />
-  <layer name="EEADesignCMS"
-           interface="eea.design.browser.interfaces.IEEADesignCMS" />
+        interface="eea.design.browser.interfaces.IEEADesignPublic" />
+
+    <layer name="EEADesignCMS"
+        interface="eea.design.browser.interfaces.IEEADesignCMS" />
 
 </layers>

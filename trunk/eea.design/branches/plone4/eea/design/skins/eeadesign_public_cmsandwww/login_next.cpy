@@ -27,19 +27,20 @@ portal = context.portal_url
 member = membership_tool.getAuthenticatedMember()
 roles = member.getRolesInContext(context)
 
-context.restrictedTraverse('@@skinchanger').switchSkin()
 
-#portal_skins = context.portal_skins
-# If user has ONLY ['Authenticated'] role than regard as "Anonymous" and keep EEADesign2006 skin
-#if ['Authenticated'] == roles:
-    #portal_skins.changeSkin("EEADesign2006", REQUEST)
-    #REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesign2006', path=REQUEST['BASEPATH1'] + '/' + portal(1))
+portal_skins = context.portal_skins
+#If user has ONLY ['Authenticated'] role than regard as "Anonymous" and keep EEADesign2006 skin
+if ['Authenticated'] == roles:
+    portal_skins.changeSkin("EEADesign2006", REQUEST)
+    REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesign2006', path=REQUEST['BASEPATH1'] + '/' + portal(1))
     #context.restrictedTraverse('@@skinchanger').changeskin('eeadesign2006')
     #context.restrictedTraverse('@@skinchanger').switchSkin(context)
-#else:
-    #REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesignCMS', path=REQUEST['BASEPATH1'] + '/' + portal(1))
+else:
+    REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesignCMS', path=REQUEST['BASEPATH1'] + '/' + portal(1))
     #context.restrictedTraverse('@@skinchanger').changeskin('eeadesigncms')
     #context.restrictedTraverse('@@skinchanger').switchSkin(context)
+
+#context.restrictedTraverse('@@skinchanger').switchSkin("")
 
 came_from = REQUEST.get('came_from', None)
 ### eea

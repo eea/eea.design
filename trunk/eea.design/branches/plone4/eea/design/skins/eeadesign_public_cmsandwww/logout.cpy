@@ -18,8 +18,10 @@ REQUEST = context.REQUEST
 #context.restrictedTraverse('@@skinchanger').changeskin('eeadesign2006')
 #### end eea
 
+portal = context.portal_url
 mt = getToolByName(context, 'portal_membership')
 mt.logoutUser(REQUEST=REQUEST)
+REQUEST.RESPONSE.setCookie('plone_skin', '', path=REQUEST['BASEPATH1'] + '/' + portal(1))
 
 from Products.CMFPlone.utils import transaction_note
 transaction_note('Logged out')
