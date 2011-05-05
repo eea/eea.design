@@ -1,9 +1,10 @@
 from plone.app.portlets.interfaces import IColumn
 from zope.interface import Interface
 from plone.portlets.interfaces import IPortletManager
+from plone.theme.interfaces import IDefaultPloneLayer
 
 
-class IEEADesignCommon(Interface):
+class IEEADesignCommon(IDefaultPloneLayer):
     """Marker interface that defines a common Zope 3 browser layer, which
     will contain resources specific for common theme use
     """
@@ -38,6 +39,7 @@ class ISoerTopicSearch(Interface):
     def getCountryEnvironment():
         pass
 
+
 class ISoerFrontpage(Interface):
 
     def getKeyFacts():
@@ -51,6 +53,7 @@ class ISoerFrontpage(Interface):
 
     def getSoerLocations():
         pass
+
 
 class IFrontPageHighlights(Interface):
 

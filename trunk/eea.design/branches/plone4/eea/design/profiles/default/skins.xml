@@ -1,30 +1,29 @@
 <?xml version="1.0"?>
-
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
-   default_skin="EEADesign2006">
+    default_skin="EEADesign2006">
 
-     <object name="eea_design" meta_type="Filesystem Directory View"
-         directory="eea.design:skins/eea_design" />
-     <object name="eea_images" meta_type="Filesystem Directory View"
-         directory="eea.design:skins/eea_images" />
+    <object name="eea_design" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eea_design" />
+    <object name="eea_images" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eea_images" />
 
     <object name="eeadesign_templates" meta_type="Filesystem Directory View"
-                 directory="eea.design:skins/eeadesign_templates" />
+        directory="eea.design:skins/eeadesign_templates" />
     <object name="eeadesign_js" meta_type="Filesystem Directory View"
-                 directory="eea.design:skins/eeadesign_js" />
+        directory="eea.design:skins/eeadesign_js" />
     <object name="eeadesign_green_images" meta_type="Filesystem Directory View"
-             directory="eea.design:skins/eeadesign_green_images" />
+        directory="eea.design:skins/eeadesign_green_images" />
     <object name="eeadesign_public" meta_type="Filesystem Directory View"
-                 directory="eea.design:skins/eeadesign_public" />
+        directory="eea.design:skins/eeadesign_public" />
     <object name="eeadesign_green" meta_type="Filesystem Directory View"
-                 directory="eea.design:skins/eeadesign_green" />
+        directory="eea.design:skins/eeadesign_green" />
     <object name="eeadesign_public_cmsandwww" meta_type="Filesystem Directory View"
-                 directory="eea.design:skins/eeadesign_public_cmsandwww" />
+        directory="eea.design:skins/eeadesign_public_cmsandwww" />
     <object name="eeadesign_cms" meta_type="Filesystem Directory View"
-                 directory="eea.design:skins/eeadesign_cms" />
+        directory="eea.design:skins/eeadesign_cms" />
     <object name="eeadesign_style_docs" meta_type="Filesystem Directory View"
-                 directory="eea.design:skins/eeadesign_style_docs" />
-    
+        directory="eea.design:skins/eeadesign_style_docs" />
+
     <skin-path name="EEADesign2006" based-on="Sunburst Theme">
         <layer name="eea_design" insert-after="custom" />
         <layer name="eea_images" insert-after="eea_design"/>
@@ -50,5 +49,4 @@
         <layer name="eeadesign_public_cmsandwww" insert-after="eeadesign_green" />
     </skin-path>
 
- 
 </object>

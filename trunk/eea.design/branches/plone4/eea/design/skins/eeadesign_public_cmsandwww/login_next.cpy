@@ -26,6 +26,9 @@ if membership_tool.isAnonymousUser():
 portal = context.portal_url
 member = membership_tool.getAuthenticatedMember()
 roles = member.getRolesInContext(context)
+
+context.restrictedTraverse('@@skinchanger').switchSkin()
+
 #portal_skins = context.portal_skins
 # If user has ONLY ['Authenticated'] role than regard as "Anonymous" and keep EEADesign2006 skin
 #if ['Authenticated'] == roles:

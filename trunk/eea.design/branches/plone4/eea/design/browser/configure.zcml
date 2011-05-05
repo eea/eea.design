@@ -7,7 +7,6 @@
 
     <include package="plone.app.portlets"/>
 
-
     <interface
         interface=".interfaces.IEEADesignCMS"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
