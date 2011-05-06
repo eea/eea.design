@@ -21,10 +21,10 @@
         name="EEADesignCMS"
         />
 
-    <interface
-        interface=".interfaces.IEEACommonLayer"
-        type="zope.publisher.interfaces.browser.IBrowserSkinType"
-        />
+    <!--<interface-->
+    <!--    interface=".interfaces.IEEACommonLayer"-->
+    <!--    type="zope.publisher.interfaces.browser.IBrowserSkinType"-->
+    <!--    />-->
 
     <interface
         interface=".interfaces.IEEADesignPublic"

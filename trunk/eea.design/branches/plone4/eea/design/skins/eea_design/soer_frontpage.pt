@@ -10,20 +10,11 @@
     <div metal:fill-slot="main">
         <metal:main-macro define-macro="main">
 
-            <h1 tal:content="object_title" class="documentFirstHeading">
-                Title or id
-            </h1>
-
-            <p class="documentDescription"
-               tal:content="here/Description"
-               tal:condition="here/Description">
-                Description
-            </p>
 
             <div class="visualClear"></div>
             <div id="tag-cloud"> 
 	 	 <!--<div id="tag-cloud-content" tal:define="faceted_path string:soer/advanced-search"> -->
-	 	                    <!--<metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />-->
+	 	 <!--                   <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />-->
 	 	 <!--</div>-->
             </div>
 

@@ -4,7 +4,7 @@
 ##bind namespace=
 ##bind script=script
 ##bind subpath=traverse_subpath
-##parameters=images=0,  others=0
+##parameters=images=0, folders=0, subimages=0,  others=0
 ##title=Helper method for photo album view
 ##
 from Products.CMFPlone.utils import base_hasattr, getToolByName

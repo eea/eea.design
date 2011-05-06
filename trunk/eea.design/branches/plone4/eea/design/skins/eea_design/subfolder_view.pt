@@ -6,21 +6,6 @@
 <body>
     <div metal:fill-slot="main">
     <metal:main-macro define-macro="main">
-        <h1 tal:content="object_title" class="documentFirstHeading">
-            Title or id
-        </h1>
-
-        <!--<div metal:use-macro="context/document_actions/macros/document_actions">-->
-            <!--Document actions (print, sendto etc)-->
-        <!--</div>-->
-
-        <div class="visualClear"></div>
-
-        <p class="documentDescription"
-           tal:content="here/Description"
-           tal:condition="here/Description">
-            Description
-        </p>
 
         <div class="visualClear"></div>
 

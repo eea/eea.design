@@ -63,18 +63,18 @@
     metal:use-macro="here/batch_macros/macros/navigation" />
 
   <!--<tal:albumsimages tal:condition="images">-->
-    <!--<tal:images tal:condition="batch" tal:repeat="brain batch">-->
-      <!--<tal:entry tal:define="-->
-        <!--obj brain/getObject;-->
-        <!--desc_or_title python:brain.Description or obj.pretty_title_or_id;-->
-        <!--urlview obj/@@url;-->
-        <!--listing_url urlview/listing_url;-->
-        <!--is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">-->
+  <!--  <tal:images tal:condition="batch" tal:repeat="brain batch">-->
+  <!--    <tal:entry tal:define="-->
+  <!--      obj brain/getObject;-->
+  <!--      desc_or_title python:brain.Description or obj.pretty_title_or_id;-->
+  <!--      urlview obj/@@url;-->
+  <!--      listing_url urlview/listing_url;-->
+  <!--      is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">-->
 
-        <!--<metal:entry use-macro="entry_macro" />-->
-      <!--</tal:entry>-->
-    <!--</tal:images>-->
-    <!--<div class="visualClear">&lt;!&ndash; &ndash;&gt;</div>-->
+  <!--      <metal:entry use-macro="entry_macro" />-->
+  <!--    </tal:entry>-->
+  <!--  </tal:images>-->
+  <!--  <div class="visualClear">&lt;!&ndash; &ndash;&gt;</div>-->
   <!--</tal:albumsimages>-->
       <tal:images tal:condition="batch" tal:repeat="image batch">
           <div class="photoAlbumEntry">

@@ -27,7 +27,7 @@
 <dl class="portlet portletNavigationTree" id="portlet-navigation-tree"
     tal:define="root view/navigation_root">
 
-    <!--<metal:globalPromotion use-macro="here/portlet_globalpromotion/macros/portlet" />-->
+    <metal:globalPromotion use-macro="here/portlet_globalpromotion/macros/portlet" />
 
     <dt class="portletHeader" id="firstHeader"
         tal:attributes="class python:view.hasName() and 'portletHeader' or 'portletHeader hiddenStructure'">

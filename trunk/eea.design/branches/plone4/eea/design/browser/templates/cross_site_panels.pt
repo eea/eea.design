@@ -1,10 +1,10 @@
 <div metal:use-macro="context/main_template/macros/master">
-<div metal:fill-slot="main">
-    <tal:main-macro metal:define-macro="main">
+    <div metal:fill-slot="main">
+        <tal:main-macro metal:define-macro="main">
 
         <div tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
             <div class="panel" id="tip-siteaction-etcssites"
-                 style="width: 270px">
+                style="width: 270px">
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
@@ -47,17 +47,17 @@
             </div>
 
             <div class="panel" id="tip-siteaction-subscriptions"
-                 style="width: 240px">
+                style="width: 240px">
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow"
-                     tal:define="includeSocialMedia python:True">
+                    tal:define="includeSocialMedia python:True">
                     <!--<metal:portlet use-macro="context/portlet_gazette/macros/portlet" />-->
                 </div>
             </div>
 
             <div class="panel" id="tip-siteaction-contactus"
-                 style="width: 320px">
+                style="width: 320px">
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
@@ -66,7 +66,7 @@
                             <td style="width: 45%;">
                                 <h2>
                                     <img width="47" height="47" alt="Write us"
-                                         tal:attributes="src string:$portal_url/icon-send.gif"/>
+                                    tal:attributes="src string:$portal_url/icon-send.gif"/>
                                     Write to us
                                 </h2>
                                 <p>
@@ -76,7 +76,7 @@
                                     <li>
                                         <p>
                                             <a target="_self"
-                                               tal:attributes="href string:$portal_url/help/infocentre/enquiries">
+                                                tal:attributes="href string:$portal_url/help/infocentre/enquiries">
                                                 Ask your question
                                                 <br/>
                                             </a>
@@ -92,7 +92,7 @@
                                     <li>
                                         <p>
                                             <a target="_self"
-                                               tal:attributes="href string:$portal_url/pressroom">
+                                                tal:attributes="href string:$portal_url/pressroom">
                                                 Press room
                                                 <br/>
                                             </a>
@@ -101,18 +101,18 @@
                                 </ul>
                                 <br/>
                                 <a tal:attributes="href string:$portal_url/about-us/who/staff-list"
-                                   class="internal-link"
-                                   title="Staff list">
+                                    class="internal-link"
+                                    title="Staff list">
                                     <strong>Contact EEA staff</strong>
                                 </a>
                                 <br/>
                                 <a tal:attributes="href string:$portal_url/help/contact-info"
-                                   class="internal-link">
+                                    class="internal-link">
                                     <strong>Contact the web team</strong>
                                 </a>
                                 <br/>
                                 <a tal:attributes="href string:$portal_url/help/eea-help-centre/faqs"
-                                   class="internal-link">
+                                    class="internal-link">
                                     <strong>FAQ</strong>
                                 </a>
                                 <br/>
@@ -123,7 +123,7 @@
                             <td style="vertical-align: top;">
                                 <h2>
                                     <img width="47" height="47" alt="Call us"
-                                         tal:attributes="src string:$portal_url/icon-telephone.gif"/>
+                                    tal:attributes="src string:$portal_url/icon-telephone.gif"/>
                                     Call us
                                 </h2>
                                 <strong>Reception:
@@ -139,7 +139,7 @@
                                 <br/>
                                 <strong>
                                     <a target="_self"
-                                       tal:attributes="href string:$portal_url/help/infocentre/index_html">
+                                        tal:attributes="href string:$portal_url/help/infocentre/index_html">
                                         <br/>
                                     </a>
                                 </strong>
@@ -148,7 +148,7 @@
                     </table>
                     <div class="portletFooter">
                         <a class="moreLink"
-                           tal:attributes="href string:$portal_url/address.html">
+                            tal:attributes="href string:$portal_url/address.html">
                             <span>More</span>
                         </a>
                     </div>
@@ -159,44 +159,44 @@
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
-                   <!-- <tal:publications define="specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;
-              feeds specific/@@smartfolder_portlets|nothing"
-                                      repeat="portlet feeds"
-                                      tal:condition="nocall:specific">
-                        <metal:macro
-                                use-macro="here/portlet_themes_common/macros/portlet"/>
-                    </tal:publications> -->
+                    <tal:publications define="specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;
+                    feeds specific/@@smartfolder_portlets|nothing"
+                    repeat="portlet feeds"
+                    tal:condition="nocall:specific">
+                    <metal:macro
+                    use-macro="here/portlet_themes_common/macros/portlet"/>
+                    </tal:publications> 
                     <a id="submit-event-link"
-                       class="moreLink"
-                       href=""
-                       title="Submit an environmental event"
-                       tal:attributes="href string:$portal_url/events/submitted/createQuickEvent">
+                        class="moreLink"
+                        href=""
+                        title="Submit an environmental event"
+                        tal:attributes="href string:$portal_url/events/submitted/createQuickEvent">
                         <span>Submit a new event</span>
                     </a>
                 </div>
             </div>
 
             <div class="panel" id="tip-siteaction-chooselang"
-                 style="width: 125px">
+                style="width: 125px">
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
-                    <!--<tal:languages define="languages here/@@translatedSites">-->
-                    <!--<ul id="chooselang">-->
-                    <!--<tal:language repeat="lang languages">-->
-                    <!--<li><a href=""-->
-                    <!--tal:define="url lang/url;-->
-                    <!--url python: 'localhost' in url and 'http://www.eea.europa.eu/%s' % url.split('/www/')[1] or url;-->
-                    <!--"-->
-                    <!--tal:content="python: '%s (%s)' % (lang['lang'], lang['langcode'])"-->
-                    <!--tal:attributes="href url; title lang/lang"></a></li>-->
-                    <!--</tal:language>-->
-                    <!--</ul>-->
-                    <!--</tal:languages>-->
+                    <tal:languages define="languages here/@@translatedSites">
+                    <ul id="chooselang">
+                        <tal:language repeat="lang languages">
+                        <li><a href=""
+                                tal:define="url lang/url;
+                                url python: 'localhost' in url and 'http://www.eea.europa.eu/%s' % url.split('/www/')[1] or url;
+                                "
+                                tal:content="python: '%s (%s)' % (lang['lang'], lang['langcode'])"
+                                tal:attributes="href url; title lang/lang"></a></li>
+                        </tal:language>
+                    </ul>
+                    </tal:languages>
                 </div>
             </div>
 
         </div>
-    </tal:main-macro>
-</div>
+        </tal:main-macro>
+    </div>
 </div>

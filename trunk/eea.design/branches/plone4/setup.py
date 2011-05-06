@@ -28,6 +28,15 @@ setup(name='eea.design',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'eea.facetednavigation',
+          'eea.promotions',
+          'eea.themecentre',
+          'eea.translations',
+          'p4a.video',
+          'Products.eeawebapplication',
+          'Products.LinguaPlone',
+          'Products.NavigationManager'
+
           # -*- Extra requirements: -*-
       ],
       entry_points="""

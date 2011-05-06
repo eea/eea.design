@@ -34,15 +34,15 @@ from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 
-#from eea.promotion.interfaces import IPromotion
+from eea.promotion.interfaces import IPromotion
 
 from Products.Five import BrowserView
 #from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 #from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 
-#from p4a.video.interfaces import IVideoEnhanced
-#from eea.themecentre.interfaces import IThemeTagging
-#from eea.themecentre.interfaces import IThemeCentreSchema
+from p4a.video.interfaces import IVideoEnhanced
+from eea.themecentre.interfaces import IThemeTagging
+from eea.themecentre.interfaces import IThemeCentreSchema
 
 class Frontpage(BrowserView):
     """
