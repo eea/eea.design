@@ -38,8 +38,6 @@ def change_skin(site, request):
     if not skin_name:
         skin_name = 'EEADesign2006'
         #logger.warning("Could not get skin name, using default skin")
-    else:
-        #logger.info("Using skin %s" % skin_name)
 
     skin = queryUtility(IBrowserSkinType, name=skin_name)
     if skin is not None:
