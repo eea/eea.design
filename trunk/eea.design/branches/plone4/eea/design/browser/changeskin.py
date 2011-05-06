@@ -1,14 +1,12 @@
 from Products.CMFCore.utils import getToolByName
-from Products.CMFDefault.interfaces import ICMFDefaultSkin
 from Products.Five import BrowserView
 from eea.design.browser.interfaces import IEEADesignPublic, IEEADesignCMS
 from plone.theme.interfaces import IDefaultPloneLayer
-from plone.theme.layer import mark_layer as base_mark_layer
+from plone.theme.layer import default_layers, mark_layer as base_mark_layer
 from zope.component import queryUtility
 from zope.interface import directlyProvidedBy
 from zope.interface import directlyProvides
 from zope.publisher.interfaces.browser import IBrowserSkinType
-from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
 import logging
@@ -21,11 +19,6 @@ class TestSkin(BrowserView):
         return "is CMS indeed"
 
 
-default_layers = (
-    IDefaultPloneLayer,
-    ICMFDefaultSkin,
-    IDefaultBrowserLayer,
-    )
 
 eea_skins = {
         'EEADesign2006':IEEADesignPublic,
@@ -37,7 +30,6 @@ def change_skin(site, request):
     skin_name = request.cookies.get('plone_skin')
     if not skin_name:
         skin_name = 'EEADesign2006'
-        #logger.warning("Could not get skin name, using default skin")
 
     skin = queryUtility(IBrowserSkinType, name=skin_name)
     if skin is not None:

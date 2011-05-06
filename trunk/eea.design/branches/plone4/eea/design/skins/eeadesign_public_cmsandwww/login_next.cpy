@@ -28,22 +28,14 @@ member = membership_tool.getAuthenticatedMember()
 roles = member.getRolesInContext(context)
 
 
-portal_skins = context.portal_skins
 #If user has ONLY ['Authenticated'] role than regard as "Anonymous" and keep EEADesign2006 skin
 if ['Authenticated'] == roles:
-    portal_skins.changeSkin("EEADesign2006", REQUEST)
     REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesign2006', path=REQUEST['BASEPATH1'] + '/' + portal(1))
-    #context.restrictedTraverse('@@skinchanger').changeskin('eeadesign2006')
-    #context.restrictedTraverse('@@skinchanger').switchSkin(context)
 else:
     REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesignCMS', path=REQUEST['BASEPATH1'] + '/' + portal(1))
-    #context.restrictedTraverse('@@skinchanger').changeskin('eeadesigncms')
-    #context.restrictedTraverse('@@skinchanger').switchSkin(context)
-
-#context.restrictedTraverse('@@skinchanger').switchSkin("")
+### /eea
 
 came_from = REQUEST.get('came_from', None)
-### eea
 
 # if we weren't called from something that set 'came_from' or if HTTP_REFERER
 # is the 'logged_out' page, return the default 'login_success' form

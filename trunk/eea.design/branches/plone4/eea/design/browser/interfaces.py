@@ -7,12 +7,12 @@ class IEEACommonLayer(Interface):
     """Common layer
     """
 
-class IEEADesignPublic(IDefaultPloneLayer): #IEEACommonLayer, 
+class IEEADesignPublic(IEEACommonLayer, IDefaultPloneLayer):
     """Marker interface that defines a common Zope 3 browser layer, which
     will contain resources specific for common theme use
     """
 
-class IEEADesignCMS(IDefaultPloneLayer):    #IEEACommonLayer, 
+class IEEADesignCMS(IEEACommonLayer, IDefaultPloneLayer):
     """Marker interface that defines a Zope 3 browser layer, which
     will contain resources specific for CMS use
     """
