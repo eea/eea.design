@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="eea">
 
 <body>
 
@@ -30,7 +30,7 @@
                tal:condition="nocall: here/asPDF|nothing"
                tal:attributes="href string:${here_url}/asPDF/atct_topic_pdf_template/atct_topic_pdf"
                i18n:translate="label_download_as_pdf"
-               i18n:domain="atcontenttypes">
+               i18n:domain="eea">
                 Download PDF
             </a>
         </tal:listing>
@@ -122,14 +122,14 @@
 
             <p class="discreet"
                tal:condition="python: not topicContents and here.listCriteria()"
-               i18n:domain="atcontenttypes"
+               i18n:domain="eea"
                i18n:translate="description_no_items_in_topic">
                 There are currently no results for this search.
             </p>
 
             <p class="discreet"
                tal:condition="not: here/listCriteria"
-               i18n:domain="atcontenttypes"
+               i18n:domain="eea"
                i18n:translate="description_no_criteria_in_topic">
                 There are currently no criteria on which to search.
                 Please add them using the 'criteria' tab.
@@ -142,7 +142,7 @@
     <metal:body define-macro="folderlisting_macro">
         <tal:subtopics condition="here/hasSubtopics|nothing"
                        define="folderContents here/listSubtopics|nothing">
-            <h2 i18n:domain="atcontenttypes"
+            <h2 i18n:domain="eea"
                 i18n:translate="heading_contained_collections">
                 Also in this section
             </h2>
