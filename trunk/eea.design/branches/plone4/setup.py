@@ -29,7 +29,7 @@ setup(name='eea.design',
       install_requires=[
           'setuptools',
           'eea.facetednavigation',
-          'eea.promotions',
+          'eea.promotion',
           'eea.themecentre',
           'eea.translations',
           'p4a.video',
