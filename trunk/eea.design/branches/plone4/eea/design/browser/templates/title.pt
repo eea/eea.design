@@ -4,6 +4,6 @@
   </tal:pagetitle>
   &mdash;
 
-  <tal:portaltitle i18n:domain="eea.translations" i18n:translate=""
+  <tal:portaltitle i18n:domain="eea" i18n:translate=""
       tal:content="view/portal_title">EEA</tal:portaltitle>
 </title>

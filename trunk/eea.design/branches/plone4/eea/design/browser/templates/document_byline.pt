@@ -3,7 +3,7 @@
     id="plone-document-byline"
     tal:define="isAnon context/@@plone_portal_state/anonymous;
     plone_view context/@@plone;"
-    i18n:domain="plone">
+    i18n:domain="eea">
     <tal:loggedin tal:condition="not: isAnon">
     <span id="lock-icon"
         title="This document is locked."

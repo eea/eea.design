@@ -3,7 +3,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       tal:omit-tag="">
 <dl class="portlet portletCalendar"
-    i18n:domain="plone"
+    i18n:domain="eea"
     tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url;
                 query_string view/getQueryString;
                 url_quote_plus nocall:view/url_quote_plus;
@@ -73,7 +73,7 @@
     <dd class="portletItem">
         <table class="ploneCalendar"
                summary="Calendar"
-               i18n:domain="plone"
+               i18n:domain="eea"
                i18n:attributes="summary summary_calendar;">
             <caption class="hiddenStructure"
                      tal:content="view/monthName">Month name</caption>

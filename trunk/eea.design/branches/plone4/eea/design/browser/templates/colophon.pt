@@ -1,6 +1,6 @@
 <div id="portal-colophon"
      metal:define-macro="colophon"
-     i18n:domain="plone">
+     i18n:domain="eea">
 <metal:slot define-slot="colophon" />
 
 <div class="colophonWrapper">

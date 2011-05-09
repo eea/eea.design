@@ -1,5 +1,5 @@
 <div tal:omit-tag=""
-     i18n:domain="plone">
+     i18n:domain="eea">
 
     <div class="visualClear"><!-- --></div>
 
@@ -23,13 +23,6 @@
                 </li>
             </ul>
         </tal:docactions>
-<!---->
-<!--        <tal:lang tal:condition="exists: context/global_languageselector">-->
-<!--            <metal:lang-->
-<!--                    use-macro="context/global_languageselector/macros/language">-->
-<!--                Language selector-->
-<!--            </metal:lang>-->
-<!--        </tal:lang>-->
 
         <div tal:replace="structure provider:plone.documentactions"/>
 

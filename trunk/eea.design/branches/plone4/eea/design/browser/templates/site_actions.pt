@@ -5,7 +5,7 @@
                        putils context/plone_utils;
                        getIconFor nocall:putils/getIconFor;"
     tal:condition="view/site_actions"
-    i18n:domain="plone">
+    i18n:domain="eea">
 
     <li tal:repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}"><a

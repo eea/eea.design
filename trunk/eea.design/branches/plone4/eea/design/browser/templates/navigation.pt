@@ -1,7 +1,7 @@
-<tal:block i18n:domain="plone">
+<tal:block i18n:domain="eea">
 <!--
     <metal:header define-macro="header"
-         i18n:domain="plone"
+         i18n:domain="eea"
          tal:define="view context/@@navigationHeader;
                      displayLogo view/shouldDisplayLogo">
 
