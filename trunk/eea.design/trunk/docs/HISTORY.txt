@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2.25-dev - (unreleased)
+-----------------------
+
 2.24 - (2011-05-10)
 -------------------
  * Bug fix: Fixed Javascript error in policy-documents faceted navigation, IE 8 [voineali #4318]
