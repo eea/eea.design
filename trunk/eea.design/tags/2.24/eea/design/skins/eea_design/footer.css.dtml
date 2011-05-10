@@ -1,0 +1,150 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+#footer-wrapper {
+    background: white url(footer_left.jpg) no-repeat;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+#bg-wrapper {
+    background: transparent url(footer_right.jpg) no-repeat top right;
+    padding: 90px 0 0 0;
+    margin: 0;
+}
+
+#portal-footer {
+    float: none;
+    padding: 2em;
+    background: #95B229;
+    color: white;
+    margin: 0 0em 1em 0em;
+}
+
+/*
+#portal-footer {
+   background: &dtml-darkBackgroundColor;;
+   float: none;
+   line-height: 1.2em;
+   margin: 0 0em 1em 0em;
+   padding: 2em 1em;
+   text-align: left;
+   font-size: x-small;
+   color: white;
+}
+*/
+
+#portal-footer .image-right {
+   margin-top: 1em;
+}
+
+#portal-footer a {
+    text-transform: none;
+    text-decoration: underline;
+    color: white;
+    border: none;
+}
+
+#portal-footer a:visited {
+    color: white;
+}
+
+#portal-footer a:hover {
+    color: &dtml-linkHoverColor;;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#portal-colophon {
+    float: none;
+    margin: 0em 0em 2em 0em;
+    padding: 0.5em 0em 1em 0em;
+    text-align: center;
+}
+
+#portal-colophon ul,
+#portal-colophon ul li,
+#portal-colophon ul li a {
+    list-style-image: none;
+    list-style-type: none;
+    display: inline;
+    text-decoration: none;
+    color: &dtml-fontColor;;
+}
+
+#portal-colophon ul {
+    list-style-type: none;
+}
+
+#portal-colophon ul li {
+    display: table-cell;
+    font-size: &dtml-fontSmallSize;;
+    margin: 0 0.25em;
+    padding: 0.1em 0.2em;
+}
+
+#portal-colophon .colophonWrapper {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#portal-colophon .colophonIcon {
+    display: block; /* This is for Mozilla, as it doesn't support
+                       inline-block. The colophon icons aren't in
+                       one line though. */
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 15px;
+    height: 0px !important;
+    height /**/: 15px;
+    width: 80px;
+}
+
+#portal-colophon a.colophonIcon {
+    cursor: pointer;
+}
+#portal-colophon .colophonIconPlone {
+    background-image: url(&dtml-portal_url;/plone_powered.gif);
+}
+
+#portal-colophon .colophonIcon508 {
+    background-image: url(&dtml-portal_url;/colophon_sec508.gif);
+}
+
+#portal-colophon .colophonIconWAI {
+    background-image: url(&dtml-portal_url;/colophon_wai-aa.gif);
+}
+
+#portal-colophon .colophonIconXHTML {
+    background-image: url(&dtml-portal_url;/colophon_xhtml.png);
+}
+
+#portal-colophon .colophonIconCSS {
+    background-image: url(&dtml-portal_url;/colophon_css.png);
+}
+
+#portal-colophon .colophonIconAnyBrowser {
+    background-image: url(&dtml-portal_url;/colophon_anybrowser.png);
+}
+
+#portal-footer #portlet-ecotip {
+   font-size: 120%;
+   width: 75%;
+   margin: 0 auto;
+}
+
+#portal-footer #portlet-ecotip .portletFooter {
+  border: none;
+  padding: 0;
+}
+
+#portal-footer #portlet-ecotip dt {
+   display: none;
+}
+
+/* </dtml-with> */
