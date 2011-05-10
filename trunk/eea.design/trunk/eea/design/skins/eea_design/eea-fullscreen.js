@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-    $('#slide-button').height( $('#firstHeader').outerHeight() );
+    var height = $('#firstHeader').outerHeight();
+    if(height !== null){
+        $('#slide-button').height( height );
+    }
 
     $('#slide-button').click(function() {
         var body = $('body');
