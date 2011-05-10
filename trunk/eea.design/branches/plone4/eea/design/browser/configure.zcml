@@ -231,13 +231,15 @@
 
     <!-- langugages -->
 
-    <browser:page
-        for="*"
-        name="translatedSitesLanguages"
-        class=".language.Languages"
-        permission="zope.Public"
-        attribute="getTranslatedSitesLanguages"
-        />
+    plone4: already defined in Products.EEAContentTypes
+
+    <!--<browser:page-->
+        <!--for="*"-->
+        <!--name="translatedSitesLanguages"-->
+        <!--class=".language.Languages"-->
+        <!--permission="zope.Public"-->
+        <!--attribute="getTranslatedSitesLanguages"-->
+        <!--/>-->
 
     <browser:page
         for="*"
@@ -247,13 +249,13 @@
         attribute="getLocalSites"
         />
 
-    <browser:page
-        for="*"
-        name="languageSelector"
-        class=".language.LanguageSelectorData"
-        permission="zope.Public"
-        attribute="data"
-        />
+    <!--<browser:page-->
+        <!--for="*"-->
+        <!--name="languageSelector"-->
+        <!--class=".language.LanguageSelectorData"-->
+        <!--permission="zope.Public"-->
+        <!--attribute="data"-->
+        <!--/>-->
 
 
     <browser:page
@@ -330,13 +332,14 @@
         <!--        />-->
 
 
-    <browser:page
-        for="*"
-        name="url"
-        class=".url.URL"
-        permission="zope2.View"
-        allowed_attributes="listing_url object_url is_external css_class"
-        />
+    <!-- added for plone 4 migration to be deleted from here -->
+    <!--<browser:page-->
+        <!--for="*"-->
+        <!--name="url"-->
+        <!--class=".url.URL"-->
+        <!--permission="zope2.View"-->
+        <!--allowed_attributes="listing_url object_url is_external css_class"-->
+        <!--/>-->
 
     <!-- Customized portlets -->
 
