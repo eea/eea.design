@@ -1,6 +1,6 @@
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
-      i18n:domain="plone" tal:omit-tag="">
+      i18n:domain="eea" tal:omit-tag="">
 
 <div metal:define-macro="high"
 		id="highlights-high" 
@@ -111,7 +111,7 @@
     <tal:defines  
         tal:define="first_vid python:vids[0];
  	            three_other python:vids[1:];">
-    <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="inthespotlight">In the spotlight</h2>
+    <h2 class="column-title" i18n:domain="eea" i18n:translate="inthespotlight">In the spotlight</h2>
     <h3 class="shortNewsTitle visualPadding">
         <a class="video-fancybox"
             href="#"

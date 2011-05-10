@@ -1,15 +1,15 @@
 ## Script (Python) "atctListAlbum"
+##title=Helper method for photo album view
 ##bind container=container
 ##bind context=context
 ##bind namespace=
 ##bind script=script
 ##bind subpath=traverse_subpath
-##parameters=images=0, folders=0, subimages=0,  others=0
-##title=Helper method for photo album view
-##
+##parameters=images=0, others=0
+
 from Products.CMFPlone.utils import base_hasattr, getToolByName
+
 result = {}
-is_topic = context.portal_type == 'Topic'
 
 if context.portal_type == 'Topic':
     queryMethod = context.queryCatalog
@@ -17,11 +17,10 @@ else:
     queryMethod = context.getFolderContents
 
 image_types = []
-
 if images:
     portal_atct = getToolByName(context, 'portal_atct')
     image_types = getattr(portal_atct, 'image_types', [])
-    if context.portal_type in ['Topic', 'RichTopic'] and \
+    if context.portal_type == 'Topic' and \
             'ATPortalTypeCriterion' in [obj.portal_type for obj in context.listCriteria()]:
         # if portal_type is already in the smart folder's criteria
         # passing the image_types to queryMethod() doesn't have any effect.
@@ -38,10 +37,7 @@ if others:
                 if p_type not in image_types and p_type != 'Folder' ]
     if filtered:
         # We don't need the full objects for the folder_listing
-        if is_topic:
-            result['others'] = context.queryCatalog(portal_type=filtered)
-        else:
-            result['others'] = context.getFolderContents({'portal_type': filtered})
+        result['others'] = queryMethod({'portal_type':filtered})
     else:
         result['others'] = ()
 

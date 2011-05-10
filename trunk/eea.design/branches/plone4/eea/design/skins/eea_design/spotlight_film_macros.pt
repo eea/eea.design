@@ -1,6 +1,6 @@
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
-      i18n:domain="plone" tal:omit-tag="">
+      i18n:domain="eea" tal:omit-tag="">
       
 
 <div metal:define-macro="spotlight" class="highlightMiddle shortNews" id="multimedia-highlights">

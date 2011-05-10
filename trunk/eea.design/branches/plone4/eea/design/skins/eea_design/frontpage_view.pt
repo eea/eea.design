@@ -2,7 +2,7 @@
             bar python:request.set('disable_plone.rightcolumn', 1);"/>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
-      i18n:domain="plone"
+      i18n:domain="eea"
       metal:use-macro="context/main_template/macros/master">
     <head>
     </head>
@@ -25,7 +25,7 @@
                         <div metal:use-macro="context/spotlight_film_macros/macros/spotlight">
                             Spotlight
                         </div>
-                        <h2 class="column-title" i18n:domain="eea.translations" i18n:translate="Articles">Featured articles</h2>
+                        <h2 class="column-title" i18n:domain="eea" i18n:translate="Articles">Featured articles</h2>
                         <div metal:use-macro="here/frontpage_macros/macros/highArticles">
                             Top articles
                         </div>

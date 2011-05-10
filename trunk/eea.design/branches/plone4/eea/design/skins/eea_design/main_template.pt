@@ -101,7 +101,7 @@
     tal:attributes="class body_class;
                     dir python:isRTL and 'rtl' or 'ltr'">
 
-<!--<div id="print-warning" i18n:domain="eea.translations">-->
+<!--<div id="print-warning" i18n:domain="eea">-->
              <!--<p i18n:translate="print_warning">-->
                  <!--Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!-->
              <!--</p>-->
@@ -114,7 +114,7 @@
 
         <div id="portal-top"
             class="row"
-            i18n:domain="plone"
+            i18n:domain="eea"
             tal:condition="not:ajax_load">
 <div class="cell width-full position-0"> <!-- TODO: Temporary, this one should be in the template that is inserted -->
             <div tal:replace="structure provider:plone.portaltop" />
@@ -249,11 +249,11 @@
     <div class="visualClear"><!-- --></div>
  </div>
     <!-- end column wrapper -->
-    <div i18n:domain="eea.translations" tal:condition="python:language != 'en'" id="translation-disclaimer">
+    <div i18n:domain="eea" tal:condition="python:language != 'en'" id="translation-disclaimer">
         <p class="note" i18n:translate="page_translated_by">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
     </div>
 
-    <metal:block i18n:domain="plone" tal:condition="not:ajax_load">
+    <metal:block i18n:domain="eea" tal:condition="not:ajax_load">
         <div tal:replace="structure provider:plone.portalfooter" />
     </metal:block>
 

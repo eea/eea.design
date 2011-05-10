@@ -20,7 +20,7 @@ Customizing this template
 {/whatever}
 </tal:comment>
 
-<html i18n:domain="plonegazette"
+<html i18n:domain="eea"
       xmlns="http://www.w3.org/1999/xhtml"
       xml:lang="en-US"
       lang="en-US"

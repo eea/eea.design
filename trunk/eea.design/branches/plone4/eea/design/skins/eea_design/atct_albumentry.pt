@@ -1,5 +1,7 @@
 <metal:entry define-macro="entry">
-  <div>
+  <div tal:define="
+    css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
+    tal:attributes="class css">
     <a tal:attributes="
       href listing_url;
       class python:test(is_video, 'video-fancybox', '');

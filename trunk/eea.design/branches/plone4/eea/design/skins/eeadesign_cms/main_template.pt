@@ -65,7 +65,7 @@
 
         <div id="portal-top"
             class="row"
-            i18n:domain="plone"
+            i18n:domain="eea"
             tal:condition="not:ajax_load">
 <div class="cell width-full position-0"> <!-- TODO: Temporary, this one should be in the template that is inserted -->
             <div tal:replace="structure provider:plone.portaltop" />
@@ -177,7 +177,7 @@
     </div>
     <tal:comment replace="nothing"> end column wrapper </tal:comment>
 
-    <metal:block i18n:domain="plone" tal:condition="not:ajax_load">
+    <metal:block i18n:domain="eea" tal:condition="not:ajax_load">
         <div tal:replace="structure provider:plone.portalfooter" />
     </metal:block>
 

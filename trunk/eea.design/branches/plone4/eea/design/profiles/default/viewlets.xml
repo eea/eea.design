@@ -4,31 +4,37 @@
      -->
 
 <object>
+    
     <!-- portalheader order -->
     <order manager="plone.portalheader" skinname="*"
-           based-on="Plone Default">
+        based-on="Plone Default">
 
         <viewlet name="plone.site_actions"
-                 insert-before="plone.skip_links"/>
+            insert-before="plone.skip_links"/>
         <viewlet name="eea.cross_site_top"
-                 insert-before="plone.skip_links"/>
-        
+            insert-before="plone.skip_links"/>
+
     </order>
     <!-- end portalheader order -->
-
-
+    <order manager="plone.abovecontenttitle" skinname="*"
+        based-on="Plone Default">
+        <viewlet name="eea.languageselector"
+            insert-before="*"/>
+    </order>
+    
     <!-- portalfooter hiddenmanagers -->
     <hidden manager="plone.portalfooter" skinname="EEADesign2006" >
         <viewlet name="plone.site_actions"/>
     </hidden>
-    
-   <hidden manager="plone.portalfooter" skinname="EEADesignCMS" >
+
+    <hidden manager="plone.portalfooter" skinname="EEADesignCMS" >
         <viewlet name="plone.site_actions"/>
         <viewlet name="plone.colophon"/>
     </hidden>
-     <!-- end portalfooter hiddenmanagers -->
+    <!-- end portalfooter hiddenmanagers -->
+
     <hidden manager="plone.htmlhead.links" skinname="*" >
-          <viewlet name="plone.links.author"/>
-      </hidden>
+        <viewlet name="plone.links.author"/>
+    </hidden>
 
 </object>
