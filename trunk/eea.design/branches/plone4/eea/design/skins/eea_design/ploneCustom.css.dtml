@@ -981,7 +981,7 @@ float:right;
     display: inline-block;
 }
 
-.documentActions li {
+.documentActions li, .languageCodes li {
     display: inline-block !important;
     list-style: none;
     list-style-image: none;
@@ -999,16 +999,8 @@ float:right;
 /*.documentActions ul {*/
     /*display: none;*/
 /*}*/
-.documentActions .languageCodes {
+.languageCodes {
     display: block;
-}
-
-/* Bottom documentActions should show the actions */
-#belowContent .documentActions ul {
-    display: block;
-}
-#belowContent .documentActions .languageCodes {
-    display: none;
 }
 
 /* .system-message and #error-handling are reST error indicators */
@@ -1673,7 +1665,7 @@ div.listingBar a:hover {
     border-bottom: 1px solid #8E004D !important;
 }
 #content a:hover, dl.portlet a:hover {
-    color: #8E004D !important;
+    color: #8E004D; 
 }
 div.listingBar a {
     border: 0px;

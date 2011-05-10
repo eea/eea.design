@@ -231,31 +231,34 @@
 
     <!-- langugages -->
 
-    plone4: already defined in Products.EEAContentTypes
+    <!--plone4: already defined in Products.EEAContentTypes-->
 
-    <!--<browser:page-->
-        <!--for="*"-->
-        <!--name="translatedSitesLanguages"-->
-        <!--class=".language.Languages"-->
-        <!--permission="zope.Public"-->
-        <!--attribute="getTranslatedSitesLanguages"-->
-        <!--/>-->
+    <browser:page
+        for="*"
+        name="translatedSitesLanguages"
+        class=".language.Languages"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        attribute="getTranslatedSitesLanguages"
+        />
 
-    <!--<browser:page-->
-        <!--for="*"-->
-        <!--name="translatedSites"-->
-        <!--class=".language.Languages"-->
-        <!--permission="zope.Public"-->
-        <!--attribute="getLocalSites"-->
-        <!--/>-->
+    <browser:page
+        for="*"
+        name="translatedSites"
+        class=".language.Languages"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        attribute="getLocalSites"
+        />
 
-    <!--<browser:page-->
-        <!--for="*"-->
-        <!--name="languageSelector"-->
-        <!--class=".language.LanguageSelectorData"-->
-        <!--permission="zope.Public"-->
-        <!--attribute="data"-->
-        <!--/>-->
+    <browser:page
+        for="*"
+        name="languageSelector"
+        class=".language.LanguageSelectorData"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        attribute="data"
+        />
 
 
     <browser:page
@@ -278,6 +281,7 @@
         for="*"
         name="frontpage_highlights"
         class=".frontpage.Frontpage"
+        layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
         allowed_interface=".interfaces.IFrontPageHighlights"
         />
@@ -286,6 +290,7 @@
         for="*"
         name="soer_topic_search_logic"
         class=".soer_topic_search_logic.SoerTopicSearch"
+        layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
         allowed_interface=".interfaces.ISoerTopicSearch"
         />
@@ -294,6 +299,7 @@
         for="*"
         name="soer_frontpage_logic"
         class=".soer_frontpage.SoerFrontpage"
+        layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
         allowed_interface=".interfaces.ISoerFrontpage"
         />
@@ -302,6 +308,7 @@
         for="zope.interface.Interface"
         name="soer_tagcloud"
         class=".tagcloud.TagCloud"
+        layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
         />
 
@@ -311,6 +318,7 @@
         name="subfolder_view_logic"
         class=".subfolder_view_logic.SubFolderView"
         permission="zope.Public"
+        layer=".interfaces.IEEACommonLayer"
         allowed_interface=".interfaces.ISubFolderView"
         />
 
@@ -318,6 +326,7 @@
         for="*"
         name="smart_view_logic"
         class=".smart_view_logic.SmartView"
+        layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
         allowed_interface=".interfaces.ISmartView"
         />
@@ -332,14 +341,14 @@
         <!--        />-->
 
 
-    <!-- added for plone 4 migration to be deleted from here -->
-    <!--<browser:page-->
-        <!--for="*"-->
-        <!--name="url"-->
-        <!--class=".url.URL"-->
-        <!--permission="zope2.View"-->
-        <!--allowed_attributes="listing_url object_url is_external css_class"-->
-        <!--/>-->
+    <browser:page
+        for="*"
+        name="url"
+        class=".url.URL"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        allowed_attributes="listing_url object_url is_external css_class"
+        />
 
     <!-- Customized portlets -->
 

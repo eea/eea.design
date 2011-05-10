@@ -560,10 +560,9 @@ div span span.languageCodes {
     float: left;
 }
 
-.languageCodes a,
-#languageCodes li a { 
+.languageCodes a:link, .languageCodes a, #languageCodes li a { 
     background: &dtml-darkBackgroundColor;;
-    color: white;
+    color: white !important;
     padding: 0.2em;
     line-height:2.0em;
     border: 1px solid &dtml-darkBackgroundColor; ! important;
@@ -594,10 +593,11 @@ form.manylanguages select {
 }
 
 div span span.languageCodes a,
-.languageCodes a:hover,
+ #content .languageCodes a:hover,
+ .languageCodes li a:hover,
 #languageCodes li a:hover { 
     background: white;
-    color:#DE7800;
+    color:#DE7800 !important;
 }
 
 .highlights ul.relatedLinks li,
