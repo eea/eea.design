@@ -241,13 +241,13 @@
         <!--attribute="getTranslatedSitesLanguages"-->
         <!--/>-->
 
-    <browser:page
-        for="*"
-        name="translatedSites"
-        class=".language.Languages"
-        permission="zope.Public"
-        attribute="getLocalSites"
-        />
+    <!--<browser:page-->
+        <!--for="*"-->
+        <!--name="translatedSites"-->
+        <!--class=".language.Languages"-->
+        <!--permission="zope.Public"-->
+        <!--attribute="getLocalSites"-->
+        <!--/>-->
 
     <!--<browser:page-->
         <!--for="*"-->
