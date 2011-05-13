@@ -1,6 +1,6 @@
         <tal:lang tal:condition="exists: context/global_languageselector">
-            <!--<metal:lang-->
-            <!--        use-macro="context/global_languageselector/macros/language">-->
-            <!--    Language selector-->
-            <!--</metal:lang>-->
+            <metal:lang
+                    use-macro="context/global_languageselector/macros/language">
+                Language selector
+            </metal:lang>
         </tal:lang>
