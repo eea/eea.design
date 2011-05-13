@@ -1,0 +1,33 @@
+# Please note that this approach will gradually be phased out, probably in
+# Plone 2.2 or 2.3. Using DTML in CSS is something we want to stop doing.
+
+### WISE Specific properties and colors
+title:string=WISETheme's color, font, logo and border defaults
+
+plone_skin:string=WISETheme
+
+fontFamily:string= Helvetica, Arial, sans-serif
+headingFontFamily:string= Helvetica, Arial, sans-serif
+
+portalMinWidth:string=29em
+columnOneWidth:string=21em
+columnTwoWidth:string=17em
+
+lightText:string=#ffffff
+darkerText:string=#666666
+
+lightBluePortlet:string=#d9ecec
+darkBluePortlet:string=#082764
+lightGreenPortlet:string=#e0edcc
+darkGreenPortlet:string=#96c161
+factboxGreen:string=#5e813e
+
+imgWaves:string=waves.gif
+imgBorderTL:string=corner_tl.gif
+imgBorderTR:string=corner_tr.gif
+imgBorderBL:string=corner_bl.gif
+imgBorderBR:string=corner_br.gif
+blueGradient:string=blue_gradient.png
+greenGradient:string=green_gradient.png
+imgGuestbook:string=guestbook.gif
+imgFact:string=fact.gif
