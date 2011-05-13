@@ -1,0 +1,27 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+<body>
+<div metal:define-macro="portlet"
+     tal:omit-tag="">
+
+<div class="outer">
+<dl class="portlet darkblue-portlet"
+    id="portlet-my-rbd">
+
+    <dt class="portletHeader">
+        <a href="#" 
+           class="tile"
+           tal:attributes="href string:/themes/water/wise-viewer/wise-viewer-flash?mapid=myRBD&apptype=simple">My river basin district</a>
+    </dt>
+    <dd class="hr"><hr/></dd>
+    <dd class="portletItem odd">
+        <a href="#" 
+           class="tile"
+           tal:attributes="href string:/themes/water/wise-viewer/wise-viewer-flash?mapid=myRBD&apptype=simple">Click here to go to the WISE map viewer.</a>
+    </dd>
+</dl>
+</div>
+</div>
+</body>
+</html>

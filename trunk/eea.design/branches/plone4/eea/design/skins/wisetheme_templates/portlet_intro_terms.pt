@@ -1,0 +1,31 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+<body>
+<div metal:define-macro="portlet"
+     tal:omit-tag="">
+
+<div class="outer-bottom">
+<dl class="darkblue-portlet portlet"
+    id="portlet-intro-terms">
+
+    <dt class="portletHeader">
+        <a href="#" 
+           class="tile"
+           tal:attributes="href string:/themes/water/wise-help-centre/guided-tours/introduction-to-general-terms">Introduction to general terms</a>
+    </dt>
+
+    <dd class="portletItem odd">
+	<p>
+	<a href="#"
+           class="tile light"
+           tal:attributes="href string:/themes/water/wise-help-centre/guided-tours/introduction-to-general-terms">
+		<img src="" alt="Guided Tour" tal:attributes="src string:/themes/water/boxmap_b.gif" />
+		Click here to read an introduction to general hydrological terms.</a>
+	</p>
+    </dd>
+</dl>
+</div>
+</div>
+</body>
+</html>

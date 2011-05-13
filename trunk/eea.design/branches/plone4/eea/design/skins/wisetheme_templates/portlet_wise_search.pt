@@ -1,0 +1,55 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+<body>
+<div metal:define-macro="portlet"
+     tal:omit-tag="">
+
+<dl class="portlet darkblue-portlet"
+    id="portlet-wise-search"
+    tal:define="portal_url context/@@plone_portal_state/portal_url; ">
+
+    <dt class="portletHeader">
+        <a href="#" 
+           class="tile"
+           tal:attributes="href string:$portal_url/wise_search">WISE Search</a>
+    </dt>
+    <dd class="portletItem odd">
+    <form name="searchform" method="get"
+          action="http://www.google.com/custom" 
+          style="white-space:nowrap">
+
+        <input TYPE="hidden" NAME="as" VALUE="Google Search" />
+        
+        <input type="hidden" name="domains" value="water.europa.eu"/>
+        <input type="hidden" name="sitesearch" value="water.europa.eu"/>
+        <input type="hidden" name="cof" VALUE="GIMP:#FF9900;T:#000000;ALC:#006666;L:http://template.eea.europa.eu/images/eeabanner;GFNT:#808080;LC:#003366;BGC:#FFFFFF;AH:left;VLC:#993300;GL:0;S:http://water.europa.eu;GALT:#FF9900;AWFID:109f704edff0cc7d;"/>
+        <label for="searchGadget" class="hiddenStructure"
+                    i18n:translate="text_search">Search Site</label>
+        <input type="hidden" name="config" value="" />
+        <input type="hidden" name="restrict" value="" />
+        <input type="hidden" name="exclude" value="" />
+        <input type="hidden" NAME="page" VALUE="" />
+        <div class="LSBox">
+        <input id="searchGadget"
+               name="q"
+               type="text"
+               size="10"
+               value=""
+               title="Search Site"
+               accesskey="5"
+               i18n:attributes="title title_search_site;"
+               tal:attributes="value request/SearchableText|nothing;"
+               class="visibility:visible" />
+
+        <input id="arrowButton"
+               type="submit"
+               value="&#x25b6;"
+               />
+        </div>
+    </form>
+    </dd>
+</dl>
+</div>
+</body>
+</html>

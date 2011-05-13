@@ -1,0 +1,62 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+<body>
+<div metal:define-macro="portlet"
+       i18n:domain="eea"
+       tal:omit-tag=""
+       tal:define="view context/@@navigation_view;
+                   root view/navigationRoot;">
+
+    <!-- #TODO portletHeader remains empty for wise sections -->
+<dl class="portlet" id="portlet-navigation-tree" 
+    tal:condition="view/display">
+    <dt class="portletHeader">
+        <!--span class="portletTopLeft"></span>
+        <a href="#" 
+           class="tile"
+           tal:condition="not:view/title"
+           tal:attributes="href string:${root/absolute_url}/sitemap" 
+           i18n:translate="box_navigation">Navigation</a>
+       <a href="#" 
+           class="tile"
+           tal:condition="view/title"
+           tal:attributes="href root/getUrl|root/absolute_url"
+           tal:content="view/title">Navigation</a>
+        <span class="portletTopRight"></span-->
+    </dt>
+
+    <dd class="portletItem lastItem">
+        <ul class="portletNavigationTree navTreeLevel0">
+
+            <li class="navTreeItem"
+                tal:condition="view/includeTop">
+                <tal:block define="typeClass string:contenttype-${view/rootTypeName};
+                                   selectedClass python:test(path('view/isPortalOrDefaultChild'), 'navTreeCurrentItem', '');
+                                  ">
+                   <div class="contenttype-plone-site" tal:attributes="class typeClass">
+                       <a class="visualIconPadding"
+                          tal:attributes="href root/absolute_url;
+                                          title portal/Description;
+                                          class string:$selectedClass visualIconPadding;">
+                       <span tal:omit-tag=""
+                             tal:condition="python:root == portal"
+                             i18n:translate="tabs_home">Home</span>
+                       <span tal:condition="python:root != portal"
+                             tal:replace="root/Title">Home</span>
+                       </a>
+                   </div>
+                </tal:block>
+            </li>
+            <li tal:replace="structure view/createNavTree">
+                SUBTREE
+            </li>
+        </ul>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+</div>
+</body>
+</html>

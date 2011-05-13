@@ -1,0 +1,24 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+<body>
+<div metal:define-macro="portlet" tal:omit-tag="">
+
+<div class="outer-top">
+<dl class="portlet lightblue-portlet"
+    id="portlet-data-center">
+
+    <dt class="portletHeader">
+        <a tal:attributes="href string:/themes/water/data-center-services;
+                           class string:tile">Data centre services</a>
+    </dt>
+    <dd class="portletItem odd">
+        <p tal:content="structure here/portlet_dcnavtree_macro">
+            SUBTREE
+        </p>
+    </dd>
+</dl>
+</div>
+</div>
+</body>
+</html>

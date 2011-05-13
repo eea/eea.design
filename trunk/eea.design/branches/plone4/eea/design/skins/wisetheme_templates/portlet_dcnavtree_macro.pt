@@ -1,0 +1,20 @@
+<tal:master define="normalizeString nocall:context/plone_utils/normalizeString;
+                    viewActions here/portal_properties/site_properties/typesUseViewActionInListings|python:();
+                    member context/portal_membership/getAuthenticatedMember|nothing;
+                    member_id member/getId|nothing;">
+
+<metal:main define-macro="nav_main_dc">
+
+    <tal:replace tal:define="dcsvcs   python:context.portal_catalog(path='/www/SITE/themes/water/data-center-services',sort_on='created');">
+        <tal:replace tal:repeat="item dcsvcs">
+            <a tal:define="linkRemote python:(item.getRemoteUrl or item.getUrl);
+                           itemUrl python:item.getURL();"
+               tal:condition="python:item.portal_type=='Document'"
+               tal:attributes="href python:test(linkRemote, item.getUrl, itemUrl);
+                               class string:tile;"
+               tal:content="structure python:'&raquo; %s' % item.Title">Link text</a>
+        </tal:replace>
+    </tal:replace>
+
+</metal:main>
+</tal:master>
