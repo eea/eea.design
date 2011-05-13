@@ -38,6 +38,9 @@
            tal:content="view/title"
            i18n:translate="">Navigation</a>
 
+        <tal:block tal:define="logoURL context/@@page_design/getLogoURL|nothing">
+            <img tal:condition="logoURL" tal:attributes="src logoURL"/>
+        </tal:block>
         <!--<metal:header use-macro="here/portlet_navigation/macros/header" />-->
 
         <span class="portletTopRight"></span>

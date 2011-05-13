@@ -2,9 +2,6 @@
 # Plone 2.2 or 2.3. Using DTML in CSS is something we want to stop doing.
 
 ### WISE Specific properties and colors
-title:string=WISETheme's color, font, logo and border defaults
-
-plone_skin:string=WISETheme
 
 fontFamily:string= Helvetica, Arial, sans-serif
 headingFontFamily:string= Helvetica, Arial, sans-serif

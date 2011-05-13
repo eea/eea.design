@@ -1,6 +1,6 @@
 title:string=eea.design's color, font, logo and border defaults
 
-plone_skin:string=eea.design
+plone_skin:string=EEADesign2006
 
 logoName:string=logo.gif
 
