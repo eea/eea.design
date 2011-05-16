@@ -3,6 +3,7 @@ Changelog
 
 2.25-dev - (unreleased)
 -----------------------
+ * Feature: Added a social/followus portlet to the frontpage [demarant]
 
 2.24 - (2011-05-10)
 -------------------
