@@ -159,13 +159,14 @@
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
-                    <tal:publications define="specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;
-                    feeds specific/@@smartfolder_portlets|nothing"
-                    repeat="portlet feeds"
-                    tal:condition="nocall:specific">
-                    <metal:macro
-                    use-macro="here/portlet_themes_common/macros/portlet"/>
-                    </tal:publications> 
+                    <!-- #TODO plone4 this fails because of eeacontenttypes smartfolder.py-->
+                    <!--<tal:publications define="specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;-->
+                    <!--feeds specific/@@smartfolder_portlets|nothing"-->
+                    <!--repeat="portlet feeds"-->
+                    <!--tal:condition="nocall:specific">-->
+                    <!--<metal:macro-->
+                    <!--use-macro="here/portlet_themes_common/macros/portlet"/>-->
+                    <!--</tal:publications> -->
                     <a id="submit-event-link"
                         class="moreLink"
                         href=""
