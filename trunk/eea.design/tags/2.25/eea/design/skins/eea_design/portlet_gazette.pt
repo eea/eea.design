@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body tal:define="Iterator python:modules['Products.CMFPlone'].IndexIterator;
+                  tabindex python:Iterator(mainSlot=False)">
+
+<div metal:define-macro="portlet"
+     tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous', getId='eea_main_subscription');
+                 nl_objects python: [brain.getObject() for brain in nl_brains if brain.getObject()];
+                 nl_unique python: len(nl_objects) == 1"
+     tal:condition="nl_objects">
+
+<dl class="portlet gradientBG" id="portlet-subscribtion">
+    <dt>Sign up now!</dt>
+    <dd class="portletItem">Get notifications on new reports and products.
+      <tal:cond tal:condition="python:len(nl_objects) == 1" >
+        <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="subscribers_no">
+          Currently we have <strong i18n:name="nr"
+            tal:content="python:len(subscribers)">1000</strong> subscribers. Frequency: 3-4 emails / month.
+        </span>
+      </tal:cond>
+      
+    </dd>
+    <dd class="portletItem">
+        <form action="register_newsletter"
+              name="subscription"
+              method="post"
+              tal:attributes="action string:$portal_url/register_newsletter">
+
+            <tal:block tal:condition="nl_unique">
+              <input type="hidden" name="nlpath" value="#"
+                     tal:attributes="value python: '/'.join(nl_objects[0].getPhysicalPath())" />
+            </tal:block>
+            <tal:block tal:condition="python:len(nl_objects) == 1"
+                      tal:define="newsletter python:nl_objects[0]">
+                 <input type="hidden" name="format_test" tal:attributes="value newsletter/default_format" />
+            </tal:block>
+
+            <tal:block tal:condition="not: nl_unique">
+            <div class="field">
+              <label for="nlpath" i18n:translate="label_choose_newsletter">Choose a newsletter</label> <br />
+              <select name="nlpath" id="nlpath">
+                <option value="#"
+                  tal:repeat="newsletter nl_objects"
+                  tal:content="newsletter/Title"
+                  tal:attributes="value python: '/'.join(newsletter.getPhysicalPath())">
+                </option>
+              </select>
+            </div>
+            </tal:block>
+
+             <div class="field">
+              <label for="email" class="hiddenStructure" i18n:translate="label_email">Email</label>
+              <input type="text" 
+                     name="email" 
+                     id="email"  
+                     alt="Email address"
+                     value="Enter email"
+                     size="20" 
+                     tal:attributes="tabindex tabindex/next" 
+                     i18n:attributes="alt label_email;" />
+
+        <input class="subscriptionButton"
+               type="submit"
+               tabindex=""
+               name="submit"
+               value=""
+               alt="Subscribe"
+               tal:attributes="tabindex tabindex/next"
+               i18n:attributes="alt label_subscribe"/>
+             </div>
+        </form>
+    </dd>
+
+         <dt>Follow us</dt>
+        <dd>
+            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon"/> <a href="http://twitter.com/euenvironment">Twitter</a>
+        </dd>
+        <dd>
+            <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon"/> <a href="http://www.facebook.com/European.Environment.Agency">Facebook</a>
+        </dd>
+        <dd>
+            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon"/> <a href="http://www.youtube.com/user/EEAvideos">YouTube channel</a>
+        </dd>
+        <dd>
+            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds">
+            <span i18n:translate="rss_feeds">RSS Feeds</span></a>
+        </dd>
+
+    <dd class="portletFooter" style="padding-bottom: 0.5em"
+        tal:condition="nl_unique">
+     
+         <a href="#" class="moreLink" tal:attributes="href python: nl_objects[0].absolute_url() + '/view'">
+            <span i18n:translate="label_visit_archives">Notifications archive</span></a>
+   
+    </dd>
+    
+</dl>
+
+</div>
+
+
+<div metal:define-macro="portlet-subscribe"
+     tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous', getId='eea_main_subscription');
+                 nl_objects python: [brain.getObject() for brain in nl_brains if brain.getObject()];
+                 nl_unique python: len(nl_objects) == 1"
+     tal:condition="nl_objects">
+
+<dl class="portlet gradientBG" id="portlet-subscribtion-only">
+    <dt>Sign up now!</dt>
+    <dd class="portletItem">Get notifications on new reports and products.
+      <tal:cond tal:condition="python:len(nl_objects) == 1" >
+        <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="subscribers_no">
+          Currently we have <strong i18n:name="nr"
+            tal:content="python:len(subscribers)">1000</strong> subscribers. Frequency: 3-4 emails / month.
+        </span>
+      </tal:cond>
+      
+    </dd>
+    <dd class="portletItem">
+        <form action="register_newsletter"
+              name="subscription"
+              method="post"
+              tal:attributes="action string:$portal_url/register_newsletter">
+
+            <tal:block tal:condition="nl_unique">
+              <input type="hidden" name="nlpath" value="#"
+                     tal:attributes="value python: '/'.join(nl_objects[0].getPhysicalPath())" />
+            </tal:block>
+            <tal:block tal:condition="python:len(nl_objects) == 1"
+                      tal:define="newsletter python:nl_objects[0]">
+                 <input type="hidden" name="format_test" tal:attributes="value newsletter/default_format" />
+            </tal:block>
+
+            <tal:block tal:condition="not: nl_unique">
+            <div class="field">
+              <label for="nlpath" i18n:translate="label_choose_newsletter">Choose a newsletter</label> <br />
+              <select name="nlpath" id="nlpath">
+                <option value="#"
+                  tal:repeat="newsletter nl_objects"
+                  tal:content="newsletter/Title"
+                  tal:attributes="value python: '/'.join(newsletter.getPhysicalPath())">
+                </option>
+              </select>
+            </div>
+            </tal:block>
+
+             <div class="field">
+              <label for="email" class="hiddenStructure" i18n:translate="label_email">Email</label>
+              <input type="text" 
+                     name="email" 
+                     id="email"  
+                     alt="Email address"
+                     value="Enter email"
+                     size="20" 
+                     tal:attributes="tabindex tabindex/next" 
+                     i18n:attributes="alt label_email;" />
+
+        <input class="subscriptionButton" 
+               type="submit"
+               tabindex=""
+               name="submit"
+               value=""
+               alt="Subscribe"
+               tal:attributes="tabindex tabindex/next"
+               i18n:attributes="alt label_subscribe"/>
+             </div>
+        </form>
+    </dd>
+
+    <dd class="portletFooter" style="padding-bottom: 0.5em"
+        tal:condition="nl_unique">
+     
+         <a href="#" class="moreLink" tal:attributes="href python: nl_objects[0].absolute_url() + '/view'">
+            <span i18n:translate="label_visit_archives">Notifications archive</span></a>
+   
+    </dd>
+    
+</dl>
+
+</div>
+
+
+<div metal:define-macro="followus"
+     tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous', getId='eea_main_subscription');
+                 nl_objects python: [brain.getObject() for brain in nl_brains if brain.getObject()];
+                 nl_unique python: len(nl_objects) == 1"
+     tal:condition="nl_objects">
+
+<div style="display:none;">
+ <div style="width: 250px; height: 150px;" id="subscribe-popup">
+     <div metal:use-macro="here/portlet_gazette/macros/portlet-subscribe">
+                            email subscribe
+     </div>
+  </div>
+</div>
+
+<dl class="portlet" id="portlet-followus">
+
+        <dt class="hiddenStructure">Follow us</dt>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon"/> <a href="http://twitter.com/euenvironment">Twitter</a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon"/> <a href="http://www.facebook.com/European.Environment.Agency">Facebook</a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon"/> <a href="http://www.youtube.com/user/EEAvideos">YouTube</a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds">
+            <span i18n:translate="rss_feeds">RSS</span></a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/mail_icon.gif" alt="Email icon"/> <a href="#subscribe-popup" class="fancybox">
+            <span i18n:translate="rss_feeds">Email</span></a>
+        </dd>
+    <dd class="portletFooter" style="padding-bottom: 10px;border:none;">
+     &nbsp;
+    </dd>
+</dl>
+
+</div>
+</body>
+</html>
