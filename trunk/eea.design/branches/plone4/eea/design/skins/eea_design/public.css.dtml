@@ -172,12 +172,12 @@ input.searchField {
 
 /* @group LiveSearch */
 
-#LSResult {
-    position: absolute;
-    right: 0;
-    background: White;
-    margin: -1.5em 0 0 -7em;
-}
+/* #LSResult { */
+/*     position: absolute; */
+/*     right: 0; */
+/*     background: White; */
+/*     margin: -1.5em 0 0 -7em; */
+/* } */
 
 #LSResult fieldset {
     padding: 1em 0 0;
@@ -321,7 +321,7 @@ div.managePortletsLink,
 a.managePortletsFallback {
     text-align: center;
     padding: 0.25em 0.5em;
-    font-size: 80%;
+    font-size: 90%;
     margin: 0 auto 1em;
     background: #ddd;
     border-radius: 0.5em;
@@ -1584,7 +1584,7 @@ dl.toc dd ol {
 /* @group Footer */
 
 #portal-footer {
-    font-size: 75%;
+    font-size: 80%;
     background: #ddd;
     padding: 1em;
     margin: 1em 0;
@@ -1592,7 +1592,7 @@ dl.toc dd ol {
 }
 
 #portal-colophon {
-    font-size: 70%;
+    font-size: 80%;
     text-align: center;
     margin-bottom: 1em;
 }

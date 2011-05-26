@@ -24,7 +24,7 @@
     <!-- end plone.abovecontenttitle order -->
     
     <!-- portalheader hiddenmanagers -->
-    <hidden manager="plone.portalheader" skinname="*" >
+    <hidden manager="plone.portalheader" skinname="*">
         <viewlet name="plone.app.i18n.locales.languageselector"/>
     </hidden>
     <!--end portalheader hiddenmanagers -->

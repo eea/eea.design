@@ -13,6 +13,11 @@ body {
     padding-left:  <dtml-var "_['eeacms-banner.gif'].width">px !important;
 }
 
+body.mceContentBody {
+    background: transparent !important;
+    margin: 0px !important;
+}
+
 #portal-globalnav li{
         width: auto;
 	margin: 0 0.25em 0 0;
