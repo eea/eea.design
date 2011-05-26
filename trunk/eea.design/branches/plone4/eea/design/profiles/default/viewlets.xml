@@ -23,6 +23,12 @@
     </order>
     <!-- end plone.abovecontenttitle order -->
     
+    <!-- portalheader hiddenmanagers -->
+    <hidden manager="plone.portalheader" skinname="*" >
+        <viewlet name="plone.app.i18n.locales.languageselector"/>
+    </hidden>
+    <!--end portalheader hiddenmanagers -->
+
     <!-- portalfooter hiddenmanagers -->
     <hidden manager="plone.portalfooter" skinname="EEADesign2006" >
         <viewlet name="plone.site_actions"/>

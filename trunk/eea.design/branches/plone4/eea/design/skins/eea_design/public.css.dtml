@@ -55,7 +55,7 @@ iframe { border-width: 0; border-style:none; }
 
 #portal-globalnav {
     clear: both;
-    font-size: 80%;
+    font-size: 120%;
     background: #ddd;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
     margin: 0 0 1em 0;
