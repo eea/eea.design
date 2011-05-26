@@ -825,25 +825,8 @@ float:right;
 #portal-personaltools-wrapper {
     clear: both;
 }
-#portal-personaltools {
-    /* Bar with personalized menu (user preferences, favorites etc) */
-    background-color: &dtml-globalBackgroundColor;;
-    border-top-color: &dtml-globalBorderColor;;
-    border-top-style: &dtml-borderStyle;;
-    border-top-width: &dtml-borderWidth;;
-    border-bottom-color: &dtml-globalBorderColor;;
-    border-bottom-style: &dtml-borderStyle;;
-    border-bottom-width: &dtml-borderWidth;;
-    line-height: 1.6em;
-    color: &dtml-fontColor;;
-    padding: 0em 3em 0em 3em;
-    margin: 0;
-    text-align: right;
-    text-transform: &dtml-textTransform;;
-    list-style: none;
-}
 
-#portal-personaltools .portalUser {
+#portal-personaltools #user-name {
     background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
     padding-left: 15px;
 }
@@ -858,8 +841,8 @@ float:right;
 
 #portal-personaltools li {
     color: &dtml-globalFontColor;;
-    margin-left: 1em;
-    display: inline;
+    margin: 0em 0em 0em 1em;
+    display: inline-block;
 }
 
 #portal-personaltools li a {

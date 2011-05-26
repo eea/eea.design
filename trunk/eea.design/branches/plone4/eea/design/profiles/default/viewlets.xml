@@ -1,8 +1,4 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration of the viewlet managers
-     for the "eea.design" skin.
-     -->
-
 <object>
     
     <!-- portalheader order -->
@@ -14,27 +10,30 @@
         <viewlet name="eea.cross_site_top"
             insert-before="plone.skip_links"/>
 
+        <viewlet name="plone.personal_bar"
+            position-after="plone.global_sections"/>
     </order>
     <!-- end portalheader order -->
+
+    <!-- plone.abovecontenttitle order -->
     <order manager="plone.abovecontenttitle" skinname="*"
         based-on="Plone Default">
         <viewlet name="eea.languageselector"
             insert-before="*"/>
     </order>
+    <!-- end plone.abovecontenttitle order -->
     
     <!-- portalfooter hiddenmanagers -->
-    <hidden manager="plone.portalfooter" skinname="EEADesign2006" >
-        <viewlet name="plone.site_actions"/>
-    </hidden>
-
     <hidden manager="plone.portalfooter" skinname="EEADesignCMS" >
         <viewlet name="plone.site_actions"/>
         <viewlet name="plone.colophon"/>
     </hidden>
     <!-- end portalfooter hiddenmanagers -->
 
+    <!-- plone.htmlhead hiddenmanagers -->
     <hidden manager="plone.htmlhead.links" skinname="*" >
         <viewlet name="plone.links.author"/>
     </hidden>
+    <!-- end plone.htmlhead hiddenmanagers -->
 
 </object>

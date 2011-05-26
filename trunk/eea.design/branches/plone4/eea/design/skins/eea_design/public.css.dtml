@@ -84,20 +84,20 @@ iframe { border-width: 0; border-style:none; }
 }
 
 #portal-personaltools {
-    float: right;
-    background: #e3e3e3;
-    position: relative;
-    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
-    top: 0;
-    right: 0;
-    padding: 0.25em 0.5em;
-    font-size: 80%;
-    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
-    -moz-border-radius-bottomright: 0.5em;
+background-color: #E9EFCD;
+border-top-color: #CCC;
+border-top-style: solid;
+border-top-width: 1px;
+border-bottom-color: #CCC;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+line-height: 1.6em;
+color: black;
+padding: 0em 3em 0em 3em;
+margin: 0;
+text-align: right;
+text-transform: lowercase;
+list-style: none;
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
