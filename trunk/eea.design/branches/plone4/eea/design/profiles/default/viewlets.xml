@@ -24,7 +24,10 @@
     <!-- end plone.abovecontenttitle order -->
     
     <!-- portalheader hiddenmanagers -->
-    <hidden manager="plone.portalheader" skinname="*">
+    <hidden manager="plone.portalheader" skinname="EEADesign2006">
+        <viewlet name="plone.app.i18n.locales.languageselector"/>
+    </hidden>
+    <hidden manager="plone.portalheader" skinname="EEADesignCMS">
         <viewlet name="plone.app.i18n.locales.languageselector"/>
     </hidden>
     <!--end portalheader hiddenmanagers -->

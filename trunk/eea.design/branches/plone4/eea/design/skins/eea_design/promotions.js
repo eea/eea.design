@@ -1,7 +1,7 @@
 // Handle onload
 jQuery(document).ready(function() {
     // Don't run on frontpage... In frontpage.css we make the promotions visible.
-    if ($('body.frontpage').length > 0) {
+    if ($('body').length > 0) {
         $('#top-news-area .portlet-promotions .promo-nav-portlet dd').removeClass('hide-promo');
     }
     else {

@@ -90,7 +90,7 @@
     padding-left: 0;
 }
 
-.frontpage .portlet-promotions a.portletHeader{
+.portlet-promotions a.portletHeader{
     display: none;
 }
 

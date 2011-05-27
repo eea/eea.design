@@ -9,11 +9,11 @@
 ******************************************************************************/
 
 /* This div sneaks in a padding for IE it seems. */
-body.frontpage #region-content {
+#region-content {
     padding: 0 0 !important;
 }
 
-body.frontpage .documentContent {
+.documentContent {
     padding: 0;
 }
 
@@ -98,7 +98,7 @@ body.frontpage ul {
 }
 
 #top-news-area .portlet,
-#top-news-area dl.portlet {
+#top-news-area dl.portlet, #top-news-area dd  {
     margin: 0;
     padding: 0;
 }
