@@ -28,7 +28,7 @@ setup(name='eea.design',
           'Products.EEAContentTypes',
           'Products.EEAPloneAdmin',
           'Products.LinguaPlone',
-          'Products.NavigationManager'
+          'Products.NavigationManager',
           'Products.eeawebapplication',
 
           'eea.facetednavigation',
