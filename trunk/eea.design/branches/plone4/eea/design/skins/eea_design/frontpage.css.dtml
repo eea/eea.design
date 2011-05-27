@@ -84,6 +84,7 @@ body.frontpage ul {
 
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
+    /* border: 0px;  */
 }
 
 #top-news-area div.portletHeader {
@@ -163,10 +164,12 @@ body.frontpage #portal-columns {
 #multimedia-highlights ul {
     float: right;
     width: 20%;
+    list-style: none outside none;
 }
 
 #multimedia-highlights .tileImage,
 #multimedia-highlights ul li,
+#multimedia-highlights ul li a ,
 #multimedia-highlights img {
     padding: 0;
     margin: 0;
