@@ -31,7 +31,7 @@
 * :link,:visited { text-decoration:none }
 * ul,ol { list-style:none; }
 * li { display: inline; }
-* h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+/* * h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; } */
 * a img,:link img,:visited img { border:none }
 a { outline: none; }
 table { border-spacing: 0; }
@@ -395,7 +395,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 #content {
     line-height: 1.5em;
     clear: both;
-    font-size: 80%;
+    font-size: 85%;
     margin: 1em 0.25em 2em 0.25em;
 }
 
@@ -559,12 +559,12 @@ dl.portlet li {
     border-spacing: 0px;
 }
 
-#content .documentDescription,
-#content #description {
-    color: #666;
-    margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
-}
+/* #content .documentDescription, */
+/* #content #description { */
+/*     color: #666; */
+/*     margin-left: 0; */
+/*     font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif; */
+/* } */
 
 #content img.tileImage,
 #content div.newsImageContainer {
