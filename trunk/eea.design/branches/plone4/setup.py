@@ -25,15 +25,20 @@ setup(name='eea.design',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
+          'Products.EEAContentTypes',
+          'Products.EEAPloneAdmin',
+          'Products.LinguaPlone',
+          'Products.NavigationManager'
+          'Products.eeawebapplication',
+
           'eea.facetednavigation',
           'eea.promotion',
           'eea.themecentre',
           'eea.translations',
+
           'p4a.video',
-          'Products.eeawebapplication',
-          'Products.LinguaPlone',
-          'Products.NavigationManager'
+          'setuptools',
+          'valentine.linguaflow',
 
           # -*- Extra requirements: -*-
       ],
