@@ -4,7 +4,7 @@
    <version>1000</version>
    <dependencies>
 
-        <dependency>profile-Products.EEAContentTypes:default</dependency>
+        <!-- <dependency>profile-Products.EEAContentTypes:default</dependency> -->
         <dependency>profile-Products.EEAPloneAdmin:default</dependency>
         <dependency>profile-Products.NavigationManager:default</dependency>
         <dependency>profile-Products.eeawebapplication:default</dependency>
