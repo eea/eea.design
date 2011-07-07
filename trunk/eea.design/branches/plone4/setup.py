@@ -25,13 +25,13 @@ setup(name='eea.design',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          #TODO: plone4 enable ContentTypes
-          #'Products.EEAContentTypes',
+          'Products.EEAContentTypes',
           'Products.EEAPloneAdmin',
           'Products.LinguaPlone',
           'Products.NavigationManager',
           'Products.eeawebapplication',
 
+          'eea.cache',
           'eea.facetednavigation',
           'eea.promotion',
           'eea.themecentre',

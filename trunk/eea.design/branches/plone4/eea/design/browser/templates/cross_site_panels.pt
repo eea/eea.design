@@ -52,7 +52,7 @@
                 </div>
                 <div class="panel-content shadow"
                     tal:define="includeSocialMedia python:True">
-                    <!--<metal:portlet use-macro="context/portlet_gazette/macros/portlet" />-->
+                    <metal:portlet use-macro="context/portlet_gazette/macros/portlet" />
                 </div>
             </div>
 
@@ -159,14 +159,22 @@
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
-                    <!-- #TODO plone4 this fails because of eeacontenttypes smartfolder.py-->
-                    <!--<tal:publications define="specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;-->
-                    <!--feeds specific/@@smartfolder_portlets|nothing"-->
-                    <!--repeat="portlet feeds"-->
-                    <!--tal:condition="nocall:specific">-->
-                    <!--<metal:macro-->
-                    <!--use-macro="here/portlet_themes_common/macros/portlet"/>-->
-                    <!--</tal:publications> -->
+
+                    <tal:comment replace="nothing">
+                        smartfolder_portlets comes from eeacontenttypes
+                        portlet_themes_common comes from eea.themcentre
+                    </tal:comment>
+
+                    <tal:publications tal:define=" portal_object here/portal_url/getPortalObject;
+                        specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;" tal:on-error="nothing">
+                        <tal:cond tal:condition="specific">
+                            <tal:publication tal:define="feeds specific/@@smartfolder_portlets|nothing;"
+                                    tal:repeat="portlet feeds">
+                                <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
+                            </tal:publication>
+                        </tal:cond>
+                    </tal:publications>
+
                     <a id="submit-event-link"
                         class="moreLink"
                         href=""

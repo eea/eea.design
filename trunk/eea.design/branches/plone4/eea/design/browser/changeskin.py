@@ -50,12 +50,10 @@ def change_skin(site, request):
         directlyProvides(request, *ifaces)
 
 
-#import datetime
 def mark_layer(site, event):
     """Mark the request with a layer corresponding to the current skin,
     as set in the portal_skins tool.
     """
-    #print "event", datetime.datetime.now()
     if getattr(event.request, "_eeaplonetheme_", False):
         return
     event.request._eeaplonetheme_ = True

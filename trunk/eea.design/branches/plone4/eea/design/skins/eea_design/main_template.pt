@@ -23,6 +23,7 @@
         here_url context_state/object_url;
         portal portal_state/portal;
         isAnon portal_state/anonymous;
+        isEmpty context/@@plone_context_state/is_empty;
         member portal_state/member;
         actions python:context.portal_actions.listFilteredActionsFor(context);
         mtool context/portal_membership;
@@ -38,11 +39,10 @@
         ifacetool context/portal_interface;
         syntool context/portal_syndication;
         inApplication context/@@inApplication;
+        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view');
         "
     tal:attributes="lang language;">
-        <!--webapp_view here/@@main_webapplication;
-        inApplication here/@@inApplication;
-        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view')"-->
+
     <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">
     Get the global cache headers located in global_cache_settings.
     </metal:cache>
@@ -96,19 +96,19 @@
 <body tal:define="isRTL portal_state/is_rtl;
                   sl python:plone_view.have_portlets('plone.leftcolumn', view);
                   sr python:plone_view.have_portlets('plone.rightcolumn', view);
-                  body_class python:plone_view.bodyClass(template, view);
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
-    tal:attributes="class body_class;
+    tal:attributes="class python:here.getSectionFromURL(plone_view);
+
                     dir python:isRTL and 'rtl' or 'ltr'">
 
-<!--<div id="print-warning" i18n:domain="eea">-->
-             <!--<p i18n:translate="print_warning">-->
-                 <!--Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!-->
-             <!--</p>-->
-         <!--</div>-->
+<div id="print-warning" i18n:domain="eea">
+             <p i18n:translate="print_warning">
+                 Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
+             </p>
+         </div>
 
-         <!--<a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title">-->
-         <!--</a>-->
+         <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title">
+         </a>
 
 <div id="visual-portal-wrapper">
 
@@ -121,9 +121,9 @@
 </div>
         </div>
 
-    <div id="portal-columns" class="row">
-<!--tal:attributes="class python:test(inApplication, 'visualColumnHideOneTwo', test(onFrontpage, 'visualColumnHideOneTwo', hidecolumns))"-->
-<!--                    tal:define="plone_view context/@@plone">-->
+        <div id="portal-columns" 
+            class="row"
+            >
 
         <!-- start of the main and left columns -->
         <div id="visual-column-wrapper">
@@ -219,9 +219,8 @@
             <div id="portal-column-one"
                  class="cell width-1:4 position-0"
                  metal:define-slot="column_one_slot"
-                 tal:condition="python:test(sl)"
+                tal:condition="python:test(not inApplication and sl and not onFrontpage)"
                  tal:attributes="class python:isRTL and 'cell width-1:4 position-3:4' or 'cell width-1:4 position-0'">
-                <!--tal:condition="python:test(not inApplication and sl and not onFrontpage)">-->
                 <div class="visualPadding">
                     <div id="slide-menu">
                         <metal:portlets define-slot="portlets_one_slot">
@@ -237,9 +236,8 @@
         <div id="portal-column-two"
             class="cell width-1:4 position-3:4"
             metal:define-slot="column_two_slot"
-            tal:condition="python:test(sr)"
+            tal:condition="python:test(not inApplication and sr and not onFrontpage)"
             tal:attributes="class python:isRTL and 'cell width-1:4 position-0' or 'cell width-1:4 position-3:4'">
-            <!--tal:condition="python:test(not inApplication and sr and not onFrontpage)">-->
             <metal:portlets define-slot="portlets_two_slot">
                 <tal:block replace="structure provider:plone.rightcolumn" />
             </metal:portlets>

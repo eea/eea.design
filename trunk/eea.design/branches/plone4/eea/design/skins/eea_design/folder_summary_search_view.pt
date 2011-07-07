@@ -7,10 +7,9 @@
 
     <div metal:fill-slot="main">
     <metal:main-macro define-macro="main">
-      <!-- disabled until EEAAdmin is ported to plone 4-->
-        <!--<tal:isEmpty tal:condition="python: isEmpty and isAnon and len(context.getTranslations()) &gt; 1">-->
-         <!--<tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />-->
-      <!--</tal:isEmpty>-->
+        <tal:isEmpty tal:condition="python: isEmpty and isAnon and len(context.portal_languages.getSupportedLanguages()) &gt; 1">
+         <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />
+      </tal:isEmpty>
 
         <h1 tal:content="object_title" class="documentFirstHeading">
             Title or id

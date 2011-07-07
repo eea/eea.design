@@ -123,22 +123,6 @@ class ISmartView(Interface):
         """  """
 
 
-# these interfaces come from EEAContentTypes/browser/interfaces.py
-# TODO; delete this interface when EEAContentTypes is ported to Plone4
-
-class IURL(Interface):
-
-    def object_url(brain=None):
-        """ Return the URL which should be used to view the object """
-
-    def listing_url(brain=None):
-        """ Return the URL that represents the URL in a listing """
-
-    def is_external():
-        """ Does this object point to an external URL? """
-
-    def css_class():
-        """ Returns a class name that should be present in anchor links """
 
 class ILanguages(Interface):
 

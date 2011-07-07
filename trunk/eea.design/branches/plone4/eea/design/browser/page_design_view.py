@@ -6,7 +6,7 @@ KEY = 'eea.design'
 
 class AnnotationView(BrowserView):
 
-    def __init__(self, context, request): #pyflakes, #pylint: disable-msg = W0231
+    def __init__(self, context, request):
         self.context = context
         self.request = request
         annotations = IAnnotations(context.getCanonical())

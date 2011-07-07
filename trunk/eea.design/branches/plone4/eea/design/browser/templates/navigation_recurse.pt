@@ -32,7 +32,6 @@
                            title node/Description;
 			   class python: is_current and 'navItemLevel%s navItemLevel%scurrent' % (level, level) or 'navItemLevel%s' % level;">
                            
-            <!--<img tal:replace="structure item_icon/html_tag" />-->
             <span tal:content="node/Title">Selected Item Title</span>
         </a>
 

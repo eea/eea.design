@@ -28,5 +28,5 @@ class TagCloud(BrowserView):
             return ''
 
         widget = criteria.widget(cid=cid)
-        widget = widget(ancestor, self.request, criterion) #pyflakes, #pylint: disable-msg = W0631
+        widget = widget(ancestor, self.request, criterion) 
         return widget()

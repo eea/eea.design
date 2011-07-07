@@ -7,9 +7,9 @@
 
 <metal:content-core fill-slot="content-core">
 
-      <!--<tal:isEmpty tal:condition="python: isEmpty and isAnon">-->
-         <!--<tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />-->
-      <!--</tal:isEmpty>-->
+      <tal:isEmpty tal:condition="python: isEmpty and isAnon">
+         <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />
+      </tal:isEmpty>
 
   <metal:block define-macro="content-core">
     <metal:body define-macro="body_macro"

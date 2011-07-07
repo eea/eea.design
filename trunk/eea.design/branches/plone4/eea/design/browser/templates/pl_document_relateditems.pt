@@ -1,6 +1,10 @@
 <div class="relatedItems"
      i18n:domain="eea"
-     tal:define="related view/related_items"
+     tal:define="related view/related_items;
+                 plone_view context/@@plone;
+                 template_id options/template_id | template/getId | nothing;
+                 view_template_id plone_view/getViewTemplateId;
+                 isViewTemplate python:template_id==view_template_id or template_id=='index'"
      tal:condition="related">
     <div class="visualClear" id="clear-space-before-relatedItemBox"><!-- --></div>
     <dl id="relatedItemBox"
@@ -38,16 +42,16 @@
 
     
     <!-- eea related -->
-    <!--<div metal:use-macro="here/document_relateditems/macros/pages">-->
-    <!--    show related feeds if they exist-->
-    <!--</div>-->
+    <div metal:use-macro="here/document_relateditems/macros/pages">
+        show related feeds if they exist
+    </div>
 
-    <!--<div metal:use-macro="here/document_relateditems/macros/feeds">-->
-    <!--    show related feeds if they exist-->
-    <!--</div>-->
+    <div metal:use-macro="here/document_relateditems/macros/feeds">
+        show related feeds if they exist
+    </div>
 
-    <!--<div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">-->
-    <!--    show all (back and forward refs) related items if they exist-->
-    <!--</div>-->
+    <div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">
+        show all (back and forward refs) related items if they exist
+    </div>
 
 </div>

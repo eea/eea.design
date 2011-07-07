@@ -6,7 +6,6 @@
                    template_id options/template_id | template/getId | nothing;
                    view_template_id plone_view/getViewTemplateId;
                    isViewTemplate python:template_id==view_template_id or template_id=='index'"
-
             i18n:domain="eea">
 <!--  #TODO           tal:condition="isViewTemplate" -->
 

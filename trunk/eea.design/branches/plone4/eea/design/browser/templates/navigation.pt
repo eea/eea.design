@@ -1,10 +1,11 @@
 <tal:block i18n:domain="eea">
-<!--
-    <metal:header define-macro="header"
+
+<metal:header define-macro="header"
          i18n:domain="eea"
          tal:define="view context/@@navigationHeader;
-                     displayLogo view/shouldDisplayLogo">
-
+         displayLogo view/shouldDisplayLogo|nothing;
+         title root/title"
+         tal:condition="displayLogo">
         <a href="#" class="tile"
            tal:condition="python: not displayLogo and not title"
            tal:attributes="href string:${root/absolute_url}/sitemap"
@@ -21,8 +22,8 @@
                                title view/title|nothing;
                                alt view/title|string:subsite logo" />
         </a>
-    </metal:header>
--->
+</metal:header>
+
 
 <dl class="portlet portletNavigationTree" id="portlet-navigation-tree"
     tal:define="root view/navigation_root">
@@ -43,7 +44,11 @@
         <tal:block tal:define="logoURL context/@@page_design/getLogoURL|nothing">
             <img tal:condition="logoURL" tal:attributes="src logoURL"/>
         </tal:block>
-        <!--<metal:header use-macro="here/portlet_navigation/macros/header" />-->
+
+
+    <tal:header tal:condition="context/@@navigation_macros/macros/header">
+        <metal:header use-macro="context/@@navigation_macros/macros/header" />
+    </tal:header>
 
         <span class="portletTopRight"></span>
     </dt>

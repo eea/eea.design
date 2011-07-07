@@ -15,25 +15,4 @@
                                title tab/description|nothing;">
             Tab Name
             </a></li></tal:tabs></ul>
-  <!-- portal_tabs
-    tal:define="selected_tabs python:here.selectedTabs('index_html', here, portal_tabs);
-                 selected_portal_tab selected_tabs/portal;
-                 site	 options/site|request/site|here/navigationmanager_site|string:default;
-                 tabselected options/tabselected|request/tabselected|context/navigationmanager_menuid|string:default;
-                 navigationmanager nocall:here/portal_navigationmanager|nothing;
-                 portal_nodes python:navigationmanager.getTree(site,tabselected);"
-     tal:condition="portal_nodes"
-
-    <ul id="portal-globalnav">
-    <tal:tabs tal:repeat="node portal_nodes">
-        <li tal:define="tab nocall:node/item" class="plain"
-            tal:attributes="class python:test(node['selected'], 'selected', 'plain')">
-          <tal:noSubmenu><a href="" title="" class="dropTab"
-                 tal:attributes="href tab/url;
-                                 title tab/description|nothing;"><span class="tabTitleText" tal:content="tab/title">Tab Name:</span></a>
-          </tal:noSubmenu>
-        </li>
-    </tal:tabs>
-</ul>
-    -->
 </tal:sections>

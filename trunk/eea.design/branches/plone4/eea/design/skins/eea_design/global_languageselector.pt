@@ -5,13 +5,12 @@
 
 <!-- LANGUAGE SWITCHER DEFINITION -->
 
-<metal:language define-macro="language"
-   >
-<!--tal:condition="python:(context.getId() != 'portal_languages') and context.isTranslatable()">-->
+<metal:language define-macro="language">
     <tal:languages  tal:define="data context/@@languageSelector;
                             portal_state context/@@plone_portal_state;
                             isAnon portal_state/anonymous;
-                            translations python:len(context.portal_languages.getSupportedLanguages()) > 1 &gt; 1">
+                            translations python:len(context.portal_languages.getSupportedLanguages()) > 1 &gt; 1"
+                    tal:condition="python:(context.getId() != 'portal_languages') and context.plone_utils.isTranslatable(context)">
 
    <tal:anonLanguageCodes tal:condition="python:test(translations and isAnon)">
     <ul class="languageCodes">

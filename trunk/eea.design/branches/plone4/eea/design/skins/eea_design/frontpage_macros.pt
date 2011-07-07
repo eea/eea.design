@@ -23,7 +23,7 @@
                                figure_link hl/getUrl;
                                figure_scale string:thumb;"
                              condition="figure">
-                   <!--<metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />-->
+                   <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
                  </tal:image>
             </div>
 

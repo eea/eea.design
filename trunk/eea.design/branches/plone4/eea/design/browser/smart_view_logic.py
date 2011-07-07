@@ -1,8 +1,7 @@
 from Products.Five import BrowserView
 
-
 class SmartView(BrowserView):
-    """
+    """ Returns smartTemplate if present in request
     """
 
     def getTemplateName(self):

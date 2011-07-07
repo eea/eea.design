@@ -26,7 +26,7 @@ PARTC_TOPIC_MAP = {
 
 class SoerTopicSearch(BrowserView):
 
-    def __init__(self, context, request): #pyflakes, #pylint: disable-msg = W0231
+    def __init__(self, context, request): 
         self.context = context
         self.request = request
         utils = getToolByName(context, 'plone_utils')
@@ -86,7 +86,6 @@ class SoerTopicSearch(BrowserView):
         return self._searchForContent('global megatrends', 30)
 
     def getCountryEnvironment(self):
-        #tags = []
         topic = self.request.get('topic', None)
         if topic == None or topic not in PARTC_TOPIC_MAP.keys(): 
             return []

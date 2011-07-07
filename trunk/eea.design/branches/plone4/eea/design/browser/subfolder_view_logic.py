@@ -1,8 +1,6 @@
 from zope.component import queryMultiAdapter
 from zope.component import getMultiAdapter
 from Products.Five import BrowserView
-#from eea.rdfrepository.interfaces import IFeed
-#from Products.EEAContentTypes.interfaces import IFeedPortletInfo
 
 def _get_contents(obj, size_limit, request, facetednav=None):
     """Get contents of folderish brain (cachable list/dict format)"""
@@ -29,7 +27,7 @@ class SubFolderView(BrowserView):
         return self.context.getFolderContents()
 
 
-    def folder_contents(self, size_limit=10, folderContents=None): #pyflakes, #pylint: disable-msg = R0914
+    def folder_contents(self, size_limit=10, folderContents=None): 
         """Get the folderish items in cachable list/dict format"""
         size_limit = int(self.request.get('size_limit', size_limit))
         ret = {

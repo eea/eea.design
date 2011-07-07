@@ -13,9 +13,9 @@
 
             <div class="visualClear"></div>
             <div id="tag-cloud"> 
-	 	 <!--<div id="tag-cloud-content" tal:define="faceted_path string:soer/advanced-search"> -->
-	 	 <!--                   <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />-->
-	 	 <!--</div>-->
+	 	 <div id="tag-cloud-content" tal:define="faceted_path string:soer/advanced-search"> 
+	 	                    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
+	 	 </div>
             </div>
 
             <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic">

@@ -15,16 +15,20 @@
         layer=".interfaces.IEEADesignCMS"
         />
 
+
+    <browser:page
+        for="*"
+        template="templates/navigation.pt"
+        name="navigation_macros"
+        permission="zope.Public"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
     <interface
         interface=".interfaces.IEEADesignCMS"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
         name="EEADesignCMS"
         />
-
-    <!--<interface-->
-    <!--    interface=".interfaces.IEEACommonLayer"-->
-    <!--    type="zope.publisher.interfaces.browser.IBrowserSkinType"-->
-    <!--    />-->
 
     <interface
         interface=".interfaces.IEEADesignPublic"
@@ -239,38 +243,6 @@
         permission="plone.app.portlets.ManagePortlets"
         />
 
-    <!-- langugages -->
-
-    <!--plone4: already defined in Products.EEAContentTypes-->
-
-    <browser:page
-        for="*"
-        name="translatedSitesLanguages"
-        class=".language.Languages"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope.Public"
-        attribute="getTranslatedSitesLanguages"
-        />
-
-    <browser:page
-        for="*"
-        name="translatedSites"
-        class=".language.Languages"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope.Public"
-        attribute="getLocalSites"
-        />
-
-    <browser:page
-        for="*"
-        name="languageSelector"
-        class=".language.LanguageSelectorData"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope.Public"
-        attribute="data"
-        />
-
-
     <browser:page
         name="global_externalsites"
         for="*"
@@ -341,7 +313,7 @@
         allowed_interface=".interfaces.ISmartView"
         />
 
-    <!-- added for plone 4 migration to be deleted from here -->
+    <!-- added for plone4 migration to be deleted from here -->
     <!--<browser:page-->
         <!--        for="*"-->
         <!--        name="inApplication"-->
@@ -351,14 +323,6 @@
         <!--        />-->
 
 
-    <browser:page
-        for="*"
-        name="url"
-        class=".url.URL"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        allowed_attributes="listing_url object_url is_external css_class"
-        />
 
     <!-- Customized portlets -->
 

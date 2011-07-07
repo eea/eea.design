@@ -7,7 +7,8 @@
 <div metal:define-macro="portlet"
      tal:define="nl_brains python: here.portal_catalog(portal_type='NewsletterTheme', allowedRolesAndUsers='Anonymous');
                  nl_objects python: [brain.getObject() for brain in nl_brains if brain.getObject()];
-                 nl_unique python: len(nl_objects) == 1"
+                 nl_unique python: len(nl_objects) == 1;
+                 portal_url context/@@plone_portal_state/portal_url;"
      tal:condition="nl_objects">
 
 <dl class="portlet gradientBG" id="portlet-subscribtion">

@@ -28,7 +28,7 @@ __author__ = """unknown <unknown>"""
 __docformat__ = 'plaintext'
 
 from zope.component import queryMultiAdapter, getMultiAdapter
-#from eea.cache import cache
+from eea.cache import cache
 
 from Acquisition import aq_inner
 from DateTime import DateTime
@@ -37,12 +37,13 @@ from Products.CMFCore.utils import getToolByName
 from eea.promotion.interfaces import IPromotion
 
 from Products.Five import BrowserView
-#from Products.EEAContentTypes.content.interfaces import IFlashAnimation
-#from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
+from Products.EEAContentTypes.content.interfaces import IFlashAnimation
+from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 
 from p4a.video.interfaces import IVideoEnhanced
 from eea.themecentre.interfaces import IThemeTagging
 from eea.themecentre.interfaces import IThemeCentreSchema
+from Products.Archetypes.utils import shasattr
 
 class Frontpage(BrowserView):
     """
@@ -64,7 +65,7 @@ class Frontpage(BrowserView):
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
         self.now = DateTime()
 
-    #@cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
+    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getHigh(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb'):
         visibilityLevel = 'top'
         results =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfHigh]
@@ -74,7 +75,7 @@ class Frontpage(BrowserView):
 
         return highlights
 
-    #@cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
+    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getMedium(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb'):
         visibilityLevel = [ 'top', 'middle' ]
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfMedium + self.noOfHigh]
@@ -93,7 +94,7 @@ class Frontpage(BrowserView):
         results =  self.getHigh(('Article', ), 'thumb')
         return results
 
-    #cache(cacheKeyHighlights, dependencies = ['frontpage-highlights'])
+    cache(cacheKeyHighlights, dependencies = ['frontpage-highlights'])
     def getLow(self, portaltypes = ('Highlight', 'PressRelease'), scale='dummy'): 
         visibilityLevel = [ 'top', 'middle', 'bottom' ] 
         otherIds = [ h['id'] for h in self.getMedium(portaltypes) ] 
@@ -151,7 +152,7 @@ class Frontpage(BrowserView):
                 return ret
         return None
 
-    #@cache(cacheKeyPromotions)
+    @cache(cacheKeyPromotions)
     def getPromotions(self):
         # Each theme represents a category
         query = {
@@ -257,7 +258,6 @@ class Frontpage(BrowserView):
         obj = high.getObject()
         media = obj.getMedia()
         media_url = media_type = media_title = media_copy = media_note = ''
-
         if media:
             media_url = media.absolute_url()
 
@@ -279,35 +279,40 @@ class Frontpage(BrowserView):
         if adapter is not None:
             themes = adapter.short_items()
             
-        result = { 'id' : high['id'],
-                 'getUrl' : high.get('getUrl',high.getURL()),
-                 'getNewsTitle' : high['getNewsTitle'],
-                 'getTeaser' : high['getTeaser'],
-                 'effective' : high['effective'],
-                 'expires' : high['expires'],
+        result = { 
+                 'id'                 : high['id'],
+                 'getUrl'             : high.get('getUrl',high.getURL()),
+                 'getNewsTitle'       : high['getNewsTitle'],
+                 'getTeaser'          : high['getTeaser'],
+                 'effective'          : high['effective'],
+                 'expires'            : high['expires'],
                  'getVisibilityLevel' : high['getVisibilityLevel'],
-                 'themes' : themes,
+                 'themes'             : themes,
                   }
 
         if media is not None:
-            result['media'] = { 'absolute_url' :  media_url,
-                                'portal_type' : media_type,
-                                'Title' : media_title,
-                                'Rights' : media_copy,
-                                'Description' : media_note,
-                                'getScale' : '' }
-            if hasattr(media, 'getScale'):
+            result['media'] = { 
+                    'absolute_url' : media_url,
+                    'portal_type'  : media_type,
+                    'Title'        : media_title,
+                    'Rights'       : media_copy,
+                    'Description'  : media_note,
+                    'getScale'     : '' 
+                }
+            getscale = getattr(media, 'getScale', None)
+            if getscale:
                 result['media']['getScale'] = media.getScale(scale).tag()
-                    
         return result
 
     def _getItemsWithVisibility(self, visibilityLevel, portaltypes, interfaces=None):
         """ get items of certain content types and/or interface and certain visibility level. """
         # TODO: add functionality for optional param interfaces
-        query = { 'portal_type' : portaltypes,
-                  'review_state' : 'published',
-                  'getVisibilityLevel' : visibilityLevel,
-                  'sort_on' : 'effective',
-                  'sort_order' : 'reverse',
-                  'effectiveRange' : self.now }
+        query = { 
+                'portal_type'        : portaltypes,
+                'review_state'       : 'published',
+                'getVisibilityLevel' : visibilityLevel,
+                'sort_on'            : 'effective',
+                'sort_order'         : 'reverse',
+                'effectiveRange'     : self.now
+              }
         return self.catalog.searchResults(query)
