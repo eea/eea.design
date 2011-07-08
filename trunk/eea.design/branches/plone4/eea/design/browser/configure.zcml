@@ -15,6 +15,13 @@
         layer=".interfaces.IEEADesignCMS"
         />
 
+    <browser:page
+        for="*"
+        name="batching"
+        class=".batching.Batching"
+        permission="zope.Public"
+        template="templates/batching.pt"
+        />
 
     <browser:page
         for="*"

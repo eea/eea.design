@@ -3,6 +3,8 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+* Added an override for batch_macros that uses a view. This is to workaround a bug
+  [tiberich]
 
 * Feature: Added upgrade steps
   [voineali #4392]
