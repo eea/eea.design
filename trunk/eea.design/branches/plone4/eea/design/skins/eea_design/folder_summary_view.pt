@@ -69,14 +69,14 @@
                                        item_css_class urlview/css_class;
                                        ">
 
-                    <a href="#" class="tileImage"
-                       tal:condition="exists:item_object/image_thumb"
-                       tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);
+                    <a class="tileImage"
+                       tal:attributes="href item_url;
                                        title item_title_or_id;
                                        alt item_title_or_id;
-                                       class string:tileImage ${item_css_class}" >
-                        <img src="" alt=""
-                             tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tileImage')" />
+                                       class string:tileImage ${item_css_class}">
+                        <img tal:attributes="src string:${item_absolute_url}/image_thumb;
+                                             title item_title_or_id;
+                                             alt item_title_or_id" />
                     </a>
 
                     <h2 class="tileHeadline"

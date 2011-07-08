@@ -1,6 +1,7 @@
 from zope.component import queryMultiAdapter
 from zope.component import getMultiAdapter
 from Products.Five import BrowserView
+from types import GeneratorType
 
 def _get_contents(obj, size_limit, request, facetednav=None):
     """Get contents of folderish brain (cachable list/dict format)"""
@@ -11,6 +12,13 @@ def _get_contents(obj, size_limit, request, facetednav=None):
         brains = obj.getFolderContents()
     elif obj.portal_type in ['Topic', 'RichTopic']:
         brains = obj.queryCatalog()
+
+    # NOTE: plone4 brains from topics end up as generators therefore we need to convert it 
+    # back to a list to have a lenght and be able to slice it 
+    if isinstance(brains, GeneratorType):
+        brains = [obj for obj in brains]
+    else:
+        pass
     return [{
         'title': brain.Title,
         'description': brain.Title,

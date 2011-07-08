@@ -20,7 +20,7 @@
          <div tal:replace="structure provider:plone.documentactions" />
         <metal:listingmacro define-macro="listing">
         <tal:topiccontents define="b_size request/b_size|nothing;
-	                               topicContents python:context.queryCatalog(batch=True, b_size=b_size);
+	                               topicContents python:context.queryCatalog(batch=True);
                                    batch topicContents;
                                    use_view_action site_properties/typesUseViewActionInListings|python:();
                                    ">
@@ -115,7 +115,7 @@
                         </tal:brain>
                      </tbody>
                 </table>
-                <div metal:use-macro="context/batch_macros/macros/navigation" />
+                <!--<div metal:use-macro="context/batch_macros/macros/navigation" />-->
             </tal:custom>
 
             </tal:listing>
