@@ -10,7 +10,7 @@
 
 <metal:content-core fill-slot="content-core">
     <tal:protect tal:condition="python: not checkPermission('List folder contents', here)" tal:replace="here/raiseUnauthorized" />
-      <tal:isEmpty tal:condition="python: isEmpty and isAnon">
+    <tal:isEmpty tal:condition="python: isEmpty and isAnon">
          <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />
       </tal:isEmpty>
 <metal:block define-macro="content-core"
@@ -206,10 +206,12 @@
             </tal:entry>
         </dl>
 
-        <div metal:use-macro="context/batch_macros/macros/navigation" />
 
     </tal:listing>
-    <metal:empty metal:define-slot="no_items_in_listing">
+
+    <div metal:use-macro="context/batch_macros/macros/navigation" />
+        
+        <metal:empty metal:define-slot="no_items_in_listing">
         <p class="discreet"
            tal:condition="not: folderContents"
            i18n:translate="description_no_items_in_folder">
