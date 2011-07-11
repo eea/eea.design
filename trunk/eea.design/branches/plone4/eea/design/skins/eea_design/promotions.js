@@ -1,14 +1,12 @@
 // Handle onload
 jQuery(document).ready(function() {
-    // Don't run on frontpage... In frontpage.css we make the promotions visible.
-    if ($('body').length > 0) {
-        $('#top-news-area .portlet-promotions .promo-nav-portlet dd').removeClass('hide-promo');
+    if (jQuery('#top-news-area').length > 0) {
+        jQuery('#top-news-area .portlet-promotions .promo-nav-portlet dd').removeClass('hide-promo');
     }
     else {
         setPromo();
     }
 });
-
 // Main function
 var btn_ready = true;
 
@@ -23,13 +21,12 @@ function setPromo() {
         if (promos.length > 0) {
             var sel_promo_id = promos[getRandom(promos.length)].id;
             showImage(sel_promo_id);
-            jQuery("#" + sel_promo_id).toggle(animation_speed);
+            jQuery("#" + sel_promo_id).toggle(animation_speed); 
             jQuery('#' + sel_promo_id).addClass('active-promo');
             jQuery('#' + sel_promo_id).removeClass('hide-promo');
             updateCounter(this.id);
         }
     });
-
     // Set next/prev events
     jQuery(".promo-next").click(function () { promoMoveSlide(this, 'next', animation_speed) });
     jQuery(".promo-prev").click(function () { promoMoveSlide(this, 'prev', animation_speed) });
