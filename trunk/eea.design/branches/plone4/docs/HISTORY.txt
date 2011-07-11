@@ -3,6 +3,8 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+* Change: Override vpip.js with eea_vpip.js for swf animation popup view [szabozo0 #4379]
+
 * Added an override for batch_macros that uses a view. This is to workaround a bug
   [tiberich]
 
