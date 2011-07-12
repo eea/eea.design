@@ -15,8 +15,31 @@
         site_properties context/portal_properties/site_properties;
         ajax_load request/ajax_load | nothing;
         ajax_include_head request/ajax_include_head | nothing;
-        isAnon context/@@plone_portal_state/anonymous;
-        isEmpty context/@@plone_context_state/is_empty;"
+        template_id template/getId;
+        normalizeString nocall:plone_view/normalizeString;
+        toLocalizedTime nocall:plone_view/toLocalizedTime;
+        portal_properties context/portal_properties;
+        site_properties portal_properties/site_properties;
+        here_url context_state/object_url;
+        portal portal_state/portal;
+        isAnon portal_state/anonymous;
+        isEmpty context/@@plone_context_state/is_empty;
+        member portal_state/member;
+        actions python:context.portal_actions.listFilteredActionsFor(context);
+        mtool context/portal_membership;
+        wtool context/portal_workflow;
+        wf_state context_state/workflow_state;
+        default_language portal_state/default_language;
+        is_editable context_state/is_editable;
+        isContextDefaultPage context_state/is_default_page;
+        object_title context_state/object_title;
+        putils context/plone_utils;
+        ztu modules/ZTUtils;
+        acl_users nocall: context/acl_users;
+        ifacetool context/portal_interface;
+        syntool context/portal_syndication;
+        inApplication context/@@inApplication;
+        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view');"
     tal:attributes="lang language;">
 
 

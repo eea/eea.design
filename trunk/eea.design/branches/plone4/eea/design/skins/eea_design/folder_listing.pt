@@ -67,7 +67,8 @@
         <dl metal:define-slot="entries">
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
-            <tal:block tal:define="item_url item/getURL|item/absolute_url;
+            <tal:block tal:condition="python: not isAnon or not not_show_empty or not getattr(item, 'is_empty', False)" 
+                       tal:define="item_url item/getURL|item/absolute_url;
                                    item_id item/getId|item/id;
                                    item_title_or_id item/pretty_title_or_id;
                                    item_description item/Description;
@@ -88,7 +89,7 @@
                                  
                                    item_sametime python: item_start == item_end;
                                    item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False"
-                    tal:condition="python: not isAnon or not not_show_empty or not getattr(item, 'is_empty', False)">
+                    >
                 <metal:block define-slot="entry">
                 <dt metal:define-macro="listitem"
                     tal:attributes="class python:test(item_type == 'Event', 'vevent', '')">
