@@ -189,18 +189,19 @@
         />
 
     <browser:viewlet
-        name="eea.languageselector"
-        class=".viewlets.LanguageSelectorViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        />
-    <browser:viewlet
         name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
         class="plone.app.layout.viewlets.common.PathBarViewlet"
         template="templates/path_bar.pt"
         layer=".interfaces.IEEADesignPublic"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.app.i18n.locales.languageselector"
+        class=".viewlets.LanguageSelectorViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
         />
 
