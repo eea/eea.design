@@ -43,7 +43,6 @@ from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlight
 from p4a.video.interfaces import IVideoEnhanced
 from eea.themecentre.interfaces import IThemeTagging
 from eea.themecentre.interfaces import IThemeCentreSchema
-from Products.Archetypes.utils import shasattr
 
 class Frontpage(BrowserView):
     """

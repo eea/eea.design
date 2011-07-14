@@ -5,10 +5,12 @@
       i18n:domain="eea"
       metal:use-macro="context/main_template/macros/master">
     <head>
+
     </head>
     <body>
 
     <div metal:fill-slot="main">
+
         <h1 class="hiddenStructure" tal:content="context/Title">EEA Home page</h1>
         <tal:main-macro metal:define-macro="main">
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
@@ -33,11 +35,24 @@
                         </div>
                     </div>
                     <div id="highlights-area" class="column-area">
-                        <h2 class="column-title" i18n:translate="News">News</h2>
+                        <!-- tabs -->
+                        <ul id="tabs"
+                            tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps'];">
+                            <li tal:repeat="tab tabnames">
+                                <a href="#"  tal:content="tab" class="block">Tabs</a>
+                            </li>
+                        </ul>
+                        <!-- end_tabs -->
+
+                        <!--<h2 class="column-title" i18n:translate="News">News</h2>-->
                         <div metal:use-macro="here/frontpage_macros/macros/high">
                             Top Highlights
                         </div>
                         <div metal:use-macro="here/frontpage_macros/macros/middle">
+                            Middle Highlights
+                        </div>
+
+                        <div metal:use-macro="here/frontpage_macros/macros/middle-short">
                             Middle Highlights
                         </div>
                         <div class="visualClear"><!-- &nbsp; --></div>
@@ -49,6 +64,13 @@
                 </div>
                 <tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>
             </div>
+
+            <script type="text/javascript">
+                jQuery(function() { 
+                    jQuery("#highlights-middle").tabs("#highlights-middle div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
+                    jQuery("ul#tabs").tabs("> .highlights");
+                });
+            </script>
         </tal:main-macro>
     </div>
 

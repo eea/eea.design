@@ -23,6 +23,8 @@
         directory="eea.design:skins/eeadesign_cms" />
     <object name="eeadesign_style_docs" meta_type="Filesystem Directory View"
         directory="eea.design:skins/eeadesign_style_docs" />
+    <object name="eeadesign_2011" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eea_design_2011" />
 
     <object name="wisetheme_images" meta_type="Filesystem Directory View"
         directory="eea.design:skins/wisetheme_images" />

@@ -1,7 +1,6 @@
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       i18n:domain="eea" tal:omit-tag="">
-
 <div metal:define-macro="high"
 		id="highlights-high" 
 		class="highlights"
@@ -61,6 +60,17 @@
                 tal:condition="highlights"
                 tal:repeat="hl highlights">
 		
+        <!-- accordion panels -->
+	    <div class="panel">
+	       <p class="noPrint"
+	       		tal:content="hl/getNewsTitle">
+                Highlight Title</p>
+	   	     <p class="date" 
+                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+	    	  tal:content="date">07 Dec 2005 </p> 
+        </div>
+        <!-- end_accordion panels -->
+
      <div class="highlightMiddle">
   
 	    <h3 class="highlight">
@@ -68,10 +78,23 @@
 	       		tal:attributes="href hl/getUrl"
 	       		tal:content="hl/getNewsTitle">
 	       			Highlight Title</a></h3>
+          <!-- teaser and read more -->
+            <div class="figure-left">
+                      <tal:image define="figure hl/media|nothing;
+                               figure_link hl/getUrl;
+                               figure_scale string:thumb;"
+                             condition="figure">
+                   <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
+                 </tal:image>
+            </div>
+
 	   	     <span class="date" 
                   tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
 	    	  tal:content="date">07 Dec 2005 </span> 
-	    	              
+            <p tal:content="hl/getTeaser">teaser</p>
+            <p><a href="#" class="noPrint"
+                    tal:attributes="href hl/getUrl">Read more</a></p>
+          <!-- end teaser and read more -->
        </div>
     </metal:items>
 </div>

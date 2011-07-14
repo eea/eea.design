@@ -56,6 +56,7 @@ body.frontpage ul {
     font-size: 160%;
     margin: 0.25em 0;
     border: none;
+    clear: left;
 }
 
 #highlights-block .shortNewsTitle {
@@ -221,5 +222,50 @@ body.frontpage #portal-columns {
 
 #highlights-block .portletFooter {
     padding-right: 1em;
+}
+
+div.panel, div.current {
+    background: #F6F6F6;
+    margin: 0;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid white;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+}
+
+div.current {
+    display: none;
+}
+
+ul#tabs {
+    background: #2C8DA2;
+    border-bottom: 1px solid #666;
+    height: 30px;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0;
+}
+
+ul#tabs li {
+    float: left;
+    list-style-image: none !important;
+    margin: 0 !important;
+    padding: 1em 0em;
+    text-indent: 0;
+}
+
+ul#tabs li a {
+    color: #FFF;
+    border: 0px;
+    text-decoration: none;
+    padding: 1em;
+}
+
+ul#tabs li a.current, ul#tabs li a:hover {
+    background: #FFF;
+    color: #2D8EA3;
+    
 }
 /* </dtml-with> */
