@@ -7,7 +7,7 @@
 
 <dl class="portlet-ecotips portlet" id="portlet-ecotip"
     tal:define="ecotip context/@@randomecotip;
-                portal_url context/@plone_portal_state/portal_url"
+                portal_url context/@@plone_portal_state/portal_url"
     tal:condition="ecotip">
     <dt>
         <a tal:attributes="href ecotip/url">
