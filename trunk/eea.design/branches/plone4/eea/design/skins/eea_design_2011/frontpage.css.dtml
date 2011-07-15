@@ -268,4 +268,16 @@ ul#tabs li a.current, ul#tabs li a:hover {
     color: #2D8EA3;
     
 }
+
+#news-header select {
+    margin-left: 30px;
+}
+
+#news-header h2 {
+    float: left;
+}
+
+#news-header {
+    height: 30px;
+}
 /* </dtml-with> */

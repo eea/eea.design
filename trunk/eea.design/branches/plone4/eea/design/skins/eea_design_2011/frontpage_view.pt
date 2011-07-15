@@ -34,17 +34,32 @@
                             <p><a href="articles" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
                         </div>
                     </div>
+
                     <div id="highlights-area" class="column-area">
+                        <div id="news-header">
+                        <h2> What's new</h2>
+                        <!-- select_topics -->
+                        <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector">
+                            <option value="">Filter by topic</option>
+                            <tal:items tal:repeat="item items">
+                                <option  
+                                        tal:define="value python: item[0];"
+                                        tal:attributes="value value;"
+                                        tal:content="python: item[1]" />
+                            </tal:items>
+                        </select>
+                        </div>
+                        <!-- end select_topics -->
+
                         <!-- tabs -->
                         <ul id="tabs"
                             tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps'];">
                             <li tal:repeat="tab tabnames">
-                                <a href="#"  tal:content="tab" class="block">Tabs</a>
+                                <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.lower()">Tabs</a>
                             </li>
                         </ul>
                         <!-- end_tabs -->
 
-                        <!--<h2 class="column-title" i18n:translate="News">News</h2>-->
                         <div metal:use-macro="here/frontpage_macros/macros/high">
                             Top Highlights
                         </div>
@@ -67,8 +82,32 @@
 
             <script type="text/javascript">
                 jQuery(function() { 
-                    jQuery("#highlights-middle").tabs("#highlights-middle div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
+                    var tabs = jQuery("#highlights-middle").tabs("#highlights-middle div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
                     jQuery("ul#tabs").tabs("> .highlights");
+                    jQuery("#topic-selector").change(
+                    function displayResult()
+                    {
+                        var x=document.getElementById("topic-selector").selectedIndex;
+                        var y=document.getElementById("topic-selector").options;
+                        var sel_value = y[x].value;
+                        var cur_tab_val = $("#tabs a.current").text();
+                        var all_news = jQuery(".highlights:visible");
+                        var news = all_news.each(function() 
+                            {
+                               var container = $(this);
+                               if( container.css("display") == "block")
+                               {
+                                    return container;
+                               }
+                            });
+                        var address = "http://localhost:8081/www/SITE/ajax?topic=";
+                        jQuery(news).load( address + sel_value + ";tab=" + cur_tab_val, function() {
+                            tabs;
+
+                        });
+                    }
+                    );
+
                 });
             </script>
         </tal:main-macro>
