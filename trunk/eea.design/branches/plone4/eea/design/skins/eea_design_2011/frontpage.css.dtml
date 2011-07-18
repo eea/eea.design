@@ -280,4 +280,8 @@ ul#tabs li a.current, ul#tabs li a:hover {
 #news-header {
     height: 30px;
 }
+
+#highlights-area {
+    height: 610px;
+}
 /* </dtml-with> */

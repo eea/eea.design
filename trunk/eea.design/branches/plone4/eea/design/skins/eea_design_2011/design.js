@@ -44,6 +44,8 @@ $(window).resize(function() {
     $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
 
     // Make sure both frontpage columns have the same height:
-    var largest_column_height = Math.max($("#articles-area").height(), $("#highlights-area").height());
-    $(".frontpage .column-area").height(largest_column_height);
+    // TODO: ichimdav disabled automatic height of panels because of removal of
+    // items from production site
+    // var largest_column_height = Math.max($("#articles-area").height(), $("#highlights-area").height());
+    // $(".frontpage .column-area").height(largest_column_height);
 });

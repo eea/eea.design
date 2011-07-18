@@ -23,9 +23,9 @@
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-                        <div metal:use-macro="context/spotlight_film_macros/macros/spotlight">
-                            Spotlight
-                        </div>
+                        <!--<div metal:use-macro="context/spotlight_film_macros/macros/spotlight">-->
+                        <!--    Spotlight-->
+                        <!--</div>-->
                         <h2 class="column-title" i18n:domain="eea" i18n:translate="Articles">Featured articles</h2>
                         <div metal:use-macro="here/frontpage_macros/macros/highArticles">
                             Top articles
@@ -77,39 +77,11 @@
                     </div>
                     <div class="visualClear"><!-- &nbsp; --></div>
                 </div>
-                <tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>
+                <!--<tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>-->
             </div>
-
-            <script type="text/javascript">
-                jQuery(function() { 
-                    var tabs = jQuery("#highlights-middle").tabs("#highlights-middle div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
-                    jQuery("ul#tabs").tabs("> .highlights");
-                    jQuery("#topic-selector").change(
-                    function displayResult()
-                    {
-                        var x=document.getElementById("topic-selector").selectedIndex;
-                        var y=document.getElementById("topic-selector").options;
-                        var sel_value = y[x].value;
-                        var cur_tab_val = $("#tabs a.current").text();
-                        var all_news = jQuery(".highlights:visible");
-                        var news = all_news.each(function() 
-                            {
-                               var container = $(this);
-                               if( container.css("display") == "block")
-                               {
-                                    return container;
-                               }
-                            });
-                        var address = "http://localhost:8081/www/SITE/ajax?topic=";
-                        jQuery(news).load( address + sel_value + ";tab=" + cur_tab_val, function() {
-                            tabs;
-
-                        });
-                    }
-                    );
-
-                });
-            </script>
+                <!-- accordion_gallery -->
+                <script type="text/javascript" tal:attributes=" src string: ${portal_url}/accordion_gallery.js"></script>
+                <!-- end accordion_gallery -->
         </tal:main-macro>
     </div>
 
