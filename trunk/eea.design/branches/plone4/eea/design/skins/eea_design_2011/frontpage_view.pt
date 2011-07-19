@@ -20,6 +20,7 @@
                     <div class="visualClear"><!-- &nbsp; --></div>
                     </div>
                 </tal:promos>
+                <h2>More enviremental topics</h2>
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">

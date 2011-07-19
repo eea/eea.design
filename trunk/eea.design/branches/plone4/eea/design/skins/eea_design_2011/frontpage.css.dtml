@@ -9,6 +9,10 @@
 ******************************************************************************/
 
 /* This div sneaks in a padding for IE it seems. */
+html {
+    background: url("bg_top.png") top left repeat-x;
+
+}
 #region-content {
     padding: 0 0 !important;
 }
@@ -21,6 +25,14 @@ body.frontpage ul {
     list-style: none;
     list-style-image: none;
     margin: 0;
+}
+
+body.frontpage {
+    background: url("footer.png") bottom left repeat-x;
+}
+
+#main-content {
+    margin-top: 15px;
 }
 
 #highlights-block h1 a,

@@ -251,6 +251,7 @@ class Frontpage(BrowserView):
                 'listing_url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
             }
             output.append(info)
+        
         return output
 
     def _getTeaserMedia(self, high, scale):

@@ -612,6 +612,7 @@ float:right;
     border: 0;
     margin: 0px 0 0 7px;
     padding: 0;
+    float: left;
 }
 #printLogo {
     display: none;
@@ -638,7 +639,7 @@ float:right;
 #portal-top {
     margin: 0;
     padding: 0;
-    background: url(&dtml-portal_url;/headerbg.gif) repeat-y top right #95b229;
+    /* background: url(&dtml-portal_url;/headerbg.gif) repeat-y top right #95b229; */
 }
 
 #cross-site-top {
