@@ -3,6 +3,7 @@
 
 #footer-wrapper {
     /* background: white url(footer_left.jpg) no-repeat; */
+    background-color: #b1c748;
     margin: 0;
     padding: 0;
     clear: both;
@@ -16,13 +17,14 @@
 }
 
 #portal-footer {
-    float: none;
-    padding: 2em;
     /* background: #95B229; */
     background: transparent;
     color: white;
-    margin: 0 0em 1em 0em;
+    float: none;
+    padding: 2em;
+    margin: 0 auto;
     text-align: left;
+    width: 1024px;
 }
 
 /*
@@ -92,6 +94,8 @@
     border-collapse: collapse;
     border-spacing: 0;
     text-align: left;
+    width: 1024px;
+    margin: 0 auto;
 }
 #portal-colophon .discreet {
     text-align: center;
@@ -140,9 +144,10 @@
 }
 
 #portal-footer #portlet-ecotip {
-   font-size: 120%;
-   width: 75%;
-   margin: 0 auto;
+    font-size: 120%;
+    width: 70%;
+    background: url("ecotip.png") no-repeat 0px 12px;
+    padding-left: 5em;
 }
 
 #portal-footer #portlet-ecotip .portletFooter {

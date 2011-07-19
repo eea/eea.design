@@ -2,11 +2,13 @@ var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
 $(document).ready(function() {
-    // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
+    // Move the cross-site-top above the visual-portal-wrapper
         var cross_site_top = $("#cross-site-top").detach(),
             portal_siteactions = $("#portal-siteactions").detach();
         portal_siteactions.prependTo(cross_site_top);
         cross_site_top.prependTo("body");
+
+    // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(window.location.pathname)) {
         $('body').addClass('fullscreen');

@@ -1,11 +1,8 @@
 <div metal:define-macro="portal_footer"
      i18n:domain="eea"
-     class="row"
-
-        >
+     class="row">
     <div id="footer-wrapper">
         <div id="bg-wrapper">
-            <div class="cell width-full position-0">
 
                 <div id="portal-footer">
                     <!--<metal:ecotip  use-macro="context/portlet_ecotip/macros/portlet"/>-->
@@ -17,12 +14,7 @@
                            tal:attributes="href view/manageUrl"
                            i18n:translate="manage-footer-portlet-link">Manage footer portlets</a>
                     </div>
-                 
-                </div>
-            </div>
-
-
+                 </div>
         </div>
-
     </div>
 </div>

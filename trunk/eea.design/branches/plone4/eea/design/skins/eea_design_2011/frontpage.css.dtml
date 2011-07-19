@@ -9,10 +9,11 @@
 ******************************************************************************/
 
 /* This div sneaks in a padding for IE it seems. */
-html {
-    background: url("bg_top.png") top left repeat-x;
+body {
+    background: url("header.png") top left repeat-x;
 
 }
+
 #region-content {
     padding: 0 0 !important;
 }
@@ -28,7 +29,8 @@ body.frontpage ul {
 }
 
 body.frontpage {
-    background: url("footer.png") bottom left repeat-x;
+    background: url("bg_top.png") top left repeat-x;
+
 }
 
 #main-content {
