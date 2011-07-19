@@ -298,4 +298,14 @@ ul#tabs li a.current, ul#tabs li a:hover {
 #highlights-area {
     height: 610px;
 }
+
+#forum, #community, #mobile {
+    height: 100px;
+    background: #e6e7e8;
+    border: solid #e6e7e8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 2.5em;
+}
 /* </dtml-with> */

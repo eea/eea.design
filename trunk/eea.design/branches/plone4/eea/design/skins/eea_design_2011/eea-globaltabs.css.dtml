@@ -163,9 +163,12 @@
     width:15em;
 }
 
-#portaltab-pressroom, #portaltab-abouteea {
+#portaltab-abouteea {
     float: right;
 }
+#portaltab-pressroom {
+    margin-left: 8em;
+} 
 /*#portal-globalnav {*/
     /*clear: both;*/
     /*font-size: 80%;*/
