@@ -146,6 +146,52 @@
 </div>
 <!-- end featured article macro -->
 
+<!-- promotion_gallery macro -->
+<div metal:define-macro="promo-gallery"
+                tal:define="highlights frontpage_view/getMedium;
+                            plone_view nocall:plone_view|here">
+
+  <metal:items  define-macro="middlenews-promo"
+                tal:condition="highlights"
+                tal:repeat="hl highlights">
+                <ul id="promo-navigator"> 
+                    <li>
+                        <tal:image define="figure hl/media|nothing;
+                        figure_link hl/getUrl;
+                        figure_scale string:thumb;"
+                        condition="figure">
+                        <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
+                        </tal:image>
+
+                        <h3><a href="#" class="noPrint"
+                                tal:attributes="href hl/getUrl"
+                                tal:content="hl/getNewsTitle">
+                                Highlight Title</a></h3>
+                        <span class="date" 
+                            tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+                            tal:content="date">07 Dec 2005 </span> 
+                    </li>
+                </ul> 
+                <ul id="promo-gallery-content"> 
+                    <li>
+                        <tal:image define="figure hl/media|nothing;
+                        figure_link hl/getUrl;
+                        figure_scale string:medium;"
+                        condition="figure">
+                        <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
+                        </tal:image>
+                        <span class="date" 
+                            tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+                            tal:content="date">07 Dec 2005 </span> 
+                        <p tal:content="hl/getTeaser" class="teaser-desc">teaser</p>
+                        <p><a href="#" class="noPrint"
+                                tal:attributes="href hl/getUrl">Read more</a></p>
+                    </li>    
+                </ul>
+    </metal:items>
+</div>
+<!-- end promotion_gallery macro -->
+
 <div metal:define-macro="multimedia" 
 		class="highlightMiddle shortNews"
 		id="multimedia-highlights" 

@@ -1,5 +1,5 @@
 /*
-  Style for the front page highlights/news.
+  Style for the promo gallery with highlights/news.
 
   <dtml-with base_properties> (do not remove this)
   <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)

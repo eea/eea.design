@@ -55,7 +55,21 @@
                         </div>
                     </div>
 
+                        <!-- promotions_gallery -->
+                        <div id="promotions">
+                            <div metal:use-macro="here/frontpage_macros/macros/promo-gallery">
+                                Middle Highlights
+                            </div>
+                            <div class="controls">
+                            <a href="" id="prev-promo">Previous</a>
+                            <a href="" id="next-promo">Next</a>
+                            <a href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
+                            </div>
+                        </div>
+                            
+                        <!-- end promotions_gallery -->
                     <div id="highlights-area" class="column-area">
+
                         <div id="news-header">
                         <h2> What's new</h2>
                         <!-- select_topics -->
@@ -99,6 +113,11 @@
                 </div>
                 <!--<tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>-->
             </div>
+
+                <!-- promo gallery javascript & css -->
+                <script type="text/stylesheets" tal:attributes=" src string: ${portal_url}/promo_gallery.css.dtml"></script>
+                <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promotion_gallery.js"></script>
+                <!-- end promo gallery javacript -->
                 <!-- accordion_gallery -->
                 <script type="text/javascript" tal:attributes=" src string: ${portal_url}/accordion_gallery.js"></script>
                 <!-- end accordion_gallery -->

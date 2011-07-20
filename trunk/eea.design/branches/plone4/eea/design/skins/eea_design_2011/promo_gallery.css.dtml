@@ -1,0 +1,115 @@
+/*
+  Style for the promo gallery with highlights/news.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/*******************************************************************************/
+
+.teaser-desc{
+	z-index:100px;
+	position:absolute;
+	top:150px;
+	left:50px;
+	width:400px;
+	color:#FFF;
+	margin:0 8px;
+	padding:8px 0;
+}
+
+
+/* main promo content */
+#promo-gallery-content {
+	overflow:hidden;
+	background:transparent  scroll 50% 50%;
+	padding:0px;
+	margin:0;
+	height:300px;
+	width:600px;
+	position:absolute;
+	overflow:hidden;
+}
+
+#promo-gallery-content li{
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+	height:100%;
+	width:600px;
+	float:left;
+}
+
+#promo-gallery-content li img{
+	padding:0px;	
+	width:600px;
+}
+
+/* item navigator */
+#promo-navigator{
+	top:0;
+	padding:0;
+	margin:0;
+	position:absolute;
+	width:100%;
+}
+
+#promo-navigator li{
+	cursor:hand; 
+	cursor:pointer;
+	list-style:none;
+	width:100%;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+
+#promo-navigator .outer {
+	position:absolute;
+	right:0;
+	top:00px;
+	z-index:100;
+	height:300px;
+	width:310px;
+	overflow:hidden;
+	color:#FFF;
+}
+
+#promo-navigator .lof-navigator li.active{
+	color:#FFF;
+}
+
+#promo-navigator li h3{
+	color:#FFF;
+	font-size:100%;
+	padding:15px 0 0 !important;
+	margin:0;
+
+}
+#promo-navigator li div{
+	color:#FFF;
+	height:100%;
+	position:relative;
+	margin-left:15px;
+	padding-left:15px;
+	border-top:1px solid #E1E1E1;
+}
+
+#promo-navigator li.active div{
+	color:#FFF;
+}
+#promo-navigator li img{
+	height:60px;
+	width:60px;
+	margin:15px 15px 10px 0px;
+	float:left;
+	padding:3px;
+	border:#C5C5C5 solid 1px;
+}
+#promo-navigator li.active img{
+	border:##6C8E5C  solid 1px;
+}
+#promo-navigator li.active h3{
+	color:#FFF;
+}
+/* </dtml-with> */
