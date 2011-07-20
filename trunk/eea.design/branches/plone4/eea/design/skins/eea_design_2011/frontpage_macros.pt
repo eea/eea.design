@@ -47,7 +47,7 @@
 		class="highlights"
 		tal:define="highlights frontpage_view/getHighArticles;
 		            plone_view nocall:plone_view|here;">
-    <metal:items use-macro="here/frontpage_macros/macros/middlenews-short" />
+    <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
 </div>
 
 <div metal:define-macro="middle" 
@@ -79,6 +79,7 @@
 	       		tal:content="hl/getNewsTitle">
 	       			Highlight Title</a></h3>
           <!-- teaser and read more -->
+          <metal:teaser define-macro="teaser">
             <div class="figure-left">
                       <tal:image define="figure hl/media|nothing;
                                figure_link hl/getUrl;
@@ -94,7 +95,8 @@
             <p tal:content="hl/getTeaser">teaser</p>
             <p><a href="#" class="noPrint"
                     tal:attributes="href hl/getUrl">Read more</a></p>
-          <!-- end teaser and read more -->
+           </metal:teaser>
+           <!-- end teaser and read more -->
        </div>
     </metal:items>
 </div>
@@ -124,6 +126,25 @@
        </div>
     </metal:items>
 </div>
+
+
+<!-- featured article macro -->
+<div metal:define-macro="middle-long"
+        class="highlights"
+                id="highlights-middle"
+                tal:define="highlights frontpage_view/getMedium;
+                            plone_view nocall:plone_view|here">
+
+  <metal:items  define-macro="middlenews-long"
+                tal:condition="highlights"
+                tal:repeat="hl highlights">
+
+          <!-- teaser and read more -->
+          <metal:teasers use-macro="here/frontpage_macros/macros/teaser" />
+          <!-- end teaser and read more -->
+    </metal:items>
+</div>
+<!-- end featured article macro -->
 
 <div metal:define-macro="multimedia" 
 		class="highlightMiddle shortNews"

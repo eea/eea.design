@@ -27,12 +27,21 @@
                         <!--<div metal:use-macro="context/spotlight_film_macros/macros/spotlight">-->
                         <!--    Spotlight-->
                         <!--</div>-->
-                        <h2 class="column-title" i18n:domain="eea" i18n:translate="Articles">Featured articles</h2>
+
                         <!-- featured and spotlight articles -->
+                        <a href="articles" class="archives">archive</a>
+                        <h2 class="column-title" i18n:domain="eea" i18n:translate="Articles">Featured articles</h2>
                         <div metal:use-macro="here/frontpage_macros/macros/highArticles">
                             Top articles
                         </div>
-                        <div id="topic-spotlight"></div>
+
+                        <div id="spotlight-high">
+                            <a href="articles" class="archives">archive</a>
+                            <h2 class="column-title" i18n:domain="eea" i18n:translate="Articles">Topic in the spotlight</h2>
+                            <div metal:use-macro="here/frontpage_macros/macros/highArticles">
+                                Top articles
+                            </div>
+                        </div>
                         <!-- end featured and spotlight articles -->
 
                         <!-- community  divs -->

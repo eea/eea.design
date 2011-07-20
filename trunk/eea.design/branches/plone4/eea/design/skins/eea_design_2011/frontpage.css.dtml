@@ -87,6 +87,11 @@ body.frontpage {
     visibility:hidden;
 }
 
+.archives {
+    float: right;
+    margin: 15px;
+}
+
 /* Frontpage promotions
 ******************************************************************************/
 
