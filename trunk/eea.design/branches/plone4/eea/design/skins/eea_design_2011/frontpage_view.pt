@@ -17,25 +17,24 @@
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-                        <!--<div metal:use-macro="context/spotlight_film_macros/macros/spotlight">-->
-                        <!--    Spotlight-->
-                        <!--</div>-->
 
-                        <!-- featured and spotlight articles -->
-                        <a href="articles" class="archives">archive</a>
-                        <h2 class="column-title" i18n:domain="eea" i18n:translate="Articles">Featured articles</h2>
-                        <div metal:use-macro="here/frontpage_macros/macros/highArticles">
-                            Top articles
+
+                        <!-- featured and spotlight areas -->
+                        <div id="featured-box">
+                          <a href="articles" class="archives">archive</a>
+                          <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured articles</h2>
+                          <div metal:use-macro="here/frontpage_macros/macros/highArticles">
+                            item title, description and image
+                          </div>
                         </div>
 
-                        <div id="spotlight-high">
-                            <a href="articles" class="archives">archive</a>
-                            <h2 class="column-title" i18n:domain="eea" i18n:translate="Articles">Topic in the spotlight</h2>
+                        <div id="spotlight-box">
+                            <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
                             <div metal:use-macro="here/frontpage_macros/macros/highArticles">
-                                Top articles
+                                item title, description and image
                             </div>
                         </div>
-                        <!-- end featured and spotlight articles -->
+                        <!-- end featured and spotlight areas -->
 
                         <!-- community  divs -->
                         <div id="forum"></div>
