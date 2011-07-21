@@ -43,23 +43,23 @@
                         <!-- end community divs -->
                         
                         <div class="portletFooter">
-                            <p><a href="articles" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
+            
                         </div>
                     </div>
 
-                        <!-- promotions_gallery -->
-                        <div id="promotions">
+                    <!-- promotions_gallery_slideshow-->
+                    <div id="promotions">
                             <div metal:use-macro="here/frontpage_macros/macros/promo-gallery">
-                                Middle Highlights
+                                promoted item
                             </div>
                             <div class="controls">
                             <a href="" id="prev-promo">Previous</a>
                             <a href="" id="next-promo">Next</a>
                             <a href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
                             </div>
-                        </div>
-                            
-                        <!-- end promotions_gallery -->
+                    </div>   
+                    <!-- end promotions_gallery_slideshow -->
+                        
                     <div id="highlights-area" class="column-area">
 
                         <div id="news-header">
