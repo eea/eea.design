@@ -14,13 +14,6 @@
         <h1 class="hiddenStructure" tal:content="context/Title">EEA Home page</h1>
         <tal:main-macro metal:define-macro="main">
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
-                <tal:promos condition="python:request.get('LANGUAGE','en') == 'en'">
-                    <div id="top-news-area">
-                        <metal:promotions use-macro="here/portlet_promotions/macros/hardcoded_promotions" />
-                    <div class="visualClear"><!-- &nbsp; --></div>
-                    </div>
-                </tal:promos>
-                <h2>More enviremental topics</h2>
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
