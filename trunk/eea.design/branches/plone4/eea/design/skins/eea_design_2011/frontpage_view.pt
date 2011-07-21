@@ -115,7 +115,7 @@
             </div>
 
                 <!-- promo gallery javascript & css -->
-                <script type="text/stylesheets" tal:attributes=" src string: ${portal_url}/promo_gallery.css.dtml"></script>
+                <link rel="stylesheet" type="text/css" media="screen" tal:attributes="href string: ${portal_url}/promo_gallery.css" />
                 <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promotion_gallery.js"></script>
                 <!-- end promo gallery javacript -->
                 <!-- accordion_gallery -->

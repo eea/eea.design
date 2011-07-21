@@ -151,10 +151,10 @@
                 tal:define="highlights frontpage_view/getMedium;
                             plone_view nocall:plone_view|here">
 
+ <ul id="promo-navigator"> 
   <metal:items  define-macro="middlenews-promo"
                 tal:condition="highlights"
                 tal:repeat="hl highlights">
-                <ul id="promo-navigator"> 
                     <li>
                         <tal:image define="figure hl/media|nothing;
                         figure_link hl/getUrl;
@@ -171,24 +171,30 @@
                             tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
                             tal:content="date">07 Dec 2005 </span> 
                     </li>
-                </ul> 
-                <ul id="promo-gallery-content"> 
-                    <li>
-                        <tal:image define="figure hl/media|nothing;
-                        figure_link hl/getUrl;
-                        figure_scale string:medium;"
-                        condition="figure">
-                        <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
-                        </tal:image>
-                        <span class="date" 
-                            tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
-                            tal:content="date">07 Dec 2005 </span> 
-                        <p tal:content="hl/getTeaser" class="teaser-desc">teaser</p>
-                        <p><a href="#" class="noPrint"
-                                tal:attributes="href hl/getUrl">Read more</a></p>
-                    </li>    
-                </ul>
-    </metal:items>
+  </metal:items>
+        </ul>
+
+  <ul id="promo-gallery-content"> 
+      <metal:pritems  
+                    tal:condition="highlights"
+                    tal:repeat="hl highlights">
+                        <li>
+                            <tal:image define="figure hl/media|nothing;
+                            figure_link hl/getUrl;
+                            figure_scale string:preview;"
+                            condition="figure">
+                            <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
+                            </tal:image>
+                            <span class="date" 
+                                tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+                                tal:content="date">07 Dec 2005 </span> 
+                            <p tal:content="hl/getTeaser" class="teaser-desc">teaser</p>
+                            <p><a href="#" class="noPrint"
+                                    tal:attributes="href hl/getUrl">Read more</a></p>
+                        </li>    
+        </metal:pritems>
+    </ul> 
+
 </div>
 <!-- end promotion_gallery macro -->
 
