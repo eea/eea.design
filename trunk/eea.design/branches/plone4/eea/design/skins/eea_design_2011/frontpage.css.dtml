@@ -28,11 +28,6 @@ body.frontpage ul {
     margin: 0;
 }
 
-body.frontpage {
-    background: url("bg_top.png") top left repeat-x;
-
-}
-
 #main-content {
     margin-top: 15px;
 }
@@ -79,7 +74,7 @@ body.frontpage {
 
 #highlights-block .date {
     font-size: x-small;
-    color:&dtml-discreetColor;;
+    color: #FFF;
 }
 
 /* don't show dates on articles on frontpage as they are not like news */
@@ -154,7 +149,7 @@ body.frontpage {
 ******************************************************************************/
 
 .column-area {
-    width: 48%;
+    width: 40%;
     margin: 0 0;
     padding: 0 1em 1em 0;
     background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */

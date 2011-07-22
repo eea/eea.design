@@ -95,13 +95,16 @@ function handler(event) {
 			navItemsSelector    : '.lof-navigator li',
 			navOuterSelector    : '.lof-navigator-outer' ,
 			isPreloaded			: true,
-			easing				: 'easeInOutQuad'
+			easing				: 'easeInOutQuad',
+            caption             : 'lof-main-item-desc',
+            opacityClass        : '.lof-opacity'  
 		}	
 		$.extend( this.settings, settings ||{} );	
 		this.nextNo         = null;
 		this.previousNo     = null;
 		this.maxWidth  = this.settings.mainWidth || 600;
-		this.wrapper = $( obj ).find( this.settings.wapperSelector );	
+        $obj = $(obj);
+		this.wrapper = $obj.find( this.settings.wapperSelector );	
 		this.slides = this.wrapper.find( this.settings.mainItemSelector );
 		if( !this.wrapper.length || !this.slides.length ) return ;
 		// set width of wapper
@@ -109,8 +112,8 @@ function handler(event) {
 			this.settings.maxItemDisplay = this.slides.length;	
 		}
 		this.currentNo      = isNaN(this.settings.startItem)||this.settings.startItem > this.slides.length?0:this.settings.startItem;
-		this.navigatorOuter = $( obj ).find( this.settings.navOuterSelector );	
-		this.navigatorItems = $( obj ).find( this.settings.navItemsSelector ) ;
+		this.navigatorOuter = $obj.find( this.settings.navOuterSelector );	
+		this.navigatorItems = $obj.find( this.settings.navItemsSelector );
 		this.navigatorInner = this.navigatorOuter.find( this.settings.navInnerSelector );
 		
 		if( this.settings.navPosition == 'horizontal' ){ 
@@ -129,10 +132,10 @@ function handler(event) {
 		
 		
 		if( this.settings.direction == 'opacity') {
-			this.wrapper.addClass( 'lof-opacity' );
+			this.wrapper.addClass( this.settings.opacityClass );
 			$(this.slides).css('opacity',0).eq(this.currentNo).css('opacity',1);
-			this.caption = $( obj ).find( '.lof-main-item-desc' );
-			$( obj ).find( '.lof-main-item-desc' ).hide().eq(0).show();
+			this.caption = $obj.find( this.settings.caption );
+			this.caption.hide().eq(0).show();
 		} else { 
 			this.wrapper.css({'left':'-'+this.currentNo*this.maxSize+'px', 'width':( this.maxWidth ) * this.slides.length } );
 		}
@@ -320,4 +323,3 @@ function handler(event) {
 		}
 	})
 })(jQuery)
-

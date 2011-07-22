@@ -52,12 +52,12 @@
                             <div metal:use-macro="here/frontpage_macros/macros/promo-gallery">
                                 promoted item
                             </div>
+                    </div>   
                             <div class="controls">
-                            <a href="" id="prev-promo">Previous</a>
-                            <a href="" id="next-promo">Next</a>
+                            <a onclick="return false;" href="" id="prev-promo">Previous</a>
+                            <a onclick="return false;" href="" id="next-promo">Next</a>
                             <a href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
                             </div>
-                    </div>   
                     <!-- end promotions_gallery_slideshow -->
                         
                     <div id="highlights-area" class="column-area">
@@ -109,6 +109,7 @@
                 <!-- promo gallery javascript & css -->
                 <link rel="stylesheet" type="text/css" media="screen" tal:attributes="href string: ${portal_url}/promo_gallery.css" />
                 <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promotion_gallery.js"></script>
+                <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promo_gallery.js"></script>
                 <!-- end promo gallery javacript -->
                 <!-- accordion_gallery -->
                 <script type="text/javascript" tal:attributes=" src string: ${portal_url}/accordion_gallery.js"></script>
