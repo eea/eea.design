@@ -12,7 +12,7 @@
     position: absolute;
     top: 240px;
     left: 0px;
-    width: 400px;
+    width: 420px;
     color: white;
     margin: 0 0px;
     padding: 8px;
@@ -26,7 +26,7 @@
 
 /* main promo content */
 #promotions {
-    width: 570px;
+    width: 590px;
     height: 320px;
     position: relative;
     overflow: hidden; 
@@ -36,7 +36,7 @@
 #gallery-content-outer {
     position: relative;
     height: 100%;
-    width: 400px;
+    width: 420px;
     z-index: 3;
     overflow: hidden;
     float: right;
@@ -48,7 +48,7 @@
 	padding:0px;
 	margin:0;
 	height:320px;
-	width:400px;
+	width:420px;
 	position:relative;
 	overflow:hidden;
 }
@@ -58,7 +58,7 @@
 	padding:0px;
 	margin:0px;
 	height:100%;
-	width:400px;
+	width:420px;
 	float:left;
 }
 

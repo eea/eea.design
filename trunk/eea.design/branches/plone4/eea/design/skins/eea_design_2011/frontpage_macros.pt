@@ -18,10 +18,10 @@
 	       			Highlight Title</a></h2>
    
             <div class="figure-left">
-                      <tal:image define="figure hl/media|nothing;
+                      <tal:image tal:define="figure hl/media|nothing;
                                figure_link hl/getUrl;
                                figure_scale string:thumb;"
-                             condition="figure">
+                             tal:condition="figure">
                    <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
                  </tal:image>
             </div>
@@ -84,7 +84,7 @@
                       <tal:image define="figure hl/media|nothing;
                                figure_link hl/getUrl;
                                figure_scale string:thumb;"
-                             condition="figure">
+                             tal:condition="figure">
                    <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
                  </tal:image>
             </div>
@@ -155,15 +155,15 @@
     <div id="gallery-content-outer"> 
   <ul id="promo-gallery-content"> 
       <metal:pritems  
+                tal:define="highlights python: frontpage_view.getMedium(scale='gallery');"
                     tal:condition="highlights"
                     tal:repeat="hl highlights">
                         <li>
-                        <tal:image define="figure hl/media|nothing;
+                        <tal:image tal:define="figure hl/media|nothing;
                         figure_link hl/getUrl;
                         figure_scale string: preview;
-                        figure_title figure_title|figure/Title;
-                        "
-                        condition="figure">
+                        figure_title figure_title|figure/Title;"
+                        tal:condition="figure">
                             <a href="" title="" class="noPrint"
                                tal:attributes="href figure_link|nothing;
                                title figure_title;"
@@ -197,12 +197,12 @@
                 tal:repeat="hl highlights">
                     <li>
                         <div>
-                        <tal:image define="figure hl/media|nothing;
+                        <tal:image tal:define="figure hl/media|nothing;
                         figure_link hl/getUrl;
                         figure_scale string:thumb;
                         figure_title figure_title|figure/Title;
                         "
-                        condition="figure">
+                        tal:condition="figure">
                             <span tal:replace="structure figure/getScale"> </span> 
                         </tal:image>
 
