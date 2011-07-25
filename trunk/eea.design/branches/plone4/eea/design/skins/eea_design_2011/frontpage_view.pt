@@ -56,7 +56,7 @@
                             <div class="controls">
                             <a onclick="return false;" href="" id="prev-promo">Previous</a>
                             <a onclick="return false;" href="" id="next-promo">Next</a>
-                            <a href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
+                            <a onclick="return false;" href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
                             </div>
                     <!-- end promotions_gallery_slideshow -->
                         

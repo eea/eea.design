@@ -97,7 +97,8 @@ function handler(event) {
 			isPreloaded			: true,
 			easing				: 'easeInOutQuad',
             caption             : 'lof-main-item-desc',
-            opacityClass        : '.lof-opacity'  
+            opacityClass        : '.lof-opacity',  
+            toggleElement       : '#pause-toggle'
 		}	
 		$.extend( this.settings, settings ||{} );	
 		this.nextNo         = null;
@@ -170,8 +171,21 @@ function handler(event) {
 				this.registerButtonsControl( 'click', this.settings.buttons, this );
 
 			}
-			if( this.settings.auto ) 
-			this.play( this.settings.interval,'next', true );
+			if( this.settings.auto ) { 
+			    this.play( this.settings.interval,'next', true );
+            }
+
+			if( this.settings.toggleElement ) {
+                var gallery = this;
+                $(this.settings.toggleElement).toggle( function() {
+                    // first time the button is to call stop
+                    gallery.stop();
+                    this.innerHTML = "Play";
+                }, function() {
+			        gallery.play( 1000,'next', true );
+                    this.innerHTML = "Pause";
+                });
+            } 
 			
 			return this;
 		},

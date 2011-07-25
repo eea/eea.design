@@ -3,7 +3,7 @@
     $(function() { 
         
         var buttons = { previous:$('#prev-promo') ,
-						next:$('#next-promo') };
+						next:$('#next-promo')  };
         
         $("#promo-gallery-content img").each(
                 function() {
@@ -12,7 +12,8 @@
                 }
         ); 
         
-        $('#promotions').lofJSidernews({     interval            : 9000,
+        var promotions = $('#promotions').lofJSidernews({     
+                                             interval            : 9000,
                                              direction           : 'opacity',
 											 duration            : 1500,
                                              wapperSelector      : '#promo-gallery-content',
@@ -22,9 +23,10 @@
 			                                 navigatorHeight	 : 80,
 			                                 navigatorWidth		 : 170,
 											 auto                : true,
-                                             caption             : 'promo-item-desc',
-                                             opacityClass        : 'lof-opacity',  
-                                             buttons             : buttons 
+                                             caption             : '.promo-item-desc',
+                                             opacityClass        : '.lof-opacity',  
+                                             buttons             : buttons, 
+                                             toggleElement       : '#play-pause',
                                         });
 
     })

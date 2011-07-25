@@ -155,24 +155,25 @@
     <div id="gallery-content-outer"> 
   <ul id="promo-gallery-content"> 
       <metal:pritems  
-                tal:define="highlights python: frontpage_view.getMedium(scale='gallery');"
+                tal:define="highlights python: frontpage_view.getMedium(scale='preview');"
                     tal:condition="highlights"
                     tal:repeat="hl highlights">
                         <li>
                         <tal:image tal:define="figure hl/media|nothing;
-                        figure_link hl/getUrl;
+                        figure_link hl/getUrl|nothing;
                         figure_scale string: preview;
-                        figure_title figure_title|figure/Title;"
+                        figure_title figure/Title|nothing;"
                         tal:condition="figure">
+                        <tal:Link tal:condition="figure_link">
                             <a href="" title="" class="noPrint"
                                tal:attributes="href figure_link|nothing;
-                               title figure_title;"
-                               tal:condition="figure_link|nothing">
+                               title figure_title;">
                               <span tal:replace="structure figure/getScale"> </span> 
-                 </a>
-                <tal:noLink tal:condition="not: figure_link|nothing">
-                  <span tal:replace="structure figure/getScale"> </span> 
-                </tal:noLink>
+                         </a>
+                         </tal:Link>
+                        <tal:noLink tal:condition="not: figure_link">
+                            <span tal:replace="structure figure/getScale"> </span> 
+                        </tal:noLink>
                         </tal:image>
                     <div class="promo-item-desc">
                         <h3><a href="#" class="noPrint"
@@ -200,7 +201,7 @@
                         <tal:image tal:define="figure hl/media|nothing;
                         figure_link hl/getUrl;
                         figure_scale string:thumb;
-                        figure_title figure_title|figure/Title;
+                        figure_title figure/Title|nothing;
                         "
                         tal:condition="figure">
                             <span tal:replace="structure figure/getScale"> </span> 
