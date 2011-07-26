@@ -24,7 +24,7 @@
 			                                 navigatorWidth		 : 170,
 											 auto                : true,
                                              caption             : '.promo-item-desc',
-                                             opacityClass        : '.lof-opacity',  
+                                             opacityClass        : 'lof-opacity',  
                                              buttons             : buttons, 
                                              toggleElement       : '#play-pause',
                                         });

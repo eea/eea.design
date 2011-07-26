@@ -135,6 +135,7 @@ function handler(event) {
 		if( this.settings.direction == 'opacity') {
 			this.wrapper.addClass( this.settings.opacityClass );
 			$(this.slides).css('opacity',0).eq(this.currentNo).css('opacity',1);
+			//$(this.slides).hide().eq(this.currentNo).show();
 			this.caption = $obj.find( this.settings.caption );
 			this.caption.hide().eq(0).show();
 		} else { 
@@ -182,12 +183,14 @@ function handler(event) {
                     // of the gallery
                     gallery.stop();
                     this.innerHTML = "Play";
+                    this.className = "play";
                     // return false because we want to cancel the default
                     // behaviour of the event in our case the click event
                     return false;
                 }, function() {
 			        gallery.play( 1000, 'next', true );
                     this.innerHTML = "Pause";
+                    this.className = "pause";
                     return false;
                 });
             } 
@@ -299,9 +302,12 @@ function handler(event) {
 				if( this.settings.direction == 'opacity' ) { 
 					$(this.slides).stop().animate({opacity:0}, {duration: this.settings.duration, easing:this.settings.easing} );
 					$(this.slides).eq(index).stop().animate( {opacity:1},this.settings.duration, this.settings.easing, function(){
-																			$(currentObj.caption.slideUp().eq(index)).slideDown();																
-																	} );
-					
+                    	    $(currentObj.caption.slideUp().eq(index)).slideDown();														
+                    }); 
+					//var slides = $(this.slides);
+                    //slides.stop().hide();
+					//slides.eq(index).stop().fadeIn(1500);
+                    //$(currentObj.caption).fadeIn(1000);
 				}else {
 					this.wrapper.stop().animate( obj, {duration: this.settings.duration, easing:this.settings.easing} );
 				}
@@ -342,3 +348,4 @@ function handler(event) {
 		}
 	})
 })(jQuery)
+

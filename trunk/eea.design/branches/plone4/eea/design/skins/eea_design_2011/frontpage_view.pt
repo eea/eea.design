@@ -54,8 +54,8 @@
                             </div>
                     </div>   
                             <div class="controls">
-                            <a  href="#" id="prev-promo">Previous</a>
-                            <a  href="#" id="next-promo">Next</a>
+                            <a  href="#" id="next-promo"></a>
+                            <a  href="#" id="prev-promo"></a>
                             <a  href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
                             </div>
                     <!-- end promotions_gallery_slideshow -->

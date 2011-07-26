@@ -180,7 +180,8 @@
                                 tal:attributes="href hl/getUrl"
                                 tal:content="hl/getNewsTitle">
                                 Highlight Title</a></h3>
-                            <span class="date" 
+                        Author: <span tal:define="author hl/Creator|string: EEA" tal:content="author" />   
+                        Published: <span  
                                 tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
                                 tal:content="date">07 Dec 2005 </span>
                     </div>
