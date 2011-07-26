@@ -10,7 +10,7 @@
                 var cur_tab_val = $("#tabs a.current").text();
                 var address = window.location.href + "ajax";
                 var news = $(".highlights").filter( function(index) { 
-                     if ( this.style.display === "block") { return this; } 
+                     return this.style.display === "block"; 
                 });
                 news.load( address, {topic: sel_value, tab: cur_tab_val },  function(html) {
                     news.tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});

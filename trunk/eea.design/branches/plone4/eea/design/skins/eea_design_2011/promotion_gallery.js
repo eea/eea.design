@@ -178,12 +178,17 @@ function handler(event) {
 			if( this.settings.toggleElement ) {
                 var gallery = this;
                 $(this.settings.toggleElement).toggle( function() {
-                    // first time the button is to call stop
+                    // first time the button is cliked to stop the auto start
+                    // of the gallery
                     gallery.stop();
                     this.innerHTML = "Play";
+                    // return false because we want to cancel the default
+                    // behaviour of the event in our case the click event
+                    return false;
                 }, function() {
-			        gallery.play( 1000,'next', true );
+			        gallery.play( 1000, 'next', true );
                     this.innerHTML = "Pause";
+                    return false;
                 });
             } 
 			
@@ -266,10 +271,10 @@ function handler(event) {
 			for( var action in objects ){ 
 				switch (action.toString() ){
 					case 'next':
-						objects[action].click( function() { self.next( true) } );
+						objects[action].click( function() { self.next( true); return false; } );
 						break;
 					case 'previous':
-						objects[action].click( function() { self.previous( true) } );
+						objects[action].click( function() { self.previous( true); return false; } );
 						break;
 				}
 			}
