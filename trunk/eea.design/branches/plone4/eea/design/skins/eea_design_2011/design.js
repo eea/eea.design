@@ -2,11 +2,17 @@ var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
 $(document).ready(function() {
-    // Move the cross-site-top above the visual-portal-wrapper
+        // Move the cross-site-top above the visual-portal-wrapper
         var cross_site_top = $("#cross-site-top").detach(),
             portal_siteactions = $("#portal-siteactions").detach();
         portal_siteactions.prependTo(cross_site_top);
         cross_site_top.prependTo("body");
+        
+        // remove the pressroom and about eea and assign them to a new ul
+        // to keep them floated right
+        var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>");
+        $("#portaltab-pressroom, #portaltab-abouteea").detach().appendTo(secundary_portaltabs);
+        secundary_portaltabs.appendTo("#portal-globalnav");
 
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;

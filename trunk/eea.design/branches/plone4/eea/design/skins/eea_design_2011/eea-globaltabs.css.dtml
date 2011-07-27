@@ -163,12 +163,11 @@
     width:15em;
 }
 
-#portaltab-abouteea {
+#secundary-portaltabs{
     float: right;
+    display: inline;
 }
-#portaltab-pressroom {
-    margin-left: 8em;
-} 
+
 /*#portal-globalnav {*/
     /*clear: both;*/
     /*font-size: 80%;*/

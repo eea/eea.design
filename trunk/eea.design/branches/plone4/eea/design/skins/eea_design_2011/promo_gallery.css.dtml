@@ -10,7 +10,7 @@
 .promo-item-desc {
     z-index: 100;
     position: absolute;
-    top: 240px;
+    top: 220px;
     left: 0px;
     width: 380px;
     color: white;
@@ -118,6 +118,8 @@
 	padding:5px 6px 0;
 	margin:0;
     font-weight: normal;
+    height: 71px;
+    overflow: hidden;
 }
 
 #promo-navigator li div{
@@ -136,7 +138,7 @@
 	width:60px;
     margin: 0px 7px 0px 5px;
     float: left;
-    padding: 10px 1px 5px 5px;
+    padding: 10px 1px 21px 5px;
 }
 
 #promo-navigator li.active img{
