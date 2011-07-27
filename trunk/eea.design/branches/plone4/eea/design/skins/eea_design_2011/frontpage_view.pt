@@ -46,7 +46,8 @@
             
                         </div>
                     </div>
-
+                        
+                    <div id="highlights-area" class="column-area">
                     <!-- promotions_gallery_slideshow-->
                     <div id="promotions">
                             <div metal:use-macro="here/frontpage_macros/macros/promo-gallery">
@@ -59,8 +60,6 @@
                             <a  href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
                             </div>
                     <!-- end promotions_gallery_slideshow -->
-                        
-                    <div id="highlights-area" class="column-area">
 
                         <div id="news-header">
                         <h2> What's new</h2>

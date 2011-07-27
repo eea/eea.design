@@ -61,23 +61,18 @@
                 tal:repeat="hl highlights">
 		
         <!-- accordion panels -->
-	    <div class="panel">
+	    <div class="panel" tal:define="even repeat/hl/even" tal:attributes="class python: 'panel even' if even else 'panel'">
 	       <p class="noPrint"
 	       		tal:content="hl/getNewsTitle">
                 Highlight Title</p>
-	   	     <p class="date" 
+            <p class="date" 
                   tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
-	    	  tal:content="date">07 Dec 2005 </p> 
+                  tal:content="string: Published: ${date}">07 Dec 2005 </p> 
         </div>
         <!-- end_accordion panels -->
 
      <div class="highlightMiddle">
   
-	    <h3 class="highlight">
-	       <a href="#" class="noPrint"
-	       		tal:attributes="href hl/getUrl"
-	       		tal:content="hl/getNewsTitle">
-	       			Highlight Title</a></h3>
           <!-- teaser and read more -->
           <metal:teaser define-macro="teaser">
             <div class="figure-left">
@@ -88,6 +83,12 @@
                    <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
                  </tal:image>
             </div>
+
+	    <h3 class="highlight">
+	       <a href="#" class="noPrint"
+	       		tal:attributes="href hl/getUrl"
+	       		tal:content="hl/getNewsTitle">
+	       			Highlight Title</a></h3>
 
 	   	     <span class="date" 
                   tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 

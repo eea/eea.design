@@ -57,8 +57,8 @@ body.frontpage ul {
 }
 
 #highlights-block h3 {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em 0;
+    font-weight: normal;
 }
 
 #highlights-block h2 { 
@@ -66,6 +66,7 @@ body.frontpage ul {
     margin: 0.25em 0;
     border: none;
     clear: left;
+    color: #000;
 }
 
 #highlights-block .shortNewsTitle {
@@ -73,10 +74,13 @@ body.frontpage ul {
 }
 
 #highlights-block .date {
-    font-size: x-small;
-    color: #FFF;
+    font: normal  x-small "Verdana";
+    color: #808285;
 }
 
+.figure-left {
+    clear: left;
+}
 /* don't show dates on articles on frontpage as they are not like news */
 #articles-high .date {
     visibility:hidden;
@@ -152,7 +156,7 @@ body.frontpage ul {
     width: 38%;
     margin: 0 0;
     padding: 0 1em 1em 0;
-    background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
+    /* background: white url(shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */ */
 }
 
 #articles-area {
@@ -162,7 +166,7 @@ body.frontpage ul {
 
 #highlights-area {
     float: left;
-    margin-top: 2em;
+    width: 585px;
 }
 
 body.frontpage .documentActions,
@@ -205,9 +209,9 @@ body.frontpage #portal-columns {
 
 /* Frontpage news and articles
 ******************************************************************************/
-
 .highlightMiddle {
-    margin: 0 0em 1em 1em;
+    padding: 2em 1.7em 1em 1.7em;
+    background: #F7F7F7;
 }
 
 .highlightHigh {
@@ -225,6 +229,27 @@ body.frontpage #portal-columns {
     margin-top: 0;
 }
 
+.panel .noPrint {
+    margin: 0px !important;
+}
+
+p a.noPrint {
+    color: #346f83;
+    border: 0px !important;
+    padding: 5px 0px 5px 25px;
+    background: url("readme_more.png") no-repeat top left;
+}
+
+.highlightMiddle a:hover, .highlightMiddle p a:hover {
+
+    border-bottom: 1px #A6BACD solid;
+}
+
+
+.noPrint a:hover, .noPrint p a:hover {
+
+    border-bottom: 1px #A6BACD solid;
+}
 #highlights-block .highlightHigh .relatedLinks {
     font-size: 160%;
 }
@@ -239,15 +264,19 @@ body.frontpage #portal-columns {
     padding-right: 1em;
 }
 
-div.panel, div.current {
-    background: #F6F6F6;
+div.panel, div.even  {
+    background: #E6E7E8;
+    color: #346f83; 
     margin: 0;
-    padding: 5px 15px;
-    font-size: 14px;
+    padding: 15px 15px 10px 15px;
+    font-size: 125%;
     font-weight: normal;
     border: 1px solid white;
     border-bottom: 1px solid #DDD;
     cursor: pointer;
+}
+div.even {
+    /* background: #f7f7f7 !important; */
 }
 
 div.current {
@@ -257,6 +286,7 @@ div.current {
 ul#tabs {
     background: #2C8DA2;
     border-bottom: 1px solid #666;
+    border-radius: 5px 5px 0px 0px;
     height: 30px;
     list-style: none;
     margin: 0 !important;
@@ -275,17 +305,18 @@ ul#tabs li a {
     color: #FFF;
     border: 0px;
     text-decoration: none;
-    padding: 1em;
+    padding: 11px 10px 10px 10px;
 }
 
 ul#tabs li a.current, ul#tabs li a:hover {
-    background: #FFF;
+    background: #F7F7F7;
     color: #2D8EA3;
     
 }
 
 #news-header select {
     margin-left: 30px;
+    color: #346f83;
 }
 
 #news-header h2 {
@@ -294,10 +325,7 @@ ul#tabs li a.current, ul#tabs li a:hover {
 
 #news-header {
     height: 30px;
-}
-
-#highlights-area {
-    height: 610px;
+    margin-top: 2em;
 }
 
 #forum, #community, #mobile {
