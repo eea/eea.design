@@ -25,6 +25,13 @@
 
     <browser:page
         for="*"
+        name="format_catalog_metadata"
+        class=".batching.FormatCatalogMetadata"
+        permission="zope.Public"
+        />
+
+    <browser:page
+        for="*"
         template="templates/navigation.pt"
         name="navigation_macros"
         permission="zope.Public"
