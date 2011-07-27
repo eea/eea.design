@@ -21,7 +21,7 @@
 
                         <!-- featured and spotlight areas -->
                         <div id="featured-box">
-                          <a href="articles" class="archives">archive</a>
+                          <a href="articles" class="archives">Archive</a>
                           <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured articles</h2>
                           <div metal:use-macro="here/frontpage_macros/macros/highArticles">
                             item title, description and image

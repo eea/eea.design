@@ -47,8 +47,6 @@ body.frontpage ul {
 }
 
 #highlights-block .column-title {
-    border-bottom: 1px solid #e0ded5;
-    background-image: url(portlet_bg.png);
     padding: 1em 0 1em 0.5em;
 }
 
@@ -79,16 +77,22 @@ body.frontpage ul {
 }
 
 .figure-left {
-    clear: left;
+    /* clear: left; */
+    float: left;
 }
 /* don't show dates on articles on frontpage as they are not like news */
 #articles-high .date {
-    visibility:hidden;
+    /* visibility:hidden; */
 }
 
 .archives {
     float: right;
     margin: 15px;
+}
+
+a.archives {
+    color: #869936;
+    border-bottom: 1px solid #869936;
 }
 
 /* Frontpage promotions
@@ -327,7 +331,18 @@ ul#tabs li a.current, ul#tabs li a:hover {
     height: 30px;
     margin-top: 2em;
 }
+#featured-box, #spotlight-box {
+    background: #E6E7E8;
+    padding: 0px 20px 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 2.5em;
+}
 
+#spotlight-box  img, #featured-box img {
+    padding-right: 10px;
+    width: 180px;
+    height: 101px;
+}
 #forum, #community, #mobile {
     height: 100px;
     background: #e6e7e8;

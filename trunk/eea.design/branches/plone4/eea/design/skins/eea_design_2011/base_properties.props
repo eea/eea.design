@@ -1,0 +1,70 @@
+title:string=eea.design's color, font, logo and border defaults
+
+plone_skin:string=EEADesign2006
+
+logoName:string=logo.gif
+
+fontFamily:string=Lucida Grande, Verdana, Lucida, Helvetica, Arial, sans-serif
+fontBaseSize:string=69%
+fontColor:string=Black
+fontSmallSize:string=85%
+
+#different headings colors
+linkHeadingColor:string=#346f83
+headingColor:string=#2d749c
+headingFontFamily:string= Verdana, Lucida, Helvetica, Arial, sans-serif
+
+backgroundColor:string=transparent
+
+#general divisions colors
+lightGreyDivisionColor:string=#cccccc
+
+#general bgc for boxes and portlets
+lightBackgroundColor:string=#ecf3d0
+mediumBackgroundColor:string=#e9efcd
+darkBackgroundColor:string=#95b229
+greyBackgroundColor:string=#eeeeee
+headerBackgroundColor:string=#F0F4F5
+
+#top navigation colors
+tabBackgroundColor:string=#ebf2e4
+
+#link colors
+linkColor:string=#2a6495
+linkActiveColor:string=#f5821f
+linkVisitedColor:string=#8e004d
+linkHoverColor:string=#8e004d
+linkHoverBGColor:string=#e9efcd
+linkUnderlineColor:string=#a6bacd
+linkUnderlineHoverColor:string=#8e004d
+
+borderWidth:string=1px
+borderStyle:string=solid
+borderStyleAnnotations:string=dashed
+
+globalBorderColor:string=#cccccc
+globalGreenBorderColor:string=#9db481
+globalBackgroundColor:string=#e9efcd
+globalFontColor:string=#000000
+
+
+contentViewBorderColor:string=#74ae0b
+contentViewBackgroundColor:string=#cde2a7
+contentViewFontColor:string=#578308
+
+inputFontColor:string=Black
+
+textTransform:string=lowercase
+
+evenRowBackgroundColor:string=#f6f6f6
+oddRowBackgroundColor:string=transparent
+
+notifyBorderColor:string=#ffa500
+notifyBackgroundColor:string=#febe86
+
+discreetColor:string=#76797c
+helpBackgroundColor:string=#ffffe1
+
+portalMinWidth:string=70em
+columnOneWidth:string=16em
+columnTwoWidth:string=16em

@@ -141,7 +141,36 @@
                 tal:repeat="hl highlights">
 
           <!-- teaser and read more -->
-          <metal:teasers use-macro="here/frontpage_macros/macros/teaser" />
+          <!--<metal:teasers use-macro="here/frontpage_macros/macros/teaser" />-->
+
+            <div class="figure-left">
+                      <tal:image define="figure hl/media|nothing;
+                               figure_link hl/getUrl;
+                               figure_scale string:mini;"
+                             tal:condition="figure">
+                        <tal:image tal:define="figure hl/media|nothing;
+                        figure_link hl/getUrl;
+                        figure_scale string:mini;
+                        figure_title figure/Title|nothing;
+                        "
+                        tal:condition="figure">
+                            <span tal:replace="structure figure/getScale"> </span> 
+                        </tal:image>
+                 </tal:image>
+            </div>
+
+	    <h3 class="highlight">
+	       <a href="#" class="noPrint"
+	       		tal:attributes="href hl/getUrl"
+	       		tal:content="hl/getNewsTitle">
+	       			Highlight Title</a></h3>
+
+	   	     <span class="date" 
+                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+	    	  tal:content="date">07 Dec 2005 </span> 
+            <p tal:content="hl/getTeaser">teaser</p>
+            <p><a href="#" class="noPrint"
+                    tal:attributes="href hl/getUrl">Read more</a></p>
           <!-- end teaser and read more -->
     </metal:items>
 </div>
