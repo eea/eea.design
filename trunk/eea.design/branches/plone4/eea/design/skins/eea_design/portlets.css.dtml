@@ -172,7 +172,7 @@ dd.portletFooter a {
     text-decoration: none;
 }
 
-.portlet a:visited {
+.portlet a:visited, #content .portlet a{
     color:&dtml-linkColor;;
 }
 
@@ -195,6 +195,9 @@ dd.portletFooter a:visited {
     text-decoration: none;
 }
 
+#content img {
+    vertical-align: middle;
+}
 
 /* Rounded plone tab navigation with images -
 ** probably this style will be removed
@@ -574,9 +577,12 @@ a.noHover {
    border: none;
 }
 
-.portlet .date {
+#content .portlet .date {
    font-weight: bold;
    font-size: x-small;
+   margin: 0px;
+   padding-top: 0px;
+   padding-bottom: 0px;
 }
 
 .portlet dt.portletItem {
@@ -607,9 +613,10 @@ a.noHover {
    font-weight: normal;
 }
 
-.portlet-rss .portletFooter {
+.portlet-rss .portletFooter, #content .portlet-rss .portletFooter {
    padding-top: 0.7em;
    padding-bottom: 0;
+   margin:0;
 }
 
 #portlet-subscribtion {

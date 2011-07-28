@@ -57,7 +57,7 @@
                      id="email"  
                      alt="Email address"
                      value="Enter email"
-                     size="20" 
+                     size="17" 
 
                      i18n:attributes="alt label_email;" />
 
