@@ -37,9 +37,17 @@
                         <!-- end featured and spotlight areas -->
 
                         <!-- community  divs -->
-                        <div id="forum"></div>
-                        <div id="community"></div>
-                        <div id="mobile"></div>
+                        <div id="forum">
+                            <a id="forum-link" href="forum"></a>
+                        </div>
+                        <div id="community">
+                            <a id="facebook" href="http://facebook.com"></a>
+                            <a id="youtube" href="http://youtube.com"></a>
+                            <a id="twitter" href="http://twitter.com"></a>
+                        </div>
+                        <div id="mobile">
+                            <a id="mobile-link" href="http://mobile.eea.europa.eu"></a>
+                        </div>
                         <!-- end community divs -->
                         
                         <div class="portletFooter">
@@ -85,8 +93,8 @@
                         </ul>
                         <!-- end_tabs -->
 
-                        <div metal:use-macro="here/frontpage_macros/macros/high">
-                            Top Highlights
+                        <div metal:use-macro="here/frontpage_macros/macros/news">
+                            News highlights
                         </div>
                         <div metal:use-macro="here/frontpage_macros/macros/middle">
                             Middle Highlights

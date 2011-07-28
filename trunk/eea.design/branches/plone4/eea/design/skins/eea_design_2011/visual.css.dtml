@@ -279,6 +279,7 @@ class figure-right or figure-left */
 }
 .figure-title, .figure-nr {
     font-weight: bold;
+    display: none;
 }
 .figure-image {
      text-align: center;

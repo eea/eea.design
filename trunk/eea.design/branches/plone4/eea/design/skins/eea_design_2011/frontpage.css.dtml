@@ -352,4 +352,50 @@ ul#tabs li a.current, ul#tabs li a:hover {
     border-radius: 5px;
     margin-bottom: 2.5em;
 }
+#forum {
+    background: #E6E7E8 url("enquiry_service.png") no-repeat center center;
+}
+
+#community {
+    background: #E6E7E8 url("community.png") no-repeat center center;
+}
+
+#mobile {
+    background: #E6E7E8 url("mobile.png") no-repeat center center;
+}
+
+#facebook {
+    padding: 28px 32px;
+    position: relative;
+    top: 45px;
+    left: 58px;
+}
+
+#youtube {
+    position: relative;
+    padding: 30px;
+    left: 94px;
+    top: 44px
+}
+
+#twitter {
+    position: relative;
+    padding: 30px 35px;
+    top: 45px;
+    left: 125px;
+}
+
+#forum-link {
+    position: relative;
+    padding: 40px 100px;
+    top: 44px;
+    left: 87px;
+}
+
+#mobile-link {
+    position: relative;
+    padding: 30px 120px;
+    top: 40px;
+    left: 67px;
+}
 /* </dtml-with> */

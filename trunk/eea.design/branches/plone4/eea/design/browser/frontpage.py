@@ -62,6 +62,7 @@ class Frontpage(BrowserView):
         self.noOfHigh = frontpage_properties.getProperty('noOfHigh', 3)
         self.noOfMedium = frontpage_properties.getProperty('noOfMedium', 4)
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
+        self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
         self.now = DateTime()
 
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
@@ -87,6 +88,23 @@ class Frontpage(BrowserView):
                 highlights.append ( self._getTeaserMedia(high, scale) )
 
         return highlights[:self.noOfMedium]
+
+    def getNews(self, scale = 'mini'):
+        interfaces = ('Products.EEAContentTypes.content.interfaces.IExternalHighlight',)
+        visibilityLevel = [ 'top', 'middle', 'low' ]
+        result =  self._getItemsWithVisibility(visibilityLevel, interfaces = interfaces)[:self.noOfNews]
+        highlights = [] 
+        for high in result:
+            highlights.append ( self._getTeaserMedia(high, scale) )
+        return highlights
+
+    def getArticles(self, products = "Article", scale = 'mini'):
+        visibilityLevel = [ 'top', 'middle', 'low' ]
+        result =  self._getItemsWithVisibility(visibilityLevel, products)[:self.noOfNews]
+        highlights = [] 
+        for high in result:
+            highlights.append ( self._getTeaserMedia(high, scale) )
+        return highlights
 
     def getHighArticles(self):
         """ return a defined number of high visibility articles items """
@@ -304,7 +322,7 @@ class Frontpage(BrowserView):
                 result['media']['getScale'] = media.getScale(scale).tag()
         return result
 
-    def _getItemsWithVisibility(self, visibilityLevel, portaltypes, interfaces=None):
+    def _getItemsWithVisibility(self, visibilityLevel, portaltypes='', interfaces=''):
         """ get items of certain content types and/or interface and certain visibility level. """
         # TODO: add functionality for optional param interfaces
         query = { 
@@ -315,4 +333,8 @@ class Frontpage(BrowserView):
                 'sort_order'         : 'reverse',
                 'effectiveRange'     : self.now
               }
-        return self.catalog.searchResults(query)
+        if interfaces:
+            query['object_provides'] = interfaces
+            return self.catalog.searchResults(query)
+        else:
+            return self.catalog.searchResults(query)

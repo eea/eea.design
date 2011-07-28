@@ -1,6 +1,7 @@
 (function($) {
     $(function() { 
-        $("#highlights-middle").tabs("#highlights-middle div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
+        /* $("#highlights-middle").tabs("#highlights-middle div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'}); */
+        $("#highlights-high, #highlights-middle").tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
         $("ul#tabs").tabs("> .highlights");
         $("#topic-selector").change(
             function displayResult() {

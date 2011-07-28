@@ -1,21 +1,27 @@
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       i18n:domain="eea" tal:omit-tag="">
-<div metal:define-macro="high"
+<div metal:define-macro="news"
 		id="highlights-high" 
 		class="highlights"
-		tal:define="highlights frontpage_view/getHigh;
+		tal:define="highlights frontpage_view/getNews;
 		            plone_view nocall:plone_view|here;">
 	
-    <div class="highlightHigh" metal:define-macro="highnews"
-    		tal:condition="highlights" 
-    		tal:repeat="hl highlights">
-         <div class="visualPadding" style="padding:0 1em 0;">
-          <h2 class="highlight"  style="font-size:150%;">
-	       <a href="#" class="noPrint"
-                  tal:attributes="href hl/getUrl"
-                  tal:content="hl/getNewsTitle">
-	       			Highlight Title</a></h2>
+  <metal:news tal:condition="highlights"
+                tal:repeat="hl highlights">
+
+        <!-- accordion panels -->
+	    <div class="panel" tal:define="even repeat/hl/even" tal:attributes="class python: 'panel even' if even else 'panel'">
+	       <p class="noPrint"
+	       		tal:content="hl/getNewsTitle">
+                Highlight Title</p>
+            <p class="date" 
+                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+                  tal:content="string: Published: ${date}">07 Dec 2005 </p> 
+        </div>
+        <!-- end_accordion panels -->
+    <div class="highlightMiddle" metal:define-macro="highnews">
+         <div>
    
             <div class="figure-left">
                       <tal:image tal:define="figure hl/media|nothing;
@@ -25,6 +31,11 @@
                    <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
                  </tal:image>
             </div>
+          <h3 class="highlight"  style="font-size:150%;">
+	       <a href="#" class="noPrint"
+                  tal:attributes="href hl/getUrl"
+                  tal:content="hl/getNewsTitle">
+	       			Highlight Title</a></h3>
 
 	
 	   <span class="date" 
@@ -32,15 +43,19 @@
               tal:content="date"> 07 Dec 2005 </span>
            <p class="teaser">
 	       <span tal:replace="structure hl/getTeaser">Teaser</span>
+              </p>
+           <p>
                <a href="" title=""
                   tal:attributes="href hl/getUrl;
-	                          title hl/getNewsTitle" class="moreLink"
-                  i18n:translate="box_morelink">More</a>
-               <br clear="all" /></p>
+	                          title hl/getNewsTitle" class="noPrint"
+                  i18n:translate="box_morelink">Read More</a>
+          </p>
          </div>
         <div class="visualClear"><!-- --></div>
-     </div>
+    </div>
+    </metal:news>
 </div>
+
 
 <div metal:define-macro="highArticles" 
 		id="articles-high" 
@@ -53,7 +68,7 @@
 <div metal:define-macro="middle" 
         class="highlights"
 		id="highlights-middle" 
-		tal:define="highlights frontpage_view/getMedium;
+		tal:define="highlights frontpage_view/getArticles;
 		            plone_view nocall:plone_view|here">
 
   <metal:items  define-macro="middlenews"
