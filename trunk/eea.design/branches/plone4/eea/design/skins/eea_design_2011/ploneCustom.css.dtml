@@ -505,8 +505,10 @@ dl a:hover, dd a:hover, dt a:hover {
 }
 
 a.moreLink {
-background: url(&dtml-portal_url;/bcpil.gif) no-repeat center right;
-padding-right: 1em;
+    color: #346f83;
+    border: 0px !important;
+    padding: 5px 0px 5px 25px;
+    background: url("readme_more.png") no-repeat top left;
 }
 
 /* End links */
