@@ -454,6 +454,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     border:#aaaaaa 1px dotted;
     padding:0px;
     text-align:center;
+    margin:0px;
 }
 
 #related-multimedia-top dd.embeddedMedia {
@@ -1554,9 +1555,9 @@ body.section-soer-draft #visual-portal-wrapper {
 
 /* ichimdav columns.css slider-definitions */
 
-div.width-3\3a 4 { width:    77.875% }
-div.position-1\3a 4 {margin-left:    -77.875%;}
-div.width-1\3a 4 { width:    21.75%; } /* .width-1:4 */
+div.width-3\3a 4 { width:    84.875% }
+div.position-1\3a 4 {margin-left:    -84.875%;}
+div.width-1\3a 4 { width:    15.75%; } /* .width-1:4 */
 div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 /* padding - thanks to the w3c box model :P */
 

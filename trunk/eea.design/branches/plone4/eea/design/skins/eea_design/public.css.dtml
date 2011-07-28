@@ -271,7 +271,7 @@ dl dt span.summary a {
 
 dl.portlet {
     margin: 0 0 1em;
-    font-size: 80%;
+/*    font-size: 80%;*/
 }
 dl.portletError {
     background-color: #FFA500;
@@ -395,7 +395,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 #content {
     line-height: 1.5em;
     clear: both;
-    font-size: 85%;
+/*    font-size: 85%;*/
     margin: 1em 0.25em 2em 0.25em;
 }
 
