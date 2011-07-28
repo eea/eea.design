@@ -237,13 +237,6 @@ body.frontpage #portal-columns {
     margin: 0px !important;
 }
 
-p a.noPrint {
-    color: #346f83;
-    border: 0px !important;
-    padding: 5px 0px 5px 25px;
-    background: url("readme_more.png") no-repeat top left;
-}
-
 .highlightMiddle a:hover, .highlightMiddle p a:hover {
 
     border-bottom: 1px #A6BACD solid;
