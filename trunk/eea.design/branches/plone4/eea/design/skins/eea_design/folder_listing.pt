@@ -68,7 +68,12 @@
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
             <tal:block tal:condition="python: not isAnon or not not_show_empty or not getattr(item, 'is_empty', False)" 
-                       tal:define="item_url item/getURL|item/absolute_url;
+                       tal:define="
+                                   item_object item/getObject;
+                                   urlview item_object/@@url;
+                                   item_absolute_url item_object/absolute_url;
+                                   item_url urlview/listing_url;
+
                                    item_id item/getId|item/id;
                                    item_title_or_id item/pretty_title_or_id;
                                    item_description item/Description;
@@ -77,7 +82,7 @@
                                    item_modified item/ModificationDate;
                                    item_published item/EffectiveDate|item/getEffectiveDate;
                                    item_created item/CreationDate;
-                                    plone_view context/@@plone;
+                                   plone_view context/@@plone;
                                    item_icon python:plone_view.getIcon(item);
                                    item_type_class python:'contenttype-' + normalizeString(item_type);
                                    item_wf_state item/review_state|python: context.portal_workflow.getInfoFor(item, 'review_state', '');

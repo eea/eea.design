@@ -63,7 +63,7 @@
                                        item_start item/start/ISO|item/StartDate|nothing;
                                        item_end item/end/ISO|item/EndDate|nothing;
                                        item_object item/getObject;
-                                        urlview item_object/@@url;
+                                       urlview item_object/@@url;
                                        item_absolute_url item_object/absolute_url;
                                        item_url urlview/listing_url;
                                        item_css_class urlview/css_class;
