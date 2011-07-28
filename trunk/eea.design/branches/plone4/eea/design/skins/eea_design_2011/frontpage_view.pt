@@ -19,16 +19,16 @@
                     <div id="articles-area" class="column-area">
 
 
-                        <!-- featured and spotlight areas -->
-                        <div id="featured-box">
+                        <!-- featured and spotlight areas NEW -->
+                        <div id="featured-box" class="roundedCorners">
                           <a href="articles" class="archives">Archive</a>
-                          <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured articles</h2>
+                          <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured article</h2>
                           <div metal:use-macro="here/frontpage_macros/macros/highArticles">
                             item title, description and image
                           </div>
                         </div>
 
-                        <div id="spotlight-box">
+                        <div id="spotlight-box" class="roundedCorners">
                             <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
                             <div metal:use-macro="here/frontpage_macros/macros/highArticles">
                                 item title, description and image
@@ -41,9 +41,9 @@
                             <a id="forum-link" href="forum"></a>
                         </div>
                         <div id="community">
-                            <a id="facebook" href="http://facebook.com"></a>
-                            <a id="youtube" href="http://youtube.com"></a>
-                            <a id="twitter" href="http://twitter.com"></a>
+                            <a id="facebook" class="roundedCorners" href="http://facebook.com"></a>
+                            <a id="youtube" class="roundedCorners" href="http://youtube.com"></a>
+                            <a id="twitter" class="roundedCorners" href="http://twitter.com"></a>
                         </div>
                         <div id="mobile">
                             <a id="mobile-link" href="http://mobile.eea.europa.eu"></a>
