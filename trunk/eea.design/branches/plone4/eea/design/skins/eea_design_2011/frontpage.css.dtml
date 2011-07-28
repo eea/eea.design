@@ -29,7 +29,7 @@ body.frontpage ul {
 }
 
 #main-content {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 #highlights-block h1 a,
