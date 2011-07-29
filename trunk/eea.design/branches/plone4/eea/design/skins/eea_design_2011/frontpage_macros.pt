@@ -26,7 +26,7 @@
             <div class="figure-left">
                       <tal:image tal:define="figure hl/media|nothing;
                                figure_link hl/getUrl;
-                               figure_scale string:thumb;"
+                               figure_scale string:mini;"
                              tal:condition="figure">
                    <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
                  </tal:image>
@@ -47,7 +47,7 @@
            <p>
                <a href="" title=""
                   tal:attributes="href hl/getUrl;
-	                          title hl/getNewsTitle" class="noPrint"
+	                          title hl/getNewsTitle" class="moreLink"
                   i18n:translate="box_morelink">Read More</a>
           </p>
          </div>
@@ -63,6 +63,23 @@
 		tal:define="highlights frontpage_view/getHighArticles;
 		            plone_view nocall:plone_view|here;">
     <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
+</div>
+
+<div metal:define-macro="publications" 
+		id="articles-high" 
+		class="highlights"
+		tal:define="folderContents frontpage_view/getPublications;
+        plone_view nocall:plone_view|here;">
+
+    <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+  <!--<metal:items  -->
+  <!--              tal:condition="highlights"-->
+  <!--              tal:repeat="hl highlights">-->
+  <!--              <span tal:content="hl/getCoverImage|nothing" />-->
+  <!--              <p tal:content="hl/description">Description</p>-->
+  <!--              <a  tal:attributes="href hl/absolute_url; class string: moreLink">Read More</a>-->
+  <!--</metal:items>-->
+
 </div>
 
 <div metal:define-macro="middle" 
@@ -93,7 +110,7 @@
             <div class="figure-left">
                       <tal:image define="figure hl/media|nothing;
                                figure_link hl/getUrl;
-                               figure_scale string:thumb;"
+                               figure_scale string: mini;"
                              tal:condition="figure">
                    <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
                  </tal:image>
@@ -109,7 +126,7 @@
                   tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
 	    	  tal:content="date">07 Dec 2005 </span> 
             <p tal:content="hl/getTeaser">teaser</p>
-            <p><a href="#" class="noPrint"
+            <p><a href="#" class="moreLink"
                     tal:attributes="href hl/getUrl">Read more</a></p>
            </metal:teaser>
            <!-- end teaser and read more -->
@@ -184,7 +201,7 @@
                   tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
 	    	  tal:content="date">07 Dec 2005 </span> 
             <p tal:content="hl/getTeaser">teaser</p>
-            <p><a href="#" class="noPrint"
+            <p><a href="#" class="moreLink"
                     tal:attributes="href hl/getUrl">Read more</a></p>
           <!-- end teaser and read more -->
     </metal:items>
@@ -263,40 +280,28 @@
 <!-- end promotion_gallery macro -->
 
 <div metal:define-macro="multimedia" 
-		class="highlightMiddle shortNews"
+		class="highlights"
 		id="multimedia-highlights" 
-		tal:define="vids frontpage_view/getMultimedia;"
-                tal:condition="vids|nothing">
-		    
-    <tal:defines  
-        tal:define="first_vid python:vids[0];
- 	            three_other python:vids[1:];">
-    <h2 class="column-title" i18n:domain="eea" i18n:translate="inthespotlight">In the spotlight</h2>
-    <h3 class="shortNewsTitle visualPadding">
-        <a class="video-fancybox"
-            href="#"
-            tal:content="first_vid/title"
-            tal:attributes="href first_vid/url">
-        </a>
-    </h3>
+		tal:define="folderContents frontpage_view/getMultimedia;"
+                tal:condition="folderContents|nothing">
     <div class="visualPadding">
         <ul>
-            <metal:items tal:repeat="vid three_other" >
-                <li class="vidthumb" tal:define="last repeat/vid/end" tal:attributes="class python:test(last, 'vidthumb last', 'vidthumb')">
-                    <a class="video-fancybox" href="" tal:attributes="href vid/listing_url">
-                        <img src="" tal:attributes="src string:${vid/url}/image_wide; title vid/title" />
-                    </a>
-                </li>
-            </metal:items>
+
+    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+            <!--<metal:items tal:repeat="vid vids" >-->
+            <!--    <li class="vidthumb" tal:define="last repeat/vid/end" >-->
+            <!--        <div class="figure-left">-->
+            <!--        <a class="video-fancybox" href="" tal:attributes="href vid/listing_url">-->
+            <!--            <img src="" tal:attributes="src string:${vid/url}/image_wide; title vid/title" />-->
+            <!--        </a>-->
+            <!--        <a href="" tal:attributes="href vid/listing_url; class string: video-fancybox center" tal:content="vid/title">Title</a>-->
+            <!--        <span class="visualClear" />-->
+            <!--        </div>-->
+            <!--    </li>-->
+            <!--</metal:items>-->
         </ul>
-        <div id="big_vid">
-            <a class="video-fancybox" href="" tal:attributes="href first_vid/listing_url">
-                <img src="" tal:attributes="src string:${first_vid/url}/image_wide; title first_vid/title" />
-            </a>
-        </div>
         <div class="visualClear"><!-- --></div>
     </div>
-    </tal:defines>
 </div>
 
 

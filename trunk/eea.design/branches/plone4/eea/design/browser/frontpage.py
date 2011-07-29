@@ -27,7 +27,7 @@
 __author__ = """unknown <unknown>"""
 __docformat__ = 'plaintext'
 
-from zope.component import queryMultiAdapter, getMultiAdapter
+from zope.component import queryMultiAdapter #, getMultiAdapter
 from eea.cache import cache
 
 from Acquisition import aq_inner
@@ -63,6 +63,7 @@ class Frontpage(BrowserView):
         self.noOfMedium = frontpage_properties.getProperty('noOfMedium', 4)
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
         self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
+        self.noOfMultimedia = frontpage_properties.getProperty('noOfMultimedia', 6)
         self.now = DateTime()
 
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
@@ -89,22 +90,29 @@ class Frontpage(BrowserView):
 
         return highlights[:self.noOfMedium]
 
-    def getNews(self, scale = 'mini'):
-        interfaces = ('Products.EEAContentTypes.content.interfaces.IExternalHighlight',)
+    def getNews(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'mini'):
         visibilityLevel = [ 'top', 'middle', 'low' ]
-        result =  self._getItemsWithVisibility(visibilityLevel, interfaces = interfaces)[:self.noOfNews]
+        result =  self._getItemsWithVisibility(visibilityLevel,  portaltypes)[:self.noOfNews]
         highlights = [] 
         for high in result:
             highlights.append ( self._getTeaserMedia(high, scale) )
         return highlights
 
-    def getArticles(self, products = "Article", scale = 'mini'):
+    def getArticles(self, portaltypes = "Article", scale = 'mini'):
         visibilityLevel = [ 'top', 'middle', 'low' ]
-        result =  self._getItemsWithVisibility(visibilityLevel, products)[:self.noOfNews]
+        result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfNews]
         highlights = [] 
         for high in result:
             highlights.append ( self._getTeaserMedia(high, scale) )
         return highlights
+
+    def getPublications(self, portaltypes = "Report", scale = 'mini'):
+        result =  self._getItemsWithVisibility(portaltypes  = portaltypes)[:self.noOfNews]
+        #highlights = [] 
+        #for high in result:
+        #    highlights.append( high.getObject())
+        #return highlights
+        return result
 
     def getHighArticles(self):
         """ return a defined number of high visibility articles items """
@@ -258,19 +266,19 @@ class Frontpage(BrowserView):
             'effectiveRange' : self.now,
         }
         result = self.catalog(query)
-        result = [i for i in result if not IFlashAnimation.providedBy(i.getObject())]
-
-        output = []
-        for brain in result[:4]:
-            obj = brain.getObject()
-            info = {
-                'title': brain.Title,
-                'url': brain.getURL(),
-                'listing_url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
-            }
-            output.append(info)
-        
-        return output
+        result = [i for i in result if not IFlashAnimation.providedBy(i.getObject())][:self.noOfMultimedia]
+        return result
+        #output = []
+        #for brain in result[:4]:
+        #    obj = brain.getObject()
+        #    info = {
+        #        'title': brain.Title,
+        #        'url': brain.getURL(),
+        #        'listing_url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
+        #    }
+        #    output.append(info)
+        #
+        #return output
 
     def _getTeaserMedia(self, high, scale):
         obj = high.getObject()
@@ -322,10 +330,10 @@ class Frontpage(BrowserView):
                 result['media']['getScale'] = media.getScale(scale).tag()
         return result
 
-    def _getItemsWithVisibility(self, visibilityLevel, portaltypes='', interfaces=''):
+    def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = ''):
         """ get items of certain content types and/or interface and certain visibility level. """
         # TODO: add functionality for optional param interfaces
-        query = { 
+        query = {
                 'portal_type'        : portaltypes,
                 'review_state'       : 'published',
                 'getVisibilityLevel' : visibilityLevel,

@@ -863,7 +863,6 @@ float:right;
     text-transform: none;
 }
 
-
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
     border: none;

@@ -46,14 +46,14 @@ $(window).resize(function() {
 
     // Make sure the height of our images stick to 16:9. Can be removed when
     // we have correct aspect ratio on the uploaded images.
-    $("#multimedia-highlights img, #top-news-area .portlet-promotions img").each(function(i) {
-        $(this).height((9/16) * $(this).width());
-    });
+    // $("#multimedia-highlights img, #top-news-area .portlet-promotions img").each(function(i) {
+    //     $(this).height((9/16) * $(this).width());
+    // });
 
     // Add margins so that the #multimedia-highlights ul fill up the same height as the #big_vid.
     // TODO: why does the ul look a little bit too big in IE6 and 7?
-    margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
-    $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
+    // margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
+    // $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
 
     // Make sure both frontpage columns have the same height:
     // TODO: ichimdav disabled automatic height of panels because of removal of

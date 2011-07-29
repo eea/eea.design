@@ -23,7 +23,7 @@
 
 #promo-gallery-content h3 {
     margin-top: 0.5em;
-    font: normal 1.7em Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font: normal 1.4em Verdana, Lucida, Helvetica, Arial, sans-serif;
     /* padding: 0px 10px; */
 }
 #promo-gallery-content h3 a, #promo-gallery-content h3 a:visited {
@@ -134,8 +134,8 @@
 }
 
 #promo-navigator li img{
-	height:60px;
-	width:60px;
+	height:53px;
+	width:70px;
     margin: 0px 7px 0px 5px;
     float: left;
     padding: 10px 1px 21px 5px;

@@ -9,7 +9,7 @@
 ******************************************************************************/
 
 /* This div sneaks in a padding for IE it seems. */
-body {
+html {
     background: url("header.png") top left repeat-x;
 
 }
@@ -76,6 +76,9 @@ body.frontpage ul {
     color: #808285;
 }
 
+.highlights {
+    clear: both;
+}
 .figure-left {
     /* clear: left; */
     float: left;
@@ -196,19 +199,17 @@ body.frontpage #portal-columns {
 }
 
 #multimedia-highlights ul {
-    float: right;
-    width: 20%;
+    /* float: right; */
+    /* width: 100%; */
     list-style: none outside none;
 }
 
-#multimedia-highlights .tileImage,
 #multimedia-highlights ul li,
 #multimedia-highlights ul li a ,
-#multimedia-highlights img {
+{
     padding: 0;
     margin: 0;
     border: none;
-    width: 100%;
 }
 
 /* Frontpage news and articles

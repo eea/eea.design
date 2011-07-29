@@ -97,12 +97,15 @@
                             News highlights
                         </div>
                         <div metal:use-macro="here/frontpage_macros/macros/middle">
-                            Middle Highlights
+                            Articles Highlights
+                        </div>
+                        <div metal:use-macro="here/frontpage_macros/macros/publications">
+                            Publications Highlights
+                        </div>
+                        <div metal:use-macro="here/frontpage_macros/macros/multimedia">
+                            Multimedia Highlights
                         </div>
 
-                        <div metal:use-macro="here/frontpage_macros/macros/middle-short">
-                            Middle Highlights
-                        </div>
                         <div class="visualClear"><!-- &nbsp; --></div>
                         <div class="portletFooter">
                              <p><a href="highlights" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
