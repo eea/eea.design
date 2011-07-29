@@ -3,7 +3,7 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
-* Change: Fixed Right portlets layout, Design of the portlets in the footer [szabozo0 #4440]
+* Change: Fixed Right portlets layout, Design of the portlets in the footer, double external link icon [szabozo0 #4440]
 
 * Change: Override vpip.js with eea_vpip.js for swf animation popup view [szabozo0 #4379]
 

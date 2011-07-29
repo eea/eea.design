@@ -483,6 +483,10 @@ dd.embeddedMedia .magnify {
 }
 
 /* Links with differently colored link underlines - only for content */
+#content span.link-external a{
+    background: none;
+    padding: 0px;
+}
 .flowplayer a,
 .documentContent p a,
 .documentContent ul li a,
