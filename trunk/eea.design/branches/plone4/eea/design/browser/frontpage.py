@@ -64,6 +64,7 @@ class Frontpage(BrowserView):
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
         self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
         self.noOfMultimedia = frontpage_properties.getProperty('noOfMultimedia', 6)
+        self.noOfPublications = frontpage_properties.getProperty('noOfPublications', 6)
         self.now = DateTime()
 
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
@@ -107,7 +108,7 @@ class Frontpage(BrowserView):
         return highlights
 
     def getPublications(self, portaltypes = "Report", scale = 'mini'):
-        result =  self._getItemsWithVisibility(portaltypes  = portaltypes)[:self.noOfNews]
+        result =  self._getItemsWithVisibility(portaltypes  = portaltypes)[:self.noOfPublications]
         #highlights = [] 
         #for high in result:
         #    highlights.append( high.getObject())

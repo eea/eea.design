@@ -10,64 +10,6 @@
  * Requires: 1.2.2+
  */
 
-(function($) {
-
-var types = ['DOMMouseScroll', 'mousewheel'];
-
-$.event.special.mousewheel = {
-	setup: function() {
-		if ( this.addEventListener )
-			for ( var i=types.length; i; )
-				this.addEventListener( types[--i], handler, false );
-		else
-			this.onmousewheel = handler;
-	},
-	
-	teardown: function() {
-		if ( this.removeEventListener )
-			for ( var i=types.length; i; )
-				this.removeEventListener( types[--i], handler, false );
-		else
-			this.onmousewheel = null;
-	}
-};
-
-$.fn.extend({
-	mousewheel: function(fn) {
-		return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
-	},
-	
-	unmousewheel: function(fn) {
-		return this.unbind("mousewheel", fn);
-	}
-});
-
-
-function handler(event) {
-	var args = [].slice.call( arguments, 1 ), delta = 0, returnValue = true;
-	
-	event = $.event.fix(event || window.event);
-	event.type = "mousewheel";
-	
-	if ( event.wheelDelta ) delta = event.wheelDelta/120;
-	if ( event.detail     ) delta = -event.detail/3;
-	
-	// Add events and delta to the front of the arguments
-	args.unshift(event, delta);
-
-	return $.event.handle.apply(this, args);
-}
-
-})(jQuery);
-
-/**
- * @version		$Id:  $Revision
- * @package		jquery
- * @subpackage	lofslidernews
- * @copyright	Copyright (C) JAN 2010 LandOfCoder.com <@emai:landofcoder@gmail.com>. All rights reserved.
- * @website     http://landofcoder.com
- * @license		This plugin is dual-licensed under the GNU General Public License and the MIT License 
- */
 // JavaScript Document
 (function($) {
 	 $.fn.lofJSidernews = function( settings ) {
@@ -165,7 +107,6 @@ function handler(event) {
 				} );
 				$(item).css( {'height': seft.settings.navigatorHeight, 'width':  seft.settings.navigatorWidth} );
 			})
-			this.registerWheelHandler( this.navigatorOuter, this );
 			this.setNavActive(this.currentNo );
 			
 			if( this.settings.buttons && typeof (this.settings.buttons) == "object" ){
@@ -176,24 +117,27 @@ function handler(event) {
 			    this.play( this.settings.interval,'next', true );
             }
 
-			if( this.settings.toggleElement ) {
+            if( this.settings.toggleElement ) {
                 var gallery = this;
-                $(this.settings.toggleElement).toggle( function() {
+                $(this.settings.toggleElement).click( function() {
                     // first time the button is cliked to stop the auto start
                     // of the gallery
-                    gallery.stop();
-                    this.innerHTML = "Play";
-                    this.className = "play";
-                    // return false because we want to cancel the default
-                    // behaviour of the event in our case the click event
-                    return false;
-                }, function() {
-			        gallery.play( 1000, 'next', true );
-                    this.innerHTML = "Pause";
-                    this.className = "pause";
-                    return false;
+                    if(this.innerHTML === "Pause") {
+                        gallery.stop();
+                        this.innerHTML = "Play";
+                        this.className = "play";
+                        // return false because we want to cancel the default
+                        // behaviour of the event in our case the click event
+                        return false;
+                    }
+                    else {
+                        gallery.play( 1000, 'next', true );
+                        this.innerHTML = "Pause";
+                        this.className = "pause";
+                        return false;
+                    }
                 });
-            } 
+             }
 			
 			return this;
 		},
@@ -258,26 +202,14 @@ function handler(event) {
 				default: this.maxSize=this.maxWidth; return ['left','width'];
 			}
 		},
-		registerWheelHandler:function( element, obj ){ 
-			 element.bind('mousewheel', function(event, delta ) {
-				var dir = delta > 0 ? 'Up' : 'Down',
-					vel = Math.abs(delta);
-				if( delta > 0 ){
-					obj.previous( true );
-				} else {
-					obj.next( true );
-				}
-				return false;
-			});
-		},
 		registerButtonsControl:function( eventHandler, objects, self ){ 
 			for( var action in objects ){ 
 				switch (action.toString() ){
 					case 'next':
-						objects[action].click( function() { self.next( true); return false; } );
+						objects[action].click( function() { self.next( true); self.stop(); self.changePlayButton(); return false; } );
 						break;
 					case 'previous':
-						objects[action].click( function() { self.previous( true); return false; } );
+						objects[action].click( function() { self.previous( true); self.stop(); self.changePlayButton(); return false; } );
 						break;
 				}
 			}
@@ -343,6 +275,13 @@ function handler(event) {
 			if(!wait){ this[direction](false); }
 			var self  = this;
 			this.isRun = setTimeout(function() { self[direction](true); }, delay);
+		},
+
+		changePlayButton: function(){	
+            var play = $(this.settings.toggleElement)[0];
+            console.log(play);
+            play.innerHTML = "Play";
+            play.className = "play";
 		},
 		stop:function(){ 
 			if (this.isRun == null) return;
