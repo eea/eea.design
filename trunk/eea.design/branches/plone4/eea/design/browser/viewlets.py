@@ -1,10 +1,13 @@
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.layout.viewlets import common, content
-from plone.app.layout.links import viewlets as links
-from zope.component import getMultiAdapter
+from Products.CMFCore.utils import _checkPermission
 from Products.CMFCore.utils import getToolByName
-from cgi import escape
 from Products.CMFPlone.utils import safe_unicode
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from cgi import escape
+from plone.app.layout.links import viewlets as links
+from plone.app.layout.viewlets import common, content
+from plone.app.layout.viewlets.content import DocumentBylineViewlet as \
+    BaseBelowContentTitleViewlet
+from zope.component import getMultiAdapter
 
 class SiteActionsViewlet(common.SiteActionsViewlet):
     """A custom version of the site-actions viewlet
@@ -82,3 +85,13 @@ class LanguageSelectorViewlet(common.ViewletBase):
     """
     render = ViewPageTemplateFile('templates/language_selector.pt')
 
+
+class BelowEditContentTitleViewlet(BaseBelowContentTitleViewlet):
+    """Customized this viewlet because it won't show history
+    """
+
+    def show_history(self):
+        if not _checkPermission('CMFEditions: Access previous versions', self.context):
+            return False
+        return True
+    

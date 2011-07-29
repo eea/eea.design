@@ -371,4 +371,20 @@
      <!--SUBSCRIBERS -->
 
 
+     <!--Viewlets-->
+
+    <browser:viewletManager
+        name="eea.below_edit_contenttitle"
+        provides=".interfaces.IBelowEditContentTitle"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        />
+
+    <browser:viewlet
+        name="eea.below_edit_contenttitle.documentbyline"
+        manager=".interfaces.IBelowEditContentTitle"
+        class=".viewlets.BelowEditContentTitleViewlet"
+        permission="zope2.View"
+        />
+
 </configure>

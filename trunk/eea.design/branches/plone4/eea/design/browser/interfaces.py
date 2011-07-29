@@ -1,21 +1,26 @@
 from plone.app.portlets.interfaces import IColumn
-from zope.interface import Interface
 from plone.portlets.interfaces import IPortletManager
 from plone.theme.interfaces import IDefaultPloneLayer
+from zope.interface import Interface
+from zope.viewlet.interfaces import IViewletManager
+
 
 class IEEACommonLayer(Interface, IDefaultPloneLayer):
     """Common layer
     """
+
 
 class IEEADesignPublic(IEEACommonLayer):
     """Marker interface that defines a common Zope 3 browser layer, which
     will contain resources specific for common theme use
     """
 
+
 class IEEADesignCMS(IEEACommonLayer):
     """Marker interface that defines a Zope 3 browser layer, which
     will contain resources specific for CMS use
     """
+
 
 class IFooterPortletManager(IPortletManager, IColumn):
     """we need our own portlet manager for the footer area.
@@ -123,7 +128,6 @@ class ISmartView(Interface):
         """  """
 
 
-
 class ILanguages(Interface):
 
     def getTranslationLanguages():
@@ -131,3 +135,9 @@ class ILanguages(Interface):
 
     def getTranslatedSitesLanguages():
         """ Return languages for translated sites.  """
+
+
+class IBelowEditContentTitle(IViewletManager):
+    """A viewlet manager that sits below the content title in edit templates
+    """
+
