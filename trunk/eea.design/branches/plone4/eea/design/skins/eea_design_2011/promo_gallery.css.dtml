@@ -118,7 +118,7 @@
 	padding:5px 6px 0;
 	margin:0;
     font-weight: normal;
-    height: 71px;
+    height: 68px;
     overflow: hidden;
 }
 
@@ -136,9 +136,9 @@
 #promo-navigator li img{
 	height:53px;
 	width:70px;
-    margin: 0px 7px 0px 5px;
+    margin: 0px;
     float: left;
-    padding: 10px 1px 21px 5px;
+    padding: 14px 5px 18px 10px;
 }
 
 #promo-navigator li.active img{
@@ -162,7 +162,7 @@
 }
 
 .play {
-    background: url("play.png") no-repeat 0px -4px;
+    background: url("play.png") no-repeat 0px -2px;
     padding: 0em 0.5em 0em 2.2em;
 }
 

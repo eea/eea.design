@@ -41,8 +41,8 @@ from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 
 from p4a.video.interfaces import IVideoEnhanced
-from eea.themecentre.interfaces import IThemeTagging
-from eea.themecentre.interfaces import IThemeCentreSchema
+#from eea.themecentre.interfaces import IThemeTagging
+#from eea.themecentre.interfaces import IThemeCentreSchema
 
 class Frontpage(BrowserView):
     """
@@ -65,6 +65,7 @@ class Frontpage(BrowserView):
         self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
         self.noOfMultimedia = frontpage_properties.getProperty('noOfMultimedia', 6)
         self.noOfPublications = frontpage_properties.getProperty('noOfPublications', 6)
+        self.noOfPromotions = frontpage_properties.getProperty('noOfPromotions', 7)
         self.now = DateTime()
 
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
@@ -109,10 +110,6 @@ class Frontpage(BrowserView):
 
     def getPublications(self, portaltypes = "Report", scale = 'mini'):
         result =  self._getItemsWithVisibility(portaltypes  = portaltypes)[:self.noOfPublications]
-        #highlights = [] 
-        #for high in result:
-        #    highlights.append( high.getObject())
-        #return highlights
         return result
 
     def getHighArticles(self):
@@ -178,28 +175,7 @@ class Frontpage(BrowserView):
                 return ret
         return None
 
-    @cache(cacheKeyPromotions)
     def getPromotions(self):
-        # Each theme represents a category
-        query = {
-            'object_provides': 'eea.themecentre.interfaces.IThemeCentre',
-            'review_state': 'published',
-            'effectiveRange': self.now,
-        }
-        result = self.catalog(query)
-
-        categories = {}
-        for brain in result:
-            themecentre = IThemeCentreSchema(brain.getObject())
-            category = {
-                'id': themecentre.tags, # ThemeCentres are only tagged with one theme
-                'Title': brain.Title,
-                'url': brain.getURL(),
-                'path': brain.getPath(),
-                'macro': 'here/portlet_promotions/macros/portlet',
-            }
-            categories[brain.id] = category
-
         query = {
             'object_provides': {
                 'query': [
@@ -213,9 +189,9 @@ class Frontpage(BrowserView):
             'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
-        result = self.catalog(query)
 
-        cPromos = {}
+        result = self.catalog(query)
+        cPromos = []
         for brain in result:
             obj = brain.getObject()
             promo = IPromotion(obj)
@@ -224,39 +200,12 @@ class Frontpage(BrowserView):
                 continue
             if not promo.display_on_frontpage:
                 continue
-
-            themes = IThemeTagging(obj).tags
-            if not len(themes):
+            if not promo.active:
                 continue
-            theme = themes[0]
-            if theme in cPromos:
-                continue
-            if theme == 'default':
-                continue
-
-            cPromos[theme] = [{
-                'id' : brain.id,
-                'Description' : brain.Description,
-                'Title' : brain.Title,
-                'url' : promo.url,
-                'absolute_url' : brain.getURL(),
-                'is_video' : IVideoEnhanced.providedBy(obj),
-            }]
-
-            if len(cPromos.keys()) == 5:
+            cPromos.append(obj)
+            if len(cPromos) == self.noOfPublications:
                 break
-
-        promotions = []
-        for theme, promos in cPromos.items():
-            if promos is not None:
-                promotions.append({
-                    'category' : categories[theme],
-                    'promotions' : promos
-                })
-
-        # Sort alphabetically on category title
-        promotions.sort(lambda x, y: cmp(x['category']['Title'].lower(), y['category']['Title'].lower()))
-        return promotions
+        return cPromos
 
     def getMultimedia(self):
         query = {
@@ -266,20 +215,10 @@ class Frontpage(BrowserView):
             'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
+
         result = self.catalog(query)
         result = [i for i in result if not IFlashAnimation.providedBy(i.getObject())][:self.noOfMultimedia]
         return result
-        #output = []
-        #for brain in result[:4]:
-        #    obj = brain.getObject()
-        #    info = {
-        #        'title': brain.Title,
-        #        'url': brain.getURL(),
-        #        'listing_url': getMultiAdapter((obj, obj.REQUEST), name='url').listing_url(),
-        #    }
-        #    output.append(info)
-        #
-        #return output
 
     def _getTeaserMedia(self, high, scale):
         obj = high.getObject()
@@ -333,7 +272,6 @@ class Frontpage(BrowserView):
 
     def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = ''):
         """ get items of certain content types and/or interface and certain visibility level. """
-        # TODO: add functionality for optional param interfaces
         query = {
                 'portal_type'        : portaltypes,
                 'review_state'       : 'published',

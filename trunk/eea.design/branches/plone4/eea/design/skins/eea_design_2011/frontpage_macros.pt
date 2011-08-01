@@ -82,6 +82,7 @@
 
 </div>
 
+
 <div metal:define-macro="middle" 
         class="highlights"
 		id="highlights-middle" 
@@ -210,41 +211,40 @@
 
 <!-- promotion_gallery macro -->
 <metal:promos metal:define-macro="promo-gallery"
-                tal:define="highlights frontpage_view/getMedium;
+                tal:define="highlights python: frontpage_view.getPromotions;
                             plone_view nocall:plone_view|here">
 
 
     <div id="gallery-content-outer"> 
   <ul id="promo-gallery-content"> 
       <metal:pritems  
-                tal:define="highlights python: frontpage_view.getMedium(scale='preview');"
                     tal:condition="highlights"
                     tal:repeat="hl highlights">
                         <li>
-                        <tal:image tal:define="figure hl/media|nothing;
-                        figure_link hl/getUrl|nothing;
+                        <tal:image tal:define="figure hl/getImage|nothing;
+                        figure_link hl/absolute_url|nothing;
                         figure_scale string: preview;
-                        figure_title figure/Title|nothing;"
+                        figure_title figure/title|nothing;"
                         tal:condition="figure">
                         <tal:Link tal:condition="figure_link">
                             <a href="" title="" class="noPrint"
                                tal:attributes="href figure_link|nothing;
                                title figure_title;">
-                              <span tal:replace="structure figure/getScale"> </span> 
+                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure/title; alt figure/title" />
                          </a>
                          </tal:Link>
                         <tal:noLink tal:condition="not: figure_link">
-                            <span tal:replace="structure figure/getScale"> </span> 
+                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure/title; alt figure/title" />
                         </tal:noLink>
                         </tal:image>
                     <div class="promo-item-desc">
                         <h3><a href="#" class="noPrint"
-                                tal:attributes="href hl/getUrl"
-                                tal:content="hl/getNewsTitle">
+                                tal:attributes="href hl/absolute_url"
+                                tal:content="hl/title">
                                 Highlight Title</a></h3>
                         Author: <span tal:define="author hl/Creator|string: EEA" tal:content="author" />   
                         Published: <span  
-                                tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
+                                tal:define="date python:plone_view.toLocalizedTime(hl.effective())" 
                                 tal:content="date">07 Dec 2005 </span>
                     </div>
                         </li>    
@@ -261,16 +261,16 @@
                 tal:repeat="hl highlights">
                     <li>
                         <div>
-                        <tal:image tal:define="figure hl/media|nothing;
+                        <tal:image tal:define="figure hl/getImage|nothing;
                         figure_link hl/getUrl;
                         figure_scale string:thumb;
-                        figure_title figure/Title|nothing;
+                        figure_title figure/title|nothing;
                         "
                         tal:condition="figure">
-                            <span tal:replace="structure figure/getScale"> </span> 
+                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_thumb; title figure/title; alt figure/title" />
                         </tal:image>
 
-                        <h3 tal:content="hl/getNewsTitle">Highlight Title</h3>
+                        <h3 tal:content="hl/Title">Highlight Title</h3>
                     </div>
                     </li>
   </metal:items>

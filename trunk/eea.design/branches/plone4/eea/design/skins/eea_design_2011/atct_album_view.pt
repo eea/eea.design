@@ -26,10 +26,7 @@
 
   <metal:listingmacro define-macro="listing" tal:define="
     entry_macro  context/atct_albumentry/macros/entry;
-    Batch python:modules['Products.CMFPlone'].Batch;
-    folderContents folderContents|nothing;
-    b_start python:request.get('b_start', 0);
-    batch python:Batch(iter(folderContents), 4)">
+    folderContents folderContents|nothing;">
   <tal:folderContents condition="folderContents" tal:define="batch folderContents">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
     <tal:images tal:repeat="brain folderContents">
