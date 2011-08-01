@@ -1,0 +1,14 @@
+<div metal:define-macro="articles" 
+		class="highlights"
+		id="articles-highlights" 
+        tal:define="
+        frontpage_view context/@@frontpage_highlights;
+        folderContents frontpage_view/getArticles;"
+                tal:condition="folderContents|nothing">
+    <div class="visualPadding">
+        <ul>
+    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+        </ul>
+        <div class="visualClear"><!-- --></div>
+    </div>
+</div>

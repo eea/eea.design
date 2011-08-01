@@ -100,22 +100,24 @@ class Frontpage(BrowserView):
             highlights.append ( self._getTeaserMedia(high, scale) )
         return highlights
 
-    def getArticles(self, portaltypes = "Article", scale = 'mini'):
+    def getArticles(self, portaltypes = "Article"):
+        topic = getattr( self.context.REQUEST, 'topic', None)
+        if topic:
+            result = self._getTopics(portaltypes = "Article", 
+                                 topic = topic, noOfItems=self.noOfNews)
+            return result
         visibilityLevel = [ 'top', 'middle', 'low' ]
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfNews]
-        highlights = [] 
-        for high in result:
-            highlights.append ( self._getTeaserMedia(high, scale) )
-        return highlights
+        return result
 
-    def getPublications(self, portaltypes = "Report", scale = 'mini'):
+    def getPublications(self, portaltypes = "Report"):
         topic = getattr( self.context.REQUEST, 'topic', None)
         if topic:
             result = self._getTopics(portaltypes = "Report", 
                                  topic = topic, noOfItems=self.noOfPublications)
             return result
-
-        result =  self._getItemsWithVisibility(portaltypes  = portaltypes)[:self.noOfPublications]
+        visibilityLevel = ''
+        result =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = portaltypes)[:self.noOfPublications]
         return result
 
     def getHighArticles(self):
