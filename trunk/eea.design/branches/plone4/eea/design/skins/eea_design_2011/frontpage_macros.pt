@@ -242,10 +242,8 @@
                                 tal:attributes="href hl/absolute_url"
                                 tal:content="hl/title">
                                 Highlight Title</a></h3>
-                        Author: <span tal:define="author hl/Creator|string: EEA" tal:content="author" />   
-                        Published: <span  
-                                tal:define="date python:plone_view.toLocalizedTime(hl.effective())" 
-                                tal:content="date">07 Dec 2005 </span>
+                         <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
+                
                     </div>
                         </li>    
         </metal:pritems>
