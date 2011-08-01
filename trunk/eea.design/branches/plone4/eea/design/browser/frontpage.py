@@ -203,7 +203,7 @@ class Frontpage(BrowserView):
             if not promo.active:
                 continue
             cPromos.append(obj)
-            if len(cPromos) == self.noOfPublications:
+            if len(cPromos) == self.noOfPromotions:
                 break
         return cPromos
 
