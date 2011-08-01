@@ -13,7 +13,7 @@
                      return this.style.display === "block"; 
                 });
                 var address = site_address + cur_tab_val + "_gallery_macro";
-                news.load( addr, {topic: sel_value, tab: cur_tab_val },  function(html) {
+                news.load( address, {topic: sel_value, tab: cur_tab_val },  function(html) {
                     news.tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
                 });
             }
