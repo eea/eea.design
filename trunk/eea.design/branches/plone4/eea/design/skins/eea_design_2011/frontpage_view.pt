@@ -30,7 +30,7 @@
 
                         <div id="spotlight-box" class="roundedCorners">
                             <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
-                            <div metal:use-macro="here/frontpage_macros/macros/highArticles">
+                            <div metal:use-macro="here/frontpage_macros/macros/spotlightItem">
                                 item title, description and image
                             </div>
                         </div>

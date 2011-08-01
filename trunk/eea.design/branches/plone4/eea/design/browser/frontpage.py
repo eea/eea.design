@@ -68,7 +68,7 @@ class Frontpage(BrowserView):
         self.noOfPromotions = frontpage_properties.getProperty('noOfPromotions', 7)
         self.now = DateTime()
 
-    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
+#    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getHigh(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb'):
         visibilityLevel = 'top'
         results =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfHigh]
@@ -123,6 +123,37 @@ class Frontpage(BrowserView):
         results =  self.getHigh(('Article', ), 'thumb')
         return results
 
+    def getSpotlight(self):
+        query = {
+            'object_provides': {
+                'query': [
+                    'eea.promotion.interfaces.IPromoted',
+                    'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
+                ],
+                'operator': 'or',
+            },
+            'review_state': 'published',
+            'sort_on': 'effective',
+            'sort_order' : 'reverse',
+            'effectiveRange' : self.now,
+        }
+
+        result = self.catalog(query)
+        Spotlight = {}
+        for brain in result:
+            obj = brain.getObject()
+            promo = IPromotion(obj)
+            if not promo.display_in_spotlight:
+                continue
+            if not promo.active:
+                continue
+            Spotlight['effective'] = brain.effective
+            Spotlight['title'] = obj.Title()
+            Spotlight['description'] = obj.Description()
+            Spotlight['url'] = obj.absolute_url()
+            break
+        return Spotlight
+        
     cache(cacheKeyHighlights, dependencies = ['frontpage-highlights'])
     def getLow(self, portaltypes = ('Highlight', 'PressRelease'), scale='dummy'): 
         visibilityLevel = [ 'top', 'middle', 'bottom' ] 
@@ -250,7 +281,6 @@ class Frontpage(BrowserView):
         themes = []
         if adapter is not None:
             themes = adapter.short_items()
-            
         result = { 
                  'id'                 : high['id'],
                  'getUrl'             : high.get('getUrl',high.getURL()),
