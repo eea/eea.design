@@ -73,8 +73,8 @@
                         <h2> What's new</h2>
                         <!-- select_topics -->
                         <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector">
-                            <option value="none">Filter by topic</option>
-                            <option value="all">All topics</option>
+                            <option value="">Filter by topic</option>
+                            <option value="">All topics</option>
                             <tal:items tal:repeat="item items">
                                 <option  
                                         tal:define="value python: item[0];"

@@ -41,7 +41,7 @@ from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 
 from p4a.video.interfaces import IVideoEnhanced
-#from eea.themecentre.interfaces import IThemeTagging
+from eea.themecentre.interfaces import IThemeTagging, IThemeTaggable
 #from eea.themecentre.interfaces import IThemeCentreSchema
 
 class Frontpage(BrowserView):
@@ -109,6 +109,12 @@ class Frontpage(BrowserView):
         return highlights
 
     def getPublications(self, portaltypes = "Report", scale = 'mini'):
+        topic = getattr( self.context.REQUEST, 'topic', None)
+        if topic:
+            result = self._getTopics(portaltypes = "Report", 
+                                 topic = topic, noOfItems=self.noOfPublications)
+            return result
+
         result =  self._getItemsWithVisibility(portaltypes  = portaltypes)[:self.noOfPublications]
         return result
 
@@ -189,7 +195,6 @@ class Frontpage(BrowserView):
             'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
-
         result = self.catalog(query)
         cPromos = []
         for brain in result:
@@ -208,16 +213,17 @@ class Frontpage(BrowserView):
         return cPromos
 
     def getMultimedia(self):
-        query = {
-            'object_provides': 'p4a.video.interfaces.IVideoEnhanced',
-            'review_state': 'published',
-            'sort_on': 'effective',
-            'sort_order' : 'reverse',
-            'effectiveRange' : self.now,
-        }
-
-        result = self.catalog(query)
-        result = [i for i in result if not IFlashAnimation.providedBy(i.getObject())][:self.noOfMultimedia]
+        topic = getattr( self.context.REQUEST, 'topic', None)
+        if topic:
+            result = self._getTopics(object_provides= 
+                                        'p4a.video.interfaces.IVideoEnhanced', 
+                                 topic = topic, noOfItems=self.noOfMultimedia)
+            return result
+        visibilityLevel = ''
+        result = self._getItemsWithVisibility(visibilityLevel, 
+                            interfaces = 'p4a.video.interfaces.IVideoEnhanced')
+        result = [i for i in result if not IFlashAnimation.providedBy(
+                                          i.getObject())][:self.noOfMultimedia]
         return result
 
     def _getTeaserMedia(self, high, scale):
@@ -285,3 +291,15 @@ class Frontpage(BrowserView):
             return self.catalog.searchResults(query)
         else:
             return self.catalog.searchResults(query)
+
+    def _getTopics(self, topic = '', portaltypes ='', object_provides = '', noOfItems = ''):
+        query = {
+            'object_provides': object_provides,
+            'portal_types' : portaltypes,
+            'review_state': 'published',
+            'sort_on': 'effective',
+            'sort_order' : 'reverse',
+            'effectiveRange' : self.now,
+        }
+        query['getThemes'] = topic
+        return self.catalog(query)[:noOfItems]

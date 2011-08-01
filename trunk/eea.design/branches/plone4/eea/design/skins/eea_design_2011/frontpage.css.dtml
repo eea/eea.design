@@ -281,7 +281,7 @@ div.even {
 }
 
 div.current {
-    display: none;
+    /* display: none; */
 }
 
 ul#tabs {

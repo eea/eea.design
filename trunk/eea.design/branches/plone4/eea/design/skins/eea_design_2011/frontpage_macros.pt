@@ -1,6 +1,8 @@
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       i18n:domain="eea" tal:omit-tag="">
+
+
 <div metal:define-macro="news"
 		id="highlights-high" 
 		class="highlights"
@@ -66,7 +68,7 @@
 </div>
 
 <div metal:define-macro="publications" 
-		id="articles-high" 
+		id="publications-highlights" 
 		class="highlights"
 		tal:define="folderContents frontpage_view/getPublications;
         plone_view nocall:plone_view|here;">

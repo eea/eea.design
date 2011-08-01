@@ -1,0 +1,10 @@
+<div metal:define-macro="publications" 
+		id="publications-highlights" 
+		class="highlights"
+        tal:define="
+        frontpage_view context/@@frontpage_highlights;
+        folderContents frontpage_view/getPublications;
+        plone_view nocall:plone_view|here;">
+
+    <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+</div>
