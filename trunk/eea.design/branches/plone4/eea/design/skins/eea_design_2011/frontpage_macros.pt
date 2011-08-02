@@ -114,59 +114,21 @@
   <!--</metal:items>-->
 
 </div>
-
-
-<div metal:define-macro="middle" 
-        class="highlights"
-		id="highlights-middle" 
-		tal:define="highlights frontpage_view/getArticles;
-		            plone_view nocall:plone_view|here">
-
-  <metal:items  define-macro="middlenews"
-                tal:condition="highlights"
-                tal:repeat="hl highlights">
-		
-        <!-- accordion panels -->
-	    <div class="panel" tal:define="even repeat/hl/even" tal:attributes="class python: 'panel even' if even else 'panel'">
-	       <p class="noPrint"
-	       		tal:content="hl/getNewsTitle">
-                Highlight Title</p>
-            <p class="date" 
-                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
-                  tal:content="string: Published: ${date}">07 Dec 2005 </p> 
-        </div>
-        <!-- end_accordion panels -->
-
-     <div class="highlightMiddle">
-  
-          <!-- teaser and read more -->
-          <metal:teaser define-macro="teaser">
-            <div class="figure-left">
-                      <tal:image define="figure hl/media|nothing;
-                               figure_link hl/getUrl;
-                               figure_scale string: mini;"
-                             tal:condition="figure">
-                   <metal:thefigure use-macro="here/media_floating_macros/macros/figure-caption" />
-                 </tal:image>
-            </div>
-
-	    <h3 class="highlight">
-	       <a href="#" class="noPrint"
-	       		tal:attributes="href hl/getUrl"
-	       		tal:content="hl/getNewsTitle">
-	       			Highlight Title</a></h3>
-
-	   	     <span class="date" 
-                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
-	    	  tal:content="date">07 Dec 2005 </span> 
-            <p tal:content="hl/getTeaser">teaser</p>
-            <p><a href="#" class="moreLink"
-                    tal:attributes="href hl/getUrl">Read more</a></p>
-           </metal:teaser>
-           <!-- end teaser and read more -->
-       </div>
-    </metal:items>
+<div metal:define-macro="articles" 
+		class="highlights"
+		id="articles-highlights" 
+        tal:define="
+        frontpage_view context/@@frontpage_highlights;
+        folderContents frontpage_view/getArticles;"
+                tal:condition="folderContents|nothing">
+    <div class="visualPadding">
+        <ul>
+            <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+        </ul>
+        <div class="visualClear"><!-- --></div>
+    </div>
 </div>
+
 
 <div metal:define-macro="middle-short"
         class="highlights"

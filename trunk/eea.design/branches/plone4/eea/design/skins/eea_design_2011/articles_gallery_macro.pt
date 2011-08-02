@@ -7,7 +7,7 @@
                 tal:condition="folderContents|nothing">
     <div class="visualPadding">
         <ul>
-    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+            <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
         </ul>
         <div class="visualClear"><!-- --></div>
     </div>

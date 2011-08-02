@@ -95,7 +95,7 @@
                         <div metal:use-macro="here/frontpage_macros/macros/news">
                             News highlights
                         </div>
-                        <div metal:use-macro="here/frontpage_macros/macros/middle">
+                        <div metal:use-macro="here/frontpage_macros/macros/articles">
                             Articles Highlights
                         </div>
                         <div metal:use-macro="here/frontpage_macros/macros/publications">
