@@ -1,0 +1,14 @@
+<div metal:define-macro="news" 
+		class="highlights"
+		id="articles-highlights" 
+        tal:define="
+        frontpage_view context/@@frontpage_highlights;
+        folderContents frontpage_view/getNews;"
+                tal:condition="folderContents|nothing">
+    <div class="visualPadding">
+        <ul>
+            <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+        </ul>
+        <div class="visualClear"><!-- --></div>
+    </div>
+</div>

@@ -62,6 +62,7 @@ class Frontpage(BrowserView):
         self.noOfHigh = frontpage_properties.getProperty('noOfHigh', 3)
         self.noOfMedium = frontpage_properties.getProperty('noOfMedium', 4)
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
+        self.noOfArticles = frontpage_properties.getProperty('noOfArticles', 4)
         self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
         self.noOfMultimedia = frontpage_properties.getProperty('noOfMultimedia', 6)
         self.noOfPublications = frontpage_properties.getProperty('noOfPublications', 6)
@@ -93,6 +94,11 @@ class Frontpage(BrowserView):
         return highlights[:self.noOfMedium]
 
     def getNews(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'mini'):
+        topic = getattr( self.context.REQUEST, 'topic', None)
+        if topic:
+            result = self._getTopics(portaltypes = ('Highlight', 'PressRelease'),
+                                 topic = topic, noOfItems=self.noOfNews)
+            return result
         visibilityLevel = [ 'top', 'middle', 'low' ]
         result =  self._getItemsWithVisibility(visibilityLevel,  portaltypes)[:self.noOfNews]
         highlights = [] 
@@ -104,10 +110,10 @@ class Frontpage(BrowserView):
         topic = getattr( self.context.REQUEST, 'topic', None)
         if topic:
             result = self._getTopics(portaltypes = "Article", 
-                                 topic = topic, noOfItems=self.noOfNews)
+                                 topic = topic, noOfItems=self.noOfArticles)
             return result
         visibilityLevel = [ 'top', 'middle', 'low' ]
-        result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfNews]
+        result =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfArticles]
         return result
 
     def getPublications(self, portaltypes = "Report"):

@@ -15,9 +15,15 @@
                      return this.style.display === "block"; 
                 });
                 var address = site_address + cur_tab_val + "_gallery_macro";
+                var no_results = $("<p>No results are available for this topic</p>");
                 news.load( address, {topic: sel_value, tab: cur_tab_val },  function(html) {
-                    if (cur_tab_val === "multimedia") {
-                        $.getScript(site_address + "eea-mediacentre.js");
+                    if (html.length > 1) {
+                        if (cur_tab_val === "multimedia") {
+                            $.getScript(site_address + "eea-mediacentre.js");
+                        }
+                    }
+                    else {
+                       no_results.appendTo(news);
                     }
                 });
             }
