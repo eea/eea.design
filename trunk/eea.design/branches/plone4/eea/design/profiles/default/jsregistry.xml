@@ -14,7 +14,7 @@
     enabled="True" expression="" id="slide.js" inline="False"
     position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
-    enabled="False" expression="" id="eea-smartview.js" inline="False"
+    enabled="True" expression="" id="eea-smartview.js" inline="False"
     position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="eea-accordion.js" inline="False"

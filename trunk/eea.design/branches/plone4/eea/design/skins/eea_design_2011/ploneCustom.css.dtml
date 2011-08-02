@@ -187,7 +187,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 #smart-view-switch {
     margin: 0.5em 0;
-    width: 131px;
+    width: 132px;
     height: 32px;
     background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
     border: 1px solid #ccc;
@@ -226,7 +226,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin: 0 0.5em 0 0;
 }
 
-.eea-no-list-style {
+.eea-no-list-style, #content ul.eea-no-list-style{
     list-style-type: none;
     list-style-image: none;
     margin: 1em 0;

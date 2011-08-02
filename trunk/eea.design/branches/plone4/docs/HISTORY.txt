@@ -5,6 +5,8 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Bugfix: Enabled eea-smartview.js [szabozo0 #4446]
+
 * Feature: Added spotlight functionality [szabozo0 #4425]
 
 * Change: Fixed Right portlets layout, Design of the portlets in the footer, double external link icon [szabozo0 #4440]
