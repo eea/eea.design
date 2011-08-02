@@ -67,28 +67,36 @@
     <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
 </div>
 
-<div metal:define-macro="spotlightItem"
-        id="spotlight-item"
-        class="spotlight"
-        tal:define="spotlight frontpage_view/getSpotlight;
-		            plone_view nocall:plone_view|here;">
-    <div class="figure-left"><img alt="" tal:attributes="src string:${spotlight/url}/image_thumb; title spotlight/title; alt spotlight/title" /></div>
-    <h3 class="highlight">
-        <a href="#" class="noPrint"
-       	    tal:attributes="href spotlight/url"
-       		tal:content="spotlight/title">
-       		    Spotlight Title</a></h3>
-   	<span class="date" 
-        tal:define="date python:plone_view.toLocalizedTime(spotlight['effective'])" 
-        tal:content="date">07 Dec 2005 </span> 
-
-    <p tal:content="spotlight/description">description</p>
-
-    <p><a href="#" class="moreLink"
-        tal:attributes="href spotlight/url">Read more</a></p>
+<metal:spotlight metal:define-macro="spotlightItem" 
+            tal:define="spotlight frontpage_view/getSpotlight;
+		                plone_view nocall:plone_view|here;"
+		    tal:condition="spotlight">
+    <div id="spotlight-box" class="roundedCorners">
+        <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
 
 
-</div>
+        <div id="spotlight-item"
+            class="spotlight">
+            <div class="figure-left"><img alt="" tal:attributes="src string:${spotlight/url}/image_thumb; title spotlight/title; alt spotlight/title" /></div>
+            <h3 class="highlight">
+                <a href="#" class="noPrint"
+           	        tal:attributes="href spotlight/url"
+           		    tal:content="spotlight/title">
+       	    	        Spotlight Title</a></h3>
+       	    <span class="date" 
+                tal:define="date python:plone_view.toLocalizedTime(spotlight['effective'])" 
+                tal:content="date">07 Dec 2005 </span> 
+
+            <p tal:content="spotlight/description">description</p>
+
+            <p><a href="#" class="moreLink"
+                tal:attributes="href spotlight/url">Read more</a></p>
+
+
+        </div>
+    </div>
+
+</metal:spotlight>
 
 <div metal:define-macro="publications" 
 		id="publications-highlights" 
