@@ -105,15 +105,8 @@
         plone_view nocall:plone_view|here;">
 
   <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
-  <!--<metal:items  -->
-  <!--              tal:condition="highlights"-->
-  <!--              tal:repeat="hl highlights">-->
-  <!--              <span tal:content="hl/getCoverImage|nothing" />-->
-  <!--              <p tal:content="hl/description">Description</p>-->
-  <!--              <a  tal:attributes="href hl/absolute_url; class string: moreLink">Read More</a>-->
-  <!--</metal:items>-->
-
 </div>
+
 <div metal:define-macro="articles" 
 		class="highlights"
 		id="articles-highlights" 
@@ -281,21 +274,15 @@
         <ul>
 
     <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
-            <!--<metal:items tal:repeat="vid vids" >-->
-            <!--    <li class="vidthumb" tal:define="last repeat/vid/end" >-->
-            <!--        <div class="figure-left">-->
-            <!--        <a class="video-fancybox" href="" tal:attributes="href vid/listing_url">-->
-            <!--            <img src="" tal:attributes="src string:${vid/url}/image_wide; title vid/title" />-->
-            <!--        </a>-->
-            <!--        <a href="" tal:attributes="href vid/listing_url; class string: video-fancybox center" tal:content="vid/title">Title</a>-->
-            <!--        <span class="visualClear" />-->
-            <!--        </div>-->
-            <!--    </li>-->
-            <!--</metal:items>-->
         </ul>
         <div class="visualClear"><!-- --></div>
     </div>
 </div>
 
+
+<div metal:define-macro="datamaps" 
+		class="highlights"
+        id="datamaps-highlights"> 
+</div>
 
 </html>

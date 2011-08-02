@@ -333,7 +333,7 @@ class Frontpage(BrowserView):
     def _getTopics(self, topic = '', portaltypes ='', object_provides = '', noOfItems = ''):
         query = {
             'object_provides': object_provides,
-            'portal_types' : portaltypes,
+            'portal_type' : portaltypes,
             'review_state': 'published',
             'sort_on': 'effective',
             'sort_order' : 'reverse',

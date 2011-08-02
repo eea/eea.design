@@ -104,6 +104,9 @@
                         <div metal:use-macro="here/frontpage_macros/macros/multimedia">
                             Multimedia Highlights
                         </div>
+                        <div metal:use-macro="here/frontpage_macros/macros/datamaps">
+                            Data and maps Highlights
+                        </div>
 
                         <div class="visualClear"><!-- &nbsp; --></div>
                         <div class="portletFooter">
