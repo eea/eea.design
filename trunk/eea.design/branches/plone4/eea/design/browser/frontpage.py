@@ -41,7 +41,7 @@ from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
 
 from p4a.video.interfaces import IVideoEnhanced
-from eea.themecentre.interfaces import IThemeTagging, IThemeTaggable
+#from eea.themecentre.interfaces import IThemeTagging , IThemeTaggable
 #from eea.themecentre.interfaces import IThemeCentreSchema
 
 class Frontpage(BrowserView):
@@ -96,15 +96,12 @@ class Frontpage(BrowserView):
     def getNews(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'mini'):
         topic = getattr( self.context.REQUEST, 'topic', None)
         if topic:
-            result = self._getTopics(portaltypes = ('Highlight', 'PressRelease'),
+            result = self._getTopics(portaltypes = portaltypes,
                                  topic = topic, noOfItems=self.noOfNews)
             return result
         visibilityLevel = [ 'top', 'middle', 'low' ]
         result =  self._getItemsWithVisibility(visibilityLevel,  portaltypes)[:self.noOfNews]
-        highlights = [] 
-        for high in result:
-            highlights.append ( self._getTeaserMedia(high, scale) )
-        return highlights
+        return result
 
     def getArticles(self, portaltypes = "Article"):
         topic = getattr( self.context.REQUEST, 'topic', None)
@@ -330,7 +327,7 @@ class Frontpage(BrowserView):
         else:
             return self.catalog.searchResults(query)
 
-    def _getTopics(self, topic = '', portaltypes ='', object_provides = '', noOfItems = ''):
+    def _getTopics(self, topic = '', portaltypes = '', object_provides = '', noOfItems = ''):
         query = {
             'object_provides': object_provides,
             'portal_type' : portaltypes,

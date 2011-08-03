@@ -4,21 +4,21 @@
         $("ul#tabs").tabs("> .highlights");
 
         var site_address = window.location.href;
-        site_address = site_address.replace(/#\w*/, '')
+        // remove any # or #items links from the site link address 
+        site_address = site_address.replace(/#\w*/, '');
         
         var datamaps = $("#datamaps-highlights");
         var data_address  = site_address + "data-and-maps" + " " + ".photoAlbumEntry";
         datamaps.load(data_address);
 
         $topic_selector = $("#topic-selector");
-        $topic_selector.find('[value="default"]').remove()
+        $topic_selector.find('[value="default"]').remove();
         $topic_selector.change(
             function displayResult() {
                 var x = this.selectedIndex,
                     y = this.options;
                 var sel_value = y[x].value;
                 var cur_tab_val = $("#tabs a.current").text().toLowerCase();
-                // remove any # or #items links from the link address 
                 var news = $(".highlights").filter( function(index) { 
                      return this.style.display === "block"; 
                 });

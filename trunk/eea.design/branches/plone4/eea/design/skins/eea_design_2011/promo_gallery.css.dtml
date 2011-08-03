@@ -112,10 +112,10 @@
 	color:#FFF;
 }
 
-#promo-navigator li h3{
-    color: #4e8192;
-	font-size:100%;
-	padding:5px 6px 0;
+#promo-navigator li h3 {
+    color: #4E8192;
+    font-size: 100%;
+    padding: 8px 6px 0 3px;
 	margin:0;
     font-weight: normal;
     height: 68px;

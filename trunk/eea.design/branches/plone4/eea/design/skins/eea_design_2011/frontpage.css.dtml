@@ -176,8 +176,13 @@ a.archives {
     width: 585px;
 }
 
+#datamaps-highlights {
+    float: left;
+}
+
 #highlights-area .highlights {
     background: #F7F7F7;
+    padding: 2em;
 }
 body.frontpage .documentActions,
 body.frontpage #belowContent {

@@ -1,14 +1,8 @@
-<div metal:define-macro="multimedia" 
-		class="highlights"
-		id="multimedia-highlights" 
+<tal:multimedia metal:define-macro="multimedia" 
         tal:define="
         frontpage_view context/@@frontpage_highlights;
         folderContents frontpage_view/getMultimedia;"
                 tal:condition="folderContents|nothing">
-    <div class="visualPadding">
-        <ul>
     <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
-        </ul>
-        <div class="visualClear"><!-- --></div>
-    </div>
-</div>
+    <div class="visualClear"><!-- --></div>
+</tal:multimedia>
