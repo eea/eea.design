@@ -203,20 +203,6 @@ class Frontpage(BrowserView):
         results = self._getItemsWithVisibility(visibilityLevel, ('Highlight', 'PressRelease')) 
         return results 
 
-    def getCampaign(self):
-        ret = self.context.restrictedTraverse('@@globalPromotion')()
-        if ret is None:
-            return None
-        portal_url = getToolByName(aq_inner(self.context), 'portal_url')
-        portal = portal_url.getPortalObject()
-        img = getattr(self.context, 'campaign-banner', None)
-        if img is not None:
-            wf = getToolByName(portal, 'portal_workflow', None)
-            hist = wf.getHistoryOf('plone_workflow', img)
-            if hist[-1]['review_state'] == 'published' or 'force_campaign' in self.request:
-                return ret
-        return None
-
     def getPromotions(self):
         query = {
             'object_provides': {
