@@ -61,6 +61,7 @@ body.frontpage ul {
 
 #highlights-block h2 { 
     font-size: 160%;
+    line-height: 1.4;
     margin: 0.25em 0;
     border: none;
     clear: left;
@@ -78,7 +79,12 @@ body.frontpage ul {
 
 .highlights {
     clear: both;
+    padding: 0 15px 15px 15px;
 }
+
+/**
+ * Reset margin between tabs and content from highlights
+*/
 .figure-left {
     /* clear: left; */
     float: left;
@@ -144,6 +150,17 @@ a.archives {
     width: 100%;
 }
 
+/* Campaign mode
+******************************************************************************/
+
+#campaign-banner {
+    width: 100%;
+    height: 100%;
+}
+
+#campaign-banner img {
+    width: 100%;
+}
 
 /* Frontpage main content
 ******************************************************************************/
@@ -165,13 +182,8 @@ a.archives {
     width: 585px;
 }
 
-#datamaps-highlights {
-    float: left;
-}
-
 #highlights-area .highlights {
     background: #F7F7F7;
-    padding: 2em;
 }
 body.frontpage .documentActions,
 body.frontpage #belowContent {
@@ -228,6 +240,7 @@ body.frontpage #portal-columns {
 
 #highlights-block .highlightHigh h2 {
     font-size: 250%;
+    line-height: 1.5;
     margin-top: 0;
 }
 
@@ -266,22 +279,21 @@ div.panel, div.even  {
     padding: 15px 15px 10px 15px;
     font-size: 125%;
     font-weight: normal;
-    border: 1px solid white;
     border-bottom: 1px solid #DDD;
     cursor: pointer;
 }
 div.even {
-    /* background: #f7f7f7 !important; */
+     background: #f7f7f7 !important; 
 }
 
 div.current {
-    /* display: none; */
+  display: none; 
 }
 
 ul#tabs {
     background: #2C8DA2;
-    border-bottom: 1px solid #666;
     border-radius: 10px 10px 0px 0px;
+    border: none;
     height: 33px;
     list-style: none;
     margin: 0 !important;
@@ -292,7 +304,7 @@ ul#tabs li {
     float: left;
     list-style-image: none !important;
     margin: 0 !important;
-    padding: 9px 0em;
+    padding: 8px 0em;
     text-indent: 0;
 }
 
@@ -300,7 +312,7 @@ ul#tabs li a {
     color: #FFF;
     border: 0px;
     text-decoration: none;
-    padding: 11px 10px 10px 10px;
+    padding: 9px 10px 11px 10px;
 }
 
 ul#tabs li a.current, ul#tabs li a:hover {
@@ -309,9 +321,16 @@ ul#tabs li a.current, ul#tabs li a:hover {
     
 }
 
+ul#tabs li:first-child a.current,
+ul#tabs li:first-child a:hover {
+  border-radius: 8px 0 0 0;
+}
+
 #news-header select {
     margin-left: 30px;
     color: #346f83;
+    margin-top: 10px;
+    display: table-cell;
 }
 
 #news-header h2 {
@@ -319,8 +338,11 @@ ul#tabs li a.current, ul#tabs li a:hover {
 }
 
 #news-header {
-    height: 30px;
-    margin-top: 2em;
+  height: 35px;
+  margin-top: 2em;
+  clear: both;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .roundedCorners {
@@ -348,6 +370,15 @@ ul#tabs li a.current, ul#tabs li a:hover {
 }
 #forum {
     background: #E6E7E8 url("enquiry_service.png") no-repeat center center;
+}
+
+#forum a:hover,
+#community a:hover,
+#mobile a:hover,
+#prev-promo:hover,
+#play-pause:hover,
+#next-promo:hover {
+  text-decoration: none !important;
 }
 
 #community {
@@ -393,3 +424,4 @@ ul#tabs li a.current, ul#tabs li a:hover {
     left: 67px;
 }
 /* </dtml-with> */
+

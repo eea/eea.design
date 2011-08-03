@@ -187,7 +187,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 #smart-view-switch {
     margin: 0.5em 0;
-    width: 132px;
+    width: 131px;
     height: 32px;
     background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
     border: 1px solid #ccc;
@@ -226,7 +226,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin: 0 0.5em 0 0;
 }
 
-.eea-no-list-style, #content ul.eea-no-list-style{
+.eea-no-list-style {
     list-style-type: none;
     list-style-image: none;
     margin: 1em 0;
@@ -514,7 +514,7 @@ a.moreLink {
     color: #346f83;
     border: 0px !important;
     padding: 5px 0px 5px 25px;
-    background: url("readme_more.png") no-repeat top left;
+    background: transparent url("readme_more.png") no-repeat scroll left center;
 }
 
 /* End links */
@@ -606,11 +606,9 @@ float:right;
      * understand the CSS. So if you change these values, make sure to change
      * design.js too. TODO: use dtml*/
     margin: 0 auto;
-    max-width: 1024px;
-    min-width: 972px;
+    width: 1024px;
     overflow: hidden;
     padding: 0;
-    width: 98%;
 }
 
 /* Logo properties */
@@ -655,6 +653,7 @@ float:right;
     margin-top: 2px;
     height: 25px;
     padding: 0;
+    min-width: 1024px;
 }
 
 .shadow {
@@ -1128,10 +1127,33 @@ float:right;
     margin-bottom: 0.5em;
 }
 
+.tileContent {
+  display: table-cell;
+}
+
 .tileImage {
     float: left;
-    margin: 1em 1em 0em 0em;
+    margin: 1em 1em 1em 0em;
     border: 1px solid &dtml-globalBorderColor;;
+}
+
+.highlights .tileItem {
+  margin-top: 0 !important;
+}
+
+.highlights #news-highlights .tileItem:last-child,
+.highlights #articles-highlights .tileItem:last-child,
+.highlights #publications-highlights .tileItem:last-child,
+.highlights #multimedia-highlights .tileItem:last-child,
+.highlights #datamaps-highlights .tileItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.tileFooter {
+    float: left;
+    clear: both;
+    display: block;
 }
 
 #relatedItems .visualClear {
@@ -1703,5 +1725,7 @@ body.mceContentBody {
 }
 
 
+
 /* </dtml-with> */
+
 
