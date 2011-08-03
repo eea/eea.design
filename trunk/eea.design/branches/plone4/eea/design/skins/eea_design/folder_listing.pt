@@ -69,7 +69,7 @@
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
             <tal:block tal:condition="python: not isAnon or not not_show_empty or not getattr(item, 'is_empty', False)" 
                        tal:define="
-                                   item_object item/getObject;
+                                   item_object item/getObject|nocall:item;
                                    urlview item_object/@@url;
                                    item_absolute_url item_object/absolute_url;
                                    item_url urlview/listing_url;

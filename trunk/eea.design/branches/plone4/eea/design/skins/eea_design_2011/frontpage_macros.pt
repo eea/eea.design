@@ -6,7 +6,7 @@
 <div metal:define-macro="news"
 		id="news-highlights" 
 		class="highlights"
-		tal:define="highlights frontpage_view/getNews;
+		tal:define="folderContents frontpage_view/getNews;
 		            plone_view nocall:plone_view|here;">
         <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
         <div class="visualClear"><!-- --></div>
