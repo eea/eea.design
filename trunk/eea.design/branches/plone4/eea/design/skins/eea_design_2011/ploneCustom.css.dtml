@@ -1696,6 +1696,11 @@ div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
 
+/* szabozo0 added for tinymce */
+body.mceContentBody {
+    background: transparent !important;
+    padding: 0px !important;
+}
 
 
 /* </dtml-with> */
