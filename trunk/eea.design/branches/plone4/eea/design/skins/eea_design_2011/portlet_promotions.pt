@@ -2,32 +2,6 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       i18n:domain="eea">
 <body>
-<metal:portlet define-macro="portlet-unused">
-<div class="dropShadow">
- <dl class="portlet">
-    <dt class="portletHeader">
-      <span class="portletContentNavigation">
-       <a href="" title="previous"><img src="box-arrows.gif" alt="previous/next" /></a>
-      </span>
-        For kids
-    </dt>
-    <dd class="portletItem">
-        <img id="agents" src="http://www/images/teaser_leftbox_eco_agents.gif" alt="Eco agents logo" width="100%"/>
-    </dd>
-
-    <dd class="portletItem subHeader">
-        <a href="" title="">Ecoagent</a>
-    </dd>
-    <dd class="portletItem">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-        <a href="" title=""
-           tal:attributes="href here/absolute_url;
-                           title string:more" class="moreLink">More</a>
-    </dd>
- </dl>
-</div>
-</metal:portlet>
-
 <metal:portlet define-macro="promotion-list"
                tal:condition="nocall:promotionCategoryFolder|nothing">
 <div class="portlet-promotions"
@@ -89,13 +63,6 @@
 </div>
 </metal:portlet>
 
-<metal:portlet define-macro="campaign"
-               tal:condition="campaign|nothing"
-               tal:define="promo python:campaign[0];">
-    <a id="campaign-banner" href="#" title="" tal:attributes="href promo/url; title promo/Title">
-        <img src="campaign-banner" alt="" tal:attributes="alt promo/Title" />
-    </a>
-</metal:portlet>
 
 <metal:portlet define-macro="all" tal:condition="promotions|nothing">
 <tal:promotionCategories repeat="promos promotions">

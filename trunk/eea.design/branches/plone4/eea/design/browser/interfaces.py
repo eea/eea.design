@@ -80,8 +80,6 @@ class IFrontPageHighlights(Interface):
         """ Return all published promotions and group them in categories.
             Categories are defined by the folders containing the promotions. """
 
-    def getCampaign():
-        """ Return the campaign promotion if there is one. """
 
     def getMultimedia():
         """ Return 4 latest videos. """
