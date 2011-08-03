@@ -4,8 +4,8 @@
     <body>
 
         <metal:portlet metal:define-macro="portlet" tal:define="queryString queryString|string:h2, h3, h4">
-
-            <dl id="document-toc" class="portlet toc collapsable-portlet">
+<!--toc -->
+            <dl id="document-toc" class="portlet collapsable-portlet">
                 <span style="display:none" id="queryString" tal:content="queryString"></span>
                 <dt class="portletHeader">
                     <span i18n:translate="label_tableofcontents">Contents</span>

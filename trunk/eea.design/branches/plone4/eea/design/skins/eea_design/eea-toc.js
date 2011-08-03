@@ -9,7 +9,7 @@ function build_toc(){
         var currentList = $(this).find('.portletItem ol');
         var hLevel = null;
         var lists = {'root': currentList};
-        var queryString = $(this).find(' #queryString').html();
+        var queryString = $('#queryString').html();
 
         $('#region-content').find(queryString).each(function(i, el) {
             var newLevel = parseInt(el.tagName.charAt(1), 10);
