@@ -6,14 +6,14 @@ $(document).ready(function() {
             var title = $(this).attr("title");
             $(this).after($('<div class="eea-tooltip-markup-top">' + title + '</div>'));
             $(this).tooltip({
-                //effect: 'slide'
+                effect: 'fade'
             });
         });
         $(".eea-tooltip-bottom").each(function(i) {
             var title = $(this).attr("title");
             $(this).after($('<div class="eea-tooltip-markup-bottom">' + title + '</div>'));
             $(this).tooltip({
-                //effect: 'slide',
+                effect: 'fade',
                 position: 'bottom center'
             });
         });
@@ -21,7 +21,7 @@ $(document).ready(function() {
             var title = $(this).attr("title");
             $(this).after($('<div class="eea-tooltip-markup-left">' + title + '</div>'));
             $(this).tooltip({
-                //effect: 'slide',
+                effect: 'fade',
                 position: 'center left'
             });
         });
@@ -29,7 +29,7 @@ $(document).ready(function() {
             var title = $(this).attr("title");
             $(this).after($('<div class="eea-tooltip-markup-right">' + title + '</div>'));
             $(this).tooltip({
-                //effect: 'slide',
+                effect: 'fade',
                 position: 'center right'
             });
         });
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
           $(this).after(container);
           $(this).tooltip({
-            //effect: 'slide',
+            effect: 'fade',
             position: 'center right',
             offset: [20, 20]
           });
@@ -71,7 +71,7 @@ $(document).ready(function() {
 
           $(this).after(container);
           $(this).tooltip({
-            //effect: 'slide',
+            effect: 'fade',
             position: 'center left',
             offset: [20, -10]
           });
@@ -92,7 +92,7 @@ $(document).ready(function() {
 
           $(this).after(container);
           $(this).tooltip({
-            //effect: 'slide',
+            effect: 'fade',
             position: 'top center',
             offset: [10, 0]
           });
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
           $(this).after(container);
           $(this).tooltip({
-            //effect: 'slide',
+            effect: 'fade',
             position: 'bottom center',
             offset: [30, 0]
           });
