@@ -82,7 +82,7 @@
 	padding:0;
 	margin:0;
     position: absolute;
-	width:100%;
+	width:190px;
 }
 #promotions ul, #promo-gallery-content ul {
     margin-left: 0em;
@@ -103,13 +103,16 @@
 	top:0px;
 	z-index:100;
 	height:320px;
-	width:170px;
 	overflow:hidden;
 	color:#FFF;
 }
 
-#promo-navigator .lof-navigator li.active{
+#promo-navigator li.active{
 	color:#FFF;
+    background: transparent url("promotions-gallery-arrow.png") no-repeat right center;
+    position: relative;
+    z-index: 300;
+    width: 189px !important;
 }
 
 #promo-navigator li h3 {
@@ -126,10 +129,10 @@
 	color:#FFF;
 	height:100%;
 	position:relative;
+    width: 170px;
 }
 
 #promo-navigator li.active div{
-	color: FFF;
     background: #b1c748;
 }
 
