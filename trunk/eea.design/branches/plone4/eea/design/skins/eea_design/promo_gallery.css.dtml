@@ -15,7 +15,7 @@
     width: 380px;
     color: white;
     margin: 0 0px;
-    background: #B1C748;
+    background: &dtml-corporateGreen;
     opacity: 0.9;
     height: 75px;
     padding: 5px 20px 0px 20px;
@@ -133,7 +133,7 @@
 }
 
 #promo-navigator li.active div{
-    background: #b1c748;
+    background: &dtml-corporateGreen;;
 }
 
 #promo-navigator li img{
@@ -188,7 +188,7 @@
 .controls {
     height: 25px;
     border-radius: 0px 0px 10px 10px;
-    background: #E6E7E8;
+    background: &dtml-mediumBackgroundColor;;
     width: 570px;
     padding: 15px 0px 0px 20px;
 }

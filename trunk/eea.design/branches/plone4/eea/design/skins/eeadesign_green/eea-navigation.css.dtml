@@ -8,7 +8,7 @@
 a.navItemLevel1current,
 #eea-portlet-navigation-tree a.navItemLevel3current,
 #eea-portlet-navigation-tree a.navItemLevel2current {
-    background: url("arrow-normal.png") no-repeat scroll 1em 50% #E9EFCD !important;
+    background: url("arrow-normal.png") no-repeat scroll 1em 50% &dtml-corporateGreen; !important;
 }
 
 #eea-portlet-navigation-tree a,

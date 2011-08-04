@@ -3,7 +3,7 @@
 
 #footer-wrapper {
     /* background: white url(footer_left.jpg) no-repeat; */
-    background-color: #b1c748;
+    background-color: &dtml-corporateGreen;;
     margin: 0;
     padding: 0;
     clear: both;

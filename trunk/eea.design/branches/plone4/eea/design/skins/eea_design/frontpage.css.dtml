@@ -272,7 +272,7 @@ body.frontpage #portal-columns {
 }
 
 div.panel, div.even  {
-    background: #E6E7E8;
+    background: &dtml-evenRowBackgroundColor;;
     color: #346f83; 
     margin: 0;
     padding: 15px 15px 10px 15px;
@@ -290,7 +290,7 @@ div.current {
 }
 
 ul#tabs {
-    background: #2C8DA2;
+    background: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     border: none;
     height: 33px;

@@ -24,7 +24,7 @@
 
 #document-toc {
     margin: 0 0;
-    border: 1px solid #E9EFCD;
+    border: 1px solid &dtml-globalBorderColor;
     float: left;
     width: 25%;
 }
@@ -53,7 +53,7 @@
 
 .portlet-promotions dl.portlet dt{
     text-align: center;
-    background-color: #E9EFCD;
+    background-color: &dtml-greyBackgroundColor;;
 }
 
 .portlet-promotions dl.portlet .promo-prev {
@@ -591,7 +591,7 @@ a.noHover {
    background: none repeat scroll 0 0 transparent;
 }
 .portlet dt.portletItem a:link{
-    color: #2A6495;
+    color: &dtml-linkColor;;
 }
 
 .portlet dd.portletSeparator {
