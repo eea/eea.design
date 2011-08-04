@@ -5,6 +5,8 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Bugfix: Fixed file type on album view for EEAFigure [szabozo0 #4446]
+
 * Bugfix: Replaced slide effect with fade. Slide is not available directly in jquerytools only via custom plugin [szabozo0 #4446]
 
 * Bugfix: Enabled eea-smartview.js, fixed double /view on folder listing, fixed padding for tinymce [szabozo0 #4446]
