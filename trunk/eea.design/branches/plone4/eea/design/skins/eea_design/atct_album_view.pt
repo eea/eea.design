@@ -25,7 +25,7 @@
     </div>
 
   <metal:listingmacro define-macro="listing" tal:define="
-    entry_macro  context/atct_albumentry/macros/entry;
+    entry_macro  entry_macro|context/atct_albumentry/macros/entry;
     folderContents folderContents|nothing;">
   <tal:folderContents condition="folderContents" tal:define="batch folderContents">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
