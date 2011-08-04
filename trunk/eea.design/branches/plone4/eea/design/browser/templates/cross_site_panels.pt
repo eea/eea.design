@@ -155,8 +155,10 @@
                 </div>
             </div>
 
+            <!-- #4460 XXX Plone4 Performance issue -->
             <div class="panel" id="tip-siteaction-events" style="width: 450px">
-                <div class="panel-top">
+              <!-- XXX Refactor or use AJAX-->
+                <!--div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
 
@@ -182,7 +184,7 @@
                         tal:attributes="href string:$portal_url/events/submitted/createQuickEvent">
                         <span>Submit a new event</span>
                     </a>
-                </div>
+                </div-->
             </div>
 
             <div class="panel" id="tip-siteaction-chooselang"
@@ -195,7 +197,7 @@
                         <tal:language repeat="lang languages">
                         <li><a href=""
                                 tal:define="url lang/url;
-                                url python: 'localhost' in url and (('www' in url) and 
+                                url python: 'localhost' in url and (('www' in url) and
                                     'http://www.eea.europa.eu/%s' % url.split('/www/')[1]) or url;
                                 "
                                 tal:content="python: '%s (%s)' % (lang['lang'], lang['langcode'])"
