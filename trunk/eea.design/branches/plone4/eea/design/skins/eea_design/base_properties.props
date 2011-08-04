@@ -9,6 +9,10 @@ fontBaseSize:string=69%
 fontColor:string=Black
 fontSmallSize:string=85%
 
+#corporate main colors
+corporateGreen:string=#b1c748
+corporateBlueOne:string=#2c8da2
+
 #different headings colors
 linkHeadingColor:string=#346f83
 headingColor:string=#2d749c
@@ -20,17 +24,17 @@ backgroundColor:string=transparent
 lightGreyDivisionColor:string=#cccccc
 
 #general bgc for boxes and portlets
-lightBackgroundColor:string=#ecf3d0
-mediumBackgroundColor:string=#e9efcd
+lightBackgroundColor:string=#ececec
+mediumBackgroundColor:string=#e6e7e8
 darkBackgroundColor:string=#95b229
-greyBackgroundColor:string=#eeeeee
+greyBackgroundColor:string=#ececec
 headerBackgroundColor:string=#F0F4F5
 
 #top navigation colors
-tabBackgroundColor:string=#ebf2e4
+tabBackgroundColor:string=#2c8da2
 
 #link colors
-linkColor:string=#2a6495
+linkColor:string=#346f83
 linkActiveColor:string=#f5821f
 linkVisitedColor:string=#8e004d
 linkHoverColor:string=#8e004d
@@ -56,13 +60,14 @@ inputFontColor:string=Black
 
 textTransform:string=lowercase
 
-evenRowBackgroundColor:string=#f6f6f6
-oddRowBackgroundColor:string=transparent
+#For zebra styles. odd items in lists / tables 
+evenRowBackgroundColor:string=#e6e7e8
+oddRowBackgroundColor:string=#f7f7f7
 
 notifyBorderColor:string=#ffa500
 notifyBackgroundColor:string=#febe86
 
-discreetColor:string=#76797c
+discreetColor:string=#808285
 helpBackgroundColor:string=#ffffe1
 
 portalMinWidth:string=70em
