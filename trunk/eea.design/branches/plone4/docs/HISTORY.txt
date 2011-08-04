@@ -5,7 +5,7 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
-* Bugfix: Fixed file type on album view for EEAFigure [szabozo0 #4446]
+* Bugfix: Fixed file type on album view for EEAFigure, CSS for issue on "Latest added" portlet [szabozo0 #4446]
 
 * Bugfix: Replaced slide effect with fade. Slide is not available directly in jquerytools only via custom plugin [szabozo0 #4446]
 

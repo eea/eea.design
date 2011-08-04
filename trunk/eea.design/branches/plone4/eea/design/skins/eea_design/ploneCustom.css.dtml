@@ -447,6 +447,20 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin-top: 0;
 }
 
+#auto-related dd {
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+
+#auto-related dd.portletFooter {
+    padding:1em;
+}
+
+#auto-related dt {
+    background-color:transparent;
+    padding-left:0px;
+}
+
 #related-multimedia-top dd.embeddedMedia,
 #related-multimedia dd.embeddedMedia,
 .portlet dd.embeddedMedia {
@@ -467,6 +481,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin-bottom: 1em;
 }
 
+#content dt.
 #related-multimedia-top {
     border:none;
     margin:0;
