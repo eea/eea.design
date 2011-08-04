@@ -34,10 +34,6 @@ body.section-atlas #visual-column-wrapper {
     margin-bottom: 10px;
 }
 
-#soerSearchBox dd, #video-portlet dd{
-    margin: 0;
-    padding: 0;
-}
 #geo1_widget li {
     text-transform: uppercase;
 }
@@ -49,7 +45,7 @@ body.section-atlas #visual-column-wrapper {
     background: #dcecf4;
     height: 270px ! important;
 }
-.slidePortlet .portletItem, #content .slidePortlet .portletItem {
+.slidePortlet .portletItem {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -100,7 +96,7 @@ body.section-atlas #visual-column-wrapper {
 
 .section-soer #boxes .portlet,
 .section-soer-draft #boxes .portlet {
-    height: 181px;
+    height: 190px;
 }
 .section-soer #boxes,
 .section-soer-draft #boxes {
@@ -191,7 +187,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 #smart-view-switch {
     margin: 0.5em 0;
-    width: 131px;
+    width: 132px;
     height: 32px;
     background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
     border: 1px solid #ccc;
@@ -230,7 +226,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin: 0 0.5em 0 0;
 }
 
-.eea-no-list-style {
+.eea-no-list-style, #content ul.eea-no-list-style{
     list-style-type: none;
     list-style-image: none;
     margin: 1em 0;
@@ -255,7 +251,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* Override jquery.ui style */
 .ui-widget-content a {
-    color: &dtml-linkColor;;
+    color: #2A6495;
 }
 
 /* Inflexible tooltips */
@@ -451,20 +447,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin-top: 0;
 }
 
-#auto-related dd {
-    padding: 0;
-    margin: 0 0 1em 0;
-}
-
-#auto-related dd.portletFooter {
-    padding:1em;
-}
-
-#auto-related dt {
-    background-color:transparent;
-    padding-left:0px;
-}
-
 #related-multimedia-top dd.embeddedMedia,
 #related-multimedia dd.embeddedMedia,
 .portlet dd.embeddedMedia {
@@ -485,7 +467,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin-bottom: 1em;
 }
 
-#content dt.
 #related-multimedia-top {
     border:none;
     margin:0;
@@ -530,9 +511,10 @@ dl a:hover, dd a:hover, dt a:hover {
 }
 
 a.moreLink {
+    color: #346f83;
     border: 0px !important;
     padding: 5px 0px 5px 25px;
-    background: transparent url("readme_more.png") no-repeat scroll left center;
+    background: url("readme_more.png") no-repeat top left;
 }
 
 /* End links */
@@ -618,14 +600,17 @@ float:right;
 }
 
 /* End edit form elements */
+
 #visual-portal-wrapper {
     /* We also set max/min width in design.js because IE doens't
      * understand the CSS. So if you change these values, make sure to change
      * design.js too. TODO: use dtml*/
     margin: 0 auto;
-    width: 1024px;
+    max-width: 1024px;
+    min-width: 972px;
     overflow: hidden;
     padding: 0;
+    width: 98%;
 }
 
 /* Logo properties */
@@ -660,8 +645,8 @@ float:right;
 }
 
 #portal-top {
-    /* margin: 0; */
-    /* padding: 0; */
+    margin: 0;
+    padding: 0;
     /* background: url(&dtml-portal_url;/headerbg.gif) repeat-y top right #95b229; */
 }
 
@@ -670,7 +655,6 @@ float:right;
     margin-top: 2px;
     height: 25px;
     padding: 0;
-    min-width: 1024px;
 }
 
 .shadow {
@@ -1144,33 +1128,10 @@ float:right;
     margin-bottom: 0.5em;
 }
 
-.tileContent {
-  display: table-cell;
-}
-
 .tileImage {
     float: left;
-    margin: 1em 1em 1em 0em;
+    margin: 1em 1em 0em 0em;
     border: 1px solid &dtml-globalBorderColor;;
-}
-
-.highlights .tileItem {
-  margin-top: 0 !important;
-}
-
-.highlights #news-highlights .tileItem:last-child,
-.highlights #articles-highlights .tileItem:last-child,
-.highlights #publications-highlights .tileItem:last-child,
-.highlights #multimedia-highlights .tileItem:last-child,
-.highlights #datamaps-highlights .tileItem:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.tileFooter {
-    float: left;
-    clear: both;
-    display: block;
 }
 
 #relatedItems .visualClear {
@@ -1595,7 +1556,7 @@ body.kupu {
 
 body.section-soer #visual-portal-wrapper,
 body.section-soer-draft #visual-portal-wrapper {
-    width: 1024px;
+    width: 972px;
 }
 
 /* ichimdav columns.css slider-definitions */
@@ -1620,7 +1581,6 @@ div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
     float: left;
     width: 182px;
 }
-
 #portal-column-two .visualPadding {
     padding: 0em 1em 1em 0em;
 }
@@ -1729,7 +1689,5 @@ body.mceContentBody {
 }
 
 
-
 /* </dtml-with> */
-
 
