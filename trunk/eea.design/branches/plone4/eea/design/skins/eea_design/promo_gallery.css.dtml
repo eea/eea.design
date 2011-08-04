@@ -39,7 +39,6 @@
     /* float: right; */
     background: #F7F7F7;
     border: 0px solid #F7F7F7;
-    border-radius:10px 0px 0px;
 }
 
 #gallery-content-outer {
