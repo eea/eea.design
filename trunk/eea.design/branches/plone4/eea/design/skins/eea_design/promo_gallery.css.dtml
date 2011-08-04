@@ -22,13 +22,17 @@
 }
 
 #promo-gallery-content h3 {
-    margin-top: 0.5em;
-    font: normal 1.4em Verdana, Lucida, Helvetica, Arial, sans-serif;
-    /* padding: 0px 10px; */
+    margin: 0.2em 0 0.4em 0;
+    font-size: 1.6em;
 }
 #promo-gallery-content h3 a, #promo-gallery-content h3 a:visited {
     color: #FFF !important;
 }
+
+.promo-item-desc span {
+   font-size: 1em;
+}
+
 
 /* main promo content */
 #promotions {
