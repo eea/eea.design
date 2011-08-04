@@ -172,7 +172,7 @@
                     tal:repeat="hl highlights">
                         <li>
                         <tal:image tal:define="figure hl/getImage|nothing;
-                        figure_link hl/absolute_url|nothing;
+                        figure_link hl/getUrl|hl/absolute_url/nothing;
                         figure_scale string: preview;
                         figure_title figure/title|nothing;"
                         tal:condition="figure">
@@ -189,7 +189,7 @@
                         </tal:image>
                     <div class="promo-item-desc">
                         <h3><a href="#" class="noPrint"
-                                tal:attributes="href hl/absolute_url"
+                                tal:attributes="href hl/getUrl|hl/absolute_url/nothing"
                                 tal:content="hl/title">
                                 Highlight Title</a></h3>
                          <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   

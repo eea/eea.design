@@ -98,7 +98,6 @@
 							  
 		startUp:function( obj, wrapper ) {
 			seft = this;
-
 			this.navigatorItems.each( function(index, item ){
 				$(item).click( function(){
 					seft.jumping( index, true );
@@ -205,10 +204,10 @@
 			for( var action in objects ){ 
 				switch (action.toString() ){
 					case 'next':
-						objects[action].click( function() { self.next( true); self.stop(); self.changePlayButton(); return false; } );
+						objects[action].click( function() { self.next( true );  return false; } );
 						break;
 					case 'previous':
-						objects[action].click( function() { self.previous( true); self.stop(); self.changePlayButton(); return false; } );
+						objects[action].click( function() { self.previous( true ); return false; } );
 						break;
 				}
 			}
@@ -253,12 +252,16 @@
 			this.onProcessing( item, manual, 0, this.maxSize )
 				.fxStart( this.currentNo, this.getObjectDirection(this.maxSize ), this )
 				.finishFx( manual );
+            this.stopPlay();
+
+
 		},
 		previous:function( manual, item ){
 			this.currentNo += this.currentNo > 0 ? -1 : this.slides.length - 1;
 			this.onProcessing( item, manual )
 				.fxStart( this.currentNo, this.getObjectDirection(this.maxSize ), this )
 				.finishFx( manual	);			
+            this.stopPlay();
 		},
 		play:function( delay, direction, wait ){	
 			this.stop(); 
@@ -266,12 +269,12 @@
 			var self  = this;
 			this.isRun = setTimeout(function() { self[direction](true); }, delay);
 		},
-
-		changePlayButton: function(){	
-            var play = $(this.settings.toggleElement)[0];
-            play.innerHTML = "Play";
-            play.className = "play";
-		},
+        stopPlay: function() {
+            var play_button = $(this.settings.toggleElement)[0];
+            if (play_button.innerHTML === "Play") {
+                this.stop();
+            }          
+        },
 		stop:function(){ 
 			if (this.isRun == null) return;
 			clearTimeout(this.isRun);
