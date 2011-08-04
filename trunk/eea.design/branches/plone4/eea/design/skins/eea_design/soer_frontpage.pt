@@ -12,9 +12,9 @@
 
 
             <div class="visualClear"></div>
-            <div id="tag-cloud"> 
-	 	 <div id="tag-cloud-content" tal:define="faceted_path string:soer/advanced-search"> 
-	 	                    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
+            <div id="tag-cloud">
+	 	 <div id="tag-cloud-content" tal:define="faceted_path python:'soer/advanced-search'"> 
+	 	        <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
 	 	 </div>
             </div>
 

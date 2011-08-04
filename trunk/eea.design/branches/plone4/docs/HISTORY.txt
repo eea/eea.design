@@ -5,6 +5,8 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Bugfix: Fixed widgets on soer frontpage [szabozo0 #4446]
+
 * Change: updated the variable of colors to match the new update color scheme. now we can start using these dtml variables in our css to be consistent. [demarant #4458]
 
 * Bugfix: Fixed file type on album view for EEAFigure, CSS for issue on "Latest added" portlet [szabozo0 #4446]
