@@ -15,7 +15,7 @@
     width: 380px;
     color: white;
     margin: 0 0px;
-    background: &dtml-corporateGreen;
+    background: &dtml-corporateGreen;;
     opacity: 0.9;
     height: 75px;
     padding: 5px 20px 0px 20px;
