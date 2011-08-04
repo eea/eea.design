@@ -10,7 +10,7 @@ fontColor:string=Black
 fontSmallSize:string=85%
 
 #different headings colors
-linkHeadingColor:string=#00446a
+linkHeadingColor:string=#346f83
 headingColor:string=#2d749c
 headingFontFamily:string= Verdana, Lucida, Helvetica, Arial, sans-serif
 

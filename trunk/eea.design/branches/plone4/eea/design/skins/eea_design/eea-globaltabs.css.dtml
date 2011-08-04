@@ -30,9 +30,10 @@
     display: block;
     width: 100%;
     list-style: none;
-    padding: 0px;
+    padding: 5px 0px 0px 0px;
     margin: 0 0 0 0em;
-    background: url(&dtml-portal_url;/globalnav.png) repeat-x #00446a;
+    background: transparent;
+    /* background: url(&dtml-portal_url;/globalnav.png) repeat-x #00446a; */
     /*min-height: 3em;*/
 }
 
@@ -162,7 +163,11 @@
     width:15em;
 }
 
-/* </dtml-with> */
+#secundary-portaltabs{
+    float: right;
+    display: inline;
+}
+
 /*#portal-globalnav {*/
     /*clear: both;*/
     /*font-size: 80%;*/
@@ -184,4 +189,5 @@
 /*}*/
 
 
+/* </dtml-with> */
 

@@ -251,11 +251,12 @@
         <p class="note" i18n:translate="page_translated_by">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
     </div>
 
+
+</div>
+
     <metal:block i18n:domain="eea" tal:condition="not:ajax_load">
         <div tal:replace="structure provider:plone.portalfooter" />
     </metal:block>
-
-</div>
 </body>
 </html>
 

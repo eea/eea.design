@@ -10,14 +10,14 @@
 .promo-item-desc {
     z-index: 100;
     position: absolute;
-    top: 220px;
+    top: 240px;
     left: 0px;
     width: 380px;
     color: white;
     margin: 0 0px;
     background: #B1C748;
     opacity: 0.9;
-    height: 100px;
+    height: 75px;
     padding: 5px 20px 0px 20px;
 }
 

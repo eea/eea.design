@@ -377,7 +377,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
    padding:0.2em 0.3em 0.3em 22px;
    color:#8F8F8F;
    font-size:1em;
-   border: 1px solid #efefef;
+   /* border: 1px solid #efefef; */
 }
 #translation-disclaimer {
    margin: 0 1em 0 1em;
@@ -487,6 +487,7 @@ dd.embeddedMedia .magnify {
     background: none;
     padding: 0px;
 }
+
 .flowplayer a,
 .documentContent p a,
 .documentContent ul li a,
@@ -510,8 +511,10 @@ dl a:hover, dd a:hover, dt a:hover {
 }
 
 a.moreLink {
-background: url(&dtml-portal_url;/bcpil.gif) no-repeat center right;
-padding-right: 1em;
+    color: #346f83;
+    border: 0px !important;
+    padding: 5px 0px 5px 25px;
+    background: transparent url("readme_more.png") no-repeat scroll left center;
 }
 
 /* End links */
@@ -597,18 +600,14 @@ float:right;
 }
 
 /* End edit form elements */
-
 #visual-portal-wrapper {
     /* We also set max/min width in design.js because IE doens't
      * understand the CSS. So if you change these values, make sure to change
      * design.js too. TODO: use dtml*/
-    width: 98%;
-    max-width: 1280px;
-    min-width: 972px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
+    margin: 0 auto;
+    width: 1024px;
     overflow: hidden;
+    padding: 0;
 }
 
 /* Logo properties */
@@ -618,6 +617,7 @@ float:right;
     border: 0;
     margin: 0px 0 0 7px;
     padding: 0;
+    float: left;
 }
 #printLogo {
     display: none;
@@ -642,9 +642,9 @@ float:right;
 }
 
 #portal-top {
-    margin: 0;
-    padding: 0;
-    background: url(&dtml-portal_url;/headerbg.gif) repeat-y top right #95b229;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* background: url(&dtml-portal_url;/headerbg.gif) repeat-y top right #95b229; */
 }
 
 #cross-site-top {
@@ -652,6 +652,7 @@ float:right;
     margin-top: 2px;
     height: 25px;
     padding: 0;
+    min-width: 1024px;
 }
 
 .shadow {
@@ -865,7 +866,6 @@ float:right;
 .visualCaseSensitive {
     text-transform: none;
 }
-
 
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
@@ -1126,10 +1126,33 @@ float:right;
     margin-bottom: 0.5em;
 }
 
+.tileContent {
+  display: table-cell;
+}
+
 .tileImage {
     float: left;
-    margin: 1em 1em 0em 0em;
+    margin: 1em 1em 1em 0em;
     border: 1px solid &dtml-globalBorderColor;;
+}
+
+.highlights .tileItem {
+  margin-top: 0 !important;
+}
+
+.highlights #news-highlights .tileItem:last-child,
+.highlights #articles-highlights .tileItem:last-child,
+.highlights #publications-highlights .tileItem:last-child,
+.highlights #multimedia-highlights .tileItem:last-child,
+.highlights #datamaps-highlights .tileItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.tileFooter {
+    float: left;
+    clear: both;
+    display: block;
 }
 
 #relatedItems .visualClear {
@@ -1559,9 +1582,9 @@ body.section-soer-draft #visual-portal-wrapper {
 
 /* ichimdav columns.css slider-definitions */
 
-div.width-3\3a 4 { width:    83.875% }
-div.position-1\3a 4 {margin-left:    -83.875%;}
-div.width-1\3a 4 { width:    15.75%; } /* .width-1:4 */
+div.width-3\3a 4 { width:    79.875% }
+div.position-1\3a 4 {margin-left:    -79.875%;}
+div.width-1\3a 4 { width:    19.75%; } /* .width-1:4 */
 div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 /* padding - thanks to the w3c box model :P */
 
@@ -1694,7 +1717,14 @@ div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
 
+/* szabozo0 added for tinymce */
+body.mceContentBody {
+    background: transparent !important;
+    padding: 0px !important;
+}
+
 
 
 /* </dtml-with> */
+
 

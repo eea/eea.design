@@ -27,6 +27,7 @@
   <metal:listingmacro define-macro="listing" tal:define="
     entry_macro  entry_macro|context/atct_albumentry/macros/entry;
     folderContents folderContents|nothing;">
+  
   <tal:folderContents condition="folderContents" tal:define="batch folderContents">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
     <tal:images tal:repeat="brain folderContents">
@@ -43,6 +44,7 @@
     <div class="visualClear"></div>
     <div metal:use-macro="here/batch_macros/macros/navigation" />
   </tal:folderContents>
+
 
   <tal:noFolderContents tal:condition="not:folderContents" tal:define="
     result python:here.atctListAlbum(images=1, others=1);
@@ -90,6 +92,26 @@
   </tal:noFolderContents>
 
   </metal:listingmacro>
+
+  <!-- needed for frontpage gallery to have the listing without batch -->
+  <metal:albummacro define-macro="listing-nobatch" tal:define="
+    entry_macro  entry_macro|context/atct_albumentry/macros/entry;
+    folderContents folderContents|nothing;">
+  <tal:folderContents condition="folderContents" tal:define="batch folderContents">
+    <tal:images tal:repeat="brain folderContents">
+      <tal:entry tal:define="
+        obj brain/getObject;
+        obj_title python:obj.pretty_title_or_id();
+        desc_or_title python:brain.Description or obj_title;
+        urlview obj/@@url;
+        listing_url urlview/listing_url;
+        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        <metal:entry use-macro="entry_macro" />
+      </tal:entry>
+    </tal:images>
+    <div class="visualClear"></div>
+    </tal:folderContents>
+  </metal:albummacro>
 
   <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
 

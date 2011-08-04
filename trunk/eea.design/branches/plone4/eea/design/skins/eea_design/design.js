@@ -2,6 +2,18 @@ var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
 $(document).ready(function() {
+        // Move the cross-site-top above the visual-portal-wrapper
+        var cross_site_top = $("#cross-site-top").detach(),
+            portal_siteactions = $("#portal-siteactions").detach();
+        portal_siteactions.prependTo(cross_site_top);
+        cross_site_top.prependTo("body");
+        
+        // remove the pressroom and about eea and assign them to a new ul
+        // to keep them floated right
+        var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>");
+        $("#portaltab-pressroom, #portaltab-abouteea").detach().appendTo(secundary_portaltabs);
+        secundary_portaltabs.appendTo("#portal-globalnav");
+
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(window.location.pathname)) {
@@ -26,24 +38,26 @@ $(window).resize(function() {
 
     // Layout of top promotions. It's safer to do this in JS as there was some rounding issues
     // with IE in window sizes that wasn't dividible by 5.
-    var margin = $('#top-news-area').width() * 0.03;
-    w = ($('#top-news-area').width() - 4 * margin) / 5;
+    var margin = $('#top-news-area').width() * 0.012;
+    w = ($('#top-news-area').width() - 5 * margin) / 5;
     $('#top-news-area .portlet-promotions').width(w);
     $('#top-news-area .portlet-promotions:lt(4)').css('marginRight', Math.floor(margin) + 'px');
     $('#top-news-area .portlet-promotions:last').css({'marginRight': '0', 'float': 'right'});
 
     // Make sure the height of our images stick to 16:9. Can be removed when
     // we have correct aspect ratio on the uploaded images.
-    $("#multimedia-highlights img, #top-news-area .portlet-promotions img").each(function(i) {
-        $(this).height((9/16) * $(this).width());
-    });
+    // $("#multimedia-highlights img, #top-news-area .portlet-promotions img").each(function(i) {
+    //     $(this).height((9/16) * $(this).width());
+    // });
 
     // Add margins so that the #multimedia-highlights ul fill up the same height as the #big_vid.
     // TODO: why does the ul look a little bit too big in IE6 and 7?
-    margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
-    $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
+    // margin = ($('#big_vid').height() - ($("#multimedia-highlights ul li img").height() * 3)) / 2;
+    // $("#multimedia-highlights ul img:lt(2)").css('marginBottom', margin + 'px');
 
     // Make sure both frontpage columns have the same height:
-    var largest_column_height = Math.max($("#articles-area").height(), $("#highlights-area").height());
-    $(".frontpage .column-area").height(largest_column_height);
+    // TODO: ichimdav disabled automatic height of panels because of removal of
+    // items from production site
+    // var largest_column_height = Math.max($("#articles-area").height(), $("#highlights-area").height());
+    // $(".frontpage .column-area").height(largest_column_height);
 });

@@ -279,6 +279,7 @@ class figure-right or figure-left */
 }
 .figure-title, .figure-nr {
     font-weight: bold;
+    display: none;
 }
 .figure-image {
      text-align: center;
@@ -417,8 +418,8 @@ img.scaled {
     float: left;
     background-color: #fff;
     border: 1px solid #a9a9a9;
-    margin: 0 6px 6px 0;
-    padding: 4px;
+    margin: 0 10px 3px 0;
+    padding: 5px;
 }
 
 /* rounded boxes default css */
