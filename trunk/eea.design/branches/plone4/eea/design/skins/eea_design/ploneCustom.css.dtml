@@ -16,6 +16,74 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+/*
+** demarant: Specific faceted navigation style for certain site sections 
+*/
+
+#faceted-form .faceted-widget {
+   margin: 0 0 1em 0;
+   padding-bottom: 1em;
+}
+
+#faceted-form #center-content-area {
+   padding: 0 0.5em 0 0.5em;
+}
+
+#faceted-form .faceted-widget fieldset {
+   border-style: none !important;
+}
+
+#faceted-form .faceted-widget {
+   background-color: &dtml-lightBackgroundColor;;
+   }
+   
+   
+#faceted-form .widget-fieldset legend {
+  background-color: &dtml-corporateGreen;;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 1.6em;
+}
+
+
+/* Style for faceted used in section-publications */
+
+.section-publications #c0_widget {
+   background-color: #ffffff;
+   }
+
+.section-publications #c13_widget.faceted-widget {
+   /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
+   background-color: &dtml-lightBackgroundColor;;
+}
+
+.section-publications #c13_widget .faceted-textwidget-place-all,
+.section-publications #c13_widget .faceted-textwidget-place-current {
+    display: inline;
+    margin-left: 10px;
+}
+
+.section-publications #c13_button.searchButton {
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 0.5em;
+    position: absolute;
+    right: 40px;
+    text-align: center;
+    top: 160px;
+    width: 138px;
+}
+
+.section-publications #content #faceted-form #c13_widget.faceted-widget label {
+    display: inline;
+    float: none;
+    font-size: 11px;
+    line-height: 13px;
+    padding-bottom: 0;
+    width: 120px;
+}
+
+/* end of specific faceted navigation style */
 
 /* ichimdav: these styles were previously in public.css */
 
