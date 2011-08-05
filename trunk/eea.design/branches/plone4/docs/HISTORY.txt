@@ -5,7 +5,7 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
-* Bugfix: Fixed widgets on soer frontpage, Enabled external link icons [szabozo0 #4446]
+* Bugfix: Fixed widgets on soer frontpage, Enabled external link icons, Added styling for wise portlets [szabozo0 #4446]
 
 * Change: updated the variable of colors to match the new update color scheme. now we can start using these dtml variables in our css to be consistent. [demarant #4458]
 

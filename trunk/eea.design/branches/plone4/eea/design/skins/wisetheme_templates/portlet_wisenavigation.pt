@@ -11,6 +11,12 @@
             WISE Menu
         </span>
     </dt>
+    <dd id="wise-logo" class="portletItem active-promo" style="display: block;">
+        <a title="Water Information System for Europe" class="" href="http://water.europa.eu/en/welcome">
+            <img title="Water Information System for Europe" alt="Water Information System for Europe" src="http://www.eea.europa.eu/themes/water/wise/image_thumb">
+        </a>
+    </dd>
+
 
     <dd class="portletItem odd bold">
         <ul>

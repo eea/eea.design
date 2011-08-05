@@ -7,6 +7,7 @@
 
 /* YOUR CSS RULES START HERE */
 
+
 body
 {
 	background: #ffffff url(<dtml-var imgWaves missing="/waves.gif">) no-repeat scroll left 25em;
@@ -63,6 +64,22 @@ dt.portletSubMenuHeader {
 	display: inline;
 }
 
+#portlet-wise-navigation ul{
+   list-style-image: url("http://localhost:8080/www/bullet.gif");    
+   list-style-type: square;
+   margin: 0.5em 0 0 1.5em;
+}
+
+#wise-logo, #portlet-wise-navigation dd.portletItem, #portlet-guestbook dd.portletItem{
+    padding:0;
+}
+
+#portlet-guestbook .portletHeader a:hover,
+#portlet-guestbook .portletHeader a:link,
+#portlet-guestbook .portletHeader a:active{
+    color: #00446A;
+    text-decoration: none;
+}
 
 /* </dtml-with> */
 
