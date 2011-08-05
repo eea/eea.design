@@ -244,7 +244,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* arrow search input */
 #portal-searchbox input.searchButton {
-    background: url(&dtml-portal_url;/search_btn.png) no-repeat top left;
+    background: url(&dtml-portal_url;/search-button.png) no-repeat top left;
     border: none;
     width: 41px;
     height: 26px;
@@ -783,7 +783,7 @@ float:right;
 
 #searchbox_terminology input {
    width: 366px;
-   background: transparent url(search_bg.png) no-repeat 50% 50%;
+   background: transparent url(search-bg.png) no-repeat 50% 50%;
    border: none;
    padding: 9px 0 9px 30px;
    font-size: 0.8em;

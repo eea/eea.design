@@ -82,10 +82,12 @@ body.frontpage ul {
     padding: 0 15px 15px 15px;
 }
 
-p.empty-highlights {
-  font-weight: bold;
-  text-align: center;
-  padding: 20px 0px 0px 10px;
+.highlights .portalMessage {
+  margin-top: 0;
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 /**
