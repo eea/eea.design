@@ -449,7 +449,7 @@ dl.portlet a:hover {
 }
 
 #category {
-    font-size: 75%;
+    font-size: 100%;
     margin-bottom: 1em;
     color: #666;
     text-align: right;
