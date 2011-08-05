@@ -64,7 +64,7 @@ function addLanguageLink(link, lang) {
 }
 
 
-    /*var links = jq("a", contentarea).
+/*    var links = jq("a", contentarea).
                     not('.link-plain').
                     not('.noTranslation').
                     not('translated').
@@ -122,7 +122,7 @@ function scanforlinks() {
 
         lang = getLanguageFromLink(linkval);
         if (lang !== currentLanguage && lang !== 'unknown'){
-            addLanguageLink(links[i], lang);
+            addLanguageLink(link, lang);
         }
     });
 
