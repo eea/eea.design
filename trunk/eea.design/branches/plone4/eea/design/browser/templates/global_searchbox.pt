@@ -14,8 +14,8 @@
             <input class="searchButton"
                    type="submit"
                    tabindex=""
-                   value=""
-                   
+                   value="Search"
+                   i18n:attributes="value Search"
                    />
             <br clear="all" />
             <a class="azglossary" href="http://glossary.eea.europa.eu/"

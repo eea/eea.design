@@ -244,13 +244,23 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* arrow search input */
 #portal-searchbox input.searchButton {
-    background: url(&dtml-portal_url;/search-button.png) no-repeat top left;
-    border: none;
-    width: 41px;
-    height: 26px;
-    margin: 0 8px 0 2px;
+    background: url(&dtml-portal_url;/search-button.png) no-repeat left center;
+    border: 1px solid #DFDFDF;
+    -webkit-border-radius: 0px 4px 4px 0px;
+       -moz-border-radius: 0px 4px 4px 0px;
+            border-radius: 0px 4px 4px 0px;
+    color: #FFFFFF;
+    width: 60px;
+    height: 29px;
+    margin: 0;
     padding: 0;
     cursor: pointer;
+    position: relative;
+    left: -38px;
+}
+
+#portal-searchbox input.searchButton:hover {
+    background: url(&dtml-portal_url;/search-button-hover.png) no-repeat left center;
 }
 
 /* Override jquery.ui style */
@@ -368,7 +378,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 .azglossary {
-    padding-right: 5.3em;
+    padding-right: 3.3em;
 }
 
 .documentContent {
@@ -775,19 +785,25 @@ float:right;
 #portal-searchbox a {
     text-transform: none;
     text-decoration: underline;
-    color: #444;
+    color: #FFFFFF;
     border: none;
-    font-size: 80%;
+    font-size: 85%;
 }
 
 
 #searchbox_terminology input {
-   width: 366px;
-   background: transparent url(search-bg.png) no-repeat 50% 50%;
+   background: transparent url(search-bg.png) no-repeat left center;
    border: none;
-   padding: 9px 0 9px 30px;
+   padding: 9px 0 9px 25px;
+   margin: 0;
    font-size: 0.8em;
+   width: 325px;
 }
+
+#searchbox_terminology input:focus {
+    background: transparent url(search-bg-focus.png) no-repeat left center;
+}
+
 
 /*  IE7 fixes */
 * + html #region-content,
