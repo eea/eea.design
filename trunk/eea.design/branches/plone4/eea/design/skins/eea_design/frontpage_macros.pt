@@ -7,23 +7,15 @@
 		id="news-highlights" 
 		class="highlights"
 		tal:define="folderContents frontpage_view/getNews;
-		            plone_view nocall:plone_view|here;">
-                    
+		plone_view nocall:plone_view|here;
+        hide_listing python: False;
+        hide_album python: True;"
+        tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
-            <a href="#"><li>gallery</li><a/>
-            <a href="#"><li>list</li><a/>
+            <a href="#" class="list-layout active-list"><a/>
+            <a href="#" class="album-layout"><a/>
         </ul>
-        
-        <div class="gallery-ajax">
-            <div class="gallery-listing">
-                <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
-            </div>
-            <div class="gallery-album">
-                <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
-            </div>
-        </div>
-    
-    <div class="visualClear"><!-- --></div>
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
 
@@ -70,8 +62,15 @@
 		id="publications-highlights" 
 		class="highlights"
 		tal:define="folderContents frontpage_view/getPublications;
-        plone_view nocall:plone_view|here;">
-  <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+        plone_view nocall:plone_view|here;
+        hide_listing python: False;
+        hide_album python: True;"
+        tal:condition="folderContents|nothing">
+        <ul class="gallery-layout-selection">
+            <a href="#" class="list-layout active-list"><a/>
+            <a href="#" class="album-layout"><a/>
+        </ul>
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
 <div metal:define-macro="articles" 
@@ -79,9 +78,16 @@
 		id="articles-highlights" 
         tal:define="
         frontpage_view context/@@frontpage_highlights;
-        folderContents frontpage_view/getArticles;"
-                tal:condition="folderContents|nothing">
-            <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+        folderContents frontpage_view/getArticles;
+        hide_listing python: False;
+        hide_album python: True;
+        "
+        tal:condition="folderContents|nothing">
+        <ul class="gallery-layout-selection">
+            <a href="#" class="list-layout active-list"><a/>
+            <a href="#" class="album-layout"><a/>
+        </ul>
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
 
@@ -172,7 +178,7 @@
                     tal:repeat="hl highlights">
                         <li>
                         <tal:image tal:define="figure hl/getImage|nothing;
-                        figure_link hl/getUrl|hl/absolute_url/nothing;
+                        figure_link hl/getUrl|hl/absolute_url|nothing;
                         figure_scale string: preview;
                         figure_title figure/title|nothing;"
                         tal:condition="figure">
@@ -189,7 +195,7 @@
                         </tal:image>
                     <div class="promo-item-desc">
                         <h3><a href="#" class="noPrint"
-                                tal:attributes="href hl/getUrl|hl/absolute_url/nothing"
+                                tal:attributes="href hl/getUrl|hl/absolute_url|nothing"
                                 tal:content="hl/title">
                                 Highlight Title</a></h3>
                          <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
@@ -230,9 +236,15 @@
 <div metal:define-macro="multimedia" 
 		class="highlights"
 		id="multimedia-highlights" 
-		tal:define="folderContents frontpage_view/getMultimedia;"
-                tal:condition="folderContents|nothing">
-    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+        tal:define="folderContents frontpage_view/getMultimedia;
+        hide_album python: False;
+        hide_listing python: True;"
+        tal:condition="folderContents|nothing">
+        <ul class="gallery-layout-selection">
+            <a href="#" class="list-layout"><a/>
+            <a href="#" class="album-layout active-album"><a/>
+        </ul>
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
 
@@ -240,5 +252,27 @@
 		class="highlights"
         id="datamaps-highlights"> 
 </div>
+
+<metal:gallery-items define-macro="gallery-items"
+                     tal:define="visible_album python: 'hiddenStructure' if hide_album else '';
+                                visible_listing python: 'hiddenStructure' if hide_listing else '';">
+        <div class="gallery-ajax">
+            <div tal:attributes="class string: gallery-listing ${visible_listing}">
+                <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+            </div>
+            <div tal:attributes="class string: gallery-album ${visible_album}">
+                <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+            </div>
+        </div>
+</metal:gallery-items>
+
+<metal:ajax-items define-macro="ajax-items">
+            <div class="gallery-listing">
+                <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
+            </div>
+            <div class="gallery-album">
+                <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+            </div>
+</metal:ajax-items>
 
 </html>

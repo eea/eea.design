@@ -3,6 +3,5 @@
         frontpage_view context/@@frontpage_highlights;
         folderContents frontpage_view/getMultimedia;"
                 tal:condition="folderContents|nothing">
-    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
-    <div class="visualClear"><!-- --></div>
+                <div metal:use-macro="here/frontpage_macros/macros/ajax-items" />
 </tal:multimedia>

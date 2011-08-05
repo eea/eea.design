@@ -3,6 +3,5 @@
         frontpage_view context/@@frontpage_highlights;
         folderContents frontpage_view/getNews;"
                 tal:condition="folderContents|nothing">
-    <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
-    <div class="visualClear"><!-- --></div>
+                <div metal:use-macro="here/frontpage_macros/macros/ajax-items" />
 </tal:news>
