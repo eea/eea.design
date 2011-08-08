@@ -30,14 +30,6 @@
         permission="zope.Public"
         />
 
-    <browser:page
-        for="*"
-        template="templates/navigation.pt"
-        name="navigation_macros"
-        permission="zope.Public"
-        layer=".interfaces.IEEACommonLayer"
-        />
-
     <interface
         interface=".interfaces.IEEADesignCMS"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
