@@ -234,7 +234,6 @@ table.datatable {
 #content h4 a,
 #content h5 a,
 #content h6 a {
-    color: &dtml-fontColor; ! important;
     text-decoration: none;
     background: url(&dtml-portal_url;/bcpil.gif) no-repeat center right;
     padding-right: 0.9em !important;

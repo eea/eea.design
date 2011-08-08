@@ -35,7 +35,6 @@ body.frontpage ul {
 #highlights-block h1 a,
 #highlights-block h2 a,
 #highlights-block h3 a {
-    color: &dtml-linkHeadingColor;!important;
 	background: none;
 }
 
