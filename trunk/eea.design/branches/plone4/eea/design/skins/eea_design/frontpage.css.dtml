@@ -430,36 +430,41 @@ ul#tabs li:first-child a:hover {
     top: 40px;
     left: 67px;
 }
-.list-layout {
-    background: transparent url("gallery-views-sprite.png") no-repeat 0px -16px;
+
+a.list-layout {
     padding: 2px 8px;
+    background: transparent url("gallery-views-sprite.png") no-repeat -21px -16px;
+    width: 16px;
+    height: 16px;
 }
 
 a.active-list {
-    background: transparent url("gallery-views-sprite.png") no-repeat top left !important;
-    padding: 2px 8px;
-}
-a.list-layout:hover  {
-    background: transparent url("gallery-views-sprite.png") no-repeat 0px -16px;
-    padding: 2px 8px;
+    background: transparent url("gallery-views-sprite.png") no-repeat -21px 1px !important;
 }
 
-a.album-layout:hover  {
-    background: transparent url("gallery-views-sprite.png") no-repeat -21px -16px;
+a.list-layout:hover  {
+    background: transparent url("gallery-views-sprite.png") no-repeat -21px 1px;
+    border-bottom: 0px !important;
+}
+
+a.album-layout {
+    background: transparent url("gallery-views-sprite.png") no-repeat 0px -16px;
+    margin-left: 1em;
     padding: 2px 8px;
+    width: 16px;
+    height: 16px;
 }
 
 a.active-album  {
-    background: transparent url("gallery-views-sprite.png") no-repeat top right !important;
+    background: transparent url("gallery-views-sprite.png") no-repeat 0px 1px !important;
     margin-left: 1em;
-    padding: 2px 8px;
-
 }
-a.album-layout {
-    background: transparent url("gallery-views-sprite.png") no-repeat -21px -16px;
-    margin-left: 1em;
-    padding: 2px 8px;
 
+a.album-layout:hover  {
+    background: transparent url("gallery-views-sprite.png") no-repeat 0px 1px;
+    border-bottom: 0px !important;
 }
+
+
 /* </dtml-with> */
 
