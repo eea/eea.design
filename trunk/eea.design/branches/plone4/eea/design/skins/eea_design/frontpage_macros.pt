@@ -154,9 +154,6 @@
 	       		tal:content="hl/getNewsTitle">
 	       			Highlight Title</a></h3>
 
-	   	     <span class="date" 
-                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])" 
-	    	  tal:content="date">07 Dec 2005 </span> 
             <p tal:content="hl/getTeaser">teaser</p>
             <p><a href="#" class="moreLink"
                     tal:attributes="href hl/getUrl">Read more</a></p>
