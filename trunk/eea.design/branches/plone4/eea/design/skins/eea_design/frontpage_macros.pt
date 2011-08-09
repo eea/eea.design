@@ -22,7 +22,8 @@
 <div metal:define-macro="highArticles" 
 		id="articles-high" 
 		class="highlights"
-		tal:define="highlights frontpage_view/getHighArticles;
+        tal:define="frontpage_view context/@@frontpage_highlights;
+                    highlights highlights|frontpage_view/getHighArticles;
 		            plone_view nocall:plone_view|here;">
     <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
 </div>

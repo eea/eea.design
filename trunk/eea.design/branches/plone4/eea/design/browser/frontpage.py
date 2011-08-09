@@ -70,9 +70,10 @@ class Frontpage(BrowserView):
         self.now = DateTime()
 
 #    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getHigh(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb'):
+    def getHigh(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb', topic = ''):
         visibilityLevel = 'top'
-        results =  self._getItemsWithVisibility(visibilityLevel, portaltypes)[:self.noOfHigh]
+        topic = topic
+        results =  self._getItemsWithVisibility(visibilityLevel, portaltypes, topic = topic)[:self.noOfHigh]
         highlights = []
         for high in results:
             highlights.append ( self._getTeaserMedia(high, scale) )
@@ -123,8 +124,12 @@ class Frontpage(BrowserView):
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = portaltypes)[:self.noOfPublications]
         return result
 
-    def getHighArticles(self):
+    def getHighArticles(self, topic = ''):
         """ return a defined number of high visibility articles items """
+        if topic: 
+            topic = self.context.aq_parent.id
+            results =  self.getHigh(('Article', ), 'thumb', topic)
+            return results
         results =  self.getHigh(('Article', ), 'thumb')
         return results
 
@@ -217,6 +222,9 @@ class Frontpage(BrowserView):
             'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
+        themes = 'themes' in self.context.REQUEST.URL0
+        if themes:
+            query['getThemes'] = self.context.aq_parent.id
         result = self.catalog(query)
         cPromos = []
         for brain in result:
@@ -225,8 +233,12 @@ class Frontpage(BrowserView):
 
             if IVideoEnhanced.providedBy(obj):
                 continue
-            if not promo.display_on_frontpage:
-                continue
+            if themes:
+                if not promo.display_on_themepage:
+                    continue
+            else:
+                if not promo.display_on_frontpage:
+                    continue
             if not promo.active:
                 continue
             cPromos.append(obj)
@@ -297,7 +309,7 @@ class Frontpage(BrowserView):
                 result['media']['getScale'] = media.getScale(scale).tag()
         return result
 
-    def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = ''):
+    def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = '', topic = ''):
         """ get items of certain content types and/or interface and certain visibility level. """
         query = {
                 'portal_type'        : portaltypes,
@@ -310,8 +322,10 @@ class Frontpage(BrowserView):
         if interfaces:
             query['object_provides'] = interfaces
             return self.catalog.searchResults(query)
-        else:
+        elif topic:
+            query['getThemes'] = topic
             return self.catalog.searchResults(query)
+        return self.catalog.searchResults(query)
 
     def _getTopics(self, topic = '', portaltypes = '', object_provides = '', noOfItems = ''):
         query = {
