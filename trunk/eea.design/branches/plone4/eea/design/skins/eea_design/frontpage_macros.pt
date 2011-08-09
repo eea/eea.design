@@ -268,4 +268,34 @@
             </div>
 </metal:ajax-items>
 
+<!-- Social / Follow us links -->
+<div metal:define-macro="followus">
+
+<dl class="portlet" id="portlet-followus">
+
+        <dt class="hiddenStructure">Follow us</dt>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon"/> <a href="http://twitter.com/euenvironment">Twitter</a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon"/> <a href="http://www.facebook.com/European.Environment.Agency">Facebook</a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon"/> <a href="http://www.youtube.com/user/EEAvideos">YouTube</a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds">
+            <span i18n:translate="rss_feeds">RSS</span></a>
+        </dd>
+        <dd style="float:left;margin-left:12px;">
+            <img tal:attributes="src string:$portal_url/mail_icon.gif" alt="Email icon"/> <a href="#subscribe-popup" class="fancybox">
+            <span i18n:translate="rss_feeds">Email</span></a>
+        </dd>
+    <dd class="portletFooter" style="padding-bottom: 10px;border:none;">
+     &nbsp;
+    </dd>
+</dl>
+
+</div>
+
 </html>
