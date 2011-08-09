@@ -1,7 +1,7 @@
 <div id="portal-breadcrumbs"
      i18n:domain="eea"
      tal:define="breadcrumbs view/breadcrumbs;
-                 is_rtl view/is_rtl;>
+                 is_rtl view/is_rtl;">
 
     <span id="breadcrumbs-you-are-here" i18n:translate="you_are_here">You
 are here:</span>
