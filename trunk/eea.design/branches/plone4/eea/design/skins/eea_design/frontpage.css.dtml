@@ -254,16 +254,7 @@ body.frontpage #portal-columns {
     margin: 0px !important;
 }
 
-.highlightMiddle a:hover, .highlightMiddle p a:hover {
 
-    border-bottom: 1px #A6BACD solid;
-}
-
-
-.noPrint a:hover, .noPrint p a:hover {
-
-    border-bottom: 1px #A6BACD solid;
-}
 #highlights-block .highlightHigh .relatedLinks {
     font-size: 160%;
 }
@@ -368,15 +359,27 @@ ul#tabs li:first-child a:hover {
     width: 180px;
     height: 101px;
 }
+
+
 #forum, #community, #mobile {
     height: 100px;
     background: #e6e7e8;
-    border: solid #e6e7e8;
+    border: 1px solid #e6e7e8;
     margin-bottom: 2.5em;
 }
-#forum {
-    background: #E6E7E8 url("enquiry_service.png") no-repeat center center;
-}
+
+#forum-link,
+#facebook,
+#youtube,
+#twitter,
+a.active-list,
+a.list-layout,
+a.album-layout,
+a.active-album,
+a.list-layout:hover,
+a.album-layout:hover {
+  background: transparent url('icons-sprite.png') no-repeat scroll top right;
+} 
 
 #forum a:hover,
 #community a:hover,
@@ -387,8 +390,8 @@ ul#tabs li:first-child a:hover {
   text-decoration: none !important;
 }
 
-#community {
-    background: #E6E7E8 url("community.png") no-repeat center center;
+#forum-link {
+    background-position: right -550px !important;
 }
 
 #mobile {
@@ -396,6 +399,7 @@ ul#tabs li:first-child a:hover {
 }
 
 #facebook {
+    background-position: -399px -478px !important;
     padding: 28px 32px;
     position: relative;
     top: 45px;
@@ -403,6 +407,7 @@ ul#tabs li:first-child a:hover {
 }
 
 #youtube {
+    background-position: -359px -395px !important;
     position: relative;
     padding: 30px;
     left: 94px;
@@ -410,6 +415,7 @@ ul#tabs li:first-child a:hover {
 }
 
 #twitter {
+    background-position: -322px -475px !important;
     position: relative;
     padding: 30px 35px;
     top: 45px;
@@ -430,40 +436,28 @@ ul#tabs li:first-child a:hover {
     left: 67px;
 }
 
+a.list-layout,
+a.album-layout {
+  padding: 2px 8px;
+  width: 16px;
+  height: 16px;
+}
+
 a.list-layout {
-    padding: 2px 8px;
-    background: transparent url("sprite-eeaimages.png") no-repeat -21px -16px;
-    width: 16px;
-    height: 16px;
+    background-position: -427px -162px;
 }
 
-a.active-list {
-    background: transparent url("sprite-eeaimages.png") no-repeat -21px 1px !important;
-}
-
-a.list-layout:hover  {
-    background: transparent url("sprite-eeaimages.png") no-repeat -21px 1px;
-    border-bottom: 0px !important;
+a.active-list, a.list-layout:hover {
+  background-position: -427px -145px !important;
 }
 
 a.album-layout {
-    background: transparent url("sprite-eeaimages.png") no-repeat 0px -16px;
-    margin-left: 1em;
-    padding: 2px 8px;
-    width: 16px;
-    height: 16px;
+  background-position: -448px -145px;
 }
 
-a.active-album  {
-    background: transparent url("sprite-eeaimages.png") no-repeat 0px 1px !important;
-    margin-left: 1em;
+a.active-album, a.album-layout:hover {
+    background-position: -448px -162px !important;
 }
-
-a.album-layout:hover  {
-    background: transparent url("sprite-eeaimages.png") no-repeat 0px 1px;
-    border-bottom: 0px !important;
-}
-
 
 /* </dtml-with> */
 

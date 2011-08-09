@@ -310,26 +310,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-/* arrow search input */
-#portal-searchbox input.searchButton {
-    background: url(&dtml-portal_url;/search-button.png) no-repeat left center;
-    border: 1px solid #DFDFDF;
-    -webkit-border-radius: 0px 4px 4px 0px;
-       -moz-border-radius: 0px 4px 4px 0px;
-            border-radius: 0px 4px 4px 0px;
-    color: #FFFFFF;
-    width: 60px;
-    height: 29px;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    position: relative;
-    left: -38px;
-}
 
-#portal-searchbox input.searchButton:hover {
-    background: url(&dtml-portal_url;/search-button-hover.png) no-repeat left center;
-}
 
 /* Override jquery.ui style */
 .ui-widget-content a {
@@ -593,12 +574,9 @@ dd.embeddedMedia .magnify {
 .documentContent a:hover,
 .documentContent ul li a:hover,
 .documentContent td a:hover {
-    border-bottom: 1px &dtml-linkUnderlineHoverColor; solid;
+    border: none;
 }
 
-dl a, dd a, dt a {
-    border: none !important;
-}
 dl a:hover, dd a:hover, dt a:hover {
     color: &dtml-linkUnderlineHoverColor; !important;
     text-decoration: underline !important;
@@ -607,7 +585,7 @@ dl a:hover, dd a:hover, dt a:hover {
 a.moreLink {
     border: 0px !important;
     padding: 5px 0px 5px 25px;
-    background: transparent url("readme_more.png") no-repeat scroll left center;
+    background: transparent url("icons-sprite.png") no-repeat scroll -441px -6px;
 }
 
 /* End links */
@@ -856,20 +834,55 @@ float:right;
     margin: 0 35px 0 -30px;
 }
 
+#searchbox_terminology input,
+#searchbox_terminology input:focus,
+#portal-searchbox input.searchButton,
+#portal-searchbox input.searchButton:hover{
+    background: transparent url('icons-sprite.png') no-repeat scroll left center;
+}
+
+#portal-searchbox input.searchButton {
+    position: relative;
+    left: -4px;
+    background-position: -314px -84px !important;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 0;
+    border: 1px solid #DFDFDF;
+    -webkit-border-radius: 0px 4px 4px 0px;
+       -moz-border-radius: 0px 4px 4px 0px;
+            border-radius: 0px 4px 4px 0px;
+    color: #FFFFFF;
+    width: 60px;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+#portal-searchbox input.searchButton:hover {
+    background-position: -314px -116px;
+}
 
 #searchbox_terminology input {
-   background: transparent url(search-bg.png) no-repeat left center;
-   border: none;
-   padding: 9px 0 9px 25px;
-   margin: 0;
-   font-size: 0.8em;
-   width: 325px;
+    height: 30px;
+    padding: 0 0 0 25px;
+    width: 286px;
+    background-position: 0 -82px;
+    font-family: Arial, Verdana, sans-serif;
+    font-style: italic;
+    color: #777777;
+    border: none;
+    margin: 0;
+    font-size: 0.8em;
 }
 
 #searchbox_terminology input:focus {
-    background: transparent url(search-bg-focus.png) no-repeat left center;
+    font-style: normal;
+    color: #000000;
+    background-position: 0px -114px;
 }
-
 
 /*  IE7 fixes */
 * + html #region-content,
@@ -1762,7 +1775,6 @@ body.longwordlanguage .visualColumnHideTwo #portal-column-content #content {
 div.listingBar a:hover {
     background: transparent;
     color: #8E004D !important;
-    border-bottom: 1px solid #8E004D !important;
 }
 #content a:hover, dl.portlet a:hover {
     color: #8E004D;
