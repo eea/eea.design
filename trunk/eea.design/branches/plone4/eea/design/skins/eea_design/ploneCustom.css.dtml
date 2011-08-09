@@ -52,27 +52,67 @@
    background-color: #ffffff;
    }
 
+
+.section-publications #c13_widget form {
+   position:relative;
+   top:-50px;
+   left:280px;
+}
+
+
+
+/* c13 = the search box*/
+
+.section-publications #c13 {
+   width:280px;
+   height: 28px;
+   font-size: 1.6em;
+}
+
 .section-publications #c13_widget.faceted-widget {
    /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
    background-color: &dtml-lightBackgroundColor;;
+   height:50px;
 }
 
 .section-publications #c13_widget .faceted-textwidget-place-all,
 .section-publications #c13_widget .faceted-textwidget-place-current {
     display: inline;
     margin-left: 10px;
+    position:relative;
+    top:0px;
+    left:-130px;
 }
 
-.section-publications #c13_button.searchButton {
+ .section-publications #c13_button.searchButton {
+    background: none;
+    background-color:&dtml-corporateBlueOne;;
+    color:#ffffff;
     font-size: 1.6em;
     font-weight: bold;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     padding: 0.5em;
-    position: absolute;
-    right: 40px;
+    position: relative;
     text-align: center;
-    top: 160px;
     width: 138px;
+    left:270px;
 }
+.section-publications #c13_button.searchButton:hover {
+    background-color:&dtml-corporateGreen;;
+    color: #ffffff;
+    cursor:pointer;
+}
+
+/*portlet subscription*/
+.section-publications #c10_widget.faceted-widget,  
+.section-publications #c10_widget fieldset {
+  background-color: transparent;
+  padding:0 !important;
+  margin:0 !important;
+}
+
 
 .section-publications #content #faceted-form #c13_widget.faceted-widget label {
     display: inline;
