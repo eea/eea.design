@@ -67,7 +67,7 @@
         <dl metal:define-slot="entries">
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
-            <tal:block tal:condition="python: not isAnon or not not_show_empty or not getattr(item, 'is_empty', False)" 
+            <tal:block tal:condition="python: not isAnon or not not_show_empty or not getattr(item, 'is_empty', False)"
                        tal:define="
                                    item_object item/getObject|nocall:item;
                                    urlview item_object/@@url;
@@ -91,7 +91,7 @@
                                    item_start item/start|item/StartDate|nothing;
                                    item_end item/end|item/EndDate|nothing;
                                    not_show_empty not_show_empty|nothing;
-                                 
+
                                    item_sametime python: item_start == item_end;
                                    item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False"
                     >
@@ -158,7 +158,7 @@
                               August 16, 2001 at 23:35:59
                             </span>
                         </tal:published>
-                        
+
                     <tal:anon tal:condition="not: isAnon">
                             &mdash;
 
@@ -216,7 +216,7 @@
     </tal:listing>
 
     <div metal:use-macro="context/batch_macros/macros/navigation" />
-        
+
         <metal:empty metal:define-slot="no_items_in_listing">
         <p class="discreet"
            tal:condition="not: folderContents"
