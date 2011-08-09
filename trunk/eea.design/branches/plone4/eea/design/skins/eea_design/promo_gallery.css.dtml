@@ -177,18 +177,19 @@
 
 .play {
     background-position: -446px -215px;
+    padding-left: 25px;
 }
 
 .pause {
-    background-position: -454px -131px;
+    background-position: -454px -190px;
     padding-left: 16px;
 }
 
 #prev-promo, #next-promo {
-    width: 20px;
+    display: inline-block;
     height: 20px;
-    padding: 18px 5px 5px 15px;
-    margin-left: 0em;
+    margin-left: 0;
+    width: 16px;
 }
 
 #prev-promo {

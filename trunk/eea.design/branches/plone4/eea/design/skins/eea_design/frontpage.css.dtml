@@ -438,9 +438,10 @@ a.album-layout:hover {
 
 a.list-layout,
 a.album-layout {
-  padding: 2px 8px;
-  width: 16px;
-  height: 16px;
+  display: inline-block;
+  height: 17px;
+  margin-right: 10px;
+  width: 20px;
 }
 
 a.list-layout {
@@ -452,11 +453,11 @@ a.active-list, a.list-layout:hover {
 }
 
 a.album-layout {
-  background-position: -448px -145px;
+  background-position: -448px -162px !important;
 }
 
 a.active-album, a.album-layout:hover {
-    background-position: -448px -162px !important;
+  background-position: -448px -145px;  
 }
 
 /* </dtml-with> */

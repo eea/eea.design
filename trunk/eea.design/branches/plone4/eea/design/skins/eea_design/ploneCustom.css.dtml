@@ -807,7 +807,7 @@ float:right;
     float: right;
     clear: right;
     background-color: transparent;
-    margin: 25px -15px 0 0;
+    margin: 25px 0px 0 0;
     padding: 0 0 0 0;
     text-align: right;
     text-transform: &dtml-textTransform;;
@@ -842,27 +842,24 @@ float:right;
 }
 
 #portal-searchbox input.searchButton {
-    position: relative;
-    left: -4px;
-    background-position: -314px -84px !important;
-    font-family: Arial, Verdana, sans-serif;
+    background-position: -404px -83px !important;
+    border-radius: 0 4px 4px 0;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,Verdana,sans-serif;
     font-size: 12px;
     font-style: normal;
-    letter-spacing: 0;
-    border: 1px solid #DFDFDF;
-    -webkit-border-radius: 0px 4px 4px 0px;
-       -moz-border-radius: 0px 4px 4px 0px;
-            border-radius: 0px 4px 4px 0px;
-    color: #FFFFFF;
-    width: 60px;
     height: 29px;
+    left: -5px;
+    letter-spacing: 0;
     margin: 0;
     padding: 0;
-    cursor: pointer;
+    position: relative;
+    width: 60px;
 }
 
 #portal-searchbox input.searchButton:hover {
-    background-position: -314px -116px;
+    background-position: -404px -116px !important;
 }
 
 #searchbox_terminology input {
