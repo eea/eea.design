@@ -43,10 +43,6 @@
            	        tal:attributes="href spotlight/url"
            		    tal:content="spotlight/title">
        	    	        Spotlight Title</a></h3>
-       	    <span class="date" 
-                tal:define="date python:plone_view.toLocalizedTime(spotlight['effective'])" 
-                tal:content="date">07 Dec 2005 </span> 
-
             <p tal:content="spotlight/description">description</p>
 
             <p><a href="#" class="moreLink"
