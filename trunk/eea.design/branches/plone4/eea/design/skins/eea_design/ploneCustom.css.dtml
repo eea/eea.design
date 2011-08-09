@@ -445,9 +445,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     display: none;
 }
 
-.azglossary {
-    padding-right: 3.3em;
-}
 
 .documentContent {
     background: &dtml-backgroundColor;;
@@ -856,6 +853,7 @@ float:right;
     color: #FFFFFF;
     border: none;
     font-size: 85%;
+    margin: 0 35px 0 -30px;
 }
 
 
