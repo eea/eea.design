@@ -17,7 +17,7 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 /*
-** demarant: Specific faceted navigation style for certain site sections 
+** demarant: Specific faceted navigation style for certain site sections
 */
 
 #faceted-form .faceted-widget {
@@ -36,8 +36,8 @@
 #faceted-form .faceted-widget {
    background-color: &dtml-lightBackgroundColor;;
    }
-   
-   
+
+
 #faceted-form .widget-fieldset legend {
   background-color: &dtml-corporateGreen;;
   color: #ffffff;
@@ -1778,7 +1778,8 @@ div.width-full {
 div.position-0 {
     margin-left: -100%;
 }
-/* ichimdav added from public */
+
+/* Added from public */
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
     padding: 0px;
     border-bottom: 0em;
@@ -1803,13 +1804,11 @@ div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
 
-/* szabozo0 added for tinymce */
+/* Fix for TinyMCE */
 body.mceContentBody {
     background: transparent !important;
     padding: 0px !important;
 }
-
-
 
 /* </dtml-with> */
 
