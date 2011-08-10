@@ -12,7 +12,7 @@
     position: absolute;
     top: 240px;
     left: 0px;
-    width: 380px;
+    width: 91%;
     color: white;
     margin: 0 0px;
     background: &dtml-corporateGreen;;
@@ -21,12 +21,19 @@
     padding: 5px 20px 0px 20px;
 }
 
-#promo-gallery-content h3 {
+#promo-gallery-content h3, #promo-gallery-content-sm h3 {
     margin: 0.2em 0 0.4em 0;
     font-size: 1.6em;
     line-height: 1.2em;
+    font-weight: normal;
 }
-#promo-gallery-content h3 a, #promo-gallery-content h3 a:visited {
+
+#promo-gallery-content-sm h3 {
+    font-size: 1.4em;
+}
+
+#promo-gallery-content h3 a, #promo-gallery-content h3 a:visited, #promo-gallery-content-sm h3 a, 
+#promo-gallery-content-sm h3 a:visited {
     color: #FFF !important;
 }
 
@@ -34,64 +41,67 @@
    font-size: 1em;
 }
 
-
 /* main promo content */
 #promotions {
-    width: 590px;
-    height: 320px;
+    width: 100%;
     position: relative;
     overflow: hidden; 
-    /* float: right; */
     background: #F7F7F7;
     border: 0px solid #F7F7F7;
 }
 
-#gallery-content-outer {
+#gallery-content-outer, #gallery-content-outer-sm {
     position: relative;
     height: 100%;
-    width: 420px;
+    width: 415px;
     z-index: 3;
     overflow: hidden;
     float: right;
 }
 
-#promo-gallery-content {
+#promo-gallery-content, #promo-gallery-content-sm {
 	overflow:hidden;
 	background:transparent  scroll 50% 50%;
 	padding:0px;
 	margin:0;
 	height:320px;
-	width:420px;
+	width:415px;
 	position:relative;
 	overflow:hidden;
 }
 
-#promo-gallery-content li{
+#promo-gallery-content li, #promo-gallery-content-sm li {
 	overflow:hidden;
 	padding:0px;
 	margin:0px;
 	height:100%;
-	width:420px;
+	width:415px;
 	float:left;
 }
 
-#promo-gallery-content li img{
+#gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li{
+    width: 388px;
+}
+
+#promo-gallery-content li img, #promo-gallery-content-sm li img{
 	padding:0px;	
 	width:448px;
 }
 
 /* item navigator */
-#promo-navigator{
+#promo-navigator, #promo-navigator-sm{
 	top:0;
 	padding:0;
 	margin:0;
     position: absolute;
 	width:190px;
 }
-#promotions ul, #promo-gallery-content ul {
+
+#promotions ul, #promo-gallery-content ul, #promo-gallery-content-sm ul {
     margin-left: 0em;
+    list-style: none;
 }
-#promo-navigator li{
+#promo-navigator li, #promo-navigator-sm {
 	cursor:hand; 
 	cursor:pointer;
 	list-style:none;
@@ -99,7 +109,6 @@
 	padding:0;
 	margin:0;
 	overflow:hidden;
-    /* background: #f7f7f7; */
 }
 
 #navigator-outer {
@@ -111,7 +120,7 @@
 	color:#FFF;
 }
 
-#promo-navigator li.active{
+#promo-navigator li.active, #promo-navigator-sm li.active{
 	color:#FFF;
     background: transparent url("promotions-gallery-arrow.png") no-repeat right center;
     position: relative;
@@ -119,7 +128,11 @@
     width: 189px !important;
 }
 
-#promo-navigator li h3 {
+#promo-navigator-sm, #promo-navigator-sm li.active{
+    width: 109px !important;
+}
+
+#promo-navigator li h3, #promo-navigator-sm li h3 {
     color: #4E8192;
     font-size: 100%;
     padding: 8px 6px 0 3px;
@@ -129,18 +142,22 @@
     overflow: hidden;
 }
 
-#promo-navigator li div{
+#promo-navigator li div, #promo-navigator-sm li div {
 	color:#FFF;
 	height:100%;
 	position:relative;
     width: 170px;
 }
 
-#promo-navigator li.active div{
+#promo-navigator-sm li div {
+    width: 90px;
+}
+
+#promo-navigator li.active div, #promo-navigator-sm li.active div {
     background: &dtml-corporateGreen;;
 }
 
-#promo-navigator li img{
+#promo-navigator li img, #promo-navigator-sm li img {
 	height:53px;
 	width:70px;
     margin: 0px;
@@ -148,11 +165,16 @@
     padding: 14px 5px 18px 10px;
 }
 
-#promo-navigator li.active img{
+#promo-navigator-sm li img {
+    padding: 13px 5px 15px 10px;
+
+}
+
+#promo-navigator li.active img, #promo-navigator-sm li.active img {
 	border:##6C8E5C  solid 1px;
 }
 
-#promo-navigator li.active h3{
+#promo-navigator li.active h3, #promo-navigator-sm li.active h3 {
 	color:#FFF;
 }
 
@@ -202,11 +224,13 @@
 }
 
 .controls {
-    height: 25px;
-    border-radius: 0px 0px 10px 10px;
     background: &dtml-mediumBackgroundColor;;
-    width: 570px;
+    border-radius: 0px 0px 10px 10px;
+    clear: both;
+    height: 25px;
     padding: 15px 0px 0px 20px;
+    position: relative;
+    width: 100%;
 }
 
 /* </dtml-with> */

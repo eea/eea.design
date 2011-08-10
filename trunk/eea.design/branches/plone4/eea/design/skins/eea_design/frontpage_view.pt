@@ -63,12 +63,13 @@
                             <div metal:use-macro="here/frontpage_macros/macros/promo-gallery">
                                 promoted item
                             </div>
-                    </div>   
+
                             <div class="controls">
                             <a  href="#" id="next-promo"></a>
                             <a  href="#" id="prev-promo"></a>
                             <a  href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
                             </div>
+                    </div>   
                     <!-- end promotions_gallery_slideshow -->
 
                         <div id="news-header">

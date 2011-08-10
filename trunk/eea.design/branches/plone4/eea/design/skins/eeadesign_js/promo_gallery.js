@@ -9,19 +9,24 @@
                 function() {
                     this.width = "448";
                     this.height = "320";
-                }
-        );
+                });
+    
+        var site_address = window.location.href.indexOf('themes') != '-1' ? true : undefined,
+            nav_height = 80,  
+            nav_width = site_address ? 90 : 170,
+            nav_items_selector = site_address ? "#promo-navigator-sm li" : "#promo-navigator li", 
+            wrapper_selector = site_address ? "#promo-gallery-content-sm" : "#promo-gallery-content";
 
         var promotions = $('#promotions').lofJSidernews({
                                              interval            : 9000,
                                              direction           : 'opacity',
                                              duration            : 1500,
-                                             wapperSelector      : '#promo-gallery-content',
-                                             navItemsSelector    : '#promo-navigator li',
+                                             wapperSelector      : wrapper_selector,
+                                             navItemsSelector    : nav_items_selector,
                                              navOuterSelector    : '#navigator-outer',
                                              isPreloaded         : false,
-                                             navigatorHeight     : 80,
-                                             navigatorWidth      : 170,
+                                             navigatorHeight     : nav_height,
+                                             navigatorWidth      : nav_width,
                                              auto                : true,
                                              caption             : '.promo-item-desc',
                                              opacityClass        : 'lof-opacity',

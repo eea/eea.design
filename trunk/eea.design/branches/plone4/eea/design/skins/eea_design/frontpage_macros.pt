@@ -162,11 +162,14 @@
 <!-- promotion_gallery macro -->
 <metal:promos metal:define-macro="promo-gallery"
                 tal:define="highlights python: frontpage_view.getPromotions;
-                            plone_view nocall:plone_view|here">
+                plone_view nocall:plone_view|here;
+                frontpage_gallery frontpage|string: true;
+                small_factor python: '' if frontpage_gallery else '-sm';
+                ">
 
 
-    <div id="gallery-content-outer"> 
-  <ul id="promo-gallery-content"> 
+                <div tal:attributes="id string:gallery-content-outer${small_factor};"> 
+  <ul tal:attributes="id string:promo-gallery-content${small_factor}"> 
       <metal:pritems  
                     tal:condition="highlights"
                     tal:repeat="hl highlights">
@@ -203,22 +206,22 @@
 <!-- navigation outer -->
 
 <div id="navigator-outer">
- <ul id="promo-navigator"> 
+    <ul tal:attributes="id string:promo-navigator${small_factor}"> 
   <metal:items  define-macro="middlenews-promo"
                 tal:condition="highlights"
                 tal:repeat="hl highlights">
                     <li>
                         <div>
                         <tal:image tal:define="figure hl/getImage|nothing;
-                        figure_link hl/getUrl;
                         figure_scale string:thumb;
-                        figure_title figure/title|nothing;
-                        "
+                        figure_title figure/title|nothing;"
                         tal:condition="figure">
                             <img alt="" tal:attributes="src string:${hl/absolute_url}/image_thumb; title figure/title; alt figure/title" />
                         </tal:image>
 
-                        <h3 tal:content="hl/Title">Highlight Title</h3>
+                        <tal:title tal:condition="frontpage_gallery">
+                            <h3 tal:content="hl/Title">Highlight Title</h3>
+                        </tal:title>
                     </div>
                     </li>
   </metal:items>
