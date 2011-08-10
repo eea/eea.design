@@ -456,19 +456,19 @@ a.album-layout {
   width: 20px;
 }
 
-a.list-layout {
+a.album-layout {
     background-position: -427px -162px;
 }
 
-a.active-list, a.list-layout:hover {
+a.active-album, a.album-layout:hover {
   background-position: -427px -145px;
 }
 
-a.album-layout {
+a.list-layout {
   background-position: -448px -162px;
 }
 
-a.active-album, a.album-layout:hover {
+a.active-list, a.list-layout:hover {
   background-position: -448px -145px;  
 }
 
