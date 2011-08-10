@@ -1675,10 +1675,7 @@ dl.toc dd ol {
     width: 130px;
     margin: 16px auto 0px;
 }
-.photoAlbumFolder {
-    background-image: url('polaroid-multi.png');
-    background-repeat: no-repeat;
-}
+
 .photoAlbumEntryTitle {
     color: #76797c;
     display: block;

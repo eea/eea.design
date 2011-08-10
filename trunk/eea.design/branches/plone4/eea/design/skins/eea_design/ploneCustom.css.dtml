@@ -1495,8 +1495,7 @@ textarea.proportional {
 }
 
 .photoAlbumFolder {
-    background-image: url('&dtml-portal_url;/polaroid-multi.png');
-    background-repeat: no-repeat;
+    background-image: none;
 }
 
 .photoAlbumEntryTitle {
