@@ -11,7 +11,12 @@ fontSmallSize:string=85%
 
 #corporate main colors
 corporateGreen:string=#b1c748
+corpotateGreenTwo:string=#777c1f
 corporateBlueOne:string=#2c8da2
+corporateBlueTwo:string=#005e7d
+
+#color used for	buttons / actions / special links (not for plain text)
+corporateOrange:string=#f6a800
 
 #different headings colors
 linkHeadingColor:string=#346f83
