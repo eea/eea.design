@@ -753,9 +753,7 @@ float:right;
 }
 
 #portal-top {
-    /* margin: 0; */
-    /* padding: 0; */
-    /* background: url(&dtml-portal_url;/headerbg.gif) repeat-y top right #95b229; */
+    width: 1000px;
 }
 
 #cross-site-top {
@@ -871,7 +869,7 @@ float:right;
     color: #FFFFFF;
     border: none;
     font-size: 85%;
-    margin: 0 35px 0 -30px;
+    margin: 0 5px 0 0px;
 }
 
 #searchbox_terminology input,
@@ -899,7 +897,7 @@ float:right;
 }
 
 #portal-searchbox input.searchButton:hover {
-    background-position: -404px -116px !important;
+    background-position: -404px -117px !important;
 }
 
 #searchbox_terminology input {
@@ -976,9 +974,15 @@ float:right;
     text-transform: none;
 }
 
-
 #siteaction-contactus {
     font-weight: bold;
+}
+
+#siteaction-chooselang a {
+    background: url("icons-sprite.png") no-repeat scroll -430px -35px transparent;
+    color: black;
+    padding-bottom: 4px;
+    padding-left: 35px;
 }
 
 #portal-personaltools-wrapper {
