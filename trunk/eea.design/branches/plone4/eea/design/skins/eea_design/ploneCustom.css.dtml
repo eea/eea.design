@@ -1441,7 +1441,7 @@ textarea.proportional {
     background-color: #FFFFFF;
     float: left;
     height: 190px;
-    width: 145px;
+    width: 140px;
     margin: 0 10px 10px 0;
     padding: 0px 10px;
     text-align: center;
