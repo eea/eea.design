@@ -1438,6 +1438,7 @@ textarea.proportional {
 /* Album view classes */
 
 .photoAlbumEntry {
+    border: 1px solid #DFDFDF;
     background-color: #FFFFFF;
     float: left;
     height: 190px;
