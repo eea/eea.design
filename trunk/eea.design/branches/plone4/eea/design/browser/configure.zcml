@@ -332,20 +332,6 @@
 
 
     <!-- Customized portlets -->
-
-    <!-- Special renderer for the CMS Navigation Portlet -->
-    <plone:portletRenderer
-        portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
-        class=".portlets.CMSNavigationPortlet"
-        layer=".interfaces.IEEADesignCMS"
-        />
-
-    <plone:portletRenderer
-        portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
-        class=".portlets.EEANavigationPortlet"
-        layer=".interfaces.IEEADesignPublic"
-        />
-
     <plone:portletRenderer
         portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"
         template="templates/calendar.pt"

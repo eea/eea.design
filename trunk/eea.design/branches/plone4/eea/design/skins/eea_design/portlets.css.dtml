@@ -771,22 +771,35 @@ a.noHover {
    cursor:pointer;
 }
 
-.eea-accordion-portlet {
-    margin: 0;
-    padding: 0;
+dl.portletNavigationTree dt.portletHeader {
+  padding: 1em 0.5em 1em 0.5em;
+  font-size: 1.6em;
+  background: #D0DF86;
+  margin: 0px;
 }
-.eea-accordion-header {
-    padding: 0.5em 0.2em 0.5em 0.2em;
-    margin: 0;
+
+dl.portletNavigationTree dt.portletSubMenuHeader {
+  font-size: 1.2em;
+  padding: 0.5em 0.2em 0.5em 0.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: #D0DF86;
 }
-.eea-accordion-portlet .eea-accordion-header .tile {
-    cursor: pointer;
-    padding: 0 0 0 20px;
-    margin: 0;
-    background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll left center #D0DF86;
+
+dl.portletNavigationTree dt.portletSubMenuHeader span.title {
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  margin: 0;
+  background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll left center #D0DF86;
 }
-.eea-active-accordion .eea-accordion-header .tile {
-    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll left center #D0DF86;
+
+dl.portletNavigationTree dt.current span.title {
+  background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll left center #D0DF86;
+}
+
+dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
+  color: #8E004D;
+  background-color: #E9EFCD;
 }
 
 #portal-column-one .portlet {
