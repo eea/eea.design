@@ -96,8 +96,9 @@
   <!-- needed for frontpage gallery to have the listing without batch -->
   <metal:albummacro define-macro="listing-nobatch" tal:define="
     entry_macro  entry_macro|context/atct_albumentry/macros/entry;
-    folderContents folderContents|nothing;">
-  <tal:folderContents condition="folderContents" tal:define="batch folderContents">
+    folderContents folderContents|nothing;
+    enabled enabled|nothing">
+  <tal:folderContents condition="python: folderContents and enabled" tal:define="batch folderContents">
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
         obj brain/getObject;

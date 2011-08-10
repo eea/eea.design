@@ -254,9 +254,11 @@
             <div tal:attributes="class string: gallery-listing ${visible_listing}">
                 <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
             </div>
-            <div tal:attributes="class string: gallery-album ${visible_album}">
-                <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
-            </div>
+            <tal:enabled tal:define="enabled python: True">
+                <div tal:attributes="class string: gallery-album ${visible_album}">
+                    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+                </div>
+            </tal:enabled>
         </div>
 </metal:gallery-items>
 
@@ -265,7 +267,9 @@
                 <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
             </div>
             <div class="gallery-album">
-                <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+                <tal:enabled tal:define="enabled python: True">
+                    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
+                </tal:enabled>
             </div>
 </metal:ajax-items>
 
