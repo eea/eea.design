@@ -104,6 +104,9 @@ body.frontpage ul {
 .archives {
     float: right;
     margin: 15px;
+    position: relative;
+    top: 15px;
+    line-height: 1;
 }
 
 a.archives {
@@ -196,12 +199,14 @@ body.frontpage #portal-columns {
     top: 5px;
     left: 470px;
     list-style: none;
+    margin-bottom: 10px;
 }
 #content ul.gallery-layout-selection li {
     display: inline;
 }
 #datamaps-highlights {
     float: left;
+    padding-top: 15px;
 }
 
 
@@ -348,9 +353,16 @@ ul#tabs li:first-child a:hover {
     border-radius: 10px;
 }
 
+#featured-box {
+  padding: 1px;
+}
+
+#spotlight-box {
+  padding: 0px 20px 10px 20px;
+}
+
 #featured-box, #spotlight-box {
-    background: #ececec;
-    padding: 0px 20px 10px 20px;
+    background: #ECECEC;
     margin-bottom: 2.5em;
 }
 

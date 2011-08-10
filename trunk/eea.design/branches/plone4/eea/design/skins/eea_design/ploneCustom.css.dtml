@@ -1024,11 +1024,13 @@ float:right;
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
     border: none;
-    line-height: 1.6em;
-    margin: 0 0 1em 0em;
-    padding-left: 2em;
+    line-height: 1.4;
+    margin: 0;
+    position: relative;
+    left: 16px;
     clear: both;
     background: white;
+    height: 5px;
 }
 
 #region-content #portal-breadcrumbs {
@@ -1302,6 +1304,12 @@ float:right;
     padding-bottom: 0;
 }
 
+#multimedia-highlights .gallery-album {
+    width: 518px;
+    position: relative;
+    margin: 0 auto;
+}
+
 .tileFooter {
     float: left;
     clear: both;
@@ -1430,14 +1438,29 @@ textarea.proportional {
 /* Album view classes */
 
 .photoAlbumEntry {
+    background-color: #FFFFFF;
     float: left;
-    height: 195px;
-    width: 143px;
-    margin: 0em;
-    padding: 0px 6px 0px 9px;
+    height: 190px;
+    width: 145px;
+    margin: 0 10px 10px 0;
+    padding: 0px 10px;
     text-align: center;
-    background-image: url('&dtml-portal_url;/polaroid-single.png');
-    background-repeat: no-repeat;
+    -webkit-box-shadow: 1px 1px 2px #BFBFBF;
+       -moz-box-shadow: 1px 1px 2px #BFBFBF;
+            box-shadow: 1px 1px 2px #BFBFBF;
+}
+
+#datamaps-highlights .photoAlbumEntry {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    border: none;
+    height: 195px;
+}
+
+.photoAlbumEntry:hover {
+    background: #FBFBFB;
 }
 
 .photoAlbumEntry img {

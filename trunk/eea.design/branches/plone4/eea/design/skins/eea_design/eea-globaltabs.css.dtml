@@ -57,6 +57,7 @@
     padding: 1em 1.2em 0.8em;
     border: 0px;
     min-width: 0px;
+    line-height: 0.7;
 }
 
 #portal-globalnav a:hover, #portal-globalnav li a:hover {
