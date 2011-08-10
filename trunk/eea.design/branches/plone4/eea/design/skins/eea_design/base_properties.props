@@ -53,7 +53,7 @@ borderStyleAnnotations:string=dashed
 
 globalBorderColor:string=#cccccc
 globalGreenBorderColor:string=#9db481
-globalBackgroundColor:string=#e9efcd
+globalBackgroundColor:string=#ececec
 globalFontColor:string=#000000
 
 
