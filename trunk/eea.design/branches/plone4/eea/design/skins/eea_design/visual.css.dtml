@@ -628,15 +628,10 @@ div span span.languageCodes a,
     padding: 20px;
 }
 
-.gradientBG, .gradientBGLightToDark, #portlet-login {
-	background: url(&dtml-portal_url;/white-green.gif) repeat-x bottom left #ffffff;
+#portlet-login {
+
 	color: #000;
 } 
-
-.gradientBGDarkToLight {
-	background: url(&dtml-portal_url;/green-white.gif) repeat-x top left #ffffff;
-	color: #000;
-}
 
 
 form#translationfeedback input#url {
