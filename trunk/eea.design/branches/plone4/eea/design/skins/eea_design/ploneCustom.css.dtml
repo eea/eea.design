@@ -93,14 +93,14 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    padding: 0.5em;
+    padding: 10px;
     position: relative;
     text-align: center;
-    width: 138px;
-    left:270px;
+    width: 128px;
+    left:280px;
 }
 .section-publications #c13_button.searchButton:hover {
-    background-color:&dtml-corporateGreen;;
+    background-color:&dtml-corporateOrange;;
     color: #ffffff;
     cursor:pointer;
 }
