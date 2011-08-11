@@ -55,7 +55,7 @@ body.frontpage ul {
     font-weight: normal;
 }
 
-.featured h2 { 
+#highlights-block h2, .featured h2 { 
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4;
@@ -63,6 +63,7 @@ body.frontpage ul {
     border: none;
     clear: left;
     color: #000;
+    margin: 0;
 }
 
 #highlights-block .shortNewsTitle {
@@ -336,7 +337,7 @@ ul#tabs li:first-child a:hover {
 #news-header h2 {
     float: left;
     padding: 0px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     border:none;
 }
 
