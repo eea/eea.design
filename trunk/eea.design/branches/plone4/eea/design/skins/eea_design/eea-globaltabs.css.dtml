@@ -20,10 +20,6 @@
     color:#DE7800;
     font-weight: bold;
 }
-#portal-globalnav li a.dropTab:hover {
-    text-decoration: underline;
-}
-
 
 #portal-globalnav {
     /*font-size: 1.2em;*/
@@ -62,7 +58,6 @@
 
 #portal-globalnav a:hover, #portal-globalnav li a:hover {
     background: transparent;
-     text-decoration: underline;
     color: white;
 }
 #portal-globalnav .selected a
@@ -74,11 +69,6 @@
     background: white;
     color:#DE7800;
 }
-/*#portal-globalnav li .popper2 li a:hover,*/
-/*#portal-globalnav li a:hover{*/
-    /*color:#DE7800;*/
-    /*text-decoration: underline;*/
-/*}*/
 
 .tabMenuContent {
     display:none;

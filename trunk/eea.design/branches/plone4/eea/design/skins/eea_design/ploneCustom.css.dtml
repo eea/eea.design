@@ -619,7 +619,6 @@ dd.embeddedMedia .magnify {
 
 dl a:hover, dd a:hover, dt a:hover {
     color: &dtml-linkUnderlineHoverColor; !important;
-    text-decoration: underline !important;
 }
 
 a.moreLink {
@@ -865,7 +864,6 @@ float:right;
 
 #portal-searchbox a {
     text-transform: none;
-    text-decoration: underline;
     color: #FFFFFF;
     border: none;
     font-size: 85%;
@@ -1030,7 +1028,6 @@ float:right;
     left: 16px;
     clear: both;
     background: white;
-    height: 5px;
 }
 
 #region-content #portal-breadcrumbs {

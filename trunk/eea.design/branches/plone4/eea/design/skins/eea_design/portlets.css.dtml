@@ -464,9 +464,6 @@ font-size: 0.75em;
     border-collapse: collapse;
     border: 2px &dtml-borderStyle; #ffa500;
 }
-.ploneCalendar #calendar-month a {
-    text-decoration: underline;
-}
 .ploneCalendar #calendar-previous {
     background-image: url(&dtml-portal_url;/arrowLeft.gif);
     background-repeat: no-repeat;

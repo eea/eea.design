@@ -61,7 +61,6 @@ font-weight:bold;
 
 
 #notification-footer a {
-text-decoration: underline;
 color: white;
 border: none;
 }
@@ -71,7 +70,6 @@ color: white;
 #notification-footer a:hover {
 color: #8e004d;
 background-color: transparent;
-text-decoration: underline;
 }
 
 #notification-header {

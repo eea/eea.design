@@ -41,7 +41,6 @@ body.frontpage ul {
 #highlights-block h1 a:hover,
 #highlights-block h2 a:hover,
 #highlights-block h3 a:hover {
-    text-decoration: underline;
     border: none;
 }
 

@@ -46,7 +46,6 @@
 
 #portal-footer a {
     text-transform: none;
-    text-decoration: underline;
     color: white;
     border: none;
 }
@@ -58,7 +57,6 @@
 #portal-footer a:hover {
     color: &dtml-linkHoverColor;;
     background-color: transparent;
-    text-decoration: underline;
 }
 
 #portal-colophon {
