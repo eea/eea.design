@@ -1,7 +1,3 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
-      i18n:domain="eea">
-<body>
-
 <!-- THE SEARCHBOX DEFINITION -->
 <div id="portal-searchbox" metal:define-macro="quick_search" 
      tal:define="local_site context/@@plone_portal_state/local_site">
@@ -28,6 +24,3 @@
                i18n:translate="advanced_search" tal:attributes="href string:${local_site}/help/advanced-search"
                >Advanced search</a>
 </div>
-
-</body>
-</html>
