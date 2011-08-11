@@ -44,9 +44,6 @@ body.frontpage ul {
     border: none;
 }
 
-#highlights-block .column-title {
-    padding: 1em 0 1em 0.5em;
-}
 
 #highlights-high ul.relatedLinks, #articles-high ul.relatedLinks {
     margin:0.5em 0 0 1px;
@@ -57,10 +54,11 @@ body.frontpage ul {
     font-weight: normal;
 }
 
-#highlights-block h2 { 
+h2, .featured h2 { 
     font-size: 160%;
+    font-weight: normal;
     line-height: 1.4;
-    margin: 0.25em 0;
+    padding: 1em 1em 0.25em;
     border: none;
     clear: left;
     color: #000;
@@ -104,8 +102,8 @@ body.frontpage ul {
     float: right;
     margin: 15px;
     position: relative;
-    top: 15px;
-    line-height: 1;
+    top: 7px;
+    line-height: 1em;
 }
 
 a.archives {
@@ -336,11 +334,12 @@ ul#tabs li:first-child a:hover {
 
 #news-header h2 {
     float: left;
+    padding: 0px;
+    margin: 5px 0px;
 }
 
 #news-header {
   height: 35px;
-  margin-top: 2em;
   clear: both;
   display: block;
   margin-bottom: 5px;
@@ -352,20 +351,20 @@ ul#tabs li:first-child a:hover {
     border-radius: 10px;
 }
 
-#featured-box {
-  padding: 1px;
-}
-
-#spotlight-box {
-  padding: 0px 20px 10px 20px;
-}
-
-#featured-box, #spotlight-box {
+.featured {
     background: #ECECEC;
     margin-bottom: 2.5em;
 }
 
-#spotlight-box  img, #featured-box img {
+.promo {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0em;
+    background: #ECECEC;
+    margin-bottom: 2em;
+}
+
+.featured  img {
     padding-right: 10px;
     width: 180px;
     height: 101px;
@@ -377,6 +376,7 @@ ul#tabs li:first-child a:hover {
     background: #e6e7e8;
     border: 1px solid #e6e7e8;
     margin-bottom: 2.5em;
+    text-align: center;
 }
 
 #forum-link,
@@ -456,7 +456,7 @@ a.album-layout:hover {
 }
 
 #mobile {
-    background: #E6E7E8 url("mobile.png") no-repeat center center;
+    background: #e6e7e8 url("mobile.png") no-repeat center center;
 }
 
 #facebook {
@@ -472,7 +472,7 @@ a.album-layout:hover {
     position: relative;
     padding: 30px;
     left: 94px;
-    top: 44px
+    top: 44px;
 }
 
 #twitter {
@@ -487,14 +487,12 @@ a.album-layout:hover {
     position: relative;
     padding: 40px 100px;
     top: 44px;
-    left: 87px;
 }
 
 #mobile-link {
     position: relative;
     padding: 30px 120px;
     top: 40px;
-    left: 67px;
 }
 
 a.list-layout,

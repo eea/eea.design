@@ -20,7 +20,7 @@
 
 
                         <!-- featured and spotlight areas -->
-                        <div id="featured-box" class="roundedCorners">
+                        <div class="featured roundedCorners">
                           <a href="articles" class="archives" i18n:translate="archive">Archive</a>
                           <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured article</h2>
                           <div metal:use-macro="here/frontpage_macros/macros/highArticles">

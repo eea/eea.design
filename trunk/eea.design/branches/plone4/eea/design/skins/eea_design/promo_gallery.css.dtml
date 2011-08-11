@@ -17,12 +17,12 @@
     margin: 0 0px;
     background: &dtml-corporateGreen;;
     opacity: 0.9;
-    height: 75px;
-    padding: 5px 20px 0px 20px;
+    height: 80px;
+    padding: 0px 20px 0px 20px;
 }
 
 #promo-gallery-content h3, #promo-gallery-content-sm h3 {
-    margin: 0.2em 0 0.4em 0;
+    margin: 0.4em 0 0.4em 0;
     font-size: 1.6em;
     line-height: 1.2em;
     font-weight: normal;
@@ -30,6 +30,7 @@
 
 #promo-gallery-content-sm h3 {
     font-size: 1.4em;
+    margin-top: 0.2em;
 }
 
 #promo-gallery-content h3 a, #promo-gallery-content h3 a:visited, 
@@ -48,6 +49,7 @@
     overflow: hidden; 
     background: #F7F7F7;
     border: 0px solid #F7F7F7;
+    margin-bottom: 2em;
 }
 
 #gallery-content-outer, #gallery-content-outer-sm {
@@ -87,6 +89,10 @@
 #gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li,
 #promo-gallery-content-sm li img{
     width: 388px;
+}
+
+#promo-gallery-content-sm li img {
+    height: 240px;
 }
 
 /* item navigator */

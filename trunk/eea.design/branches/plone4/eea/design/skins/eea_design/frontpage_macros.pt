@@ -43,12 +43,12 @@
             tal:define="spotlight frontpage_view/getSpotlight;
 		                plone_view nocall:plone_view|here;"
 		    tal:condition="spotlight">
-    <div id="spotlight-box" class="roundedCorners">
+    <div class="featured roundedCorners">
         <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
 
 
         <div id="spotlight-item"
-            class="spotlight">
+            class="highlights">
             <div class="figure-left"><img alt="" tal:attributes="src string:${spotlight/url}/image_thumb; title spotlight/title; alt spotlight/title" /></div>
             <h3 class="highlight">
                 <a href="#" class="noPrint"
