@@ -384,13 +384,18 @@ ul#tabs li:first-child a:hover {
 #facebook,
 #youtube,
 #twitter,
+#twitter-link,
+#facebook-link,
+#youtube-link,
+#rss-link,
+#email-link,
 a.active-list,
 a.list-layout,
 a.album-layout,
 a.active-album,
 a.list-layout:hover,
 a.album-layout:hover {
-  background: transparent url('icons-sprite.png') no-repeat scroll top right;
+  background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
 } 
 
 #forum a:hover,
@@ -400,6 +405,51 @@ a.album-layout:hover {
 #play-pause:hover,
 #next-promo:hover {
   text-decoration: none !important;
+}
+
+#portlet-followus dd {
+  float: left;
+  display: inline-block;
+}
+
+#twitter-link,
+#facebook-link,
+#youtube-link,
+#rss-link,
+#email-link{
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+#twitter-link {
+    background-position: 0 -180px !important;
+}
+
+#facebook-link {
+    background-position: 0 -147px !important;
+}
+
+#youtube-link {
+    background-position: 0 -213px !important;
+}
+
+#rss-link {
+    line-height: 2.4;
+    background-position: 0 -246px !important;
+}
+
+#email-link {
+    height: 20px;
+    margin-top: 6px;
+    line-height: 1.5;
+    background-position: 0 -279px !important;
+}
+
+#rss-link,
+#email-link {
+    font-size: 13px;
+    padding-left: 38px;
 }
 
 #forum-link {

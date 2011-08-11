@@ -180,11 +180,11 @@
 	color:#FFF;
 }
 
-.lof-opacity  li{
-	position:absolute;
-	top:0;
-	left:0;
-	float:inherit;
+.lof-opacity  li{
+	position:absolute;
+	top:0;
+	left:0;
+	float:inherit;
 }
 
 #play-pause {
@@ -196,7 +196,7 @@
 .pause,
 #prev-promo,
 #next-promo {
-  background: transparent url('icons-sprite.png') no-repeat scroll top right;
+  background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
 }
 
 .play {

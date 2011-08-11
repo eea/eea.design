@@ -625,7 +625,7 @@ dl a:hover, dd a:hover, dt a:hover {
 a.moreLink {
     border: 0px !important;
     padding: 5px 0px 5px 25px;
-    background: transparent url("icons-sprite.png") no-repeat scroll -441px -6px;
+    background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -6px;
 }
 
 /* End links */
@@ -876,7 +876,7 @@ float:right;
 #searchbox_terminology input:focus,
 #portal-searchbox input.searchButton,
 #portal-searchbox input.searchButton:hover{
-    background: transparent url('icons-sprite.png') no-repeat scroll left center;
+    background: transparent url('sprite-eeaimages.png') no-repeat scroll left center;
 }
 
 #portal-searchbox input.searchButton {
@@ -979,7 +979,7 @@ float:right;
 }
 
 #siteaction-chooselang a {
-    background: url("icons-sprite.png") no-repeat scroll -430px -35px transparent;
+    background: url("sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
     color: black;
     padding-bottom: 4px;
     padding-left: 35px;
