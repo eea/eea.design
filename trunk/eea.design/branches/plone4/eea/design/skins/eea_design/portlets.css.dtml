@@ -53,7 +53,7 @@
 
 .portlet-promotions dl.portlet dt{
     text-align: center;
-    background-color: &dtml-greyBackgroundColor;;
+    background-color: &dtml-mediumBackgroundColor;;
 }
 
 .portlet-promotions dl.portlet .promo-prev {
@@ -120,7 +120,7 @@ dt.portletItem {
    padding:0.5em 0.2em 0.5em 0.5em;
    margin-top:0;
    margin-bottom:0;
-   background: #d0df86;
+   background: &dtml-mediumBackgroundColor;;
 }
 
 #portlet-navigation-tree #firstHeader {
@@ -771,7 +771,6 @@ a.noHover {
 dl.portletNavigationTree dt.portletHeader {
   padding: 1em 0.5em 1em 0.5em;
   font-size: 1.6em;
-  background: #D0DF86;
   margin: 0px;
 }
 
@@ -780,18 +779,18 @@ dl.portletNavigationTree dt.portletSubMenuHeader {
   padding: 0.5em 0.2em 0.5em 0.5em;
   margin-top: 0;
   margin-bottom: 0;
-  background: #D0DF86;
+  background: &dtml-mediumBackgroundColor;;
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader span.title {
   cursor: pointer;
   padding: 0 0 0 20px;
   margin: 0;
-  background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll left center #D0DF86;
+  background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll left center &dtml-mediumBackgroundColor;;
 }
 
 dl.portletNavigationTree dt.current span.title {
-  background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll left center #D0DF86;
+  background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll left center &dtml-mediumBackgroundColor;;
 }
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
