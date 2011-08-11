@@ -336,7 +336,7 @@ ul#tabs li:first-child a:hover {
 #news-header h2 {
     float: left;
     padding: 0px;
-    margin: 5px 0px;
+    margin: 10px 0px;
     border:none;
 }
 
