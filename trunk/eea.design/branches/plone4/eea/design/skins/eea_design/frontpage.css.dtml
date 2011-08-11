@@ -337,6 +337,7 @@ ul#tabs li:first-child a:hover {
     float: left;
     padding: 0px;
     margin: 5px 0px;
+    border:none;
 }
 
 #news-header {
