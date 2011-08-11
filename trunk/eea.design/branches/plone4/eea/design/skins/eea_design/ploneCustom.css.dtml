@@ -611,11 +611,6 @@ dd.embeddedMedia .magnify {
     border-bottom: 1px &dtml-linkUnderlineColor; solid;
 }
 
-.documentContent a:hover,
-.documentContent ul li a:hover,
-.documentContent td a:hover {
-    border: none;
-}
 
 dl a:hover, dd a:hover, dt a:hover {
     color: &dtml-linkUnderlineHoverColor; !important;
@@ -1873,6 +1868,7 @@ body.mceContentBody {
     background: transparent !important;
     padding: 0px !important;
 }
+
 
 /* </dtml-with> */
 
