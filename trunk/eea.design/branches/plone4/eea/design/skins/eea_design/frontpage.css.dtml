@@ -359,6 +359,7 @@ ul#tabs li:first-child a:hover {
 .featured {
     background: #ECECEC;
     margin-bottom: 2.5em;
+    padding:0.5em;
 }
 
 .promo {
