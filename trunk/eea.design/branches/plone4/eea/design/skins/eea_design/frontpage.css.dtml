@@ -451,42 +451,16 @@ a.album-layout:hover {
 }
 
 
-#forum-link {
-    background-position: right -550px !important;
-}
-
 #mobile {
     background: #e6e7e8 url("mobile.png") no-repeat center center;
 }
 
-#facebook {
-    background-position: -399px -478px !important;
-    padding: 28px 32px;
-    position: relative;
-    top: 45px;
-    left: 58px;
-}
-
-#youtube {
-    background-position: -359px -395px !important;
-    position: relative;
-    padding: 30px;
-    left: 94px;
-    top: 44px;
-}
-
-#twitter {
-    background-position: -322px -475px !important;
-    position: relative;
-    padding: 30px 35px;
-    top: 45px;
-    left: 125px;
-}
 
 #forum-link {
     position: relative;
     padding: 40px 100px;
     top: 44px;
+    background-position: right -550px !important;
 }
 
 #mobile-link {
