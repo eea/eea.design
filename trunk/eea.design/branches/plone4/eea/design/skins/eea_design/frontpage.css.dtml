@@ -194,13 +194,13 @@ body.frontpage #portal-columns {
     padding: 0 !important;
 }
 #content ul.gallery-layout-selection  {
-    position: relative;
-    top: 5px;
-    list-style: none;
-    margin-bottom: 10px;
-    width: 65px;
-    display: inline;
-    float: right;
+  float: right;
+  position: relative;
+  top: 5px;
+  list-style: none;
+  margin-bottom: 10px;
+  width: 65px;
+  display: inline;
 }
 #content ul.gallery-layout-selection li {
     display: inline;

@@ -52,6 +52,7 @@ h2 {
     font-size: 130%;
     margin: 0.83em 0;
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    color: &dtml-corpotateGreenTwo;;
     padding-bottom: 0.25em;}
 h3 {
     font-size: 125%;

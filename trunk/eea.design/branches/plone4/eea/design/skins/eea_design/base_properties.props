@@ -29,10 +29,10 @@ backgroundColor:string=transparent
 lightGreyDivisionColor:string=#cccccc
 
 #general bgc for boxes and portlets
-lightBackgroundColor:string=#ececec
-mediumBackgroundColor:string=#e6e7e8
+lightBackgroundColor:string=#f3f3f3
+mediumBackgroundColor:string=#ececec
 darkBackgroundColor:string=#95b229
-greyBackgroundColor:string=#ececec
+greyBackgroundColor:string=#f3f3f3
 headerBackgroundColor:string=#F0F4F5
 
 #top navigation colors
@@ -53,7 +53,7 @@ borderStyleAnnotations:string=dashed
 
 globalBorderColor:string=#cccccc
 globalGreenBorderColor:string=#9db481
-globalBackgroundColor:string=#ececec
+globalBackgroundColor:string=#f3f3f3
 globalFontColor:string=#000000
 
 
@@ -66,7 +66,7 @@ inputFontColor:string=Black
 textTransform:string=lowercase
 
 #For zebra styles. odd items in lists / tables 
-evenRowBackgroundColor:string=#e6e7e8
+evenRowBackgroundColor:string=#ececec
 oddRowBackgroundColor:string=#f7f7f7
 
 notifyBorderColor:string=#ffa500

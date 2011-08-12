@@ -10,7 +10,6 @@
                <property name="description" i18n:translate=""></property>
                <property name="url_expr">string:$portal_url/address.html</property>
                <property name="link_target"></property>
-               <property name="icon_expr">string:$portal_url/mail_icon.gif</property>
                <property name="available_expr"></property>
                <property name="permissions">
                     <element value="View"/>
@@ -37,7 +36,6 @@
                <property name="description" i18n:translate=""></property>
                <property name="url_expr">string:$portal_url/subscription</property>
                <property name="link_target"></property>
-               <property name="icon_expr">string:$portal_url/newsitem_icon.gif</property>
                <property name="available_expr">python: request.get('LANGUAGE', 'en') == 'en'</property>
                <property name="permissions">
                     <element value="View"/>
@@ -51,7 +49,6 @@
                <property name="description" i18n:translate=""></property>
                <property name="url_expr">string:$portal_url/mobile</property>
                <property name="link_target"></property>
-               <property name="icon_expr">string:$portal_url/phone.png</property>
                <property name="available_expr"></property>
                <property name="permissions">
                     <element value="View"/>

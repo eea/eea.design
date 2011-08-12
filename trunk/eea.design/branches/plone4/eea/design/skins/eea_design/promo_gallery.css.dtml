@@ -49,6 +49,9 @@
     overflow: hidden; 
     background: #F7F7F7;
     border: 0px solid #F7F7F7;
+    -webkit-border-radius: 0 0 10px 10px;
+       -moz-border-radius: 0 0 10px 10px;
+            border-radius: 0 0 10px 10px;
     margin-bottom: 2em;
 }
 
@@ -233,12 +236,13 @@
 
 .controls {
     background: &dtml-mediumBackgroundColor;;
-    border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+       -moz-border-radius: 0 0 10px 10px;
+        border-radius: 0px 0px 10px 10px;
     clear: both;
     height: 25px;
     padding: 15px 0px 0px 20px;
     position: relative;
-    width: 100%;
 }
 
 /* </dtml-with> */

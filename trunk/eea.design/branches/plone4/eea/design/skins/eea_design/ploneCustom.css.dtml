@@ -759,14 +759,16 @@ float:right;
 }
 
 .shadow {
-    -moz-box-shadow: 0 10px 50px 0 #333;
-    -webkit-box-shadow: 0 10px 50px 0 #333;
+    -webkit-box-shadow: 1px 1px 5px #afafaf;
+       -moz-box-shadow: 1px 1px 5px #afafaf;
+            box-shadow: 1px 1px 5px #afafaf;
 }
 
 /* drop down panels for portal siteactions */
 #cross-site-top .panel {
     display: none;
     z-index: 100;
+    background: transparent;
 }
 
 #cross-site-top .panel-top {
@@ -775,7 +777,7 @@ float:right;
     width: 50px;
     height: 25px;
     position: relative;
-    top: 1px;
+    top: 2px;
 }
 
 #cross-site-top .panel .portletFooter {
@@ -819,8 +821,24 @@ float:right;
 
 #tip-siteaction-etcssites li,
 #tip-siteaction-chooselang li {
-    margin-left: 1em;
-    list-style-image: url(bullet.gif);
+    padding-left: 1em;
+    background: url("bullet.gif") no-repeat scroll left center transparent;
+}
+
+#tip-siteaction-chooselang {
+    min-width: 145px;
+    background-color: transparent;
+}
+
+#tip-siteaction-chooselang li {
+    display: block;
+}
+
+
+
+#tip-siteaction-chooselang li a {
+    font-size: 11px;
+    display: block;
 }
 
 /* The skin switcher at the top, only shows up if you have multiple skins available */
@@ -943,6 +961,32 @@ float:right;
     line-height: normal;
     float: right;
     padding: 0px 10px 0px 0;
+}
+
+#siteaction-subscriptions a,
+#siteaction-formobile a,
+#siteaction-contactus a {
+    background: url("sprite-eeaimages.png") no-repeat scroll transparent;
+    display: inline-block;
+    line-height: 1.4;
+    height: 16px !important;
+}
+
+
+#siteaction-subscriptions a {
+    background-position: 0 -29px !important;
+    padding-left: 22px;
+}
+
+#siteaction-formobile a {
+    background-position: 0 -12px !important;
+    padding-left: 16px;
+}
+
+#siteaction-contactus a {
+    height: 14px !important;
+    background-position: 0 2px !important;
+    padding-left: 23px;
 }
 
 #portal-externalsites {
@@ -1280,6 +1324,10 @@ float:right;
 .tileImage {
     float: left;
     margin: 1em 1em 1em 0em;
+    border: 1px solid &dtml-globalBorderColor;;
+}
+
+.tileImage:hover {
     border: 1px solid &dtml-globalBorderColor;;
 }
 
