@@ -17,7 +17,9 @@
 <div metal:define-macro="news"
 		id="news-highlights" 
 		class="highlights"
-		tal:define="folderContents frontpage_view/getNews;
+        tal:define="
+        frontpage_view context/@@frontpage_highlights;       
+        folderContents frontpage_view/getNews;
 		plone_view nocall:plone_view|here;
         hide_listing python: False;
         hide_album python: True;"
@@ -172,17 +174,17 @@
 
 <!-- promotion_gallery macro -->
 <metal:promos metal:define-macro="promo-gallery"
-                tal:define="highlights python: frontpage_view.getPromotions;
+                tal:define="
+                frontpage_view context/@@frontpage_highlights;       
+                highlights python: frontpage_view.getPromotions;
                 plone_view nocall:plone_view|here;
                 frontpage_gallery frontpage|string: true;
-                small_factor python: '' if frontpage_gallery else '-sm';
-                ">
-
+                small_factor python: '' if frontpage_gallery else '-sm';"
+                tal:condition="highlights">
 
                 <div tal:attributes="id string:gallery-content-outer${small_factor};"> 
   <ul tal:attributes="id string:promo-gallery-content${small_factor}"> 
       <metal:pritems  
-                    tal:condition="highlights"
                     tal:repeat="hl highlights">
                         <li>
                         <tal:image tal:define="figure hl/getImage|nothing;
@@ -259,6 +261,19 @@
 <div metal:define-macro="datamaps" 
 		class="highlights"
         id="datamaps-highlights"> 
+</div>
+
+<div metal:define-macro="featured-article"
+              tal:define="frontpage_view context/@@frontpage_highlights;       
+              highlights python: frontpage_view.getHighArticles(topic =  True);"
+              tal:condition="highlights">
+            <div class="featured roundedCorners">
+              <a href="articles" class="archives">More articles</a>
+              <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured article</h2>
+                <div metal:use-macro="here/frontpage_macros/macros/highArticles">
+                    item title, description and image
+                </div>
+            </div>
 </div>
 
 <metal:gallery-items define-macro="gallery-items"

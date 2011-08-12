@@ -127,7 +127,7 @@ class Frontpage(BrowserView):
     def getHighArticles(self, topic = ''):
         """ return a defined number of high visibility articles items """
         if topic: 
-            topic = self.context.aq_parent.id
+            topic = self.context.aq_inner.aq_parent.id
             results =  self.getHigh(('Article', ), 'thumb', topic)
             return results
         results =  self.getHigh(('Article', ), 'thumb')
@@ -224,7 +224,7 @@ class Frontpage(BrowserView):
         }
         themes = 'themes' in self.context.REQUEST.URL0
         if themes:
-            query['getThemes'] = self.context.aq_parent.id
+            query['getThemes'] = self.context.aq_inner.aq_parent.id
         result = self.catalog(query)
         cPromos = []
         for brain in result:
