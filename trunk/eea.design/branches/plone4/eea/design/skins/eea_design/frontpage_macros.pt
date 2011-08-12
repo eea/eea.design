@@ -264,7 +264,7 @@
 <metal:gallery-items define-macro="gallery-items"
                      tal:define="visible_album python: 'hiddenStructure' if hide_album else '';
                                 visible_listing python: 'hiddenStructure' if hide_listing else '';">
-        <div class="gallery-ajax">
+        <div class="gallery-ajax visualClear">
             <div tal:attributes="class string: gallery-listing ${visible_listing}">
                 <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
             </div>

@@ -89,28 +89,30 @@
                         <!-- end select_topics -->
 
                         <!-- tabs -->
-                        <ul id="tabs"
-                            tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps'];">
-                            <li tal:repeat="tab tabnames">
-                                <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.lower()">Tabs</a>
-                            </li>
-                        </ul>
-                        <!-- end_tabs -->
+                        <div metal:define-macro="whatsnew-gallery">
+                            <ul id="tabs"
+                                tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps'];">
+                                <li tal:repeat="tab tabnames">
+                                    <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.lower()">Tabs</a>
+                                </li>
+                            </ul>
+                            <!-- end_tabs -->
 
-                        <div metal:use-macro="here/frontpage_macros/macros/news">
-                            News highlights
-                        </div>
-                        <div metal:use-macro="here/frontpage_macros/macros/articles">
-                            Articles Highlights
-                        </div>
-                        <div metal:use-macro="here/frontpage_macros/macros/publications">
-                            Publications Highlights
-                        </div>
-                        <div metal:use-macro="here/frontpage_macros/macros/multimedia">
-                            Multimedia Highlights
-                        </div>
-                        <div metal:use-macro="here/frontpage_macros/macros/datamaps">
-                            Data and maps Highlights
+                            <div metal:use-macro="here/frontpage_macros/macros/news">
+                                News highlights
+                            </div>
+                            <div metal:use-macro="here/frontpage_macros/macros/articles">
+                                Articles Highlights
+                            </div>
+                            <div metal:use-macro="here/frontpage_macros/macros/publications">
+                                Publications Highlights
+                            </div>
+                            <div metal:use-macro="here/frontpage_macros/macros/multimedia">
+                                Multimedia Highlights
+                            </div>
+                            <div metal:use-macro="here/frontpage_macros/macros/datamaps">
+                                Data and maps Highlights
+                            </div>
                         </div>
 
                         <div class="visualClear"><!-- &nbsp; --></div>

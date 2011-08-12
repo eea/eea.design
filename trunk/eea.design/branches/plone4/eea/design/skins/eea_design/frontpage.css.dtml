@@ -196,9 +196,11 @@ body.frontpage #portal-columns {
 #content ul.gallery-layout-selection  {
     position: relative;
     top: 5px;
-    left: 470px;
     list-style: none;
     margin-bottom: 10px;
+    width: 65px;
+    display: inline;
+    float: right;
 }
 #content ul.gallery-layout-selection li {
     display: inline;
