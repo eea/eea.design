@@ -295,7 +295,7 @@ dl.portlet-navigation-tree {
 
 #portlet-navigation-tree .navTreeCurrentItem {
     color: &dtml-linkHoverColor;;
-    background-color: &dtml-linkHoverBGColor;;
+    background-color: &dtml-corporateGreen;;
 }
 
 /* END of portlet with tabs */
@@ -795,7 +795,7 @@ dl.portletNavigationTree dt.current span.title {
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
   color: #8E004D;
-  background-color: #E9EFCD;
+  background-color: &dtml-corporateGreen;;
 }
 
 #portal-column-one .portlet {

@@ -450,11 +450,6 @@ a.album-layout:hover {
     background-position: 0 -279px !important;
 }
 
-#rss-link,
-#email-link {
-    font-size: 13px;
-    padding-left: 38px;
-}
 
 #forum-link {
     background-position: right -550px !important;

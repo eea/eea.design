@@ -561,11 +561,11 @@ div span span.languageCodes {
 }
 
 .languageCodes a:link, .languageCodes a, #languageCodes li a { 
-    background: &dtml-darkBackgroundColor;;
+    background: &dtml-lightBackgroundColor;;
     color: white !important;
     padding: 0.2em;
     line-height:2.0em;
-    border: 1px solid &dtml-darkBackgroundColor; ! important;
+    border: 1px solid &dtml-mediumBackgroundColor; ! important;
     text-decoration: none;
 }
 

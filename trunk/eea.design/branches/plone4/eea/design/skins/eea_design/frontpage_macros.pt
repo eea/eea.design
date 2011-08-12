@@ -289,6 +289,16 @@
 
 <!-- Social / Follow us links -->
 <div metal:define-macro="followus">
+
+      <!-- the fancy box email subscription -->  
+      <div style="display:none;">
+	 <div style="width: 280px; height: 250px;" id="subscribe-popup">
+	     <div metal:use-macro="here/portlet_gazette/macros/portlet-subscribe">
+                                email subscribe
+             </div>
+	 </div>
+      </div>
+
       <dl class="portlet" id="portlet-followus">
         <dt class="hiddenStructure">Follow us</dt>
         <dd>
@@ -309,14 +319,14 @@
         <dd>
 	    <a id="rss-link" title="Subscribe to RSS Feed"
 	       tal:attributes="href string:$portal_url/subscription/news-feeds"
-	       i18n:attributes="title rss_feeds;">RSS</a>
+	       i18n:attributes="title rss_feeds;">&nbsp;</a>
         </dd>
         <dd>
 	    <a id="email-link"
 	       title="Subscribe by email"
 	       href="#subscribe-popup"
 	       class="fancybox"
-	       i18n:attributes="title email_feeds;">Email</a>
+	       i18n:attributes="title email_feeds;">&nbsp;</a>
         </dd>
       </dl>
 </div>
