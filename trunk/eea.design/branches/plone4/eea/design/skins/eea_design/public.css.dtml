@@ -75,11 +75,11 @@ iframe { border-width: 0; border-style:none; }
 
 #portal-globalnav .selected a,
 #portal-globalnav a:hover {
-    background: #205c90;
-    color: White;
+    /*background: #205c90;*/
+    color: &dtml-corporateOrange;;
 }
 #portal-globalnav .selected a:hover {
-    background: #ddd;
+    /*background: #ddd;*/
     color: #205c90;
 }
 
