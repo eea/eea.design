@@ -448,14 +448,15 @@ dl.portlet a:hover {
     padding: 1px 0px 1px 16px;
 }
 
-#category {
+#category, #themes-tags {
     font-size: 100%;
     margin-bottom: 1em;
     color: #666;
     text-align: right;
+    line-height: 2em;
 }
 
-#category a.link-category {
+#category a.link-category, #themes-tags a.link-category {
     color: black;
     padding: 0.25em 0.5em;
     background: #ddd;
@@ -463,12 +464,12 @@ dl.portlet a:hover {
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
 }
-#category a.link-category:hover {
-    background: #205c90;
+#category a.link-category:hover, #themes-tags a.link-category:hover {
+    background: &dtml-corporateBlueTwo;;
     color: White;
     border-color: #205c90;
 }
-#category .separator {
+#category .separator, #themes-tags .separator {
     display: none;
 }
 
