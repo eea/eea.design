@@ -237,16 +237,6 @@ body.section-atlas #visual-column-wrapper {
 .section-soer-draft #free-text-space {
     min-height: 150px;
 }
-.section-soer .photoAlbumEntry,
-.section-soer-draft .photoAlbumEntry {
-    background: white url(&dtml-portal_url;/shadowAlpha.png) no-repeat bottom right; /* from sasha.vincic.org */
-    padding: 10px;
-}
-
-.map-photo-album .photoAlbumEntry {
-    background: white url(&dtml-portal_url;/polaroid-single.png) no-repeat !important;
-    padding: 0 9px 0px 6px !important;
-}
 
 .section-soer #auto-related,
 .section-soer #related-multimedia,
@@ -1327,6 +1317,9 @@ float:right;
     border: none;
     font-size: 110%;
     font-weight: bold;
+    background: none;
+    margin:0;
+    padding-left:0;
 }
 
 #relatedItems .tileHeadline {
