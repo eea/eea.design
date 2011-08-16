@@ -68,8 +68,8 @@
      class="highlights"
      tal:define="folderContents frontpage_view/getPublications;
                  plone_view nocall:plone_view|here;
-                 hide_listing python: False;
-                 hide_album python: True;"
+                 hide_listing python: True;
+                 hide_album python: False;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
             <li><a href="#" class="list-layout active-list"></a></li>
@@ -236,6 +236,20 @@
      class="highlights"
      id="multimedia-highlights"
      tal:define="folderContents frontpage_view/getMultimedia;
+                 hide_album python: False;
+                 hide_listing python: True;"
+     tal:condition="folderContents|nothing">
+        <ul class="gallery-layout-selection">
+            <li><a href="#" class="list-layout"><a/></li>
+            <li><a href="#" class="album-layout active-album"><a/></li>
+        </ul>
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
+</div>
+
+<div metal:define-macro="allproducts"
+     class="highlights"
+     id="allproducts-highlights"
+     tal:define="folderContents frontpage_view/getAllProducts;
                  hide_album python: False;
                  hide_listing python: True;"
      tal:condition="folderContents|nothing">

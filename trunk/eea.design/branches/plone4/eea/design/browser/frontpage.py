@@ -67,6 +67,7 @@ class Frontpage(BrowserView):
         self.noOfMultimedia = frontpage_properties.getProperty('noOfMultimedia', 6)
         self.noOfPublications = frontpage_properties.getProperty('noOfPublications', 6)
         self.noOfPromotions = frontpage_properties.getProperty('noOfPromotions', 7)
+        self.noOfEachProduct = frontpage_properties.getProperty('noOfEachProduct', 3)
         self.now = DateTime()
 
 #    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
@@ -122,6 +123,28 @@ class Frontpage(BrowserView):
             return result
         visibilityLevel = ''
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = portaltypes)[:self.noOfPublications]
+        return result
+    
+
+    def getAllProducts(self):
+        """ get all latest published products for frontpage """
+        portaltypes = ('Report','Article','Highlight','PressRelease', 'Data', 'EEAFigure')
+        interfaces = 'p4a.video.interfaces.IVideoEnhanced'
+        visibilityLevel = ''
+        topic = getattr(self.context.REQUEST, 'topic', None)
+        result = []
+        for mytype in portaltypes:
+            if topic:
+                result2 = self._getTopics(portaltypes = mytype , 
+                                 topic = topic, noOfItems=self.noOfEachProduct)
+            else:
+                result2 =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = mytype)[:self.noOfEachProduct]
+            result.extend(result2)
+            
+        multimedia = self.getMultimedia();
+        result.extend(multimedia)
+        #TODO the list must be re-sorted on effective date.
+        
         return result
 
     def getHighArticles(self, topic = ''):

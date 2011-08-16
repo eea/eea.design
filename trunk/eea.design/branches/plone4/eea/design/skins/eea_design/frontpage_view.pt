@@ -84,7 +84,7 @@
                         <!-- tabs -->
                         <div metal:define-macro="whatsnew-gallery">
                             <ul id="tabs"
-                                tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps'];">
+                                tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps', 'All products'];">
                                 <li tal:repeat="tab tabnames">
                                     <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.lower()">Tabs</a>
                                 </li>
@@ -105,6 +105,9 @@
                             </div>
                             <div metal:use-macro="here/frontpage_macros/macros/datamaps">
                                 Data and maps Highlights
+                            </div>
+                             <div metal:use-macro="here/frontpage_macros/macros/allproducts">
+                                All products Highlights
                             </div>
                         </div>
 
