@@ -13,108 +13,102 @@
 <!-- end accordion_gallery -->
 
 <div metal:define-macro="news"
-		id="news-highlights" 
-		class="highlights"
-        tal:define="
-        frontpage_view context/@@frontpage_highlights;       
-        folderContents frontpage_view/getNews;
-		plone_view nocall:plone_view|here;
-        hide_listing python: False;
-        hide_album python: True;"
-        tal:condition="folderContents|nothing">
+     id="news-highlights"
+     class="highlights"
+     tal:define="frontpage_view context/@@frontpage_highlights;
+                 folderContents frontpage_view/getNews;
+                 plone_view nocall:plone_view|here;
+                 hide_listing python: False;
+                 hide_album python: True;"
+     tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
-            <a href="#" class="list-layout active-list"><a/>
-            <a href="#" class="album-layout"><a/>
+            <li><a href="#" class="list-layout active-list"><a/></li>
+            <li><a href="#" class="album-layout"><a/></li>
         </ul>
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
 
-<div metal:define-macro="highArticles" 
-		id="articles-high" 
-		class="highlights"
-        tal:define="frontpage_view context/@@frontpage_highlights;
-                    highlights highlights|frontpage_view/getHighArticles;
-		            plone_view nocall:plone_view|here;">
+<div metal:define-macro="highArticles"
+     id="articles-high"
+     class="highlights"
+     tal:define="frontpage_view context/@@frontpage_highlights;
+                 highlights highlights|frontpage_view/getHighArticles;
+                 plone_view nocall:plone_view|here;">
     <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
 </div>
 
-<metal:spotlight metal:define-macro="spotlightItem" 
-            tal:define="spotlight frontpage_view/getSpotlight;
-		                plone_view nocall:plone_view|here;"
-		    tal:condition="spotlight">
+<metal:spotlight metal:define-macro="spotlightItem"
+                 tal:define="spotlight frontpage_view/getSpotlight;
+                             plone_view nocall:plone_view|here;"
+                 tal:condition="spotlight">
     <div class="featured roundedCorners">
         <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
-
 
         <div id="spotlight-item"
             class="highlights">
             <div class="figure-left"><img alt="" tal:attributes="src string:${spotlight/url}/image_thumb; title spotlight/title; alt spotlight/title" /></div>
             <h3 class="highlight">
                 <a href="#" class="noPrint"
-           	        tal:attributes="href spotlight/url"
-           		    tal:content="spotlight/title">
-       	    	        Spotlight Title</a></h3>
+                   tal:attributes="href spotlight/url"
+                   tal:content="spotlight/title">
+                       Spotlight Title</a></h3>
             <p tal:content="spotlight/description">description</p>
 
             <p><a href="#" class="moreLink"
                 tal:attributes="href spotlight/url">Read more</a></p>
-
 
         </div>
     </div>
 
 </metal:spotlight>
 
-<div metal:define-macro="publications" 
-		id="publications-highlights" 
-		class="highlights"
-		tal:define="folderContents frontpage_view/getPublications;
-        plone_view nocall:plone_view|here;
-        hide_listing python: False;
-        hide_album python: True;"
-        tal:condition="folderContents|nothing">
+<div metal:define-macro="publications"
+     id="publications-highlights"
+     class="highlights"
+     tal:define="folderContents frontpage_view/getPublications;
+                 plone_view nocall:plone_view|here;
+                 hide_listing python: False;
+                 hide_album python: True;"
+     tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
-            <a href="#" class="list-layout active-list"><a/>
-            <a href="#" class="album-layout"><a/>
+            <li><a href="#" class="list-layout active-list"><a/></li>
+            <li><a href="#" class="album-layout"><a/></li>
         </ul>
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
-<div metal:define-macro="articles" 
-		class="highlights"
-		id="articles-highlights" 
-        tal:define="
-        frontpage_view context/@@frontpage_highlights;
-        folderContents frontpage_view/getArticles;
-        hide_listing python: False;
-        hide_album python: True;
-        "
-        tal:condition="folderContents|nothing">
+<div metal:define-macro="articles"
+     class="highlights"
+     id="articles-highlights"
+     tal:define="frontpage_view context/@@frontpage_highlights;
+                 folderContents frontpage_view/getArticles;
+                 hide_listing python: False;
+                 hide_album python: True;"
+     tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
-            <a href="#" class="list-layout active-list"><a/>
-            <a href="#" class="album-layout"><a/>
+            <li><a href="#" class="list-layout active-list"><a/></li>
+            <li><a href="#" class="album-layout"><a/></li>
         </ul>
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
-
 
 <div metal:define-macro="middle-short"
-        class="highlights"
-                id="highlights-middle"
-                tal:define="highlights frontpage_view/getMedium;
-                            plone_view nocall:plone_view|here">
+     class="highlights"
+     id="highlights-middle"
+     tal:define="highlights frontpage_view/getMedium;
+                 plone_view nocall:plone_view|here">
 
   <metal:items  define-macro="middlenews-short"
                 tal:condition="highlights"
                 tal:repeat="hl highlights">
 
      <div class="highlightMiddle shortNews">
-            
+
              <h3 class="shortNewsTitle">
              <a href="#" class="noPrint"
-                        tal:attributes="href hl/getUrl"
-                        tal:content="hl/getNewsTitle">
+                tal:attributes="href hl/getUrl"
+                tal:content="hl/getNewsTitle">
                                 Highlight Title</a></h3>
 
              <span class="date"
@@ -128,10 +122,10 @@
 
 <!-- featured article macro -->
 <div metal:define-macro="middle-long"
-        class="highlights"
-                id="highlights-middle"
-                tal:define="highlights frontpage_view/getMedium;
-                            plone_view nocall:plone_view|here">
+     class="highlights"
+     id="highlights-middle"
+     tal:define="highlights frontpage_view/getMedium;
+                 plone_view nocall:plone_view|here">
 
   <metal:items  define-macro="middlenews-long"
                 tal:condition="highlights"
@@ -151,20 +145,20 @@
                         figure_title figure/Title|nothing;
                         "
                         tal:condition="figure">
-                            <span tal:replace="structure figure/getScale"> </span> 
+                            <span tal:replace="structure figure/getScale"> </span>
                         </tal:image>
                  </tal:image>
             </div>
 
-	    <h3 class="highlight">
-	       <a href="#" class="noPrint"
-	       		tal:attributes="href hl/getUrl"
-	       		tal:content="hl/getNewsTitle">
-	       			Highlight Title</a></h3>
+            <h3 class="highlight">
+                <a href="#" class="noPrint"
+                   tal:attributes="href hl/getUrl"
+                   tal:content="hl/getNewsTitle">
+                       Highlight Title</a></h3>
 
             <p tal:content="hl/getTeaser">teaser</p>
             <p><a href="#" class="moreLink"
-                    tal:attributes="href hl/getUrl">Read more</a></p>
+                  tal:attributes="href hl/getUrl">Read more</a></p>
           <!-- end teaser and read more -->
     </metal:items>
 </div>
@@ -172,18 +166,16 @@
 
 <!-- promotion_gallery macro -->
 <metal:promos metal:define-macro="promo-gallery"
-                tal:define="
-                frontpage_view context/@@frontpage_highlights;       
-                highlights python: frontpage_view.getPromotions;
-                plone_view nocall:plone_view|here;
-                frontpage_gallery frontpage|string: true;
-                small_factor python: '' if frontpage_gallery else '-sm';"
-                tal:condition="highlights">
+              tal:define="frontpage_view context/@@frontpage_highlights;
+                          highlights python: frontpage_view.getPromotions;
+                          plone_view nocall:plone_view|here;
+                          frontpage_gallery frontpage|string: true;
+                          small_factor python: '' if frontpage_gallery else '-sm';"
+              tal:condition="highlights">
 
-                <div tal:attributes="id string:gallery-content-outer${small_factor};"> 
-  <ul tal:attributes="id string:promo-gallery-content${small_factor}"> 
-      <metal:pritems  
-                    tal:repeat="hl highlights">
+                <div tal:attributes="id string:gallery-content-outer${small_factor};">
+  <ul tal:attributes="id string:promo-gallery-content${small_factor}">
+      <metal:pritems tal:repeat="hl highlights">
                         <li>
                         <tal:image tal:define="figure hl/getImage|nothing;
                         figure_link hl/getUrl|hl/absolute_url|nothing;
@@ -206,27 +198,26 @@
                                 tal:attributes="href hl/getUrl|hl/absolute_url|nothing"
                                 tal:content="hl/title">
                                 Highlight Title</a></h3>
-                         <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
-                
+                         <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />
                     </div>
-                        </li>    
+                        </li>
         </metal:pritems>
-    </ul> 
+    </ul>
     </div>
 
 <!-- navigation outer -->
 
 <div id="navigator-outer">
-    <ul tal:attributes="id string:promo-navigator${small_factor}"> 
+    <ul tal:attributes="id string:promo-navigator${small_factor}">
   <metal:items  define-macro="middlenews-promo"
                 tal:condition="highlights"
                 tal:repeat="hl highlights">
                     <li>
                         <div>
                         <tal:image tal:define="figure hl/getImage|nothing;
-                        figure_scale string:thumb;
-                        figure_title figure/title|nothing;"
-                        tal:condition="figure">
+                                               figure_scale string:thumb;
+                                               figure_title figure/title|nothing;"
+                                   tal:condition="figure">
                             <img alt="" tal:attributes="src string:${hl/absolute_url}/image_thumb; title figure/title; alt figure/title" />
                         </tal:image>
 
@@ -241,29 +232,29 @@
 </metal:promos>
 <!-- end promotion_gallery macro -->
 
-<div metal:define-macro="multimedia" 
-		class="highlights"
-		id="multimedia-highlights" 
-        tal:define="folderContents frontpage_view/getMultimedia;
-        hide_album python: False;
-        hide_listing python: True;"
-        tal:condition="folderContents|nothing">
+<div metal:define-macro="multimedia"
+     class="highlights"
+     id="multimedia-highlights"
+     tal:define="folderContents frontpage_view/getMultimedia;
+                 hide_album python: False;
+                 hide_listing python: True;"
+     tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
-            <a href="#" class="list-layout"><a/>
-            <a href="#" class="album-layout active-album"><a/>
+            <li><a href="#" class="list-layout"><a/></li>
+            <li><a href="#" class="album-layout active-album"><a/></li>
         </ul>
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
 
-<div metal:define-macro="datamaps" 
-		class="highlights"
-        id="datamaps-highlights"> 
+<div metal:define-macro="datamaps"
+     class="highlights"
+     id="datamaps-highlights">
 </div>
 
 <metal:gallery-items define-macro="gallery-items"
                      tal:define="visible_album python: 'hiddenStructure' if hide_album else '';
-                                visible_listing python: 'hiddenStructure' if hide_listing else '';">
+                                 visible_listing python: 'hiddenStructure' if hide_listing else '';">
         <div class="gallery-ajax visualClear">
             <div tal:attributes="class string: gallery-listing ${visible_listing}">
                 <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
@@ -290,43 +281,43 @@
 <!-- Social / Follow us links -->
 <div metal:define-macro="followus">
 
-      <!-- the fancy box email subscription -->  
+      <!-- the fancy box email subscription -->
       <div style="display:none;">
-	 <div style="width: 280px; height: 250px;" id="subscribe-popup">
-	     <div metal:use-macro="here/portlet_gazette/macros/portlet-subscribe">
+          <div style="width: 280px; height: 250px;" id="subscribe-popup">
+              <div metal:use-macro="here/portlet_gazette/macros/portlet-subscribe">
                                 email subscribe
-             </div>
-	 </div>
+              </div>
+          </div>
       </div>
 
       <dl class="portlet" id="portlet-followus">
         <dt class="hiddenStructure">Follow us</dt>
         <dd>
             <a id="twitter-link" title="Follow us on Twitter"
-	       href="http://twitter.com/euenvironment"
-	       i18n:attributes="title twitter_follow;">&nbsp;</a>
+               href="http://twitter.com/euenvironment"
+               i18n:attributes="title twitter_follow;">&nbsp;</a>
         </dd>
         <dd>
-	    <a id="facebook-link" title="Follow us on Facebook"
-	       href="http://www.facebook.com/European.Environment.Agency"
-	       i18n:attributes="title twitter_follow;">&nbsp;</a>
+            <a id="facebook-link" title="Follow us on Facebook"
+               href="http://www.facebook.com/European.Environment.Agency"
+               i18n:attributes="title twitter_follow;">&nbsp;</a>
         </dd>
         <dd>
-	    <a id="youtube-link" title="Follow us on YouTube"
-	       href="http://www.youtube.com/user/EEAvideos"
-	       i18n:attributes="title youtube_follow;">&nbsp;</a>
+            <a id="youtube-link" title="Follow us on YouTube"
+               href="http://www.youtube.com/user/EEAvideos"
+               i18n:attributes="title youtube_follow;">&nbsp;</a>
         </dd>
         <dd>
-	    <a id="rss-link" title="Subscribe to RSS Feed"
-	       tal:attributes="href string:$portal_url/subscription/news-feeds"
-	       i18n:attributes="title rss_feeds;">&nbsp;</a>
+            <a id="rss-link" title="Subscribe to RSS Feed"
+               tal:attributes="href string:$portal_url/subscription/news-feeds"
+               i18n:attributes="title rss_feeds;">&nbsp;</a>
         </dd>
         <dd>
-	    <a id="email-link"
-	       title="Subscribe by email"
-	       href="#subscribe-popup"
-	       class="fancybox"
-	       i18n:attributes="title email_feeds;">&nbsp;</a>
+            <a id="email-link"
+               title="Subscribe by email"
+               href="#subscribe-popup"
+               class="fancybox"
+               i18n:attributes="title email_feeds;">&nbsp;</a>
         </dd>
       </dl>
 </div>

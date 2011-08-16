@@ -1,5 +1,5 @@
 <!-- THE SEARCHBOX DEFINITION -->
-<div id="portal-searchbox" metal:define-macro="quick_search" 
+<div id="portal-searchbox" metal:define-macro="quick_search"
      tal:define="local_site context/@@plone_portal_state/local_site">
     <form action="http://glossary.eea.europa.eu/terminology/sitesearch" tal:attributes="action python:'http://glossary.'+request.get('LANGUAGE', 'en')+'.eea.europa.eu/terminology/sitesearch'" id="searchbox_terminology" name="searchform">
         <tal:translated condition="python:request.get('LANGUAGE','en') != 'en'">
@@ -10,10 +10,8 @@
         </tal:notranslation>
             <input class="searchButton"
                    type="submit"
-                   tabindex=""
                    value="Search"
-                   i18n:attributes="value Search"
-                   />
+                   i18n:attributes="value Search" />
     </form>
       <a id="search_advanced_link" href="/help/advanced-search"
                i18n:translate="advanced_search" tal:attributes="href string:${local_site}/help/advanced-search"

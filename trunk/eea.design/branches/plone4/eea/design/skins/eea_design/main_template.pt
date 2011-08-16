@@ -38,8 +38,7 @@
         ifacetool context/portal_interface;
         syntool context/portal_syndication;
         inApplication context/@@inApplication;
-        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view');
-        "
+        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view');"
     tal:attributes="lang language;">
 
     <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">
