@@ -51,7 +51,7 @@
     position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="promo_gallery.js" inline="False"
-    position-after="promotions.js"/>
+    position-after="promotion_gallery.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="eea_vpip.js" inline="False"
     position-after="promotions.js"/>

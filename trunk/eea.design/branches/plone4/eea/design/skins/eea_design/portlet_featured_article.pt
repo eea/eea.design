@@ -1,0 +1,13 @@
+<div metal:define-macro="portlet"
+              tal:define="frontpage_view context/@@frontpage_highlights;       
+              highlights python: frontpage_view.getHighArticles(topic =  True);"
+              tal:condition="highlights">
+            <div class="featured roundedCorners">
+              <a href="articles" class="archives">More articles</a>
+              <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured article</h2>
+                <div metal:use-macro="here/frontpage_macros/macros/highArticles">
+                    item title, description and image
+                </div>
+            </div>
+</div>
+
