@@ -206,6 +206,11 @@ body.frontpage #portal-columns {
 #content ul.gallery-layout-selection li {
     display: inline;
 }
+
+#content ul.gallery-layout-selection li a {
+    border-bottom: 0px;
+}
+
 #datamaps-highlights {
     float: left;
     padding-top: 15px;

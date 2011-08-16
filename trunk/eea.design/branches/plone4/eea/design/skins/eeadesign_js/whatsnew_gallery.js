@@ -49,10 +49,7 @@
 
         // selection of folder_summary_view or atct_album_view
         var layout_links = $(".gallery-layout-selection li a");
-        layout_links.filter( function() { return this.className === '';}).remove();
-        var filtered_links = layout_links.filter( function() { return this.className != '';});
-        var listing_layout = $(".gallery-listing");
-        filtered_links.click( function(e) {
+        layout_links.click( function(e) {
              var $this = $(this);
              var $parent = $this.parent();
              var $ajax = $this.closest('ul').next();
