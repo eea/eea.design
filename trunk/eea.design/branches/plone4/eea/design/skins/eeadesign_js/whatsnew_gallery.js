@@ -55,11 +55,11 @@
         filtered_links.click( function(e) {
              var $this = $(this);
              var $parent = $this.parent();
-             var $ajax = $parent.next();
+             var $ajax = $this.closest('ul').next();
              var $hidden_gallery = $ajax.find(".hiddenStructure");
              var listing = $ajax.find('.gallery-listing');
              var album = $ajax.find('.gallery-album');
-             var next = $this.siblings().first();
+             var next = $parent.siblings().find('a');
              var link_class = $this[0].className;
 
              if ( link_class === "list-layout active-list" || link_class === "album-layout active-album") {
