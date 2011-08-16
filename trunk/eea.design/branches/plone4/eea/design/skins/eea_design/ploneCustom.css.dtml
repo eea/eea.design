@@ -1251,13 +1251,6 @@ float:right;
     margin-top: 1em;
 }
 
-.even {
-    background-color: &dtml-evenRowBackgroundColor;;
-}
-
-.odd {
-    background-color: &dtml-oddRowBackgroundColor;;
-}
 
 .visualHighlight {
     background-color: &dtml-evenRowBackgroundColor;;

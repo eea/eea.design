@@ -560,12 +560,6 @@ dl.portlet li {
     border-spacing: 0px;
 }
 
-/* #content .documentDescription, */
-/* #content #description { */
-/*     color: #666; */
-/*     margin-left: 0; */
-/*     font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif; */
-/* } */
 
 #content img.tileImage,
 #content div.newsImageContainer {
@@ -635,10 +629,11 @@ table.listing .top {
 }
 table.listing th {
     text-align: left;
-    color: #666;
+    color: #fff;
     border: 0.1em solid #e7e7e7;
     border-style: solid solid none;
-    background: #ddd;
+    background: &dtml-corporateBlueTwo;;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
 }
 table.listing tr.odd th {
     border: 0.1em solid #fff;

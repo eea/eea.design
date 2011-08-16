@@ -127,11 +127,6 @@ table.datatable {
 .sortable tbody tr {
 }
 
-.sortable tr.zebraeven,
-.listing tr.zebraeven {
-	background-color: #f6f6f6;
-}
-
 .sortable td, .listing td {
 	padding: 0.2em;
 	border-bottom: 1px dotted #b6b6b6;
@@ -161,8 +156,17 @@ table.datatable {
 .sortable thead th a:hover, 
 .listing thead th a:hover,
 .listing thead th:hover {
-	background: #97af79;
+	background: &dtml-corporateOrange;;
+	color: #fff;
 }
+
+/* CSS3 Zebra effect for certain tables */
+.listing tr:nth-child(odd) td, 
+.sortable tr:nth-child(odd) td
+.datatable tr:nth-child(odd) td {
+	background-color: #ececec;
+}
+
 /* Tables for arranging formulars */
 
 .formtable {
