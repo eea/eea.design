@@ -20,10 +20,9 @@
          <div tal:replace="structure provider:plone.documentactions" />
         <metal:listingmacro define-macro="listing">
         <tal:topiccontents define="b_size request/b_size|nothing;
-	                               topicContents python:context.queryCatalog(batch=True);
+                                   topicContents python:context.queryCatalog(batch=True);
                                    batch topicContents;
-                                   use_view_action site_properties/typesUseViewActionInListings|python:();
-                                   ">
+                                   use_view_action site_properties/typesUseViewActionInListings|python:();">
 
         <tal:listing condition="topicContents">
             <a style='text-align: right' href="#"
@@ -58,9 +57,8 @@
             <tal:custom condition="here/getCustomView|nothing"
                         define="vocab python:here.listMetaDataFields(False)">
 
-                <table class="listing"
-                       summary="Content listing"
-                       i18n:attributes="summary summary_content_listing;">
+                <table class="listing">
+                     <caption class="hiddenStructure" i18n:translate="">Content listing</caption>
                      <thead>
                         <tr>
                             <th tal:repeat="field here/getCustomViewFields"

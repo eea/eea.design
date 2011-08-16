@@ -13,9 +13,8 @@
         <metal:block use-macro="context/folder_listing/macros/content-core">
             <metal:entries fill-slot="entries">
 
-            <table class="listing"
-                   summary="Content listing"
-                   i18n:attributes="summary summary_content_listing;">
+            <table class="listing">
+                <caption class="hiddenStructure" i18n:translate="">Content listing</caption>
                 <thead>
                     <tr>
                         <th class="nosort">&nbsp;<tal:title i18n:translate="listingheader_title"

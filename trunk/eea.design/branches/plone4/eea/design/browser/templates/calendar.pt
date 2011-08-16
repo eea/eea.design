@@ -13,13 +13,12 @@
                 year view/year;
                 DateTime python:modules['DateTime.DateTime'];
                 weeks view/getEventsForCalendar;
-				 tqs python: query_string is None and '' or query_string;
-				 tqs python: tqs.find('orig_month:int') > -1 and tqs or tqs.replace('month:int', 'orig_month:int');
-				 tqs python: tqs.find('orig_year:int') > -1 and tqs or tqs.replace('year:int', 'orig_year:int');
-				 query_string python: tqs == '' and None or tqs;
-
-				 last_week python:[ k['day'] for k in weeks[-1] if k['day'] != 0];
-				 last_day python:last_week[-1];
+                tqs python: query_string is None and '' or query_string;
+                tqs python: tqs.find('orig_month:int') > -1 and tqs or tqs.replace('month:int', 'orig_month:int');
+                tqs python: tqs.find('orig_year:int') > -1 and tqs or tqs.replace('year:int', 'orig_year:int');
+                query_string python: tqs == '' and None or tqs;
+                last_week python:[ k['day'] for k in weeks[-1] if k['day'] != 0];
+                last_day python:last_week[-1];
                 portal_url context/@@plone_portal_state/portal_url; ">
 
 <div class="portlet-calendar">
@@ -38,14 +37,14 @@
            tal:condition="showPrevMonth"
            i18n:attributes="title title_previous_month;">&laquo;</a>
 
-					<tal:month tal:define="first_day_of_month python:DateTime(year,month,01);
-											last_day_of_month python:DateTime(year,month,last_day);
-											begin python:url_quote_plus((last_day_of_month.latestTime()).ISO());
-											end python:url_quote_plus(first_day_of_month.earliestTime().ISO());"
-											tal:omit-tag="">
-					<a href="" title="Month events"
-						tal:attributes="href string:${portal_url}/events/search?${view/getReviewStateString}start.query:record:list:date=${begin}&amp;start.range:record=max&amp;end.query:record:list:date=${end}&amp;end.range:record=min&amp;year:int=${year}&amp;month:int=${month}"
-						i18n:attributes="title month_events;">
+        <tal:month tal:define="first_day_of_month python:DateTime(year,month,01);
+                               last_day_of_month python:DateTime(year,month,last_day);
+                               begin python:url_quote_plus((last_day_of_month.latestTime()).ISO());
+                               end python:url_quote_plus(first_day_of_month.earliestTime().ISO());"
+                   tal:omit-tag="">
+            <a href="" title="Month events"
+               tal:attributes="href string:${portal_url}/events/search?${view/getReviewStateString}start.query:record:list:date=${begin}&amp;start.range:record=max&amp;end.query:record:list:date=${end}&amp;end.range:record=min&amp;year:int=${year}&amp;month:int=${month}"
+               i18n:attributes="title month_events;">
         <span i18n:translate="" tal:omit-tag="">
             <span i18n:name="monthname" i18n:translate=""
                   tal:content="view/monthName"
@@ -55,8 +54,8 @@
                   tal:omit-tag="">year</span>
         </span>
 
-					</a>
-					</tal:month>
+            </a>
+        </tal:month>
 
         <a href="#" rel="nofollow"
            title="Next month"
@@ -72,9 +71,7 @@
 
     <dd class="portletItem">
         <table class="ploneCalendar"
-               summary="Calendar"
-               i18n:domain="eea"
-               i18n:attributes="summary summary_calendar;">
+               i18n:domain="eea">
             <caption class="hiddenStructure"
                      tal:content="view/monthName">Month name</caption>
             <thead>
@@ -126,7 +123,7 @@
         </table>
         <span class="portletBottomLeft"></span>
         <span class="portletBottomRight"></span>
-<div class="portletFooter"><a href="" title="Submit an 
+<div class="portletFooter"><a href="" title="Submit an
 environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a></div>
     </dd>
 </dl>

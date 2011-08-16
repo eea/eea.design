@@ -5,18 +5,18 @@
     <body>
     <metal:block fill-slot="portlets_one_slot" tal:define="global frontpage_view here/@@frontpage_highlights">
 		            		 <!-- example of left menu navigation -->
-		            		 <tal:leftmenu replace="structure python:here.getSubNavigation('default','indicators','yes','indicatorswhatsnew')" /> 
+		            		 <tal:leftmenu replace="structure python:here.getSubNavigation('default','indicators','yes','indicatorswhatsnew')" />
                                          <tal:promotion metal:use-macro="here/portlet_promotions/macros/all" />
 					 <tal:promotionlist define="promotionCategoryFolder nocall:here/promotions/educational|nothing">
 					    <metal:rss use-macro="here/portlet_promotions/macros/promotion-list" />
-					 </tal:promotionlist>			 
+					 </tal:promotionlist>
 	                         <!-- end of left menu navigation start -->
 		                     <!-- Local search on left column -->
                      		<div class="localSearch roundedBox lightBGC">
 								<h4>Search for publications</h4>
 								<form method="get" action="available.asp" id="form1" name="form1">
 								<input type="hidden" name="type" value="search" />
-								
+
 								<div class="field">
 									<label>Title</label>
 					        		<div class="formHelp">Use of AND/OR/* is supported.</div>
@@ -24,7 +24,7 @@
 									<input type="text" name="search" value="" size="17" maxlength="50" tabindex="1" />
 							        <input type="submit" value="Search" class="searchButton" id="Submit1" name="Submit1" tabindex="2" />
 					      		</div>
-					
+
 							  </form>
 							</div>
 		</metal:block>
@@ -41,76 +41,76 @@
 							                <br />
 							                <input size="10" alt="Login Name" onclick="showCookieMessage('cookies_message')" tabindex="20001" name="__ac_name" value="" id="__ac_name" type="text" />
 							            </div>
-							            
+
 							            <div class="field">
 							                <label for="__ac_password">Password</label>
 							                <br />
 							                <input size="10" alt="Password" onclick="showCookieMessage('cookies_message')" tabindex="20002" name="__ac_password" id="__ac_password" type="password" />
-							                <input class="standardButton" name="submit" value="Log in" alt="Log in" onclick="javascript:return setLoginVars('__ac_name','login_name','__ac_password','pwd_empty','js_enabled','cookies_enabled')" tabindex="20003" type="submit" />  
+							                <input class="standardButton" name="submit" value="Log in" alt="Log in" onclick="javascript:return setLoginVars('__ac_name','login_name','__ac_password','pwd_empty','js_enabled','cookies_enabled')" tabindex="20003" type="submit" />
 							            </div>
-							
+
 							            <div id="cookies_message" class="portalMessage" style="display: none;">
 							                Cookies are not enabled. You must <a href="enabling_cookies">enable cookies</a> before you can log in.
 							            </div>
-							            
+
 							        </form>
 							    </dd>
-							    
+
 							    <dd class="portletItem ">
 							        <a class="link-info" href="/mail_password_form">
 							           Forgot your password?
 							      	</a>
 							    </dd>
-							    							    
+
 							    <dd class="portletItem ">
 									 <a class="link-user" href="/join_form">
           							  New user?
        							     </a>
 							    </dd>
-							   
+
 							</dl>
                             <br />
 							<dl class="portlet portlet-rss" id="portlet-latest-reports">
- 
+
 							    <dt class="portletHeader">
 							        <a href="#">Latest publications</a>
 							    </dt>
 				                <dt class="portletItem">
 							        <a href="#">Report 22</a>
 							    </dt>
-							    
+
 							    <dd class="portletItem date">07 Dec 2005</dd>
-							    
+
 							    <dd class="portletItem thumbnail-right">
 							        <a href="#" title="Read report"><img src="report2.png" alt="report thumbnail" /></a>
 							    </dd>
 							    <dd class="portletItem link">
 							        <a href="#" title="Read report">Read report</a>
 							    </dd>
-							    
+
 							    <dd class="portletItem">
 							        Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.
-							    </dd>    
+							    </dd>
 
 							    <dt class="portletItem">
 							        <a href="#">Briefing AB</a>
 							    </dt>
-							
+
 							    <dd class="portletItem date">04 Dec 2005</dd>
-							    
+
 							    <dd class="portletItem thumbnail-right">
 							        <a href="#" title="Read report"><img src="report2.png" alt="report thumbnail" /></a>
 							    </dd>
 							    <dd class="portletItem link">
 							        <a href="#" title="Read report">Read report</a>
 							    </dd>
-							    
+
 							    <dd class="portletItem">
-							
+
 							        Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.
-							    </dd>    
+							    </dd>
 							    <dd class="portletFooter"></dd>
-							    
+
 							</dl>
 
 							<dl class="portlet portlet-rss" id="portlet-latest-maps">
@@ -120,51 +120,51 @@
 							    <dt class="portletItem">
 							        <a href="#">Map 1</a>
 							    </dt>
-							
+
 							    <dd class="portletItem date">07 Dec 2005</dd>
-							    
+
 							    <dd class="portletItem thumbnail-right">
 							        <a href="#" title="See map"><img src="map1.png" alt="map thumbnail" /></a>
 							    </dd>
 							    <dd class="portletItem link">
 							        <a href="#" title="See map">See map</a>
 							    </dd>
-							    
+
 							    <dd class="portletItem">
-							
+
 							        Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.
-							    </dd>    
-							    
+							    </dd>
+
 							    <dt class="portletItem">
 							        <a href="#">Map 2</a>
 							    </dt>
-							
+
 							    <dd class="portletItem date">04 Dec 2005</dd>
-							    
+
 							    <dd class="portletItem thumbnail-right">
 							        <a href="#" title="See map"><img src="map2.png" alt="map thumbnail" /></a>
 							    </dd>
 							    <dd class="portletItem link">
 							        <a href="#" title="See map">See map</a>
 							    </dd>
-							    
+
 							    <dd class="portletItem">
-							
+
 							        Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.
-							    </dd>    
+							    </dd>
 							    <dd class="portletFooter"></dd>
-							</dl> 
-          
+							</dl>
+
         </metal:block>
         <metal:main fill-slot="main">
                               <h1>Heading of level 1 - Page title</h1>
                               <div class="documentDescription">This is the description or introduction for this page. It is styled as teaser.</div>
-<tal:figure-right 
-     tal:define="global figure python:getattr(here, 'lynx.jpg');">                        
+<tal:figure-right
+     tal:define="global figure python:getattr(here, 'lynx.jpg');">
                  <!--<metal:thefigure use-macro="here/media_macros/macros/figure-right" />       -->
 </tal:figure-right>
 <p>
-Here is 2<sup>nd</sup> paragraph. Lorem ipsum dolor 
+Here is 2<sup>nd</sup> paragraph. Lorem ipsum dolor
 <a href="file://///Readme/documentation/Redesign2006/phaseA4implementation/unvisitedpage.html">unvisited link</a>,
 consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
@@ -187,8 +187,8 @@ quotation. This is a long quotation. This is a long quotation.
 <p class="source">by John What</p></blockquote>
 
 <h2>Heading of level 2</h2>
-<div class="figure-right" 
-     tal:define="global figure python:getattr(here, 'mbi_highlight_small.jpg');">                        
+<div class="figure-right"
+     tal:define="global figure python:getattr(here, 'mbi_highlight_small.jpg');">
                  <!--<metal:thefigure use-macro="here/media_macros/macros/figure-plus" />       -->
 </div>
 
@@ -224,7 +224,7 @@ sea takimata sanctus est Lorem ipsum dolor sit amet.
 			<h4>Search on data set and application</h4>
 			<form method="get" action="available.asp" id="form2" name="form2">
 			<input type="hidden" name="type" value="search" />
-			
+
 			<div class="field">
 				<label>Title</label>
         		<div class="formHelp">Enter one or more keywords for a search. Use of AND/OR is supported.</div>
@@ -248,9 +248,9 @@ sea takimata sanctus est Lorem ipsum dolor sit amet.
 <h3>Icons based on protocols</h3>
 <p>
 <a href="http://www.externalsite.eu">external link</a>,
-<a href="https://www.externalsite.eu">secure link</a>, 
+<a href="https://www.externalsite.eu">secure link</a>,
 <a href="ftp://externalsite.eu">FTP link</a>,
-<a href="callto://externalsite.eu">callto link</a>, 
+<a href="callto://externalsite.eu">callto link</a>,
 <a href="mailto:any@any.eu">mailto link</a>
 <br />
 <strong>Test links</strong>: <a href="https://www.eea.europa.eu">new EEA domain link</a>, <a href="https://www.eea.europa.eu/document.pdf">PDF on new EEA domain link</a>, <a href="https://reports.eea.europa.eu/document.ppt">Presentation on old EEA domain</a>
@@ -258,10 +258,10 @@ sea takimata sanctus est Lorem ipsum dolor sit amet.
 <h3>Some popular file extensions</h3>
 <p>
 <a href="/document.pdf">PDF document</a>,
-<a href="/doc.doc">Word document</a>, 
+<a href="/doc.doc">Word document</a>,
 <a href="/pres.zip">Zip archive</a>,
-<a href="/doc.xls">Excel link</a>, 
-<a href="/download.asp?fileid=456&filetype=.pdf">Fake PDF file extension</a> (just add file extension in the URL as query at the end!), 
+<a href="/doc.xls">Excel link</a>,
+<a href="/download.asp?fileid=456&filetype=.pdf">Fake PDF file extension</a> (just add file extension in the URL as query at the end!),
 </p>
 <p>There are more icons detected, see <a href="all_icons">list of all icons available</a></p>
 <hr />
@@ -320,10 +320,10 @@ next i
 </pre>
 
 <h2>Tables</h2>
-<h3>Zebra static content listing</h3>   
-          <table id="your-zebra-content-id" class="datatable" summary="Static Content listing">
+<h3>Zebra static content listing</h3>
+          <table id="your-zebra-content-id" class="datatable">
+	    <caption class="hiddenStructure">Static Content listing</caption>
             <thead>
-              
                 <tr>
                   <th>&nbsp;Title&nbsp;</th>
                   <th>&nbsp;Size&nbsp;</th>
@@ -395,20 +395,18 @@ next i
                     </td>
                    </tr>
             </tbody>
-        </table>   
+        </table>
 <h3>Simple sortable table, client-side</h3>
 <p>In order to have a client-side sortable table via javascript you just need to add the class "listing" to the table. See source code.</p>
-		<table id="your-table-id" class="listing"
-                 summary="Content listing">
+		<table id="your-table-id" class="listing">
+	    <caption class="hiddenStructure">Content listing</caption>
             <thead>
-              
                 <tr>
                   <th>&nbsp;Title&nbsp;</th>
                   <th>&nbsp;Size&nbsp;</th>
                   <th>&nbsp;Modified&nbsp;</th>
                   <th>&nbsp;State&nbsp;</th>
                   <th class="nosort">&nbsp;Non sortable column&nbsp;</th>
-                  
                 </tr>
             </thead>
 
@@ -460,13 +458,14 @@ next i
                    </tr>
             </tbody>
         </table>
-        
+
 
 <h3>Complex sortable datatable, client-side</h3>
 <p>
 The example is copied and adjusted from <a href="http://reports.eea.europa.eu/GH-98-96-518-EN-C/en/page007.html">http://reports.eea.europa.eu/GH-98-96-518-EN-C/en/page007.html</a>
 </p>
-<table id="your-sortable-datatable-id" class="listing" summary="sortable complex table">
+<table id="your-sortable-datatable-id" class="listing">
+<caption class="hiddenStructure">Sortable complex table</caption>
 <col style="width:11em" />
 <col style="width:6em" />
 <col style="width:6em" />
@@ -591,8 +590,9 @@ The example is copied and adjusted from <a href="http://reports.eea.europa.eu/GH
 
 <h3>Sortable server-side</h3>
 <p>In the server-side sortable table the arrow images are in the HTML (not in CSS or via Javascript). You do not need to use the
-class "listing".</p>        
-	<table class="sortable" summary="sortable server-side table">
+class "listing".</p>
+	<table class="sortable">
+	<caption class="hiddenStructure">Sortable server-side table</caption>
 	<thead>
 	<tr>
 	<th class="sorted" scope="col"><a
