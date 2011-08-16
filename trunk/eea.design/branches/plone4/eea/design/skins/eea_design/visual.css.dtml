@@ -1,7 +1,7 @@
 /*
 ** EEA Design 2006 style sheet - Public-facing Elements
 **
-** 
+**
 ** Documentation http://webservices.eea.eu.int/templates/
 **
 **
@@ -11,8 +11,8 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 
-/* 
-** Breadcrumb trail 
+/*
+** Breadcrumb trail
 ** Adopted from Eionet
 */
 
@@ -22,7 +22,6 @@
     background-image: url(&dtml-portal_url;/bcpil.gif);
     background-repeat: no-repeat;
     background-position: 0 50%;
-	
 }
 .breadcrumbitemlast {
     font-weight:bold;
@@ -31,9 +30,9 @@ a.breadcrumbitem {
     color:&dtml-linkColor;;
 }
 
-/* 
-** Collapsible areas classes. 
-** further info in javascript 
+/*
+** Collapsible areas classes.
+** further info in javascript
 ** and style reference
 */
 
@@ -46,99 +45,99 @@ a.breadcrumbitem {
 .expandedBlockCollapsible .collapsibleContent {
     display: block;
 }
- 
+
 .collapsedBlockCollapsible .collapsibleContent {
     display: none;
 }
 
-/* 
-** Tables 
+/*
+** Tables
 ** Adopted from Eionet
 */
 
 /* Default are layout tables. We can not really style those. It would have too many side effects */
 table {
-	empty-cells: show;
-	font-size: 0.9em;
+    empty-cells: show;
+    font-size: 0.9em;
 }
 
 td {
-	line-height: normal; 
-	text-decoration: none;
+    line-height: normal;
+    text-decoration: none;
 }
 
 th {
-	font-weight: bold; 
-	line-height: normal; 
-	padding: 0.1em 0.5em;
-	text-decoration: none;
+    font-weight: bold;
+    line-height: normal;
+    padding: 0.1em 0.5em;
+    text-decoration: none;
 }
 th a, th a:link, th a:visited {
-	color: #000;
+    color: #000;
 }
 
 /* Data tables */
 table.datatable {
-	border: 1px solid #b6b6b6;
-	border-collapse: collapse;
-	color: #666666;
-	margin: 1em 0.5em;
+    border: 1px solid #b6b6b6;
+    border-collapse: collapse;
+    color: #666666;
+    margin: 1em 0.5em;
 }
 .datatable th {
-	text-align: center;
-	background-color: #f6f6f6;
-	font-weight: bold;
-	/* border-top:    1px solid white;
-	border-bottom: 1px solid white;*/
+    text-align: center;
+    background-color: #f6f6f6;
+    font-weight: bold;
+    /* border-top:    1px solid white;
+    border-bottom: 1px solid white;*/
 }
 .datatable th.scope-row { /* IE6 doesn't understand [scope="row"] */
-	text-align: right;
+    text-align: right;
 }
 .datatable th[scope="row"] {
-	text-align: right;
+    text-align: right;
 }
 
 .datatable .number {
-	text-align: right;
+    text-align: right;
 }
 .datatable .sum {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .datatable td, .datatable th  {
-	padding: 0.3em;
-	vertical-align: top;
+    padding: 0.3em;
+    vertical-align: top;
 }
 .datatable tr {
-	/* border-top:    1px solid #f6f6f6;
-	border-bottom: 1px solid #f6f6f6;*/
+    /* border-top:    1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;*/
 }
 .datatable tr.zebraeven {
-	background-color: #f6f6f6;
+    background-color: #f6f6f6;
 }
 
 /* Sortable table columns */
 .sortable, .listing {
-	border: 1px solid #b6b6b6;
-	color: #666666;
-	line-height:normal;
+    border: 1px solid #b6b6b6;
+    color: #666666;
+    line-height:normal;
 }
 
 .sortable tbody tr {
 }
 
 .sortable td, .listing td {
-	padding: 0.2em;
-	border-bottom: 1px dotted #b6b6b6;
+    padding: 0.2em;
+    border-bottom: 1px dotted #b6b6b6;
 }
 .sortable th, .listing th {
-	background: #f1efe5;
-	border: 2px outset #adc095; /* #495b6b;*/
-	margin: 0;
-	padding: 0;
-	white-space: nowrap;
-	vertical-align: top;
-        text-transform: none;
+    background: #f1efe5;
+    border: 2px outset #adc095; /* #495b6b;*/
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    vertical-align: top;
+    text-transform: none;
 }
 
 .sortable th a:link,
@@ -147,69 +146,69 @@ table.datatable {
 .listing th a:visited,
 .sortable th span,
 .listing th a:visited {
-	display:block;
-	text-decoration: none;
-	font-weight: bold;
-	padding:1px 0.5em;
+    display:block;
+    text-decoration: none;
+    font-weight: bold;
+    padding:1px 0.5em;
 }
 
-.sortable thead th a:hover, 
+.sortable thead th a:hover,
 .listing thead th a:hover,
 .listing thead th:hover {
-	background: &dtml-corporateOrange;;
-	color: #fff;
+    background: &dtml-corporateOrange;;
+    color: #fff;
 }
 
 /* CSS3 Zebra effect for certain tables */
-.listing tr:nth-child(odd) td, 
+.listing tr:nth-child(odd) td,
 .sortable tr:nth-child(odd) td
 .datatable tr:nth-child(odd) td {
-	background-color: #ececec;
+    background-color: #ececec;
 }
 
 /* Tables for arranging formulars */
 
 .formtable {
-	border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 .formtable th {
-	vertical-align: top;
-	text-align: right;
-	border: none;
-	background: transparent;
+    vertical-align: top;
+    text-align: right;
+    border: none;
+    background: transparent;
 }
 
 .formtable th.scope-col { /* IE6 doesn't understand [scope="col"] */
-	text-align: left;
+    text-align: left;
 }
 
 .formtable th[scope="col"] {
-	text-align: left;
+    text-align: left;
 }
 
 .formtable td  {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 
 /* Styles which apply only in central content area */
 
 #content blockquote {
-	width: 70%;
-	margin: 1.0em auto;
-	padding: 1.5em 1em 1em 3em;
-	background: &dtml-lightBackgroundColor; url(&dtml-portal_url;/open_quote.gif) 0.5em 0.75em no-repeat;
-	color: #000000;
+    width: 70%;
+    margin: 1.0em auto;
+    padding: 1.5em 1em 1em 3em;
+    background: &dtml-lightBackgroundColor; url(&dtml-portal_url;/open_quote.gif) 0.5em 0.75em no-repeat;
+    color: #000000;
 }
 
 #content blockquote.quote-right {
-  float: right; 
-  width: 15em; 
+  float: right;
+  width: 15em;
 }
 
 #content blockquote.quote-left {
-  float: left; 
+  float: left;
   width: 15em;
   margin:2em 2em 0.4em 0em;
 }
@@ -256,18 +255,18 @@ table.datatable {
     display: inline;
 }
 
-/* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */ 
+/* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
 #content div#multicolumn {
-	-moz-column-width: 150px;
-	-moz-column-gap: 20px;
-	column-width: 150px;
-	column-gap: 20px;
+    -moz-column-width: 150px;
+    -moz-column-gap: 20px;
+    column-width: 150px;
+    column-gap: 20px;
 }
 
 /* Styles which can be used on any area */
 
 /* standard figure, used for articles and pages.
-can be floated left or right with additional 
+can be floated left or right with additional
 class figure-right or figure-left */
 
 .figure p,
@@ -289,7 +288,7 @@ class figure-right or figure-left */
      clear: both;
 }
 
-.figure-note { 
+.figure-note {
     font-weight: normal;
 }
 .figure-source-copyright {
@@ -330,14 +329,14 @@ margin-left: 3em;
 .figure-left .figure,
 .figure-left .figure-plus-container {
     float: left;
-    margin-right: 0.5em; 
+    margin-right: 0.5em;
 }
 
 span.figure-left {
     display: block;
 }
 
-/* available scaled sizes to be used in  combination of .figure-plus-container 
+/* available scaled sizes to be used in  combination of .figure-plus-container
         sizes= {'large'   : (768, 768),
                 'preview' : (400, 400),
                 'mini'    : (180,135),
@@ -346,7 +345,7 @@ span.figure-left {
                 'icon'    :  (32, 32),
                 'listing' :  (16, 16),
                },
-               
+
 */
 
 .figure-container-imagelarge,
@@ -454,12 +453,12 @@ dl.wizard dt.currentStep {
 }
 
 .roundedBox {
-	display:block;
-	background: &dtml-mediumBackgroundColor;;/* standard background color */
+    display:block;
+    background: &dtml-mediumBackgroundColor;;/* standard background color */
 }
 
 
-#portlet-subscribtion {
+.portlet-subscribtion {
     display:block;
     color: black;
 }
@@ -485,11 +484,10 @@ dl.wizard dt.currentStep {
  {
  padding: 0 1em;
  }
- 
+
  #portlet-login dt.portletHeader {
  padding: 0.7em 0.7em 0em 0.7em;
  }
- 
 
 
 /* smaller login in content area */
@@ -506,18 +504,17 @@ margin: 1em;
 }
 
 
-/* general background colors
-usable in combination with roundedBox */
+/* general background colors usable in combination with roundedBox */
 .lightBGC {
-	background-color:&dtml-lightBackgroundColor;;
+    background-color:&dtml-lightBackgroundColor;;
 }
 
 .mediumBGC {
-	background-color:&dtml-mediumBackgroundColor;;
+    background-color:&dtml-mediumBackgroundColor;;
 }
 
 .darkBGC {
-	background-color:&dtml-darkBackgroundColor;;
+    background-color:&dtml-darkBackgroundColor;;
 }
 
 /* info icon */
@@ -559,12 +556,12 @@ div span span.languageCodes {
     padding: 0 0.25em;
 }
 
-#languageCodes { 
+#languageCodes {
     padding: 0.25em 0 0.25em 0;
     float: left;
 }
 
-.languageCodes a:link, .languageCodes a, #languageCodes li a { 
+.languageCodes a:link, .languageCodes a, #languageCodes li a {
     background: &dtml-lightBackgroundColor;;
     color: white !important;
     padding: 0.2em;
@@ -591,7 +588,7 @@ form.manylanguages select {
 }
 
 
-#languageCodes li.selected a { 
+#languageCodes li.selected a {
     background: white;
     color:#DE7800;
 }
@@ -599,7 +596,7 @@ form.manylanguages select {
 div span span.languageCodes a,
  #content .languageCodes a:hover,
  .languageCodes li a:hover,
-#languageCodes li a:hover { 
+#languageCodes li a:hover {
     background: white;
     color:#DE7800 !important;
 }
@@ -619,7 +616,7 @@ div span span.languageCodes a,
 .relatedLinks {
     margin: 1em 0 0 1px;
     color: &dtml-fontColor;;
-       
+
 }
 
 .relatedLinks li {
@@ -634,8 +631,8 @@ div span span.languageCodes a,
 
 #portlet-login {
 
-	color: #000;
-} 
+    color: #000;
+}
 
 
 form#translationfeedback input#url {

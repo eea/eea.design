@@ -11,7 +11,7 @@
                  portal_url context/@@plone_portal_state/portal_url;"
      tal:condition="nl_objects">
 
-<dl class="portlet" id="portlet-subscribtion">
+<dl class="portlet portlet-subscribtion">
     <dt>Sign up now!</dt>
     <dd class="portletItem">Get notifications on new reports and products.
       <tal:cond tal:condition="python:len(nl_objects) == 1" >
@@ -100,7 +100,7 @@
                  portal_url context/@@plone_portal_state/portal_url;"
      tal:condition="nl_objects">
 
-<dl class="portlet" id="portlet-subscribtion">
+<dl class="portlet portlet-subscribtion">
     <dt>Sign up now!</dt>
     <dd class="portletItem">Get notifications on new reports and products.
       <tal:cond tal:condition="python:len(nl_objects) == 1" >

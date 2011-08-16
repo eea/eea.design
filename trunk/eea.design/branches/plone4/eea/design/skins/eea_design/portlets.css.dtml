@@ -620,7 +620,7 @@ a.noHover {
    margin:0;
 }
 
-#portlet-subscribtion {
+.portlet-subscribtion {
    padding:0.5em;
    height: auto;
 }
@@ -682,7 +682,7 @@ a.noHover {
    display: none;
 }
 
-#portlet-subscribtion dt {
+.portlet-subscribtion dt {
    margin-bottom: 5px;
 }
 
@@ -758,11 +758,11 @@ a.noHover {
    float: left;
 }
 
-#portlet-subscribtion dd {
+.portlet-subscribtion dd {
     margin-bottom: 0.5em;
 }
 
-#portlet-subscribtion input.subscriptionButton {
+.portlet-subscribtion input.subscriptionButton {
    background: url(&dtml-portal_url;/search_btn_small.png) no-repeat top left;
    border: none;
    width: 30px;
@@ -905,8 +905,8 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
 }
 
 .portletItemDetails {
-	font-size: 85%;
-	padding-top: .5em;
+    font-size: 85%;
+    padding-top: .5em;
     line-height: 1.5em;
     margin-left: 1em;
     display: block;

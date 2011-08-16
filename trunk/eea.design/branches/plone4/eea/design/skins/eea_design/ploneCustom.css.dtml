@@ -106,7 +106,7 @@
 }
 
 /*portlet subscription*/
-.section-publications #c10_widget.faceted-widget,  
+.section-publications #c10_widget.faceted-widget,
 .section-publications #c10_widget fieldset {
   background-color: transparent;
   padding:0 !important;
@@ -785,15 +785,15 @@ float:right;
     padding-top: 1em;
 }
 
-#portal-column-one #portlet-subscribtion {
+#portal-column-one .portlet-subscribtion {
     margin-top:20px;
 }
 
-#cross-site-top .panel #portlet-subscribtion {
+#cross-site-top .panel .portlet-subscribtion {
     margin: 0;
 }
 
-#cross-site-top .panel #portlet-subscribtion .portletFooter {
+#cross-site-top .panel .portlet-subscribtion .portletFooter {
     margin-bottom: 0;
     margin-bottom: 0;
 }
