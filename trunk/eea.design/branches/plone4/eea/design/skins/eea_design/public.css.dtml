@@ -459,13 +459,13 @@ dl.portlet a:hover {
 #category a.link-category, #themes-tags a.link-category {
     color: black;
     padding: 0.25em 0.5em;
-    background: #ddd;
+    background: &dtml-mediumBackgroundColor;;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
 }
 #category a.link-category:hover, #themes-tags a.link-category:hover {
-    background: &dtml-corporateBlueTwo;;
+    background: &dtml-corporateOrange;;
     color: White;
     border-color: #205c90;
 }

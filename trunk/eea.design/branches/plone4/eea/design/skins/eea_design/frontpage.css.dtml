@@ -64,6 +64,7 @@ body.frontpage ul {
     clear: left;
     color: #000;
     margin: 0;
+    background: none;
 }
 
 #highlights-block .shortNewsTitle {

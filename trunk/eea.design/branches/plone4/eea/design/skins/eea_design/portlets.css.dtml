@@ -104,9 +104,8 @@ dt.portletItem {
 }
 
 .portletHeader, dl.portlet dt.portletHeader {
-    background-image: url(portlet_bg.png);
     font-weight:normal;
-    padding: 0;
+    padding: 1em 0.5em;
     margin-bottom:0.2em;
     margin-left:0;
     line-height: 1.1em;
@@ -120,8 +119,13 @@ dt.portletItem {
    padding:0.5em 0.2em 0.5em 0.5em;
    margin-top:0;
    margin-bottom:0;
+}
+
+
+#portlet-navigation-tree .portletSubMenuHeader {
    background: &dtml-mediumBackgroundColor;;
 }
+
 
 #portlet-navigation-tree #firstHeader {
    padding: 1em 0.5em 1em 0.5em;
@@ -772,6 +776,9 @@ dl.portletNavigationTree dt.portletHeader {
   padding: 1em 0.5em 1em 0.5em;
   font-size: 1.6em;
   margin: 0px;
+  background-image: url("portlet_bg.png");
+  background-repeat: repeat-x;
+  background-color: transparent;
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader {

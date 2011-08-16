@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     color: #00446a;
     font-size: 150%; margin: 0.67em 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     padding-bottom: 0.25em;
     padding-right:4em; /* to avoid overlapping with document actions */}
@@ -51,7 +52,9 @@ h1 {
 h2 {
     font-size: 130%;
     margin: 0.83em 0;
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, .4);
     background-image: url("portlet_bg.png");
+    background-repeat:repeat-x;
     /*border-bottom: 1px solid &dtml-mediumBackgroundColor;;*/
     color: &dtml-corporateBlueTwo;;
     padding: 1em 0.5em;}

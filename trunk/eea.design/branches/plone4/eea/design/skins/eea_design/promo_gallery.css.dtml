@@ -26,6 +26,8 @@
     font-size: 1.6em;
     line-height: 1.2em;
     font-weight: normal;
+    border: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
 }
 
 #promo-gallery-content-sm h3 {
@@ -147,10 +149,14 @@
     color: #4E8192;
     font-size: 100%;
     padding: 8px 6px 0 3px;
-	margin:0;
+    margin:0;
     font-weight: normal;
     height: 68px;
     overflow: hidden;
+}
+
+#promo-navigator h3, #promo-navigator-sm h3 {
+    border:none !important;
 }
 
 #promo-navigator li div, #promo-navigator-sm li div {

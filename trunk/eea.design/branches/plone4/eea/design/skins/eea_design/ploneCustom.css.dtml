@@ -1821,8 +1821,7 @@ div.position-3\3a 4 {margin-left:    -450px;}
 
 #portal-column-one .visualPadding {
     padding: 0;
-    /*background: #F0F4F5;*/
-    background: white;
+    background: transparent;
 }
 
 #slide-menu {
