@@ -13,7 +13,7 @@
     <h2 id="eea-comments" tal:condition="python:isDiscussionAllowed or not isAnon">Comments</h2>
 
     <!-- Top portal message -->
-    <script language="javascript" type="text/javascript"
+    <script type="text/javascript"
             tal:condition="python:isDiscussionAllowed"
             tal:content="structure string://<!--
 jQuery(document).ready(function() {
@@ -53,7 +53,7 @@ function addPortalMessage() {
 
     <div class="discussion"
              tal:condition="python:userHasReplyPermission">
-             
+
         <form name="reply"
               action=""
               method="post"
