@@ -240,8 +240,8 @@
                  hide_listing python: True;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout"><a/></li>
-            <li><a href="#" class="album-layout active-album"><a/></li>
+            <li><a href="#" class="list-layout"></a></li>
+            <li><a href="#" class="album-layout active-album"></a></li>
         </ul>
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
@@ -254,8 +254,8 @@
                  hide_listing python: True;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout"><a/></li>
-            <li><a href="#" class="album-layout active-album"><a/></li>
+            <li><a href="#" class="list-layout"></a></li>
+            <li><a href="#" class="album-layout active-album"></a></li>
         </ul>
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>

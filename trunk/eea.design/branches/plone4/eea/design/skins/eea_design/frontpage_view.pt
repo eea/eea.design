@@ -86,7 +86,7 @@
                             <ul id="tabs"
                                 tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps', 'All products'];">
                                 <li tal:repeat="tab tabnames">
-                                    <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.lower()">Tabs</a>
+                                    <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '-').lower()">Tabs</a>
                                 </li>
                             </ul>
                             <!-- end_tabs -->
