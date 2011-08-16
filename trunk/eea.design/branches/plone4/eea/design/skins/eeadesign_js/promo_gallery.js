@@ -17,7 +17,7 @@
             nav_items_selector = site_address ? "#promo-navigator-sm li" : "#promo-navigator li", 
             wrapper_selector = site_address ? "#promo-gallery-content-sm" : "#promo-gallery-content";
 
-        var promotions = $('#promotions').lofJSidernews({
+        var promotions = $('#promo-gallery-wrapper').lofJSidernews({
                                              interval            : 9000,
                                              direction           : 'opacity',
                                              duration            : 1500,

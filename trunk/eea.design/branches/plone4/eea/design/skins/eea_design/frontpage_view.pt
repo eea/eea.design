@@ -18,7 +18,6 @@
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
 
-
                         <!-- featured and spotlight areas -->
                         <div class="featured roundedCorners">
                           <a href="articles" class="archives" i18n:translate="archive">Archive</a>
@@ -51,7 +50,6 @@
                         </div>
                         <!-- end community divs -->
                         
-                        
                         <div class="portletFooter">
                         
                         </div>
@@ -59,17 +57,12 @@
                         
                     <div id="highlights-area" class="column-area">
                     <!-- promotions_gallery_slideshow-->
-                    <div id="promotions">
-                            <div metal:use-macro="here/frontpage_macros/macros/promo-gallery">
+                    <metal:promotions 
+                        tal:define="frontpage python: True">
+                            <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
                                 promoted item
                             </div>
-
-                            <div class="controls">
-                            <a  href="#" id="next-promo"></a>
-                            <a  href="#" id="prev-promo"></a>
-                            <a  href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
-                            </div>
-                    </div>   
+                    </metal:promotions>   
                     <!-- end promotions_gallery_slideshow -->
 
                         <div id="news-header">
@@ -125,8 +118,6 @@
                 <!--<tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>-->
             </div>
 
-                <!-- promo gallery javascript & css -->
-                <div metal:use-macro="here/frontpage_macros/macros/promo-gallery-files">promo js and css</div>
         </tal:main-macro>
     </div>
 

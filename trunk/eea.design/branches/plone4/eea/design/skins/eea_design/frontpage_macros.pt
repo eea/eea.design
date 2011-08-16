@@ -4,14 +4,12 @@
 
 
 <!-- promo gallery javascript & css -->
-<metal:promo-gallery-files define-macro="promo-gallery-files"> 
-    <link rel="stylesheet" type="text/css" media="screen" tal:attributes="href string: ${portal_url}/promo_gallery.css" />
-    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promotion_gallery.js"></script>
-    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promo_gallery.js"></script>
-    <!-- end promo gallery javacript -->
-    <!-- accordion_gallery -->
-    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/whatsnew_gallery.js"></script>
-</metal:promo-gallery-files>
+<!--<metal:promo-gallery-files define-macro="promo-gallery-files"> -->
+<!--    <link rel="stylesheet" type="text/css" media="screen" tal:attributes="href string: ${portal_url}/promo_gallery.css" />-->
+<!--    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promotion_gallery.js"></script>-->
+<!--    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promo_gallery.js"></script>-->
+<!--    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/whatsnew_gallery.js"></script>-->
+<!--</metal:promo-gallery-files>-->
 <!-- end accordion_gallery -->
 
 <div metal:define-macro="news"
@@ -261,19 +259,6 @@
 <div metal:define-macro="datamaps" 
 		class="highlights"
         id="datamaps-highlights"> 
-</div>
-
-<div metal:define-macro="featured-article"
-              tal:define="frontpage_view context/@@frontpage_highlights;       
-              highlights python: frontpage_view.getHighArticles(topic =  True);"
-              tal:condition="highlights">
-            <div class="featured roundedCorners">
-              <a href="articles" class="archives">More articles</a>
-              <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured article</h2>
-                <div metal:use-macro="here/frontpage_macros/macros/highArticles">
-                    item title, description and image
-                </div>
-            </div>
 </div>
 
 <metal:gallery-items define-macro="gallery-items"

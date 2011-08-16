@@ -38,19 +38,29 @@
     enabled="True" expression="" id="framebreak.js" inline="False"
     position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
-    enabled="True" expression="python: portal.portal_membership.isAnonymousUser() and request.get('jsdisable','') != 'jquery'" id="design.js" inline="False"
+    enabled="True" expression="python: portal.portal_membership.isAnonymousUser()" id="design.js" inline="False"
     position-before="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
-    enabled="True" expression="python: request.get('jsdisable','') != 'jquery'" id="print_warning.js" inline="False"
+    enabled="True" expression="" id="print_warning.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="whatsnew_gallery.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="promotion_gallery.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="promo_gallery.js" inline="False"
     position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="eea_vpip.js" inline="False"
-    position-after="eea_vpip.js"/>
+    position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="False" expression="" id="++resource++vPIP/vpip.js" inline="False"
-    position-after="++resource++vPIP/vpip.js"/>
+    position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="not: portal/portal_membership/isAnonymousUser" id="block_ldapuserfolder_profile.js" inline="False"
-    position-after="++resource++vPIP/vpip.js"/>
+    position-after="promotions.js"/>
 </object>
+
 

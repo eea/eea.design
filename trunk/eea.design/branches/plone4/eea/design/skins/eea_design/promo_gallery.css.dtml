@@ -45,7 +45,7 @@
 }
 
 /* main promo content */
-#promotions {
+#promo-gallery-wrapper {
     width: 100%;
     position: relative;
     overflow: hidden; 
@@ -109,7 +109,7 @@
 	width:190px;
 }
 
-#promotions ul, #promo-gallery-content ul, #promo-gallery-content-sm ul {
+#promo-gallery-wrapper ul, #promo-gallery-content ul, #promo-gallery-content-sm ul {
     margin-left: 0em;
     list-style: none;
 }
