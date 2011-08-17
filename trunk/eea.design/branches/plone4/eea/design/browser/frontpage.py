@@ -128,7 +128,7 @@ class Frontpage(BrowserView):
 
     def getAllProducts(self):
         """ get all latest published products for frontpage """
-        portaltypes = ('Report','Article','Highlight','PressRelease', 'Data', 'EEAFigure')
+        portaltypes = ('Report','Article','Highlight','PressRelease', 'Assessment', 'Data', 'EEAFigure')
         interfaces = 'p4a.video.interfaces.IVideoEnhanced'
         visibilityLevel = ''
         topic = getattr(self.context.REQUEST, 'topic', None)

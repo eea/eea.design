@@ -41,6 +41,13 @@
 #promo-gallery-content h3 a, #promo-gallery-content h3 a:visited, 
 #promo-gallery-content-sm h3 a, #promo-gallery-content-sm h3 a:visited {
     color: #FFF !important;
+    background: none;
+}
+
+#promo-gallery-content h3 a:hover, 
+#promo-gallery-content-sm h3 a:hover {
+    color: &dtml-corporateBlueTwo; !important;
+    background: none;
 }
 
 .promo-item-desc span, .promo-item-desc-sm span {
@@ -162,6 +169,7 @@
 
 #promo-navigator h3, #promo-navigator-sm h3 {
     border:none !important;
+    text-shadow: none;
 }
 
 #promo-navigator li div, #promo-navigator-sm li div {
