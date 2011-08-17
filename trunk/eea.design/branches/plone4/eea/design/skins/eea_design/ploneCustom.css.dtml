@@ -34,15 +34,54 @@
 }
 
 #faceted-form .faceted-widget {
-   background-color: &dtml-lightBackgroundColor;;
-   }
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    background-color: &dtml-lightBackgroundColor;;
+}
 
 
 #faceted-form .widget-fieldset legend {
   background-color: &dtml-corporateGreen;;
   color: #ffffff;
-  padding: 10px;
-  font-size: 1.6em;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px #555555;
+  -webkit-box-shadow: 1px 1px 1px #555555;
+       -moz-box-shadow: 1px 1px 1px #555555;
+            box-shadow: 1px 1px 1px #555555;
+}
+
+.widget-fieldset ul li input {
+    float: none !important;
+    clear: none !important;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+
+.widget-fieldset ul li label {
+    display: table-cell;
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.widget-fieldset ul li span {
+    display: table-cell;
+    padding-left: 3px;
+    color: &dtml-tabBackgroundColorl;;
+}
+
+.faceted-checkboxes-widget fieldset,
+.faceted-radio-widget fieldset {
+    margin: 0;
+}
+
+.faceted-checkboxes-widget fieldset form ul,
+.faceted-radio-widget fieldset form ul {
+    margin: 0 0 0 10px;
 }
 
 
@@ -55,8 +94,8 @@
 
 .section-publications #c13_widget form {
    position:relative;
-   top:-50px;
-   left:280px;
+   top:-55px;
+   left:180px;
 }
 
 
@@ -79,9 +118,9 @@
 .section-publications #c13_widget .faceted-textwidget-place-current {
     display: inline;
     margin-left: 10px;
-    position:relative;
+    /*position:relative;
     top:0px;
-    left:-130px;
+    left:-130px;*/
 }
 
  .section-publications #c13_button.searchButton {
@@ -94,10 +133,10 @@
     -moz-border-radius: 4px;
     border-radius: 4px;
     padding: 10px;
-    position: relative;
+    /*position: relative;*/
     text-align: center;
     width: 128px;
-    left:280px;
+    /*left:280px;*/
 }
 .section-publications #c13_button.searchButton:hover {
     background-color:&dtml-corporateOrange;;
@@ -1005,10 +1044,11 @@ float:right;
     display: inline;
     color: white;
     border-right: 1px solid &dtml-darkBackgroundColor;;
+    padding-left: 10px;
 }
 
 #portal-siteactions li {
-    padding: 0 0 0  10px;
+    padding: 0 10px;
 }
 
 #portal-externalsites li:last-child,

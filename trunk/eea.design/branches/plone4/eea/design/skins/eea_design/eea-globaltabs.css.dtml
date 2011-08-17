@@ -41,6 +41,9 @@
 {
     background-color: white;
     text-shadow: none;
+    position: relative;
+    top: -1px;
+    height: 15px;
 }
 
 #portal-globalnav .selected a:hover {
