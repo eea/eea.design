@@ -2,16 +2,13 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 #footer-wrapper {
-    /* background: white url(footer_left.jpg) no-repeat; */
     background-color: &dtml-corporateGreen;;
-    margin: 0;
-    padding: 0;
+    margin-top: 0.5em;
+    padding: 1em;
     clear: both;
 }
 
 #bg-wrapper {
-    /* background: transparent url(footer_right.jpg) no-repeat top right; */
-    /* padding: 90px 0 0 0; */
     padding: 0px;
     margin: 0;
 }
