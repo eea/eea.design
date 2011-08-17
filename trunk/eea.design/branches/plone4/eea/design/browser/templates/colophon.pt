@@ -35,8 +35,8 @@ i18n:translate="Legal notice">Legal notice</tal:translate></a>, <a href="http://
   </li>
   <li>
 <a href="http://validator.w3.org/check/referer"
-   title="This Plone site is valid XHTML.">
-  Valid XHTML
+   title="This Plone site is valid HTML5.">
+  Valid HTML5
 </a> |
   </li>
   <li>
