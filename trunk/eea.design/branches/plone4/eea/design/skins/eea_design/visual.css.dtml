@@ -563,9 +563,8 @@ div span span.languageCodes {
 
 .languageCodes a:link, .languageCodes a, #languageCodes li a {
     background: &dtml-lightBackgroundColor;;
-    color: white !important;
-    padding: 0.2em;
-    line-height:2.0em;
+    padding: 0.4em;
+    line-height:2.5em;
     border: 1px solid &dtml-mediumBackgroundColor; ! important;
     text-decoration: none;
 }
