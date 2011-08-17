@@ -97,6 +97,9 @@ class Frontpage(BrowserView):
 
     def getNews(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'mini'):
         topic = getattr( self.context.REQUEST, 'topic', None)
+        topic_request = 'themes' in self.context.REQUEST['URL0']
+        if topic_request:
+            topic = self.context.aq_inner.aq_parent.id
         if topic:
             result = self._getTopics(portaltypes = portaltypes,
                                  topic = topic, noOfItems=self.noOfNews)
@@ -107,6 +110,9 @@ class Frontpage(BrowserView):
 
     def getArticles(self, portaltypes = "Article"):
         topic = getattr( self.context.REQUEST, 'topic', None)
+        topic_request = 'themes' in self.context.REQUEST['URL0']
+        if topic_request:
+            topic = self.context.aq_inner.aq_parent.id
         if topic:
             result = self._getTopics(portaltypes = "Article", 
                                  topic = topic, noOfItems=self.noOfArticles)
@@ -117,6 +123,9 @@ class Frontpage(BrowserView):
 
     def getPublications(self, portaltypes = "Report"):
         topic = getattr( self.context.REQUEST, 'topic', None)
+        topic_request = 'themes' in self.context.REQUEST['URL0']
+        if topic_request:
+            topic = self.context.aq_inner.aq_parent.id
         if topic:
             result = self._getTopics(portaltypes = "Report", 
                                  topic = topic, noOfItems=self.noOfPublications)
@@ -131,7 +140,10 @@ class Frontpage(BrowserView):
         portaltypes = ('Report','Article','Highlight','PressRelease', 'Assessment', 'Data', 'EEAFigure')
         interfaces = 'p4a.video.interfaces.IVideoEnhanced'
         visibilityLevel = ''
-        topic = getattr(self.context.REQUEST, 'topic', None)
+        topic = getattr( self.context.REQUEST, 'topic', None)
+        topic_request = 'themes' in self.context.REQUEST['URL0']
+        if topic_request:
+            topic = self.context.aq_inner.aq_parent.id
         result = []
         for mytype in portaltypes:
             if topic:
@@ -271,6 +283,9 @@ class Frontpage(BrowserView):
 
     def getMultimedia(self):
         topic = getattr( self.context.REQUEST, 'topic', None)
+        topic_request = 'themes' in self.context.REQUEST['URL0']
+        if topic_request:
+            topic = self.context.aq_inner.aq_parent.id
         if topic:
             result = self._getTopics(object_provides= 
                                         'p4a.video.interfaces.IVideoEnhanced', 
