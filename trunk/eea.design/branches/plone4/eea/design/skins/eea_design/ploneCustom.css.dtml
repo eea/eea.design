@@ -71,7 +71,7 @@
 .widget-fieldset ul li span {
     display: table-cell;
     padding-left: 3px;
-    color: &dtml-tabBackgroundColorl;;
+    color: &dtml-tabBackgroundColor;;
 }
 
 .faceted-checkboxes-widget fieldset,
