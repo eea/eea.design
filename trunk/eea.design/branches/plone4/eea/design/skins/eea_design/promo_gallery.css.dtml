@@ -156,7 +156,7 @@
     padding: 8px 6px 0 3px;
     margin:0;
     font-weight: normal;
-    height: 68px;
+    height: 72px;
     overflow: hidden;
 }
 
@@ -181,10 +181,8 @@
 }
 
 #promo-navigator li img, #promo-navigator-sm li img {
-	/* height:53px; */
-	/* width:70px; */
-	height:36px;
-	width:53px;
+	height:53px;
+	width:70px;
     margin: 0px;
     float: left;
     padding: 14px 5px 18px 10px;
@@ -193,6 +191,8 @@
 #promo-navigator-sm li img {
     /* padding: 13px 5px 15px 10px; */
     padding: 8px 8px 8px 6px;
+	height:36px;
+	width:53px;
 }
 
 #promo-navigator li.active img, #promo-navigator-sm li.active img {
