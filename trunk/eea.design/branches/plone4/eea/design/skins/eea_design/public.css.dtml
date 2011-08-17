@@ -84,20 +84,18 @@ iframe { border-width: 0; border-style:none; }
 }
 
 #portal-personaltools {
-background-color: #E9EFCD;
-border-top-color: #CCC;
-border-top-style: solid;
-border-top-width: 1px;
-border-bottom-color: #CCC;
-border-bottom-style: solid;
-border-bottom-width: 1px;
+background-color: &dtml-lightBackgroundColor;;
+border:none;
 line-height: 1.6em;
 color: black;
-padding: 0em 3em 0em 3em;
+padding: 0.5em 3em 0.5em 3em;
 margin: 0;
 text-align: right;
 text-transform: lowercase;
 list-style: none;
+-moz-box-shadow: 2px 2px 1px #888;
+-webkit-box-shadow: 2px 2px 1px #888;
+box-shadow: 2px 2px 1px #888;
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
