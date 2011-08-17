@@ -151,6 +151,10 @@
     position: relative;
     z-index: 300;
     width: 189px !important;
+    float: left;
+}
+#promo-navigator-sm li.active {
+    background: transparent url("promotions-gallery-arrow.png") no-repeat 65px 7px;
 }
 
 #promo-navigator-sm, #promo-navigator-sm li.active{

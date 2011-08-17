@@ -372,9 +372,16 @@ ul#tabs li:first-child a:hover {
 .promo {
     width: 100%;
     text-align: center;
-    padding: 0.5em 0em;
+    padding: 2em 0em;
     background: #ECECEC;
     margin-bottom: 2em;
+}
+
+#theme-datacentre {
+    background: transparent url('sprite-eeaimages.png') no-repeat;
+    padding: 25px 0px 25px 66px;
+    height: 56px;
+    background-position: -401px -469px;
 }
 
 .featured  img {

@@ -1,0 +1,9 @@
+<metal:portlet metal:define-macro="portlet">
+    <div class="promo roundedCorners">
+        <h3>
+            <a href="dc" class="internal-link" title="Data centre overview">
+                <span id="theme-datacentre"  tal:content="string: ${here/Title} data centre">theme data centre</span>
+            </a>
+        </h3>
+    </div>
+</metal:portlet>
