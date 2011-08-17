@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     background-color: transparent;
     font-family: &dtml-headingFontFamily;;
+    text-shadow: 1px 1px white;
 }
 
 h1 {
@@ -48,11 +49,11 @@ h1 {
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     padding-bottom: 0.25em;
     padding-right:4em; /* to avoid overlapping with document actions */}
-
+    
 h2 {
     font-size: 130%;
     margin: 0.83em 0;
-    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, .4);
+    text-shadow: 1px 1px white;
     background-image: url("portlet_bg.png");
     background-repeat:repeat-x;
     /*border-bottom: 1px solid &dtml-mediumBackgroundColor;;*/
