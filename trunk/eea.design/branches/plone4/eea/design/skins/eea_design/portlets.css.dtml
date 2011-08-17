@@ -776,8 +776,6 @@ dl.portletNavigationTree dt.portletHeader {
   padding: 1em 0.5em 1em 0.5em;
   font-size: 1.6em;
   margin: 0px;
-  background-image: url("portlet_bg.png");
-  background-repeat: repeat-x;
   background-color: transparent;
 }
 
