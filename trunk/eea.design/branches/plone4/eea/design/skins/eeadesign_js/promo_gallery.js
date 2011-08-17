@@ -12,8 +12,8 @@
                 });
     
         var site_address = window.location.href.indexOf('themes') != '-1' ? true : undefined,
-            nav_height = 80,  
-            nav_width = site_address ? 90 : 170,
+            nav_height = site_address ? 60 : 80, // 80  
+            nav_width = site_address ? 65 : 170, // 90
             nav_items_selector = site_address ? "#promo-navigator-sm li" : "#promo-navigator li", 
             wrapper_selector = site_address ? "#promo-gallery-content-sm" : "#promo-gallery-content";
 
