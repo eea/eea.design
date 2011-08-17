@@ -6,8 +6,10 @@
         var site_address = window.location.href;
         // remove any # or #items links from the site link address
         site_address = site_address.replace(/#\w*/, '');
-
         var datamaps = $("#datamaps-highlights");
+        if ( site_address.charAt(site_address.length - 1) !== '/') {
+            site_address += '/';
+        }
         var data_address  = site_address + "data-and-maps" + " " + ".photoAlbumEntry";
         datamaps.load(data_address);
 
@@ -18,7 +20,7 @@
                 var x = this.selectedIndex,
                     y = this.options;
                 var sel_value = y[x].value;
-                var cur_tab_val = $("#tabs a.current").text().toLowerCase();
+                var cur_tab_val = $("#tabs a.current")[0].id.substr(4);
                 var news = $(".highlights").filter( function(index) {
                      return this.style.display === "block";
                 });

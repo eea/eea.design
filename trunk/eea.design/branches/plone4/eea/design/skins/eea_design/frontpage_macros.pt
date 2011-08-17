@@ -2,16 +2,6 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       i18n:domain="eea" tal:omit-tag="">
 
-
-<!-- promo gallery javascript & css -->
-<!--<metal:promo-gallery-files define-macro="promo-gallery-files"> -->
-<!--    <link rel="stylesheet" type="text/css" media="screen" tal:attributes="href string: ${portal_url}/promo_gallery.css" />-->
-<!--    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promotion_gallery.js"></script>-->
-<!--    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/promo_gallery.js"></script>-->
-<!--    <script type="text/javascript" tal:attributes=" src string: ${portal_url}/whatsnew_gallery.js"></script>-->
-<!--</metal:promo-gallery-files>-->
-<!-- end accordion_gallery -->
-
 <div metal:define-macro="news"
      id="news-highlights"
      class="highlights"
