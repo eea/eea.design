@@ -190,9 +190,9 @@
 
 #promo-navigator-sm li img {
     /* padding: 13px 5px 15px 10px; */
-    padding: 8px 8px 8px 6px;
-	height:36px;
-	width:53px;
+    padding: 6px 8px 0px 6px;
+    height: 38px;
+    width: 53px;
 }
 
 #promo-navigator li.active img, #promo-navigator-sm li.active img {
@@ -213,6 +213,7 @@
 #play-pause {
     float: right;
     margin-right: 3em;
+    height: 25px;
 }
 
 .play,
