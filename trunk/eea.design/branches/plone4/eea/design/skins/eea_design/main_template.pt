@@ -40,10 +40,10 @@
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang lang;" class="no-js ie6 oldie"><![endif]-->
-<!--[if IE 7]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang lang;" class="no-js ie7 oldie"><![endif]-->
-<!--[if IE 8]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang lang;" class="no-js ie8 oldie"><![endif]-->
-<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang lang;" class="no-js"><!--<![endif]-->
+<!--[if lt IE 7]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js ie6 oldie"><![endif]-->
+<!--[if IE 7]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js ie7 oldie"><![endif]-->
+<!--[if IE 8]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js ie8 oldie"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js"><!--<![endif]-->
 
     <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">
     Get the global cache headers located in global_cache_settings.
