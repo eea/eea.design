@@ -44,8 +44,9 @@
 #faceted-form .widget-fieldset legend {
   background-color: &dtml-corporateGreen;;
   color: #ffffff;
-  padding: 10px 15px;
-  font-size: 18px;
+  padding: 5px 15px;
+  font-size: 14px;
+  line-height: 1.5;
   font-weight: normal;
   text-shadow: 1px 1px 1px #555555;
   -webkit-box-shadow: 1px 1px 1px #555555;
@@ -53,15 +54,17 @@
             box-shadow: 1px 1px 1px #555555;
 }
 
+.widget-fieldset {
+    padding: 0 !important;
+    margin: 5px !important;
+}
+
 .widget-fieldset ul li input {
-    float: none !important;
-    clear: none !important;
     vertical-align: middle;
     margin-top: 2px;
 }
 
 .widget-fieldset ul li label {
-    display: table-cell;
     font-size: 11px;
     line-height: 15px;
     padding-left: 5px;
@@ -69,7 +72,6 @@
 }
 
 .widget-fieldset ul li span {
-    display: table-cell;
     padding-left: 3px;
     color: &dtml-tabBackgroundColor;;
 }
@@ -81,7 +83,7 @@
 
 .faceted-checkboxes-widget fieldset form ul,
 .faceted-radio-widget fieldset form ul {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 5px !important;
 }
 
 
@@ -94,18 +96,41 @@
 
 .section-publications #c13_widget form {
    position:relative;
-   top:-55px;
-   left:180px;
+   top:-25px;
+   left:212px;
+   width: 480px;
 }
 
+.faceted_letter_selected {
+    background: transparent !important;
+    font-weight: bold;
+}
 
+.faceted_letter,
+.faceted_letter:hover {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#right-area, #left-area {
+    width: 200px !important;
+}
+
+.left-area-js {
+    margin-left: 205px !important;
+    width: 580px;
+}
 
 /* c13 = the search box*/
 
 .section-publications #c13 {
-   width:280px;
-   height: 28px;
-   font-size: 1.6em;
+   width:350px;
+   height: 22px;
+   font-size: 16px;
+   padding: 5px;
+   -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+          -border-radius: 3px;
 }
 
 .section-publications #c13_widget.faceted-widget {
@@ -116,27 +141,22 @@
 
 .section-publications #c13_widget .faceted-textwidget-place-all,
 .section-publications #c13_widget .faceted-textwidget-place-current {
-    display: inline;
-    margin-left: 10px;
-    /*position:relative;
-    top:0px;
-    left:-130px;*/
+    display: inline-block;
+    float: left;
+    clear: right;
+    margin-right: 20px;
 }
 
  .section-publications #c13_button.searchButton {
-    background: none;
-    background-color:&dtml-corporateBlueOne;;
-    color:#ffffff;
-    font-size: 1.6em;
+    background: none repeat scroll 0 0 #2C8DA2;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 15px;
     font-weight: bold;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    padding: 10px;
-    /*position: relative;*/
+    padding: 5px;
     text-align: center;
-    width: 128px;
-    /*left:280px;*/
+    width: 113px;
 }
 .section-publications #c13_button.searchButton:hover {
     background-color:&dtml-corporateOrange;;
@@ -1323,7 +1343,7 @@ float:right;
     text-transform: &dtml-textTransform;;
     vertical-align: top;
     margin: 1em 0em;
-    font-size: 94%;
+    font-size: 11px !important;
     clear: both;
 }
 
@@ -1346,6 +1366,7 @@ float:right;
 }
 
 .listingBar a {
+    font-size: 11px;
     text-decoration: none;
 }
 
