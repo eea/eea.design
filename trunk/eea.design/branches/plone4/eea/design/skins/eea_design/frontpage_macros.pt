@@ -220,7 +220,7 @@
       <!-- the fancy box email subscription -->
       <div style="display:none;">
           <div style="width: 280px; height: 250px;" id="subscribe-popup">
-              <div metal:use-macro="here/portlet_gazette/macros/portlet-subscribe">
+              <div metal:use-macro="here/portlet_subscribe/macros/portlet-subscribe">
                                 email subscribe
               </div>
           </div>
