@@ -34,8 +34,9 @@
                                 tal:attributes="href hl/getUrl|hl/absolute_url|nothing"
                                 tal:content="hl/title">
                                 Highlight Title</a></h3>
-                         <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
-                
+                    <tal:desc tal:condition="frontpage_gallery">
+                      <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
+                    </tal:desc>  
                     </div>
                         </li>    
         </metal:pritems>
@@ -59,7 +60,6 @@
                         </tal:image>
 
                         <tal:title tal:condition="frontpage_gallery">
-                        <!--<tal:title >-->
                             <h3 tal:content="hl/Title">Highlight Title</h3>
                         </tal:title>
                     </div>

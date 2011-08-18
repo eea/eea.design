@@ -21,7 +21,8 @@
     padding: 0px 20px 0px 20px;
 }
 .promo-item-desc-sm {
-    top: 171px; 
+    top: 200px;
+    height: 50px;
 }
 
 #promo-gallery-content h3, #promo-gallery-content-sm h3 {
@@ -126,7 +127,7 @@
     list-style: none;
 }
 
-#promo-navigator li, #promo-navigator-sm {
+#promo-navigator li, #promo-navigator-sm li {
 	cursor:hand; 
 	cursor:pointer;
 	list-style:none;
