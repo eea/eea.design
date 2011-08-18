@@ -96,7 +96,7 @@
 
 .section-publications #c13_widget form {
    position:relative;
-   top:-25px;
+   top:-43px;
    left:212px;
    width: 480px;
 }
@@ -119,6 +119,19 @@
 .left-area-js {
     margin-left: 205px !important;
     width: 580px;
+}
+
+.ui-accordion .ui-state-default,
+.ui-accordion .ui-state-active {
+    margin: 0 !important;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 0 !important;
+}
+
+#center-and-left-area {
+    clear: both !important;
 }
 
 /* c13 = the search box*/
