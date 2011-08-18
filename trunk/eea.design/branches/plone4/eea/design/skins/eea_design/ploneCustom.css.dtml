@@ -1932,6 +1932,10 @@ div.position-3\3a 4 {margin-left:    -440px;}
     padding: 0em 1em 1em 0em;
 }
 
+#portal-column-two {
+    padding-left: 1em;
+}
+
 /* hide columns */
 
 body.longwordlanguage .visualColumnHideOneTwo #portal-column-content #content,
