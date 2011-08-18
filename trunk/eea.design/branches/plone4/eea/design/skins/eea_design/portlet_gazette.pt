@@ -54,7 +54,6 @@
               <label for="email" class="hiddenStructure" i18n:translate="label_email">Email</label>
               <input type="text"
                      name="email"
-                     id="email"
                      value="Enter email"
                      size="17" />
 
