@@ -136,6 +136,20 @@ class Frontpage(BrowserView):
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = portaltypes)[:self.noOfPublications]
         return result
     
+    def getThemeFolders(self):
+        """ get folders from current theme object """
+        folder_path = '/'.join(self.context.getPhysicalPath())
+        query = {
+                'portal_type'        : 'Folder',
+                'review_state'       : 'published',
+                'sort_on'            : 'effective',
+                'exclude_from_nav'   : False,
+                'sort_order'         : 'reverse',
+                'path'               : {'query': folder_path, 'depth': 1},
+                'effectiveRange'     : self.now
+        }
+        return self.catalog.searchResults(query)
+    
     def getDataCentreName(self):
         """ get the name of the datacentre for the given theme of the context """
         name = ''
