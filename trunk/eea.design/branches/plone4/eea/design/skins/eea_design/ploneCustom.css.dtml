@@ -93,12 +93,15 @@
    background-color: #ffffff;
    }
 
+.section-publications #c13_widget .widget-fieldset {
+    height: 50px;
+}
 
 .section-publications #c13_widget form {
    position:relative;
    top:-43px;
    left:212px;
-   width: 480px;
+   width: 445px;
 }
 
 .faceted_letter_selected {
@@ -178,10 +181,6 @@
        -moz-transition: box-shadow .218s;
          -o-transition: box-shadow .218s;
             transition: box-shadow .218s;
-    -webkit-transition: color .218s;
-       -moz-transition: color .218s;
-         -o-transition: color .218s;
-            transition: color .218s;
     border: 1px solid #DCDCDC;
     -webkit-border-radius: 2px;
        -moz-border-radius: 2px;
@@ -2037,7 +2036,7 @@ div.managePortletsLink, a.managePortletsFallback {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .section-publications #c13_widget form {
         position: relative;
-        top: -37px
+        top: -37px !important;
     }
 }
 
