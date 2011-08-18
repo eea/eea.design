@@ -43,6 +43,7 @@ from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlight
 from p4a.video.interfaces import IVideoEnhanced
 #from eea.themecentre.interfaces import IThemeTagging , IThemeTaggable
 #from eea.themecentre.interfaces import IThemeCentreSchema
+from eea.themecentre.themecentre import getTheme
 
 class Frontpage(BrowserView):
     """
@@ -68,6 +69,7 @@ class Frontpage(BrowserView):
         self.noOfPublications = frontpage_properties.getProperty('noOfPublications', 6)
         self.noOfPromotions = frontpage_properties.getProperty('noOfPromotions', 7)
         self.noOfEachProduct = frontpage_properties.getProperty('noOfEachProduct', 3)
+        self.noOfDatasets = frontpage_properties.getProperty('noOfDatasets', 4)
         self.now = DateTime()
 
 #    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
@@ -99,7 +101,7 @@ class Frontpage(BrowserView):
         topic = getattr( self.context.REQUEST, 'topic', None)
         topic_request = 'themes' in self.context.REQUEST['URL0']
         if topic_request:
-            topic = self.context.aq_inner.aq_parent.id
+            topic = getTheme(self.context) 
         if topic:
             result = self._getTopics(portaltypes = portaltypes,
                                  topic = topic, noOfItems=self.noOfNews)
@@ -112,7 +114,7 @@ class Frontpage(BrowserView):
         topic = getattr( self.context.REQUEST, 'topic', None)
         topic_request = 'themes' in self.context.REQUEST['URL0']
         if topic_request:
-            topic = self.context.aq_inner.aq_parent.id
+            topic = getTheme(self.context) 
         if topic:
             result = self._getTopics(portaltypes = "Article", 
                                  topic = topic, noOfItems=self.noOfArticles)
@@ -125,7 +127,7 @@ class Frontpage(BrowserView):
         topic = getattr( self.context.REQUEST, 'topic', None)
         topic_request = 'themes' in self.context.REQUEST['URL0']
         if topic_request:
-            topic = self.context.aq_inner.aq_parent.id
+            topic = getTheme(self.context) 
         if topic:
             result = self._getTopics(portaltypes = "Report", 
                                  topic = topic, noOfItems=self.noOfPublications)
@@ -134,6 +136,16 @@ class Frontpage(BrowserView):
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = portaltypes)[:self.noOfPublications]
         return result
     
+    def getDataCentreName(self):
+        """ get the name of the datacentre for the given theme of the context """
+        name = ''
+        name = getTheme(self.context)
+        if name:
+            return name.capitalize()
+        else:
+            name = getTheme(self.context.aq_inner.aq_parent)
+            name = [name.capitalize() if name else ''].pop()
+            return name
 
     def getAllProducts(self):
         """ get all latest published products for frontpage """
@@ -143,7 +155,7 @@ class Frontpage(BrowserView):
         topic = getattr( self.context.REQUEST, 'topic', None)
         topic_request = 'themes' in self.context.REQUEST['URL0']
         if topic_request:
-            topic = self.context.aq_inner.aq_parent.id
+            topic = getTheme(self.context) 
         result = []
         for mytype in portaltypes:
             if topic:
@@ -162,7 +174,7 @@ class Frontpage(BrowserView):
     def getHighArticles(self, topic = ''):
         """ return a defined number of high visibility articles items """
         if topic: 
-            topic = self.context.aq_inner.aq_parent.id
+            topic = getTheme(self.context) 
             results =  self.getHigh(('Article', ), 'thumb', topic)
             return results
         results =  self.getHigh(('Article', ), 'thumb')
@@ -259,7 +271,7 @@ class Frontpage(BrowserView):
         }
         themes = 'themes' in self.context.REQUEST.URL0
         if themes:
-            query['getThemes'] = self.context.aq_inner.aq_parent.id
+            query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
         result = self.catalog(query)
         cPromos = []
         for brain in result:
@@ -285,7 +297,7 @@ class Frontpage(BrowserView):
         topic = getattr( self.context.REQUEST, 'topic', None)
         topic_request = 'themes' in self.context.REQUEST['URL0']
         if topic_request:
-            topic = self.context.aq_inner.aq_parent.id
+            topic = getTheme(self.context) 
         if topic:
             result = self._getTopics(object_provides= 
                                         'p4a.video.interfaces.IVideoEnhanced', 
