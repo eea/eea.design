@@ -454,15 +454,12 @@ a.album-layout:hover {
 }
 
 #rss-link {
-    line-height: 2.4;
     background-position: 0 -246px !important;
 }
 
 #email-link {
-    height: 20px;
-    margin-top: 6px;
-    line-height: 1.5;
-    background-position: 0 -279px !important;
+    /*background-position: 0 -279px !important;*/
+    background: url("email_32.png") no-repeat center center transparent; /* to sprite */
 }
 
 
