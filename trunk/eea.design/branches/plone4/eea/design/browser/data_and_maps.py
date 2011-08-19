@@ -56,81 +56,88 @@ class DataMaps(BrowserView):
 
         self.promotions = []
         self.portal_url = getToolByName(aq_inner(context), 'portal_url')()
-        
-        self.noOfDatasets = frontpage_properties.getProperty('noOfDatasets', 6)
+        #default number of items shown in each whatsnew / latest tab/portlet.
+        self.noOfLatestDefault = frontpage_properties.getProperty('noOfLatestDefault', 6)
+        # noOfEachProduct is used when all latest products are merged together
+        # we show equal number of each, so that none products overshadow the others.
         self.noOfEachProduct = frontpage_properties.getProperty('noOfEachProduct', 3)
         self.now = DateTime()
         
     def getLatestDatasets(self):
-        """ """
-        portaltypes = ('Data',)
+        """ Get latest published datasets. Number configurable via ZMI frontpage_properties. """
+        return self._getItems(None,('eea.dataservice.interfaces.IDataset'),self.noOfLatestDefault)
+        
+    def getLatestIndicators(self):
+        """ Get latest published indicators. """            
+        return self._getItems(None,('eea.indicators.content.interfaces.IIndicatorAssessment'),self.noOfLatestDefault)
+        
+    def getLatestMaps(self):
+        """ Get latest published static maps. """            
+        return self._getItems(None,('eea.dataservice.interfaces.IEEAFigureMap'),self.noOfLatestDefault)
+        
+    def getLatestGraphs(self):
+        """ Get latest published static graphs/charts."""
+        return self._getItems(None,('eea.dataservice.interfaces.IEEAFigureGraph'),self.noOfLatestDefault)
+        
+    def getLatestInteractiveMaps(self):
+        """ Get latest published interactive maps."""
+        return self._getItems(None,('Products.EEAContentTypes.content.interfaces.IInteractiveMap'),self.noOfLatestDefault)
+        
+    def getLatestInteractiveData(self):
+        """ Get latest published interactive data charts."""
+        return self._getItems(None,('Products.EEAContentTypes.content.interfaces.IInteractiveData'),self.noOfLatestDefault)
+        
+
+    def getAllProducts(self):
+        """ get all latest data and maps merged into one single list """
+        result = []
+        res1 = self.getLatestDatasets()[:self.noOfEachProduct];
+        res2 = self.getLatestIndicators()[:self.noOfEachProduct];
+        res3 = self.getLatestMaps()[:self.noOfEachProduct];
+        res4 = self.getLatestGraphs()[:self.noOfEachProduct];
+        res5 = self.getLatestInteractiveMaps()[:self.noOfEachProduct];
+        res6 = self.getLatestInteractiveData()[:self.noOfEachProduct];
+        
+        result.extend(res1)
+        result.extend(res2)
+        result.extend(res3)
+        result.extend(res4)
+        result.extend(res5)
+        result.extend(res6)
+        
+        #TODO/OPTIONAL the list may be re-sorted on effective date.
+        
+        return result
+
+
+    def _getItems(self,portaltypes=None,interfaces=None,noOfItems=6):
+        """ generic internal method for getting items from catalog (via portaltypes or via interfaces)
+        filtered by topic or not."""
         visibilityLevel = ''
         result = []
         #if topic is not passed in the REQUEST variable
-        #then we try to get it from the context
-        topic = getattr( self.context.REQUEST, 'topic', None)       
+        #then we try to get it from the context object
+        topic = getattr(self.context.REQUEST, 'topic', None)       
         topic_request = getTheme(self.context)
         if topic or topic_request:
             topic = [topic if topic else topic_request].pop()
             
-        for mytype in portaltypes:
-            if topic:
-                result2 = self._getTopics(portaltypes = mytype , 
-                                 topic = topic, noOfItems=self.noOfDatasets)
-            else:
-                result2 =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = mytype)[:self.noOfDatasets]
-            result.extend(result2)
-            
-        return result
-        
-    def getLatestIndicators(self):
-        """ """
-        pass
-        
-    def getLatestMaps(self):
-        """ """
-        pass
-    
-        
-    def getLatestGraphs(self):
-        """ """
-        pass
-        
-    def getLatestInteractiveMaps(self):
-        """ """
-        pass
-    
-    def getLatestInteractiveData(self):
-        """ """
-        pass
-    
-
-    def getAllProducts(self):
-        """ get all latest published products for frontpage """
-        portaltypes = ('Report','Article','Highlight','PressRelease', 'Assessment', 'Data', 'EEAFigure')
-        interfaces = 'p4a.video.interfaces.IVideoEnhanced'
-        visibilityLevel = ''
-        topic = getattr( self.context.REQUEST, 'topic', None)
-        topic_request = 'themes' in self.context.REQUEST['URL0']
-        if topic_request:
-            topic = getTheme(self.context) 
-        result = []
-        for mytype in portaltypes:
-            if topic:
-                result2 = self._getTopics(portaltypes = mytype , 
-                                 topic = topic, noOfItems=self.noOfEachProduct)
-            else:
-                result2 =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = mytype)[:self.noOfEachProduct]
-            result.extend(result2)
-            
-        multimedia = self.getMultimedia();
-        result.extend(multimedia)
-        #TODO the list must be re-sorted on effective date.
+        if portaltypes:
+           #if there is a topic/theme tag then get items filtered 
+           if topic:
+                result = self._getTopics(portaltypes = portaltypes , 
+                                 topic = topic, noOfItems=noOfItems)
+           else:
+                result =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = portaltypes)[:noOfItems]
+        elif interfaces:
+           #if there is a topic/theme tag then get items filtered 
+           if topic:
+                result = self._getTopics(object_provides = interfaces , 
+                                 topic = topic, noOfItems=noOfItems)
+           else:
+                result =  self._getItemsWithVisibility(visibilityLevel, interfaces  = interfaces)[:noOfItems]
         
         return result
-
-
-
 
     def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = '', topic = ''):
         """ get items of certain content types and/or interface and certain visibility level. """

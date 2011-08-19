@@ -187,7 +187,7 @@
      class="highlights"
      id="datamaps-highlights" 
      tal:define="datamaps_view context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestDatasets;
+                 folderContents datamaps_view/getAllProducts;
                  hide_album python: False;
                  hide_listing python: True;"
      tal:condition="folderContents|nothing">
