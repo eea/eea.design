@@ -6,7 +6,9 @@
         var site_address = window.location.href;
         // remove any # or #items links from the site link address
         site_address = site_address.replace(/#\w*/, '');
-
+        
+        // when we need to load or construct a link we need for it to end 
+        // in / so we check for it and add it if not present
         if ( site_address.charAt(site_address.length - 1) !== '/') {
             site_address += '/';
         }
