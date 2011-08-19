@@ -215,7 +215,8 @@
 </metal:ajax-items>
 
 <!-- Social / Follow us links -->
-<div metal:define-macro="followus">
+<div metal:define-macro="followus"
+      tal:define="portal_url context/@@plone_portal_state/portal_url;">
 
       <!-- the fancy box email subscription -->
       <div style="display:none;">
