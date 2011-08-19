@@ -214,7 +214,6 @@ body.frontpage #portal-columns {
 
 #datamaps-highlights {
     float: left;
-    padding-top: 15px;
 }
 
 

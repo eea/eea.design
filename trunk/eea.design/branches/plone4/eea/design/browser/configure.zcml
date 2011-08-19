@@ -274,6 +274,14 @@
         permission="zope.Public"
         allowed_interface=".interfaces.IFrontPageHighlights"
         />
+        
+    <browser:page
+        for="*"
+        name="data_and_maps_logic"
+        class=".data_and_maps.DataMaps"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        />
 
     <browser:page
         for="*"

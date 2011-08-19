@@ -185,7 +185,17 @@
 
 <div metal:define-macro="datamaps"
      class="highlights"
-     id="datamaps-highlights">
+     id="datamaps-highlights" 
+     tal:define="datamaps_view context/@@data_and_maps_logic;
+                 folderContents datamaps_view/getLatestDatasets;
+                 hide_album python: False;
+                 hide_listing python: True;"
+     tal:condition="folderContents|nothing">
+     <ul class="gallery-layout-selection">
+            <li><a href="#" class="list-layout active-list"></a></li>
+            <li><a href="#" class="album-layout"></a></li>
+    </ul>
+    <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
 </div>
 
 <metal:gallery-items define-macro="gallery-items"

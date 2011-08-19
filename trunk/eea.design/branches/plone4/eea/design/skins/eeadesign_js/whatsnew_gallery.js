@@ -6,12 +6,10 @@
         var site_address = window.location.href;
         // remove any # or #items links from the site link address
         site_address = site_address.replace(/#\w*/, '');
-        var datamaps = $("#datamaps-highlights");
+
         if ( site_address.charAt(site_address.length - 1) !== '/') {
             site_address += '/';
         }
-        var data_address  = site_address + "data-and-maps" + " " + ".photoAlbumEntry";
-        datamaps.load(data_address);
 
         $topic_selector = $("#topic-selector");
         $topic_selector.find('[value="default"]').remove();
