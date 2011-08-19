@@ -99,10 +99,9 @@ class Frontpage(BrowserView):
 
     def getNews(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'mini'):
         topic = getattr( self.context.REQUEST, 'topic', None)
-        topic_request = 'themes' in self.context.REQUEST['URL0']
-        if topic_request:
-            topic = getTheme(self.context) 
-        if topic:
+        topic_request = getTheme(self.context)
+        if topic or topic_request:
+            topic = [topic if topic else topic_request].pop()
             result = self._getTopics(portaltypes = portaltypes,
                                  topic = topic, noOfItems=self.noOfNews)
             return result
@@ -112,10 +111,9 @@ class Frontpage(BrowserView):
 
     def getArticles(self, portaltypes = "Article"):
         topic = getattr( self.context.REQUEST, 'topic', None)
-        topic_request = 'themes' in self.context.REQUEST['URL0']
-        if topic_request:
-            topic = getTheme(self.context) 
-        if topic:
+        topic_request = getTheme(self.context)
+        if topic or topic_request:
+            topic = [topic if topic else topic_request].pop()
             result = self._getTopics(portaltypes = "Article", 
                                  topic = topic, noOfItems=self.noOfArticles)
             return result
@@ -125,10 +123,9 @@ class Frontpage(BrowserView):
 
     def getPublications(self, portaltypes = "Report"):
         topic = getattr( self.context.REQUEST, 'topic', None)
-        topic_request = 'themes' in self.context.REQUEST['URL0']
-        if topic_request:
-            topic = getTheme(self.context) 
-        if topic:
+        topic_request = getTheme(self.context)
+        if topic or topic_request:
+            topic = [topic if topic else topic_request].pop()
             result = self._getTopics(portaltypes = "Report", 
                                  topic = topic, noOfItems=self.noOfPublications)
             return result
@@ -136,26 +133,15 @@ class Frontpage(BrowserView):
         result =  self._getItemsWithVisibility(visibilityLevel, portaltypes  = portaltypes)[:self.noOfPublications]
         return result
     
-    def getDataCentreName(self):
-        """ get the name of the datacentre for the given theme of the context """
-        name = ''
-        name = getTheme(self.context)
-        if name:
-            return name.capitalize()
-        else:
-            name = getTheme(self.context.aq_inner.aq_parent)
-            name = [name.capitalize() if name else ''].pop()
-            return name
-
     def getAllProducts(self):
         """ get all latest published products for frontpage """
         portaltypes = ('Report','Article','Highlight','PressRelease', 'Assessment', 'Data', 'EEAFigure')
         interfaces = 'p4a.video.interfaces.IVideoEnhanced'
         visibilityLevel = ''
         topic = getattr( self.context.REQUEST, 'topic', None)
-        topic_request = 'themes' in self.context.REQUEST['URL0']
-        if topic_request:
-            topic = getTheme(self.context) 
+        topic_request = getTheme(self.context)
+        if topic or topic_request:
+            topic = [topic if topic else topic_request].pop()
         result = []
         for mytype in portaltypes:
             if topic:
@@ -269,7 +255,7 @@ class Frontpage(BrowserView):
             'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
-        themes = 'themes' in self.context.REQUEST.URL0
+        themes = getTheme(self.context)
         if themes:
             query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
         result = self.catalog(query)
@@ -295,10 +281,9 @@ class Frontpage(BrowserView):
 
     def getMultimedia(self):
         topic = getattr( self.context.REQUEST, 'topic', None)
-        topic_request = 'themes' in self.context.REQUEST['URL0']
-        if topic_request:
-            topic = getTheme(self.context) 
-        if topic:
+        topic_request = getTheme(self.context)
+        if topic or topic_request:
+            topic = [topic if topic else topic_request].pop()
             result = self._getTopics(object_provides= 
                                         'p4a.video.interfaces.IVideoEnhanced', 
                                  topic = topic, noOfItems=self.noOfMultimedia)
