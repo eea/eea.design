@@ -431,6 +431,15 @@ a.album-layout:hover {
   display: inline-block;
 }
 
+#portlet-followus dd a:hover {
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
 #twitter-link,
 #facebook-link,
 #youtube-link,
