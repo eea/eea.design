@@ -221,15 +221,5 @@
         </div>
 </metal:gallery-items>
 
-<metal:ajax-items define-macro="ajax-items">
-            <div class="gallery-listing">
-                <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
-            </div>
-            <div class="gallery-album">
-                <tal:enabled tal:define="enabled python: True">
-                    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
-                </tal:enabled>
-            </div>
-</metal:ajax-items>
 
 </html>
