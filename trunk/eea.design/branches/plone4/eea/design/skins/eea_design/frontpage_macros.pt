@@ -19,6 +19,29 @@
 </div>
 
 
+<metal:featured metal:define-macro="featured-item"
+     tal:define="featured_class featured_class|context/@@frontpage_highlights;
+                 highlight highlight|featured_class/getHighArticles;
+                 translate_tag translate_tag|string: featured-item;
+                 title title|string:Featured Article;"
+                 tal:condition="highlight">
+    <div class="featured roundedCorners">
+        <tal:translate i18n:translate="${translate_tag}">
+            <h2 class="column-title" i18n:domain="eea" tal:content="title">Box Name</h2>
+        </tal:translate>
+        <div class="highlights">
+            <div class="figure-left"><img alt="" tal:attributes="src string:${highlight/url}/image_thumb; title highlight/title; alt highlight/title" /></div>
+            <h3 class="highlight">
+                <a href="#" class="noPrint"
+                   tal:attributes="href highlight/url"
+                   tal:content="highlight/title">
+                       Highlight Title</a></h3>
+            <p tal:content="highlight/description">description</p>
+            <p><a href="#" class="moreLink"
+                tal:attributes="href highlight/url">Read more</a></p>
+        </div>
+</metal:featured>
+
 <div metal:define-macro="highArticles"
      id="articles-high"
      class="highlights"
@@ -27,31 +50,6 @@
                  plone_view nocall:plone_view|here;">
     <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
 </div>
-
-<metal:spotlight metal:define-macro="spotlightItem"
-                 tal:define="spotlight frontpage_view/getSpotlight;
-                             plone_view nocall:plone_view|here;"
-                 tal:condition="spotlight">
-    <div class="featured roundedCorners">
-        <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
-
-        <div id="spotlight-item"
-            class="highlights">
-            <div class="figure-left"><img alt="" tal:attributes="src string:${spotlight/url}/image_thumb; title spotlight/title; alt spotlight/title" /></div>
-            <h3 class="highlight">
-                <a href="#" class="noPrint"
-                   tal:attributes="href spotlight/url"
-                   tal:content="spotlight/title">
-                       Spotlight Title</a></h3>
-            <p tal:content="spotlight/description">description</p>
-
-            <p><a href="#" class="moreLink"
-                tal:attributes="href spotlight/url">Read more</a></p>
-
-        </div>
-    </div>
-
-</metal:spotlight>
 
 <div metal:define-macro="publications"
      id="publications-highlights"

@@ -27,10 +27,13 @@
                           </div>
                         </div>
 
-                        <metal:spotlight metal:use-macro="here/frontpage_macros/macros/spotlightItem">
-                            item title, description and image
-                        </metal:spotlight>
-                        
+                        <tal:spotlight 
+                             tal:define="featured_class context/@@frontpage_highlights;
+                                         highlight featured_class/getSpotlight;
+                                         translate_tag string:spotlight-item;
+                                         title string:Topic in the spotlight;">
+                            <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
+                        </tal:spotlight>
                         <!-- end featured and spotlight areas -->
 
                         <!-- community  divs -->

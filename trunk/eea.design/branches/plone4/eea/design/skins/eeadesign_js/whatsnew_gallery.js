@@ -19,7 +19,6 @@
                      return this.style.display === "block";
                 });
                 var address = site_address + cur_tab_val + "_gallery_macro";
-                console.log(address);
 
                 var no_results = $("<div class='portalMessage informationMessage'><p>No results are available for this topic</p></div>");
                 var gallery_ajax = $(".gallery-ajax", news);
@@ -31,7 +30,6 @@
                         }
                         else {
                             gallery_ajax.find('.gallery-listing').addClass('hiddenStructure');
-
                         }
                         if (cur_tab_val === "multimedia") {
                             $.getScript(site_address + "eea-mediacentre.js");
