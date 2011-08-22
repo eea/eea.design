@@ -3,15 +3,9 @@
         $("#highlights-high, #highlights-middle").tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
         $("ul#tabs").tabs("> .highlights");
 
-        var site_address = window.location.href;
-        // remove any # or #items links from the site link address
-        site_address = site_address.replace(/#\w*/, '');
-        
-        // when we need to load or construct a link we need for it to end 
-        // in / so we check for it and add it if not present
-        if ( site_address.charAt(site_address.length - 1) !== '/') {
-            site_address += '/';
-        }
+        var host = window.location.host, http = 'http://',
+            localhost = host.indexOf('localhost') != '-1' ? true : undefined,
+            site_address = localhost ? http + host + '/www/' : http + host + '/';
 
         $topic_selector = $("#topic-selector");
         $topic_selector.find('[value="default"]').remove();
@@ -25,6 +19,8 @@
                      return this.style.display === "block";
                 });
                 var address = site_address + cur_tab_val + "_gallery_macro";
+                console.log(address);
+
                 var no_results = $("<div class='portalMessage informationMessage'><p>No results are available for this topic</p></div>");
                 var gallery_ajax = $(".gallery-ajax", news);
                 var layout_selection = $('.gallery-layout-selection li a', news)[0];
