@@ -1,0 +1,120 @@
+<tal:block tal:define="foo python:request.set('disable_plone.leftcolumn', 1);
+            bar python:request.set('disable_plone.rightcolumn', 1);"/>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      i18n:domain="eea"
+      metal:use-macro="context/main_template/macros/master">
+    <head>
+
+    </head>
+    <body>
+
+    <div metal:fill-slot="main">
+
+        <h1 tal:content="context/Title">EEA Data and maps service</h1>
+        <tal:main-macro metal:define-macro="main">
+            <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
+                <div id="main-content">
+                    <div class="visualClear"><!-- &nbsp; --></div>
+                    <div id="articles-area" class="column-area">
+
+                        <!-- featured and spotlight areas 
+                        <metal:spotlight metal:use-macro="here/datamaps_macros/macros/featuredIndicator">
+                            item title, description and image
+                        </metal:spotlight>
+                        -->
+                        
+                        <!-- end featured and spotlight areas -->
+
+                        <!-- community  divs -->
+
+                        <div id="mobile">
+                            <a id="mobile-link" href="http://mobile.eea.europa.eu"></a>
+                        </div>
+                        
+                        <div id="social-links">
+                        <h2 class="column-title" i18n:translate="follow-us">Follow us</h2>
+                           <div metal:use-macro="here/frontpage_macros/macros/followus">
+                               Social links
+                           </div>
+                        </div>
+                        <!-- end community divs -->
+                        
+                        <div class="portletFooter">
+                        
+                        </div>
+                    </div>
+                        
+                    <div id="highlights-area" class="column-area">
+                    <!-- promotions_gallery_slideshow-->
+                    <metal:promotions 
+                        tal:define="frontpage python: True">
+                            <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
+                                promoted item
+                            </div>
+                    </metal:promotions>   
+                    <!-- end promotions_gallery_slideshow -->
+
+                        <div id="news-header">
+                        <h2> What's new</h2>
+                        <!-- select_topics -->
+                        <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector">
+                            <option value="">Filter by topic</option>
+                            <option value="">All topics</option>
+                            <tal:items tal:repeat="item items">
+                                <option  
+                                        tal:define="value python: item[0];"
+                                        tal:attributes="value value;"
+                                        tal:content="python: item[1]" />
+                            </tal:items>
+                        </select>
+                        </div>
+                        <!-- end select_topics -->
+
+                        <!-- tabs -->
+                        <div metal:define-macro="whatsnew-gallery">
+                            <ul id="tabs"
+                                tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps', 'Indicators', 'Graphs' ];">
+                                <li tal:repeat="tab tabnames">
+                                    <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
+                                </li>
+                            </ul>
+                            <!-- end_tabs -->
+                            
+                            <div metal:use-macro="here/datamaps_macros/macros/alldataproducts">
+                                All data products Highlights
+                            </div>
+                            <div metal:use-macro="here/datamaps_macros/macros/datasets">
+                                Datasets highlights
+                            </div>
+                            <div metal:use-macro="here/datamaps_macros/macros/maps">
+                                Maps Highlights
+                            </div>
+                            <div metal:use-macro="here/datamaps_macros/macros/interactivemaps">
+                                Interactive maps Highlights
+                            </div>
+                            <div metal:use-macro="here/datamaps_macros/macros/indicators">
+                                Indicators Highlights
+                            </div>
+                            <div metal:use-macro="here/datamaps_macros/macros/graphs">
+                                Graphs Highlights
+                            </div>
+
+                        </div>
+
+                        <div class="visualClear"><!-- &nbsp; --></div>
+                        <div class="portletFooter">
+                             <p><a href="highlights" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
+                        </div>
+                    </div>
+                    <div class="visualClear"><!-- &nbsp; --></div>
+                </div>
+                <!--<tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>-->
+            </div>
+
+        </tal:main-macro>
+    </div>
+
+    </body>
+</html>
+

@@ -1,28 +1,4 @@
 # -*- coding: utf-8 -*-
-#
-# File: frontpage.py
-#
-# Copyright (c) 2006 by []
-# Generator: ArchGenXML Version 1.5.1-svn
-#            http://plone.org/products/archgenxml
-#
-# GNU General Public License (GPL)
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
-# 02110-1301, USA.
-#
 
 __author__ = """unknown <unknown>"""
 __docformat__ = 'plaintext'
@@ -67,6 +43,12 @@ class DataMaps(BrowserView):
         """ Get latest published indicators. """
         interfaces = ('eea.indicators.content.interfaces.IIndicatorAssessment')
         return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+    
+    def getFeaturedIndicators(self):
+        """ Get featured indicators. """
+        interfaces = ('eea.indicators.content.interfaces.IIndicatorAssessment')
+        brains = _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+        return brains
 
     def getLatestMaps(self):
         """ Get latest published static maps. """
@@ -92,8 +74,8 @@ class DataMaps(BrowserView):
     def getAllProducts(self):
         """ get all latest data and maps merged into one single list """
         result = []
-        res1 = self.getLatestDatasets()[:self.noOfEachProduct];
-        res2 = self.getLatestIndicators()[:self.noOfEachProduct];
+        res1 = self.getLatestIndicators()[:self.noOfEachProduct];
+        res2 = self.getLatestDatasets()[:self.noOfEachProduct];
         res3 = self.getLatestMaps()[:self.noOfEachProduct];
         res4 = self.getLatestGraphs()[:self.noOfEachProduct];
         res5 = self.getLatestInteractiveMaps()[:self.noOfEachProduct];
