@@ -33,12 +33,11 @@
     <tal:translate i18n:translate="${archive_translate_tag}" tal:condition="archive_text">
         <a tal:attributes="href archive_href; class string: archives" tal:content="archive_text">Archive</a>
     </tal:translate>
-
      <metal:items tal:repeat="highlight python:highlights[:nr_items]">
         <tal:item tal:define="obj highlight/media|highlight;
                               url obj/getURL|highlight/getUrl|obj/absolute_url;
-                              title highlight/getNewsTitle|obj/Title;
-                              description highlight/getTeaser|obj/Description">
+                              title highlight/Title|highlight/getNewsTitle|obj/Title;
+                              description highlight/Description|highlight/getTeaser|obj/Description">
             <div class="featured roundedCorners">
                 <tal:translate i18n:translate="${translate_tag}">
                     <h2 class="column-title" i18n:domain="eea" tal:content="box_title">Box Name</h2>
