@@ -97,11 +97,13 @@
    background-color: #ffffff;
    }
 
-.faceted-top-widgets .faceted-widget .widget-fieldset {
+.faceted-top-widgets .faceted-widget .widget-fieldset,
+.faceted-center-widgets .faceted-widget .widget-fieldset {
     height: 50px;
 }
 
-.faceted-top-widgets .faceted-widget form {
+.faceted-top-widgets .faceted-widget form,
+.faceted-center-widgets .faceted-widget form {
    position:relative;
    top:-43px;
    left:212px;
@@ -125,7 +127,12 @@
 
 .left-area-js {
     margin-left: 205px !important;
-    width: 580px;
+    min-width: 580px;
+}
+
+.right-area-js {
+    margin-right: 205px !important;
+    min-width: 580px;
 }
 
 .ui-accordion .ui-state-default,
@@ -143,7 +150,12 @@
 
 /* c13 = the search box */
 
-.faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"] {
+.faceted-tagscloud-widget {
+    height: auto !important;
+}
+
+.faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"],
+.faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]{
    width:350px;
    height: 22px;
    font-size: 16px;
@@ -153,21 +165,25 @@
           -border-radius: 3px;
 }
 
-.faceted-top-widgets .faceted-widget {
+.faceted-top-widgets .faceted-widget,
+.faceted-center-widgets .faceted-widget {
    /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
    background-color: &dtml-lightBackgroundColor;;
    height:50px;
 }
 
 .faceted-top-widgets .faceted-widget .faceted-textwidget-place-all,
-.faceted-top-widgets .faceted-widget .faceted-textwidget-place-current {
+.faceted-top-widgets .faceted-widget .faceted-textwidget-place-current,
+.faceted-center-widgets .faceted-widget .faceted-textwidget-place-all,
+.faceted-center-widgets .faceted-widget .faceted-textwidget-place-current {
     display: inline-block;
     float: left;
     clear: right;
     margin-right: 20px;
 }
 
-.faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton {
+.faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton {
     color:&dtml-discreetColor;;
     background:&dtml-globalBackgroundColor;;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
@@ -191,7 +207,8 @@
             border-radius: 2px;
     float: right;
 }
-.faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton:hover {
+.faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton:hover,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton:hover {
     background-color:&dtml-corporateOrange;;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
     background: -moz-linear-gradient(270deg, orange, #FF9123) repeat scroll 0 0 transparent;
@@ -214,7 +231,9 @@
 
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
-.faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label {
+.faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label{
     display: inline;
     float: none;
     font-size: 11px;
@@ -2043,7 +2062,8 @@ div.managePortletsLink, a.managePortletsFallback {
 */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    .faceted-top-widgets .faceted-widget form {
+    .faceted-top-widgets .faceted-widget form,
+    .faceted-center-widgets .faceted-widget form {
         position: relative;
         top: -37px !important;
     }
