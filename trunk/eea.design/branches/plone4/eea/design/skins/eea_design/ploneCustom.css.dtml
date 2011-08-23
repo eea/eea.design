@@ -150,7 +150,9 @@
 
 /* c13 = the search box */
 
-.faceted-tagscloud-widget {
+.faceted-tagscloud-widget,
+.faceted-tagscloud-widget .widget-fieldset,
+.faceted-criteria-widget .widget-fieldset {
     height: auto !important;
 }
 
@@ -995,7 +997,8 @@ float:right;
 #searchbox_terminology input,
 #searchbox_terminology input:focus,
 #portal-searchbox input.searchButton,
-#portal-searchbox input.searchButton:hover{
+#portal-searchbox input.searchButton:hover,
+.searchField {
     background: transparent url('sprite-eeaimages.png') no-repeat scroll left center;
 }
 
@@ -1020,7 +1023,8 @@ float:right;
     background-position: -404px -115px !important;
 }
 
-#searchbox_terminology input {
+#searchbox_terminology input,
+.searchField {
     height: 30px;
     padding: 0 0 0 25px;
     width: 286px;
@@ -1033,7 +1037,8 @@ float:right;
     font-size: 0.8em;
 }
 
-#searchbox_terminology input:focus {
+#searchbox_terminology input:focus,
+.searchField:focus {
     font-style: normal;
     color: #000000;
     background-position: 0px -114px;
@@ -1054,6 +1059,12 @@ float:right;
 
 #search_advanced_link {
     float: left;
+}
+
+#portal-searchbox label {
+    font-size: 11px;
+    color: #FFFFFF;
+    vertical-align: middle;
 }
 
 /*  IE7 fixes */
