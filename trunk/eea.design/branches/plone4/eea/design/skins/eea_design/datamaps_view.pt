@@ -18,18 +18,35 @@
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-
-                        <tal:featured_indicator 
+                        <!-- featured content -->
+                        <tal:featured_item 
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestIndicators;
                                          translate_tag string:featured-indicator-item;
-                                         nr_items python:3;
+                                         nr_items python:1;
                                          box_title string:Featured indicator;
                                          archive_text string:See all;
                                          archive_href string:indicators;
                                          archive_translate_tag string:see-all;">
                             <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
-                        </tal:featured_indicator>
+                        </tal:featured_item>
+
+                        <tal:featured_item 
+                             tal:define="featured_class datamaps_view;
+                                         highlights featured_class/getLatestInteractiveData;
+                                         translate_tag string:featured-indicator-item;
+                                         nr_items python:1;
+                                         box_title string:Interactive data viewers;
+                                         archive_text string:See all;
+                                         archive_href string:data/data-viewers;
+                                         archive_translate_tag string:see-all;">
+                            <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
+                        </tal:featured_item>
+                        
+                        <div class="featured">
+                          <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
+                        </div>
+                        <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
 
                         <!-- community  divs -->
 

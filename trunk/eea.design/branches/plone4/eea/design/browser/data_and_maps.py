@@ -43,12 +43,6 @@ class DataMaps(BrowserView):
         """ Get latest published indicators. """
         interfaces = ('eea.indicators.content.interfaces.IIndicatorAssessment')
         return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
-    
-    def getFeaturedIndicators(self):
-        """ Get featured indicators. """
-        interfaces = ('eea.indicators.content.interfaces.IIndicatorAssessment')
-        brains = _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
-        return brains
 
     def getLatestMaps(self):
         """ Get latest published static maps. """

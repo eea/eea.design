@@ -53,7 +53,14 @@
 
 .portlet-promotions dl.portlet dt{
     text-align: center;
-    background-color: &dtml-mediumBackgroundColor;;
+    background-color: #ececec;
+    color: #000000;
+    font-size: 160%;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 0;
+    padding: 1em 1em 0.25em;
+    text-shadow: 1px 1px white;
 }
 
 .portlet-promotions dl.portlet .promo-prev {
@@ -104,13 +111,14 @@ dt.portletItem {
 }
 
 .portletHeader, dl.portlet dt.portletHeader {
-    font-weight:normal;
-    padding: 1em 0.5em;
-    margin-bottom:0.2em;
+    font-weight:normal !important;
     margin-left:0;
-    line-height: 1.1em;
-    font: bold 1.3em &dtml-fontFamily;;
+    font: normal 160% &dtml-fontFamily;;
     color:&dtml-fontColor;;
+    line-height: 1.4;
+    margin: 0;
+    padding: 1em 1em 0.25em;
+    text-shadow: 1px 1px white;
 }
 #portlet-navigation-tree .portletHeader,
 #portlet-navigation-tree .portletSubMenuHeader,
