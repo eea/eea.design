@@ -20,6 +20,10 @@
 ** demarant: Specific faceted navigation style for certain site sections
 */
 
+.ui-widget {
+    font-family: Verdana, Arial, sans-serif;
+}
+
 #faceted-form .faceted-widget {
    margin: 0 0 1em 0;
    padding-bottom: 1em;
@@ -44,9 +48,9 @@
 #faceted-form .widget-fieldset legend {
   background-color: &dtml-corporateGreen;;
   color: #ffffff;
-  padding: 5px 15px;
+  padding: 5px 10px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: normal;
   text-shadow: 1px 1px 1px #555555;
   -webkit-box-shadow: 1px 1px 1px #555555;
@@ -93,11 +97,11 @@
    background-color: #ffffff;
    }
 
-.section-publications #c13_widget .widget-fieldset {
+.faceted-top-widgets .faceted-widget .widget-fieldset {
     height: 50px;
 }
 
-.section-publications #c13_widget form {
+.faceted-top-widgets .faceted-widget form {
    position:relative;
    top:-43px;
    left:212px;
@@ -137,9 +141,9 @@
     clear: both !important;
 }
 
-/* c13 = the search box*/
+/* c13 = the search box */
 
-.section-publications #c13 {
+.faceted-top-widgets .faceted-widget .widget-filedset form input[type="text"] {
    width:350px;
    height: 22px;
    font-size: 16px;
@@ -149,21 +153,21 @@
           -border-radius: 3px;
 }
 
-.section-publications #c13_widget.faceted-widget {
+.faceted-top-widget .faceted-widget {
    /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
    background-color: &dtml-lightBackgroundColor;;
    height:50px;
 }
 
-.section-publications #c13_widget .faceted-textwidget-place-all,
-.section-publications #c13_widget .faceted-textwidget-place-current {
+.faceted-top-widget .faceted-widget .faceted-textwidget-place-all,
+.faceted-top-widget .faceted-widget .faceted-textwidget-place-current {
     display: inline-block;
     float: left;
     clear: right;
     margin-right: 20px;
 }
 
- .section-publications #c13_button.searchButton {
+.faceted-top-widget .faceted-widget form .searchButton {
     color:&dtml-discreetColor;;
     background:&dtml-globalBackgroundColor;;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
@@ -187,7 +191,7 @@
             border-radius: 2px;
     float: right;
 }
-.section-publications #c13_button.searchButton:hover {
+.faceted-top-widget .faceted-widget form .searchButton:hover {
     background-color:&dtml-corporateOrange;;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
     background: -moz-linear-gradient(270deg, orange, #FF9123) repeat scroll 0 0 transparent;
@@ -209,7 +213,8 @@
 }
 
 
-.section-publications #content #faceted-form #c13_widget.faceted-widget label {
+.faceted-top-widget .faceted-widget form .faceted-textwidget-place-all label,
+.faceted-top-widget .faceted-widget form .faceted-textwidget-place-current label {
     display: inline;
     float: none;
     font-size: 11px;
@@ -2038,7 +2043,7 @@ div.managePortletsLink, a.managePortletsFallback {
 */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    .section-publications #c13_widget form {
+    .faceted-top-widgets .faceted-widget form {
         position: relative;
         top: -37px !important;
     }
