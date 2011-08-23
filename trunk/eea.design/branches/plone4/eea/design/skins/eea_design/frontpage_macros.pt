@@ -21,6 +21,7 @@
 
 <metal:featured metal:define-macro="featured-item"
      tal:define="featured_class featured_class|context/@@frontpage_highlights;
+                 nr_items nr_items|python:1; 
                  highlights highlights|featured_class/getHighArticles;
                  translate_tag translate_tag|string: featured-item;
                  box_title box_title|string:Featured Article;
@@ -30,10 +31,10 @@
                  tal:condition="highlights">
 
     <tal:translate i18n:translate="${archive_translate_tag}" tal:condition="archive_text">
-        <a tal:attributes="href archive_text; class string: archives" tal:content="archive_text">Archive</a>
+        <a tal:attributes="href archive_href; class string: archives" tal:content="archive_text">Archive</a>
     </tal:translate>
 
-     <metal:items tal:repeat="highlight highlights">
+     <metal:items tal:repeat="highlight python:highlights[:nr_items]">
         <tal:item tal:define="obj highlight/media|highlight;
                               url obj/getURL|highlight/getUrl|obj/absolute_url;
                               title highlight/getNewsTitle|obj/Title;
