@@ -13,4 +13,5 @@ class EEAFooterPortletRenderer(ColumnPortletManagerRenderer):
     A renderer for the footer portlets
     """
     adapts(Interface, IDefaultBrowserLayer, IBrowserView, IFooterPortletManager)
-    template = ViewPageTemplateFile('templates/renderer.pt')
+    template = ViewPageTemplateFile('../templates/renderer.pt')
+

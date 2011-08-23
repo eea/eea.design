@@ -62,6 +62,11 @@
         layer=".interfaces.IEEACommonLayer"
         />
 
+    <browser:resourceDirectory
+        name="eea.design.portlets"
+        directory="portlets"
+        layer=".interfaces.IEEACommonLayer"
+        />
 
     <!-- Viewlets registration -->
 
@@ -346,11 +351,18 @@
         layer=".interfaces.IEEACommonLayer"
         />
 
+    <plone:portlet
+        name="portlets.PromoGallery"
+        interface=".portlets.promogallery.IPromoGallery"
+        assignment=".portlets.promogallery.Assignment"
+        renderer=".portlets.promogallery.Renderer"
+        addview=".portlets.promogallery.AddForm"
+        />
     <!-- ADAPTERS -->
 
     <!-- make an adapter for our very own footer manager renderer -->
     <adapter
-        factory="eea.design.browser.portlets.EEAFooterPortletRenderer"
+        factory="eea.design.browser.portlets.footer.EEAFooterPortletRenderer"
         provides="plone.portlets.interfaces.IPortletManagerRenderer"
         />
 

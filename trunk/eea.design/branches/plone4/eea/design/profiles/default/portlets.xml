@@ -1,7 +1,20 @@
 <?xml version="1.0"?>
-<portlets>
+<portlets xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="plone">
+
+ <portlet 
+   addview="portlets.PromoGallery"
+   title="EEA Promotion Gallery"
+   description="A portlet which displays a gallery with the latest promoted items"
+   i18n:attributes="title title_recent_portlet;
+                    description description_recent_portlet">
+       <for interface="plone.app.portlets.interfaces.IColumn" />
+       <for interface="plone.app.portlets.interfaces.IDashboard" />
+  </portlet>
+
  <portletmanager
    name="plone.footer"
    type="eea.design.browser.interfaces.IFooterPortletManager"
  />
+
 </portlets>
