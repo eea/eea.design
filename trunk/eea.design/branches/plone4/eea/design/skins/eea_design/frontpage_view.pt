@@ -20,7 +20,7 @@
 
                         <!-- featured and spotlight areas -->
                         <tal:featured_article 
-                             tal:define="featured_class context/@@frontpage_highlights;
+                             tal:define="featured_class frontpage_view;
                                          highlights featured_class/getHighArticles;
                                          translate_tag string:featured-article-item;
                                          box_title string:Featured Article;
@@ -31,7 +31,7 @@
                         </tal:featured_article>
 
                         <tal:spotlight 
-                             tal:define="featured_class context/@@frontpage_highlights;
+                             tal:define="featured_class frontpage_view;
                                          highlights featured_class/getSpotlight;
                                          translate_tag string:spotlight-item;
                                          box_title string:Topic in the spotlight;">
