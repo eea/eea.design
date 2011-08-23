@@ -114,7 +114,7 @@ class Frontpage(BrowserView):
         }
 
         result = self.catalog(query)
-        Spotlight = {}
+        spotlight = []
         for brain in result:
             obj = brain.getObject()
             promo = IPromotion(obj)
@@ -122,12 +122,9 @@ class Frontpage(BrowserView):
                 continue
             if not promo.active:
                 continue
-            Spotlight['effective'] = brain.effective
-            Spotlight['title'] = obj.Title()
-            Spotlight['description'] = obj.Description()
-            Spotlight['url'] = obj.absolute_url()
+            spotlight.append(brain)
             break
-        return Spotlight
+        return spotlight
 
     def getPromotions(self):
         """ retrieves external and internal promotions """

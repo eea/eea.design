@@ -19,22 +19,25 @@
                     <div id="articles-area" class="column-area">
 
                         <!-- featured and spotlight areas -->
-                        <div class="featured roundedCorners">
-                          <a href="articles" class="archives" i18n:translate="archive">Archive</a>
-                          <h2 class="column-title" i18n:domain="eea" i18n:translate="featured-articles">Featured article</h2>
-                          <div metal:use-macro="here/frontpage_macros/macros/highArticles">
-                            item title, description and image
-                          </div>
-                        </div>
+                        <tal:featured_article 
+                             tal:define="featured_class context/@@frontpage_highlights;
+                                         highlights featured_class/getHighArticles;
+                                         translate_tag string:featured-article-item;
+                                         box_title string:Featured Article;
+                                         archive_text string:Archive;
+                                         archive_href string:archives;
+                                         archive_translate_tag string:archives;">
+                            <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
+                        </tal:featured_article>
 
                         <tal:spotlight 
                              tal:define="featured_class context/@@frontpage_highlights;
-                                         highlight featured_class/getSpotlight;
+                                         highlights featured_class/getSpotlight;
                                          translate_tag string:spotlight-item;
-                                         title string:Topic in the spotlight;">
+                                         box_title string:Topic in the spotlight;">
                             <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
                         </tal:spotlight>
-                        <!-- end featured and spotlight areas -->
+                         <!--end featured and spotlight areas -->
 
                         <!-- community  divs -->
                         <div id="forum">
