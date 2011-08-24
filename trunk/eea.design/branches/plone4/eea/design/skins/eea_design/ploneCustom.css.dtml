@@ -24,6 +24,11 @@
     font-family: Verdana, Arial, sans-serif;
 }
 
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-size: 12px;
+    padding: 3px;
+}
+
 #faceted-form .faceted-widget {
    margin: 0 0 1em 0;
    padding-bottom: 1em;
@@ -1069,6 +1074,7 @@ float:right;
     font-style: normal;
     color: #000000;
     background-position: 0px -114px;
+    background-color: transparent;
 }
 
 #search_glossary_link, #search_advanced_link {
