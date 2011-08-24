@@ -88,5 +88,6 @@ class DataMaps(BrowserView):
     
     def getPromotions(self):
         """ retrieves external and internal promotions for data and maps section """
-        return self.getAllProducts()
+        res = [b.getObject() for b in self.getAllProducts()]
+        return res
     

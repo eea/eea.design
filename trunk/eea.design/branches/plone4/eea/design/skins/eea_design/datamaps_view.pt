@@ -70,7 +70,7 @@
                     <div id="highlights-area" class="column-area">
                     <!-- promotions_gallery_slideshow-->
                     <metal:promotions 
-                        tal:define="frontpage python: True; 
+                        tal:define="frontpage python: True;
                                     promo_view datamaps_view;">
                             <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
                                 promoted item

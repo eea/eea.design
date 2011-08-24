@@ -5,7 +5,7 @@
 <div metal:define-macro="datasets"
      id="datasets-highlights"
      class="highlights"
-     tal:define="datamaps_view context/@@data_and_maps_logic;
+     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestDatasets;
                  plone_view nocall:plone_view|here;
                  hide_listing python: False;
@@ -21,7 +21,7 @@
 <div metal:define-macro="maps"
      class="highlights"
      id="maps-highlights"
-     tal:define="datamaps_view context/@@data_and_maps_logic;
+     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestMaps;
                  hide_listing python: False;
                  hide_album python: True;"
@@ -36,7 +36,7 @@
 <div metal:define-macro="indicators"
      id="indicators-highlights"
      class="highlights"
-     tal:define="datamaps_view context/@@data_and_maps_logic;
+     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestIndicators;
                  plone_view nocall:plone_view|here;
                  hide_listing python: True;
@@ -55,7 +55,7 @@
 <div metal:define-macro="highArticles"
      id="articles-high"
      class="highlights"
-     tal:define="frontpage_view context/@@frontpage_highlights;
+     tal:define="frontpage_view datamaps_view|context/@@frontpage_highlights;
                  highlights highlights|frontpage_view/getHighArticles;
                  plone_view nocall:plone_view|here;">
     <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
@@ -163,7 +163,7 @@
 <div metal:define-macro="graphs"
      class="highlights"
      id="graphs-highlights"
-     tal:define="datamaps_view context/@@data_and_maps_logic;
+     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestGraphs;
                  hide_album python: False;
                  hide_listing python: True;"
@@ -178,7 +178,7 @@
 <div metal:define-macro="interactivemaps"
      class="highlights"
      id="interactivemaps-highlights"
-     tal:define="datamaps_view context/@@data_and_maps_logic;
+     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestInteractiveMaps;
                  hide_album python: False;
                  hide_listing python: True;"
@@ -194,7 +194,7 @@
 <div metal:define-macro="alldataproducts"
      class="highlights"
      id="alldataproducts-highlights" 
-     tal:define="datamaps_view context/@@data_and_maps_logic;
+     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getAllProducts;
                  hide_album python: False;
                  hide_listing python: True;"
