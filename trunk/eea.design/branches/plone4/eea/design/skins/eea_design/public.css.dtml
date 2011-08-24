@@ -1435,6 +1435,7 @@ label {
 }
 
 #content label {
+   cursor: pointer;
 }
 
 #content optgroup {
