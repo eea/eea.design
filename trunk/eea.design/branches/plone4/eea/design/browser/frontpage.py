@@ -123,43 +123,8 @@ class Frontpage(BrowserView):
         return spotlight
 
     def getPromotions(self):
-        """ retrieves external and internal promotions """
-        query = {
-            'object_provides': {
-                'query': [
-                    'eea.promotion.interfaces.IPromoted',
-                    'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
-                ],
-                'operator': 'or',
-            },
-            'review_state': 'published',
-            'sort_on': 'effective',
-            'sort_order' : 'reverse',
-            'effectiveRange' : self.now,
-        }
-        themes = getTheme(self.context)
-        if themes:
-            query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
-        result = self.catalog(query)
-        cPromos = []
-        for brain in result:
-            obj = brain.getObject()
-            promo = IPromotion(obj)
-
-            if IVideoEnhanced.providedBy(obj):
-                continue
-            if themes:
-                if not promo.display_on_themepage:
-                    continue
-            else:
-                if not promo.display_on_frontpage:
-                    continue
-            if not promo.active:
-                continue
-            cPromos.append(obj)
-            if len(cPromos) == self.noOfPromotions:
-                break
-        return cPromos
+        result = _getPromotions(self)
+        return result
 
     def getMultimedia(self):
         """ retrieves multimedia videos filtered by date and by topic """
@@ -274,6 +239,46 @@ class Frontpage(BrowserView):
 ## end deprecated visibility methods
 
 ## Utility functions 
+
+def _getPromotions(self):
+    """ utility function to retrieves external and internal promotions """
+    query = {
+        'object_provides': {
+            'query': [
+                'eea.promotion.interfaces.IPromoted',
+                'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
+            ],
+            'operator': 'or',
+        },
+        'review_state': 'published',
+        'sort_on': 'effective',
+        'sort_order' : 'reverse',
+        'effectiveRange' : self.now,
+    }
+    
+    themes = getTheme(self.context.aq_inner)
+    if themes:
+        query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
+    result = self.catalog(query)
+    cPromos = []
+    for brain in result:
+        obj = brain.getObject()
+        promo = IPromotion(obj)
+
+        if IVideoEnhanced.providedBy(obj):
+            continue
+        if themes:
+            if not promo.display_on_themepage:
+                continue
+        else:
+            if not promo.display_on_frontpage:
+                continue
+        if not promo.active:
+            continue
+        cPromos.append(obj)
+        if len(cPromos) == self.noOfPromotions:
+            break
+    return cPromos
 def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = '', topic = ''):
     """ retrieves items of certain content types and/or interface and certain visibility level. """
     query = {
@@ -291,6 +296,9 @@ def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interf
         query['getThemes'] = topic
         return self.catalog.searchResults(query)
     return self.catalog.searchResults(query)
+
+
+
 
 def _getTopics(self, topic = '', portaltypes = '', object_provides = '', noOfItems = ''):
     """ retrieves items of certain content types and/or interface and
@@ -315,7 +323,7 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None, noO
     #if topic is not passed in the REQUEST variable
     #then we try to get it from the context object
     topic = getattr(self.context.REQUEST, 'topic', None)
-    topic_request = getTheme(self.context)
+    topic_request = getTheme(self.context.aq_inner)
     if topic or topic_request:
         topic = topic if topic else topic_request
 
@@ -335,3 +343,4 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None, noO
             result =  _getItemsWithVisibility(self, visibilityLevel = visibilityLevel, interfaces  = interfaces)[:noOfItems]
 
     return result
+

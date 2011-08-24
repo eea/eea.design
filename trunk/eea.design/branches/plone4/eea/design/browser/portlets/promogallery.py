@@ -5,15 +5,12 @@ from plone.app.portlets.portlets import base
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-from p4a.video.interfaces import IVideoEnhanced
-from eea.themecentre.themecentre import getTheme
-from eea.promotion.interfaces import IPromotion
 from plone.memoize.compress import xhtml_compress
 from Products.CMFCore.utils import getToolByName
 
 from DateTime import DateTime
 from zope.component import getMultiAdapter
-
+from eea.design.browser.frontpage import _getPromotions
 
 class IPromoGallery(IPortletDataProvider):
     """Promo Gallery portlet
@@ -59,47 +56,12 @@ class Renderer(base.Renderer):
     def available(self):
         """Show the portlet only if there are one or more elements."""
         plone = getMultiAdapter((self.context, self.request), name=u'plone_context_state')
-        return plone.is_view_template() and len(self._data())
+        return plone.is_view_template() and len(self.get_promotions())
 
     def get_promotions(self):
         """ promotions """
-        return self._data()
-
-    def _data(self):
-        """ retrieves external and internal promotions """
-        query = {
-            'object_provides': {
-                'query': [
-                    'eea.promotion.interfaces.IPromoted',
-                    'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
-                ],
-                'operator': 'or',
-            },
-            'review_state': 'published',
-            'sort_on': 'effective',
-            'sort_order' : 'reverse',
-            'effectiveRange' : self.now,
-        }
-        themes = getTheme(self.context)
-        if themes:
-            query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
-        result = self.catalog(query)
-        cPromos = []
-        for brain in result:
-            obj = brain.getObject()
-            promo = IPromotion(obj)
-
-            if IVideoEnhanced.providedBy(obj):
-                continue
-            if themes:
-                if not promo.display_on_themepage:
-                    continue
-            if not promo.active:
-                continue
-            cPromos.append(obj)
-            if len(cPromos) == self.noOfPromotions:
-                break
-        return cPromos
+        result = _getPromotions(self)
+        return result
 
 class AddForm(base.NullAddForm):
     """Portlet add form.

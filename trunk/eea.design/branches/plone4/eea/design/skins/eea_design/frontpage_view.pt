@@ -19,8 +19,9 @@
                     <div id="articles-area" class="column-area">
 
                         <!-- featured and spotlight areas -->
-                        <tal:featured_article 
-                             tal:define="featured_class frontpage_view;
+                        
+                        <tal:featured_article metal:define-macro="featured_article"
+                             tal:define="featured_class context/@@frontpage_highlights;
                                          highlights featured_class/getHighArticles;
                                          translate_tag string:featured-article-item;
                                          box_title string:Featured Article;
