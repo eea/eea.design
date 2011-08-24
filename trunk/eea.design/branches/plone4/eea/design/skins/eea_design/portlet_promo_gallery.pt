@@ -1,7 +1,6 @@
 <metal:promos metal:define-macro="portlet"
                 tal:define="
-                frontpage_view context/@@frontpage_highlights;       
-                highlights python: frontpage_view.getPromotions;
+                highlights view/get_promotions|context/@@frontpage_highlights/getPromotions;
                 plone_view nocall:plone_view|here;
                 frontpage_gallery frontpage|nothing;
                 small_factor python: '' if frontpage_gallery else '-sm';"
