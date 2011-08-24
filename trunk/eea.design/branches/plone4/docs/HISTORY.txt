@@ -5,6 +5,8 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Feature: extended the common feature-item macro with "descr_max_length" integer parameter for cropping the lengthy descriptions, default 200 chars [demarant].
+
 * Feature/Bug fix: refs #4425, fixed a small bug with href for the new featured macro. added the feature of limiting the number of items to show [demarant].
 
 * Feature: Added first version of "all products" in the whatsnew section. it remains to resort the list by effective date. [demarant]
