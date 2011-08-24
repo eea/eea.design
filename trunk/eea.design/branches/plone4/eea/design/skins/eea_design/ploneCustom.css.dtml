@@ -126,16 +126,16 @@
     font-weight: normal;
 }
 
-#right-area, #left-area {
+#faceted-form #right-area, #faceted-form #left-area {
     width: 215px !important;
 }
 
-.left-area-js {
+#faceted-form .left-area-js {
     margin-left: 220px !important;
     min-width: 550px;
 }
 
-.right-area-js {
+#faceted-form .right-area-js {
     margin-right: 220px !important;
     min-width: 550px;
 }
