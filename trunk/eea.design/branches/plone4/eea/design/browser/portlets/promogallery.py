@@ -13,7 +13,7 @@ from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 
 from DateTime import DateTime
-
+from zope.component import getMultiAdapter
 
 
 class IPromoGallery(IPortletDataProvider):
@@ -61,7 +61,8 @@ class Renderer(base.Renderer):
     @property
     def available(self):
         """Show the portlet only if there are one or more elements."""
-        return len(self._data())
+        plone = getMultiAdapter((self.context, self.request), name=u'plone_context_state')
+        return plone.is_view_template() and len(self._data())
 
     def get_promotions(self):
         """ promotions """
@@ -82,7 +83,6 @@ class Renderer(base.Renderer):
             'sort_order' : 'reverse',
             'effectiveRange' : self.now,
         }
-        import pdb; pdb.set_trace( )
         themes = getTheme(self.context)
         if themes:
             query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
