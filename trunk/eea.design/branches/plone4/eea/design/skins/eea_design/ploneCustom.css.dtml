@@ -2002,7 +2002,11 @@ div.position-3\3a 4 {margin-left:    -440px;}
 
 #slide-menu {
     float: left;
-    width: 182px;
+    width: 220px;
+    border: 1px solid &dtml-mediumBackgroundColor;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
 }
 
 #portal-column-two .visualPadding {
@@ -2088,9 +2092,8 @@ div.position-0 {
 /* Added from public */
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
     padding: 0px;
-    border-bottom: 0em;
     line-height: 1.5em;
-    margin: 0px;
+    margin: 5px;
 }
 
 dl.portlet ul.navTreeLevel1 .navTreeItem {
