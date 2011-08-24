@@ -127,17 +127,17 @@
 }
 
 #right-area, #left-area {
-    width: 200px !important;
+    width: 215px !important;
 }
 
 .left-area-js {
-    margin-left: 205px !important;
-    min-width: 580px;
+    margin-left: 220px !important;
+    min-width: 550px;
 }
 
 .right-area-js {
-    margin-right: 205px !important;
-    min-width: 580px;
+    margin-right: 220px !important;
+    min-width: 550px;
 }
 
 .ui-accordion .ui-state-default,
