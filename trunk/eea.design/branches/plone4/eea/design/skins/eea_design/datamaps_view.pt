@@ -129,6 +129,15 @@
                         <div class="portletFooter">
                              <p><a href="highlights" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
                         </div>
+			
+			<!-- Popular tags -->
+			<div id="faceted-form">
+			  <div id="tag-cloud">
+	 	            <div id="tag-cloud-content" tal:define="faceted_path python:'find/global'"> 
+	 	                <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
+			    </div>
+                          </div>
+			</div>
                     </div>
                     <div class="visualClear"><!-- &nbsp; --></div>
                 </div>
