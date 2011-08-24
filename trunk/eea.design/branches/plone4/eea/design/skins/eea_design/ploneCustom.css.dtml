@@ -140,6 +140,15 @@
     min-width: 550px;
 }
 
+#faceted-form .tags-cloud li {
+   color: &dtml-linkColor; !important;
+}
+
+#faceted-form .tags-cloud li:hover {
+    background-color: &dtml-corporateOrange;; !important;
+    color: white !important;
+}
+
 .ui-accordion .ui-state-default,
 .ui-accordion .ui-state-active {
     margin: 0 !important;
