@@ -88,14 +88,10 @@ class Frontpage(BrowserView):
 
         return highlights
 
-    def getHighArticles(self, topic = ''):
+    def getHighArticles(self):
         """ return a defined number of high visibility articles items """
-        if topic:
-            topic = getTheme(self.context)
-            results =  self.getHigh(('Article', ), 'thumb', topic)
-            return results
-        results =  self.getHigh(('Article', ), 'thumb')
-        return results
+        visibilityLevel = ['top']
+        return _getItems(self, visibilityLevel = visibilityLevel, portaltypes = 'Article', noOfItems=self.noOfHigh)
 
     def getSpotlight(self):
         """ retrieves promoted item that has the spotlight promotion assigned """

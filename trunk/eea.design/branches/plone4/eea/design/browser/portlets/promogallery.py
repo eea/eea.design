@@ -9,7 +9,6 @@ from p4a.video.interfaces import IVideoEnhanced
 from eea.themecentre.themecentre import getTheme
 from eea.promotion.interfaces import IPromotion
 from plone.memoize.compress import xhtml_compress
-from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 
 from DateTime import DateTime
@@ -51,8 +50,6 @@ class Renderer(base.Renderer):
         portal_properties = getToolByName(context, 'portal_properties')
         frontpage_properties = getattr(portal_properties, 'frontpage_properties')
 
-        self.promotions = []
-        self.portal_url = getToolByName(aq_inner(context), 'portal_url')()
         self.noOfPromotions = frontpage_properties.getProperty('noOfPromotions', 7)
 
     def render(self):

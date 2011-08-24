@@ -5,9 +5,9 @@
                    plone_view context/@@plone;
                    template_id options/template_id | template/getId | nothing;
                    view_template_id plone_view/getViewTemplateId;
-                   isViewTemplate python:template_id==view_template_id or template_id=='index'"
-            i18n:domain="eea">
-<!--  #TODO           tal:condition="isViewTemplate" -->
+                   isViewTemplate context/@@plone_context_state/is_view_template;"
+                   i18n:domain="eea"
+                   tal:condition="isViewTemplate">
 
     <!-- Comments anchor -->
     <h2 id="eea-comments" tal:condition="python:isDiscussionAllowed or not isAnon">Comments</h2>
