@@ -152,6 +152,7 @@
 
 .faceted-tagscloud-widget,
 .faceted-tagscloud-widget .widget-fieldset,
+.faceted-criteria-widget,
 .faceted-criteria-widget .widget-fieldset {
     height: auto !important;
 }
@@ -242,6 +243,10 @@
     line-height: 13px;
     padding-bottom: 0;
     width: 120px;
+}
+
+.faceted-results .photoAlbumEntry {
+    margin: 0 0 25px 25px !important;
 }
 
 /* end of specific faceted navigation style */
