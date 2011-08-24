@@ -12,6 +12,16 @@
        <for interface="plone.app.portlets.interfaces.IDashboard" />
   </portlet>
 
+ <portlet 
+   addview="portlets.FeaturedArticle"
+   title="EEA Featured Article"
+   description="A portlet which displays a featured article"
+   i18n:attributes="title title_recent_portlet;
+                    description description_recent_portlet">
+       <for interface="plone.app.portlets.interfaces.IColumn" />
+       <for interface="plone.app.portlets.interfaces.IDashboard" />
+  </portlet>
+
  <portletmanager
    name="plone.footer"
    type="eea.design.browser.interfaces.IFooterPortletManager"

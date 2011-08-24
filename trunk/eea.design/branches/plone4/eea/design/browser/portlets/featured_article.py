@@ -10,10 +10,10 @@ from Products.CMFCore.utils import getToolByName
 
 from DateTime import DateTime
 from zope.component import getMultiAdapter
-from eea.design.browser.frontpage import _getPromotions
+from eea.design.browser.frontpage import _getHighArticles
 
-class IPromoGallery(IPortletDataProvider):
-    """Promo Gallery portlet
+class IFeaturedArticle(IPortletDataProvider):
+    """ Featured Article portlet
     """
 
 class Assignment(base.Assignment):
@@ -21,7 +21,7 @@ class Assignment(base.Assignment):
     This is what is actually managed through the portlets UI and associated
     with columns.
     """
-    implements(IPromoGallery)
+    implements(IFeaturedArticle)
 
     def __init__(self):
         pass
@@ -31,12 +31,12 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return "EEA Promotion Gallery"
+        return "EEA Featured Article"
 
 class Renderer(base.Renderer):
     """Portlet renderer.
     """
-    _template = ViewPageTemplateFile('promogallery.pt')
+    _template = ViewPageTemplateFile('featured_article.pt')
 
     def __init__(self, *args):
         """ init """
@@ -47,7 +47,7 @@ class Renderer(base.Renderer):
         portal_properties = getToolByName(context, 'portal_properties')
         frontpage_properties = getattr(portal_properties, 'frontpage_properties')
 
-        self.noOfItems = frontpage_properties.getProperty('noOfPromotions', 7)
+        self.noOfItems = frontpage_properties.getProperty('noOfHigh', 1)
 
     def render(self):
         return xhtml_compress(self._template())
@@ -56,11 +56,11 @@ class Renderer(base.Renderer):
     def available(self):
         """Show the portlet only if there are one or more elements."""
         plone = getMultiAdapter((self.context, self.request), name=u'plone_context_state')
-        return plone.is_view_template() and len(self.get_promotions())
+        return plone.is_view_template() and len(self.get_articles())
 
-    def get_promotions(self):
-        """ promotions """
-        result = _getPromotions(self, noOfItems = self.noOfItems)
+    def get_articles(self):
+        """ retrieve high visibility articles """
+        result = _getHighArticles(self, noOfItems = self.noOfItems)
         return result
 
 class AddForm(base.NullAddForm):

@@ -90,8 +90,7 @@ class Frontpage(BrowserView):
 
     def getHighArticles(self):
         """ return a defined number of high visibility articles items """
-        visibilityLevel = ['top']
-        return _getItems(self, visibilityLevel = visibilityLevel, portaltypes = 'Article', noOfItems=self.noOfHigh)
+        return _getHighArticles(self, noOfItems=self.noOfHigh)
 
     def getSpotlight(self):
         """ retrieves promoted item that has the spotlight promotion assigned """
@@ -123,7 +122,7 @@ class Frontpage(BrowserView):
         return spotlight
 
     def getPromotions(self):
-        result = _getPromotions(self)
+        result = _getPromotions(self, noOfItems = self.noOfPromotions)
         return result
 
     def getMultimedia(self):
@@ -240,8 +239,8 @@ class Frontpage(BrowserView):
 
 ## Utility functions 
 
-def _getPromotions(self):
-    """ utility function to retrieves external and internal promotions """
+def _getPromotions(self, noOfItems = 6):
+    """ utility function to retrieve external and internal promotions """
     query = {
         'object_provides': {
             'query': [
@@ -255,7 +254,7 @@ def _getPromotions(self):
         'sort_order' : 'reverse',
         'effectiveRange' : self.now,
     }
-    
+
     themes = getTheme(self.context.aq_inner)
     if themes:
         query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
@@ -276,9 +275,15 @@ def _getPromotions(self):
         if not promo.active:
             continue
         cPromos.append(obj)
-        if len(cPromos) == self.noOfPromotions:
+        if len(cPromos) == noOfItems:
             break
     return cPromos
+
+def _getHighArticles(self, noOfItems = 1):
+    """ utility function to return a defined number of high visibility articles items """
+    visibilityLevel = ['top']
+    return _getItems(self, visibilityLevel = visibilityLevel, portaltypes = 'Article', noOfItems=noOfItems)
+
 def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = '', topic = ''):
     """ retrieves items of certain content types and/or interface and certain visibility level. """
     query = {
@@ -296,9 +301,6 @@ def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interf
         query['getThemes'] = topic
         return self.catalog.searchResults(query)
     return self.catalog.searchResults(query)
-
-
-
 
 def _getTopics(self, topic = '', portaltypes = '', object_provides = '', noOfItems = ''):
     """ retrieves items of certain content types and/or interface and

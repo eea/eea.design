@@ -358,6 +358,14 @@
         renderer=".portlets.promogallery.Renderer"
         addview=".portlets.promogallery.AddForm"
         />
+
+    <plone:portlet
+        name="portlets.FeaturedArticle"
+        interface=".portlets.featured_article.IFeaturedArticle"
+        assignment=".portlets.featured_article.Assignment"
+        renderer=".portlets.featured_article.Renderer"
+        addview=".portlets.featured_article.AddForm"
+        />
     <!-- ADAPTERS -->
 
     <!-- make an adapter for our very own footer manager renderer -->
