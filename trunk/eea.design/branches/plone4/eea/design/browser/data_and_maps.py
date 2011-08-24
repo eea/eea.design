@@ -85,4 +85,8 @@ class DataMaps(BrowserView):
         #TODO/OPTIONAL the list may be re-sorted on effective date.
 
         return result
-
+    
+    def getPromotions(self):
+        """ retrieves external and internal promotions for data and maps section """
+        return self.getAllProducts()
+    
