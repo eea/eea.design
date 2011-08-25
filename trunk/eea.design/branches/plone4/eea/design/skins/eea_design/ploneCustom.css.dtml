@@ -2007,6 +2007,7 @@ div.position-3\3a 4 {margin-left:    -440px;}
     -webkit-border-radius: 3px;
        -moz-border-radius: 3px;
             border-radius: 3px;
+    background-color: #FFFFFF;
 }
 
 #portal-column-two .visualPadding {

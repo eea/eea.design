@@ -807,8 +807,8 @@ dl.portletNavigationTree dt.current span.title {
 }
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
-  color: #8E004D;
-  background-color: &dtml-corporateGreen;;
+  color: #333333;
+  background-color: &dtml-lightBackgroundColor;;
 }
 
 #portal-column-one .portlet {

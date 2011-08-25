@@ -385,6 +385,16 @@ dl.portlet ul.navTree li a:hover {
    color: #333333 !important;
 }
 
+.navTreeItemInPath > ul.navTreeLevel1 li > a {
+   border: 1px solid red;
+   padding-left: 25px !important;
+   width: auto !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel2 li > a {
+   padding-left: 45px !important;
+}
+
 dl.portletNavigationTree dd.portletItem {
     padding: 0;
 }
