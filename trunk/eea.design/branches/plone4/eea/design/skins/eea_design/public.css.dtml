@@ -365,10 +365,24 @@ dl.portlet ul.navTree li a {
     border: none;
     display: block;
     zoom: 1;
+    margin: 0;
+    padding: 0 0 0 25px;
+    background-color: #FFFFFF;
+    text-shadow: none;
+    -webkit-transition: background-color, color, text-shadow .3s;
+       -moz-transition: background-color, color, text-shadow .3s;
+         -o-transition: background-color, color, text-shadow .3s;
+            transition: background-color, color, text-shadow .3s;
 }
 
 dl.portlet ul.navTree li a:hover {
-
+   background-color: &dtml-lightBackgroundColor;;
+   color: &dtml-inputFontColor;;
+   text-shadow: 0 1px 0 #FFFFFF;
+   -webkit-transition: background-color, color, text-shadow .3s;
+      -moz-transition: background-color, color, text-shadow .3s;
+        -o-transition: background-color, color, text-shadow .3s;
+           transition: background-color, color, text-shadow .3s;
 }
 
 dl.portletNavigationTree dd.portletItem {
@@ -382,7 +396,7 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 }
 
 dl.portlet ul.navTreeLevel1 .navTreeItem {
-    padding-left: 0.5em;
+    padding-left: 0;
     line-height: 2em;
 }
 
@@ -463,7 +477,10 @@ dl.portlet a:hover {
 
 #category a.link-category, #themes-tags a.link-category {
     color: black;
-    padding: 0.25em 0.5em;
+    padding: 0 5px;
+    margin: 2px 0;
+    word-break: keep-all;
+    display: inline-block;
     background: &dtml-mediumBackgroundColor;;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;

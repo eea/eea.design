@@ -2003,7 +2003,7 @@ div.position-3\3a 4 {margin-left:    -440px;}
 #slide-menu {
     float: left;
     width: 220px;
-    border: 1px solid &dtml-mediumBackgroundColor;
+    border: 1px solid &dtml-mediumBackgroundColor;;
     -webkit-border-radius: 3px;
        -moz-border-radius: 3px;
             border-radius: 3px;
@@ -2091,9 +2091,10 @@ div.position-0 {
 
 /* Added from public */
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    padding: 0px;
+    padding: 0px !important;
     line-height: 1.5em;
-    margin: 5px;
+    margin: 0px !important;
+    
 }
 
 dl.portlet ul.navTreeLevel1 .navTreeItem {
