@@ -372,7 +372,7 @@ dl.portlet ul.navTree li a {
        -moz-transition: background-color .3s, color .3s, background .3s;
          -o-transition: background-color .3s, color .3s, background .3s;
             transition: background-color .3s, color .3s, background .3s;
-   border-top: 1px solid: #DFDFDF;
+   border-top: 1px solid #BABBB8;
    font-weight: normal;
    font-size: 12px;
    line-height: 1.5;
@@ -406,7 +406,6 @@ dl.portletNavigationTree dd.portletItem {
 
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
     padding: 0.25em 1em;
-    border-bottom: 0.1em dotted #ddd;
     line-height: 2em;
 }
 
