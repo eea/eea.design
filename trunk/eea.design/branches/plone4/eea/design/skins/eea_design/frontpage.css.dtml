@@ -423,6 +423,7 @@ a.album-layout:hover {
   background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
 } 
 
+#semantic-ds-links a:hover,
 #forum a:hover,
 #community a:hover,
 #mobile a:hover,
@@ -456,6 +457,7 @@ a.album-layout:hover {
   display: block;
 }
 
+
 #twitter-link {
     background-position: 0 -180px !important;
 }
@@ -474,9 +476,30 @@ a.album-layout:hover {
 
 #email-link {
     /*background-position: 0 -279px !important;*/
-    background: url("email_32.png") no-repeat center center transparent; /* to sprite */
+    background: url("email_32.png") no-repeat center center transparent; /* TODO: to sprite */
 }
 
+.shortcut-light {
+    height: 100px;
+    background: transparent;
+    border: 1px solid #e6e7e8;
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+
+.shortcut-light:hover {
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#semantic-content {
+   background: url("molecule.png") no-repeat 35px 20px transparent; /* TODO: to sprite */
+   padding: 5px 0 5px 25px;
+}
 
 #mobile {
     background: #e6e7e8 url("mobile.png") no-repeat center center;

@@ -9,9 +9,7 @@
     </head>
     <body>
 
-    <div metal:fill-slot="main">
-
-        <h1 tal:content="context/Title">EEA Data and maps service</h1>
+    <div metal:fill-slot="content-core">
         <tal:main-macro metal:define-macro="main">
             <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;
                                                    global datamaps_view context/@@data_and_maps_logic;">
@@ -55,6 +53,14 @@
                           <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
                         </div>-->
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
+			
+			<div id="semantic-ds-links" class="shortcut-light">
+			   <div id="semantic-content">
+			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
+			   <h2>Semantic Data Service</h2> 
+			   Access our data via semantic APIs</a>
+			   </div>
+                        </div>
 
                         <!-- community  divs -->
 
