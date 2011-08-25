@@ -12,26 +12,25 @@
   <ul tal:attributes="id string:promo-gallery-content${small_factor}"> 
       <metal:pritems  
                     tal:repeat="hl highlights">
-                        <li>
+                        <li tal:define="
+                            figure_link hl/getUrl|hl/getURL|hl/absolute_url|nothing;">
                         <tal:image tal:define="figure hl/getImage|nothing;
-                        figure_link hl/getUrl|hl/absolute_url|nothing;
                         figure_scale string: preview;
-                        figure_title figure/title|nothing;"
-                        tal:condition="figure">
+                        figure_title figure/title|hl/Title|nothing;">
                         <tal:Link tal:condition="figure_link">
                             <a href="" title="" class="noPrint"
-                               tal:attributes="href figure_link|nothing;
+                               tal:attributes="href figure_link;
                                title figure_title;">
-                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure/title; alt figure/title" />
+                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure_title; alt figure_title" />
                          </a>
                          </tal:Link>
                         <tal:noLink tal:condition="not: figure_link">
-                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure/title; alt figure/title" />
+                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure_title; alt figure_title" />
                         </tal:noLink>
                         </tal:image>
                     <div tal:attributes="class string:promo-item-desc${small_factor};">
                         <h3><a href="#" class="noPrint"
-                                tal:attributes="href hl/getUrl|hl/getURL/hl/absolute_url|nothing"
+                                tal:attributes="href figure_link"
                                 tal:content="hl/Title">
                                 Highlight Title</a></h3>
                     <tal:desc tal:condition="frontpage_gallery">
@@ -54,9 +53,8 @@
                         <div>
                         <tal:image tal:define="figure hl/getImage|nothing;
                         figure_scale string:thumb;
-                        figure_title figure/title|nothing;"
-                        tal:condition="figure">
-                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_thumb; title figure/title; alt figure/title" />
+                        figure_title figure/title|hl/Title|nothing;">
+                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_thumb; title figure_title; alt figure_title" />
                         </tal:image>
 
                         <tal:title tal:condition="frontpage_gallery">
