@@ -64,7 +64,7 @@
                         
                         <div id="social-links">
                         <h2 class="column-title" i18n:translate="follow-us">Follow us</h2>
-                           <div metal:use-macro="here/frontpage_macros/macros/followus">
+                           <div metal:use-macro="here/portlet_social_links/macros/portlet">
                                Social links
                            </div>
                         </div>
