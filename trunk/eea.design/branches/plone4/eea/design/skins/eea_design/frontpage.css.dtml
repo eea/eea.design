@@ -471,17 +471,23 @@ a.album-layout:hover {
     padding: 2em 0em;
     background: #ECECEC;
     margin-bottom: 2em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 .shortcut-light {
-    height: 100px;
+    /*height: 100px;*/
     background: transparent;
     border: 1px solid #e6e7e8;
     margin-bottom: 2.5em;
     text-align: center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
-.shortcut-light:hover {
+.shortcut-default:hover, .shortcut-light:hover {
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
@@ -491,8 +497,9 @@ a.album-layout:hover {
 }
 
 #semantic-content {
-   background: url("molecule.png") no-repeat 35px 20px transparent; /* TODO: to sprite */
-   padding: 5px 0 5px 25px;
+   background: url("molecule.png") no-repeat 48px 22px transparent; /* TODO: to sprite */
+   padding: 0px 0 5px 45px;
+   height: 90px;
 }
 
 #theme-datacentre {
@@ -518,6 +525,10 @@ a.album-layout:hover {
     position: relative;
     padding: 30px 120px;
     top: 40px;
+}
+
+.shortcut-light a.portletHeader, .shortcut-default a.portletHeader  {
+   display:block;
 }
 
 a.list-layout,
