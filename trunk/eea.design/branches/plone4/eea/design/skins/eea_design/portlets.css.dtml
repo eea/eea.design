@@ -822,7 +822,7 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
   text-shadow: none;
 }
 
-dl.portletNavigationTree li.navTreeItem  .navTreeCurrentItem:before {
+dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
    content:"";
    position: absolute;
    width: 0;
@@ -831,6 +831,10 @@ dl.portletNavigationTree li.navTreeItem  .navTreeCurrentItem:before {
    border-right: 26px solid &dtml-corporateGreen;
    border-bottom: 14px solid transparent;
    margin: -5px 0 0 -45px;
+}
+
+dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:hover:before {
+   border-right: 26px solid &dtml-corporateGreen;
 }
 
 #portal-column-one .portlet {
