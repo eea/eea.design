@@ -804,7 +804,8 @@ dl.portletNavigationTree dt.portletSubMenuHeader:last-child {
 dl.portletNavigationTree dt.portletSubMenuHeader span.title {
   cursor: pointer;
   margin: 0;
-  background: url("&dtml-portal_url;/accordion_right.png") no-repeat scroll right center &dtml-lightBackgroundColor;;
+  display: block;
+  background: url("&dtml-portal_url;/accordion_left.png") no-repeat scroll right center &dtml-lightBackgroundColor;;
 }
 
 dl.portletNavigationTree dt.current span.title {
