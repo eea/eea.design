@@ -13,7 +13,9 @@
       <metal:pritems  
                     tal:repeat="hl highlights">
                         <li tal:define="
-                            figure_link hl/getUrl|hl/getURL|hl/absolute_url|nothing;">
+                            figure_link python: hl.getUrl if str(hl.getUrl) != '' else hl.getURL();
+                            image_link hl/getURL|hl/absolute_url;
+                            ">
                         <tal:image tal:define="figure hl/getImage|nothing;
                         figure_scale string: preview;
                         figure_title figure/title|hl/Title|nothing;">
@@ -21,11 +23,11 @@
                             <a href="" title="" class="noPrint"
                                tal:attributes="href figure_link;
                                title figure_title;">
-                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure_title; alt figure_title" />
+                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
                          </a>
                          </tal:Link>
                         <tal:noLink tal:condition="not: figure_link">
-                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_preview; title figure_title; alt figure_title" />
+                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
                         </tal:noLink>
                         </tal:image>
                     <div tal:attributes="class string:promo-item-desc${small_factor};">
@@ -46,15 +48,14 @@
 
 <div id="navigator-outer">
     <ul tal:attributes="id string:promo-navigator${small_factor}"> 
-  <metal:items  define-macro="middlenews-promo"
-                tal:condition="highlights"
-                tal:repeat="hl highlights">
+  <metal:items tal:repeat="hl highlights">
                     <li>
                         <div>
                         <tal:image tal:define="figure hl/getImage|nothing;
                         figure_scale string:thumb;
-                        figure_title figure/title|hl/Title|nothing;">
-                            <img alt="" tal:attributes="src string:${hl/absolute_url}/image_thumb; title figure_title; alt figure_title" />
+                        figure_title figure/title|hl/Title|nothing;
+                        url hl/getURL|hl/absolute_url">
+                            <img alt="" tal:attributes="src string:${url}/image_thumb; title figure_title; alt figure_title" />
                         </tal:image>
 
                         <tal:title tal:condition="frontpage_gallery">
@@ -74,4 +75,5 @@
 </div>
  <!--end promotion_gallery macro -->
 </metal:promos>
+
 
