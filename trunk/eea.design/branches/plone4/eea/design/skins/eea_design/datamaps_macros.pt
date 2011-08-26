@@ -7,7 +7,7 @@
      class="highlights"
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestDatasets;
-                 plone_view nocall:plone_view|here;
+                 plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;"
      tal:condition="folderContents|nothing">
@@ -38,7 +38,7 @@
      class="highlights"
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestIndicators;
-                 plone_view nocall:plone_view|here;
+                 plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: True;
                  hide_album python: False;"
      tal:condition="folderContents|nothing">
@@ -57,13 +57,13 @@
      class="highlights"
      tal:define="frontpage_view datamaps_view|context/@@frontpage_highlights;
                  highlights highlights|frontpage_view/getHighArticles;
-                 plone_view nocall:plone_view|here;">
+                 plone_view nocall:plone_view|context/@@plone;">
     <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
 </div>
 
 <metal:spotlight metal:define-macro="spotlightItem"
                  tal:define="spotlight frontpage_view/getSpotlight;
-                             plone_view nocall:plone_view|here;"
+                             plone_view nocall:plone_view|context/@@plone;"
                  tal:condition="spotlight">
     <div class="featured roundedCorners">
         <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
@@ -93,7 +93,7 @@
      class="highlights"
      id="highlights-middle"
      tal:define="highlights frontpage_view/getMedium;
-                 plone_view nocall:plone_view|here">
+                 plone_view nocall:plone_view|context/@@plone">
 
   <metal:items  define-macro="middlenews-short"
                 tal:condition="highlights"
@@ -121,7 +121,7 @@
      class="highlights"
      id="highlights-middle"
      tal:define="highlights frontpage_view/getMedium;
-                 plone_view nocall:plone_view|here">
+                 plone_view nocall:plone_view|context/@@plone">
 
   <metal:items  define-macro="middlenews-long"
                 tal:condition="highlights"

@@ -7,7 +7,7 @@
      class="highlights"
      tal:define="frontpage_view context/@@frontpage_highlights;
                  folderContents frontpage_view/getNews;
-                 plone_view nocall:plone_view|here;
+                 plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;"
      tal:condition="folderContents|nothing">
@@ -24,7 +24,7 @@
                  highlights highlights|featured_class/getHighArticles;
                  translate_tag translate_tag|string: featured-item;
                  box_title box_title|string:Featured Article;
-                 plone_view nocall:plone_view|here;
+                 plone_view nocall:plone_view|context/@@plone;
                  descr_max_length descr_max_length|python:200;
                  archive_text archive_text|nothing;
                  archive_href archive_href|nothing;

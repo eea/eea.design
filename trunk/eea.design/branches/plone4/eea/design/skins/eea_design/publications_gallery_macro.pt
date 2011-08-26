@@ -2,6 +2,6 @@
         tal:define="
         frontpage_view context/@@frontpage_highlights;
         folderContents frontpage_view/getPublications;
-        plone_view nocall:plone_view|here;">
+        plone_view nocall:plone_view|context/@@plone;;">
                 <div metal:use-macro="here/frontpage_macros/macros/ajax-items" />
 </tal:publications>
