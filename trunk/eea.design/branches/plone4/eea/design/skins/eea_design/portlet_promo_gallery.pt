@@ -13,7 +13,7 @@
       <metal:pritems  
                     tal:repeat="hl highlights">
                         <li tal:define="
-                            figure_link python: hl.getUrl if str(hl.getUrl) != '' else hl.getURL();
+                            figure_link hl/getUrl|hl/getURL|hl/absolute_url;
                             image_link hl/getURL|hl/absolute_url;
                             ">
                         <tal:image tal:define="figure hl/getImage|nothing;
@@ -75,5 +75,3 @@
 </div>
  <!--end promotion_gallery macro -->
 </metal:promos>
-
-
