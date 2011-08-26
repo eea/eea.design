@@ -828,13 +828,13 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
    width: 0;
    height:0;
    border-top: 14px solid transparent;
-   border-right: 26px solid &dtml-corporateGreen;
+   border-right: 15px solid &dtml-corporateGreen;;
    border-bottom: 14px solid transparent;
-   margin: -5px 0 0 -45px;
+   margin: -5px 0 0 -35px;
 }
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:hover:before {
-   border-right: 26px solid &dtml-corporateGreen;
+   border-right: 26px solid &dtml-corporateGreen;;
 }
 
 #portal-column-one .portlet {
