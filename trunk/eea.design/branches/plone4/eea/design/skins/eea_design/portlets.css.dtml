@@ -830,6 +830,10 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
    margin: -5px 0 0 -35px;
    border-top: 14px solid transparent;
    border-bottom: 14px solid transparent;
+   -webkit-transition: border-right .3s;
+      -moz-transition: border-right .3s;
+        -o-transition: border-right .3s;
+           transition: border-right .3s;
 }
 
 #portal-column-two dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
