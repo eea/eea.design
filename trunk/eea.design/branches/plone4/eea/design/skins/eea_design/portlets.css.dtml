@@ -790,11 +790,15 @@ dl.portletNavigationTree dt.portletHeader {
 dl.portletNavigationTree dt.portletSubMenuHeader {
    background-color: &dtml-lightBackgroundColor;;
    font-size: 12px;
-   padding: 5px;
+   padding: 5px 10px;
    margin: 0;
    text-shadow: 0 1px 0 #FFFFFF;
    cursor: pointer;
    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+}
+
+dl.portletNavigationTree dt.portletSubMenuHeader:hover {
+   background-color: &dtml-mediumBackgroundColor;;
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader:last-child {
@@ -805,17 +809,28 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
   cursor: pointer;
   margin: 0;
   display: block;
-  background: url("&dtml-portal_url;/accordion_left.png") no-repeat scroll right center &dtml-lightBackgroundColor;;
+  background: url("&dtml-portal_url;/accordion_left.png") no-repeat scroll right center transparent;
 }
 
 dl.portletNavigationTree dt.current span.title {
-  background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll right center &dtml-lightBackgroundColor;;
+  background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll right center transparent;
 }
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
   color: #FFFFFF;
   background-color: &dtml-corporateGreen;;
   text-shadow: none;
+}
+
+dl.portletNavigationTree li.navTreeItem  .navTreeCurrentItem:before {
+   content:"";
+   position: absolute;
+   width: 0;
+   height:0;
+   border-top: 14px solid transparent;
+   border-right: 26px solid &dtml-corporateGreen;
+   border-bottom: 14px solid transparent;
+   margin: -5px 0 0 -45px;
 }
 
 #portal-column-one .portlet {
