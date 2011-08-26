@@ -371,21 +371,6 @@ ul#tabs li:first-child a:hover {
     border-radius: 10px;
 }
 
-.promo {
-    width: 100%;
-    text-align: center;
-    padding: 2em 0em;
-    background: #ECECEC;
-    margin-bottom: 2em;
-}
-
-#theme-datacentre {
-    background: transparent url('sprite-eeaimages.png') no-repeat;
-    padding: 25px 0px 25px 66px;
-    height: 56px;
-    background-position: -401px -469px;
-}
-
 .featured  img {
     padding-right: 10px;
     width: 180px;
@@ -396,6 +381,7 @@ ul#tabs li:first-child a:hover {
     padding: 0 1em 0 1em;
 }
 
+/* style for shortcuts buttons */
 
 #forum, #community, #mobile {
     height: 100px;
@@ -479,6 +465,14 @@ a.album-layout:hover {
     background: url("email_32.png") no-repeat center center transparent; /* TODO: to sprite */
 }
 
+.shortcut-default {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0em;
+    background: #ECECEC;
+    margin-bottom: 2em;
+}
+
 .shortcut-light {
     height: 100px;
     background: transparent;
@@ -499,6 +493,13 @@ a.album-layout:hover {
 #semantic-content {
    background: url("molecule.png") no-repeat 35px 20px transparent; /* TODO: to sprite */
    padding: 5px 0 5px 25px;
+}
+
+#theme-datacentre {
+    background: transparent url('sprite-eeaimages.png') no-repeat;
+    padding: 25px 0px 25px 66px;
+    height: 56px;
+    background-position: -401px -469px;
 }
 
 #mobile {
