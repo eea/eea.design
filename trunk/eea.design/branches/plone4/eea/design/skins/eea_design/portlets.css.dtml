@@ -827,14 +827,26 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
    position: absolute;
    width: 0;
    height:0;
-   border-top: 14px solid transparent;
-   border-right: 15px solid &dtml-corporateGreen;;
-   border-bottom: 14px solid transparent;
    margin: -5px 0 0 -35px;
+   border-top: 14px solid transparent;
+   border-bottom: 14px solid transparent;
 }
 
-dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:hover:before {
-   border-right: 26px solid &dtml-corporateGreen;;
+#portal-column-two dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
+   border-right: 15px solid &dtml-corporateGreen;;
+}
+
+#portal-column-two dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:hover:before {
+   border-right: 15px solid &dtml-corporateOrange;;
+}
+
+#portal-column-one dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
+   right: -10px;
+   border-left: 15px solid &dtml-corporateGreen;;
+}
+
+#portal-column-one dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:hover:before {
+   border-left: 15px solid &dtml-corporateOrange;;
 }
 
 #portal-column-one .portlet {
