@@ -379,6 +379,10 @@ dl.portlet ul.navTree li a {
    
 }
 
+dl.portlet ul.navTree li a:first-child {
+   border-top: none;
+}
+
 dl.portlet ul.navTree li a:hover {
    background-color:&dtml-corporateOrange;;
    background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
@@ -1979,7 +1983,6 @@ div.overlay .formControls a {
     /* background: no-repeat transparent 0px -648px url(contenttypes-sprite.png); */
     background: none;
     padding-left: 0px !important;
-    margin-left: -15px !important;
 }
 .contenttype-link {
     background: no-repeat transparent 0px -1080px url(contenttypes-sprite.png);
