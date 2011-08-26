@@ -2,6 +2,7 @@
 <portlets xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="plone">
 
+  <!-- new portlets definition -->
  <portlet 
    addview="portlets.PromoGallery"
    title="EEA Promotion Gallery"
@@ -20,11 +21,47 @@
                     description description_recent_portlet">
        <for interface="plone.app.portlets.interfaces.IColumn" />
        <for interface="plone.app.portlets.interfaces.IDashboard" />
-  </portlet>
+   </portlet>
+  <!-- END new portlets definition -->
 
+  <!-- themes folder portlets assigment -->
+ <assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/SITE/themes"
+     type="portlets.Classic">
+     <property name="template">portlet_datacenter_overview</property>
+     <property name="macro">portlet</property>
+ </assignment>
+
+  <assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/SITE/themes"
+     type="portlets.PromoGallery" />
+
+  <assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/SITE/themes"
+     type="portlets.FeaturedArticle" />
+
+ <assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/SITE/themes"
+     type="portlets.Classic">
+     <property name="template">portlet_social_links</property>
+     <property name="macro">portlet</property>
+ </assignment>
+
+  <!-- END themes folder portlets assigment -->
+
+  <!-- portlet managers -->
  <portletmanager
    name="plone.footer"
    type="eea.design.browser.interfaces.IFooterPortletManager"
  />
+  <!-- END portlet managers -->
 
 </portlets>
