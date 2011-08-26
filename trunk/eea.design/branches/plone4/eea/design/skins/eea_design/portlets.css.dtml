@@ -858,6 +858,19 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem:before {
     margin: 0;
 }
 
+
+.navTreeItem .contenttype-document,
+.navTreeItem .contenttype-event,
+.navTreeItem .contenttype-folder,
+.navTreeItem .contenttype-link,
+.navTreeItem .contenttype-news-item,
+.navTreeItem .contenttype-plone-site,
+.navTreeItem .contenttype-topic,
+.navTreeItem .contenttype-file,
+.navTreeItem .contenttype-image {
+   background: none;
+}
+
 /* ichimdav added styles from sunburst's portlets.css */
 .managedPortlet {
     margin: 0.8em 0;
