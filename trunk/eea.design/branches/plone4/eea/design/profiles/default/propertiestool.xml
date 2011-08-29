@@ -31,7 +31,7 @@
   <property name="currentFolderOnlyInNavtree" type="boolean">False</property>
   <property name="includeTop" type="boolean">True</property>
   <property name="topLevel" type="int">0</property>
-  <property name="bottomLevel" type="int">0</property>
+  <property name="bottomLevel" type="int">10</property>
   <property name="showAllParents" type="boolean">True</property>
   <property name="idsNotToList" type="lines"/>
   <property name="parentMetaTypesNotToQuery" type="lines">
