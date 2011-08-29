@@ -18,3 +18,8 @@
         Plone
     </a>
 </h2>
+
+<h3 class="site-description"
+    tal:define="portal context/@@plone_portal_state/portal"
+    tal:content="portal/description">
+</h3>

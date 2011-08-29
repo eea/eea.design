@@ -901,6 +901,19 @@ float:right;
     background-color: transparent;
 }
 
+h3.site-description {
+    border: medium none;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 20px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    width: 340px;
+}
+
 .header-holder {
     width: 100%;
     clear: both;

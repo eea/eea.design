@@ -78,5 +78,9 @@
     float: right;
 }
 
+li#portaltab-themes a {
+    padding-left: 0 !important;
+}
+
 /* </dtml-with> */
 
