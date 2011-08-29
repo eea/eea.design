@@ -8,27 +8,16 @@ $(document).ready(function() {
         portal_siteactions.prependTo(cross_site_top);
         cross_site_top.prependTo("body");
         
-        // Move portal-top above the visual-portal-wrapper and
-        // create the header-holder to insert the background color
-        //var header_holder = '<div class="header-holder"></div>',
-        //    globalnav_holder = '<div class="globalnav-holder"></div>',
-        //    portal_top = $('#portal-top').detach(),
-        //    portal_globalnav = $('#portal-globalnav').detach();
-        //portal_top.prependTo(header_holder);
-        //portal_globalnav.appendTo(globalnav_holder);
-        //globalnav_holder.appendTo(header_holder);
-        //header_holder.insertAfter(cross_site_top);
-        //
-        // Move globalnav-holder above the visual-portal-wrapper
-        // and add the holder to insert the background color
-        
-        
-        // remove the pressroom and about eea and assign them to a new ul
-        // to keep them floated right
-        var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>");
+        var header_holder = $('<div class="header-holder"></div>'),
+            globalnav_holder = $('<div class="globalnav-holder"></div>'),
+            secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>");
         $("#portaltab-pressroom, #portaltab-abouteea").detach().appendTo(secundary_portaltabs);
         secundary_portaltabs.appendTo("#portal-globalnav");
-
+        $('#portal-globalnav').detach().appendTo(globalnav_holder);
+        $('#portal-top').detach().prependTo(header_holder);
+        globalnav_holder.appendTo(header_holder);
+        header_holder.insertAfter(cross_site_top);
+        
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(window.location.pathname)) {
