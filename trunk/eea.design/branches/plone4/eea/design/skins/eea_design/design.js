@@ -11,16 +11,17 @@ $(document).ready(function() {
         // Move portal-top above the visual-portal-wrapper and
         // create the header-holder to insert the background color
         var header_holder = '<div class="header-holder"></div>',
-            portal_top = $('#portal-top').detach();
-        header_holder.insertAfter('#cross-site-top');
-        portal_top.appendTo(header_holder);
+            globalnav_holder = '<div class="globalnav-holder"></div>',
+            portal_top = $('#portal-top').detach(),
+            portal_globalnav = $('#portal-globalnav').detach();
+        portal_top.prependTo(header_holder);
+        portal_globalnav.appendTo(globalnav_holder);
+        globalnav_holder.appendTo(header_holder);
+        header_holder.insertAfter(cross_site_top);
         
         // Move globalnav-holder above the visual-portal-wrapper
         // and add the holder to insert the background color
-        var globalnav_holder = '<div class="globalnav-holder"></div>',
-            portal_globalnav = $('#portal-globalnav').detach();
-        globalnav_holder.insertAfter('#portal-top');
-        portal_globalnav.appendTo(globalnav_holder);
+        
         
         // remove the pressroom and about eea and assign them to a new ul
         // to keep them floated right
