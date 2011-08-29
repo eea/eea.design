@@ -18,6 +18,11 @@ $(document).ready(function() {
         globalnav_holder.appendTo(header_holder);
         header_holder.insertAfter(cross_site_top);
         
+        if( $('#portal-personaltools-wrapper').length ){
+            $('#portal-personaltools-wrapper').detach().insertAfter(globalnav_holder);
+        }
+        
+        
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(window.location.pathname)) {
