@@ -1,18 +1,41 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.globalnav-holder {
+    background: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
+    background: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    background: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background: linear-gradient(#478EA5, #346F83); /* the standard */
+    width: 100%;
+    position: relative;
+    display: block;
+    clear: both;
+}
+
 #portal-globalnav {
     display: block;
-    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
     list-style: none;
-    padding: 5px 0px 0px 0px;
-    margin: 0 0 0 0em;
-    background: transparent;
+    padding: 0px;
+    background: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
+    background: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    background: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background: linear-gradient(#478EA5, #346F83); /* the standard */
 }
 
 #portal-globalnav li {
     margin-bottom: 0;
-    float: left;
+    float: none;
     text-align: center;
     height: 3em;
     display: inline-block;
@@ -51,7 +74,9 @@
     color:#DE7800;
 }
 
-
+#secundary-portaltabs {
+    float: right;
+}
 
 /* </dtml-with> */
 

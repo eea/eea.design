@@ -865,6 +865,9 @@ float:right;
     width: 1024px;
     overflow: hidden;
     padding: 0;
+    clear: both;
+    display: block;
+    position: relative;
 }
 
 /* Logo properties */
@@ -898,8 +901,24 @@ float:right;
     background-color: transparent;
 }
 
+.header-holder {
+    width: 100%;
+    clear: both;
+    display: block;
+    position: relative;
+    background: &dtml-corporateGreen;;
+}
+
 #portal-top {
     width: 1000px;
+    display: block;
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header-holder #portal-top .cell {
+    float: none;
 }
 
 #cross-site-top {
@@ -1068,7 +1087,7 @@ float:right;
 .searchField {
     height: 30px;
     padding: 0 0 0 25px;
-    width: 286px;
+    width: 258px;
     background-position: 0 -82px;
     font-family: Arial, Verdana, sans-serif;
     font-style: italic;
@@ -1076,6 +1095,11 @@ float:right;
     border: none;
     margin: 0;
     font-size: 0.8em;
+}
+
+.frontpage #searchbox_terminology input,
+.frontapage .searchField {
+    width: 286px;
 }
 
 #searchbox_terminology input:focus,
@@ -2091,26 +2115,6 @@ div.position-0 {
 }
 
 /* Added from public */
-dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    padding: 0px !important;
-    line-height: 1.5em;
-    margin: 0px !important;
-    
-}
-
-dl.portlet ul.navTreeLevel1 .navTreeItem {
-    line-height: 1.5em;
-}
-
-.navTreeItem a, dd.portletItem .navTreeItem a {
-    padding: 0px;
-}
-
-dl.portlet ul.navTree .navTreeCurrentItem {
-    margin: 0em ;
-    border-left: 0px;
-}
-
 div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
