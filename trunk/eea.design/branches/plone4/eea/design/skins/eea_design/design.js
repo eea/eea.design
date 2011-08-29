@@ -14,7 +14,7 @@ $(document).ready(function() {
         $("#portaltab-pressroom, #portaltab-abouteea").detach().appendTo(secundary_portaltabs);
         secundary_portaltabs.appendTo("#portal-globalnav");
         $('#portal-globalnav').detach().appendTo(globalnav_holder);
-        $('#portal-top').detach().prependTo(header_holder);
+        $('#portal-top').removeClass('row').detach().prependTo(header_holder);
         globalnav_holder.appendTo(header_holder);
         header_holder.insertAfter(cross_site_top);
         

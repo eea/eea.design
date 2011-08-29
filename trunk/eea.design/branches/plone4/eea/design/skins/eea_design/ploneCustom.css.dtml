@@ -1097,7 +1097,7 @@ float:right;
     font-size: 0.8em;
 }
 
-.frontpage #searchbox_terminology input,
+.frontpage #searchbox_terminology input[type="text"],
 .frontapage .searchField {
     width: 286px;
 }
