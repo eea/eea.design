@@ -411,6 +411,22 @@ dl.portletNavigationTree ul.navTreeLevel2 li.navTreeItem .navTreeCurrentItem:bef
    margin-left: -60px !important;
 }
 
+.navTreeItemInPath > ul.navTreeLevel3 li > a {
+   padding-left: 55px !important;
+}
+
+dl.portletNavigationTree ul.navTreeLevel3 li.navTreeItem .navTreeCurrentItem:before {
+   margin-left: -70px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel4 li > a {
+   padding-left: 65px !important;
+}
+
+dl.portletNavigationTree ul.navTreeLevel4 li.navTreeItem .navTreeCurrentItem:before {
+   margin-left: -80px !important;
+}
+
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
     padding: 0.25em 1em;
     line-height: 2em;

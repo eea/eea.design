@@ -160,7 +160,7 @@
     background: transparent url("promotions-gallery-arrow.png") no-repeat right center;
     position: relative;
     z-index: 300;
-    width: 189px !important;
+    width: 182px !important;
     float: left;
 }
 
