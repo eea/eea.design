@@ -392,43 +392,46 @@ dl.portletNavigationTree dd.portletItem {
 }
 
 .navTreeItemInPath > ul.navTreeLevel0 li > a {
-   padding-left: 0;
+   padding-left: 10px !important;
+}
+
+dl.portletNavigationTree ul.navTreeLevel0 li.navTreeItem .navTreeCurrentItem:before {
+   margin-left: -25px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel1 li > a {
-   padding-left: 35px !important;
+   padding-left: 25px !important;
 }
 
 dl.portletNavigationTree ul.navTreeLevel1 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -50px !important;
+   margin-left: -40px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel2 li > a {
-   padding-left: 45px !important;
+   padding-left: 35px !important;
 }
 
 dl.portletNavigationTree ul.navTreeLevel2 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -60px !important;
+   margin-left: -50px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel3 li > a {
-   padding-left: 55px !important;
+   padding-left: 45px !important;
 }
 
 dl.portletNavigationTree ul.navTreeLevel3 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -70px !important;
+   margin-left: -60px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel4 li > a {
-   padding-left: 65px !important;
+   padding-left: 55px !important;
 }
 
 dl.portletNavigationTree ul.navTreeLevel4 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -80px !important;
+   margin-left: -70px !important;
 }
 
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    padding: 0.25em 1em;
     line-height: 2em;
 }
 

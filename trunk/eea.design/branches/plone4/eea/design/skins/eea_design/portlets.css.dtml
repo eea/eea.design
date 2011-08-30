@@ -790,7 +790,7 @@ dl.portletNavigationTree dt.portletHeader {
 dl.portletNavigationTree dt.portletSubMenuHeader {
    background-color: &dtml-lightBackgroundColor;;
    font-size: 12px;
-   padding: 5px 10px;
+   padding: 10px;
    margin: 0;
    text-shadow: 0 1px 0 #FFFFFF;
    cursor: pointer;
