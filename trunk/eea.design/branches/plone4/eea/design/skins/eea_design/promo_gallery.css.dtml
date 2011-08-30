@@ -270,6 +270,20 @@
   background-position: -438px -192px;
 }
 
+#portal-column-two #promo-gallery-wrapper #next-promo,
+#portal-column-two #promo-gallery-wrapper #prev-promo {
+  height: 16px;
+}
+
+#portal-column-two #promo-gallery-wrapper #prev-promo {
+  background-position: left -370px;
+  margin-left: 0;
+}
+
+#portal-column-two #promo-gallery-wrapper #prev-promo {
+  background-position: left -345px;
+}
+
 .controls {
     background: &dtml-mediumBackgroundColor;;
     -webkit-border-radius: 0 0 10px 10px;
