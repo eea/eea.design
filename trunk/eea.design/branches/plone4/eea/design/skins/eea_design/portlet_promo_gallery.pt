@@ -69,8 +69,15 @@
         </ul>
     </div>
     <div class="controls">
+        <tal:big condition="not:small_factor">
         <a  href="#" id="next-promo"></a>
         <a  href="#" id="prev-promo"></a>
+        </tal:big>
+
+        <tal:small condition="small_factor">
+            <a  href="#" id="prev-promo"></a>
+            <a  href="#" id="next-promo"></a>
+        </tal:small>
         <a  href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
     </div>
 

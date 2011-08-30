@@ -151,7 +151,7 @@
 
 #navigator-outer-sm {
     position: relative;
-    left: 12px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -280,7 +280,7 @@
   margin-left: 0;
 }
 
-#portal-column-two #promo-gallery-wrapper #prev-promo {
+#portal-column-two #promo-gallery-wrapper #next-promo {
   background-position: left -345px;
 }
 
