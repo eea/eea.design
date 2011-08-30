@@ -392,16 +392,23 @@ dl.portletNavigationTree dd.portletItem {
 }
 
 .navTreeItemInPath > ul.navTreeLevel0 li > a {
-   padding-left: 0 !important;
+   padding-left: 0;
 }
 
 .navTreeItemInPath > ul.navTreeLevel1 li > a {
-   padding-left: 25px !important;
-   width: auto !important;
+   padding-left: 35px !important;
+}
+
+dl.portletNavigationTree ul.navTreeLevel1 li.navTreeItem .navTreeCurrentItem:before {
+   margin-left: -50px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel2 li > a {
    padding-left: 45px !important;
+}
+
+dl.portletNavigationTree ul.navTreeLevel2 li.navTreeItem .navTreeCurrentItem:before {
+   margin-left: -60px !important;
 }
 
 dl.portlet ul.navTreeLevel0 > .navTreeItem {

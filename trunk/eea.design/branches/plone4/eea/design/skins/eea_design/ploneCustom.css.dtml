@@ -909,6 +909,7 @@ h3.site-description {
     display: inline-block;
     font-size: 12px;
     font-weight: normal;
+    font-style: italic;
     margin: 30px 0;
     position: relative;
     text-decoration: none;
@@ -939,10 +940,11 @@ h3.site-description {
 
 #cross-site-top {
     background-color: white;
-    margin-top: 2px;
     height: 25px;
+    margin: 0;
     padding: 0;
     min-width: 1024px;
+    border-top: 2px solid #B1C748;
 }
 
 .shadow {

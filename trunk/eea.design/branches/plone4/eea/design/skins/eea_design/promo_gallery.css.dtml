@@ -175,7 +175,7 @@
 #promo-navigator li h3, #promo-navigator-sm li h3 {
     color: #4E8192;
     font-size: 100%;
-    padding: 8px 6px 0 3px;
+    padding: 10px 6px 0 3px;
     margin:0;
     font-weight: normal;
     height: 72px;
@@ -191,6 +191,15 @@
 	color:#FFF;
 	position:relative;
     width: 170px;
+}
+
+#promo-navigator li div {
+  border-top: 1px solid &dtml-mediumBackgroundColor;;
+}
+
+#promo-navigator li div:hover,
+#promo-navigator-sm li div:hover {
+  background: &dtml-lightBackgroundColor;;
 }
 
 #promo-navigator-sm li div {
