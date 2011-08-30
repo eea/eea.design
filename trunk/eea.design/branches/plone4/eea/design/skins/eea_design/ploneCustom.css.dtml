@@ -1124,6 +1124,10 @@ h3.site-description {
     background-color: transparent;
 }
 
+.frontpage h3.site-description {
+    width: 305px;
+}
+
 #search_glossary_link, #search_advanced_link {
     text-decoration: underline;
     font-size: 11px;
