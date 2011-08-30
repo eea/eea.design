@@ -2,7 +2,7 @@
                 tal:define="
                 promo_view promo_view|context/@@frontpage_highlights;       
                 highlights view/get_promotions|promo_view/getPromotions|nothing;
-                plone_view nocall:plone_view|here;
+                plone_view nocall:plone_view|context/@@plone;
                 show_description show_description|python:True;
                 frontpage_gallery frontpage|nothing;
                 small_factor python: '' if frontpage_gallery else '-sm';"
@@ -68,7 +68,7 @@
   </metal:items>
         </ul>
     </div>
-    <div class="controls">
+    <div tal:attributes="class string:controls${small_factor}">
         <tal:big condition="not:small_factor">
         <a  href="#" id="next-promo"></a>
         <a  href="#" id="prev-promo"></a>

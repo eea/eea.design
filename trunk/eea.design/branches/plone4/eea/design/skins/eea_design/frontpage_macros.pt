@@ -62,7 +62,7 @@
      id="publications-highlights"
      class="highlights"
      tal:define="folderContents frontpage_view/getPublications;
-                 plone_view nocall:plone_view|here;
+                 plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;"
      tal:condition="folderContents|nothing">
