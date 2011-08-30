@@ -875,9 +875,11 @@ float:right;
 .portal-logo {
     background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat 0 8px;
     border: 0;
-    margin: 0px 0 0 7px;
+    margin: 0px;
     padding: 0;
     float: left;
+    position: relative;
+    left: -7px;
 }
 #printLogo {
     display: none;
@@ -1042,7 +1044,7 @@ h3.site-description {
     float: right;
     clear: right;
     background-color: transparent;
-    margin: 25px 0px 0 0;
+    margin: 25px 7px 0 0;
     padding: 0 0 0 0;
     text-align: right;
     text-transform: &dtml-textTransform;;
@@ -1125,7 +1127,8 @@ h3.site-description {
 }
 
 .frontpage h3.site-description {
-    width: 305px;
+    width: 310px;
+    margin-left: 5px;
 }
 
 #search_glossary_link, #search_advanced_link {
