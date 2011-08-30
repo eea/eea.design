@@ -121,7 +121,9 @@
     position: absolute;
 	width:190px;
 }
-
+#promo-navigator-sm{ 
+    height: 50px;
+}
 #promo-gallery-wrapper ul, #promo-gallery-content ul, #promo-gallery-content-sm ul {
     margin-left: 0em;
     list-style: none;
@@ -135,6 +137,7 @@
 	padding:0;
 	margin:0;
 	overflow:hidden;
+    float: left;
 }
 
 #navigator-outer {
@@ -146,6 +149,12 @@
 	color:#FFF;
 }
 
+#navigator-outer-sm {
+    position: relative;
+    left: 12px;
+    overflow: hidden;
+}
+
 #promo-navigator li.active, #promo-navigator-sm li.active{
 	color:#FFF;
     background: transparent url("promotions-gallery-arrow.png") no-repeat right center;
@@ -154,12 +163,13 @@
     width: 189px !important;
     float: left;
 }
-#promo-navigator-sm li.active {
-    background: transparent url("promotions-gallery-arrow.png") no-repeat 65px 7px;
-}
 
-#promo-navigator-sm, #promo-navigator-sm li.active{
-    width: 89px !important; /* 109 */
+/* #promo-navigator-sm li.active { */
+/*     background: transparent url("promotions-gallery-arrow.png") no-repeat 65px 7px; */
+/* } */
+
+#promo-navigator-sm li, #promo-navigator-sm li.active {
+    width: 65px !important; 
 }
 
 #promo-navigator li h3, #promo-navigator-sm li h3 {
@@ -179,7 +189,6 @@
 
 #promo-navigator li div, #promo-navigator-sm li div {
 	color:#FFF;
-	/* height:100%; */
 	position:relative;
     width: 170px;
 }
@@ -202,7 +211,6 @@
 }
 
 #promo-navigator-sm li img {
-    /* padding: 13px 5px 15px 10px; */
     padding: 6px 8px 0px 6px;
     height: 38px;
     width: 53px;

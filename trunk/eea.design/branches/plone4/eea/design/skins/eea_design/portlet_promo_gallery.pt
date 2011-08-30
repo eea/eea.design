@@ -48,7 +48,7 @@
 
 <!-- navigation outer -->
 
-<div id="navigator-outer">
+<div tal:attributes="id string:navigator-outer${small_factor}">
     <ul tal:attributes="id string:promo-navigator${small_factor}"> 
   <metal:items tal:repeat="hl highlights">
                     <li>
