@@ -16,9 +16,21 @@
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-                        <!-- featured content -->
+		    
+		    <!-- data and maps global search -->
+		    <div class="featured" style="padding:2em;">
+		       <h2>Global search on data and maps</h2>
+		       <form action="find/global" method="get" id="free-text-search">
+                                <p>
+                                    <input type="text" name="c12[]">
+                                    <input type="submit" value="Go!" name="search" class="searchButton" style="cursor: pointer; cursor: hand;">
+                                </p>
+		       </form>
+		    </div>
+		    
+                        <!-- featured content 
                             <div metal:use-macro="here/portlet_featured_indicator/macros/portlet" />
-
+                        -->
                         <tal:featured_item 
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
@@ -30,6 +42,7 @@
                                          archive_translate_tag string:see-all;">
                             <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
                         </tal:featured_item>
+			
 		        <!-- Popular tags -->
 			<div id="faceted-form">
 			  <div id="tag-cloud">
@@ -45,6 +58,9 @@
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
 			
 			<div id="semantic-ds-links" class="shortcut-light">
+			   <div class="beta">
+			      <p>BETA</p>
+			   </div>
 			   <div id="semantic-content">
 			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
 			   <h2>Semantic Data Service</h2> 
@@ -82,7 +98,9 @@
                             </div>
                     </metal:promotions>   
                     <!-- end promotions_gallery_slideshow -->
+		    
 
+		    
                         <div id="news-header">
                         <h2> What's new</h2>
                         <!-- select_topics -->
