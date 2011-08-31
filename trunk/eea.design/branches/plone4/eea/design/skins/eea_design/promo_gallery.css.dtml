@@ -62,9 +62,9 @@
     overflow: hidden; 
     background: #F7F7F7;
     border: 0px solid #F7F7F7;
-    -webkit-border-radius: 0 0 10px 10px;
-       -moz-border-radius: 0 0 10px 10px;
-            border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
     margin-bottom: 2em;
 }
 
@@ -199,7 +199,7 @@
 
 #promo-navigator li div:hover,
 #promo-navigator-sm li div:hover {
-  background: &dtml-lightBackgroundColor;;
+  background: &dtml-mediumBackgroundColor;;
 }
 
 #promo-navigator-sm li div {

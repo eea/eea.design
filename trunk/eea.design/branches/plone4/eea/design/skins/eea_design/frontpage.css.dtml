@@ -90,6 +90,11 @@ body.frontpage ul {
   display: block;
 }
 
+.frontpage .tileHeadline {
+  padding-left: 0;
+  padding-top: 0.4em;
+}
+
 /**
  * Reset margin between tabs and content from highlights
 */
@@ -328,12 +333,13 @@ ul#tabs li a {
     border: 0px;
     text-decoration: none;
     padding: 9px 10px 11px 10px;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 ul#tabs li a.current, ul#tabs li a:hover {
     background: #F7F7F7;
     color: #2D8EA3;
-    
+    text-shadow: 1px 1px 1px #FFFFFF;
 }
 
 ul#tabs li:first-child a.current,
@@ -391,10 +397,12 @@ ul#tabs li:first-child a:hover {
 
 #forum, #community, #mobile {
     height: 100px;
-    background: #e6e7e8;
-    border: 1px solid #e6e7e8;
+    background: &dtml-mediumBackgroundColor;;
     margin-bottom: 2.5em;
     text-align: center;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
 }
 
 #forum-link,
@@ -439,12 +447,16 @@ a.album-layout:hover {
   -webkit-border-radius: 5px;
 }
 
+#social-links h2 {
+  padding-left: 1.4em  !important;
+}
+
 #twitter-link,
 #facebook-link,
 #youtube-link,
 #rss-link,
 #email-link{
-  width: 32px;
+  width: 33px;
   height: 32px;
   display: block;
 }

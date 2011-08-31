@@ -317,10 +317,11 @@ dl.portlet-navigation-tree {
 
 .portletNavigationTree {
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     list-style: none;
     list-style-image: none;
     line-height: 1em;
+    background: #FFFFFF;
 }
 
 .navTree {
