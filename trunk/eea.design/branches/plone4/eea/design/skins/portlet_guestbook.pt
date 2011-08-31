@@ -1,0 +1,25 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+<body>
+<div metal:define-macro="portlet"
+     tal:omit-tag="">
+
+<div class="outer-bottom">
+<dl class="portlet darkblue-portlet"
+    id="portlet-guestbook">
+
+    <dt class="portletHeader guestbook">
+        <a href="#" 
+           class="tile"
+           tal:attributes="href string:http://www.eea.europa.eu/help/infocentre/enquiries">WISE feedback</a>
+    </dt>
+    <dd class="hr"><hr/></dd>
+    <dd class="portletItem odd">
+	<p><a href="http://www.eea.europa.eu/help/infocentre/enquiries">Send your feedback to the WISE team via the EEA public enquiry form.</a></p>
+    </dd>
+</dl>
+</div>
+</div>
+</body>
+</html>
