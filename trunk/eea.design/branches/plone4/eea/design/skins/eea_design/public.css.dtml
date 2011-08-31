@@ -1644,7 +1644,7 @@ dl.toc dd ol {
 }
 
 #portal-colophon {
-    font-size: 80%;
+    font-size: 12px;
     text-align: center;
     margin-bottom: 1em;
 }

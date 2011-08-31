@@ -71,7 +71,7 @@
 
 #portal-colophon ul li {
     display: table-cell;
-    font-size: &dtml-fontSmallSize;;
+    font-size: 11px;
     margin: 0 0.25em;
     padding: 0.1em 0.2em;
 }
@@ -149,5 +149,56 @@
 #portal-footer #portlet-ecotip .portletItem {
     padding: 9px 0 0 0;
 }
+
+.footer-clear {
+    clear: both;
+    display: block;
+    height: 1px;
+}
+
+.colophon-left {
+    float: left;
+    width: 215px;
+}
+
+.colophon-middle {
+    float: left;
+    text-align: center;
+    width: 585px;
+}
+
+.colophon-right {
+    float: right;
+    width: 215px;
+}
+
+.colophon-right span {
+    float: left;
+    width: 155px;
+}
+
+.colophon-right img {
+    float: right;
+    width: 50px;
+}
+
+.colophon-links li {
+    display: inline;
+    font-size: 11px !important;
+    padding: 0 5px !important;
+}
+
+.colophon-links li a {
+    display: inline;
+    font-size: 11px !important;
+    color: #346f83 !important;
+    text-decoration: underline !important;
+}
+
+.colophon-links li a:hover {
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
 
 /* </dtml-with> */
