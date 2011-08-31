@@ -577,5 +577,14 @@ a.active-list, a.list-layout:hover {
   background-position: -448px -145px;  
 }
 
+.filter-topic {
+    float: left;
+    text-align: right;
+    width: 84%;
+    padding-top: 6px;
+}
+.filter-topic span {
+    font-weight: bold;
+}
 /* </dtml-with> */
 

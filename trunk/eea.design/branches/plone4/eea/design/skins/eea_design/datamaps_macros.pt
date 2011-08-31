@@ -12,13 +12,7 @@
                  hide_album python: True;
                  more_href string:data;"
      tal:condition="folderContents|nothing">
-        <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout active-list"></a></li>
-            <li><a href="#" class="album-layout"></a></li>
-        </ul>
-        <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
-        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
-
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
 </div>
 
 <div metal:define-macro="maps"
@@ -30,12 +24,7 @@
                  hide_album python: True;
                  more_href string:figures;"
      tal:condition="folderContents|nothing">
-        <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout active-list"></a></li>
-            <li><a href="#" class="album-layout"></a></li>
-        </ul>
-        <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
-        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
 </div>
 
 <div metal:define-macro="indicators"
@@ -48,12 +37,7 @@
                  hide_album python: False;
                  more_href string:indicators;"
      tal:condition="folderContents|nothing">
-        <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout active-list"></a></li>
-            <li><a href="#" class="album-layout"></a></li>
-        </ul>
-        <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
-        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
 </div>
 
 
@@ -176,12 +160,7 @@
                  hide_listing python: True;
                  more_href string:figures;"
      tal:condition="folderContents|nothing">
-        <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout"></a></li>
-            <li><a href="#" class="album-layout active-album"></a></li>
-        </ul>
-        <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
-        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
 </div>
 
 <div metal:define-macro="interactivemaps"
@@ -193,12 +172,7 @@
                  hide_listing python: True;
                  more_href string:explore-interactive-maps;"
      tal:condition="folderContents|nothing">
-        <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout"></a></li>
-            <li><a href="#" class="album-layout active-album"></a></li>
-        </ul>
-        <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
-        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
 </div>
 
 
@@ -211,28 +185,7 @@
                  hide_listing python: True;
                  more_href string:find;"
      tal:condition="folderContents|nothing">
-     <ul class="gallery-layout-selection">
-            <li><a href="#" class="list-layout"></a></li>
-            <li><a href="#" class="album-layout active-album"></a></li>
-    </ul>
-    <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
-        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
 </div>
-
-<metal:gallery-items define-macro="gallery-items"
-                     tal:define="visible_album python: 'hiddenStructure' if hide_album else '';
-                                 visible_listing python: 'hiddenStructure' if hide_listing else '';">
-        <div class="gallery-ajax visualClear">
-            <div tal:attributes="class string: gallery-listing ${visible_listing}">
-                <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
-            </div>
-            <tal:enabled tal:define="enabled python: True">
-                <div tal:attributes="class string: gallery-album ${visible_album}">
-                    <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
-                </div>
-            </tal:enabled>
-        </div>
-</metal:gallery-items>
-
 
 </html>

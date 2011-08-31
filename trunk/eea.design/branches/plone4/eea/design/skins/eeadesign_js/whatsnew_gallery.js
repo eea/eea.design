@@ -13,12 +13,23 @@
             function displayResult() {
                 var x = this.selectedIndex,
                     y = this.options;
-                var sel_value = y[x].value;
+                var sel_value = y[x].value,
+                    sel_text = y[x].innerText;
                 var cur_tab_val = $("#tabs a.current")[0].id.substr(4);
                 var news = $(".highlights").filter( function(index) {
                      return this.style.display === "block";
                 });
                 var address = site_address + cur_tab_val + "_gallery_macro";
+                // filter by topic notice
+                var filter_topic = news.find(".filter-topic"),
+                    filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
+                if (sel_value) {
+                    filter_topic[0].innerHTML = filter_topic_text;
+                } 
+                else {
+                    filter_topic[0].innerHTML = "";
+                
+                }
 
                 var no_results = $("<div class='portalMessage informationMessage'><p>No results are available for this topic</p></div>");
                 var gallery_ajax = $(".gallery-ajax", news);
