@@ -750,7 +750,7 @@ dd.embeddedMedia .magnify {
 }
 
 /* Links with differently colored link underlines - only for content */
-#content span.link-external a{
+#content span.link-external  {
     background: none;
     padding: 0px;
 }
@@ -1740,6 +1740,8 @@ textarea.proportional {
     border: 1px solid #ccc;
     display: block;
     margin: 0 auto;
+    width: 128px;
+    height: 95px;
 }
 
 .photoAlbumEntryWrapper {

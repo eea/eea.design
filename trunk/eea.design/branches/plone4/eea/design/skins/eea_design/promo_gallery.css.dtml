@@ -21,8 +21,8 @@
     padding: 0px 20px 0px 20px;
 }
 .promo-item-desc-sm {
-    top: 200px;
-    height: 50px;
+    top: 190px;
+    height: 60px;
 }
 
 #promo-gallery-content h3, #promo-gallery-content-sm h3 {

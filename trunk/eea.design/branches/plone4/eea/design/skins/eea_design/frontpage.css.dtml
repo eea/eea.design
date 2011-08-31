@@ -461,12 +461,16 @@ a.album-layout:hover {
   display: block;
 }
 
-
-#twitter-link {
+#content #twitter-link, #content #facebook-link, #content #youtube-link {
+    background: transparent url('sprite-eeaimages.png') no-repeat;
+    padding: 0px;
+}
+    
+ #twitter-link {
     background-position: 0 -180px !important;
 }
 
-#facebook-link {
+ #facebook-link {
     background-position: 0 -147px !important;
 }
 
