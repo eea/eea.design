@@ -56,10 +56,6 @@
                            </div>
                         </div>
                         <!-- end community divs -->
-                        
-                        <div class="portletFooter">
-                        
-                        </div>
                     </div>
                         
                     <div id="highlights-area" class="column-area">
@@ -119,14 +115,9 @@
                             </div>
                         </div>
 
-                        <div class="visualClear"><!-- &nbsp; --></div>
-                        <div class="portletFooter">
-                             <p><a href="highlights" title="archive" class="moreLink" i18n:attributes="title" i18n:translate="archive">archive</a></p>
-                        </div>
                     </div>
                     <div class="visualClear"><!-- &nbsp; --></div>
                 </div>
-                <!--<tal:tooltip-script tal:replace="structure context/spotlight_film_design_fastedit"/>-->
             </div>
 
         </tal:main-macro>

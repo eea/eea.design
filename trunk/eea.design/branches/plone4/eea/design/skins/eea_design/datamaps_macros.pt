@@ -9,13 +9,16 @@
                  folderContents datamaps_view/getLatestDatasets;
                  plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
-                 hide_album python: True;"
+                 hide_album python: True;
+                 more_href string:data;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
             <li><a href="#" class="list-layout active-list"></a></li>
             <li><a href="#" class="album-layout"></a></li>
         </ul>
         <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
+        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
+
 </div>
 
 <div metal:define-macro="maps"
@@ -24,13 +27,15 @@
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestMaps;
                  hide_listing python: False;
-                 hide_album python: True;"
+                 hide_album python: True;
+                 more_href string:figures;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
             <li><a href="#" class="list-layout active-list"></a></li>
             <li><a href="#" class="album-layout"></a></li>
         </ul>
         <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
+        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 <div metal:define-macro="indicators"
@@ -40,13 +45,15 @@
                  folderContents datamaps_view/getLatestIndicators;
                  plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: True;
-                 hide_album python: False;"
+                 hide_album python: False;
+                 more_href string:indicators;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
             <li><a href="#" class="list-layout active-list"></a></li>
             <li><a href="#" class="album-layout"></a></li>
         </ul>
         <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
+        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 
@@ -166,13 +173,15 @@
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestGraphs;
                  hide_album python: False;
-                 hide_listing python: True;"
+                 hide_listing python: True;
+                 more_href string:figures;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
             <li><a href="#" class="list-layout"></a></li>
             <li><a href="#" class="album-layout active-album"></a></li>
         </ul>
         <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
+        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 <div metal:define-macro="interactivemaps"
@@ -181,13 +190,15 @@
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getLatestInteractiveMaps;
                  hide_album python: False;
-                 hide_listing python: True;"
+                 hide_listing python: True;
+                 more_href string:explore-interactive-maps;"
      tal:condition="folderContents|nothing">
         <ul class="gallery-layout-selection">
             <li><a href="#" class="list-layout"></a></li>
             <li><a href="#" class="album-layout active-album"></a></li>
         </ul>
         <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
+        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 
@@ -197,13 +208,15 @@
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getAllProducts;
                  hide_album python: False;
-                 hide_listing python: True;"
+                 hide_listing python: True;
+                 more_href string:find;"
      tal:condition="folderContents|nothing">
      <ul class="gallery-layout-selection">
             <li><a href="#" class="list-layout"></a></li>
             <li><a href="#" class="album-layout active-album"></a></li>
     </ul>
     <div metal:use-macro="here/datamaps_macros/macros/gallery-items" />
+        <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 <metal:gallery-items define-macro="gallery-items"
