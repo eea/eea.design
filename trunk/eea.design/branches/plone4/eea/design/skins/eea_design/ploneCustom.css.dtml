@@ -914,7 +914,7 @@ h3.site-description {
     position: relative;
     text-decoration: none;
     text-shadow: none;
-    width: 340px;
+    width: 240px;
     max-height: 30px;
 }
 
@@ -1129,7 +1129,7 @@ h3.site-description {
 }
 
 .frontpage h3.site-description {
-    width: 310px;
+    width: 240px;
     margin-left: 5px;
 }
 
