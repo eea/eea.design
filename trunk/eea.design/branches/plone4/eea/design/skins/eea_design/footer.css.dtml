@@ -83,9 +83,13 @@
     width: 1024px;
     margin: 0 auto;
 }
-#portal-colophon .discreet {
-    text-align: center;
+
+#portal-colophon .discreet,
+#portal-colophon .discreet-list {
+    text-align: left;
+    float: left;
 }
+
 #portal-colophon .colophonIcon {
     display: block; /* This is for Mozilla, as it doesn't support
                        inline-block. The colophon icons aren't in
@@ -200,5 +204,13 @@
     text-decoration: none !important;
 }
 
+.colophon-full {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    width: 760px;
+}
 
 /* </dtml-with> */
