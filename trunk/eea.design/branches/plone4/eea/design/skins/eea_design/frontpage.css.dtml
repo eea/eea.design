@@ -163,15 +163,21 @@ a.archives {
 /* Frontpage main content
 ******************************************************************************/
 
-.column-area {
-    width: 38%;
+.column-area, .right-column-area {
+    width: 61%;
     margin: 0 0;
     padding: 0 1em 1em 0;
+    float: left;
 }
 
+.right-column-area {
+    width: 35%;
+    padding: 0 0 0 1em;
+}
 #articles-area {
+    width: 390px;
     float: right;
-    clear: right;
+    padding: 0;
 }
 
 #highlights-area {
