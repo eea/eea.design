@@ -40,7 +40,7 @@
                 <tal:translate i18n:translate="${translate_tag}">
                     <h2 class="column-title" i18n:domain="eea" tal:content="box_title">Box Name</h2>
                 </tal:translate>
-                <div class="highlights">
+                <div class="featured-highlights">
                     <div class="figure-left"><img alt="" tal:attributes="src string:${url}/image_thumb; title title; alt title" /></div>
                     <h3 class="highlight">
                         <a href="#" class="noPrint"
