@@ -59,7 +59,7 @@ body.frontpage ul {
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4;
-    padding: 1em 1em 0.25em;
+    padding: 1em 1em 0.25em 0em;
     border: none;
     clear: left;
     color: #000;
@@ -77,7 +77,7 @@ body.frontpage ul {
     color: #808285;
 }
 
-.highlights {
+#whatsnew-gallery .highlights {
     clear: both;
     padding: 0 15px 15px 15px;
 }
@@ -368,6 +368,8 @@ ul#tabs li:first-child a:hover {
   margin-bottom: 5px;
 }
 
+/* style for featured boxes */
+
 .roundedCorners {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -377,11 +379,12 @@ ul#tabs li:first-child a:hover {
 .featured {
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 2.5em;
-    padding:0.5em;
+    padding:1em 2em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+
 
 .featured  img {
     padding-right: 10px;

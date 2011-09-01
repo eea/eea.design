@@ -86,7 +86,7 @@
                         <!-- end select_topics -->
 
                         <!-- tabs -->
-                        <div metal:define-macro="whatsnew-gallery">
+                        <div id="whatsnew-gallery" metal:define-macro="whatsnew-gallery">
                             <ul id="tabs"
                                 tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps', 'All products'];">
                                 <li tal:repeat="tab tabnames">

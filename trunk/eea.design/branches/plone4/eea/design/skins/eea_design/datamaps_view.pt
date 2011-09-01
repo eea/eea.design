@@ -102,7 +102,7 @@
 
 		    
                         <div id="news-header">
-                        <h2> What's new</h2>
+                        <h2>What's new</h2>
                         <!-- select_topics -->
                         <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector">
                             <option value="">Filter by topic</option>
@@ -118,7 +118,7 @@
                         <!-- end select_topics -->
 
                         <!-- tabs -->
-                        <div metal:define-macro="whatsnew-gallery">
+                        <div id="whatsnew-gallery" metal:define-macro="whatsnew-gallery">
                             <ul id="tabs"
                                 tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps', 'Indicators', 'Graphs' ];">
                                 <li tal:repeat="tab tabnames">
