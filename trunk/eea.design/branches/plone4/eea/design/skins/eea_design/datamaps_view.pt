@@ -23,7 +23,7 @@
 		       <form action="find/global" method="get" id="faceted-text-search">
                                 <p>
                                     <input type="text" onkeypress="return disableEnterKey(event)" name="c12">
-                                    <input type="submit" value="Search" name="search" class="searchButton" style="cursor: pointer; cursor: hand;">
+                                    <input type="submit" value="Search" name="search">
                                 </p>
 		       </form>
 		    </div>
