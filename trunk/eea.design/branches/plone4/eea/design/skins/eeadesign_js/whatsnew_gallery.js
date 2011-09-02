@@ -1,18 +1,32 @@
 (function($) {
     $(function() {
-        $("#highlights-high, #highlights-middle").tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
-        var whatsnew_func = function(cur_tab_val, sel_text, sel_value) {
-                var news = $("#whatsnew-gallery").find(".highlights:visible"); 
-                var address = site_address + cur_tab_val + "_gallery_macro";
 
-                // filter by topic notice
-                var filter_topic = news.find(".filter-topic")[0],
+        $("#highlights-high, #highlights-middle").tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
+
+        var host = window.location.host, http = 'http://',
+            localhost = host.indexOf('localhost') != '-1' ? true : undefined,
+            site_address = localhost ? http + host + '/www/' : http + host + '/';
+
+        var whatsnew_func = function(cur_tab_val, sel_text, sel_value, index) {
+                var address = site_address + cur_tab_val + "_gallery_macro";
+                var gal = $("#whatsnew-gallery").find(".highlights");
+                var news = index ? gal[index] : $("#whatsnew-gallery").find(".highlights:visible"); 
+
+                // workaround: we need the first highlights because when we click on the
+                // first tab gal[0] returns the second highlights instead of
+                // the first so we redefine news to the first found match if
+                // index is 0
+                var first = gal.first();
+                var news = index === 0 ? first : news;
+
+                var filter_topic = index ? news.firstElementChild : news[0].firstElementChild,
                     filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
-                filter_topic.innerHTML = sel_value ? filter_topic_text : "";
+                    filter_topic.innerHTML = sel_value ? filter_topic_text : "";
 
                 var no_results = $("<div class='portalMessage informationMessage'><p>No results are available for this topic</p></div>");
                 var gallery_ajax = $(".gallery-ajax", news);
                 var layout_selection = $('.gallery-layout-selection li a', news)[0];
+                
                 gallery_ajax.load( address, {topic: sel_value, tab: cur_tab_val },  function(html) {
                     if (html.length > 1) {
                         if (layout_selection.className === "list-layout active-list"){
@@ -31,65 +45,41 @@
 
                 });
         };
+
         $("ul#tabs").tabs("> .highlights", function(event, index) {
-        var host = window.location.host, http = 'http://',
-            localhost = host.indexOf('localhost') != '-1' ? true : undefined,
-            site_address = localhost ? http + host + '/www/' : http + host + '/';
             var cur_tab = this.getTabs()[index];
-            cur_tab.data = cur_tab.data || "none";
-            var sel_value = $("#topic-selector").find(":selected").val();
+                cur_tab.data = cur_tab.data || "none",
+                cur_tab_val = cur_tab.id.substr(4);
+            var opt_item = $("#topic-selector").find(":selected");
+                sel_value = opt_item.val(),
+                sel_text = opt_item.text();
+
+            if (sel_text === "All topics") {
+                whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
+            }
             if (sel_value) {
                 if (cur_tab.data !== sel_value) {
                     cur_tab.data = sel_value;
-                var cur_tab_val = cur_tab.id.substr(4);
-                // WIP this function is a repetition of the whatsnew_function
-                // but the onBeforeClick event of the tabs doesn't take in the 
-                // whatsnew_function correctly
-                var inner_func = function() {
-                    var address = site_address + cur_tab_val + "_gallery_macro";
-                    var no_results = $("<div class='portalMessage informationMessage'><p>No results are available for this topic</p></div>");
-                    var news = $("#whatsnew-gallery").find(".highlights:visible"); 
-                var filter_topic = news.find(".filter-topic")[0],
-                    filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
-                    filter_topic.innerHTML = sel_value ? filter_topic_text : "";
-                    var gallery_ajax = $(".gallery-ajax", news);
-                    var layout_selection = $('.gallery-layout-selection li a', news)[0];
-                    gallery_ajax.load( address, {topic: sel_value, tab: cur_tab.data },  function(html) {
-                        if (html.length > 1) {
-                            if (layout_selection.className === "list-layout active-list"){
-                                gallery_ajax.find('.gallery-album').addClass('hiddenStructure');
-                            }
-                            else {
-                                gallery_ajax.find('.gallery-listing').addClass('hiddenStructure');
-                            }
-                            if (cur_tab_val === "multimedia") {
-                                $.getScript(site_address + "eea-mediacentre.js");
-                            }
-                        }
-                        else {
-                           no_results.appendTo(gallery_ajax);
-                        }
-
-                    });
-                };
-                window.setTimeout(inner_func, 50);
+                    whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
                 }
             }
         });
 
-        var host = window.location.host, http = 'http://',
-            localhost = host.indexOf('localhost') != '-1' ? true : undefined,
-            site_address = localhost ? http + host + '/www/' : http + host + '/';
 
         $topic_selector = $("#topic-selector");
         $topic_selector.find('[value="default"]').remove();
         $topic_selector.change(
             function displayResult() {
+                // hide filter by topic after we choose a topic to filter the
+                // results
+                $topic_selector[0][0].className = "hidden";
+
                 var x = this.selectedIndex,
                     y = this.options;
                 var topic_value = y[x].value,
-                    topic_text = y[x].innerText;
+                    topic_text = y[x].innerHTML;
                 var tab_val = $("#tabs a.current")[0].id.substr(4);
+               
                 whatsnew_func(cur_tab_val = tab_val, sel_text = topic_text, sel_value = topic_value);
             }
         );

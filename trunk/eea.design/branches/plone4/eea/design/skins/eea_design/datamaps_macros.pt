@@ -45,7 +45,6 @@
 
 <div metal:define-macro="highArticles"
      id="articles-high"
-     class="highlights"
      tal:define="frontpage_view datamaps_view|context/@@frontpage_highlights;
                  highlights highlights|frontpage_view/getHighArticles;
                  plone_view nocall:plone_view|context/@@plone;">
@@ -76,80 +75,6 @@
     </div>
 
 </metal:spotlight>
-
-
-
-
-<div metal:define-macro="middle-short"
-     class="highlights"
-     id="highlights-middle"
-     tal:define="highlights frontpage_view/getMedium;
-                 plone_view nocall:plone_view|context/@@plone">
-
-  <metal:items  define-macro="middlenews-short"
-                tal:condition="highlights"
-                tal:repeat="hl highlights">
-
-     <div class="highlightMiddle shortNews">
-
-             <h3 class="shortNewsTitle">
-             <a href="#" class="noPrint"
-                tal:attributes="href hl/getUrl"
-                tal:content="hl/getNewsTitle">
-                                Highlight Title</a></h3>
-
-             <span class="date"
-                  tal:define="date python:plone_view.toLocalizedTime(hl['effective'])"
-                  tal:content="date">07 Dec 2005 </span>
-             <br />
-       </div>
-    </metal:items>
-</div>
-
-
-<!-- featured article macro -->
-<div metal:define-macro="middle-long"
-     class="highlights"
-     id="highlights-middle"
-     tal:define="highlights frontpage_view/getMedium;
-                 plone_view nocall:plone_view|context/@@plone">
-
-  <metal:items  define-macro="middlenews-long"
-                tal:condition="highlights"
-                tal:repeat="hl highlights">
-
-          <!-- teaser and read more -->
-          <!--<metal:teasers use-macro="here/frontpage_macros/macros/teaser" />-->
-
-            <div class="figure-left">
-                      <tal:image define="figure hl/media|nothing;
-                               figure_link hl/getUrl;
-                               figure_scale string:mini;"
-                             tal:condition="figure">
-                        <tal:image tal:define="figure hl/media|nothing;
-                        figure_link hl/getUrl;
-                        figure_scale string:mini;
-                        figure_title figure/Title|nothing;
-                        "
-                        tal:condition="figure">
-                            <span tal:replace="structure figure/getScale"> </span>
-                        </tal:image>
-                 </tal:image>
-            </div>
-
-            <h3 class="highlight">
-                <a href="#" class="noPrint"
-                   tal:attributes="href hl/getUrl"
-                   tal:content="hl/getNewsTitle">
-                       Highlight Title</a></h3>
-
-            <p tal:content="hl/getTeaser">teaser</p>
-            <p><a href="#" class="moreLink"
-                  tal:attributes="href hl/getUrl">Read more</a></p>
-          <!-- end teaser and read more -->
-    </metal:items>
-</div>
-<!-- end featured article macro -->
 
 <div metal:define-macro="graphs"
      class="highlights"
