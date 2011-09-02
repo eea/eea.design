@@ -3,7 +3,7 @@ $(document).ready(function() {
     if ( !$('body').hasClass('section-soer') && !$('body').hasClass('section-soer-draft') && !$('body').hasClass('.slidePortlet') ) {
         return;
     }
-
+    /*
     $('#free-text-search input[type=submit]').click(function(e) {
         e.preventDefault();
         var searchTerm = $('#free-text-search input[type=text]').val();
@@ -17,7 +17,7 @@ $(document).ready(function() {
         var url = window.location.href + '/advanced-search' + '#c3=' + keywords;
         window.location.href = url;
     });
-
+    */
 
     /* SLIDE PORTLET */
 
@@ -90,6 +90,7 @@ $(document).ready(function() {
    });
 });
 
+/*
 var disableEnterKey = function(e)
 {
     var key;
@@ -100,3 +101,4 @@ var disableEnterKey = function(e)
     }
     return (key != 13);
 };
+*/

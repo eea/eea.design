@@ -23,11 +23,11 @@
                     <dl class="portlet" id="soerSearchBox" style="padding:0px;">
                         <dt class="portletHeader" style="padding:5px;">Search SOER</dt>
                         <dd class="portletItem">
-                            <form id="free-text-search" method="get" action="advanced-search">
+                            <form id="faceted-text-search" method="get" action="advanced-search">
                                 <strong>Free text search</strong>
                                 <p>
-                                    <input type="text" name="#c4" onKeyPress="return disableEnterKey(event)" />
-                                    <input type="submit" style="cursor: pointer; cursor: hand;" name="search" value="Go!" />
+                                    <input type="text" name="c4" onKeyPress="return disableEnterKey(event)" />
+                                    <input type="submit" name="search" value="Find" />
                                 </p>
                             </form>
                             <form id="topic-search" method="get" action="soer_topic_search">
@@ -38,12 +38,12 @@
                                         <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
                                     </tal:block>
                                 </select>
-                                <input type="submit" style="cursor: pointer; cursor: hand;" value="Go!"/>
+                                <input type="submit" value="Find"/>
                                 </p>
                             </form>
 			    <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
                             <form onsubmit="$('#browsegeo').click(); return false;">
-                                <p style="margin-top:8px"><input type="submit" style="cursor: pointer; cursor: hand;" value="Browse geographically..." onclick=""/></p>
+                                <p style="margin-top:8px"><input type="submit" value="Browse geographically..." onclick=""/></p>
                             </form>
                             <div class="hiddenStructure">
 			      <metal:geographically use-macro="context/soer_geographically/macros/main" /> 

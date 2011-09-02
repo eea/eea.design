@@ -263,7 +263,8 @@
 
 /* standard search button inside any of the portal columns*/
 
-#portal-columns input.searchButton {
+/* #portal-columns input.searchButton, */
+#portal-columns input[type="submit"] {
     color:#fff;
     background:#346F83;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
@@ -287,7 +288,8 @@
             border-radius: 2px;
 }
 
-#portal-columns input.searchButton:hover {
+/* #portal-columns input.searchButton:hover, */
+#portal-columns input[type="submit"]:hover {
     background-color:&dtml-corporateOrange;;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
     background: -moz-linear-gradient(270deg, orange, #FF9123) repeat scroll 0 0 transparent;
@@ -301,7 +303,7 @@
 }
 
 
-#free-text-search input[type="text"] {
+#faceted-text-search input[type="text"] {
     -moz-transition: box-shadow 0.218s ease 0s;
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 3px 3px 3px 3px;
