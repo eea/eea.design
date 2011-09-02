@@ -31,15 +31,7 @@
             if (tooltip.length > 0) {
                 a.attr("title","").attr("href", "#");
 
-                // the tooltip panel should have the id in form of
-                // tip-SITEACTION-ID
-                // chrome 9 doesn't support focus event anymore so we give it click
-                var fordef;
-                if (navigator.userAgent.indexOf('Chrome/') > 0) {
-                    fordef = 'click, blur';
-                } else {
-                    fordef = 'focus, blur';
-                } 
+                fordef = 'click, blur';
 
                 a.tooltip({
                     tip: tooltip[0],
@@ -51,15 +43,15 @@
                     }
                 });
 
+                a.click(function(ev) {
+                    ev.preventDefault(); 
+                    tooltip.fadeIn('fast');
+                });
+                tooltip.bind('mouseleave', function() {
+                    tooltip.fadeOut('fast');
+                });
             }
 
-            // remove panel if user clicks outside it
-            $(document).click(function(e) {
-                var target = $(e.target);
-                if (!target.is('#cross-site-top .panel') && !target.parents('#cross-site-top .panel, #cross-site-top').length) {
-                    $('#cross-site-top .panel').fadeOut('fast');
-                }
-            });
         }
         $("#portal-siteactions a").each(panel);
         $("#portal-externalsites a").each(panel);
