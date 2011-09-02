@@ -1,0 +1,3 @@
+<metal:macro define-macro="pagedesign">
+    <!-- dummy used until eea.pagedesign is installed, this file can be removed later -->
+</metal:macro>

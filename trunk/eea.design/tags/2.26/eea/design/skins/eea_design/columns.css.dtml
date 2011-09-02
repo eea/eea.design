@@ -1,0 +1,126 @@
+/*
+** Tableless Column Layout for CSS2 capable Browsers
+** Based on http://www.positioniseverything.net/ordered-floats.html by Big John.
+*/
+
+/* <dtml-with base_properties> */
+
+body {
+    min-width: <dtml-var portalMinWidth missing="70em">;
+}
+#portal-columns {
+    width: auto;
+    padding: 1em 0 0 0 ! important;
+}
+#visual-column-wrapper {
+    float: left;
+    width: 100%;
+    margin-right: -<dtml-var columnTwoWidth missing="16em">;
+}
+#portal-column-content {
+    width: 100%;
+    float: right;
+    margin-left: -<dtml-var columnOneWidth missing="16em">;
+}
+
+#portal-column-content #content {
+    margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 <dtml-var columnOneWidth missing="16em">;
+}
+
+#portal-column-one {
+    float: left;
+    width: <dtml-var columnOneWidth missing="16em">;
+    overflow: hidden;
+    position: relative;
+}
+
+#portal-column-two {
+    float: right;
+    width: <dtml-var columnTwoWidth missing="16em">;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* padding - thanks to the w3c box model :P */
+
+#portal-column-content  {
+    padding: 0em 0em 0em 0em;
+}
+
+#portal-column-one .visualPadding {
+    padding: 0;
+    /*background: #F0F4F5;*/
+    background: white;
+}
+
+#slide-menu {
+    float: left;
+    width: 182px;
+}
+#slide-button {
+    width: 8px;
+    height: 50px; /* is set dynamically with js */
+    float: left;
+    cursor: pointer;
+    background: url(&dtml-portal_url;/arrow_left_8x8.png) right center no-repeat #E9EFCD;
+}
+#slide-button:hover {
+    background-color: #D0DF86;
+}
+body.fullscreen #slide-button {
+    background-image: url(&dtml-portal_url;/arrow_right_8x8.png);
+}
+
+#portal-column-two .visualPadding {
+    padding: 0em 1em 1em 0em;
+}
+
+/* hide columns */
+
+body.longwordlanguage .visualColumnHideOneTwo #portal-column-content #content,
+.visualColumnHideOneTwo #portal-column-content #content {
+    margin: 0;
+}
+
+body.longwordlanguage .visualColumnHideOne #portal-column-content #content,
+.visualColumnHideOne #portal-column-content #content {
+    margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 0;
+}
+
+body.longwordlanguage .visualColumnHideTwo #portal-column-content #content,
+.visualColumnHideTwo #portal-column-content #content {
+    margin: 0 0 0 <dtml-var columnOneWidth missing="16em">;
+}
+
+/* longword languages */
+
+body.longwordlanguage #visual-column-wrapper {
+    margin-right: -22em;
+}
+body.longwordlanguage #portal-column-content {
+    width: 100%;
+    float: right;
+    margin-left: -22em;
+}
+
+body.longwordlanguage #portal-column-content #content {
+    margin: 0 22em;
+}
+
+body.longwordlanguage #portal-column-one {
+    width: 22em;
+}
+
+body.longwordlanguage #portal-column-two {
+    width: 22em;
+}
+
+body.longwordlanguage .visualColumnHideOne #portal-column-content #content {
+    margin: 0 22em 0 0;
+}
+
+body.longwordlanguage .visualColumnHideTwo #portal-column-content #content {
+    margin: 0 0 0 22em;
+}
+
+/* </dtml-with> */
