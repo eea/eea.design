@@ -72,7 +72,7 @@
             function displayResult() {
                 // hide filter by topic after we choose a topic to filter the
                 // results
-                $topic_selector[0][0].className = "hidden";
+                $topic_selector[0][0].className = "hiddenStructure";
 
                 var x = this.selectedIndex,
                     y = this.options;

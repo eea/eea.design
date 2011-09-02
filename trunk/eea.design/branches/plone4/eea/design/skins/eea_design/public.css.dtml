@@ -296,10 +296,6 @@ div.portletAssignments {
     line-height: 2em;
 }
 
-.hidden {
-    display: none;
-}
-
 div.portletAssignments .managedPortletActions {
     float: right;
 }

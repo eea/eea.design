@@ -1748,6 +1748,9 @@ textarea.proportional {
     width: 1px;
 }
 
+option.hiddenStructure {
+    display: none;
+}
 .contentViews .hiddenStructure,
 .contentActions .hiddenStructure {
     position: absolute;
