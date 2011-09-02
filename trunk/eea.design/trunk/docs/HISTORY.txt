@@ -3,6 +3,7 @@ Changelog
 
 2.26-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed accidental loading of links for cross_site_tops [ichimdav #4132]
 
 2.25 - (2011-05-20)
 -------------------
