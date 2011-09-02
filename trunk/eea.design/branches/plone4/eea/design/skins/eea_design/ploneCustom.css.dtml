@@ -1009,7 +1009,7 @@ h3.site-description {
 /* drop down panels for portal siteactions */
 #cross-site-top .panel {
     display: none;
-    z-index: 100;
+    z-index: 600;
     background: transparent;
 }
 
