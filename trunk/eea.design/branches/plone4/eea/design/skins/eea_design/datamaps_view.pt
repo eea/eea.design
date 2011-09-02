@@ -18,19 +18,19 @@
                     <div id="articles-area" class="column-area">
 		    
 		    <!-- data and maps global search -->
-		    <div class="featured" style="padding:2em;">
-		       <h2>Global search on data and maps</h2>
-		       <form action="find/global" method="get" id="free-text-search">
+		    <div class="featured">
+		       <h2>Global search</h2>
+		       <form action="find/global" method="get" id="faceted-text-search">
                                 <p>
-                                    <input type="text" name="c12[]">
-                                    <input type="submit" value="Go!" name="search" class="searchButton" style="cursor: pointer; cursor: hand;">
+                                    <input type="text" onkeypress="return disableEnterKey(event)" name="c12">
+                                    <input type="submit" value="Search" name="search" class="searchButton" style="cursor: pointer; cursor: hand;">
                                 </p>
 		       </form>
 		    </div>
 		    
-                        <!-- featured content 
+                        <!-- featured content -->
                             <div metal:use-macro="here/portlet_featured_indicator/macros/portlet" />
-                        -->
+
                         <tal:featured_item 
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
@@ -58,9 +58,6 @@
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
 			
 			<div id="semantic-ds-links" class="shortcut-light">
-			   <div class="beta">
-			      <p>BETA</p>
-			   </div>
 			   <div id="semantic-content">
 			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
 			   <h2>Semantic Data Service</h2> 
@@ -101,21 +98,9 @@
 		    
 
 		    
-                        <div id="news-header">
-                        <h2>What's new</h2>
-                        <!-- select_topics -->
-                        <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector">
-                            <option value="">Filter by topic</option>
-                            <option value="">All topics</option>
-                            <tal:items tal:repeat="item items">
-                                <option  
-                                        tal:define="value python: item[0];"
-                                        tal:attributes="value value;"
-                                        tal:content="python: item[1]" />
-                            </tal:items>
-                        </select>
-                        </div>
-                        <!-- end select_topics -->
+                        <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
+                                Whatsnew heading and select topic.
+		        </div>
 
                         <!-- tabs -->
                         <div id="whatsnew-gallery" metal:define-macro="whatsnew-gallery">
