@@ -2,14 +2,10 @@ var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
 $(document).ready(function() {
-        var globalnav_holder = $('<div id="globalnav-holder"></div>'),
-            secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
+        var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
             global_nav = $('#portal-globalnav');
-        global_nav.detach();
         $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
         secundary_portaltabs.appendTo(global_nav);
-        global_nav.appendTo(globalnav_holder);
-        globalnav_holder.appendTo("#portal-top");
         
         
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data

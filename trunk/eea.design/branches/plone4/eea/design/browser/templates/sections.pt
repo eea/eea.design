@@ -2,7 +2,6 @@
      i18n:domain="eea">
      <div id="globalnav-holder">
         <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
-        <h2>david</h2>
         <ul id="portal-globalnav" 
             tal:define="selected_tab python:view.selected_portal_tab">
             <tal:tabs tal:repeat="tab portal_tabs">

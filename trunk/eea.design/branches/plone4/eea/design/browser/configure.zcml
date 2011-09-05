@@ -125,7 +125,7 @@
         name="plone.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
-        templates="templates/sections.pt"
+        template="templates/sections.pt"
         layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
         />

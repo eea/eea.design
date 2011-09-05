@@ -19,11 +19,6 @@ class LogoViewlet(common.LogoViewlet):
     """
     render = ViewPageTemplateFile('templates/logo.pt')
 
-class GlobalSectionsCMSViewlet(common.GlobalSectionsViewlet):
-    """A custom version of the global-sections class
-    """
-    render = ViewPageTemplateFile('templates/sections_cms.pt')
-
 class TitleViewlet(common.TitleViewlet):
     """A custom version of the title viewlet
     """
