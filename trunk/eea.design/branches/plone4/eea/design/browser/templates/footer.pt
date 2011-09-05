@@ -5,7 +5,6 @@
         <div id="bg-wrapper">
 
                 <div id="portal-footer">
-                    <!--<metal:ecotip  use-macro="context/portlet_ecotip/macros/portlet"/>-->
                     <tal:block replace="structure provider:plone.footer" tal:condition="exists: provider:plone.footer" />
                     <div class="managePortletsLink"
                        tal:condition="view/canManagePortlets">
