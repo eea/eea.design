@@ -282,7 +282,7 @@
        -moz-transition: box-shadow .218s;
          -o-transition: box-shadow .218s;
             transition: box-shadow .218s;
-    border: 1px solid #DCDCDC;
+    border: 1px solid #346F83;
     -webkit-border-radius: 2px;
        -moz-border-radius: 2px;
             border-radius: 2px;
@@ -1787,12 +1787,10 @@ option.hiddenStructure {
     border: 1px solid #ccc;
     display: block;
     margin: 0 auto;
-    width: 128px;
-    height: 95px;
 }
 
 .photoAlbumEntryWrapper {
-    /*display: block;*/
+    display: block;
     height: 130px;
     width: 128px;
     margin-bottom: 7px;
@@ -1805,6 +1803,7 @@ option.hiddenStructure {
     height: 169px;
     width: 130px;
     margin: 16px auto 0px;
+    overflow: hidden;
 }
 
 .photoAlbumEntryPreview,
