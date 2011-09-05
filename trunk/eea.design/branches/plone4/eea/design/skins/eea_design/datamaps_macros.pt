@@ -6,38 +6,35 @@
      id="datasets-highlights"
      class="highlights"
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestDatasets;
+                 folderContents datamaps_view/getLatestDatasets|nothing;
                  plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;
-                 more_href string:data;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:data;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <div metal:define-macro="maps"
      class="highlights"
      id="maps-highlights"
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestMaps;
+                 folderContents datamaps_view/getLatestMaps|nothing;
                  hide_listing python: False;
                  hide_album python: True;
-                 more_href string:figures;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:figures;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <div metal:define-macro="indicators"
      id="indicators-highlights"
      class="highlights"
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestIndicators;
+                 folderContents datamaps_view/getLatestIndicators|nothing;
                  plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: True;
                  hide_album python: False;
-                 more_href string:indicators;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:indicators;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 
@@ -80,24 +77,22 @@
      class="highlights"
      id="graphs-highlights"
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestGraphs;
+                 folderContents datamaps_view/getLatestGraphs|nothing;
                  hide_album python: False;
                  hide_listing python: True;
-                 more_href string:figures;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:figures;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <div metal:define-macro="interactivemaps"
      class="highlights"
      id="interactivemaps-highlights"
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestInteractiveMaps;
+                 folderContents datamaps_view/getLatestInteractiveMaps|nothing;
                  hide_album python: False;
                  hide_listing python: True;
-                 more_href string:explore-interactive-maps;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:explore-interactive-maps;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 
@@ -105,12 +100,11 @@
      class="highlights"
      id="alldataproducts-highlights" 
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getAllProducts;
+                 folderContents datamaps_view/getAllProducts|nothing;
                  hide_album python: False;
                  hide_listing python: True;
-                 more_href string:find;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:find;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 </html>

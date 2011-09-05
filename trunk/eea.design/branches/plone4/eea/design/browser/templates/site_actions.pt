@@ -1,13 +1,14 @@
-
 <ul id="portal-siteactions"
     tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};
-     portal_url context/@@plone_portal_state/portal_url;
-                       putils context/plone_utils;
-                       getIconFor nocall:putils/getIconFor;"
-    tal:condition="view/site_actions"
+                portal_url context/@@plone_portal_state/portal_url;
+                putils context/plone_utils;
+                context_state    context/@@plone_context_state;
+                site_actions python: context_state.actions('site_actions');
+                getIconFor nocall:putils/getIconFor;"
+    tal:condition="site_actions"
     i18n:domain="eea">
 
-    <li tal:repeat="saction view/site_actions"
+    <li tal:repeat="saction site_actions"
         tal:attributes="id string:siteaction-${saction/id}"><a
            href=""
            tal:define="title saction/title;

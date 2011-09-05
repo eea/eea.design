@@ -10,9 +10,8 @@
                  plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;
-                 more_href string:highlights;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:highlights;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <metal:featured metal:define-macro="featured-item"
@@ -62,9 +61,8 @@
                  plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;
-                 more_href string:publications;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:publications;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <div metal:define-macro="articles"
@@ -74,9 +72,8 @@
                  folderContents frontpage_view/getArticles;
                  hide_listing python: False;
                  hide_album python: True;
-                 more_href string:articles;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:articles;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <div metal:define-macro="multimedia"
@@ -85,9 +82,8 @@
      tal:define="folderContents frontpage_view/getMultimedia;
                  hide_album python: False;
                  hide_listing python: True;
-                 more_href string:multimedia;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:multimedia;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <div metal:define-macro="allproducts"
@@ -95,9 +91,8 @@
      id="allproducts-highlights"
      tal:define="folderContents frontpage_view/getAllProducts;
                  hide_album python: False;
-                 hide_listing python: True;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 hide_listing python: True;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 
@@ -108,9 +103,8 @@
                  folderContents datamaps_view/getAllProducts;
                  hide_album python: False;
                  hide_listing python: True;
-                 more_href string:data-and-maps;"
-     tal:condition="folderContents|nothing">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-layout-selection" />
+                 more_href string:data-and-maps;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
 <div metal:define-macro="more-link" class="portletFooter"
@@ -157,4 +151,16 @@
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
         <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </metal:gallery-layout-selection>
+
+<metal:condition metal:define-macro="gallery-condition">
+    <tal:cond tal:condition="folderContents"
+        tal:define="ajax ajax|nothing;
+        foldermacro python:context.frontpage_macros.macros['ajax-items'] if ajax else context.frontpage_macros.macros['gallery-layout-selection'];">
+        <div metal:use-macro="foldermacro" />
+    </tal:cond>
+    <tal:nocond tal:condition="not:folderContents">
+        <div class='portalMessage informationMessage'><p>No results are available for this topic</p></div>
+    </tal:nocond>
+</metal:condition>
+
 </html>

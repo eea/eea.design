@@ -2,25 +2,14 @@ var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
 $(document).ready(function() {
-        // Move the cross-site-top above the visual-portal-wrapper
-        var cross_site_top = $("#cross-site-top").detach(),
-            portal_siteactions = $("#portal-siteactions").detach();
-        portal_siteactions.prependTo(cross_site_top);
-        cross_site_top.prependTo("body");
-        
-        var header_holder = $('<div class="header-holder"></div>'),
-            globalnav_holder = $('<div class="globalnav-holder"></div>'),
-            secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>");
-        $("#portaltab-pressroom, #portaltab-abouteea").detach().appendTo(secundary_portaltabs);
-        secundary_portaltabs.appendTo("#portal-globalnav");
-        $('#portal-globalnav').detach().appendTo(globalnav_holder);
-        $('#portal-top').removeClass('row').detach().prependTo(header_holder);
-        globalnav_holder.appendTo(header_holder);
-        header_holder.insertAfter(cross_site_top);
-        
-        if( $('#portal-personaltools-wrapper').length ){
-            $('#portal-personaltools-wrapper').detach().insertAfter(globalnav_holder);
-        }
+        var globalnav_holder = $('<div id="globalnav-holder"></div>'),
+            secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
+            global_nav = $('#portal-globalnav');
+        global_nav.detach();
+        $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
+        secundary_portaltabs.appendTo(global_nav);
+        global_nav.appendTo(globalnav_holder);
+        globalnav_holder.appendTo("#portal-top");
         
         
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data

@@ -1,7 +1,6 @@
 <tal:news metal:define-macro="news" 
-        tal:define="
-        frontpage_view context/@@frontpage_highlights;
-        folderContents frontpage_view/getNews;"
-                tal:condition="folderContents|nothing">
-                <div metal:use-macro="here/frontpage_macros/macros/ajax-items" />
+        tal:define="frontpage_view context/@@frontpage_highlights;
+                    folderContents frontpage_view/getNews;
+                    ajax python:True">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </tal:news>

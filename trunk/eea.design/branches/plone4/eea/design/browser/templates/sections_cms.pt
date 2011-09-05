@@ -2,7 +2,7 @@
      tal:condition="portal_tabs"
      i18n:domain="eea">
     <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
-
+<div id="globalnav-holder">
     <ul id="portal-globalnav"
         tal:define="selected_tab python:view.selected_portal_tab"
         ><tal:tabs tal:repeat="tab portal_tabs"
@@ -15,5 +15,6 @@
                                title tab/description|nothing;">
             Tab Name
             </a></li></tal:tabs>
-    </ul>
+        </ul>
+    </div>
 </tal:sections>

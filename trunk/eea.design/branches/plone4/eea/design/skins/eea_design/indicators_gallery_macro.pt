@@ -1,6 +1,6 @@
 <tal:items metal:define-macro="indicators" 
         tal:define="datamaps_view context/@@data_and_maps_logic;
-        folderContents datamaps_view/getLatestIndicators;"
-                tal:condition="folderContents|nothing">
-                <div metal:use-macro="here/frontpage_macros/macros/ajax-items" />
+                    folderContents datamaps_view/getLatestIndicators;
+                    ajax python:True">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </tal:items>

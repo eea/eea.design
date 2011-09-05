@@ -23,7 +23,6 @@
                     filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
                     filter_topic.innerHTML = sel_value ? filter_topic_text : "";
 
-                var no_results = $("<div class='portalMessage informationMessage'><p>No results are available for this topic</p></div>");
                 var gallery_ajax = $(".gallery-ajax", news);
                 var layout_selection = $('.gallery-layout-selection li a', news)[0];
                 
@@ -38,9 +37,6 @@
                         if (cur_tab_val === "multimedia") {
                             $.getScript(site_address + "eea-mediacentre.js");
                         }
-                    }
-                    else {
-                       no_results.appendTo(gallery_ajax);
                     }
 
                 });

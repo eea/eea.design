@@ -72,7 +72,7 @@
 
     <browser:viewlet
         name="eea.cross_site_top"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         template="templates/cross_site_top.pt"
         layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
@@ -87,13 +87,13 @@
         permission="zope2.View"
         />
 
-    <browser:viewlet
-        name="plone.site_actions"
-        class=".viewlets.SiteActionsViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        />
+    <!--<browser:viewlet-->
+    <!--    name="plone.site_actions"-->
+    <!--    class=".viewlets.SiteActionsViewlet"-->
+    <!--    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"-->
+    <!--    layer=".interfaces.IEEACommonLayer"-->
+    <!--    permission="zope2.View"-->
+    <!--    />-->
 
     <browser:viewlet
         name="plone.searchbox"
@@ -121,29 +121,19 @@
         permission="zope2.View"
         />
 
-
-
     <browser:viewlet
         name="plone.global_sections"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
         templates="templates/sections.pt"
-        layer=".interfaces.IEEADesignPublic"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="plone.global_sections"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".viewlets.GlobalSectionsCMSViewlet"
-        layer=".interfaces.IEEADesignCMS"
+        layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
         />
 
    <!-- The personal bar -->
     <browser:viewlet
         name="plone.personal_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
         class="plone.app.layout.viewlets.common.PersonalBarViewlet"
         template="templates/personal_bar.pt"
         layer=".interfaces.IEEACommonLayer"

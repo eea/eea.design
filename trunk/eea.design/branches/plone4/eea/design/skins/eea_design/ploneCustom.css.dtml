@@ -971,7 +971,7 @@ h3.site-description {
     max-height: 30px;
 }
 
-.header-holder {
+#header-holder {
     width: 100%;
     clear: both;
     display: block;
@@ -979,7 +979,7 @@ h3.site-description {
     background: &dtml-corporateGreen;;
 }
 
-#portal-top {
+#portal-header {
     width: 1000px;
     display: block;
     clear: both;

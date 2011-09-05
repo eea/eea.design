@@ -1,7 +1,7 @@
 <tal:publications metal:define-macro="publications" 
-        tal:define="
-        frontpage_view context/@@frontpage_highlights;
-        folderContents frontpage_view/getPublications;
-        plone_view nocall:plone_view|context/@@plone;">
-                <div metal:use-macro="here/frontpage_macros/macros/ajax-items" />
+        tal:define="frontpage_view context/@@frontpage_highlights;
+                    folderContents frontpage_view/getPublications;
+                    plone_view nocall:plone_view|context/@@plone;
+                    ajax python:True">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </tal:publications>

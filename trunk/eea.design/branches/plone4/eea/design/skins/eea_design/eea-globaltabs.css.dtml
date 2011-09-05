@@ -1,7 +1,7 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-.globalnav-holder {
+#globalnav-holder {
     background: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
     background: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
