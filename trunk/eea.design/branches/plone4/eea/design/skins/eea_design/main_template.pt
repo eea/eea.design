@@ -110,15 +110,13 @@
             <div id="portal-top"
                 i18n:domain="eea"
                 tal:condition="not:ajax_load">
-                                <div tal:replace="structure provider:plone.portaltop" />
+                    <div tal:replace="structure provider:plone.portaltop" />
             </div>
-    </div>
+        </div>
+
 <div id="visual-portal-wrapper">
 
-
-        <div id="portal-columns"
-            class="row"
-            >
+        <div id="portal-columns" class="row">
 
         <!-- start of the main and left columns -->
         <div id="visual-column-wrapper">

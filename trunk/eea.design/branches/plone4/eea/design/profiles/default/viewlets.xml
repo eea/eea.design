@@ -21,9 +21,8 @@
     <!-- plone.abovecontenttitle order -->
     <order manager="plone.abovecontenttitle" skinname="*"
         based-on="Plone Default">
-        <viewlet name="plone.personal_bar"
-            insert-before="*" />
-        <viewlet name="plone.path_bar" />
+        <viewlet name="plone.personal_bar" />
+        <viewlet name="plone.path_bar" position-after="plone.personal_bar" />
     </order>
     <!-- end plone.abovecontenttitle order -->
     

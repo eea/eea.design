@@ -82,18 +82,20 @@
 
     <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title">
     </a>
-<div id="visual-portal-wrapper">
 
+    <div id="header-holder">
         <div id="portal-top"
             i18n:domain="eea"
             tal:condition="not:ajax_load">
             <div tal:replace="structure provider:plone.portaltop" />
         </div>
+    </div>
 
       <tal:comment replace="nothing">
         tal:attributes="class string:${hidecolumns}"
         this might not be needed
       </tal:comment>
+<div id="visual-portal-wrapper">
     <div id="portal-columns" class="row">
 
         <div id="visual-column-wrapper">
