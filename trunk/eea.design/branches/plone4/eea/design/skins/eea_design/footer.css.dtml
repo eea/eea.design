@@ -139,6 +139,18 @@
     height: 84px;
     overflow: hidden;
     margin: 0;
+    -webkit-transition: background 0.218s ease 0s;
+    -moz-transition: background 0.218s ease 0s;
+    -o-transition: background 0.218s ease 0s;
+    transition: background 0.218s ease 0s;
+}
+
+#portal-footer #portlet-ecotip:hover {
+    background: transparent url("led-bulb.png") no-repeat scroll left 10px;
+    -webkit-transition: background 0.218s ease 0s;
+    -moz-transition: background 0.218s ease 0s;
+    -o-transition: background 0.218s ease 0s;
+    transition: background 0.218s ease 0s;
 }
 
 #portal-footer #portlet-ecotip .portletFooter {
