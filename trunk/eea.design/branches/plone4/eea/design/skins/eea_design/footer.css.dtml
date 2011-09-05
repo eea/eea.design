@@ -84,11 +84,6 @@
     margin: 0 auto;
 }
 
-#portal-colophon .discreet,
-#portal-colophon .discreet-list {
-    text-align: left;
-    float: left;
-}
 
 #portal-colophon .colophonIcon {
     display: block; /* This is for Mozilla, as it doesn't support
@@ -164,12 +159,6 @@
 
 #portal-footer #portlet-ecotip .portletItem {
     padding: 9px 0 0 0;
-}
-
-.footer-clear {
-    clear: both;
-    display: block;
-    height: 1px;
 }
 
 .colophon-left {

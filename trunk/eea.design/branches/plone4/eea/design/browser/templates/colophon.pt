@@ -29,11 +29,11 @@
                     <li>
                          <a href="http://www.eea.europa.eu/privacy/" tal:attributes="href string:${local_site}/legal/privacy" title="Privacy policy" i18n:translate="Privacy policy" i18n:attributes="title">Privacy policy</a>
                     </li>
-     
-                    <li>
-                         <tal:comments i18n:translate="comments_to">Comments to</tal:comments> <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>
-                    </li>
                </ul>
+                    
+               <p style="margin-top:20px;">
+                 <tal:comments i18n:translate="engineered_by">engineered by</tal:comments><br><a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="eea_web_team" tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>
+               </p>
           </div>
      
           <div class="colophon-right">
@@ -49,18 +49,20 @@
           <div class="colophon-full">
                <p class="discreet">
                     This site conforms to the following standards:
+                    <br>
                </p>
-               
+              
                <ul class="discreet-list">
                     <li>
-                         <a rel="license"
+                      <a rel="license"
                         href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
                         title="Creative Commons Attribution License">
                             <img alt="Creative Commons Attribution License"
                                  style="border-width: 0pt;"
                                  src="http://www.eea.europa.eu/creativecommons-by-2.5-dk-80x15.png" /></a>
+              
                     </li>
-     
+              
                     <li>
                          <a href="http://www.w3.org/WAI/WCAG1AA-Conformance"
                             title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.">
@@ -92,9 +94,9 @@
           </div>
      </div>
      
-     <div class="footer-clear">&nbsp;</div>
+     <div class="visualClear">&nbsp;</div>
 
-     <a href="/login_form" title="CMS login">
+     <p><a href="/login_form" title="CMS login">
           <strong>CMS login</strong>
-     </a>
+     </a></p>
 </div>
