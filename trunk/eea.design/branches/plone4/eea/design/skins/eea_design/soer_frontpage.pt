@@ -7,33 +7,42 @@
 </head>
 
 <body>
-    <div metal:fill-slot="main">
+    <div metal:fill-slot="content-core">
         <metal:main-macro define-macro="main">
+            <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic;">
 
-
-            <div class="visualClear"></div>
-            <div id="tag-cloud">
-	 	 <div id="tag-cloud-content" tal:define="faceted_path python:'soer/advanced-search'"> 
-	 	        <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
-	 	 </div>
-            </div>
-
-            <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic">
-                <div class="content-column-one">
-                    <dl class="portlet" id="soerSearchBox" style="padding:0px;">
+                <div id="soer-top-area" style="margin:20px 0 50px 0;">
+		    <!-- all key facts and messages -->
+		    <dl style="float:left;width:370px;" class="portlet slidePortlet" >
+                            <dt class="portletHeader" style="padding:5px;">Key facts and messages</dt>
+                             <dd class="portletItem" style="left: 370px;"  tal:repeat="item view/getAllFactsAndMessages">
+                               <span>
+                                  <span tal:replace="structure item/text"></span>
+				   <a href="" title="Read more of the key fact" class="moreLink"
+				   tal:attributes="href item/url">more</a>
+                                </span>
+                             </dd>
+		    </dl>
+		    
+                    <dl style="float:right;width:240px;padding:0px;" class="portlet" id="soerSearchBox">
                         <dt class="portletHeader" style="padding:5px;">Search SOER</dt>
                         <dd class="portletItem">
-                            <form id="faceted-text-search" method="get" action="advanced-search">
+
+			   <div>
+			    <form id="faceted-text-search" method="get" action="advanced-search">
                                 <strong>Free text search</strong>
                                 <p>
-                                    <input type="text" name="c4" onKeyPress="return disableEnterKey(event)" />
+                                    <input type="text" style="width:160px;" name="c4" onKeyPress="return disableEnterKey(event)" />
                                     <input type="submit" name="search" value="Find" />
                                 </p>
                             </form>
-                            <form id="topic-search" method="get" action="soer_topic_search">
+			       
+                            </div>
+			    
+			     <form id="topic-search" method="get" action="soer_topic_search">
                                 <strong>Browse by topic</strong>
                                 <p>
-                                <select name="topic">
+                                <select name="topic" style="font-size:16px;height:34px;padding:5px;margin-bottom:10px;">
                                     <tal:block tal:repeat="item view/getSoerTopics">
                                         <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
                                     </tal:block>
@@ -41,53 +50,51 @@
                                 <input type="submit" value="Find"/>
                                 </p>
                             </form>
-			    <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
-                            <form onsubmit="$('#browsegeo').click(); return false;">
+			      <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
+                               <form onsubmit="$('#browsegeo').click(); return false;">
                                 <p style="margin-top:8px"><input type="submit" value="Browse geographically..." onclick=""/></p>
-                            </form>
-                            <div class="hiddenStructure">
-			      <metal:geographically use-macro="context/soer_geographically/macros/main" /> 
-			    </div>
-                            <span><a title="Advanced search" style="float:right;" class="moreLink" href="./advanced-search">Advanced search</a></span>
+                               </form>
+			      <a title="Advanced search" class="moreLink" href="./advanced-search">Advanced search</a>
+                                <div class="hiddenStructure">
+			          <metal:geographically use-macro="context/soer_geographically/macros/main" /> 
+			        </div>
+
                         </dd>
                     </dl>
-                    <dl class="portlet slidePortlet">
-                        <dt class="portletHeader" style="padding:5px;">Key facts</dt>
-                        <dd class="portletItem" style="left: 370px;"  tal:repeat="item view/getKeyFacts">
-                            <span>
-                                <span tal:replace="structure item/text"></span>
-				<a href="" title="Read more of the key fact" class="moreLink"
-				   tal:attributes="href item/url">more</a>
-                            </span>
-                        </dd>
-                    </dl>
-                    <p><a title="All key facts" class="internal-link moreLink" href="resolveuid/10fa976d921e0e9a44d329a927835668">All key facts</a></p>
+		    <div class="visualClear"></div>
+
+		    
+		    <p>
+		      <a title="All key facts" class="internal-link moreLink" href="resolveuid/10fa976d921e0e9a44d329a927835668">All key facts</a>&nbsp;
+		      <a title="All key messages" class="internal-link moreLink" href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c">All key messages</a>
+		    </p>
+
                 </div>
-                <div class="content-column-two">
-                    <dl class="portlet" id="video-portlet" style="padding:0px;">
-                        <dt class="portletHeader">Video</dt>
-                        <dd class="portletItem" tal:define="html context/soer_video/getText|nothing">
-                            <tal:vidhtml tal:condition="html" tal:replace="structure html"/>
-                        </dd>
-                    </dl>
-                    <dl class="portlet slidePortlet">
-                        <dt class="portletHeader" style="padding:5px;">Key messages</dt>
-                        <dd class="portletItem" style="left: 370px;" tal:repeat="item view/getMessages">
-                            <span>
-                                <span tal:replace="structure item/text"></span>
-				<a href="" title="Read more of the key message" class="moreLink"
-				   tal:attributes="href item/url">more</a>
-                            </span>
-                        </dd>
-                    </dl>
-                    <p><a title="All key messages" class="internal-link moreLink" href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c">All key messages</a></p>
-                </div>
+
                 <div class="visualClear"></div>
+		
+		
                 <div id="free-text-space" tal:define="txt context/getText|nothing">
                     <p tal:condition="txt" tal:replace="structure txt">[Free text]</p>
                 </div>
             </div>
 
+	    
+	    <!--div id="soer-video">
+	       <dl class="portlet" id="video-portlet" style="padding:0px;">
+                        <dt class="portletHeader">Video</dt>
+                        <dd class="portletItem" tal:define="html context/soer_video/getText|nothing">
+                            <tal:vidhtml tal:condition="html" tal:replace="structure html"/>
+                        </dd>
+	       </dl>
+	    </div-->
+	    
+	    <div class="visualClear"></div>
+            <div id="tag-cloud">
+	 	 <div id="tag-cloud-content" tal:define="faceted_path python:'soer/advanced-search'"> 
+	 	        <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
+	 	 </div>
+            </div>
         </metal:main-macro>
     </div>
 </body>

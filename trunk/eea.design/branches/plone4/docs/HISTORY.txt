@@ -5,6 +5,9 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Bug fix: fixed design issues on soer frontpage due to new template.
+  [demarant #4520]
+
 * Feature: Moved Site Setup portlet from left column to the right [szabozo #4493]
 
 * Feature: refs# 4487 added optional boolean parameter show_description to hide description on promotion gallery, limited the number of character to show in promo navigator and on title so that it works well on most content. 

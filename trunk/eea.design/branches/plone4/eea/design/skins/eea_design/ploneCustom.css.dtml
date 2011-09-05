@@ -425,29 +425,20 @@ body.section-atlas #visual-column-wrapper {
 .section-soer-draft #boxes .portlet {
     height: 181px;
 }
-.section-soer #boxes,
-.section-soer-draft #boxes {
-    width: 75%;
-}
+
 .section-soer #search-url,
 .section-soer-draft #search-url {
     display: none;
 }
-.section-soer #tag-cloud,
-.section-soer-draft #tag-cloud {
-    width: 24%;
-    margin-left: 0.5em;
-    float: right;
-}
+
+
+
 .section-soer #video-portlet img,
 .section-soer-draft #video-portlet img {
     width: 100%;
 }
-.section-soer #tag-cloud-content,
-.section-soer-draft #tag-cloud-content {
-    margin-top: -10px;
-    height: 300px;
-}
+
+
 .section-soer #free-text-space,
 .section-soer-draft #free-text-space {
     min-height: 150px;

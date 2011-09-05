@@ -50,6 +50,13 @@ class SoerFrontpage(BrowserView):
                 'url': brain.getURL,
             })
         return ret
+    
+    def getAllFactsAndMessages(self):
+        """Return all SOER key facts and messages in one list"""
+        ret1 = self.getMessages();
+        ret2 = self.getKeyFacts();
+        ret1.extend(ret2)
+        return ret1
 
     def getSoerTopics(self):
         return [
