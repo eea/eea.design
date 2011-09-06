@@ -1,8 +1,9 @@
 <div metal:use-macro="context/main_template/macros/master">
     <div metal:fill-slot="main">
-        <tal:main-macro metal:define-macro="main">
+        <tal:main-macro metal:define-macro="main"
+         tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
 
-        <div tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
+        <div>
             <div class="panel" id="tip-externalsites-etcssites">
                 <div class="panel-top">
                 </div>
@@ -157,7 +158,7 @@
             <!-- #4460 XXX Plone4 Performance issue -->
             <div class="panel" id="tip-siteaction-events" style="width: 450px">
               <!-- XXX Refactor or use AJAX-->
-                <!--div class="panel-top">
+                <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
 
@@ -166,9 +167,9 @@
                         portlet_themes_common comes from eea.themcentre
                     </tal:comment>
 
-                    <tal:publications tal:define=" portal_object here/portal_url/getPortalObject;
-                        specific nocall:portal_object/SITE/events/environmental-events-calendar|nothing;" tal:on-error="nothing">
-                        <tal:cond tal:condition="specific">
+                    <tal:publications tal:define="portal_object  context/@@plone_portal_state/portal;
+                    specific python:portal_object.restrictedTraverse('SITE/events/environmental-events-calendar');">
+                        <tal:cond tal:condition="nocall:specific">
                             <tal:publication tal:define="feeds specific/@@smartfolder_portlets|nothing;"
                                     tal:repeat="portlet feeds">
                                 <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
@@ -183,7 +184,7 @@
                         tal:attributes="href string:$portal_url/events/submitted/createQuickEvent">
                         <span>Submit a new event</span>
                     </a>
-                </div-->
+                </div>
             </div>
 
             <div class="panel" id="tip-siteaction-chooselang"

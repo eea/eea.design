@@ -297,7 +297,6 @@ div.panel, div.even  {
     color: #346f83; 
     margin: 0;
     padding: 15px 15px 10px 15px;
-    font-size: 125%;
     font-weight: normal;
     border-bottom: 1px solid #DDD;
     cursor: pointer;

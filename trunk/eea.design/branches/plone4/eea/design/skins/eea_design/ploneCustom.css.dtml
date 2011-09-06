@@ -1059,6 +1059,11 @@ h3.site-description {
     background: url("bullet.gif") no-repeat scroll left center transparent;
     display: block;
 }
+
+#tip-siteaction-contactus {
+    font-size: 125%;
+}
+
 #tip-externalsites-networks, #tip-externalsites-etcssites {
     width: 201px; 
     position:absolute; 
