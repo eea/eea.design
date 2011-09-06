@@ -9,6 +9,10 @@
     tal:define="ecotip context/@@randomecotip;
                 portal_url context/@@plone_portal_state/portal_url"
     tal:condition="ecotip">
+      
+      <img tal:attributes="src string:${portal_url}/ecotip.png" alt="" title="" class="ecotip-bulb" />
+      <img tal:attributes="src string:${portal_url}/led-bulb.png" alt="" title="" class="led-bulb" />
+      
     <dt>
         <a tal:attributes="href ecotip/url">
             <img tal:attributes="src string:${portal_url}/ecotip_icon.gif" alt="Green tip icon" />

@@ -129,23 +129,9 @@
 }
 
 #portal-footer #portlet-ecotip {
-    background: transparent url("ecotip.png") no-repeat scroll left 10px;
-    padding: 0 0 0 65px;
     height: 84px;
     overflow: hidden;
     margin: 0;
-    -webkit-transition: opacity .2s ease-in-out, background .5s linear;
-       -moz-transition: opacity .2s ease-in-out, background .5s linear;
-         -o-transition: opacity .2s ease-in-out, background .5s linear;
-            transition: opacity .2s ease-in-out, background .5s linear;
-}
-
-#portal-footer #portlet-ecotip:hover {
-    -webkit-transition: opacity .2s ease-in-out, background .5s linear;
-       -moz-transition: opacity .2s ease-in-out, background .5s linear;
-         -o-transition: opacity .2s ease-in-out, background .5s linear;
-            transition: opacity .2s ease-in-out, background .5s linear;
-    background: transparent url("led-bulb.png") no-repeat scroll 2px 10px;
 }
 
 #portal-footer #portlet-ecotip .portletFooter {
@@ -213,5 +199,21 @@
     position: relative;
     width: 760px;
 }
+
+img.ecotip-bulb {
+    float: left;
+    margin-top: 5px;
+}
+
+img.led-bulb {
+    float: left;
+    margin-top: 5px;
+    position: absolute;
+    left: 5px;
+}
+
+#portlet-ecotip img { -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;}
+img.ecotip-bulb, #portlet-ecotip:hover img.led-bulb { opacity: 1.0; }
+#portlet-ecotip:hover img.ecotip-bulb, img.led-bulb { opacity: 0; }
 
 /* </dtml-with> */
