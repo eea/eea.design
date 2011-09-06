@@ -33,7 +33,7 @@
                         </div>
                         <div class="visualClear"></div>
                     </div>
-                    <a class="moreLink" tal:condition="child/has_more" i18n:translate="box_morelink" tal:attributes="href child/listing_url">Read more</a>
+                    <a class="moreLink" tal:condition="child/has_more" i18n:translate="read_more" tal:attributes="href child/listing_url">Read more</a>
                     <div class="visualClear"></div>
                 </div>
 

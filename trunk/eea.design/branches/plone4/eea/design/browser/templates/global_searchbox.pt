@@ -11,7 +11,7 @@
             <input class="searchButton"
                    type="submit"
                    value="Search"
-                   i18n:attributes="value Search" />
+                   i18n:attributes="value label_search" />
     </form>
       <a id="search_advanced_link" href="/help/advanced-search"
                i18n:translate="advanced_search" tal:attributes="href string:${local_site}/help/advanced-search"

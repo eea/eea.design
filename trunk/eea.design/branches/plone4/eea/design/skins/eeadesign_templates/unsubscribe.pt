@@ -23,7 +23,7 @@
           <input type="text"
                  name="email"
                  id="email"
-                 alt="Email address"
+                 alt="Email"
                  value="Enter email"
                  size="20"
                  tal:attributes="value email"
@@ -33,7 +33,7 @@
                  name="submit"
                  value="Unsubscribe"
                  alt="Unsubscribe"
-                 i18n:attributes="value alt" />
+                 i18n:attributes="value alt_unsubscribe" />
         </div>
 
         </div>
