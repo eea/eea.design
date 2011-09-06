@@ -1002,6 +1002,7 @@ h3.site-description {
     display: none;
     z-index: 600;
     background: transparent;
+    border: 0px;
 }
 
 #cross-site-top .panel-top {
@@ -1021,7 +1022,6 @@ h3.site-description {
     background: white url(&dtml-portal_url;/portlet_bg.png) repeat-x;
     color: black;
     padding: 10px;
-    border: 1px solid #ccc;
 }
 
 #portal-columns {
@@ -1052,22 +1052,21 @@ h3.site-description {
     background: transparent;
 }
 
-#tip-siteaction-etcssites li,
+#tip-externalsites-etcssites li,
+.externalsites li,
 #tip-siteaction-chooselang li {
     padding-left: 1em;
     background: url("bullet.gif") no-repeat scroll left center transparent;
-}
-
-#tip-siteaction-chooselang {
-    min-width: 145px;
-    background-color: transparent;
-}
-
-#tip-siteaction-chooselang li {
     display: block;
 }
-
-
+#tip-externalsites-networks, #tip-externalsites-etcssites {
+    width: 201px; 
+    position:absolute; 
+    left: 0px !important;
+}
+#tip-externalsites-etcssites{ 
+    width: 270px; 
+}
 
 #tip-siteaction-chooselang li a {
     font-size: 11px;
@@ -1261,6 +1260,7 @@ h3.site-description {
 
 #portal-externalsites {
     float: left;
+    margin-left: 1.5em;
 }
 
 #portal-externalsites li,

@@ -55,7 +55,7 @@
         }
         $("#portal-siteactions a").each(panel);
         $("#portal-externalsites a").each(panel);
-
+        $("#tip-externalsites-networks").find(".externalsites a").each(panel);
         // since we use the standard events_portlet, we can't place the
         // submit-event-link in its footer initially
         var footer = $("#tip-siteaction-events .portletFooter");

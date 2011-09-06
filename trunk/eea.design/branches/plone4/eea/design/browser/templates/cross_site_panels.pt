@@ -3,12 +3,11 @@
         <tal:main-macro metal:define-macro="main">
 
         <div tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
-            <div class="panel" id="tip-siteaction-etcssites"
-                style="width: 270px">
+            <div class="panel" id="tip-externalsites-etcssites">
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
-                    <h4 style="margin:0 0 1em 0;">Select European Topic Centre
+                    <h4 style="margin:0 0 1em 0;" i18n:translate="externalsites-topiccentres">Select European Topic Centre
                         (ETC)
                     </h4>
                     <ul>
