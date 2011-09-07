@@ -96,14 +96,12 @@
                     </metal:promotions>   
                     <!-- end promotions_gallery_slideshow -->
 		    
-
-		    
-                        <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
-                                Whatsnew heading and select topic.
-		        </div>
+                    <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
+                        Whatsnew heading and select topic.
+                    </div>
 
                         <!-- tabs -->
-                        <div id="whatsnew-gallery" metal:define-macro="whatsnew-gallery">
+                        <div metal:define-macro="whatsnew-gallery" tal:define="datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
                             <ul id="tabs"
                                 tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps', 'Indicators', 'Graphs' ];">
                                 <li tal:repeat="tab tabnames">

@@ -86,7 +86,7 @@
                         <!-- end select_topics -->
 
                         <!-- tabs -->
-                        <div id="whatsnew-gallery" metal:define-macro="whatsnew-gallery">
+                        <div metal:define-macro="whatsnew-gallery" tal:define="datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
                             <ul id="tabs"
                                 tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps', 'All products'];">
                                 <li tal:repeat="tab tabnames">

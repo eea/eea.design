@@ -41,6 +41,9 @@
     enabled="True" expression="" id="design.js" inline="False"
     position-before="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="sub_cookies.js" inline="False"
+    position-before="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="print_warning.js" inline="False"
     position-after="promotions.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"

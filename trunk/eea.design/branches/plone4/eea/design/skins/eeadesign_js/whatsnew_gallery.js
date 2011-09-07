@@ -6,6 +6,8 @@
         var host = window.location.host, http = 'http://',
             localhost = host.indexOf('localhost') != '-1' ? true : undefined,
             site_address = localhost ? http + host + '/www/' : http + host + '/';
+        var gallery = $("#whatsnew-gallery"),
+            gallery_page = gallery.attr("data-page"); 
 
         var whatsnew_func = function(cur_tab_val, sel_text, sel_value, index) {
                 var address = site_address + cur_tab_val + "_gallery_macro";
@@ -77,8 +79,7 @@
                 var tab_val = $("#tabs a.current")[0].id.substr(4);
                
                 whatsnew_func(cur_tab_val = tab_val, sel_text = topic_text, sel_value = topic_value);
-            }
-        );
+            });
 
         // selection of folder_summary_view or atct_album_view
         var layout_links = $(".gallery-layout-selection li a");
@@ -91,10 +92,12 @@
              var album = $ajax.find('.gallery-album');
              var next = $parent.siblings().find('a');
              var link_class = $this[0].className;
-
+             var highlight = $this.closest('div')[0].id;
              if ( link_class === "list-layout active-list" || link_class === "album-layout active-album") {
                  return false;
              };
+             var cookie_expires = new Date(); 
+                cookie_expires.setMonth(cookie_expires.getMonth() + 1); // one month
 
             if (link_class == "list-layout") {
                 album.slideUp();
@@ -102,6 +105,7 @@
                 $hidden_gallery.removeClass("hiddenStructure");
                 $this.toggleClass("active-list");
                 next.toggleClass("active-album");
+                SubCookieUtil.set(gallery_page, highlight, "active-list", expires = cookie_expires);
                 return false;
             }
             else {
@@ -110,9 +114,44 @@
                 $hidden_gallery.removeClass("hiddenStructure");
                 $this.toggleClass("active-album");
                 next.toggleClass("active-list");
+                SubCookieUtil.set(gallery_page, highlight, "active-album", expires = cookie_expires);
                 return false;
             }
+
         });
+        
+        // set layout depending on cookies
+        if (gallery.length > 0) {
+            var gallery_cookies = SubCookieUtil.getAll(gallery_page);
+            console.log(gallery_cookies); 
+            if (gallery_cookies !== null) {
+                gallery.find('.highlights').each(function(){
+                    var $this = $(this);
+                    var layouts = $this.find(".gallery-layout-selection li a");
+                    var $hidden_gallery = $this.find(".hiddenStructure");
+                    $hidden_gallery.removeClass("hiddenStructure");
+                    var link_listing = layouts.first();
+                    var link_album = layouts.last();
+                    var listing = $this.find('.gallery-listing');
+                    var album = $this.find('.gallery-album');             
+                    var gallery_cookie = gallery_cookies[this.id];
+                    if (gallery_cookie !== null) {
+                        if (gallery_cookie === "active-album") {
+                            listing.hide();
+                            album.show();
+                            link_listing.removeClass("active-list");
+                            link_album.addClass("active-album");
+                        }
+                        else if (gallery_cookie === "active-list"){
+                            listing.show();
+                            album.hide();
+                            link_listing.addClass("active-list");
+                            link_album.removeClass("active-album");
+                        }
+                    }
+                });
+            }
+        }
     });
 
 })(jQuery);
