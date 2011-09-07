@@ -14,6 +14,8 @@ $(document).ready(function() {
         $('body').addClass('fullscreen');
         $('#icon-full_screen').parent().remove();
     }
+    
+    setInterval('toggleEcotipClass', 5000);
 });
 
 $(window).load(function() {
@@ -55,3 +57,18 @@ $(window).resize(function() {
     // var largest_column_height = Math.max($("#articles-area").height(), $("#highlights-area").height());
     // $(".frontpage .column-area").height(largest_column_height);
 });
+
+/**
+ * Function to animate ecotip bulb
+*/
+function toggleEcotipClass(){
+        ecotip = $('#portlet-ecotip');
+        
+        if( ecotip.hasClass('hover') ){
+                ecotip.removeClass('hover');
+        }else {
+                ecotip.addClass('hover');
+        }
+        
+        return false;
+}
