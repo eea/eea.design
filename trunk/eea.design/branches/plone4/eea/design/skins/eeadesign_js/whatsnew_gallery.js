@@ -18,8 +18,7 @@
                 // first tab gal[0] returns the second highlights instead of
                 // the first so we redefine news to the first found match if
                 // index is 0
-                var first = gal.first();
-                var news = index === 0 ? first : news;
+                var news = index === 0 ? gal.first() : news;
 
                 var filter_topic = index ? news.firstElementChild : news[0].firstElementChild,
                     filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
@@ -123,7 +122,6 @@
         // set layout depending on cookies
         if (gallery.length > 0) {
             var gallery_cookies = SubCookieUtil.getAll(gallery_page);
-            console.log(gallery_cookies); 
             if (gallery_cookies !== null) {
                 gallery.find('.highlights').each(function(){
                     var $this = $(this);

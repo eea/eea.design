@@ -1309,6 +1309,7 @@ h3.site-description {
 #portal-personaltools-wrapper {
     clear: both;
     margin-top: -11px;
+    min-height: 10px;
 }
 
 #portal-personaltools #user-name {
