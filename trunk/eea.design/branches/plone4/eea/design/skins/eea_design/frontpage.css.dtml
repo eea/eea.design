@@ -128,27 +128,29 @@ a.archives {
     font-size: 1.2em;
     width: 100%;
     margin: 1em 0 1em 0;
+    padding: 2em 0em;
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
     color: &dtml-linkHeadingColor;;
     font-weight: normal;
     /* border: 0px;  */
+    background: transparent;
+    padding-top: 8px;
+}
+#top-news-area div.portletHeader {
+    background: none repeat scroll 0 0 white;
+    height: 38px;
+    opacity: 0.8;
+    margin-top: -37px;
+    text-align: left;
+    padding: 0px;
 }
 
-#top-news-area div.portletHeader {
-    background: url("promotion_bg.png") repeat-x scroll left bottom transparent;
-    margin: 0 2px;
-    opacity: 0.8;
-    padding: 0.25em 0 0.5em 1em;
-    position: absolute;
-    top: 105px;
-    width: 171px;
-}
 #top-news-area .portlet-promotions {
     width: 20%;
     float: left;
-    border: 1px solid #888;
+    border: 1px solid #999;
 }
 
 #top-news-area .portlet,
@@ -163,6 +165,7 @@ a.archives {
 
 #top-news-area .portlet-promotions img {
     width: 100%;
+    height: 110px;
 }
 
 /* Frontpage main content
