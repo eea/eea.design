@@ -129,7 +129,6 @@
                     var $this = $(this);
                     var layouts = $this.find(".gallery-layout-selection li a");
                     var $hidden_gallery = $this.find(".hiddenStructure");
-                    $hidden_gallery.removeClass("hiddenStructure");
                     var link_listing = layouts.first();
                     var link_album = layouts.last();
                     var listing = $this.find('.gallery-listing');
@@ -139,12 +138,14 @@
                         if (gallery_cookie === "active-album") {
                             listing.hide();
                             album.show();
+                            $hidden_gallery.removeClass("hiddenStructure");
                             link_listing.removeClass("active-list");
                             link_album.addClass("active-album");
                         }
                         else if (gallery_cookie === "active-list"){
                             listing.show();
                             album.hide();
+                            $hidden_gallery.removeClass("hiddenStructure");
                             link_listing.addClass("active-list");
                             link_album.removeClass("active-album");
                         }

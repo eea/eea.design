@@ -1308,6 +1308,7 @@ h3.site-description {
 
 #portal-personaltools-wrapper {
     clear: both;
+    margin-top: -11px;
 }
 
 #portal-personaltools #user-name {
@@ -1346,7 +1347,7 @@ h3.site-description {
     /* The path bar, including breadcrumbs and add to favorites */
     border: none;
     line-height: 1.4;
-    margin: 0;
+    margin: 3px 0 0 0;
     position: relative;
     left: 16px;
     clear: both;
@@ -2221,5 +2222,6 @@ body.mceContentBody {
 }
 
 /* </dtml-with> */
+
 
 

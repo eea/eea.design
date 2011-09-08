@@ -59,7 +59,7 @@ body.frontpage ul {
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4;
-    padding: 1em 1em 0.25em 0em;
+    padding: 0.2em 1em 0.25em 0em;
     border: none;
     clear: left;
     color: #000;
@@ -384,6 +384,9 @@ ul#tabs li:first-child a:hover {
     border-radius: 10px;
 }
 
+.featured-highlights {
+    min-height: 120px;
+}
 
 .featured  img {
     padding-right: 10px;
@@ -589,4 +592,5 @@ a.active-list, a.list-layout:hover {
     font-weight: bold;
 }
 /* </dtml-with> */
+
 

@@ -14,7 +14,8 @@
       <metal:pritems  
                     tal:repeat="hl highlights">
                         <li tal:define="
-                            figure_link hl/getUrl|hl/getURL|hl/absolute_url;
+                            figure_link hl/getUrl|nothing;
+                            figure_link python:figure_link or hl.getURL();
                             image_link hl/getURL|hl/absolute_url;
                             hltitle hl/Title
                             ">
