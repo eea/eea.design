@@ -124,10 +124,10 @@ a.archives {
 ******************************************************************************/
 
 #top-news-area {
-    background: #E5E6E8;
+    /* background: #E5E6E8; */
     font-size: 1.2em;
-    width: 100%;
-    margin: 1em 0 1em 0;
+    width: 998px;
+    margin: 1em 0;
     padding: 2em 0em;
 }
 
@@ -150,7 +150,7 @@ a.archives {
 #top-news-area .portlet-promotions {
     width: 20%;
     float: left;
-    border: 1px solid #999;
+    border: 1px solid #c6c6c7;
 }
 
 #top-news-area .portlet,
@@ -160,7 +160,7 @@ a.archives {
 }
 
 #top-news-area dd  {
-    border: 2px solid #FFF;
+    border: 3px solid #FFF;
 }
 
 #top-news-area .portlet-promotions img {

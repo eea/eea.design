@@ -34,17 +34,15 @@ $(window).resize(function() {
 
     // Layout of top promotions. It's safer to do this in JS as there was some rounding issues
     // with IE in window sizes that wasn't dividible by 5.
-    var margin = $('#top-news-area').width() * 0.012;
-    w = ($('#top-news-area').width() - 5 * margin) / 5;
-    $('#top-news-area .portlet-promotions').width(w);
-    $('#top-news-area .portlet-promotions:lt(4)').css('marginRight', Math.floor(margin) + 'px');
-    $('#top-news-area .portlet-promotions:last').css({'marginRight': '0', 'float': 'right'});
-
-    // Make sure the height of our images stick to 16:9. Can be removed when
-    // we have correct aspect ratio on the uploaded images.
-    // $("#multimedia-highlights img, #top-news-area .portlet-promotions img").each(function(i) {
-    //     $(this).height((9/16) * $(this).width());
-    // });
+    var top_news = $('#top-news-area'),
+        top_news_width = top_news.width();
+    var margin = top_news_width * 0.012;
+    var w = Math.floor((top_news_width - 5 * margin) / 5);
+    var promotions = top_news.find('.portlet-promotions');
+    promotions.width(w);
+    var last = promotions.last();
+    promotions.not(last).css('marginRight', (Math.floor(margin) + 2) + 'px');
+    last.css({'marginRight': '0px', 'float': 'right'});
 
     // Add margins so that the #multimedia-highlights ul fill up the same height as the #big_vid.
     // TODO: why does the ul look a little bit too big in IE6 and 7?
