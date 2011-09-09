@@ -16,6 +16,7 @@ $(document).ready(function() {
     }
     
     window.setInterval('toggleEcotipClass()', 5000);
+
 });
 
 $(window).load(function() {
@@ -60,13 +61,6 @@ $(window).resize(function() {
  * Function to animate ecotip bulb
 */
 function toggleEcotipClass(){
-        ecotip = $('#portlet-ecotip');
-        
-        if( ecotip.hasClass('hover') ){
-                ecotip.removeClass('hover');
-        }else {
-                ecotip.addClass('hover');
-        }
-        
-        return false;
+    var ecotip = $('#portlet-ecotip');
+    ecotip.toggleClass('hover');
 }
