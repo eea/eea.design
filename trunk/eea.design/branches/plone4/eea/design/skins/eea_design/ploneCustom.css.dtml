@@ -2184,7 +2184,7 @@ div.listingBar a {
     border: 0px;
 }
 
-div.width-full {
+div.width-full, #themesListingTable {
     width: 100%;
 }
 

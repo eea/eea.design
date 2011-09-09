@@ -140,7 +140,7 @@ a.archives {
     background: none repeat scroll 0 0 white;
     height: 38px;
     opacity: 0.8;
-    margin-top: -37px;
+    margin-top: -38px;
     text-align: left;
     padding: 0px;
 }
