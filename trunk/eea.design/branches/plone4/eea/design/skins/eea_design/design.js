@@ -15,7 +15,7 @@ $(document).ready(function() {
         $('#icon-full_screen').parent().remove();
     }
     
-    setInterval('toggleEcotipClass', 5000);
+    window.setInterval('toggleEcotipClass()', 5000);
 });
 
 $(window).load(function() {
