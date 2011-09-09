@@ -133,7 +133,7 @@
             <metal:block define-slot="content">
                 <div metal:define-macro="content"
                     tal:define="show_border context/@@plone/showEditableBorder; show_border python:show_border and not ajax_load"
-                    tal:attributes="id python:'region-content' or ''">
+                    id="region-content">
 
                     <div id="edit-bar"
                         tal:condition="show_border"
