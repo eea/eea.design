@@ -157,9 +157,7 @@
                 </div>
             </div>
 
-            <!-- #4460 XXX Plone4 Performance issue -->
             <div class="panel" id="tip-siteaction-events" style="width: 450px">
-              <!-- XXX Refactor or use AJAX-->
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">

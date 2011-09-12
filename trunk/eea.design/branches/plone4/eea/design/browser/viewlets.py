@@ -9,11 +9,6 @@ from plone.app.layout.viewlets.content import DocumentBylineViewlet as \
     BaseBelowContentTitleViewlet
 from zope.component import getMultiAdapter
 
-class SiteActionsViewlet(common.SiteActionsViewlet):
-    """A custom version of the site-actions viewlet
-    """
-    render = ViewPageTemplateFile('templates/site_actions.pt')
-
 class LogoViewlet(common.LogoViewlet):
     """A custom version of the logo viewlet
     """

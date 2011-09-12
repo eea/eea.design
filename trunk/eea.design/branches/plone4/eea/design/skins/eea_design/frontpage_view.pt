@@ -70,7 +70,7 @@
                     <!-- end promotions_gallery_slideshow -->
 
                         <div id="news-header" metal:define-macro="whatsnew-select-topic">
-                        <h2> What's new</h2>
+                        <h2 i18n:translate="whatnews_gallery_title"> What's new</h2>
                         <!-- select_topics -->
                         <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector">
                             <option value="">Filter by topic</option>

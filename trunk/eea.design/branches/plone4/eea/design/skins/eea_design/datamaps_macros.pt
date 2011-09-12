@@ -53,7 +53,7 @@
                              plone_view nocall:plone_view|context/@@plone;"
                  tal:condition="spotlight">
     <div class="featured roundedCorners">
-        <h2 class="column-title" i18n:domain="eea" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
+        <h2 class="column-title" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
 
         <div id="spotlight-item"
             class="highlights">
@@ -66,7 +66,7 @@
             <p tal:content="spotlight/description">description</p>
 
             <p><a href="#" class="moreLink"
-                tal:attributes="href spotlight/url">Read more</a></p>
+                tal:attributes="href spotlight/url" i18n:translate="read_more">Read more</a></p>
 
         </div>
     </div>

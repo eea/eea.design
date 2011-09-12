@@ -87,14 +87,6 @@
         permission="zope2.View"
         />
 
-    <!--<browser:viewlet-->
-    <!--    name="plone.site_actions"-->
-    <!--    class=".viewlets.SiteActionsViewlet"-->
-    <!--    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"-->
-    <!--    layer=".interfaces.IEEACommonLayer"-->
-    <!--    permission="zope2.View"-->
-    <!--    />-->
-
     <browser:viewlet
         name="plone.searchbox"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"

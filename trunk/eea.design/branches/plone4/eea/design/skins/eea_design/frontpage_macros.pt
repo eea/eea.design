@@ -14,6 +14,10 @@
         <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 
+<h2 tal:define="statusMessage python:request.get('statusMessage'); 
+                   domain python:request.get('domain')" 
+       tal:attributes="i18n:domain domain; 
+                       i18n:translate string:">someText</h2>
 <metal:featured metal:define-macro="featured-item"
      tal:define="featured_class featured_class|context/@@frontpage_highlights;
                  nr_items nr_items|python:1; 
@@ -25,10 +29,12 @@
                  archive_text archive_text|nothing;
                  archive_href archive_href|nothing;
                  archive_translate_tag archive_translate_tag|nothing;"
-                 tal:condition="highlights">
+                 tal:condition="highlights"
+                 i18n:domain="eea">
 
-    <tal:translate i18n:translate="${archive_translate_tag}" tal:condition="archive_text">
-        <a tal:attributes="href archive_href; class string: archives" tal:content="archive_text">Archive</a>
+    <tal:translate tal:condition="archive_text">
+    <a tal:attributes="href archive_href; class string: archives">
+        <span tal:content="archive_text">Archive</span></a>
     </tal:translate>
      <metal:items tal:repeat="highlight python:highlights[:nr_items]">
         <tal:item tal:define="
@@ -36,9 +42,11 @@
                               title highlight/Title|highlight/getNewsTitle;
                               description highlight/Description|highlight/getTeaser">
             <div class="featured roundedCorners">
-                <tal:translate i18n:translate="${translate_tag}">
-                    <h2 class="column-title" i18n:domain="eea" tal:content="box_title">Box Name</h2>
-                </tal:translate>
+                    <h2 class="column-title" i18n:domain="eea" i18n:translate="">
+                                                        <span i18n:name="featured_item_box_title" 
+                                                        tal:content="box_title"
+                                                        tal:omit-tag="">Box Name</span>
+                    </h2>
                 <div class="featured-highlights">
                     <div class="figure-left"><img alt="" tal:attributes="src string:${url}/image_thumb; title title; alt title" /></div>
                     <h3 class="highlight">
@@ -110,8 +118,12 @@
 <div metal:define-macro="more-link" class="portletFooter"
     tal:define="more_href more_href|string:/;
                 more_title more_title|string:More">
-                <p><a  title="archive" class="moreLink" 
-                      tal:attributes="href more_href;" tal:content="more_title">More</a></p>
+                <p><a title="archive" class="moreLink" 
+                      tal:attributes="href more_href;" i18n:translate=""><span i18n:name="portlet_footer_read_more" 
+                                                        tal:content="more_title"
+                                                        tal:omit-tag="">More</span>
+                    </a>
+                </p>
 </div>
 
 <metal:gallery-items define-macro="gallery-items"

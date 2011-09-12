@@ -21,9 +21,6 @@
 
                        icon python:getIconFor('site_actions', saction['id'], None);
                        accesskey python: accesskeys.get(id, '');"
-           i18n:attributes="title"
-           i18n:translate=""
-          
            tal:attributes="href saction/url;
                            title title;
                            accesskey accesskey;">
