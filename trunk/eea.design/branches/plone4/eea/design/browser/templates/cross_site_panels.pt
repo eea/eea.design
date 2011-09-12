@@ -52,7 +52,9 @@
                 </div>
                 <div class="panel-content shadow"
                     tal:define="includeSocialMedia python:True">
-                    <metal:portlet use-macro="context/portlet_subscribe/macros/portlet" />
+                    <tal:block condition="exists:context/portlet_subscribe">
+                      <metal:portlet use-macro="context/portlet_subscribe/macros/portlet" />
+                    </tal:block>
                 </div>
             </div>
 
@@ -172,7 +174,9 @@
                         <tal:cond tal:condition="nocall:specific">
                             <tal:publication tal:define="feeds specific/@@smartfolder_portlets|nothing;"
                                     tal:repeat="portlet feeds">
-                                <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
+                                <tal:block condition="exists:context/portlet_themes_common">
+                                  <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
+                                </tal:block>
                             </tal:publication>
                         </tal:cond>
                     </tal:publications>
