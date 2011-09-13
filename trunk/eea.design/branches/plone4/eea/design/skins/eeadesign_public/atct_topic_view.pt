@@ -11,6 +11,8 @@
      <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />
   </tal:isEmpty>
 
+  <tal:map condition="here/@@isGeoContainer" replace="structure here/@@geoEventsMap" />
+
   <metal:block define-macro="content-core">
     <metal:body define-macro="body_macro"
                 tal:define="kssClassesView context/@@kss_field_decorator_view;
