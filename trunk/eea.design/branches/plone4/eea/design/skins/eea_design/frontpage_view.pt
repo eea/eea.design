@@ -69,19 +69,20 @@
                     </metal:promotions>   
                     <!-- end promotions_gallery_slideshow -->
 
-                        <div id="news-header" metal:define-macro="whatsnew-select-topic">
-                        <h2 i18n:translate="whatnews_gallery_title"> What's new</h2>
                         <!-- select_topics -->
-                        <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector">
-                            <option value="">Filter by topic</option>
-                            <option value="">All topics</option>
-                            <tal:items tal:repeat="item items">
-                                <option  
-                                        tal:define="value python: item[0];"
-                                        tal:attributes="value value;"
-                                        tal:content="python: item[1]" />
-                            </tal:items>
-                        </select>
+                        <div id="news-header">
+                            <h2 i18n:translate="whatnews_gallery_title"> What's new</h2>
+                            <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector"
+                               metal:define-macro="whatsnew-select-topic">
+                                <option value="">Filter by topic</option>
+                                <option value="">All topics</option>
+                                <tal:items tal:repeat="item items">
+                                    <option  
+                                            tal:define="value python: item[0];"
+                                            tal:attributes="value value;"
+                                            tal:content="python: item[1]" />
+                                </tal:items>
+                            </select>
                         </div>
                         <!-- end select_topics -->
 

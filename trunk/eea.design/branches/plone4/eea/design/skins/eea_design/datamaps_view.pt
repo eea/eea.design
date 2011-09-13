@@ -95,8 +95,11 @@
                     </metal:promotions>   
                     <!-- end promotions_gallery_slideshow -->
 		    
-                    <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
-                        Whatsnew heading and select topic.
+                    <div id="news-header" >
+                    <h2 i18n:translate="datamaps_gallery_title"> Browse complete catalogue</h2>
+                        <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
+                            Whatsnew select topic.
+                        </div>
                     </div>
 
                         <!-- tabs -->
