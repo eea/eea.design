@@ -16,20 +16,20 @@
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="column-area">
-		    
+
 		    <!-- data and maps global search -->
 		    <div class="featured">
 		       <h2 i18n:translate="featured_global_search">Global search</h2>
-		       <form action="find/global" method="get" id="faceted-text-search" class="searchforms">
-                   <input type="text" onkeypress="return disableEnterKey(event)" name="c12" title="Search data, maps, indicators">
-                                    <input type="submit" value="Search" name="search">
+		       <form action="find/global" method="get" id="faceted-text-search" class="searchforms faceted-external-search">
+                   <input type="text" name="c12" title="Search data, maps, indicators" value=""/>
+                   <input type="submit" value="Search" name="search" />
 		       </form>
 		    </div>
-		    
+
                         <!-- featured content -->
                             <div metal:use-macro="here/portlet_featured_indicator/macros/portlet" />
 
-                        <tal:featured_item 
+                        <tal:featured_item
                         i18n:translate="featured_item_see_all"
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
@@ -41,25 +41,25 @@
                                          archive_translate_tag string:see-all;">
                             <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
                         </tal:featured_item>
-			
+
 		        <!-- Popular tags -->
 			<div id="faceted-form">
 			  <div id="tag-cloud">
-	 	            <div id="tag-cloud-content" tal:define="faceted_path python:'find/global'"> 
+	 	            <div id="tag-cloud-content" tal:define="faceted_path python:'find/global'">
 	 	                <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
 			    </div>
                           </div>
 			</div>
-			
+
                         <!--<div class="featured">
                           <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
                         </div>-->
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
-			
+
 			<div id="semantic-ds-links" class="shortcut-light">
 			   <div id="semantic-content">
 			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
-			   <h2>Semantic Data Service</h2> 
+			   <h2>Semantic Data Service</h2>
 			   Access our data via semantic APIs</a>
 			   </div>
                         </div>
@@ -69,7 +69,7 @@
                         <div id="mobile">
                             <a id="mobile-link" href="http://mobile.eea.europa.eu"></a>
                         </div>
-                        
+
                         <div id="social-links">
                         <h2 class="column-title" i18n:translate="follow-us">Follow us</h2>
                            <div metal:use-macro="here/portlet_social_links/macros/portlet">
@@ -77,24 +77,24 @@
                            </div>
                         </div>
                         <!-- end community divs -->
-                        
+
                         <div class="portletFooter">
-                        
+
                         </div>
                     </div>
-                        
+
                     <div id="highlights-area" class="column-area">
                     <!-- promotions_gallery_slideshow-->
-                    <metal:promotions 
+                    <metal:promotions
                         tal:define="frontpage python: True;
                                     promo_view datamaps_view;
 				    show_description python:False;">
                             <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
                                 promoted item
                             </div>
-                    </metal:promotions>   
+                    </metal:promotions>
                     <!-- end promotions_gallery_slideshow -->
-		    
+
                     <div id="news-header" >
                     <h2 i18n:translate="datamaps_gallery_title"> Browse complete catalogue</h2>
                         <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
@@ -111,7 +111,7 @@
                                 </li>
                             </ul>
                             <!-- end_tabs -->
-                            
+
                             <div metal:use-macro="here/datamaps_macros/macros/alldataproducts">
                                 All data products Highlights
                             </div>

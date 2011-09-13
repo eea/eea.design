@@ -23,22 +23,22 @@
                                 </span>
                              </dd>
 		    </dl>
-		    
+
                     <dl style="float:right;width:240px;padding:0px;" class="portlet" id="soerSearchBox">
                         <dt class="portletHeader" style="padding:5px;">Search SOER</dt>
                         <dd class="portletItem">
 
 			   <div>
-			    <form id="faceted-text-search" method="get" action="advanced-search">
+			    <form id="faceted-text-search" method="get" action="advanced-search" class="faceted-external-search">
                                 <strong>Free text search</strong>
                                 <p>
-                                    <input type="text" style="width:160px;" name="c4" onKeyPress="return disableEnterKey(event)" />
+                                    <input type="text" style="width:160px;" name="c4" />
                                     <input type="submit" name="search" value="Find" />
                                 </p>
                             </form>
-			       
+
                             </div>
-			    
+
 			     <form id="topic-search" method="get" action="soer_topic_search">
                                 <strong>Browse by topic</strong>
                                 <p>
@@ -56,14 +56,14 @@
                                </form>
 			      <a title="Advanced search" class="moreLink" href="./advanced-search">Advanced search</a>
                                 <div class="hiddenStructure">
-			          <metal:geographically use-macro="context/soer_geographically/macros/main" /> 
+			          <metal:geographically use-macro="context/soer_geographically/macros/main" />
 			        </div>
 
                         </dd>
                     </dl>
 		    <div class="visualClear"></div>
 
-		    
+
 		    <p>
 		      <a title="All key facts" class="internal-link moreLink" href="resolveuid/10fa976d921e0e9a44d329a927835668">All key facts</a>&nbsp;
 		      <a title="All key messages" class="internal-link moreLink" href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c">All key messages</a>
@@ -72,14 +72,14 @@
                 </div>
 
                 <div class="visualClear"></div>
-		
-		
+
+
                 <div id="free-text-space" tal:define="txt context/getText|nothing">
                     <p tal:condition="txt" tal:replace="structure txt">[Free text]</p>
                 </div>
             </div>
 
-	    
+
 	    <!--div id="soer-video">
 	       <dl class="portlet" id="video-portlet" style="padding:0px;">
                         <dt class="portletHeader">Video</dt>
@@ -88,10 +88,10 @@
                         </dd>
 	       </dl>
 	    </div-->
-	    
+
 	    <div class="visualClear"></div>
             <div id="tag-cloud">
-	 	 <div id="tag-cloud-content" tal:define="faceted_path python:'soer/advanced-search'"> 
+	 	 <div id="tag-cloud-content" tal:define="faceted_path python:'soer/advanced-search'">
 	 	        <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
 	 	 </div>
             </div>

@@ -89,16 +89,3 @@ $(document).ready(function() {
         b1.click();}, 10000);
    });
 });
-
-/*
-var disableEnterKey = function(e)
-{
-    var key;
-    if(window.event){
-        key = window.event.keyCode; //IE
-    }else{
-        key = e.which; //firefox
-    }
-    return (key != 13);
-};
-*/
