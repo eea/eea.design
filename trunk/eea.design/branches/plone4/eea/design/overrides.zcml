@@ -6,7 +6,7 @@
         for="Products.CMFCore.interfaces.ISiteRoot
              zope.app.publication.interfaces.IBeforeTraverseEvent"
         handler="eea.design.browser.changeskin.mark_layer"
-        />
+         />
 
 </configure>
 

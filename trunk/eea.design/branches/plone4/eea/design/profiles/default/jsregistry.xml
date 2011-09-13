@@ -3,7 +3,7 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
   <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="promotions.js" inline="False"
-    position-after="iefixes.js"/>
+    position-after="sub_cookies.js"/>
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True" expression="" id="global_searchbox.js" inline="False"
     position-after="promotions.js"/>
