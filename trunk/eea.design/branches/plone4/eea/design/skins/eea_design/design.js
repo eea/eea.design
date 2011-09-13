@@ -1,7 +1,7 @@
 var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
         var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
             global_nav = $('#portal-globalnav');
         $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
@@ -19,13 +19,13 @@ $(document).ready(function() {
 
 });
 
-$(window).load(function() {
-    $(window).resize();
+jQuery(window).load(function() {
+    jQuery(window).resize();
 });
 
-$(window).resize(function() {
+jQuery(window).resize(function() {
     // CSS max/min width doesn't work in IE, so we do it in JS instead:
-    var wrapper = $('#visual-portal-wrapper');
+    var wrapper = jQuery('#visual-portal-wrapper');
     var w = wrapper.width();
     if (w < DESIGN_MIN_WIDTH) {
         wrapper.width(DESIGN_MIN_WIDTH);
@@ -35,7 +35,7 @@ $(window).resize(function() {
 
     // Layout of top promotions. It's safer to do this in JS as there was some rounding issues
     // with IE in window sizes that wasn't dividible by 5.
-    var top_news = $('#top-news-area'),
+    var top_news = jQuery('#top-news-area'),
         top_news_width = top_news.width();
     var margin = top_news_width * 0.012;
     var w = Math.floor((top_news_width - 5 * margin) / 5);
@@ -61,6 +61,6 @@ $(window).resize(function() {
  * Function to animate ecotip bulb
 */
 function toggleEcotipClass(){
-    var ecotip = $('#portlet-ecotip');
+    var ecotip = jQuery('#portlet-ecotip');
     ecotip.toggleClass('hover');
 }

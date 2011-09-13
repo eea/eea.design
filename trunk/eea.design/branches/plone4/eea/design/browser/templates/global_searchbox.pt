@@ -1,7 +1,7 @@
 <!-- THE SEARCHBOX DEFINITION -->
 <div id="portal-searchbox" metal:define-macro="quick_search"
      tal:define="local_site context/@@plone_portal_state/local_site">
-    <form action="http://glossary.eea.europa.eu/terminology/sitesearch" tal:attributes="action python:'http://glossary.'+request.get('LANGUAGE', 'en')+'.eea.europa.eu/terminology/sitesearch'" id="searchbox_terminology" name="searchform">
+    <form action="http://glossary.eea.europa.eu/terminology/sitesearch" tal:attributes="action python:'http://glossary.'+request.get('LANGUAGE', 'en')+'.eea.europa.eu/terminology/sitesearch'" id="searchbox_terminology" class="searchforms">
         <tal:translated condition="python:request.get('LANGUAGE','en') != 'en'">
             <input type="text" name="term" size="35" i18n:attributes="title Search;" title="Search Europe's environment" />
         </tal:translated>

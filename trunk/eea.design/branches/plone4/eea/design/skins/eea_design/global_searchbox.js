@@ -1,25 +1,24 @@
-// This script adds the description label to the search textfield.
-// We can't use jQuery here due to JS library conflicts in some
-// sites using EEATemplateService. #2455
+(function($) {
+    $(function() {
+        var search_forms = $("#portal-searchbox, #visual-column-wrapper").find(".searchforms");
+        var text_inputs = search_forms.find("input:text");
+        text_inputs.each( function() {
+                var term = this;
+                var search_label = this.title + "...";
+                term.onfocus = function() {
+                    if (this.value == search_label) {
+                        this.value = "";
+                    }
+                };
+                term.onblur = function() {
+                    if (this.value === "") {
+                        this.value = search_label;
+                    }
+                };
+                term.value = search_label;
+        });
 
-function global_searchbox_init() {
-    var form = document.getElementById('searchbox_terminology');
-    if (form === null) {
-        return;
-    }
-    var term = form.term;
-    var search_label = term.title + "...";
-    term.onfocus = function() {
-        if (this.value == search_label) {
-            this.value = "";
-        }
-    };
-    term.onblur = function() {
-        if (this.value === "") {
-            this.value = search_label;
-        }
-    };
-    term.value = search_label;
-}
+    });
 
-registerPloneFunction(global_searchbox_init);
+})(jQuery);
+

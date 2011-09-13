@@ -34,7 +34,7 @@
 
     <tal:translate tal:condition="archive_text">
     <a tal:attributes="href archive_href; class string: archives">
-        <span tal:content="archive_text">Archive</span></a>
+        <span tal:content="python:context.utranslate(archive_text)">Archive</span></a>
     </tal:translate>
      <metal:items tal:repeat="highlight python:highlights[:nr_items]">
         <tal:item tal:define="

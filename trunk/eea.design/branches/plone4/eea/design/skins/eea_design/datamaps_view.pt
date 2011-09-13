@@ -20,11 +20,9 @@
 		    <!-- data and maps global search -->
 		    <div class="featured">
 		       <h2 i18n:translate="featured_global_search">Global search</h2>
-		       <form action="find/global" method="get" id="faceted-text-search">
-                                <p>
-                                    <input type="text" onkeypress="return disableEnterKey(event)" name="c12">
+		       <form action="find/global" method="get" id="faceted-text-search" class="searchforms">
+                   <input type="text" onkeypress="return disableEnterKey(event)" name="c12" title="Search data, maps, indicators">
                                     <input type="submit" value="Search" name="search">
-                                </p>
 		       </form>
 		    </div>
 		    
@@ -32,7 +30,6 @@
                             <div metal:use-macro="here/portlet_featured_indicator/macros/portlet" />
 
                         <tal:featured_item 
-
                         i18n:translate="featured_item_see_all"
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;

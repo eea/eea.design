@@ -1176,6 +1176,17 @@ h3.site-description {
     background-color: transparent;
 }
 
+.searchforms input {
+    font-family: Arial, Verdana, sans-serif;
+    font-style: italic;
+    color: #777777;
+    font-size: 0.8em;
+}
+
+.searchforms input:focus {
+    color: #000000;
+}
+
 .frontpage h3.site-description {
     width: 240px;
     margin-left: 5px;
