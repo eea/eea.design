@@ -28,10 +28,6 @@
 
     <object name="wisetheme_images" meta_type="Filesystem Directory View"
         directory="eea.design:skins/wisetheme_images" />
-    <object name="wisetheme_styles" meta_type="Filesystem Directory View"
-        directory="eea.design:skins/wisetheme_styles" />
-    <object name="wisetheme_templates" meta_type="Filesystem Directory View"
-        directory="eea.design:skins/wisetheme_templates" />
 
     <skin-path name="EEADesign2006" based-on="Sunburst Theme">
         <layer name="eea_design" insert-after="custom" />
@@ -44,8 +40,6 @@
         <layer name="eeadesign_green" insert-after="eeadesign_public" />
         <layer name="eeadesign_public_cmsandwww" insert-after="eeadesign_green" />
         <layer name="wisetheme_images" insert-after="eeadesign_public_cmsandwww" />
-        <layer name="wisetheme_styles" insert-after="wisetheme_images" />
-        <layer name="wisetheme_templates" insert-after="wisetheme_styles" />
     </skin-path>
 
     <skin-path name="EEADesignCMS" based-on="EEADesign2006">
@@ -60,8 +54,6 @@
         <layer name="eeadesign_green" insert-after="eeadesign_public" />
         <layer name="eeadesign_public_cmsandwww" insert-after="eeadesign_green" />
         <layer name="wisetheme_images" insert-after="eeadesign_public_cmsandwww" />
-        <layer name="wisetheme_styles" insert-after="wisetheme_images" />
-        <layer name="wisetheme_templates" insert-after="wisetheme_styles" />
     </skin-path>
 
 </object>
