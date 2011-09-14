@@ -6,21 +6,18 @@
 __author__ = """unknown <unknown>"""
 __docformat__ = 'plaintext'
 
-from zope.component import queryMultiAdapter
-from eea.cache import cache
-
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
-
-from eea.promotion.interfaces import IPromotion
-
-from Products.Five import BrowserView
-from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
-
-from p4a.video.interfaces import IVideoEnhanced
+from Products.EEAContentTypes.content.interfaces import IFlashAnimation
+from Products.Five import BrowserView
+from eea.cache import cache
+from eea.promotion.interfaces import IPromotion
 from eea.themecentre.themecentre import getTheme
+from p4a.video.interfaces import IVideoEnhanced
+from plone.app.blob.interfaces import IBlobWrapper
+from zope.component import queryMultiAdapter
 
 class Frontpage(BrowserView):
     """
@@ -138,7 +135,10 @@ class Frontpage(BrowserView):
         media = obj.getMedia()
         media_url = media_type = media_title = media_copy = media_note = ''
         if media:
-            media_url = media.absolute_url()
+            if IBlobWrapper.providedBy(media):
+                media_url = obj.absolute_url() + '/image'
+            else:
+                media_url = media.absolute_url()
 
             if obj.absolute_url() in media_url:
                 # image in image field
@@ -177,9 +177,9 @@ class Frontpage(BrowserView):
                     'Description'  : media_note,
                     'getScale'     : ''
                 }
-            getscale = getattr(media, 'getScale', None)
-            if getscale:
-                result['media']['getScale'] = media.getScale(scale).tag()
+            if IBlobWrapper.providedBy(media):
+                result['media']['getScale'] = obj.getField('image').tag(obj, scale=scale)
+
         return result
 
 ## deprecated visibility methods
