@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:five="http://namespaces.zope.org/five">
+    
+  <browser:page
+     for="plone.portlets.interfaces.ILocalPortletAssignable"
+     name="manage-portlets"
+     class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+     template="templates/manage-contextual.pt"
+     permission="plone.app.portlets.ManagePortlets"
+     layer="eea.design.browser.interfaces.IEEACommonLayer"
+     />
+
+</configure>
