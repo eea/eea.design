@@ -8,10 +8,6 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-body {
-    background: transparent url(eeacms-banner.gif) top left repeat-y ! important;
-    padding-left:  <dtml-var "_['eeacms-banner.gif'].width">px !important;
-}
 
 body.mceContentBody {
     background: transparent !important;

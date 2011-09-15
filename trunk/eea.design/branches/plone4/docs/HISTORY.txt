@@ -5,6 +5,10 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Change: no more red CMS banner when logged in. was creating issues, no need for
+  that. it is very clear by other elements that you are logged in.
+  [demarant]
+
 * Bug fix: fixed design issues on soer frontpage due to new template.
   [demarant #4520]
 
