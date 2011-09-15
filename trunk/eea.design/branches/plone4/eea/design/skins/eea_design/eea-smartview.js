@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
     function markSelectedButton() {
         var smartTemplate = $.bbq.getState('smartTemplate');

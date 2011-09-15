@@ -4,7 +4,7 @@
  * - The script works with headers with nested <a> tags
  */
 function build_toc(){
-    $('#document-toc').each(function() {
+    jQuery('#document-toc').each(function($) {
         var tocID = $(this).attr('id');
         var currentList = $(this).find('.portletItem ol');
         var hLevel = null;
@@ -58,6 +58,6 @@ function build_toc(){
     });
 }
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     build_toc();
 });

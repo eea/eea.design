@@ -9,7 +9,7 @@ function breakout_of_frame()
 }
 
 
-$(document).ready(function(){
+jQuery(document).ready(function($){
     breakout_of_frame();
 });
 

@@ -10,13 +10,14 @@
 var warning_displayed = false;
 
 window.onbeforeprint = function() {
-    var warning_text = $.trim($("#print-warning p").html());
+    
+    var warning_text = jQuery.trim(jQuery("#print-warning p").html());
     if (warning_displayed === false) {
         alert(warning_text);
     }
 };
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     $('#icon-print').parent().attr('href', '#').click(function() {
         var warning_text = $.trim($("#print-warning p").html());
         if (confirm(warning_text)) {

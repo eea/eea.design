@@ -1,5 +1,5 @@
 /* This JS integrates the jQuery Tools Tooltips with the EEA site. */
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     if ($.fn.tooltip !== undefined) {
         // Inflexible tooltips
         $(".eea-tooltip-top").each(function(i) {

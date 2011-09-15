@@ -5,6 +5,9 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Bugfix: Fixed IE JS errors, fixed code that uses jQuery to avoid conflicts
+  with other JS frameworks [szabozo0 #4542]
+
 * Change: no more red CMS banner when logged in. was creating issues, no need for
   that. it is very clear by other elements that you are logged in.
   [demarant]
