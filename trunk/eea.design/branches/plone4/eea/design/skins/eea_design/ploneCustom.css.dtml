@@ -100,19 +100,11 @@
 
 .section-publications #c0_widget {
    background-color: #ffffff;
-   }
-
-.faceted-top-widgets .faceted-widget .widget-fieldset,
-.faceted-center-widgets .faceted-widget .widget-fieldset {
-    height: 50px;
 }
 
 .faceted-top-widgets .faceted-widget form,
 .faceted-center-widgets .faceted-widget form {
-   position:relative;
-   top:-43px;
-   left:212px;
-   width: 445px;
+   width: 525px;
 }
 
 .faceted_letter_selected {
@@ -173,7 +165,7 @@
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"],
 .faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]{
-   width:350px;
+   width:425px;
    height: 22px;
    font-size: 16px;
    padding: 5px;    
@@ -203,7 +195,7 @@
 .faceted-center-widgets .faceted-widget {
    /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
    background-color: &dtml-lightBackgroundColor;;
-   height:50px;
+   min-height: 150px;
 }
 
 .faceted-top-widgets .faceted-widget .faceted-textwidget-place-all,
@@ -2213,11 +2205,6 @@ div.managePortletsLink, a.managePortletsFallback {
 */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    .faceted-top-widgets .faceted-widget form,
-    .faceted-center-widgets .faceted-widget form {
-        position: relative;
-        top: -37px !important;
-    }
 }
 
 /* Fix for TinyMCE */
