@@ -705,15 +705,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     clear: right;
 }
 
-#auto-related,
-#related-multimedia,
-#related-pages {
-    float: right;
-    clear: right;
-    width: 17em;
-    padding: 7px;
-    background-color:white;
-}
 
 #auto-related .portletItem {
     padding-bottom:0.5em;
@@ -1448,7 +1439,6 @@ h3.site-description {
 .documentActions ul {
     margin: 0;
     padding: 0;
-    float: right;
     display: inline-block;
 }
 

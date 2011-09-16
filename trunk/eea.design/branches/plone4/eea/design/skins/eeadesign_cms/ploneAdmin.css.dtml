@@ -56,9 +56,6 @@ body.section-SITE .documentActions {
     padding-top: 1em;
 }
 
-.documentActions {
-    float:right;
-}
 
 .documentEditable .documentContent {
 padding: 1em;
