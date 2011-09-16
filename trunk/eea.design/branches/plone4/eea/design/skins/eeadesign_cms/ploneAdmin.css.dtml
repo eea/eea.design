@@ -1,10 +1,3 @@
-
-
-/* http://localhost:8080/new/portal_css/ploneCustom.css?original=1 */
-/* */
-/* */
-
-
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
@@ -15,8 +8,8 @@ body.mceContentBody {
 }
 
 #portal-globalnav li{
-        width: auto;
-	margin: 0 0.25em 0 0;
+    width: auto;
+    margin: 0 0.25em 0 0;
 }
 
 #portal-column-one .visualPadding,
@@ -82,9 +75,6 @@ padding: 1em;
 #portlet-navigation-tree .contenttype-topic {
     background: no-repeat transparent 0px -1728px url(contenttypes-sprite.png);
 }
-
-
-
 
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE
