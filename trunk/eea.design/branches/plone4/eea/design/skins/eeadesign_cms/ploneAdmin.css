@@ -1,3 +1,6 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
 body.mceContentBody {
     background: transparent !important;
     margin: 0px !important;
@@ -71,3 +74,7 @@ padding: 1em;
 #portlet-navigation-tree .contenttype-topic {
     background: no-repeat transparent 0px -1728px url(contenttypes-sprite.png);
 }
+
+/* </dtml-with>
+** YOUR CSS RULES STOP HERE
+*/
