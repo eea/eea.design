@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from eea.themecentre.themecentre import getTheme
 
 LIMIT_CHARS = 300
     
@@ -23,11 +24,16 @@ class SoerFrontpage(BrowserView):
             text = text.replace(keyword, '<b>%s</b>' % keyword, 1)
         return text
         
-    def getMessages(self):
+    def getMessages(self, topic = ''):
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
-        brains = catalog({
+        theme = ''
+        if topic:
+            theme = getTheme(self.context)
+        brains = catalog.searchResults({
             'portal_type': 'SOERMessage',
+            'getTheme' : theme,
+            'review_state': 'published'
         })
         for brain in brains:
             text = self._prepareText(brain)
@@ -37,11 +43,16 @@ class SoerFrontpage(BrowserView):
             })
         return ret
 
-    def getKeyFacts(self):
+    def getKeyFacts(self, topic = ''):
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
-        brains = catalog({
+        theme = ''
+        if topic:
+            theme = getTheme(self.context)
+        brains = catalog.searchResults({
             'portal_type': 'SOERKeyFact',
+            'getTheme' : theme,
+            'review_state': 'published'
         })
         for brain in brains:
             text = self._prepareText(brain)
@@ -53,8 +64,13 @@ class SoerFrontpage(BrowserView):
     
     def getAllFactsAndMessages(self):
         """Return all SOER key facts and messages in one list"""
-        ret1 = self.getMessages();
-        ret2 = self.getKeyFacts();
+        topics = 'themes' in self.context.REQUEST['URL0']
+        if topics:
+            ret1 = self.getMessages(topic = topics);
+            ret2 = self.getKeyFacts(topic = topics);
+        else:
+            ret1 = self.getMessages();
+            ret2 = self.getKeyFacts();
         ret1.extend(ret2)
         return ret1
 
