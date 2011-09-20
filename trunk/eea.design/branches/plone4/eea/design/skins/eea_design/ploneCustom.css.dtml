@@ -797,7 +797,7 @@ dl a:hover, dd a:hover, dt a:hover {
 
 a.moreLink {
     border: 0px !important;
-    padding: 5px 0px 5px 25px;
+    padding: 5px 0px 4px 25px;
     background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -6px;
 }
 
@@ -981,14 +981,14 @@ h3.site-description {
 }
 
 /* drop down panels for portal siteactions */
-#cross-site-top .panel {
+.panel {
     display: none;
     z-index: 600;
     background: transparent;
     border: 0px;
 }
 
-#cross-site-top .panel-top {
+.panel-top {
     margin: auto auto;
     background: transparent url(&dtml-portal_url;/panel_arrow.png);
     width: 50px;
@@ -997,11 +997,11 @@ h3.site-description {
     top: 2px;
 }
 
-#cross-site-top .panel .portletFooter {
+.panel .portletFooter {
     margin-top: 1em;
 }
 
-#cross-site-top .panel-content {
+.panel-content {
     background: white url(&dtml-portal_url;/portlet_bg.png) repeat-x;
     color: black;
     padding: 10px;
@@ -1464,6 +1464,10 @@ h3.site-description {
     display: block;
 }
 
+#article-language {
+    float: right;
+    margin-top: -30px;
+}
 /* .system-message and #error-handling are reST error indicators */
 
 .portalMessage,

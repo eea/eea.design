@@ -8,18 +8,28 @@
                     tal:condition="python:(context.getId() != 'portal_languages') and context.plone_utils.isTranslatable(context)">
 
    <tal:anonLanguageCodes tal:condition="python: translations and isAnon">
-    <ul class="languageCodes">
-      <tal:anonymous tal:repeat="lang data">
-          <li tal:attributes="class python: lang['current'] and 'selected' or None"
-              tal:condition="lang/available">
-            <a href="" class="translated"
-               tal:attributes="href lang/change_url;
-                               title lang/alt"
-               tal:omit-tag="lang/current"
-               tal:content="lang/Language">Language code
-            </a></li>
-      </tal:anonymous>
-   </ul>
+   <div id="article-language"><a href="#" i18n:translate="">Article in your language</a></div>
+   
+   <div id="tip-article-language" class="panel" style="width: 150px;">  
+                <div class="panel-top">
+                </div>
+                <div class="panel-content shadow">
+            <ul class="languageCodes">
+              <tal:anonymous tal:repeat="lang data">
+                  <li tal:attributes="class python: lang['current'] and 'selected' or None"
+                      tal:condition="lang/available">
+                    <a href="" class="translated"
+                       tal:attributes="href lang/change_url;
+                                       title lang/alt"
+                       tal:omit-tag="lang/current">
+                       <tal:langtitle tal:content="lang/Title"></tal:langtitle>
+                       <tal:langcode  tal:content="string:(${lang/Language})"></tal:langcode>
+                    </a></li>
+              </tal:anonymous>
+           </ul>
+       </div>
+   </div>
+   
    <div class="visualClear"><!-- --></div>
    </tal:anonLanguageCodes>
 
@@ -32,10 +42,11 @@
                tal:attributes="href lang/change_url;
                                title lang/alt;
                class python: not available and 'noTranslation' or 'translated'"
-               tal:omit-tag="lang/current"><tal:langcode  tal:content="lang/Language">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a></li>
+               tal:omit-tag="lang/current">
+
+               <tal:langcode  tal:content="string:(${lang/Language})">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a></li>
       </tal:cms>
     </ul>
 </tal:admin>
-
 </tal:languages>
 </metal:language>

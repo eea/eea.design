@@ -293,7 +293,7 @@ body.frontpage #portal-columns {
     padding-right: 1em;
 }
 
-div.panel, div.even  {
+div.even  {
     background: &dtml-evenRowBackgroundColor;;
     color: #346f83; 
     margin: 0;

@@ -27,16 +27,15 @@
             if (buttonID == "siteaction-contactus" && isCurrentPageTranslated()) {
                 return;
             }
-
+            var offset = buttonID === "article-language" ? [-150, -300] : [0, 0];
             if (tooltip.length > 0) {
                 a.attr("title","").attr("href", "#");
 
                 fordef = 'click, blur';
-
                 a.tooltip({
                     tip: tooltip[0],
                     position: 'bottom center',
-                    offset: [0, 0],
+                    offset: offset,
                     delay: 10000000,
                     events: {
                         def: fordef
@@ -55,6 +54,7 @@
         }
         $("#portal-siteactions a").each(panel);
         $("#portal-externalsites a").each(panel);
+        $("#article-language").find('a').each(panel);
         $("#tip-externalsites-networks").find(".externalsites a").each(panel);
         // since we use the standard events_portlet, we can't place the
         // submit-event-link in its footer initially
