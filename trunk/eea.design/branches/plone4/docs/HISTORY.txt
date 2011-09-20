@@ -5,6 +5,8 @@ Changelog
 --------------------
 * TODO: test spotlight for various content types
 
+* Change: Updated CSS for calendar [szabozo0 #4501]
+
 * Bugfix: Fixed JS error when portal_javascripts are not in development mode [szabozo0 #4542]
 
 * Bugfix: Fixed IE JS errors, fixed code that uses jQuery to avoid conflicts
