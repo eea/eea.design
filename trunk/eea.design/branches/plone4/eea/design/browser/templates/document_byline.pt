@@ -70,8 +70,10 @@
     </tal:rights>
     </tal:loggedin>
 
-    <tal:anonymous tal:condition="isAnon" metal:define-macro="publishdate">
+    <tal:anonymous  tal:define="metatypes_showdates context/portal_properties/site_properties/metatypes_showdates|python:['ATDocument','Highlight','PressRelease','Article','Speech','Assessment','Specification']" tal:condition="python:isAnon and context.meta_type in metatypes_showdates" metal:define-macro="publishdate">
     <tal:published  i18n:translate="Published">Published</tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())">
+        August 16, 2001 at 23:35:59
+    </span> | <tal:modified  i18n:translate="">Last modified</tal:modified>: <span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate())">
         August 16, 2001 at 23:35:59
     </span>
     </tal:anonymous>

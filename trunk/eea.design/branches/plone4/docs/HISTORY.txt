@@ -3,7 +3,9 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
-* TODO: test spotlight for various content types
+* Feature: added condition on showing dates info under title for anonymous.
+  The default content types that show dates info can be set in site_properties/metatypes_showdates.
+  [demarant]
 
 * Change: Updated CSS for calendar [szabozo0 #4501]
 
