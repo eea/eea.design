@@ -44,7 +44,7 @@
                class python: not available and 'noTranslation' or 'translated'"
                tal:omit-tag="lang/current">
 
-               <tal:langcode  tal:content="string:(${lang/Language})">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a></li>
+               <tal:langcode  tal:content="string:${lang/Language}">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a></li>
       </tal:cms>
     </ul>
 </tal:admin>
