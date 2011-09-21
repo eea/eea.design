@@ -439,8 +439,8 @@ a.album-layout:hover {
 }
 
 #portlet-followus dd {
-  float: left;
   display: inline-block;
+  padding-left: 2em;
 }
 
 #portlet-followus dd a:hover {
