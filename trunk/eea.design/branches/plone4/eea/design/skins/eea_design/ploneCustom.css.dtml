@@ -813,9 +813,13 @@ dl a:hover, dd a:hover, dt a:hover {
 
 a.moreLink {
     border: 0px !important;
-    padding: 6px 0px 6px 25px;
-    background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -6px;
+    background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -9px;
     display: inline-block;
+    padding-left: 25px;
+    height: 18px;
+    font-size: 11px;
+    line-height: 1.6;
+    text-transform: capitalize;
 }
 
 /* End links */
