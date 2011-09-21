@@ -760,9 +760,9 @@ body.section-signals #nonfolderish-subfolder-view-items {
     min-height: 210px;
 }
 
-.portlet dd.embeddedMediaMedia .tileImage {
-    border: none;
-    margin: 15px auto;
+.portlet dd.embeddedMedia .tileImage {
+    border: none !important;
+    margin: 15px auto !important;
 }
 
 #related-multimedia-top dd.embeddedMedia {
@@ -815,6 +815,7 @@ a.moreLink {
     border: 0px !important;
     padding: 6px 0px 6px 25px;
     background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -6px;
+    display: inline-block;
 }
 
 /* End links */

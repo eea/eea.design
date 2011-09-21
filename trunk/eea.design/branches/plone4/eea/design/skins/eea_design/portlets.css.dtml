@@ -117,7 +117,7 @@ dt.portletItem {
     color:&dtml-fontColor;;
     line-height: 1.4;
     margin: 0;
-    padding: 1em 1em 0.25em;
+    padding: 5px 10px;
     text-shadow: 1px 1px white;
 }
 #portlet-navigation-tree .portletHeader,

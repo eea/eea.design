@@ -314,13 +314,6 @@ dl.portlet dt a:hover {
 .ploneCalendar tbody {
     padding-bottom: 1em;
 }
-dl.portlet dd.portletItem,
-dl.portlet dd.portletFooter,
-dl.portletError dd {
-    padding: 1em;
-}
-
-
 
 div.managePortletsLink,
 a.managePortletsFallback {
