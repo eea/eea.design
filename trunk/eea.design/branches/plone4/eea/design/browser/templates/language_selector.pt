@@ -14,7 +14,7 @@
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
-            <ul class="languageCodes">
+            <ul id="languageCodes">
               <tal:anonymous tal:repeat="lang data">
                   <li tal:attributes="class python: lang['current'] and 'selected' or None"
                       tal:condition="lang/available">
@@ -34,7 +34,7 @@
    </tal:anonLanguageCodes>
 
    <tal:admin tal:condition="not: isAnon">
-    <ul class="languageCodes">
+    <ul id="languageCodes">
       <tal:cms tal:repeat="lang data">
           <li tal:attributes="class python: lang['current'] and 'selected' or None"
               tal:define="available lang/available">

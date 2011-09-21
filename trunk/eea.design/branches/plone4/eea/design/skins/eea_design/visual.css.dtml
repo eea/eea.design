@@ -552,16 +552,17 @@ margin: 1em;
     text-decoration: none;
 }
 
-div span span.languageCodes {
+div span span#languageCodes {
     padding: 0 0.25em;
 }
 
 #languageCodes {
     padding: 0.25em 0 0.25em 0;
-    float: left;
 }
-
-.languageCodes a:link, .languageCodes a, #languageCodes li a {
+#languageCodes li {
+    display: inline-block;
+}
+#languageCodes a:link, #languageCodes a, #languageCodes li a {
     background: &dtml-lightBackgroundColor;;
     padding: 0.4em;
     line-height:2.5em;
@@ -582,7 +583,7 @@ form.manylanguages select {
 }
 
 #languageCodes li a.noTranslation {
-    background: &dtml-globalBackgroundColor;;;
+    background: transparent;
     color: &dtml-linkColor;;
 }
 
@@ -592,9 +593,8 @@ form.manylanguages select {
     color:#DE7800;
 }
 
-div span span.languageCodes a,
- #content .languageCodes a:hover,
- .languageCodes li a:hover,
+div span span#languageCodes a,
+ #content #languageCodes a:hover,
 #languageCodes li a:hover {
     background: white;
     color:#DE7800 !important;
