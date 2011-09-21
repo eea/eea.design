@@ -8,7 +8,7 @@
                     tal:condition="python:(context.getId() != 'portal_languages') and context.plone_utils.isTranslatable(context)">
 
    <tal:anonLanguageCodes tal:condition="python: translations and isAnon">
-   <div id="article-language"><a href="#" i18n:translate="">Article in your language</a></div>
+   <div id="article-language"><a href="#" i18n:translate="">This page in your language</a></div>
    
    <div id="tip-article-language" class="panel" style="width: 150px;">  
                 <div class="panel-top">
