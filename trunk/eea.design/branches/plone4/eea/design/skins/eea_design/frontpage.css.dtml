@@ -314,7 +314,7 @@ ul#tabs {
     background: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     border: none;
-    height: 33px;
+    height: 37px;
     list-style: none;
     margin: 0 !important;
     padding: 0;
@@ -324,7 +324,6 @@ ul#tabs li {
     float: left;
     list-style-image: none !important;
     margin: 0 !important;
-    padding: 8px 0em;
     text-indent: 0;
 }
 
