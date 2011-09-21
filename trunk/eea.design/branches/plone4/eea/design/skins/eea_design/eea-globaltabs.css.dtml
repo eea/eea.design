@@ -11,10 +11,9 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
     background: linear-gradient(#478EA5, #346F83); /* the standard */
     width: 100%;
-    position: relative;
     display: block;
     clear: both;
-    top: 1px;
+    height: 40px;
 }
 
 #portal-globalnav {
@@ -22,6 +21,7 @@
     position: relative;
     margin: 0 auto;
     width: 1000px;
+    height: 40px;
     list-style: none;
     padding: 0px;
     background: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
@@ -38,9 +38,9 @@
     margin-bottom: 0;
     float: none;
     text-align: center;
-    height: 3em;
+    height: 40px;
     display: inline-block;
-    padding: 0em;
+    padding: 0;
     white-space: nowrap;
     text-shadow: black 0px 0px 3px;
 }
@@ -49,10 +49,10 @@
     background: transparent;
     color: white;
     display: inline-block;
-    padding: 1em 1.2em 0.8em;
+    padding: 1em;
     border: 0px;
     min-width: 0px;
-    line-height: 0.7;
+    line-height: 0.9;
     font-weight:bold;
 }
 

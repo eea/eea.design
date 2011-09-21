@@ -59,8 +59,10 @@
   font-weight: normal;
   text-shadow: 1px 1px 1px #555555;
   -webkit-box-shadow: 1px 1px 1px #555555;
-       -moz-box-shadow: 1px 1px 1px #555555;
-            box-shadow: 1px 1px 1px #555555;
+     -moz-box-shadow: 1px 1px 1px #555555;
+      -ms-box-shadow: 1px 1px 2px #BFBFBF;
+       -o-box-shadow: 1px 1px 2px #BFBFBF;
+          box-shadow: 1px 1px 1px #555555;
 }
 
 .widget-fieldset {
@@ -175,10 +177,12 @@
     background: #FFFFFF;
     -webkit-transition: border-color .218s;
        -moz-transition: border .218s;
+       -ms-transition: border .218s;
          -o-transition: border-color .218s;
             transition: border-color .218s;
     -webkit-transition: box-shadow .218s;
        -moz-transition: box-shadow .218s;
+       -ms-transition: box-shadow .218s;
          -o-transition: box-shadow .218s;
             transition: box-shadow .218s;
 }
@@ -187,6 +191,8 @@
 .faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]:focus {
     -webkit-box-shadow: 1px 1px 3px #DFDFDF;
        -moz-box-shadow: 1px 1px 3px #DFDFDF;
+        -ms-box-shadow: 1px 1px 3px #DFDFDF;
+         -o-box-shadow: 1px 1px 3px #DFDFDF;
             box-shadow: 1px 1px 3px #DFDFDF;
     border-color: &dtml-corporateGreen;;
 }
@@ -221,9 +227,11 @@
     text-shadow: 0 1px 0 #000;
     -webkit-transition: border-color .218s;
        -moz-transition: border .218s;
+       -ms-transition: border .218s;
          -o-transition: border-color .218s;
             transition: border-color .218s;
     -webkit-transition: box-shadow .218s;
+    -ms-transition: box-shadow .218s;
        -moz-transition: box-shadow .218s;
          -o-transition: box-shadow .218s;
             transition: box-shadow .218s;
@@ -241,9 +249,11 @@
     color: #FFFFFF;
     cursor:pointer;
     border-color: #999999;
-    -webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+        -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+         -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
     text-shadow: none;
 }
 
@@ -268,10 +278,12 @@
     text-shadow: 0 1px 0 #000;
     -webkit-transition: border-color .218s;
        -moz-transition: border .218s;
+       -ms-transition: border-color .218s;
          -o-transition: border-color .218s;
             transition: border-color .218s;
     -webkit-transition: box-shadow .218s;
        -moz-transition: box-shadow .218s;
+       -ms-transition: box-shadow .218s;
          -o-transition: box-shadow .218s;
             transition: box-shadow .218s;
     border: 1px solid #346F83;
@@ -288,15 +300,21 @@
     color: #FFFFFF;
     cursor:pointer;
     border-color: #999999;
-    -webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+         -o-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
     text-shadow: none;
 }
 
 
 #faceted-text-search input[type="text"] {
+    -webkit-transition: box-shadow 0.218s ease 0s;
     -moz-transition: box-shadow 0.218s ease 0s;
+    -ms-transition: box-shadow 0.218s ease 0s;
+    -o-transition: box-shadow 0.218s ease 0s;
+    transition: box-shadow 0.218s ease 0s;
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 3px 3px 3px 3px;
     font-size: 16px;
@@ -998,6 +1016,8 @@ h3.site-description {
 .shadow {
     -webkit-box-shadow: 1px 1px 5px #afafaf;
        -moz-box-shadow: 1px 1px 5px #afafaf;
+        -ms-box-shadow: 1px 1px 5px #afafaf;
+         -o-box-shadow: 1px 1px 5px #afafaf;
             box-shadow: 1px 1px 5px #afafaf;
 }
 
@@ -1505,7 +1525,11 @@ h3.site-description {
     background-image: url(&dtml-portal_url;/information.png);
     background-repeat: no-repeat;
     background-position: 5px 50%;
-    box-shadow: 2px 2px 1px #888888;
+    -webkit-box-shadow: 2px 2px 1px #888888;
+       -moz-box-shadow: 2px 2px 1px #888888;
+        -ms-box-shadow: 2px 2px 1px #888888;
+         -o-box-shadow: 2px 2px 1px #888888;
+            box-shadow: 2px 2px 1px #888888;
     text-shadow: 1px 1px white;
 }
 
@@ -1764,6 +1788,8 @@ textarea.proportional {
     padding: 0;
     margin: -1px 0 0 -1px;
     width: 1px;
+    position: absolute;
+    left: -9999px;
 }
 
 option.hiddenStructure {
@@ -1801,6 +1827,8 @@ option.hiddenStructure {
     text-align: center;
     -webkit-box-shadow: 1px 1px 2px #BFBFBF;
        -moz-box-shadow: 1px 1px 2px #BFBFBF;
+        -ms-box-shadow: 1px 1px 2px #BFBFBF;
+         -o-box-shadow: 1px 1px 2px #BFBFBF;
             box-shadow: 1px 1px 2px #BFBFBF;
 }
 
