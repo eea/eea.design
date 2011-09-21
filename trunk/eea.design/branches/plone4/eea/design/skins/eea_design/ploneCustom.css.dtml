@@ -1029,7 +1029,7 @@ h3.site-description {
     border: 0px;
 }
 
-.panel-top {
+.panel-top, #tip-article-language .panel-top {
     margin: auto auto;
     background: transparent url(&dtml-portal_url;/panel_arrow.png);
     width: 50px;
@@ -1041,11 +1041,24 @@ h3.site-description {
 .panel .portletFooter {
     margin-top: 1em;
 }
-
-.panel-content {
+.panel-content, #tip-article-language .panel-content {
     background: white url(&dtml-portal_url;/portlet_bg.png) repeat-x;
     color: black;
     padding: 10px;
+}
+
+#tip-article-language{ 
+    position: absolute; 
+    right: 15px;
+    width: 615px; top: 55px;
+}
+#tip-article-language .panel-top { 
+    right: 0; 
+    float: right; 
+    clear: both;
+}
+#tip-article-language .panel-content{
+    clear: both; 
 }
 
 #portal-columns {

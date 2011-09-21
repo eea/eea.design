@@ -10,7 +10,7 @@
    <tal:anonLanguageCodes tal:condition="python:data and isAnon">
    <div id="article-language"><a href="#" i18n:translate="">This page in your language</a></div>
    
-   <div id="tip-article-language" class="panel" style="width: 150px;">  
+   <div id="tip-article-language" class="panel">  
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">

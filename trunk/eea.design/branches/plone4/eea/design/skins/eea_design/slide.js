@@ -27,7 +27,7 @@
             if (buttonID == "siteaction-contactus" && isCurrentPageTranslated()) {
                 return;
             }
-            var offset = buttonID === "article-language" ? [-150, -300] : [0, 0];
+            var offset = buttonID === "article-language" ? [-170, -513] : [0, 0];
             if (tooltip.length > 0) {
                 a.attr("title","").attr("href", "#");
 
