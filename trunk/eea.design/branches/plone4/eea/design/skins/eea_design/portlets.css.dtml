@@ -146,7 +146,7 @@ dt.portletItem {
     text-align: right;
     border: 0;
     clear: both;
-    font-size:x-small;
+    font-size:11px;
     line-height:1em;
 }
 
