@@ -20,7 +20,7 @@ function setPromo() {
         var promos = jQuery('dd', this);
         if (promos.length > 0) {
             var sel_promo_id = promos[getRandom(promos.length)].id;
-            showImage(sel_promo_id);
+            /* showImage(sel_promo_id); */
             jQuery("#" + sel_promo_id).toggle(animation_speed); 
             jQuery('#' + sel_promo_id).addClass('active-promo');
             jQuery('#' + sel_promo_id).removeClass('hide-promo');
@@ -40,9 +40,10 @@ function setPromo() {
 function getPortletId(context) { return context.id.substring(5, context.id.length) + '-portlet' }
 function getRandom(range) { return Math.floor(Math.random()*range) }
 function showImage(promo_id) {
-    var image_ob = jQuery('#' + promo_id + ' IMG')[0];
-    var image_src = jQuery('#' + promo_id + ' A')[2].href;
-    jQuery('#' + promo_id + ' IMG')[0].src = image_src;
+    var promo =  jQuery('#' + promo_id);
+    var image_ob = promo.find('img')[0];
+    var image_src = promo.find('a').last()[0].href;
+    image_ob.src = image_src;
 }
 function updateCounter(portlet_id) {
     var sel_index = jQuery('#' + portlet_id + ' DD').index(jQuery('#' + portlet_id + ' DD.active-promo')[0]) + 1;
@@ -61,7 +62,7 @@ function promoMoveSlide(context, direction, speed) {
             var sel_promo_id = sel_promo[0].id;
             var next_promo_id = next_promo[0].id;
 
-            showImage(next_promo_id);
+            /* showImage(next_promo_id); */
             jQuery("#" + sel_promo_id).slideToggle(speed);
             jQuery("#" + next_promo_id).slideToggle(speed);
 
