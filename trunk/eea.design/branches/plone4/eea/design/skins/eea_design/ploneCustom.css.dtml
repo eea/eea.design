@@ -201,7 +201,7 @@
 .faceted-center-widgets .faceted-widget {
    /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
    background-color: &dtml-lightBackgroundColor;;
-   min-height: 150px;
+   min-height: 110px;
 }
 
 .faceted-top-widgets .faceted-widget .faceted-textwidget-place-all,
@@ -1048,6 +1048,7 @@ h3.site-description {
     background: white url(&dtml-portal_url;/portlet_bg.png) repeat-x;
     color: black;
     padding: 10px;
+    border: 1px solid #BABBB8;
 }
 
 #tip-article-language{ 
