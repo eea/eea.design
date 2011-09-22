@@ -200,6 +200,7 @@ table.datatable {
     padding: 1.5em 1em 1em 3em;
     background: &dtml-lightBackgroundColor; url(&dtml-portal_url;/open_quote.gif) 0.5em 0.75em no-repeat;
     color: #000000;
+    clear:both;
 }
 
 #content blockquote.quote-right {
