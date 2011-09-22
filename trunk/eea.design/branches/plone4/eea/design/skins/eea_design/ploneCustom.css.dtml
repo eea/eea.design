@@ -262,6 +262,9 @@
     width: 50px;
 }
 
+.faceted-criteria dd {
+    margin-left: 22px !important;
+}
 
 /* standard search button inside any of the portal columns*/
 

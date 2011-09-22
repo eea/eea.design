@@ -496,7 +496,9 @@ dl.portlet a:hover {
     line-height: 2em;
 }
 
-#category a.link-category, #themes-tags a.link-category {
+#category a.link-category,
+#themes-tags a.link-category,
+#languageCodes a.translated {
     color: black;
     padding: 0 5px;
     margin: 2px 0;
