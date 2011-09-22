@@ -1434,6 +1434,7 @@ h3.site-description {
     margin-bottom: 1em;
 }
 
+
 /* Only h5/h6 headlines in the content area should have the discreet color */
 
 #content h5,

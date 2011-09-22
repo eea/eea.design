@@ -3,6 +3,11 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+
+* Feature: extended the features of dates in document by line to also include
+  creation date. each of the dates can be switched on/off by metatype.
+  [demarant, #4537]
+  
 * Feature: added condition on showing dates info under title for anonymous.
   The default content types that show dates info can be set in site_properties/metatypes_showdates.
   [demarant]

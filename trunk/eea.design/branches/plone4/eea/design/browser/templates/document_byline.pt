@@ -2,7 +2,8 @@
 <div class="documentByLine"
     id="plone-document-byline"
     tal:define="isAnon context/@@plone_portal_state/anonymous;
-    plone_view context/@@plone;"
+    plone_view context/@@plone;
+    siteprops context/portal_properties/site_properties;"
     i18n:domain="eea">
     <tal:loggedin tal:condition="not: isAnon">
     <span id="lock-icon"
@@ -70,12 +71,25 @@
     </tal:rights>
     </tal:loggedin>
 
-    <tal:anonymous  tal:define="metatypes_showdates context/portal_properties/site_properties/metatypes_showdates|python:['ATDocument','Highlight','PressRelease','Article','Speech','Assessment','Specification']" tal:condition="python:isAnon and context.meta_type in metatypes_showdates" metal:define-macro="publishdate">
-    <tal:published  i18n:translate="Published">Published</tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())">
-        August 16, 2001 at 23:35:59
-    </span> | <tal:modified  i18n:translate="">Last modified</tal:modified>: <span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate())">
-        August 16, 2001 at 23:35:59
-    </span>
+    <tal:anonymous  tal:define="metatypes_showpubdate siteprops/metatypes_showpubdate|python:['Highlight','PressRelease','Article','Speech','Assessment','Specification'];
+                                metatypes_showmoddate siteprops/metatypes_showmoddate|python:['ATDocument','Highlight','PressRelease','Article','Speech','Assessment','Specification'];
+                                metatypes_showcredate siteprops/metatypes_showcredate|python:['Assessment','Specification'];" 
+                    tal:condition="isAnon" metal:define-macro="publishdate">                    
+       <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
+         <tal:published  i18n:translate="Published">Created</tal:published>: 
+         <span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())">
+           August 16, 2001 at 23:35:59</span>
+       </span>
+       <span class="docDate publishDate" tal:condition="python:context.meta_type in metatypes_showpubdate">
+         <tal:published  i18n:translate="Published">Published</tal:published>: 
+         <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())">
+           August 16, 2001 at 23:35:59</span>
+       </span>
+       <span class="docDate modificationDate" tal:condition="python:context.meta_type in metatypes_showmoddate">
+         <tal:modified  i18n:translate="">Last modified</tal:modified>: 
+         <span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate())">
+          August 16, 2001 at 23:35:59</span>
+       </span>
     </tal:anonymous>
 </div>
 </tal:docByline>
