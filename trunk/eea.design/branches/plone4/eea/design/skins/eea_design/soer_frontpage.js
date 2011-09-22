@@ -30,10 +30,8 @@
             var b2 = $('<span class="slideButton prev"></span>');
             portlet.append(b1);
             portlet.append(b2);
-            if (body_class) {
-                var play = $('<div class="slideButton play pause"></div>');
-                portlet.append(play);
-            } 
+            var play = $('<div class="slideButton play"></div>');
+            portlet.append(play);
             // Start positions
         var items = portlet.find('.portletItem');
         var randomnumber=Math.floor(Math.random()*items.length);
@@ -80,19 +78,27 @@
             });
 
             
+            var playID;
+            play.click( function() {
+                var $this = $(this);
+                if($this.hasClass('pause')) {
+                    $this.removeClass('pause');
+                    window.clearInterval(playID);
+                }
+                else {
+                    $this.toggleClass('pause');
+                    b1.click();
+                    playID = window.setInterval(function() {
+                        b1.click();}, 10000);
+                }
+            });
+
             if (body_class) {
-                var playID;
-                play.toggle(function() {
-                $(this).attr('class', 'slideButton play');
-                clearInterval(playID);
-                }, function() {
-                $(this).attr('class', 'slideButton play pause');
-                playID = setInterval(function() {
-                    b1.click();}, 10000);
-                });
-                playID = setInterval(function() {
+                play.addClass('pause');
+                playID = window.setInterval(function() {
                 b1.click();}, 10000);
             }
+
        });
     });
 
