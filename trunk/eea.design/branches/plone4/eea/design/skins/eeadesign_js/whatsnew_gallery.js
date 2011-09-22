@@ -26,8 +26,8 @@
 
                 var gallery_ajax = $(".gallery-ajax", news);
                 var layout_selection = $('.gallery-layout-selection li a', news)[0];
-                
-                gallery_ajax.load( address, {topic: sel_value, tab: cur_tab_val },  function(html) {
+                var params = 'topic' + '=' + sel_value;
+                gallery_ajax.load( address, params,  function(html) {
                     if (html.length > 1) {
                         if (layout_selection.className === "list-layout active-list"){
                             gallery_ajax.find('.gallery-album').addClass('hiddenStructure');
