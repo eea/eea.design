@@ -78,7 +78,9 @@ h6 {
     margin: 2.33em 0;
     color: #000;}
 
-
+#content-core h2, #content-core h3 {
+    clear:both;
+}
 
 #region-content ul, ul {
 
