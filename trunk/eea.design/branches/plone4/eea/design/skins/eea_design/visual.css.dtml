@@ -562,12 +562,6 @@ div span span#languageCodes {
 #languageCodes li {
     display: inline-block;
 }
-#languageCodes a:link, #languageCodes a, #languageCodes li a {
-    background: &dtml-lightBackgroundColor;;
-    line-height:2em;
-    border: 1px solid &dtml-mediumBackgroundColor; ! important;
-    text-decoration: none;
-}
 
 form.manylanguages {
     margin: 0;
@@ -590,13 +584,6 @@ form.manylanguages select {
 #languageCodes li.selected a {
     background: white;
     color:#DE7800;
-}
-
-div span span#languageCodes a,
- #content #languageCodes a:hover,
-#languageCodes li a:hover {
-    background: white;
-    color:#DE7800 !important;
 }
 
 .highlights ul.relatedLinks li,

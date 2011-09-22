@@ -508,12 +508,16 @@ dl.portlet a:hover {
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
+    font-size: 10px;
 }
-#category a.link-category:hover, #themes-tags a.link-category:hover {
+#category a.link-category:hover,
+#themes-tags a.link-category:hover,
+#languageCodes a.translated:hover {
     background: &dtml-corporateOrange;;
     color: White;
     border-color: #205c90;
 }
+
 #category .separator, #themes-tags .separator {
     display: none;
 }
