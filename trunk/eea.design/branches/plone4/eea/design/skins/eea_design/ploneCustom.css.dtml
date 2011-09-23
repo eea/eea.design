@@ -274,6 +274,10 @@
     padding: 0;
 }
 
+.faceted-criteria-count-holder {
+    display: none;
+}
+
 /* standard search button inside any of the portal columns*/
 
 /* #portal-columns input.searchButton, */

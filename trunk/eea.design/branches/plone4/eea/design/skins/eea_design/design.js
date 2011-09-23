@@ -75,14 +75,15 @@ function toggleFacetedCriteria(){
         criteriaCounterHolder = $('.faceted-criteria-count-holder');
         criteriaList = $('.faceted-criteria dl');
         criteria = $('.faceted-criteria dd span');
-        criteriaList.slideToggle();
         
         if( criteriaList.is(':visible') === true ){
-                toggleButton.text('Hide filters');
-                criteriaCounterHolder.hide();
-        }else {
+                criteriaList.slideUp();
                 toggleButton.text('Show filters');
                 criteriaCounter.text(criteria.length);
                 criteriaCounterHolder.show();
+        }else {
+                criteriaList.slideDown();
+                toggleButton.text('Hide filters');
+                criteriaCounterHolder.hide();
         }
 }
