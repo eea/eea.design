@@ -15,8 +15,14 @@ jQuery(document).ready(function($) {
         $('#icon-full_screen').parent().remove();
     }
     
+    
+    $('.faceted-criteria dl').slideUp();
+    facetedToggleLink = $('<a class="faceted-criteria-toggle-button" href="javascript:void(0); ">Show filters</a>');
+    $('.faceted-criteria legend').after(facetedToggleLink);
+    facetedToggleLink.after('<span><strong class="faceted-criteria-count">' + $(".facted-criteria dd span").length + '</strong> criteria</span>');
+    facetedToggleLink.click(toggleFacetedCriteria);
+    
     window.setInterval('toggleEcotipClass()', 5000);
-
 });
 
 jQuery(window).load(function() {
@@ -63,4 +69,22 @@ jQuery(window).resize(function() {
 function toggleEcotipClass(){
     var ecotip = jQuery('#portlet-ecotip');
     ecotip.toggleClass('hover');
+}
+
+function toggleFacetedCriteria(){
+        toggleButton = $('.faceted-criteria-toggle-button');
+        criteriaCounter = $('.faceted-criteria-count');
+        criteriaList = $('.faceted-criteria dl');
+        criteria = $('.faceted-criteria dd span');
+        criteriaList.slideToggle();
+        
+        if( criteriaList.is(':visible') ){
+                toggleButton.text('Hide filters');
+                criteriaCounter.hide();
+        }else {
+                toggleButton.text('Show filters');
+                criteriaCounter.text(criteria.length).show();
+        }
+        
+        return false;
 }

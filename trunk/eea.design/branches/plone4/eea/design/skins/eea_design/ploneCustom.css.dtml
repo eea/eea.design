@@ -266,6 +266,12 @@
     margin-left: 22px !important;
 }
 
+.faceted-criteria-toggle-button {
+    position: relative;
+    top: -10px;
+    margin-right: 5px;
+}
+
 /* standard search button inside any of the portal columns*/
 
 /* #portal-columns input.searchButton, */
