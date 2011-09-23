@@ -28,13 +28,15 @@
                 return;
             }
             var offset = buttonID === "article-language" ? [-170, -513] : [0, 0];
+            var position = buttonID === "article-language" ? 'bottom right' : 'bottom center';
+            
             if (tooltip.length > 0) {
                 a.attr("title","").attr("href", "#");
 
                 fordef = 'click, blur';
                 a.tooltip({
                     tip: tooltip[0],
-                    position: 'bottom right',
+                    position: position,
                     offset: offset,
                     delay: 10000000,
                     events: {
