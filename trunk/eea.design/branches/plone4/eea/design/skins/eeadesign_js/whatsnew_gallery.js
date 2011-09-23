@@ -7,13 +7,12 @@
             localhost = host.indexOf('localhost') != '-1' ? true : undefined,
             site_address = localhost ? http + host + '/www/' : http + host + '/';
         var gallery = $("#whatsnew-gallery"),
-            gallery_page = gallery.attr("data-page"); 
+            gallery_page = gallery.attr("data-page");
 
         var whatsnew_func = function(cur_tab_val, sel_text, sel_value, index) {
                 var address = site_address + cur_tab_val + "_gallery_macro";
-                var gal = $("#whatsnew-gallery").find(".highlights");
-                var news = index ? gal[index] : $("#whatsnew-gallery").find(".highlights:visible"); 
-
+                var gal = gallery.find(".highlights");
+                var news = index ? gal[index] : gal.filter(function() {return this.style.display !== 'none';}); 
                 // workaround: we need the first highlights because when we click on the
                 // first tab gal[0] returns the second highlights instead of
                 // the first so we redefine news to the first found match if
@@ -36,7 +35,7 @@
                             gallery_ajax.find('.gallery-listing').addClass('hiddenStructure');
                         }
                         if (cur_tab_val === "multimedia") {
-                            $.getScript(site_address + "eea-mediacentre.js");
+                                $.getScript(site_address + "eea-mediacentre.js");
                         }
                     }
 
@@ -50,8 +49,10 @@
             var opt_item = $("#topic-selector").find(":selected");
                 sel_value = opt_item.val(),
                 sel_text = opt_item.text();
-
-            if (sel_text === "All topics") {
+            var highlight = $("#" + cur_tab_val + "-highlights");
+            var listing = highlight.find('.gallery-listing');
+            var listing_length =  listing.length !== 0 ? listing[0].childElementCount : 0;
+            if (sel_text === "All topics" || listing_length === 0) {
                 whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
             }
             if (sel_value) {
@@ -154,4 +155,5 @@
     });
 
 })(jQuery);
+
 

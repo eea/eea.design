@@ -95,7 +95,7 @@
                  hide_listing python: False;
                  hide_album python: True;
                  more_href string:publications;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="articles"
@@ -106,7 +106,7 @@
                  hide_listing python: False;
                  hide_album python: True;
                  more_href string:articles;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="multimedia"
@@ -116,7 +116,7 @@
                  hide_album python: False;
                  hide_listing python: True;
                  more_href string:multimedia;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="allproducts"
@@ -125,7 +125,7 @@
      tal:define="folderContents frontpage_view/getAllProducts;
                  hide_album python: False;
                  hide_listing python: True;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 
@@ -137,7 +137,7 @@
                  hide_album python: False;
                  hide_listing python: True;
                  more_href string:data-and-maps;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="more-link" class="portletFooter"
@@ -200,4 +200,20 @@
     </tal:nocond>
 </metal:condition>
 
+<metal:empty metal:define-macro="gallery-empty">
+     <p class="filter-topic"></p>
+     <ul class="gallery-layout-selection"
+         tal:define="active_list python:' active-list' if not hide_listing else '';
+                     active_album python:' active-album' if not hide_album else '';">
+            <li><a href="#" tal:attributes="class string:list-layout${active_list}"></a></li>
+            <li><a href="#" tal:attributes="class string:album-layout${active_album}"></a></li>
+        </ul>
+    <div class="gallery-ajax visualClear">
+        <div class="gallery-listing">
+        </div>
+        <div class="gallery-album">
+        </div>
+    </div>
+    <div metal:use-macro="here/frontpage_macros/macros/more-link" />
+</metal:empty>
 </html>

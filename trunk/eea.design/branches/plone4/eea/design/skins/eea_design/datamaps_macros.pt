@@ -11,7 +11,7 @@
                  hide_listing python: False;
                  hide_album python: True;
                  more_href string:data;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="maps"
@@ -22,7 +22,7 @@
                  hide_listing python: False;
                  hide_album python: True;
                  more_href string:figures;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="indicators"
@@ -34,7 +34,7 @@
                  hide_listing python: True;
                  hide_album python: False;
                  more_href string:indicators;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 
@@ -81,7 +81,7 @@
                  hide_album python: False;
                  hide_listing python: True;
                  more_href string:figures;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="interactivemaps"
@@ -92,7 +92,7 @@
                  hide_album python: False;
                  hide_listing python: True;
                  more_href string:explore-interactive-maps;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 
