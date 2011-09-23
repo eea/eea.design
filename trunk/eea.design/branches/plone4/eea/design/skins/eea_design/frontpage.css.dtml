@@ -224,9 +224,6 @@ body.frontpage #portal-columns {
     border-bottom: 0px;
 }
 
-#datamaps-highlights {
-    float: left;
-}
 
 
 /* Frontpage multimedia area

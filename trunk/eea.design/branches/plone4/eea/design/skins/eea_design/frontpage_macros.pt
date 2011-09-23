@@ -90,9 +90,7 @@
 <div metal:define-macro="publications"
      id="publications-highlights"
      class="highlights"
-     tal:define="folderContents frontpage_view/getPublications;
-                 plone_view nocall:plone_view|context/@@plone;
-                 hide_listing python: False;
+     tal:define="hide_listing python: False;
                  hide_album python: True;
                  more_href string:publications;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
@@ -101,9 +99,7 @@
 <div metal:define-macro="articles"
      class="highlights"
      id="articles-highlights"
-     tal:define="frontpage_view context/@@frontpage_highlights;
-                 folderContents frontpage_view/getArticles;
-                 hide_listing python: False;
+     tal:define="hide_listing python: False;
                  hide_album python: True;
                  more_href string:articles;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
@@ -112,8 +108,7 @@
 <div metal:define-macro="multimedia"
      class="highlights"
      id="multimedia-highlights"
-     tal:define="folderContents frontpage_view/getMultimedia;
-                 hide_album python: False;
+     tal:define="hide_album python: False;
                  hide_listing python: True;
                  more_href string:multimedia;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
@@ -122,8 +117,7 @@
 <div metal:define-macro="allproducts"
      class="highlights"
      id="allproducts-highlights"
-     tal:define="folderContents frontpage_view/getAllProducts;
-                 hide_album python: False;
+     tal:define="hide_album python: False;
                  hide_listing python: True;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
@@ -132,9 +126,7 @@
 <div metal:define-macro="datamaps"
      class="highlights"
      id="datamaps-highlights" 
-     tal:define="datamaps_view context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getAllProducts;
-                 hide_album python: False;
+     tal:define="hide_album python: False;
                  hide_listing python: True;
                  more_href string:data-and-maps;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
@@ -216,4 +208,5 @@
     </div>
     <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </metal:empty>
+
 </html>

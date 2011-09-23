@@ -5,9 +5,7 @@
 <div metal:define-macro="datasets"
      id="datasets-highlights"
      class="highlights"
-     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestDatasets|nothing;
-                 plone_view nocall:plone_view|context/@@plone;
+     tal:define="plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;
                  more_href string:data;">
@@ -17,9 +15,7 @@
 <div metal:define-macro="maps"
      class="highlights"
      id="maps-highlights"
-     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestMaps|nothing;
-                 hide_listing python: False;
+     tal:define="hide_listing python: False;
                  hide_album python: True;
                  more_href string:figures;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
@@ -28,9 +24,7 @@
 <div metal:define-macro="indicators"
      id="indicators-highlights"
      class="highlights"
-     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestIndicators|nothing;
-                 plone_view nocall:plone_view|context/@@plone;
+     tal:define="plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: True;
                  hide_album python: False;
                  more_href string:indicators;">
@@ -76,9 +70,7 @@
 <div metal:define-macro="graphs"
      class="highlights"
      id="graphs-highlights"
-     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestGraphs|nothing;
-                 hide_album python: False;
+     tal:define="hide_album python: False;
                  hide_listing python: True;
                  more_href string:figures;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
@@ -87,9 +79,7 @@
 <div metal:define-macro="interactivemaps"
      class="highlights"
      id="interactivemaps-highlights"
-     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
-                 folderContents datamaps_view/getLatestInteractiveMaps|nothing;
-                 hide_album python: False;
+     tal:define="hide_album python: False;
                  hide_listing python: True;
                  more_href string:explore-interactive-maps;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
