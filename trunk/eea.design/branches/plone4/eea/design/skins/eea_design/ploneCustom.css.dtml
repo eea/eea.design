@@ -404,7 +404,7 @@ body.section-atlas #visual-column-wrapper {
     padding: 10px 2px;
     width: 8px;
     height: 8px;
-    background: url('&dtml-portal_url;/arrow_left_8x8.png') no-repeat center center #fff;
+    background: white url(&dtml-portal_url;/accordion_left.png) no-repeat scroll center center;
     cursor: pointer;
     border: 1px solid white;
     -moz-border-radius: 3px;
@@ -412,22 +412,22 @@ body.section-atlas #visual-column-wrapper {
 }
 .slidePortlet .slideButton.next {
     right: 0;
-    background-image: url('&dtml-portal_url;/arrow_right_8x8.png');
+    background: white url(&dtml-portal_url;/accordion_right.png) no-repeat scroll center center;
 }
 
 .slidePortlet .slideButton.play {
-    bottom: 2px;
-    left: 138px;
-    margin: 4px auto;
     position: absolute;
-    top: auto;
+    right: 0;
+    top: 8px;
+    margin: 4px auto;
+    padding: 5px;
     border: 0;
-    padding: 4px;
-    background: transparent url('&dtml-portal_url;/control_play.png') no-repeat center center;
+    border-radius: 0;
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll -446px -216px;
 }
 
 .slidePortlet .slideButton.play.pause {
-    background: transparent url('&dtml-portal_url;/control_pause.png') no-repeat center center;
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll -454px -191px;
 }
 
 .section-soer .slidePortlet a.moreLink,

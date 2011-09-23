@@ -402,7 +402,6 @@ width:16px;
   display: block;
   background-color: &dtml-lightBackgroundColor;;
   margin: -6px 0px 0px -6px;
-  border: 1px solid #a9a9a9;
   padding: 4px;
 }
 
