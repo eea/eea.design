@@ -330,6 +330,7 @@ ul#tabs li {
 ul#tabs li a {
     color: #FFF;
     border: 0px;
+    height: 17px;
     text-decoration: none;
     padding: 9px 10px 11px 10px;
     text-shadow: 1px 1px 1px #000000;

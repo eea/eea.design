@@ -382,7 +382,8 @@ body.section-atlas #visual-column-wrapper {
     position: relative;
     overflow: hidden;
     padding: 0;
-    background: #dcecf4;
+    background: #346F83;
+    color: #FFFFFF;
     height: 270px ! important;
 }
 .slidePortlet .portletItem, #content .slidePortlet .portletItem {
@@ -2182,6 +2183,7 @@ div.position-3\3a 4 {margin-left:    -369px;}
 
 #portal-column-two {
     padding-left: 1em;
+    margin-top: 75px;
 }
 
 /* hide columns */
