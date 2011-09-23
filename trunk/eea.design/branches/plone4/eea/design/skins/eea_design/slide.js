@@ -34,7 +34,7 @@
                 fordef = 'click, blur';
                 a.tooltip({
                     tip: tooltip[0],
-                    position: 'bottom center',
+                    position: 'bottom right',
                     offset: offset,
                     delay: 10000000,
                     events: {
