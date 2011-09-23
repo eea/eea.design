@@ -266,10 +266,12 @@
     margin-left: 22px !important;
 }
 
-.faceted-criteria-toggle-button {
+.faceted-criteria-toggle-button,
+.faceted-criteria-count-holder {
     position: relative;
     top: -10px;
     margin-right: 5px;
+    padding: 0;
 }
 
 /* standard search button inside any of the portal columns*/
@@ -425,7 +427,7 @@ body.section-atlas #visual-column-wrapper {
     position: absolute;
     right: 0;
     top: 8px;
-    margin: 4px auto;
+    margin-right: 10px;
     padding: 5px;
     border: 0;
     border-radius: 0;
@@ -831,7 +833,6 @@ dd.embeddedMedia .magnify {
 .documentContent td a {
     display: inline-block;
     text-decoration: none !important;
-    border-bottom: 1px &dtml-linkUnderlineColor; solid;
 }
 
 
@@ -1058,10 +1059,11 @@ h3.site-description {
     border: 1px solid #BABBB8;
 }
 
-#tip-article-language{ 
-    position: absolute; 
+#tip-article-language{
+    width: 400px;
+    position: absolute;
     right: 15px;
-    width: 615px; top: 55px;
+    top: 55px;
 }
 #tip-article-language .panel-top { 
     right: 0; 
