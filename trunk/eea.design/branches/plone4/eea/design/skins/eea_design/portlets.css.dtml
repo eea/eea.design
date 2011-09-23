@@ -114,11 +114,11 @@ dt.portletItem {
     font-weight:normal !important;
     margin-left:0;
     font: normal 160% &dtml-fontFamily;;
-    color:&dtml-fontColor;;
+    color: white;
     line-height: 1.4;
     margin: 0;
     padding: 5px 10px;
-    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px #000000;
 }
 #portlet-navigation-tree .portletHeader,
 #portlet-navigation-tree .portletSubMenuHeader,

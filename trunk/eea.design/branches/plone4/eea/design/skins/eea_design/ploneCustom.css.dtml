@@ -394,7 +394,7 @@ body.section-atlas #visual-column-wrapper {
     position: relative;
     overflow: hidden;
     padding: 0;
-    background: #346F83;
+    background: &dtml-lightBackgroundColor;;
     color: #FFFFFF;
     height: 270px ! important;
 }
@@ -416,15 +416,14 @@ body.section-atlas #visual-column-wrapper {
     padding: 10px 2px;
     width: 8px;
     height: 8px;
-    background: white url(&dtml-portal_url;/accordion_left.png) no-repeat scroll center center;
+    background: transparent url(&dtml-portal_url;/accordion_left.png) no-repeat scroll center center;
     cursor: pointer;
-    border: 1px solid white;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
 .slidePortlet .slideButton.next {
     right: 0;
-    background: white url(&dtml-portal_url;/accordion_right.png) no-repeat scroll center center;
+    background: transparent url(&dtml-portal_url;/accordion_right.png) no-repeat scroll center center;
 }
 
 .slidePortlet .slideButton.play {
@@ -440,6 +439,18 @@ body.section-atlas #visual-column-wrapper {
 
 .slidePortlet .slideButton.play.pause {
     background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll -454px -191px;
+}
+
+.slidePortlet a.moreLink {
+    background: none;
+    padding-left: 0;
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+.slidePortlet a.moreLink:hover {
+    text-decoration: none;
 }
 
 .section-soer .slidePortlet a.moreLink,

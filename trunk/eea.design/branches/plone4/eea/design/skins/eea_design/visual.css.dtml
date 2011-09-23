@@ -400,9 +400,8 @@ width:16px;
 /* standard elements which are shadowed and therefore moved up*/
 .shadowed, .figure img, .thumbnail-right img {
   display: block;
-  background-color: &dtml-lightBackgroundColor;;
   margin: -6px 0px 0px -6px;
-  padding: 4px;
+  padding: 5px;
 }
 
 /* hover effect for images inside links */
