@@ -52,11 +52,14 @@
             var highlight = $("#" + cur_tab_val + "-highlights");
             var listing = highlight.find('.gallery-listing');
             var listing_length =  listing.length !== 0 ? listing[0].childElementCount : 0;
+
             if (sel_text === "All topics" || listing_length === 0) {
+                listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
                 whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
             }
             if (sel_value) {
                 if (cur_tab.data !== sel_value) {
+                    listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
                     cur_tab.data = sel_value;
                     whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
                 }
