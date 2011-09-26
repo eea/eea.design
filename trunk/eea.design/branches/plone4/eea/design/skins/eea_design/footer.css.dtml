@@ -15,14 +15,12 @@
 
 #portal-footer {
     width: 1024px;
-    height: 84px;
-    overflow: hidden;
     position: relative;
     margin: 0 auto;
     padding: 0;
     background: &dtml-corporateGreen;;
     text-align: left;
-    font-size: 11px;
+    font-size: 12px;
     color: white;
 }
 
@@ -129,8 +127,6 @@
 }
 
 #portal-footer #portlet-ecotip {
-    height: 84px;
-    overflow: hidden;
     margin: 0;
 }
 
@@ -145,6 +141,11 @@
 
 #portal-footer #portlet-ecotip .portletItem {
     padding: 9px 0 0 0;
+    margin-left: 75px !important;
+}
+
+#portal-footer #portlet-ecotip .portletItem strong {
+    font-size: 14px;
 }
 
 .colophon-left {
@@ -212,7 +213,7 @@ img.led-bulb {
     left: 8px;
 }
 
-#portlet-ecotip img { -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;}
+#portlet-ecotip img { -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out;transition: all 1s ease-in-out; margin-right: 15px; margin-top: 10px;}
 img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; }
 #portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 0; }
 
