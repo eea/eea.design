@@ -285,6 +285,7 @@ ul#tabs li a {
     text-decoration: none;
     padding: 9px 10px 11px 10px;
     text-shadow: 1px 1px 1px #000000;
+    display: inline-block;
 }
 
 ul#tabs li a.current, ul#tabs li a:hover {

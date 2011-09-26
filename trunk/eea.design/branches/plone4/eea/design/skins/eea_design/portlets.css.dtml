@@ -119,6 +119,7 @@ dt.portletItem {
     margin: 0;
     padding: 5px 10px;
     text-shadow: 1px 1px #000000;
+    padding-left: 25px !important;
 }
 #portlet-navigation-tree .portletHeader,
 #portlet-navigation-tree .portletSubMenuHeader,

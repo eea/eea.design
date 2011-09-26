@@ -394,7 +394,7 @@ body.section-atlas #visual-column-wrapper {
     position: relative;
     overflow: hidden;
     padding: 0;
-    background: &dtml-lightBackgroundColor;;
+    background: &dtml-corporateBlueTwo;;
     color: #FFFFFF;
     height: 270px ! important;
 }
@@ -445,7 +445,7 @@ body.section-atlas #visual-column-wrapper {
     background: none;
     padding-left: 0;
     text-decoration: underline;
-    color: white;
+    color: white !important;
     cursor: pointer;
 }
 
