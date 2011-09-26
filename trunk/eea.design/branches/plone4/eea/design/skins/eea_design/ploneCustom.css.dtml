@@ -1137,7 +1137,7 @@ h3.site-description {
 }
 
 #tip-externalsites-networks, #tip-externalsites-etcssites {
-    width: 201px; 
+    width: 400px; 
     position:absolute; 
     left: 0px !important;
 }
@@ -1148,6 +1148,10 @@ h3.site-description {
 #tip-siteaction-chooselang li a {
     font-size: 11px;
     display: block;
+}
+
+.networkSites dt {
+    background: none !important;
 }
 
 /* The skin switcher at the top, only shows up if you have multiple skins available */

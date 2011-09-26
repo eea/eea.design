@@ -8,31 +8,63 @@
                 <div class="panel-top">
                 </div>
                 <div class="panel-content shadow">
-                    <ul class="externalsites" 
-                        
-                        tal:define="externalsite_actions python: context.portal_actions.listFilteredActionsFor(context).get('externalsite_actions', '');
-                                    putils context/plone_utils;
-                                    getIconFor nocall:putils/getIconFor;
-                                    accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
-                        tal:condition="externalsite_actions">
-
-                        <li tal:repeat="saction externalsite_actions"
-                            tal:attributes="id string:externalsites-${saction/id}"><a
-                               href=""
-                               tal:define="title saction/title;
-                                           id saction/id;
-                                           icon python:getIconFor('plone', saction['id'], None);
-                                           accesskey python: accesskeys.get(id, '');"
-                               i18n:attributes="title"
-                               i18n:translate=""
-                               tal:attributes="href saction/url;
-                                               title title;
-                                               accesskey accesskey;"
-                               ><tal:title tal:content="title"
-                    >Site action</tal:title>
+		    <dl class="portlet networkSites">
+		    <dt>Networks</dt>
+                    <dd><ul>
+                        <li id="externalsites-eionet"><a title="Eionet" accesskey="" href="http://www.eionet.europa.eu/">Eionet
                     </a></li>
+		    <li id="externalsites-epanet"><a title="EPA network" accesskey="" href="http://epanet.ew.eea.europa.eu/">Network of the Heads of Environment Protection Agencies (EPA network)
+		    </a></li>
+		    <li id="externalsites-envirowindows"><a title="EnviroWindows" accesskey="" href="http://ew.eea.europa.eu/">EnviroWindows
+                    </a></li>
+                    <li id="seis-network"><a title="SEIS network" accesskey="" href="http://www.eea.europa.eu/about-us/what/shared-environmental-information-system">Shared Environmental Information System (SEIS) 
+                    </a></li></ul>
+	            </dd>
+		    <dt>European Topic Centres (ETCs)</dt>
+                    <dd>
+                    <ul>
+                        <li>
+                            <a href="http://acm.eionet.europa.eu">Air pollution
+                                and Climate Change mitigation (ACM)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://bd.eionet.europa.eu">Biological
+                                Diversity (BD)
+                            </a>
 
+                        </li>
+                        <li>
+                            <a href="http://cca.eionet.europa.eu">Climate Change
+                                Impacts, Vulnerability and Adaptation (CCA)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://icm.eionet.europa.eu">Inland,
+                                Coastal and Marine waters (ICM)
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="http://sia.eionet.europa.eu">Spatial
+                                Information and Analysis (SIA)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://scp.eionet.europa.eu">Sustainable
+                                Consumption and Production (SCP)
+                            </a>
+                        </li>
                     </ul>
+		    </dd>
+		    <dt class="hiddenStructure">More networks</dt>
+		    <dd style="padding-bottom: 0.5em" class="portletFooter">
+                      <a class="moreLink" href="http://www.eea.europa.eu/about-us/key-partners">
+		      EU partners</a>&nbsp;&nbsp;
+		      <a class="moreLink" href="http://www.eea.europa.eu/about-us/international-cooperation">
+		      International cooperation</a>
+                    </dd>
+		    </dl>
                 </div>
             </div>
 

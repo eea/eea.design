@@ -96,7 +96,7 @@ border:none;
 line-height: 1.6em;
 color: black;
 padding: 0.5em 3em 0.5em 3em;
-margin: 0;
+margin: 0.5em 0;
 text-align: right;
 text-transform: lowercase;
 list-style: none;

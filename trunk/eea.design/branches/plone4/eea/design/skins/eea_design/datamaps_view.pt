@@ -42,14 +42,7 @@
                             <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
                         </tal:featured_item>
 
-		        <!-- Popular tags -->
-			<div id="faceted-form">
-			  <div id="tag-cloud">
-	 	            <div id="tag-cloud-content" tal:define="faceted_path python:'find/global'">
-	 	                <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" />
-			    </div>
-                          </div>
-			</div>
+
 
                         <!--<div class="featured">
                           <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
@@ -67,7 +60,7 @@
                         <!-- community  divs -->
 
                         <div id="mobile">
-                            <a id="mobile-link" href="http://mobile.eea.europa.eu"></a>
+                            <a id="mobile-link" href="/mobile"></a>
                         </div>
 
                         <div id="social-links">

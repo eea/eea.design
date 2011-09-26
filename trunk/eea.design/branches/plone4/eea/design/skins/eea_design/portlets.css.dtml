@@ -134,9 +134,10 @@ dt.portletItem {
 }
 
 
-#portlet-navigation-tree #firstHeader {
+#firstHeader {
    padding: 1em 0.5em 1em 0.5em;
    font-size: 1.6em;
+   text-shadow: none;
 }
 
 .portletFooter {
