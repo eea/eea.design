@@ -55,7 +55,7 @@ body.frontpage ul {
     font-weight: normal;
 }
 
-#highlights-block h2, .featured h2 { 
+#highlights-block h2, .featured h2 {
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4;
@@ -118,52 +118,6 @@ body.frontpage ul {
 a.archives {
     color: #869936;
     border-bottom: 1px solid #869936;
-}
-
-/* Frontpage promotions
-******************************************************************************/
-
-#top-news-area {
-    /* background: #E5E6E8; */
-    font-size: 1.2em;
-    width: 998px;
-}
-
-#top-news-area .portlet-promotions .portletHeader a {
-    color: &dtml-linkHeadingColor;;
-    font-weight: normal;
-    /* border: 0px;  */
-    background: transparent;
-    padding: 8px 0 0 15px;
-}
-#top-news-area div.portletHeader {
-    background: none repeat scroll 0 0 white;
-    height: 38px;
-    opacity: 0.8;
-    margin-top: -38px;
-    text-align: left;
-    padding: 0px;
-}
-
-#top-news-area .portlet-promotions {
-    width: 20%;
-    float: left;
-    border: 1px solid #c6c6c7;
-}
-
-#top-news-area .portlet,
-#top-news-area dl.portlet, #top-news-area dd  {
-    margin: 0;
-    padding: 0;
-}
-
-#top-news-area dd  {
-    border: 3px solid #FFF;
-}
-
-#top-news-area .portlet-promotions img {
-    width: 100%;
-    height: 110px;
 }
 
 /* Frontpage main content
@@ -292,7 +246,7 @@ body.frontpage #portal-columns {
 
 div.even  {
     background: &dtml-evenRowBackgroundColor;;
-    color: #346f83; 
+    color: #346f83;
     margin: 0;
     padding: 15px 15px 10px 15px;
     font-weight: normal;
@@ -300,11 +254,11 @@ div.even  {
     cursor: pointer;
 }
 div.even {
-     background: #f7f7f7 !important; 
+     background: #f7f7f7 !important;
 }
 
 div.current {
-  display: none; 
+  display: none;
 }
 
 ul#tabs {
@@ -424,7 +378,7 @@ a.active-album,
 a.list-layout:hover,
 a.album-layout:hover {
   background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
-} 
+}
 
 #semantic-ds-links a:hover,
 #forum a:hover,
@@ -468,7 +422,7 @@ a.album-layout:hover {
     background: transparent url('sprite-eeaimages.png') no-repeat;
     padding: 0px;
 }
-    
+
  #twitter-link {
     background-position: 0 -180px !important;
 }
@@ -577,7 +531,7 @@ a.list-layout {
 }
 
 a.active-list, a.list-layout:hover {
-  background-position: -448px -145px;  
+  background-position: -448px -145px;
 }
 
 .filter-topic {
