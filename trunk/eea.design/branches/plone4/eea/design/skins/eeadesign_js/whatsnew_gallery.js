@@ -34,9 +34,6 @@
                         else {
                             gallery_ajax.find('.gallery-listing').addClass('hiddenStructure');
                         }
-                        if (cur_tab_val === "multimedia") {
-                                $.getScript(site_address + "eea-mediacentre.js");
-                        }
                     }
 
                 });
@@ -44,7 +41,7 @@
 
         $("ul#tabs").tabs("> .highlights", function(event, index) {
             var cur_tab = this.getTabs()[index];
-                cur_tab.data = cur_tab.data || "none",
+                cur_tab.theme = cur_tab.theme || "none",
                 cur_tab_val = cur_tab.id.substr(4);
             var opt_item = $("#topic-selector").find(":selected");
                 sel_value = opt_item.val(),
@@ -54,7 +51,7 @@
             var listing_length =  listing.length !== 0 ? listing[0].childElementCount : 0;
             var notopics = highlight.find('.portalMessage'),
                 notopics_length = notopics.length !== 0 ? 1 : 0;
-            if (cur_tab.data === sel_value && notopics_length !== 0) {
+            if (cur_tab.theme === sel_value && notopics_length !== 0) {
                 return;
             } 
             if (sel_text === "All topics" || listing_length === 0) {
@@ -62,9 +59,9 @@
                 whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
             }
             if (sel_value) {
-                if (cur_tab.data !== sel_value) {
+                if (cur_tab.theme !== sel_value) {
                     listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
-                    cur_tab.data = sel_value;
+                    cur_tab.theme = sel_value;
                     whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
                 }
             }
@@ -162,5 +159,3 @@
     });
 
 })(jQuery);
-
-
