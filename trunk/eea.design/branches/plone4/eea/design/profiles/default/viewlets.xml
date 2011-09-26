@@ -56,7 +56,6 @@
 
     <hidden manager="plone.portalfooter" skinname="EEADesignCMS">
         <viewlet name="plone.site_actions" />
-        <viewlet name="plone.colophon" />
     </hidden>
     <!-- end portalfooter hiddenmanagers -->
 
