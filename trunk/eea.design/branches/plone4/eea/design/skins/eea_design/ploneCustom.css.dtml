@@ -453,6 +453,13 @@ body.section-atlas #visual-column-wrapper {
     text-decoration: none;
 }
 
+.slidePortlet .portletHeader {
+    padding-left: 25px !important;
+    text-shadow: 1px 1px #000000;
+    background: &dtml-corporateBlueTwo;;
+    color: #FFFFFF;
+}
+
 .section-soer .slidePortlet a.moreLink,
 .section-soer-draft .slidePortlet a.moreLink {
     display: inline;

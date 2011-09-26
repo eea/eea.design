@@ -63,6 +63,7 @@ h2 {
     padding: 1em 0.5em;}
 h3 {
     font-size: 125%;
+    line-height: 1.5;
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     margin: 1em 0;}
 h4 {
@@ -77,6 +78,10 @@ h6 {
     font-size: 85%;
     margin: 2.33em 0;
     color: #000;}
+
+#content-core h3 {
+    padding-bottom: 5px;
+}
 
 #content-core h2, #content-core h3 {
     clear:both;
