@@ -219,7 +219,13 @@
     color:#fff;
     background:#346F83;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
     background: -moz-linear-gradient(270deg, #478EA5, #346F83) repeat scroll 0 0 transparent;
+    background-image: -ms-linear-gradient(top,#478EA5,#346F83);
+    background-image: -o-linear-gradient(top,#478EA5,#346F83);
+    background-image: linear-gradient(top,#478EA5,#346F83);
     font: bold 12px Verdana, Arial, sans-serif;
     padding: 7px 12px;
     position: relative;
@@ -245,7 +251,13 @@
 .faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton:hover {
     background-color:&dtml-corporateOrange;;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
+    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */  
     background: -moz-linear-gradient(270deg, orange, #FF9123) repeat scroll 0 0 transparent;
+    background-image: -ms-linear-gradient(top,orange,#FF9123);
+    background-image: -o-linear-gradient(top,orange,#FF9123);
+    background-image: linear-gradient(top,orange,#FF9123);
     color: #FFFFFF;
     cursor:pointer;
     border-color: #999999;
@@ -284,8 +296,14 @@
 #portal-columns input[type="submit"] {
     color:#fff;
     background:#346F83;
-    background: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
-    background: -moz-linear-gradient(270deg, #478EA5, #346F83) repeat scroll 0 0 transparent;
+    background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background-image: -moz-linear-gradient(270deg, #478EA5, #346F83);
+    background-image: -ms-linear-gradient(top,#478EA5,#346F83);
+    background-image: -o-linear-gradient(top,#478EA5,#346F83);
+    background-image: linear-gradient(top,#478EA5,#346F83);
     font: bold 12px Verdana, Arial, sans-serif;
     padding: 7px 12px;
     position: relative;
@@ -310,8 +328,14 @@
 /* #portal-columns input.searchButton:hover, */
 #portal-columns input[type="submit"]:hover {
     background-color:&dtml-corporateOrange;;
-    background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
-    background: -moz-linear-gradient(270deg, orange, #FF9123) repeat scroll 0 0 transparent;
+    background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
+    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */  
+    background-image: -moz-linear-gradient(270deg, orange, #FF9123);
+    background-image: -ms-linear-gradient(top,orange,#FF9123);
+    background-image: -o-linear-gradient(top,orange,#FF9123);
+    background-image: linear-gradient(top,orange,#FF9123);
     color: #FFFFFF;
     cursor:pointer;
     border-color: #999999;
@@ -331,6 +355,8 @@
     -o-transition: box-shadow 0.218s ease 0s;
     transition: box-shadow 0.218s ease 0s;
     background: none repeat scroll 0 0 #FFFFFF;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
     border-radius: 3px 3px 3px 3px;
     font-size: 16px;
     height: 22px;
@@ -422,6 +448,7 @@ body.section-atlas #visual-column-wrapper {
     cursor: pointer;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 .slidePortlet .slideButton.next {
     right: 0;
@@ -435,6 +462,8 @@ body.section-atlas #visual-column-wrapper {
     margin-right: 10px;
     padding: 5px;
     border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
     background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll -446px -216px;
 }
@@ -1208,6 +1237,8 @@ h3.site-description {
 
 #portal-searchbox input.searchButton {
     background-position: -404px -83px !important;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0;
     color: #FFFFFF;
     cursor: pointer;

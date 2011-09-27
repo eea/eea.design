@@ -2,7 +2,15 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 #footer-wrapper {
+    background: #478EA5;
+    background-image: -webkit-linear-gradient(top,#478EA5,#346F83);
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
     background: -moz-linear-gradient(#478EA5, #346F83) repeat scroll 0 0 transparent;
+    background-image: -ms-linear-gradient(top,#478EA5,#346F83);
+    background-image: -o-linear-gradient(top,#478EA5,#346F83);
+    background-image: linear-gradient(top,#478EA5,#346F83);
     margin-top: 0.5em;
     padding: 1em;
     clear: both;

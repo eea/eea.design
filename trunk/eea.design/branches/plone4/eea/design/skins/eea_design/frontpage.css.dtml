@@ -297,6 +297,8 @@ ul#tabs li a.current, ul#tabs li a:hover {
 ul#tabs li:first-child a.current,
 ul#tabs li:first-child a:hover {
   border-radius: 8px 0 0 0;
+  -webkit-border-radius: 8px 0 0 0;
+  -moz-border-radius: 8px 0 0 0;
 }
 
 #news-header select {
