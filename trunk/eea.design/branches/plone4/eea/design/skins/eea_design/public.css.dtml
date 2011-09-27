@@ -1630,14 +1630,6 @@ dl.toc dd ol {
 
 /* @group Footer */
 
-#portal-footer {
-    font-size: 80%;
-    background: #ddd;
-    padding: 1em;
-    margin: 1em 0;
-    line-height: 2em;
-}
-
 #portal-colophon {
     font-size: 12px;
     text-align: center;

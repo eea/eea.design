@@ -2,7 +2,7 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 #footer-wrapper {
-    background-color: &dtml-corporateGreen;;
+    background: -moz-linear-gradient(#478EA5, #346F83) repeat scroll 0 0 transparent;
     margin-top: 0.5em;
     padding: 1em;
     clear: both;
@@ -18,7 +18,7 @@
     position: relative;
     margin: 0 auto;
     padding: 0;
-    background: &dtml-corporateGreen;;
+    line-height: 2em;
     text-align: left;
     font-size: 12px;
     color: white;
