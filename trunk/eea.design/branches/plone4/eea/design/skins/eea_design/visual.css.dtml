@@ -392,16 +392,28 @@ width:16px;
 
 
 /* standard elements with shadow background */
-.dropshadow, .figure, .thumbnail-right {
+.dropshadow, .thumbnail-right {
   display: block;
   margin: 10px 0px 2px 6px;
 }
 
+.figure {
+    display: block;
+}
+
 /* standard elements which are shadowed and therefore moved up*/
-.shadowed, .figure img, .thumbnail-right img {
+.shadowed, .thumbnail-right img {
   display: block;
   margin: -6px 0px 0px -6px;
   padding: 5px;
+}
+
+.figure img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 633px !important;
+    height: 356px !important;
 }
 
 /* hover effect for images inside links */

@@ -396,7 +396,9 @@ body.section-atlas #visual-column-wrapper {
     padding: 0;
     background: &dtml-corporateBlueTwo;;
     color: #FFFFFF;
-    height: 270px ! important;
+    width: 633px !important;
+    left: 0 !important;
+    top: -156px !important;
 }
 .slidePortlet .portletItem, #content .slidePortlet .portletItem {
     position: absolute;
@@ -457,7 +459,7 @@ body.section-atlas #visual-column-wrapper {
     padding-left: 25px !important;
     text-shadow: 1px 1px #000000;
     background: &dtml-corporateBlueTwo;;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .section-soer .slidePortlet a.moreLink,

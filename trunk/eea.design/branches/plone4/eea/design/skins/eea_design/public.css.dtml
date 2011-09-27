@@ -1454,11 +1454,6 @@ fieldset,
 div.formControls {
     margin: 1em;
 }
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus {
-    background-color: #ffffe0;
-}
 
 #content textarea {
     font: 100% Monaco, "Courier New", Courier, monospace;
