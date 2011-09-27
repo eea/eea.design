@@ -83,6 +83,10 @@ h6 {
     padding-bottom: 5px;
 }
 
+#content-core h2, #content-core h3 {
+    clear:both;
+}
+
 #region-content ul, ul {
 
     margin: 0em 0 0 1.5em;
