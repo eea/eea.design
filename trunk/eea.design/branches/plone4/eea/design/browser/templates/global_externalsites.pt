@@ -4,8 +4,8 @@
     <li id="externalsites-networks"><a href="#" i18n:translate="externalsites-networks">Networks</a></li>
 </ul>
 
-            <div class="panel" id="tip-externalsites-networks">
-                <div class="panel-top">
+            <div class="panel" id="tip-externalsites-networks" style="width:450px; margin-left: 2em;">
+                <div class="panel-top" style="left: -195px;">
                 </div>
                 <div class="panel-content shadow">
 		    <dl class="portlet networkSites">
