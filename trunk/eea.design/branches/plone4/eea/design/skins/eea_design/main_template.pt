@@ -34,7 +34,6 @@
                         acl_users nocall: context/acl_users;
                         ifacetool context/portal_interface;
                         syntool context/portal_syndication;
-                        inApplication context/@@inApplication;
                         onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view');">
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 
@@ -51,9 +50,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <metal:baseslot define-slot="base">
-        <base tal:attributes="href plone_view/renderBase" /><!--[if lt IE 7]></base><![endif]-->
-    </metal:baseslot>
 
     <tal:notajax tal:condition="python:not ajax_load or ajax_include_head">
         <div tal:replace="structure provider:plone.htmlhead" />
@@ -71,12 +67,12 @@
             <tal:anonymousNoBorder condition="isAnon|nothing">
                 <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
             </tal:anonymousNoBorder>
+            <metal:baseslot define-slot="base">
+                <base tal:attributes="href plone_view/renderBase" /><!--[if lt IE 7]></base><![endif]-->
+            </metal:baseslot>
         </metal:headslot>
 
         <metal:style_slot define-slot="style_slot">
-            <link href="application.css" rel="stylesheet" type="text/css"
-                tal:attributes="href string:$portal_url/++resource++application.css"
-                tal:condition="inApplication"/>
             <metal:pagedesign use-macro="here/page_design_macros/macros/pagedesign" />
 
         </metal:style_slot>
@@ -108,7 +104,6 @@
 
          <div id="header-holder">
             <div id="portal-top"
-                i18n:domain="eea"
                 tal:condition="not:ajax_load">
                     <div tal:replace="structure provider:plone.portaltop" />
             </div>
@@ -125,14 +120,10 @@
 
             <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" />
 
-                <tal:webapplication-menu condition="inApplication">
-                    <metal:menu use-macro="here/webapp_menu/macros/menu">
-                        application menu
-                    </metal:menu>
-                </tal:webapplication-menu>
             <metal:block define-slot="content">
                 <div metal:define-macro="content"
                     tal:define="show_border context/@@plone/showEditableBorder; show_border python:show_border and not ajax_load"
+                    tal:attributes="class python:show_border and 'documentEditable' or ''"
                     id="region-content">
 
                     <div id="edit-bar"
@@ -145,17 +136,6 @@
 
                     <metal:slot define-slot="body">
                         <div id="content"  class="documentContent panels">
-
-                            <tal:noajax condition="not: view/menu|nothing">
-                            <tal:tabs define="submenu here/@@application_submenu_direct;">
-                                <tal:submenu
-                                        condition="python:len(submenu) &gt; 1 and inApplication">
-                                    <metal:menu use-macro="here/webapp_menu/macros/submenu">
-                                        Application menu
-                                    </metal:menu>
-                                </tal:submenu>
-                            </tal:tabs>
-                            </tal:noajax>
 
                             <metal:header define-slot="header" tal:content="nothing">
                             Visual Header
@@ -212,7 +192,7 @@
             <div id="portal-column-one"
                  class="cell width-1:4 position-0"
                  metal:define-slot="column_one_slot"
-                tal:condition="python:test(not inApplication and sl and not onFrontpage)"
+                tal:condition="python:test(sl and not onFrontpage)"
                  tal:attributes="class python:isRTL and 'cell width-1:4 position-3:4' or 'cell width-1:4 position-0'">
                 <div class="visualPadding">
                     <div id="slide-menu">
@@ -228,7 +208,7 @@
         <div id="portal-column-two"
             class="cell width-1:4 position-3:4"
             metal:define-slot="column_two_slot"
-            tal:condition="python:test(not inApplication and sr and not onFrontpage)"
+            tal:condition="python:test(sr and not onFrontpage)"
             tal:attributes="class python:isRTL and 'cell width-1:4 position-0' or 'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
                 <tal:block replace="structure provider:plone.rightcolumn" />
