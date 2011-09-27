@@ -32,11 +32,13 @@
     font-weight: normal;
     border: none;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    clear: none !important;
 }
 
 #promo-gallery-content-sm h3 {
     font-size: 1.4em;
     margin-top: 0.2em;
+    clear: none !important;
 }
 
 #promo-gallery-content h3 a, #promo-gallery-content h3 a:visited, 
@@ -180,11 +182,13 @@
     font-weight: normal;
     height: 72px;
     overflow: hidden;
+    clear: none !important;
 }
 
 #promo-navigator h3, #promo-navigator-sm h3 {
     border:none !important;
     text-shadow: none;
+    clear: none !important;
 }
 
 #promo-navigator li div, #promo-navigator-sm li div {
