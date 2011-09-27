@@ -27,12 +27,16 @@
                 var layout_selection = $('.gallery-layout-selection li a', news)[0];
                 var params = sel_value ? 'topic' + '=' + sel_value : undefined;
                 gallery_ajax.load( address, params, function(html) {
+                    var album = gallery_ajax.find('.gallery-album');
+                    var listing = gallery_ajax.find('.gallery-listing');
                     if (html.length > 1) {
                         if (layout_selection.className === "list-layout active-list"){
                             gallery_ajax.find('.gallery-album').addClass('hiddenStructure');
+                            listing.hide().fadeIn('slow');    
                         }
                         else {
                             gallery_ajax.find('.gallery-listing').addClass('hiddenStructure');
+                             album.hide().fadeIn('slow');
                         }
                     }
 
@@ -104,8 +108,8 @@
                 cookie_expires.setMonth(cookie_expires.getMonth() + 1); // one month
 
             if (link_class == "list-layout") {
-                album.slideUp();
-                listing.slideDown();
+                album.slideUp('slow');
+                listing.slideDown('slow');          
                 $hidden_gallery.removeClass("hiddenStructure");
                 $this.toggleClass("active-list");
                 next.toggleClass("active-album");
@@ -113,8 +117,8 @@
                 return false;
             }
             else {
-                listing.slideUp();
-                album.slideDown();
+                listing.slideUp('slow');
+                album.slideDown('slow');
                 $hidden_gallery.removeClass("hiddenStructure");
                 $this.toggleClass("active-album");
                 next.toggleClass("active-list");
@@ -159,3 +163,4 @@
     });
 
 })(jQuery);
+
