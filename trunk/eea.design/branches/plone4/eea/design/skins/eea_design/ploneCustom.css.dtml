@@ -97,6 +97,13 @@
     margin: 0 0 0 5px !important;
 }
 
+#tag-cloud {
+   background-color: &dtml-lightBackgroundColor;;
+}
+
+#tag-cloud .portletFooter {
+  margin: 0 1em 1em 0;
+}
 
 /* Style for faceted used in section-publications */
 
@@ -901,7 +908,6 @@ a.moreLink {
     height: 18px;
     font-size: 11px;
     line-height: 1.6;
-    text-transform: capitalize;
 }
 
 /* End links */

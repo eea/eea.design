@@ -146,7 +146,7 @@ a.archives {
 }
 
 #highlights-area .highlights {
-    background: #F7F7F7;
+    background: &dtml-greyBackgroundColor;;
 }
 
 body.frontpage .documentActions,
@@ -206,7 +206,7 @@ body.frontpage #portal-columns {
 ******************************************************************************/
 .highlightMiddle {
     padding: 2em 1.7em 1em 1.7em;
-    background: #F7F7F7;
+    background: &dtml-greyBackgroundColor;;
 }
 
 .highlightHigh {
@@ -254,7 +254,7 @@ div.even  {
     cursor: pointer;
 }
 div.even {
-     background: #f7f7f7 !important;
+     background: &dtml-greyBackgroundColor; !important;
 }
 
 div.current {
@@ -289,7 +289,7 @@ ul#tabs li a {
 }
 
 ul#tabs li a.current, ul#tabs li a:hover {
-    background: #F7F7F7;
+    background: &dtml-greyBackgroundColor;;
     color: #2D8EA3;
     text-shadow: 1px 1px 1px #FFFFFF;
 }
