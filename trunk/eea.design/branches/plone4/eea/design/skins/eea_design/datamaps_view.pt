@@ -18,6 +18,8 @@
                     <div id="articles-area" class="column-area">
 
 		    <!-- data and maps global search -->
+		    <a href="find/global" class="archives advanced-search-link" title="Go to advanced search">
+                    <span>Advanced search</span></a>
 		    <div class="featured">
 		       <h2 i18n:translate="featured_global_search">Search</h2>
 		       <form action="find/global" method="get" id="faceted-text-search" class="searchforms faceted-external-search">
