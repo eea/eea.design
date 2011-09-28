@@ -353,6 +353,11 @@ ul#tabs li:first-child a:hover {
     padding: 0 1em 0 1em;
 }
 
+/* in featured boxes we do want floating for links and images */
+.featured h2, .featured h3 {
+    clear: none !important;
+}
+
 /* style for shortcuts buttons */
 
 #forum, #community, #mobile {
