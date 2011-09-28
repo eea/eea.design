@@ -49,6 +49,14 @@
                         </div>-->
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
 
+			<div id="organisations-links" class="shortcut-light">
+			   <div id="organisations-content">
+			   <a id="organisations-link" href="/data-and-maps/data-providers-and-partners">
+			     <h2>Browse by organisation</h2>
+			   </a>
+			   </div>
+                        </div>			
+			
 			<div id="semantic-ds-links" class="shortcut-light">
 			   <div id="semantic-content">
 			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
@@ -59,7 +67,7 @@
 
                         <!-- community  divs -->
 
-                        <div id="mobile">
+                        <div id="mobile" class="shortcut-light">
                             <a id="mobile-link" href="/mobile"></a>
                         </div>
 

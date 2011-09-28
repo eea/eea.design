@@ -451,7 +451,7 @@ a.album-layout:hover {
     width: 100%;
     text-align: center;
     padding: 2em 0em;
-    background: #ECECEC;
+    background: &dtml-lightBackgroundColor;;
     margin-bottom: 2em;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -469,7 +469,7 @@ a.album-layout:hover {
     -webkit-border-radius: 5px;
 }
 
-.shortcut-default:hover, .shortcut-light:hover {
+.shortcut-default:hover, .shortcut-light:hover, #mobile:hover {
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
@@ -479,9 +479,15 @@ a.album-layout:hover {
 }
 
 #semantic-content {
-   background: url("molecule.png") no-repeat 48px 22px transparent; /* TODO: to sprite */
-   padding: 0px 0 5px 45px;
+   background: url("molecule.png") no-repeat 55px 22px transparent; /* TODO: to sprite */
+   padding: 0px 0px 5px 60px;
    height: 90px;
+}
+
+#organisations-content {
+   background: url("/valentine-imagescales/organisation/image_thumb") no-repeat 35px 10px transparent; /* TODO: to sprite */
+   padding: 25px 0 0px 65px;
+   height: 75px;
 }
 
 #theme-datacentre {
@@ -492,7 +498,7 @@ a.album-layout:hover {
 }
 
 #mobile {
-    background: #e6e7e8 url("mobile.png") no-repeat center center;
+    background: transparent url("mobile-app.png") no-repeat center center;
 }
 
 
