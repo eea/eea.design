@@ -75,6 +75,21 @@ padding: 1em;
     background: no-repeat transparent 0px -1728px url(contenttypes-sprite.png);
 }
 
+/******* Manage portlets links *******/
+.managePortletsLink {
+    border: 1px solid black;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.managePortletsLink a:hover {
+    color: #8E004D;
+}
+
+.managePortletsLink a:link {
+    color: #346F83;
+}
+
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE
 */
