@@ -480,8 +480,8 @@ a.album-layout:hover {
 
 #semantic-content {
    background: url("molecule.png") no-repeat 55px 22px transparent; /* TODO: to sprite */
-   padding: 0px 0px 5px 60px;
-   height: 90px;
+   padding: 25px 0px 5px 60px;
+   height: 75px;
 }
 
 #organisations-content {
