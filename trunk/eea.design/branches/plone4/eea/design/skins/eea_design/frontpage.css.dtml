@@ -55,11 +55,11 @@ body.frontpage ul {
     font-weight: normal;
 }
 
-#highlights-block h2, .featured h2 {
+#highlights-block h2, .featured h2, .featured dt.portletHeader {
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4;
-    padding: 0.2em 1em 0.25em 0em;
+    padding: 0.2em 1em 0.25em 0em !important;
     border: none;
     clear: left;
     color: #000;

@@ -466,6 +466,10 @@ dl.portlet {
 
 }
 
+dl#featured-datasets {
+  margin-bottom: 2.5em;
+}
+
 /* #content a:link, */
 /* dl.portlet a:link { */
 /*     color: #205c90; */
@@ -546,8 +550,17 @@ dl.portlet li {
     margin-bottom: 0;
     margin-right: 0;
 }
+
 #content dd {
     margin: 0 0 1em 2em;
+}
+
+#featured-datasets dd {
+    margin: 0 0 0.5em 2em;
+}
+
+#featured-datasets {
+   margin-bottom: 2.5em;
 }
 
 #content pre {
