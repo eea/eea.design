@@ -76,17 +76,35 @@ padding: 1em;
 }
 
 /******* Manage portlets links *******/
-.managePortletsLink {
+div.managePortletsLink {
     border: 1px solid black;
-    background-color: #f0f0f0;
-    color: black;
+    -webkit-transition: background .3s;
+       -moz-transition: background .3s;
+         -o-transition: background .3s;
+            transition: background .3s;
+    background: #f0f0f0;
 }
 
-.managePortletsLink a:hover {
+div.managePortletsLink:hover {
+    -webkit-transition: background .3s;
+       -moz-transition: background .3s;
+         -o-transition: background .3s;
+            transition: background .3s;
+    background: orange;
+}
+
+.managePortletsLink a, #portal-footer div.managePortletsLink .managePortletsFallback {
+    color: black;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.managePortletsLink a:hover, #portal-footer div.managePortletsLink .managePortletsFallback a:hover {
     color: #8E004D;
 }
 
-.managePortletsLink a:link {
+.managePortletsLink a:link, #portal-footer  div.managePortletsLink .managePortletsFallback a:link {
     color: #346F83;
 }
 
