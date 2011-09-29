@@ -20,7 +20,7 @@
     display: block;
     position: relative;
     margin: 0 auto;
-    width: 1000px;
+    width: 1024px;
     height: 40px;
     list-style: none;
     padding: 0px;
@@ -49,7 +49,7 @@
     background: transparent;
     color: white;
     display: inline-block;
-    padding: 1em;
+    padding: 1em 1em 1em 0;
     border: 0px;
     min-width: 0px;
     line-height: 0.9;
@@ -68,6 +68,9 @@
     position: relative;
     top: -1px;
     height: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
 }
 
 #portal-globalnav .selected a:hover {

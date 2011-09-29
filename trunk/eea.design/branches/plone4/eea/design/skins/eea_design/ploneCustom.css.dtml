@@ -747,7 +747,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .documentContent {
     background: &dtml-backgroundColor;;
-    padding: 0em 1em 2em 1em;
+    padding: 0em 1em 2em 0em;
 }
 
 #translation-disclaimer .note {
@@ -1015,7 +1015,7 @@ float:right;
     padding: 0;
     float: left;
     position: relative;
-    left: -7px;
+    left: -10px;
 }
 #printLogo {
     display: none;
@@ -1063,7 +1063,7 @@ h3.site-description {
 }
 
 #portal-header {
-    width: 1000px;
+    width: 1024px;
     display: block;
     clear: both;
     position: relative;
@@ -1476,7 +1476,6 @@ h3.site-description {
     line-height: 1.4;
     margin: 3px 0 0 0;
     position: relative;
-    left: 16px;
     clear: both;
     background: white;
 }
