@@ -18,8 +18,8 @@
                     <div id="articles-area" class="column-area">
 
 		    <!-- data and maps global search -->
-		    <a href="find/global" class="archives advanced-search-link" title="Go to advanced search">
-                    <span>Advanced search</span></a>
+		    <a href="find/global" class="archives advanced-search-link" style="padding-right:10px;" title="Go to advanced search">
+                    <span>Advanced</span></a>
 		    <div class="featured">
 		       <h2 i18n:translate="featured_global_search">Search</h2>
 		       <form action="find/global" method="get" id="faceted-text-search" class="searchforms faceted-external-search">
@@ -29,9 +29,14 @@
 		    </div>
 
                         <!-- featured content -->
-                            <div metal:use-macro="here/portlet_featured_indicator/macros/portlet" />
+			<div metal:use-macro="here/portlet_featured_indicator/macros/portlet" />
 
-                        <tal:featured_item
+                        <!--<div class="featured">
+                          <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
+                        </div>-->
+                        <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
+			
+			<tal:featured_item
                         i18n:translate="featured_item_see_all"
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
@@ -43,13 +48,6 @@
                                          archive_translate_tag string:see-all;">
                             <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
                         </tal:featured_item>
-
-
-
-                        <!--<div class="featured">
-                          <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
-                        </div>-->
-                        <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
 
 			<div id="organisations-links" class="shortcut-light">
 			   <div id="organisations-content">
@@ -69,9 +67,9 @@
 
                         <!-- community  divs -->
 
-                        <div id="mobile" class="shortcut-light">
+                        <!--div id="mobile" class="shortcut-light">
                             <a id="mobile-link" href="/mobile"></a>
-                        </div>
+                        </div-->
 
                         <div id="social-links">
                         <h2 class="column-title" i18n:translate="follow-us">Follow us</h2>
@@ -87,6 +85,7 @@
                     </div>
 
                     <div id="highlights-area" class="column-area">
+		    <h2>Highlights</h2>
                     <!-- promotions_gallery_slideshow-->
                     <metal:promotions
                         tal:define="frontpage python: True;
@@ -144,7 +143,7 @@
 			        
 			    </div> 
                             <div class="portletFooter">
-		                <p><a href="tags" class="moreLink" title="archive">Discover all tags
+		                <p><a href="tags" class="moreLink" title="archive">Explore all tags
                                    </a>
                                 </p>
 			    </div>

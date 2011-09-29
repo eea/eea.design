@@ -11,6 +11,7 @@
  <object name="imaging_properties" meta_type="Plone Property Sheet">
   <property name="title">Image handling properties</property>
   <property name="allowed_sizes" type="lines">
+   <element value="xlarge 633:356"/>
    <element value="large 768:768"/>
    <element value="preview 400:400"/>
    <element value="mini 200:200"/>
