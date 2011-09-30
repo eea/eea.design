@@ -9,7 +9,8 @@ __docformat__ = 'plaintext'
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
-from Products.EEAContentTypes.cache import cacheKeyPromotions, cacheKeyHighlights
+from Products.EEAContentTypes.cache import cacheKeyPromotions, \
+                                            cacheKeyHighlights
 from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from Products.Five import BrowserView
 from eea.cache import cache
@@ -28,7 +29,8 @@ class Frontpage(BrowserView):
 
         self.catalog = getToolByName(context, 'portal_catalog')
         portal_properties = getToolByName(context, 'portal_properties')
-        frontpage_properties = getattr(portal_properties, 'frontpage_properties')
+        frontpage_properties = getattr(portal_properties,
+                                                'frontpage_properties')
 
         self.promotions = []
         self.portal_url = getToolByName(aq_inner(context), 'portal_url')()
@@ -38,35 +40,46 @@ class Frontpage(BrowserView):
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
         self.noOfArticles = frontpage_properties.getProperty('noOfArticles', 4)
         self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
-        self.noOfMultimedia = frontpage_properties.getProperty('noOfMultimedia', 6)
-        self.noOfPublications = frontpage_properties.getProperty('noOfPublications', 6)
-        self.noOfPromotions = frontpage_properties.getProperty('noOfPromotions', 7)
-        self.noOfEachProduct = frontpage_properties.getProperty('noOfEachProduct', 3)
+        self.noOfMultimedia = frontpage_properties.getProperty(
+                                                           'noOfMultimedia', 6)
+        self.noOfPublications = frontpage_properties.getProperty(
+                                                         'noOfPublications', 6)
+        self.noOfPromotions = frontpage_properties.getProperty(
+                                                           'noOfPromotions', 7)
+        self.noOfEachProduct = frontpage_properties.getProperty(
+                                                          'noOfEachProduct', 3)
         self.noOfDatasets = frontpage_properties.getProperty('noOfDatasets', 4)
-        self.noOfLatestDefault = frontpage_properties.getProperty('noOfLatestDefault', 6)
+        self.noOfLatestDefault = frontpage_properties.getProperty(
+                                                        'noOfLatestDefault', 6)
         self.now = DateTime()
 
 
     def getNews(self):
         """ retrieves latest news by date and by topic """
         visibilityLevel = [ 'top', 'middle', 'low' ]
-        return _getItems(self, visibilityLevel = visibilityLevel, portaltypes = ('Highlight', 'PressRelease'), noOfItems=self.noOfNews)
+        return _getItems(self, visibilityLevel = visibilityLevel,
+                portaltypes = ('Highlight', 'PressRelease'),
+                                        noOfItems=self.noOfNews)
 
     def getArticles(self, portaltypes = "Article"):
         """ retrieves latest articles by date and by topic """
         visibilityLevel = [ 'top', 'middle', 'low' ]
-        return _getItems(self, visibilityLevel = visibilityLevel, portaltypes = "Article", noOfItems=self.noOfArticles)
+        return _getItems(self, visibilityLevel = visibilityLevel,
+                portaltypes = "Article", noOfItems=self.noOfArticles)
 
     def getPublications(self, portaltypes = "Report"):
         """ retrieves latest publications by date and by topic """
-        return _getItems(self, portaltypes = 'Report', noOfItems=self.noOfPublications)
-    
+        return _getItems(self, portaltypes = 'Report',
+                                    noOfItems=self.noOfPublications)
+
     def getAllProducts(self):
         """ retrieves all latest published products for frontpage """
-        portaltypes = ('Report','Article','Highlight','PressRelease', 'Assessment', 'Data', 'EEAFigure')
+        portaltypes = ('Report','Article','Highlight','PressRelease',
+                                    'Assessment', 'Data', 'EEAFigure')
         result = []
         for mytype in portaltypes:
-            res1 = _getItems(self, portaltypes = mytype, noOfItems=self.noOfEachProduct)
+            res1 = _getItems(self, portaltypes = mytype,
+                        noOfItems=self.noOfEachProduct)
             result.extend(res1)
         multimedia = self.getMultimedia();
         result.extend(multimedia[:self.noOfEachProduct])
@@ -74,11 +87,13 @@ class Frontpage(BrowserView):
         return result
 
 #    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getHigh(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb', topic = ''):
+    def getHigh(self, portaltypes = ('Highlight', 'PressRelease'),
+                                    scale = 'thumb', topic = ''):
         """ retrieves high visibility portaltypes """
         visibilityLevel = 'top'
         topic = topic
-        results =  _getItemsWithVisibility(self, visibilityLevel, portaltypes, topic = topic)[:self.noOfHigh]
+        results =  _getItemsWithVisibility(self, visibilityLevel,
+                        portaltypes, topic = topic)[:self.noOfHigh]
         highlights = []
         for high in results:
             highlights.append ( self._getTeaserMedia(high, scale) )
@@ -90,14 +105,16 @@ class Frontpage(BrowserView):
         return _getHighArticles(self, noOfItems=self.noOfHigh)
 
     def getSpotlight(self):
-        """ retrieves promoted item that has the spotlight promotion assigned """
+        """ retrieves promoted item that has the spotlight promotion
+        assigned
+        """
         query = {
             'object_provides': {
-                'query': [
-                    'eea.promotion.interfaces.IPromoted',
-                    'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
-                ],
-                'operator': 'or',
+              'query': [
+              'eea.promotion.interfaces.IPromoted',
+              'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
+              ],
+              'operator': 'or',
             },
             'review_state': 'published',
             'sort_on': 'effective',
@@ -124,7 +141,9 @@ class Frontpage(BrowserView):
 
     def getMultimedia(self):
         """ retrieves multimedia videos filtered by date and by topic """
-        result = _getItems(self, interfaces = 'p4a.video.interfaces.IVideoEnhanced', noOfItems=self.noOfMultimedia)
+        result = _getItems(self,
+                    interfaces = 'p4a.video.interfaces.IVideoEnhanced',
+                    noOfItems=self.noOfMultimedia)
         result = [i for i in result if not IFlashAnimation.providedBy(
                                           i.getObject())][:self.noOfMultimedia]
         return result
@@ -153,7 +172,8 @@ class Frontpage(BrowserView):
                 media_copy = media.Rights()
                 media_note = media.Description()
 
-        adapter = queryMultiAdapter((obj, self.request), name=u'themes-object', default=None)
+        adapter = queryMultiAdapter((obj, self.request), name=u'themes-object',
+                                                                default=None)
         themes = []
         if adapter is not None:
             themes = adapter.short_items()
@@ -178,24 +198,28 @@ class Frontpage(BrowserView):
                     'getScale'     : ''
                 }
             if IBlobWrapper.providedBy(media):
-                result['media']['getScale'] = obj.getField('image').tag(obj, scale=scale)
+                result['media']['getScale'] = obj.getField('image').tag(
+                                                            obj, scale=scale)
 
         return result
 
 ## deprecated visibility methods
     cache(cacheKeyHighlights, dependencies = ['frontpage-highlights'])
-    def getLow(self, portaltypes = ('Highlight', 'PressRelease'), scale='dummy'):
+    def getLow(self, portaltypes = ('Highlight', 'PressRelease'),
+                                                        scale='dummy'):
         visibilityLevel = [ 'top', 'middle', 'bottom' ]
         otherIds = [ h['id'] for h in self.getMedium(portaltypes) ]
         otherIds.extend( [ high['id'] for high in self.getHigh(portaltypes) ] )
-        result =  _getItemsWithVisibility(self, visibilityLevel, portaltypes)[:self.noOfHigh + self.noOfMedium + self.noOfLow]
+        result =  _getItemsWithVisibility(self, visibilityLevel, portaltypes) \
+                            [:self.noOfHigh + self.noOfMedium + self.noOfLow]
         highlights = []
 
         for high in result:
             # remove highlights that are display as top or middle 
             if high['id'] not in otherIds:
                 obj = high.getObject()
-                adapter = queryMultiAdapter((obj, self.request), name=u'themes-object', default=None)
+                adapter = queryMultiAdapter((obj, self.request),
+                                        name=u'themes-object', default=None)
                 themes = []
                 if adapter is not None:
                     themes = adapter.short_items()
@@ -213,14 +237,17 @@ class Frontpage(BrowserView):
         return highlights[:self.noOfLow]
 
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getMedium(self, portaltypes = ('Highlight', 'PressRelease'), scale = 'thumb'):
+    def getMedium(self, portaltypes = ('Highlight', 'PressRelease'),
+                                                    scale = 'thumb'):
         visibilityLevel = [ 'top', 'middle' ]
-        result =  _getItemsWithVisibility(self, visibilityLevel, portaltypes)[:self.noOfMedium + self.noOfHigh]
+        result =  _getItemsWithVisibility(self, visibilityLevel, portaltypes) \
+                                            [:self.noOfMedium + self.noOfHigh]
         topIds = [ h['id'] for h in self.getHigh(portaltypes) ]
         highlights = []
         #topRemoved = 0
         for high in result:
-            # remove the self.noOfHigh top highlights from the result, they are displayd on top
+            # remove the self.noOfHigh top highlights from the result, 
+            # they are displayd on top
             if high['id'] not in topIds:
                 highlights.append ( self._getTeaserMedia(high, scale) )
 
@@ -244,8 +271,8 @@ def _getPromotions(self, noOfItems = 6):
     query = {
         'object_provides': {
             'query': [
-                'eea.promotion.interfaces.IPromoted',
-                'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
+              'eea.promotion.interfaces.IPromoted',
+              'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
             ],
             'operator': 'or',
         },
@@ -280,46 +307,57 @@ def _getPromotions(self, noOfItems = 6):
     return cPromos
 
 def _getHighArticles(self, noOfItems = 1):
-    """ utility function to return a defined number of high visibility articles items """
+    """ utility function to return a defined number of high visibility
+    articles items
+    """
     visibilityLevel = ['top']
-    return _getItems(self, visibilityLevel = visibilityLevel, portaltypes = 'Article', noOfItems=noOfItems)
+    return _getItems(self, visibilityLevel = visibilityLevel,
+                        portaltypes = 'Article', noOfItems=noOfItems)
 
-def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '', interfaces = '', topic = ''):
-    """ retrieves items of certain content types and/or interface and certain visibility level. """
+def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '',
+                                            interfaces = '', topic = ''):
+    """ retrieves items of certain content types and/or interface
+    and certain visibility level.
+    """
     query = {
-            'portal_type'        : portaltypes,
             'review_state'       : 'published',
-            'getVisibilityLevel' : visibilityLevel,
             'sort_on'            : 'effective',
             'sort_order'         : 'reverse',
-            'effectiveRange'     : self.now
-          }
+            'effectiveRange'     : self.now }
+    if portaltypes:
+        query['portal_type'] = portaltypes
+    if visibilityLevel:
+        query['getVisibilityLevel'] = visibilityLevel
     if interfaces:
         query['object_provides'] = interfaces
-        return self.catalog.searchResults(query)
-    elif topic:
+    if topic:
         query['getThemes'] = topic
-        return self.catalog.searchResults(query)
     return self.catalog.searchResults(query)
 
-def _getTopics(self, topic = '', portaltypes = '', object_provides = '', noOfItems = ''):
+def _getTopics(self, topic = '', portaltypes = '', object_provides = '',
+                                                        noOfItems = ''):
     """ retrieves items of certain content types and/or interface and
     certain visibility level, with the addition of topic filtering """
     query = {
-        'object_provides': object_provides,
-        'portal_type' : portaltypes,
         'review_state': 'published',
         'sort_on': 'effective',
         'sort_order' : 'reverse',
         'effectiveRange' : self.now,
-    }
-    query['getThemes'] = topic
+        }
+    if portaltypes:
+        query['portal_type'] = portaltypes
+    if object_provides:
+        query['object_provides'] = object_provides
+    if topic:
+        query['getThemes'] = topic
     return self.catalog(query)[:noOfItems]
 
 
-def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None, noOfItems=6):
-    """ generic internal method for getting items from catalog (via portaltypes or via interfaces)
-    filtered by topic or not."""
+def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
+                                                                noOfItems=6):
+    """ generic internal method for getting items from catalog
+    (via portaltypes or via interfaces) filtered by topic or not.
+    """
     visibilityLevel = visibilityLevel or ''
     result = []
     #if topic is not passed in the REQUEST variable
@@ -335,14 +373,18 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None, noO
             result = _getTopics(self, portaltypes = portaltypes,
                              topic = topic, noOfItems=noOfItems)
        else:
-            result =  _getItemsWithVisibility(self, visibilityLevel = visibilityLevel, portaltypes  = portaltypes)[:noOfItems]
+           result =  _getItemsWithVisibility(self,
+                   visibilityLevel = visibilityLevel,
+                   portaltypes  = portaltypes)[:noOfItems]
     elif interfaces:
        #if there is a topic/theme tag then get items filtered 
        if topic:
             result = _getTopics(self, object_provides = interfaces,
                              topic = topic, noOfItems=noOfItems)
        else:
-            result =  _getItemsWithVisibility(self, visibilityLevel = visibilityLevel, interfaces  = interfaces)[:noOfItems]
+           result =  _getItemsWithVisibility(self,
+                   visibilityLevel = visibilityLevel,
+                   interfaces  = interfaces)[:noOfItems]
 
     return result
 
