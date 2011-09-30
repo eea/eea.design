@@ -18,9 +18,10 @@
                 // the first so we redefine news to the first found match if
                 // index is 0
                 var news = index === 0 ? gal.first() : news;
-
-                var filter_topic = index ? news.firstElementChild : news[0].firstElementChild,
-                    filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
+                var filter_topic;
+                var news = news[0] !== undefined ? news[0] : news;
+                filter_topic = news.firstElementChild !== undefined ? news.firstElementChild : news.firstChild;
+                var filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
                     filter_topic.innerHTML = sel_value ? filter_topic_text : "";
 
                 var gallery_ajax = $(".gallery-ajax", news);
