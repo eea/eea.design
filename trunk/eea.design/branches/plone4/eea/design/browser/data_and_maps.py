@@ -13,8 +13,8 @@ from eea.design.browser.frontpage import _getItems
 
 class DataMaps(BrowserView):
     """
-    This browser view class has methos to get all the latest data and maps 
-    items globally or related to a specific topic. 
+    This browser view class has methos to get all the latest data and maps
+    items globally or related to a specific topic.
     """
     __implements__ = (getattr(BrowserView, '__implements__', ()), )
 

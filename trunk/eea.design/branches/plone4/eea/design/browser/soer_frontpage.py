@@ -30,11 +30,13 @@ class SoerFrontpage(BrowserView):
         theme = ''
         if topic:
             theme = getTheme(self.context)
-        brains = catalog.searchResults({
+        query = {
             'portal_type': 'SOERMessage',
-            'getTheme' : theme,
             'review_state': 'published'
-        })
+        }
+        if theme:
+            query['getTheme'] = theme
+        brains = catalog.searchResults(query)
         for brain in brains:
             text = self._prepareText(brain)
             ret.append({
@@ -49,11 +51,13 @@ class SoerFrontpage(BrowserView):
         theme = ''
         if topic:
             theme = getTheme(self.context)
-        brains = catalog.searchResults({
+        query = {
             'portal_type': 'SOERKeyFact',
-            'getTheme' : theme,
             'review_state': 'published'
-        })
+        }
+        if theme:
+            query['getTheme'] = theme
+        brains = catalog.searchResults(query)
         for brain in brains:
             text = self._prepareText(brain)
             ret.append({
