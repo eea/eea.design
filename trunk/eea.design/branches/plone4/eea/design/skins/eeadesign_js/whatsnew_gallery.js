@@ -53,7 +53,7 @@
                 sel_text = opt_item.text();
             var highlight = $("#" + cur_tab_val + "-highlights");
             var listing = highlight.find('.gallery-listing');
-            var listing_length =  listing.length !== 0 ? listing[0].childElementCount : 0;
+            var listing_length =  listing.length !== 0 ? listing.children().length : 0;
             var notopics = highlight.find('.portalMessage'),
                 notopics_length = notopics.length !== 0 ? 1 : 0;
             if (cur_tab.theme === sel_value && notopics_length !== 0) {
