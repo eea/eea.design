@@ -1539,7 +1539,7 @@ h3.site-description {
     margin: 1em 0em;
     padding: 0.5em 1em 0.5em 3em;
     vertical-align: middle;
-    background-image: url(&dtml-portal_url;/information.png);
+    /*background-image: url(&dtml-portal_url;/information.png);*/
     background-repeat: no-repeat;
     background-position: 5px 50%;
     -webkit-box-shadow: 2px 2px 1px #888888;
@@ -1552,17 +1552,17 @@ h3.site-description {
 
 .informationMessage {
     background-color: #ffffff;
-    background-image: url(&dtml-portal_url;/information.png);
+    /*background-image: url(&dtml-portal_url;/information.png);*/
 }
 
 .warningMessage {
     font-size: 140%;
-    background-image: url(&dtml-portal_url;/error.png);
+    /*background-image: url(&dtml-portal_url;/error.png);*/
 }
 
 #error-handling, .errorMessage {
     font-size: 160%;
-    background-image: url(&dtml-portal_url;/exclamation.png);
+    /*background-image: url(&dtml-portal_url;/exclamation.png);*/
 }
 
 .portalMessage a {
