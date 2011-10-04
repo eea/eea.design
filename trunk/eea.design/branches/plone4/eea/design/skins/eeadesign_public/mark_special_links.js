@@ -6,23 +6,23 @@
 
 function getLanguageFromLink(link) {
     if (link.toLowerCase().indexOf('://')>0 && (link.toLowerCase().indexOf(window.location.host)>0 || link.toLowerCase().indexOf('eu.int')>0 || link.toLowerCase().indexOf('europa.eu')>0)){
-	// we assume it's english for local and known domains
+        // we assume it's english for local and known domains
 
-	if (link.toLowerCase().match(langregex1)){
-	    return langregex1.exec(link.toLowerCase())[2];
-	} 
-	else if (link.toLowerCase().match(langregex2)){
-	    return langregex2.exec(link.toLowerCase())[2];
-	} 
-	else if (link.toLowerCase().match(langregex3)){
-	    return langregex3.exec(link.toLowerCase())[2];
-	} 
-	else if (link.toLowerCase().match(subdomainregex)){
-	    return subdomainregex.exec(link.toLowerCase())[1];
-	} 
+        if (link.toLowerCase().match(langregex1)){
+            return langregex1.exec(link.toLowerCase())[2];
+        }
+        else if (link.toLowerCase().match(langregex2)){
+            return langregex2.exec(link.toLowerCase())[2];
+        }
+        else if (link.toLowerCase().match(langregex3)){
+            return langregex3.exec(link.toLowerCase())[2];
+        }
+        else if (link.toLowerCase().match(subdomainregex)){
+            return subdomainregex.exec(link.toLowerCase())[1];
+        }
 
 
-	return 'en';
+        return 'en';
     }
     return 'unknown';
 }
@@ -52,26 +52,27 @@ function scanforlinksinarea(contentarea) {
 
     for (i=0; i < links.length; i++) {
         if ( (links[i].getAttribute('href')) &&
-            (links[i].className.indexOf('link-plain') === -1)    && 
-            (links[i].className.indexOf('noTranslation') === -1) && 
+            (links[i].className.indexOf('link-plain') === -1)    &&
+            (links[i].className.indexOf('noTranslation') === -1) &&
             (links[i].className.indexOf('translated') === -1)    &&
             (links[i].className.indexOf('feedButton') === -1)    &&
+            (links[i].parentElement.className.indexOf('actionMenuHeader') === -1) &&
             (links[i].className.indexOf('breadcrumbitem') === -1)) {
             var linkval = links[i].getAttribute('href');
 
             // ADD CSS CLASSES FOR FILE EXTENSIONS
-            // grab file extension 
+            // grab file extension
             colonIdx = linkval.lastIndexOf(':');
             // add host name if relative links (for FireFox)
             relativeLink = 0;
             if (colonIdx < 0) {
-		if (linkval.indexOf('/') > 0 || linkval.indexOf('/') === -1 ) {
-		    linkval = 'http://'+window.location.host+'/'+linkval;
-		    relativeLink = 1; 
-		} else {
-		    linkval = 'http://'+window.location.host+linkval;
-		}
-	    }
+                if (linkval.indexOf('/') > 0 || linkval.indexOf('/') === -1 ) {
+                    linkval = 'http://'+window.location.host+'/'+linkval;
+                    relativeLink = 1;
+                } else {
+                    linkval = 'http://'+window.location.host+linkval;
+                }
+            }
             ext_idx0 = linkval.lastIndexOf('.');
             slashIdx = linkval.lastIndexOf('/');
             colonIdx = linkval.lastIndexOf(':');
@@ -82,7 +83,7 @@ function scanforlinksinarea(contentarea) {
                if (ext_idx0 > 0 && links[i].getElementsByTagName('img').length === 0  ) {
                   wrapNode(links[i], 'span', 'link-'+extension.toLowerCase());
                 }
-	    }
+            }
             // ADD CSS CLASSES FOR SPECIAL PROTOCOLS
             // check if the link href is a relative link, or an absolute link to
             // the current host.
@@ -115,20 +116,20 @@ function scanforlinksinarea(contentarea) {
                     // opened in a new window.
                     links[i].setAttribute('target', '_blank');
                 }
-	    }
+            }
 
-	    if (linkval.toLowerCase().indexOf('://')>0 && relativeLink === 0 && links[i].getElementsByTagName('img').length === 0){
-		lang = getLanguageFromLink(linkval);
-		if (lang !== currentLanguage && lang !== 'unknown'){
-			addLanguageLink(links[i], lang);
-		}
-	    }
+            if (linkval.toLowerCase().indexOf('://')>0 && relativeLink === 0 && links[i].getElementsByTagName('img').length === 0){
+                lang = getLanguageFromLink(linkval);
+                if (lang !== currentLanguage && lang !== 'unknown'){
+                        addLanguageLink(links[i], lang);
+                }
+            }
         }
     }
 }
 
 function scanforlinks() {
-    contentarea = getContentArea(); 
+    contentarea = getContentArea();
     scanforlinksinarea(contentarea);
 }
 
