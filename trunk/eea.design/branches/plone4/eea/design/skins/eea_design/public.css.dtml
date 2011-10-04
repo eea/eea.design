@@ -808,10 +808,10 @@ dl.portalMessage dd {
     line-height: 1.25em;
 }
 dl.warning {
-    border-color: #d80;
+    border-color: &dtml-globalBorderColor;;
 }
 dl.warning dt {
-    background-color: #d80;
+    background-color: &dtml-lightBackgroundColor;;
 }
 dl.error {
     border-color: #d00;
@@ -820,10 +820,10 @@ dl.error dt {
     background-color: #d00;
 }
 dl.warning {
-    border-color: #d80;
+    border-color: &dtml-globalBorderColor;;
 }
 dl.warning dd {
-    background-color: #fd7;
+    background-color: &dtml-lightBackgroundColor;;
 }
 dl.error {
     border-color: red;
