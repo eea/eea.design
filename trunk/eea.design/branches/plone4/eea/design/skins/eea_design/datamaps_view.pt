@@ -59,7 +59,7 @@
 			
 			<div id="semantic-ds-links" class="shortcut-light">
 			   <div id="semantic-content">
-			   <a id="semantic-link" class="link-plain" href="http://semantic.eea.europa.eu">
+			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
 			   <h2>Semantic Data Service</h2>
 			   Access our data via semantic APIs</a>
 			   </div>

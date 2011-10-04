@@ -10,7 +10,7 @@ def _get_contents(obj, size_limit, request, facetednav=None):
         brains = facetednav.query(batch=False, sort=True, **query)
     elif obj.portal_type == 'Folder':
         brains = obj.getFolderContents()
-    elif obj.portal_type in ['Topic', 'RichTopic']:
+    elif obj.portal_type in ['Topic']:
         brains = obj.queryCatalog()
 
     # NOTE: plone4 brains from topics end up as generators therefore we need to convert it 
@@ -55,7 +55,7 @@ class SubFolderView(BrowserView):
                 obj = getattr(obj, defaultPage)
             listing_url = getMultiAdapter((obj, self.request), name=u'url').listing_url
             facetednav = queryMultiAdapter((obj, self.request), name=u'faceted_query')
-            if (obj.portal_type in ['Folder', 'Topic', 'RichTopic']) or facetednav:
+            if (obj.portal_type in ['Folder', 'Topic']) or facetednav:
                 contents, nitems = _get_contents(obj, size_limit, self.request, facetednav)
                 ret['folderish'].append({
                     'title': obj.Title(),
