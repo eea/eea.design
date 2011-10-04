@@ -790,22 +790,16 @@ div.listingBar a:hover {
 dl.portalMessage {
     margin: 1em 0;
     font-size: 80%;
-    border: 1px solid #996;
-    background-color: #ffffe3;
+    background-color: &dtml-lightBackgroundColor;;
     clear:both;
 }
-dl.portalMessage a,
-#content dl.portalMessage a {
-    color: black;
-    border-bottom: 1px solid #888;
-}
+
 dl.portalMessage dt {
-    background-color: #996;
+    background-color: transparent;
     font-weight: bold;
     float: left;
     margin: 0 0.5em 0 0;
     padding: 0.5em 0.75em;
-    color: White;
     line-height: 1.25em;
 }
 dl.portalMessage dd {
