@@ -27,7 +27,7 @@
             if (buttonID == "siteaction-contactus" && isCurrentPageTranslated()) {
                 return;
             }
-            var offset = buttonID === "article-language" ? [-170, -600] : [0, 0];
+            var offset = buttonID === "article-language" ? [-170, -690] : [0, 0];
             var position = buttonID === "article-language" ? 'bottom right' : 'bottom center';
             
             if (tooltip.length > 0) {
@@ -66,3 +66,4 @@
         footer.prepend(submitLink);
     });
 })(jQuery);
+
