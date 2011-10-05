@@ -512,6 +512,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     cursor: pointer;
     border-right: 1px solid #ccc;
     margin: 0;
+    list-style: none outside none;
 }
 #smart-view-switch li.last {
     border-right: 0;
