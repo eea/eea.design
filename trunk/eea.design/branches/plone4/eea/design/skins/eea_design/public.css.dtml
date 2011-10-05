@@ -503,7 +503,7 @@ dl.portlet a:hover {
 
 #category a.link-category,
 #themes-tags a.link-category,
-#languageCodes a.translated {
+#languageCodes a.translated, #languageCodes li.selected {
     color: black;
     padding: 0 5px;
     margin: 2px 0;
@@ -517,7 +517,7 @@ dl.portlet a:hover {
 }
 #category a.link-category:hover,
 #themes-tags a.link-category:hover,
-#languageCodes a.translated:hover {
+#languageCodes a.translated:hover, #languageCodes li.selected {
     background: &dtml-corporateOrange;;
     color: White;
     border-color: #205c90;

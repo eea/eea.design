@@ -38,13 +38,19 @@
       <tal:cms tal:repeat="lang data">
           <li tal:attributes="class python: lang['current'] and 'selected' or None"
               tal:define="available lang/available">
-            <a href=""
-               tal:attributes="href lang/change_url;
-                               title lang/alt;
-               class python: not available and 'noTranslation' or 'translated'"
-               tal:omit-tag="lang/current">
-
-               <tal:langcode  tal:content="string:${lang/Language}">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a></li>
+              <span tal:condition="not:available"
+               tal:attributes="title lang/alt;
+               class string:noTranslation" 
+               tal:content="string:${lang/Language}">
+               Language code</span>
+           
+               <a href=""
+                   tal:attributes="href lang/change_url;
+                                   title lang/alt;
+                                   class string:translated"
+                   tal:omit-tag="lang/current" tal:condition="available">
+                   <tal:langcode  tal:content="string:${lang/Language}">Language code</tal:langcode><img src="" tal:attributes="src string:${portal_url}/error_icon.gif" alt="Invalid translation" tal:condition="lang/invalid" /></a>
+           </li>
       </tal:cms>
     </ul>
 </tal:admin>

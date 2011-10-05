@@ -675,12 +675,6 @@ form.manylanguages select {
     color: &dtml-linkColor;;
 }
 
-
-#languageCodes li.selected a {
-    background: white;
-    color:#DE7800;
-}
-
 .highlights ul.relatedLinks li,
 #relatedItems legend,
 #relatedItems fieldset,
