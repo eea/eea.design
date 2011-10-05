@@ -3,8 +3,10 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+* Bugfix: Fixed login_form when using not existing user/password [szabozo0 #4596]
+
 * Bugfix: Added tiny_mce.js version 3.4.5 for IE 9 compatibility
-  [szabozo #4542]
+  [szabozo0 #4542]
 
 * Feature: extended the features of dates in document by line to also include
   creation date. each of the dates can be switched on/off by metatype.

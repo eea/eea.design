@@ -47,10 +47,19 @@
             Since cookie authentication is disabled, cookie-based login is not available.
         </div>
         <metal:login define-macro="login"
-            tal:define="checkPermission nocall: context/portal_membership/checkPermission;
+            tal:define="auth nocall:context/acl_users/credentials_cookie_auth|context/cookie_authentication|nothing;
+                        came_from request/came_from|request/HTTP_REFERER|nothing;
+                        came_from python:test(context.portal_url.isURLInPortal(came_from), came_from, None);
+                        errors options/state/getErrors;
+                        ac_name auth/name_cookie|string:__ac_name;
+                        ac_password auth/pw_cookie|string:__ac_password;
+                        ac_persist auth/persist_cookie|nothing;
+                        login_name python:request.get('login_name', request.get(ac_name, ''));
+                        checkPermission nocall: context/portal_membership/checkPermission;
                         site_properties context/portal_properties/site_properties;
                         use_email_as_login site_properties/use_email_as_login|nothing;
                         ztu modules/ZTUtils;">
+
             <form tal:define="url python:context.absolute_url()+'/'+template.id;
                   secureUrl python:url.replace('http://', 'http://');"
                    tal:attributes="action secureUrl"
