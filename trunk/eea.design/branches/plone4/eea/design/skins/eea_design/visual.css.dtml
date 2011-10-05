@@ -398,7 +398,7 @@ width:16px;
 }
 
 #keyfacts-slider dl {
-   width: 616px;
+   width: 633px;
    height: 126px !important;
    position: relative;
    top: -160px;
