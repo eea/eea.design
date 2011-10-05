@@ -51,12 +51,15 @@ function scanforlinksinarea(contentarea) {
     currentLanguage = getLanguageFromLink(location.href);
 
     for (i=0; i < links.length; i++) {
+        var parent = jQuery(links[i]).parent();
+        if(parent.hasClass('actionMenuHeader')){
+            continue;
+        }
         if ( (links[i].getAttribute('href')) &&
             (links[i].className.indexOf('link-plain') === -1)    &&
             (links[i].className.indexOf('noTranslation') === -1) &&
             (links[i].className.indexOf('translated') === -1)    &&
             (links[i].className.indexOf('feedButton') === -1)    &&
-            (links[i].parentElement.className.indexOf('actionMenuHeader') === -1) &&
             (links[i].className.indexOf('breadcrumbitem') === -1)) {
             var linkval = links[i].getAttribute('href');
 
