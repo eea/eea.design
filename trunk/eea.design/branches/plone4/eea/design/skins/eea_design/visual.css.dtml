@@ -679,7 +679,7 @@ form.manylanguages select {
 #relatedItems legend,
 #relatedItems fieldset,
 .relatedLinks ul,
-.relatedLinks  {
+.relatedLinks, ul#languageCodes  {
     border: 0;
     padding: 0;
     margin: 0;
