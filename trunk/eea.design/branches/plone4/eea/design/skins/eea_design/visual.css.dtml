@@ -399,12 +399,12 @@ width:16px;
 
 #keyfacts-slider dl {
    width: 616px;
-   height: 156px !important;
+   height: 126px !important;
    position: relative;
    top: -160px;
    left: -2px;
    opacity: 0.8;
-   margin-bottom: -140px;
+   margin-bottom: -120px;
 }
 
 #keyfacts-slider .slidePortlet {
@@ -415,7 +415,7 @@ width:16px;
     color: #FFFFFF;
     width: 633px !important;
     left: 0 !important;
-    top: -156px !important;
+    top: -126px !important;
 }
 
 #keyfacts-slider .slidePortlet .portletItem {
