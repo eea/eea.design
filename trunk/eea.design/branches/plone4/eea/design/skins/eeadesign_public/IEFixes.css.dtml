@@ -314,5 +314,35 @@ display:inline !important;
 float: left;
 
 }
+
+#whatsnew-gallery .tileContent {
+display: inline;
+width: 414px;
+float: left; 
+}
+#whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a { 
+/* width: 100%; */
+width: 414px;
+padding: 0px !important;
+margin-right: 20px !important;
+}
+#whatsnew-gallery .tileBody { 
+/* float: left; */
+margin-top: 5px;
+}
+
+#portlet-followus dd {
+    display: inline;
+    float: left;
+    padding-left: 1em;
+}
+
+#play-pause { 
+    margin-top: -22px;
+}
+
+#mobile { 
+    margin-top : -125px;
+}
 /* </dtml-with> */
 
