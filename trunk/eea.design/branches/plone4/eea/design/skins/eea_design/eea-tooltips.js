@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
             offset: [20, 20],
             tipClass: 'eea-tooltip-markup',
             layout : container,
-            onBeforeShow: removeExtraText,           
+            onBeforeShow: removeExtraText           
           });
         });
 
@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
             offset: [20, -10],
             tipClass: 'eea-tooltip-markup',
             layout : container,
-            onBeforeShow: removeExtraText,           
+            onBeforeShow: removeExtraText           
           });
         });
 
@@ -105,7 +105,7 @@ jQuery(document).ready(function($) {
             offset: [10, 0],
             tipClass: 'eea-tooltip-markup',
             layout : container,
-            onBeforeShow: removeExtraText,           
+            onBeforeShow: removeExtraText           
           });
         });
 
@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
             offset: [30, 0],
             tipClass: 'eea-tooltip-markup',
             layout : container,
-            onBeforeShow: removeExtraText,           
+            onBeforeShow: removeExtraText           
           });
         });
     }
