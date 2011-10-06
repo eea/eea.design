@@ -29,6 +29,10 @@
     width: 25%;
 }
 
+#document-toc li {
+   list-style-image: url("bullet.gif");
+}
+
 .collapsable-portlet .portletHeader {
     cursor: pointer;
     padding: 0 20px 0 0;
