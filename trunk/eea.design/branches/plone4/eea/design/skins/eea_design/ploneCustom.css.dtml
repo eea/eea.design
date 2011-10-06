@@ -1232,9 +1232,10 @@ h3.site-description {
     color: #000000;
 }
 
-.frontpage h3.site-description {
+#portal-header h3.site-description {
     width: 240px;
     margin-left: 5px;
+    float: left;
 }
 
 #search_glossary_link, #search_advanced_link {
