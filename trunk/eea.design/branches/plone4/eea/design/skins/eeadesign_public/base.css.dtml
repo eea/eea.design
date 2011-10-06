@@ -113,7 +113,7 @@ dt {
 dd {
     line-height: 1.5;
     margin-bottom: 1em;
-    margin-left: 0 !important;
+    margin-left: 0;
 }
 
 abbr, acronym, .explain {
