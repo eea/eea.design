@@ -300,8 +300,8 @@
 /* standard search button inside any of the portal columns*/
 
 /* #portal-columns input.searchButton, */
-#portal-columns input[type="submit"] {
-    color:#fff;
+#portal-columns input[type="submit"], .standardButton {
+    color:#fff !important;
     background:#346F83;
     background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
     background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
@@ -315,7 +315,7 @@
     padding: 7px 12px;
     position: relative;
     display: inline-block;
-    text-shadow: 0 1px 0 #000;
+    text-shadow: 0 1px 1px #000;
     -webkit-transition: border-color .218s;
        -moz-transition: border .218s;
        -ms-transition: border-color .218s;
@@ -333,7 +333,7 @@
 }
 
 /* #portal-columns input.searchButton:hover, */
-#portal-columns input[type="submit"]:hover {
+#portal-columns input[type="submit"]:hover, .standardButton:hover {
     background-color:&dtml-corporateOrange;;
     background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
     background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */  
@@ -343,7 +343,7 @@
     background-image: -ms-linear-gradient(top,orange,#FF9123);
     background-image: -o-linear-gradient(top,orange,#FF9123);
     background-image: linear-gradient(top,orange,#FF9123);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     cursor:pointer;
     border-color: #999999;
     -webkit-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
@@ -354,6 +354,9 @@
     text-shadow: none;
 }
 
+.standardButton a, .standardButton a:hover, .standardButton a:visited {
+    color: #FFFFFF !important;
+}
 
 #faceted-text-search input[type="text"] {
     -webkit-transition: box-shadow 0.218s ease 0s;
