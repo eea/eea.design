@@ -28,7 +28,7 @@
                                              navItemsSelector    : nav_items_selector,
                                              navOuterSelector    : nav_outer_selector,
                                              isPreloaded         : false,
-			                                 maxItemDisplay	 	 : max_item_display,
+			                                 maxItemDisplay      : max_item_display,
                                              navigatorHeight     : nav_height,
                                              navigatorWidth      : nav_width,
                                              navPosition         : nav_position,
@@ -36,8 +36,8 @@
                                              caption             : '.promo-item-desc',
                                              opacityClass        : 'lof-opacity',
                                              buttons             : buttons,
-                                             toggleElement       : '#play-pause',
+                                             toggleElement       : '#play-pause'
                                         });
 
-    })
+    });
 })(jQuery);
