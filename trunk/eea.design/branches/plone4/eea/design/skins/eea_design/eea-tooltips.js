@@ -4,37 +4,42 @@ jQuery(document).ready(function($) {
         // Inflexible tooltips
         $(".eea-tooltip-top").each(function(i) {
             var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-top">' + title + '</div>'));
             $(this).tooltip({
-                effect: 'fade'
+                effect: 'fade',
+                tipClass: 'eea-tooltip-markup-top'
             });
         });
         $(".eea-tooltip-bottom").each(function(i) {
             var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-bottom">' + title + '</div>'));
             $(this).tooltip({
                 effect: 'fade',
-                position: 'bottom center'
+                position: 'bottom center',
+                tipClass: 'eea-tooltip-markup-bottom'
             });
         });
         $(".eea-tooltip-left").each(function(i) {
             var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-left">' + title + '</div>'));
             $(this).tooltip({
                 effect: 'fade',
-                position: 'center left'
+                position: 'center left',
+                tipClass: 'eea-tooltip-markup-left'
             });
         });
         $(".eea-tooltip-right").each(function(i) {
             var title = $(this).attr("title");
-            $(this).after($('<div class="eea-tooltip-markup-right">' + title + '</div>'));
             $(this).tooltip({
                 effect: 'fade',
-                position: 'center right'
+                position: 'center right',
+                tipClass: 'eea-tooltip-markup-right'
             });
         });
 
         // Flexible tooltips
+        //
+        var removeExtraText = function() {
+            this.getTip()[0].lastChild.nodeValue = '';
+        };
+
         $(".eea-flexible-tooltip-right").each(function(i){
           var title = $(this).attr("title");
 
@@ -48,11 +53,13 @@ jQuery(document).ready(function($) {
           bottomright.append(topleft);
           container.append(bottomright);
 
-          $(this).after(container);
           $(this).tooltip({
             effect: 'fade',
             position: 'center right',
-            offset: [20, 20]
+            offset: [20, 20],
+            tipClass: 'eea-tooltip-markup',
+            layout : container,
+            onBeforeShow: removeExtraText,           
           });
         });
 
@@ -69,11 +76,13 @@ jQuery(document).ready(function($) {
           bottomright.append(topleft);
           container.append(bottomright);
 
-          $(this).after(container);
           $(this).tooltip({
             effect: 'fade',
             position: 'center left',
-            offset: [20, -10]
+            offset: [20, -10],
+            tipClass: 'eea-tooltip-markup',
+            layout : container,
+            onBeforeShow: removeExtraText,           
           });
         });
 
@@ -90,11 +99,13 @@ jQuery(document).ready(function($) {
           bottomright.append(topleft);
           container.append(bottomright);
 
-          $(this).after(container);
           $(this).tooltip({
             effect: 'fade',
             position: 'top center',
-            offset: [10, 0]
+            offset: [10, 0],
+            tipClass: 'eea-tooltip-markup',
+            layout : container,
+            onBeforeShow: removeExtraText,           
           });
         });
 
@@ -111,11 +122,13 @@ jQuery(document).ready(function($) {
           bottomright.append(topleft);
           container.append(bottomright);
 
-          $(this).after(container);
           $(this).tooltip({
             effect: 'fade',
             position: 'bottom center',
-            offset: [30, 0]
+            offset: [30, 0],
+            tipClass: 'eea-tooltip-markup',
+            layout : container,
+            onBeforeShow: removeExtraText,           
           });
         });
     }
