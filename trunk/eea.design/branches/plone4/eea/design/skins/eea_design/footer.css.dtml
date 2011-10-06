@@ -11,8 +11,8 @@
     background-image: -ms-linear-gradient(top,#478EA5,#346F83);
     background-image: -o-linear-gradient(top,#478EA5,#346F83);
     background-image: linear-gradient(top,#478EA5,#346F83);
-    margin-top: 0.5em;
-    padding: 1em;
+    margin: 2em 0 2em 0;
+    padding: 2em;
     clear: both;
 }
 
