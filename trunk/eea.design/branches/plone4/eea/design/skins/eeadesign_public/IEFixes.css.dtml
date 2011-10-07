@@ -304,10 +304,7 @@ dd.portletFooter {
     padding: 0em 0em 0.5em 0em;
 }
 
-.column-area {
-    background: white url(shadow.gif) no-repeat bottom right; /* from sasha.vincic.org */
 
-}
 
 #portal-globalnav li {
 display:inline !important;
@@ -341,8 +338,23 @@ margin-top: 5px;
     margin-top: -22px;
 }
 
-#mobile { 
-    margin-top : -125px;
+
+#mobile a:hover {
+     border: 1px solid gray;
+}
+
+#mobile a { 
+    display: block;
+    height: 50px;
+   width: 145px;
+   margin-top: -50px;
+
+}
+
+#forum-link { 
+   position: absolute;
+   top: 590px;
+   right: 110px;
 }
 /* </dtml-with> */
 
