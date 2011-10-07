@@ -6,7 +6,7 @@ logoName:string=logo.gif
 
 fontFamily:string=Lucida Grande, Verdana, Lucida, Helvetica, Arial, sans-serif
 fontBaseSize:string=69%
-fontColor:string=Black
+fontColor:string=#333333
 fontSmallSize:string=85%
 
 #corporate main colors
