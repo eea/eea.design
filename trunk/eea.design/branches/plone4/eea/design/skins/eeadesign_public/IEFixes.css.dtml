@@ -376,5 +376,9 @@ dd.portletFooter {
 a.list-layout.active-list, a.list-layout {
    margin-right: 11px !important;
 }
+
+#header-holder {
+   z-index: 1000;
+}
 /* </dtml-with> */
 

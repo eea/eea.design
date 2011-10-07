@@ -48,12 +48,23 @@
                     ev.preventDefault(); 
                     tooltip.fadeIn('fast');
                 });
-                tooltip.bind('mouseleave', function() {
-                    tooltip.fadeOut('fast');
-                });
+  
             }
 
         }
+
+
+$(document).click(function(e) {
+	                var target = $(e.target);
+                        var parents = $('#cross-site-top, #content'),
+                            panels = parents.find('.panel');
+          
+                        if (!target.is('#cross-site-top a,  #cross-site-top .panel, #article-language a') && !target.parents('.panel').length) {
+                          panels.fadeOut('fast');
+	                }
+	            });
+
+
         $("#portal-siteactions a").each(panel);
         $("#portal-externalsites a").each(panel);
         $("#article-language").find('a').each(panel);
@@ -66,4 +77,5 @@
         footer.prepend(submitLink);
     });
 })(jQuery);
+
 
