@@ -307,62 +307,44 @@ dd.portletFooter {
 
 
 #portal-globalnav li {
-display:inline !important;
-float: left;
-
+    display:inline !important;
+    float: left;
 }
 
 #whatsnew-gallery .tileContent {
-display: inline;
-width: 414px;
-float: left; 
+    width: 414px;
 }
+
 #whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a { 
-/* width: 100%; */
-width: 414px;
-padding: 0px !important;
-margin-right: 20px !important;
+    width: 414px;
+    padding: 0px !important;
+    margin-right: 20px !important;
 }
 #whatsnew-gallery .tileBody { 
-/* float: left; */
-margin-top: 5px;
+    margin-top: 5px;
 }
 
 #portlet-followus dd {
     display: inline;
-    float: left;
-    padding-left: 1em;
+    padding-left: 0px;
 }
 
 #play-pause { 
     margin-top: -22px;
 }
 
-/* #mobile { 
-    margin-top : -125px;
-}
-*/
-
 #mobile a:hover {
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
      border: 1px solid gray;
-     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
 }
 
 #mobile a { 
     display: block;
     height: 50px;
-   width: 145px;
-   margin-top: -50px;
-
+    width: 145px;
+    margin-top: -50px;
 }
 
 #forum-link { 
-
     display: block;
     height: 50px;
     width: 200px;
@@ -381,7 +363,6 @@ margin-top: 5px;
     height: 25px !important;
 }
 
-
 #languageCodes li, #languageCodes li.selected { 
     display: inline;
     margin: 0px 5px;
@@ -391,5 +372,9 @@ margin-top: 5px;
     padding-bottom: 3px;
 }
 
+
+a.list-layout.active-list, a.list-layout {
+   margin-right: 11px !important;
+}
 /* </dtml-with> */
 
