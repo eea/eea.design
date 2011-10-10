@@ -960,7 +960,7 @@ float:right;
     padding: 0;
     padding-top: <dtml-var "_[logoName].height + 16">px;
     height: 0px !important;
-    width: <dtml-var "_[logoName].width">px;
+    width: 335px;
     cursor: pointer;
 }
 
