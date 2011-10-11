@@ -72,11 +72,12 @@
             </metal:baseslot>
         </metal:headslot>
 
-        <metal:style_slot define-slot="style_slot">
-            <metal:pagedesign use-macro="here/page_design_macros/macros/pagedesign" />
+        <metal:styleslot define-slot="style_slot" />
 
-        </metal:style_slot>
+        <metal:pagedesign use-macro="here/page_design_macros/macros/pagedesign" />
 
+        <tal:comment replace="nothing"> This is deprecated, please use style_slot instead. </tal:comment>
+        <metal:cssslot define-slot="css_slot" />
 
         <metal:javascriptslot define-slot="javascript_head_slot" />
 
