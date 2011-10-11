@@ -6,20 +6,15 @@ jQuery(document).ready(function($) {
             global_nav = $('#portal-globalnav');
         $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
         secundary_portaltabs.appendTo(global_nav);
-        
-        
+
+
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(window.location.pathname)) {
         $('body').addClass('fullscreen');
         $('#icon-full_screen').parent().remove();
     }
-    
-    facetedToggleLink = $('<a class="faceted-criteria-toggle-button" href="javascript:void(0); ">Hide filters</a>');
-    $('.faceted-criteria legend').after(facetedToggleLink);
-    facetedToggleLink.after('<span class="faceted-criteria-count-holder"><strong class="faceted-criteria-count">' + $(".facted-criteria dd span").length + '</strong> criteria</span>');
-    facetedToggleLink.click(toggleFacetedCriteria);
-    
+
     window.setInterval('toggleEcotipClass()', 5000);
 });
 
@@ -67,23 +62,4 @@ jQuery(window).resize(function() {
 function toggleEcotipClass(){
     var ecotip = jQuery('#portlet-ecotip');
     ecotip.toggleClass('hover');
-}
-
-function toggleFacetedCriteria(){
-        toggleButton = $('.faceted-criteria-toggle-button');
-        criteriaCounter = $('.faceted-criteria-count');
-        criteriaCounterHolder = $('.faceted-criteria-count-holder');
-        criteriaList = $('.faceted-criteria dl');
-        criteria = $('.faceted-criteria dd span');
-        
-        if( criteriaList.is(':visible') === true ){
-                criteriaList.slideUp();
-                toggleButton.text('Show filters');
-                criteriaCounter.text(criteria.length);
-                criteriaCounterHolder.show();
-        }else {
-                criteriaList.slideDown();
-                toggleButton.text('Hide filters');
-                criteriaCounterHolder.hide();
-        }
 }
