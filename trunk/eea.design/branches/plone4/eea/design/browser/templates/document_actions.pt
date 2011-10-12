@@ -3,7 +3,7 @@
 
     <div class="visualClear"><!-- --></div>
 
-    <div class="documentActions">
+    <div class="documentActions" tal:condition="context/@@plone_context_state/is_view_template">
         <tal:docactions tal:condition="view/actions">
 
             <h5 class="hiddenStructure"

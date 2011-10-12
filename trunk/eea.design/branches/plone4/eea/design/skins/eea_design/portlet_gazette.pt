@@ -4,7 +4,7 @@
       i18n:domain="eea">
 <body >
 
-<div metal:define-macro="portlet">
+ <div metal:define-macro="portlet" tal:condition="context/@@plone_context_state/is_view_template">
 <h2 class="column-title" i18n:translate="follow-us">Follow us</h2>
        <div metal:use-macro="here/portlet_social_links/macros/portlet">
            Social links
