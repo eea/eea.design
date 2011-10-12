@@ -15,8 +15,8 @@
 		    tal:define="view view|nocall:context/@@soer_frontpage_logic;
 		                background_img_path background_img_path| python: context.getCanonical().absolute_url() + '/image_xlarge'  " 
 		     id="keyfacts-slider" class="figure keyFactsSlider">
-                 <img class="keyfacts-bgimg" src=""
-                      tal:attributes="src background_img_path"  />
+                    <div class="keyfactsImgContainer"><img class="keyfacts-bgimg" src=""
+                      tal:attributes="src background_img_path"  /></div>
                     <div id="boxes" tal:define="items view/getAllFactsAndMessages">
                             <div id="soer-top-area">
                                 <!-- all key facts and messages -->
