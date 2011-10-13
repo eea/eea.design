@@ -31,7 +31,7 @@ lightGreyDivisionColor:string=#cccccc
 #general bgc for boxes and portlets
 lightBackgroundColor:string=#f3f3f3
 mediumBackgroundColor:string=#ececec
-darkBackgroundColor:string=#95b229
+darkBackgroundColor:string=#D6D6D6
 greyBackgroundColor:string=#f3f3f3
 headerBackgroundColor:string=#F0F4F5
 

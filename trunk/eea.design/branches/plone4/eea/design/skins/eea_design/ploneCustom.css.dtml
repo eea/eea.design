@@ -1383,15 +1383,10 @@ h3.site-description {
 }
 
 #portal-personaltools li {
-    color: &dtml-globalFontColor;;
     margin: 0em 0em 0em 1em;
     display: inline-block;
 }
 
-#portal-personaltools li a {
-    text-decoration: none;
-    color: &dtml-globalFontColor;;
-}
 
 #portal-personaltools .visualIconPadding {
     padding-left: 10px;
