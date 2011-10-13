@@ -878,6 +878,7 @@ dl.error dd {
 #content-views {
     float: left;
     background-color: &dtml-corporateGreen;;
+    margin:0px !important;
 }
 /* fix shift on content views list under ie6 */
 /* .ie6 is set on <html> by Modernizr library */
@@ -1040,6 +1041,10 @@ dl.error dd {
 
 .actionMenuContent {
     padding: 0 0.25em;
+}
+
+#contentActionMenus .actionMenuContent ul {
+   margin:0px !important;
 }
 
 dl.actionMenu {
