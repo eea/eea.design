@@ -34,7 +34,8 @@
                         acl_users nocall: context/acl_users;
                         ifacetool context/portal_interface;
                         syntool context/portal_syndication;
-                        onFrontpage python: plone_view.getViewTemplateId() in ('frontpage_view','localfrontpage_view');">
+                        ">
+
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -87,8 +88,8 @@
 </head>
 
 <body tal:define="isRTL portal_state/is_rtl;
-                  sl python:plone_view.have_portlets('plone.leftcolumn', view);
-                  sr python:plone_view.have_portlets('plone.rightcolumn', view);
+                  sl python:plone_view.have_portlets('plone.leftcolumn', view) and not request.get('disable_plone.leftcolumn');
+                  sr python:plone_view.have_portlets('plone.rightcolumn', view) and not request.get('disable_plone.rightcolumn');
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
     tal:attributes="class python:here.getSectionFromURL(plone_view);
 
@@ -193,7 +194,7 @@
             <div id="portal-column-one"
                  class="cell width-1:4 position-0"
                  metal:define-slot="column_one_slot"
-                tal:condition="python:test(sl and not onFrontpage)"
+                 tal:condition="sl"
                  tal:attributes="class python:isRTL and 'cell width-1:4 position-3:4' or 'cell width-1:4 position-0'">
                 <div class="visualPadding">
                     <div id="slide-menu">
@@ -209,7 +210,7 @@
         <div id="portal-column-two"
             class="cell width-1:4 position-3:4"
             metal:define-slot="column_two_slot"
-            tal:condition="python:test(sr and not onFrontpage)"
+            tal:condition="sr"
             tal:attributes="class python:isRTL and 'cell width-1:4 position-0' or 'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
                 <tal:block replace="structure provider:plone.rightcolumn" />

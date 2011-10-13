@@ -3,6 +3,7 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+* Bugfix: get rid of onFrontpage check in main_template, allows proper display of left and right portal columns [tiberich #4624]
 * Bugfix: Fixed login_form when using not existing user/password [szabozo0 #4596]
 
 * Bugfix: Added tiny_mce.js version 3.4.5 for IE 9 compatibility
