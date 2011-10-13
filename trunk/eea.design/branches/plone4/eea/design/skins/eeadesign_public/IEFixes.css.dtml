@@ -8,13 +8,26 @@
 /* Left Navigation workaround for broken Internet Explorer */
 
 * html li.navTreeCurrentItem a,
-* html li.navTreeCurrentItem a:hover {s
-    height: 1.6em;
+* html li.navTreeCurrentItem a:hover {
+    height: 1.65em;
 }
 
 #portal-columns {
   width: 100%;
 }
+
+#portal-header {
+    min-height: 90px;
+}
+
+/* Remove bcpil.gif background image of hiperlinks from spcific headings */
+#portal-header h2 a,
+.shortcut-default h3 a,
+.portletWrapper .highlight a
+{
+    background: transparent !important;
+}
+
 * html*#portal-columns {
     width: auto;
 }
@@ -441,6 +454,38 @@ a.list-layout.active-list, a.list-layout {
 .shortcut-default h3 {
     border: none !important;
     text-decoration: none !important;
+}
+
+#subtopics {
+    display: block;
+    min-height: 1px;
+}
+
+#subtopics ul {
+    background: transparent !important;
+}
+
+#subtopics ul li {
+    float: left;
+    display: inline !important;
+    position: relative;
+}
+
+.faceted-widget.faceted-text-widget .widget-fieldset form input[type="text"] {
+    float: left;
+}
+
+.faceted-widget.faceted-text-widget .widget-fieldset form input[type="submit"] {
+    float: left;
+    clear: right;
+    min-height: 1px;
+    margin-left: 10px;
+}
+
+.faceted-textwidget-place-all,
+.faceted-textwidget-place-current {
+    float: left;
+    display: inline !important;
 }
 
 /* </dtml-with> */
