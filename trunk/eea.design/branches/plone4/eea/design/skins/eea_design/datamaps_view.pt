@@ -22,7 +22,7 @@
                     <span>Advanced</span></a>
 		    <div class="featured">
 		       <h2 i18n:translate="featured_global_search">Search</h2>
-		       <form action="find/global" method="get" id="faceted-text-search" class="searchforms faceted-external-search">
+		       <form tal:attributes="action string:${here/absolute_url}/find/global"  method="get" id="faceted-text-search" class="searchforms faceted-external-search">
                    <input type="text" name="c12" title="Search data, maps, indicators" value=""/>
                    <input type="submit" value="Search" name="search" />
 		       </form>
@@ -159,4 +159,3 @@
 
     </body>
 </html>
-
