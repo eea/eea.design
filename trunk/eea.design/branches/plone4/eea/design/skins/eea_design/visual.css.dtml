@@ -393,8 +393,8 @@ width:16px;
 /* style for keyfacts slider */
 
 #keyfacts-slider img.keyfacts-bgimg {
-   width:633px; 
-   height: 356px;  
+   min-width:633px; 
+   min-height: 356px;  
 }
 
 #keyfacts-slider dl {
@@ -484,6 +484,13 @@ width:16px;
     text-shadow: 1px 1px #000000;
     background: &dtml-corporateBlueTwo;;
     color: #FFFFFF !important;
+}
+
+#keyfacts-slider .keyfactsImgContainer {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    height: 280px;
 }
 
 /* standard elements with shadow background */
