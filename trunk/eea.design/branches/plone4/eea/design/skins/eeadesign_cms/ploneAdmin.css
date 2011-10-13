@@ -77,7 +77,6 @@ padding: 1em;
 
 /******* Manage portlets links *******/
 div.managePortletsLink {
-    border: 1px solid black;
     -webkit-transition: background .3s;
        -moz-transition: background .3s;
          -o-transition: background .3s;
