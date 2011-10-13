@@ -172,7 +172,9 @@ dt.portletItem {
 
 
 #firstHeader {
-   padding: 1em 0.5em 1em 0.5em;
+   padding: 0 0.5em;
+   margin-top: 0;
+   line-height: 1.2;
    font-size: 1.6em;
    text-shadow: none;
 }

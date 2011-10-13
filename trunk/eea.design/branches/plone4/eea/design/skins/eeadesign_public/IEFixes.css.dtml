@@ -8,7 +8,7 @@
 /* Left Navigation workaround for broken Internet Explorer */
 
 * html li.navTreeCurrentItem a,
-* html li.navTreeCurrentItem a:hover {
+* html li.navTreeCurrentItem a:hover {s
     height: 1.6em;
 }
 
@@ -43,6 +43,10 @@ div#portal-columns div.portlet {
 div#portal-columns div#portal-column-one,
 div#portal-columns div#portal-column-two {
     overflow: hidden;
+}
+
+div#portal-column-two {
+    margin-top: 0 !important;
 }
 
 textarea {
@@ -304,7 +308,11 @@ dd.portletFooter {
     padding: 0em 0em 0.5em 0em;
 }
 
-
+#content-core {
+    display: block;
+    clear: both;
+    margin-bottom: 3em;
+}
 
 #portal-globalnav li {
     display:inline !important;
@@ -334,14 +342,18 @@ dd.portletFooter {
 }
 
 #mobile a:hover {
-     border: 1px solid gray;
+     border: none !important;
+}
+
+#mobile {
+    display: block;
+    position: relative;
+    clear: both;
+    padding-top: 0 !important;
 }
 
 #mobile a { 
     display: block;
-    height: 50px;
-    width: 145px;
-    margin-top: -50px;
 }
 
 #forum-link { 
@@ -352,6 +364,27 @@ dd.portletFooter {
     float: none;
     top: 0px;
     right: 100px;
+}
+
+#twitter-link, #facebook-link, #youtube-link, #rss-link, #email-link {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+#document-action-sendto, #document-action-print, #document-action-full_screen, #document-action-twitter, #document-action-delicious, #document-action-facebook, #document-action-rdf , #document-action-rss2 {
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.documentActions {
+    display: block;
+    clear: both;
+}
+
+.documentActions ul {
+    margin-left: 0 !important;
 }
 
 #portal-searchbox {
@@ -377,8 +410,37 @@ a.list-layout.active-list, a.list-layout {
    margin-right: 11px !important;
 }
 
+.archives.advanced-search-link {
+    padding-right: 0 !important;
+    margin-right: 10px !important;
+    position: relative;
+    right: 20px;
+}
+
+.column-area .featured .searchforms input[type="submit"] {
+    padding: 7px 2px !important;
+}
+
 #header-holder {
    z-index: 1000;
 }
-/* </dtml-with> */
 
+.shortcut-default {
+   margin-top: 10px !important;
+}
+
+.portletWrapper {
+    clear: both;
+    display: block;
+}
+
+.shortcut-default {
+    padding: 40px 0 20px 0 !important;
+}
+
+.shortcut-default h3 {
+    border: none !important;
+    text-decoration: none !important;
+}
+
+/* </dtml-with> */
