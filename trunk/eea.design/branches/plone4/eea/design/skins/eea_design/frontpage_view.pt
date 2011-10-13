@@ -23,12 +23,11 @@
                         <tal:featured_article metal:define-macro="featured_article"
                              tal:define="featured_class context/@@frontpage_highlights;
                                          highlights featured_class/getHighArticles;
-                                         translate_tag string:featured-article-item;
-                                         box_title string:Featured Article;
-                                         archive_text string:Archive;
-                                         archive_href string:archives;
-                                         archive_translate_tag string:archives;">
-                            <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
+                                         archive_href string:articles;">
+                                         <div metal:use-macro="here/frontpage_macros/macros/featured-item">
+                                             <span metal:fill-slot="archive" i18n:translate="">Archive</span>
+                                             <span metal:fill-slot="box_title" i18n:translate="">Featured Article</span>
+                                         </div>
                         </tal:featured_article>
 
                         <tal:spotlight 

@@ -22,19 +22,15 @@
      tal:define="featured_class featured_class|context/@@frontpage_highlights;
                  nr_items nr_items|python:1; 
                  highlights highlights|featured_class/getHighArticles;
-                 translate_tag translate_tag|string: featured-item;
-                 box_title box_title|string:Featured Article;
                  plone_view nocall:plone_view|context/@@plone;
                  descr_max_length descr_max_length|python:200;
-                 archive_text archive_text|nothing;
-                 archive_href archive_href|nothing;
-                 archive_translate_tag archive_translate_tag|nothing;"
+                 archive_href archive_href|nothing;"
                  tal:condition="highlights"
                  i18n:domain="eea">
 
-    <tal:translate tal:condition="archive_text">
+    <tal:translate tal:condition="archive_href">
     <a tal:attributes="href archive_href; class string: archives">
-        <span tal:content="python:context.utranslate(archive_text)">Archive</span></a>
+        <span metal:define-slot="archive">Archive or title for more items</span></a>
     </tal:translate>
      <metal:items tal:repeat="highlight python:highlights[:nr_items]">
         <tal:item tal:define="
@@ -44,9 +40,8 @@
                               is_video python:highlight.portal_type == 'File';">
             <div class="featured roundedCorners">
                     <h2 class="column-title" i18n:domain="eea" i18n:translate="">
-                                                        <span i18n:name="featured_item_box_title" 
-                                                        tal:content="box_title"
-                                                        tal:omit-tag="">Box Name</span>
+                                                        <span  
+                                                        tal:omit-tag="" metal:define-slot="box_title">Box Name (Title that shows up)</span>
                     </h2>
                 <div class="featured-highlights">
                     <div class="figure-left">
