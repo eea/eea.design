@@ -142,7 +142,7 @@
 			        
 			    </div> 
                             <div class="portletFooter">
-		                <p><a href="tags" class="moreLink" title="archive">Explore all tags
+		                <p><a href="tags" class="standardButton" title="archive">Explore all tags
                                    </a>
                                 </p>
 			    </div>

@@ -129,11 +129,11 @@
 
 <div metal:define-macro="more-link" class="portletFooter"
     tal:define="more_href more_href|string:/;
-                more_title more_title|string:More">
-                <p><a title="archive" class="moreLink" 
+                more_title more_title|string:All items">
+                <p><a title="archive" class="standardButton" 
                       tal:attributes="href more_href;" i18n:translate=""><span i18n:name="portlet_footer_read_more" 
                                                         tal:content="more_title"
-                                                        tal:omit-tag="">More</span>
+                                                        tal:omit-tag="">All items</span>
                     </a>
                 </p>
 </div>
@@ -187,7 +187,7 @@
     </tal:nocond>
 </metal:condition>
 
-<metal:empty metal:define-macro="gallery-empty">
+<metal:empty metal:define-macro="gallery-empty" tal:define="more_title string:All items;">
      <p class="filter-topic"></p>
      <ul class="gallery-layout-selection"
          tal:define="active_list python:' active-list' if not hide_listing else '';
