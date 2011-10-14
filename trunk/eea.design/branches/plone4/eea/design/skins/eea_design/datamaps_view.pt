@@ -40,13 +40,12 @@
                         i18n:translate="featured_item_see_all"
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
-                                         translate_tag string:featured-indicator-item;
                                          nr_items python:1;
-                                         box_title string:Interactive data viewers;
-                                         archive_text string:See all;
-                                         archive_href string:data/data-viewers;
-                                         archive_translate_tag string:see-all;">
-                            <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
+                                         archive_href string:data/data-viewers;">
+                                         <div metal:use-macro="here/frontpage_macros/macros/featured-item">
+                                              <span metal:fill-slot="archive" i18n:translate="">See all</span>
+                                              <span metal:fill-slot="box_title" i18n:translate="">Interactive data viewers</span>
+                                          </div>
                         </tal:featured_item>
 
 			<div id="organisations-links" class="shortcut-light">
