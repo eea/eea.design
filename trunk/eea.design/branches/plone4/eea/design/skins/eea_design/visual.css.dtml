@@ -19,9 +19,6 @@
 .breadcrumbitem, .breadcrumbitemlast {
     padding-right:0px;
     padding-left:11px;
-    background-image: url(&dtml-portal_url;/bcpil.gif);
-    background-repeat: no-repeat;
-    background-position: 0 50%;
 }
 .breadcrumbitemlast {
     font-weight:bold;
@@ -239,7 +236,6 @@ table.datatable {
 #content h5 a,
 #content h6 a {
     text-decoration: none;
-    background: url(&dtml-portal_url;/bcpil.gif) no-repeat center right;
     padding-right: 0.9em !important;
     border: none;
 }

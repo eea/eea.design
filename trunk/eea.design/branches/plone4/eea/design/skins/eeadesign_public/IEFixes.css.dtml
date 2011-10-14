@@ -20,14 +20,6 @@
     min-height: 90px;
 }
 
-/* Remove bcpil.gif background image of hiperlinks from spcific headings */
-#portal-header h2 a,
-.shortcut-default h3 a,
-.portletWrapper .highlight a
-{
-    background: transparent !important;
-}
-
 * html*#portal-columns {
     width: auto;
 }
@@ -160,15 +152,6 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 * html #error-handling,
 * html .documentContent {
     height: 0.1%;
-}
-
-/* link background position fix */
-h2 a, 
-h3 a, 
-h4 a, 
-h5 a, 
-h6 a {
-     background: url(&dtml-portal_url;/bcpil.gif) no-repeat 0.5em right;
 }
 
 /* Fix for IE float bug - have to use the Limi Hack here, since the paragraph
