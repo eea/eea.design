@@ -872,7 +872,7 @@ dl.error dd {
     border: 0.25em solid &dtml-corporateGreen;;
     font-size: 100%;
     min-height: 2em;
-    margin-bottom: 1em;
+    margin: 1em 0;
     padding-top: 0.05em;
 }
 #content-views {
