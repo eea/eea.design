@@ -485,7 +485,27 @@ a.list-layout.active-list, a.list-layout {
 .faceted-textwidget-place-all,
 .faceted-textwidget-place-current {
     float: left;
+    clear: left !important;
+    margin-left: 0px;
+    margin-right: auto !important;
+    margin-top: 25px;
     display: inline !important;
+    min-height: 1px;
+    min-width: 1px;
+    height: auto !important;
+    width: auto !important;
+}
+
+.navTreeItem {
+    list-style: none;
+    list-style-type: none;
+    list-style-image: none;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+dd.portletItem {
+    margin-left: 0 !important;
 }
 
 /* </dtml-with> */
