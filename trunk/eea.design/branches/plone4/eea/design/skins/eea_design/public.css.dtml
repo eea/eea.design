@@ -402,7 +402,7 @@ dl.portletNavigationTree dd.portletItem {
 }
 
 dl.portletNavigationTree ul.navTreeLevel0 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -25px !important;
+   margin-left: -35px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel1 li > a {
