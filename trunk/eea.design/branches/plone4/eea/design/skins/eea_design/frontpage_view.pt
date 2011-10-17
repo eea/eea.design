@@ -32,10 +32,10 @@
 
                         <tal:spotlight 
                              tal:define="featured_class frontpage_view;
-                                         highlights featured_class/getSpotlight;
-                                         translate_tag string:spotlight-item;
-                                         box_title string:Topic in the spotlight;">
-                            <div metal:use-macro="here/frontpage_macros/macros/featured-item" />
+                                         highlights featured_class/getSpotlight;">
+                                         <div metal:use-macro="here/frontpage_macros/macros/featured-item">
+                                             <span metal:fill-slot="box_title" i18n:translate="">Topic in the spotlight</span>
+                                         </div>
                         </tal:spotlight>
                          <!--end featured and spotlight areas -->
 
