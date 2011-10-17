@@ -14,6 +14,9 @@
     display: block;
     clear: both;
     height: 40px;
+    box-shadow: 0 2px 2px #333333;
+    -webkit-box-shadow: 0 2px 2px #333333;
+    -moz-box-shadow: 0 2px 2px #333333;
 }
 
 #portal-globalnav {
