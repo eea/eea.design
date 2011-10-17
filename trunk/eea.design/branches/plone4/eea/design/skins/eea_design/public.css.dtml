@@ -1000,6 +1000,7 @@ dl.error dd {
     background-color: &dtml-corporateGreen;;
     color: White;
     z-index: 5;
+    padding: 0 !important;
 }
 #contentActionMenus dl.actionMenu.activated dd {
     border-bottom: 0.5em solid &dtml-corporateGreen;;

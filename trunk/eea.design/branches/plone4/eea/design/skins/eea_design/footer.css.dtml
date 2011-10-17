@@ -76,7 +76,7 @@
 }
 
 #portal-colophon ul li {
-    display: table-cell;
+    display: inline;
     font-size: 11px;
     margin: 0 0.25em;
     padding: 0.1em 0.2em;

@@ -491,4 +491,8 @@ dd.portletItem {
     margin-left: 0 !important;
 }
 
+form#searchbox_terminology {
+    color: #FFFFFF !important;
+}
+
 /* </dtml-with> */
