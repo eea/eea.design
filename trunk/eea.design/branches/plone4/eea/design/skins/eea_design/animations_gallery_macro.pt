@@ -1,0 +1,6 @@
+<tal:animations metal:define-macro="animations" 
+        tal:define="frontpage_view context/@@frontpage_highlights;
+                    folderContents frontpage_view/getAnimations;
+                    ajax python:True">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+</tal:animations>

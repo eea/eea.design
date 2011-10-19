@@ -42,6 +42,8 @@ class Frontpage(BrowserView):
         self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
         self.noOfMultimedia = frontpage_properties.getProperty(
                                                            'noOfMultimedia', 6)
+        self.noOfAnimations = frontpage_properties.getProperty(
+                                                           'noOfAnimations', 6)
         self.noOfPublications = frontpage_properties.getProperty(
                                                          'noOfPublications', 6)
         self.noOfPromotions = frontpage_properties.getProperty(
@@ -146,6 +148,15 @@ class Frontpage(BrowserView):
                     noOfItems=self.noOfMultimedia)
         result = [i for i in result if not IFlashAnimation.providedBy(
                                           i.getObject())][:self.noOfMultimedia]
+        return result
+
+    def getAnimations(self):
+        """ retrieves multimedia swf animations filtered by date and topic """
+        result = _getItems(self,
+                    interfaces = 'p4a.video.interfaces.IVideoEnhanced',
+                    noOfItems=self.noOfAnimations)
+        result = [i for i in result if IFlashAnimation.providedBy(
+                                          i.getObject())][:self.noOfAnimations]
         return result
 
     def _getTeaserMedia(self, high, scale):
