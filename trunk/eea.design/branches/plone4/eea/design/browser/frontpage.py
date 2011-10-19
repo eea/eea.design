@@ -335,7 +335,7 @@ def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '',
     return self.catalog.searchResults(query)
 
 def _getTopics(self, topic = '', portaltypes = '', object_provides = '',
-                                                        noOfItems = ''):
+                                            tags = '', noOfItems = ''):
     """ retrieves items of certain content types and/or interface and
     certain visibility level, with the addition of topic filtering """
     query = {
@@ -350,6 +350,8 @@ def _getTopics(self, topic = '', portaltypes = '', object_provides = '',
         query['object_provides'] = object_provides
     if topic:
         query['getThemes'] = topic
+    if tags:
+        query['Subject'] = tags
     return self.catalog(query)[:noOfItems]
 
 
@@ -363,6 +365,7 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
     #if topic is not passed in the REQUEST variable
     #then we try to get it from the context object
     topic = getattr(self.context.REQUEST, 'topic', None)
+    tags = getattr(self.context.REQUEST, 'tags', None)
     topic_request = getTheme(self.context.aq_inner)
     if topic or topic_request:
         topic = topic if topic else topic_request
@@ -371,7 +374,10 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
        #if there is a topic/theme tag then get items filtered 
        if topic:
             result = _getTopics(self, portaltypes = portaltypes,
-                             topic = topic, noOfItems=noOfItems)
+                    topic = topic, noOfItems=noOfItems)
+       elif tags:
+            result = _getTopics(self, portaltypes = portaltypes,
+                    tags = tags, noOfItems=noOfItems)
        else:
            result =  _getItemsWithVisibility(self,
                    visibilityLevel = visibilityLevel,

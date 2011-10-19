@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
         eea_gal.gallery_page = eea_gal.gallery.attr("data-page");
     })();
 
-    eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index) {
+    eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index, tag_title) {
             var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
             var gal = eea_gal.gallery.find(".highlights");
             var news = index ? gal[index] : gal.filter(function() {return this.style.display !== 'none';}); 
@@ -29,7 +29,8 @@ jQuery(document).ready(function($) {
 
             var gallery_ajax = $(".gallery-ajax", news);
             var layout_selection = $('.gallery-layout-selection li a', news)[0];
-            var params = sel_value ? 'topic' + '=' + sel_value : undefined;
+            var params = sel_value ? 'topic' + '=' + sel_value : undefined,
+                params = tag_title ? 'tags' + '=' + sel_value : params;
             gallery_ajax.load( address, params, function(html) {
                 var album = gallery_ajax.find('.gallery-album');
                 var listing = gallery_ajax.find('.gallery-listing');
