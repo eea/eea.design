@@ -387,6 +387,9 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
        if topic:
             result = _getTopics(self, object_provides = interfaces,
                              topic = topic, noOfItems=noOfItems)
+       elif tags:
+            result = _getTopics(self, portaltypes = portaltypes,
+                    tags = tags, noOfItems=noOfItems)
        else:
            result =  _getItemsWithVisibility(self,
                    visibilityLevel = visibilityLevel,
