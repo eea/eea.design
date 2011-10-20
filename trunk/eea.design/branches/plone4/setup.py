@@ -1,3 +1,5 @@
+""" Installer
+"""
 from setuptools import setup, find_packages
 from os.path import join
 import os
@@ -6,7 +8,7 @@ name = 'eea.design'
 path = name.split('.') + ['version.txt']
 version = open(join(*path)).read().strip()
 
-setup(name='eea.design',
+setup(name=name,
       version=version,
       description="Plone4 theme for EEA",
       long_description=open("README.txt").read() + "\n" +

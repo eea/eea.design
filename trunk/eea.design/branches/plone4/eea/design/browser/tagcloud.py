@@ -16,7 +16,7 @@ class TagCloud(BrowserView):
             logger.exception('Invalid ancestor %r', ancestor)
             return ''
 
-        cid = ''
+        cid = criterion = None
         for key, criterion in criteria.items():
             if criterion.get('widget', '') == 'tagscloud':
                 cid = key
@@ -28,5 +28,5 @@ class TagCloud(BrowserView):
             return ''
 
         widget = criteria.widget(cid=cid)
-        widget = widget(ancestor, self.request, criterion) 
+        widget = widget(ancestor, self.request, criterion)
         return widget()

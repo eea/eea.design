@@ -1,3 +1,5 @@
+""" Search logic
+"""
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
@@ -8,7 +10,8 @@ LABELS = {
     'soil': 'Soil',
     'marine and coastal': 'Marine and coastal environment',
     'consumption': 'Consumption',
-    'material resources, natural resources, waste': 'Material resources and waste',
+    'material resources, natural resources, waste':
+    'Material resources and waste',
     'freshwater quality, water resources': 'Freshwater',
     'air pollution': 'Air pollution',
     'urban environment': 'Urban environment',
@@ -25,8 +28,9 @@ PARTC_TOPIC_MAP = {
     }
 
 class SoerTopicSearch(BrowserView):
-
-    def __init__(self, context, request): 
+    """ Topic search
+    """
+    def __init__(self, context, request):
         self.context = context
         self.request = request
         utils = getToolByName(context, 'plone_utils')
@@ -36,14 +40,18 @@ class SoerTopicSearch(BrowserView):
             self.soer = context
 
     def getTopicLabel(self):
+        """ Label
+        """
         tag = self.request.get('topic')
         return LABELS.get(tag, tag)
 
     def _searchForContent(self, tag, count):
+        """ Content
+        """
         tags = ['SOER2010', tag]
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog({
-            'portal_type': ['Report','File', 'ATFile'], 
+            'portal_type': ['Report','File', 'ATFile'],
             'Subject': {
                 'query': tags,
                 'operator': 'and',
@@ -77,17 +85,25 @@ class SoerTopicSearch(BrowserView):
 
 
     def getSynthesisReport(self):
+        """ Synthesis report
+        """
         return self._searchForContent('synthesis', 10)
 
     def getThematicAssesments(self):
+        """ Thematic assesments
+        """
         return self._searchForContent('thematic assessment', 30)
 
     def getGlobalMegatrends(self):
+        """ Global megatrends
+        """
         return self._searchForContent('global megatrends', 30)
 
     def getCountryEnvironment(self):
+        """ Country environment
+        """
         topic = self.request.get('topic', None)
-        if topic == None or topic not in PARTC_TOPIC_MAP.keys(): 
+        if topic == None or topic not in PARTC_TOPIC_MAP.keys():
             return []
 
         countries = getattr(self.soer, 'countries', None)
@@ -98,10 +114,12 @@ class SoerTopicSearch(BrowserView):
         ret = []
         for country in countries:
             ret.append({
-                    'url': '%s/soertopic_view?topic=%s' % (country.getURL(), PARTC_TOPIC_MAP.get(topic)),
+                    'url': '%s/soertopic_view?topic=%s' % (
+                        country.getURL(), PARTC_TOPIC_MAP.get(topic)),
                     'image' : country.getURL(),
                     'title': '%s' % country.Title,
-                    'description': '%s - %s' % (country.Title, PARTC_TOPIC_MAP.get(topic)),
+                    'description': '%s - %s' % (
+                        country.Title, PARTC_TOPIC_MAP.get(topic)),
                 })
 
         # Sort alphabetically on country name

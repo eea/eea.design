@@ -1,3 +1,5 @@
+""" Portlets
+"""
 from zope.interface import implements
 
 from plone.portlets.interfaces import IPortletDataProvider
@@ -45,17 +47,21 @@ class Renderer(base.Renderer):
         self.now = DateTime()
         self.catalog = getToolByName(context, 'portal_catalog')
         portal_properties = getToolByName(context, 'portal_properties')
-        frontpage_properties = getattr(portal_properties, 'frontpage_properties')
+        frontpage_properties = getattr(portal_properties,
+                                       'frontpage_properties')
 
         self.noOfItems = frontpage_properties.getProperty('noOfHigh', 1)
 
     def render(self):
+        """ Render
+        """
         return xhtml_compress(self._template())
 
     @property
     def available(self):
         """Show the portlet only if there are one or more elements."""
-        plone = getMultiAdapter((self.context, self.request), name=u'plone_context_state')
+        plone = getMultiAdapter((self.context, self.request),
+                                name=u'plone_context_state')
         return plone.is_view_template() and len(self.get_articles())
 
     def get_articles(self):
@@ -67,6 +73,6 @@ class AddForm(base.NullAddForm):
     """Portlet add form.
     """
     def create(self):
+        """ Create
+        """
         return Assignment()
-
-

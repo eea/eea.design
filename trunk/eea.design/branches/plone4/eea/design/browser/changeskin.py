@@ -1,3 +1,5 @@
+""" Change skins
+"""
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from eea.design.browser.interfaces import IEEADesignPublic, IEEADesignCMS
@@ -8,12 +10,12 @@ from zope.interface import directlyProvidedBy
 from zope.interface import directlyProvides
 from zope.publisher.interfaces.browser import IBrowserSkinType
 
-
 import logging
 logger = logging.getLogger("eea.design")
 
-
 class TestSkin(BrowserView):
+    """ Test Skin
+    """
     def __call__(self):
         """test view for cms skin """
         return "is CMS indeed"
@@ -26,7 +28,8 @@ eea_skins = {
     }
 
 def change_skin(site, request):
-
+    """ Change skin
+    """
     skin_name = request.cookies.get('plone_skin')
     if not skin_name:
         skin_name = 'EEADesign2006'
@@ -46,7 +49,7 @@ def change_skin(site, request):
                 continue
             else:
                 layer_ifaces.append(layer)
-        ifaces = [skin,] + layer_ifaces + default_ifaces
+        ifaces = [skin] + layer_ifaces + default_ifaces
         directlyProvides(request, *ifaces)
 
 

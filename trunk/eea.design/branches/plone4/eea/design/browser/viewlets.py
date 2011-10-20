@@ -1,3 +1,5 @@
+""" Custom viewlets
+"""
 from Products.CMFCore.utils import _checkPermission
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safe_unicode
@@ -19,6 +21,8 @@ class TitleViewlet(common.TitleViewlet):
     """
     index = ViewPageTemplateFile('templates/title.pt')
     def update(self):
+        """ Update
+        """
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
         context_state = getMultiAdapter((self.context, self.request),
@@ -81,7 +85,10 @@ class BelowEditContentTitleViewlet(BaseBelowContentTitleViewlet):
     """
 
     def show_history(self):
-        if not _checkPermission('CMFEditions: Access previous versions', self.context):
+        """ History
+        """
+        if not _checkPermission('CMFEditions: Access previous versions',
+                                self.context):
             return False
         return True
-    
+

@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
-
+""" Browser controllers
+"""
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
@@ -23,57 +20,71 @@ class DataMaps(BrowserView):
 
         self.catalog = getToolByName(context, 'portal_catalog')
         portal_properties = getToolByName(context, 'portal_properties')
-        frontpage_properties = getattr(portal_properties, 'frontpage_properties')
+        frontpage_properties = getattr(portal_properties,
+                                       'frontpage_properties')
 
         self.promotions = []
         self.portal_url = getToolByName(aq_inner(context), 'portal_url')()
         #default number of items shown in each whatsnew / latest tab/portlet.
-        self.noOfLatestDefault = frontpage_properties.getProperty('noOfLatestDefault', 6)
+        self.noOfLatestDefault = frontpage_properties.getProperty(
+            'noOfLatestDefault', 6)
         # noOfEachProduct is used when all latest products are merged together
-        # we show equal number of each, so that none products overshadow the others.
-        self.noOfEachProduct = frontpage_properties.getProperty('noOfEachProduct', 3)
+        # we show equal number of each, so that none
+        # products overshadow the others.
+        self.noOfEachProduct = frontpage_properties.getProperty(
+            'noOfEachProduct', 3)
         self.now = DateTime()
 
     def getLatestDatasets(self):
-        """ Get latest published datasets. Number configurable via ZMI frontpage_properties. """
+        """ Get latest published datasets. Number configurable via
+        ZMI frontpage_properties.
+        """
         interfaces = ('eea.dataservice.interfaces.IDataset')
-        return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+        return _getItems(self,
+                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
 
     def getLatestIndicators(self):
         """ Get latest published indicators. """
         interfaces = ('eea.indicators.content.interfaces.IIndicatorAssessment')
-        return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+        return _getItems(self,
+                interfaces = interfaces, noOfItems = self.noOfLatestDefault)
 
     def getLatestMaps(self):
         """ Get latest published static maps. """
         interfaces = ('eea.dataservice.interfaces.IEEAFigureMap')
-        return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+        return _getItems(self,
+                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
 
     def getLatestGraphs(self):
         """ Get latest published static graphs/charts."""
         interfaces = ('eea.dataservice.interfaces.IEEAFigureGraph')
-        return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+        return _getItems(self,
+                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
 
     def getLatestInteractiveMaps(self):
         """ Get latest published interactive maps."""
-        interfaces = ('Products.EEAContentTypes.content.interfaces.IInteractiveMap')
-        return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+        interfaces = (
+            'Products.EEAContentTypes.content.interfaces.IInteractiveMap')
+        return _getItems(self,
+                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
 
     def getLatestInteractiveData(self):
         """ Get latest published interactive data charts."""
-        interfaces = ('Products.EEAContentTypes.content.interfaces.IInteractiveData')
-        return _getItems(self, interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+        interfaces = (
+            'Products.EEAContentTypes.content.interfaces.IInteractiveData')
+        return _getItems(self,
+                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
 
 
     def getAllProducts(self):
         """ get all latest data and maps merged into one single list """
         result = []
-        res1 = self.getLatestIndicators()[:self.noOfEachProduct];
-        res2 = self.getLatestDatasets()[:self.noOfEachProduct];
-        res3 = self.getLatestMaps()[:self.noOfEachProduct];
-        res4 = self.getLatestGraphs()[:self.noOfEachProduct];
-        res5 = self.getLatestInteractiveMaps()[:self.noOfEachProduct];
-        res6 = self.getLatestInteractiveData()[:self.noOfEachProduct];
+        res1 = self.getLatestIndicators()[:self.noOfEachProduct]
+        res2 = self.getLatestDatasets()[:self.noOfEachProduct]
+        res3 = self.getLatestMaps()[:self.noOfEachProduct]
+        res4 = self.getLatestGraphs()[:self.noOfEachProduct]
+        res5 = self.getLatestInteractiveMaps()[:self.noOfEachProduct]
+        res6 = self.getLatestInteractiveData()[:self.noOfEachProduct]
 
         result.extend(res1)
         result.extend(res2)
@@ -87,7 +98,7 @@ class DataMaps(BrowserView):
         return result
 
     def getPromotions(self):
-        """ retrieves external and internal promotions for data and maps section """
+        """ Retrieves external and internal promotions for data and maps section
+        """
         res = self.getAllProducts()
         return res
-

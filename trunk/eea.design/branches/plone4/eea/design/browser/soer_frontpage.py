@@ -1,11 +1,14 @@
+""" Browser controllers
+"""
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from eea.themecentre.themecentre import getTheme
 
 LIMIT_CHARS = 300
-    
-class SoerFrontpage(BrowserView):
 
+class SoerFrontpage(BrowserView):
+    """ SOER View
+    """
     def __init__(self, context, request):
         self.context = context
         self.request = request
@@ -16,6 +19,8 @@ class SoerFrontpage(BrowserView):
             self.soer = context
 
     def _prepareText(self, brain):
+        """ Prepare text
+        """
         text = brain.Description
         if len(text) > LIMIT_CHARS:
             lastSpace = text.find(' ', LIMIT_CHARS-10)
@@ -23,8 +28,10 @@ class SoerFrontpage(BrowserView):
         for keyword in brain.Subject:
             text = text.replace(keyword, '<b>%s</b>' % keyword, 1)
         return text
-        
+
     def getMessages(self, topic = ''):
+        """ Get messages
+        """
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
         theme = ''
@@ -46,6 +53,8 @@ class SoerFrontpage(BrowserView):
         return ret
 
     def getKeyFacts(self, topic = ''):
+        """ Get keyfacts
+        """
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
         theme = ''
@@ -65,20 +74,23 @@ class SoerFrontpage(BrowserView):
                 'url': brain.getURL,
             })
         return ret
-    
+
     def getAllFactsAndMessages(self):
-        """Return all SOER key facts and messages in one list"""
+        """Return all SOER key facts and messages in one list
+        """
         topics = 'themes' in self.context.REQUEST['URL0']
         if topics:
-            ret1 = self.getMessages(topic = topics);
-            ret2 = self.getKeyFacts(topic = topics);
+            ret1 = self.getMessages(topic = topics)
+            ret2 = self.getKeyFacts(topic = topics)
         else:
-            ret1 = self.getMessages();
-            ret2 = self.getKeyFacts();
+            ret1 = self.getMessages()
+            ret2 = self.getKeyFacts()
         ret1.extend(ret2)
         return ret1
 
     def getSoerTopics(self):
+        """ SOER Topics
+        """
         return [
             {
                 'label': 'Climate Change',
@@ -127,6 +139,8 @@ class SoerFrontpage(BrowserView):
         ]
 
     def getSoerLocations(self):
+        """ SOER Locations
+        """
         return [
             {
                 'label': 'Country name',

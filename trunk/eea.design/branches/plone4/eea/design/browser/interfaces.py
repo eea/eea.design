@@ -1,3 +1,5 @@
+""" Browser interfaces
+"""
 from plone.app.portlets.interfaces import IColumn
 from plone.portlets.interfaces import IPortletManager
 from plone.theme.interfaces import IDefaultPloneLayer
@@ -31,39 +33,42 @@ class IFooterPortletManager(IPortletManager, IColumn):
 
 
 class ISoerTopicSearch(Interface):
+    """ Topic Search """
 
     def getTopicLabel():
-        pass
+        """ Label """
 
     def getSynthesisReport():
-        pass
+        """  Synthesis Report """
 
     def getThematicAssesments():
-        pass
+        """ Thematic Assesments """
 
     def getGlobalMegatrends():
-        pass
+        """ Global Megatrends """
 
     def getCountryEnvironment():
-        pass
+        """ Country Environment """
 
 
 class ISoerFrontpage(Interface):
+    """ Front page """
 
     def getKeyFacts():
-        pass
+        """ Key Facts """
 
     def getMessages():
-        pass
+        """ Messages """
 
     def getSoerTopics():
-        pass
+        """ Soer Topics """
 
     def getSoerLocations():
-        pass
+        """ Soer Locations """
 
 
 class IFrontPageHighlights(Interface):
+    """ Front Page Highlights """
 
     def getHigh():
         """ Return the published highlights with visibility `top` and that
@@ -76,7 +81,7 @@ class IFrontPageHighlights(Interface):
             `top` that are left over because of the configuration in
             portal_properties.frontpage_properties. """
 
-    def getPromotions(): #pyflakes, #pylint: disable-msg = E0211
+    def getPromotions():
         """ Return all published promotions and group them in categories.
             Categories are defined by the folders containing the promotions. """
 
@@ -115,18 +120,20 @@ class ISubFolderView(Interface):
 
 
 class ISmartView(Interface):
+    """ Smart view """
 
     def getTemplateName():
-        """  """
+        """ Template Name """
 
     def getTemplate():
-        """  """
+        """ Template """
 
     def getListingMacro():
-        """  """
+        """ Listing macro """
 
 
 class ILanguages(Interface):
+    """ Languages """
 
     def getTranslationLanguages():
         """ Return languages for translation. """
@@ -138,4 +145,3 @@ class ILanguages(Interface):
 class IBelowEditContentTitle(IViewletManager):
     """A viewlet manager that sits below the content title in edit templates
     """
-

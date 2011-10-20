@@ -1,3 +1,5 @@
+""" Page design
+"""
 from zope.app.annotation.interfaces import IAnnotations
 from Products.Five import BrowserView
 from persistent.dict import PersistentDict
@@ -5,7 +7,8 @@ from persistent.dict import PersistentDict
 KEY = 'eea.design'
 
 class AnnotationView(BrowserView):
-
+    """ Annotation View
+    """
     def __init__(self, context, request):
         self.context = context
         self.request = request
@@ -18,13 +21,19 @@ class AnnotationView(BrowserView):
         self.mapping = mapping
 
 class PageDesignView(AnnotationView):
-
+    """ Page Design View
+    """
     def getBackgroundURL(self):
+        """ Get background URL
+        """
         return self.mapping.get('page_background')
 
 class PageDesignEditView(AnnotationView):
-
+    """ Page Design Edit
+    """
     def setBackgroundURL(self, url):
+        """ Set background URL
+        """
         self.mapping['page_background'] = url
 
     def __call__(self):

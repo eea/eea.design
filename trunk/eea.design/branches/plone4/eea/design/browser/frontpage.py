@@ -1,16 +1,10 @@
-# -*- coding: utf-8 -*-
-#
-# File: frontpage.py
-#
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
+""" Controllers
+"""
 
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
-from Products.EEAContentTypes.cache import cacheKeyPromotions, \
-                                            cacheKeyHighlights
+from Products.EEAContentTypes.cache import cacheKeyHighlights
 from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from Products.Five import BrowserView
 from eea.cache import cache
@@ -21,9 +15,8 @@ from plone.app.blob.interfaces import IBlobWrapper
 from zope.component import queryMultiAdapter
 
 class Frontpage(BrowserView):
+    """ Front page
     """
-    """
-
     def __init__(self, context, request):
         BrowserView.__init__(self, context, request)
 
@@ -76,14 +69,14 @@ class Frontpage(BrowserView):
 
     def getAllProducts(self):
         """ retrieves all latest published products for frontpage """
-        portaltypes = ('Report','Article','Highlight','PressRelease',
+        portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
                                     'Assessment', 'Data', 'EEAFigure')
         result = []
         for mytype in portaltypes:
             res1 = _getItems(self, portaltypes = mytype,
                         noOfItems=self.noOfEachProduct)
             result.extend(res1)
-        multimedia = self.getMultimedia();
+        multimedia = self.getMultimedia()
         result.extend(multimedia[:self.noOfEachProduct])
         #TODO the list must be re-sorted on effective date.
         return result
@@ -138,6 +131,8 @@ class Frontpage(BrowserView):
         return spotlight
 
     def getPromotions(self):
+        """ Promotions
+        """
         result = _getPromotions(self, noOfItems = self.noOfPromotions)
         return result
 
@@ -152,9 +147,9 @@ class Frontpage(BrowserView):
 
     def getAnimations(self):
         """ retrieves multimedia swf animations filtered by date and topic """
-        result = _getItems(self,
-                    interfaces = 'Products.EEAContentTypes.content.interfaces.IFlashAnimation',
-                    noOfItems = self.noOfAnimations)
+        result = _getItems(self, interfaces = \
+                'Products.EEAContentTypes.content.interfaces.IFlashAnimation',
+                noOfItems = self.noOfAnimations)
         return result
 
     def _getTeaserMedia(self, high, scale):
@@ -216,6 +211,8 @@ class Frontpage(BrowserView):
     cache(cacheKeyHighlights, dependencies = ['frontpage-highlights'])
     def getLow(self, portaltypes = ('Highlight', 'PressRelease'),
                                                         scale='dummy'):
+        """ Low
+        """
         visibilityLevel = [ 'top', 'middle', 'bottom' ]
         otherIds = [ h['id'] for h in self.getMedium(portaltypes) ]
         otherIds.extend( [ high['id'] for high in self.getHigh(portaltypes) ] )
@@ -224,7 +221,7 @@ class Frontpage(BrowserView):
         highlights = []
 
         for high in result:
-            # remove highlights that are display as top or middle 
+            # remove highlights that are display as top or middle
             if high['id'] not in otherIds:
                 obj = high.getObject()
                 adapter = queryMultiAdapter((obj, self.request),
@@ -248,6 +245,8 @@ class Frontpage(BrowserView):
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getMedium(self, portaltypes = ('Highlight', 'PressRelease'),
                                                     scale = 'thumb'):
+        """ Medium
+        """
         visibilityLevel = [ 'top', 'middle' ]
         result =  _getItemsWithVisibility(self, visibilityLevel, portaltypes) \
                                             [:self.noOfMedium + self.noOfHigh]
@@ -255,7 +254,7 @@ class Frontpage(BrowserView):
         highlights = []
         #topRemoved = 0
         for high in result:
-            # remove the self.noOfHigh top highlights from the result, 
+            # remove the self.noOfHigh top highlights from the result,
             # they are displayd on top
             if high['id'] not in topIds:
                 highlights.append ( self._getTeaserMedia(high, scale) )
@@ -273,7 +272,7 @@ class Frontpage(BrowserView):
         return results
 ## end deprecated visibility methods
 
-## Utility functions 
+## Utility functions
 
 def _getPromotions(self, noOfItems = 6):
     """ utility function to retrieve external and internal promotions """
@@ -380,29 +379,28 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
         topic = topic if topic else topic_request
 
     if portaltypes:
-       #if there is a topic/theme tag then get items filtered 
-       if topic:
+        #if there is a topic/theme tag then get items filtered
+        if topic:
             result = _getTopics(self, portaltypes = portaltypes,
                     topic = topic, noOfItems=noOfItems)
-       elif tags:
+        elif tags:
             result = _getTopics(self, portaltypes = portaltypes,
-                    tags = tags, noOfItems=noOfItems)
-       else:
-           result =  _getItemsWithVisibility(self,
-                   visibilityLevel = visibilityLevel,
-                   portaltypes  = portaltypes)[:noOfItems]
+                                tags = tags, noOfItems=noOfItems)
+        else:
+            result =  _getItemsWithVisibility(self,
+                                        visibilityLevel = visibilityLevel,
+                                        portaltypes  = portaltypes)[:noOfItems]
     elif interfaces:
-       #if there is a topic/theme tag then get items filtered 
-       if topic:
+        #if there is a topic/theme tag then get items filtered
+        if topic:
             result = _getTopics(self, object_provides = interfaces,
-                             topic = topic, noOfItems=noOfItems)
-       elif tags:
+                                            topic = topic, noOfItems=noOfItems)
+        elif tags:
             result = _getTopics(self, object_provides = interfaces,
-                    tags = tags, noOfItems=noOfItems)
-       else:
-           result =  _getItemsWithVisibility(self,
-                   visibilityLevel = visibilityLevel,
-                   interfaces  = interfaces)[:noOfItems]
+                                tags = tags, noOfItems=noOfItems)
+        else:
+            result =  _getItemsWithVisibility(self,
+                                            visibilityLevel = visibilityLevel,
+                                        interfaces  = interfaces)[:noOfItems]
 
     return result
-
