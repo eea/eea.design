@@ -153,10 +153,8 @@ class Frontpage(BrowserView):
     def getAnimations(self):
         """ retrieves multimedia swf animations filtered by date and topic """
         result = _getItems(self,
-                    interfaces = 'p4a.video.interfaces.IVideoEnhanced',
-                    noOfItems=self.noOfAnimations)
-        result = [i for i in result if IFlashAnimation.providedBy(
-                                          i.getObject())][:self.noOfAnimations]
+                    interfaces = 'Products.EEAContentTypes.content.interfaces.IFlashAnimation',
+                    noOfItems = self.noOfAnimations)
         return result
 
     def _getTeaserMedia(self, high, scale):
