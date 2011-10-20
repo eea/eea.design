@@ -37,7 +37,7 @@ jQuery(window).resize(function() {
     var top_news = jQuery('#top-news-area'),
         top_news_width = top_news.width();
     var margin = top_news_width * 0.012;
-    var w = Math.floor((top_news_width - 5 * margin) / 5);
+    w = Math.floor((top_news_width - 5 * margin) / 5);
     var promotions = top_news.find('.portlet-promotions');
     promotions.width(w);
     var last = promotions.last();

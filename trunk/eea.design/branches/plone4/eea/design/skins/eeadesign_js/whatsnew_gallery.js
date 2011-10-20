@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
     eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index, tag_title) {
             var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
             var gal = eea_gal.gallery.find(".highlights");
-            var news = index ? gal[index] : gal.filter(function() {return this.style.display !== 'none';}); 
+            var news = index ? gal[index] : gal.filter(function() {return this.style.display !== 'none';});
             // workaround: we need the first highlights because when we click on the
             // first tab gal[0] returns the second highlights instead of
             // the first so we redefine news to the first found match if
@@ -29,15 +29,15 @@ jQuery(document).ready(function($) {
 
             var gallery_ajax = $(".gallery-ajax", news);
             var layout_selection = $('.gallery-layout-selection li a', news)[0];
-            var params = sel_value ? 'topic' + '=' + sel_value : undefined,
-                params = tag_title ? 'tags' + '=' + sel_value : params;
+            var params = sel_value ? 'topic' + '=' + sel_value : undefined;
+            params = tag_title ? 'tags' + '=' + sel_value : params;
             gallery_ajax.load( address, params, function(html) {
                 var album = gallery_ajax.find('.gallery-album');
                 var listing = gallery_ajax.find('.gallery-listing');
                 if (html.length > 1) {
                     if (layout_selection.className === "list-layout active-list"){
                         gallery_ajax.find('.gallery-album').addClass('hiddenStructure');
-                        listing.hide().fadeIn('slow');    
+                        listing.hide().fadeIn('slow');
                     }
                     else {
                         gallery_ajax.find('.gallery-listing').addClass('hiddenStructure');
@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
             notopics_length = notopics.length !== 0 ? 1 : 0;
         if (cur_tab.theme === sel_value && notopics_length !== 0) {
             return;
-        } 
+        }
         if (sel_text === "All topics" || listing_length === 0) {
             listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
             eea_gal.whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
             var topic_value = y[x].value,
                 topic_text = y[x].innerHTML;
             var tab_val = $("#tabs a.current")[0].id.substr(4);
-           
+
             eea_gal.whatsnew_func(cur_tab_val = tab_val, sel_text = topic_text, sel_value = topic_value);
         });
 
@@ -109,12 +109,12 @@ jQuery(document).ready(function($) {
          if ( link_class === "list-layout active-list" || link_class === "album-layout active-album") {
              return false;
          }
-         var cookie_expires = new Date(); 
+         var cookie_expires = new Date();
             cookie_expires.setMonth(cookie_expires.getMonth() + 1); // one month
 
         if (link_class == "list-layout") {
             album.slideUp('slow');
-            listing.slideDown('slow');          
+            listing.slideDown('slow');
             $hidden_gallery.removeClass("hiddenStructure");
             $this.toggleClass("active-list");
             next.toggleClass("active-album");
@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
         }
 
     });
-    
+
     // set layout depending on cookies
     if (eea_gal.gallery.length > 0) {
         var gallery_cookies = SubCookieUtil.getAll(eea_gal.gallery_page);
@@ -144,7 +144,7 @@ jQuery(document).ready(function($) {
                 var link_listing = layouts.first();
                 var link_album = layouts.last();
                 var listing = $this.find('.gallery-listing');
-                var album = $this.find('.gallery-album');             
+                var album = $this.find('.gallery-album');
                 var gallery_cookie = gallery_cookies[this.id];
                 if (gallery_cookie !== null) {
                     if (gallery_cookie === "active-album") {
