@@ -49,9 +49,7 @@
             <metal:javascriptslot fill-slot="javascript_head_slot">
                 <!-- A slot where you can insert javascript in the header from a template -->
                 <metal:javascriptslot define-slot="javascript_head_slot" />
-                <script type="text/javscript" tal:content="string:
-                  var context_url = '${context/absolute_url}';
-                  " />
+                <script type="text/javascript" tal:content="string:var context_url = '${context/absolute_url}';" />
 
             </metal:javascriptslot>
 
