@@ -3,6 +3,7 @@ Changelog
 
 2.27-dev - (unreleased)
 -----------------------
+ * Change: Added a window.context_url JS variable in main_template [tiberich #4471]
 
 2.26 - (2011-09-02)
 -------------------
