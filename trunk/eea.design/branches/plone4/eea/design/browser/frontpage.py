@@ -31,8 +31,8 @@ class Frontpage(BrowserView):
         self.noOfHigh = frontpage_properties.getProperty('noOfHigh', 3)
         self.noOfMedium = frontpage_properties.getProperty('noOfMedium', 4)
         self.noOfLow = frontpage_properties.getProperty('noOfLow', 10)
-        self.noOfArticles = frontpage_properties.getProperty('noOfArticles', 4)
-        self.noOfNews = frontpage_properties.getProperty('noOfNews', 4)
+        self.noOfArticles = frontpage_properties.getProperty('noOfArticles', 6)
+        self.noOfNews = frontpage_properties.getProperty('noOfNews', 6)
         self.noOfMultimedia = frontpage_properties.getProperty(
                                                            'noOfMultimedia', 6)
         self.noOfAnimations = frontpage_properties.getProperty(
@@ -43,7 +43,7 @@ class Frontpage(BrowserView):
                                                            'noOfPromotions', 7)
         self.noOfEachProduct = frontpage_properties.getProperty(
                                                           'noOfEachProduct', 3)
-        self.noOfDatasets = frontpage_properties.getProperty('noOfDatasets', 4)
+        self.noOfDatasets = frontpage_properties.getProperty('noOfDatasets', 6)
         self.noOfLatestDefault = frontpage_properties.getProperty(
                                                         'noOfLatestDefault', 6)
         self.now = DateTime()
