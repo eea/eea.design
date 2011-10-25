@@ -401,40 +401,20 @@ dl.portletNavigationTree dd.portletItem {
    padding-left: 10px !important;
 }
 
-dl.portletNavigationTree ul.navTreeLevel0 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -35px !important;
-}
-
 .navTreeItemInPath > ul.navTreeLevel1 li > a {
    padding-left: 25px !important;
-}
-
-dl.portletNavigationTree ul.navTreeLevel1 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -40px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel2 li > a {
    padding-left: 35px !important;
 }
 
-dl.portletNavigationTree ul.navTreeLevel2 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -50px !important;
-}
-
 .navTreeItemInPath > ul.navTreeLevel3 li > a {
    padding-left: 45px !important;
 }
 
-dl.portletNavigationTree ul.navTreeLevel3 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -60px !important;
-}
-
 .navTreeItemInPath > ul.navTreeLevel4 li > a {
    padding-left: 55px !important;
-}
-
-dl.portletNavigationTree ul.navTreeLevel4 li.navTreeItem .navTreeCurrentItem:before {
-   margin-left: -70px !important;
 }
 
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
@@ -1000,7 +980,6 @@ dl.error dd {
     background-color: &dtml-corporateGreen;;
     color: White;
     z-index: 5;
-    padding: 0 !important;
 }
 #contentActionMenus dl.actionMenu.activated dd {
     border-bottom: 0.5em solid &dtml-corporateGreen;;
@@ -1013,6 +992,10 @@ dl.error dd {
 }
 #contentActionMenus dl.actionMenu {
     line-height: 2em;
+}
+
+#contentActionMenus .contenttype-folder {
+   padding: 0 !important.;
 }
 
 #folderHeader, #contextHeader {
