@@ -20,6 +20,14 @@
     min-height: 90px;
 }
 
+/* Remove bcpil.gif background image of hiperlinks from spcific headings */
+#portal-header h2 a,
+.shortcut-default h3 a,
+.portletWrapper .highlight a
+{
+    background: transparent !important;
+}
+
 * html*#portal-columns {
     width: auto;
 }
@@ -152,6 +160,15 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 * html #error-handling,
 * html .documentContent {
     height: 0.1%;
+}
+
+/* link background position fix */
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a {
+     background: url(&dtml-portal_url;/bcpil.gif) no-repeat 0.5em right;
 }
 
 /* Fix for IE float bug - have to use the Limi Hack here, since the paragraph
@@ -390,6 +407,7 @@ dd.portletFooter {
 #portal-searchbox input[type=text] {
     padding-top: 8px;
     height: 25px !important;
+    color: #FFFFFF;
 }
 
 #languageCodes li, #languageCodes li.selected { 
@@ -465,20 +483,6 @@ a.list-layout.active-list, a.list-layout {
     margin-left: 10px;
 }
 
-.faceted-textwidget-place-all,
-.faceted-textwidget-place-current {
-    float: left;
-    clear: left !important;
-    margin-left: 0px;
-    margin-right: auto !important;
-    margin-top: 25px;
-    display: inline !important;
-    min-height: 1px;
-    min-width: 1px;
-    height: auto !important;
-    width: auto !important;
-}
-
 .navTreeItem {
     list-style: none;
     list-style-type: none;
@@ -491,8 +495,9 @@ dd.portletItem {
     margin-left: 0 !important;
 }
 
-form#searchbox_terminology {
-    color: #FFFFFF !important;
+form#searchbox_terminology input[type="text"] {
+    color: #FFFFFF;
 }
+
 
 /* </dtml-with> */
