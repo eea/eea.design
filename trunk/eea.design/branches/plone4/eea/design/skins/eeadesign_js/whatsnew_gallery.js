@@ -52,9 +52,21 @@ jQuery(document).ready(function($) {
         var cur_tab = this.getTabs()[index],
             cur_tab_val = cur_tab.id.substr(4);
             cur_tab.theme = cur_tab.theme || "none";
-        var opt_item = $("#topic-selector").find(":selected"),
-            sel_value = opt_item.val(),
+        var opt_item,
+            sel_value,
+            sel_text;
+        opt_item = $("#topic-selector").find(":selected");
+        if ( opt_item.length !== 0 ) {
+            sel_value = opt_item.val();
             sel_text = opt_item.text();
+        }
+        else {
+            opt_item = $("#topright-widgets").find('.selected').filter(':visible');
+            sel_value = opt_item.length !== 0 ? opt_item[0].id.substr(3) : undefined;
+            sel_text = opt_item.text();
+            sel_value = sel_value !== 'all' ?  sel_value : '';
+        }
+
         var highlight = $("#" + cur_tab_val + "-highlights");
         var listing = highlight.find('.gallery-listing');
         var listing_length =  listing.length !== 0 ? listing.children().length : 0;
