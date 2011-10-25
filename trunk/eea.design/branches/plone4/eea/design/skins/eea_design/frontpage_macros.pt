@@ -179,6 +179,7 @@
 <metal:condition metal:define-macro="gallery-condition">
     <tal:cond tal:condition="folderContents"
         tal:define="ajax ajax|nothing;
+        limit_display limit_display|nothing;
         foldermacro python:context.frontpage_macros.macros['ajax-items'] if ajax else context.frontpage_macros.macros['gallery-layout-selection'];">
         <div metal:use-macro="foldermacro" />
     </tal:cond>

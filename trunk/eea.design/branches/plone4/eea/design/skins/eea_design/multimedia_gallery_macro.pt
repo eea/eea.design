@@ -1,6 +1,9 @@
 <tal:multimedia metal:define-macro="multimedia" 
         tal:define="frontpage_view context/@@frontpage_highlights;
                     folderContents frontpage_view/getMultimedia;
-                    ajax python:True">
+                    ajax python:True;
+                    frontpage_properties context/portal_properties/frontpage_properties;
+                    limit_display frontpage_properties/noOfMultimedia|python:6;
+                    ">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </tal:multimedia>
