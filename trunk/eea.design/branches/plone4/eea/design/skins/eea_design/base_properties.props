@@ -11,7 +11,7 @@ fontSmallSize:string=85%
 
 #corporate main colors
 corporateGreen:string=#b1c748
-corpotateGreenTwo:string=#777c1f
+corporateGreenTwo:string=#777c1f
 corporateBlueOne:string=#2c8da2
 corporateBlueTwo:string=#005e7d
 

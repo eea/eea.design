@@ -91,8 +91,8 @@ iframe { border-width: 0; border-style:none; }
 }
 
 #portal-personaltools {
-background-color: #D14836;
-background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+background-color: &dtml-corporateGreenTwo;;
+background-image: -moz-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
 border:none;
 border-radius: 5px;
 -webkit-border-radius: 5px;
