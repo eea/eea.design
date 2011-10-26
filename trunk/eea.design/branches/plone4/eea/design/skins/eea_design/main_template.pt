@@ -230,6 +230,11 @@
     <metal:block i18n:domain="eea" tal:condition="not:ajax_load">
         <div tal:replace="structure provider:plone.portalfooter" />
     </metal:block>
+    <metal:short_footer define-macro="short_colophon" tal:define="url_list python:context.REQUEST['URL0']; short_colophon python:'videopage' in url_list">
+        <tal:footer_slot metal:define-slot="colophon_slot">
+        
+        </tal:footer_slot>
+    </metal:short_footer>
 </body>
 </html>
 

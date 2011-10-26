@@ -4,6 +4,15 @@
         <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
         <ul id="portal-globalnav" 
             tal:define="selected_tab python:view.selected_portal_tab">
+        <metal metal:use-macro="here/main_template/macros/short_colophon">
+        <tal:cond condition="short_colophon" metal:fill-slot="colophon_slot">
+            <a href="/" accesskey="2">
+                 <img src="" alt="EEA"
+                      tal:attributes="src string:logo.gif"  class="visualFloatLeft" id="multimedia-logo" />
+            </a>
+        </tal:cond>
+        </metal>
+
             <tal:tabs tal:repeat="tab portal_tabs">
                 <li tal:define="tid tab/id"
                  tal:attributes="id string:portaltab-${tid};

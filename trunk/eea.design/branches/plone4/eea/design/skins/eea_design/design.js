@@ -2,10 +2,12 @@ var DESIGN_MIN_WIDTH = 972;
 var DESIGN_MAX_WIDTH = 1280;
 
 jQuery(document).ready(function($) {
-        var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
-            global_nav = $('#portal-globalnav');
-        $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
-        secundary_portaltabs.appendTo(global_nav);
+        if ($("#multimedia-widgets").length === 0) {  
+            var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
+                global_nav = $('#portal-globalnav');
+            $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
+            secundary_portaltabs.appendTo(global_nav);
+        }
 
 
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
