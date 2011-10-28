@@ -84,6 +84,10 @@
 
         <meta name="generator" content="Plone - http://plone.org" />
     </tal:notajax>
+    
+    <script type="text/javascript" tal:content="string: context_url='${context/absolute_url}';parent_url='${context/aq_parent/absolute_url}'">
+    </script>
+
 </head>
 
 <body tal:define="isRTL portal_state/is_rtl;
