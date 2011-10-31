@@ -52,9 +52,10 @@ class Frontpage(BrowserView):
     def getNews(self):
         """ retrieves latest news by date and by topic """
         visibilityLevel = [ 'top', 'middle', 'low' ]
-        return _getItems(self, visibilityLevel = visibilityLevel,
+        items = _getItems(self, visibilityLevel = visibilityLevel,
                 portaltypes = ('Highlight', 'PressRelease'),
-                                        noOfItems=self.noOfNews)
+                noOfItems = self.noOfNews)
+        return items
 
     def getArticles(self, portaltypes = "Article"):
         """ retrieves latest articles by date and by topic """
@@ -325,8 +326,8 @@ def _getHighArticles(self, noOfItems = 1):
     return _getItems(self, visibilityLevel = visibilityLevel,
                         portaltypes = 'Article', noOfItems=noOfItems)
 
-def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '',
-                                            interfaces = '', topic = ''):
+def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
+                            interfaces = None, topic = None, noOfItems = None):
     """ retrieves items of certain content types and/or interface
     and certain visibility level.
     """
@@ -343,10 +344,11 @@ def _getItemsWithVisibility(self, visibilityLevel = '', portaltypes = '',
         query['object_provides'] = interfaces
     if topic:
         query['getThemes'] = topic
-    return self.catalog.searchResults(query)
+    res = self.catalog.searchResults(query)[:noOfItems]
+    return res
 
-def _getTopics(self, topic = '', portaltypes = '', object_provides = '',
-                                            tags = '', noOfItems = ''):
+def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
+                                            tags = None, noOfItems = None):
     """ retrieves items of certain content types and/or interface and
     certain visibility level, with the addition of topic filtering """
     query = {
@@ -385,25 +387,27 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
         #if there is a topic/theme tag then get items filtered
         if topic:
             result = _getTopics(self, portaltypes = portaltypes,
-                    topic = topic, noOfItems=noOfItems)
+                                          topic = topic, noOfItems = noOfItems)
         elif tags:
             result = _getTopics(self, portaltypes = portaltypes,
-                                tags = tags, noOfItems=noOfItems)
+                                            tags = tags, noOfItems = noOfItems)
         else:
             result =  _getItemsWithVisibility(self,
-                                        visibilityLevel = visibilityLevel,
-                                        portaltypes  = portaltypes)[:noOfItems]
+                                            visibilityLevel = visibilityLevel,
+                                            portaltypes = portaltypes,
+                                            noOfItems = noOfItems)
     elif interfaces:
         #if there is a topic/theme tag then get items filtered
         if topic:
             result = _getTopics(self, object_provides = interfaces,
-                                            topic = topic, noOfItems=noOfItems)
+                                          topic = topic, noOfItems = noOfItems)
         elif tags:
             result = _getTopics(self, object_provides = interfaces,
                                 tags = tags, noOfItems=noOfItems)
         else:
             result =  _getItemsWithVisibility(self,
                                             visibilityLevel = visibilityLevel,
-                                        interfaces  = interfaces)[:noOfItems]
+                                            interfaces  = interfaces,
+                                            noOfItems = noOfItems)
 
     return result
