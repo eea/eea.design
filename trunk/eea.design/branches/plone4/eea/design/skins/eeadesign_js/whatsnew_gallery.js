@@ -54,7 +54,8 @@ jQuery(document).ready(function($) {
             cur_tab.theme = cur_tab.theme || "none";
         var opt_item,
             sel_value,
-            sel_text;
+            sel_text,
+            tag_title; 
         opt_item = $("#topic-selector").find(":selected");
         if ( opt_item.length !== 0 ) {
             sel_value = opt_item.val();
@@ -62,7 +63,11 @@ jQuery(document).ready(function($) {
         }
         else {
             opt_item = $("#topright-widgets").find('.selected').filter(':visible');
-            sel_value = opt_item.length !== 0 ? opt_item[0].id.substr(3) : undefined;
+            if( opt_item.length !== 0 ) {
+                var tags = opt_item.parent().prev().text().indexOf('tags');
+                sel_value = tags !== -1 ? opt_item[0].title : opt_item[0].id.substr(3);
+                tag_title = tags !== -1 ? opt_item[0].title : undefined;
+            }
             sel_text = opt_item.text();
             sel_value = sel_value !== 'all' ?  sel_value : '';
         }
@@ -75,15 +80,20 @@ jQuery(document).ready(function($) {
         if (cur_tab.theme === sel_value && notopics_length !== 0) {
             return;
         }
-        if (sel_text === "All topics" || listing_length === 0) {
+        // console.log('sel_text', sel_text);
+        // console.log('sel_value', sel_value);
+        // console.log('listing_length', listing_length);
+        if (sel_text.indexOf("All") !== -1 || listing_length === 0) {
             listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
-            eea_gal.whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
+           // console.log('in first check for 0 items');
+            eea_gal.whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index, tag_title = tag_title);
         }
         if (sel_value) {
+            // console.log('cur theme',cur_tab.theme);
             if (cur_tab.theme !== sel_value) {
                 listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
                 cur_tab.theme = sel_value;
-                eea_gal.whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index);
+                eea_gal.whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index, tag_title = tag_title);
             }
         }
     });
