@@ -30,3 +30,30 @@ class TagCloud(BrowserView):
         widget = criteria.widget(cid=cid)
         widget = widget(ancestor, self.request, criterion)
         return widget()
+
+    def tagclouds(self, ancestor, **kwargs):
+        criteria = queryAdapter(ancestor, ICriteria)
+        if not criteria:
+            logger.exception('Invalid ancestor %r', ancestor)
+            return ''
+
+        criterions = []
+        cid = []
+        res = []
+        for key, criterion in criteria.items():
+            if criterion.get('widget', '') == 'tagscloud':
+                cid.append(key)
+                criterions.append(criterion)
+
+        if not cid:
+            logger.exception('Provided ancestor %r has no tagscloud facet',
+                             ancestor)
+            return ''
+
+        i = 0
+        for item in cid:
+            widget = criteria.widget(cid=item)
+            widget = widget(ancestor, self.request, criterions[i])
+            res.append(widget())
+            i += 1
+        return res

@@ -287,6 +287,14 @@
         permission="zope.Public"
         />
 
+    <browser:page
+        for="zope.interface.Interface"
+        name="faceted_tagclouds"
+        class=".tagcloud.TagCloud"
+        layer=".interfaces.IEEACommonLayer"
+        allowed_attributes="tagclouds"
+        permission="zope.Public"
+        />
 
     <browser:page
         for="*"
