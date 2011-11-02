@@ -32,6 +32,8 @@ class TagCloud(BrowserView):
         return widget()
 
     def tagclouds(self, ancestor, **kwargs):
+        """ Returns all found tagclouds based on eea.facetednavigation
+        """
         criteria = queryAdapter(ancestor, ICriteria)
         if not criteria:
             logger.exception('Invalid ancestor %r', ancestor)
