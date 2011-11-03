@@ -262,6 +262,36 @@ table.datatable {
 
 /* Styles which can be used on any area */
 
+.boxShadowed, #edit-bar, #contentActionMenus, #portal-personaltools, #portal-personaltools {
+   -moz-box-shadow: 0px 2px 1px #888;
+   -webkit-box-shadow: 0px 2px 1px #888;
+   box-shadow: 0px 2px 1px #888;
+}
+
+.actionMenuContent {
+   -moz-box-shadow: 2px 2px 1px #888;
+   -webkit-box-shadow: 2px 2px 1px #888;
+   box-shadow: 2px 2px 1px #888;
+}
+
+.greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools {
+    background-color: &dtml-corporateGreenTwo;;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(&dtml-corporateGreen;), to(&dtml-corporateGreenTwo;));
+    background-image: -webkit-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+    background-image:    -moz-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+    background-image:     -ms-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+    background-image:      -o-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+}
+
+.greenGradientBackgroundDown, #contentActionMenus {
+    background-color: &dtml-corporateGreenTwo;;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(&dtml-corporateGreenTwo;), to(&dtml-corporateGreen;));
+    background-image: -webkit-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
+    background-image:    -moz-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
+    background-image:     -ms-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
+    background-image:      -o-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
+}
+
 /* standard figure, used for articles and pages.
 can be floated left or right with additional
 class figure-right or figure-left */
@@ -412,6 +442,9 @@ width:16px;
     width: 633px !important;
     left: 0 !important;
     top: -140px !important;
+    box-shadow: 0 2px 2px #333;
+    -webkit-box-shadow: 0 2px 2px #333;
+    -moz-box-shadow: 0 2px 2px #333;
 }
 
 #keyfacts-slider .slidePortlet .portletItem {
