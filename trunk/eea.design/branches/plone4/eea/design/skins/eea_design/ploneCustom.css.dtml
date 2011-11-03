@@ -51,18 +51,12 @@
 
 
 #faceted-form .widget-fieldset legend {
-  background-color: &dtml-corporateGreen;;
   color: #ffffff;
   padding: 5px 10px;
   font-size: 14px;
   line-height: 1.6;
   font-weight: normal;
   text-shadow: 1px 1px 1px #555555;
-  -webkit-box-shadow: 1px 1px 1px #555555;
-     -moz-box-shadow: 1px 1px 1px #555555;
-      -ms-box-shadow: 1px 1px 2px #BFBFBF;
-       -o-box-shadow: 1px 1px 2px #BFBFBF;
-          box-shadow: 1px 1px 1px #555555;
 }
 
 .widget-fieldset {
