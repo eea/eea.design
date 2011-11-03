@@ -91,7 +91,6 @@
 </head>
 
 <body tal:define="isRTL portal_state/is_rtl;
-                  sl python:plone_view.have_portlets('plone.leftcolumn', view) and not request.get('disable_plone.leftcolumn');
                   sr python:plone_view.have_portlets('plone.rightcolumn', view) and not request.get('disable_plone.rightcolumn');
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
     tal:attributes="class python:here.getSectionFromURL(plone_view);
@@ -194,21 +193,10 @@
         </div>
 
         <tal:notajax tal:condition="not:ajax_load">
-            <div id="portal-column-one"
-                 class="cell width-1:4 position-0"
-                 metal:define-slot="column_one_slot"
-                 tal:condition="sl"
-                 tal:attributes="class python:isRTL and 'cell width-1:4 position-3:4' or 'cell width-1:4 position-0'">
-                <div class="visualPadding">
-                    <div id="slide-menu">
-                        <metal:portlets define-slot="portlets_one_slot">
-                            <tal:block
-                                    replace="structure provider:plone.leftcolumn"/>
-                        </metal:portlets>
-                    </div>
-                    <div class="visualClear"></div>
-                </div>
-            </div>
+
+        <div id="portal-column-one"
+            metal:define-slot="column_one_slot">
+        </div>
 
         <div id="portal-column-two"
             class="cell width-1:4 position-3:4"

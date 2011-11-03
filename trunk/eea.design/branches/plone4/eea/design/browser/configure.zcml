@@ -30,6 +30,7 @@
         permission="zope.Public"
         />
 
+
     <interface
         interface=".interfaces.IEEADesignCMS"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"

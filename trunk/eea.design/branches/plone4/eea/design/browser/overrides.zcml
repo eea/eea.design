@@ -13,4 +13,13 @@
      layer="eea.design.browser.interfaces.IEEACommonLayer"
      />
 
+    <!-- EEA Sunburst special view -->
+    <browser:page
+        for="*"
+        name="sunburstview"
+        class=".eea_sunburst_view.EEASunburstView"
+        permission="zope.Public"
+        layer="eea.design.browser.interfaces.IEEACommonLayer"
+        allowed_interface="plonetheme.sunburst.browser.interfaces.ISunburstView"
+        />                
 </configure>
