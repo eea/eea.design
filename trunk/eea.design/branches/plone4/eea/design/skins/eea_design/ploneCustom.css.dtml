@@ -99,6 +99,10 @@
   margin: 0 1em 1em 0;
 }
 
+.tags-cloud {
+  padding: 0.5em 1em !important;
+}
+
 /* Style for faceted used in section-publications */
 
 .section-publications #c0_widget {
