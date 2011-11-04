@@ -43,8 +43,8 @@ jQuery(window).resize(function() {
     var promotions = top_news.find('.portlet-promotions');
     promotions.width(w);
     var last = promotions.last();
-    promotions.not(last).css('marginRight', (Math.floor(margin) + 2) + 'px');
-    last.css({'marginRight': '0px', 'float': 'right'});
+    promotions.not(last).css('marginRight', (Math.floor(margin) + 7) + 'px');
+    last.css({'marginRight': '0px'});
 
     // Add margins so that the #multimedia-highlights ul fill up the same height as the #big_vid.
     // TODO: why does the ul look a little bit too big in IE6 and 7?
