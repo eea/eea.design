@@ -43,7 +43,7 @@ jQuery(window).resize(function() {
     var promotions = top_news.find('.portlet-promotions');
     promotions.width(w);
     var last = promotions.last();
-    promotions.not(last).css('marginRight', (Math.floor(margin) + 7) + 'px');
+    promotions.not(last).css('marginRight', (Math.floor(margin) + 3) + 'px');
     last.css({'marginRight': '0px'});
 
     // Add margins so that the #multimedia-highlights ul fill up the same height as the #big_vid.
