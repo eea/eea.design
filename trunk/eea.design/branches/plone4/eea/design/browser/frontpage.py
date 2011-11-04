@@ -138,23 +138,15 @@ class Frontpage(BrowserView):
         return result
 
     def getMultimedia(self):
-        """ retrieves multimedia videos filtered by date and by topic """
+        """ retrieves multimedia objects (videos/animations etc..) 
+        filtered by date and by topic """
         interface = 'p4a.video.interfaces.IVideoEnhanced'
-        # querying for extra objects because Animations also implement 
-        # IVideoEnhanced
         result = _getItems(self,
                     interfaces = interface,
-                    noOfItems=self.noOfMultimedia + 20)
-        result = [i for i in result if not IFlashAnimation.providedBy(
-                                          i.getObject())][:self.noOfMultimedia]
+                    noOfItems=self.noOfMultimedia)
+        
         return result
-
-    def getAnimations(self):
-        """ retrieves multimedia swf animations filtered by date and topic """
-        result = _getItems(self, interfaces = \
-                'Products.EEAContentTypes.content.interfaces.IFlashAnimation',
-                noOfItems = self.noOfAnimations)
-        return result
+    
 
     def _getTeaserMedia(self, high, scale):
         """ teaser media utility method """
