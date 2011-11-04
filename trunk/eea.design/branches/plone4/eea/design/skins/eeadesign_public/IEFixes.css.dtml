@@ -499,5 +499,27 @@ form#searchbox_terminology input[type="text"] {
     color: #FFFFFF;
 }
 
+#top-news-area div.portletHeader {
+    opacity: 1 !important;
+    background: #FFFFFF !important;
+    background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#FFFFFF);
+    zoom: 1;
+}
 
+#top-news-area .portlet-promotions img {
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#top-news-area .portlet-promotions .portletHeader a {
+    display: block !important;
+}
+
+
+#top-news-area .portletItem {
+    border: 1px solid #DFDFDF;
+    zoom: 1;
+}
 /* </dtml-with> */
