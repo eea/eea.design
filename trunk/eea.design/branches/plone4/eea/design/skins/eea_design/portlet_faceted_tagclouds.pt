@@ -24,10 +24,10 @@
             w.count();
           }
         });
-        jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
-          url = url + '#' + jQuery.param(Faceted.Query);
-          window.location = url;
-        });
+        //jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
+          // url = url + '#' + jQuery.param(Faceted.Query);
+          // window.location = url;
+        //});
       });"></script>
       </tal:tagcloud>
       <tal:tagcloud condition="not:content">

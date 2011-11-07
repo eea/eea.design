@@ -56,8 +56,77 @@ jQuery(document).ready(function($) {
             sel_value,
             sel_text,
             tag_title; 
+
+    // change tags and topics for multimedia when clicking tabs
+        var tag_cloud = $("#bottomright-widgets").find('#tag-cloud-content');
+        if ( tag_cloud.length ) {
+            var first_tag = tag_cloud.clone().detach();
+            var address, topic_params, tags_params;
+            if (cur_tab_val === "greentips") {
+                address = eea_gal.site_address + '/SITE/multimedia/all-videos/@@tagscloud_counter';
+                topic_params = "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
+                tags_params = "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
+                tag_cloud.load(address, topic_params, function(html) {
+                    tag_cloud.find("#c1_widget").fadeIn();
+                    var themes = $("#c1");
+                    themes.tagcloud({type: 'list', height: 280, sizemin:12});
+                    var themes_li = themes.find('li');
+                    var theme_vals = themes_li.filter( function(){
+                        return this.value === 1;
+                    }).remove();
+
+                    $.get(address, tags_params, function(data){
+                        tag_cloud.append(data);
+                        $("#c3_widget").fadeIn();
+                        var tags = $("#c3");
+                        var vals = tags.find('li').filter( function(){
+                            return this.value === 1;
+                        });
+                        vals.remove();
+                        tags.tagcloud({type: 'list', height: 280, sizemin: 12});
+                        $("#faceted-tabs").tabs("#tag-cloud-content > div.faceted-widget");
+                        // repeat
+                        $('#c1all').addClass('selected');
+                        $('#c3all').addClass('selected');
+                    });
+
+                });
+            }
+           if ( cur_tab_val === "videoclips" ){
+                if ($("#c1all").attr('value') === 28) {
+                    address = eea_gal.site_address + '/SITE/multimedia/all-videos/@@tagscloud_counter';
+                    topic_params = "cid=c1&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
+                    tags_params = "cid=c3&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
+                    tag_cloud.load(address, topic_params, function(html) {
+                        tag_cloud.find("#c1_widget").fadeIn();
+                        var themes = $("#c1");
+                        themes.tagcloud({type: 'list', height: 280, sizemin:10});
+                        var themes_li = themes.find('li');
+                        var theme_vals = themes_li.filter( function(){
+                            return this.value === 1;
+                        });
+
+                        $.get(address, tags_params, function(data){
+                            tag_cloud.append(data);
+                            $("#c3_widget").fadeIn();
+                            var tags = $("#c3");
+                            var vals = tags.find('li').filter( function(){
+                                return this.value === 1;
+                            });
+                            vals.remove();
+                            tags.tagcloud({type: 'list', height: 280, sizemin: 10});
+                            $("#faceted-tabs").tabs("#tag-cloud-content > div.faceted-widget");
+                            // repeat
+                            $('#c1all').addClass('selected');
+                            $('#c3all').addClass('selected');
+                        });
+                    });
+                }
+            }
+        }
+        
         opt_item = $("#topic-selector").find(":selected");
-        if ( opt_item.length !== 0 ) {
+        if ( opt_item.length ) {
             sel_value = opt_item.val();
             sel_text = opt_item.text();
         }
@@ -188,5 +257,3 @@ jQuery(document).ready(function($) {
         }
     }
 });
-
-
