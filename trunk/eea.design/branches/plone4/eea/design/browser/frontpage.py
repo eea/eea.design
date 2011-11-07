@@ -50,7 +50,7 @@ class Frontpage(BrowserView):
 
     def getNews(self):
         """ retrieves latest news by date and by topic """
-        visibilityLevel = [ 'top', 'middle', 'low' ]
+        visibilityLevel = [ 'top', 'middle', 'low', '']
         items = _getItems(self, visibilityLevel = visibilityLevel,
                 portaltypes = ('Highlight', 'PressRelease'),
                 noOfItems = self.noOfNews)
@@ -58,8 +58,7 @@ class Frontpage(BrowserView):
 
     def getArticles(self, portaltypes = "Article"):
         """ retrieves latest articles by date and by topic """
-        visibilityLevel = [ 'top', 'middle', 'low' ]
-        return _getItems(self, visibilityLevel = visibilityLevel,
+        return _getItems(self,
                 portaltypes = "Article", noOfItems=self.noOfArticles)
 
     def getPublications(self, portaltypes = "Report"):
