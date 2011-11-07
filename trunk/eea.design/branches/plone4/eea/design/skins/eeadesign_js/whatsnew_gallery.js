@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
             var first_tag = tag_cloud.clone().detach();
             var address, topic_params, tags_params;
             if (cur_tab_val === "greentips") {
-                address = eea_gal.site_address + '/SITE/multimedia/all-videos/@@tagscloud_counter';
+                address = eea_gal.site_address + '/multimedia/all/@@tagscloud_counter';
                 topic_params = "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                 tags_params = "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                 tag_cloud.load(address, topic_params, function(html) {
@@ -86,6 +86,7 @@ jQuery(document).ready(function($) {
                         tags.tagcloud({type: 'list', height: 280, sizemin: 12});
                         $("#faceted-tabs").tabs("#tag-cloud-content > div.faceted-widget");
                         // repeat
+              
                         $('#c1all').addClass('selected');
                         $('#c3all').addClass('selected');
                     });
@@ -93,8 +94,8 @@ jQuery(document).ready(function($) {
                 });
             }
            if ( cur_tab_val === "videoclips" ){
-                if ($("#c1all").attr('value') === 28) {
-                    address = eea_gal.site_address + '/SITE/multimedia/all-videos/@@tagscloud_counter';
+                if ($("#c1all").attr('value') === 32) {
+                    address = eea_gal.site_address + '/multimedia/all/@@tagscloud_counter';
                     topic_params = "cid=c1&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
                     tags_params = "cid=c3&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
                     tag_cloud.load(address, topic_params, function(html) {
@@ -119,6 +120,7 @@ jQuery(document).ready(function($) {
                             // repeat
                             $('#c1all').addClass('selected');
                             $('#c3all').addClass('selected');
+
                         });
                     });
                 }
@@ -257,3 +259,4 @@ jQuery(document).ready(function($) {
         }
     }
 });
+
