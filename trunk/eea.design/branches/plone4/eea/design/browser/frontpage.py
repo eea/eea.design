@@ -287,7 +287,7 @@ def _getPromotions(self, noOfItems = 6):
 
     themes = getTheme(self.context.aq_inner)
     if themes:
-        query['getThemes'] = getTheme(self.context.aq_inner.aq_parent)
+        query['getThemes'] = themes
     result = self.catalog(query)
     cPromos = []
     for brain in result:
