@@ -3,6 +3,7 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+* Bugfix: some templates where still using fill-slot="main", changed to content-core [demarant]
 * Feature: Added context_url and parent_url javascript variables to maintemplate [szabozo0 #4612]
 
 * Bugfix: get rid of onFrontpage check in main_template, allows proper display of left and right portal columns [tiberich #4624]
