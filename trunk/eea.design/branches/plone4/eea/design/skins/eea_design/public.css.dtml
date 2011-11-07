@@ -994,6 +994,10 @@ dl.error dd {
    padding: 0 !important.;
 }
 
+#contentActionMenus .contenttype-folder img {
+   margin-left: -20px;
+}
+
 #folderHeader, #contextHeader {
         border-bottom: 2px solid white;
 }
