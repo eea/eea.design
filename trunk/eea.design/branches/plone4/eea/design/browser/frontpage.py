@@ -5,7 +5,6 @@ from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 from Products.EEAContentTypes.cache import cacheKeyHighlights
-from Products.EEAContentTypes.content.interfaces import IFlashAnimation
 from Products.Five import BrowserView
 from eea.cache import cache
 from eea.promotion.interfaces import IPromotion
