@@ -21,7 +21,7 @@ body.mceContentBody {
 }
 
 #content {
-    padding: 0.5em;
+    padding: 0.5em 0;
 }
 
 .navTreeItem a, dd.portletItem .navTreeItem a {

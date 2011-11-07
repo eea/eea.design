@@ -426,7 +426,7 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
     line-height: 1.5em;
     clear: both;
 /*    font-size: 85%;*/
-    margin: 1em 0.25em 2em 0.25em;
+    margin: 1em 0em 2em 0em;
 }
 
 /* Special case of #content - TinyMCE */
