@@ -62,10 +62,10 @@ jQuery(document).ready(function($) {
         if ( tag_cloud.length ) {
             var first_tag = tag_cloud.clone().detach();
             var address, topic_params, tags_params;
-            if (cur_tab_val === "greentips") {
-                address = eea_gal.site_address + '/multimedia/all/@@tagscloud_counter';
-                topic_params = "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
-                tags_params = "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
+            var tabs = function (address, topic_params, tags_params) {
+                address = address || eea_gal.site_address + '/multimedia/all/@@tagscloud_counter';
+                topic_params = topic_params || "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
+                tags_params = tags_params || "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                 tag_cloud.load(address, topic_params, function(html) {
                     tag_cloud.find("#c1_widget").fadeIn();
                     var themes = $("#c1");
@@ -90,40 +90,24 @@ jQuery(document).ready(function($) {
                         $('#c1all').addClass('selected');
                         $('#c3all').addClass('selected');
                     });
-
                 });
-            }
-           if ( cur_tab_val === "videoclips" ){
-                if ($("#c1all").attr('value') === 32) {
-                    address = eea_gal.site_address + '/multimedia/all/@@tagscloud_counter';
-                    topic_params = "cid=c1&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
-                    tags_params = "cid=c3&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
-                    tag_cloud.load(address, topic_params, function(html) {
-                        tag_cloud.find("#c1_widget").fadeIn();
-                        var themes = $("#c1");
-                        themes.tagcloud({type: 'list', height: 280, sizemin:10});
-                        var themes_li = themes.find('li');
-                        var theme_vals = themes_li.filter( function(){
-                            return this.value === 1;
-                        });
-
-                        $.get(address, tags_params, function(data){
-                            tag_cloud.append(data);
-                            $("#c3_widget").fadeIn();
-                            var tags = $("#c3");
-                            var vals = tags.find('li').filter( function(){
-                                return this.value === 1;
-                            });
-                            vals.remove();
-                            tags.tagcloud({type: 'list', height: 280, sizemin: 10});
-                            $("#faceted-tabs").tabs("#tag-cloud-content > div.faceted-widget");
-                            // repeat
-                            $('#c1all').addClass('selected');
-                            $('#c3all').addClass('selected');
-
-                        });
-                    });
-                }
+            };
+            
+            switch (cur_tab_val) {
+                case "greentips":
+                    address = eea_gal.site_address + 'multimedia/all/@@tagscloud_counter';
+                    topic_params = "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
+                    tags_params = "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
+                    tabs(address, topic_params, tags_params); 
+                    break;
+                case "videoclips":
+                    if ($("#c1all").attr('value') === 32) {
+                        address = eea_gal.site_address + 'multimedia/all/@@tagscloud_counter';
+                        topic_params = "cid=c1&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
+                        tags_params = "cid=c3&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
+                        tabs(address, topic_params, tags_params); 
+                    }
+                    break;
             }
         }
         
