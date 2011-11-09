@@ -522,4 +522,10 @@ form#searchbox_terminology input[type="text"] {
     border: 1px solid #DFDFDF;
     zoom: 1;
 }
+
+.multimedia-widget .featured,
+.multimedia-widget UL#tabs LI A.current
+{
+  background-color:transparent;
+}
 /* </dtml-with> */
