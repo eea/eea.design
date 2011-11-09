@@ -39,13 +39,13 @@
                         </tal:spotlight>
                          <!--end featured and spotlight areas -->
 
-                        <!-- community  divs -->
+                        <!-- shortcuts divs -->
                         <div id="forum">
-                            <a id="forum-link" href="forum"></a>
+                            <a id="forum-link" href="" tal:attributes="href string:$portal_url/help/infocentre/enquiries"></a>
                         </div>
 
                         <div id="mobile">
-                            <a id="mobile-link" href="http://mobile.eea.europa.eu"></a>
+                            <a id="mobile-link" href="/mobile" tal:attributes="href string:$portal_url/mobile"></a>
                         </div>
                         
                         <div id="social-links">
@@ -54,7 +54,7 @@
                                Social links
                            </div>
                         </div>
-                        <!-- end community divs -->
+                        <!-- end shortcuts divs -->
                     </div>
                         
                     <div id="highlights-area" class="column-area">
