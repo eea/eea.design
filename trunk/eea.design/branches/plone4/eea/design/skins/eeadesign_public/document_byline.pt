@@ -1,4 +1,5 @@
-
+<!-- obsolete? do we still need this? 
+it is replaced by a  viewlet browser/templates/document_byline -->
 <tal:anonymous 
 tal:define="isAnon context/@@plone_portal_state/anonymous;
             plone_view context/@@plone;"
