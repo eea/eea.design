@@ -350,10 +350,6 @@ dd.portletFooter {
     padding-left: 0px;
 }
 
-#play-pause { 
-    margin-top: -22px;
-}
-
 #mobile a:hover {
      border: none !important;
 }
