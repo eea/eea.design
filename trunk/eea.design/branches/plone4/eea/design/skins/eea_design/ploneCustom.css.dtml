@@ -199,6 +199,8 @@
         -ms-box-shadow: 1px 1px 3px #DFDFDF;
          -o-box-shadow: 1px 1px 3px #DFDFDF;
             box-shadow: 1px 1px 3px #DFDFDF;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#DFDFDF')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#DFDFDF');
     border-color: &dtml-corporateGreen;;
 }
 
@@ -271,6 +273,8 @@
         -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
          -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000');
     text-shadow: none;
 }
 
@@ -349,6 +353,8 @@
         -ms-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
          -o-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=135, Color='#000000')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=135, Color='#000000');
     text-shadow: none;
 }
 
@@ -770,6 +776,8 @@ body.section-signals #nonfolderish-subfolder-view-items {
        -ms-box-shadow:  1px 1px 2px #BFBFBF;
         -o-box-shadow:  1px 1px 2px #BFBFBF;
            box-shadow:  1px 1px 2px #BFBFBF;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#BFBFBF')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#BFBFBF');
     padding: 0 0 15px 0  !important;
     margin: 0px 15px 15px 0 !important;
     text-align: center;
@@ -1017,6 +1025,8 @@ h3.site-description {
         -ms-box-shadow: 1px 1px 5px #afafaf;
          -o-box-shadow: 1px 1px 5px #afafaf;
             box-shadow: 1px 1px 5px #afafaf;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#AFAFAF')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#AFAFAF');
 }
 
 /* drop down panels for portal siteactions */
@@ -1545,6 +1555,8 @@ h3.site-description {
         -ms-box-shadow: 2px 2px 1px #888888;
          -o-box-shadow: 2px 2px 1px #888888;
             box-shadow: 2px 2px 1px #888888;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888');
     text-shadow: 1px 1px white;
 }
 
@@ -1842,6 +1854,8 @@ option.hiddenStructure {
         -ms-box-shadow: 1px 1px 2px #BFBFBF;
          -o-box-shadow: 1px 1px 2px #BFBFBF;
             box-shadow: 1px 1px 2px #BFBFBF;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#BFBFBF')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#BFBFBF');
 }
 
 .photoAlbumEntry:hover {

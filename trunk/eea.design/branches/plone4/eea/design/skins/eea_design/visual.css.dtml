@@ -267,12 +267,16 @@ table.datatable {
    -moz-box-shadow: 0px 2px 1px #888;
    -webkit-box-shadow: 0px 2px 1px #888;
    box-shadow: 0px 2px 1px #888;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888');
 }
 
 .boxShadowedDownRight, .actionMenuContent {
    -moz-box-shadow: 2px 2px 1px #888;
    -webkit-box-shadow: 2px 2px 1px #888;
    box-shadow: 2px 2px 1px #888;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888');
 }
 
 .greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools,
@@ -450,6 +454,8 @@ width:16px;
     box-shadow: 0 2px 2px #333;
     -webkit-box-shadow: 0 2px 2px #333;
     -moz-box-shadow: 0 2px 2px #333;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#333333')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#333333');
 }
 
 #keyfacts-slider .slidePortlet .portletItem {
