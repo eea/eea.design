@@ -23,7 +23,7 @@
                                 <dl style="" 
                                     class="portlet slidePortlet" >
                                     <dt class="portletHeader" style="padding:5px;">Key facts and messages</dt>
-                                     <dd class="portletItem" style="left: 615px;"  tal:repeat="item items">
+                                     <dd class="portletItem" style="left: 650px;"  tal:repeat="item items">
                                        <span>
                                           <span tal:replace="structure item/text"></span>
                                            <a href="" title="Read more of the key fact" class="moreLink"
