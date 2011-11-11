@@ -321,6 +321,11 @@ dd.portletFooter {
     padding: 0em 0em 0.5em 0em;
 }
 
+#globalnav-holder {
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83');
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83');
+}
+
 #content-core {
     display: block;
     clear: both;
@@ -337,7 +342,7 @@ dd.portletFooter {
 }
 
 #whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a { 
-    width: 414px;
+    width: 390pxpx;
     padding: 0px !important;
     margin-right: 20px !important;
 }
@@ -404,6 +409,10 @@ dd.portletFooter {
     padding-top: 8px;
     height: 25px !important;
     color: #FFFFFF;
+}
+
+#portal-searchbox input[type=text]:focus {
+    color: #333333;
 }
 
 #languageCodes li, #languageCodes li.selected { 
@@ -519,9 +528,33 @@ form#searchbox_terminology input[type="text"] {
     zoom: 1;
 }
 
+a.archives {
+    z-index: 2;
+}
+
+.featured {
+    width: 300px;
+    position: relative;
+    top: -40px;
+    z-index: 1;
+}
+.frontpage .featured {
+    width: 350px;
+}
+
+.frontpage #portal-searchbox input.searchButton {
+    left: -30px;
+    top: -1px;
+}
+
 .multimedia-widget .featured,
 .multimedia-widget UL#tabs LI A.current
 {
   background-color:transparent;
 }
+
+#coverflow img { 
+   margin: 0px -60px -35px !important;
+}
+
 /* </dtml-with> */
