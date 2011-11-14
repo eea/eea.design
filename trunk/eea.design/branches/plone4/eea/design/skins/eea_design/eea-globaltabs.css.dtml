@@ -17,8 +17,6 @@
     box-shadow: 0 2px 2px #333333;
     -webkit-box-shadow: 0 2px 2px #333333;
     -moz-box-shadow: 0 2px 2px #333333;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#333333')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#333333');
 }
 
 #portal-globalnav {

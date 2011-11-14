@@ -339,8 +339,6 @@ ul#tabs li:first-child a:hover {
     box-shadow: 0 2px 2px #888888;
     -webkit-box-shadow: 0 2px 2px #888888;
     -moz-box-shadow: 0 2px 2px #888888;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#888888')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#888888');
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -378,8 +376,6 @@ ul#tabs li:first-child a:hover {
     box-shadow: 0 2px 2px #888;
     -moz-box-shadow: 0 2px 2px #888888;
     -webkit-box-shadow: 0 2px 2px #888888;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#888888')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#888888');
 }
 
 #forum-link,
@@ -419,8 +415,6 @@ a.album-layout:hover {
   box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
   -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
   -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#000000')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#000000');
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -478,8 +472,6 @@ a.album-layout:hover {
     box-shadow: 0 2px 2px #888888;
     -webkit-box-shadow: 0 2px 2px #888888;
     -moz-box-shadow: 0 2px 2px #888888;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#888888')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#888888');
 }
 
 .shortcut-light {
@@ -497,8 +489,6 @@ a.album-layout:hover {
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#000000')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#000000');
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;

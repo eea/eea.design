@@ -267,16 +267,12 @@ table.datatable {
    -moz-box-shadow: 0px 2px 2px #888;
    -webkit-box-shadow: 0px 2px 2px #888;
    box-shadow: 0px 2px 2px #888;
-   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888');
 }
 
 .boxShadowedDownRight, .actionMenuContent {
    -moz-box-shadow: 2px 2px 1px #888;
    -webkit-box-shadow: 2px 2px 1px #888;
    box-shadow: 2px 2px 1px #888;
-   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#888888');
 
 }
 
@@ -429,9 +425,12 @@ width:16px;
 /* style for keyfacts slider */
 
 #keyfacts-slider img.keyfacts-bgimg {
-   width:650px;
-   min-width:650px; 
-   min-height: 356px;  
+   min-width: 633px; 
+   min-height: 356px;
+   width: 639px !important;
+   position: absolute;
+   bottom: 0;
+   left: 0;
 }
 
 #keyfacts-slider dl {
@@ -450,14 +449,12 @@ width:16px;
     padding: 0;
     background: &dtml-corporateBlueTwo;;
     color: #FFFFFF;
-    width: 650px !important;
+    width: 639px !important;
     left: 0 !important;
     top: -140px !important;
     box-shadow: 0 2px 2px #333;
     -webkit-box-shadow: 0 2px 2px #333;
     -moz-box-shadow: 0 2px 2px #333;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#333333')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#333333');
 }
 
 #keyfacts-slider .slidePortlet .portletItem {
