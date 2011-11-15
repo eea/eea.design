@@ -56,4 +56,8 @@
         <layer name="wisetheme_images" insert-after="eeadesign_public_cmsandwww" />
     </skin-path>
 
+    <skin-path name="Plone Default">
+        <layer name="eeadesign_cms" insert-after="custom" />
+    </skin-path>
+
 </object>
