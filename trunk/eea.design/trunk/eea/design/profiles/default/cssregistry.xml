@@ -45,6 +45,24 @@
         />
 
     <stylesheet title=""
+        id="IE8Fixes.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        conditionalcomment="IE 8"
+        expression="exists: portal/IE8Fixes.css"
+        position-after="IE7Fixes.css"
+        />
+
+    <stylesheet title=""
+        id="IEFixes.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        conditionalcomment="gt IE 8"
+        expression="exists: portal/IEFixes.css"
+        position-after="ploneKss.css"
+        />
+
+    <stylesheet title=""
         id="organisations.css"
         media="screen" rel="stylesheet" rendering="import"
         cacheable="True" compression="safe" cookable="True"
