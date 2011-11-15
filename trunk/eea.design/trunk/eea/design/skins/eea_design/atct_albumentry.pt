@@ -15,6 +15,7 @@
         src string:${obj/absolute_url}/image_thumb"/>
       </span>
       <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+      <span class="photoAlbumEntryDescription" tal:content="python: obj.Description() or obj.aq_parent.Description()" tal:condition="here/main_template/macros/short_colophon" />
     </a>
   </div>
 </metal:entry>

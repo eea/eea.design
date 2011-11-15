@@ -106,7 +106,7 @@
         desc_or_title python:brain.Description or obj_title;
         urlview obj/@@url;
         listing_url urlview/listing_url;
-        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides;">
         <metal:entry use-macro="entry_macro" />
       </tal:entry>
     </tal:images>

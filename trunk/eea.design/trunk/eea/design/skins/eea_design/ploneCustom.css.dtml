@@ -1893,6 +1893,10 @@ option.hiddenStructure {
     font-weight: bold;
 }
 
+.photoAlbumEntryDescription {
+    display:none;
+}
+
 /* bigger title for products section */
 .section-products .photoAlbumEntryTitle {
     font-size:160%;
