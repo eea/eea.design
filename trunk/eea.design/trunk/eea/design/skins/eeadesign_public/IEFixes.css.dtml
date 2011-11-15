@@ -535,11 +535,15 @@ a.archives {
 .featured {
     width: 300px;
     position: relative;
-    top: -40px;
     z-index: 1;
 }
 .frontpage .featured {
     width: 350px;
+}
+
+.column-area .featured {
+    width: 580px;
+    position: relative;
 }
 
 .frontpage #portal-searchbox input.searchButton {
@@ -555,6 +559,11 @@ a.archives {
 
 #coverflow img { 
    margin: 0px -60px -35px !important;
+}
+
+
+#keyfacts-slider .slidePortlet {
+    width: 638px !important;
 }
 
 /* </dtml-with> */
