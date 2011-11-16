@@ -3,6 +3,8 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+* Bugfix: Fixed transparency in ie8 on Environmental topics page for the main topics [szabozo0 #4697]
+
 * Change: Migrated showurl from custom [szabozo0 #4161]
 
 * Bugfix: Fixed quality of the images for IE8 [szabozo0 #4673]

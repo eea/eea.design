@@ -510,9 +510,10 @@ form#searchbox_terminology input[type="text"] {
 
 #top-news-area div.portletHeader {
     opacity: 1 !important;
+    filter: alpha(opacity=80);
     background: #FFFFFF !important;
     background:transparent;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#FFFFFF);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#FFFFFF);*/
     zoom: 1;
 }
 
