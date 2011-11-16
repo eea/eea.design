@@ -574,4 +574,9 @@ form#searchbox_terminology input[type="text"] {
     color: #FFFFFF;
 }
 
+img
+{
+-ms-interpolation-mode: bicubic;
+}
 /* </dtml-with> */
+

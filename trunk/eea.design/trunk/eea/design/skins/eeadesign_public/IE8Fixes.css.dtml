@@ -578,4 +578,9 @@ a.archives {
     width: 480px !important;
 }
 
+img
+{
+-ms-interpolation-mode: bicubic;
+}
 /* </dtml-with> */
+
