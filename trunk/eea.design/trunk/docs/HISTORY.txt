@@ -3,6 +3,8 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+* Change: Migrated showurl from custom [szabozo0 #4161]
+
 * Bugfix: Fixed quality of the images for IE8 [szabozo0 #4673]
 
 * Change: Migrated portlet_toc, portlet_reports from custom [szabozo0 #4161]
