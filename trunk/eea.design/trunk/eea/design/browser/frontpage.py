@@ -334,6 +334,8 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
         query['object_provides'] = interfaces
     if topic:
         query['getThemes'] = topic
+    # for tests we need to give an int value if noOfItems remains none
+    noOfItems = noOfItems or 6
     res = self.catalog.searchResults(query)[:noOfItems]
     return res
 
