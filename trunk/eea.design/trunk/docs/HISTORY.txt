@@ -3,6 +3,10 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+
+* Feature: Added a viewlet eea.js_belowbodytag for adding inline js just after the body tag. 
+  [demarant]
+
 * Bugfix: Fixed transparency in ie8 on Environmental topics page for the main topics [szabozo0 #4697]
 
 * Change: Migrated showurl from custom [szabozo0 #4161]

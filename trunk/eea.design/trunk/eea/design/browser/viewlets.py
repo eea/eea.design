@@ -91,4 +91,11 @@ class BelowEditContentTitleViewlet(BaseBelowContentTitleViewlet):
                                 self.context):
             return False
         return True
+    
+    
+class JSBelowBodyViewlet(common.ViewletBase):
+    """ A custom viewlet registered below the body tag specifically for js
+    that needs to be just below the body tag.
+    """
+    render = ViewPageTemplateFile('templates/inline_js_belowbodytag.pt')
 
