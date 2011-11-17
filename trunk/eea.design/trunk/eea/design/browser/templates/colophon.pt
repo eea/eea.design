@@ -123,9 +123,10 @@
 
     <tal:c7 condition="not:short_colophon_cond">
     <div class="visualClear">&nbsp;</div>
-    <p><a href="/login_form" title="CMS login">
-            <strong>CMS login</strong>
-    </a></p>
+    <p>
+      <a href="/login_form" title="CMS login"><strong>CMS login</strong></a>
+      <tal:invalidcachescript replace="structure here/invalidcache_link" />
+    </p>
     </tal:c7>
     </tal:condition>
     </metal>
