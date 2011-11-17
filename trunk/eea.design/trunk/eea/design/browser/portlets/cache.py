@@ -1,4 +1,5 @@
-from Products.CMFCore.utils import getToolByName
+""" Cache invalidation portlet
+"""
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
