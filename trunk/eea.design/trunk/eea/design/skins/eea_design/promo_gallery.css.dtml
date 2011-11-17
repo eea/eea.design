@@ -27,11 +27,11 @@
 
 #promo-gallery-content h3, #promo-gallery-content-sm h3 {
     margin: 0.4em 0 0.4em 0;
-    font-size: 1.6em;
-    line-height: 1.2em;
-    font-weight: normal;
+    font-size: 1.8em;
+    line-height: 1.1em;
+    font-weight: bold;
     border: none;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    text-shadow: 1px 1px 1px #000000;
     clear: none !important;
 }
 

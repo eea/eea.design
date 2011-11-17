@@ -61,7 +61,8 @@
                     <!-- promotions_gallery_slideshow-->
                     <metal:promotions 
                         tal:define="frontpage python: True; 
-                                    promo_view frontpage_view;">
+                                    promo_view frontpage_view;
+                                    show_description python:False;">
                             <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
                                 promoted item
                             </div>
