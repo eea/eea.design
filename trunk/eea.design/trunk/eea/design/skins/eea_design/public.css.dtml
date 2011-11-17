@@ -442,6 +442,10 @@ body#content {
     margin-top: 0;
 }
 
+#content h1#parent-fieldname-title {
+   width: 75%;
+}
+
 #content p,
 #content table,
 #content dl,
