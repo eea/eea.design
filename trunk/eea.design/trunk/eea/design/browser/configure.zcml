@@ -357,6 +357,21 @@
         renderer=".portlets.featured_article.Renderer"
         addview=".portlets.featured_article.AddForm"
         />
+
+    <!--<plone:portletRenderer-->
+        <!--portlet=".portlets.cache.ICachePortlet"-->
+        <!--class=".portlets.cache.Renderer"-->
+        <!--layer=".interfaces.IEEACommonLayer"-->
+        <!--/>-->
+
+    <plone:portlet
+        name="portlets.CacheInvalidationLinks"
+        interface=".portlets.cache.ICachePortlet"
+        assignment=".portlets.cache.Assignment"
+        addview=".portlets.cache.AddForm"
+        renderer=".portlets.cache.Renderer"
+        />
+
     <!-- ADAPTERS -->
 
     <!-- make an adapter for our very own footer manager renderer -->

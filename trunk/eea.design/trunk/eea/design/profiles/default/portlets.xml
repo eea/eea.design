@@ -22,6 +22,14 @@
        <for interface="plone.app.portlets.interfaces.IColumn" />
        <for interface="plone.app.portlets.interfaces.IDashboard" />
    </portlet>
+
+ <portlet 
+   addview="portlets.CacheInvalidationLinks"
+   title="Context invalidation links"
+   description="A portlet that shows links to invalidate context">
+       <for interface="plone.app.portlets.interfaces.IColumn" />
+       <for interface="plone.app.portlets.interfaces.IDashboard" />
+   </portlet>
   <!-- END new portlets definition -->
 
   <!-- themes folder portlets assigment -->
@@ -45,6 +53,12 @@
      category="context"
      key="/SITE/themes"
      type="portlets.FeaturedArticle" />
+
+  <assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/SITE/"
+     type="portlets.CacheInvalidationLinks" />
 
  <assignment
      manager="plone.rightcolumn"

@@ -3,6 +3,7 @@ Changelog
 
 4.0-dev (unreleased)
 --------------------
+ * Feature: added portlet to invalidate cache [tiberich #4689]
  * Bug fix: added the Invalidate cache link in the colophon [tiberich #4689]
 
 * Feature: Added a viewlet eea.js_belowbodytag for adding inline js just after the body tag. 
