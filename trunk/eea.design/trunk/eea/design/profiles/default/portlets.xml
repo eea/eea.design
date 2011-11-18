@@ -23,13 +23,6 @@
        <for interface="plone.app.portlets.interfaces.IDashboard" />
    </portlet>
 
- <portlet 
-   addview="portlets.CacheInvalidationLinks"
-   title="Context invalidation links"
-   description="A portlet that shows links to invalidate context">
-       <for interface="plone.app.portlets.interfaces.IColumn" />
-       <for interface="plone.app.portlets.interfaces.IDashboard" />
-   </portlet>
   <!-- END new portlets definition -->
 
   <!-- themes folder portlets assigment -->
@@ -39,6 +32,15 @@
      key="/SITE/themes"
      type="portlets.Classic">
      <property name="template">portlet_datacenter_overview</property>
+     <property name="macro">portlet</property>
+ </assignment>
+
+ <assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/SITE/"
+     type="portlets.Classic">
+     <property name="template">portlet_cache</property>
      <property name="macro">portlet</property>
  </assignment>
 
