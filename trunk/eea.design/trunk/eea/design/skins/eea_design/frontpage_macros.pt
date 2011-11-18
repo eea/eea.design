@@ -184,6 +184,7 @@
         <div metal:use-macro="foldermacro" />
     </tal:cond>
     <tal:nocond tal:condition="not:folderContents">
+    <div style="display:none">plone: XXX this is a workaround, somehow the first div from this folder gets it's content removed</div>
         <div class='portalMessage informationMessage'><p i18n:translate="no-topics">No results are available for this topic</p></div>
     </tal:nocond>
 </metal:condition>
