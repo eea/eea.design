@@ -668,17 +668,18 @@ img
     progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1c748', endColorstr='#777c1f') !important;
 }
 
-.section-multimedia #content-core #multimedia-widgets #sliders .multimedia-widget {
+.section-multimedia #content-core #multimedia-widgets #sliders .multimedia-widget .featured,
+#multimedia-coverflow {
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#252525')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#252525')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#252525')
     progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2346f83, endColorstr=#b2346f83)
-    alpha(opacity=80);
+    alpha(opacity=80) !important;
     filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#252525')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#252525')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#252525')
     progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2346f83, endColorstr=#b2346f83)
-    alpha(opacity=80);
+    alpha(opacity=80) !important;
 }
 
 .frontpage .column-area#articles-area a.archives,
