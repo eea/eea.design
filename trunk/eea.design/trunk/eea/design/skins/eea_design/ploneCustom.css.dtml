@@ -687,6 +687,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 #translation-disclaimer {
    margin: 0 1em 0 1em;
+   display: inline-block;
 }
 
 /* related styles amd flowplayer videos style */
