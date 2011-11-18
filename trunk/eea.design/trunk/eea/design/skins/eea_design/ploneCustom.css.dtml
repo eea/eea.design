@@ -1235,6 +1235,8 @@ h3.site-description {
     width: 240px;
     margin-left: 5px;
     float: left;
+    //disable site description / motto until decided otherwise
+    visibility:hidden;
 }
 
 #search_glossary_link, #search_advanced_link {
