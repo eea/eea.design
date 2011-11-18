@@ -129,23 +129,19 @@ jQuery(document).ready(function($) {
         var highlight = $("#" + cur_tab_val + "-highlights");
         var listing = highlight.find('.gallery-listing');
         var listing_length =  listing.length !== 0 ? listing.children().length : 0;
+        var ajax_loader_img = '<div style="text-align: center;"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
         var notopics = highlight.find('.portalMessage'),
             notopics_length = notopics.length !== 0 ? 1 : 0;
         if (cur_tab.theme === sel_value && notopics_length !== 0) {
             return;
         }
-        // console.log('sel_text', sel_text);
-        // console.log('sel_value', sel_value);
-        // console.log('listing_length', listing_length);
         if (sel_text.indexOf("All") !== -1 || listing_length === 0) {
-            listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
-           // console.log('in first check for 0 items');
+            listing.html(ajax_loader_img);
             eea_gal.whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index, tag_title = tag_title);
         }
         if (sel_value) {
-            // console.log('cur theme',cur_tab.theme);
             if (cur_tab.theme !== sel_value) {
-                listing.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
+                listing.html(ajax_loader_img);
                 cur_tab.theme = sel_value;
                 eea_gal.whatsnew_func(cur_tab_val = cur_tab_val, sel_text = sel_text, sel_value = sel_value, index = index, tag_title = tag_title);
             }
