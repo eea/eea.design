@@ -325,8 +325,10 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
             'review_state'       : 'published',
             'sort_on'            : 'effective',
             'sort_order'         : 'reverse',
-            'Language'           : self.context.getLanguage(),
             'effectiveRange'     : self.now }
+
+    if self.context.get('getLanguage'):
+        query['language'] = self.context.getLanguage()
     if portaltypes:
         query['portal_type'] = portaltypes
     if visibilityLevel:
@@ -349,8 +351,9 @@ def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
         'sort_on'        : 'effective',
         'sort_order'     : 'reverse',
         'effectiveRange' : self.now,
-        'Language'       : self.context.getLanguage()
         }
+    if self.context.get('getLanguage'):
+        query['language'] = self.context.getLanguage()
     if portaltypes:
         query['portal_type'] = portaltypes
     if object_provides:
