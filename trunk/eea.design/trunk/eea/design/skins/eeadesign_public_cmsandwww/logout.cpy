@@ -17,7 +17,7 @@ mt = getToolByName(context, 'portal_membership')
 mt.logoutUser(REQUEST=REQUEST)
 
 ### eea
-REQUEST.RESPONSE.setCookie('plone_skin', '', path=REQUEST['BASEPATH1'] + '/' + portal(1))
+REQUEST.RESPONSE.setCookie('plone_skin', 'EEADesign2006', path=REQUEST['BASEPATH1'] + '/' + portal(1))
 ### /eea
 
 from Products.CMFPlone.utils import transaction_note
