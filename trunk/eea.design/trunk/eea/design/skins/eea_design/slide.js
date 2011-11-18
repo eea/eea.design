@@ -47,9 +47,9 @@
                 a.click(function(ev) {
                     ev.preventDefault();
 
-                    parents = $('#cross-site-top, #content'),
+                    var parents = $('#cross-site-top, #content'),
                     panels = parents.find('.panel');
-                    panels.each (function(){
+                    panels.each(function(){
                         if ($(this).attr('id') != tooltip.attr('id')){
                             $(this).fadeOut('fast');
                         }
