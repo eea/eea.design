@@ -175,7 +175,7 @@
    width:425px;
    height: 22px;
    font-size: 16px;
-   padding: 5px;    
+   padding: 5px;
    -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
           -border-radius: 3px;
@@ -224,9 +224,9 @@
     color:#fff;
     background:#346F83;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
-    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */
     background: -moz-linear-gradient(270deg, #478EA5, #346F83) repeat scroll 0 0 transparent;
     background-image: -ms-linear-gradient(top,#478EA5,#346F83);
     background-image: -o-linear-gradient(top,#478EA5,#346F83);
@@ -256,9 +256,9 @@
 .faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton:hover {
     background-color:&dtml-corporateOrange;;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
-    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */  
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */  
+    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */
     background: -moz-linear-gradient(270deg, orange, #FF9123) repeat scroll 0 0 transparent;
     background-image: -ms-linear-gradient(top,orange,#FF9123);
     background-image: -o-linear-gradient(top,orange,#FF9123);
@@ -302,9 +302,9 @@
     color:#fff !important;
     background:#346F83;
     background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
-    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */
     background-image: -moz-linear-gradient(270deg, #478EA5, #346F83);
     background-image: -ms-linear-gradient(top,#478EA5,#346F83);
     background-image: -o-linear-gradient(top,#478EA5,#346F83);
@@ -334,9 +334,9 @@
 #portal-columns input[type="submit"]:hover, .standardButton:hover {
     background-color:&dtml-corporateOrange;;
     background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
-    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */  
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */  
+    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */
     background-image: -moz-linear-gradient(270deg, orange, #FF9123);
     background-image: -ms-linear-gradient(top,orange,#FF9123);
     background-image: -o-linear-gradient(top,orange,#FF9123);
@@ -1053,13 +1053,13 @@ h3.site-description {
     right: 15px;
     top: 55px;
 }
-#tip-article-language .panel-top { 
-    right: 0; 
-    float: right; 
+#tip-article-language .panel-top {
+    right: 0;
+    float: right;
     clear: both;
 }
 #tip-article-language .panel-content{
-    clear: both; 
+    clear: both;
 }
 
 #portal-columns {
@@ -1103,12 +1103,12 @@ h3.site-description {
 }
 
 #tip-externalsites-networks, #tip-externalsites-etcssites {
-    width: 400px; 
-    position:absolute; 
+    width: 400px;
+    position:absolute;
     left: 0px !important;
 }
-#tip-externalsites-etcssites{ 
-    width: 270px; 
+#tip-externalsites-etcssites{
+    width: 270px;
 }
 
 #tip-siteaction-chooselang li a {
@@ -2184,54 +2184,6 @@ div.position-3\3a 4 {margin-left:    -369px;}
 #portal-column-two {
     padding-left: 1em;
     margin-top: 75px;
-}
-
-/* hide columns */
-
-body.longwordlanguage .visualColumnHideOneTwo #portal-column-content #content,
-.visualColumnHideOneTwo #portal-column-content #content {
-    margin: 0;
-}
-
-body.longwordlanguage .visualColumnHideOne #portal-column-content #content,
-.visualColumnHideOne #portal-column-content #content {
-    margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 0;
-}
-
-body.longwordlanguage .visualColumnHideTwo #portal-column-content #content,
-.visualColumnHideTwo #portal-column-content #content {
-    margin: 0 0 0 <dtml-var columnOneWidth missing="16em">;
-}
-
-/* longword languages */
-
-body.longwordlanguage #visual-column-wrapper {
-    margin-right: -22em;
-}
-body.longwordlanguage #portal-column-content {
-    width: 100%;
-    float: right;
-    margin-left: -22em;
-}
-
-body.longwordlanguage #portal-column-content #content {
-    margin: 0 22em;
-}
-
-body.longwordlanguage #portal-column-one {
-    width: 22em;
-}
-
-body.longwordlanguage #portal-column-two {
-    width: 22em;
-}
-
-body.longwordlanguage .visualColumnHideOne #portal-column-content #content {
-    margin: 0 22em 0 0;
-}
-
-body.longwordlanguage .visualColumnHideTwo #portal-column-content #content {
-    margin: 0 0 0 22em;
 }
 
 /* visual */
