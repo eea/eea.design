@@ -70,19 +70,29 @@ jQuery(document).ready(function($) {
                     var themes = $("#c1");
                     themes.tagcloud({type: 'list', height: 280, sizemin:12});
                     var themes_li = themes.find('li');
-                    var theme_vals = themes_li.filter( function(){
-                        return this.value === 1;
-                    }).remove();
+                    var theme_vals;
+                    if ($("#tab-greentips").hasClass("current")) {
+                        theme_vals = themes_li.filter( function(){
+                            return this.value === 1 || this.value === 2;
+                        });
+                        theme_vals.remove();
+                    }
+                    else {
+                        theme_vals = themes_li.filter( function(){
+                            return this.value === 1;
+                        });
+                        theme_vals.remove();
+                    }
 
                     $.get(address, tags_params, function(data){
                         tag_cloud.append(data);
                         $("#c3_widget").fadeIn();
                         var tags = $("#c3");
+                        tags.tagcloud({type: 'list', height: 280, sizemin: 12});
                         var vals = tags.find('li').filter( function(){
                             return this.value === 1;
                         });
                         vals.remove();
-                        tags.tagcloud({type: 'list', height: 280, sizemin: 12});
                         $("#faceted-tabs").tabs("#tag-cloud-content > div.faceted-widget");
                         // repeat
               
@@ -100,12 +110,10 @@ jQuery(document).ready(function($) {
                     tabs(address, topic_params, tags_params); 
                     break;
                 case "videoclips":
-                    if ($("#c1all").attr('value') === 32) {
                         address = eea_gal.site_address + 'multimedia/all/@@tagscloud_counter';
                         topic_params = "cid=c1&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
                         tags_params = "cid=c3&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
                         tabs(address, topic_params, tags_params); 
-                    }
                     break;
             }
         }
