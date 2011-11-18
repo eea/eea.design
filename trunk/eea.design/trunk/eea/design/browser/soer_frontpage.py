@@ -42,7 +42,7 @@ class SoerFrontpage(BrowserView):
             'review_state': 'published'
         }
         if theme:
-            query['getTheme'] = theme
+            query['getThemes'] = theme
         brains = catalog.searchResults(query)
         for brain in brains:
             text = self._prepareText(brain)
@@ -65,7 +65,7 @@ class SoerFrontpage(BrowserView):
             'review_state': 'published'
         }
         if theme:
-            query['getTheme'] = theme
+            query['getThemes'] = theme
         brains = catalog.searchResults(query)
         for brain in brains:
             text = self._prepareText(brain)

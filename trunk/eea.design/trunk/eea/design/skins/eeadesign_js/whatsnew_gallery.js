@@ -4,10 +4,9 @@ jQuery(document).ready(function($) {
     var eea_gal = window.whatsnew;
 
     (function() {
-        var host = window.location.host, http = 'http://',
-            localhost = host.indexOf('localhost') != '-1' ? true : undefined;
-            /* site_address = localhost ? http + host + '/www/' : http + host + '/'; */
-        eea_gal.site_address = localhost ? http + host + '/www/' : http + host + '/';
+        var host = window.location.href,
+            host_length = host.length;
+        eea_gal.site_address = host[host_length - 1] !== '/' ? host + '/': host;
         eea_gal.gallery = $("#whatsnew-gallery");
         eea_gal.gallery_page = eea_gal.gallery.attr("data-page");
     })();

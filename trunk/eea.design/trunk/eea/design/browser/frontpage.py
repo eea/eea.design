@@ -325,6 +325,7 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
             'review_state'       : 'published',
             'sort_on'            : 'effective',
             'sort_order'         : 'reverse',
+            'Language'           : self.context.getLanguage(),
             'effectiveRange'     : self.now }
     if portaltypes:
         query['portal_type'] = portaltypes
@@ -344,10 +345,11 @@ def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
     """ retrieves items of certain content types and/or interface and
     certain visibility level, with the addition of topic filtering """
     query = {
-        'review_state': 'published',
-        'sort_on': 'effective',
-        'sort_order' : 'reverse',
+        'review_state'   : 'published',
+        'sort_on'        : 'effective',
+        'sort_order'     : 'reverse',
         'effectiveRange' : self.now,
+        'Language'       : self.context.getLanguage()
         }
     if portaltypes:
         query['portal_type'] = portaltypes
