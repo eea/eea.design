@@ -38,7 +38,7 @@
                     <div tal:attributes="class string:promo-item-desc${small_factor};">
                         <h3><a href="#" class="noPrint"
                                 tal:attributes="href figure_link"
-                                tal:content="python:plone_view.cropText(hltitle,100)">
+                                tal:content="python:plone_view.cropText(hltitle,80)">
                                 Highlight Title</a></h3>
                     <tal:desc tal:condition="python:frontpage_gallery and show_description">
                       <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
