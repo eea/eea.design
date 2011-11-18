@@ -1,0 +1,89 @@
+<metal:promos metal:define-macro="portlet"
+                tal:define="
+                promo_view promo_view|context/@@frontpage_highlights;       
+                highlights view/get_promotions|promo_view/getPromotions|nothing;
+                plone_view nocall:plone_view|context/@@plone;
+                show_description show_description|python:True;
+                frontpage_gallery frontpage|nothing;
+                small_factor python: '' if frontpage_gallery else '-sm';"
+                tal:condition="highlights">
+
+<div id="promo-gallery-wrapper">
+<div tal:attributes="id string:gallery-content-outer${small_factor};"> 
+  <ul tal:attributes="id string:promo-gallery-content${small_factor}"> 
+      <metal:pritems  
+                    tal:repeat="hl highlights">
+                        <li tal:define="
+                            getUrl hl/getUrl|nothing;
+                            getURL hl/getURL|nothing;
+                            absolute_url hl/absolute_url|nothing;
+                            figure_link python:getUrl or getURL or absolute_url;
+                            image_link hl/getURL|hl/absolute_url;
+                            hltitle hl/Title
+                            ">
+                        <tal:image tal:define="figure hl/getImage|nothing;
+                        figure_scale string: preview;
+                        figure_title figure/title|hl/Title|nothing;">
+                        <tal:Link tal:condition="figure_link">
+                            <a href="" title="" class="noPrint"
+                               tal:attributes="href figure_link;
+                               title figure_title;">
+                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
+                         </a>
+                         </tal:Link>
+                        <tal:noLink tal:condition="not: figure_link">
+                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
+                        </tal:noLink>
+                        </tal:image>
+                    <div tal:attributes="class string:promo-item-desc${small_factor};">
+                        <h3><a href="#" class="noPrint"
+                                tal:attributes="href figure_link"
+                                tal:content="python:plone_view.cropText(hltitle,80)">
+                                Highlight Title</a></h3>
+                    <tal:desc tal:condition="python:frontpage_gallery and show_description">
+                      <span tal:define="description hl/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
+                    </tal:desc>  
+                    </div>
+                        </li>    
+        </metal:pritems>
+    </ul> 
+    </div>
+
+<!-- navigation outer -->
+
+<div tal:attributes="id string:navigator-outer${small_factor}">
+    <ul tal:attributes="id string:promo-navigator${small_factor}"> 
+  <metal:items tal:repeat="hl highlights">
+                    <li>
+                        <div>
+                        <tal:image tal:define="figure hl/getImage|nothing;
+                        figure_scale string:thumb;
+                        figure_title figure/title|hl/Title|nothing;
+                        url hl/getURL|hl/absolute_url">
+                            <img alt="" tal:attributes="src string:${url}/image_thumb; title figure_title; alt figure_title" />
+                        </tal:image>
+
+                        <tal:title tal:condition="frontpage_gallery" tal:define="hltitle hl/Title">
+                            <h3 tal:content="python:plone_view.cropText(hltitle,38)">Highlight Title</h3>
+                        </tal:title>
+                    </div>
+                    </li>
+  </metal:items>
+        </ul>
+    </div>
+    <div tal:attributes="class string:controls${small_factor}">
+        <tal:big condition="not:small_factor">
+        <a  href="#" id="next-promo"></a>
+        <a  href="#" id="prev-promo"></a>
+        </tal:big>
+
+        <tal:small condition="small_factor">
+            <a  href="#" id="prev-promo"></a>
+            <a  href="#" id="next-promo"></a>
+        </tal:small>
+        <a  href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
+    </div>
+
+</div>
+ <!--end promotion_gallery macro -->
+</metal:promos>
