@@ -2258,6 +2258,12 @@ div.position-0 {
     margin-left: -100%;
 }
 
+/* Plone center FAQ custom css*/
+
+.faqSection {
+   padding-left: 1em;
+}
+
 /* Added from public */
 div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
