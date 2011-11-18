@@ -109,13 +109,13 @@
         </tal:c5>
 
         <tal:c6 condition="short_colophon_cond">
-        <div class="colophon-right">
-            <a href="#"> <img src="backgrounds/background.jpg/image_thumb" class="selected" /> </a>
-            <a href="#"> <img src="backgrounds/background2.jpg/image_thumb" /> </a>   
-            <a href="#"> <img src="backgrounds/background3.jpg/image_thumb" /> </a>
-            <a href="#"> <img src="backgrounds/background4.jpg/image_thumb" /> </a>
-            <a href="#"> <img src="backgrounds/background5.jpg/image_thumb" /> </a>
-            <a href="#"> <img src="backgrounds/background6.jpg/image_thumb"  /> </a>
+        <div class="colophon-right" tal:define="local python:'/SITE' if 'localhost' in context.REQUEST['URL0'] else ''; portal_state context/@@plone_portal_state; img_url string:${portal_state/portal_url}${local}/multimedia/backgrounds/background">
+            <a href="#"> <img tal:attributes="src string:${img_url}.jpg/image_thumb" class="selected" /> </a>
+            <a href="#"> <img tal:attributes="src string:${img_url}2.jpg/image_thumb" /> </a>   
+            <a href="#"> <img tal:attributes="src string:${img_url}3.jpg/image_thumb" /> </a>
+            <a href="#"> <img tal:attributes="src string:${img_url}4.jpg/image_thumb" /> </a>
+            <a href="#"> <img tal:attributes="src string:${img_url}5.jpg/image_thumb" /> </a>
+            <a href="#"> <img tal:attributes="src string:${img_url}6.jpg/image_thumb" /> </a>
         </div>
         </tal:c6>
     </div>
