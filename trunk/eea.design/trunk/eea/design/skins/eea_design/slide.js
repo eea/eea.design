@@ -45,12 +45,18 @@
                 });
 
                 a.click(function(ev) {
-                    ev.preventDefault(); 
+                    ev.preventDefault();
+
+                    parents = $('#cross-site-top, #content'),
+                    panels = parents.find('.panel');
+                    panels.each (function(){
+                        if ($(this).attr('id') != tooltip.attr('id')){
+                            $(this).fadeOut('fast');
+                        }
+                    });
                     tooltip.fadeIn('fast');
                 });
-  
             }
-
         }
 
 
