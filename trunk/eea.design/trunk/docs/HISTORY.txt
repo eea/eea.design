@@ -3,6 +3,7 @@ Changelog
 
 4.1-dev - (unreleased)
 ----------------------
+ * Change: changed configuration of faceted navigation for multimedia page to use a single faceted page [ichimdav #4725]
 
 4.0 - (2011-11-18)
 ------------------
