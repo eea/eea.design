@@ -578,5 +578,10 @@ img
 {
 -ms-interpolation-mode: bicubic;
 }
+
+#coverflow img { 
+   margin: 0px 0px -35px -92px !important;
+}
+
 /* </dtml-with> */
 
