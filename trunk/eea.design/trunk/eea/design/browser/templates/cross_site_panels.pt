@@ -78,7 +78,7 @@
                                     <li>
                                         <p>
                                             <a target="_self"
-                                                tal:attributes="href string:$portal_url/help/infocentre/enquiries">
+                                                tal:attributes="href string:$portal_url/help/infocentre/enquiries/">
                                                 Ask your question
                                                 <br/>
                                             </a>

@@ -3,6 +3,7 @@ Changelog
 
 4.2-dev - (unreleased)
 ----------------------
+ * Bugfix: fixed links for enquiries [szabozo0 #4735]
  * Change: hide site tagline/motto. [demarant]
 
 4.1 - (2011-11-18)

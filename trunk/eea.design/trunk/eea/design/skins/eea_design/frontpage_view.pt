@@ -41,7 +41,7 @@
 
                         <!-- shortcuts divs -->
                         <div id="forum">
-                            <a id="forum-link" href="" tal:attributes="href string:$portal_url/help/infocentre/enquiries"></a>
+                            <a id="forum-link" href="" tal:attributes="href string:$portal_url/help/infocentre/enquiries/"></a>
                         </div>
 
                         <div id="mobile">
