@@ -558,7 +558,7 @@ a.archives {
 }
 
 #coverflow img { 
-   margin: 0px -60px -35px !important;
+   margin: 0px 0px -35px -92px !important;
 }
 
 
