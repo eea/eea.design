@@ -112,8 +112,7 @@ class Frontpage(BrowserView):
             },
             'review_state': 'published',
             'sort_on': 'effective',
-            'sort_order' : 'reverse',
-            'effectiveRange' : self.now,
+            'sort_order' : 'reverse'
         }
 
         result = self.catalog(query)
@@ -280,8 +279,7 @@ def _getPromotions(self, noOfItems = 6):
         },
         'review_state': 'published',
         'sort_on': 'effective',
-        'sort_order' : 'reverse',
-        'effectiveRange' : self.now,
+        'sort_order' : 'reverse'
     }
 
     themes = getTheme(self.context.aq_inner)
@@ -324,8 +322,8 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
     query = {
             'review_state'       : 'published',
             'sort_on'            : 'effective',
-            'sort_order'         : 'reverse',
-            'effectiveRange'     : self.now }
+            'sort_order'         : 'reverse'
+            }
 
     if self.context.get('getLanguage'):
         query['language'] = self.context.getLanguage()
@@ -349,8 +347,7 @@ def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
     query = {
         'review_state'   : 'published',
         'sort_on'        : 'effective',
-        'sort_order'     : 'reverse',
-        'effectiveRange' : self.now,
+        'sort_order'     : 'reverse'
         }
     if self.context.get('getLanguage'):
         query['language'] = self.context.getLanguage()

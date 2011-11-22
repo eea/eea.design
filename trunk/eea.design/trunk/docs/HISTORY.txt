@@ -3,6 +3,8 @@ Changelog
 
 4.3-dev - (unreleased)
 ----------------------
+ * Bug fix: removed effectiveRange from the topic queries, it missing brains which were found with 
+   the faceted navigation [ichimdav #4725]
  * Bug fix: Improved the image quality in the features-item macro, it was using 
    a image_thumb (which was stretched) instead of image_preview higher res. 
    [demarant]

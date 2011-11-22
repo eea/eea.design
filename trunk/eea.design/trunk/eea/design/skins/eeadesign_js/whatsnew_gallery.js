@@ -71,18 +71,10 @@ jQuery(document).ready(function($) {
                     themes.tagcloud({type: 'list', height: 280, sizemin:12});
                     var themes_li = themes.find('li');
                     var theme_vals;
-                    if ($("#tab-greentips").hasClass("current")) {
-                        theme_vals = themes_li.filter( function(){
-                            return this.value === 1 || this.value === 2;
-                        });
-                        theme_vals.remove();
-                    }
-                    else {
-                        theme_vals = themes_li.filter( function(){
-                            return this.value === 1;
-                        });
-                        theme_vals.remove();
-                    }
+                    theme_vals = themes_li.filter( function(){
+                        return this.value === 1;
+                    });
+                    theme_vals.remove();
 
                     $.get(address, tags_params, function(data){
                         tag_cloud.append(data);
