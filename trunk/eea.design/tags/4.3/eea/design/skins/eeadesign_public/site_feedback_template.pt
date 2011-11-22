@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:metal="http://xml.zope.org/namespaces/metal"
+
+
+     tal:omit-tag=""
+     tal:define="portal context/@@plone_portal_state/portal;
+                 charset portal/email_charset|string:utf-8;
+                 dummy python:request.RESPONSE.setHeader('Content-Type', 'text/plain;;charset=%s' % charset);"
+><span tal:omit-tag="" tal:content="options/message | nothing" />
+
+--
+<span tal:replace="portal/email_from_name" />
+
+<div  tal:omit-tag="">
+You are receiving this mail because <span  tal:omit-tag="" tal:content="options/sender_fullname|nothing" />
+<span tal:omit-tag="" tal:content="options/sender_from_address"/>
+is sending feedback about the site you administer at <span  tal:replace="options/url" />.
+
+======================
+Automated Translation:
+======================
+
+[AUTOMATED_TRANSLATION]
+
+</div>
+</div>
