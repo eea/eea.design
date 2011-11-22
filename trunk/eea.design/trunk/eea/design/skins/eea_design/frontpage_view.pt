@@ -26,7 +26,7 @@
                                          archive_href string:articles;">
                                          <div metal:use-macro="here/frontpage_macros/macros/featured-item">
                                              <span metal:fill-slot="archive" i18n:translate="">Archive</span>
-                                             <span metal:fill-slot="box_title" i18n:translate="">Featured Article</span>
+                                             <span metal:fill-slot="box_title" i18n:translate="">Featured article</span>
                                          </div>
                         </tal:featured_article>
 
