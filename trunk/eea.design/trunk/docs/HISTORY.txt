@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.4-dev - (unreleased)
+----------------------
+
 4.3 - (2011-11-22)
 ------------------
  * Bug fix: removed effectiveRange from the topic queries, it missing brains which were found with 
