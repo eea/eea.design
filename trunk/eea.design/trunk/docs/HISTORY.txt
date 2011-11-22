@@ -4,7 +4,8 @@ Changelog
 4.3-dev - (unreleased)
 ----------------------
  * Bug fix: Improved the image quality in the features-item macro, it was using 
-   a image_thumb (which was stretched) instead of image_preview higher res.
+   a image_thumb (which was stretched) instead of image_preview higher res. 
+   [demarant]
 
 4.2 - (2011-11-21)
 ------------------
