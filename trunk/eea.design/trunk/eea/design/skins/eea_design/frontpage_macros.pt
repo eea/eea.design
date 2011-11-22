@@ -48,11 +48,11 @@
                         <tal:cond tal:condition="is_video">
                         <a href="#" class="noPrint"
                                     tal:attributes="href url; class string:video-fancybox;">
-                            <img alt="" tal:attributes="src string:${url}/image_thumb; title title; alt title" />
+                            <img alt="" tal:attributes="src string:${url}/image_preview; title title; alt title" />
                         </a>
                         </tal:cond>
                         <tal:notcond tal:condition="not:is_video">
-                            <img alt="" tal:attributes="src string:${url}/image_thumb; title title; alt title" />
+                            <img alt="" tal:attributes="src string:${url}/image_preview; title title; alt title" />
                         </tal:notcond>
                     </div>
                 
