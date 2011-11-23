@@ -61,5 +61,9 @@ function build_toc(){
 }
 
 jQuery(document).ready(function($) {
+    $('.clear-toc').each(function(){
+        $('#document-toc dd.portletItem ol').empty();
+    });
     build_toc();
+    $('.clear-toc').removeClass('clear-toc');
 });
