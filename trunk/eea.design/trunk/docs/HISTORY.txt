@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.5-dev - (unreleased)
+----------------------
+
 4.4 - (2011-11-23)
 ------------------
   * Bug fix: display loading image when clicking on the whatsnew gallery to show visual progress [ichimdav #4672]
