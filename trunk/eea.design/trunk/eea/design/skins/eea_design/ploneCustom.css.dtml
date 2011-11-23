@@ -1235,7 +1235,7 @@ h3.site-description {
     width: 240px;
     margin-left: 5px;
     float: left;
-    //disable site motto until decided otherwise
+    /* hide until decided on right tagline */
     display: none;
 }
 
