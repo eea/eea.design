@@ -3,6 +3,7 @@ Changelog
 
 4.4-dev - (unreleased)
 ----------------------
+  * Bug fix: Fixed "you are not allowed to access 'aq_parent' in this context" error when user is anonymus [szabozo0 #4769]
   * Bug fix: Fixed TOC for indicators [szabozo0 #4726]
   * Change: hide site tagline/motto. [demarant]
 
