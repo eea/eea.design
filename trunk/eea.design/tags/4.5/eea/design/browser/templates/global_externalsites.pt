@@ -1,0 +1,88 @@
+
+<metal:external metal:define-macro="external_sites">
+<ul id="portal-externalsites">
+    <li id="externalsites-networks"><a href="#" i18n:translate="externalsites-networks">Networks</a></li>
+</ul>
+
+            <div class="panel" id="tip-externalsites-networks" style="width:450px; margin-left: 2em;">
+                <div class="panel-top" style="left: -195px;">
+                </div>
+                <div class="panel-content shadow">
+		    <dl class="portlet networkSites">
+		    <dt>Networks</dt>
+                    <dd><ul>
+                        <li id="externalsites-eionet"><a title="Eionet" accesskey="" href="http://www.eionet.europa.eu/">Eionet
+                    </a></li>
+		    <li id="externalsites-epanet"><a title="EPA network" accesskey="" href="http://epanet.ew.eea.europa.eu/">Network of the Heads of Environment Protection Agencies (EPA network)
+		    </a></li>
+		    <li id="externalsites-envirowindows"><a title="EnviroWindows" accesskey="" href="http://ew.eea.europa.eu/">EnviroWindows
+                    </a></li>
+                    <li id="seis-network"><a title="SEIS network" accesskey="" href="http://www.eea.europa.eu/about-us/what/shared-environmental-information-system">Shared Environmental Information System (SEIS) 
+                    </a></li></ul>
+	            </dd>
+		    <dt>European Topic Centres (ETCs)</dt>
+                    <dd>
+                    <ul>
+                        <li>
+                            <a href="http://acm.eionet.europa.eu">Air pollution
+                                and Climate Change mitigation (ACM)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://bd.eionet.europa.eu">Biological
+                                Diversity (BD)
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="http://cca.eionet.europa.eu">Climate Change
+                                Impacts, Vulnerability and Adaptation (CCA)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://icm.eionet.europa.eu">Inland,
+                                Coastal and Marine waters (ICM)
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="http://sia.eionet.europa.eu">Spatial
+                                Information and Analysis (SIA)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://scp.eionet.europa.eu">Sustainable
+                                Consumption and Production (SCP)
+                            </a>
+                        </li>
+                    </ul>
+		    </dd>
+		    <dt class="hiddenStructure">More networks</dt>
+		    <dd style="padding-bottom: 0.5em" class="portletFooter">
+                      <a class="moreLink" href="http://www.eea.europa.eu/about-us/key-partners">
+		      EU partners</a>&nbsp;&nbsp;
+		      <a class="moreLink" href="http://www.eea.europa.eu/about-us/international-cooperation">
+		      International cooperation</a>
+                    </dd>
+		    </dl>
+                </div>
+            </div>
+
+
+</metal:external>
+
+<div metal:define-macro="etcs_sites" tal:omit-tag="">
+ <dl id="portlet-etcs-sites">
+    <dt>
+         European Topic Centres:
+    </dt>
+    <dd class="portletItem">
+           <tal:chooslangscript replace="structure here/select_etc_js" />     
+           <noscript>
+            <ul id="chooseetc">        	
+	           <li><a href="http://www.eionet.europa.eu/topics" title="European Topic Centres">European Topic Centres</a></li>
+            </ul>
+           </noscript>
+    </dd>    
+ </dl>
+</div>
