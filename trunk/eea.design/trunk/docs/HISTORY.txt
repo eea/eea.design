@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.6-dev - (unreleased)
+----------------------
+
 4.5 - (2011-11-24)
 ------------------
  * Bug fix: Updated redirect for broken links [szabozo0 #4702]
