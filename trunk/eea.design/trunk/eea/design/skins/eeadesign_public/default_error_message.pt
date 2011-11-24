@@ -17,11 +17,15 @@
                  isAnon context/@@plone_portal_state/anonymous;
                  toLocalizedTime nocall: context/@@plone/toLocalizedTime;">
 
-        <tal:block tal:define="redirect_similar_items context/@@plone_redirector_view/search_for_similar;
-                               wrong_title python:request.URL.split('?')[0].split('/')[-1];
-                               redirect_url python:[item.getURL() for item in redirect_similar_items if item.pretty_title_or_id()==wrong_title]"
+        <tal:block tal:define="
+                            redirect_similar_items context/@@plone_redirector_view/search_for_similar;
+                            wrong_title python: request.URL.split('/')[-1];
+                            url_query python:request.QUERY_STRING;
+                            redirect_url python:[item.getURL() for item in redirect_similar_items if item.getURL().split('/')[-1]==wrong_title]"
                    tal:condition="redirect_url">
-                        <metal:redirect tal:define="dummy python:request.response.redirect(redirect_url[0],status=301,lock=1)"/>
+                   <metal:redirect tal:define="
+                                        redirect_url python:url_query and redirect_url[0]+'?'+url_query or redirect_url[0];
+                                        dummy python:request.response.redirect(redirect_url,status=301,lock=1)"/>
         </tal:block>
 
         <metal:notfound tal:condition="python:err_type=='NotFound'">

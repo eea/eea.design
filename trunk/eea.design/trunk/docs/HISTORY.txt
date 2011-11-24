@@ -3,6 +3,7 @@ Changelog
 
 4.5-dev - (unreleased)
 ----------------------
+ * Bug fix: Updated redirect for broken links [szabozo0 #4702]
  * Change: display link from url field for external promotions [ichimdav #4662]
 
 4.4 - (2011-11-23)
