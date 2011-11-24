@@ -3,6 +3,7 @@ Changelog
 
 4.5-dev - (unreleased)
 ----------------------
+ * Change: display link from url field for external promotions [ichimdav #4662]
 
 4.4 - (2011-11-23)
 ------------------
