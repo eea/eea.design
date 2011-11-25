@@ -3,11 +3,13 @@ Changelog
 
 4.6-dev - (unreleased)
 ----------------------
+ * Bug fix: fixed newsletter rendering template
+   [ghicaale #4792]
  * Bug fix: fixed the preview image url for the case when we have an external 
    promotion (link type), the target link and the image link are different.
-  [demarant #4662]
+   [demarant #4662]
  * Bug fix: fixed cross_site_top macro reference to global_externalsites which prevented the template from 
- being editied with portal_view_customizations [ichimdav #4783]
+   being editied with portal_view_customizations [ichimdav #4783]
  * Feature: made "all items" links in whatsnewgallery overwritable to be used by
    data centres pages [demarant #4784]
 
