@@ -3,6 +3,8 @@ Changelog
 
 4.6-dev - (unreleased)
 ----------------------
+ * Feature: made "all items" links in whatsnewgallery overwritable to be used by
+   data centres pages [demarant #4784]
 
 4.5 - (2011-11-24)
 ------------------

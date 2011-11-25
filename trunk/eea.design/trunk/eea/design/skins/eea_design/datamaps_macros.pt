@@ -8,16 +8,16 @@
      tal:define="plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;
-                 more_href string:data;">
+                 more_href more_href|string:data;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="maps"
      class="highlights"
      id="maps-highlights"
-     tal:define="hide_listing python: False;
-                 hide_album python: True;
-                 more_href string:figures;">
+     tal:define="hide_listing python: True;
+                 hide_album python: False;
+                 more_href more_href|string:figures;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
@@ -27,7 +27,7 @@
      tal:define="plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: True;
                  hide_album python: False;
-                 more_href string:indicators;">
+                 more_href more_href|string:indicators;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
@@ -72,7 +72,7 @@
      id="graphs-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;
-                 more_href string:figures;">
+                 more_href more_href|string:figures;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
@@ -81,7 +81,7 @@
      id="interactivemaps-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;
-                 more_href string:explore-interactive-maps;">
+                 more_href more_href|string:explore-interactive-maps;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
@@ -93,7 +93,7 @@
                  folderContents datamaps_view/getAllProducts|nothing;
                  hide_album python: False;
                  hide_listing python: True;
-                 more_href string:find;">
+                 more_href more_href|string:dm;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 </div>
 

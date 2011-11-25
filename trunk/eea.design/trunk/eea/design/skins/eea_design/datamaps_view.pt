@@ -104,7 +104,9 @@
                     </div>
 
                         <!-- tabs -->
-                        <div metal:define-macro="whatsnew-gallery" tal:define="datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
+                        <div metal:define-macro="whatsnew-gallery" 
+			                  tal:define="more_hrefs  more_hrefs|python: ['find', 'data', 'find#c1=Map', 'explore-interactive-maps', 'indicators', 'find#c1=Graph' ];
+			                              datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
                             <ul id="tabs"
                                 tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps', 'Indicators', 'Graphs' ];">
                                 <li tal:repeat="tab tabnames">
@@ -113,24 +115,24 @@
                             </ul>
                             <!-- end_tabs -->
 
-                            <div metal:use-macro="here/datamaps_macros/macros/alldataproducts">
-                                All data products Highlights
-                            </div>
-                            <div metal:use-macro="here/datamaps_macros/macros/datasets">
-                                Datasets highlights
-                            </div>
-                            <div metal:use-macro="here/datamaps_macros/macros/maps">
-                                Maps Highlights
-                            </div>
-                            <div metal:use-macro="here/datamaps_macros/macros/interactivemaps">
-                                Interactive maps Highlights
-                            </div>
-                            <div metal:use-macro="here/datamaps_macros/macros/indicators">
-                                Indicators Highlights
-                            </div>
-                            <div metal:use-macro="here/datamaps_macros/macros/graphs">
-                                Graphs Highlights
-                            </div>
+                            <tal:tab define="more_href python:more_hrefs[0]">
+			      <div metal:use-macro="here/datamaps_macros/macros/alldataproducts" />
+			    </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[1]">
+                              <div metal:use-macro="here/datamaps_macros/macros/datasets" />
+                            </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[2]">
+                              <div metal:use-macro="here/datamaps_macros/macros/maps" />
+                            </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[3]">
+                              <div metal:use-macro="here/datamaps_macros/macros/interactivemaps" />
+                            </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[4]">
+                              <div metal:use-macro="here/datamaps_macros/macros/indicators" />
+                            </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[5]">
+                              <div metal:use-macro="here/datamaps_macros/macros/graphs" />
+                            </tal:tab>
 
                         </div>
 			
