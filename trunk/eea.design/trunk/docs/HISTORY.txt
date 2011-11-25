@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.7-dev - (unreleased)
+----------------------
+
 4.6 - (2011-11-25)
 ------------------
  * Bug fix: fixed newsletter rendering template
