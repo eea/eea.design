@@ -39,6 +39,7 @@
                               getURL highlight/getURL|nothing;
                               absolute_url highlight/absolute_url|nothing;
                               url python:getUrl or getURL or absolute_url;
+                              image_url python:getURL or getUrl or absolute_url;
                               title highlight/Title|highlight/getNewsTitle;
                               description highlight/Description|highlight/getTeaser;
                               is_video python:highlight.portal_type == 'File';">
@@ -56,7 +57,7 @@
                         </a>
                         </tal:cond>
                         <tal:notcond tal:condition="not:is_video">
-                            <img alt="" tal:attributes="src string:${url}/image_preview; title title; alt title" />
+                            <img alt="" tal:attributes="src string:${image_url}/image_preview; title title; alt title" />
                         </tal:notcond>
                     </div>
                 
