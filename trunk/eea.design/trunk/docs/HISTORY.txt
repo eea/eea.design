@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.6-dev - (unreleased)
-----------------------
+4.6 - (2011-11-25)
+------------------
  * Bug fix: fixed newsletter rendering template
    [ghicaale #4792]
  * Bug fix: fixed the preview image url for the case when we have an external 
