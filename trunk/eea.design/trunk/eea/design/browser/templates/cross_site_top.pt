@@ -1,5 +1,5 @@
 <div id="cross-site-top">
-   <div metal:use-macro="here/global_externalsites/macros/external_sites">
+   <div metal:use-macro="context/@@global_externalsites/external_sites">
        Eionet, EW ..
    </div>
     
