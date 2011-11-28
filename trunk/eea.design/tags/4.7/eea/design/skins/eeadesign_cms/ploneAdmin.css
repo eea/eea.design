@@ -1,0 +1,112 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+body.mceContentBody {
+    background: transparent !important;
+    margin: 0px !important;
+}
+
+#portal-globalnav li{
+    width: auto;
+    margin: 0 0.25em 0 0;
+}
+
+#portal-column-one .visualPadding,
+#portal-column-two .visualPadding {
+   padding: 0.5em;
+}
+
+#portal-column-content {
+    /*margin-left: -22em;*/
+}
+
+#content {
+    padding: 0.5em 0;
+}
+
+.navTreeItem a, dd.portletItem .navTreeItem a {
+    border-color: white;
+}
+
+body.section-SITE .documentActions {
+    float: right;
+    margin: 0.4em 1em 0 0.5em;
+    padding: 0;
+    text-align: right;
+}
+
+#portlet-navigation-tree li a,
+.portlet-navigation-tree li a {
+    background: none;
+}
+
+.portletNavigationTree {
+    line-height: 1.5em;
+}
+
+*:first-child+html .documentActions {
+    padding-top: 1em;
+}
+
+
+.documentEditable .documentContent {
+padding: 1em;
+}
+
+#portlet-navigation-tree .contenttype-document {
+    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+}
+#portlet-navigation-tree .contenttype-event {
+    background: no-repeat transparent 0px -216px url(contenttypes-sprite.png);
+}
+#portlet-navigation-tree .contenttype-folder {
+    background: no-repeat transparent 0px -648px url(contenttypes-sprite.png);
+}
+#portlet-navigation-tree .contenttype-link {
+    background: no-repeat transparent 0px -1080px url(contenttypes-sprite.png);
+}
+#portlet-navigation-tree .contenttype-news-item {
+    background: no-repeat transparent 0px -1296px url(contenttypes-sprite.png);
+}
+#portlet-navigation-tree .contenttype-plone-site {
+    background: no-repeat transparent 0px -1512px url(contenttypes-sprite.png);
+}
+#portlet-navigation-tree .contenttype-topic {
+    background: no-repeat transparent 0px -1728px url(contenttypes-sprite.png);
+}
+
+/******* Manage portlets links *******/
+div.managePortletsLink {
+    -webkit-transition: background .3s;
+       -moz-transition: background .3s;
+         -o-transition: background .3s;
+            transition: background .3s;
+    background: #f0f0f0;
+}
+
+div.managePortletsLink:hover {
+    -webkit-transition: background .3s;
+       -moz-transition: background .3s;
+         -o-transition: background .3s;
+            transition: background .3s;
+    background: orange;
+}
+
+.managePortletsLink a, #portal-footer div.managePortletsLink .managePortletsFallback {
+    color: black;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.managePortletsLink a:hover, #portal-footer div.managePortletsLink .managePortletsFallback a:hover {
+    color: #8E004D;
+}
+
+.managePortletsLink a:link, #portal-footer  div.managePortletsLink .managePortletsFallback a:link {
+    color: #346F83;
+}
+
+/* </dtml-with>
+** YOUR CSS RULES STOP HERE
+*/
