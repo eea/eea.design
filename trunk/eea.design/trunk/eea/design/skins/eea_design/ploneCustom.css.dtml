@@ -817,7 +817,6 @@ dd.embeddedMedia .magnify {
 }
 
 .flowplayer a,
-.documentContent p a,
 .documentContent ul li a,
 .documentContent td a {
     display: inline-block;

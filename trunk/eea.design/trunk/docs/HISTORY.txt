@@ -3,6 +3,9 @@ Changelog
 
 4.7-dev - (unreleased)
 ----------------------
+ * Change: Links in text must have discreet underline. 
+   removed Inline-block, was giving issue when used in news with floating right images.
+   [demarant]
  * Bug fix: Fixed link color in live search results, it was not visible, white on white. [demarant]
 
 4.6 - (2011-11-25)

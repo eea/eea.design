@@ -15,6 +15,10 @@ a:visited { color: &dtml-linkVisitedColor;; }
 a:hover { color: &dtml-linkHoverColor;; }
 a:active { color: &dtml-linkActiveColor;; }
 
+#content p a:link {
+    border-bottom: 1px solid #CCCCCC;
+}
+
 p {
     font-family:  Verdana, Arial, Helvetica, sans-serif;
     margin: 0 0 0.75em 0;
