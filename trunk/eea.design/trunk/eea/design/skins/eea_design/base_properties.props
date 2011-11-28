@@ -54,7 +54,7 @@ borderStyleAnnotations:string=dashed
 globalBorderColor:string=#cccccc
 globalGreenBorderColor:string=#9db481
 globalBackgroundColor:string=#f3f3f3
-globalFontColor:string=#000000
+globalFontColor:string=#333333
 
 
 contentViewBorderColor:string=#74ae0b

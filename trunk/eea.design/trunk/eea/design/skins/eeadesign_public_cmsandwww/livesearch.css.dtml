@@ -38,7 +38,8 @@
 .LSRow a {
     text-decoration: none;
     font-weight:bold;
-    white-space:nowrap
+    white-space:nowrap;
+    color: &dtml-linkColor; !important;
 }
 
 .LSDescr {

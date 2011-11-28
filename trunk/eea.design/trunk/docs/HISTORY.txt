@@ -3,6 +3,7 @@ Changelog
 
 4.7-dev - (unreleased)
 ----------------------
+ * Bug fix: Fixed link color in live search results, it was not visible, white on white. [demarant]
 
 4.6 - (2011-11-25)
 ------------------
