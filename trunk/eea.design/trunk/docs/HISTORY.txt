@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.8-dev - (unreleased)
+----------------------
+
 4.7 - (2011-11-28)
 ------------------
  * Change: Fixed floating issue with related portlets [demarant]
