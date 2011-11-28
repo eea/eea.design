@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.7-dev - (unreleased)
-----------------------
+4.7 - (2011-11-28)
+------------------
  * Change: Fixed floating issue with related portlets [demarant]
  * Change: Links in text must have discreet underline. 
    removed Inline-block, was giving issue when used in news with floating right images.
