@@ -420,6 +420,15 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 
 /* @end */
 
+
+/* @group Related portlets */
+
+#related-pages, #related-multimedia, #auto-related {
+  clear: both;
+}
+
+/* @end */
+
 /* @group Content Area */
 
 #content {
@@ -454,6 +463,10 @@ dl.portlet {
     margin-bottom: 1em;
 }
 
+#content p a:link {
+    border-bottom: 1px solid #CCCCCC;
+}
+
 #content ul,
 #content ol {
 
@@ -463,17 +476,6 @@ dl#featured-datasets {
   margin-bottom: 2.5em;
 }
 
-/* #content a:link, */
-/* dl.portlet a:link { */
-/*     color: #205c90; */
-/*     border-bottom: 0.1em solid #ccc; */
-/* } */
-/*  */
-/* #content a:visited, */
-/* dl.portlet a:visited { */
-/*     color: #427597; */
-/*     border-bottom: 0.1em solid #ccc; */
-/* } */
 #content a:hover,
 dl.portlet a:hover {
     color: #8E004D; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
