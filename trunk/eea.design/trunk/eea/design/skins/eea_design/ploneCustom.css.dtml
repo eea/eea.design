@@ -1119,6 +1119,11 @@ h3.site-description {
     background: none !important;
 }
 
+#externalsites-eoe a {
+    background: url("eyeonearth-icon.png") no-repeat scroll 0 1px transparent;
+    padding: 1px 0 1px 36px;
+}
+
 /* The skin switcher at the top, only shows up if you have multiple skins available */
 
 #portal-skinswitcher {
