@@ -78,14 +78,38 @@
     <li id="move_up_down" style="display:none;"><span i18n:translate="move_up_down">move portlet up or down</span>: ::</li>
     <li><span i18n:translate="stop_portlet">do not display this portlet this folder and under</span>: &plusmn;</li>
     <li><span i18n:translate="allow_portlet">display this portlet this folder and under</span>: v</li>
-    <li><span i18n:translate="move_left">move portlet left</span>: &larr;</li>
-    <li><span i18n:translate="move_right">move portlet right</span>: &rarr;</li>
     <li><span i18n:translate="delete">delete portlet</span>: &times;</li>
   </ul>
   <script type="text/javascript">
-    jq('#move_up').css("display", "none" );
-    jq('#move_down').css("display", "none" );
-    jq('#move_up_down').css("display", "list-item" );
+      jQuery(document).ready(function(){ 
+          jQuery('#move_up').css("display", "none" );
+          jQuery('#move_down').css("display", "none" );
+          jQuery('#move_up_down').css("display", "list-item" );
+          var right_column = jQuery("#portal-column-two");
+          var i = 0;
+          var rule_item = {};
+          var rules = kukit.engine.getRules();
+          jQuery(rules).each(function(){ 
+              if(this.kssSelector.css == ".portletAssignments .managedPortletActions .delete") {
+                  rule_item.item = this;
+                  rule_item.content = this.actions.content;
+                  this.actions.content = {};
+              }
+          });
+          right_column.delegate('a', 'click', function(e){
+              if (this.className === "delete") {
+              var conf = i === 0 ? window.confirm("Are you sure you want to delete the portlet from its initial assigment? \n By hiting delete you can delete a portlet which is added in another context which will make the portlet dissapear for all of the other content!!! \n Remember that you can hide an portlet by clicking the +- sign which will turn into the +- into a V") : false;
+                  if (conf && i === 0) {
+                      rule_item.item.actions.content = rule_item.content;
+                      i += 1;
+                      jQuery(this).trigger('click');
+                  }
+                  else {
+                     e.preventDefault();
+                  }
+              }
+            });
+      });
   </script>
   </div>
   <p i18n:translate="description_portlets_block_unblock">
