@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.9-dev - (unreleased)
+----------------------
+
 4.8 - (2011-11-29)
 ------------------
  * Change: added eye on earth as external site and removed unused macros [demarant]
