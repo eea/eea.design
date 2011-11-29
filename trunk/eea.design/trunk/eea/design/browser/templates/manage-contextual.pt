@@ -23,6 +23,9 @@
 <body>
 <div metal:fill-slot="main">
 
+      <style type="text/css">
+          .left {display: none;}
+      </style>
   <h1 class="documentFirstHeading"
       i18n:translate="title_manage_contextual_portlets">
       <img i18n:name="context_icon" tal:replace="structure python:plone_view.getIcon(context).html_tag()" />
@@ -76,8 +79,8 @@
     <li id="move_up" style="display:list-item;"><span i18n:translate="move_up">move portlet up</span>: &uarr;</li>
     <li id="move_down" style="display:list-item;"><span i18n:translate="move_down">move portlet down</span>: &darr;</li>
     <li id="move_up_down" style="display:none;"><span i18n:translate="move_up_down">move portlet up or down</span>: ::</li>
-    <li><span i18n:translate="stop_portlet">do not display this portlet this folder and under</span>: &plusmn;</li>
-    <li><span i18n:translate="allow_portlet">display this portlet this folder and under</span>: v</li>
+    <li><span i18n:translate="stop_portlet">in this folder and under this portlet is visible</span>: &plusmn;</li>
+    <li><span i18n:translate="allow_portlet">in this folder and under this portlet is hidden</span>: v</li>
     <li><span i18n:translate="delete">delete portlet</span>: &times;</li>
   </ul>
   <script type="text/javascript">
