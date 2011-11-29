@@ -3,6 +3,7 @@ Changelog
 
 4.8-dev - (unreleased)
 ----------------------
+ * Change: added eye on earth as external site and removed unused macros [demarant]
  * Change: added a warning box which alerts the user that he is about to delete a portlet [ichimdav #4793]
 
 4.7 - (2011-11-28)

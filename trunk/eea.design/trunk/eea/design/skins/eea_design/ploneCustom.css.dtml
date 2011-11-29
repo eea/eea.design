@@ -1330,10 +1330,6 @@ h3.site-description {
     display: inline;
     color: white;
     border-right: 1px solid &dtml-darkBackgroundColor;;
-    padding-left: 10px;
-}
-
-#portal-siteactions li {
     padding: 0 10px;
 }
 
