@@ -3,6 +3,8 @@ Changelog
 
 4.9-dev - (unreleased)
 ----------------------
+ * Bug fix: removed retrieval of description from parent on album entries because it fails to get aq_parent
+   when the parent is a faceted navigation enabled folder [ichimdav #4807]
 
 4.8 - (2011-11-29)
 ------------------
