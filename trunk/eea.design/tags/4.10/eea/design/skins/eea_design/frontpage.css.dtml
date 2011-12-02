@@ -1,0 +1,573 @@
+/*
+  Style for the promo gallery with highlights/news.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* General frontpage
+******************************************************************************/
+
+/* This div sneaks in a padding for IE it seems. */
+html {
+    /*background: url("header.png") top left repeat-x;*/
+
+}
+
+#region-content {
+    padding: 0 0 !important;
+}
+
+.documentContent {
+    padding: 0;
+}
+
+body.frontpage ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+}
+
+#main-content {
+    margin-top: 5px;
+}
+
+#highlights-block h1 a,
+#highlights-block h2 a,
+#highlights-block h3 a {
+	background: none;
+}
+
+#highlights-block h1 a:hover,
+#highlights-block h2 a:hover,
+#highlights-block h3 a:hover {
+    border: none;
+    text-decoration: underline;
+}
+
+
+#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks {
+    margin:0.5em 0 0 1px;
+}
+
+#highlights-block h3 {
+    margin: 0 0 0.5em 0;
+    font-weight: normal;
+}
+
+#highlights-block h2, .featured h2, .featured dt.portletHeader {
+    font-size: 160%;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 0.2em 1em 0.25em 0em !important;
+    border: none;
+    clear: left;
+    color: #000;
+    margin: 0;
+    background: none;
+    text-shadow: 1px 1px white;
+}
+
+#highlights-block .shortNewsTitle {
+    margin-top: 0.5em;
+}
+
+#highlights-block .date {
+    font: normal  x-small "Verdana";
+    color: #808285;
+}
+
+#whatsnew-gallery .highlights {
+    clear: both;
+    padding: 0 15px 15px 15px;
+}
+
+.highlights .portalMessage {
+  margin-top: 0;
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.frontpage .tileHeadline {
+  padding-left: 0 !important;
+  padding-top: 0.4em !important;
+}
+
+/**
+ * Reset margin between tabs and content from highlights
+*/
+.figure-left {
+    /* clear: left; */
+    float: left;
+}
+/* don't show dates on articles on frontpage as they are not like news */
+#articles-high .date {
+    /* visibility:hidden; */
+}
+
+.archives {
+    float: right;
+    margin: 15px;
+    position: relative;
+    top: 7px;
+    line-height: 1em;
+}
+
+a.archives {
+    color: #869936;
+    border-bottom: 1px solid #869936;
+}
+
+/* Frontpage main content
+******************************************************************************/
+
+.column-area, .right-column-area {
+    width: 61%;
+    margin: 0 0;
+    padding: 0 1em 1em 0;
+    float: left;
+}
+
+.right-column-area {
+    width: 35%;
+    padding: 0 0 0 1em;
+}
+#articles-area {
+    width: 390px;
+    float: right;
+    padding: 0;
+}
+
+#highlights-area {
+    float: left;
+    width: 585px;
+}
+
+#highlights-area .highlights {
+    background: &dtml-greyBackgroundColor;;
+}
+
+body.frontpage .documentActions,
+body.frontpage #belowContent {
+    display: none;
+}
+
+body.frontpage #highlights-block {
+   padding: 0;
+}
+
+body.frontpage #portal-columns {
+    padding: 0 !important;
+}
+#content ul.gallery-layout-selection  {
+  float: right;
+  position: relative;
+  top: 5px;
+  list-style: none;
+  margin-bottom: 10px;
+  width: 65px;
+  display: inline;
+}
+#content ul.gallery-layout-selection li {
+    display: inline;
+}
+
+#content ul.gallery-layout-selection li a {
+    border-bottom: 0px;
+}
+
+
+
+/* Frontpage multimedia area
+******************************************************************************/
+
+#big_vid {
+    float: left;
+    width: 70%;
+}
+
+#multimedia-highlights ul {
+    /* float: right; */
+    /* width: 100%; */
+    list-style: none outside none;
+}
+
+#multimedia-highlights ul li,
+#multimedia-highlights ul li a ,
+{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Frontpage news and articles
+******************************************************************************/
+.highlightMiddle {
+    padding: 2em 1.7em 1em 1.7em;
+    background: &dtml-greyBackgroundColor;;
+}
+
+.highlightHigh {
+    display: block;
+    padding: 0em 0em;
+    margin: 0 0 0em 0em;
+}
+
+.visualPadding {
+    padding: 0 1em 1em 1em;
+}
+
+#highlights-block .highlightHigh h2 {
+    font-size: 250%;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.panel .noPrint {
+    margin: 0px !important;
+}
+
+
+#highlights-block .highlightHigh .relatedLinks {
+    font-size: 160%;
+}
+
+
+.highlights ul li .date {
+    float: left;
+    margin: 0 0 0 -8em;
+}
+
+#highlights-block .portletFooter {
+    padding-right: 1em;
+}
+
+div.even  {
+    background: &dtml-evenRowBackgroundColor;;
+    color: #346f83;
+    margin: 0;
+    padding: 15px 15px 10px 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+}
+div.even {
+     background: &dtml-greyBackgroundColor; !important;
+}
+
+div.current {
+  display: none;
+}
+
+ul#tabs {
+    background: &dtml-corporateBlueOne;;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+    height: 37px;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0;
+}
+
+ul#tabs li {
+    float: left;
+    list-style-image: none !important;
+    margin: 0 !important;
+    text-indent: 0;
+}
+
+ul#tabs li a {
+    color: #FFF;
+    border: 0px;
+    height: 17px;
+    font-size: 125%;
+    text-decoration: none;
+    padding: 9px 10px 11px 10px;
+    text-shadow: 1px 1px 1px #000000;
+    display: inline-block;
+}
+
+ul#tabs li a.current, ul#tabs li a:hover {
+    background: &dtml-greyBackgroundColor;;
+    color: #2D8EA3;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+ul#tabs li:first-child a.current,
+ul#tabs li:first-child a:hover {
+  border-radius: 8px 0 0 0;
+  -webkit-border-radius: 8px 0 0 0;
+  -moz-border-radius: 8px 0 0 0;
+}
+
+#news-header select {
+    margin-left: 30px;
+    color: #346f83;
+    margin-top: 10px;
+    display: table-cell;
+}
+
+#news-header h2 {
+    float: left;
+    padding: 0px;
+    margin: 5px 0px;
+    border:none;
+    line-height:1.2;
+}
+
+#news-header {
+  height: 35px;
+  clear: both;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* style for featured boxes */
+
+.roundedCorners {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.featured {
+    background: &dtml-lightBackgroundColor;;
+    margin-bottom: 2.5em;
+    padding:1em 2em;
+    box-shadow: 0 2px 2px #888888;
+    -webkit-box-shadow: 0 2px 2px #888888;
+    -moz-box-shadow: 0 2px 2px #888888;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.featured-highlights {
+    min-height: 120px;
+}
+
+.featured  img {
+    padding-right: 10px;
+    width: 180px;
+    height: 101px;
+}
+
+.featured dl {
+    padding: 0 1em 0 1em;
+}
+
+/* in featured boxes we do want floating for links and images */
+.featured h2, .featured h3 {
+    clear: none !important;
+}
+
+/* style for shortcuts buttons */
+
+#forum, #community, #mobile {
+    height: 100px;
+    background: &dtml-mediumBackgroundColor;;
+    margin-bottom: 2.5em;
+    text-align: center;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    box-shadow: 0 2px 2px #888;
+    -moz-box-shadow: 0 2px 2px #888888;
+    -webkit-box-shadow: 0 2px 2px #888888;
+}
+
+#forum-link,
+#facebook,
+#youtube,
+#twitter,
+#twitter-link,
+#facebook-link,
+#youtube-link,
+#rss-link,
+#email-link,
+a.active-list,
+a.list-layout,
+a.album-layout,
+a.active-album,
+a.list-layout:hover,
+a.album-layout:hover {
+  background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
+}
+
+#semantic-ds-links a:hover,
+#forum a:hover,
+#community a:hover,
+#mobile a:hover,
+#prev-promo:hover,
+#play-pause:hover,
+#next-promo:hover {
+  text-decoration: none !important;
+}
+
+#portlet-followus dd {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+#portlet-followus dd a:hover {
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#social-links h2 {
+  padding-left: 1.4em  !important;
+}
+
+#twitter-link,
+#facebook-link,
+#youtube-link,
+#rss-link,
+#email-link{
+  width: 33px;
+  height: 32px;
+  display: block;
+}
+
+#content #twitter-link, #content #facebook-link, #content #youtube-link {
+    background: transparent url('sprite-eeaimages.png') no-repeat;
+    padding: 0px;
+}
+
+ #twitter-link {
+    background-position: 0 -180px !important;
+}
+
+ #facebook-link {
+    background-position: 0 -147px !important;
+}
+
+#youtube-link {
+    background-position: 0 -213px !important;
+}
+
+#rss-link {
+    background-position: 0 -246px !important;
+}
+
+#email-link {
+    /*background-position: 0 -279px !important;*/
+    background: url("email_32.png") no-repeat center center transparent; /* TODO: to sprite */
+}
+
+.shortcut-default {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0em;
+    background: &dtml-lightBackgroundColor;;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 2px 2px #888888;
+    -webkit-box-shadow: 0 2px 2px #888888;
+    -moz-box-shadow: 0 2px 2px #888888;
+}
+
+.shortcut-light {
+    /*height: 100px;*/
+    background: transparent;
+    border: 1px solid #e6e7e8;
+    margin-bottom: 2.5em;
+    text-align: center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.shortcut-default:hover, .shortcut-light:hover, #mobile:hover {
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#semantic-content {
+   background: url("molecule.png") no-repeat 55px 22px transparent; /* TODO: to sprite */
+   padding: 25px 0px 5px 60px;
+   height: 75px;
+}
+
+#organisations-content {
+   background: url("/valentine-imagescales/organisation/image_thumb") no-repeat 35px 10px transparent; /* TODO: to sprite */
+   padding: 25px 0 0px 65px;
+   height: 75px;
+}
+
+#theme-datacentre {
+    background: transparent url('sprite-eeaimages.png') no-repeat;
+    padding: 25px 0px 25px 66px;
+    height: 56px;
+    background-position: -401px -469px;
+}
+
+#mobile {
+    background: transparent url("mobile-app.png") no-repeat center center;
+}
+
+
+#forum-link {
+    position: relative;
+    padding: 40px 100px;
+    top: 44px;
+    background-position: right -550px !important;
+}
+
+#mobile-link {
+    position: relative;
+    padding: 30px 120px;
+    top: 40px;
+}
+
+.shortcut-light a.portletHeader, .shortcut-default a.portletHeader  {
+   display:block;
+}
+
+a.list-layout,
+a.album-layout {
+  display: inline-block;
+  height: 17px;
+  margin-right: 10px;
+  width: 20px;
+}
+
+a.album-layout {
+    background-position: -427px -162px;
+}
+
+a.active-album, a.album-layout:hover {
+  background-position: -427px -145px;
+}
+
+a.list-layout {
+  background-position: -448px -162px;
+}
+
+a.active-list, a.list-layout:hover {
+  background-position: -448px -145px;
+}
+
+.filter-topic {
+    float: left;
+    text-align: right;
+    width: 84%;
+    padding-top: 6px;
+}
+.filter-topic span {
+    font-weight: bold;
+}
+/* </dtml-with> */
+
+
