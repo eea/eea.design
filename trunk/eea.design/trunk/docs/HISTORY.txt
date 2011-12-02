@@ -3,6 +3,7 @@ Changelog
 
 4.10-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed toc list for indicators edit form in eea-toc.js [ichimdav #4726]
 
 4.9 - (2011-11-30)
 ------------------
