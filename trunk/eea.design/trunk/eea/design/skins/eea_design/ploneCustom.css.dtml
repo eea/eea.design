@@ -2241,6 +2241,11 @@ body.mceContentBody {
     float: none;
 }
 
+/* hide ImageFs images from listing #4762 */
+.summary img[alt="ImageFS"] {
+    display: none;
+}
+
 /* </dtml-with> */
 
 
