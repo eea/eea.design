@@ -100,18 +100,18 @@
               if (this.className === "delete") {
                   var conf = window.confirm("Are you sure you want to delete the portlet from its initial assigment? \n By hiting delete you can delete a portlet which is added in another context which will make the portlet dissapear for all of the other content!!! \n Remember that you can hide an portlet by clicking the +- sign which will turn into the +- into a V");
                   if (conf) {
-                      var hash = $(this).closest('div').parent().attr('id').substr(7);
+                      var hash = jQuery(this).closest('div').parent().attr('id').substr(7);
                       var window_href = window.location.href;
                       var manage_location = window_href.indexOf('manage-portlets');
                       var manage_link = window_href.substr(0, manage_location + 15);
                       var clean_link = window_href.substr(0, manage_location);
                       var delete_link = clean_link + 'spmInlineDeletePortlet';
-                      $.post(delete_link, { portlethash : hash, viewname: 'manage-portlets'}, function(data){
+                      jQuery.post(delete_link, { portlethash : hash, viewname: 'manage-portlets'}, function(data){
                           window.location.href = manage_link;
                       });
                   }
-                  e.preventDefault();
               }
+              e.preventDefault();
          });
       });
   </script>
