@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.11-dev - (unreleased)
+-----------------------
+
 4.10 - (2011-12-02)
 -------------------
  * Change: removed kss action from the removal of the portlet and do the post with jquery because
