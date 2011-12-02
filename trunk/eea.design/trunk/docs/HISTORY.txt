@@ -3,6 +3,8 @@ Changelog
 
 4.10-dev - (unreleased)
 -----------------------
+ * Change: removed kss action from the removal of the portlet and do the post with jquery because
+   the kss action interacted with the confirm popup even if canceled [ichimdav #4793]
  * Bug fix: hide ImageFS image for listings because of double content image [ichimdav #4762]
  * Bug fix: fixed toc list for indicators edit form in eea-toc.js [ichimdav #4726]
 
