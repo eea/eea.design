@@ -23,7 +23,7 @@
                         <tal:featured_article metal:define-macro="featured_article"
                              tal:define="featured_class context/@@frontpage_highlights;
                                          highlights featured_class/getHighArticles;
-                                         archive_href string:articles;">
+                                         archive_href string:${context/@@plone_portal_state/portal_url}/articles;">
                                          <div metal:use-macro="here/frontpage_macros/macros/featured-item">
                                              <span metal:fill-slot="archive" i18n:translate="">Archive</span>
                                              <span metal:fill-slot="box_title" i18n:translate="">Featured article</span>
