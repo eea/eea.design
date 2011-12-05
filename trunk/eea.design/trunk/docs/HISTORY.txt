@@ -3,6 +3,7 @@ Changelog
 
 4.11-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed link to articles archive to point to site/articles anywhere in the site[ichimdav #4819]
 
 4.10 - (2011-12-02)
 -------------------
