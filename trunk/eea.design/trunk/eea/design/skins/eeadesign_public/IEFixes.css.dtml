@@ -405,16 +405,6 @@ dd.portletFooter {
     width: 350px;
 }
 
-#portal-searchbox input[type=text] {
-    padding-top: 8px;
-    height: 25px !important;
-    color: #FFFFFF;
-}
-
-#portal-searchbox input[type=text]:focus {
-    color: #333333;
-}
-
 #languageCodes li, #languageCodes li.selected { 
     display: inline;
     margin: 0px 5px;
@@ -498,10 +488,6 @@ a.list-layout.active-list, a.list-layout {
 
 dd.portletItem {
     margin-left: 0 !important;
-}
-
-form#searchbox_terminology input[type="text"] {
-    color: #FFFFFF;
 }
 
 #top-news-area div.portletHeader {

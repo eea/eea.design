@@ -403,7 +403,7 @@ dd.portletFooter {
 #portal-searchbox input[type=text] {
     padding-top: 8px;
     height: 25px !important;
-    color: #FFFFFF;
+    color: #777;
 }
 
 #portal-searchbox input[type=text]:focus {
@@ -497,10 +497,6 @@ dd.portletItem {
 
 #document-toc .portletItem ol li {
     list-style: none !important;
-}
-
-form#searchbox_terminology input[type="text"] {
-    color: #FFFFFF;
 }
 
 #top-news-area div.portletHeader {

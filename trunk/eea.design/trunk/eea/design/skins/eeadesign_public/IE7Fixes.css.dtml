@@ -483,7 +483,7 @@ dd.portletFooter {
 #portal-searchbox input[type=text] {
     padding-top: 8px;
     height: 25px !important;
-    color: #FFFFFF;
+    color: #777;
 }
 
 #languageCodes li, #languageCodes li.selected { 
@@ -568,10 +568,6 @@ a.list-layout.active-list, a.list-layout {
 
 dd.portletItem {
     margin-left: 0 !important;
-}
-
-form#searchbox_terminology input[type="text"] {
-    color: #FFFFFF;
 }
 
 img
