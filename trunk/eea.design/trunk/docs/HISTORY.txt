@@ -5,6 +5,7 @@ Changelog
 -----------------------
  * Bug fix: fixed remaining style issues issues from ticket #4619 [ichimdav #4619]
  * Bug fix: fixed link to articles archive to point to site/articles anywhere in the site[ichimdav #4819]
+ * Change: updated message for deleting portlets [ghicaale]
 
 4.10 - (2011-12-02)
 -------------------
@@ -26,7 +27,7 @@ Changelog
 4.7 - (2011-11-28)
 ------------------
  * Change: Fixed floating issue with related portlets [demarant]
- * Change: Links in text must have discreet underline. 
+ * Change: Links in text must have discreet underline.
    removed Inline-block, was giving issue when used in news with floating right images.
    [demarant]
  * Bug fix: Fixed link color in live search results, it was not visible, white on white. [demarant]
@@ -35,10 +36,10 @@ Changelog
 ------------------
  * Bug fix: fixed newsletter rendering template
    [ghicaale #4792]
- * Bug fix: fixed the preview image url for the case when we have an external 
+ * Bug fix: fixed the preview image url for the case when we have an external
    promotion (link type), the target link and the image link are different.
    [demarant #4662]
- * Bug fix: fixed cross_site_top macro reference to global_externalsites which prevented the template from 
+ * Bug fix: fixed cross_site_top macro reference to global_externalsites which prevented the template from
    being editied with portal_view_customizations [ichimdav #4783]
  * Feature: made "all items" links in whatsnewgallery overwritable to be used by
    data centres pages [demarant #4784]
@@ -56,10 +57,10 @@ Changelog
 
 4.3 - (2011-11-22)
 ------------------
- * Bug fix: removed effectiveRange from the topic queries, it missing brains which were found with 
+ * Bug fix: removed effectiveRange from the topic queries, it missing brains which were found with
    the faceted navigation [ichimdav #4725]
- * Bug fix: Improved the image quality in the features-item macro, it was using 
-   a image_thumb (which was stretched) instead of image_preview higher res. 
+ * Bug fix: Improved the image quality in the features-item macro, it was using
+   a image_thumb (which was stretched) instead of image_preview higher res.
    [demarant]
 
 4.2 - (2011-11-21)
@@ -77,7 +78,7 @@ Changelog
  * Change: Improve readability of promo gallery on frontpage and disable description. [demarant]
  * Feature: added portlet to invalidate cache [tiberich #4689]
  * Bug fix: added the Invalidate cache link in the colophon [tiberich #4689]
-* Feature: Added a viewlet eea.js_belowbodytag for adding inline js just after the body tag. 
+* Feature: Added a viewlet eea.js_belowbodytag for adding inline js just after the body tag.
   [demarant]
 * Bugfix: Fixed transparency in ie8 on Environmental topics page for the main topics [szabozo0 #4697]
 * Change: Migrated showurl from custom [szabozo0 #4161]
@@ -105,7 +106,7 @@ Changelog
 * Bug fix: fixed design issues on soer frontpage due to new template.
   [demarant #4520]
 * Feature: Moved Site Setup portlet from left column to the right [szabozo #4493]
-* Feature: refs# 4487 added optional boolean parameter show_description to hide description on promotion gallery, limited the number of character to show in promo navigator and on title so that it works well on most content. 
+* Feature: refs# 4487 added optional boolean parameter show_description to hide description on promotion gallery, limited the number of character to show in promo navigator and on title so that it works well on most content.
 * Feature: extended the common feature-item macro with "descr_max_length" integer parameter for cropping the lengthy descriptions, default 200 chars [demarant].
 * Feature/Bug fix: refs #4425, fixed a small bug with href for the new featured macro. added the feature of limiting the number of items to show [demarant].
 * Feature: Added first version of "all products" in the whatsnew section. it remains to resort the list by effective date. [demarant]

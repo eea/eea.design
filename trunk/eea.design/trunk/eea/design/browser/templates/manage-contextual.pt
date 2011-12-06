@@ -54,7 +54,7 @@
 
   <p i18n:translate="description_manage_contextual_portlets">
     The portlet columns will now display only those portlets
-    explicitly assigned in this context. Use the buttons on each portlet 
+    explicitly assigned in this context. Use the buttons on each portlet
     to move them up or down, delete or edit them. To add a new portlet,
     use the drop-down list at the top of the column.
   </p>
@@ -84,13 +84,13 @@
     <li><span i18n:translate="delete">delete portlet</span>: &times;</li>
   </ul>
   <script type="text/javascript">
-      jQuery(document).ready(function(){ 
+      jQuery(document).ready(function(){
           jQuery('#move_up').css("display", "none" );
           jQuery('#move_down').css("display", "none" );
           jQuery('#move_up_down').css("display", "list-item" );
           var right_column = jQuery("#portal-column-two");
           var rules = kukit.engine.getRules();
-          jQuery(rules).each(function(){ 
+          jQuery(rules).each(function(){
               if(this.kssSelector.css == ".portletAssignments .managedPortletActions .delete") {
                   // get rid of the kss action for deleting
                   this.actions.content = {};
@@ -98,7 +98,7 @@
           });
           right_column.delegate('a', 'click', function(e){
               if (this.className === "delete") {
-                  var conf = window.confirm("Are you sure you want to delete the portlet from its initial assigment? \n By hiting delete you can delete a portlet which is added in another context which will make the portlet dissapear for all of the other content!!! \n Remember that you can hide an portlet by clicking the +- sign which will turn into the +- into a V");
+                  var conf = window.confirm("THIS ACTION WILL DELETE THE PORTLET FROM ALL SECTIONS OF THE PORTAL! \n Hint 1: ask a portal manager if you want to manage portlets \n Hint 2: use Parent portlets property and select Block");
                   if (conf) {
                       var hash = jQuery(this).closest('div').parent().attr('id').substr(7);
                       var window_href = window.location.href;
@@ -117,7 +117,7 @@
   </script>
   </div>
   <p i18n:translate="description_portlets_block_unblock">
-      If you wish to block or unblock certain categories of portlets, you can 
+      If you wish to block or unblock certain categories of portlets, you can
       do so using the drop-down boxes.
   </p>
 
@@ -138,7 +138,7 @@
                value="Convert portlets"
                i18n:attributes="value label_convert_portlets"
                name="convert" />
-    
+
     </form>
 
   </div>
