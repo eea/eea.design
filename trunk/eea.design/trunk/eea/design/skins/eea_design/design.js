@@ -17,6 +17,11 @@ jQuery(document).ready(function($) {
         $('#icon-full_screen').parent().remove();
     }
 
+    function toggleEcotipClass(){
+        var ecotip = jQuery('#portlet-ecotip');
+        ecotip.toggleClass('hover');
+    }
+
     window.setInterval(toggleEcotipClass, 5000);
 });
 
@@ -61,7 +66,3 @@ jQuery(window).resize(function() {
 /**
  * Function to animate ecotip bulb
 */
-function toggleEcotipClass(){
-    var ecotip = jQuery('#portlet-ecotip');
-    ecotip.toggleClass('hover');
-}
