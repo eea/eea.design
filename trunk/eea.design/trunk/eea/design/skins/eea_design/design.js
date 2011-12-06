@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
         $('#icon-full_screen').parent().remove();
     }
 
-    window.setInterval('toggleEcotipClass()', 5000);
+    window.setInterval(toggleEcotipClass, 5000);
 });
 
 jQuery(window).load(function() {
