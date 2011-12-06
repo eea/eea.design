@@ -27,8 +27,13 @@
             if (buttonID == "siteaction-contactus" && isCurrentPageTranslated()) {
                 return;
             }
-            var offset = buttonID === "article-language" ? [-170, -690] : [0, 0];
-            var position = buttonID === "article-language" ? 'bottom right' : 'bottom center';
+            var article_lang = buttonID === "article-language";
+            // wee need to check for ie8 because it required a different value
+            // from ie7 and ie 9
+            var ie_vers = $.browser.msie && parseInt($.browser.version, 10);
+            var offset =  article_lang ? [-170, -690] : [0, 0];
+                offset = article_lang && ie_vers === 8 ? [-170, -760] : offset;
+            var position = article_lang ? 'bottom right' : 'bottom center';
             
             if (tooltip.length > 0) {
                 a.attr("title","").attr("href", "#");
