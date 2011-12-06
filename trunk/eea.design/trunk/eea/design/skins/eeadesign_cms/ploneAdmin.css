@@ -16,14 +16,6 @@ body.mceContentBody {
    padding: 0.5em;
 }
 
-#portal-column-content {
-    /*margin-left: -22em;*/
-}
-
-#content {
-    padding: 0.5em 0;
-}
-
 .navTreeItem a, dd.portletItem .navTreeItem a {
     border-color: white;
 }
@@ -46,11 +38,6 @@ body.section-SITE .documentActions {
 
 *:first-child+html .documentActions {
     padding-top: 1em;
-}
-
-
-.documentEditable .documentContent {
-padding: 1em;
 }
 
 #portlet-navigation-tree .contenttype-document {
