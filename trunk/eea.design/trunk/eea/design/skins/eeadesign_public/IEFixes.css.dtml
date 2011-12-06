@@ -561,9 +561,4 @@ a.archives {
    margin: 0px 0px -35px -92px !important;
 }
 
-
-#keyfacts-slider .slidePortlet {
-    width: 638px !important;
-}
-
 /* </dtml-with> */
