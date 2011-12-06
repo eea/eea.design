@@ -61,7 +61,7 @@ function build_toc() {
 }
 
 jQuery(document).ready(function($) {
-    $('#document-toc').find('.TOC2Digit').empty();
+    $('#document-toc').find('ol').first().empty();
     build_toc();
     $("#region-content").find('.clear-toc').removeClass('clear-toc');
 });
