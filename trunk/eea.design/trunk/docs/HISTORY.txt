@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.12-dev - (unreleased)
+-----------------------
+
 4.11 - (2011-12-07)
 -------------------
  * Change: better fix for indicators toc list [ichimdav #4726]
