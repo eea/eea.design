@@ -345,8 +345,12 @@ dd.portletFooter {
     margin-top: 5px;
 }
 
+#portlet-followus {
+    text-align: center;
+}
 #portlet-followus dd {
     display: inline-block;
+    margin-left: 1em;
     padding-left: 0px;
 }
 
@@ -617,21 +621,26 @@ img
     width: 295px !important;
 }
 
-.frontpage .column-area#articles-area .featured.roundedCorners,
-.frontpage .column-area#articles-area #forum,
+#articles-area .featured.roundedCorners,
+#forum,
 #portal-column-two .shortcut-default,
 #portal-column-two .featured.roundedCorners,
-.section-themes #content-core .column-area .featured,
-.section-themes #content-core .right-column-area .shortcut-default.roundedCorners,
-.section-data-and-maps #content-core .column-area .featured {
+#content-core .column-area .featured,
+#content-core .right-column-area .shortcut-default.roundedCorners,
+.shortcut-default:hover, .shortcut-light:hover, #mobile:hover 
+{
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
     filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
+
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
+}
+.shortcut-default:hover, .shortcut-light:hover, #mobile:hover {
+    background-color: #FFF;
 }
 
 #whatsnew-gallery .highlights .gallery-album .photoAlbumEntry {
@@ -661,7 +670,7 @@ img
 }
 
 .section-multimedia #content-core #multimedia-widgets #sliders .multimedia-widget .featured,
-#multimedia-coverflow  {
+#multimedia-coverflow   {
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#252525')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#252525')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#252525')

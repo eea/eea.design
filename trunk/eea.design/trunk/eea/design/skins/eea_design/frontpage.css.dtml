@@ -145,7 +145,7 @@ a.archives {
     width: 585px;
 }
 
-#highlights-area .highlights {
+#whatsnew-gallery .highlights {
     background: &dtml-greyBackgroundColor;;
 }
 
