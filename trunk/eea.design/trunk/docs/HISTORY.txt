@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.11-dev - (unreleased)
------------------------
+4.11 - (2011-12-07)
+-------------------
  * Change: better fix for indicators toc list [ichimdav #4726]
  * Bug fix: fixed 2, 8, 11, 15, 16 issues from ticket #4619 [ichimdav #4619]
  * Bug fix: fixed link to articles archive to point to site/articles anywhere in the site[ichimdav #4819]
