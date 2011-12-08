@@ -3,6 +3,8 @@ Changelog
 
 4.12-dev - (unreleased)
 -----------------------
+ * Bug fix: Fixed contact-info for authenticated users.
+   [voineali #4781]
 
 4.11 - (2011-12-07)
 -------------------

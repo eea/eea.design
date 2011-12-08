@@ -18,7 +18,7 @@
                  isAnon context/@@plone_portal_state/anonymous;">
 
     <h1 class="documentFirstHeading"
-        i18n:translate="heading_contact_form">Contact form</h1>
+        i18n:translate="heading_contact_form">Contact EEA Web Admin</h1>
 
     <div class="documentDescription"
          tal:condition="portal/description"
@@ -36,7 +36,7 @@
     <div tal:condition="email_from_address">
 
         <div i18n:translate="description_contact_site_owner">
-            Fill in this form to contact the site owners.
+            Fill in this form to contact the site admin.
         </div>
         <div id="content-core">
             <form name="feedback_form"
