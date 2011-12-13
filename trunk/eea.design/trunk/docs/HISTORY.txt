@@ -3,6 +3,7 @@ Changelog
 
 4.12-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed small promotion gallery for pages that weren't from themes folder [ichimdav #4827]
  * Bug fix: Fixed contact-info for authenticated users.
    [voineali #4781]
 

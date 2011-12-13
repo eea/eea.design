@@ -11,7 +11,8 @@
                     this.height = "320";
                 });
     
-        var site_address = window.location.href.indexOf('themes') != '-1' ? true : undefined,
+        var small_navigator = $("#promo-navigator-sm"),
+            site_address = small_navigator.length ? true : undefined,
             nav_height = site_address ? 50 : 80,  
             nav_width = site_address ? 65 : 170, 
             nav_items_selector = site_address ? "#promo-navigator-sm li" : "#promo-navigator li", 
