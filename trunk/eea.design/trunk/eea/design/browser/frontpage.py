@@ -282,7 +282,8 @@ def _getPromotions(self, noOfItems = 6):
         'sort_order' : 'reverse'
     }
 
-    themes = getTheme(self.context.aq_inner)
+    context = self.context.aq_inner
+    themes = getTheme(context)
     if themes:
         query['getThemes'] = themes
     result = self.catalog(query)
@@ -291,13 +292,14 @@ def _getPromotions(self, noOfItems = 6):
         obj = brain.getObject()
         promo = IPromotion(obj)
 
-        if IVideoEnhanced.providedBy(obj):
-            continue
         if themes:
-            if not promo.display_on_themepage:
+            if promo.display_on_themepage == False or \
+                                       promo.display_globally == False:
                 continue
-        else:
-            if not promo.display_on_frontpage:
+        if hasattr(context, 'layout') and \
+                                    context.layout == 'frontpage_view':
+            if promo.display_on_frontpage == False or \
+                                       promo.display_globally == False:
                 continue
         if not promo.active:
             continue
