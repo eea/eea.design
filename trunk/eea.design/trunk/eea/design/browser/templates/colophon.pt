@@ -2,7 +2,7 @@
     metal:define-macro="colophon"
     i18n:domain="eea">
     <metal metal:use-macro="here/main_template/macros/short_colophon">
-    <tal:condition 
+    <tal:condition
     tal:define="local_site context/@@plone_portal_state/local_site;
     isViewTemplate context/@@plone_context_state/is_view_template;
     short_colophon_cond python:short_colophon and isViewTemplate;" metal:fill-slot="colophon_slot">
@@ -111,7 +111,7 @@
         <tal:c6 condition="short_colophon_cond">
         <div class="colophon-right" tal:define="local python:'/SITE' if 'localhost' in context.REQUEST['URL0'] else ''; portal_state context/@@plone_portal_state; img_url string:${portal_state/portal_url}${local}/multimedia/backgrounds/background">
             <a href="#"> <img tal:attributes="src string:${img_url}.jpg/image_thumb" class="selected" /> </a>
-            <a href="#"> <img tal:attributes="src string:${img_url}2.jpg/image_thumb" /> </a>   
+            <a href="#"> <img tal:attributes="src string:${img_url}2.jpg/image_thumb" /> </a>
             <a href="#"> <img tal:attributes="src string:${img_url}3.jpg/image_thumb" /> </a>
             <a href="#"> <img tal:attributes="src string:${img_url}4.jpg/image_thumb" /> </a>
             <a href="#"> <img tal:attributes="src string:${img_url}5.jpg/image_thumb" /> </a>
@@ -125,7 +125,11 @@
     <div class="visualClear">&nbsp;</div>
     <p>
       <a href="/login_form" title="CMS login"><strong>CMS login</strong></a>
-      <tal:invalidcachescript replace="structure here/invalidcache_link" />
+      <a href="@@invalidate_cache"
+        tal:condition="python:checkPermission('Modify portal content', context)"
+        rel="nofollow" title="Refresh this page"
+        i18n:attributes="title"
+        i18n:translate="">Refresh this page</a>
     </p>
     </tal:c7>
     </tal:condition>
