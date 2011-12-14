@@ -59,7 +59,7 @@
 		this.navigatorItems = $obj.find( this.settings.navItemsSelector );
 		this.navigatorInner = this.navigatorOuter.find( this.settings.navInnerSelector );
 		
-		if( this.settings.navPosition == 'horizontal' ){ 
+		if( this.settings.navPosition === 'horizontal' ){ 
 			this.navigatorInner.width( this.slides.length * this.settings.navigatorWidth );
 			this.navigatorOuter.width( this.settings.maxItemDisplay * this.settings.navigatorWidth );
 			this.navigatorOuter.height(	this.settings.navigatorHeight );
@@ -74,7 +74,7 @@
 		this.directionMode = this.__getDirectionMode();  
 		
 		
-		if( this.settings.direction == 'opacity') {
+		if( this.settings.direction === 'opacity') {
 			this.wrapper.addClass( this.settings.opacityClass );
 			$(this.slides).hide().eq(this.currentNo).show();
 			this.caption = $obj.find( this.settings.caption );
@@ -107,7 +107,7 @@
 			});
 			this.setNavActive(this.currentNo );
 			
-			if( this.settings.buttons && typeof (this.settings.buttons) == "object" ){
+			if( this.settings.buttons && typeof (this.settings.buttons) === "object" ){
 				this.registerButtonsControl( 'click', this.settings.buttons, this );
 
 			}
@@ -188,15 +188,19 @@
 			}
 		},
 		__getPositionMode:function( position ){
-			if(	position  == 'horizontal' ){
+			if(	position  === 'horizontal' ){
 				return ['left', this.settings.navigatorWidth];
 			}
 			return ['top', this.settings.navigatorHeight];
 		},
 		__getDirectionMode:function(){
-			switch( this.settings.direction ){
-				case 'opacity': this.maxSize=0; return ['opacity','opacity'];
-				default: this.maxSize=this.maxWidth; return ['left','width'];
+			if (this.settings.direction === 'opacity') {
+                    this.maxSize=0; 
+                    return ['opacity','opacity'];
+            }
+		    else { 
+                this.maxSize=this.maxWidth; 
+                return ['left','width'];
 			}
 		},
 		registerButtonsControl:function( eventHandler, objects, self ){ 

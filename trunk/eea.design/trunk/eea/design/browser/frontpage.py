@@ -296,7 +296,7 @@ def _getPromotions(self, noOfItems = 6):
                 continue
         if hasattr(context, 'layout') and \
                                     context.layout == 'frontpage_view':
-            if not(promo.display_on_fontpage or promo.display_globally):
+            if not(promo.display_on_frontpage or promo.display_globally):
                 continue
         if not promo.active:
             continue
