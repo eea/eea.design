@@ -7,13 +7,13 @@ function cookiesEnabled() {
   document.cookie = c;
   var dc = document.cookie;
   // cookie not set?  fail
-  if (dc.indexOf(c) == -1) return 0;
+  if (dc.indexOf(c) === -1) { return 0; }
   // change test cookie
   c = "areYourCookiesEnabled=1";
   document.cookie = c;
   dc = document.cookie;
   // cookie not changed?  fail
-  if (dc.indexOf(c) == -1) return 0;
+  if (dc.indexOf(c) === -1) { return 0; }
   // delete cookie
   document.cookie = "areYourCookiesEnabled=; expires=Thu, 01-Jan-01 00:00:01 GMT";
   return 1;
@@ -34,17 +34,17 @@ function setLoginVars(user_name_id, alt_user_name_id, password_id, empty_passwor
     if (el) { el.value = cookiesEnabled(); } 
   }
   if (user_name_id && alt_user_name_id) {
-    user_name = document.getElementById(user_name_id)
-    alt_user_name = document.getElementById(alt_user_name_id)
+    user_name = document.getElementById(user_name_id);
+    alt_user_name = document.getElementById(alt_user_name_id);
     if (user_name && alt_user_name) {
        alt_user_name.value = user_name.value;
     } 
   }
   if (password_id && empty_password_id) {
-    password = document.getElementById(password_id)
-    empty_password = document.getElementById(empty_password_id)
+    password = document.getElementById(password_id);
+    empty_password = document.getElementById(empty_password_id);
     if (password && empty_password) {
-       if (password.value.length==0) {
+       if (password.value.length === 0) {
           empty_password.value = '1';
        } else {
           empty_password.value = '0';
@@ -56,7 +56,7 @@ function setLoginVars(user_name_id, alt_user_name_id, password_id, empty_passwor
 
 function showCookieMessage(msg_id) {
   // Show the element with the given id if cookies are not enabled
-  msg = document.getElementById(msg_id)
+  msg = document.getElementById(msg_id);
   if (msg) {
      if (cookiesEnabled()) {
         msg.style.display = 'none';
@@ -68,7 +68,7 @@ function showCookieMessage(msg_id) {
 
 function showEnableCookiesMessage() {
   // Show the element with the id 'enable_cookies_message' if cookies are not enabled
-  showCookieMessage('enable_cookies_message')
+  showCookieMessage('enable_cookies_message');
 }
 // Call showEnableCookiesMessage after the page loads
 registerPloneFunction(showEnableCookiesMessage);
