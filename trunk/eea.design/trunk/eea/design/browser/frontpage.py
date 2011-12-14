@@ -293,13 +293,11 @@ def _getPromotions(self, noOfItems = 6):
         promo = IPromotion(obj)
 
         if themes:
-            if promo.display_on_themepage == False or \
-                                       promo.display_globally == False:
+            if not(promo.display_on_themepage or promo.display_globally):
                 continue
         if hasattr(context, 'layout') and \
                                     context.layout == 'frontpage_view':
-            if promo.display_on_frontpage == False or \
-                                       promo.display_globally == False:
+            if not(promo.display_on_fontpage or promo.display_globally):
                 continue
         if not promo.active:
             continue
