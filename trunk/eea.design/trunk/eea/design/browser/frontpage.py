@@ -301,7 +301,7 @@ def _getPromotions(self, noOfItems = 6):
                 continue
         if not promo.active:
             continue
-        cPromos.append(obj)
+        cPromos.append(brain)
         if len(cPromos) == noOfItems:
             break
     return cPromos

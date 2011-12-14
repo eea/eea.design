@@ -3,6 +3,7 @@ Changelog
 
 4.12-dev - (unreleased)
 -----------------------
+ * Bug fix: allow videos to be displayed as promotions [ichimdav #4830]
  * Change: Updated "Refresh this page" according with EEAContentTypes changes
    [voineali #4689]
  * Bug fix: fixed small promotion gallery for pages that weren't from themes folder [ichimdav #4827]
