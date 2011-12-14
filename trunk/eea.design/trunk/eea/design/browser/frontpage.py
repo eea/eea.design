@@ -9,7 +9,6 @@ from Products.Five import BrowserView
 from eea.cache import cache
 from eea.promotion.interfaces import IPromotion
 from eea.themecentre.themecentre import getTheme
-from p4a.video.interfaces import IVideoEnhanced
 from plone.app.blob.interfaces import IBlobWrapper
 from zope.component import queryMultiAdapter
 
