@@ -679,7 +679,8 @@ table.listing th.listingCheckbox {
 table.listing {
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    display: block;
+    display: inline-block;
+    max-width: 650px;
     overflow: auto;
 }
 table.listing .top {
