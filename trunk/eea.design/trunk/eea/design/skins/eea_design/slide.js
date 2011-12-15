@@ -24,16 +24,11 @@
 
             // 'Contact us' link should go to old translated page because the
             // pop up is hardcoded in english. #2954
-            if (buttonID == "siteaction-contactus" && isCurrentPageTranslated()) {
+            if (buttonID === "siteaction-contactus" && isCurrentPageTranslated()) {
                 return;
             }
             var article_lang = buttonID === "article-language";
-            // wee need to check for ie8 because it required a different value
-            // from ie7 and ie 9
-            var ie_vers = $.browser.msie && parseInt($.browser.version, 10);
-            var offset =  article_lang ? [-170, -690] : [0, 0];
-                offset = article_lang && ie_vers === 8 ? [-170, -760] : offset;
-            var position = article_lang ? 'bottom right' : 'bottom center';
+            var networks_panel = buttonID === "externalsites-networks";
             
             if (tooltip.length > 0) {
                 a.attr("title","").attr("href", "#");
@@ -41,8 +36,8 @@
                 fordef = 'click, blur';
                 a.tooltip({
                     tip: tooltip[0],
-                    position: position,
-                    offset: offset,
+                    position: 'bottom center',
+                    offset: [0,0],
                     delay: 10000000,
                     events: {
                         def: fordef
@@ -55,10 +50,24 @@
                     var parents = $('#cross-site-top, #content'),
                     panels = parents.find('.panel');
                     panels.each(function(){
-                        if ($(this).attr('id') != tooltip.attr('id')){
+                        if ($(this).attr('id') !== tooltip.attr('id')){
                             $(this).fadeOut('fast');
                         }
                     });
+                    if(article_lang) {
+                        $("#tip-article-language").css({
+                            position: 'absolute',
+                            top: '48px',
+                            display: 'block',
+                            right : '0px',
+                            left: ''
+                        });
+                    }
+                    
+                    if(networks_panel) {
+                        $("#tip-externalsites-networks").css('margin-left', '2em');
+                    }
+                    
                     tooltip.fadeIn('fast');
                 });
             }
@@ -87,6 +96,6 @@ $(document).click(function(e) {
         submitLink.remove().css('margin-right', '0.5em');
         footer.prepend(submitLink);
     });
-})(jQuery);
+}(jQuery));
 
 
