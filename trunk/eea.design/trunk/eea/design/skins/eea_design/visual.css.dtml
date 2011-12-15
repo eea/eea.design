@@ -353,6 +353,14 @@ float: right;
 margin-left: 1em;
 }
 
+.shadowed, .figure img, .thumbnail-right img {
+    display: block;
+    background-color: #fff;
+    margin: -6px 0px 0px -6px;
+    border: 1px solid #a9a9a9;
+    padding: 4px;
+}
+
 .related-in-content-area .figure-plus-container {
 margin-left: 3em;
 }
