@@ -126,7 +126,6 @@
     <p>
       <a href="/login_form" title="CMS login"><strong>CMS login</strong></a>
       <a href="@@invalidate_cache"
-        tal:condition="python:context.portal_membership.checkPermission('Modify portal content', context)"
         rel="nofollow" title="Refresh this page"
         i18n:attributes="title"
         i18n:translate="">Refresh this page</a>
