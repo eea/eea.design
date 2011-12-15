@@ -3,6 +3,8 @@ Changelog
 
 4.12-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed the padding issue on ipad and any other devices that have 
+   resolution of 1024px [ichimdav #4683]
  * Bug fix: allow videos to be displayed as promotions [ichimdav #4830]
  * Change: Updated "Refresh this page" according with EEAContentTypes changes
    [voineali #4689]

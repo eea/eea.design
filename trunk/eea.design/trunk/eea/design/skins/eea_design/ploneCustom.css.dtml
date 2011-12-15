@@ -926,7 +926,6 @@ float:right;
      * understand the CSS. So if you change these values, make sure to change
      * design.js too. TODO: use dtml*/
     margin: 0 auto;
-    width: 1024px;
     overflow: hidden;
     padding: 0;
     clear: both;
@@ -991,7 +990,6 @@ h3.site-description {
 }
 
 #portal-header {
-    width: 1024px;
     display: block;
     clear: both;
     position: relative;
@@ -1007,7 +1005,8 @@ h3.site-description {
     height: 25px;
     margin: 0;
     padding: 0;
-    min-width: 1024px;
+    width: 100%;
+    min-width: 1007px;
     border-top: 2px solid #B1C748;
 }
 
@@ -2143,9 +2142,10 @@ body.kupu {
     width: 65%;
 }
 
-body.section-soer #visual-portal-wrapper,
-body.section-soer-draft #visual-portal-wrapper {
-    width: 1024px;
+#visual-portal-wrapper, #portal-globalnav, #portal-header, 
+#portal-colophon .colophonWrapper, #portal-footer  {
+    min-width: 983px;
+    max-width: 1024px;
 }
 
 /* ichimdav columns.css slider-definitions */

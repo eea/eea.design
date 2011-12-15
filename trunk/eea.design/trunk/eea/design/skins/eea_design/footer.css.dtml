@@ -22,7 +22,6 @@
 }
 
 #portal-footer {
-    width: 1024px;
     position: relative;
     margin: 0 auto;
     padding: 0;
@@ -86,7 +85,6 @@
     border-collapse: collapse;
     border-spacing: 0;
     text-align: left;
-    width: 1024px;
     margin: 0 auto;
 }
 
@@ -164,7 +162,7 @@
 .colophon-middle {
     float: left;
     text-align: center;
-    width: 585px;
+    width: 575px;
 }
 
 .colophon-right {
