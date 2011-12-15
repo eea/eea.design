@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.12-dev - (unreleased)
------------------------
+4.12 - (2011-12-15)
+-------------------
  * Bug fix: fixed the padding issue on ipad and any other devices that have 
    resolution of 1024px [ichimdav #4683]
  * Bug fix: allow videos to be displayed as promotions [ichimdav #4830]
