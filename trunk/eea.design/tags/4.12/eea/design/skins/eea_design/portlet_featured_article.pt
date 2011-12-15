@@ -1,0 +1,4 @@
+<div metal:define-macro="portlet">
+    <div metal:use-macro="here/frontpage_view/macros/featured_article" />
+</div>
+
