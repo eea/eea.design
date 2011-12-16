@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.13-dev - (unreleased)
------------------------
+4.13 - (2011-12-16)
+-------------------
  * Bug fix: fixed width and height of gallery_fancybox_view [ichimdav #4818]
  * Bug fix: removed portal-column-two from @usergroup [ichimdav #4817]
  * Bug fix: Fixed "Image caption text does not show" for PressReleases
