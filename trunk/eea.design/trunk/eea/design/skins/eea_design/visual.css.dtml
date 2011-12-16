@@ -262,7 +262,7 @@ table.datatable {
 
 /* Styles which can be used on any area */
 
-.boxShadowedDown, .featured, #edit-bar, #contentActionMenus, #portal-personaltools, 
+.boxShadowedDown, .featured, #edit-bar, #contentActionMenus, #portal-personaltools,
 #portal-personaltools, #faceted-form .widget-fieldset legend {
    -moz-box-shadow: 0px 2px 2px #888;
    -webkit-box-shadow: 0px 2px 2px #888;
@@ -284,8 +284,8 @@ table.datatable {
     background-image:    -moz-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
     background-image:     -ms-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
     background-image:      -o-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
     background: linear-gradient(&dtml-corporateGreen;, &dtml-corporateGreenTwo;); /* the w3c standard */
 }
 
@@ -314,7 +314,6 @@ class figure-right or figure-left */
 }
 .figure-title, .figure-nr {
     font-weight: bold;
-    display: none;
 }
 .figure-image {
      text-align: center;
@@ -433,7 +432,7 @@ width:16px;
 /* style for keyfacts slider */
 
 #keyfacts-slider img.keyfacts-bgimg {
-   min-width: 633px; 
+   min-width: 633px;
    min-height: 356px;
    width: 639px !important;
    position: absolute;
