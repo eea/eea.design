@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+  <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="promotions.js" inline="False"
+    position-after="sub_cookies.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="global_searchbox.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="soer_frontpage.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="slide.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-smartview.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-fullscreen.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-toc.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-tooltips.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-galleryview.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-autoscroll.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="eea-fancybox.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="framebreak.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="design.js" inline="False"
+    position-before="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="sub_cookies.js" inline="False"
+    position-before="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="print_warning.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="whatsnew_gallery.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="promotion_gallery.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="" id="promo_gallery.js" inline="False"
+    position-after="promotion_gallery.js"/>
+ <javascript cacheable="True" compression="safe" cookable="False"
+    enabled="True" expression="" id="eea_vpip.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="False" expression="" id="++resource++vPIP/vpip.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="not: portal/portal_membership/isAnonymousUser" id="block_ldapuserfolder_profile.js" inline="False"
+    position-after="promotions.js"/>
+ <javascript cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression="not: portal/portal_membership/isAnonymousUser" id="patch_keyword_widget.js" inline="False"
+    position-after="block_ldapuserfolder_profile.js"/>
+</object>
+
+
