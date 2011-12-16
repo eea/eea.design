@@ -9,8 +9,8 @@ jQuery(document).ready(function($) {
                 type: 'iframe',
                 padding: 0,
                 margin: 0,
-                width: 780,
-                height: 580,
+                width: 650,
+                height: 500,
                 scrolling: 'no',
                 autoScale: false,
                 autoDimensions: false
