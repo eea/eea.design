@@ -8,8 +8,12 @@ jQuery(document).ready(function($) {
             $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
             secundary_portaltabs.appendTo(global_nav);
         }
-
-
+    
+    // removed portal-column-two from @@usergroup-userprefs #4817
+    if($("#portlet-prefs").length) {
+        $("#portal-column-two").remove();
+        $("#portal-column-content").removeClass('width-3:4').addClass('width-full');
+    }
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(window.location.pathname)) {

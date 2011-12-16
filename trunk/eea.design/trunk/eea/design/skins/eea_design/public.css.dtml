@@ -680,9 +680,15 @@ table.listing {
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     display: inline-block;
-    max-width: 650px;
+    max-width: 100%;
     overflow: auto;
 }
+
+/* display input as block for users search form  #4817 */
+form[name="users_search"] input.context {
+    display: block !important;
+}
+
 table.listing .top {
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
