@@ -336,12 +336,9 @@ ul#tabs li:first-child a:hover {
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 2.5em;
     padding:1em 2em;
-    box-shadow: 0 2px 2px #888888;
-    -webkit-box-shadow: 0 2px 2px #888888;
-    -moz-box-shadow: 0 2px 2px #888888;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
+     -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
 }
 
 .featured-highlights {
@@ -373,9 +370,6 @@ ul#tabs li:first-child a:hover {
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
             border-radius: 10px;
-    box-shadow: 0 2px 2px #888;
-    -moz-box-shadow: 0 2px 2px #888888;
-    -webkit-box-shadow: 0 2px 2px #888888;
 }
 
 #forum-link,
@@ -406,18 +400,21 @@ a.album-layout:hover {
   text-decoration: none !important;
 }
 
+/* Styles which can be used on any area */
+.shortcut-default:hover, .shortcut-light:hover, #mobile:hover, #portlet-followus dd a:hover {
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+      -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+       -ms-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+        -o-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+}
+/* END Styles which can be used on any area */
 #portlet-followus dd {
   display: inline-block;
   padding-left: 1em;
-}
-
-#portlet-followus dd a:hover {
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
 }
 
 #social-links h2 {
@@ -467,11 +464,8 @@ a.album-layout:hover {
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 2em;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    box-shadow: 0 2px 2px #888888;
-    -webkit-box-shadow: 0 2px 2px #888888;
-    -moz-box-shadow: 0 2px 2px #888888;
+     -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
 }
 
 .shortcut-light {
@@ -481,17 +475,8 @@ a.album-layout:hover {
     margin-bottom: 2.5em;
     text-align: center;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-.shortcut-default:hover, .shortcut-light:hover, #mobile:hover {
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+     -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
 }
 
 #semantic-content {

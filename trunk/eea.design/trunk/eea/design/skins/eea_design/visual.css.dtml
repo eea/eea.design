@@ -263,17 +263,30 @@ table.datatable {
 /* Styles which can be used on any area */
 
 .boxShadowedDown, .featured, #edit-bar, #contentActionMenus, #portal-personaltools,
-#portal-personaltools, #faceted-form .widget-fieldset legend {
-   -moz-box-shadow: 0px 2px 2px #888;
-   -webkit-box-shadow: 0px 2px 2px #888;
+#portal-personaltools, #faceted-form .widget-fieldset legend,
+#forum, #community, #mobile,
+.shortcut-default {
    box-shadow: 0px 2px 2px #888;
+   -webkit-box-shadow: 0px 2px 2px #888;
+       -moz-box-shadow: 0px 2px 2px #888;
+        -ms-box-shadow: 0px 2px 2px #888;
+         -o-box-shadow: 0px 2px 2px #888;
 }
 
 .boxShadowedDownRight, .actionMenuContent {
-   -moz-box-shadow: 2px 2px 1px #888;
-   -webkit-box-shadow: 2px 2px 1px #888;
    box-shadow: 2px 2px 1px #888;
+   -webkit-box-shadow: 2px 2px 1px #888;
+       -moz-box-shadow: 2px 2px 1px #888;
+        -ms-box-shadow: 2px 2px 1px #888;
+         -o-box-shadow: 2px 2px 1px #888;
+}
 
+#keyfacts-slider .slidePortlet, #globalnav-holder {
+    box-shadow: 0px 2px 2px #333;
+    -webkit-box-shadow: 0px 2px 2px #333;
+       -moz-box-shadow: 0px 2px 2px #333;
+        -ms-box-shadow: 0px 2px 2px #333;
+         -o-box-shadow: 0px 2px 2px #333;
 }
 
 .greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools,
@@ -459,9 +472,6 @@ width:16px;
     width: 639px !important;
     left: 0 !important;
     top: -140px !important;
-    box-shadow: 0 2px 2px #333;
-    -webkit-box-shadow: 0 2px 2px #333;
-    -moz-box-shadow: 0 2px 2px #333;
 }
 
 #keyfacts-slider .slidePortlet .portletItem {
