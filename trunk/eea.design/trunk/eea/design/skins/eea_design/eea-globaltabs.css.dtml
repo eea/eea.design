@@ -75,7 +75,6 @@
 }
 
 #portal-globalnav .selected a:hover {
-    background: white;
     color:#DE7800;
 }
 
