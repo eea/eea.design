@@ -643,6 +643,10 @@ img
     background-color: #FFF;
 }
 
+#multimedia-vids #whatsnew-gallery .highlights {
+    background: transparent; 
+}
+
 #whatsnew-gallery .highlights .gallery-album .photoAlbumEntry {
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#d4d4d4')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#d4d4d4')
