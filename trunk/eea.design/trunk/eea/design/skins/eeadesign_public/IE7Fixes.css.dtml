@@ -553,6 +553,10 @@ a.list-layout.active-list, a.list-layout {
     position: relative;
 }
 
+.faceted-widget.faceted-text-widget .widget-fieldset form {
+    width: 550px;
+}
+
 .faceted-widget.faceted-text-widget .widget-fieldset form input[type="text"] {
     /*float: left;*/
     clear: both;
@@ -560,11 +564,10 @@ a.list-layout.active-list, a.list-layout {
 
 .faceted-widget.faceted-text-widget .widget-fieldset form input[type="submit"] {
     /*float: left;*/
-    display: block;
-    clear: both;
+    float: none !important;
     min-height: 1px;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 0px !important;
 }
 .navTreeItem {
     list-style: none;
@@ -629,6 +632,17 @@ img
 #featured-location {
     width: 310px;
     display: block;
+}
+
+#faceted-form .tags-cloud li {
+    /*display: inline-block !important;*/
+    /*float: left !important;*/
+    position: relative !important;
+    margin-right: 10px !important;
+}
+
+#faceted-form .tags-cloud {
+    /*word-wrap: break-word;*/
 }
 
 /* </dtml-with> */
