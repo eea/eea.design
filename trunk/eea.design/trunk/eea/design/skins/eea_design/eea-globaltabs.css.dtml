@@ -50,7 +50,7 @@
     background: transparent;
     color: white;
     display: inline-block;
-    padding: 1em 1em 1em 0;
+    padding: 1em;
     border: 0px;
     min-width: 0px;
     line-height: 0.9;
@@ -58,7 +58,6 @@
 }
 
 #portal-globalnav a:hover, #portal-globalnav li a:hover {
-    background: transparent;
     color: &dtml-corporateOrange;;
 }
 
@@ -67,11 +66,7 @@
     background-color: white;
     text-shadow: none;
     position: relative;
-    top: -1px;
     height: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 10px;
 }
 
 #portal-globalnav .selected a:hover {
