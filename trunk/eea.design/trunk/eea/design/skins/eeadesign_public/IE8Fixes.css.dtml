@@ -627,7 +627,8 @@ img
 #portal-column-two .featured.roundedCorners,
 #content-core .column-area .featured,
 #content-core .right-column-area .shortcut-default.roundedCorners,
-.shortcut-default:hover, .shortcut-light:hover, #mobile:hover 
+.shortcut-default:hover, .shortcut-light:hover, #mobile:hover,
+.portletGradientStandard
 {
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
@@ -641,6 +642,14 @@ img
 }
 .shortcut-default:hover, .shortcut-light:hover, #mobile:hover {
     background-color: #FFF;
+}
+
+.boxShadowedDown, .featured, #edit-bar, #contentActionMenus, #portal-personaltools,
+#portal-personaltools, #faceted-form .widget-fieldset legend,
+#forum, #community, #mobile,
+.shortcut-default {
+    filter: progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=2, Color='#b1b1b1')
+    progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1c748', endColorstr='#777c1f') !important;
 }
 
 #multimedia-vids #whatsnew-gallery .highlights {

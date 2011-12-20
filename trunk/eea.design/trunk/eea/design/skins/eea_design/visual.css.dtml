@@ -266,27 +266,27 @@ table.datatable {
 #portal-personaltools, #faceted-form .widget-fieldset legend,
 #forum, #community, #mobile,
 .shortcut-default {
-   box-shadow: 0px 2px 2px #888;
-   -webkit-box-shadow: 0px 2px 2px #888;
+    -webkit-box-shadow: 0px 2px 2px #888;
        -moz-box-shadow: 0px 2px 2px #888;
         -ms-box-shadow: 0px 2px 2px #888;
          -o-box-shadow: 0px 2px 2px #888;
+            box-shadow: 0px 2px 2px #888;
 }
 
 .boxShadowedDownRight, .actionMenuContent {
-   box-shadow: 2px 2px 1px #888;
-   -webkit-box-shadow: 2px 2px 1px #888;
+    -webkit-box-shadow: 2px 2px 1px #888;
        -moz-box-shadow: 2px 2px 1px #888;
         -ms-box-shadow: 2px 2px 1px #888;
          -o-box-shadow: 2px 2px 1px #888;
+            box-shadow: 2px 2px 1px #888;
 }
 
 #keyfacts-slider .slidePortlet, #globalnav-holder {
-    box-shadow: 0px 2px 2px #333;
     -webkit-box-shadow: 0px 2px 2px #333;
        -moz-box-shadow: 0px 2px 2px #333;
         -ms-box-shadow: 0px 2px 2px #333;
          -o-box-shadow: 0px 2px 2px #333;
+            box-shadow: 0px 2px 2px #333;
 }
 
 .greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools,
