@@ -3,6 +3,9 @@ Changelog
 
 4.14-dev - (unreleased)
 -----------------------
+ * Buf fix: added viewport metadata to main_template to force the ipad to 
+   display the site in the maximum width of 1024px instead of an emulation at
+   980px [ichimdav #4683]
  * Bug fix: fixed transparency on multimedia of whatsnew-gallery IE8 [#4673]
 
 4.13 - (2011-12-16)
