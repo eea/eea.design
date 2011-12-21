@@ -111,7 +111,7 @@
 
 .faceted-top-widgets .faceted-widget form,
 .faceted-center-widgets .faceted-widget form {
-   width: 525px;
+   width: 520px;
 }
 
 .faceted_letter_selected {
@@ -131,12 +131,14 @@
 
 #faceted-form .left-area-js {
     margin-left: 220px !important;
-    min-width: 550px;
+    min-width: 535px;
+    max-width: 550px;
 }
 
 #faceted-form .right-area-js {
     margin-right: 220px !important;
-    min-width: 550px;
+    min-width: 535px;
+    max-width: 550px;
 }
 
 #faceted-form .tags-cloud li {

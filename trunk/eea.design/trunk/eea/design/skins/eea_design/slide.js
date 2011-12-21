@@ -59,7 +59,7 @@
                             position: 'absolute',
                             top: '48px',
                             display: 'block',
-                            right : '0px',
+                            right : '21px',
                             left: ''
                         });
                     }
