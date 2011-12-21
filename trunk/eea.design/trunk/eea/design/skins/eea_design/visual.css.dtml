@@ -471,7 +471,7 @@ width:16px;
     color: #FFFFFF;
     width: 619px !important;
     left: 0 !important;
-    top: -145px !important;
+    top: -140px !important;
 }
 
 #keyfacts-slider .slidePortlet .portletItem {

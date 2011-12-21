@@ -132,13 +132,11 @@
 #faceted-form .left-area-js {
     margin-left: 220px !important;
     min-width: 535px;
-    max-width: 550px;
 }
 
 #faceted-form .right-area-js {
     margin-right: 220px !important;
     min-width: 535px;
-    max-width: 550px;
 }
 
 #faceted-form .tags-cloud li {
@@ -502,6 +500,10 @@ body.section-signals #nonfolderish-subfolder-view-items {
     float: none;
     width: 100%;
     padding: 0;
+}
+
+#viewlet-below-content {
+    width: 615px;
 }
 
 #smart-view-switch {
