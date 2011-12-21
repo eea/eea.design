@@ -135,7 +135,7 @@ a.archives {
     padding: 0 0 0 1em;
 }
 #articles-area {
-    width: 390px;
+    width: 387px;
     float: right;
     padding: 0;
 }

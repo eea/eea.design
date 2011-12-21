@@ -18,7 +18,7 @@
                     <div id="articles-area" class="column-area">
 
 		    <!-- data and maps global search -->
-		    <a href="find/global" class="archives advanced-search-link" style="padding-right:10px;" title="Go to advanced search">
+		    <a href="find/global" class="archives advanced-search-link" title="Go to advanced search">
                     <span>Advanced</span></a>
 		    <div class="featured">
 		       <h2 i18n:translate="featured_global_search">Search</h2>

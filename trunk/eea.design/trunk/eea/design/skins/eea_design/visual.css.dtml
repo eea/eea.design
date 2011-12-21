@@ -365,7 +365,7 @@ float: right;
 margin-left: 1em;
 }
 
-.shadowed, .figure img, .thumbnail-right img {
+.shadowed, .thumbnail-right img {
     display: block;
     background-color: #fff;
     margin: -6px 0px 0px -6px;
@@ -447,14 +447,14 @@ width:16px;
 #keyfacts-slider img.keyfacts-bgimg {
    min-width: 633px;
    min-height: 356px;
-   width: 639px !important;
+   width: 633px;
    position: absolute;
    bottom: 0;
    left: 0;
 }
 
 #keyfacts-slider dl {
-   width: 639px;
+   width: 629px;
    height: 140px !important;
    position: relative;
    top: -160px;
@@ -469,9 +469,9 @@ width:16px;
     padding: 0;
     background: &dtml-corporateBlueTwo;;
     color: #FFFFFF;
-    width: 639px !important;
+    width: 619px !important;
     left: 0 !important;
-    top: -140px !important;
+    top: -145px !important;
 }
 
 #keyfacts-slider .slidePortlet .portletItem {

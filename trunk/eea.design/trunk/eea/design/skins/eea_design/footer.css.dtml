@@ -55,7 +55,7 @@
 #portal-colophon {
     float: none;
     margin: 0em 0em 2em 0em;
-    padding: 0.5em 0em 1em 0em;
+    padding: 0.5em 1em 1em 1em;
     text-align: center;
     clear:both;
 }
@@ -162,7 +162,7 @@
 .colophon-middle {
     float: left;
     text-align: center;
-    width: 575px;
+    width: 540px;
 }
 
 .colophon-right {
