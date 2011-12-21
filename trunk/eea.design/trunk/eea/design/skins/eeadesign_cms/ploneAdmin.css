@@ -89,6 +89,19 @@ div.managePortletsLink:hover {
     color: #346F83;
 }
 
+/* white-space: nowwrap made the tinymce body not to respect the width of the
+ * portal-content-column */
+.ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr, .ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *, .ploneSkin .mceText {
+    background: transparent;
+    white-space: normal;
+    text-decoration: none;
+    font-weight: normal;
+    cursor: default;
+    color: black;
+    vertical-align: baseline;
+    width: auto;
+}
+
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE
 */
