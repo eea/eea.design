@@ -9,6 +9,9 @@ jQuery(document).ready(function($) {
             secundary_portaltabs.appendTo(global_nav);
         }
     
+    // hide js error or js disabled info #4748
+    $("#js-error").hide();
+
     // removed portal-column-two from @@usergroup-userprefs #4817
     if($("#portlet-prefs").length) {
         $("#portal-column-two").remove();

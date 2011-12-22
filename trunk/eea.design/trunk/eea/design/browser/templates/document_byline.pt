@@ -5,6 +5,11 @@
     plone_view context/@@plone;
     siteprops context/portal_properties/site_properties;"
     i18n:domain="eea">
+
+    
+    <div class="portalMessage" id="js-error">This website has limited functionality with javascript off. Please make sure javascript is
+        enabled in your browser.</div>
+    
     <tal:loggedin tal:condition="not: isAnon">
     <span id="lock-icon"
         title="This document is locked."
