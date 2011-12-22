@@ -502,8 +502,8 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 0;
 }
 
-#viewlet-below-content {
-    width: 615px;
+#viewlet-below-content, #viewlet-above-content {
+    max-width: 97%;
 }
 
 #smart-view-switch {
@@ -848,7 +848,7 @@ a.moreLink {
 .field {
     top: 0;
     left: 0;
-    margin: 0 1em 1em 0;
+    margin: 0 0em 1em 0;
 }
 
 .field .field {
@@ -885,7 +885,10 @@ a.moreLink {
 }
 
 .formControls {
-   margin: 1em 0;
+    margin: 1em 0;
+}
+form[name="edit_form"] div.formControls {
+    margin: 1em 1em 1em 0em;
 }
 
 .error {
@@ -1819,6 +1822,9 @@ option.hiddenStructure {
     top: -200px;
     left: -200px;
 }
+.contentActions {
+    clear: both;
+}
 
 .hiddenLabel {
     display: block;
@@ -2147,7 +2153,7 @@ body.kupu {
 }
 
 #visual-portal-wrapper, #portal-globalnav, #portal-header, 
-#portal-colophon .colophonWrapper, #portal-footer  {
+#portal-colophon .colophonWrapper {
     min-width: 983px;
     max-width: 1024px;
 }
