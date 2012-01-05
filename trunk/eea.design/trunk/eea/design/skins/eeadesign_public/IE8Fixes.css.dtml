@@ -623,7 +623,7 @@ img
 
 #articles-area .featured.roundedCorners,
 #forum,
-#portal-column-two .shortcut-default,
+.shortcut-default,
 #portal-column-two .featured.roundedCorners,
 #content-core .column-area .featured,
 #content-core .right-column-area .shortcut-default.roundedCorners,
@@ -644,10 +644,9 @@ img
     background-color: #FFF;
 }
 
-.boxShadowedDown, .featured, #edit-bar, #contentActionMenus, #portal-personaltools,
+#edit-bar, #contentActionMenus, 
 #portal-personaltools, #faceted-form .widget-fieldset legend,
-#forum, #community, #mobile,
-.shortcut-default {
+{
     filter: progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1c748', endColorstr='#777c1f') !important;
 }
