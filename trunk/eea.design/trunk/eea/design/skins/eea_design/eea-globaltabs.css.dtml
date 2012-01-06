@@ -2,14 +2,14 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 #globalnav-holder {
-    background: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
-    background: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
-    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
-    background: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
+    background-image: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
+    background-image: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
+    background-image: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    background-image: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
+    background-image: linear-gradient(#478EA5, #346F83); /* the standard */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
-    background: linear-gradient(#478EA5, #346F83); /* the standard */
     width: 100%;
     display: block;
     clear: both;
@@ -25,14 +25,17 @@
     height: 40px;
     list-style: none;
     padding: 0px;
-    background: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
-    background: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
-    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
-    background: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
+    clear: both;
+    font-size: 120%;
+    background-color: #478EA5;
+    background-image: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
+    background-image: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
+    background-image: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    background-image: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
+    background-image: linear-gradient(#478EA5, #346F83); /* the standard */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
-    background: linear-gradient(#478EA5, #346F83); /* the standard */
 }
 
 #portal-globalnav li {
@@ -44,6 +47,7 @@
     padding: 0;
     white-space: nowrap;
     text-shadow: black 0px 0px 3px;
+    background: transparent;
 }
 
 #portal-globalnav li a  {
@@ -57,7 +61,8 @@
     font-weight:bold;
 }
 
-#portal-globalnav a:hover, #portal-globalnav li a:hover {
+#portal-globalnav a:hover, #portal-globalnav li a:hover,  
+#portal-globalnav .selected a {
     color: &dtml-corporateOrange;;
 }
 
@@ -69,13 +74,8 @@
     height: 15px;
 }
 
-#portal-globalnav .selected a:hover {
-    color:#DE7800;
-}
-
 #secundary-portaltabs {
     float: right;
 }
 
 /* </dtml-with> */
-

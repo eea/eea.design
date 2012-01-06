@@ -2231,13 +2231,6 @@ div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
 
-/**
- * Webkit layout fix
-*/
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-}
-
 /* Fix for TinyMCE */
 body.mceContentBody {
     background: transparent !important;
@@ -2257,6 +2250,3 @@ body.mceContentBody {
 }
 
 /* </dtml-with> */
-
-
-
