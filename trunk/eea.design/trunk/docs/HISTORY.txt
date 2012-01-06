@@ -3,15 +3,17 @@ Changelog
 
 4.15-dev - (unreleased)
 -----------------------
+ * Bug fix: Allow HTML in portal status message
+   [voineali #4706]
  * Bug fix: fixed opera globalnavigation [ichimdav #4856]
  * Bug fix: removed wrong selectors for ie8 green gradient [ichimdav 4619]
 
 4.14 - (2012-01-03)
 -------------------
  * Bug fix: fixes issue number 8 and 19 from ticket #4619 [ichimdav #4619]
- * Bug fix: added info message when javascript is disabled or we have a 
+ * Bug fix: added info message when javascript is disabled or we have a
    javascript error on the page [ichimdav #4748]
- * Bug fix: added viewport metadata to main_template to force the ipad to 
+ * Bug fix: added viewport metadata to main_template to force the ipad to
    display the site in the maximum width of 1024px instead of an emulation at
    980px [ichimdav #4683]
  * Bug fix: fixed transparency on multimedia of whatsnew-gallery IE8 [#4673]
