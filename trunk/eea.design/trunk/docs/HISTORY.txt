@@ -3,6 +3,8 @@ Changelog
 
 4.15-dev - (unreleased)
 -----------------------
+ * Change: Customize the reset password page of Plone, since we have a specific
+   Eionet page for resetting eionet ldap accounts. [demarant]
  * Bug fix: fixed wrongly fading of gallery panels [ichimdav #4856]
  * Bug fix: Allow HTML in portal status message
    [voineali #4706]
