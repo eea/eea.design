@@ -834,8 +834,8 @@ dl.error dd {
     min-height: 2em;
     margin: 1em 0;
     padding-top: 0.05em;
-    max-width: 97%;
 }
+
 #content-views {
     float: left;
     background-color: transparent;

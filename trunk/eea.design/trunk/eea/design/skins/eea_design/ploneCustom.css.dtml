@@ -401,11 +401,6 @@
 
 /* ichimdav: these styles were previously in public.css */
 
-/* see #3722 */
-body.section-atlas #visual-column-wrapper {
-    float: none;
-}
-
 /* specific SOER2010 design */
 #soerSearchBox strong {
     display: block;
@@ -500,10 +495,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     float: none;
     width: 100%;
     padding: 0;
-}
-
-#viewlet-below-content, #viewlet-above-content {
-    max-width: 97%;
 }
 
 #smart-view-switch {
@@ -679,7 +670,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .documentContent {
     background: &dtml-backgroundColor;;
-    padding: 0em 2em 2em 0em;
+    padding: 0em 0em 2em 0em;
 }
 
 #translation-disclaimer .note {
@@ -929,14 +920,11 @@ float:right;
 
 /* End edit form elements */
 #visual-portal-wrapper {
-    /* We also set max/min width in design.js because IE doens't
-     * understand the CSS. So if you change these values, make sure to change
-     * design.js too. TODO: use dtml*/
     margin: 0 auto;
     overflow: hidden;
     padding: 0;
-    clear: both;
     display: block;
+    clear: both;
     position: relative;
 }
 
@@ -1533,6 +1521,11 @@ h3.site-description {
     float: right;
     margin-top: -30px;
 }
+
+.width-full #article-language {
+    min-width: 180px;
+}
+
 /* .system-message and #error-handling are reST error indicators */
 
 .portalMessage,
@@ -2160,13 +2153,13 @@ body.kupu {
 
 /* ichimdav columns.css slider-definitions */
 
-div.width-3\3a 4 { width:    640px; }
+div.width-3\3a 4 { width:    625px; }
 div.position-1\3a 4 {margin-left:    -79.875%;}
 div.width-1\3a 4 { width:    350px; } /* .width-1:4 */
 div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 /* padding - thanks to the w3c box model :P */
 
-div.position-3\3a 4 {margin-left:    -375px;}
+div.position-3\3a 4 {margin-left: -372px;}
 
 #portal-column-content  {
     padding: 0em 0em 0em 1em;

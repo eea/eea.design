@@ -469,7 +469,7 @@ width:16px;
     padding: 0;
     background: &dtml-corporateBlueTwo;;
     color: #FFFFFF;
-    width: 619px !important;
+    width: 625px !important;
     left: 0 !important;
     top: -140px !important;
 }

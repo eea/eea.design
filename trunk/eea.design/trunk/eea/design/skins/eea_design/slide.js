@@ -11,11 +11,6 @@
     }
 
     $(document).ready(function() {
-        // Disable cross-site-panels for IE6.
-        // TODO: remove this snippet when we completely drop suuport for IE6.
-        if ($.browser.msie && parseInt($.browser.version, 10) < 7) {
-            return;
-        }
 
         function panel(i) {
             var a = $(this);
@@ -50,16 +45,19 @@
                     var parents = $('#cross-site-top, #content'),
                     panels = parents.find('.panel');
                     panels.each(function(){
-                        if ($(this).attr('id') !== tooltip.attr('id')){
-                            $(this).fadeOut('fast');
+                        var $this = $(this);
+                        var $id = $this.attr('id');
+                        if ( $id !== "" && $id !== tooltip.attr('id')){
+                            $this.fadeOut('fast');
                         }
                     });
+
                     if(article_lang) {
                         $("#tip-article-language").css({
                             position: 'absolute',
                             top: '48px',
                             display: 'block',
-                            right : '21px',
+                            right : '0px',
                             left: ''
                         });
                     }
@@ -74,16 +72,15 @@
         }
 
 
-$(document).click(function(e) {
-	                var target = $(e.target);
-                        var parents = $('#cross-site-top, #content'),
-                            panels = parents.find('.panel').filter(function(){ return this.id !== ""; });
-          
-                        if (!target.is('#cross-site-top a,  #cross-site-top .panel, #article-language a') && !target.parents('.panel').length) {
-                          panels.fadeOut('fast');
-	                }
-	            });
+        var parents = $('#cross-site-top, #content'),
+            panels = parents.find('.panel').filter(function(){ return this.id !== ""; });
 
+        $(document).click(function(e) {
+            var target = $(e.target);
+            if (!target.is('#cross-site-top a,  #cross-site-top .panel, #article-language a') && !target.parents('.panel').length) {
+                panels.fadeOut('fast');
+            }
+	    });
 
         $("#portal-siteactions a").each(panel);
         $("#portal-externalsites a").each(panel);
