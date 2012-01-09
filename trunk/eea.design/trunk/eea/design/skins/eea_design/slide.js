@@ -77,7 +77,7 @@
 $(document).click(function(e) {
 	                var target = $(e.target);
                         var parents = $('#cross-site-top, #content'),
-                            panels = parents.find('.panel');
+                            panels = parents.find('.panel').filter(function(){ return this.id !== ""; });
           
                         if (!target.is('#cross-site-top a,  #cross-site-top .panel, #article-language a') && !target.parents('.panel').length) {
                           panels.fadeOut('fast');

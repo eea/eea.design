@@ -3,9 +3,10 @@ Changelog
 
 4.15-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed wrongly fading of gallery panels [ichimdav #4856]
  * Bug fix: Allow HTML in portal status message
    [voineali #4706]
- * Bug fix: fixed opera globalnavigation [ichimdav #4856]
+ * Bug fix: fixed globalnavigation look for Opera browser [ichimdav #4856]
  * Bug fix: removed wrong selectors for ie8 green gradient [ichimdav 4619]
 
 4.14 - (2012-01-03)
