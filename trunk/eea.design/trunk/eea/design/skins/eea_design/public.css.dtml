@@ -454,8 +454,22 @@ dl.portlet a:hover {
     background-color: #ffb;
 }
 #content span.link-external a {
-    background: transparent url(link_icon.png) 0px 1px no-repeat;
+    background: transparent url(link_icon.gif) 0px 1px no-repeat;
     padding: 2px 0px 1px 16px;
+}
+
+#content-core .languageCodes {
+    display: inline-block;
+}
+
+#content span.link-external a.translated {
+    background: none repeat scroll 0 0 #ECECEC;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    color: black;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 0;
+    padding: 0 5px;
 }
 
 #category, #themes-tags {

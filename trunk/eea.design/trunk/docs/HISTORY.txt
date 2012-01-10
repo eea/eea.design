@@ -3,6 +3,8 @@ Changelog
 
 4.15-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed layout issues of external link icon and 
+   the language switch indicator [demarant #4870]
  * Bug fix: more layout fixes for 1024px resolution [ichimdav #4842]
  * Change: Customize the reset password page of Plone, since we have a specific
    Eionet page for resetting eionet ldap accounts. [demarant]
