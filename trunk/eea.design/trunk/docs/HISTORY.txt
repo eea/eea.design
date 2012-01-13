@@ -3,6 +3,7 @@ Changelog
 
 4.16-dev - (unreleased)
 -----------------------
+ * Bug fix: don't show types that have missing FTI in advanced search form [tiberich #4872]
 
 4.15 - (2012-01-11)
 -------------------
