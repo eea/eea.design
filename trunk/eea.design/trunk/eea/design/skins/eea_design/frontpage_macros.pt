@@ -128,7 +128,7 @@
      id="datamaps-highlights" 
      tal:define="hide_album python: False;
                  hide_listing python: True;
-                 more_href string:data-and-maps;">
+                 more_href string:${portal_url}/data-and-maps;">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
