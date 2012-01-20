@@ -3,6 +3,7 @@ Changelog
 
 4.16-dev - (unreleased)
 -----------------------
+ * Bug fix: filter words 'and', 'or' from livesearch input [tiberich #4872]
  * Bug fix: url for data-and-maps must be absolute as it is used in themes,
             where it worked by zope acquisition. [demarant]
  * Bug fix: don't show types that have missing FTI in advanced search form [tiberich #4872]

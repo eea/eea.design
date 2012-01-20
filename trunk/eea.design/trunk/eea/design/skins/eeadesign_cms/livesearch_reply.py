@@ -62,6 +62,7 @@ multispace = u'\u3000'.encode('utf-8')
 for char in ('?', '-', '+', '*', multispace):
     q = q.replace(char, ' ')
 r = q.split()
+r = [w for w in r if w.lower() in  ('and', 'or')]
 r = " AND ".join(r)
 #r = quote_bad_chars(r)+'*'
 searchterms = url_quote_plus(r)
