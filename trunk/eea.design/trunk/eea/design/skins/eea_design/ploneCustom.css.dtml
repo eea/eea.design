@@ -2227,8 +2227,8 @@ div.managePortletsLink, a.managePortletsFallback {
 /* Fix for TinyMCE */
 body.mceContentBody {
     background: transparent !important;
-    padding: 0px !important;
 }
+
 
 /* IE8: keeps livesearch from falling behind content area,
    and display menu from falling behind footer
