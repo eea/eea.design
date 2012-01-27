@@ -3,6 +3,8 @@ Changelog
 
 4.16-dev - (unreleased)
 -----------------------
+ * Bug fix: less space between album entry so that we can have 3 columns on
+   album view when used on faceted search e.g. advanced-search. [demarant]
  * Bug fix: filter words 'and', 'or' from livesearch input [tiberich #4872]
  * Bug fix: url for data-and-maps must be absolute as it is used in themes,
             where it worked by zope acquisition. [demarant]
