@@ -3,6 +3,8 @@ Changelog
 
 4.16-dev - (unreleased)
 -----------------------
+ * Feature: added a thin border around every publication cover
+   [ghicaale #4855]
  * Bug fix: less space between album entry so that we can have 3 columns on
    album view when used on faceted search e.g. advanced-search. [demarant]
  * Bug fix: filter words 'and', 'or' from livesearch input [tiberich #4872]

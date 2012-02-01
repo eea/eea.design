@@ -322,6 +322,11 @@ class figure-right or figure-left */
      margin-bottom: 0;
 }
 
+.figure img {
+    border: 1px solid darkGray;
+    margin-bottom: 1em;
+}
+
 .figure, .figure-plus {
   text-indent: 0;
 }
