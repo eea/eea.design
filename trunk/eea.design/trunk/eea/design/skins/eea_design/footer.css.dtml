@@ -161,9 +161,8 @@
 }
 
 .colophon-middle {
-    float: left;
+    margin-top:-17px;
     text-align: center;
-    width: 540px;
 }
 
 .colophon-right {
@@ -181,20 +180,19 @@
     width: 50px;
 }
 
-.colophon-links li {
-    display: inline;
+.colophon-links {
     font-size: 11px !important;
     padding: 0 5px !important;
 }
 
-.colophon-links li a {
+.colophon-links a, .colophon-links a:visited {
     display: inline;
     font-size: 11px !important;
     color: #346f83 !important;
     text-decoration: underline !important;
 }
 
-.colophon-links li a:hover {
+.colophon-links a:hover {
     cursor: pointer;
     text-decoration: none !important;
 }

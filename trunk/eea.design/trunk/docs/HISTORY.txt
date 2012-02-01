@@ -3,6 +3,9 @@ Changelog
 
 4.16-dev - (unreleased)
 -----------------------
+ * Bug fix: footer text was not properly centered, reduced the footer info.
+   added link to software changes files, so that users can see what has changed.
+   [demarant]
  * Feature: added a thin border around every publication cover
    [ghicaale #4855]
  * Bug fix: less space between album entry so that we can have 3 columns on
