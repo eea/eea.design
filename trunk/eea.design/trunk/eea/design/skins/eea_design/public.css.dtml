@@ -803,9 +803,15 @@ dl.warning dt {
 }
 dl.error {
     border-color: #d00;
+    font-size: 120%;
+    padding-left: 1em;
 }
 dl.error dt {
     background-color: #d00;
+    padding: 1em 1em 1.2em 1em;
+}
+dl.error a {
+    text-decoration: underline;
 }
 dl.warning {
     border-color: &dtml-globalBorderColor;;

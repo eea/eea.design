@@ -3,6 +3,7 @@ Changelog
 
 4.16-dev - (unreleased)
 -----------------------
+ * Change: made the portalMessage error bigger [ichimdav #4816]
  * Bug fix: footer text was not properly centered, reduced the footer info.
    added link to software changes files, so that users can see what has changed.
    [demarant]
