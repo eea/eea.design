@@ -667,7 +667,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     display: none;
 }
 
-
 .documentContent {
     background: &dtml-backgroundColor;;
     padding: 0em 0em 2em 0em;
@@ -2161,7 +2160,7 @@ div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 div.position-3\3a 4 {margin-left: -372px;}
 
 #portal-column-content  {
-    padding: 0em 0em 0em 1em;
+    padding: 0em;
 }
 
 #portal-column-one .visualPadding {
@@ -2202,14 +2201,6 @@ div.listingBar a:hover {
 }
 div.listingBar a {
     border: 0px;
-}
-
-div.width-full, #themesListingTable {
-    width: 100%;
-}
-
-div.position-0 {
-    margin-left: -100%;
 }
 
 /* Plone center FAQ custom css*/
