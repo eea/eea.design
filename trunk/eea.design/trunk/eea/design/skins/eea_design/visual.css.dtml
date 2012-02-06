@@ -450,9 +450,9 @@ width:16px;
 /* style for keyfacts slider */
 
 #keyfacts-slider img.keyfacts-bgimg {
-   min-width: 633px;
-   min-height: 356px;
-   width: 633px;
+   min-width: 618px;
+   min-height: 348px;
+   width: 620px;
    position: absolute;
    bottom: 0;
    left: 0;
@@ -474,9 +474,9 @@ width:16px;
     padding: 0;
     background: &dtml-corporateBlueTwo;;
     color: #FFFFFF;
-    width: 625px !important;
+    width: 618px !important;
     left: 0 !important;
-    top: -140px !important;
+    top: -153px !important;
 }
 
 #keyfacts-slider .slidePortlet .portletItem {

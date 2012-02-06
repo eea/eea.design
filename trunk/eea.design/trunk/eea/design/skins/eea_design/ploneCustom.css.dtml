@@ -2151,13 +2151,13 @@ body.kupu {
 
 /* ichimdav columns.css slider-definitions */
 
-div.width-3\3a 4 { width:    625px; }
+div.width-3\3a 4 { width:    618px; }
 div.position-1\3a 4 {margin-left:    -79.875%;}
 div.width-1\3a 4 { width:    350px; } /* .width-1:4 */
 div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 /* padding - thanks to the w3c box model :P */
 
-div.position-3\3a 4 {margin-left: -372px;}
+div.position-3\3a 4 {margin-left: -375px;}
 
 #portal-column-content  {
     padding: 0em;
