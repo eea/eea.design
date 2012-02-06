@@ -146,14 +146,6 @@ h2.highlight {
     display: none;
 }
 
-body.frontpage .column-area,
-.portlet-rss {
-    display: block !important;
-    float: none !important;
-    width: 100% !important;
-    margin-top: 1em;
-}
-
 .portlet-rss * {
     clear: both;
 }

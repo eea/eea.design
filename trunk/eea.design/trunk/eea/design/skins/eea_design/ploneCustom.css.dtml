@@ -1043,6 +1043,7 @@ h3.site-description {
     position: absolute;
     right: 15px;
     top: 55px;
+    z-index: 602;
 }
 #tip-article-language .panel-top {
     right: 0;

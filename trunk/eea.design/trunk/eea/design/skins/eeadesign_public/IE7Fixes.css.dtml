@@ -321,6 +321,10 @@ dd.portletFooter {
        height: 1.7em;
 }
 
+#cross-site-top {
+    min-width: 980px;
+}
+
 * html #portal-globalnav li a:visited {
     color: #fff;
 }
@@ -627,6 +631,10 @@ img
 .multimedia-widget.left-widget #media-player #fancybox-close {
     top: 0;
     right: 0;
+}
+
+#articles-area {
+    width: 375px;
 }
 
 #featured-location {
