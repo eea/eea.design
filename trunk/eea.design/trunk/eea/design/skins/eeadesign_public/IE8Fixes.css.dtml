@@ -543,10 +543,23 @@ a.archives {
     top: -1px;
 }
 
+#topright-widgets, #bottomright-widgets {
+    min-width: 335px;
+    width: 335px;
+    max-width: 350px;
+}
+
+#featured-location {
+    height: 265px;
+}
 .multimedia-widget .featured,
 .multimedia-widget UL#tabs LI A.current
 {
   background-color:transparent;
+}
+
+.multimedia-widget #faceted-text-search input[type="text"] {
+   width: 205px !important;
 }
 
 #coverflow img { 
