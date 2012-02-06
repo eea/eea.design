@@ -3,8 +3,8 @@ Changelog
 
 4.17-dev - (unreleased)
 -----------------------
- * Bug fix: fixed frontpage and data-and-maps for ie8 and 7 1024px resolution
-   [ichimdav #4842]
+ * Bug fix: fixed frontpage, data-and-maps and multimedia 
+   for ie8 and ie7 1024px resolution [ichimdav #4842]
 
 4.16 - (2012-02-06)
 -------------------
