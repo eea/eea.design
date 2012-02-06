@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.16-dev - (unreleased)
------------------------
+4.16 - (2012-02-06)
+-------------------
  * Bug fix: removed customization of width-full and position-0 to avoid body cut
    [ichimdav #4925]
  * Change: made the portalMessage error bigger [ichimdav #4816]
