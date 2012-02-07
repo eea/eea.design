@@ -590,6 +590,10 @@ img
 -ms-interpolation-mode: bicubic;
 }
 
+#multimedia-coverflow {
+    padding-bottom: 1em;
+}
+
 #coverflow img { 
    margin: 0px 0px -35px -92px !important;
 }
@@ -598,10 +602,6 @@ img
 #featured-location,
 #topright-widgets.multimedia-widget .featured {
     background: transparent !important;
-}
-
-#featured-location {
-    height: 252px !important;
 }
 
 #topright-widgets, #bottomright-widgets {
@@ -638,8 +638,8 @@ img
     height: 390px;
 }
 
-#multimedia-vids .highlights .gallery-album .photoAlbumEntry .photoAlbumEntryWrapper img {
-    top: 0px !important;
+#multimedia-vids .highlights .gallery-album .photoAlbumEntry .photoAlbumEntryWrapper {
+    position: relative;
 }
 
 .multimedia-widget.left-widget #media-player #fancybox-close {
