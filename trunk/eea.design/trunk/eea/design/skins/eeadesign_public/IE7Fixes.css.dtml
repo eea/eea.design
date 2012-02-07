@@ -662,5 +662,29 @@ img
     /*word-wrap: break-word;*/
 }
 
+/* fix for organizational chart
+ * which is too small in ie7
+ * and brakes layout */
+.org_subhead {
+    width: 85px !important;
+}
+.org_container {
+    width: 122px !important;
+}
+
+/* make right column smaller for better
+ * alignment with ie 995px width */
+#portal-column-two {
+    padding-left: 10px;
+}
+div.position-3\:4 {
+    margin-left: -363px;
+}
+
+/* fix overflow of multimedia whatsnew gallery */
+#multimedia-vids .highlights .gallery-ajax {
+    position: relative;
+}
+
 /* </dtml-with> */
 
