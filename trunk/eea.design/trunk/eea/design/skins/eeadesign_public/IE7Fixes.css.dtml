@@ -675,10 +675,7 @@ img
 /* make right column smaller for better
  * alignment with ie 995px width */
 #portal-column-two {
-    padding-left: 10px;
-}
-div.position-3\:4 {
-    margin-left: -363px;
+    padding-left: 22px !important;
 }
 
 /* fix overflow of multimedia whatsnew gallery */

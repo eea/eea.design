@@ -435,6 +435,22 @@ a.list-layout.active-list, a.list-layout {
     right: 20px;
 }
 
+.featured {
+    width: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+.frontpage .column-area .featured {
+    width:330px;
+}
+
+
+ .right-column-area .featured-highlights,
+ .frontpage #articles-area .featured-highlights {
+     max-width: 350px;
+ }
+
 .column-area .featured .searchforms input[type="submit"] {
     padding: 7px 2px !important;
 }
@@ -609,7 +625,7 @@ img
 
 #portal-column-two .shortcut-default,
 .section-data-and-maps #content-core .column-area .featured {
-    width: 340px !important;
+    width: 330px !important;
 }
 
 #portal-column-two .featured.roundedCorners {
