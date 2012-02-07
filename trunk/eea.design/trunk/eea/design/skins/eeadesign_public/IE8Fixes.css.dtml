@@ -445,6 +445,10 @@ a.list-layout.active-list, a.list-layout {
     width:330px;
 }
 
+.column-area .featured {
+    width: 580px;
+    position: relative;
+}
 
  .right-column-area .featured-highlights,
  .frontpage #articles-area .featured-highlights {
@@ -625,7 +629,7 @@ img
 
 #portal-column-two .shortcut-default,
 .section-data-and-maps #content-core .column-area .featured {
-    width: 330px !important;
+    width: 340px !important;
 }
 
 #portal-column-two .featured.roundedCorners {
