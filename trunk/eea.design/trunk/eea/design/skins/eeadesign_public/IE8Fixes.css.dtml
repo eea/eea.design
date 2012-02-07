@@ -603,6 +603,10 @@ img
     top: -2px;
 }
 
+#portal-breadcrumbs a{
+    display: inline;
+}
+
 #portal-column-two .shortcut-default,
 .section-data-and-maps #content-core .column-area .featured {
     width: 340px !important;
@@ -625,8 +629,8 @@ img
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
-    filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
 
+    filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
@@ -695,4 +699,10 @@ img
     margin-top: -40px;
 }
 
+#portal-column-two {
+    padding-left: 10px;
+}
+div.position-3\:4 {
+    margin-left: -363px;
+}
 /* </dtml-with> */
