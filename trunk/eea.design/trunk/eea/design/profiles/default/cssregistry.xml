@@ -40,7 +40,7 @@
         media="screen" rel="stylesheet" rendering="import"
         cacheable="True" compression="safe" cookable="True"
         conditionalcomment="IE 7"
-        expression="exists: portal/IE7Fixes.css"
+        expression=""
         position-after="IEFixes.css"
         />
 
@@ -49,7 +49,7 @@
         media="screen" rel="stylesheet" rendering="import"
         cacheable="True" compression="safe" cookable="True"
         conditionalcomment="IE 8"
-        expression="exists: portal/IE8Fixes.css"
+        expression=""
         position-after="IE7Fixes.css"
         />
 
@@ -58,8 +58,8 @@
         media="screen" rel="stylesheet" rendering="import"
         cacheable="True" compression="safe" cookable="True"
         conditionalcomment="gt IE 8"
-        expression="exists: portal/IEFixes.css"
-        position-after="ploneKss.css"
+        expression=""
+        position-after="eea.multimedia.css"
         />
 
     <stylesheet title=""
