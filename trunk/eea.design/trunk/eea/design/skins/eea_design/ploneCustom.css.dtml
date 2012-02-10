@@ -811,7 +811,6 @@ dd.embeddedMedia .magnify {
 }
 
 .flowplayer a,
-.documentContent ul li a,
 .documentContent td a {
     display: inline;
     text-decoration: none !important;

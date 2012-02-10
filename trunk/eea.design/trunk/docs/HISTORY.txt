@@ -3,6 +3,7 @@ Changelog
 
 4.17-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed gallery/list icons on whatsnew tabs not showing up [demarant #4944]
  * Bug fix: fixed frontpage, data-and-maps and multimedia 
    for ie8 and ie7 1024px resolution [ichimdav #4842]
 
