@@ -393,7 +393,8 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 
 /* @group Related portlets */
 
-#related-pages, #related-multimedia, #auto-related {
+#related-pages, #related-multimedia, #auto-related, 
+#related-pages dl, #related-multimedia dl, #auto-related dl {
   clear: both;
 }
 
