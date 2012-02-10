@@ -2032,4 +2032,9 @@ div.overlay .formControls a {
     padding-left: 20px !important;
 }
 
+.documentEditable .mceLayout {
+    /* fixes width of edit forms because tinymce has hardcoded width */
+    width:100% !important;
+}
+
 /* </dtml-with> */
