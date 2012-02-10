@@ -369,7 +369,7 @@
     font-size: 16px;
     height: 22px;
     padding: 5px;
-    width: 250px;
+    width: 240px;
 }
 
 /*portlet subscription*/
