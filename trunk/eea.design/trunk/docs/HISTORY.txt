@@ -11,6 +11,8 @@ Changelog
    [ichimdav #4941]
  * Bug fix: fixed gallery/list icons on whatsnew tabs not showing up 
    [demarant #4944]
+ * Bug fix: WIP: fixing min-width of page if it goes below 1024px, works for 
+  frontpage, data-and-maps, to be fixed for normal views [ichimdav #4842]
  * Bug fix: fixed frontpage, data-and-maps and multimedia 
    for ie8 and ie7 1024px resolution [ichimdav #4842]
 

@@ -369,7 +369,7 @@
     font-size: 16px;
     height: 22px;
     padding: 5px;
-    width: 240px;
+    width: 72%;
 }
 
 /*portlet subscription*/
@@ -982,6 +982,7 @@ h3.site-description {
 
 #header-holder {
     width: 100%;
+    min-width: 982px;
     clear: both;
     display: block;
     position: relative;
@@ -1005,7 +1006,7 @@ h3.site-description {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-width: 1007px;
+    min-width: 970px;
     border-top: 2px solid #B1C748;
 }
 
@@ -2150,9 +2151,8 @@ body.kupu {
     width: 65%;
 }
 
-#visual-portal-wrapper, #portal-globalnav, #portal-header, 
-#portal-colophon .colophonWrapper {
-    min-width: 983px;
+#visual-portal-wrapper, #portal-globalnav, #portal-header {
+    min-width: 982px;
     max-width: 1024px;
 }
 

@@ -15,7 +15,7 @@
                                                    global datamaps_view context/@@data_and_maps_logic;">
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
-                    <div id="articles-area" class="column-area">
+                    <div id="articles-area" class="right-column-area">
 
 		    <!-- data and maps global search -->
 		    <a href="find/global" class="archives advanced-search-link" title="Go to advanced search">

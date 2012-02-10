@@ -131,18 +131,25 @@ a.archives {
 }
 
 .right-column-area {
-    width: 35%;
+    width: 36.5%;
     padding: 0 0 0 1em;
 }
+
 #articles-area {
-    width: 387px;
     float: right;
-    padding: 0;
+    min-width: 37%;
+    max-width: 39%;
 }
 
 #highlights-area {
     float: left;
-    width: 585px;
+    width: 58.5%;
+    min-width: 585px;
+    padding: 0em;
+}
+
+body.sections-data-and-maps #promo-gallery-wrapper,  body.frontpage #promo-gallery-wrapper {
+    min-width: 585px;
 }
 
 #whatsnew-gallery .highlights {
