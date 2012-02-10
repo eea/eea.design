@@ -40,13 +40,29 @@
                          <!--end featured and spotlight areas -->
 
                         <!-- shortcuts divs -->
-                        <div id="forum">
+                        <!--div id="forum">
                             <a id="forum-link" href="" tal:attributes="href string:$portal_url/help/infocentre/enquiries/"></a>
+                        </div-->
+                        
+			<div metal:define-macro="enquiry" id="enquiry-service-shortcut" class="shortcut-default">
+			   <div id="enquiry-content">
+			   <a id="enquiry-link" href="" tal:attributes="href string:$portal_url/help/infocentre/enquiries/">
+			   <h2>Enquiry service</h2>
+			   Ask questions or join our forum</a>
+			   </div>
                         </div>
 
-                        <div id="mobile">
-                            <a id="mobile-link" href="/mobile" tal:attributes="href string:$portal_url/mobile"></a>
+			<div metal:define-macro="mobile" id="eea-mobile-shortcut" class="shortcut-default">
+			   <div id="mobile-content">
+			   <a id="mobileapps-link" href="/mobile" tal:attributes="href string:$portal_url/mobile">
+			   <h2>Apps for your mobile</h2>
+			   Environmental information anywhere</a>
+			   </div>
                         </div>
+
+                        <!--div id="mobile">
+                            <a id="mobile-link" href="/mobile" tal:attributes="href string:$portal_url/mobile"></a>
+                        </div-->
                         
                         <div id="social-links">
                         <h2 class="column-title" i18n:translate="follow-us">Follow us</h2>

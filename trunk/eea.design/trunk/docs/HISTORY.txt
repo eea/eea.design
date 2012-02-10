@@ -3,6 +3,9 @@ Changelog
 
 4.17-dev - (unreleased)
 -----------------------
+ * Change: design improvements, made the enquiry and mobile shortcuts on frontpage 
+   use same css as used for other frontpages. mobile text was also only an image.
+   [demarant]
  * Bug fix: fixed width of edit forms [tiberich #4888]
  * Bug fix: made the video file view movie size as big as the page 
    [ichimdav #4941]

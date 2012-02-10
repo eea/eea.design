@@ -480,11 +480,30 @@ a.album-layout:hover {
       -moz-border-radius: 5px;
 }
 
+
+#eea-mobile-shortcut.shortcut-default, 
+#enquiry-service-shortcut.shortcut-default {
+   padding:0px;
+}
+
 #semantic-content {
    background: url("molecule.png") no-repeat 55px 22px transparent; /* TODO: to sprite */
    padding: 25px 0px 5px 60px;
    height: 75px;
 }
+
+#enquiry-content {
+   background: url("forum.png") no-repeat 55px 18px transparent; /* TODO: to sprite */
+   padding: 25px 0px 5px 60px;
+   height: 75px;
+}
+
+#mobile-content {
+   background: url("mobile-large.png") no-repeat 75px 22px transparent; /* TODO: to sprite */
+   padding: 25px 0px 5px 70px;
+   height: 75px;
+}
+
 
 #organisations-content {
    background: url("/valentine-imagescales/organisation/image_thumb") no-repeat 35px 10px transparent; /* TODO: to sprite */
@@ -499,23 +518,6 @@ a.album-layout:hover {
     background-position: -401px -469px;
 }
 
-#mobile {
-    background: transparent url("mobile-app.png") no-repeat center center;
-}
-
-
-#forum-link {
-    position: relative;
-    padding: 40px 100px;
-    top: 44px;
-    background-position: right -550px !important;
-}
-
-#mobile-link {
-    position: relative;
-    padding: 30px 120px;
-    top: 40px;
-}
 
 .shortcut-light a.portletHeader, .shortcut-default a.portletHeader  {
    display:block;
