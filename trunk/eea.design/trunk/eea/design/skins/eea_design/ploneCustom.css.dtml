@@ -692,8 +692,14 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .media-player .embeddedvideo {
    width: 100%;
-   height: 348px;
-   margin: auto;
+}
+
+.media-player #embeddedvideo.sixteen-nine {
+    height: 338px;
+}
+ 
+.media-player #embeddedvideo.four-three {
+    height: 450px;
 }
 
 .mediacaption {
