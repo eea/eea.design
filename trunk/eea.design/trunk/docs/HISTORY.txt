@@ -3,6 +3,8 @@ Changelog
 
 4.17-dev - (unreleased)
 -----------------------
+ * Bug fix: filter results to show only latest version on whatsnew sections
+   [demarant #4943]
  * Change: design improvements, made the enquiry and mobile shortcuts on frontpage 
    use same css as used for other frontpages. mobile text was also only an image.
    [demarant]

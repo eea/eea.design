@@ -336,8 +336,9 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
         query['getThemes'] = topic
     # for tests we need to give an int value if noOfItems remains none
     noOfItems = noOfItems or 6
-    res = self.catalog.searchResults(query)[:noOfItems]
-    return res
+    res = self.catalog.searchResults(query)
+    filtered_res = filterLatestVersion(self, brains = res,noOfItems = noOfItems)
+    return filtered_res
 
 def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
                                             tags = None, noOfItems = None):
@@ -358,7 +359,9 @@ def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
         query['getThemes'] = topic
     if tags:
         query['Subject'] = tags
-    return self.catalog(query)[:noOfItems]
+    res = self.catalog(query)
+    filtered_res = filterLatestVersion(self, brains = res,noOfItems = noOfItems)
+    return filtered_res
 
 
 def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
@@ -404,3 +407,26 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
                                             noOfItems = noOfItems)
 
     return result
+
+def filterLatestVersion(self, brains, noOfItems = 6):
+    """ Take a list of catalog brains
+    and return only the first noOfItems 
+    which are either latest versions or not versioned.
+    """
+    res = []
+    for brain in brains:
+        # if object implements our versioning 
+        if 'eea.versions.interfaces.IVersionEnhanced' in brain.object_provides: 
+           obj = brain.getObject()
+           versionsObj = obj.unrestrictedTraverse('@@getLatestVersionUrl')
+           if versionsObj.isLatest():
+                # keep it, this is latest object
+               res.append(brain)
+        else:
+            #this object is not versioned, so keep it
+            res.append(brain)
+    
+        if len(res) == noOfItems:
+            break  #we got enough items
+
+    return res       
