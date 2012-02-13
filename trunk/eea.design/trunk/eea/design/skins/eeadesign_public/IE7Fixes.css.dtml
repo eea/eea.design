@@ -321,10 +321,6 @@ dd.portletFooter {
        height: 1.7em;
 }
 
-#cross-site-top {
-    min-width: 980px;
-}
-
 * html #portal-globalnav li a:visited {
     color: #fff;
 }
@@ -524,17 +520,18 @@ a.list-layout.active-list, a.list-layout {
    z-index: 1000;
 }
 
-.shortcut-default {
-   margin-top: 10px !important;
-}
 
 .portletWrapper {
     clear: both;
     display: block;
 }
 
+.right-column-content h2{
+   margin: 2em 0 0 0;
+}
+
 .shortcut-default {
-    padding: 40px 0 20px 0 !important;
+    padding: 0;
 }
 
 .shortcut-default h3 {
@@ -645,10 +642,6 @@ img
 .multimedia-widget.left-widget #media-player #fancybox-close {
     top: 0;
     right: 0;
-}
-
-#articles-area {
-    width: 375px;
 }
 
 #faceted-form .tags-cloud li {

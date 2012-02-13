@@ -106,8 +106,7 @@
 
 #gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li,
 #promo-gallery-content-sm li img{
-    /* width: 388px; */
-    width: 350px;
+    width: 100%;
     height: 250px;
 }
 

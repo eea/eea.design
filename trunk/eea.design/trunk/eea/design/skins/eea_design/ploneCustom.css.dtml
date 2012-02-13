@@ -369,7 +369,7 @@
     font-size: 16px;
     height: 22px;
     padding: 5px;
-    width: 72%;
+    width: 69%;
 }
 
 /*portlet subscription*/
@@ -982,7 +982,7 @@ h3.site-description {
 
 #header-holder {
     width: 100%;
-    min-width: 982px;
+    min-width: 995px;
     clear: both;
     display: block;
     position: relative;
@@ -2152,19 +2152,19 @@ body.kupu {
 }
 
 #visual-portal-wrapper, #portal-globalnav, #portal-header {
-    min-width: 982px;
+    min-width: 995px;
     max-width: 1024px;
 }
 
 /* ichimdav columns.css slider-definitions */
 
-div.width-3\3a 4 { width:    618px; }
+div.width-3\3a 4 { width:    58.5%; min-width: 600px; }
 div.position-1\3a 4 {margin-left:    -79.875%;}
-div.width-1\3a 4 { width:    350px; } /* .width-1:4 */
+div.width-1\3a 4 { width: 36%;   min-width: 350px; } /* .width-1:4 */
 div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 /* padding - thanks to the w3c box model :P */
 
-div.position-3\3a 4 {margin-left: -375px;}
+div.position-3\3a 4 {margin-left: -36.8%;}
 
 #portal-column-content  {
     padding: 0em;
@@ -2190,7 +2190,6 @@ div.position-3\3a 4 {margin-left: -375px;}
 }
 
 #portal-column-two {
-    padding-left: 1em;
     margin-top: 75px;
 }
 
