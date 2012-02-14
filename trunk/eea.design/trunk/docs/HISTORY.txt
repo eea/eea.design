@@ -3,6 +3,7 @@ Changelog
 
 4.17-dev - (unreleased)
 -----------------------
+ * Bug fix: disabled rule that referenced bgnature.jpg [tiberich #4947]
  * Bug fix: registered main_template as a page, it is used by
    Products.eeawebapplication [tiberich #4947]
  * Bug fix: in atct_topic_view don't fail on brains with Missing.Value 

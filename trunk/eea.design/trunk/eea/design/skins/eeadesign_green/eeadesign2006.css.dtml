@@ -45,9 +45,11 @@
 }
 
 
+/* 
 .portlet-tabs #portletitem-rectis {
     background: white url(&dtml-portal_url;/bgnature.jpg) no-repeat;
 }
+*/
 
 /* style for local/scope search */
 #content div.localSearch {
