@@ -381,7 +381,9 @@ dd.portletFooter {
     margin: 0 20px 0 0;
 }
 
-#document-action-sendto, #document-action-print, #document-action-full_screen, #document-action-twitter, #document-action-delicious, #document-action-facebook, #document-action-rdf , #document-action-rss2 {
+#document-action-sendto, #document-action-print, #document-action-full_screen,
+#document-action-twitter, #document-action-delicious, #document-action-facebook,
+#document-action-rdf, #document-action-rss2 {
     display: block;
     float: left;
     margin: 0 5px 0 0;
@@ -429,12 +431,8 @@ a.list-layout.active-list, a.list-layout {
     margin-right: 10px !important;
     position: relative;
     right: 20px;
-}
-
-.featured {
-    min-width: 315px;
-    position: relative;
-    z-index: 1;
+    top: 10px;
+    margin-top: 0px;
 }
 
  .right-column-area .featured-highlights,
@@ -454,15 +452,6 @@ a.list-layout.active-list, a.list-layout {
     clear: both;
     display: block;
 }
-
-/* #portal-column-two .shortcut-default, */
-/* .section-data-and-maps #content-core .column-area .featured { */
-/*     width: 340px !important; */
-/* } */
-/*  */
-/* #portal-column-two .featured.roundedCorners { */
-/*     width: 295px !important; */
-/* } */
 
 .shortcut-default h3 {
     border: none !important;
@@ -548,23 +537,18 @@ dd.portletItem {
     top: -1px;
 }
 
-#topright-widgets, #bottomright-widgets {
-    min-width: 335px;
-    width: 335px;
-    max-width: 350px;
+.left-widget {
+    width: 64.5%;
 }
 
 #featured-location {
-    height: 265px;
+    height: 257px;
 }
+
 .multimedia-widget .featured,
 .multimedia-widget UL#tabs LI A.current
 {
   background-color:transparent;
-}
-
-.multimedia-widget #faceted-text-search input[type="text"] {
-   width: 205px !important;
 }
 
 #coverflow img { 
