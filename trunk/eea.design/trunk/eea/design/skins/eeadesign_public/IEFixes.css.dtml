@@ -1,12 +1,10 @@
 /*
 ** Stylesheet with Internet Explorer-specific workarounds.
 */
-
 /* <dtml-with base_properties> */
 
 
 /* Left Navigation workaround for broken Internet Explorer */
-
 * html li.navTreeCurrentItem a,
 * html li.navTreeCurrentItem a:hover {
     height: 1.65em;
@@ -52,10 +50,6 @@ table.listing td.top {
 
 div#portal-columns div.portlet {
     text-align: left;
-}
-div#portal-columns div#portal-column-one,
-div#portal-columns div#portal-column-two {
-    overflow: hidden;
 }
 
 div#portal-column-two {
@@ -351,8 +345,8 @@ dd.portletFooter {
 }
 
 #portlet-followus dd {
-    display: inline;
     padding-left: 0px;
+    margin-left: 0px;
 }
 
 #mobile a:hover {
@@ -386,7 +380,9 @@ dd.portletFooter {
     margin: 0 20px 0 0;
 }
 
-#document-action-sendto, #document-action-print, #document-action-full_screen, #document-action-twitter, #document-action-delicious, #document-action-facebook, #document-action-rdf , #document-action-rss2 {
+#document-action-sendto, #document-action-print, #document-action-full_screen, 
+#document-action-twitter, #document-action-delicious, #document-action-facebook,
+#document-action-rdf , #document-action-rss2 {
     display: block;
     float: left;
     margin: 0 5px 0 0;
@@ -434,17 +430,9 @@ a.list-layout.active-list, a.list-layout {
    z-index: 1000;
 }
 
-.shortcut-default {
-   margin-top: 10px !important;
-}
-
 .portletWrapper {
     clear: both;
     display: block;
-}
-
-.shortcut-default {
-    padding: 40px 0 20px 0 !important;
 }
 
 .shortcut-default h3 {
@@ -516,20 +504,6 @@ dd.portletItem {
 
 a.archives {
     z-index: 2;
-}
-
-.featured {
-    width: 300px;
-    position: relative;
-    z-index: 1;
-}
-.frontpage .featured {
-    width: 350px;
-}
-
-.column-area .featured {
-    width: 580px;
-    position: relative;
 }
 
 .frontpage #portal-searchbox input.searchButton {
