@@ -88,7 +88,7 @@
                                 <td tal:condition="python: field != 'Title'"
                                   tal:define="format_view nocall:context/@@format_catalog_metadata"
                                     tal:content="python:format_view(value)"
-                                    i18n:translate=""/>
+                                    i18n:translate="" tal:on-error="python:value"/>
                                 <td tal:condition="python: field == 'Title'">
                                     <a href="#" tal:attributes="href url;
                                                                 title obj_description;">

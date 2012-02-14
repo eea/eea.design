@@ -3,6 +3,8 @@ Changelog
 
 4.17-dev - (unreleased)
 -----------------------
+ * Bug fix: in atct_topic_view don't fail on brains with Missing.Value 
+   [tiberich #4947]
  * Bug fix: filter results to show only latest version on whatsnew sections
    [demarant #4943]
  * Change: design improvements, made the enquiry and mobile shortcuts on frontpage 
