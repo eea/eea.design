@@ -3,6 +3,8 @@ Changelog
 
 4.17-dev - (unreleased)
 -----------------------
+ * Bug fix: registered main_template as a page, it is used by
+   Products.eeawebapplication [tiberich #4947]
  * Bug fix: in atct_topic_view don't fail on brains with Missing.Value 
    [tiberich #4947]
  * Bug fix: filter results to show only latest version on whatsnew sections

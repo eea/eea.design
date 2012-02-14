@@ -9,6 +9,12 @@
 
     <browser:page
         for="*"
+        name="main_template"
+        template="../skins/eea_design/main_template.pt"
+        permission="zope.Public" />
+
+    <browser:page
+        for="*"
         name="test_skin"
         class=".changeskin.TestSkin"
         permission="zope.Public"
