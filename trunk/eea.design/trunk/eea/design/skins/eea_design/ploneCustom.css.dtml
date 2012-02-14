@@ -111,7 +111,7 @@
 
 .faceted-top-widgets .faceted-widget form,
 .faceted-center-widgets .faceted-widget form {
-   width: 520px;
+   min-width: 510px;
 }
 
 .faceted_letter_selected {
@@ -136,7 +136,7 @@
 
 #faceted-form .right-area-js {
     margin-right: 220px !important;
-    min-width: 535px;
+    min-width: 520px;
 }
 
 #faceted-form .tags-cloud li {
@@ -170,9 +170,13 @@
     height: auto !important;
 }
 
+#faceted-top-column fieldset {
+    width: 50%;
+}
+
 .faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"],
 .faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]{
-   width:425px;
+   min-width:82%;
    height: 22px;
    font-size: 16px;
    padding: 5px;
@@ -1850,7 +1854,7 @@ option.hiddenStructure {
     background-color: #FFFFFF;
     float: left;
     height: 190px;
-    width: 140px;
+    width: 135px;
     margin: 0 10px 10px 0;
     padding: 0px 10px;
     text-align: center;

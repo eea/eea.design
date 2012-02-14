@@ -554,10 +554,6 @@ a.list-layout.active-list, a.list-layout {
     position: relative;
 }
 
-.faceted-widget.faceted-text-widget .widget-fieldset form {
-    width: 550px;
-}
-
 .faceted-widget.faceted-text-widget .widget-fieldset form input[type="text"] {
     /*float: left;*/
     clear: both;
@@ -569,6 +565,7 @@ a.list-layout.active-list, a.list-layout {
     min-height: 1px;
     margin-left: 10px;
     margin-top: 0px !important;
+    padding: 7px 2px !important; /* the submit button is too long on faceted */
 }
 .navTreeItem {
     list-style: none;
