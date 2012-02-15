@@ -455,7 +455,7 @@ dl.portlet a:hover {
     background-color: #ffb;
 }
 #content span.link-external a {
-    background: transparent url(link_icon.gif) 0px 1px no-repeat;
+    background: transparent url(&dtml-portal_url;/link_icon.gif) 0px 1px no-repeat;
     padding: 2px 0px 1px 16px;
 }
 
@@ -929,7 +929,7 @@ dl.error dd {
     color: White;
 }
 #content li.formTab a.required span {
-    background-image: url(required.png);
+    background-image: url(&dtml-portal_url;/required.png);
     background-position: center right;
     background-repeat: no-repeat;
     padding-right: 1em;
@@ -1213,7 +1213,7 @@ dl.collapsible dd.collapsibleContent > dl {
 dl.expandedInlineCollapsible dt.collapsibleHeader,
 dl.expandedBlockCollapsible dt.collapsibleHeader {
     padding: 0 0.5em 0 2em;
-    background: White url(treeExpanded.png) no-repeat 0.5em 50%;
+    background: White url(&dtml-portal_url;/treeExpanded.png) no-repeat 0.5em 50%;
     cursor: pointer;
 }
 
@@ -1230,7 +1230,7 @@ dl.collapsedBlockCollapsible dt.collapsibleHeader {
     padding: 0 0.5em 0 2em;
     line-height: 1.2em;
     cursor: pointer;
-    background: White url(treeCollapsed.png) no-repeat 0.5em 50%;
+    background: White url(&dtml-portal_url;/treeCollapsed.png) no-repeat 0.5em 50%;
 }
 dl.collapsedInlineCollapsible dd.collapsibleContent,
 dl.collapsedBlockCollapsible dd.collapsibleContent {
@@ -1535,7 +1535,7 @@ input#title {
 }
 
 .fieldRequired {
-    background: url(required.png) center left no-repeat;
+    background: url(&dtml-portal_url;/required.png) center left no-repeat;
     padding: 0 0 0 1em;
     color: White;
 }
@@ -1811,7 +1811,7 @@ div.overlay-iframe {
 /* default close button positioned on upper-left corner */
 div.overlaybg div.close,
 div.overlay div.close {
-    background-image: url(pb_close.png);
+    background-image: url(&dtml-portal_url;/pb_close.png);
     position: absolute;
     left: -14px;
     top: -14px;
@@ -1986,35 +1986,35 @@ div.overlay .formControls a {
 */
 
 .contenttype-document {
-    background: no-repeat transparent 0px 0px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px 0px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 .contenttype-event {
-    background: no-repeat transparent 0px -216px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -216px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
  .contenttype-folder {
-    /* background: no-repeat transparent 0px -648px url(contenttypes-sprite.png); */
+    /* background: no-repeat transparent 0px -648px url(&dtml-portal_url;/contenttypes-sprite.png); */
     background: none;
     padding-left: 0px !important;
 }
 .contenttype-link {
-    background: no-repeat transparent 0px -1080px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1080px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 .contenttype-news-item {
-    background: no-repeat transparent 0px -1296px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1296px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 .contenttype-plone-site {
-    background: no-repeat transparent 0px -1512px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1512px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 .contenttype-topic {
-    background: no-repeat transparent 0px -1728px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1728px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 
 /* These should only appear in the add menu */
 #plone-contentmenu-factories .contenttype-file {
-    background: no-repeat transparent 0px -431px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -431px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 #plone-contentmenu-factories .contenttype-image {
-    background: no-repeat transparent 0px -862px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -862px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 
 .contenttype-document,

@@ -35,25 +35,25 @@ body.section-SITE .documentActions {
 }
 
 #portlet-navigation-tree .contenttype-document {
-    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px 4px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 #portlet-navigation-tree .contenttype-event {
-    background: no-repeat transparent 0px -216px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -216px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 #portlet-navigation-tree .contenttype-folder {
-    background: no-repeat transparent 0px -648px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -648px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 #portlet-navigation-tree .contenttype-link {
-    background: no-repeat transparent 0px -1080px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1080px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 #portlet-navigation-tree .contenttype-news-item {
-    background: no-repeat transparent 0px -1296px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1296px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 #portlet-navigation-tree .contenttype-plone-site {
-    background: no-repeat transparent 0px -1512px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1512px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 #portlet-navigation-tree .contenttype-topic {
-    background: no-repeat transparent 0px -1728px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1728px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 
 /******* Manage portlets links *******/

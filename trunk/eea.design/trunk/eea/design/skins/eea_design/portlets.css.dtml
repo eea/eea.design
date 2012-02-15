@@ -331,8 +331,8 @@ dl.portlet-navigation-tree {
 .portlet-navigation-tree li a {
     color: #495b6b;
     border: none;
-    padding-left: 2em;
-    background: transparent url(arrow-normal.png) 1em no-repeat;
+    parrow-noradding-left: 2em;
+    background: transparent url(&dtml-portal_url;/mal.png) 1em no-repeat;
 }
 
 #portlet-navigation-tree a:hover {
@@ -607,7 +607,7 @@ span.promoNumber_current:visited {
 }
 
 .portletSubmenu ul {
-    list-style-image: url(arrow-normal.png);
+    list-style-image: url(&dtml-portal_url;/arrow-normal.png);
 }
 
 a.noHover {
@@ -696,22 +696,22 @@ a.noHover {
 .portlet-promotions a.next {
    float: right;
    display: block;
-   background: white url(box-arrow-right.gif) top right no-repeat;
+   background: white url(&dtml-portal_url;/box-arrow-right.gif) top right no-repeat;
    margin: -10px 0 0 0;
    height: 23px;
    width: 17px;
 }
 .portlet-promotions a.next:hover {
-   background-image: url(box-arrow-mouse-right.gif);
+   background-image: url(&dtml-portal_url;/box-arrow-mouse-right.gif);
 }
 
 
 .portlet-promotions a.previous {
-   background-image: url(box-arrow-left.gif);
+   background-image: url(&dtml-portal_url;/box-arrow-left.gif);
 }
 
 .portlet-promotions a.previous:hover {
-   background-image: url(box-arrow-mouse-left.gif);
+   background-image: url(&dtml-portal_url;/box-arrow-mouse-left.gif);
 }*/
 
 #portlet-chooselang {
