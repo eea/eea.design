@@ -129,15 +129,19 @@ table.listing td.top {
 div#portal-columns div.portlet {
     text-align: left;
 }
-div#portal-columns div#portal-column-one,
-div#portal-columns div#portal-column-two {
-    overflow: hidden;
-}
+
+/* div#portal-columns div#portal-column-one, */
+/* div#portal-columns div#portal-column-two { */
+/*     overflow: hidden; */
+/* } */
 
 div#portal-column-two {
     margin-top: 0 !important;
 }
 
+.column-area .featured .searchforms input[type="submit"], .right-column-area .featured .searchforms input[type="submit"] {
+    padding: 7px 4px !important;
+}
 textarea {
     width: 97%;
 }
@@ -512,9 +516,6 @@ a.list-layout.active-list, a.list-layout {
     right: 20px;
 }
 
-.column-area .featured .searchforms input[type="submit"] {
-    padding: 7px 2px !important;
-}
 
 #header-holder {
    z-index: 1000;
@@ -565,7 +566,7 @@ a.list-layout.active-list, a.list-layout {
     min-height: 1px;
     margin-left: 10px;
     margin-top: 0px !important;
-    padding: 7px 2px !important; /* the submit button is too long on faceted */
+    padding: 7px 2px; /* the submit button is too long on faceted */
 }
 .navTreeItem {
     list-style: none;

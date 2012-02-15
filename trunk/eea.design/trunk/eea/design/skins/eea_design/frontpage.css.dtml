@@ -109,7 +109,7 @@ body.frontpage ul {
 
 .archives {
     float: right;
-    margin: 15px;
+    margin: 15px 25px 15px 15px;
     position: relative;
     top: 7px;
     line-height: 1em;
