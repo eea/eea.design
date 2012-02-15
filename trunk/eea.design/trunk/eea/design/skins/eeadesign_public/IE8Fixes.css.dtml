@@ -435,6 +435,10 @@ a.list-layout.active-list, a.list-layout {
     margin-top: 0px;
 }
 
+#topright-widgets .archives.advanced-search-link {
+    margin-right: 0px !important;
+    right: 0px;
+}
  .right-column-area .featured-highlights,
  .frontpage #articles-area .featured-highlights {
      max-width: 350px;

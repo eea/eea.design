@@ -516,6 +516,11 @@ a.list-layout.active-list, a.list-layout {
     right: 20px;
 }
 
+#topright-widgets .archives.advanced-search-link {
+    margin-right: 0px !important;
+    top: 10px;
+    right: 0px;
+}
 
 #header-holder {
    z-index: 1000;
