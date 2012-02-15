@@ -3,6 +3,7 @@ Changelog
 
 4.19-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed collapsible items in advanced search form [tiberich #4878]
 
 4.18 - (2012-02-15)
 -------------------

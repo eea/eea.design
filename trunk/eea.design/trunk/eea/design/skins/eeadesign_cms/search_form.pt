@@ -431,10 +431,6 @@
               />
           </div>
 
-          <script type="text/javascript">
-            jq('.collapsible').do_search_collapse()
-          </script>
-
         </form>
 
       </metal:define>
