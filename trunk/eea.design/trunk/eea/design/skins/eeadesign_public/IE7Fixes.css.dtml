@@ -536,10 +536,6 @@ a.list-layout.active-list, a.list-layout {
    margin: 2em 0 0 0;
 }
 
-.shortcut-default {
-    padding: 0;
-}
-
 .shortcut-default h3 {
     border: none !important;
     text-decoration: none !important;
@@ -668,11 +664,6 @@ img
     width: 122px !important;
 }
 
-/* make right column smaller for better
- * alignment with ie 995px width */
-#portal-column-two {
-    padding-left: 22px !important;
-}
 
 /* fix overflow of multimedia whatsnew gallery */
 #multimedia-vids .highlights .gallery-ajax {
