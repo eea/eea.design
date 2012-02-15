@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.19-dev - (unreleased)
+-----------------------
+
 4.18 - (2012-02-15)
 -------------------
  * Bug fix: registered main_template as view only for EEA layer [tiberich]
