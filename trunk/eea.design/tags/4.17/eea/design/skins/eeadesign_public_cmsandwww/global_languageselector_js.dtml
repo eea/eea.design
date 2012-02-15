@@ -1,0 +1,13 @@
+<script type="text/javascript">
+   // <![CDATA[
+   document.write('<form class="manylanguages" id="chooselang-<dtml-var "transobj.UID()">" onsubmit="this.select<dtml-var "transobj.UID()">.onchange();"><select id="select<dtml-var "transobj.UID()">" onchange="document.location = this.options[this.selectedIndex].value;">');
+   <dtml-in "data" mapping>
+      <dtml-if "current">
+         document.write('<option selected="selected" value="<dtml-var change_url>"><dtml-var Language></option>');
+      <dtml-elif "available">
+          document.write('<option value="<dtml-var change_url>"><dtml-var Language></option>');
+      </dtml-if>
+   </dtml-in> 
+   document.write('</select></form>');
+   // ]]>
+</script>           
