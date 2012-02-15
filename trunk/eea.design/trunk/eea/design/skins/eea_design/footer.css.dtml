@@ -14,7 +14,7 @@
     margin: 2em 0 2em 0;
     padding: 2em 1em;
     clear: both;
-    min-width: 960px;
+    min-width: 973px;
 }
 
 #bg-wrapper {
