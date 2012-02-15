@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.17-dev - (unreleased)
------------------------
+4.17 - (2012-02-15)
+-------------------
  * Bug fix: disabled rule that referenced bgnature.jpg [tiberich #4947]
  * Bug fix: registered main_template as a page, it is used by
    Products.eeawebapplication [tiberich #4947]
