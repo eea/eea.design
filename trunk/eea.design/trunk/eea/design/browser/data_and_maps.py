@@ -102,7 +102,6 @@ class DataMaps(BrowserView):
         """ Retrieves external and internal promotions for data and maps
             section
         """
-        context = self.context
         query = {
           'object_provides': {
              'query': [
@@ -132,13 +131,15 @@ class DataMaps(BrowserView):
             obj_interfaces = obj.restrictedTraverse('@@get_interfaces')()
             for i in datasets_interfaces:
                 if i in obj_interfaces:
-                    if not(promo.display_on_datacentre or
-                                                promo.display_globally):
+                    if not(promo.display_on_datacentre):
                         continue
                     cPromos.append(brain)
                     if len(cPromos) == noOfItems:
                         break
-        if cPromos:
+        promotions = len(cPromos)
+        if promotions >= 6:
             return cPromos
+        elif promotions < 6:
+            return list(set(cPromos.extend(self.getAllProducts())))
         else:
             return self.getAllProducts()
