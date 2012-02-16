@@ -29,7 +29,7 @@
                i18n:attributes="title youtube_follow;">&nbsp;</a>
         </dd>
         <dd>
-            <a id="rss-link" title="Subscribe to RSS Feed"
+            <a id="rss-link link-plain" title="Subscribe to RSS Feed"
                tal:attributes="href string:$portal_url/subscription/news-feeds"
                i18n:attributes="title rss_feeds;">&nbsp;</a>
         </dd>
