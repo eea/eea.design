@@ -136,10 +136,9 @@ class DataMaps(BrowserView):
                     cPromos.append(brain)
                     if len(cPromos) == noOfItems:
                         break
+
         promotions = len(cPromos)
         if promotions >= 6:
             return cPromos
-        elif promotions < 6:
-            return list(set(cPromos.extend(self.getAllProducts())))
         else:
-            return self.getAllProducts()
+            return list(set(cPromos.extend(self.getAllProducts())))
