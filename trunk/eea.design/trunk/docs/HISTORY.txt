@@ -3,6 +3,8 @@ Changelog
 
 4.19-dev - (unreleased)
 -----------------------
+ * Change: display promotions of dataset types and with display_on_datacentre
+   if available, otherwise show all products [ichimdav #4936]
  * Bug fix: properly link images in css files [tiberich #4956]
  * Bug fix: fixed collapsible items in advanced search form [tiberich #4878]
 

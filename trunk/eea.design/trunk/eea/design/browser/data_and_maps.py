@@ -7,6 +7,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
 from eea.design.browser.frontpage import _getItems
+from eea.promotion.interfaces import IPromotion
 
 class DataMaps(BrowserView):
     """
@@ -98,7 +99,46 @@ class DataMaps(BrowserView):
         return result
 
     def getPromotions(self):
-        """ Retrieves external and internal promotions for data and maps section
+        """ Retrieves external and internal promotions for data and maps
+            section
         """
-        res = self.getAllProducts()
-        return res
+        context = self.context
+        query = {
+          'object_provides': {
+             'query': [
+               'eea.promotion.interfaces.IPromoted',
+               'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
+              ],
+              'operator': 'or',
+            },
+            'review_state': 'published',
+            'sort_on': 'effective',
+            'sort_order' : 'reverse'
+        }
+
+        noOfItems = 18
+        result = self.catalog(query)
+        datasets_interfaces = [
+           'Products.EEAContentTypes.content.interfaces.IInteractiveMap',
+           'Products.EEAContentTypes.content.interfaces.IInteractiveData',
+           'eea.dataservice.interfaces.IEEAFigureGraph',
+           'eea.dataservice.interfaces.IDataset',
+           'eea.dataservice.interfaces.IEEAFigureMap',
+           'eea.indicators.content.interfaces.IIndicatorAssessment' ]
+        cPromos = []
+        for brain in result:
+            obj = brain.getObject()
+            promo = IPromotion(obj)
+            obj_interfaces = obj.restrictedTraverse('@@get_interfaces')()
+            for i in datasets_interfaces:
+                if i in obj_interfaces:
+                    if not(promo.display_on_datacentre or
+                                                promo.display_globally):
+                        continue
+                    cPromos.append(brain)
+                    if len(cPromos) == noOfItems:
+                        break
+        if cPromos:
+            return cPromos
+        else:
+            return self.getAllProducts()
