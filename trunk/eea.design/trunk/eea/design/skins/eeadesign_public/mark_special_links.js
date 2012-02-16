@@ -5,7 +5,10 @@
  */
 
 function getLanguageFromLink(link) {
-    if (link.toLowerCase().indexOf('://')>0 && (link.toLowerCase().indexOf(window.location.host)>0 || link.toLowerCase().indexOf('eu.int')>0 || link.toLowerCase().indexOf('europa.eu')>0)){
+    if (link.toLowerCase().indexOf('://')>0 && 
+        (link.toLowerCase().indexOf(window.location.host)>0 || 
+                                    link.toLowerCase().indexOf('eu.int')>0 || 
+                                    link.toLowerCase().indexOf('europa.eu')>0)){
         // we assume it's english for local and known domains
 
         if (link.toLowerCase().match(langregex1)){
@@ -21,7 +24,6 @@ function getLanguageFromLink(link) {
             return subdomainregex.exec(link.toLowerCase())[1];
         }
 
-
         return 'en';
     }
     return 'unknown';
@@ -33,6 +35,7 @@ function addLanguageLink(link, lang) {
     var langLink = oldLink.cloneNode(true);
     langLink.innerHTML = lang;
     langLink.className = "translated";
+    langLink.removeAttribute('id'); // ids should be unique
     var langwrapper = document.createElement("span");
     langwrapper.className = "languageCodes";
     langwrapper.appendChild(langLink);
@@ -90,9 +93,12 @@ function scanforlinksinarea(contentarea) {
             // ADD CSS CLASSES FOR SPECIAL PROTOCOLS
             // check if the link href is a relative link, or an absolute link to
             // the current host.
-            if (linkval.toLowerCase().indexOf('://')>0 && (linkval.toLowerCase().indexOf(window.location.host)>0 || linkval.toLowerCase().indexOf('eea.eu.int')>0 || linkval.toLowerCase().indexOf('eea.europa.eu')>0)){
+            if (linkval.toLowerCase().indexOf('://')>0 && 
+                (linkval.toLowerCase().indexOf(window.location.host)>0 || 
+                                               linkval.toLowerCase().indexOf('eea.eu.int')>0 || 
+                                               linkval.toLowerCase().indexOf('eea.europa.eu')>0)){
                 // absolute link internal to our host
-                var jslint_pleaser = 1; // pleases jslink
+                var jslint_pleaser = 1; // pleases jslint
             } else if (linkval.indexOf('http:') !== 0) {
                 // not a http-link. Possibly an internal relative link, but also
                 // possibly a mailto or other protocol add tests for relevant
@@ -109,8 +115,7 @@ function scanforlinksinarea(contentarea) {
                     }
                 }
             } else {
-                // we are in here if the link points to somewhere else than our
-                // site.
+                // we are in here if the link points to somewhere else than our site.
                 if ( links[i].getElementsByTagName('img').length === 0 ) {
                     // we do not want to mess with those links that already have
                     // images in them
@@ -124,7 +129,7 @@ function scanforlinksinarea(contentarea) {
             if (linkval.toLowerCase().indexOf('://')>0 && relativeLink === 0 && links[i].getElementsByTagName('img').length === 0){
                 lang = getLanguageFromLink(linkval);
                 if (lang !== currentLanguage && lang !== 'unknown'){
-                        addLanguageLink(links[i], lang);
+                    addLanguageLink(links[i], lang);
                 }
             }
         }
