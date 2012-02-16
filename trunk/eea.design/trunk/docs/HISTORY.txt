@@ -3,7 +3,7 @@ Changelog
 
 4.19-dev - (unreleased)
 -----------------------
- * Bug fix: don't show language link for RSS icon on translated sites 
+ * Bug fix: don't show language link on frontpage in right side column
    [tiberich #4960]
  * Change: display promotions of dataset types and with display_on_datacentre
    if available, otherwise show all products [ichimdav #4936]
