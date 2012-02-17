@@ -101,6 +101,10 @@ div.managePortletsLink:hover {
     width: auto;
 }
 
+#edit-bar .languageCodes {
+    display:none;
+}
+
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE
 */
