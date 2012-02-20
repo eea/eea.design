@@ -541,8 +541,8 @@ dd.portletItem {
     top: -1px;
 }
 
-.left-widget {
-    width: 64.5%;
+body.section-multimedia  .left-widget {
+    max-width: 636px;
 }
 
 #featured-location {
