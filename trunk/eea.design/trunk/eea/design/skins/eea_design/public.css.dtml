@@ -803,29 +803,18 @@ dl.warning dt {
     background-color: &dtml-lightBackgroundColor;;
 }
 dl.error {
-    border-color: #d00;
     font-size: 120%;
     padding-left: 1em;
 }
 dl.error dt {
     background-color: #d00;
-    padding: 1em 1em 1.2em 1em;
+    color: white;
+    text-shadow: none;
 }
 dl.error a {
     text-decoration: underline;
 }
-dl.warning {
-    border-color: &dtml-globalBorderColor;;
-}
-dl.warning dd {
-    background-color: &dtml-lightBackgroundColor;;
-}
-dl.error {
-    border-color: red;
-}
-dl.error dd {
-    background-color: #fdc;
-}
+
 
 /* Additional specificity for when status is shown inside #content */
 #content dl.portalMessage {
