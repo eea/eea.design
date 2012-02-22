@@ -37,7 +37,16 @@
 /* all states that are about reviewing/approvals get same color and goes here */
 .state-pending, .state-content_pending, .state-new, .state-submitted, .state-sent, .state-proof_reading, .state-webqa_pending
 {
-    color: #FFA500 !important;
+    color: #FFA500;
+}
+
+
+#contentActionMenus dl.actionMenu a span {
+    color: white;
+}
+
+#contentActionMenus dl.actionMenu a:hover span {
+    color: black;
 }
 
 .state-expired 
@@ -49,6 +58,9 @@
 {
     color: #008000 !important;
 }
+
+#contentActionMenus dl.actionMenu a
+
 
 /* ichimdav styles brought from sunburst's members.css */
 /* Pulldown menu state indicators */

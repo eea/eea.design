@@ -3,6 +3,9 @@ Changelog
 
 4.19-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed colors on workflow state change in cms, 
+   it was not possible to distinguish green on green and white on white. 
+   [demarant]
  * Bug fix: don't show language link on frontpage in right side column
    [tiberich #4960]
  * Change: display promotions of dataset types and with display_on_datacentre
