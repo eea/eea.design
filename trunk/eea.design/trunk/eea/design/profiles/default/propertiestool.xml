@@ -136,6 +136,7 @@
   <property name="typesUseViewActionInListings" type="lines">
    <element value="Image"/>
    <element value="File"/>
+   <element value="CloudVideo"/>
   </property>
   <property name="verify_login_name" type="boolean">True</property>
   <property name="many_users" type="boolean">False</property>
