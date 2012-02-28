@@ -141,4 +141,5 @@ class DataMaps(BrowserView):
         if promotions >= 6:
             return cPromos
         else:
-            return list(set(cPromos.extend(self.getAllProducts())))
+            cPromos.extend(self.getAllProducts())
+            return list(set(cPromos)))
