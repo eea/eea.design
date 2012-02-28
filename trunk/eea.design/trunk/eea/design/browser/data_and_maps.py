@@ -142,4 +142,4 @@ class DataMaps(BrowserView):
             return cPromos
         else:
             cPromos.extend(self.getAllProducts())
-            return list(set(cPromos)))
+            return list(set(cPromos))
