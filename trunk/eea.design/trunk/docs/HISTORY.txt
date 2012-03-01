@@ -3,6 +3,8 @@ Changelog
 
 4.19-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed folder_summary_view template that was using a deprecated is_empty code
+   [ghicaale #4986]
  * Bug fix: set login POST on HTTPS
    [ghicaale #4978]
  * Bug fix: fixed colors on workflow state change in cms,
