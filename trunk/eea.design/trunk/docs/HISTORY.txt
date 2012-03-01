@@ -3,6 +3,9 @@ Changelog
 
 4.19-dev - (unreleased)
 -----------------------
+ * Upgrade step: remove folder_listing.pt from /portal_skins/custom as setting a title
+   there will reflect in CMS display choices
+   [ghicaale #4986]
  * Bug fix: fixed folder_summary_view template that was using a deprecated is_empty code
    [ghicaale #4986]
  * Bug fix: set login POST on HTTPS
