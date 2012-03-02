@@ -1,3 +1,4 @@
+//jslint:disable
 (function(win) {
 	var whiteSpaceRe = /^\s*|\s*$/g,
 		undefined, isRegExpBroken = 'B'.replace(/A(.)|B/, '$1') === '$1';
@@ -6,6 +7,7 @@
 		majorVersion : '3',
 
 		minorVersion : '4.9',
+        eea_patched:true,
 
 		releaseDate : '2012-02-23',
 
@@ -8576,26 +8578,31 @@ window.tinymce.dom.Sizzle = Sizzle;
 				// Older builds of Opera crashes if you attach the node to an document created dynamically
 				// and since we can't feature detect a crash we need to sniff the acutal build number
 				// This fix will make DOM ranges and make Sizzle happy!
-				impl = node.ownerDocument.implementation;
-				if (impl.createHTMLDocument) {
-					// Create an empty HTML document
-					doc = impl.createHTMLDocument("");
 
-					// Add the element or it's children if it's a body element to the new document
-					each(node.nodeName == 'BODY' ? node.childNodes : [node], function(node) {
-						doc.body.appendChild(doc.importNode(node, true));
-					});
 
-					// Grab first child or body element for serialization
-					if (node.nodeName != 'BODY')
-						node = doc.body.firstChild;
-					else
-						node = doc.body;
+                // EEA: This is patched to fix firefox issue http://www.tinymce.com/develop/bugtracker_view.php?id=3152;
 
-					// set the new document in DOMUtils so createElement etc works
-					oldDoc = dom.doc;
-					dom.doc = doc;
-				}
+                if(tinymce.isOpera && opera.buildNumber() >= 1767) {
+                    impl = n.ownerDocument.implementation;
+                    if (impl.createHTMLDocument) {
+                        // Create an empty HTML document
+                        doc = impl.createHTMLDocument("");
+
+                        // Add the element or it's children if it's a body element to the new document
+                        each(node.nodeName == 'BODY' ? node.childNodes : [node], function(node) {
+                            doc.body.appendChild(doc.importNode(node, true));
+                        });
+
+                        // Grab first child or body element for serialization
+                        if (node.nodeName != 'BODY')
+                            node = doc.body.firstChild;
+                        else
+                            node = doc.body;
+
+                        // set the new document in DOMUtils so createElement etc works
+                        oldDoc = dom.doc;
+                        dom.doc = doc;
+				}}
 
 				args = args || {};
 				args.format = args.format || 'html';
