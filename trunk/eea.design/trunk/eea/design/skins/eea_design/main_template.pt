@@ -176,6 +176,12 @@
                                      Page body text
                                  </metal:text>
                              </div>
+                             
+                             <metal:comment tal:content="nothing">
+                               possible relation labels. can be made as viewlet.
+                             </metal:comment>
+                             <metal:macro use-macro="here/eea_relateditems/macros/relatedItemsWithThumbs" />
+                             
                              <div tal:replace="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
 
                             </metal:bodytext>

@@ -3,6 +3,11 @@ Changelog
 
 4.19-dev - (unreleased)
 -----------------------
+ * Feature: Added the generic relation macro by eea.relations.
+   Upgrade step: in @@manage-viewlets 
+          hide Viewlet: plone.belowcontentbody.relateditems
+          hide Viewlet: eea.related_pages
+          [demarant #3414,#4919]
  * Upgrade step: remove folder_listing.pt from /portal_skins/custom as setting a title
    there will reflect in CMS display choices
    [ghicaale #4986]
