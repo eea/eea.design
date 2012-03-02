@@ -7,6 +7,7 @@ Changelog
    Upgrade step: in @@manage-viewlets 
           hide Viewlet: plone.belowcontentbody.relateditems
           hide Viewlet: eea.related_pages
+          add possible relation for documents/articles to other eea content.
           [demarant #3414,#4919]
  * Upgrade step: remove folder_listing.pt from /portal_skins/custom as setting a title
    there will reflect in CMS display choices
