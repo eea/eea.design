@@ -132,20 +132,20 @@ jQuery(document).ready(function($) {
             sel_value = sel_value !== 'all' ?  sel_value : '';
         }
 
-        var listing = highlight.find('.gallery-listing');
-        var listing_length =  listing.length !== 0 ? listing.children().length : 0;
+        var album = highlight.find('.gallery-album');
+        var album_length =  album.length !== 0 ? album.children().length : 0;
         var notopics = highlight.find('.portalMessage'),
             notopics_length = notopics.length !== 0 ? 1 : 0;
         if (cur_tab.theme === sel_value && notopics_length !== 0) {
             return;
         }
-        if (sel_text.indexOf("All") !== -1 || listing_length === 0) {
-            listing.html(ajax_loader_img);
+        if (sel_text.indexOf("All") !== -1 || album_length === 0) {
+            album.html(ajax_loader_img);
             eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
         }
         if (sel_value) {
             if (cur_tab.theme !== sel_value) {
-                listing.html(ajax_loader_img);
+                album.html(ajax_loader_img);
                 cur_tab.theme = sel_value;
                 eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
             }
