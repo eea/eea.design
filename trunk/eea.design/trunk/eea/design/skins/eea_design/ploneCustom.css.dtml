@@ -237,7 +237,7 @@
     background-image: linear-gradient(top,#478EA5,#346F83);
     font: bold 12px Verdana, Arial, sans-serif;
     padding: 7px 12px;
-    position: relative;
+    position: initial;
     display: inline-block;
     text-shadow: 0 1px 0 #000;
     -webkit-transition: border-color .218s;
@@ -2231,9 +2231,11 @@ div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
 
-/* Fix for TinyMCE */
-body.mceContentBody {
-    background: transparent !important;
+/* Fix for TinyMCE width being larger than content area */
+.ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr, 
+.ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *, 
+.ploneSkin .mceText {
+    white-space: normal !important;
 }
 
 

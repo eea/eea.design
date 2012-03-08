@@ -2024,6 +2024,9 @@ div.overlay .formControls a {
 .documentEditable .mceLayout {
     /* fixes width of edit forms because tinymce has hardcoded width */
     width:100% !important;
+    /* fixes edit without visual editor placement because it has an inline
+     * negative margin-top */
+    margin-bottom: 1em;
 }
 
 /* </dtml-with> */
