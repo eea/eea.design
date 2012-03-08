@@ -674,7 +674,7 @@ img
 
 
 /* fix overflow of multimedia whatsnew gallery */
-#multimedia-vids .highlights .gallery-ajax {
+#multimedia-vids .highlights .gallery-ajax, #tag-cloud-content {
     position: relative;
 }
 
