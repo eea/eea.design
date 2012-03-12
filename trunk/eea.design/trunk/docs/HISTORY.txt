@@ -3,6 +3,7 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed tinymce widget width going over content area [ichimdav #4998]
 
 4.19 - (2012-03-05)
 -------------------
