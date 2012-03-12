@@ -1,5 +1,18 @@
 jQuery(document).ready(function($) {
     
+    var subfolder_tabs = function(){
+        var $content_core, $subfolders, $subfolder_h2,
+            $subfolder_tabs = $("#subfolder-tabs");
+        if ($subfolder_tabs.length){
+            $content_core = $("#content-core");
+            $subfolders = $content_core.find(".subfolder");
+            $subfolder_h2 = $subfolders.find('h2').detach();
+            $subfolder_h2.appendTo($subfolder_tabs);
+            $subfolder_tabs.tabs($subfolders);
+        }
+    };
+    subfolder_tabs();
+
     if ($('#smart-view-switch').length) {
        var markSelectedButton = function () {
             var smartTemplate = $.bbq.getState('smartTemplate');
@@ -25,6 +38,7 @@ jQuery(document).ready(function($) {
             var url = $.param.querystring($.bbq.getState('smartTemplate'), $.param.querystring());
             $.get(url, function(data) {
                 $('#smart-view-content').html(data);
+                subfolder_tabs();
                 $('.listingBar a').each(function(i) {
                     var batchQueryString = $.param.querystring($(this).attr('href'));
                     var newUrl = $.param.querystring(location.href, batchQueryString);
