@@ -3,6 +3,8 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Change: use smaller image for showing relations links, so it takes less space
+   especially when there is no item description. [demarant]
  * Bug fix: fixed tinymce widget width going over content area [ichimdav #4998]
 
 4.19 - (2012-03-05)

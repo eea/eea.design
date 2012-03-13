@@ -180,7 +180,9 @@
                              <metal:comment tal:content="nothing">
                                possible relation labels. can be made as viewlet.
                              </metal:comment>
-                             <metal:macro use-macro="here/eea_relateditems/macros/relatedItemsWithThumbs" />
+                             <tal:block define="thumb_scale thumb_scale | string:image_tile;">
+                               <metal:macro use-macro="here/eea_relateditems/macros/relatedItemsWithThumbs" />
+                             </tal:block>
                              
                              <div tal:replace="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
 
