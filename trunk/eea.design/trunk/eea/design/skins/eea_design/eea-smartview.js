@@ -13,6 +13,14 @@ jQuery(document).ready(function($) {
     };
     subfolder_tabs();
 
+    var $folder_panels = $('#folder-accordion-panels');
+    if($folder_panels.length) {
+     $($folder_panels).tabs(
+        "#folder-accordion-panels div.pane",
+        {tabs: 'h2', effect: 'slide', initialIndex: 0}
+      );
+    }
+
     if ($('#smart-view-switch').length) {
        var markSelectedButton = function () {
             var smartTemplate = $.bbq.getState('smartTemplate');

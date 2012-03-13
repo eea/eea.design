@@ -978,7 +978,9 @@ dl.error a {
     right: -3px;
 }
 #contentActionMenus dl.actionMenu.activated dd a:hover,
-#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected,
+#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected span
+{
     background-color: White !important;
     color: #666;
 }

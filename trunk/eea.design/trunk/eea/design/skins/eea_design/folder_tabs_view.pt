@@ -15,7 +15,7 @@
 
               <div id="folder-tabs"></div>
 
-                <div id="folder-panels">
+                <div id="folder-accordion-panel">
                 <div class="subfolder" tal:repeat="child formattedFolderContents/folderish">
                     <h2><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a></h2>
                     <p class="subfolder-description" tal:condition="child/description" tal:content="child/description"></p>
@@ -35,7 +35,9 @@
                         </div>
                         <div class="visualClear"></div>
                     </div>
-                    <a class="moreLink" tal:condition="child/has_more" i18n:translate="read_more" tal:attributes="href child/listing_url">Read more</a>
+                <div class="portletFooter">
+                    <a class="standardButton" i18n:translate="read_more" tal:attributes="href child/listing_url">All Items</a>
+                </div>
                     <div class="visualClear"></div>
                 </div>
 

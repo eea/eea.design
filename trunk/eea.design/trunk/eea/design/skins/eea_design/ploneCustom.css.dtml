@@ -593,7 +593,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
 }
 
-#folder-panels {
+#folder-panels, #folder-accordion-panels {
     border: 1px solid #DDD;
     border-top: 0px;
     background: #F3F3F3;
