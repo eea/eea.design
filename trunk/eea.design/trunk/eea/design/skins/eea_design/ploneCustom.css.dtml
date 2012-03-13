@@ -556,37 +556,44 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-#subfolder-tabs h2 {
+#folder-tabs h2 {
     background: transparent;
     display: inline;
     line-height: 1.5em;
     padding: 0px;
     margin: 0px;
+    font-weight: normal;
 }
-#subfolder-tabs h2 a {
+
+#folder-tabs h2, #folder-tabs h2 a {
     color: white;
     text-shadow: 1px 1px #000;
 }
-#subfolder-tabs h2 a:hover, #subfolder-tabs h2 a.current {
+
+#folder-tabs h2 a:hover, #folder-tabs h2 a.current {
     background: #F3F3F3;
     color: #2D8EA3;
     text-shadow: none;
 }
-#subfolder-tabs h2 a { 
+
+#folder-tabs h2 a { 
     padding: 11px 11px 12px 11px;
     font-size: 100%;
     font-weight: normal;
 }
-#subfolder-tabs h2:first-child a  {
+
+#folder-tabs h2:first-child a  {
     border-radius: 8px 0px 0px 0px;
     margin-left: -10px;
 }
-#subfolder-tabs {
+
+#folder-tabs {
     background: #2C8DA2;
     border-radius: 10px 10px 0px 0px;
     padding: 10px;
 }
-#subfolder-panels {
+
+#folder-panels {
     border: 1px solid #DDD;
     border-top: 0px;
     background: #F3F3F3;

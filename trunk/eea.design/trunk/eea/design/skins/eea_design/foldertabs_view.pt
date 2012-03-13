@@ -13,9 +13,11 @@
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents)">
 
+              <div id="folder-tabs"></div>
 
+                <div id="folder-panels">
                 <div class="subfolder" tal:repeat="child formattedFolderContents/folderish">
-                    <h2><a tal:content="python:'%s (%i)' % (child['title'], child['nitems'])" tal:attributes="href child/listing_url"></a></h2>
+                    <h2><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a></h2>
                     <p class="subfolder-description" tal:condition="child/description" tal:content="child/description"></p>
                     <div class="subfolder-contents" tal:define="subFolderContents child/contents">
                         <p tal:condition="not:child/nitems">No items to display.</p>
@@ -42,8 +44,8 @@
                      tal:condition="nitems"
                      id="nonfolderish-subfolder-view-items"
                      class="subfolder">
-                    <h2 tal:content="python:'Other resources (%i)' % nitems"></h2>
-                    <div class="subfolder-contents">
+                    <div class="subfolder-contents" >
+                        <h2><a href="#">Other resources</a></h2>
                         <div class="photoAlbumEntry"
                              tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
                              tal:repeat="item nonFolderishItems">
@@ -60,6 +62,7 @@
                     </div>
                     <div class="visualClear"></div>
                 </div>
+            </div>
 
             </tal:foldercontents>
         </metal:listingmacro>

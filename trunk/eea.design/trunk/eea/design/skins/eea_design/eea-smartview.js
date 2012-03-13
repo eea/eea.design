@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     
     var subfolder_tabs = function(){
         var $content_core, $subfolders, $subfolder_h2,
-            $subfolder_tabs = $("#subfolder-tabs");
+            $subfolder_tabs = $("#folder-tabs");
         if ($subfolder_tabs.length){
             $content_core = $("#content-core");
             $subfolders = $content_core.find(".subfolder");
