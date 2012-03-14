@@ -34,6 +34,47 @@
 &lt;/ul&gt;
     </pre>
 
+    <h2>Jquerytools tabs </h2>
+        <div id="eea-tabs">
+            <h2><a href="#">First Tab</a></h2>
+            <h2><a href="#">Second Tab</a></h2>
+        </div>
+        <div id="eea-tabs-panels">
+           
+            <div class="eea-tabs-panel">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+            </div>
+            
+            <div class="eea-tabs-panel">
+Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            </div>
+            <div class="eea-tabs-panel">
+                <h2><a href="#">Third Tab</a></h2>
+Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            </div>
+        </div>
+    <pre>
+        &lt;div id="eea-tabs"&gt;
+            &lt;h2&gt;&lt;a href="#"&gt;First Tab&lt;/a&gt;&lt;/h2&gt;
+            &lt;h2&gt;&lt;a href="#"&gt;Second Tab&lt;/a&gt;&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div id="eea-tabs-panels"&gt;
+           
+            &lt;div class="eea-tabs-panel"&gt;
+                Content for first tab
+            &lt;/div&gt;
+            &lt;div class="eea-tabs-panel"&gt;
+                Content for second tab
+            &lt;/div&gt;
+            
+            &lt;div class="eea-tabs-panel"&gt;
+                &lt;h2&gt;&lt;a href="#"&gt;Third Tab&lt;/a&gt;&lt;/h2&gt;
+                The tab can also be extracted from the body of the eea-tabs-panel             
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    </pre>
+
     <h2>Fancybox pop-ups</h2>
     <div style="display:none">
         <div id="hidden-popup" style="width:250px;height:150px">

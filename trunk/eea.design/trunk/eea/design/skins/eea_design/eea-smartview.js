@@ -2,10 +2,10 @@ jQuery(document).ready(function($) {
     
     var subfolder_tabs = function(){
         var $content_core, $subfolders, $subfolder_h2,
-            $subfolder_tabs = $("#folder-tabs");
+            $subfolder_tabs = $("#eea-tabs");
         if ($subfolder_tabs.length){
-            $content_core = $("#content-core");
-            $subfolders = $content_core.find(".subfolder");
+            $content_core = $("#content");
+            $subfolders = $content_core.find(".eea-tabs-panel");
             $subfolder_h2 = $subfolders.find('h2');
             // make width of tab bigger if the height of it
             // is bigger than 55px which is 2 rows
@@ -21,10 +21,10 @@ jQuery(document).ready(function($) {
     };
     subfolder_tabs();
 
-    var $folder_panels = $('#folder-accordion-panels');
+    var $folder_panels = $('#eea-accordion-panels');
     if($folder_panels.length) {
      $($folder_panels).tabs(
-        "#folder-accordion-panels div.pane",
+        "#eea-accordion-panels div.pane",
         {tabs: 'h2', effect: 'slide', initialIndex: 0}
       );
     }

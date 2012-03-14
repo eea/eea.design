@@ -556,8 +556,9 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-/* folder_tabs_view and folder_accordion_view styling */
-#folder-tabs {
+/* folder_tabs_view and folder_accordion_view styling 
+ * as well as generic tabs and accordion styling */
+#eea-tabs {
     background: #2C8DA2;
     border-radius: 10px 10px 0px 0px;
     width: 600px;
@@ -565,7 +566,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     overflow: hidden;
 }
 
-#folder-tabs h2 {
+#eea-tabs h2 {
     line-height: 1.5em;
     background: transparent;
     padding: 0px;
@@ -576,19 +577,19 @@ body.section-signals #nonfolderish-subfolder-view-items {
     max-width: 93px;
 }
 
-#folder-tabs h2, #folder-tabs h2 a {
+#eea-tabs h2, #eea-tabs h2 a {
     color: white;
     text-shadow: 1px 1px #000;
 }
 
-#folder-tabs h2 a:hover, #folder-tabs h2 a.current {
+#eea-tabs h2 a:hover, #eea-tabs h2 a.current {
     background: #F3F3F3;
     color: #2D8EA3;
     text-shadow: none;
     cursor: pointer;
 }
 
-#folder-tabs h2 a { 
+#eea-tabs h2 a { 
     font-weight: normal;
     height: auto;
     min-height: 4em;
@@ -598,27 +599,27 @@ body.section-signals #nonfolderish-subfolder-view-items {
     float: left;
 }
 
-#folder-tabs h2:first-child a  {
+#eea-tabs h2:first-child a  {
     border-radius: 8px 0px 0px 0px;
 }
-#folder-tabs h2:last-child a {
+#eea-tabs h2:last-child a {
     border-radius: 0px 8px 0px 0px;
 }
 
-#folder-panels, #folder-accordion-panels {
+#eea-tabs-panels, #eea-accordion-panels {
     border: 1px solid #DDD;
     border-top: 0px;
     background: #F3F3F3;
     padding: 10px;
 }
-#folder-accordion-panels {
+#eea-accordion-panels {
     padding: 0px;
 }
-#folder-accordion-panels .pane {
+#eea-accordion-panels .pane {
     padding: 10px;
 }
 
-#folder-accordion-panels h2 {
+#eea-accordion-panels h2 {
     background: #5a9ead url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
     background-color: rgba(44, 141, 162, 0.8); 
     border-bottom: 1px dotted #DDD;
@@ -626,15 +627,15 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: 115%;
 }
 
-#folder-accordion-panels h2:hover {
+#eea-accordion-panels h2:hover {
     cursor: pointer;
 }
 
-#folder-accordion-panels h2.current {
+#eea-accordion-panels h2.current {
     background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
 }
 
-#folder-accordion-panels h2 a {
+#eea-accordion-panels h2 a {
     color: #FFF;
     text-shadow: 1px 1px #000;    
 }
