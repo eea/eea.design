@@ -57,6 +57,9 @@ class SubFolderView(BrowserView):
         for brain in folderContents:
             if brain.getURL() == self.context.absolute_url():
                 continue
+            # don't add contenttypes that are excluded from navigation
+            if brain.exclude_from_nav:
+                continue
             obj = brain.getObject()
             defaultPage = obj.getDefaultPage()
             if defaultPage:
