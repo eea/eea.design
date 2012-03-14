@@ -684,6 +684,8 @@ img
     position: relative;
     zoom: 1;
 }
-
+#folder-accordion-panels h2 {
+    background-color: #5a9ead;
+}
 /* </dtml-with> */
 

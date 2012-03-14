@@ -619,18 +619,19 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 #folder-accordion-panels h2 {
-    background-image: none;
-    background-color: transparent;
+    background: #5a9ead url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
     background-color: rgba(44, 141, 162, 0.8); 
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC2C8DA2,endColorstr=#CC2C8DA2); 
-    zoom: 1;
     border-bottom: 1px dotted #DDD;
     margin: 0px;
     font-size: 115%;
 }
 
+#folder-accordion-panels h2:hover {
+    cursor: pointer;
+}
+
 #folder-accordion-panels h2.current {
-    background: #2C8DA2;
+    background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
 }
 
 #folder-accordion-panels h2 a {
