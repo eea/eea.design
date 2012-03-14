@@ -678,5 +678,12 @@ img
     position: relative;
 }
 
+/* fix folder_tabs_view tabs because of lack of inline-block support */
+#folder-tabs h2 {
+    *display: inline;
+    position: relative;
+    zoom: 1;
+}
+
 /* </dtml-with> */
 
