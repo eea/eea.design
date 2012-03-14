@@ -7,15 +7,13 @@
     <div metal:fill-slot="content-core">
     <metal:main-macro define-macro="main">
 
-        <div class="visualClear"></div>
 
         <metal:listingmacro define-macro="listing" tal:define="subfolderView subfolderView|context/@@subfolder_view_logic;
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents)">
 
               <div id="folder-tabs"></div>
-
-                <div id="folder-accordion-panel">
+                <div id="folder-panels">
                 <div class="subfolder" tal:repeat="child formattedFolderContents/folderish">
                     <h2><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a></h2>
                     <p class="subfolder-description" tal:condition="child/description" tal:content="child/description"></p>
@@ -33,12 +31,10 @@
                                 <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
                             </a>
                         </div>
-                        <div class="visualClear"></div>
                     </div>
                 <div class="portletFooter">
                     <a class="standardButton" i18n:translate="read_more" tal:attributes="href child/listing_url">All Items</a>
                 </div>
-                    <div class="visualClear"></div>
                 </div>
 
                 <div tal:define="nonFolderishItems formattedFolderContents/nonfolderish;
@@ -62,7 +58,6 @@
                         </div>
                         <div class="visualClear"></div>
                     </div>
-                    <div class="visualClear"></div>
                 </div>
             </div>
 

@@ -560,15 +560,20 @@ body.section-signals #nonfolderish-subfolder-view-items {
 #folder-tabs {
     background: #2C8DA2;
     border-radius: 10px 10px 0px 0px;
-    padding: 10px;
+    width: 600px;
+    height: 52px;
+    overflow: hidden;
 }
+
 #folder-tabs h2 {
-    background: transparent;
-    display: inline;
     line-height: 1.5em;
+    background: transparent;
     padding: 0px;
     margin: 0px;
     font-weight: normal;
+    text-align: center;
+    display: inline-block;
+    max-width: 93px;
 }
 
 #folder-tabs h2, #folder-tabs h2 a {
@@ -580,17 +585,24 @@ body.section-signals #nonfolderish-subfolder-view-items {
     background: #F3F3F3;
     color: #2D8EA3;
     text-shadow: none;
+    cursor: pointer;
 }
 
 #folder-tabs h2 a { 
-    padding: 11px 11px 12px 11px;
-    font-size: 100%;
     font-weight: normal;
+    height: auto;
+    min-height: 4em;
+    font-size: 90%;
+    display: block;
+    padding: 0.3em 1em 0em !important;
+    float: left;
 }
 
 #folder-tabs h2:first-child a  {
     border-radius: 8px 0px 0px 0px;
-    margin-left: -10px;
+}
+#folder-tabs h2:last-child a {
+    border-radius: 0px 8px 0px 0px;
 }
 
 #folder-panels, #folder-accordion-panels {
@@ -625,7 +637,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     color: #FFF;
     text-shadow: 1px 1px #000;    
 }
-
 
 /* Override jquery.ui style */
 .ui-widget-content a {
