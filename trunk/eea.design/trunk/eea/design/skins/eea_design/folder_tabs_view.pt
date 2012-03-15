@@ -7,7 +7,6 @@
     <div metal:fill-slot="content-core">
     <metal:main-macro define-macro="main">
 
-
         <metal:listingmacro define-macro="listing" tal:define="subfolderView subfolderView|context/@@subfolder_view_logic;
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents)">
@@ -15,9 +14,9 @@
               <div id="eea-tabs"></div>
                 <div id="eea-tabs-panels">
                 <div class="eea-tabs-panel" tal:repeat="child formattedFolderContents/folderish">
-                    <h2><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a></h2>
-                    <p class="subfolder-description" tal:condition="child/description" tal:content="child/description"></p>
-                    <div class="subfolder-contents" tal:define="subFolderContents child/contents">
+                    <p class="eea-tabs-title"><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a></p>
+                    <p class="eea-tabs-description" tal:condition="child/description" tal:content="child/description"></p>
+                    <div class="eea-tabs-contents" tal:define="subFolderContents child/contents">
                         <p tal:condition="not:child/nitems">No items to display.</p>
                         <div class="photoAlbumEntry"
                              tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
@@ -41,9 +40,9 @@
                                  nitems python:len(nonFolderishItems)"
                      tal:condition="nitems"
                      id="nonfolderish-subfolder-view-items"
-                     class="subfolder">
-                    <div class="subfolder-contents" >
-                        <h2><a href="#">Other resources</a></h2>
+                     class="eea-tabs-panels">
+                    <div class="eea-tabs-contents" >
+                        <p class="eea-tabs-title"><a href="#">Other resources</a></p>
                         <div class="photoAlbumEntry"
                              tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
                              tal:repeat="item nonFolderishItems">

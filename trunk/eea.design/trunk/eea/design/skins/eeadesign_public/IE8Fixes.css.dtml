@@ -685,11 +685,6 @@ img
     z-index: 2;
 }
 
-/* fix tabs spacing for folder_tabs_view tabs */
-#folder-tabs h2 {
-    margin: 0px -2px;
-}
-
 #folder-accordion-panels h2 {
     background-color: #5a9ead;
 }

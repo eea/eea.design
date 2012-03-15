@@ -6,15 +6,17 @@ jQuery(document).ready(function($) {
         if ($subfolder_tabs.length){
             $content_core = $("#content");
             $subfolders = $content_core.find(".eea-tabs-panel");
-            $subfolder_h2 = $subfolders.find('h2');
+            $subfolder_h2 = $subfolders.find('.eea-tabs-title');
             // make width of tab bigger if the height of it
             // is bigger than 55px which is 2 rows
             var i = 0, length = $subfolder_h2.length;
             $subfolder_h2.appendTo($subfolder_tabs);
             $subfolder_tabs.tabs($subfolders);
-            for(i; i < length; i += 1) {
-                if($subfolder_h2[i].clientHeight > 59) {
-                    $subfolder_h2[i].style.maxWidth = "152px";
+            var $subfolder_children = $subfolder_tabs.children();
+            for(i; i < $subfolder_children.length; i += 1) {
+                console.log($subfolder_children[i].clientHeight);
+                if($subfolder_children[i].clientHeight > 59) {
+                    $subfolder_children[i].style.maxWidth = "152px";
                 }
             }
         }

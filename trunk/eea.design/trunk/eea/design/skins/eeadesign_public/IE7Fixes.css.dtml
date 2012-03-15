@@ -679,11 +679,12 @@ img
 }
 
 /* fix folder_tabs_view tabs because of lack of inline-block support */
-#folder-tabs h2 {
+#eea-tabs > * {
     *display: inline;
     position: relative;
     zoom: 1;
 }
+
 #folder-accordion-panels h2 {
     background-color: #5a9ead;
 }
