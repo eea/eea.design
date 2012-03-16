@@ -29,11 +29,10 @@ jQuery(document).ready(function($) {
 
             // make width of tab bigger if the height of it
             // is bigger than 55px which is 2 rows
-            var $eea_panels_children = $eea_tabs.children();
-            var j = 0, panels_length = $eea_panels_children.length;
-            for(j; j < panels_length; j += 1) {
-                if($eea_panels_children[j].clientHeight > 59) {
-                    $eea_panels_children[j].style.maxWidth = "152px";
+            var j = 0;
+            for(j; j < tabs_length; j += 1) {
+                if($eea_tabs_children[j].clientHeight > 61) {
+                    $eea_tabs_children[j].style.maxWidth = "152px";
                 }
             }
         }
