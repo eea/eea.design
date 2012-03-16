@@ -3,6 +3,10 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Upgrade step: go to www/portal_types/Folder/manage_propertiesForm and add
+   folder_accordion_view and folder_tabs_view to -- Available view methods field
+ * Feature: added folder_accordion_view and folder_tabs_view as two additional 
+   views for folders [ichimdav #5006 #5007]
  * Change: use smaller image for showing relations links, so it takes less space
    especially when there is no item description. [demarant]
  * Bug fix: fixed tinymce widget width going over content area [ichimdav #4998]

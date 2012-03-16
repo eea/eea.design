@@ -42,7 +42,8 @@ class SubFolderView(BrowserView):
         return self.context.getFolderContents()
 
 
-    def folder_contents(self, size_limit=10, folderContents=None):
+    def folder_contents(self, size_limit = 10, folderContents = None,
+                                                     obj_link = None):
         """ Get the folderish items in cachable list/dict format
         """
         size_limit = int(self.request.get('size_limit', size_limit))
@@ -50,7 +51,7 @@ class SubFolderView(BrowserView):
             'folderish': [],
             'nonfolderish': [],
         }
-
+        
         if folderContents is None:
             folderContents = self.get_start_items()
 
@@ -58,12 +59,20 @@ class SubFolderView(BrowserView):
             if brain.getURL() == self.context.absolute_url():
                 continue
             # don't add contenttypes that are excluded from navigation
+            # or aren't published
             if brain.exclude_from_nav:
                 continue
+            if brain.review_state != "published":
+                continue
+
             obj = brain.getObject()
-            defaultPage = obj.getDefaultPage()
-            if defaultPage:
-                obj = getattr(obj, defaultPage)
+            # get the folder url and title instead of default's page 
+            # for pages that need it like folder_tabs_view
+            if not obj_link:
+                defaultPage = obj.getDefaultPage()
+                if defaultPage:
+                    obj = getattr(obj, defaultPage)
+
             listing_url = getMultiAdapter((obj, self.request), name=u'url'
                                           ).listing_url
             facetednav = queryMultiAdapter((obj, self.request),
