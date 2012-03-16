@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
             // is bigger than 55px which is 2 rows
             var j = 0;
             for(j; j < tabs_length; j += 1) {
-                if($eea_tabs_children[j].clientHeight > 61) {
+                if($eea_tabs_children[j].clientHeight > 60) {
                     $eea_tabs_children[j].style.maxWidth = "152px";
                 }
             }

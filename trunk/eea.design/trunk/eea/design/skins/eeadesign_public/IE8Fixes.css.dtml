@@ -685,8 +685,5 @@ img
     z-index: 2;
 }
 
-#folder-accordion-panels h2 {
-    background-color: #5a9ead;
-}
 /* </dtml-with> */
 
