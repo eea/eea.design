@@ -1,27 +1,44 @@
 jQuery(document).ready(function($) {
     
-    var subfolder_tabs = function(){
-        var $content_core, $subfolders, $subfolder_h2,
-            $subfolder_tabs = $("#eea-tabs");
-        if ($subfolder_tabs.length){
-            $content_core = $("#content");
-            $subfolders = $content_core.find(".eea-tabs-panel");
-            $subfolder_h2 = $subfolders.find('.eea-tabs-title');
+    var eea_tabs = function(){
+        var $eea_tabs_title, $eea_tabs_title_a,
+            $eea_tabs = $("#eea-tabs"), $eea_tabs_children;
+        if ($eea_tabs.length){
+            $eea_tabs_panels = $("#eea-tabs-panels");
+            // detach tabs for dom manipulation
+            $eea_tabs.detach();
+            $eea_panels = $eea_tabs_panels.find(".eea-tabs-panel");
+            $eea_panels.find('.eea-tabs-title').detach().appendTo($eea_tabs);
+
+            $eea_tabs_children = $eea_tabs.children();
+            var i = 0, tabs_length = $eea_tabs_children.length,
+                $tab_title, tab_title_text;
+            
+            // the tabs need a link so we append a link if one is not found
+            for(i; i < tabs_length; i += 1) {
+                $tab_title = $($eea_tabs_children[i]);
+                if(!$tab_title.find('a').length) { 
+                    tab_title_text = $tab_title.text();
+                    $tab_title.text("");
+                    $('<a />').attr('href', '#').html(tab_title_text).appendTo($tab_title);
+                }
+            }
+            
+            $eea_tabs.tabs($eea_panels);
+            $eea_tabs.insertBefore($eea_tabs_panels);
+
             // make width of tab bigger if the height of it
             // is bigger than 55px which is 2 rows
-            var i = 0, length = $subfolder_h2.length;
-            $subfolder_h2.appendTo($subfolder_tabs);
-            $subfolder_tabs.tabs($subfolders);
-            var $subfolder_children = $subfolder_tabs.children();
-            for(i; i < $subfolder_children.length; i += 1) {
-                console.log($subfolder_children[i].clientHeight);
-                if($subfolder_children[i].clientHeight > 59) {
-                    $subfolder_children[i].style.maxWidth = "152px";
+            var $eea_panels_children = $eea_tabs.children();
+            var j = 0, panels_length = $eea_panels_children.length;
+            for(j; j < panels_length; j += 1) {
+                if($eea_panels_children[j].clientHeight > 59) {
+                    $eea_panels_children[j].style.maxWidth = "152px";
                 }
             }
         }
     };
-    subfolder_tabs();
+    eea_tabs();
 
     var $folder_panels = $('#eea-accordion-panels');
     if($folder_panels.length) {

@@ -40,9 +40,9 @@
                                  nitems python:len(nonFolderishItems)"
                      tal:condition="nitems"
                      id="nonfolderish-subfolder-view-items"
-                     class="eea-tabs-panels">
+                     class="eea-tabs-panel">
                     <div class="eea-tabs-contents" >
-                        <p class="eea-tabs-title"><a href="#">Other resources</a></p>
+                        <p class="eea-tabs-title">Other resources</p>
                         <div class="photoAlbumEntry"
                              tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
                              tal:repeat="item nonFolderishItems">
