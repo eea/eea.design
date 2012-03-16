@@ -3,6 +3,10 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Change: folder_listing is now throwing NotFound instead of Unauthorized for two reasons,
+   one that Google bot or other bot will not return after it receive am NotFound (404) and
+   second to keep the Zope logs clean
+   [ghicaale #5015]
  * Upgrade step: go to www/portal_types/Folder/manage_propertiesForm and add
    folder_accordion_view and folder_tabs_view to -- Available view methods field
  * Feature: added folder_accordion_view and folder_tabs_view as two additional 
