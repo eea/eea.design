@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
     if($folder_panels.length) {
      $($folder_panels).tabs(
         "#eea-accordion-panels div.pane",
-        {tabs: 'h2', effect: 'slide', initialIndex: 0}
+        {tabs: '.eea-accordion-title, h2', effect: 'slide', initialIndex: 0}
       );
     }
 
