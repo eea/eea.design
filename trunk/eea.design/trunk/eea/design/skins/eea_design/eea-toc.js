@@ -5,6 +5,12 @@
  */
 function build_toc(toc) {
     var tocID = toc.attr('id');
+
+    // add collapsabl-portlet class to get the arrows to minimize the panel
+    if (!toc.hasClass('collapsable-portlet')){
+        toc.addClass('collapsable-portlet');
+    }
+
     var currentList = toc.find('.portletItem');
     var hLevel = null;
     var lists = {'root': currentList};
@@ -49,9 +55,8 @@ function build_toc(toc) {
     // The collapsable-portlet functionality should probably be moved to it's
     // own file, but I'm thinking maybe we should merge it with eea-accordion
     // in the future.
-    $('.collapsable-portlet .portletHeader').click(function() {
-        var portletClicked = $(this).parents('.portlet');
-        portletClicked.toggleClass('collapsed');
+    toc.find('.portletHeader').click(function() {
+        toc.toggleClass('collapsed');
     });
 /* }); */
 }
