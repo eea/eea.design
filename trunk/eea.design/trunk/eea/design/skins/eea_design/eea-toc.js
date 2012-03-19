@@ -48,6 +48,17 @@ function build_toc(toc) {
 
     });
 
+    var $toc_children = lists.root.children();
+    var $first_child = $toc_children.eq(0);
+    if($first_child.is('ol') && !$first_child.children().length) {
+        $toc_children = $toc_children.slice(1,$toc_children.length);
+        $toc_children.appendTo($first_child);
+        lists.root.empty();
+        $first_child.appendTo(lists.root);
+    }
+    if(!$first_child.is('ol')) {
+        $toc_children.wrapAll('<ol />');
+    }
     // reatach portlet item and show toc since it is hidden by default 
     lists.root.appendTo(toc);
     toc.show();
