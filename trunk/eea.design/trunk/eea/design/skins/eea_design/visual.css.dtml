@@ -240,18 +240,6 @@ table.datatable {
     border: none;
 }
 
-#content .header-with-go-back-button .back-to-toc-button {
-    background: url(&dtml-portal_url;/arrow_up_12x12.png) right center no-repeat;
-    width: 12px;
-    height: 12px;
-    padding-left: 6px;
-    display: none;
-}
-
-#content .header-with-go-back-button:hover .back-to-toc-button {
-    display: inline;
-}
-
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
 #content div#multicolumn {
     -moz-column-width: 150px;

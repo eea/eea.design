@@ -3,6 +3,7 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Change: use eea-toc logic only instead of toc.js from plone [ichimdav #5014]
  * Change: folder_listing is now throwing NotFound instead of Unauthorized for two reasons,
    one that Google bot or other bot will not return after it receive am NotFound (404) and
    second to keep the Zope logs clean

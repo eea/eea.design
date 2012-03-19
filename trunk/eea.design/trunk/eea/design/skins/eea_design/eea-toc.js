@@ -3,65 +3,63 @@
  * - The script works with subheaders
  * - The script works with headers with nested <a> tags
  */
-function build_toc() {
-    (function($) {
-        $('#document-toc').each(function() {
-            var tocID = $(this).attr('id');
-            var currentList = $(this).find('.portletItem ol');
-            var hLevel = null;
-            var lists = {'root': currentList};
-            var queryString = $('#queryString').html();
+function build_toc(toc) {
+    var tocID = toc.attr('id');
+    var currentList = toc.find('.portletItem');
+    var hLevel = null;
+    var lists = {'root': currentList};
+    // detach dom element to avoid extra repaints
+    lists.root.detach();
+    var queryString = $('#queryString').html();
+        queryString = queryString || "h2, h3, h4";
 
-            $('#region-content').find(queryString).each(function(i, el) {
-                var newLevel = parseInt(el.tagName.charAt(1), 10);
-                hLevel = hLevel || newLevel;
+    $('#content-core').find(queryString).each(function(i, el) {
+        var newLevel = parseInt(el.tagName.charAt(1), 10);
+        hLevel = hLevel || newLevel;
+        if(el.className === "notoc") {
+            return;
+        }
 
-                if (newLevel > hLevel) {
-                    hLevel = newLevel;
-                    var newList = $('<ol></ol>');
-                    lists[newLevel] = newList;
-                    currentList.append(newList);
-                    currentList = newList;
-                } else if (newLevel < hLevel) {
-                    hLevel = newLevel;
-                    currentList = lists[newLevel] || lists.root;
-                }
+        if (newLevel > hLevel) {
+            hLevel = newLevel;
+            var newList = $('<ol></ol>');
+            lists[newLevel] = newList;
+            currentList.append(newList);
+            currentList = newList;
+        } else if (newLevel < hLevel) {
+            hLevel = newLevel;
+            currentList = lists[newLevel] || lists.root;
+        }
 
-                var h = $(el);
-                var hText = $.trim(h.find('a').text()) || h.text();
-                var li = $('<li><a>' + hText + '</a></li>');
-                var hId = h.attr('id') || 'toc-' + i;
-                var urlWithoutHash = location.protocol + '//' + location.host + location.pathname;
-                li.find('a').attr('href', urlWithoutHash + '#' + hId);
-                currentList.append(li);
-                h.attr('id', hId);
+        var h = $(el);
+        var hText = $.trim(h.find('a').text()) || h.text();
+        var li = $('<li><a>' + hText + '</a></li>');
+        var hId = h.attr('id') || 'toc-' + i;
+        var urlWithoutHash = location.protocol + '//' + location.host + location.pathname;
+        li.find('a').attr('href', urlWithoutHash + '#' + hId);
+        currentList.append(li);
+        h.attr('id', hId);
 
-                /* Each header gets a 'back to table of contents' button. */
-                if (!h.find('.back-to-toc-button').length) {
-                    var backButton = $('.eea-template.back-to-toc-button').clone();
-                    if (backButton.length) {
-                        backButton.removeClass('eea-template');
-                        backButton.attr('href', urlWithoutHash + "#" + tocID);
-                        backButton.attr('title', "Back to table of contents");
-                        backButton.appendTo(h);
-                        h.addClass('header-with-go-back-button');
-                    }
-                }
-            });
+    });
 
-            // The collapsable-portlet functionality should probably be moved to it's
-            // own file, but I'm thinking maybe we should merge it with eea-accordion
-            // in the future.
-            $('.collapsable-portlet .portletHeader').click(function() {
-                var portletClicked = $(this).parents('.portlet');
-                portletClicked.toggleClass('collapsed');
-            });
-        });
-    }(jQuery));
+    // reatach portlet item and show toc since it is hidden by default 
+    lists.root.appendTo(toc);
+    toc.show();
+
+    // The collapsable-portlet functionality should probably be moved to it's
+    // own file, but I'm thinking maybe we should merge it with eea-accordion
+    // in the future.
+    $('.collapsable-portlet .portletHeader').click(function() {
+        var portletClicked = $(this).parents('.portlet');
+        portletClicked.toggleClass('collapsed');
+    });
+/* }); */
 }
 
 jQuery(document).ready(function($) {
-    $('#document-toc').find('ol').first().empty();
-    build_toc();
-    $("#region-content").find('.clear-toc').removeClass('clear-toc');
+    var $document_toc  = $('#document-toc');
+    if($document_toc.length){
+        build_toc($document_toc);
+    }
 });
+
