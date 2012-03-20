@@ -303,7 +303,7 @@ ul#tabs li a {
 
 ul#tabs li a.current, ul#tabs li a:hover {
     background: &dtml-greyBackgroundColor;;
-    color: #2D8EA3;
+    color: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px #FFFFFF;
 }
 
@@ -316,7 +316,7 @@ ul#tabs li:first-child a:hover {
 
 #news-header select {
     margin-left: 30px;
-    color: #346f83;
+    color: &dtml-corporateBlueTwo;;
     margin-top: 10px;
     display: table-cell;
 }
