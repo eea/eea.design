@@ -29,6 +29,6 @@ class EEASunburstView(SunburstView):
         elif sr  and (not portal_state.is_rtl()):
             # We have right column and we are NOT in RTL language
             return "cell width-3:4 position-0"
-        elif (sr and not sl) and (portal_state.is_rtl()):
+        elif sr and (portal_state.is_rtl()):
             # We have right column and we are in RTL language
             return "cell width-3:4 position-0"
