@@ -77,7 +77,7 @@ class DataMaps(BrowserView):
                     interfaces = interfaces, noOfItems = self.noOfLatestDefault)
 
 
-    def getAllProducts(self):
+    def getAllProducts(self, no_sort = False):
         """ get all latest data and maps merged into one single list """
         result = []
         res1 = self.getLatestIndicators()[:self.noOfEachProduct]
@@ -95,8 +95,9 @@ class DataMaps(BrowserView):
         result.extend(res6)
 
         # sort by effective date and then reverse it as it starts from smallest
-        result.sort(key = lambda x : x.effective)
-        result.reverse()
+        if not no_sort:
+            result.sort(key = lambda x : x.effective)
+            result.reverse()
         return result
 
     def getPromotions(self):

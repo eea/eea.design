@@ -65,7 +65,7 @@ class Frontpage(BrowserView):
         return _getItems(self, portaltypes = 'Report',
                                     noOfItems=self.noOfPublications)
 
-    def getAllProducts(self):
+    def getAllProducts(self, no_sort = False):
         """ retrieves all latest published products for frontpage """
         portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
                                     'Assessment', 'Data', 'EEAFigure')
@@ -78,8 +78,9 @@ class Frontpage(BrowserView):
         result.extend(multimedia[:self.noOfEachProduct])
 
         # resort based on effective date
-        result.sort(key = lambda x : x.effective)
-        result.reverse()
+        if not no_sort:
+            result.sort(key = lambda x : x.effective)
+            result.reverse()
 
         return result
 
