@@ -3,6 +3,7 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Bug fix: order of data-and-maps and allproducts chronologically [ichimdav#4724]
  * Bug fix: fix column position for right to left languages [ichimdav #4971]
  * Upgrade step: remove toc.js from portal_javascripts [ichimdav #5014]
  * Change: use eea-toc logic only instead of toc.js from plone [ichimdav #5014]
