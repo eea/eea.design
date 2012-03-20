@@ -12,7 +12,7 @@
     <tal:protect tal:condition="python: not checkPermission('List folder contents', here)" tal:replace="here/raiseNotFound" />
     <tal:isEmpty tal:condition="python: isEmpty and isAnon">
          <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />
-      </tal:isEmpty>
+    </tal:isEmpty>
 <metal:block define-macro="content-core"
                     tal:define="kssClassesView context/@@kss_field_decorator_view;
                                 getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;

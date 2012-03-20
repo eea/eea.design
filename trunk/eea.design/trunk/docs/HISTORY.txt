@@ -3,6 +3,8 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Change: increased font size for paragraphs in content-core area.
+   users have complained text is too small. [demarant]
  * Bug fix: order of data-and-maps and allproducts chronologically [ichimdav#4724]
  * Bug fix: fix column position for right to left languages [ichimdav #4971]
  * Upgrade step: remove toc.js from portal_javascripts [ichimdav #5014]

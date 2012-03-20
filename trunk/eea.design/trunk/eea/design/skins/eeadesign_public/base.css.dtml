@@ -21,6 +21,10 @@ p {
     line-height: 1.5em;
 }
 
+#content-core p {
+    font-size: 115%;
+}
+
 img {
     border: none;
     vertical-align: middle;
