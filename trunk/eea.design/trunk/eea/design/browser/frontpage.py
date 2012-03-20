@@ -76,7 +76,11 @@ class Frontpage(BrowserView):
             result.extend(res1)
         multimedia = self.getMultimedia()
         result.extend(multimedia[:self.noOfEachProduct])
-        #TODO the list must be re-sorted on effective date.
+
+        # resort based on effective date
+        result.sort(key = lambda x : x.effective)
+        result.reverse()
+
         return result
 
 #    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])

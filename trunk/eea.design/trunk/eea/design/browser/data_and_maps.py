@@ -94,8 +94,9 @@ class DataMaps(BrowserView):
         result.extend(res5)
         result.extend(res6)
 
-        #TODO/OPTIONAL the list may be re-sorted on effective date.
-
+        # sort by effective date and then reverse it as it starts from smallest
+        result.sort(key = lambda x : x.effective)
+        result.reverse()
         return result
 
     def getPromotions(self):
