@@ -558,11 +558,13 @@ body.section-signals #nonfolderish-subfolder-view-items {
 /* folder_tabs_view and folder_accordion_view styling 
  * as well as generic tabs and accordion styling */
 #eea-tabs {
-    background: #2C8DA2;
+    background: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
     height: 48px;
     overflow: hidden;
+    list-style: none;
+    padding: 0;
     margin: 0px !important;
 }
 
@@ -580,30 +582,28 @@ body.section-signals #nonfolderish-subfolder-view-items {
     list-style-type: none;
     list-style-image: none;
     font-size: inherit;
+    text-indent: 0;
 }
 
 #eea-tabs li, #eea-tabs a {
     color: white;
-    text-shadow: 1px 1px #000;
+    text-shadow: 1px 1px 1px #000000;
 }
 
-#eea-tabs a:hover, #eea-tabs a.current, #eea-tabs a:hover, #eea-tabs a.current {
-    background: #F3F3F3;
-    color: #2D8EA3;
-    text-shadow: none;
-    cursor: pointer;
+#eea-tabs li a:hover, #eea-tabs li a.current {
+    background: &dtml-greyBackgroundColor;;
+    color: &dtml-corporateBlueTwo;;
+    text-shadow: 1px 1px 1px #FFFFFF;
 }
 
-#eea-tabs a { 
+#eea-tabs li a { 
     font-weight: normal;
     height: auto;
     min-height: 4em;
     max-height: 4.1em;
-    /* font-size: 1em; */
     font-size: 115%;
     display: block;
-    /* line-height:1.5em; */
-    padding: 0.5em 1em 0em !important;
+    padding: 0.5em 1em 0em;
     float: left;
     margin: 0 -2px;
     border: 0px !important; 
@@ -611,9 +611,13 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 #eea-tabs li:first-child a  {
     border-radius: 8px 0px 0px 0px;
+    -webkit-border-radius: 8px 0 0 0;
+    -moz-border-radius: 8px 0 0 0;
 }
 #eea-tabs li:last-child a {
     border-radius: 0px 8px 0px 0px;
+    -webkit-border-radius: 0 8px 0 0;
+    -moz-border-radius: 0 8px 0 0;
     margin: 0px -4px;
 }
 

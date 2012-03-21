@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
             });
     };
 
-    $("ul#tabs, ul#multimedia-tabs").tabs("> .highlights", function(event, index) {
+    $("#whatsnew-gallery #eea-tabs, #multimedia-tabs").tabs("> .highlights", function(event, index) {
         var cur_tab = this.getTabs()[index],
             cur_tab_val = cur_tab.id.substr(4);
             cur_tab.theme = cur_tab.theme || "none";
@@ -165,7 +165,7 @@ jQuery(document).ready(function($) {
                 y = this.options;
             var topic_value = y[x].value,
                 topic_text = y[x].innerHTML;
-            var tab_val = $("#tabs a.current, #multimedia-tabs a.current")[0].id.substr(4);
+            var tab_val = $("#whatsnew-gallery #eea-tabs a.current, #multimedia-tabs a.current")[0].id.substr(4);
 
             eea_gal.whatsnew_func(cur_tab_val = tab_val, sel_text = topic_text, sel_value = topic_value);
         });

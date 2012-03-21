@@ -273,45 +273,22 @@ div.current {
   display: none;
 }
 
-ul#tabs {
-    background: &dtml-corporateBlueOne;;
-    border-radius: 10px 10px 0px 0px;
-    border: none;
+/* height and padding differences from eea-tabs on whatsnew-gallery */
+#whatsnew-gallery #eea-tabs {
     height: 37px;
-    list-style: none;
-    margin: 0 !important;
-    padding: 0;
 }
 
-ul#tabs li {
-    float: left;
-    list-style-image: none !important;
-    margin: 0 !important;
+#whatsnew-gallery #eea-tabs li {
     text-indent: 0;
+    margin: 0 !important;
+    max-width: 140px;
 }
-
-ul#tabs li a {
-    color: #FFF;
-    border: 0px;
+#whatsnew-gallery #eea-tabs li a {
     height: 17px;
+    max-height: 17px;
+    min-height: 17px;
     font-size: 125%;
-    text-decoration: none;
     padding: 9px 10px 11px 10px;
-    text-shadow: 1px 1px 1px #000000;
-    display: inline-block;
-}
-
-ul#tabs li a.current, ul#tabs li a:hover {
-    background: &dtml-greyBackgroundColor;;
-    color: &dtml-corporateBlueTwo;;
-    text-shadow: 1px 1px 1px #FFFFFF;
-}
-
-ul#tabs li:first-child a.current,
-ul#tabs li:first-child a:hover {
-  border-radius: 8px 0 0 0;
-  -webkit-border-radius: 8px 0 0 0;
-  -moz-border-radius: 8px 0 0 0;
 }
 
 #news-header select {

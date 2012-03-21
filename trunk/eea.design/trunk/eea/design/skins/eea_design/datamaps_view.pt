@@ -107,7 +107,7 @@
                         <div metal:define-macro="whatsnew-gallery" 
 			                  tal:define="more_hrefs  more_hrefs|python: ['find', 'data', 'find#c1=Map', 'explore-interactive-maps', 'indicators', 'find#c1=Graph' ];
 			                              datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
-                            <ul id="tabs"
+                            <ul id="eea-tabs"
                                 tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps', 'Indicators', 'Graphs' ];">
                                 <li tal:repeat="tab tabnames">
                                     <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
