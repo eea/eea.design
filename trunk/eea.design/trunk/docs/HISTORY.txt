@@ -3,6 +3,9 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Upgrade step:  from portal_setup > import > EEA Design:
+   1. Check Javascript registry import step checkbox 
+   2. Uncheck Include dependecies? checkbox [ichimdav #5006]
  * Change: removed old css and made button design more consistent across
    several other legacy css classes [demarant]
  * Feature: added CSS for separator under action menus ( .actionSeparator )
