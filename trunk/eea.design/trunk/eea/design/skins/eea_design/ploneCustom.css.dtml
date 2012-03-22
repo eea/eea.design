@@ -300,8 +300,10 @@
 
 /* standard search button inside any of the portal columns*/
 
-/* #portal-columns input.searchButton, */
-#portal-columns input[type="submit"], .standardButton, .qq-upload-button {
+#portal-columns input[type="submit"], .standardButton, .qq-upload-button,
+input.context,
+input.destructive,
+input.standalone {
     color:#fff !important;
     background:#346F83;
     background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
@@ -333,9 +335,11 @@
             border-radius: 2px;
 }
 
-/* #portal-columns input.searchButton:hover, */
 #portal-columns input[type="submit"]:hover, .standardButton:hover,
- .qq-upload-button:hover {
+ .qq-upload-button:hover,
+ input.context:hover,
+ input.destructive:hover,
+ input.standalone:hover {
     background-color:&dtml-corporateOrange;;
     background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
     background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */

@@ -3,6 +3,8 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Change: removed old css and made button design more consistent across
+   several other legacy css classes [demarant]
  * Feature: added CSS for separator under action menus ( .actionSeparator )
    [ghicaale #5017]
  * Bug fix: added transparency and size fixes for ie7 topright portion of 

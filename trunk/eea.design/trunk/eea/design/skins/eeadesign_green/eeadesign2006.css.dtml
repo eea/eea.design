@@ -7,7 +7,6 @@
 
 /* YOUR CSS RULES START HERE */
 
-
 #printLogo {
     display: none;
 }
@@ -45,28 +44,6 @@
 }
 
 
-/* 
-.portlet-tabs #portletitem-rectis {
-    background: white url(&dtml-portal_url;/bgnature.jpg) no-repeat;
-}
-*/
-
-/* style for local/scope search */
-#content div.localSearch {
-width: 30em;
-margin: 1.5em auto;
-}
-
-#portal-column-one div.localSearch,
-#portal-column-two div.localSearch {
-width: 100%;
-margin: 1em auto;
-}
-
-/* The global section tabs. */
-/* Moved to eea-globaltabs.css for clarity/ease */
-
-
 /* Accessibility and visual enhancement elements */
 
 .hiddenStructure {
@@ -81,57 +58,7 @@ margin: 1em auto;
     width: 1px;
 }
 
-/*
- * Eco agents box design
- */
-.portlet-tabs #portletitem-skovis img#agents {
-    margin-left: -70px;
-    position: relative;
-    bottom: 0px;
-    left: 0;
-    float: left;
-}
 
-
-/* IE-FIX to move the image outside the box. */
-* html .portlet-tabs #portletitem-skovis img#agents {
-    bottom: -9px;
-}
-
-/*
-* Forms Buttons
-*/
-.documentEditable * input.searchButton,
-.documentEditable * input.context,
-.documentEditable * input.destructive,
-.documentEditable * input.standalone,
-input.context,
-input.destructive,
-input.standalone {
-    cursor: pointer;
-    background:#f5821f;
-    color:white;
-    text-transform: &dtml-textTransform;;
-	border:1px solid;
-	border-color:#FC9 #630 #330 #F96;
-	padding:0.3em;
-	font: bold 1.2em verdana,sans-serif;
-	text-decoration:none;
-}
-
-/* when pressing switch the borders to give press effect
-input.context:active,
-input.destructive:active,
-input.standalone:active {
- 	border-color:#630 #FC9 #F96 #330;
-}
-*/
-
-input.context:hover, 
-input.destructive:hover,
-input.standalone:hover {
- 	color: #F9F99D;
-}
 
 /* YOUR CSS RULES STOP HERE */
 
