@@ -283,14 +283,6 @@ dd.portletFooter {
     padding-top: 0em;
 }
 
-/* remove hasLayout from the p to make it wrap*/
-* html .highlights p.teaser {
-    float: none;
-    width: auto;
-    height: auto;
-}
-
-
 .media-item .item-left {
     width: 200px;
 }

@@ -938,7 +938,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 #related-multimedia-top {
     border:none;
     margin:0;
-    padding;0;
+    padding:0;
 }
 
 dd.embeddedMedia .magnify {
