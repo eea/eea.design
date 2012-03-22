@@ -169,16 +169,17 @@ div.metadata-switch {
     display:none !important;
 }
 .keyMessage {
-    page-break-inside:avoid !important;
+    page-break-inside:avoid !important; /* no browser support yet */
 }
 .indicator-figure-plus-container {
-    page-break-inside:avoid !important;
+    clear: both;
+    page-break-inside:avoid !important; /* no browser support yet */
 }
 
 /* ichimdav added from sunburst's print.css */
 
 /* Page break class for use when printing */
-div.pageBreak {
+div.pageBreak, .policy_question {
 	page-break-before: always;
 }
 
