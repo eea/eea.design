@@ -139,8 +139,12 @@ div#portal-column-two {
     margin-top: 0 !important;
 }
 
-.column-area .featured .searchforms input[type="submit"], .right-column-area .featured .searchforms input[type="submit"] {
+.column-area .featured .searchforms input[type="submit"], .right-column-area .featured .searchforms input[type="submit"] { 
     padding: 7px 4px !important;
+}
+
+#topright-widgets .searchforms input[type="submit"] {
+    padding: 7px 2px !important;
 }
 textarea {
     width: 97%;
@@ -591,19 +595,28 @@ img
    margin: 0px 0px -35px -92px !important;
 }
 
-#whatsnew-gallery .highlights,
+body.section-multimedia #whatsnew-gallery .highlights,
 #featured-location,
 {
     background: transparent !important;
 }
 
-#topright-widgets.multimedia-widget .featured {
-    zoom: 1;
+#featured-location {
+    height: 257px;
+}
+#featured-location .portletFooter {
+    top: 256px;
 }
 #topright-widgets, #bottomright-widgets {
     min-width: 333px;
     width: 33%;
     max-width: 350px;
+}
+
+#topright-widgets .featured
+{
+  background-color:transparent;
+  zoom: 1;
 }
 
 /* .multimedia-widget #faceted-text-search { */
@@ -616,21 +629,6 @@ img
 
 .multimedia-widget#topright-widgets #faceted-text-search { 
     margin-top: -10px;
-}
-/* .multimedia-widget#topright-widgets .featured, */
-/* .multimedia-widget#topright-widgets #faceted-text-search { */
-/*     min-width: 1px !important; */
-/*     min-height: 1px !important; */
-/* } */
-
-.multimedia-widget #faceted-text-search input[type="text"] {
-   width: 205px !important;
-}
-
-.multimedia-widget#topright-widgets #faceted-text-search input[type="submit"] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    float: none !important;
 }
 
 .multimedia-widget.left-widget #media-player {
@@ -678,9 +676,10 @@ img
     position: relative;
 }
 
+
 /* fix folder_tabs_view tabs because of lack of inline-block support */
-#eea-tabs > * {
-    *display: inline;
+#eea-tabs li {
+    display: inline;
 }
 
 /* </dtml-with> */

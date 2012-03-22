@@ -3,6 +3,8 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Bug fix: added transparency and size fixes for ie7 topright portion of 
+   multimedia [ichimdav #4990]
  * Change: folder_listing is now just redirecting to a message page when 
    anonymous is accessing listing for a draft folder. 404 is not semantically 
    correct, as the folder is there, it is just empty for anonymous. this way we 
