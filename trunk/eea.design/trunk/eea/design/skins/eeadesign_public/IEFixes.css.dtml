@@ -516,14 +516,4 @@ a.archives {
    margin: 0px 0px -35px -92px !important;
 }
 
-#topright-widgets .searchforms input[type="submit"] {
-    padding: 7px 0px !important;
-    float: none;
-}
-#topright-widgets .featured
-{
-  background-color:transparent;
-  zoom: 1;
-}
-
 /* </dtml-with> */
