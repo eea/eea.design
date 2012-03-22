@@ -260,16 +260,16 @@ div.current {
 }
 
 /* height and padding differences from eea-tabs on whatsnew-gallery */
-#whatsnew-gallery .eea-tabs {
+#whatsnew-gallery ul.eea-tabs {
     height: 37px;
 }
 
-#whatsnew-gallery .eea-tabs li {
+#whatsnew-gallery ul.eea-tabs li {
     text-indent: 0;
     margin: 0 !important;
     max-width: 140px;
 }
-#whatsnew-gallery .eea-tabs li a {
+#whatsnew-gallery ul.eea-tabs li a {
     height: 17px;
     max-height: 17px;
     min-height: 17px;

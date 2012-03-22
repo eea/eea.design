@@ -4,7 +4,7 @@
 
 <div metal:define-macro="datasets"
      id="datasets-highlights"
-     class="highlights"
+     class="eea-tabs-panel"
      tal:define="plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;
@@ -13,7 +13,7 @@
 </div>
 
 <div metal:define-macro="maps"
-     class="highlights"
+     class="eea-tabs-panel"
      id="maps-highlights"
      tal:define="hide_listing python: True;
                  hide_album python: False;
@@ -23,7 +23,7 @@
 
 <div metal:define-macro="indicators"
      id="indicators-highlights"
-     class="highlights"
+     class="eea-tabs-panel"
      tal:define="plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: True;
                  hide_album python: False;
@@ -50,7 +50,7 @@
         <h2 class="column-title" i18n:translate="topic-in-spotlight">Topic in the spotlight</h2>
 
         <div id="spotlight-item"
-            class="highlights">
+            class="eea-tabs-panel">
             <div class="figure-left"><img alt="" tal:attributes="src string:${spotlight/url}/image_thumb; title spotlight/title; alt spotlight/title" /></div>
             <h3 class="highlight">
                 <a href="#" class="noPrint"
@@ -68,7 +68,7 @@
 </metal:spotlight>
 
 <div metal:define-macro="graphs"
-     class="highlights"
+     class="eea-tabs-panel"
      id="graphs-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;
@@ -77,7 +77,7 @@
 </div>
 
 <div metal:define-macro="interactivemaps"
-     class="highlights"
+     class="eea-tabs-panel"
      id="interactivemaps-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;
@@ -87,7 +87,7 @@
 
 
 <div metal:define-macro="alldataproducts"
-     class="highlights"
+     class="eea-tabs-panel"
      id="alldataproducts-highlights" 
      tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
                  folderContents datamaps_view/getAllProducts|nothing;

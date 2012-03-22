@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
     var eea_tabs = function(){
-        var $whatsnew_gallery = $("#whatsnew-gallery");
-        if($whatsnew_gallery.length) {
+        if($("#whatsnew-gallery").length || $("#daviz-view").length) {
             return;
         }
         var $eea_tabs_title, $eea_tabs_title_a,
