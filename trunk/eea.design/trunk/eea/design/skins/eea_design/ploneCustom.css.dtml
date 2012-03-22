@@ -630,7 +630,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     display: inline-block;
 }
 
-#content .eea-tabs-panel {
+.eea-tabs-panel {
     background: &dtml-greyBackgroundColor;;
 }
 
