@@ -222,7 +222,7 @@ input.searchField {
     margin-right: 0.5em;
 }
 #portal-siteactions li a:hover {
-    color: &dtml-corporateGreen;
+    color: &dtml-corporateGreen;;
 }
 
 /* @end */
@@ -1025,7 +1025,12 @@ dl.error a {
 }
 
 #contentActionMenus .actionMenuContent ul {
-   margin:0px !important;
+    margin:0px !important;
+}
+
+#contentActionMenus .actionSeparator a {
+    padding-top: 0.2em;
+    border-top: 2px solid &dtml-contentViewBorderColor;;
 }
 
 dl.actionMenu {

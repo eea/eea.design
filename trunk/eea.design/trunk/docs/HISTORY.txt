@@ -3,6 +3,8 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Feature: added CSS for separator under action menus ( .actionSeparator )
+   [ghicaale #5017]
  * Bug fix: added transparency and size fixes for ie7 topright portion of 
    multimedia [ichimdav #4990]
  * Change: folder_listing is now just redirecting to a message page when 
