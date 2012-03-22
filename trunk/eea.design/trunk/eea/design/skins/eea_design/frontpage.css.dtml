@@ -192,7 +192,7 @@ body.frontpage #portal-columns {
 }
 
 #multimedia-highlights ul li,
-#multimedia-highlights ul li a ,
+#multimedia-highlights ul li a
 {
     padding: 0;
     margin: 0;

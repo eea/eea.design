@@ -1449,7 +1449,7 @@ fieldset,
     line-height: 125%;
     color: Black;
     letter-spacing: -0.05em;
-    margin: inherit -0.05em;
+    margin: inherit -0.5em;
     font-size: 2em; /* 26px equiv */
     font-weight: bold;
 }

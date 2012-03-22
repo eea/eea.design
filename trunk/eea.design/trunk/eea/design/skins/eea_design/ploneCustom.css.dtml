@@ -930,7 +930,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin-bottom: 1em;
 }
 
-#content dt.
+#content dt,
 #related-multimedia-top {
     border:none;
     margin:0;
@@ -1287,7 +1287,6 @@ h3.site-description {
 
 #portal-column-content #portal-searchbox {
     float: none;
-    clear: auto;
     padding: 14px 0;
     margin: 0;
     background-color: #b9e148;
@@ -2070,10 +2069,8 @@ option.hiddenStructure {
 }
 
 .link-external {
-    background: transparent url(&dtml-portal_url;/link_icon.gif) 0px 1px no-repeat;
-    /* right aligned */
+    background: transparent url(&dtml-portal_url;/link_icon.gif) 3px 1px no-repeat;
     padding: 1px 0px 1px 19px;
-    background-position: 3px left;
 }
 /** html .link-external {
     background-position: top left;

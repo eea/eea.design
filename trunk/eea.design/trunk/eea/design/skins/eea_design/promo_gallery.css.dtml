@@ -131,7 +131,6 @@
 }
 
 #promo-navigator li, #promo-navigator-sm li {
-	cursor:hand; 
 	cursor:pointer;
 	list-style:none;
 	width:100%;
@@ -229,7 +228,7 @@
 }
 
 #promo-navigator li.active img, #promo-navigator-sm li.active img {
-	border:##6C8E5C  solid 1px;
+	border: 1px solid #6C8E5C;
 }
 
 #promo-navigator li.active h3, #promo-navigator-sm li.active h3 {

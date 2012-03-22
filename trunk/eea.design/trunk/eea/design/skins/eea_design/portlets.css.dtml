@@ -331,7 +331,7 @@ dl.portlet-navigation-tree {
 .portlet-navigation-tree li a {
     color: #495b6b;
     border: none;
-    parrow-noradding-left: 2em;
+    padding-left: 2em;
     background: transparent url(&dtml-portal_url;/mal.png) 1em no-repeat;
 }
 
@@ -795,7 +795,6 @@ a.noHover {
    margin: 0 0 0.6em 0;
    padding: 0;
    padding-top: 28px;
-   _padding-top: 27px; /* IE6 */
    background: url(&dtml-portal_url;/tabhead-bg.gif) repeat-x left top;
    border: none;
 }
@@ -1015,7 +1014,7 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
 .portletCalendar dt{
     background-color: #E9EFCD!important;
     border-style: solid solid none;
-    border-color: #CCCCCC #CCCCCC -moz-use-text-color;
+    border-color: #CCCCCC;
     border-width: 1px 1px medium;
 }
 
