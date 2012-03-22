@@ -595,7 +595,7 @@ img
    margin: 0px 0px -35px -92px !important;
 }
 
-body.section-multimedia #whatsnew-gallery .highlights,
+body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
 #featured-location,
 {
     background: transparent !important;
@@ -640,7 +640,7 @@ body.section-multimedia #whatsnew-gallery .highlights,
     margin: 0 15px 0 6px;
 }
 
-#multimedia-vids .highlights .gallery-album .photoAlbumEntry .photoAlbumEntryWrapper {
+#multimedia-vids .eea-tabs-panel .gallery-album .photoAlbumEntry .photoAlbumEntryWrapper {
     position: relative;
 }
 
@@ -672,13 +672,13 @@ body.section-multimedia #whatsnew-gallery .highlights,
 
 
 /* fix overflow of multimedia whatsnew gallery */
-#multimedia-vids .highlights .gallery-ajax, #tag-cloud-content {
+#multimedia-vids .eea-tabs-panel .gallery-ajax, #tag-cloud-content {
     position: relative;
 }
 
 
 /* fix folder_tabs_view tabs because of lack of inline-block support */
-#eea-tabs li {
+.eea-tabs li {
     display: inline;
 }
 

@@ -5,9 +5,9 @@ jQuery(document).ready(function($) {
             return;
         }
         var $eea_tabs_title, $eea_tabs_title_a,
-            $eea_tabs = $("#eea-tabs"), $eea_tabs_children;
+            $eea_tabs = $(".eea-tabs"), $eea_tabs_children;
         if ($eea_tabs.length){
-            $eea_tabs_panels = $("#eea-tabs-panels");
+            $eea_tabs_panels = $(".eea-tabs-panels");
             // detach tabs for dom manipulation
             $eea_tabs.detach();
             $eea_panels = $eea_tabs_panels.find(".eea-tabs-panel");

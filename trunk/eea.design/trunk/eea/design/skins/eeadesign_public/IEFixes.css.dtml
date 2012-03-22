@@ -422,7 +422,7 @@ a.list-layout.active-list, a.list-layout {
     right: 20px;
 }
 
-.column-area .featured .searchforms input[type="submit"] {
+.column-area .featured .searchforms input[type="submit"]{
     padding: 7px 2px !important;
 }
 
@@ -511,14 +511,19 @@ a.archives {
     top: -1px;
 }
 
-.multimedia-widget .featured,
-.multimedia-widget UL#tabs LI A.current
-{
-  background-color:transparent;
-}
 
 #coverflow img { 
    margin: 0px 0px -35px -92px !important;
+}
+
+#topright-widgets .searchforms input[type="submit"] {
+    padding: 7px 0px !important;
+    float: none;
+}
+#topright-widgets .featured
+{
+  background-color:transparent;
+  zoom: 1;
 }
 
 /* </dtml-with> */

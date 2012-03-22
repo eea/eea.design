@@ -77,18 +77,6 @@ body.frontpage ul {
     color: #808285;
 }
 
-#whatsnew-gallery .highlights {
-    clear: both;
-    padding: 0 15px 15px 15px;
-}
-
-.highlights .portalMessage {
-  margin-top: 0;
-  position: relative;
-  top: 10px;
-  margin-bottom: 10px;
-  display: block;
-}
 
 .frontpage .tileHeadline {
   padding-left: 0 !important;
@@ -156,9 +144,6 @@ body.sections-data-and-maps #promo-gallery-wrapper,  body.frontpage #promo-galle
     min-width: 585px;
 }
 
-#whatsnew-gallery .highlights {
-    background: &dtml-greyBackgroundColor;;
-}
 
 body.frontpage .documentActions,
 body.frontpage #belowContent {
@@ -247,7 +232,8 @@ body.frontpage #portal-columns {
 }
 
 
-.highlights ul li .date {
+.highlights ul li .date ,
+.eea-tabs-panel ul li .date {
     float: left;
     margin: 0 0 0 -8em;
 }
@@ -274,22 +260,30 @@ div.current {
 }
 
 /* height and padding differences from eea-tabs on whatsnew-gallery */
-#whatsnew-gallery #eea-tabs {
+#whatsnew-gallery .eea-tabs {
     height: 37px;
 }
 
-#whatsnew-gallery #eea-tabs li {
+#whatsnew-gallery .eea-tabs li {
     text-indent: 0;
     margin: 0 !important;
     max-width: 140px;
 }
-#whatsnew-gallery #eea-tabs li a {
+#whatsnew-gallery .eea-tabs li a {
     height: 17px;
     max-height: 17px;
     min-height: 17px;
     font-size: 125%;
     padding: 9px 10px 11px 10px;
 }
+
+#whatsnew-gallery .eea-tabs-panel {
+    clear: both;
+    padding: 0 15px 15px 15px;
+}
+
+
+/* end whatsnew-gallery customizations */
 
 #news-header select {
     margin-left: 30px;

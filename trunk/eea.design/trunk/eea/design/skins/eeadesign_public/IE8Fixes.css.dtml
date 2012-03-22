@@ -626,11 +626,11 @@ img
     progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1c748', endColorstr='#777c1f') !important;
 }
 
-#multimedia-vids #whatsnew-gallery .highlights {
+#multimedia-vids #whatsnew-gallery .eea-tabs-panel {
     background: transparent; 
 }
 
-#whatsnew-gallery .highlights .gallery-album .photoAlbumEntry {
+#whatsnew-gallery .eea-tabs-panel .gallery-album .photoAlbumEntry {
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#d4d4d4')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#d4d4d4')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#d4d4d4')
@@ -641,7 +641,7 @@ img
     progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#d4d4d4');
 }
 
-.section-multimedia #whatsnew-gallery .highlights .gallery-album .photoAlbumEntry {
+.section-multimedia #whatsnew-gallery .eea-tabs-panel .gallery-album .photoAlbumEntry {
     -ms-filter: none;
     filter: none;
 }

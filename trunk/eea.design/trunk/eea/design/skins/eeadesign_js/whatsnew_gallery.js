@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 
     eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index, tag_title) {
             var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
-            var gal = eea_gal.gallery.find(".highlights");
+            var gal = eea_gal.gallery.find(".eea-tabs-panel");
             var news = index ? gal[index] : gal.filter(function() {return this.style.display !== 'none';});
             // workaround: we need the first highlights because when we click on the
             // first tab gal[0] returns the second highlights instead of
@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
             });
     };
 
-    $("#whatsnew-gallery #eea-tabs, #multimedia-tabs").tabs("> .highlights", function(event, index) {
+    $("#whatsnew-gallery .eea-tabs, #multimedia-tabs").tabs("> .eea-tabs-panel", function(event, index) {
         var cur_tab = this.getTabs()[index],
             cur_tab_val = cur_tab.id.substr(4);
             cur_tab.theme = cur_tab.theme || "none";
@@ -165,7 +165,7 @@ jQuery(document).ready(function($) {
                 y = this.options;
             var topic_value = y[x].value,
                 topic_text = y[x].innerHTML;
-            var tab_val = $("#whatsnew-gallery #eea-tabs a.current, #multimedia-tabs a.current")[0].id.substr(4);
+            var tab_val = $("#whatsnew-gallery .eea-tabs a.current, #multimedia-tabs a.current")[0].id.substr(4);
 
             eea_gal.whatsnew_func(cur_tab_val = tab_val, sel_text = topic_text, sel_value = topic_value);
         });
@@ -213,7 +213,7 @@ jQuery(document).ready(function($) {
     if (eea_gal.gallery.length > 0) {
         var gallery_cookies = SubCookieUtil.getAll(eea_gal.gallery_page);
         if (gallery_cookies !== null) {
-            eea_gal.gallery.find('.highlights').each(function(){
+            eea_gal.gallery.find('.eea-tabs-panel').each(function(){
                 var $this = $(this);
                 var layouts = $this.find(".gallery-layout-selection li a");
                 var $hidden_gallery = $this.find(".hiddenStructure");

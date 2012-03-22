@@ -4,7 +4,7 @@
 
 <div metal:define-macro="news"
      id="news-highlights"
-     class="highlights"
+     class="eea-tabs-panel"
      tal:define="frontpage_view context/@@frontpage_highlights;
                  folderContents frontpage_view/getNews;
                  plone_view nocall:plone_view|context/@@plone;
@@ -89,7 +89,7 @@
 
 <div metal:define-macro="publications"
      id="publications-highlights"
-     class="highlights"
+     class="eea-tabs-panel"
      tal:define="hide_listing python: False;
                  hide_album python: True;
                  more_href string:publications;">
@@ -97,7 +97,7 @@
 </div>
 
 <div metal:define-macro="articles"
-     class="highlights"
+     class="eea-tabs-panel"
      id="articles-highlights"
      tal:define="hide_listing python: False;
                  hide_album python: True;
@@ -106,7 +106,7 @@
 </div>
 
 <div metal:define-macro="multimedia"
-     class="highlights"
+     class="eea-tabs-panel"
      id="multimedia-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;
@@ -115,7 +115,7 @@
 </div>
 
 <div metal:define-macro="allproducts"
-     class="highlights"
+     class="eea-tabs-panel"
      id="allproducts-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;">
@@ -124,7 +124,7 @@
 
 
 <div metal:define-macro="datamaps"
-     class="highlights"
+     class="eea-tabs-panel"
      id="datamaps-highlights" 
      tal:define="hide_album python: False;
                  hide_listing python: True;

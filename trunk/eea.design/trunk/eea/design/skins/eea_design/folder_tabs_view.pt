@@ -11,8 +11,8 @@
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents, obj_link=True)">
 
-            <ul id="eea-tabs"></ul>
-                <div id="eea-tabs-panels">
+            <ul class="eea-tabs"></ul>
+                <div class="eea-tabs-panels">
                 <div class="eea-tabs-panel" tal:repeat="child formattedFolderContents/folderish">
                     <li class="eea-tabs-title"><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a></li>
                     <p class="eea-tabs-description" tal:condition="child/description" tal:content="child/description"></p>

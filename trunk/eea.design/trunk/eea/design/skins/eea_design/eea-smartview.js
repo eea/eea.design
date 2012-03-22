@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
-    
-    var $folder_panels = $('#eea-accordion-panels');
+    // accordion implementation 
+    var $folder_panels = $('.eea-accordion-panels');
     if($folder_panels.length) {
      $($folder_panels).tabs(
-        "#eea-accordion-panels div.pane",
+        ".eea-accordion-panels div.pane",
         {tabs: '.eea-accordion-title, h2', effect: 'slide', initialIndex: 0}
       );
     }

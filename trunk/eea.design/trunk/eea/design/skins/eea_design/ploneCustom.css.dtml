@@ -557,7 +557,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* folder_tabs_view and folder_accordion_view styling 
  * as well as generic tabs and accordion styling */
-#eea-tabs {
+.eea-tabs {
     background: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
@@ -568,7 +568,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin: 0px !important;
 }
 
-#eea-tabs li {
+.eea-tabs li {
     line-height: 1.8em;
     background: transparent;
     border: 0px !important; 
@@ -585,18 +585,18 @@ body.section-signals #nonfolderish-subfolder-view-items {
     text-indent: 0;
 }
 
-#eea-tabs li, #eea-tabs a {
+.eea-tabs li, .eea-tabs a {
     color: white;
     text-shadow: 1px 1px 1px #000000;
 }
 
-#eea-tabs li a:hover, #eea-tabs li a.current {
+.eea-tabs li a:hover, .eea-tabs li a.current {
     background: &dtml-greyBackgroundColor;;
     color: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px #FFFFFF;
 }
 
-#eea-tabs li a { 
+.eea-tabs li a { 
     font-weight: normal;
     height: auto;
     min-height: 4em;
@@ -609,34 +609,52 @@ body.section-signals #nonfolderish-subfolder-view-items {
     border: 0px !important; 
 }
 
-#eea-tabs li:first-child a  {
+.eea-tabs li:first-child a  {
     border-radius: 8px 0px 0px 0px;
     -webkit-border-radius: 8px 0 0 0;
     -moz-border-radius: 8px 0 0 0;
 }
-#eea-tabs li:last-child a {
+.eea-tabs li:last-child a {
     border-radius: 0px 8px 0px 0px;
     -webkit-border-radius: 0 8px 0 0;
     -moz-border-radius: 0 8px 0 0;
     margin: 0px -4px;
 }
+.eea-tabs span {
+    height: 21px;
+    padding-left: 30px;
+    display: inline-block;
+}
 
-#eea-tabs-panels, #eea-accordion-panels {
+.eea-tabs-panel {
+    background: &dtml-greyBackgroundColor;;
+}
+
+.highlights .portalMessage,
+.eea-tabs-panel .portalMessage {
+  margin-top: 0;
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.eea-tabs-panels, .eea-accordion-panels {
     border: 1px solid #DDD;
     border-top: 0px;
-    background: #F3F3F3;
+    background: &dtml-greyBackgroundColor;;
     padding: 10px;
 }
 
-#eea-accordion-panels {
+.eea-accordion-panels {
     padding: 0px;
 }
 
-#eea-accordion-panels .pane {
+.eea-accordion-panels .pane {
     padding: 10px;
 }
 
-#eea-accordion-panels .eea-accordion-title, #eea-accordion-panels h2 {
+.eea-accordion-panels .eea-accordion-title, .eea-accordion-panels h2 {
     background: #5a9ead url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
     background-color: rgba(44, 141, 162, 0.8); 
     border-bottom: 1px dotted #DDD;
@@ -649,17 +667,17 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-#eea-accordion-panels .eea-accordion-title:hover, #eea-accordion-panels h2:hover {
+.eea-accordion-panels .eea-accordion-title:hover, .eea-accordion-panels h2:hover {
     cursor: pointer;
 }
 
-#eea-accordion-panels .eea-accordion-title.current,
-#eea-accordion-panels h2.current {
+.eea-accordion-panels .eea-accordion-title.current,
+.eea-accordion-panels h2.current {
     background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
 }
 
-#eea-accordion-panels .eea-accordion-title a, 
-#eea-accordion-panels h2 a 
+.eea-accordion-panels .eea-accordion-title a, 
+.eea-accordion-panels h2 a 
 {
     color: #FFF;
     text-shadow: 1px 1px #000;    
@@ -1803,15 +1821,15 @@ h3.site-description {
     border: 1px solid &dtml-globalBorderColor;;
 }
 
-.highlights .tileItem {
+.highlights .tileItem, .eea-tabs-panel .tileItem {
   margin-top: 0 !important;
 }
 
-.highlights #news-highlights .tileItem:last-child,
-.highlights #articles-highlights .tileItem:last-child,
-.highlights #publications-highlights .tileItem:last-child,
-.highlights #multimedia-highlights .tileItem:last-child,
-.highlights #datamaps-highlights .tileItem:last-child {
+#news-highlights .tileItem:last-child,
+#articles-highlights .tileItem:last-child,
+#publications-highlights .tileItem:last-child,
+#multimedia-highlights .tileItem:last-child,
+#datamaps-highlights .tileItem:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
