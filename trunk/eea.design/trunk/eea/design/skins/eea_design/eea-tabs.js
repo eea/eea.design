@@ -3,13 +3,14 @@ jQuery(document).ready(function($) {
         if($("#whatsnew-gallery").length || $("#daviz-view").length) {
             return;
         }
-        var $eea_tabs_title, $eea_tabs_title_a,
-            $eea_tabs = $(".eea-tabs"), $eea_tabs_children;
+        var $eea_tabs = $(".eea-tabs"), $eea_tabs_children;
         if ($eea_tabs.length){
             $eea_tabs_panels = $(".eea-tabs-panels");
             // detach tabs for dom manipulation
             $eea_tabs.detach();
+
             $eea_panels = $eea_tabs_panels.find(".eea-tabs-panel");
+            // append eea-tabs-title elements if found in eea-tabs-panel
             $eea_panels.find('.eea-tabs-title').detach().appendTo($eea_tabs);
 
             $eea_tabs_children = $eea_tabs.children();
@@ -19,6 +20,11 @@ jQuery(document).ready(function($) {
             // the tabs need a link so we append a link if one is not found
             for(i; i < tabs_length; i += 1) {
                 $tab_title = $($eea_tabs_children[i]);
+                // IE 7 encloses surrounding elements withing the li so we
+                // feed it p tags and convert it to li afterwards
+                if($tab_title[0].tagName === "P") {
+                    $tab_title.replaceWith("<li>" + $tab_title.html() + "</li>");  
+                }
                 if(!$tab_title.find('a').length) { 
                     tab_title_text = $tab_title.text();
                     $tab_title.text("");
