@@ -40,14 +40,17 @@ jQuery(document).ready(function($) {
             // make width of tab bigger if the height of it
             // is bigger than first tab's height or make the first tab width
             // bigger if it's bigger than any of the tabs
-            var j = 1, first_tab = $eea_tabs_children[0], first_tab_height = first_tab.clientHeight, cur_tab;
-            for(j; j < tabs_length; j += 1) {
-                cur_tab = $eea_tabs_children[j];
-                if(cur_tab.clientHeight < first_tab_height) {
-                    first_tab.style.maxWidth = "152px";
-                }
-                else if(cur_tab.clientHeight > first_tab_height) {
-                    cur_tab.style.maxWidth = "152px";
+            var j = 1, first_tab = $eea_tabs_children[0], first_tab_height, cur_tab;
+            if(first_tab){
+                first_tab_height = first_tab.clientHeight;
+                for(j; j < tabs_length; j += 1) {
+                    cur_tab = $eea_tabs_children[j];
+                    if(cur_tab.clientHeight < first_tab_height) {
+                        first_tab.style.maxWidth = "152px";
+                    }
+                    else if(cur_tab.clientHeight > first_tab_height) {
+                        cur_tab.style.maxWidth = "152px";
+                    }
                 }
             }
         }
