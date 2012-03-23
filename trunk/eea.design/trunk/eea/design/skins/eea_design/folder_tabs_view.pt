@@ -14,9 +14,10 @@
                                             nonFolderishItems formattedFolderContents/nonfolderish; 
                                             FolderishItems formattedFolderContents/folderish">
 
-                <div tal:condition="python:not FolderishItems and not isAnon" class="portalMessage info">
-                        <h3 i18n:translate="">Info: only Published content will be displayed in this view</h3>
-                </div>
+            <div tal:condition="python:not FolderishItems and not isAnon" class="portalMessage info">
+                <h3 i18n:translate="">Info: only Published content will be displayed in this view</h3>
+            </div>
+
             <ul class="eea-tabs"></ul>
             <div class="eea-tabs-panels">
                 <div class="eea-tabs-panel" tal:repeat="child FolderishItems">
@@ -42,9 +43,7 @@
                     </div>
                 </div>
 
-                <div tal:define="
-                    nitems python:len(nonFolderishItems)"
-                    id="nonfolderish-subfolder-view-items"
+                <div tal:define="nitems python:len(nonFolderishItems)"
                     tal:condition="nitems"
                     class="eea-tabs-panel">
                     <div class="eea-tabs-contents">
