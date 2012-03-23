@@ -1,0 +1,10 @@
+/* <dtml-call expr="RESPONSE.setHeader('pragma','no-cache')"> */
+
+/*
+    The above trick to let this file not be cached does not work, unless this file is renamed to have
+    a kss.dtml extension.
+*/
+
+#plone-contentmenu-workflow dd.actionMenuContent a:click {
+    action-client: EEAPloneAdminChangeWorkflowState;
+}
