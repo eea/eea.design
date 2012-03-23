@@ -934,7 +934,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin-bottom: 1em;
 }
 
-#content dt,
 #related-multimedia-top {
     border:none;
     margin:0;
