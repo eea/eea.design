@@ -670,7 +670,7 @@ body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
 
 
 /* fix folder_tabs_view tabs because of lack of inline-block support */
-.eea-tabs li {
+#content .eea-tabs li {
     display: inline;
 }
 

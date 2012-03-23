@@ -31,16 +31,23 @@ jQuery(document).ready(function($) {
                     $('<a />').attr('href', '#').html(tab_title_text).appendTo($tab_title);
                 }
             }
-            
+            // redo children assigment since they could have been changed from
+            // p to li
+            $eea_tabs_children = $eea_tabs.children();
             $eea_tabs.tabs($eea_panels);
             $eea_tabs.insertBefore($eea_tabs_panels);
 
             // make width of tab bigger if the height of it
-            // is bigger than 57px which is 2 rows
-            var j = 0;
+            // is bigger than first tab's height or make the first tab width
+            // bigger if it's bigger than any of the tabs
+            var j = 1, first_tab = $eea_tabs_children[0], first_tab_height = first_tab.clientHeight, cur_tab;
             for(j; j < tabs_length; j += 1) {
-                if($eea_tabs_children[j].clientHeight > 57) {
-                    $eea_tabs_children[j].style.maxWidth = "152px";
+                cur_tab = $eea_tabs_children[j];
+                if(cur_tab.clientHeight < first_tab_height) {
+                    first_tab.style.maxWidth = "152px";
+                }
+                else if(cur_tab.clientHeight > first_tab_height) {
+                    cur_tab.style.maxWidth = "152px";
                 }
             }
         }

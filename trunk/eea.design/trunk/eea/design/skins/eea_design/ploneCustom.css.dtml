@@ -605,7 +605,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     height: auto;
     min-height: 4em;
     max-height: 4.1em;
-    font-size: 115%;
+    font-size: 120%;
     display: block;
     padding: 0.5em 1em 0em;
     float: left;
