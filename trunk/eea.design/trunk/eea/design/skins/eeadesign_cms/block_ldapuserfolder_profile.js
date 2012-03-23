@@ -1,5 +1,4 @@
 // This code is ment to disable install profile of Products.LDAPUserFolder via site setup
-
 jQuery(document).ready(function ($) {
     var LDAPUserFolder_control = $(".configlets li input#LDAPUserFolder");
 

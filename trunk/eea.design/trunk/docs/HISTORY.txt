@@ -3,6 +3,12 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Upgrade step: add "change_workflow_state.js" under portal_javascripts and
+   "change_workflow_state.kss" under portal_kss
+   [ghicaale #5017]
+ * Feature: added javascript plugin to be used by KSS action on workflow state change
+   to show loading info
+   [ghicaale #5017]
  * Upgrade step:  from portal_setup > import > EEA Design:
    1. Check Javascript registry import step checkbox 
    2. Uncheck Include dependecies? checkbox [ichimdav #5006]
