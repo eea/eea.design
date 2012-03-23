@@ -508,4 +508,8 @@ a.archives {
    margin: 0px 0px -35px -92px !important;
 }
 
+/* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */ 
+#content .eea-tabs li { 
+    max-width: 93px;
+}
 /* </dtml-with> */
