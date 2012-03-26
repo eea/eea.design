@@ -407,13 +407,6 @@ a.list-layout.active-list, a.list-layout {
    margin-right: 11px !important;
 }
 
-.archives.advanced-search-link {
-    padding-right: 0 !important;
-    margin-right: 10px !important;
-    position: relative;
-    right: 20px;
-}
-
 .column-area .featured .searchforms input[type="submit"]{
     padding: 7px 2px !important;
 }
