@@ -563,7 +563,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
  * as well as generic tabs and accordion styling */
 
 ul.eea-tabs {
-    background: &dtml-corporateBlueOne;;
+    background-color: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
     height: 37px;
@@ -620,7 +620,7 @@ ul.eea-tabs li, ul.eea-tabs a {
 }
 
 ul.eea-tabs li a:hover, ul.eea-tabs li a.current {
-    background: &dtml-greyBackgroundColor;;
+    background-color: &dtml-greyBackgroundColor;;
     color: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px #FFFFFF;
 }
@@ -644,7 +644,7 @@ ul.eea-tabs span {
 div.eea-tabs-panel {
     clear: both;
     padding: 0 15px 15px 15px;
-    background: &dtml-greyBackgroundColor;;
+    background-color: &dtml-greyBackgroundColor;;
 }
 
 .highlights .portalMessage,
@@ -659,7 +659,7 @@ div.eea-tabs-panel .portalMessage {
 div.eea-tabs-panels, div.eea-accordion-panels {
     border: 1px solid #DDD;
     border-top: 0px;
-    background: &dtml-greyBackgroundColor;;
+    background-color: &dtml-greyBackgroundColor;;
     padding: 10px;
 }
 
