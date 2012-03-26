@@ -33,7 +33,6 @@ jQuery(document).ready(function($) {
             var url = $.param.querystring($.bbq.getState('smartTemplate'), $.param.querystring());
             $.get(url, function(data) {
                 $('#smart-view-content').html(data);
-                subfolder_tabs();
                 $('.listingBar a').each(function(i) {
                     var batchQueryString = $.param.querystring($(this).attr('href'));
                     var newUrl = $.param.querystring(location.href, batchQueryString);
