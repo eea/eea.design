@@ -561,81 +561,94 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* folder_tabs_view and folder_accordion_view styling 
  * as well as generic tabs and accordion styling */
-#content .eea-tabs {
+
+ul.eea-tabs {
     background: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
-    height: 48px;
+    height: 37px;
     overflow: hidden;
     list-style: none;
     padding: 0;
     margin: 0px !important;
 }
+ul.eea-tabs.two-rows {
+    height: 48px;
+}
 
-#content .eea-tabs li {
-    line-height: 1.8em;
-    background: transparent;
-    border: 0px !important; 
+ul.eea-tabs li {
+    text-indent: 0;
+    margin: 0 !important;
+    max-width: 140px;
     padding: 0px;
-    margin: -2px 0px !important;
     font-weight: normal;
     text-align: center;
-    display: inline-block;
-    max-width: 94px;
+    display: inline-block !important;
     text-decoration: none;
     list-style-type: none;
     list-style-image: none;
     font-size: inherit;
-    text-indent: 0;
+}
+ul.eea-tabs.two-rows li {
+    line-height: 1.8em !important;
+    margin: -2px 0px !important;
+    max-width: 94px;
 }
 
-#content .eea-tabs li, #content .eea-tabs a {
+ul.eea-tabs li a {
+    height: auto;
+    max-height: 17px;
+    min-height: 17px;
+    font-size: 125%;
+    padding: 9px 10px 11px 10px;
+    display: block !important;
+    float: left;
+    margin: 0 -2px;
+    font-weight: normal;
+    border: 0px; 
+}
+ul.eea-tabs.two-rows li a { 
+    min-height: 4em;
+    max-height: 4.1em;
+    font-size: 120%;
+    padding: 0.5em 1em 0em;
+}
+
+ul.eea-tabs li, ul.eea-tabs a {
     color: white;
     text-shadow: 1px 1px 1px #000000;
 }
 
-#content .eea-tabs li a:hover, #content .eea-tabs li a.current {
+ul.eea-tabs li a:hover, ul.eea-tabs li a.current {
     background: &dtml-greyBackgroundColor;;
     color: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px #FFFFFF;
 }
-
-#content .eea-tabs li a { 
-    font-weight: normal;
-    height: auto;
-    min-height: 4em;
-    max-height: 4.1em;
-    font-size: 120%;
-    display: block;
-    padding: 0.5em 1em 0em;
-    float: left;
-    margin: 0 -2px;
-    border: 0px !important; 
-}
-
-#content .eea-tabs li:first-child a  {
+ul.eea-tabs li:first-child a  {
     border-radius: 8px 0px 0px 0px;
     -webkit-border-radius: 8px 0 0 0;
     -moz-border-radius: 8px 0 0 0;
 }
-#content .eea-tabs li:last-child a {
+ul.eea-tabs li:last-child a {
     border-radius: 0px 8px 0px 0px;
     -webkit-border-radius: 0 8px 0 0;
     -moz-border-radius: 0 8px 0 0;
     margin: 0px -4px;
 }
-#content .eea-tabs span {
+ul.eea-tabs span {
     height: 21px;
     padding-left: 30px;
     display: inline-block;
 }
 
-.eea-tabs-panel {
+div.eea-tabs-panel {
+    clear: both;
+    padding: 0 15px 15px 15px;
     background: &dtml-greyBackgroundColor;;
 }
 
 .highlights .portalMessage,
-.eea-tabs-panel .portalMessage {
+div.eea-tabs-panel .portalMessage {
   margin-top: 0;
   position: relative;
   top: 10px;
@@ -643,22 +656,22 @@ body.section-signals #nonfolderish-subfolder-view-items {
   display: block;
 }
 
-.eea-tabs-panels, .eea-accordion-panels {
+div.eea-tabs-panels, div.eea-accordion-panels {
     border: 1px solid #DDD;
     border-top: 0px;
     background: &dtml-greyBackgroundColor;;
     padding: 10px;
 }
 
-.eea-accordion-panels {
+div.eea-accordion-panels {
     padding: 0px;
 }
 
-.eea-accordion-panels .pane {
+div.eea-accordion-panels .pane {
     padding: 10px;
 }
 
-.eea-accordion-panels .eea-accordion-title, .eea-accordion-panels h2 {
+div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
     background: #5a9ead url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
     background-color: rgba(44, 141, 162, 0.8); 
     border-bottom: 1px dotted #DDD;
@@ -671,17 +684,17 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-.eea-accordion-panels .eea-accordion-title:hover, .eea-accordion-panels h2:hover {
+div.eea-accordion-panels .eea-accordion-title:hover, div.eea-accordion-panels h2:hover {
     cursor: pointer;
 }
 
-.eea-accordion-panels .eea-accordion-title.current,
-.eea-accordion-panels h2.current {
+div.eea-accordion-panels .eea-accordion-title.current,
+div.eea-accordion-panels h2.current {
     background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
 }
 
-.eea-accordion-panels .eea-accordion-title a, 
-.eea-accordion-panels h2 a 
+div.eea-accordion-panels .eea-accordion-title a, 
+div.eea-accordion-panels h2 a 
 {
     color: #FFF;
     text-shadow: 1px 1px #000;    

@@ -502,7 +502,7 @@ a.archives {
 }
 
 /* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */ 
-#content .eea-tabs li { 
+ul.eea-tabs.two-rows li {
     max-width: 93px;
 }
 /* </dtml-with> */

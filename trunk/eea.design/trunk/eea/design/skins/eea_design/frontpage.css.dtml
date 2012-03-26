@@ -259,32 +259,6 @@ div.current {
   display: none;
 }
 
-/* height and padding differences from eea-tabs on whatsnew-gallery */
-#whatsnew-gallery ul.eea-tabs {
-    height: 37px;
-}
-
-#whatsnew-gallery ul.eea-tabs li {
-    text-indent: 0;
-    margin: 0 !important;
-    max-width: 140px;
-}
-#whatsnew-gallery ul.eea-tabs li a {
-    height: 17px;
-    max-height: 17px;
-    min-height: 17px;
-    font-size: 125%;
-    padding: 9px 10px 11px 10px;
-}
-
-#whatsnew-gallery .eea-tabs-panel {
-    clear: both;
-    padding: 0 15px 15px 15px;
-}
-
-
-/* end whatsnew-gallery customizations */
-
 #news-header select {
     margin-left: 30px;
     color: &dtml-corporateBlueTwo;;

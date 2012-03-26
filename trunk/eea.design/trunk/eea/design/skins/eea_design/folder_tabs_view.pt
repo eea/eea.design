@@ -18,7 +18,7 @@
                 <h3 i18n:translate="">Info: only Published content will be displayed in this view</h3>
             </div>
 
-            <ul class="eea-tabs"></ul>
+            <ul class="eea-tabs two-rows"></ul>
             <div class="eea-tabs-panels">
                 <div class="eea-tabs-panel" tal:repeat="child FolderishItems">
                     <p class="eea-tabs-title"><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url">title</a></p>

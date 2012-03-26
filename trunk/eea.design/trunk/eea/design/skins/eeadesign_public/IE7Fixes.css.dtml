@@ -670,8 +670,8 @@ body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
 
 
 /* fix folder_tabs_view tabs because of lack of inline-block support */
-#content .eea-tabs li {
-    display: inline;
+ul.eea-tabs li, ul.eea-tabs.two-rows li {
+    display: inline !important;
 }
 
 /* </dtml-with> */
