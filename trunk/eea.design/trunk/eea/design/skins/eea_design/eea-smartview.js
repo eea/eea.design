@@ -1,12 +1,4 @@
 jQuery(document).ready(function($) {
-    // accordion implementation 
-    var $folder_panels = $('.eea-accordion-panels');
-    if($folder_panels.length) {
-     $($folder_panels).tabs(
-        ".eea-accordion-panels div.pane",
-        {tabs: '.eea-accordion-title, h2', effect: 'slide', initialIndex: 0}
-      );
-    }
 
     if ($('#smart-view-switch').length) {
        var markSelectedButton = function () {
@@ -34,10 +26,13 @@ jQuery(document).ready(function($) {
             $.get(url, function(data) {
                 $('#smart-view-content').html(data);
                 if(url.indexOf('tabs') !== -1 ) {
-                    // run logic for tabs in eea-tabs.js
+                    // run logic for tabs from eea-tabs.js
                     window.EEA.eea_tabs();
                 }
-
+                if(url.indexOf('accordion') !== -1 ) {
+                    // run logic for tabs from eea-accordion.js
+                    window.EEA.eea_accordion();
+                }
                 $('.listingBar a').each(function(i) {
                     var batchQueryString = $.param.querystring($(this).attr('href'));
                     var newUrl = $.param.querystring(location.href, batchQueryString);
