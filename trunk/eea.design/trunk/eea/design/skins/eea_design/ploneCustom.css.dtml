@@ -467,16 +467,6 @@ input.standalone {
     padding: 0;
 }
 
-.only-ie6 {
-    display: none;
-}
-* html .only-ie6 {
-    display: block;
-}
-* html .no-ie6 {
-    display: none;
-}
-
 .link-without-style {
     /* plz add more link style elimination */
     text-decoration: none;
@@ -506,8 +496,8 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 #smart-view-switch {
-    margin: 0.5em 0;
-    width: 131px;
+    margin: 2em 0 !important;
+    width: 197px;
     height: 32px;
     background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
     border: 1px solid #ccc;
