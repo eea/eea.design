@@ -2,6 +2,7 @@
 """
 from zope.component import queryMultiAdapter
 from zope.component import getMultiAdapter
+from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from types import GeneratorType
 
@@ -51,7 +52,16 @@ class SubFolderView(BrowserView):
             'folderish': [],
             'nonfolderish': [],
         }
-        
+
+        # check if we have a noOfSubobjects property for the size limit
+        # of the subfolders contents
+        portal_properties = getToolByName(self.context, 'portal_properties')
+        frontpage_properties = getattr(portal_properties,
+                                                'frontpage_properties')
+        subobjects_properties = frontpage_properties.get('noOfSubObjects')
+        if subobjects_properties:
+            size_limit = subobjects_properties
+
         if folderContents is None:
             folderContents = self.get_start_items()
 

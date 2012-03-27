@@ -1,4 +1,6 @@
 jQuery(document).ready(function() {
+    // NOTE: this file is overriding the one found in
+    // Products.NavigationManager
     var portlet = jQuery('dl.portletNavigationTree');
     if(portlet.length){
       var tabs = jQuery('dd.portletItem', portlet);
