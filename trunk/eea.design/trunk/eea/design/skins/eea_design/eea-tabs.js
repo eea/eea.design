@@ -59,5 +59,8 @@ jQuery(document).ready(function($) {
             }
         }
     };
+    window.EEA = window.EEA || {};
+    // expose eea_tabs function to the global window for reuse in other scripts
+    window.EEA.eea_tabs = eea_tabs;
     eea_tabs();
 });

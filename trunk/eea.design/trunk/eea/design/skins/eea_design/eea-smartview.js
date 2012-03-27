@@ -33,6 +33,11 @@ jQuery(document).ready(function($) {
             var url = $.param.querystring($.bbq.getState('smartTemplate'), $.param.querystring());
             $.get(url, function(data) {
                 $('#smart-view-content').html(data);
+                if(url.indexOf('tabs') !== -1 ) {
+                    // run logic for tabs in eea-tabs.js
+                    window.EEA.eea_tabs();
+                }
+
                 $('.listingBar a').each(function(i) {
                     var batchQueryString = $.param.querystring($(this).attr('href'));
                     var newUrl = $.param.querystring(location.href, batchQueryString);

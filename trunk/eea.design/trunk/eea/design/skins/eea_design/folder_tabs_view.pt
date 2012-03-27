@@ -12,7 +12,8 @@
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, 
                                             folderContents=folderContents, obj_link=True); 
                                             nonFolderishItems formattedFolderContents/nonfolderish; 
-                                            FolderishItems formattedFolderContents/folderish">
+                                            FolderishItems formattedFolderContents/folderish;
+                                            isAnon isAnon|context/@@plone_portal_state/anonymous">
 
             <div tal:condition="python:not FolderishItems and not isAnon" class="portalMessage info">
                 <h3 i18n:translate="">Info: only Published content will be displayed in this view</h3>
