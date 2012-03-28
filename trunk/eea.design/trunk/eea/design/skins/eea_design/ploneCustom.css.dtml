@@ -662,8 +662,8 @@ div.eea-accordion-panels .pane {
 }
 
 div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
-    background: #5a9ead url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
-    background-color: rgba(44, 141, 162, 0.8); 
+    background: transparent url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
+    background-color: #549CAC; 
     border-bottom: 1px dotted #DDD;
     margin: 0px;
     font-size: 115%;
