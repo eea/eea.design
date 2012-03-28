@@ -3,6 +3,10 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Bug fix: remove tags and topic filtering on multimedia page when 
+   we are on tabs different from greentips or video [ichimdav #5044]
+ * Bug fix: decreased padding of search button to avoid button from falling
+   on next line on some browsers on Windows [ichimdav #5035]
  * Change: added ajax loading image on state change
    [ghicaale #5017]
  * Change: small CSS adjustments to coments viewlet
@@ -13,9 +17,10 @@ Changelog
  * Feature: added javascript plugin to be used by KSS action on workflow state change
    to show loading info
    [ghicaale #5017]
- * Upgrade step:  from portal_setup > import > EEA Design:
+ * Upgrade step:  from portal_setup > import > EEA Design import javascript step by:
    1. Check Javascript registry import step checkbox 
    2. Uncheck Include dependecies? checkbox [ichimdav #5006]
+   3. Hit Import selected steps button
  * Change: removed old css and made button design more consistent across
    several other legacy css classes [demarant]
  * Feature: added CSS for separator under action menus ( .actionSeparator )
