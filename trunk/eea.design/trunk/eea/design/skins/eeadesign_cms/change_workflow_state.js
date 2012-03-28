@@ -23,7 +23,7 @@ EEAPloneAdmin.ChangeWorkflowState.prototype = {
         var eea_contentmenu_actions = jQuery("#plone-contentmenu-workflow dd a");
 
         jQuery(eea_contentmenu_actions).click(function() {
-            jQuery(eea_contentmenu_header).html("<strong>Loading ...&nbsp;</strong>");
+            jQuery(eea_contentmenu_header).html("<img src='" + context_url + "/eea-ajax-loader.gif' alt='Changing state ...' title='Changing state ...' />");
         });
     }
   },
