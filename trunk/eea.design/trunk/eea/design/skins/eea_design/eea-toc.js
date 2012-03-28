@@ -66,16 +66,16 @@ function build_toc(toc) {
     // The collapsable-portlet functionality should probably be moved to it's
     // own file, but I'm thinking maybe we should merge it with eea-accordion
     // in the future.
-    toc.find('.portletHeader').click(function() {
-        toc.toggleClass('collapsed');
-    });
-/* }); */
 }
 
 jQuery(document).ready(function($) {
     var $document_toc  = $('#document-toc');
     if($document_toc.length){
         build_toc($document_toc);
+        var $portlet_header = $document_toc.find('.portletHeader');
+        $portlet_header.click(function() {
+            $document_toc.toggleClass('collapsed');
+        });
     }
 });
 
