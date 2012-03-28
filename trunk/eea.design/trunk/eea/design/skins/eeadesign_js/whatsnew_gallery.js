@@ -62,6 +62,9 @@ jQuery(document).ready(function($) {
         var ajax_loader_img = '<div style="text-align: center;"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
     // change tags and topics for multimedia when clicking tabs
         var tag_cloud = $("#bottomright-widgets").find('#tag-cloud-content');
+        if (cur_tab_val.indexOf('green') === -1 || cur_tab_val.indexOf('video') === -1 ) {
+            tag_cloud.find("#c1_widget").fadeOut().empty().end().find('#c3_widget').empty().fadeOut();
+        }
         if ( tag_cloud.length ) {
             var first_tag = tag_cloud.clone().detach();
             var address, topic_params, tags_params;
