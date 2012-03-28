@@ -673,5 +673,9 @@ img
     z-index: 2;
 }
 
+/* fix tabs position  because of buggy suport for inline-block */
+ul.eea-tabs li, ul.eea-tabs.two-rows li {
+    display: inline !important;
+}
 /* </dtml-with> */
 
