@@ -1259,6 +1259,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 .comment .documentByLine {
     margin-left: 1em;
+    font-size: 100%;
 }
 
 .comment .formControls {

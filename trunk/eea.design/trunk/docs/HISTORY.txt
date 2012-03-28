@@ -3,6 +3,8 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Change: small CSS adjustments to coments viewlet
+   [ghicaale #5041]
  * Upgrade step: add "change_workflow_state.js" under portal_javascripts and
    "change_workflow_state.kss" under portal_kss
    [ghicaale #5017]

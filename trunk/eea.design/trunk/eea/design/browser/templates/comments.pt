@@ -10,7 +10,9 @@
                    tal:condition="isViewTemplate">
 
     <!-- Comments anchor -->
-    <h2 id="eea-comments" tal:condition="python:isDiscussionAllowed or not isAnon">Comments</h2>
+    <h2 id="eea-comments" tal:condition="python:isDiscussionAllowed or not isAnon" i18n:translate="comments_header">
+        Comments (<span tal:content="python:len(replies)" i18n:name="comments"></span>)
+    </h2>
 
     <!-- Top portal message -->
     <script type="text/javascript"
