@@ -3,7 +3,7 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
- * Change: added ajax loadin image on state change
+ * Change: added ajax loading image on state change
    [ghicaale #5017]
  * Change: small CSS adjustments to coments viewlet
    [ghicaale #5041]
