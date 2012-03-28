@@ -674,8 +674,9 @@ img
 }
 
 /* fix tabs position  because of buggy suport for inline-block */
-ul.eea-tabs li, ul.eea-tabs.two-rows li {
-    display: inline !important;
+ ul.eea-tabs li, ul.eea-tabs.two-rows li {
+    display: block !important;
+    float: left;
 }
 /* </dtml-with> */
 
