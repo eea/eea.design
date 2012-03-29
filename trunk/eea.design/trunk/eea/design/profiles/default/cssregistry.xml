@@ -97,5 +97,13 @@
         position-after="IE8Fixes.css"
         />
 
+    <stylesheet title=""
+        id="IE7Fixes.css"
+        media="screen" rel="stylesheet" rendering="link"
+        cacheable="True" compression="safe" cookable="True"
+        conditionalcomment="IE 7"
+        expression=""
+        position-after="IE8Fixes.css"
+        />
 </object>
 
