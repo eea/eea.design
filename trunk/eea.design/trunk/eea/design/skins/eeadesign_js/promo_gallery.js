@@ -4,12 +4,6 @@
 
         var buttons = { previous:$('#prev-promo') ,
                         next:$('#next-promo')  };
-
-        $("#promo-gallery-content img").each(
-                function() {
-                    this.width = "448";
-                    this.height = "320";
-                });
     
         var small_navigator = $("#promo-navigator-sm"),
             site_address = small_navigator.length ? true : undefined,

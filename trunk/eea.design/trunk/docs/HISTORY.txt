@@ -3,6 +3,7 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Bug fix: fix distortion of promotion gallery images [ichimdav #5047]
  * Bug fix: remove tags and topic filtering on multimedia page when 
    we are on tabs different from greentips or video [ichimdav #5044]
  * Bug fix: decreased padding of search button to avoid button from falling

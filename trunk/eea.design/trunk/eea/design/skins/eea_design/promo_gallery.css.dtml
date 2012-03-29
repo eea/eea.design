@@ -10,14 +10,14 @@
 .promo-item-desc, .promo-item-desc-sm {
     z-index: 100;
     position: absolute;
-    top: 240px;
+    top: 232px;
     left: 0px;
     width: 91%;
     color: white;
     margin: 0 0px;
     background: &dtml-corporateGreen;;
     opacity: 0.9;
-    height: 80px;
+    height: 90px;
     padding: 0px 20px 0px 20px;
 }
 .promo-item-desc-sm {
@@ -101,17 +101,18 @@
 
 #promo-gallery-content li img, #promo-gallery-content-sm li img{
 	padding:0px;	
-	width:448px;
+	width: 100%;
+}
+
+/* video-fancybox is for videos which have the black border which 
+ * we should hide */
+#promo-gallery-content li a.video-fancybox img {
+    margin-top: -92px;
 }
 
 #gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li,
 #promo-gallery-content-sm li img{
     width: 100%;
-    height: 250px;
-}
-
-#promo-gallery-content-sm li img {
-    height: 240px;
 }
 
 /* item navigator */
@@ -128,6 +129,11 @@
 #promo-gallery-wrapper ul, #promo-gallery-content ul, #promo-gallery-content-sm ul {
     margin-left: 0em;
     list-style: none;
+}
+
+#promo-gallery-content-sm { 
+    height: 250px;
+    overflow: hidden;
 }
 
 #promo-navigator li, #promo-navigator-sm li {
