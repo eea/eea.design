@@ -988,14 +988,6 @@ dl.error a {
     line-height: 2em;
 }
 
-#contentActionMenus .contenttype-folder {
-   padding: 0 !important;
-}
-
-#contentActionMenus .contenttype-folder img {
-   margin-left: -20px;
-}
-
 #folderHeader, #contextHeader {
         border-bottom: 2px solid white;
 }
@@ -1990,7 +1982,6 @@ div.overlay .formControls a {
  .contenttype-folder {
     /* background: no-repeat transparent 0px -648px url(&dtml-portal_url;/contenttypes-sprite.png); */
     background: none;
-    padding-left: 0px !important;
 }
 .contenttype-link {
     background: no-repeat transparent 0px -1080px url(&dtml-portal_url;/contenttypes-sprite.png);
@@ -2015,7 +2006,6 @@ div.overlay .formControls a {
 
 .contenttype-document,
 .contenttype-event,
-.contenttype-folder,
 .contenttype-link,
 .contenttype-news-item,
 .contenttype-plone-site,
@@ -2026,6 +2016,10 @@ div.overlay .formControls a {
     display: inline-block;
     *display: block;
     padding-left: 20px !important;
+}
+
+#portal-column-content .contenttype-folder {
+    padding-left: 0px !important;
 }
 
 .documentEditable .mceLayout {
