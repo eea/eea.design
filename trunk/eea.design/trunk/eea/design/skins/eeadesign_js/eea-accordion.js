@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
     // NOTE: this file is overriding the one found in
     // Products.NavigationManager
     var portlet = jQuery('dl.portletNavigationTree');
