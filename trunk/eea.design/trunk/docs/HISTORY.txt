@@ -17,8 +17,9 @@ Changelog
  * Feature: added javascript plugin to be used by KSS action on workflow state change
    to show loading info
    [ghicaale #5017]
- * Upgrade step:  from portal_setup > import > EEA Design import javascript step by:
-   1. Check Javascript registry import step checkbox 
+ * Upgrade step:  from portal_setup > import > EEA Design import javascript and
+   stylesheet steps by:
+   1. Checking Javascript registry import step and Stylesheet registry checkboxes 
    2. Uncheck Include dependecies? checkbox [ichimdav #5006]
    3. Hit Import selected steps button
  * Change: removed old css and made button design more consistent across
@@ -43,7 +44,7 @@ Changelog
    second to keep the Zope logs clean
    [ghicaale #5015]
  * Upgrade step: go to www/portal_types/Folder/manage_propertiesForm and add
-   folder_accordion_view and folder_tabs_view to -- Available view methods field
+   smart_view - folder_accordion_view - folder_tabs_view to -- Available view methods field
  * Feature: added folder_accordion_view and folder_tabs_view as two additional 
    views for folders [ichimdav #5006 #5007]
  * Change: use smaller image for showing relations links, so it takes less space
