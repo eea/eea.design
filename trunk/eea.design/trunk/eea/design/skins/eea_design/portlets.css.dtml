@@ -856,7 +856,7 @@ dl.portletNavigationTree dt.current span.title {
 }
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background-color: &dtml-corporateOrange;;
   text-shadow: none;
 }
