@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.20-dev - (unreleased)
------------------------
+4.20 - (2012-03-30)
+-------------------
  * Bug fix: fixed location of the folder_icon [ichimdav #5048]
  * Bug fix: fix distortion of promotion gallery images [ichimdav #5047]
  * Bug fix: remove tags and topic filtering on multimedia page when 
