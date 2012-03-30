@@ -301,6 +301,7 @@
 /* standard search button inside any of the portal columns*/
 
 #portal-columns input[type="submit"], .standardButton, .qq-upload-button,
+.searchButton,
 input.context,
 input.destructive,
 input.standalone {
@@ -337,6 +338,7 @@ input.standalone {
 
 #portal-columns input[type="submit"]:hover, .standardButton:hover,
  .qq-upload-button:hover,
+ .searchButton:hover,
  input.context:hover,
  input.destructive:hover,
  input.standalone:hover {
