@@ -3,6 +3,7 @@ Changelog
 
 4.20-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed location of the folder_icon [ichimdav #5048]
  * Bug fix: fix distortion of promotion gallery images [ichimdav #5047]
  * Bug fix: remove tags and topic filtering on multimedia page when 
    we are on tabs different from greentips or video [ichimdav #5044]
