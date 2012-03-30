@@ -1,4 +1,4 @@
-/ul** Plone style sheet - Public-facing Elements
+/** Plone style sheet - Public-facing Elements
 **
 ** Style sheet documentation can be found at http://plone.org/documentation
 **
@@ -1837,12 +1837,6 @@ h3.site-description {
 #datamaps-highlights .tileItem:last-child {
     border-bottom: none;
     padding-bottom: 0;
-}
-
-#multimedia-highlights .gallery-album {
-    width: 518px;
-    position: relative;
-    margin: 0 auto;
 }
 
 .tileFooter {
