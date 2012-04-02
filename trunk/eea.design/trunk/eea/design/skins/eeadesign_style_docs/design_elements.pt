@@ -21,20 +21,24 @@
     </blockquote>
 
     <h2>Gallery view</h2>
+    <p>You need to enter a image scale after the image src otherwise 
+        the gallery will load the full-resolution images which could be many mb 
+        and just resize it on the fly making the page load very slowly
+    </p>
     <ul id="galleryView">
         <li>
             <span class="panel-overlay">Overlay text goes here</span>
-            <img src="monkey-with-makeup" />
+            <img src="monkey-with-makeup/image_large" />
         </li>
-        <li><img src="mr-monkey" /></li>
+        <li><img src="mr-monkey/image_large" /></li>
     </ul>
     <pre>
 &lt;ul id=&quot;galleryView&quot;&gt;
     &lt;li&gt;
         &lt;span class=&quot;panel-overlay&quot;&gt;Overlay text goes here&lt;/span&gt;
-        &lt;img src=&quot;mr-monkey&quot; /&gt;
+        &lt;img src=&quot;mr-monkey/image_large&quot; /&gt;
     &lt;/li&gt;
-    &lt;li&gt;&lt;img src=&quot;monkey-with-makeup&quot; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;monkey-with-makeup/image_large&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
     </pre>
 

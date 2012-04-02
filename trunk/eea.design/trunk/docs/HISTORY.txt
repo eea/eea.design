@@ -3,6 +3,9 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Change: changed example documentation for galleryView in design_elements.pt 
+   to avoid having to load really big images when applying the galleryView class
+   to a list of images [ichimdav #5055]
 
 4.20 - (2012-03-30)
 -------------------
