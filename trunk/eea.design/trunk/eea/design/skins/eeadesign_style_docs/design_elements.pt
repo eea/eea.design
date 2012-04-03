@@ -21,9 +21,8 @@
     </blockquote>
 
     <h2>Gallery view</h2>
-    <p>You need to enter a image scale after the image src otherwise 
-        the gallery will load the full-resolution images which could be many mb 
-        and just resize it on the fly making the page load very slowly
+    <p> 
+        You need to enter an image scale after the image src otherwise the gallery will load the full-resolution images which could dramatically slow the page
     </p>
     <ul id="galleryView">
         <li>
