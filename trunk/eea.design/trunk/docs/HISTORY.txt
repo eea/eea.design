@@ -3,6 +3,7 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Bug fix: consolidated position of content icons in navigation tree [ichimdav 5048]
  * Change: changed example documentation for galleryView in design_elements.pt 
    to avoid having to load really big images when applying the galleryView class
    to a list of images [ichimdav #5055]
