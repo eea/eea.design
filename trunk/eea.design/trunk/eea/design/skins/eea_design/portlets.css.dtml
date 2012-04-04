@@ -248,6 +248,9 @@ dd.portletFooter a:visited {
 
 #content img {
     vertical-align: middle;
+    /* don't allow images to be bigger than 
+     * content width #5054 */
+    max-width: 100%;
 }
 
 /* Rounded plone tab navigation with images -

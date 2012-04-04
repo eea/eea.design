@@ -3,6 +3,8 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Change: content images have a max-width of 100% to avoid images from going
+   over the right portal column [ichimdav #5054]
  * Bug fix: consolidated position of content icons in navigation tree [ichimdav 5048]
  * Change: changed example documentation for galleryView in design_elements.pt 
    to avoid having to load really big images when applying the galleryView class
