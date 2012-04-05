@@ -1977,45 +1977,48 @@ option.hiddenStructure {
 /* Album view classes */
 
 .photoAlbumEntry {
-    border: 1px solid #DFDFDF;
-    background-color: #FFFFFF;
+    border: 0px;
+    background-color: transparent;
     float: left;
-    height: 190px;
-    width: 135px;
-    margin: 0 10px 10px 0;
-    padding: 0px 10px;
+    height: 125px;
+    width: 128px;
+    margin: 0 4px 7px 4px;
+    padding: 0px;
     text-align: center;
-    -webkit-box-shadow: 1px 1px 2px #BFBFBF;
-       -moz-box-shadow: 1px 1px 2px #BFBFBF;
-        -ms-box-shadow: 1px 1px 2px #BFBFBF;
-         -o-box-shadow: 1px 1px 2px #BFBFBF;
-            box-shadow: 1px 1px 2px #BFBFBF;
 }
 
 .photoAlbumEntry:hover {
-    background: #FBFBFB;
+    background: transparent;
 }
 
 .photoAlbumEntry img {
     border: 1px solid #ccc;
     display: block;
     margin: 0 auto;
+    max-height: 71px;
+}
+
+.photoAlbumEntry a.video-fancybox img {
+    margin-top: -29px;
+    max-height: 128px;
 }
 
 .photoAlbumEntryWrapper {
     display: block;
-    height: 130px;
+    background: white;
+    max-height: 71px;
     width: 128px;
-    margin-bottom: 7px;
+    margin-bottom: 0px;
+    overflow: hidden;
 }
 
 .photoAlbumEntry a {
     display: block;
     text-decoration: none;
     font-size: &dtml-fontSmallSize;;
-    height: 169px;
+    height: 128px;
     width: 130px;
-    margin: 16px auto 0px;
+    margin: 10px 0px;
     overflow: hidden;
 }
 
