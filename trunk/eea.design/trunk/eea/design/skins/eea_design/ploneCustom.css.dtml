@@ -1982,7 +1982,7 @@ option.hiddenStructure {
     float: left;
     height: 125px;
     width: 128px;
-    margin: 0 4px 7px 4px;
+    margin: 0 3px 7px 3px;
     padding: 0px;
     text-align: center;
 }
@@ -1992,7 +1992,6 @@ option.hiddenStructure {
 }
 
 .photoAlbumEntry img {
-    border: 1px solid #ccc;
     display: block;
     margin: 0 auto;
     max-height: 71px;
@@ -2017,7 +2016,7 @@ option.hiddenStructure {
     text-decoration: none;
     font-size: &dtml-fontSmallSize;;
     height: 128px;
-    width: 130px;
+    width: 128px;
     margin: 10px 0px;
     overflow: hidden;
 }
@@ -2031,13 +2030,10 @@ option.hiddenStructure {
     margin: 0.5em  0 2em 0;
 }
 
-.photoAlbumFolder {
-    background-image: none;
-}
-
 .photoAlbumEntryTitle {
     display: block;
     overflow: hidden;
+    color: #76797c;
     width: 128px;
     height: 3.6em;
     margin-top: 0.4em;
