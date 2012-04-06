@@ -622,22 +622,6 @@ img
     background: transparent; 
 }
 
-#whatsnew-gallery .eea-tabs-panel .gallery-album .photoAlbumEntry {
-    -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#d4d4d4')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#d4d4d4')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#d4d4d4')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#d4d4d4');
-    filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#d4d4d4')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#d4d4d4')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#d4d4d4')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#d4d4d4');
-}
-
-.section-multimedia #whatsnew-gallery .eea-tabs-panel .gallery-album .photoAlbumEntry {
-    -ms-filter: none;
-    filter: none;
-}
-
 .section-publications .widget-fieldset legend {
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')

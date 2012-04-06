@@ -404,7 +404,12 @@ input.standalone {
 }
 
 .faceted-results .photoAlbumEntry {
-    margin: 0 0 15px 15px !important;
+    margin: 0 0 7px 3px;
+}
+
+.faceted-results {
+    background: #F3F3F3;
+    padding: 5px;
 }
 
 /* end of specific faceted navigation style */
