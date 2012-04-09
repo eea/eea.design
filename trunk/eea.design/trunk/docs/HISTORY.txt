@@ -3,6 +3,8 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Display other content as album entries instead of listings in album_view since
+   we have fallback images for any contenttypes [ichimdav #3488]
  * Bug fix: fixed the issues related to folder_tabs_view and folder_accordion_view
    described in the ticket [ichimdav #5076]
  * Bug fix: added isAnon declaration for folder_accordion_view [ichimdav #5076]
