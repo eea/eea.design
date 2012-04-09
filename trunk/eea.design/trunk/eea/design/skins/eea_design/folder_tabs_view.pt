@@ -48,10 +48,10 @@
                     tal:condition="nitems"
                     class="eea-tabs-panel">
                     <div class="eea-tabs-contents">
+                        <p class="eea-tabs-title"><a tal:attributes="href context/absolute_url;">Other resources</a></p>
                         <div class="photoAlbumEntry"
                             tal:attributes="class python:item['portal_type'] == 'EyewitnessStory' and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry'"
                             tal:repeat="item nonFolderishItems">
-                            <p class="eea-tabs-title"><a tal:attributes="href item/listing_url;">Other resources</a></p>
                             <a tal:attributes="href item/listing_url;
                                 title item/description;
                                 class python:item['portal_type'] == 'EyewitnessStory' and 'gallery-fancybox' or ''">

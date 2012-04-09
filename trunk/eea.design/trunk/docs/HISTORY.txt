@@ -3,6 +3,8 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed the issues related to folder_tabs_view and folder_accordion_view
+   described in the ticket [ichimdav #5076]
  * Bug fix: added isAnon declaration for folder_accordion_view [ichimdav #5076]
  * Change: content images have a max-width of 100% to avoid images from going
    over the right portal column [ichimdav #5054]
