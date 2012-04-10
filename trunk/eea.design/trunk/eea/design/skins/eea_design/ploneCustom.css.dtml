@@ -403,10 +403,6 @@ input.standalone {
     width: 120px;
 }
 
-.faceted-results .photoAlbumEntry {
-    margin: 0 0 7px 3px;
-}
-
 .faceted-results {
     background: #F3F3F3;
     padding: 5px;
@@ -1986,7 +1982,7 @@ option.hiddenStructure {
     background-color: transparent;
     float: left;
     height: 125px;
-    width: 128px;
+    width: 129px;
     margin: 0 3px 7px 3px;
     padding: 0px;
     text-align: center;
@@ -1999,7 +1995,8 @@ option.hiddenStructure {
 .photoAlbumEntry img {
     display: block;
     margin: 0 auto;
-    max-height: 71px;
+    max-height: 85px;
+    min-height: 71px;
 }
 
 .photoAlbumEntry a.video-fancybox img {
@@ -2043,6 +2040,9 @@ option.hiddenStructure {
     height: 3.6em;
     margin-top: 0.4em;
     font-weight: bold;
+}
+.eea-preview-items .photoAlbumEntryTitle {
+    height: 4.4em;
 }
 
 .photoAlbumEntryDescription {
