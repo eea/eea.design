@@ -1995,8 +1995,7 @@ option.hiddenStructure {
 .photoAlbumEntry img {
     display: block;
     margin: 0 auto;
-    max-height: 85px;
-    min-height: 71px;
+    max-height: 71px;
 }
 
 .photoAlbumEntry a.video-fancybox img {
