@@ -69,10 +69,7 @@ class SubFolderView(BrowserView):
             if brain.getURL() == self.context.absolute_url():
                 continue
             # don't add contenttypes that are excluded from navigation
-            # or aren't published
             if brain.exclude_from_nav:
-                continue
-            if brain.review_state != "published":
                 continue
 
             obj = brain.getObject()

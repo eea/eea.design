@@ -15,10 +15,6 @@
                                             FolderishItems formattedFolderContents/folderish;
                                             isAnon isAnon|context/@@plone_portal_state/anonymous">
 
-            <div tal:condition="python:not FolderishItems and not isAnon" class="portalMessage info">
-                <h3 i18n:translate="">Info: only Published content will be displayed in this view</h3>
-            </div>
-
             <ul class="eea-tabs two-rows"></ul>
             <div class="eea-tabs-panels">
                 <div class="eea-tabs-panel" tal:repeat="child FolderishItems">
