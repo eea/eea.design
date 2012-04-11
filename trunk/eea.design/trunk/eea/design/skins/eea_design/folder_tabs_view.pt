@@ -7,13 +7,14 @@
     <div metal:fill-slot="content-core">
     <metal:main-macro define-macro="main">
 
+  <metal:defaults metal:use-macro="context/folder_listing/macros/listing_defaults">
+   <metal:defaults-core metal:fill-slot="defaults_core">
         <metal:listingmacro define-macro="listing" tal:define="subfolderView subfolderView|context/@@subfolder_view_logic;
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, 
                                             folderContents=folderContents, obj_link=True); 
                                             nonFolderishItems formattedFolderContents/nonfolderish; 
-                                            FolderishItems formattedFolderContents/folderish;
-                                            isAnon isAnon|context/@@plone_portal_state/anonymous">
+                                            FolderishItems formattedFolderContents/folderish;">
 
             <ul class="eea-tabs two-rows"></ul>
             <div class="eea-tabs-panels">
@@ -64,7 +65,8 @@
 
             </tal:foldercontents>
         </metal:listingmacro>
-
+        </metal:defaults-core>
+        </metal:defaults>
     </metal:main-macro>
     </div>
 </body>
