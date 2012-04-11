@@ -404,7 +404,6 @@ input.standalone {
 }
 
 .faceted-results {
-    background: #F3F3F3;
     padding: 5px;
 }
 
