@@ -661,11 +661,11 @@ table.listing th.listingCheckbox {
 
 
 table.listing {
-    border-left: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    display: inline-block;
+    display: block;
     max-width: 100%;
     overflow: auto;
+    border-width: 0px 0px 0px 1px;
+    border-style: dotted;
 }
 
 /* display input as block for users search form  #4817 */
