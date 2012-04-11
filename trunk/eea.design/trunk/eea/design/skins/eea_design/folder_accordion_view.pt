@@ -4,11 +4,10 @@
       i18n:domain="eea">
 
 <body>
-    <div metal:fill-slot="content-core">
-    <metal:main-macro define-macro="main">
-
-  <metal:defaults metal:use-macro="context/folder_listing/macros/listing_defaults">
-   <metal:defaults-core metal:fill-slot="defaults_core">
+    <metal:content-core fill-slot="content-core">
+        <metal:content define-macro="content-core">
+        <metal:block use-macro="context/folder_listing/macros/content-core">
+            <metal:entries fill-slot="entries">
         <metal:listingmacro define-macro="listing" tal:define="subfolderView subfolderView|context/@@subfolder_view_logic;
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, 
@@ -68,10 +67,11 @@
             </div>
 
             </tal:foldercontents>
-        </metal:listingmacro>
-    </metal:defaults-core>
-    </metal:defaults>
-    </metal:main-macro>
-    </div>
+            </metal:listingmacro>
+            </metal:entries>
+        </metal:block>
+
+    </metal:content>
+    </metal:content-core>
 </body>
 </html>

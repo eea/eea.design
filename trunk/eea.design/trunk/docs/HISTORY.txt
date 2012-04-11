@@ -3,6 +3,16 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Feature: Display body text at the beginning of each listing template 
+   [ichimdav #5080]
+ * Upgrade step: add the following view templates to portal_types/Document:
+    smart_view
+    folder_accordion_view
+    folder_tabs_view
+    folder_summary_view
+    folder_tabular_view
+    atct_album_view
+    folder_listing
  * Display other content as album entries instead of listings in album_view since
    we have fallback images for any contenttypes [ichimdav #3488]
  * Bug fix: fixed the issues related to folder_tabs_view and folder_accordion_view
