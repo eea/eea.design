@@ -404,7 +404,7 @@ input.standalone {
 }
 
 .faceted-results {
-    padding: 5px;
+    padding: 0px;
 }
 
 /* end of specific faceted navigation style */
