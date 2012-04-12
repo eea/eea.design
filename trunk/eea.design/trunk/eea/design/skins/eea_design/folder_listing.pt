@@ -9,7 +9,7 @@
 <body>
 
 <metal:content-core fill-slot="content-core">
-    <tal:comment> 
+    <tal:comment tal:replace="nothing"> 
     If folder is public draft and user is anonymous, redirect to a standared message page
     </tal:comment>
     <tal:isEmpty tal:condition="python: isAnon and not checkPermission('List folder contents', here)">
@@ -38,19 +38,32 @@
         <div metal:define-slot="inside" tal:replace="structure text">The body</div>
     </div>
 
-    <metal:listingmacro define-macro="listing">
-    <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
-	                    contentFilter python:contentFilter and dict(contentFilter) or {};
-                        limit_display limit_display|request/limit_display|nothing;
-                        limit_display python:limit_display and int(limit_display) or None;
+    <metal:listingdefaults metal:define-macro="listing_defaults" 
+        tal:define="
+            parent nocall:context/aq_parent;
+            id context/id;
+            defaultPage parent/default_page;
+            context python: parent if defaultPage == id else context;
+            contentFilter contentFilter|request/contentFilter|nothing;
+            contentFilter python:contentFilter and dict(contentFilter) or {};
+            limit_display limit_display|request/limit_display|nothing;
+            limit_display python:limit_display and int(limit_display) or None;
+            is_a_topic python:context.portal_type in ['Topic'];
+            folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
+
+            Batch python:modules['Products.CMFPlone'].Batch;
+            b_start python:request.get('b_start', 0);
+            batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);">
+            <metal metal:define-slot="defaults_core"></metal>                        
+    </metal:listingdefaults>
+
+   <metal:listingmacro define-macro="listing">
+   <metal:defaults metal:use-macro="context/folder_listing/macros/listing_defaults">
+   <metal:defaults-core metal:fill-slot="defaults_core">
+   <tal:foldercontents define="
                         more_url more_url|request/more_url|string:folder_contents;
-                        is_a_topic python:context.portal_type in ['Topic'];
-                        folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
                         site_properties context/portal_properties/site_properties;
                         use_view_action site_properties/typesUseViewActionInListings|python:();
-                        Batch python:modules['Products.CMFPlone'].Batch;
-                        b_start python:request.get('b_start', 0);
-                        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);
                         isAnon context/@@plone_portal_state/anonymous;
                         isEmpty context/@@plone_context_state/is_empty;
                         template_id template/getId;
@@ -61,17 +74,18 @@
                         navigation_root_url context/@@plone_portal_state/navigation_root_url;
                         pas_member context/@@pas_member;">
     <tal:listing condition="batch">
- <a href=""
-           class="link-parent"
-           tal:define="parent_url python:test(isAnon, None, context.navigationParent(context, template_id))"
-           tal:condition="parent_url"
-           tal:attributes="href parent_url"
-           i18n:translate="go_to_parent_url">
-        Up one level
-        </a>
         <!-- Navigation -->
         <div metal:use-macro="context/batch_macros/macros/navigation" />
         <dl metal:define-slot="entries">
+
+            <a href=""
+                   class="link-parent"
+                   tal:define="parent_url python:test(isAnon, None, context.navigationParent(context, template_id))"
+                   tal:condition="parent_url"
+                   tal:attributes="href parent_url"
+                   i18n:translate="go_to_parent_url">
+                Up one level
+            </a>
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
             <tal:block tal:condition="python: not isAnon or not not_show_empty or not isEmpty"
@@ -100,8 +114,7 @@
                                    not_show_empty not_show_empty|nothing;
 
                                    item_sametime python: item_start == item_end;
-                                   item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False"
-                    >
+                                   item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False">
                 <metal:block define-slot="entry">
                 <dt metal:define-macro="listitem"
                     tal:attributes="class python:test(item_type == 'Event', 'vevent', '')">
@@ -233,6 +246,8 @@
     </metal:empty>
 
     </tal:foldercontents>
+    </metal:defaults-core>
+    </metal:defaults>
     </metal:listingmacro>
 
 </metal:block>
@@ -240,4 +255,5 @@
 
 </body>
 </html>
+
 
