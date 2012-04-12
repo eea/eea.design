@@ -551,7 +551,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-/* folder_tabs_view and folder_accordion_view styling 
+/* folder_tabs_view and folder_accordion_view styling
  * as well as generic tabs and accordion styling */
 
 ul.eea-tabs {
@@ -597,9 +597,9 @@ ul.eea-tabs li a {
     float: left;
     margin: 0 -2px;
     font-weight: normal;
-    border: 0px; 
+    border: 0px;
 }
-ul.eea-tabs.two-rows li a { 
+ul.eea-tabs.two-rows li a {
     min-height: 4em;
     max-height: 4.1em;
     font-size: 120%;
@@ -665,7 +665,7 @@ div.eea-accordion-panels .pane {
 
 div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
     background: transparent url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
-    background-color: #549CAC; 
+    background-color: #549CAC;
     border-bottom: 1px dotted #DDD;
     margin: 0px;
     font-size: 115%;
@@ -685,11 +685,11 @@ div.eea-accordion-panels h2.current {
     background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
 }
 
-div.eea-accordion-panels .eea-accordion-title a, 
-div.eea-accordion-panels h2 a 
+div.eea-accordion-panels .eea-accordion-title a,
+div.eea-accordion-panels h2 a
 {
     color: #FFF;
-    text-shadow: 1px 1px #000;    
+    text-shadow: 1px 1px #000;
 }
 
 /* Override jquery.ui style */
@@ -836,7 +836,7 @@ div.eea-accordion-panels h2 a
 .media-player #embeddedvideo.sixteen-nine {
     height: 338px;
 }
- 
+
 .media-player #embeddedvideo.four-three {
     height: 450px;
 }
@@ -961,7 +961,7 @@ dd.embeddedMedia .magnify {
 }
 
 .flowplayer a,
-.documentContent ul li a, 
+.documentContent ul li a,
 .documentContent td a {
     display: inline;
     text-decoration: none !important;
@@ -2166,7 +2166,7 @@ option.hiddenStructure {
 .link-avi {
     background: transparent url(&dtml-portal_url;/avi.png) 0% 50% no-repeat;
     padding: 2px 0px 2px 20px;}
-.link-xlb, .link-xls, .link-xlt, .link-csv {
+.link-xlb, .link-xls, .link-xlt, .link-csv, .link-tsv {
     background: transparent url(&dtml-portal_url;/xls.png) 0% 50% no-repeat;
     padding: 2px 0px 2px 20px;}
 .link-ppa, .link-pps, .link-ppt, .link-pwz {
@@ -2208,7 +2208,15 @@ option.hiddenStructure {
 .link-txt {
     background: transparent url(&dtml-portal_url;/txt.png) 0% 50% no-repeat;
     padding: 2px 0px 2px 20px;}
-
+.link-json {
+    background: transparent url(&dtml-portal_url;/script_code.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-exhibit {
+    background: transparent url(&dtml-portal_url;/script_code_red.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+.link-table {
+    background: transparent url(&dtml-portal_url;/table.png) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
 
 
 /* For ghosted elements */
@@ -2358,8 +2366,8 @@ div.managePortletsLink, a.managePortletsFallback {
 }
 
 /* Fix for TinyMCE width being larger than content area */
-.ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr, 
-.ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *, 
+.ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr,
+.ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *,
 .ploneSkin .mceText {
     white-space: normal !important;
 }

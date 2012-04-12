@@ -3,7 +3,9 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
- * Feature: Display body text at the beginning of each listing template 
+ * Feature: Added more icons (CSS) for links with file extensions (.json, .tsv, etc)
+   [voineali #5074]
+ * Feature: Display body text at the beginning of each listing template
    [ichimdav #5080]
  * Upgrade step: add the following view templates to portal_types/Document:
     smart_view
@@ -21,7 +23,7 @@ Changelog
  * Change: content images have a max-width of 100% to avoid images from going
    over the right portal column [ichimdav #5054]
  * Bug fix: consolidated position of content icons in navigation tree [ichimdav 5048]
- * Change: changed example documentation for galleryView in design_elements.pt 
+ * Change: changed example documentation for galleryView in design_elements.pt
    to avoid having to load really big images when applying the galleryView class
    to a list of images [ichimdav #5055]
 
@@ -29,7 +31,7 @@ Changelog
 -------------------
  * Bug fix: fixed location of the folder_icon [ichimdav #5048]
  * Bug fix: fix distortion of promotion gallery images [ichimdav #5047]
- * Bug fix: remove tags and topic filtering on multimedia page when 
+ * Bug fix: remove tags and topic filtering on multimedia page when
    we are on tabs different from greentips or video [ichimdav #5044]
  * Bug fix: decreased padding of search button to avoid button from falling
    on next line on some browsers on Windows [ichimdav #5035]
@@ -45,18 +47,18 @@ Changelog
    [ghicaale #5017]
  * Upgrade step:  from portal_setup > import > EEA Design import javascript and
    stylesheet steps by:
-   1. Checking Javascript registry import step and Stylesheet registry checkboxes 
+   1. Checking Javascript registry import step and Stylesheet registry checkboxes
    2. Uncheck Include dependecies? checkbox [ichimdav #5006]
    3. Hit Import selected steps button
  * Change: removed old css and made button design more consistent across
    several other legacy css classes [demarant]
  * Feature: added CSS for separator under action menus ( .actionSeparator )
    [ghicaale #5017]
- * Bug fix: added transparency and size fixes for ie7 topright portion of 
+ * Bug fix: added transparency and size fixes for ie7 topright portion of
    multimedia [ichimdav #4990]
- * Change: folder_listing is now just redirecting to a message page when 
-   anonymous is accessing listing for a draft folder. 404 is not semantically 
-   correct, as the folder is there, it is just empty for anonymous. this way we 
+ * Change: folder_listing is now just redirecting to a message page when
+   anonymous is accessing listing for a draft folder. 404 is not semantically
+   correct, as the folder is there, it is just empty for anonymous. this way we
    can also see in google analytics if there are any high trafficed ones.
    [demarant #5015]
  * Change: increased font size for paragraphs in content-core area.
@@ -71,7 +73,7 @@ Changelog
    [ghicaale #5015]
  * Upgrade step: go to www/portal_types/Folder/manage_propertiesForm and add
    smart_view - folder_accordion_view - folder_tabs_view to -- Available view methods field
- * Feature: added folder_accordion_view and folder_tabs_view as two additional 
+ * Feature: added folder_accordion_view and folder_tabs_view as two additional
    views for folders [ichimdav #5006 #5007]
  * Change: use smaller image for showing relations links, so it takes less space
    especially when there is no item description. [demarant]
@@ -80,7 +82,7 @@ Changelog
 4.19 - (2012-03-05)
 -------------------
  * Feature: Added the generic relation macro by eea.relations.
-   Upgrade step: in @@manage-viewlets 
+   Upgrade step: in @@manage-viewlets
           hide Viewlet: plone.belowcontentbody.relateditems
           hide Viewlet: eea.related_pages
           add possible relation for documents/articles to other eea content.
@@ -116,21 +118,21 @@ Changelog
  * Bug fix: disabled rule that referenced bgnature.jpg [tiberich #4947]
  * Bug fix: registered main_template as a page, it is used by
    Products.eeawebapplication [tiberich #4947]
- * Bug fix: in atct_topic_view don't fail on brains with Missing.Value 
+ * Bug fix: in atct_topic_view don't fail on brains with Missing.Value
    [tiberich #4947]
  * Bug fix: filter results to show only latest version on whatsnew sections
    [demarant #4943]
- * Change: design improvements, made the enquiry and mobile shortcuts on frontpage 
+ * Change: design improvements, made the enquiry and mobile shortcuts on frontpage
    use same css as used for other frontpages. mobile text was also only an image.
    [demarant]
  * Bug fix: fixed width of edit forms [tiberich #4888]
- * Bug fix: made the video file view movie size as big as the page 
+ * Bug fix: made the video file view movie size as big as the page
    [ichimdav #4941]
- * Bug fix: fixed gallery/list icons on whatsnew tabs not showing up 
+ * Bug fix: fixed gallery/list icons on whatsnew tabs not showing up
    [demarant #4944]
- * Bug fix: WIP: fixing min-width of page if it goes below 1024px, works for 
+ * Bug fix: WIP: fixing min-width of page if it goes below 1024px, works for
   frontpage, data-and-maps, to be fixed for normal views [ichimdav #4842]
- * Bug fix: fixed frontpage, data-and-maps and multimedia 
+ * Bug fix: fixed frontpage, data-and-maps and multimedia
    for ie8 and ie7 1024px resolution [ichimdav #4842]
 
 4.16 - (2012-02-06)
@@ -152,7 +154,7 @@ Changelog
 
 4.15 - (2012-01-11)
 -------------------
- * Bug fix: fixed layout issues of external link icon and 
+ * Bug fix: fixed layout issues of external link icon and
    the language switch indicator [demarant #4870]
  * Bug fix: more layout fixes for 1024px resolution [ichimdav #4842]
  * Change: Customize the reset password page of Plone, since we have a specific
