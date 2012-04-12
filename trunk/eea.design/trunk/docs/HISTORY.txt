@@ -3,6 +3,8 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed live search when "only in current section" is not selected
+   [ghicaale fixes #5091]
  * Feature: Added more icons (CSS) for links with file extensions (.json, .tsv, etc)
    [voineali #5074]
  * Feature: Display body text at the beginning of each listing template

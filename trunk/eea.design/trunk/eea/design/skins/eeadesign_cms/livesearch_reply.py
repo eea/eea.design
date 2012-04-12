@@ -70,11 +70,14 @@ searchterms = url_quote_plus(r)
 site_encoding = context.plone_utils.getSiteEncoding()
 if path is None:
     path = getNavigationRoot(context)
+
 #results = catalog(SearchableText=r, portal_type=friendly_types, path=path,
 #    sort_limit=limit)
+
 ### eea
 request = context.REQUEST
-request.set('SearchableText',r)
+request.set('SearchableText', r)
+request.set('path', path)
 results = catalog(REQUEST=request, use_types_blacklist=True)
 ###
 
