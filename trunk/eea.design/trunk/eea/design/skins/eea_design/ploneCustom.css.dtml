@@ -2035,12 +2035,9 @@ option.hiddenStructure {
     overflow: hidden;
     color: #76797c;
     width: 128px;
-    height: 3.6em;
+    height: 3.2em;
     margin-top: 0.4em;
     font-weight: bold;
-}
-.eea-preview-items .photoAlbumEntryTitle {
-    height: 4.4em;
 }
 
 .photoAlbumEntryDescription {
