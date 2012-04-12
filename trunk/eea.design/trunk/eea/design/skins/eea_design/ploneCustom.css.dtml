@@ -1751,10 +1751,7 @@ h3.site-description {
 
 .listingBar {
     background-color: &dtml-globalBackgroundColor;;
-    border-color: &dtml-globalBorderColor;;
-    border-style: &dtml-borderStyle;;
-    border-width: &dtml-borderWidth;;
-    padding: 0em 1em;
+    padding: 0.5em 1em;
     text-align: center;
     text-transform: &dtml-textTransform;;
     vertical-align: top;
