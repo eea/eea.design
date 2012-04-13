@@ -30,7 +30,7 @@
 
 #faceted-form .faceted-widget {
    margin: 0 0 1em 0;
-   padding-bottom: 1em;
+   padding-bottom: 0.5em;
 }
 
 #faceted-form #center-content-area {
@@ -62,6 +62,13 @@
     padding: 0 !important;
     margin: 5px !important;
 }
+
+#faceted-form .widget-fieldset form,
+#faceted-form .faceted-criteria-hide-show,
+#faceted-form .faceted-criteria-reset {
+    padding-top: 1em;
+}
+
 
 .widget-fieldset ul li input {
     vertical-align: middle;
