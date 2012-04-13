@@ -1989,10 +1989,18 @@ option.hiddenStructure {
     margin: 0 3px 7px 3px;
     padding: 0px;
     text-align: center;
+    box-shadow: 0px 1px 2px #CCCCCC;
 }
 
 .photoAlbumEntry:hover {
     background: transparent;
+    box-shadow: 0px 2px 3px #ACACAC;
+}
+
+#whatsnew-gallery .photoAlbumEntry,
+#whatsnew-gallery .photoAlbumEntry:hover{ 
+    background: transparent;
+    box-shadow: none;
 }
 
 .photoAlbumEntry img {

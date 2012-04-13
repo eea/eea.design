@@ -3,6 +3,8 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Change: Consolidated album view design to 16:9. 
+   [ichimdav, demarant fixes #5029]
  * Bug fix: fixed live search when "only in current section" is not selected
    [ghicaale fixes #5091]
  * Feature: Added more icons (CSS) for links with file extensions (.json, .tsv, etc)
