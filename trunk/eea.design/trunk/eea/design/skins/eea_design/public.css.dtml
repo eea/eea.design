@@ -595,11 +595,13 @@ dl.portlet li {
     clear: both;
 }
 
-
 #content table {
     text-align: left;
     border-collapse: collapse;
     border-spacing: 0px;
+    max-width: 100%;
+    display: block;
+    overflow: auto;
 }
 
 

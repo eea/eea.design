@@ -3,6 +3,7 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed content table from going over content area [ichimdav #5056]
  * Change: Consolidated album view design to 16:9. 
    [ichimdav, demarant fixes #5029]
  * Bug fix: fixed live search when "only in current section" is not selected
