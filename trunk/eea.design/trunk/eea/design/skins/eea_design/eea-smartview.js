@@ -1,13 +1,22 @@
 jQuery(document).ready(function($) {
+    var $smart_view_switch = $('#smart-view-switch');
+    // hide from display menu the smart view if faceted navigation is enabled
+    // #5080
+    var smart_view_action = $("#smart_view");
+    if (smart_view_action.length && $("#faceted_settings").length) {
+        smart_view_action.parent().hide();
+    }
 
-    if ($('#smart-view-switch').length) {
+    if ($smart_view_switch.length) {
+       var $smart_view_switch_li = $smart_view_switch.find('li');
        var markSelectedButton = function () {
             var smartTemplate = $.bbq.getState('smartTemplate');
-            $('#smart-view-switch .selected').removeClass('selected');
-            $('#smart-view-switch li').each(function(i) {
-                var templateID = $.trim($(this).text());
-                if (templateID == smartTemplate) {
-                    $(this).addClass('selected');
+            $smart_view_switch.find('.selected').removeClass('selected');
+            $smart_view_switch_li.each(function(i) {
+                var $this = $(this);
+                var templateID = $this.data().templateid;
+                if (templateID === smartTemplate) {
+                    $this.addClass('selected');
                 }
             });
         };
@@ -21,28 +30,33 @@ jQuery(document).ready(function($) {
         };
 
      var loadContent = function() {
-            $('#smart-view-content').html('<img src="++resource++faceted_images/ajax-loader.gif" />');
+            var $smart_view_content = $('#smart-view-content');
+            $smart_view_content.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
             var url = $.param.querystring($.bbq.getState('smartTemplate'), $.param.querystring());
+            var EEA = window.EEA;
             $.get(url, function(data) {
-                $('#smart-view-content').html(data);
+                $smart_view_content.html(data);
                 if(url.indexOf('tabs') !== -1 ) {
                     // run logic for tabs from eea-tabs.js
-                    window.EEA.eea_tabs();
+                    EEA.eea_tabs();
                 }
                 if(url.indexOf('accordion') !== -1 ) {
                     // run logic for tabs from eea-accordion.js
-                    window.EEA.eea_accordion();
+                    EEA.eea_accordion();
                 }
-                $('.listingBar a').each(function(i) {
-                    var batchQueryString = $.param.querystring($(this).attr('href'));
-                    var newUrl = $.param.querystring(location.href, batchQueryString);
-                    $(this).attr('href', newUrl);
-                });
+                var listing_a = $smart_view_content.find('.listingBar a');
+                if (listing_a.length) {
+                    listing_a.each(function(i) {
+                        var batchQueryString = $.param.querystring(this.href);
+                        var newUrl = $.param.querystring(location.href, batchQueryString);
+                        this.href = newUrl;
+                    });
+                }
             }, 'html');
         };
 
-        $('#smart-view-switch li').live('click', function(e) {
-            var smartTemplate = $(this).find('.template-id').text();
+        $smart_view_switch_li.bind('click', function() {
+            var smartTemplate = $(this).data().templateid;
             $.bbq.pushState({
                 'smartTemplate': smartTemplate
             });
