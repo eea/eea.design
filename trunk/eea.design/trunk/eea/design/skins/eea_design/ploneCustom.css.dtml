@@ -157,6 +157,7 @@
 .ui-accordion .ui-state-default,
 .ui-accordion .ui-state-active {
     margin: 0 !important;
+    background-color:  &dtml-corporateOrange;;
 }
 
 .ui-accordion .ui-accordion-content {
