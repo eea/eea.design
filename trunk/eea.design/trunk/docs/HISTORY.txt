@@ -3,6 +3,8 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Change: simplified the style for headings h1/h2.
+   [demarant]
  * Change: redesigned the frontpage portlets on the right. better and consistent
    layout as the featured box. fixed several layout issues.
    [demarant]
