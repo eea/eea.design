@@ -3,6 +3,9 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Change: redesigned the frontpage portlets on the right. better and consistent
+   layout as the featured box. fixed several layout issues.
+   [demarant]
  * Bug fix: fixed content table from going over content area [ichimdav #5056]
  * Change: Consolidated album view design to 16:9. 
    [ichimdav, demarant fixes #5029]

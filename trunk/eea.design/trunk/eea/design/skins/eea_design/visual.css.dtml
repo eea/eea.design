@@ -252,7 +252,7 @@ table.datatable {
 
 .boxShadowedDown, .featured, #edit-bar, #contentActionMenus, #portal-personaltools,
 #portal-personaltools, #faceted-form .widget-fieldset legend,
-#forum, #community, #mobile,
+#forum, #community, #mobile, .portlet,
 .shortcut-default {
     -webkit-box-shadow: 0px 2px 2px #888;
        -moz-box-shadow: 0px 2px 2px #888;

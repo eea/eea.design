@@ -154,8 +154,10 @@ dt.portletItem {
     color: black;
     line-height: 1.4;
     margin: 0;
-    padding: 5px 10px;
+    padding-bottom: 0.5em;
+    padding-left: 0;
 }
+
 #portlet-navigation-tree .portletHeader,
 #portlet-navigation-tree .portletSubMenuHeader,
 .portlet-navigation-tree .portletHeader {
@@ -172,7 +174,8 @@ dt.portletItem {
 
 
 #firstHeader {
-   padding: 0 0.5em;
+   padding-bottom: 0.5em;
+   padding-top: 0.5em;
    margin-top: 0;
    line-height: 1.2;
    font-size: 1.6em;
@@ -359,7 +362,7 @@ dl.portlet-navigation-tree {
 
 .portletNavigationTree {
     margin: 0;
-    padding: 0 !important;
+    padding: 1em !important;
     list-style: none;
     list-style-image: none;
     line-height: 1em;
@@ -775,8 +778,8 @@ a.noHover {
    border-bottom: 1px solid #fff;
 }
 #portal-column-two .portlet {
-   margin: 0 0 0.7em 0;
-   padding: 0.4em;
+   margin: 0 0 1em 0;
+   padding: 1.5em;
 }
 #portal-column-two dl dd dl.portlet {
    margin: 0;
