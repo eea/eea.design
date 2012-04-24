@@ -25,7 +25,8 @@
                  highlights highlights|featured_class/getHighArticles;
                  plone_view nocall:plone_view|context/@@plone;
                  descr_max_length descr_max_length|python:200;
-                 archive_href archive_href|nothing;"
+                 archive_href archive_href|nothing;
+                 image_scale image_scale|string:image_mini;"
                  tal:condition="highlights"
                  i18n:domain="eea">
 
@@ -53,11 +54,11 @@
                         <tal:cond tal:condition="is_video">
                         <a href="#" class="noPrint"
                                     tal:attributes="href url; class string:video-fancybox;">
-                            <img alt="" tal:attributes="src string:${url}/image_preview; title title; alt title" />
+                                    <img alt="" tal:attributes="src string:${url}/${image_scale}; title title; alt title" />
                         </a>
                         </tal:cond>
                         <tal:notcond tal:condition="not:is_video">
-                            <img alt="" tal:attributes="src string:${image_url}/image_preview; title title; alt title" />
+                            <img alt="" tal:attributes="src string:${image_url}/${image_scale}; title title; alt title" />
                         </tal:notcond>
                     </div>
                 

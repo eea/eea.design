@@ -333,15 +333,6 @@ dd.portletFooter {
     margin-top: 5px;
 }
 
-#portlet-followus {
-    text-align: center;
-}
-#portlet-followus dd {
-    display: inline-block;
-    margin-left: 1em;
-    padding-left: 0px;
-}
-
 #mobile a:hover {
      border: none !important;
 }
@@ -365,12 +356,6 @@ dd.portletFooter {
     float: none;
     top: 0px;
     right: 100px;
-}
-
-#twitter-link, #facebook-link, #youtube-link, #rss-link, #email-link {
-    display: block;
-    float: left;
-    margin: 0 20px 0 0;
 }
 
 #document-action-sendto, #document-action-print, #document-action-full_screen,
@@ -595,7 +580,8 @@ img
 #content-core .column-area .featured,
 #content-core .right-column-area .shortcut-default.roundedCorners,
 .shortcut-default:hover, .shortcut-light:hover, #mobile:hover,
-.portletGradientStandard
+.portletGradientStandard,
+.portlet
 {
     -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
