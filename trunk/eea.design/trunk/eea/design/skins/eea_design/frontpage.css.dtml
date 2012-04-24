@@ -304,7 +304,6 @@ div.current {
 
 .featured  img {
     padding-right: 10px;
-    width: 180px;
     height: 101px;
 }
 

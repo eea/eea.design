@@ -3,6 +3,8 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed feature img distortion in ie8 triggered by the change of
+   max-width for content images [ichimdav #5110]
  * Change: simplified the style for headings h1/h2.
    [demarant]
  * Change: redesigned the frontpage portlets on the right. better and consistent

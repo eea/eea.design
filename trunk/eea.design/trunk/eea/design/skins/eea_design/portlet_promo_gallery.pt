@@ -5,7 +5,8 @@
                 plone_view nocall:plone_view|context/@@plone;
                 show_description show_description|python:True;
                 frontpage_gallery frontpage|nothing;
-                small_factor python: '' if frontpage_gallery else '-sm';"
+                small_factor python: '' if frontpage_gallery else '-sm';
+                image_scale python: 'image_thumb' if frontpage_gallery else 'image_tile';"
                 tal:condition="highlights">
 
 <div id="promo-gallery-wrapper">
@@ -26,7 +27,6 @@
                             hl_class python:'video-fancybox' if is_video else 'noPrint';
                             ">
                         <tal:image tal:define="figure obj/getImage|nothing;
-                        figure_scale string: preview;
                         figure_title figure/title|obj/Title|nothing;">
                         <tal:Link tal:condition="figure_link">
                             <a href="" title="" 
@@ -61,10 +61,9 @@
                     <li>
                         <div>
                         <tal:image tal:define="figure hl/getImage|nothing;
-                        figure_scale string:thumb;
                         figure_title figure/title|hl/Title|nothing;
                         url hl/getURL|hl/absolute_url">
-                            <img alt="" tal:attributes="src string:${url}/image_thumb; title figure_title; alt figure_title" />
+                        <img alt="" tal:attributes="src string:${url}/${image_scale}; title figure_title; alt figure_title" />
                         </tal:image>
 
                         <tal:title tal:condition="frontpage_gallery" tal:define="hltitle hl/Title">
