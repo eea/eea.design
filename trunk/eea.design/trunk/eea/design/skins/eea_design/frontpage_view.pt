@@ -121,11 +121,11 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                             </div>
                         </div>
 
-                        <div id="social-links">
-                            <div metal:use-macro="here/portlet_social_links/macros/portlet">
+
+                        <div metal:use-macro="here/portlet_social_links/macros/portlet">
                                 Social links
-                            </div>
                         </div>
+
                         <!-- end shortcuts divs -->
                     </div>
 

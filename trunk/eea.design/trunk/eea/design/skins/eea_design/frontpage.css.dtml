@@ -375,10 +375,6 @@ a.album-layout:hover {
   margin-left: 0;
 }
 
-#social-links h2 {
-  padding-left: 1.4em  !important;
-}
-
 #twitter-link,
 #facebook-link,
 #youtube-link,
