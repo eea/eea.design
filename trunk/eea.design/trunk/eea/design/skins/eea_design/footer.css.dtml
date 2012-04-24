@@ -138,6 +138,7 @@
 #portal-footer #portlet-ecotip {
     margin: 0;
     background-color: transparent;
+    box-shadow: none;
 }
 
 #portal-footer #portlet-ecotip .portletFooter {
