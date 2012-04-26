@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.21-dev - (unreleased)
------------------------
+4.21 - (2012-04-26)
+-------------------
  * Change: Improved "language selection" on pages beside title.
    Added language icon for better recongnition.
    [demarant refs #5117]
