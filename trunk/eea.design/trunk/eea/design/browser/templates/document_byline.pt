@@ -7,8 +7,8 @@
     i18n:domain="eea">
 
     
-    <div class="portalMessage" id="js-error">This website has limited functionality with javascript off. Please make sure javascript is
-        enabled in your browser.</div>
+    <noscript class="portalMessage">This website has limited functionality with javascript off. Please make sure javascript is
+        enabled in your browser.</noscript>
     
     <tal:loggedin tal:condition="not: isAnon">
     <span id="lock-icon"

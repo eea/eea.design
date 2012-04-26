@@ -6,9 +6,6 @@ jQuery(document).ready(function($) {
             $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
             secundary_portaltabs.appendTo(global_nav);
         }
-    
-    // hide js error or js disabled info #4748
-    $("#js-error").hide();
 
     // removed portal-column-two from @@usergroup-userprefs #4817
     if($("#portlet-prefs").length) {
