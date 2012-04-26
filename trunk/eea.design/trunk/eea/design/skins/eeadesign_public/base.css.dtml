@@ -21,7 +21,8 @@ p {
     line-height: 1.5em;
 }
 
-#content-core p {
+#content-core p, 
+#content-core li {
     font-size: 115%;
 }
 
