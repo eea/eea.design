@@ -1677,6 +1677,8 @@ h3.site-description {
 #article-language {
     float: right;
     margin-top: -30px;
+    background: url("sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
+    padding-left: 35px;
 }
 
 .width-full #article-language {

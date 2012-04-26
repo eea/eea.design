@@ -3,6 +3,9 @@ Changelog
 
 4.21-dev - (unreleased)
 -----------------------
+ * Change: Improved "language selection" on pages beside title.
+   Added language icon for better recongnition.
+   [demarant refs #5117]
  * Bug fix: fixed feature img distortion in ie8 triggered by the change of
    max-width for content images [ichimdav #5110]
  * Change: simplified the style for headings h1/h2.
