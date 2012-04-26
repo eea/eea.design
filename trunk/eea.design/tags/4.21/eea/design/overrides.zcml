@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five">
+    
+    <include package=".browser" file="overrides.zcml" />
+    <subscriber
+        for="Products.CMFCore.interfaces.ISiteRoot
+             zope.app.publication.interfaces.IBeforeTraverseEvent"
+        handler="eea.design.browser.changeskin.mark_layer"
+         />
+
+ 
+ </configure>
+
