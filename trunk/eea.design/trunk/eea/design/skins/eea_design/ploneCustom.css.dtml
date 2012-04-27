@@ -599,7 +599,7 @@ ul.eea-tabs li a {
     height: auto;
     max-height: 17px;
     min-height: 17px;
-    font-size: 110%;
+    font-size: 125%;
     padding: 9px 10px 11px 10px;
     display: block !important;
     float: left;
