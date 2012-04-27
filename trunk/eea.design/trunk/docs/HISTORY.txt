@@ -3,6 +3,7 @@ Changelog
 
 4.23-dev - (unreleased)
 -----------------------
+ * Bug fix: do not open open external links in new window for mark_special_links [ichimdav]
 
 4.22 - (2012-04-27)
 -------------------
