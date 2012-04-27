@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6
     border: none;
     font-family: Baskerville, Georgia, Garamond, Times, serif;
     width: auto;
+    clear: both;
 }
 
 div, p, ul, dl, ol {
@@ -169,17 +170,19 @@ div.metadata-switch {
     display:none !important;
 }
 .keyMessage {
-    page-break-inside:avoid !important; /* no browser support yet */
+    page-break-inside:avoid !important;
 }
 .indicator-figure-plus-container {
-    clear: both;
-    page-break-inside:avoid !important; /* no browser support yet */
+    page-break-inside:avoid !important;
+}
+.indicator-figure-plus .figure-title {
+   clear:both !important;
 }
 
 /* ichimdav added from sunburst's print.css */
 
 /* Page break class for use when printing */
-div.pageBreak, .policy_question {
+div.pageBreak {
 	page-break-before: always;
 }
 
@@ -224,3 +227,4 @@ dl.captioned {
 	margin: 0 0 0.5em 1em;
 	width: 16em;
 }
+
