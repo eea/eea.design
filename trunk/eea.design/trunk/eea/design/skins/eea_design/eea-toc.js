@@ -19,7 +19,7 @@ function build_toc(toc) {
     var queryString = $('#queryString').html();
         queryString = queryString || "h2, h3, h4";
 
-    $('#content-core').find(queryString).each(function(i, el) {
+    $('#content').find(queryString).each(function(i, el) {
         var newLevel = parseInt(el.tagName.charAt(1), 10);
         hLevel = hLevel || newLevel;
         if(el.className === "notoc") {

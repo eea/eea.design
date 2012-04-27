@@ -3,6 +3,8 @@ Changelog
 
 4.22-dev - (unreleased)
 -----------------------
+ * Bug fix: enable toc scanning back to content instead of content-core 
+   [ichimdav #5118]
 
 4.21 - (2012-04-26)
 -------------------
