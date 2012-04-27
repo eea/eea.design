@@ -607,6 +607,10 @@ ul.eea-tabs li a {
     font-weight: normal;
     border: 0px;
 }
+
+#content-core ul.eea-tabs li a {
+    font-size: 110%;
+}
 ul.eea-tabs.two-rows li a {
     min-height: 4em;
     max-height: 4.1em;
