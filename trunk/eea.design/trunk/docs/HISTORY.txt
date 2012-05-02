@@ -3,6 +3,8 @@ Changelog
 
 4.23-dev - (unreleased)
 -----------------------
+ * Bug fix: add link to featured images even if they are not videos
+   [ichimdav #5122]
  * Change: brought changes from production to print.css [ichimdav]
  * Bug fix: do not open open external links in new window for mark_special_links [ichimdav]
 
