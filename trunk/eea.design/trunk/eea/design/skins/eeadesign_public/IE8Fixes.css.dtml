@@ -593,6 +593,12 @@ img
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
 }
+
+#portal-footer .portlet {
+    filter: none;
+    -ms-filter: none;
+}
+
 .shortcut-default:hover, .shortcut-light:hover, #mobile:hover {
     background-color: #FFF;
 }

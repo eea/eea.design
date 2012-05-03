@@ -219,11 +219,19 @@ img.led-bulb {
     float: left;
     margin-top: 6px;
     position: absolute;
-    left: 8px;
+    left: 30px;
 }
 
-#portlet-ecotip img { -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out;transition: all 1s ease-in-out; margin-right: 15px; margin-top: 10px;}
-img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; }
-#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 0; }
+#portlet-ecotip img { 
+    -webkit-transition: all 1s ease-in-out; 
+       -moz-transition: all 1s ease-in-out; 
+        -ms-transition: all 1s ease-in-out;
+         -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out; 
+    margin-right: 15px; margin-top: 10px; 
+}
+
+img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0;}
+#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 0;}
 
 /* </dtml-with> */

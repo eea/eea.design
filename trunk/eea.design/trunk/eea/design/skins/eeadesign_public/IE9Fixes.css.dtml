@@ -505,4 +505,8 @@ a.archives {
 ul.eea-tabs.two-rows li {
     max-width: 93px;
 }
+
+/* #5140 set display for ecotip */
+img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none;}
+#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
 /* </dtml-with> */
