@@ -54,7 +54,7 @@
             Batch python:modules['Products.CMFPlone'].Batch;
             b_start python:request.get('b_start', 0);
             batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);">
-            <metal metal:define-slot="defaults_core"></metal>                        
+            <metal metal:define-slot="defaults_core"></metal>
     </metal:listingdefaults>
 
    <metal:listingmacro define-macro="listing">
