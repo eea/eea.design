@@ -3,6 +3,7 @@ Changelog
 
 4.23-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed display of auto related items portlet [ichimdav #5157]
  * Bug fix: display event location properly in folder_listing if location is
    a tuple [ichimdav #4778]
  * Bug fix: fade ecotip images for IE and remove text shadow for ie8 on

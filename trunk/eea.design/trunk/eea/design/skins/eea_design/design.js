@@ -19,6 +19,25 @@ jQuery(document).ready(function($) {
         $('#icon-full_screen').parent().remove();
     }
 
+    // #4157 move the non embedded links out of the enumeration of the embedded
+    // links in order to preserve the design
+    var $auto_related = $("#auto-related"),
+        $prev = $auto_related.prev(),
+        $dls = $auto_related.find('dl');
+    if($dls.length) {
+        $auto_related.detach();
+        $dls.each(function(idx, item){
+            var $item = $(item),
+                $dt = $item.find('dt'); 
+            $item.find('.portletItem').each(function(idx, item){
+                if(item.className.indexOf('embedded') === -1) {
+                    $(item).insertAfter($dt);
+                }
+            });
+        });
+        $auto_related.insertAfter($prev);
+    }
+
     /**
      * Function to animate ecotip bulb
     */

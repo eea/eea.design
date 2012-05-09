@@ -886,8 +886,13 @@ div.eea-accordion-panels h2 a
 
 #auto-related .portletItem {
     padding-bottom:0.5em;
+    clear: both;
 }
 
+/* #5157 */
+#auto-related .embeddedMedia {
+    clear: none !important;
+}
 
 #related-portlets #auto-related,
 #related-portlets #related-multimedia,
