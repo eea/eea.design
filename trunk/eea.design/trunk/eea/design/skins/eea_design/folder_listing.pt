@@ -168,15 +168,14 @@
                              tal:define="location python:item.location"
                               i18n:translate="label_event_byline_location">&mdash;
                             <tal:location  tal:condition="python:not same_type(location, ())">
-                                 <span tal:content="string:${item/location}"
+                                 <span tal:content="location"
                                        class="location"
-                                       i18n:name="location">Oslo</span>,
+                                       i18n:name="location">Oslo</span>
                              </tal:location>
-                            <tal:location  tal:condition="python:same_type(location, ())">
+                             <tal:location  tal:condition="python:same_type(location, ())">
                                 <tal:repeat tal:repeat="loc location">
-                                     <span tal:content="loc"
-                                           class="location"
-                                           i18n:name="location">Oslo</span>,
+                                     <span tal:content="python:loc.replace(',', ' ')"
+                                         class="location">Oslo</span><tal:last tal:condition="not:repeat/loc/end">,</tal:last> 
                                 </tal:repeat>
                             </tal:location>
                         </span>
