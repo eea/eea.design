@@ -420,23 +420,51 @@ input.standalone {
 /* ichimdav: these styles were previously in public.css */
 
 /* specific SOER2010 design */
+
+#soer-search-area {
+    margin:20px 0 50px 0;
+    clear: both;
+}
 #soerSearchBox strong {
     display: block;
     margin: 5px 0;
 }
 
+/* #5175 soer search portlet fix */
 #soerSearchBox .portletHeader {
     margin-bottom: 10px;
+    padding: 5px;
+    float: left;
+}
+#soerSearchBox .moreLink {
+    float: right;
+    margin-top: 1em;
 }
 
+#soer-search-area #faceted-text-search {
+    float: left;
+    margin-right: 1em;
+}
+#soer-search-area #topic-search {
+    float: right;
+    width: 308px;
+}
+#soer-search-area #topic-search select {
+    font-size:16px;
+    height:34px;
+    padding:5px;
+    margin-bottom:10px;
+    width: 244px;
+}
 #soerSearchBox dd, #video-portlet dd{
     margin: 0;
     padding: 0;
 }
+
+
 #geo1_widget li {
     text-transform: uppercase;
 }
-
 
 .section-soer .slidePortlet a.moreLink,
 .section-soer-draft .slidePortlet a.moreLink {
@@ -453,13 +481,10 @@ input.standalone {
     display: none;
 }
 
-
-
 .section-soer #video-portlet img,
 .section-soer-draft #video-portlet img {
     width: 100%;
 }
-
 
 .section-soer #free-text-space,
 .section-soer-draft #free-text-space {

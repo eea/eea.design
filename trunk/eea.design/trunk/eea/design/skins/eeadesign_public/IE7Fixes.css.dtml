@@ -119,6 +119,17 @@ input.standalone {
     font-size: 0.90em !important;
 }
 
+/* #5175 soer search portlet fix */
+#soer-search-area input[type="submit"] {
+    padding: 7px 4px;
+}
+#soer-search-area #topic-search {
+    font-size: 17px;
+}
+#soer-search-area #faceted-text-search {
+    vertical-align: baseline;
+}
+
 table.listing td.top {
     /* insane IE row bug workaround */
     position: relative;

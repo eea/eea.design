@@ -20,7 +20,7 @@
                     <div id="boxes" tal:define="items view/getAllFactsAndMessages">
                             <div id="soer-top-area">
                                 <!-- all key facts and messages -->
-                                <dl style="" 
+                                <dl  
                                     class="portlet slidePortlet" >
                                     <dt class="portletHeader" style="padding:5px;">Key facts and messages</dt>
                                      <dd class="portletItem" style="left: 650px;"  tal:repeat="item items">
@@ -39,14 +39,15 @@
 		      <a title="All key messages" class="internal-link moreLink" href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c">All key messages</a>
 		</p>
 		    
-                <div id="soer-search-area" style="margin:20px 0 50px 0;">
+                <div id="soer-search-area">
 
                     <dl class="portlet" id="soerSearchBox">
-                        <dt class="portletHeader" style="padding:5px;">Search SOER</dt>
+                        <dt class="portletHeader">Search SOER</dt>
                         <dd class="portletItem">
-			   <a style="float:right;" title="Advanced search" class="moreLink" href="./advanced-search">Advanced search</a>
+			   <a title="Advanced search" class="moreLink" href="./advanced-search">Advanced search</a>
                   
-			   <div>
+			   <div class="visualClear">
+                            </div>
 			    <form id="faceted-text-search" method="get" action="advanced-search" class="faceted-external-search">
                                 <strong>Free text search</strong>
                                 <p>
@@ -55,12 +56,11 @@
                                 </p>
                             </form>
 
-                            </div>
 
 			     <form id="topic-search" method="get" action="soer_topic_search">
 		              <strong>Browse by topic</strong>
                                 <p>
-                                <select name="topic" style="font-size:16px;height:34px;padding:5px;margin-bottom:10px;">
+                                <select name="topic">
                                     <tal:block tal:repeat="item view/getSoerTopics">
                                         <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
                                     </tal:block>
@@ -70,7 +70,7 @@
                             </form>
 			       
 			      <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
-                               <form onsubmit="$('#browsegeo').click(); return false;">
+                               <form onsubmit="$('#browsegeo').click(); return false;" style="float:left;">
                                 <p style="margin-top:8px"><input type="submit" value="Browse geographically..." onclick=""/></p>
                                </form>
 		
