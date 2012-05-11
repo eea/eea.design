@@ -3,6 +3,7 @@ Changelog
 
 4.23-dev - (unreleased)
 -----------------------
+ * Bug fix: disabled related portlet css customization for soer [ichimdav #5157]
  * Bug fix: fixed display of auto related items portlet [ichimdav #5157]
  * Bug fix: display event location properly in folder_listing if location is
    a tuple [ichimdav #4778]
