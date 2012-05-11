@@ -123,12 +123,6 @@ input.standalone {
 #soer-search-area input[type="submit"] {
     padding: 7px 4px;
 }
-#soer-search-area #topic-search {
-    font-size: 17px;
-}
-#soer-search-area #faceted-text-search {
-    vertical-align: baseline;
-}
 
 table.listing td.top {
     /* insane IE row bug workaround */
