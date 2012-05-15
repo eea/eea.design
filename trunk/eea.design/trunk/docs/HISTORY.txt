@@ -3,6 +3,7 @@ Changelog
 
 4.24-dev - (unreleased)
 -----------------------
+ * Change: Updated code comments
 
 4.23 - (2012-05-15)
 -------------------
