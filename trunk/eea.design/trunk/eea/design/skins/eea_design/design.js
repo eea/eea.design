@@ -3,7 +3,10 @@ jQuery(document).ready(function($) {
         if (!$("#multimedia-widgets").length) {  
             var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
                 global_nav = $('#portal-globalnav');
-            $("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
+            // Fix for external headers for sites with jquery < 1.4
+            //$("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
+            $("#portaltab-pressroom, #portaltab-abouteea", global_nav).clone(true).appendTo(secundary_portaltabs);
+            $("#portaltab-pressroom, #portaltab-abouteea", global_nav).remove();
             secundary_portaltabs.appendTo(global_nav);
         }
 

@@ -3,6 +3,8 @@ Changelog
 
 4.23-dev - (unreleased)
 -----------------------
+ * Bug fix: Replaced jquery detach with clone & remove for older jquery versions
+   [szabozo0 #5095]
  * Bug fix: fixed display of topic results when set as defualt_page
    [ichimdav #5182]
  * Bug fix: fixed style of soer's search portlet [ichimdav #5175]
