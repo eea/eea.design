@@ -43,7 +43,7 @@
             parent nocall:context/aq_parent;
             id context/id;
             defaultPage parent/default_page;
-            context python: parent if defaultPage == id else context;
+            context python: parent if defaultPage == id and context.portal_type == 'Document' else context;
             contentFilter contentFilter|request/contentFilter|nothing;
             contentFilter python:contentFilter and dict(contentFilter) or {};
             limit_display limit_display|request/limit_display|nothing;
