@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.23-dev - (unreleased)
------------------------
+4.23 - (2012-05-15)
+-------------------
  * Bug fix: Replaced jquery detach with clone & remove for older jquery versions
    [szabozo0 #5095]
  * Bug fix: fixed display of topic results when set as defualt_page
