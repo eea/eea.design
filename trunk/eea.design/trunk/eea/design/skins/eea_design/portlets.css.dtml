@@ -906,7 +906,6 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
 }
 
 .portletCalendar {
-    width: 100%;
     margin: 1px 0 1em 0;
 }
 

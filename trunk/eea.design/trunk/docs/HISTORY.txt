@@ -3,6 +3,8 @@ Changelog
 
 4.24-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed width of portlet calendar which went past the column-two width
+   [ichimdav #4788]
  * Bug fix: display results of topic from child folder on folder_accordion_view
    and folder_tabs_view if they are defaultPage of folder [ichimdav #5197]
  * Change: Updated code comments
