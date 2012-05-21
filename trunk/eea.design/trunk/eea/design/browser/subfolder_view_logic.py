@@ -73,12 +73,18 @@ class SubFolderView(BrowserView):
                 continue
 
             obj = brain.getObject()
+            # #5197
             # get the folder url and title instead of default's page 
             # for pages that need it like folder_tabs_view
+            # but get the results of the topic if it's default page
+            title = obj.Title()
+            url = obj.absolute_url()
             if not obj_link:
                 defaultPage = obj.getDefaultPage()
                 if defaultPage:
-                    obj = getattr(obj, defaultPage)
+                    item  = getattr(obj, defaultPage)
+                    if item.portal_type == "Topic":
+                        obj = item
 
             listing_url = getMultiAdapter((obj, self.request), name=u'url'
                                           ).listing_url
@@ -88,9 +94,9 @@ class SubFolderView(BrowserView):
                 contents, nitems = _get_contents(
                     obj, size_limit, self.request, facetednav)
                 ret['folderish'].append({
-                    'title': obj.Title(),
+                    'title': title,
                     'description': obj.Description(),
-                    'url': obj.absolute_url(),
+                    'url': url,
                     'listing_url': listing_url,
                     'portal_type': obj.portal_type,
                     'contents': contents,
