@@ -1806,6 +1806,11 @@ return this.replace(/\s+$/,"");
     }
 
 Array.prototype.find = function(searchStr) {
+// Fix for #5189; There is a conflict between vpip & discussion. 
+// This handler prevents defaultHandler and submitting replies in plone.app.discussion, this is wrong
+if ((typeof(this.length) === 'undefined') || $(this).hasClass('rowlike')){
+    return true;
+}
 var returnArray = false;
     for (i=0; i<this.length; i++) {
     if (typeof(searchStr) == 'function') {

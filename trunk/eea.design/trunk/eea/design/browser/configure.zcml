@@ -207,7 +207,7 @@
         permission="zope2.View"
         />
 
-    <browser:viewlet
+    <!--browser:viewlet
         name="plone.comments"
         for="Products.CMFCore.interfaces.IContentish"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
@@ -216,7 +216,7 @@
         template="templates/comments.pt"
         layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
-        />
+        /-->
 
     <browser:viewlet
         name="plone.colophon"

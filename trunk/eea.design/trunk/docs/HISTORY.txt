@@ -3,6 +3,8 @@ Changelog
 
 4.24-dev - (unreleased)
 -----------------------
+ * Bug fix: fixed conflict with plone.app.discussion, submitting replies
+   [szabozo0 #5189]
  * Bug fix: fixed width of portlet calendar which went past the column-two width
    [ichimdav #4788]
  * Bug fix: display results of topic from child folder on folder_accordion_view
