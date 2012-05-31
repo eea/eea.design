@@ -1,337 +1,431 @@
-Changelog
+﻿Changelog
 =========
 
 4.24-dev - (unreleased)
 -----------------------
- * Bug fix: fixed conflict with plone.app.discussion, submitting replies
-   [szabozo0 #5189]
- * Bug fix: fixed width of portlet calendar which went past the column-two width
-   [ichimdav #4788]
- * Bug fix: display results of topic from child folder on folder_accordion_view
-   and folder_tabs_view if they are defaultPage of folder [ichimdav #5197]
- * Change: Updated code comments
+* Bug fix: fixed markup of HISTORY.txt file
+  [ciobabog refs #5231]
+* Bug fix: fixed conflict with plone.app.discussion, submitting replies
+  [szabozo0 #5189]
+* Bug fix: fixed width of portlet calendar which went past the column-two width
+  [ichimdav #4788]
+* Bug fix: display results of topic from child folder on folder_accordion_view
+  and folder_tabs_view if they are defaultPage of folder
+  [ichimdav #5197]
+* Change: Updated code comments
 
 4.23 - (2012-05-15)
 -------------------
- * Bug fix: Replaced jquery detach with clone & remove for older jquery versions
-   [szabozo0 #5095]
- * Bug fix: fixed display of topic results when set as defualt_page
-   [ichimdav #5182]
- * Bug fix: fixed style of soer's search portlet [ichimdav #5175]
- * Bug fix: disabled related portlet css customization for soer [ichimdav #5157]
- * Bug fix: fixed display of auto related items portlet [ichimdav #5157]
- * Bug fix: display event location properly in folder_listing if location is
-   a tuple [ichimdav #4778]
- * Bug fix: fade ecotip images for IE and remove text shadow for ie8 on
-   portlet ecotip text [ichimdav #5140]
- * Bug fix: add link to featured images even if they are not videos
-   [ichimdav #5122]
- * Change: brought changes from production to print.css [ichimdav]
- * Bug fix: do not open open external links in new window for mark_special_links
-   [ichimdav]
+* Bug fix: Replaced jquery detach with clone & remove for older jquery versions
+  [szabozo0 #5095]
+* Bug fix: fixed display of topic results when set as defualt_page
+  [ichimdav #5182]
+* Bug fix: fixed style of soer's search portlet
+  [ichimdav #5175]
+* Bug fix: disabled related portlet css customization for soer
+  [ichimdav #5157]
+* Bug fix: fixed display of auto related items portlet
+  [ichimdav #5157]
+* Bug fix: display event location properly in folder_listing if location is
+  a tuple
+  [ichimdav #4778]
+* Bug fix: fade ecotip images for IE and remove text shadow for ie8 on
+  portlet ecotip text
+  [ichimdav #5140]
+* Bug fix: add link to featured images even if they are not videos
+  [ichimdav #5122]
+* Change: brought changes from production to print.css
+  [ichimdav]
+* Bug fix: do not open open external links in new window for mark_special_links
+  [ichimdav]
 
 4.22 - (2012-04-27)
 -------------------
- * Bug fix: enable toc scanning back to content instead of content-core 
-   [ichimdav #5118]
+* Bug fix: enable toc scanning back to content instead of content-core 
+  [ichimdav #5118]
 
 4.21 - (2012-04-26)
 -------------------
- * Change: Improved "language selection" on pages beside title.
-   Added language icon for better recongnition.
-   [demarant refs #5117]
- * Bug fix: fixed feature img distortion in ie8 triggered by the change of
-   max-width for content images [ichimdav #5110]
- * Change: simplified the style for headings h1/h2.
-   [demarant]
- * Change: redesigned the frontpage portlets on the right. better and consistent
-   layout as the featured box. fixed several layout issues.
-   [demarant]
- * Bug fix: fixed content table from going over content area [ichimdav #5056]
- * Change: Consolidated album view design to 16:9. 
-   [ichimdav, demarant fixes #5029]
- * Bug fix: fixed live search when "only in current section" is not selected
-   [ghicaale fixes #5091]
- * Feature: Added more icons (CSS) for links with file extensions (.json, .tsv, etc)
-   [voineali #5074]
- * Feature: Display body text at the beginning of each listing template
-   [ichimdav #5080]
- * Upgrade step: add the following view templates to portal_types/Document:
-    smart_view
-    folder_accordion_view
-    folder_tabs_view
-    folder_summary_view
-    folder_tabular_view
-    atct_album_view
-    folder_listing
- * Display other content as album entries instead of listings in album_view since
-   we have fallback images for any contenttypes [ichimdav #3488]
- * Bug fix: fixed the issues related to folder_tabs_view and folder_accordion_view
-   described in the ticket [ichimdav #5076]
- * Bug fix: added isAnon declaration for folder_accordion_view [ichimdav #5076]
- * Change: content images have a max-width of 100% to avoid images from going
-   over the right portal column [ichimdav #5054]
- * Bug fix: consolidated position of content icons in navigation tree [ichimdav 5048]
- * Change: changed example documentation for galleryView in design_elements.pt
-   to avoid having to load really big images when applying the galleryView class
-   to a list of images [ichimdav #5055]
+* Change: Improved "language selection" on pages beside title.
+  Added language icon for better recongnition.
+  [demarant refs #5117]
+* Bug fix: fixed feature img distortion in ie8 triggered by the change of
+  max-width for content images
+  [ichimdav #5110]
+* Change: simplified the style for headings h1/h2.
+  [demarant]
+* Change: redesigned the frontpage portlets on the right. better and consistent
+  layout as the featured box. fixed several layout issues.
+  [demarant]
+* Bug fix: fixed content table from going over content area
+  [ichimdav #5056]
+* Change: Consolidated album view design to 16:9. 
+  [ichimdav, demarant fixes #5029]
+* Bug fix: fixed live search when "only in current section" is not selected
+  [ghicaale fixes #5091]
+* Feature: Added more icons (CSS) for links with file extensions (.json, .tsv, etc)
+  [voineali #5074]
+* Feature: Display body text at the beginning of each listing template
+  [ichimdav #5080]
+* Upgrade step: add the following view templates to portal_types/Document:
+  smart_view
+  folder_accordion_view
+  folder_tabs_view
+  folder_summary_view
+  folder_tabular_view
+  atct_album_view
+  folder_listing
+* Display other content as album entries instead of listings in album_view since
+  we have fallback images for any contenttypes
+  [ichimdav #3488]
+* Bug fix: fixed the issues related to folder_tabs_view and folder_accordion_view
+  described in the ticket
+  [ichimdav #5076]
+* Bug fix: added isAnon declaration for folder_accordion_view
+  [ichimdav #5076]
+* Change: content images have a max-width of 100% to avoid images from going
+  over the right portal column
+  [ichimdav #5054]
+* Bug fix: consolidated position of content icons in navigation tree
+  [ichimdav 5048]
+* Change: changed example documentation for galleryView in design_elements.pt
+  to avoid having to load really big images when applying the galleryView class
+  to a list of images
+  [ichimdav #5055]
 
 4.20 - (2012-03-30)
 -------------------
- * Bug fix: fixed location of the folder_icon [ichimdav #5048]
- * Bug fix: fix distortion of promotion gallery images [ichimdav #5047]
- * Bug fix: remove tags and topic filtering on multimedia page when
-   we are on tabs different from greentips or video [ichimdav #5044]
- * Bug fix: decreased padding of search button to avoid button from falling
-   on next line on some browsers on Windows [ichimdav #5035]
- * Change: added ajax loading image on state change
-   [ghicaale #5017]
- * Change: small CSS adjustments to coments viewlet
-   [ghicaale #5041]
- * Upgrade step: add "change_workflow_state.js" under portal_javascripts and
-   "change_workflow_state.kss" under portal_kss
-   [ghicaale #5017]
- * Feature: added javascript plugin to be used by KSS action on workflow state change
-   to show loading info
-   [ghicaale #5017]
- * Upgrade step:  from portal_setup > import > EEA Design import javascript and
-   stylesheet steps by:
-   1. Checking Javascript registry import step and Stylesheet registry checkboxes
-   2. Uncheck Include dependecies? checkbox [ichimdav #5006]
-   3. Hit Import selected steps button
- * Change: removed old css and made button design more consistent across
-   several other legacy css classes [demarant]
- * Feature: added CSS for separator under action menus ( .actionSeparator )
-   [ghicaale #5017]
- * Bug fix: added transparency and size fixes for ie7 topright portion of
-   multimedia [ichimdav #4990]
- * Change: folder_listing is now just redirecting to a message page when
-   anonymous is accessing listing for a draft folder. 404 is not semantically
-   correct, as the folder is there, it is just empty for anonymous. this way we
-   can also see in google analytics if there are any high trafficed ones.
-   [demarant #5015]
- * Change: increased font size for paragraphs in content-core area.
-   users have complained text is too small. [demarant]
- * Bug fix: order of data-and-maps and allproducts chronologically [ichimdav #4724]
- * Bug fix: fix column position for right to left languages [ichimdav #4971]
- * Upgrade step: remove toc.js from portal_javascripts [ichimdav #5014]
- * Change: use eea-toc logic only instead of toc.js from plone [ichimdav #5014]
- * Change: folder_listing is now throwing NotFound instead of Unauthorized for two reasons,
-   one that Google bot or other bot will not return after it receive am NotFound (404) and
-   second to keep the Zope logs clean
-   [ghicaale #5015]
- * Upgrade step: go to www/portal_types/Folder/manage_propertiesForm and add
-   smart_view - folder_accordion_view - folder_tabs_view to -- Available view methods field
- * Feature: added folder_accordion_view and folder_tabs_view as two additional
-   views for folders [ichimdav #5006 #5007]
- * Change: use smaller image for showing relations links, so it takes less space
-   especially when there is no item description. [demarant]
- * Bug fix: fixed tinymce widget width going over content area [ichimdav #4998]
+* Bug fix: fixed location of the folder_icon
+  [ichimdav #5048]
+* Bug fix: fix distortion of promotion gallery images
+  [ichimdav #5047]
+* Bug fix: remove tags and topic filtering on multimedia page when
+  we are on tabs different from greentips or video
+  [ichimdav #5044]
+* Bug fix: decreased padding of search button to avoid button from falling
+  on next line on some browsers on Windows
+  [ichimdav #5035]
+* Change: added ajax loading image on state change
+  [ghicaale #5017]
+* Change: small CSS adjustments to coments viewlet
+  [ghicaale #5041]
+* Upgrade step: add "change_workflow_state.js" under portal_javascripts and
+  "change_workflow_state.kss" under portal_kss
+  [ghicaale #5017]
+* Feature: added javascript plugin to be used by KSS action on workflow state change
+  to show loading info
+  [ghicaale #5017]
+* Upgrade step:  from portal_setup > import > EEA Design import javascript and
+  stylesheet steps by:
+  1. Checking Javascript registry import step and Stylesheet registry checkboxes
+  2. Uncheck Include dependecies? checkbox
+  3. Hit Import selected steps button
+  [ichimdav #5006]
+* Change: removed old css and made button design more consistent across
+  several other legacy css classes
+  [demarant]
+* Feature: added CSS for separator under action menus ( .actionSeparator )
+  [ghicaale #5017]
+* Bug fix: added transparency and size fixes for ie7 topright portion of
+  multimedia
+  [ichimdav #4990]
+* Change: folder_listing is now just redirecting to a message page when
+  anonymous is accessing listing for a draft folder. 404 is not semantically
+  correct, as the folder is there, it is just empty for anonymous. this way we
+  can also see in google analytics if there are any high trafficed ones.
+  [demarant #5015]
+* Change: increased font size for paragraphs in content-core area.
+  users have complained text is too small.
+  [demarant]
+* Bug fix: order of data-and-maps and allproducts chronologically
+  [ichimdav #4724]
+* Bug fix: fix column position for right to left languages
+  [ichimdav #4971]
+* Upgrade step: remove toc.js from portal_javascripts
+  [ichimdav #5014]
+* Change: use eea-toc logic only instead of toc.js from plone
+  [ichimdav #5014]
+* Change: folder_listing is now throwing NotFound instead of Unauthorized for two reasons,
+  one that Google bot or other bot will not return after it receive am NotFound (404) and
+  second to keep the Zope logs clean
+  [ghicaale #5015]
+* Upgrade step: go to www/portal_types/Folder/manage_propertiesForm and add
+  smart_view - folder_accordion_view - folder_tabs_view to -- Available view methods field
+* Feature: added folder_accordion_view and folder_tabs_view as two additional
+  views for folders
+  [ichimdav #5006 #5007]
+* Change: use smaller image for showing relations links, so it takes less space
+  especially when there is no item description.
+  [demarant]
+* Bug fix: fixed tinymce widget width going over content area
+  [ichimdav #4998]
 
 4.19 - (2012-03-05)
 -------------------
- * Feature: Added the generic relation macro by eea.relations.
-   Upgrade step: in @@manage-viewlets
-          hide Viewlet: plone.belowcontentbody.relateditems
-          hide Viewlet: eea.related_pages
-          add possible relation for documents/articles to other eea content.
-          [demarant #3414,#4919]
- * Upgrade step: remove folder_listing.pt from /portal_skins/custom as setting a title
-   there will reflect in CMS display choices
-   [ghicaale #4986]
- * Bug fix: fixed folder_summary_view template that was using a deprecated is_empty code
-   [ghicaale #4986]
- * Bug fix: set login POST on HTTPS
-   [ghicaale #4978]
- * Bug fix: fixed colors on workflow state change in cms,
-   it was not possible to distinguish green on green and white on white.
-   [demarant]
- * Bug fix: don't show language link on frontpage in right side column
-   [tiberich #4960]
- * Change: display promotions of dataset types and with display_on_datacentre
-   if available, otherwise show all products
-   [ichimdav #4936]
- * Bug fix: properly link images in css files
-   [tiberich #4956]
- * Bug fix: fixed collapsible items in advanced search form
-   [tiberich #4878]
- * Bug fix: remove id from cloned nodes when creating language links
-   [tiberich #4954]
+* Feature: Added the generic relation macro by eea.relations.
+  Upgrade step: in @@manage-viewlets
+  hide Viewlet: plone.belowcontentbody.relateditems
+  hide Viewlet: eea.related_pages
+  add possible relation for documents/articles to other eea content.
+  [demarant #3414,#4919]
+* Upgrade step: remove folder_listing.pt from /portal_skins/custom as setting a title
+  there will reflect in CMS display choices
+  [ghicaale #4986]
+* Bug fix: fixed folder_summary_view template that was using a deprecated is_empty code
+  [ghicaale #4986]
+* Bug fix: set login POST on HTTPS
+  [ghicaale #4978]
+* Bug fix: fixed colors on workflow state change in cms,
+  it was not possible to distinguish green on green and white on white.
+  [demarant]
+* Bug fix: don't show language link on frontpage in right side column
+  [tiberich #4960]
+* Change: display promotions of dataset types and with display_on_datacentre
+  if available, otherwise show all products
+  [ichimdav #4936]
+* Bug fix: properly link images in css files
+  [tiberich #4956]
+* Bug fix: fixed collapsible items in advanced search form
+  [tiberich #4878]
+* Bug fix: remove id from cloned nodes when creating language links
+  [tiberich #4954]
 
 4.18 - (2012-02-15)
 -------------------
- * Bug fix: registered main_template as view only for EEA layer [tiberich]
+* Bug fix: registered main_template as view only for EEA layer
+  [tiberich]
 
 4.17 - (2012-02-15)
 -------------------
- * Bug fix: disabled rule that referenced bgnature.jpg [tiberich #4947]
- * Bug fix: registered main_template as a page, it is used by
-   Products.eeawebapplication [tiberich #4947]
- * Bug fix: in atct_topic_view don't fail on brains with Missing.Value
-   [tiberich #4947]
- * Bug fix: filter results to show only latest version on whatsnew sections
-   [demarant #4943]
- * Change: design improvements, made the enquiry and mobile shortcuts on frontpage
-   use same css as used for other frontpages. mobile text was also only an image.
-   [demarant]
- * Bug fix: fixed width of edit forms [tiberich #4888]
- * Bug fix: made the video file view movie size as big as the page
-   [ichimdav #4941]
- * Bug fix: fixed gallery/list icons on whatsnew tabs not showing up
-   [demarant #4944]
- * Bug fix: WIP: fixing min-width of page if it goes below 1024px, works for
-  frontpage, data-and-maps, to be fixed for normal views [ichimdav #4842]
- * Bug fix: fixed frontpage, data-and-maps and multimedia
-   for ie8 and ie7 1024px resolution [ichimdav #4842]
+* Bug fix: disabled rule that referenced bgnature.jpg
+  [tiberich #4947]
+* Bug fix: registered main_template as a page, it is used by
+  Products.eeawebapplication
+  [tiberich #4947]
+* Bug fix: in atct_topic_view don't fail on brains with Missing.Value
+  [tiberich #4947]
+* Bug fix: filter results to show only latest version on whatsnew sections
+  [demarant #4943]
+* Change: design improvements, made the enquiry and mobile shortcuts on frontpage
+  use same css as used for other frontpages. mobile text was also only an image.
+  [demarant]
+* Bug fix: fixed width of edit forms
+  [tiberich #4888]
+* Bug fix: made the video file view movie size as big as the page
+  [ichimdav #4941]
+* Bug fix: fixed gallery/list icons on whatsnew tabs not showing up
+  [demarant #4944]
+* Bug fix: WIP: fixing min-width of page if it goes below 1024px, works for
+  frontpage, data-and-maps, to be fixed for normal views
+  [ichimdav #4842]
+* Bug fix: fixed frontpage, data-and-maps and multimedia
+  for ie8 and ie7 1024px resolution
+  [ichimdav #4842]
 
 4.16 - (2012-02-06)
 -------------------
- * Bug fix: removed customization of width-full and position-0 to avoid body cut
-   [ichimdav #4925]
- * Change: made the portalMessage error bigger [ichimdav #4816]
- * Bug fix: footer text was not properly centered, reduced the footer info.
-   added link to software changes files, so that users can see what has changed.
-   [demarant]
- * Feature: added a thin border around every publication cover
-   [ghicaale #4855]
- * Bug fix: less space between album entry so that we can have 3 columns on
-   album view when used on faceted search e.g. advanced-search. [demarant]
- * Bug fix: filter words 'and', 'or' from livesearch input [tiberich #4872]
- * Bug fix: url for data-and-maps must be absolute as it is used in themes,
-            where it worked by zope acquisition. [demarant]
- * Bug fix: don't show types that have missing FTI in advanced search form [tiberich #4872]
+* Bug fix: removed customization of width-full and position-0 to avoid body cut
+  [ichimdav #4925]
+* Change: made the portalMessage error bigger
+  [ichimdav #4816]
+* Bug fix: footer text was not properly centered, reduced the footer info.
+  added link to software changes files, so that users can see what has changed.
+  [demarant]
+* Feature: added a thin border around every publication cover
+  [ghicaale #4855]
+* Bug fix: less space between album entry so that we can have 3 columns on
+  album view when used on faceted search e.g. advanced-search.
+  [demarant]
+* Bug fix: filter words 'and', 'or' from livesearch input
+  [tiberich #4872]
+* Bug fix: url for data-and-maps must be absolute as it is used in themes,
+  where it worked by zope acquisition.
+  [demarant]
+* Bug fix: don't show types that have missing FTI in advanced search form
+  [tiberich #4872]
 
 4.15 - (2012-01-11)
 -------------------
- * Bug fix: fixed layout issues of external link icon and
-   the language switch indicator [demarant #4870]
- * Bug fix: more layout fixes for 1024px resolution [ichimdav #4842]
- * Change: Customize the reset password page of Plone, since we have a specific
-   Eionet page for resetting eionet ldap accounts. [demarant]
- * Bug fix: fixed wrongly fading of gallery panels [ichimdav #4856]
- * Bug fix: Allow HTML in portal status message
-   [voineali #4706]
- * Bug fix: fixed globalnavigation look for Opera browser [ichimdav #4856]
- * Bug fix: removed wrong selectors for ie8 green gradient [ichimdav 4619]
+* Bug fix: fixed layout issues of external link icon and
+  the language switch indicator
+  [demarant #4870]
+* Bug fix: more layout fixes for 1024px resolution
+  [ichimdav #4842]
+* Change: Customize the reset password page of Plone, since we have a specific
+  Eionet page for resetting eionet ldap accounts.
+  [demarant]
+* Bug fix: fixed wrongly fading of gallery panels
+  [ichimdav #4856]
+* Bug fix: Allow HTML in portal status message
+  [voineali #4706]
+* Bug fix: fixed globalnavigation look for Opera browser
+  [ichimdav #4856]
+* Bug fix: removed wrong selectors for ie8 green gradient
+  [ichimdav 4619]
 
 4.14 - (2012-01-03)
 -------------------
- * Bug fix: fixes issue number 8 and 19 from ticket #4619 [ichimdav #4619]
- * Bug fix: added info message when javascript is disabled or we have a
-   javascript error on the page [ichimdav #4748]
- * Bug fix: added viewport metadata to main_template to force the ipad to
-   display the site in the maximum width of 1024px instead of an emulation at
-   980px [ichimdav #4683]
- * Bug fix: fixed transparency on multimedia of whatsnew-gallery IE8 [#4673]
+* Bug fix: fixes issue number 8 and 19 from ticket #4619
+  [ichimdav #4619]
+* Bug fix: added info message when javascript is disabled or we have a
+  javascript error on the page
+  [ichimdav #4748]
+* Bug fix: added viewport metadata to main_template to force the ipad to
+  display the site in the maximum width of 1024px instead of an emulation at
+  980px
+  [ichimdav #4683]
+* Bug fix: fixed transparency on multimedia of whatsnew-gallery IE8
+  [#4673]
 
 4.13 - (2011-12-16)
 -------------------
- * Bug fix: fixed width and height of gallery_fancybox_view [ichimdav #4818]
- * Bug fix: removed portal-column-two from @usergroup [ichimdav #4817]
- * Bug fix: Fixed "Image caption text does not show" for PressReleases
-   [voineali #4772]
+* Bug fix: fixed width and height of gallery_fancybox_view
+  [ichimdav #4818]
+* Bug fix: removed portal-column-two from @usergroup
+  [ichimdav #4817]
+* Bug fix: Fixed "Image caption text does not show" for PressReleases
+  [voineali #4772]
 
 4.12 - (2011-12-15)
 -------------------
- * Bug fix: fixed the padding issue on ipad and any other devices that have
-   resolution of 1024px [ichimdav #4683]
- * Bug fix: allow videos to be displayed as promotions [ichimdav #4830]
- * Change: Updated "Refresh this page" according with EEAContentTypes changes
-   [voineali #4689]
- * Bug fix: fixed small promotion gallery for pages that weren't from themes
-   folder [ichimdav #4827]
- * Bug fix: Fixed contact-info for authenticated users.
-   [voineali #4781]
- * Bug fix: added override for login.js to solve problem in IE8 [tiberich #4808]
+* Bug fix: fixed the padding issue on ipad and any other devices that have
+  resolution of 1024px
+  [ichimdav #4683]
+* Bug fix: allow videos to be displayed as promotions
+  [ichimdav #4830]
+* Change: Updated "Refresh this page" according with EEAContentTypes changes
+  [voineali #4689]
+* Bug fix: fixed small promotion gallery for pages that weren't from themes
+  folder
+  [ichimdav #4827]
+* Bug fix: Fixed contact-info for authenticated users.
+  [voineali #4781]
+* Bug fix: added override for login.js to solve problem in IE8
+  [tiberich #4808]
 
 4.11 - (2011-12-07)
 -------------------
- * Change: better fix for indicators toc list [ichimdav #4726]
- * Bug fix: fixed 2, 8, 11, 15, 16 issues from ticket #4619 [ichimdav #4619]
- * Bug fix: fixed link to articles archive to point to site/articles anywhere in the site[ichimdav #4819]
- * Change: updated message for deleting portlets [ghicaale]
+* Change: better fix for indicators toc list
+  [ichimdav #4726]
+* Bug fix: fixed 2, 8, 11, 15, 16 issues from ticket #4619
+  [ichimdav #4619]
+* Bug fix: fixed link to articles archive to point to site/articles anywhere in the site
+  [ichimdav #4819]
+* Change: updated message for deleting portlets
+  [ghicaale]
 
 4.10 - (2011-12-02)
 -------------------
- * Change: removed kss action from the removal of the portlet and do the post with jquery because
-   the kss action interacted with the confirm popup even if canceled [ichimdav #4793]
- * Bug fix: hide ImageFS image for listings because of double content image [ichimdav #4762]
- * Bug fix: fixed toc list for indicators edit form in eea-toc.js [ichimdav #4726]
+* Change: removed kss action from the removal of the portlet and do the post with jquery because
+  the kss action interacted with the confirm popup even if canceled
+  [ichimdav #4793]
+* Bug fix: hide ImageFS image for listings because of double content image
+  [ichimdav #4762]
+* Bug fix: fixed toc list for indicators edit form in eea-toc.js
+  [ichimdav #4726]
 
 4.9 - (2011-11-30)
 ------------------
- * Bug fix: removed retrieval of description from parent on album entries because it fails to get aq_parent
-   when the parent is a faceted navigation enabled folder [ichimdav #4807]
+* Bug fix: removed retrieval of description from parent on album entries because it fails to get aq_parent
+  when the parent is a faceted navigation enabled folder
+  [ichimdav #4807]
 
 4.8 - (2011-11-29)
 ------------------
- * Change: added eye on earth as external site and removed unused macros [demarant]
- * Change: added a warning box which alerts the user that he is about to delete a portlet [ichimdav #4793]
+* Change: added eye on earth as external site and removed unused macros
+  [demarant]
+* Change: added a warning box which alerts the user that he is about to delete a portlet
+  [ichimdav #4793]
 
 4.7 - (2011-11-28)
 ------------------
- * Change: Fixed floating issue with related portlets [demarant]
- * Change: Links in text must have discreet underline.
-   removed Inline-block, was giving issue when used in news with floating right images.
-   [demarant]
- * Bug fix: Fixed link color in live search results, it was not visible, white on white. [demarant]
+* Change: Fixed floating issue with related portlets
+  [demarant]
+* Change: Links in text must have discreet underline.
+  removed Inline-block, was giving issue when used in news with floating right images.
+  [demarant]
+* Bug fix: Fixed link color in live search results, it was not visible, white on white.
+  [demarant]
 
 4.6 - (2011-11-25)
 ------------------
- * Bug fix: fixed newsletter rendering template
-   [ghicaale #4792]
- * Bug fix: fixed the preview image url for the case when we have an external
-   promotion (link type), the target link and the image link are different.
-   [demarant #4662]
- * Bug fix: fixed cross_site_top macro reference to global_externalsites which prevented the template from
-   being editied with portal_view_customizations [ichimdav #4783]
- * Feature: made "all items" links in whatsnewgallery overwritable to be used by
-   data centres pages [demarant #4784]
+* Bug fix: fixed newsletter rendering template
+  [ghicaale #4792]
+* Bug fix: fixed the preview image url for the case when we have an external
+  promotion (link type), the target link and the image link are different.
+  [demarant #4662]
+* Bug fix: fixed cross_site_top macro reference to global_externalsites which prevented the template from
+  being editied with portal_view_customizations
+  [ichimdav #4783]
+* Feature: made "all items" links in whatsnewgallery overwritable to be used by
+  data centres pages
+  [demarant #4784]
 
 4.5 - (2011-11-24)
 ------------------
- * Bug fix: Updated redirect for broken links [szabozo0 #4702]
- * Change: display link from url field for external promotions [ichimdav #4662]
+* Bug fix: Updated redirect for broken links
+  [szabozo0 #4702]
+* Change: display link from url field for external promotions
+  [ichimdav #4662]
 
 4.4 - (2011-11-23)
 ------------------
-  * Bug fix: display loading image when clicking on the whatsnew gallery to show visual progress [ichimdav #4672]
-  * Bug fix: Fixed TOC for indicators [szabozo0 #4726]
-  * Change: hide site tagline/motto. [demarant]
+* Bug fix: display loading image when clicking on the whatsnew gallery to show visual progress
+  [ichimdav #4672]
+* Bug fix: Fixed TOC for indicators
+  [szabozo0 #4726]
+* Change: hide site tagline/motto.
+  [demarant]
 
 4.3 - (2011-11-22)
 ------------------
- * Bug fix: removed effectiveRange from the topic queries, it missing brains which were found with
-   the faceted navigation [ichimdav #4725]
- * Bug fix: Improved the image quality in the features-item macro, it was using
-   a image_thumb (which was stretched) instead of image_preview higher res.
-   [demarant]
+* Bug fix: removed effectiveRange from the topic queries, it missing brains which were found with
+  the faceted navigation
+  [ichimdav #4725]
+* Bug fix: Improved the image quality in the features-item macro, it was using
+  a image_thumb (which was stretched) instead of image_preview higher res.
+  [demarant]
 
 4.2 - (2011-11-21)
 ------------------
- * Bugfix: fixed links for enquiries [szabozo0 #4735]
+* Bugfix: fixed links for enquiries
+  [szabozo0 #4735]
 
 4.1 - (2011-11-18)
 ------------------
- * Change: changed configuration of faceted navigation for multimedia page to use a single faceted page [ichimdav #4725]
+* Change: changed configuration of faceted navigation for multimedia page to use a single faceted page
+  [ichimdav #4725]
 
 4.0 - (2011-11-18)
 ------------------
- * Bugfix: Fixed header panels to hide on click [szabozo0 #4711]
- * Bugfix: Fixed redirects for broken links [szabozo0 #4702]
- * Change: Improve readability of promo gallery on frontpage and disable description. [demarant]
- * Feature: added portlet to invalidate cache [tiberich #4689]
- * Bug fix: added the Invalidate cache link in the colophon [tiberich #4689]
+* Bugfix: Fixed header panels to hide on click
+  [szabozo0 #4711]
+* Bugfix: Fixed redirects for broken links
+  [szabozo0 #4702]
+* Change: Improve readability of promo gallery on frontpage and disable description.
+  [demarant]
+* Feature: added portlet to invalidate cache
+  [tiberich #4689]
+* Bug fix: added the Invalidate cache link in the colophon
+  [tiberich #4689]
 * Feature: Added a viewlet eea.js_belowbodytag for adding inline js just after the body tag.
   [demarant]
-* Bugfix: Fixed transparency in ie8 on Environmental topics page for the main topics [szabozo0 #4697]
-* Change: Migrated showurl from custom [szabozo0 #4161]
-* Bugfix: Fixed quality of the images for IE8 [szabozo0 #4673]
-* Change: Migrated portlet_toc, portlet_reports from custom [szabozo0 #4161]
-* Bugfix: some templates where still using fill-slot="main", changed to content-core [demarant]
-* Feature: Added context_url and parent_url javascript variables to maintemplate [szabozo0 #4612]
-* Bugfix: get rid of onFrontpage check in main_template, allows proper display of left and right portal columns [tiberich #4624]
-* Bugfix: Fixed login_form when using not existing user/password [szabozo0 #4596]
+* Bugfix: Fixed transparency in ie8 on Environmental topics page for the main topics
+  [szabozo0 #4697]
+* Change: Migrated showurl from custom
+  [szabozo0 #4161]
+* Bugfix: Fixed quality of the images for IE8
+  [szabozo0 #4673]
+* Change: Migrated portlet_toc, portlet_reports from custom
+  [szabozo0 #4161]
+* Bugfix: some templates where still using fill-slot="main", changed to content-core
+  [demarant]
+* Feature: Added context_url and parent_url javascript variables to maintemplate
+  [szabozo0 #4612]
+* Bugfix: get rid of onFrontpage check in main_template, allows proper display of left and right portal columns
+  [tiberich #4624]
+* Bugfix: Fixed login_form when using not existing user/password
+  [szabozo0 #4596]
 * Bugfix: Added tiny_mce.js version 3.4.5 for IE 9 compatibility
   [szabozo0 #4542]
 * Feature: extended the features of dates in document by line to also include
@@ -340,28 +434,46 @@ Changelog
 * Feature: added condition on showing dates info under title for anonymous.
   The default content types that show dates info can be set in site_properties/metatypes_showdates.
   [demarant]
-* Change: Updated CSS for calendar [szabozo0 #4501]
-* Bugfix: Fixed JS error when portal_javascripts are not in development mode [szabozo0 #4542]
+* Change: Updated CSS for calendar
+  [szabozo0 #4501]
+* Bugfix: Fixed JS error when portal_javascripts are not in development mode
+  [szabozo0 #4542]
 * Bugfix: Fixed IE JS errors, fixed code that uses jQuery to avoid conflicts
-  with other JS frameworks [szabozo0 #4542]
+  with other JS frameworks
+  [szabozo0 #4542]
 * Change: no more red CMS banner when logged in. was creating issues, no need for
   that. it is very clear by other elements that you are logged in.
   [demarant]
 * Bug fix: fixed design issues on soer frontpage due to new template.
   [demarant #4520]
-* Feature: Moved Site Setup portlet from left column to the right [szabozo #4493]
-* Feature: refs# 4487 added optional boolean parameter show_description to hide description on promotion gallery, limited the number of character to show in promo navigator and on title so that it works well on most content.
-* Feature: extended the common feature-item macro with "descr_max_length" integer parameter for cropping the lengthy descriptions, default 200 chars [demarant].
-* Feature/Bug fix: refs #4425, fixed a small bug with href for the new featured macro. added the feature of limiting the number of items to show [demarant].
-* Feature: Added first version of "all products" in the whatsnew section. it remains to resort the list by effective date. [demarant]
-* Bugfix: Fixed widgets on soer frontpage, Enabled external link icons, Added styling for wise portlets [szabozo0 #4446]
-* Change: updated the variable of colors to match the new update color scheme. now we can start using these dtml variables in our css to be consistent. [demarant #4458]
-* Bugfix: Fixed file type on album view for EEAFigure, CSS for issue on "Latest added" portlet [szabozo0 #4446]
-* Bugfix: Replaced slide effect with fade. Slide is not available directly in jquerytools only via custom plugin [szabozo0 #4446]
-* Bugfix: Enabled eea-smartview.js, fixed double /view on folder listing, fixed padding for tinymce [szabozo0 #4446]
-* Feature: Added spotlight functionality [szabozo0 #4425]
-* Change: Fixed Right portlets layout, Design of the portlets in the footer, double external link icon [szabozo0 #4440]
-* Change: Override vpip.js with eea_vpip.js for swf animation popup view [szabozo0 #4379]
+* Feature: Moved Site Setup portlet from left column to the right
+  [szabozo #4493]
+* Feature: refs# 4487 added optional boolean parameter show_description to hide description on promotion gallery, limited the number of character 
+  to show in promo navigator and on title so that it works well on most content.
+* Feature: extended the common feature-item macro with "descr_max_length" integer parameter for cropping the lengthy descriptions, default 200
+  chars
+  [demarant].
+* Feature/Bug fix: refs #4425, fixed a small bug with href for the new featured macro. added the feature of limiting the number of items to show
+  [demarant].
+* Feature: Added first version of "all products" in the whatsnew section. it remains to resort the list by effective date.
+  [demarant]
+* Bugfix: Fixed widgets on soer frontpage, Enabled external link icons, Added styling for wise portlets
+  [szabozo0 #4446]
+* Change: updated the variable of colors to match the new update color scheme. now we can start using these dtml variables in our css to be
+  consistent.
+  [demarant #4458]
+* Bugfix: Fixed file type on album view for EEAFigure, CSS for issue on "Latest added" portlet
+  [szabozo0 #4446]
+* Bugfix: Replaced slide effect with fade. Slide is not available directly in jquerytools only via custom plugin
+  [szabozo0 #4446]
+* Bugfix: Enabled eea-smartview.js, fixed double /view on folder listing, fixed padding for tinymce
+  [szabozo0 #4446]
+* Feature: Added spotlight functionality
+  [szabozo0 #4425]
+* Change: Fixed Right portlets layout, Design of the portlets in the footer, double external link icon
+  [szabozo0 #4440]
+* Change: Override vpip.js with eea_vpip.js for swf animation popup view
+  [szabozo0 #4379]
 * Added an override for batch_macros that uses a view. This is to workaround a bug
   [tiberich]
 * Feature: Added upgrade steps
@@ -403,8 +515,8 @@ Changelog
 
 2.21 - (2011-03-09)
 -------------------
- * Change: cleaned up package for pylint & pyflakes violations
-   [ichimdav #4140 #4141]
+* Change: cleaned up package for pylint & pyflakes violations
+  [ichimdav #4140 #4141]
 
 2.20 - (2011-03-02)
 -------------------
@@ -416,8 +528,8 @@ Changelog
 
 2.19 - (2011-02-18)
 -------------------
- * Bug fix: fixed slide.js scoping issues
-   [ichimdav]
+* Bug fix: fixed slide.js scoping issues
+  [ichimdav]
 
 2.18 - (2011-02-18)
 -------------------
@@ -474,32 +586,37 @@ Changelog
   search is plone reserved and stopped working
   [demarant]
 * Bug fix: disabled enter key event on soer frontpage free text search,
-  since it was not working, fixes #3916
-  [demarant]
-* Bug fix: max characters for soer boxes is lowered to 300, fixes #3888
-  [demarant]
+  since it was not working
+  [demarant #3916]
+* Bug fix: max characters for soer boxes is lowered to 300 
+  [demarant #3888]
 * Bug fix: fixed many layout issues on soer frontpage,synched
-  from custom, fixes #3912
-  [demarant]
+  from custom
+  [demarant #3912]
 * Change: compromised time of 7s for message portlet slide on soer frontpage
   [demarant]
 * Bug fix: id to soer frontpage search must be c4
   [demarant]
 * Bug fix: removed unnecessary loop in soer_fronpage.js that was
-  putting IE8 on it knees #3931
-  [vincisas]
+  putting IE8 on it knees
+  [vincisas #3931]
 * Change: added related pages at the bottom since the related portlets are
-  removed in document_view in ZMI custom #3927 [vincisas]
+  removed in document_view in ZMI custom
+  [vincisas #3927]
 * Change: remove related items code from file_view, we have everything in
-  main_template. #3926 [vincisas]
+  main_template.
+  [vincisas #3926]
 * Change: customized at_download.py to raise NotFound instead of
-  raising errors [tiberich #3934]
-* Bug fix: fixed RSSFeedRecipe_icon.png cache settings [ghicaale #3943]
+  raising errors
+  [tiberich #3934]
+* Bug fix: fixed RSSFeedRecipe_icon.png cache settings
+  [ghicaale #3943]
 
 2.10 - (2010-11-26)
 -------------------
 * Change: Added more links under facts/messages boxes and other boxes on
-  SOER frontpage [demarant]
+  SOER frontpage
+  [demarant]
 * Bug fix: re-enabled the soer frontpage tag cloud and adjusted its design
   [demarant]
 * Bug fix: The tagcloud portlet's items are not updated according with
@@ -508,27 +625,27 @@ Changelog
 * Change: longer delay when playing keyfacts/keymessages
   [demarant]
 * Bug fix: layout of key facts boxes, limit the text length from 380 to 320
-  after some more testing refs #3888
-  [demarant]
+  after some more testing
+  [demarant #3888]
 * Change: style: make all countries names uppercase in soer countries facet,
   for conformity
   [demarant]
 * Bug fix: the topic result page for SOER2010 frontpage must include only
-  certain types, fixes #3894
-  [demarant]
+  certain types
+  [demarant #3894]
 * Bug fix: layout fix for sliding portlets, play button was overlapping,
-  give more height, fixes #3888.
-  [demarant]
-* Change: SOER2010 key messages and key facts: play slower #3899
-  [vincisas]
+  give more height
+  [demarant #3888]
+* Change: SOER2010 key messages and key facts: play slower
+  [vincisas #3899]
 * Feature: SOER2010 make key facts and key messages appear in randomly on
-  SOER homepage #3892
-  [vincisas]
+  SOER homepage
+  [vincisas #3892]
 
 2.9 - (2010-11-22)
 ------------------
-* BUG FIX: Layout fix for geo popup on SOER homepage #3876
-  [vincisas]
+* BUG FIX: Layout fix for geo popup on SOER homepage
+  [vincisas #3876]
 
 2.8 - (2010-11-19)
 ------------------
@@ -572,21 +689,22 @@ Changelog
 * Bug fix: Removed path from catalog query so the query should be bullet proof now
   [r18500 thuliper]
 * Change: Only require SOER2010 plus ONE of the passed in keywords.
-  Refs #3797 [r18499 thuliper]
+  [r18499 thuliper #3797]
 * Bug fix: Display all countries in alphabetical order.
-  Fixes #3800 [r18498 thuliper]
+  [r18498 thuliper #3800]
 * Change: More padding on search box titles/labels.
-  Refs #3798 [r18497 thuliper]
+  [r18497 thuliper #3798]
 * Bug fix: Avoid long item in drop down.
-  Refs #3798 [r18496 thuliper]
+  [r18496 thuliper #3798]
 * Bug fix: Fixed size on #visual-portal-wrapper and video box.
-  Refs #3798 [r18495 thuliper]
+  [r18495 thuliper #3798]
 * Change: Also support 'soer-draft' as the name of the soer frontpage folder
   [r18494 thuliper]
 
 2.3 - (2010-10-25)
 ----------------------
-* Feature: SOER 2010 frontpage milestone 1 [thuliper]
+* Feature: SOER 2010 frontpage milestone 1
+  [thuliper]
 * Bug fix: fixed 404s on loading images in eea template on devels
   [ghicaale #3697]
 
@@ -628,7 +746,8 @@ Changelog
 
 1.8 - (2010-08-04)
 ------------------
-* Feature: Hidable left menu [thuliper, #3436]
+* Feature: Hidable left menu
+  [thuliper, #3436]
 * Bug fix: Fixed all images to have righ metadata file with cache setting.
   Added bash script for later use.
   [demarant]
@@ -637,7 +756,8 @@ Changelog
 
 1.7 - (2010-07-08)
 ------------------
-* Change: Thinner global nav [demarant]
+* Change: Thinner global nav
+  [demarant]
 * Change: Reduced the spaces used by the cross-site-top area
   [demarant]
 
@@ -734,7 +854,8 @@ Changelog
 
 0.9 - (2010-02-22)
 ------------------
-* Feature: Autoscroll browser down to element classed 'autoscroll-to-here' #3011
+* Feature: Autoscroll browser down to element classed 'autoscroll-to-here'
+  [#3011]
 * Feature: Separated galleryview/tooltip integration into more descriptive
   files enabled for CMS
   [thuliper, #3007]
@@ -770,18 +891,18 @@ Changelog
 0.5 - (2009-12-04)
 ------------------
 * Change: Hardcoded list of promotions to show how it looks with correct images.
-  #2824 [thuliper]
+  [thuliper #2824]
 * Feature: Use new green tooltips from eea.jquery.
-  #2840 [thuliper]
+  [thuliper #2840]
 * Change: New smaller image layout of frontpage promotions.
-  #2840 [thuliper]
+  [thuliper #2840]
 
 0.4 - (2009-12-01)
 ------------------
 * Feature: Added tooltips for multimedia area
-  #2769 [thuliper]
+  [thuliper #2769]
 * Feature: Added jQuery Tools tooltips to frontpage promotions.
-  #2824 [thuliper]
+  [thuliper #2824]
 * Bug fix: Fit current navigation in lowest supported resolution
   [vincisas]
 
@@ -791,8 +912,8 @@ Changelog
   [thuliper]
 * Change: Removed tagline and frontpage-searchbox.
   [demarant]
-* Feature: Display info/warning dialog before printing #2791.
-  [thuliper]
+* Feature: Display info/warning dialog before printing.
+  [thuliper #2791]
 * Change: Removed frontpage multimedia from print.css - it didn't layout correctly in IE.
   [thuliper]
 * Bug fix: Fixed searchbox not removing default text when focused.
@@ -802,8 +923,8 @@ Changelog
   [thuliper]
 * Bug fix: Fixed content overflow in frontpage column areas.
   [thuliper]
-* Bug fix: Fixed document actions position too high #2792.
-  [thuliper]
+* Bug fix: Fixed document actions position too high.
+  [thuliper #2792]
 * Bug fix: Fixed bug where promotions on theme pages sometimes took up too little width.
   [thuliper]
 * Bug fix: Fixed horizontal scrollbar on frontpage in IE7/8.
