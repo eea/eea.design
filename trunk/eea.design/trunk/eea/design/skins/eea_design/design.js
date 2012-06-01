@@ -52,8 +52,14 @@ jQuery(document).ready(function($) {
             bulb = ecotip.find('.ecotip-bulb');
             led = ecotip.find('.led-bulb');
             action = function(){
-                bulb.fadeToggle();
-                led.fadeToggle();
+                if (jQuery.fadeToggle){
+                    bulb.fadeToggle();
+                    led.fadeToggle();
+                }
+                else{
+                    bulb.is(":visible") ? bulb.fadeOut() : bulb.fadeIn();
+                    led.is(":visible") ? led.fadeOut() : led.fadeIn();
+                }
             };
         }
         else {
