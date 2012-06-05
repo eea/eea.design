@@ -3,6 +3,8 @@
 
 4.24-dev - (unreleased)
 -----------------------
+* Bug fix: set review to publish for anonymous users when displaying listings 
+  [ichimdav refs #5244]
 * Bug fix: fixed markup of HISTORY.txt file
   [ciobabog refs #5231]
 * Bug fix: fixed conflict with plone.app.discussion, submitting replies
