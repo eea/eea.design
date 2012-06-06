@@ -462,6 +462,7 @@ dl.portlet a:hover {
     display: inline-block;
 }
 
+span.languageCodes a.translated,
 #content span.link-external a.translated {
     background: none repeat scroll 0 0 #ECECEC;
     border-radius: 0.5em 0.5em 0.5em 0.5em;

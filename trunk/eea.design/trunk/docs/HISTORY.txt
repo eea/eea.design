@@ -15,6 +15,9 @@
   and folder_tabs_view if they are defaultPage of folder
   [ichimdav #5197]
 * Change: Updated code comments
+* Bug Fix: CSS adjust for the extra en link in multimedia default page. 
+  The content of the page will be translated in the po files
+  [prospchr refs #5184]
 
 4.23 - (2012-05-15)
 -------------------
