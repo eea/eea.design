@@ -594,6 +594,7 @@ img
     progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
 }
 
+#cross-site-top .portlet,
 #portal-footer .portlet {
     filter: none;
     -ms-filter: none;
