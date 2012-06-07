@@ -175,7 +175,14 @@ body.frontpage #portal-columns {
     display: inline-block;
 }
 
+.featured-highlight-title {
+    float: right;
+    width: 130px;
+}
 
+.featured-highlight-description  {
+    clear: both;
+}
 
 /* Frontpage multimedia area
 ******************************************************************************/

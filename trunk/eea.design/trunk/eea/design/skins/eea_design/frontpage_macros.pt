@@ -76,14 +76,18 @@
                 </tal:cond>
 
                 <tal:nocond tal:condition="not:is_video">
-                    <h3 class="highlight">
-                        <a href="#" class="noPrint"
-                            tal:attributes="href url;"
-                           tal:content="title">
-                               Highlight Title</a></h3>
-                    <p tal:content="python:plone_view.cropText(description,descr_max_length)">description</p>
-                    <p><a href="#" class="moreLink"
-                            tal:attributes="href url;" i18n:translate="read_more">Read more</a></p>
+                    <div class="featured-highlight-title">
+                        <h3 class="highlight">
+                            <a href="#" class="noPrint"
+                                tal:attributes="href url;"
+                               tal:content="title">
+                                   Highlight Title</a></h3>
+                    </div>
+                    <div class="featured-highlight-description">
+                        <p tal:content="python:plone_view.cropText(description,descr_max_length)">description</p>
+                        <p><a href="#" class="moreLink"
+                                tal:attributes="href url;" i18n:translate="read_more">Read more</a></p>
+                    </div>
                 </tal:nocond>
                 </div>
          </tal:item>
