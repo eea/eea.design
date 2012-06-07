@@ -3,7 +3,9 @@
 
 4.24-dev - (unreleased)
 -----------------------
-* Bug fix: set review to publish for anonymous users when displaying listings 
+* Bug fix: Increase kss global timeout from 8s to 1h
+  [voineali fixes #5017]
+* Bug fix: set review to publish for anonymous users when displaying listings
   [ichimdav refs #5244]
 * Bug fix: fixed markup of HISTORY.txt file
   [ciobabog refs #5231]
@@ -48,7 +50,7 @@
 
 4.22 - (2012-04-27)
 -------------------
-* Bug fix: enable toc scanning back to content instead of content-core 
+* Bug fix: enable toc scanning back to content instead of content-core
   [ichimdav #5118]
 
 4.21 - (2012-04-26)
@@ -66,7 +68,7 @@
   [demarant]
 * Bug fix: fixed content table from going over content area
   [ichimdav #5056]
-* Change: Consolidated album view design to 16:9. 
+* Change: Consolidated album view design to 16:9.
   [ichimdav, demarant fixes #5029]
 * Bug fix: fixed live search when "only in current section" is not selected
   [ghicaale fixes #5091]
@@ -455,7 +457,7 @@
   [demarant #4520]
 * Feature: Moved Site Setup portlet from left column to the right
   [szabozo #4493]
-* Feature: refs# 4487 added optional boolean parameter show_description to hide description on promotion gallery, limited the number of character 
+* Feature: refs# 4487 added optional boolean parameter show_description to hide description on promotion gallery, limited the number of character
   to show in promo navigator and on title so that it works well on most content.
 * Feature: extended the common feature-item macro with "descr_max_length" integer parameter for cropping the lengthy descriptions, default 200
   chars
@@ -595,7 +597,7 @@
 * Bug fix: disabled enter key event on soer frontpage free text search,
   since it was not working
   [demarant #3916]
-* Bug fix: max characters for soer boxes is lowered to 300 
+* Bug fix: max characters for soer boxes is lowered to 300
   [demarant #3888]
 * Bug fix: fixed many layout issues on soer frontpage,synched
   from custom

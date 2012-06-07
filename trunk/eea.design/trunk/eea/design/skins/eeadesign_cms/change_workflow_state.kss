@@ -5,6 +5,11 @@
     a kss.dtml extension.
 */
 
+body:load {
+    action-client: setActionServerTimeout;
+    setActionServerTimeout-value: 3600000;
+}
+
 #plone-contentmenu-workflow dd.actionMenuContent a:load {
     action-client: EEAPloneAdminChangeWorkflowState;
 }

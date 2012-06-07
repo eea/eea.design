@@ -26,15 +26,15 @@ EEAPloneAdmin.ChangeWorkflowState.prototype = {
             jQuery(eea_contentmenu_header).html("<img src='" + context_url + "/eea-ajax-loader.gif' alt='Changing state ...' title='Changing state ...' />");
         });
     }
-  },
-}
+  }
+};
 
 // jQuery plugin for EEAPloneAdmin.ChangeWorkflowState
 jQuery.fn.EEAPloneAdminChangeWorkflowState = function(options){
   return this.each(function(){
     var context = jQuery(this).addClass('eea-ajax');
-    var geoview = new EEAPloneAdmin.ChangeWorkflowState(context, options);
-    context.data('EEAPloneAdminChangeWorkflowState', geoview);
+    var plugin = new EEAPloneAdmin.ChangeWorkflowState(context, options);
+    context.data('EEAPloneAdminChangeWorkflowState', plugin);
   });
 };
 
