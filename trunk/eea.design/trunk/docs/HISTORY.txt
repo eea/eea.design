@@ -3,6 +3,9 @@
 
 4.24-dev - (unreleased)
 -----------------------
+* Bug fix: avoid tripping on errors in portal_workflow when user
+  is anonymous and get an Unauthorized error
+  [tiberich fixes #5250]
 * Bug fix: Increase kss global timeout from 8s to 1h
   [voineali fixes #5017]
 * Bug fix: set review to publish for anonymous users when displaying listings

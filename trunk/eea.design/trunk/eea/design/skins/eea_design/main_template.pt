@@ -21,10 +21,10 @@
                         isAnon portal_state/anonymous;
                         isEmpty context/@@plone_context_state/is_empty;
                         member portal_state/member;
-                        actions python:context.portal_actions.listFilteredActionsFor(context);
+                        actions python:not isAnon and context.portal_actions.listFilteredActionsFor(context);
                         mtool context/portal_membership;
                         wtool context/portal_workflow;
-                        wf_state context_state/workflow_state;
+                        wf_state python: not isAnon and context_state.workflow_state;
                         default_language portal_state/default_language;
                         is_editable context_state/is_editable;
                         isContextDefaultPage context_state/is_default_page;
