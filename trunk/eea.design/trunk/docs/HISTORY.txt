@@ -1,10 +1,7 @@
 ﻿Changelog
 =========
 
-4.4-dev - (unreleased)
-----------------------
-
-4.3 - (2012-06-12)
+4.24-dev - (unreleased)
 ------------------
 * Bug fix: display translation form fields and make room for it by setting 
   the edit form full screen
