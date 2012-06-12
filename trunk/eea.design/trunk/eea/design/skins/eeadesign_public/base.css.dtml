@@ -26,6 +26,11 @@ p {
     font-size: 115%;
 }
 
+/* stop inheriting bigger size for nested lists */
+#content-core li li {
+    font-size: 100%;
+}
+
 img {
     border: none;
     vertical-align: middle;

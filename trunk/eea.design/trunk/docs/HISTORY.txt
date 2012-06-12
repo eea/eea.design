@@ -3,6 +3,8 @@
 
 4.24-dev - (unreleased)
 -----------------------
+* Bug fix: blocked font size increase for nested lists
+  [demarant fixes #5269]
 * Bug fix: avoid tripping on errors in portal_workflow when user
   is anonymous and get an Unauthorized error
   [tiberich fixes #5250]
