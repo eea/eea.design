@@ -1,0 +1,6 @@
+<tal:allproducts metal:define-macro="allproducts" 
+        tal:define="frontpage_view context/@@frontpage_highlights;
+                    folderContents frontpage_view/getAllProducts;
+                    ajax python:True">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+</tal:allproducts>

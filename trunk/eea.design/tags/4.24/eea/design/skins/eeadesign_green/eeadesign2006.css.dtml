@@ -1,0 +1,69 @@
+/*
+  This file is based on the ploneCustom.css.dtml shipped with Plone.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* YOUR CSS RULES START HERE */
+
+#printLogo {
+    display: none;
+}
+
+.visualClear {
+    display: block;
+    clear: both;
+}
+
+.image-right {
+   float: right;
+   clear: both;
+   margin: 1.5em 0 0 0;
+   padding-right: 0.5em;
+   border: none;
+   vertical-align: middle;
+}
+
+/* Subsite, subsection identification */
+
+#portal-subsite {
+ position:absolute;
+ margin-top:-35px;
+}
+
+
+#portal-subsite a {
+ color: &dtml-linkColor;;
+ text-decoration: none;
+ font-size:85%;
+}
+
+#portal-subsite a:hover {
+ color: &dtml-linkColor;
+}
+
+
+/* Accessibility and visual enhancement elements */
+
+.hiddenStructure {
+    display: block;
+    background: transparent;
+    background-image: none; /* safari bug */
+    border: none;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px 0 0 -1px;
+    width: 1px;
+}
+
+
+
+/* YOUR CSS RULES STOP HERE */
+
+/* </dtml-with> */
+
+/* Latest version of the documentation on pre-defined properties from Plone
+   can be found in CMFPlone/skins/plone_styles/ploneCustom.css */
+
