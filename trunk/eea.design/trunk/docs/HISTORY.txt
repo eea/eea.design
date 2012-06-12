@@ -1,6 +1,9 @@
 ﻿Changelog
 =========
 
+4.25-dev - (unreleased)
+-----------------------
+
 4.24 - (2012-06-12)
 -------------------
 * Bug fix: display translation form fields and make room for it by setting 
