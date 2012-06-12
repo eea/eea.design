@@ -1,2 +1,2 @@
 recursive-include eea *
-global-exclude *pyc
+global-exclude *pycglobal-include *mo
