@@ -140,7 +140,8 @@
                     </div>
 
                     <metal:slot define-slot="body">
-                        <div id="content"  class="documentContent panels">
+                        <div id="content"  class="documentContent panels" 
+                                           tal:attributes="class python:wf_state and ('documentContent panels wf-state-' + str(wf_state)) or 'documentContent panels'">
 
                             <metal:header define-slot="header" tal:content="nothing">
                             Visual Header

@@ -3,6 +3,11 @@
 
 4.24-dev - (unreleased)
 -----------------------
+* Feature: Added a watermark DRAFT in content area to make it
+  clear that a content is not in final publish state. This will also
+  warn content manager to properly publish content instead of using the
+  ambiguous public draft (visible) state.
+  [demarant]
 * Bug fix: blocked font size increase for nested lists
   [demarant fixes #5269]
 * Bug fix: avoid tripping on errors in portal_workflow when user
