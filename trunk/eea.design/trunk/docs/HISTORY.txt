@@ -3,6 +3,9 @@
 
 4.24-dev - (unreleased)
 -----------------------
+* Bug fix: display translation form fields and make room for it by setting 
+  the edit form full screen
+  [ichimdav #5267]
 * Feature: Added a watermark DRAFT in content area to make it
   clear that a content is not in final publish state. This will also
   warn content manager to properly publish content instead of using the
