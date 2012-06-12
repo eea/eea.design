@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-        if (!$("#multimedia-widgets").length) {  
+        if (!$("#multimedia-widgets").length) {
             var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
                 global_nav = $('#portal-globalnav');
             // Fix for EEATemplatesService for sites with jquery < 1.4
@@ -22,6 +22,18 @@ jQuery(document).ready(function($) {
         $('#icon-full_screen').parent().remove();
     }
 
+    // 5267 display form fields for translated items
+    var edit_bar = $("#edit-bar");
+    var edit_translate = function() {
+        var translating = $("#content").find('form').find('.hiddenStructure').text().indexOf('Translating');
+        if(translating !== -1) {
+            edit_bar.closest('#portal-column-content')[0].className = "cell width-full position-0";
+        }
+    };
+    if(edit_bar) {
+        edit_translate();
+    }
+
     // #4157 move the non embedded links out of the enumeration of the embedded
     // links in order to preserve the design
     var $auto_related = $("#auto-related"),
@@ -31,7 +43,7 @@ jQuery(document).ready(function($) {
         $auto_related.detach();
         $dls.each(function(idx, item){
             var $item = $(item),
-                $dt = $item.find('dt'); 
+                $dt = $item.find('dt');
             $item.find('.portletItem').each(function(idx, item){
                 if(item.className.indexOf('embedded') === -1) {
                     $(item).insertAfter($dt);
@@ -46,7 +58,7 @@ jQuery(document).ready(function($) {
     */
     var toggleEcotipClass = function(){
         var ecotip = jQuery('#portlet-ecotip'),
-            ie = $.browser.msie  && (parseInt($.browser.version, 10) < 10), 
+            ie = $.browser.msie  && (parseInt($.browser.version, 10) < 10),
             action, bulb, led;
         if(ie) {
             bulb = ecotip.find('.ecotip-bulb');
@@ -63,7 +75,7 @@ jQuery(document).ready(function($) {
             };
         }
         else {
-            action = function(){ecotip.toggleClass('hover');}; 
+            action = function(){ecotip.toggleClass('hover');};
         }
 
         toggleEcotipClass = function() {

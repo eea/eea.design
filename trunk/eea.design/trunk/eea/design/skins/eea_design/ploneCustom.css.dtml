@@ -2419,6 +2419,16 @@ div.managePortletsLink, a.managePortletsFallback {
     white-space: normal !important;
 }
 
+/* #5267 display form fields for translated items */
+form[name="edit_form"] > table > tbody > tr {
+    display: table-row;
+    margin-left: 1em;
+}
+form[name="edit_form"] > table > tbody > tr > td {
+    display : inline-block; 
+    margin-left : 1em; 
+    width: 48.6% !important;
+}
 
 /* IE8: keeps livesearch from falling behind content area,
    and display menu from falling behind footer
