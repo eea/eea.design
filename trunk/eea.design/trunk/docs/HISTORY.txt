@@ -7,9 +7,6 @@
   [ichimdav #3355]
 * Bug fix: don't show overflow scrollbars for edit form in translation
   [ichimdav #5267]
-
-4.24 - (2012-06-12)
--------------------
 * Bug fix: display translation form fields and make room for it by setting 
   the edit form full screen
   [ichimdav #5267]
@@ -42,6 +39,10 @@
   [prospchr refs #5184]
 * Bug Fix: Fix long words bug in featured article Titles  
   [prospchr refs #5184]
+
+4.24 - (2012-06-12)
+-------------------
+* equal to 4.23 by eggmonkey bug.
 
 4.23 - (2012-05-15)
 -------------------
