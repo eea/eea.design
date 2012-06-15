@@ -5,6 +5,8 @@
 -----------------------
 * Bug fix: removed old map from atct_topic_view
   [ichimdav #3355]
+* Bug fix: don't show overflow scrollbars for edit form in translation
+  [ichimdav #5267]
 
 4.24 - (2012-06-12)
 -------------------

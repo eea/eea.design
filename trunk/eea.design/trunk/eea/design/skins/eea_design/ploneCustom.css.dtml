@@ -2429,7 +2429,9 @@ form[name="edit_form"] > table > tbody > tr > td {
     margin-left : 1em; 
     width: 48.6% !important;
 }
-
+form[name="edit_form"] table {
+    display: table !important;
+}
 /* IE8: keeps livesearch from falling behind content area,
    and display menu from falling behind footer
    Keeping float for IE7, so the portlets don't fall */
