@@ -1,6 +1,9 @@
 ﻿Changelog
 =========
 
+4.26-dev - (unreleased)
+-----------------------
+
 4.25 - (2012-06-15)
 -------------------
 * Bug fix: removed old map from atct_topic_view
