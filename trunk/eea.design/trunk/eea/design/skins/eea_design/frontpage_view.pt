@@ -9,7 +9,7 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
     </head>
     <body>
 
-        <div metal:fill-slot="main">
+        <div metal:fill-slot="main" id="content-core">
 
             <h1 class="hiddenStructure" tal:content="context/Title">EEA Home page</h1>
             <tal:main-macro metal:define-macro="main">
