@@ -233,10 +233,6 @@
     width: 53px;
 }
 
-#promo-navigator li.active img, #promo-navigator-sm li.active img {
-	border: 1px solid #6C8E5C;
-}
-
 #promo-navigator li.active h3, #promo-navigator-sm li.active h3 {
 	color:#FFF;
 }
