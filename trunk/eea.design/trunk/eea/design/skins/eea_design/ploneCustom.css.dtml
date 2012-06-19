@@ -1403,6 +1403,7 @@ h3.site-description {
 }
 
 #searchbox_terminology input:focus,
+#portal-searchbox input:focus,
 .searchField:focus {
     font-style: normal;
     color: #000000;

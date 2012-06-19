@@ -3,6 +3,8 @@
 
 4.26-dev - (unreleased)
 -----------------------
+* Bug fix: fixed padding of folder icons in navigation portlet
+  [ichimdav #5243]
 * Bug fix: various layout fixes, e.g. text size in promotion gallery, 
   highlight thumbnails border and more.
   [ichimdav, demarant fixes #5188]

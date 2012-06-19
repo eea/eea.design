@@ -1979,6 +1979,11 @@ div.overlay .formControls a {
     padding-left: 0px !important;
 }
 
+/* #5243 wrongly indented folder icon */
+#portal-column-content .portletNavigationTree .contenttype-folder {
+    padding-left: 10px !important;
+}
+
 .documentEditable .mceLayout {
     /* fixes width of edit forms because tinymce has hardcoded width */
     width:100% !important;
