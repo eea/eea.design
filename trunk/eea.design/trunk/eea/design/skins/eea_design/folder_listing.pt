@@ -12,18 +12,15 @@
     <tal:comment tal:replace="nothing"> 
     If folder is public draft and user is anonymous, redirect to a standared message page
     </tal:comment>
-    <tal:isEmpty tal:condition="python: isAnon and not checkPermission('List folder contents', here)">
+    <tal:cond tal:condition="python: isAnon and not checkPermission('List folder contents', here)">
          <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/listing_not_available')" />
-    </tal:isEmpty>    
-    <tal:isEmpty tal:condition="python: isEmpty and isAnon">
-         <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/not_available_lang')" />
-    </tal:isEmpty>
+    </tal:cond>    
 
 <metal:block define-macro="content-core"
                     tal:define="kssClassesView context/@@kss_field_decorator_view;
                                 getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                                 templateId template/getId;
-                                not_show_empty python: True;">
+                                ">
 
 
     <div metal:define-macro="text-field-view"
@@ -89,7 +86,7 @@
             </a>
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
-            <tal:block tal:condition="python: not isAnon or not not_show_empty or not isEmpty"
+            <tal:block tal:condition="python: not isAnon"
                        tal:define="
                                    item_object item/getObject|nocall:item;
                                    urlview item_object/@@url;
@@ -112,7 +109,6 @@
                                    item_creator item/Creator;
                                    item_start item/start|item/StartDate|nothing;
                                    item_end item/end|item/EndDate|nothing;
-                                   not_show_empty not_show_empty|nothing;
 
                                    item_sametime python: item_start == item_end;
                                    item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False">
