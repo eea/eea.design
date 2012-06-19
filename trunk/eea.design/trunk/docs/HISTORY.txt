@@ -8,6 +8,8 @@
 * Bug fix: various layout fixes, e.g. text size in promotion gallery, 
   highlight thumbnails border and more.
   [ichimdav, demarant fixes #5188]
+* Bug fix: removed usage of is_empty
+  [tiberich refs #5289]
   
 4.25 - (2012-06-15)
 -------------------

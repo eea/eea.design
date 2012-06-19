@@ -19,7 +19,6 @@
                         here_url context_state/object_url;
                         portal portal_state/portal;
                         isAnon portal_state/anonymous;
-                        isEmpty context/@@plone_context_state/is_empty;
                         member portal_state/member;
                         actions python:not isAnon and context.portal_actions.listFilteredActionsFor(context);
                         mtool context/portal_membership;
