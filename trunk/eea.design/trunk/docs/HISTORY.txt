@@ -3,6 +3,9 @@
 
 4.26-dev - (unreleased)
 -----------------------
+* Bug fix: Don't send batch keyword to atct_topic_view if context isn't
+  a topic 
+  [ichimdav #5294]
 * Bug fix: fixed padding of folder icons in navigation portlet
   [ichimdav #5243]
 * Bug fix: various layout fixes, e.g. text size in promotion gallery, 
