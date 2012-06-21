@@ -6,7 +6,7 @@ from Products.CMFCore.utils import getToolByName
 
 from Products.Five import BrowserView
 
-from eea.design.browser.frontpage import _getItems
+from eea.design.browser.frontpage import _getItems, _getImageUrl
 from eea.promotion.interfaces import IPromotion
 
 class DataMaps(BrowserView):
@@ -145,3 +145,7 @@ class DataMaps(BrowserView):
         else:
             cPromos.extend(self.getAllProducts())
             return list(set(cPromos))
+
+    def getImageUrl(self, brain):
+        """ retrive image for promotion from parent """
+        return _getImageUrl(brain)

@@ -21,6 +21,7 @@
 
 <metal:featured metal:define-macro="featured-item"
      tal:define="featured_class featured_class|context/@@frontpage_highlights;
+                 get_img_url  nocall:featured_class/getImageUrl;
                  nr_items nr_items|python:1; 
                  highlights highlights|featured_class/getHighArticles;
                  plone_view nocall:plone_view|context/@@plone;
@@ -41,6 +42,8 @@
                               absolute_url highlight/absolute_url|nothing;
                               url python:getUrl or getURL or absolute_url;
                               image_url python:getURL or getUrl or absolute_url;
+                              parent_image_url python:get_img_url(highlight);
+                              image_url python:parent_image_url if parent_image_url else image_url;
                               title highlight/Title|highlight/getNewsTitle;
                               description highlight/Description|highlight/getTeaser;
                               is_video python:highlight.portal_type == 'File';">

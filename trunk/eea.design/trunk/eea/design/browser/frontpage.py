@@ -116,7 +116,7 @@ class Frontpage(BrowserView):
             },
             'review_state': 'published',
             'sort_on': 'effective',
-            'sort_order' : 'reverse'
+            'sort_order': 'reverse'
         }
 
         result = self.catalog(query)
@@ -135,19 +135,22 @@ class Frontpage(BrowserView):
     def getPromotions(self):
         """ Promotions
         """
-        result = _getPromotions(self, noOfItems = self.noOfPromotions)
+        result = _getPromotions(self, noOfItems=self.noOfPromotions)
         return result
 
     def getMultimedia(self):
-        """ retrieves multimedia objects (videos/animations etc..) 
+        """ retrieves multimedia objects (videos/animations etc..)
         filtered by date and by topic """
         interface = 'p4a.video.interfaces.IVideoEnhanced'
         result = _getItems(self,
-                    interfaces = interface,
+                    interfaces=interface,
                     noOfItems=self.noOfMultimedia)
-        
+
         return result
-    
+
+    def getImageUrl(self, brain):
+        """ retrive image for promotion from parent """
+        return _getImageUrl(brain)
 
     def _getTeaserMedia(self, high, scale):
         """ teaser media utility method """
@@ -205,8 +208,8 @@ class Frontpage(BrowserView):
         return result
 
 ## deprecated visibility methods
-    cache(cacheKeyHighlights, dependencies = ['frontpage-highlights'])
-    def getLow(self, portaltypes = ('Highlight', 'PressRelease'),
+    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
+    def getLow(self, portaltypes=('Highlight', 'PressRelease'),
                                                         scale='dummy'):
         """ Low
         """
@@ -414,6 +417,23 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
                                             noOfItems = noOfItems)
     return result
 
+def _getImageUrl(brain):
+    """ use url of parent image if promoted item doesn't have an image
+    and the parent has one
+    """
+    # #5247 use url of parent if promoted item doesn't have an image
+    obj = brain.getObject()
+    url = ""
+    if brain.is_default_page and \
+        'Products.ATContentTypes.interfaces.image.IImageContent' \
+        not in brain.object_provides:
+        parent = obj.aq_parent
+        res = parent.getFolderContents({'portal_type': 'Image',
+            'sort_on': 'getObjPositionInParent'})
+        if res:
+            url = parent.absolute_url()
+    return url
+
 def filterLatestVersion(self, brains, noOfItems = 6):
     """ Take a list of catalog brains
     and return only the first noOfItems
@@ -421,7 +441,7 @@ def filterLatestVersion(self, brains, noOfItems = 6):
     """
     res = []
     for brain in brains:
-        # if object implements our versioning 
+        # if object implements our versioning
         if 'eea.versions.interfaces.IVersionEnhanced' in brain.object_provides:
             obj = brain.getObject()
             versionsObj = obj.unrestrictedTraverse('@@getLatestVersionUrl')
