@@ -13,64 +13,68 @@
     <h1 i18n:translate="title_soer_geographically">Browse SOER geographically</h1>
     
     <ul id="portal-sitemap" style="width: 550px;">
-            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Regions</span>
+            <li style="float:left;width:125px;margin-left:1em;">
+                <span style="font-size: 1.4em; font-weight: bold;" i18n:translate="regions">Regions</span>
                <ul>
-		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&c11=DiversityReport&c11=FlexibilityReport&c12=all&c5=&b_start=0&c15=alpine">Alpine region</a></li>
-		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&c11=DiversityReport&c11=FlexibilityReport&c12=all&c5=&b_start=0&c15=carpathian">Carpathians</a></li>
-		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&c11=DiversityReport&c11=FlexibilityReport&c12=all&c5=&b_start=0&c15=baltic">Baltic sea</a></li>
+		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&amp;c11=DiversityReport&amp;c11=FlexibilityReport&amp;c12=all&amp;c5=&amp;b_start=0&amp;c15=alpine"
+		        i18n:translate="">Alpine region</a></li>
+		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&amp;c11=DiversityReport&amp;c11=FlexibilityReport&amp;c12=all&amp;c5=&amp;b_start=0&amp;c15=carpathian"
+		        i18n:translate="">Carpathians</a></li>
+		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&amp;c11=DiversityReport&amp;c11=FlexibilityReport&amp;c12=all&amp;c5=&amp;b_start=0&amp;c15=baltic"
+		        i18n:translate="">Baltic sea</a></li>
    	       </ul>
 	       <br/>
-	       <a href="europe">Europe</a><br/>
+	       <a href="europe" i18n:translate="">Europe</a><br/>
 	       <br/>
-	       <a href="europe-and-the-world">World</a>
+	       <a href="europe-and-the-world" i18n:translate="">World</a>
             </li>
-            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Countries A-F</span>
+            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;" i18n:translate="">Countries A-F</span>
                <ul>
-		<li><a href="countries/al/" title="Albania">Albania</a></li>
-		<li><a href="countries/at/" title="Austria">Austria</a></li>
-		<li><a href="countries/be/" title="Belgium">Belgium</a></li>
-		<li><a href="countries/ba/" title="Bosnia and Herzegovina">Bosnia and Herzegovina</a></li>
-		<li><a href="countries/bg/" title="Bulgaria">Bulgaria</a></li>
-		<li><a href="countries/hr/" title="Croatia">Croatia</a></li>
-		<li><a href="countries/cy/" title="Cyprus">Cyprus</a></li>
-		<li><a href="countries/cz/" title="Czech Republic">Czech Republic</a></li>
-		<li><a href="countries/dk/" title="Denmark">Denmark</a></li>
-		<li><a href="countries/ee/" title="Estonia">Estonia</a></li>
-		<li><a href="countries/fi/" title="Finland">Finland</a></li>
-		<li><a href="countries/mk/" title="Former Yugoslav Republic of Macedonia">Former Yugoslav Republic of Macedonia</a></li>
-		<li><a href="countries/fr/" title="France">France</a></li>
+		<li><a href="countries/al/" title="Albania" i18n:attributes="title" i18n:translate="">Albania</a></li>
+		<li><a href="countries/at/" title="Austria" i18n:attributes="title" i18n:translate="">Austria</a></li>
+		<li><a href="countries/be/" title="Belgium" i18n:attributes="title" i18n:translate="">Belgium</a></li>
+		<li><a href="countries/ba/" title="Bosnia and Herzegovina" i18n:attributes="title" i18n:translate="">Bosnia and Herzegovina</a></li>
+		<li><a href="countries/bg/" title="Bulgaria" i18n:attributes="title" i18n:translate="">Bulgaria</a></li>
+		<li><a href="countries/hr/" title="Croatia" i18n:attributes="title" i18n:translate="">Croatia</a></li>
+		<li><a href="countries/cy/" title="Cyprus" i18n:attributes="title" i18n:translate="">Cyprus</a></li>
+		<li><a href="countries/cz/" title="Czech Republic" i18n:attributes="title" i18n:translate="">Czech Republic</a></li>
+		<li><a href="countries/dk/" title="Denmark" i18n:attributes="title" i18n:translate="">Denmark</a></li>
+		<li><a href="countries/ee/" title="Estonia" i18n:attributes="title" i18n:translate="">Estonia</a></li>
+		<li><a href="countries/fi/" title="Finland" i18n:attributes="title" i18n:translate="">Finland</a></li>
+		<li><a href="countries/mk/" title="Former Yugoslav Republic of Macedonia" i18n:attributes="title" i18n:translate="">Former Yugoslav Republic of Macedonia</a></li>
+		<li><a href="countries/fr/" title="France" i18n:attributes="title" i18n:translate="">France</a></li>
    	       </ul>            </li>
-            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Countries G-M</span>
+            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;" i18n:translate="">Countries G-M</span>
                <ul>
-		<li><a href="countries/de/" title="Germany">Germany</a></li>
-		<li><a href="countries/gr/" title="Greece">Greece</a></li>
-		<li><a href="countries/hu/" title="Hungary">Hungary</a></li>
-		<li><a href="countries/is/" title="Iceland">Iceland</a></li>
-		<li><a href="countries/ie/" title="Ireland">Ireland</a></li>
-		<li><a href="countries/it/" title="Italy">Italy</a></li>
-		<li><a href="countries/lv/" title="Latvia">Latvia</a></li>
-		<li><a href="countries/li/" title="Liechtenstein">Liechtenstein</a></li>
-		<li><a href="countries/lt/" title="Lithuania">Lithuania</a></li>
-		<li><a href="countries/lu/" title="Luxembourg">Luxembourg</a></li>
-		<li><a href="countries/mt/" title="Malta">Malta</a></li>
-		<li><a href="countries/me/" title="Montenegro">Montenegro</a></li>
+		<li><a href="countries/de/" title="Germany" i18n:attributes="title" i18n:translate="">Germany</a></li>
+		<li><a href="countries/gr/" title="Greece" i18n:attributes="title" i18n:translate="">Greece</a></li>
+		<li><a href="countries/hu/" title="Hungary" i18n:attributes="title" i18n:translate="">Hungary</a></li>
+		<li><a href="countries/is/" title="Iceland" i18n:attributes="title" i18n:translate="">Iceland</a></li>
+		<li><a href="countries/ie/" title="Ireland" i18n:attributes="title" i18n:translate="">Ireland</a></li>
+		<li><a href="countries/it/" title="Italy" i18n:attributes="title" i18n:translate="">Italy</a></li>
+		<li><a href="countries/lv/" title="Latvia" i18n:attributes="title" i18n:translate="">Latvia</a></li>
+		<li><a href="countries/li/" title="Liechtenstein" i18n:attributes="title" i18n:translate="">Liechtenstein</a></li>
+		<li><a href="countries/lt/" title="Lithuania" i18n:attributes="title" i18n:translate="">Lithuania</a></li>
+		<li><a href="countries/lu/" title="Luxembourg" i18n:attributes="title" i18n:translate="">Luxembourg</a></li>
+		<li><a href="countries/mt/" title="Malta" i18n:attributes="title" i18n:translate="">Malta</a></li>
+		<li><a href="countries/me/" title="Montenegro" i18n:attributes="title" i18n:translate="">Montenegro</a></li>
    	       </ul>
             </li>
-            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;">Countries L-Y</span>
+            <li style="float:left;width:125px;margin-left:1em;"><span style="font-size: 1.4em; font-weight: bold;" i18n:translate="">Countries L-Y</span>
                <ul>
-		<li><a href="countries/nl/" title="Netherlands">Netherlands</a></li>
-		<li><a href="countries/no/" title="Norway">Norway</a></li>
-		<li><a href="countries/pl/" title="Poland">Poland</a></li>
-		<li><a href="countries/pt/" title="Portugal">Portugal</a></li>
-		<li><a href="countries/ro/" title="Romania">Romania</a></li>
-		<li><a href="countries/rs/" title="Serbia">Serbia</a></li>
-		<li><a href="countries/sk/" title="Slovakia">Slovakia</a></li>
-		<li><a href="countries/si/" title="Slovenia">Slovenia</a></li>
-		<li><a href="countries/es/" title="Spain">Spain</a></li>
-		<li><a href="countries/se/" title="Sweden">Sweden</a></li>
-		<li><a href="countries/ch/" title="Switzerland">Switzerland</a></li>
-		<li><a href="countries/tr/" title="Turkey">Turkey</a></li>
-		<li><a href="countries/gb/" title="United Kingdom ">United Kingdom</a></li>
+		<li><a href="countries/nl/" title="Netherlands" i18n:attributes="title" i18n:translate="">Netherlands</a></li>
+		<li><a href="countries/no/" title="Norway" i18n:attributes="title" i18n:translate="">Norway</a></li>
+		<li><a href="countries/pl/" title="Poland" i18n:attributes="title" i18n:translate="">Poland</a></li>
+		<li><a href="countries/pt/" title="Portugal" i18n:attributes="title" i18n:translate="">Portugal</a></li>
+		<li><a href="countries/ro/" title="Romania" i18n:attributes="title" i18n:translate="">Romania</a></li>
+		<li><a href="countries/rs/" title="Serbia" i18n:attributes="title" i18n:translate="">Serbia</a></li>
+		<li><a href="countries/sk/" title="Slovakia" i18n:attributes="title" i18n:translate="">Slovakia</a></li>
+		<li><a href="countries/si/" title="Slovenia" i18n:attributes="title" i18n:translate="">Slovenia</a></li>
+		<li><a href="countries/es/" title="Spain" i18n:attributes="title" i18n:translate="">Spain</a></li>
+		<li><a href="countries/se/" title="Sweden" i18n:attributes="title" i18n:translate="">Sweden</a></li>
+		<li><a href="countries/ch/" title="Switzerland" i18n:attributes="title" i18n:translate="">Switzerland</a></li>
+		<li><a href="countries/tr/" title="Turkey" i18n:attributes="title" i18n:translate="">Turkey</a></li>
+		<li><a href="countries/gb/" title="United Kingdom" i18n:attributes="title" i18n:translate="">United Kingdom</a></li>
    	       </ul>
             </li>
     </ul>

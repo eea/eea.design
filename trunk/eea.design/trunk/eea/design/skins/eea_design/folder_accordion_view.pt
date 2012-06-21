@@ -47,7 +47,7 @@
                 <div tal:define="nitems python:len(nonFolderishItems)"
                     tal:condition="nitems"
                     class="eea-accordion-panel">
-                    <h2><a href="#">Other resources</a></h2>
+                    <h2><a href="#" i18n:translate="">Other resources</a></h2>
                     <div class="pane">
                         <div class="subfolder-contents">
                             <div class="photoAlbumEntry"

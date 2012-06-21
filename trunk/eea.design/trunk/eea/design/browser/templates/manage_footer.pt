@@ -16,12 +16,12 @@
                                         disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
 
            <div metal:fill-slot="portlets_one_slot">
-               <tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
+               <tal:comment tal:replace="nothing" i18n:translate="">get rid of the left hand column portlets to avoid confusion</tal:comment>
            </div>
 
 <div metal:fill-slot="main">
 
-  <h1 class="documentFirstHeading">Manage Footer Portlets</h1>
+  <h1 class="documentFirstHeading" i18n:translate="">Manage Footer Portlets</h1>
     <p>
                  <a href=""
                        class="link-parent"

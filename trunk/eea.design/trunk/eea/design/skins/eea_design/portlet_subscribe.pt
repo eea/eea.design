@@ -12,8 +12,9 @@
      tal:condition="nl_objects">
 
 <dl class="portlet portlet-subscribtion">
-    <dt>Sign up now!</dt>
-    <dd class="portletItem">Get notifications on new reports and products.
+    <dt i18n:translate="">Sign up now!</dt>
+    <dd class="portletItem">
+      <span i18n:translate="">Get notifications on new reports and products.</span>
       <tal:cond tal:condition="python:len(nl_objects) == 1" >
         <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="subscribers_no">
           Currently we have <strong i18n:name="nr"
@@ -65,18 +66,18 @@
         </form>
     </dd>
 
-         <dt>Follow us</dt>
+         <dt i18n:translate="follow-us">Follow us</dt>
         <dd>
-            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon"/> <a href="http://twitter.com/euenvironment">Twitter</a>
+            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon" i18n:attributes="alt"/> <a href="http://twitter.com/euenvironment" tal:content="string:Twitter"></a>
         </dd>
         <dd>
-            <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon"/> <a href="http://www.facebook.com/pages/European-Environment-Agency/113006845445297">Facebook</a>
+            <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon" i18n:attributes="alt"/> <a href="http://www.facebook.com/pages/European-Environment-Agency/113006845445297" tal:content="string:Facebook"></a>
         </dd>
         <dd>
-            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon"/> <a href="http://www.youtube.com/user/EEAvideos">YouTube channel</a>
+            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon" i18n:attributes="alt"/> <a href="http://www.youtube.com/user/EEAvideos" i18n:translate="youtube-channel">YouTube channel</a>
         </dd>
         <dd>
-            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds">
+            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo" i18n:attributes="alt"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds">
             <span i18n:translate="rss_feeds">RSS Feeds</span></a>
         </dd>
 
@@ -100,8 +101,9 @@
      tal:condition="nl_objects">
 
 <dl class="portlet portlet-subscribtion">
-    <dt>Sign up now!</dt>
-    <dd class="portletItem">Get notifications on new reports and products.
+    <dt i18n:translate="">Sign up now!</dt>
+    <dd class="portletItem">
+      <span i18n:translate="">Get notifications on new reports and products.</span>
       <tal:cond tal:condition="python:len(nl_objects) == 1" >
         <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="subscribers_no">
           Currently we have <strong i18n:name="nr"

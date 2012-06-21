@@ -4,7 +4,7 @@
       i18n:domain="eea">
 
 <metal:js fill-slot="javascript_head_slot">
-   <script src="http://www.google.com/uds/api?file=uds.js&v=1.0" type="text/javascript"></script>
+   <script src="http://www.google.com/uds/api?file=uds.js&amp;v=1.0" type="text/javascript"></script>
    <link href="http://www.google.com/uds/css/gsearch.css" rel="stylesheet" type="text/css"/>
    <link href="http://glossary.eea.europa.eu/css/customsearch.css" rel="stylesheet" type="text/css"/>
 </metal:js>
@@ -12,10 +12,10 @@
              tal:define="dummy python:request.set('disable_border',1)" />
 
 <div metal:fill-slot="main">
-		<h1>EEA website search</h1>
-		<div id="GCSSearchForm2">Loading...</div>
-		<div id="rightSearchControl" class="search-control">Loading...</div>
-		<p><a href="http://code.google.com/apis/ajaxsearch/index.html"><span class="tagline">powered by The Google AJAX Search API</span></a> and <a href="http://www.google.com/coop/cse"><span class="tagline">Google Custom Search Engines</span></a></p>
+		<h1 i18n:translate="">EEA website search</h1>
+		<div id="GCSSearchForm2" i18n:translate="">Loading...</div>
+		<div id="rightSearchControl" class="search-control" i18n:translate="">Loading...</div>
+		<p><a href="http://code.google.com/apis/ajaxsearch/index.html"><span class="tagline" i18n:translate="">powered by The Google AJAX Search API</span></a> and <a href="http://www.google.com/coop/cse"><span class="tagline" i18n:translate="">Google Custom Search Engines</span></a></p>
   <span tal:replace="structure here/google_cs_ajax_js" />
 </div>
 </html>

@@ -19,7 +19,8 @@
           <br /><br />
 
         <div tal:attributes="class python:test(msg, 'error', '')">
-          <span tal:condition="msg" tal:replace="structure string:$msg <br />" />
+          <span tal:condition="msg" 
+                tal:replace="structure string:$msg &lt;br /&gt;" />
           <input type="text"
                  name="email"
                  id="email"

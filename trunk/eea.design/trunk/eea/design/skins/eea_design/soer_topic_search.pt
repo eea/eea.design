@@ -12,15 +12,15 @@
 
             <h1 tal:content="view/getTopicLabel"></h1>
 
-            <p class="documentDescription">
-                Below you will find all SOER content related to <span tal:content="view/getTopicLabel"/>
+            <p class="documentDescription" i18n:translate="">
+                Below you will find all SOER content related to <span tal:content="view/getTopicLabel" i18n:name="topic-label"></span>
             </p>
 
             <div class="visualClear"></div>
 
 	    <tal:synthesis define="result view/getSynthesisReport"
 			   condition="result">
-            <h2>Synthesis</h2>
+            <h2 i18n:translate="">Synthesis</h2>
             <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
@@ -34,7 +34,7 @@
 
 	    <tal:europe define="result view/getThematicAssesments"
 			condition="result">
-            <h2>Europe's environment: thematic assessments</h2>
+            <h2 i18n:translate="eu-environment-assessments">Europe's environment: thematic assessments</h2>
             <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
@@ -48,7 +48,7 @@
 
 	    <tal:globaltrends define="result view/getGlobalMegatrends"
 			      condition="result">
-            <h2>Europe and the world: global megatrends</h2>
+            <h2 i18n:translate="eu-megatrends">Europe and the world: global megatrends</h2>
             <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
@@ -62,7 +62,7 @@
 
 	    <tal:partc define="result view/getCountryEnvironment"
 		       condition="result">
-            <h2>Country environment</h2>
+            <h2 i18n:translate="">Country environment</h2>
             <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">

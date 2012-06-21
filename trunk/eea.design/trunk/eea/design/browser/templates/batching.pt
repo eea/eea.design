@@ -1,4 +1,4 @@
-<tal:comment condition="nothing">You can feed in batch_base_url by enclosing
+<tal:comment replace="nothing">You can feed in batch_base_url by enclosing
 the metal:use-macro="context/batch_macros/macros/navigation" statement in your
 template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
 </tal:comment>
@@ -41,7 +41,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
         </a>
     </span>
 
-    <tal:comment tal:condition="nothing">
+    <tal:comment replace="nothing">
       Link to first
     </tal:comment>
     <span tal:condition="python: 1 not in batch.navlist">
@@ -53,7 +53,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
         </span>
     </span>
 
-    <tal:comment tal:condition="nothing">
+    <tal:comment replace="nothing">
       Pagelist with quantum leap links to previous pages for quick navigation
     </tal:comment>
     <span tal:repeat="linklist python:batch.navurls(batchlinkparams, batch.leapback)"
@@ -68,7 +68,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
         &hellip;
     </span>
 
-    <tal:comment tal:condition="nothing">
+    <tal:comment replace="nothing">
       Pagelist with links to previous pages for quick navigation
     </tal:comment>
     <span tal:repeat="linklist python:batch.prevurls(batchlinkparams)"
@@ -82,13 +82,13 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
         </a>
     </span>
 
-    <tal:comment tal:replace="nothing">
+    <tal:comment replace="nothing">
       Current page
     </tal:comment>
     <span tal:condition="batch/navlist" class="current"
            tal:content="batch/pagenumber">Current page number</span>
 
-    <tal:comment tal:replace="nothing">
+    <tal:comment tal:replace="nothing" i18n:translate="">
       Pagelist with links to next pages for quick navigation
     </tal:comment>
     <span tal:repeat="linklist python:batch.nexturls(batchlinkparams)"
@@ -102,7 +102,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
         </a>
     </span>
 
-    <tal:comment tal:replace="nothing">
+    <tal:comment replace="nothing">
       Pagelist with quantum leap links to next pages for quick navigation
     </tal:comment>
     <span tal:repeat="linklist python:batch.navurls(batchlinkparams, batch.leapforward)"
@@ -117,7 +117,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
         </a>
     </span>
 
-    <tal:comment tal:replace="nothing">
+    <tal:comment replace="nothing">
       Link to last
     </tal:comment>
     <span tal:condition="python:batch.numpages not in batch.navlist">

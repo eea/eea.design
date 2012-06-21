@@ -84,7 +84,14 @@
             <a  href="#" id="prev-promo"></a>
             <a  href="#" id="next-promo"></a>
         </tal:small>
-        <a  href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
+        <a  href="#" 
+            id="play-pause" 
+            title="Pause slideshow"
+            i18n:attributes="title" 
+            class="pause disabled" 
+            aria-pressed="true" 
+            role="button"
+            i18n:translate="pause">Pause</a>
     </div>
 
 </div>

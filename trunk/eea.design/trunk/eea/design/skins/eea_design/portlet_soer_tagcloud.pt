@@ -3,11 +3,12 @@
   i18n:domain="eea">
 <body>
 
-<tal:comment condition="nothing"><!--
+<tal:comment condition="nothing">
+<!--
 Tagcloud portlet.
 
 Keyword arguments:
-faceted_path -- Relative path to a faceted navigable folder that has at least
+faceted_path :  Relative path to a faceted navigable folder that has at least
                 one tagscloud facet.
 
                 This can be also set as context property if you want to use

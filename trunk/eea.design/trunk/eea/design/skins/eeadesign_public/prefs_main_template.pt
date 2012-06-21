@@ -23,7 +23,7 @@
             <metal:block metal:use-macro="context/main_template/macros/content">
               <metal:override metal:fill-slot="main">
                 <metal:slot metal:define-slot="prefs_configlet_main" tal:content="nothing">
-                  Page body text
+                  
                 </metal:slot>
               </metal:override>
             </metal:block>

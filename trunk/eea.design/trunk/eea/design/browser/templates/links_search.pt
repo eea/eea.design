@@ -3,5 +3,6 @@
     <link rel="search"
           href=""
           title="Search this site"
+          i18n:attributes="title"
           tal:attributes="href string:${navigation_root_url}/search_form" />
 </tal:search>

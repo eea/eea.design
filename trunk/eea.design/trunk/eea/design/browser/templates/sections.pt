@@ -7,7 +7,9 @@
         <metal metal:use-macro="here/main_template/macros/short_colophon">
         <tal:cond condition="short_colophon" metal:fill-slot="colophon_slot">
             <a href="/" accesskey="2">
-                 <img src="" alt="EEA"
+                 <img src="" 
+                      alt="EEA"
+                      i18n:attributes="alt"
                       tal:attributes="src string:logo.gif"  class="visualFloatLeft" id="multimedia-logo" />
             </a>
         </tal:cond>

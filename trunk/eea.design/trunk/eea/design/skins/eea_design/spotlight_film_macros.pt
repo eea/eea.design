@@ -4,12 +4,15 @@
       
 
 <div metal:define-macro="spotlight" class="highlightMiddle shortNews" id="multimedia-highlights">
-    <h2 class="column-title">In the spotlight</h2>
+    <h2 class="column-title" i18n:translate="">In the spotlight</h2>
     <div id="spotlights-area" class="visualPadding" style="padding-top:1.5em;">
         <ul>
             <li class="vidthumb">
                 <a href="http://www.eea.europa.eu/data-and-maps/explore-interactive-maps/eye-on-earth">
-                    <img style="border: 1px solid #E0DED5" src="http://www.eea.europa.eu/data-and-maps/explore-interactive-maps/promotions/eoe/image_thumb" title="Eye On Earth &ndash; Citizen observatory on air and bathing water quality">
+                    <img style="border: 1px solid #E0DED5" 
+                         src="http://www.eea.europa.eu/data-and-maps/explore-interactive-maps/promotions/eoe/image_thumb" 
+                         title="Eye On Earth &ndash; Citizen observatory on air and bathing water quality"
+                         i18n:attributes="title" />
                 </a>
             </li>
            <li class="vidthumb last">

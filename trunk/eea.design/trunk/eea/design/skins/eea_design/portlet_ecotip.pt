@@ -15,15 +15,21 @@
       
     <dt>
         <a tal:attributes="href ecotip/url">
-            <img tal:attributes="src string:${portal_url}/ecotip_icon.gif" alt="Green tip icon" />
-            Green tips
+            <img tal:attributes="src string:${portal_url}/ecotip_icon.gif" 
+                 alt="Green tip icon"
+                 i18n:attributes="alt" />
+            <tal:block i18n:translate="">Green tips</tal:block>
         </a>
     </dt>
     <dd class="portletItem">
         <strong tal:content="ecotip/title" />
         <p><span tal:content="ecotip/description" />&nbsp;
-           <a class="" title="more green tips" href="/green-tips/" tal:attributes="href string:${portal_url}/green-tips/">
-            More green tips
+           <a class="" 
+              title="more green tips"
+              i18n:attributes="title" 
+              href="/green-tips/" 
+              tal:attributes="href string:${portal_url}/green-tips/">
+            <tal:block i18n:translate="">More green tips</tal:block>
            </a>
         </p>
     </dd>

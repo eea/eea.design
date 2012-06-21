@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<tal:comment tal:replace="nothing">
+<tal:comment replace="nothing">
 $Id: newsletter_mua_formatter.pt 37 2004-12-07 17:45:51Z zope $
 
 Customizing this template
@@ -128,8 +128,10 @@ color:white;
 
 
 <div id="notification-header">  
-<h3>European Environment Agency (EEA)<br/>
-www.eea.europa.eu</h3>
+<h3>
+    <tal:block i18n:translate="">European Environment Agency</tal:block> (<tal:block i18n:translate="">EEA</tal:block>)<br/>
+    <span tal:replace="string:www.eea.europa.eu" />
+</h3>
 </div>
 <div id="notification-body">
   <h1 tal:content="options/title" />
@@ -140,18 +142,27 @@ www.eea.europa.eu</h3>
    The body...
   </div>
   <metal:block metal:use-macro="here/NewsletterMacros/macros/newsletter_dynamic_content">
-    Dynamic content
   </metal:block>
 </div>
 <br/>
 <div id="notification-footer">
-<p>Best regards<br/>
-<a href="http://www.eea.europa.eu/help/contact-info">EEA Web Team</a><br/><br/>
-<a href="http://www.eea.europa.eu">European Environment Agency</a>, Kongens Nytorv 6, 1050 Copenhagen K, Denmark - Phone: +45 3336 7100  <br />
-<a rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#" href="http://www.eea.europa.eu/legal/copyright">Legal notice</a>, 
-<a href="http://www.eea.europa.eu/disclaimer">Disclaimer</a> and  <a href="http://www.eea.europa.eu/privacy/">Privacy policy</a>    
+<p i18n:translate="">Best regards<br/>
+<a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="">EEA Web Team</a><br/><br/>
+<a href="http://www.eea.europa.eu" i18n:translate="">European Environment Agency</a>,
+                     <tal:block i18n:translate="eea-street-address">
+                        Kongens Nytorv 6, 1050, Copenhagen K, Denmark.
+                    </tal:block> -  <tal:block i18n:translate="">Phone:</tal:block> +45 3336 7100 <br />
+<a rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#" 
+   href="http://www.eea.europa.eu/legal/copyright" i18n:translate="">Legal notice</a>, 
+<a href="http://www.eea.europa.eu/disclaimer" i18n:translate="">Disclaimer</a>, 
+<a href="http://www.eea.europa.eu/privacy/" i18n:translate="">Privacy policy</a>    
 </p>
-<p>More subscriptions are available at <a href="http://www.eea.europa.eu/subscription">EEA Subscriptions</a></p>
+<p i18n:translate="">
+    More subscriptions are available at 
+    <tal:block i18n:name="link">
+        <a href="http://www.eea.europa.eu/subscription" i18n:translate="">EEA Subscriptions</a>
+    </tal:block>
+</p>
 </div>
 <div id="userpage-info">
 <div tal:replace="structure options/newsletterFooter" />

@@ -23,7 +23,10 @@
 
 <div class="portlet-calendar">
     <div class="portletHeader">
-        <a href="/events" title="Environmental events around the world">Environmental events around the world</a>
+        <a href="/events" 
+           title="Environmental events around the world"
+           i18n:attributes="title"
+           i18n:translate="">Environmental events around the world</a>
     </div>
     <dt>
         <span class="portletTopLeft"></span>
@@ -123,8 +126,14 @@
         </table>
         <span class="portletBottomLeft"></span>
         <span class="portletBottomRight"></span>
-<div class="portletFooter"><a href="" title="Submit an
-environmental event" tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent">Submit a new event</a></div>
-    </dd>
+                <div class="portletFooter">
+                    <a href="" 
+                       title="Submit an environmental event" 
+                       tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent"
+                       i18n:attributes="title"
+                       i18n:translate="">Submit a new event</a>
+                </div>
+   </dd>
+</div>
 </dl>
 </html>

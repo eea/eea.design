@@ -11,20 +11,24 @@
 
     <div metal:fill-slot="content-core">
         <tal:main-macro metal:define-macro="main">
-            <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;
-                                                   global datamaps_view context/@@data_and_maps_logic;">
+            <div id="highlights-block" 
+                 tal:define="global frontpage_view context/@@frontpage_highlights;
+                             global datamaps_view context/@@data_and_maps_logic;">
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="right-column-area">
 
 		    <!-- data and maps global search -->
-		    <a href="find/global" class="archives advanced-search-link" title="Go to advanced search">
-                    <span>Advanced</span></a>
+		    <a href="find/global" 
+		       class="archives advanced-search-link" 
+		       title="Go to advanced search"
+		       i18n:attributes="title">
+                    <span i18n:translate="advanced">Advanced</span></a>
 		    <div class="featured">
 		       <h2 i18n:translate="featured_global_search">Search</h2>
 		       <form tal:attributes="action string:${here/absolute_url}/find/global"  method="get" id="faceted-text-search" class="searchforms faceted-external-search">
-                   <input type="text" name="c12" title="Search data, maps, indicators" value=""/>
-                   <input type="submit" value="Search" name="search" />
+                   <input type="text" name="c12" title="Search data, maps, indicators" i18n:attributes="title" value="" />
+                   <input type="submit" value="Search" i18n:attributes="value" name="search" />
 		       </form>
 		    </div>
 
@@ -51,7 +55,7 @@
 			<div id="organisations-links" class="shortcut-light">
 			   <div id="organisations-content">
 			   <a id="organisations-link" href="/data-and-maps/data-providers-and-partners">
-			     <h2>Browse by organisation</h2>
+			     <h2 i18n:translate="">Browse by organisation</h2>
 			   </a>
 			   </div>
                         </div>			
@@ -59,8 +63,8 @@
 			<div id="semantic-ds-links" class="shortcut-light">
 			   <div id="semantic-content">
 			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
-			   <h2>Semantic Data Service</h2>
-			   Access our data via semantic APIs</a>
+    			   <h2 i18n:translate="">Semantic Data Service</h2>
+    			   <span i18n:translate="">Access our data via semantic APIs</span></a>
 			   </div>
                         </div>
 
@@ -83,7 +87,7 @@
                     </div>
 
                     <div id="highlights-area" class="column-area">
-		    <h2>Highlights</h2>
+		    <h2 i18n:translate="">Highlights</h2>
                     <!-- promotions_gallery_slideshow-->
                     <metal:promotions
                         tal:define="frontpage python: True;
@@ -139,13 +143,17 @@
 			<div id="faceted-form"> 
 			  <div id="tag-cloud"> 
 			    <div id="tag-cloud-content" tal:define="faceted_path python:'find/global'"> 
-				<metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" /> 
+				    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" /> 
 			        
 			    </div> 
-                            <div class="portletFooter">
-		                <p><a href="tags" class="standardButton" title="archive">Explore all tags
-                                   </a>
-                                </p>
+                <div class="portletFooter">
+		                <p>
+		                    <a href="tags" 
+		                      class="standardButton" 
+		                      title="archive" 
+		                      i18n:attributes="title"
+		                      i18n:translate="">Explore all tags</a>
+                        </p>
 			    </div>
 			  </div> 
 			</div> 			

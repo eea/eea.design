@@ -22,12 +22,15 @@
                                 <!-- all key facts and messages -->
                                 <dl  
                                     class="portlet slidePortlet" >
-                                    <dt class="portletHeader" style="padding:5px;">Key facts and messages</dt>
+                                    <dt class="portletHeader" style="padding:5px;" i18n:translate="">Key facts and messages</dt>
                                      <dd class="portletItem" style="left: 650px;"  tal:repeat="item items">
                                        <span>
                                           <span tal:replace="structure item/text"></span>
-                                           <a href="" title="Read more of the key fact" class="moreLink"
-                                           tal:attributes="href item/url">more</a>
+                                           <a href="" title="Read more of the key fact" 
+                                              class="moreLink"
+                                              tal:attributes="href item/url"
+                                              i18n:attributes="title"
+                                              i18n:translate="">more</a>
                                         </span>
                                      </dd>
                                 </dl>
@@ -35,43 +38,60 @@
                     </div>
                 </div>
 		<p>
-		      <a title="All key facts" class="internal-link moreLink" href="resolveuid/10fa976d921e0e9a44d329a927835668">All key facts</a>&nbsp;
-		      <a title="All key messages" class="internal-link moreLink" href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c">All key messages</a>
+		      <a title="All key facts" 
+		         class="internal-link moreLink" 
+		         href="resolveuid/10fa976d921e0e9a44d329a927835668"
+		         i18n:attributes="title"
+                 i18n:translate="">All key facts</a>&nbsp;
+		      <a title="All key messages" 
+		         class="internal-link moreLink" 
+		         href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c"
+		         i18n:attributes="title"
+                 i18n:translate="">All key messages</a>
 		</p>
 		    
                 <div id="soer-search-area">
 
                     <dl class="portlet" id="soerSearchBox">
-                        <dt class="portletHeader">Search SOER</dt>
+                        <dt class="portletHeader" i18n:translate="">Search SOER</dt>
                         <dd class="portletItem">
-			   <a title="Advanced search" class="moreLink" href="./advanced-search">Advanced search</a>
+			   <a title="Advanced search" 
+			      class="moreLink" 
+			      href="./advanced-search"
+			      i18n:attributes="title"
+                  i18n:translate="">Advanced search</a>
                   
 			   <div class="visualClear">
                             </div>
 			    <form id="faceted-text-search" method="get" action="advanced-search" class="faceted-external-search">
-                                <strong>Free text search</strong>
+                                <strong i18n:translate="">Free text search</strong>
                                 <p>
                                     <input type="text" style="width:160px;" name="c4" />
-                                    <input type="submit" name="search" value="Find" />
+                                    <input type="submit" name="search" value="Find" i18n:attributes="value" />
                                 </p>
                             </form>
 
 
 			     <form id="topic-search" method="get" action="soer_topic_search">
-		              <strong>Browse by topic</strong>
+		              <strong i18n:translate="">Browse by topic</strong>
                                 <p>
                                 <select name="topic">
                                     <tal:block tal:repeat="item view/getSoerTopics">
                                         <option tal:attributes="value item/tags" tal:content="item/label">Lorem ipsum</option>
                                     </tal:block>
                                 </select>
-                                <input type="submit" value="Find"/>
+                                <input type="submit" value="Find" i18n:attributes="value" />
                                 </p>
                             </form>
 			       
-			      <a href="#portal-sitemap" id="browsegeo" class="fancybox hiddenStructure">Browse geographically</a>
+			      <a href="#portal-sitemap" 
+			         id="browsegeo" 
+			         class="fancybox hiddenStructure"
+			         i18n:translate="">Browse geographically</a>
                                <form onsubmit="$('#browsegeo').click(); return false;" style="float:left;">
-                                <p style="margin-top:8px"><input type="submit" value="Browse geographically..." onclick=""/></p>
+                                <p style="margin-top:8px">
+                                    <input type="submit" value="Browse geographically..." onclick="" i18n:attributes="value" />
+                                </p>
                                </form>
 		
                                 <div class="hiddenStructure">

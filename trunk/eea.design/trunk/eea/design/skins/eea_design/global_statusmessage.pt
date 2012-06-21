@@ -2,7 +2,7 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="plone">
+      i18n:domain="eea">
 
 <body>
 
@@ -10,8 +10,8 @@
            metal:define-macro="portal_message">
 
     <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
-        <dt>Info</dt>
-        <dd><tal:block replace="nothing">KSS portal message</tal:block></dd>
+        <dt i18n:translate="">Info</dt>
+        <dd><tal:block replace="nothing" >KSS portal message</tal:block></dd>
     </dl>
 
     <tal:statusmsg tal:define="messages python:context.plone_utils.showPortalMessages()"
