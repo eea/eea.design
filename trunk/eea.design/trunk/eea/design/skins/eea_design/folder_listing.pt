@@ -86,7 +86,7 @@
             </a>
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
-            <tal:block tal:condition="python: not isAnon"
+            <tal:block 
                        tal:define="
                                    item_object item/getObject|nocall:item;
                                    urlview item_object/@@url;

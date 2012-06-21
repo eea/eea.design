@@ -3,6 +3,9 @@
 
 5.1-dev - (unreleased)
 ----------------------
+* Bug fix: fixed listing for anomymous users for content that uses 
+  folder_listing and folder_summary_view
+  [ichimdav #5300]
 
 5.0 - (2012-06-20)
 ------------------
