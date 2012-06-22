@@ -47,7 +47,7 @@
             contentFilter python: { 'review_state' : 'published' } if isAnon else contentFilter;
             limit_display limit_display|request/limit_display|nothing;
             limit_display python:limit_display and int(limit_display) or None;
-            is_a_topic python:context.portal_type in ['Topic'];
+            is_a_topic python:context.portal_type=='Topic';
             folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
 
             Batch python:modules['Products.CMFPlone'].Batch;
