@@ -1,6 +1,7 @@
 <metal:promos metal:define-macro="portlet"
                 tal:define="
                 promo_view promo_view|context/@@frontpage_highlights;       
+                get_img_url  nocall:promo_view/getImageUrl;
                 highlights view/get_promotions|promo_view/getPromotions|nothing;
                 plone_view nocall:plone_view|context/@@plone;
                 show_description show_description|python:True;
@@ -23,6 +24,8 @@
                             figure_link python:getUrl or getURL or absolute_url;
                             figure_link python: figure_link + '/view' if is_video else figure_link;
                             image_link obj/getURL|obj/absolute_url;
+                            parent_image_url python:get_img_url(hl);
+                            image_link python:parent_image_url if parent_image_url else image_link;
                             hltitle obj/Title;
                             hl_class python:'video-fancybox' if is_video else 'noPrint';
                             ">
@@ -62,7 +65,10 @@
                         <div>
                         <tal:image tal:define="figure hl/getImage|nothing;
                         figure_title figure/title|hl/Title|nothing;
-                        url hl/getURL|hl/absolute_url">
+                        url hl/getURL|hl/absolute_url;
+                        parent_image_url python:get_img_url(hl);
+                        url python:parent_image_url if parent_image_url else url;
+                        ">
                         <img alt="" tal:attributes="src string:${url}/${image_scale}; title figure_title; alt figure_title" />
                         </tal:image>
 

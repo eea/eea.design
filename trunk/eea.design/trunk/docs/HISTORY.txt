@@ -3,6 +3,9 @@
 
 5.1-dev - (unreleased)
 ----------------------
+* Feature: use parent folder image if promoted item doesn't have an 
+  image field else use fallback image
+  [ichimdav #5247]
 * Bug fix: fixed listing for anomymous users for content that uses 
   folder_listing and folder_summary_view
   [ichimdav #5300]
