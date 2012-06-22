@@ -540,8 +540,7 @@ The example is copied and adjusted from <a href="http://reports.eea.europa.eu/GH
 </table>
 
 <h3 i18n:translate="">Sortable server-side</h3>
-<pi18n:translate="server-side-sortable">In the server-side sortable table the arrow images are in the HTML (not in CSS or via Javascript). You do not need to use the
-class "listing".</p>
+<p i18n:translate="server-side-sortable">In the server-side sortable table the arrow images are in the HTML (not in CSS or via Javascript). You do not need to use the class "listing".</p>
 	<table class="sortable">
 	<caption class="hiddenStructure" i18n:translate="">Sortable server-side table</caption>
 	<thead>

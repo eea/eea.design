@@ -63,8 +63,7 @@
             <div class="eea-tabs-panel"
                  tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
             </div>
-            <div class="eea-tabs-panel"
-                 tal:content="Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.">
+            <div class="eea-tabs-panel">Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
             </div>
         </div>
     <pre>/
@@ -277,7 +276,7 @@
 
     <h2 i18n:translate="">Portal messages</h2>
     <div class="portalMessage">
-        <p i18n:translate="">Settings have been applied<p/>
+        <p i18n:translate="">Settings have been applied</p>
     </div>
     <div class="portalMessage informationMessage">
         <p i18n:translate="">Your screensaver has been upgraded, please consider to restart your computer ... Have a good day</p>
