@@ -149,7 +149,7 @@ class Frontpage(BrowserView):
         return result
 
     def getImageUrl(self, brain):
-        """ retrive image for promotion from parent """
+        """ public method for frontpage calling _getImageUrl """
         return _getImageUrl(brain)
 
     def _getTeaserMedia(self, high, scale):
@@ -418,10 +418,9 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
     return result
 
 def _getImageUrl(brain):
-    """ use url of parent image if promoted item doesn't have an image
+    """ #5247 use url of parent image if promoted item doesn't have an image
     and the parent has one
     """
-    # #5247 use url of parent if promoted item doesn't have an image
     obj = brain.getObject()
     url = ""
     if brain.is_default_page and \

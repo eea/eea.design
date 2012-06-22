@@ -147,5 +147,5 @@ class DataMaps(BrowserView):
             return list(set(cPromos))
 
     def getImageUrl(self, brain):
-        """ retrive image for promotion from parent """
+        """ public method for data-and-maps calling _getImageUrl """
         return _getImageUrl(brain)
