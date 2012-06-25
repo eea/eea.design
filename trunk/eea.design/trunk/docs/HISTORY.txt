@@ -3,6 +3,9 @@
 
 5.1-dev - (unreleased)
 ----------------------
+* Bug fix: set wf_status variable for anonymous as well, so that
+  Draft watermark feature (in r28435) works for anonymous.
+  [demarant]
 * Feature: use parent folder image if promoted item doesn't have an 
   image field else use fallback image
   [ichimdav #5247]
