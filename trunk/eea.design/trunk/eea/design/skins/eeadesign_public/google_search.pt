@@ -15,7 +15,15 @@
 		<h1 i18n:translate="">EEA website search</h1>
 		<div id="GCSSearchForm2" i18n:translate="">Loading...</div>
 		<div id="rightSearchControl" class="search-control" i18n:translate="">Loading...</div>
-		<p><a href="http://code.google.com/apis/ajaxsearch/index.html"><span class="tagline" i18n:translate="">powered by The Google AJAX Search API</span></a> and <a href="http://www.google.com/coop/cse"><span class="tagline" i18n:translate="">Google Custom Search Engines</span></a></p>
+		<p>
+		    <a href="http://code.google.com/apis/ajaxsearch/index.html">
+		        <span class="tagline" i18n:translate="">powered by The Google AJAX Search API</span>
+		    </a> 
+		    &nbsp;<tal:block i18n:translate="">and</tal:block>&nbsp; 
+		    <a href="http://www.google.com/coop/cse">
+		        <span class="tagline" i18n:translate="">Google Custom Search Engines</span>
+		    </a>
+		</p>
   <span tal:replace="structure here/google_cs_ajax_js" />
 </div>
 </html>

@@ -143,7 +143,7 @@
                                            tal:attributes="class python:wf_state and ('documentContent panels wf-state-' + str(wf_state)) or 'documentContent panels'">
 
                             <metal:header define-slot="header" tal:content="nothing">
-                            Visual Header
+                         
                             </metal:header>
 
                             <metal:bodytext define-slot="main">
@@ -151,8 +151,10 @@
                              <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
                              <metal:title define-slot="content-title">
                                  <metal:comment tal:content="nothing">
-                                     If you write a custom title always use
-                                     <h1 class="documentFirstHeading"></h1> for it
+                                    <tal:comment replace="nothing">
+                                        If you write a custom title always use
+                                        <h1 class="documentFirstHeading"></h1> for it
+                                    </tal:comment>   
                                  </metal:comment>
                                  <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">
                                      Generic KSS Title. Is rendered with class="documentFirstHeading".
@@ -162,8 +164,10 @@
 
                              <metal:description define-slot="content-description">
                                  <metal:comment tal:content="nothing">
-                                     If you write a custom description always use
-                                     <div class="documentDescription"></div> for it
+                                    <tal:comment replace="nothing">
+                                        If you write a custom description always use
+                                        <div class="documentDescription"></div> for it
+                                    </tal:comment>                                          
                                  </metal:comment>
                                  <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
                                      Generic KSS Description. Is rendered with class="documentDescription".
@@ -172,13 +176,17 @@
 
                              <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
                              <div id="content-core">
-                                 <metal:text define-slot="content-core" tal:content="nothing">
-                                     Page body text
+                                 <metal:text define-slot="content-core" content="nothing">
+                                    <tal:comment replace="nothing">
+                                        text body page
+                                    </tal:comment>     
                                  </metal:text>
                              </div>
                              
                              <metal:comment tal:content="nothing">
-                               possible relation labels. can be made as viewlet.
+                                <tal:comment replace="nothing">
+                                    possible relation labels. can be made as viewlet.
+                                </tal:comment>
                              </metal:comment>
                              <tal:block define="thumb_scale thumb_scale | string:image_tile;">
                                <metal:macro use-macro="here/eea_relateditems/macros/relatedItemsWithThumbs" />
@@ -191,8 +199,10 @@
                     </metal:slot>
 
                     <metal:sub define-slot="sub" tal:content="nothing">
-                       This slot is here for backwards compatibility only.
-                       Don't use it in your custom templates.
+                       <tal:comment replace="nothing">
+                           This slot is here for backwards compatibility only.
+                           Don't use it in your custom templates.
+                       </tal:comment>
                     </metal:sub>
                 </div>
 

@@ -106,7 +106,7 @@
 
                 <div class="visualClear"></div>
 
-		<hr>
+		<hr />
 		
                 <div id="free-text-space" tal:define="txt context/getText|nothing">
                     <p tal:condition="txt" tal:replace="structure txt">[Free text]</p>
