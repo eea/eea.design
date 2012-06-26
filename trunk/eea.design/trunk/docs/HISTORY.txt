@@ -3,6 +3,9 @@
 
 5.1-dev - (unreleased)
 ----------------------
+* Upgrade Step: remove from www/portal_view_customizations/manage_main
+  the customized plone colophon zope.interface.interface-plone.colophon
+  [ichimdav #5314]
 * Bug fix: set wf_status variable for anonymous as well, so that
   Draft watermark feature (in r28435) works for anonymous.
   [demarant]
