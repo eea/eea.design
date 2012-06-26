@@ -31,7 +31,8 @@
                 </tal:block>    
                 <br/>
                 <a href="http://www.eea.europa.eu/legal" 
-                   tal:attributes="href string:${local_site}/legal/"><tal:block i18n:translate="Legal notice">Legal notice</tal:block></a>
+                   tal:attributes="href string:${local_site}/legal/"
+                   i18n:translate="Legal notice">Legal notice</a>
             </span>
              <img src="http://www.eea.europa.eu/eu-flag.gif" 
                   alt="EU flag" 

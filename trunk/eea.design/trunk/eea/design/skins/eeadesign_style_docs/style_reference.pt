@@ -88,11 +88,11 @@
 							    <dd class="portletItem date" tal:content="string:07 Dec 2005"></dd>
 
 							    <dd class="portletItem thumbnail-right">
-							        <a href="#" title="Read report" >
-							            <img src="report2.png" alt="report thumbnail"  /></a>
+							        <a href="#">
+							            <img src="report2.png" /></a>
 							    </dd>
 							    <dd class="portletItem link">
-							        <a href="#" title="Read report"  tal:content="string:Read report"></a>
+							        <a href="#" tal:content="string:Read report"></a>
 							    </dd>
 
 							    <dd class="portletItem" tal:content="string:Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.">
@@ -106,11 +106,11 @@
 							    <dd class="portletItem date" tal:content="string:04 Dec 2005"></dd>
 
 							    <dd class="portletItem thumbnail-right">
-							        <a href="#" title="Read report" >
-							            <img src="report2.png" alt="report thumbnail"  /></a>
+							        <a href="#">
+							            <img src="report2.png" /></a>
 							    </dd>
 							    <dd class="portletItem link">
-							        <a href="#" title="Read report" tal:content="string:Read report"></a>
+							        <a href="#" tal:content="string:Read report"></a>
 							    </dd>
 
 							    <dd class="portletItem" tal:content="string:Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.">
@@ -131,11 +131,11 @@
 							    <dd class="portletItem date" tal:content="string:07 Dec 2005"></dd>
 
 							    <dd class="portletItem thumbnail-right">
-							        <a href="#" title="See map" >
-							            <img src="map1.png" alt="map thumbnail"  /></a>
+							        <a href="#" >
+							            <img src="map1.png" /></a>
 							    </dd>
 							    <dd class="portletItem link">
-							        <a href="#" title="See map" tal:content="string:See map"></a>
+							        <a href="#" tal:content="string:See map"></a>
 							    </dd>
 
 							    <dd class="portletItem" tal:content="string:Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.">
@@ -149,10 +149,10 @@
 							    <dd class="portletItem date" tal:content="string:04 Dec 2005"></dd>
 
 							    <dd class="portletItem thumbnail-right">
-							        <a href="#" title="See map"><img src="map2.png" alt="map thumbnail" /></a>
+							        <a href="#"><img src="map2.png" /></a>
 							    </dd>
 							    <dd class="portletItem link">
-							        <a href="#" title="See map" tal:content="string:See map"></a>
+							        <a href="#" tal:content="string:See map"></a>
 							    </dd>
 
 							    <dd class="portletItem" tal:content="string:Amet, consectetuer adipscing elit, sed diam nonummy nibh euismod tincidunt ut.">
@@ -232,7 +232,7 @@ sea takimata sanctus est Lorem ipsum dolor sit amet.">
         		<div class="formHelp" tal:content="string:Enter one or more keywords for a search. Use of AND/OR is supported."></div>
         		<div></div>
 				<input type="text" name="search" value="" size="30" maxlength="50" tabindex="1" />
-		        <input type="submit" value="Search" class="searchButton" id="Submit2" name="Submit2" tabindex="2" />
+		        <input type="submit" value="Search" i18n:attributes="value" class="searchButton" id="Submit2" name="Submit2" tabindex="2" />
       		</div>
 
 		  </form>
@@ -313,9 +313,9 @@ sea takimata sanctus est Lorem ipsum dolor sit amet.">
   <dd tal:content="string:White cold drink"></dd>
 </dl>
 <p>
-    <tal:block content="string:Abbreviations: "></tal:block><abbr title="United Nations" tal:content="string:UN"></abbr>
+    <tal:block content="string:Abbreviations: "></tal:block><abbr tal:content="string:UN"></abbr>
     <br />
-    <tal:block content="string:Links to EEA glossary, Gemet or other terminologies webpages: "></tal:block><a class="explain" href="#" title="Ozone depletion" tal:content="string:Ozone depletion"></a>
+    <tal:block content="string:Links to EEA glossary, Gemet or other terminologies webpages: "></tal:block><a class="explain" href="#" tal:content="string:Ozone depletion"></a>
 </p>
 <h3  tal:content="string:Other various tags"></h3>
 <p  tal:content="string:The pre tag is good for displaying formulas, computer code or other already formatted text:"></p>
@@ -545,18 +545,18 @@ next i">
 	<thead>
 	<tr>
 	<th class="sorted" scope="col"><a
-	 title="Sorted A..Z - Click to reverse" rel="nofollow"
+	 rel="nofollow"
 	 href="#" tal:content="string:Id"><img
 	 src="/styles/sortup.gif" width="12" height="12" alt=""/></a></th>
 	<th scope="col"><a
-	 title="Sortable" rel="nofollow"
+	 rel="nofollow"
 	 href="#" tal:content="string:Title"><img
 	 src="/styles/sortnot.gif" width="12" height="12" alt=""/></a></th>
 	<th scope="col"><a
-	 title="Sortable" rel="nofollow"
+	 rel="nofollow"
 	 href="#" tal:content="string:Period"><img
 	 src="/styles/sortnot.gif" width="12" height="12" alt=""/></a></th>
-	<th scope="col"><span title="Not sortable" tal:content="string:Not sortable"></span></th>
+	<th scope="col"><span tal:content="string:Not sortable"></span></th>
 	</tr>
 	</thead>
 	<tbody>
