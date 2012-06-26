@@ -176,7 +176,7 @@
 
                              <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
                              <div id="content-core">
-                                 <metal:text define-slot="content-core" content="nothing">
+                                 <metal:text define-slot="content-core" tal:content="nothing">
                                     <tal:comment replace="nothing">
                                         text body page
                                     </tal:comment>     
