@@ -1396,7 +1396,7 @@ h3.site-description {
     font-size: 0.8em;
 }
 .searchField {
-    width: 258px;
+    width: 258px !important;
 }
 
 .frontpage #searchbox_terminology input[type="text"],
