@@ -6,7 +6,7 @@
 
 <body>
 
-<tal:block i18n:domain="plone"
+<tal:block i18n:domain="eea"
            metal:define-macro="portal_message">
 
     <dl class="portalMessage info" id="kssPortalMessage" style="display:none">

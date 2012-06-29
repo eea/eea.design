@@ -4,7 +4,7 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="eea">
 <head>
     <div metal:fill-slot="javascript_head_slot" tal:omit-tag="">
         <link type="text/css" rel="kinetic-stylesheet"
@@ -58,7 +58,7 @@
     to move them up or down, delete or edit them. To add a new portlet,
     use the drop-down list at the top of the column.
   </p>
-  <div class="portletAssignments portletLegend" i18n:domain="solgemaportletsmanager">
+  <div class="portletAssignments portletLegend" i18n:domain="eea">
         <div class="portletLegendLine herited portlet_here portlet_visible">
           <div class="portletHeader"></div>
         </div>

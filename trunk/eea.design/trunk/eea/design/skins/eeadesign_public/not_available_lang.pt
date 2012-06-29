@@ -2,7 +2,7 @@
       xml:lang="en"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="linguaplone">
+      i18n:domain="eea">
 
 <head>
     <metal:top fill-slot="top_slot">
