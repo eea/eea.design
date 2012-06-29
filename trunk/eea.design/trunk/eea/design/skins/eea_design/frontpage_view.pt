@@ -107,9 +107,9 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
 
                         <div metal:define-macro="enquiry" id="enquiry-service-shortcut" class="shortcut-default">
                             <div id="enquiry-content">
-                                <a id="enquiry-link" href="" tal:attributes="href string:$portal_url/help/infocentre/enquiries/">
-                                    <h2 i18n:translate="">Enquiry service</h2>
-                                    <tal:block i18n:translate="">Ask questions or join our forum</tal:block></a>
+                                <a id="enquiry-link" href="" tal:attributes="href string:http://community.eea.europa.eu">
+                                    <h2 i18n:translate="">Ask your question</h2>
+                                    <tal:block i18n:translate="">EEA Forum, FAQs, discuss and share</tal:block></a>
                             </div>
                         </div>
 
