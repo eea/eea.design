@@ -3,6 +3,8 @@
 
 5.1-dev - (unreleased)
 ----------------------
+* Bug fix: resolved IE8 design issues described in ticket 5233
+  [ichimdav #5233]
 * Upgrade Step: remove from www/portal_view_customizations/manage_main
   the customized plone colophon zope.interface.interface-plone.colophon
   [ichimdav #5314]

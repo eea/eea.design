@@ -1383,11 +1383,10 @@ h3.site-description {
     background-position: -404px -115px !important;
 }
 
-#portal-searchbox input,
-.searchField {
+#portal-searchbox input, .searchField
+{
     height: 30px;
     padding: 0 0 0 25px;
-    width: 258px;
     background-position: 0 -82px;
     font-family: Arial, Verdana, sans-serif;
     font-style: italic;
@@ -1395,6 +1394,9 @@ h3.site-description {
     border: none;
     margin: 0;
     font-size: 0.8em;
+}
+.searchField {
+    width: 258px;
 }
 
 .frontpage #searchbox_terminology input[type="text"],
