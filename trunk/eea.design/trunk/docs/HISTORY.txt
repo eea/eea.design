@@ -17,8 +17,8 @@
 * Bug fix: fixed listing for anomymous users for content that uses 
   folder_listing and folder_summary_view
   [ichimdav #5300]
-* Bug Fix: Fixed i18n missing tags, invalid token and i18n:domain 
-  in *.zpt 
+* Bug Fix: Fixed i18n missing tags, invalid token, i18n:domain and 
+  duplicate keys in *.zpt 
   [prospchr refs #5162]
 
 5.0 - (2012-06-20)

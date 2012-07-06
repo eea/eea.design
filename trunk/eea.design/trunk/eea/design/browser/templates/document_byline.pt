@@ -81,7 +81,7 @@
                                    metatypes_showcredate siteprops/metatypes_showcredate|python:['Assessment','Specification'];"
         tal:condition="isAnon" metal:define-macro="publishdate">
             <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
-                <tal:published i18n:translate="Published">
+                <tal:published i18n:translate="">
                     Created
                 </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
             </span>

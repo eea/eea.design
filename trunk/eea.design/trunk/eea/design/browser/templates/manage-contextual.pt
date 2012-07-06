@@ -36,7 +36,7 @@
        class="link-parent"
        tal:attributes="href string:${context/absolute_url}"
        i18n:translate="return_to_view">
-    Return
+    Return to view
   </a>
 <dl class="portalMessage info"
     tal:condition="here/@@plone/isDefaultPageInFolder">
