@@ -7,7 +7,7 @@
         i18n:domain="eea">
 
         <noscript>
-          <tal:comment tal:replace="nothing">
+          <tal:comment replace="nothing">
             #5233 IE8 has a bug which renders the noscript tag when using 
             background color and border so we set the class to a div
           </tal:comment>
