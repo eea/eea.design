@@ -90,7 +90,7 @@
 			         i18n:translate="">Browse geographically</a>
                                <form onsubmit="$('#browsegeo').click(); return false;" style="float:left;">
                                 <p style="margin-top:8px">
-                                    <input type="submit" value="Browse geographically..." onclick="" i18n:attributes="value" />
+                                    <input type="submit" value="Browse geographically" onclick="" i18n:attributes="value" />
                                 </p>
                                </form>
 		

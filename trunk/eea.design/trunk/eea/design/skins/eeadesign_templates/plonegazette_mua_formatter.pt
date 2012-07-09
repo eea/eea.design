@@ -146,7 +146,7 @@ color:white;
 </div>
 <br/>
 <div id="notification-footer">
-<p i18n:translate="">Best regards<br/>
+<p><tal:block i18n:translate="">Best regards</tal:block><br/>
 <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="">EEA Web Team</a><br/><br/>
 <a href="http://www.eea.europa.eu" i18n:translate="">European Environment Agency</a>,
                      <tal:block i18n:translate="eea-street-address">
