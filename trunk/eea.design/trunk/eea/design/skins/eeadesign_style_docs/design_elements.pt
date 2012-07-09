@@ -228,11 +228,11 @@
     <img src="fish" 
          class="eea-flexible-tooltip-left" 
          title="The name given to the resource. Typically, a title will be a name by which the resource is formally known" 
-         i18n:attributes="title" />
+         i18n:attributes="title tooltip-left-desc" />
     <img src="fish" 
          class="eea-flexible-tooltip-top" 
          title="The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content"
-         i18n:attributes="title" />
+         i18n:attributes="title tooltip-top-desc" />
     <img src="fish" 
          class="eea-flexible-tooltip-bottom" 
          title="Short description of the data resource"
@@ -240,7 +240,7 @@
     <img src="fish" 
          class="eea-flexible-tooltip-right" 
          title="Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights"
-         i18n:attributes="title" />
+         i18n:attributes="title tooltip-right-desc" />
     <pre tal:content="string:
 &lt;img src=&quot;fish&quot; class=&quot;eea-flexible-tooltip-left&quot; title=&quot;The name given to the resource. Typically, a title will be a name by which the resource is formally known&quot; /&gt;
 &lt;img src=&quot;fish&quot; class=&quot;eea-flexible-tooltip-top&quot; title=&quot;The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content&quot; /&gt;
