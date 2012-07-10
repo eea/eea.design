@@ -3,6 +3,10 @@
 
 5.1-dev - (unreleased)
 ----------------------
+* Feature: Added message with anchor link to comments in footer
+  [szabozo0 refs #5295]
+* Bug fix: Display login button in Comments if user is not authenticated
+  [szabozo0 refs #5295]
 * Bug fix: resolved IE8 design issues described in ticket 5233
   [ichimdav #5233]
 * Upgrade Step: remove from www/portal_view_customizations/manage_main
