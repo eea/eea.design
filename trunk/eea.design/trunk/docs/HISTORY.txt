@@ -3,6 +3,8 @@
 
 5.1-dev - (unreleased)
 ----------------------
+* Feature: Show dates info easily for logged in users as done for anonym.
+  [demarant]
 * Feature: Added message with anchor link to comments in footer
   [szabozo0 refs #5295]
 * Bug fix: Display login button in Comments if user is not authenticated

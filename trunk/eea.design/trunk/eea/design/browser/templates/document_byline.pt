@@ -16,7 +16,32 @@
             Please make sure javascript is enabled in your browser.
           </div>
         </noscript>
-
+        <tal:dates tal:define="metatypes_showpubdate siteprops/metatypes_showpubdate|python:['Highlight','PressRelease','Article','Speech','Assessment','Specification'];
+                                   metatypes_showmoddate siteprops/metatypes_showmoddate|python:['ATDocument','Highlight','PressRelease','Article','Speech','Assessment','Specification'];
+                                   metatypes_showcredate siteprops/metatypes_showcredate|python:['Assessment','Specification'];"
+                    metal:define-macro="publishdate">
+            <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
+                <tal:published i18n:translate="created">
+                    Created
+                </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
+            </span>
+            <span class="docDate publishDate" tal:condition="python:context.meta_type in metatypes_showpubdate">
+                <tal:published i18n:translate="published">
+                    Published
+                </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
+            </span>
+            <span class="docDate modificationDate" tal:condition="python:isAnon and context.meta_type in metatypes_showmoddate">
+                   <tal:modified i18n:translate="box_last_modified">
+                    Last modified
+                   </tal:modified>: <span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59</span>
+            </span>
+            <tal:expired tal:condition="view/isExpired">
+                — 
+                <span class="state-expired"
+                      i18n:translate="time_expired">expired</span>
+            </tal:expired>
+        </tal:dates>
+        <br />
         <tal:loggedin tal:condition="not: isAnon">
             <span id="lock-icon"
                 title="This document is locked."
@@ -75,26 +100,5 @@
                 </div>
             </tal:rights>
         </tal:loggedin>
-
-        <tal:anonymous tal:define="metatypes_showpubdate siteprops/metatypes_showpubdate|python:['Highlight','PressRelease','Article','Speech','Assessment','Specification'];
-                                   metatypes_showmoddate siteprops/metatypes_showmoddate|python:['ATDocument','Highlight','PressRelease','Article','Speech','Assessment','Specification'];
-                                   metatypes_showcredate siteprops/metatypes_showcredate|python:['Assessment','Specification'];"
-        tal:condition="isAnon" metal:define-macro="publishdate">
-            <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
-                <tal:published i18n:translate="">
-                    Created
-                </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
-            </span>
-            <span class="docDate publishDate" tal:condition="python:context.meta_type in metatypes_showpubdate">
-                <tal:published i18n:translate="Published">
-                    Published
-                </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
-            </span>
-            <span class="docDate modificationDate" tal:condition="python:context.meta_type in metatypes_showmoddate">
-                <tal:modified i18n:translate="">
-                    Last modified
-                </tal:modified>: <span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate())"> August 16, 2001 at 23:35:59</span>
-            </span>
-        </tal:anonymous>
     </div>
 </tal:block>
