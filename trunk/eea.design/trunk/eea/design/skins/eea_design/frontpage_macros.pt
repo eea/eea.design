@@ -146,7 +146,7 @@
     tal:define="more_href more_href|string:/;
                 more_title more_title|string:All items">
                 <p><a title="archive" class="standardButton" i18n:attributes="title" 
-                      tal:attributes="href more_href;" i18n:translate="" 
+                       tal:attributes="href more_href;" i18n:translate=""><span i18n:name="portlet_footer_read_more"   
                                                         tal:content="more_title"
                                                         tal:omit-tag="">All items</span>
                     </a>

@@ -15,7 +15,7 @@
                    i18n:attributes="value label_search" />
     </form>
       <a id="search_advanced_link" href="/help/advanced-search"
-               i18n:translate=""
+       i18n:translate="" tal:attributes="href string:${local_site}/help/advanced-search" 
                >Advanced search</a>
       <a id="search_glossary_link" href="http://glossary.eea.europa.eu/"
          i18n:translate=""

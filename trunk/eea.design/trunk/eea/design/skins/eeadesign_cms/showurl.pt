@@ -8,9 +8,9 @@
         <span tal:condition="template/title"
               tal:replace="template/title">optional template title</span></h2>
 
-    <tal:block i18n:translate="">template id</em>.
+<tal:block i18n:translate="">This is Page Template</tal:block>&nbsp;<em tal:content="template/id">template id</em>. 
 
-    <tal:block i18n:translate="">description</p>     
+   <tal:block i18n:translate="">abs_url</tal:block>:&nbsp; <p tal:content="here/absolute_url">description</p>  
 
   </body>
 </html>

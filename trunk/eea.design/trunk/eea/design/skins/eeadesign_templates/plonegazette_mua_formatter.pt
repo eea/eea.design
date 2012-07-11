@@ -129,7 +129,7 @@ color:white;
 
 <div id="notification-header">  
 <h3>
-    <tal:block i18n:translate="">EEA</tal:block>)<br/>
+  <tal:block i18n:translate="">European Environment Agency</tal:block> (<tal:block i18n:translate="">EEA</tal:block>)<br/> 
     <span tal:replace="string:www.eea.europa.eu" />
 </h3>
 </div>
