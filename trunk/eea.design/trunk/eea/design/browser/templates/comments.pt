@@ -1,4 +1,4 @@
-<h2 id="eea-comments">Comments</h2>
+<h2 id="eea-comments" i18n:translate="">Comments</h2>
 <tal:block tal:define="userHasReplyPermission view/can_reply;
                        isDiscussionAllowed view/is_discussion_allowed;
                        isAnonymousDiscussionAllowed view/anonymous_discussion_allowed;
@@ -22,7 +22,7 @@
 </tal:block>
 <tal:block tal:condition="python:userHasReplyPermission">
 <tal:block tal:condition="python:isDiscussionAllowed or has_replies"
-           i18n:domain="plone">
+           i18n:domain="eea">
 
     <div class="reply"
          tal:condition="python:isAnon and not isAnonymousDiscussionAllowed">
@@ -72,7 +72,7 @@
                                          alt reply/Creator" />
                 </div>
 
-                <div class="documentByLine" i18n:domain="plone.app.discussion">
+                <div class="documentByLine" i18n:domain="eea">
                     <tal:name>
                         <a href=""
                            tal:condition="has_author_link"
@@ -142,7 +142,7 @@
 
         <div tal:condition="python: has_replies and not isDiscussionAllowed"
              class="discreet"
-             i18n:domain="plone.app.discussion"
+             i18n:domain="eea"
              i18n:translate="label_commenting_disabled">
             Commenting has been disabled.
         </div>
