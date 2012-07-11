@@ -10,11 +10,11 @@
 
 <metal:main fill-slot="main">
  <metal:sitemap-content metal:define-macro="main">
-    <h1 i18n:translate="title_soer_geographically">Browse SOER geographically</h1>
+    <h1 i18n:translate="">Browse SOER geographically</h1>
     
     <ul id="portal-sitemap" style="width: 550px;">
             <li style="float:left;width:125px;margin-left:1em;">
-                <span style="font-size: 1.4em; font-weight: bold;" i18n:translate="regions">Regions</span>
+                <span style="font-size: 1.4em; font-weight: bold;" i18n:translate="">Regions</span>
                <ul>
 		 <li><a href="http://www.eea.europa.eu/soer/countries/#c11=CommonalityReport&amp;c11=DiversityReport&amp;c11=FlexibilityReport&amp;c12=all&amp;c5=&amp;b_start=0&amp;c15=alpine"
 		        i18n:translate="">Alpine region</a></li>

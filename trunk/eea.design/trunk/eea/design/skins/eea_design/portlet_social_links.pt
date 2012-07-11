@@ -12,7 +12,7 @@
       </div>
 
       <dl class="portlet" id="portlet-followus">
-        <dt i18n:translate="follow-us">Follow us</dt>
+        <dt i18n:translate="">Follow us</dt>
         <dd>
             <a id="twitter-link" title="Follow us on Twitter"
                href="http://twitter.com/euenvironment"

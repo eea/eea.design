@@ -17,15 +17,15 @@
                 <caption class="hiddenStructure" i18n:translate="">Content listing</caption>
                 <thead>
                     <tr>
-                        <th class="nosort">&nbsp;<tal:title i18n:translate="listingheader_title"
+                        <th class="nosort">&nbsp;<tal:title i18n:translate=""
                           >Title</tal:title>&nbsp;</th>
                         <th class="nosort"
-                            tal:condition="show_about">&nbsp;<tal:title i18n:translate="listingheader_author"
+                            tal:condition="show_about">&nbsp;<tal:title i18n:translate=""
                           >Author</tal:title>&nbsp;</th>
-                        <th class="nosort">&nbsp;<tal:title i18n:translate="listingheader_type"
+                        <th class="nosort">&nbsp;<tal:title i18n:translate=""
                           >Type</tal:title>&nbsp;</th>
                         <th class="nosort"
-                            tal:condition="show_about">&nbsp;<tal:modified i18n:translate="listingheader_modified"
+                            tal:condition="show_about">&nbsp;<tal:modified i18n:translate=""
                           >Modified</tal:modified>&nbsp;</th>
                     </tr>
                 </thead>

@@ -30,7 +30,7 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
 
                         <!-- select_topics -->
                         <div id="news-header">
-                            <h2 i18n:translate="whatnews_gallery_title"> What's new</h2>
+                            <h2 i18n:translate=""> What's new</h2>
                             <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector"
                                 metal:define-macro="whatsnew-select-topic">
                                 <option value="" i18n:translate="">Filter by topic</option>

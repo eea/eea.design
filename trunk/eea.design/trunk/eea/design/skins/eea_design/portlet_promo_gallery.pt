@@ -97,7 +97,7 @@
             class="pause disabled" 
             aria-pressed="true" 
             role="button"
-            i18n:translate="pause">Pause</a>
+            i18n:translate="">Pause</a>
     </div>
 
 </div>

@@ -11,7 +11,7 @@
             #5233 IE8 has a bug which renders the noscript tag when using 
             background color and border so we set the class to a div
           </tal:comment>
-          <div class="portalMessage" i18n:translate="website-functionality-desc">
+          <div class="portalMessage" i18n:translate="">
             This website has limited functionality with javascript off.
             Please make sure javascript is enabled in your browser.
           </div>
@@ -26,7 +26,7 @@
                 </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
             </span>
             <span class="docDate publishDate" tal:condition="python:context.meta_type in metatypes_showpubdate">
-                <tal:published i18n:translate="published">
+                <tal:published i18n:translate="">
                     Published
                 </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
             </span>
@@ -38,7 +38,7 @@
             <tal:expired tal:condition="view/isExpired">
                 — 
                 <span class="state-expired"
-                      i18n:translate="time_expired">expired</span>
+                      i18n:translate="">expired</span>
             </tal:expired>
         </tal:dates>
         <br />
@@ -82,11 +82,11 @@
                   tal:condition="view/show_history"> — 
                   <a href="#"
                      tal:attributes="href string:${here/absolute_url}/@@historyview"
-                     i18n:translate="label_history">History</a>
+                     i18n:translate="">History</a>
             </span>
             <div tal:define="contributors context/Contributors"
                  tal:condition="contributors"
-                 i18n:translate="text_contributors">
+                 i18n:translate="">
                     Contributors:
                     <span i18n:name="name"
                         tal:omit-tag=""

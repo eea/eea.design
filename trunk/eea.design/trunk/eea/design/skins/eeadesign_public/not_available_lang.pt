@@ -21,11 +21,11 @@
                         translations context/getTranslations">
 
 
-    <h1 i18n:translate="header_translation_unavailable">
+    <h1 i18n:translate="">
         Translation Unavailable
     </h1>
 
-    <p i18n:translate="description_changed_translation_unavailable"
+    <p i18n:translate=""
        tal:condition="set_language">
         The content you were viewing does not exist in the language
         you just selected. The site language has been switched to
@@ -36,7 +36,7 @@
         and you can keep browsing the site in this language.
     </p>
 
-    <p i18n:translate="description_translation_unavailable"
+    <p i18n:translate=""
        tal:condition="not:set_language">
         This content does not exist in your current language,
         <strong i18n:name="language"
@@ -49,7 +49,7 @@
     <tal:translations condition="context/getTranslatedLanguages"
                       define="translations context/getTranslations">
 
-        <p i18n:translate="description_read_translated_versions">
+        <p i18n:translate="">
             If you want to read the content of this document, you have to
             switch to one of the following languages:
         </p>
@@ -69,7 +69,7 @@
 
     <tal:add condition="python:checkPermission('Add portal content', context)">
 
-        <h2 i18n:translate="header_add_content_translation">
+        <h2 i18n:translate="">
             Add content translation
         </h2>
 
@@ -78,7 +78,7 @@
               action=""
               tal:attributes="action here/absolute_url">
 
-            <p i18n:translate="description_create_language_translation">
+            <p i18n:translate="">
                 Create
                 <span i18n:name="language">
                     <select name="set_language">

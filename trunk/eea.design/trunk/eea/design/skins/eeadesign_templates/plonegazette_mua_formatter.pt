@@ -129,7 +129,7 @@ color:white;
 
 <div id="notification-header">  
 <h3>
-    <tal:block i18n:translate="">European Environment Agency</tal:block> (<tal:block i18n:translate="">EEA</tal:block>)<br/>
+    <tal:block i18n:translate="">EEA</tal:block>)<br/>
     <span tal:replace="string:www.eea.europa.eu" />
 </h3>
 </div>
@@ -149,7 +149,7 @@ color:white;
 <p><tal:block i18n:translate="">Best regards</tal:block><br/>
 <a href="http://www.eea.europa.eu/help/contact-info" i18n:translate="">EEA Web Team</a><br/><br/>
 <a href="http://www.eea.europa.eu" i18n:translate="">European Environment Agency</a>,
-                     <tal:block i18n:translate="eea-street-address">
+                     <tal:block i18n:translate="">
                         Kongens Nytorv 6, 1050, Copenhagen K, Denmark.
                     </tal:block> -  <tal:block i18n:translate="">Phone:</tal:block> +45 3336 7100 <br />
 <a rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#" 

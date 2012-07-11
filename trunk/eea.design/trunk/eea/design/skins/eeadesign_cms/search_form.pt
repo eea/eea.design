@@ -14,9 +14,9 @@
   <metal:main fill-slot="main">
 
     <h1 class="documentFirstHeading"
-      i18n:translate="heading_advanced_search">Advanced search for content</h1>
+      i18n:translate="">Advanced search for content</h1>
 
-    <div class="documentDescription" i18n:translate="description_advanced_search">
+    <div class="documentDescription" i18n:translate="">
       This search form enables you to find content on the site by
       specifying one or more search terms.
       <br />
@@ -42,9 +42,9 @@
           <input type="hidden" name="advanced_search" value="True" />
 
           <div class="field">
-            <label for="SearchableText" i18n:translate="label_search_text">Search text</label>
+            <label for="SearchableText" i18n:translate="">Search text</label>
 
-            <div class="formHelp" i18n:translate="help_search_text">
+            <div class="formHelp" i18n:translate="">
               For a simple text search, enter your search term
               here. Multiple words may be found by combining
               them with <strong>AND</strong> and <strong>OR</strong>.
@@ -65,9 +65,9 @@
             tal:define="usedSubjects python:context.portal_catalog.uniqueValuesFor('Subject');"
             tal:condition="usedSubjects">
 
-            <label for="Subject" i18n:translate="label_tags">Tags</label>
+            <label for="Subject" i18n:translate="">Tags</label>
 
-            <div class="formHelp" i18n:translate="help_search_tags">
+            <div class="formHelp" i18n:translate="">
               Return items matching some or all of these tags.
               Multiple words may be found by pressing <strong>Ctrl</strong>
               (or <strong>Apple</strong> key on Mac) while clicking the
@@ -95,7 +95,7 @@
               value=""
               class="noborder"
               tal:attributes="checked python:(request.get('Subject_usage:ignore_empty', '') == '') and 1 or ''"/>
-            <label for="Subject_or" i18n:translate="description_subject_or">
+            <label for="Subject_or" i18n:translate="">
               Match any
             </label>
             <br />
@@ -106,7 +106,7 @@
               value="operator:and"
               class="noborder"
               tal:attributes="checked python:(request.get('Subject_usage:ignore_empty') != '') and 1 or 0"/>
-            <label for="Subject_and" i18n:translate="description_subject_and">
+            <label for="Subject_and" i18n:translate="">
               Match all
             </label>
           </div>
@@ -122,11 +122,11 @@
             used_types  python:context.plone_utils.getUserFriendlyTypes(all_used_types);
             all_checked python:(len(used_types) == len(request.get('portal_type', []))) or first_call;
             toggle_select_state python:all_checked and 'true' or 'false';">
-            <label i18n:translate="label_item_type"
+            <label i18n:translate=""
               class="collapser">Item type</label>
 
             <div class="collapse">
-              <div class="formHelp" i18n:translate="help_search_item_type">
+              <div class="formHelp" i18n:translate="">
                 Return items of a specific type.
               </div>
 
@@ -141,7 +141,7 @@
                   tal:attributes="checked python:all_checked and 'checked' or '';
                   onclick string:javascript:toggleSelect(this, 'portal_type:list', ${toggle_select_state});"/>
                 <label for="pt_toggle"
-                  i18n:translate="label_toggle"
+                  i18n:translate=""
                   >Select All/None
                 </label>
               </span>
@@ -178,10 +178,10 @@
             tal:attributes="class field_collapsible_class">
             <label for="created"
               class="collapser"
-              i18n:translate="label_new_items_since">New items since</label>
+              i18n:translate="">New items since</label>
 
             <div class="collapse">
-              <div class="formHelp" i18n:translate="help_search_new_items_since">
+              <div class="formHelp" i18n:translate="">
                 Return items added since you were last logged on, the last week, etc.
               </div>
 
@@ -201,23 +201,23 @@
                     tal:define="value python:member is not None and member.getProperty('last_login_time') or today"
                     tal:attributes="value value;
                     selected python:selected==value and 'selected' or '';"
-                    i18n:translate="last_login">Last log-in</option>
+                    i18n:translate="">Last log-in</option>
                   <option value="#"
                     tal:attributes="value yesterday;
                     selected python:selected==yesterday and 'selected' or '';"
-                    i18n:translate="time_yesterday"> Yesterday </option>
+                    i18n:translate=""> Yesterday </option>
                   <option value="#"
                     tal:attributes="value lastweek;
                     selected python:selected==lastweek and 'selected' or '';"
-                    i18n:translate="time_last_week"> Last week </option>
+                    i18n:translate=""> Last week </option>
                   <option value="#" tal:attributes="value lastmonth;
                     selected python:selected==lastmonth and 'selected' or '';"
-                    i18n:translate="time_last_month"> Last month </option>
+                    i18n:translate=""> Last month </option>
                   <option value="#"
                     class="default_option"
                     tal:attributes="value ever;
                     selected python:selected==ever and 'selected' or '';"
-                    i18n:translate="time_ever"> Ever </option>
+                    i18n:translate=""> Ever </option>
                 </select>
               </tal:datetime>
             </div>
@@ -231,7 +231,7 @@
 
             <label for="review_state"
               class="collapser"
-              i18n:translate="label_review_status">Review status</label>
+              i18n:translate="">Review status</label>
 
             <div class="collapse"
               tal:define="navtree_props portal/portal_properties/navtree_properties;
@@ -240,7 +240,7 @@
               filtered_states python:[state for state in states if state[1] in used_states];
               all_checked python:(len(filtered_states) == len(request.get('review_state', []))) or first_call;
               toggle_select_state python:all_checked and 'true' or 'false';">
-              <div class="formHelp" i18n:translate="help_search_review_status">
+              <div class="formHelp" i18n:translate="">
                 You may search for items based on their
                 review state. If you wish to constrain results to items
                 in certain states, select them from this list.
@@ -257,7 +257,7 @@
                   tal:attributes="checked python:all_checked and 'checked' or '';
                   onclick string:javascript:toggleSelect(this, 'review_state:list', ${toggle_select_state});"/>
                 <label for="rs_toggle"
-                  i18n:translate="label_toggle"
+                  i18n:translate=""
                   >Select All/None
                 </label>
                 <br />
@@ -290,10 +290,10 @@
             tal:attributes="class field_collapsible_class">
             <label for="Creator"
               class="collapser"
-              i18n:translate="label_author">Author</label>
+              i18n:translate="">Author</label>
 
             <div class="collapse">
-              <div class="formHelp" i18n:translate="help_search_author">
+              <div class="formHelp" i18n:translate="">
                 Return items created by a particular person.
               </div>
 
@@ -304,7 +304,7 @@
                   tal:condition="python: len(creators) &lt;= 30">
                   <option value=""
                     class="default_option"
-                    i18n:translate="label_any_author">Any Author</option>
+                    i18n:translate="">Any Author</option>
                   <metal:block tal:repeat="creator creators">
                     <option value=""
                       tal:attributes="value creator;
@@ -325,10 +325,10 @@
             tal:condition="options/show_title">
             <label for="Title"
               class="collapser"
-              i18n:translate="label_title">Title</label>
+              i18n:translate="">Title</label>
 
             <div class="collapse">
-              <div class="formHelp" i18n:translate="help_search_title">
+              <div class="formHelp" i18n:translate="">
                 Return items matching this title.
               </div>
 
@@ -348,10 +348,10 @@
 
             <label for="Description"
               class="collapser"
-              i18n:translate="label_description">Description</label>
+              i18n:translate="">Description</label>
 
             <div class="collapse">
-              <div class="formHelp" i18n:translate="help_search_description">
+              <div class="formHelp" i18n:translate="">
                 Return items matching this description.
                 Multiple words may be found
                 by combining them with <strong>AND</strong> and <strong>OR</strong>.

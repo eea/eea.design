@@ -11,7 +11,7 @@
                         <a href=""
                            class="managePortletsFallback"
                            tal:attributes="href view/manageUrl"
-                           i18n:translate="manage-footer-portlet-link">Manage footer portlets</a>
+                           i18n:translate="">Manage footer portlets</a>
                     </div>
                  </div>
         </div>

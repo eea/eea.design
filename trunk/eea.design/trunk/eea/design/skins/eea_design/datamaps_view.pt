@@ -23,9 +23,9 @@
 		       class="archives advanced-search-link" 
 		       title="Go to advanced search"
 		       i18n:attributes="title">
-                    <span i18n:translate="advanced">Advanced</span></a>
+                    <span i18n:translate="">Advanced</span></a>
 		    <div class="featured">
-		       <h2 i18n:translate="featured_global_search">Search</h2>
+		       <h2 i18n:translate="">Search</h2>
 		       <form tal:attributes="action string:${here/absolute_url}/find/global"  method="get" id="faceted-text-search" class="searchforms faceted-external-search">
                    <input type="text" name="c12" title="Search data, maps, indicators" i18n:attributes="title" value="" />
                    <input type="submit" value="Search" i18n:attributes="value" name="search" />
@@ -41,7 +41,7 @@
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
 			
 			<tal:featured_item
-                        i18n:translate="featured_item_see_all"
+                        i18n:translate=""
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
                                          nr_items python:1;
@@ -100,7 +100,7 @@
                     <!-- end promotions_gallery_slideshow -->
 
                     <div id="news-header" >
-                    <h2 i18n:translate="datamaps_gallery_title"> Browse complete catalogue</h2>
+                    <h2 i18n:translate=""> Browse complete catalogue</h2>
                         <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
                             Whatsnew select topic.
                         </div>

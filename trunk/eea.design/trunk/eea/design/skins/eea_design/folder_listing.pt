@@ -81,7 +81,7 @@
                    tal:define="parent_url python:test(isAnon, None, context.navigationParent(context, template_id))"
                    tal:condition="parent_url"
                    tal:attributes="href parent_url"
-                   i18n:translate="go_to_parent_url">
+                   i18n:translate="">
                 Up one level
             </a>
 
@@ -128,14 +128,14 @@
 
                     <span class="documentByLine">
                         <span tal:condition="python: item_type in ('Event', 'QuickEvent') and item_sametime"
-                              i18n:translate="label_event_byline_onlyfrom">
+                              i18n:translate="">
                              <abbr class="dtstart"
                                    tal:attributes="title python:item_start"
                                    tal:content="python:toLocalizedTime(item_start,long_format=1)"
                                    i18n:name="start">from date</abbr>
                         </span>
                         <span tal:condition="python: item_type in ('Event', 'QuickEvent') and item_samedate and not item_sametime"
-                              i18n:translate="label_event_byline_samedate">
+                              i18n:translate="">
                              <abbr class="dtstart"
                                    tal:attributes="title python:item_start"
                                    tal:content="python:toLocalizedTime(item_start)"
@@ -150,7 +150,7 @@
                                    i18n:name="end">to time</abbr>
                         </span>
                         <span tal:condition="python: item_type in ('Event', 'QuickEvent') and not item_samedate and not item_sametime"
-                              i18n:translate="label_event_byline">
+                              i18n:translate="">
                               from
                                    <abbr class="dtstart"
                                    tal:attributes="title python:item_start"
@@ -163,7 +163,7 @@
                         </span>
                          <span tal:condition="python: item_type in ('Event', 'QuickEvent') and item.location"
                              tal:define="location python:item.location"
-                              i18n:translate="label_event_byline_location">&mdash;
+                              i18n:translate="">&mdash;
                             <tal:location  tal:condition="python:not same_type(location, ())">
                                  <span tal:content="location"
                                        class="location"
@@ -194,7 +194,7 @@
                                             creator_long_form string:?author=${author/username};
                                             creator_is_openid python:'/' in creator_short_form;
                                             creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
-                              <span i18n:translate="label_by_author">
+                              <span i18n:translate="">
                                 by
                               <a href="#"
                                  tal:attributes="href string:${navigation_root_url}/author/${item_creator}"
@@ -246,7 +246,7 @@
         <metal:empty metal:define-slot="no_items_in_listing">
         <p class="discreet"
            tal:condition="not: folderContents"
-           i18n:translate="description_no_items_in_folder">
+           i18n:translate="">
             There are currently no items in this folder.
         </p>
     </metal:empty>

@@ -24,7 +24,7 @@
             <a style='text-align: right' href="#"
                tal:condition="nocall: here/asPDF|nothing"
                tal:attributes="href string:${here_url}/asPDF/atct_topic_pdf_template/atct_topic_pdf"
-               i18n:translate="label_download_as_pdf"
+               i18n:translate=""
                i18n:domain="eea">
                 Download PDF
             </a>
@@ -117,14 +117,14 @@
             <p class="discreet"
                tal:condition="python: not topicContents and here.listCriteria()"
                i18n:domain="eea"
-               i18n:translate="description_no_items_in_topic">
+               i18n:translate="">
                 There are currently no results for this search.
             </p>
 
             <p class="discreet"
                tal:condition="not: here/listCriteria"
                i18n:domain="eea"
-               i18n:translate="description_no_criteria_in_topic">
+               i18n:translate="">
                 There are currently no criteria on which to search.
                 Please add them using the 'criteria' tab.
             </p>
@@ -137,7 +137,7 @@
         <tal:subtopics condition="here/hasSubtopics|nothing"
                        define="folderContents here/listSubtopics|nothing">
             <h2 i18n:domain="eea"
-                i18n:translate="heading_contained_collections">
+                i18n:translate="">
                 Also in this section
             </h2>
             <metal:list metal:use-macro="here/base/macros/folderlisting"/>

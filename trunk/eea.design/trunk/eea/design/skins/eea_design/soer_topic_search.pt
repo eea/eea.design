@@ -34,7 +34,7 @@
 
 	    <tal:europe define="result view/getThematicAssesments"
 			condition="result">
-            <h2 i18n:translate="eu-environment-assessments">Europe's environment: thematic assessments</h2>
+            <h2 i18n:translate="">Europe's environment: thematic assessments</h2>
             <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">
@@ -48,7 +48,7 @@
 
 	    <tal:globaltrends define="result view/getGlobalMegatrends"
 			      condition="result">
-            <h2 i18n:translate="eu-megatrends">Europe and the world: global megatrends</h2>
+            <h2 i18n:translate="">Europe and the world: global megatrends</h2>
             <div class="photoAlbumEntry" tal:repeat="item result">
                 <a tal:attributes="href item/url; title item/description">
                     <span class="photoAlbumEntryWrapper">

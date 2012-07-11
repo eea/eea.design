@@ -38,7 +38,7 @@
                                 <div class="visualClear"></div>
                             </div>
                             <div class="portletFooter">
-                            <a class="standardButton" i18n:translate="" tal:attributes="href child/listing_url" tal:condition="child/has_more">All Items</a>
+                            <a class="standardButton" i18n:translate="">All Items</a>
                             </div>
                         </div>
                     </div>

@@ -48,7 +48,7 @@
             <a href="" title="Month events"
                tal:attributes="href string:${portal_url}/events/search?${view/getReviewStateString}start.query:record:list:date=${begin}&amp;start.range:record=max&amp;end.query:record:list:date=${end}&amp;end.range:record=min&amp;year:int=${year}&amp;month:int=${month}"
                i18n:attributes="title month_events;">
-        <span i18n:translate="" tal:omit-tag="">
+        <span i18n:translate="">
             <span i18n:name="monthname" i18n:translate=""
                   tal:content="view/monthName"
                   tal:omit-tag="">monthname</span>

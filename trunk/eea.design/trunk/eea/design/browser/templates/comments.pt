@@ -84,7 +84,7 @@
                               tal:replace="reply/Creator" />
                         <span tal:condition="not: reply/Creator">Anonymous</span>
                     </tal:name>
-                    <tal:posted i18n:translate="label_says">says:</tal:posted>
+                    <tal:posted i18n:translate="">says:</tal:posted>
                     <div class="commentDate"
                          tal:content="python:view.format_time(reply.modification_date)">
                          8/23/2001 12:40:44 PM
@@ -133,7 +133,7 @@
                 </div>
                 <button class="context reply-to-comment-button hide allowMultiSubmit"
                         tal:condition="python:isDiscussionAllowed and (isAnon and isAnonymousDiscussionAllowed or userHasReplyPermission)"
-                        i18n:translate="label_reply">
+                        i18n:translate="">
                     Reply
                 </button>
             </div>
@@ -143,7 +143,7 @@
         <div tal:condition="python: has_replies and not isDiscussionAllowed"
              class="discreet"
              i18n:domain="eea"
-             i18n:translate="label_commenting_disabled">
+             i18n:translate="">
             Commenting has been disabled.
         </div>
 
@@ -165,7 +165,7 @@
 
         <fieldset>
 
-            <legend i18n:translate="label_add_comment">Add comment</legend>
+            <legend i18n:translate="">Add comment</legend>
             <p tal:content="view/comment_transform_message">
                 You can add a comment by filling out the form below. Plain text
                 formatting.

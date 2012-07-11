@@ -9,7 +9,7 @@
     </metal:block>
         <metal:main fill-slot="main">
           <h1 i18n:translate="">List of all icons available</h1>
-			<div class="documentDescription" i18n:translate="doc-description">
+			<div class="documentDescription" i18n:translate="">
 			    Link types are automatically detected on client side by a javascript 
 			    (scanforlinks) which will add the necessary class icon before the link.</div>
 			<h3 i18n:translate="">Icons based on protocols</h3>
@@ -26,7 +26,7 @@
 			<a href="https://reports.eea.eu.int/document.ppt" i18n:translate="">Presentation on old EEA domain</a>
 			</p>
 			<h3 i18n:translate="">Mix links examples</h3>
-			<p i18n:translate="icon-description">Icons based on file extension, on different external sites and protocols</p>
+			<p i18n:translate="">Icons based on file extension, on different external sites and protocols</p>
 			<p>
 			<a href="http://www.externalsite.eu/document.doc" i18n:translate="">Word doc on external link</a>,
 			<a href="https://www.externalsite.eu/doc.pdf" i18n:translate="">PDF on secure external link</a>, 
@@ -34,7 +34,7 @@
 			<a href="https://externalsite.eu/data.xls" i18n:translate="">Excel doc on secure external link</a>, 
 			</p>
 			<h3 i18n:translate="">Available icons based on file extension</h3>
-			<p i18n:translate="available-icon-file">New icons or updates can be done via the mimetypes_registry in the Plone CMS or through the EEADesign2006 product. Contact the EEA web development team in this case.</p>
+			<p i18n:translate="">New icons or updates can be done via the mimetypes_registry in the Plone CMS or through the EEADesign2006 product. Contact the EEA web development team in this case.</p>
 			<p>
 			<tal:block tal:repeat="mimetype here/mimetypes_registry/mimetypes">
 			<tal:block tal:condition="python:mimetype.extensions and mimetype.icon_path!='unknown.png' and mimetype.icon_path!='html.png'">

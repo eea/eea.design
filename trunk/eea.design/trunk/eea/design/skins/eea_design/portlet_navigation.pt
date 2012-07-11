@@ -7,7 +7,7 @@
     <a href="#" class="tile"
        tal:condition="python: not displayLogo and not title"
        tal:attributes="href string:${root/absolute_url}/sitemap"
-       i18n:translate="box_navigation">Navigation</a>
+       i18n:translate="">Navigation</a>
     <a href="#" class="tile"
        tal:condition="python: title and not displayLogo"
        tal:attributes="href root/getUrl|root/absolute_url"

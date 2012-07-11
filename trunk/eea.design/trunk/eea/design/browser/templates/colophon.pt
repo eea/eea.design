@@ -11,10 +11,10 @@
         <div class="colophon-left">
             <tal:address>
                 <a href="/" tal:attributes="href string:${portal_state/portal_url}" >
-                    <tal:block i18n:translate="">European Environment Agency</tal:block> (<tal:block i18n:translate="">EEA</tal:block>)
+                    <tal:block i18n:translate="">EEA</tal:block>)
                 </a>                <br/>
                 <tal:c1 condition="not:short_colophon_cond">
-                    <tal:block i18n:translate="eea-street-address">
+                    <tal:block i18n:translate="">
                         Kongens Nytorv 6, 1050, Copenhagen K, Denmark.
                     </tal:block>
                     <br/> 
@@ -32,7 +32,7 @@
                 <br/>
                 <a href="http://www.eea.europa.eu/legal" 
                    tal:attributes="href string:${local_site}/legal/"
-                   i18n:translate="Legal notice">Legal notice</a>
+                   i18n:translate="">Legal notice</a>
             </span>
              <img src="http://www.eea.europa.eu/eu-flag.gif" 
                   alt="EU flag" 
@@ -59,9 +59,9 @@
     </div>
     <div tal:condition="not:short_colophon_cond" class="colophon-middle">
        <p class="discreet colophon-links">
-            <tal:comments i18n:translate="engineered_by">engineered by</tal:comments><br />
+            <tal:comments i18n:translate="">engineered by</tal:comments><br />
             <a href="http://www.eea.europa.eu/help/contact-info" 
-               i18n:translate="eea_web_team" 
+               i18n:translate="" 
                tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>
        </p>
 

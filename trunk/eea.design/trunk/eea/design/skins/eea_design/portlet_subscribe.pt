@@ -16,7 +16,7 @@
     <dd class="portletItem">
       <span i18n:translate="">Get notifications on new reports and products.</span>
       <tal:cond tal:condition="python:len(nl_objects) == 1" >
-        <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="subscribers_no">
+        <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="">
           Currently we have <strong i18n:name="nr"
             tal:content="python:len(subscribers)">1000</strong> subscribers. Frequency: 3-4 emails / month.
         </span>
@@ -40,7 +40,7 @@
 
             <tal:block tal:condition="not: nl_unique">
             <div class="field">
-              <label for="nlpath" i18n:translate="label_choose_newsletter">Choose a newsletter</label> <br />
+              <label for="nlpath" i18n:translate="">Choose a newsletter</label> <br />
               <select name="nlpath" id="nlpath">
                 <option value="#"
                   tal:repeat="newsletter nl_objects"
@@ -52,7 +52,7 @@
             </tal:block>
 
              <div class="field">
-              <label for="email" class="hiddenStructure" i18n:translate="label_email">Email</label>
+              <label for="email" class="hiddenStructure" i18n:translate="">Email</label>
               <input type="text"
                      name="email"
                      value="Enter email"
@@ -66,7 +66,7 @@
         </form>
     </dd>
 
-         <dt i18n:translate="follow-us">Follow us</dt>
+         <dt i18n:translate="">Follow us</dt>
         <dd>
             <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon" i18n:attributes="alt"/> <a href="http://twitter.com/euenvironment" tal:content="string:Twitter"></a>
         </dd>
@@ -74,18 +74,18 @@
             <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon" i18n:attributes="alt"/> <a href="http://www.facebook.com/pages/European-Environment-Agency/113006845445297" tal:content="string:Facebook"></a>
         </dd>
         <dd>
-            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon" i18n:attributes="alt"/> <a href="http://www.youtube.com/user/EEAvideos" i18n:translate="youtube-channel">YouTube channel</a>
+            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon" i18n:attributes="alt"/> <a href="http://www.youtube.com/user/EEAvideos" i18n:translate="">YouTube channel</a>
         </dd>
         <dd>
             <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo" i18n:attributes="alt"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds">
-            <span i18n:translate="rss_feeds">RSS Feeds</span></a>
+            <span i18n:translate="">RSS Feeds</span></a>
         </dd>
 
     <dd class="portletFooter" style="padding-bottom: 0.5em"
         tal:condition="nl_unique">
 
          <a href="#" class="moreLink" tal:attributes="href python: nl_objects[0].absolute_url() + '/view'">
-            <span i18n:translate="label_visit_archives">Notifications archive</span></a>
+            <span i18n:translate="">Notifications archive</span></a>
 
     </dd>
 
@@ -105,7 +105,7 @@
     <dd class="portletItem">
       <span i18n:translate="">Get notifications on new reports and products.</span>
       <tal:cond tal:condition="python:len(nl_objects) == 1" >
-        <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="subscribers_no">
+        <span tal:define="subscribers python:nl_objects[0].getSubscriberFolder()" i18n:translate="">
           Currently we have <strong i18n:name="nr"
             tal:content="python:len(subscribers)">1000</strong> subscribers. Frequency: 3-4 emails / month.
         </span>
@@ -129,7 +129,7 @@
 
             <tal:block tal:condition="not: nl_unique">
             <div class="field">
-              <label for="nlpath" i18n:translate="label_choose_newsletter">Choose a newsletter</label> <br />
+              <label for="nlpath" i18n:translate="">Choose a newsletter</label> <br />
               <select name="nlpath" id="nlpath">
                 <option value="#"
                   tal:repeat="newsletter nl_objects"
@@ -141,7 +141,7 @@
             </tal:block>
 
              <div class="field">
-              <label for="email" class="hiddenStructure" i18n:translate="label_email">Email</label>
+              <label for="email" class="hiddenStructure" i18n:translate="">Email</label>
               <input type="text"
                      name="email"
                      value="Enter email"
@@ -159,7 +159,7 @@
         tal:condition="nl_unique">
 
          <a href="#" class="moreLink" tal:attributes="href python: nl_objects[0].absolute_url() + '/view'">
-            <span i18n:translate="label_visit_archives">Notifications archive</span></a>
+            <span i18n:translate="">Notifications archive</span></a>
 
     </dd>
 

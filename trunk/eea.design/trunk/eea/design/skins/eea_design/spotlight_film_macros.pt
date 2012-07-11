@@ -44,7 +44,7 @@
                              i18n:attributes="title;alt"/>
               </a>
             </div>
-             <h3><a href="http://www.eea.europa.eu/soer" i18n:translate="environent-lookout-link">The European environment &ndash; state and outlook 2010</a></h3>
+             <h3><a href="http://www.eea.europa.eu/soer" i18n:translate="">The European environment &ndash; state and outlook 2010</a></h3>
          </div>
         <div class="visualClear"><!-- --></div>
     </div>

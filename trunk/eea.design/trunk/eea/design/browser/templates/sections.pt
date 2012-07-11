@@ -1,7 +1,7 @@
 <tal:sections tal:define="portal_tabs view/portal_tabs"
      i18n:domain="eea">
      <div id="globalnav-holder">
-        <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
+        <h5 class="hiddenStructure" i18n:translate="">Sections</h5>
         <ul id="portal-globalnav" 
             tal:define="selected_tab python:view.selected_portal_tab">
         <metal metal:use-macro="here/main_template/macros/short_colophon">

@@ -19,7 +19,7 @@
 
 								<div class="field">
 									<label i18n:translate="">Title</label>
-					        		<div class="formHelp" i18n:translate="use-and-or">Use of AND/OR/* is supported.</div>
+					        		<div class="formHelp" i18n:translate="">Use of AND/OR/* is supported.</div>
 					        		<div></div>
 									<input type="text" name="search" value="" size="17" maxlength="50" tabindex="1" />
 							        <input type="submit" value="Search" class="searchButton" i18n:attributes="value" 

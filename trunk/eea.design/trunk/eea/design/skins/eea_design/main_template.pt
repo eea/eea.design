@@ -98,7 +98,7 @@
                     dir python:isRTL and 'rtl' or 'ltr'">
 
 <div id="print-warning" i18n:domain="eea">
-             <p i18n:translate="print_warning">
+             <p i18n:translate="">
                  Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
              </p>
          </div>
@@ -232,7 +232,7 @@
  </div>
     <!-- end column wrapper -->
     <div i18n:domain="eea" tal:condition="python:language != 'en'" id="translation-disclaimer">
-        <p class="note" i18n:translate="page_translated_by">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
+        <p class="note" i18n:translate="">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
     </div>
 
 

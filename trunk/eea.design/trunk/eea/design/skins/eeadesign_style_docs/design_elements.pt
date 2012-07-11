@@ -11,23 +11,23 @@
         table of contents
     </div>
 
-    <h1 class="autoscroll-to-here" i18n:translate="welcome-design-element">
+    <h1 class="autoscroll-to-here" i18n:translate="">
         Welcome to EEA Web design elements, your browser should have autoscrolled down to me
     </h1>
-    <div class="documentDescription" i18n:translate="common-html-markup">
+    <div class="documentDescription" i18n:translate="">
         This page shows common html markup, css classes and javascripts we use across the EEA website. See example code and use Firefox Firebug plugin to inspect elements code.
     </div>
 
-    <h2 i18n:translate="quotations">Quotations</h2>
+    <h2 i18n:translate="">Quotations</h2>
     <blockquote>
-    <p i18n:translate="europe-progress">
+    <p i18n:translate="">
         Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
     </p>
     <p class="source" i18n:translate="">Stavros Dimas, Commissioner for Environment</p>
     </blockquote>
 
     <h2 i18n:translate="">Gallery view</h2>
-    <p i18n:translate="gallery-desc"> 
+    <p i18n:translate=""> 
         You need to enter an image scale after the image src otherwise the gallery 
         will load the full-resolution images which could dramatically slow the page
     </p>
@@ -95,7 +95,7 @@
             <li i18n:translate="">Second tab with longer title</li>
             <li i18n:translate="">Third tab</li>
         </ul>
-        <p i18n:translate="jquery-desc">
+        <p i18n:translate="">
             If you have tabs that have longer titles consider using the extra "two-rows" class for the tabs which makes the tabs larger in height and better styled to accomodate larger titles.
         </p>
         <div class="eea-tabs-panels">
@@ -185,14 +185,14 @@
         </div>
     </div>
     <h4 i18n:translate="">Arbitrary HTML</h4>
-    <p i18n:translate="arbitrary-html">You can have arbitrary HTML in the pop-ups:</p>
+    <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
     <p>
     <a class="fancybox" href="#hidden-popup" i18n:translate="">
         Click me!
     </a>
     </p>
     <h4 i18n:translate="">Image pop-ups</h4>
-    <p i18n:translate="pop-up-desc">
+    <p i18n:translate="">
         If the a-tag hrefs to an image, it will be displayed in the popup.
         Be careful though, if the URL does not end with an image extension,
         fancybox will hang.
@@ -251,7 +251,7 @@
     <h2 i18n:translate="">Sortable tables</h2>
     <table class="listing">
         <thead>
-            <tr><th i18n:translate="">Product</th><th i18n:translate="">Price</th></tr> 
+            <tr><th i18n:translate="">Price</th></tr> 
         </thead>
         <tbody>
             <tr><td i18n:translate="">Ice cream</td><td>50</td></tr>
@@ -278,18 +278,18 @@
     <h3 i18n:translate="">This is a h3</h3>
     <h4 i18n:translate="">This is a h4</h4>
     <p>
-        <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;<a href="#" class="moreLink" i18n:translate="">This is a moreLink</a></p>
+        <tal:block i18n:translate="">This is a moreLink</a></p>
     
     <h2 i18n:translate="">Image scales</h2>
-    <p><tal:block i18n:translate="">image_large</tal:block><br/><img src="giraffe/image_large" /></p>
-    <p><tal:block i18n:translate="">image_preview</tal:block><br/><img src="giraffe/image_preview" /></p>
-    <p><tal:block i18n:translate="">image_mini</tal:block><br/><img src="giraffe/image_mini" /></p>
-    <p><tal:block i18n:translate="">image_thumb</tal:block><br/><img src="giraffe/image_thumb" /></p>
-    <p><tal:block i18n:translate="">image_tile</tal:block><br/><img src="giraffe/image_tile" /></p>
-    <p><tal:block i18n:translate="">image_icon</tal:block><br/><img src="giraffe/image_icon" /></p>
-    <p><tal:block i18n:translate="">image_listing</tal:block><br/><img src="giraffe/image_listing" /></p>
-    <p><tal:block i18n:translate="">image_thumb (videos get play button and black borders applied correctly)</tal:block><br/><img src="/multimedia/rain-on-snow-environmental-atlas-of-europe-2014-sweden/image_thumb" /></p>
-    <p><tal:block i18n:translate="">image_wide (only available for videos)</tal:block><br/><img src="/multimedia/rain-on-snow-environmental-atlas-of-europe-2014-sweden/image_wide" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
+    <p><tal:block i18n:translate="" /></p>
 
     <h2 i18n:translate="">Portal messages</h2>
     <div class="portalMessage">
@@ -304,7 +304,7 @@
 
 
     <h2 i18n:translate="">Auto-Link-Icons</h2>
-    <p i18n:translate="auto-link-desc">
+    <p i18n:translate="">
         Link types are automatically detected on client side
         by a javascript which will add the necessary class icon before the link. 
         Here you see some examples:
@@ -347,7 +347,7 @@
             <input type="hidden" name="type" value="search" />
             <div class="field">
                 <label i18n:translate="">Title</label>
-                <div class="formHelp" i18n:translate="form-help">Enter one or more keywords for a search. Use of AND/OR is supported.</div>
+                <div class="formHelp" i18n:translate="">Enter one or more keywords for a search. Use of AND/OR is supported.</div>
                 <div></div>
                 <input type="text" name="search" value="" size="30" maxlength="50" tabindex="1" />
                 <input type="submit" value="Search" class="searchButton" i18n:attributes="value" id="Submit2" name="Submit2" tabindex="2" />

@@ -15,11 +15,11 @@
 <metal:main metal:fill-slot="main">
 
 
-    <h1 i18n:translate="listing_not_available">
+    <h1 i18n:translate="">
         Listing not available
     </h1>
 
-    <p i18n:translate="description_listing_not_available">
+    <p i18n:translate="">
         The folder you are trying to access is still in draft and therefore its
         content cannot be listed. If you are a content manager of this site,
         you need to login and publish this folder. 

@@ -19,7 +19,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
         <a href=""
            tal:attributes="href python: '%s?%s' % (url , mq( batchlinkparams, {batch.b_start_str:p.first} ))">
            &laquo;
-           <span i18n:translate="batch_previous_x_items" tal:omit-tag="">
+           <span i18n:translate="">
                Previous
                <span i18n:name="number" tal:omit-tag="" tal:content="p/length">n</span>
                items
@@ -32,7 +32,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
       tal:condition="n">
         <a href=""
            tal:attributes="href python: '%s?%s' % (url , mq( batchlinkparams, {batch.b_start_str:n.first} ))">
-           <span i18n:translate="batch_next_x_items" tal:omit-tag="">
+           <span i18n:translate="">
                Next
                <span i18n:name="number" tal:omit-tag="" tal:content="n/length">n</span>
                items
