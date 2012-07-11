@@ -151,7 +151,7 @@
 
                     <span class="documentModified">
                       &mdash;
-                        <span i18n:translate="box_last_modified">
+                        <span i18n:translate="">
                         last modified
                         </span>
                         <span tal:replace="python:toLocalizedTime(result.ModificationDate, long_format=1)">

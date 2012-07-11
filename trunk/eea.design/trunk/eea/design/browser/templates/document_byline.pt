@@ -21,7 +21,7 @@
                                    metatypes_showcredate siteprops/metatypes_showcredate|python:['Assessment','Specification'];"
                     metal:define-macro="publishdate">
             <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
-                <tal:published i18n:translate="created">
+                <tal:published i18n:translate="">
                     Created
                 </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
             </span>
@@ -31,7 +31,7 @@
                 </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
             </span>
             <span class="docDate modificationDate" tal:condition="python:isAnon and context.meta_type in metatypes_showmoddate">
-                   <tal:modified i18n:translate="box_last_modified">
+                   <tal:modified i18n:translate="">
                     Last modified
                    </tal:modified>: <span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59</span>
             </span>
@@ -56,7 +56,7 @@
                                     creator_is_openid python:'/' in creator_short_form;
                                     creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
                     <span>
-                        <tal:i18n i18n:translate="label_by_author">
+                        <tal:i18n i18n:translate="">
                             by
                             <a href="#"
                             tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${creator_id}"
@@ -68,13 +68,13 @@
                     -
                 </tal:name>
             </tal:creator>
-            <span i18n:translate="box_last_modified"> last modified </span>
+            <span i18n:translate=""> last modified </span>
             <span tal:replace="python:view.toLocalizedTime(context.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59 </span>
 
             <tal:expired tal:condition="view/isExpired">
                 -
                 <span class="state-expired"
-                      i18n:translate="time_expired">expired</span>
+                      i18n:translate="">expired</span>
             </tal:expired>
 
             <span class="contentHistory" 

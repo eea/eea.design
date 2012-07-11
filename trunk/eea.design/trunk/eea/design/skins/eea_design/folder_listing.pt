@@ -209,7 +209,7 @@
 
                             <tal:modified condition="python: item_type not in ('Event', 'QuickEvent')">
                                 &mdash;
-                                <tal:mod i18n:translate="box_last_modified">
+                                <tal:mod i18n:translate="">
                                   last modified
                                 </tal:mod>
                                 <span tal:replace="python:toLocalizedTime(item_modified,long_format=1)">
