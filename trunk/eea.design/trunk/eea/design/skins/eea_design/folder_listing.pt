@@ -162,12 +162,10 @@
                                    i18n:name="end">to date</abbr>
                         </span>
                          <span tal:condition="python: item_type in ('Event', 'QuickEvent') and item.location"
-                             tal:define="location python:item.location"
-                              i18n:translate="">&mdash;
+                             tal:define="location python:item.location">&mdash;
                             <tal:location  tal:condition="python:not same_type(location, ())">
                                  <span tal:content="location"
-                                       class="location"
-                                       i18n:name="location">Oslo</span>
+                                       class="location">Oslo</span>
                              </tal:location>
                              <tal:location  tal:condition="python:same_type(location, ())">
                                 <tal:repeat tal:repeat="loc location">

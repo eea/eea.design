@@ -11,8 +11,9 @@
            tal:condition="python:isDiscussionAllowed or has_replies"
            i18n:domain="eea">
 
-<p class="portalMessage" i18n:translate="">This item is open for comments. See the comments 
-    <a tal:attributes="href string:${context/absolute_url}#eea-comments">section below</a>
+<p class="portalMessage">
+    <tal:block i18n:translate="">This item is open for comments. See the comments </tal:block>
+    <a tal:attributes="href string:${context/absolute_url}#eea-comments" i18n:translate="">section below</a>
 </p>
 
 </tal:block>

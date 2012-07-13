@@ -30,7 +30,7 @@
       i18n:translate="">
       <img i18n:name="context_icon" tal:replace="structure python:plone_view.getIcon(context).html_tag()" />
       Manage portlets for
-      "<span i18n:name="context_title" tal:content="context/Title" />"
+      <span i18n:name="context_title" tal:content="context/Title" />
   </h1>
   <a href=""
        class="link-parent"

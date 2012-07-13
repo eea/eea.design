@@ -8,8 +8,12 @@
 <div metal:fill-slot="main">
 <p i18n:translate="">This file contains links that should be marked in different ways by the mark_special_link.js script.
 This is to test and verify that it works. Try it with <br />
-<a href="http://localhost:8080/www/SITE/themes/test_languagelinks" i18n:translate="">Normal</a>
-<a href="http://localhost:8080/www/sv/test_languagelinks" i18n:translate="">Swedish site</a>
+<tal:block i18n:name="normal">
+	<a href="http://localhost:8080/www/SITE/themes/test_languagelinks" i18n:translate="">Normal</a>
+</tal:block>
+<tal:block i18n:name="swedish-site">
+	<a href="http://localhost:8080/www/sv/test_languagelinks" i18n:translate="">Swedish site</a>
+</tal:block>
 <br />
 </p>
 <a href="http://themes.eea.europa.eu/IMS/ISpecs/ISpecification20080704102557/IAssessment1226434796626/view_content_pub" i18n:translate="">English themes IMS link </a>
