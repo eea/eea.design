@@ -3,6 +3,9 @@
 
 5.2-dev - (unreleased)
 ----------------------
+* Bug fix: moved further down definitions of wf_state and is_editable
+  to avoid triggering false errors when Unauthorized
+  [tiberich refs #5250]
 
 5.1 - (2012-07-13)
 ------------------
