@@ -1,6 +1,9 @@
 ﻿Changelog
 =========
 
+5.2-dev - (unreleased)
+----------------------
+
 5.1 - (2012-07-13)
 ------------------
 * Feature: Show dates info easily for logged in users as done for anonym.
