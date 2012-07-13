@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title tal:content="template/title">The title</title>
+  </head>
+  <body>
+    
+    <h2><span tal:replace="here/title_or_id">content title or id</span>
+        <span tal:condition="template/title"
+              tal:replace="template/title">optional template title</span></h2>
+
+<tal:block i18n:translate="">This is Page Template</tal:block>&nbsp;<em tal:content="template/id">template id</em>. 
+
+   <tal:block i18n:translate="">abs_url</tal:block>:&nbsp; <p tal:content="here/absolute_url">description</p>  
+
+  </body>
+</html>
