@@ -13,7 +13,7 @@
             </div>
 
             <div id="tip-article-language" class="panel">
-                <div class="panel-top"></div>
+                <div class="panel-top"><!-- --></div>
                 <div class="panel-content shadow">
                     <ul id="languageCodes">
                         <tal:anonymous tal:repeat="lang data">

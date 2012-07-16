@@ -3,6 +3,8 @@
 
 5.3-dev - (unreleased)
 ----------------------
+* Bug fix: Quickfix for empty divs
+  [szabozo0 refs #5358]
 
 5.2 - (2012-07-13)
 ------------------

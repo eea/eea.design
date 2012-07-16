@@ -8,7 +8,7 @@
         </li>
     </ul>
     <div class="panel" id="tip-externalsites-networks" style="width:450px; margin-left: 10em;">
-        <div class="panel-top" style="left: -195px;"></div>
+        <div class="panel-top" style="left: -195px;"><!-- --></div>
         <div class="panel-content shadow">
             <dl class="portlet networkSites">
                 <dt i18n:translate="">

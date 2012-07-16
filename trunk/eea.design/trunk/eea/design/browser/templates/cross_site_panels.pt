@@ -7,6 +7,7 @@
             <div class="panel" id="tip-siteaction-subscriptions"
                 style="width: 240px">
                 <div class="panel-top">
+                    <!-- -->
                 </div>
                 <div class="panel-content shadow"
                     tal:define="includeSocialMedia python:True">
@@ -19,6 +20,7 @@
             <div class="panel" id="tip-siteaction-contactus"
                 style="width: 420px">
                 <div class="panel-top">
+                    <!-- -->
                 </div>
                 <div class="panel-content shadow">
                     <table>
@@ -121,6 +123,7 @@
 
             <div class="panel" id="tip-siteaction-events" style="width: 450px">
                 <div class="panel-top">
+                    <!-- -->
                 </div>
                 <div class="panel-content shadow">
 
@@ -155,6 +158,7 @@
             <div class="panel" id="tip-siteaction-chooselang"
                 style="width: 125px">
                 <div class="panel-top">
+                    <!-- -->
                 </div>
                 <div class="panel-content shadow">
                     <tal:languages define="languages here/@@translatedSites">
