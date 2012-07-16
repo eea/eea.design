@@ -1,6 +1,9 @@
 ﻿Changelog
 =========
 
+5.4-dev - (unreleased)
+----------------------
+
 5.3 - (2012-07-16)
 ------------------
 * Bug fix: Quickfix for empty divs
