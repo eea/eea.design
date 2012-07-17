@@ -79,7 +79,7 @@
                                                 obj_url python:test(obj_type in use_view_action, url+'/view', url);
                                                 title_or_id obj/pretty_title_or_id">
                             <tal:block define="value python: getattr(obj, field, None)">
-                                <td tal:condition="python: field != 'Title'"
+                                <td tal:condition="python: field != 'Title' and value"
                                   tal:define="format_view nocall:context/@@format_catalog_metadata"
                                     tal:content="python:format_view(value)"
                                     i18n:translate=""/>

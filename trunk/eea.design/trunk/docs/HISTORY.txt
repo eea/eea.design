@@ -3,6 +3,9 @@
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: check if value is present when trying to display field values in
+  atct_topic_view
+  [ichimdav #5376]
 
 5.3 - (2012-07-16)
 ------------------
