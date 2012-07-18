@@ -101,6 +101,7 @@
                                                 tal:content="title_or_id" />
 
                                 </td>
+                                <td tal:condition="not:value">&nbsp;</td>
                             </tal:block>
                             </tal:fields>
                         </tr>
