@@ -165,13 +165,13 @@
         permission="zope2.View"
         />
 
-    <browser:viewlet
+    <!--browser:viewlet
         name="plone.links.navigation"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
         class=".viewlets.NavigationViewlet"
         layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
-        />
+        /-->
 
     <browser:viewlet
         name="plone.belowcontentbody.relateditems"
