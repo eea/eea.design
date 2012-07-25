@@ -3,6 +3,8 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: fixed login form from logged_out template when using it over https
+  [ichimdav #5000]
 * Feature: added outdated browser notification
   [ichimdav #4699]
 * WIP: Feature: Plone 4.2 compatibility [tiberich #5346]

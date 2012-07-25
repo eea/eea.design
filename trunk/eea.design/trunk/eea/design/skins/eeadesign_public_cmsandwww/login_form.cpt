@@ -60,7 +60,7 @@
                         use_email_as_login site_properties/use_email_as_login|nothing;
                         ztu modules/ZTUtils;">
 
-            <form tal:define="url python:context.absolute_url()+'/'+template.id;
+            <form tal:define="url python:context.absolute_url()+'/'+ 'login_form';
                               decide_https python:test(context.portal_url() == 'http://www.eea.europa.eu', 'https://', 'http://');
                               secureUrl python:url.replace('http://', decide_https);"
                   tal:attributes="action secureUrl"
