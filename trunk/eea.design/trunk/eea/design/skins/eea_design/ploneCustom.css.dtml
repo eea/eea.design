@@ -2448,4 +2448,64 @@ form[name="edit_form"] table {
     display: none;
 }
 
+/* #4669 display outdated browser message */
+#outdated_wrap {
+    background-color: #fcfdde;
+    width: 100%;
+    border-top: solid 1px #778899;
+    border-bottom: solid 1px #778899;
+    text-align: center;
+    padding:5px 0px 5px 0px;
+    position: absolute;
+    z-index: 900;
+}
+
+#outdated {
+   width: 960px;
+   margin: 0 auto;
+}
+
+#outdated h3 {
+    border: 0px;
+    margin: 0px;
+}
+
+#outdated li {
+    float: left;
+    background: url('&dtml-portal_url;/browsers.png') no-repeat;
+    width: 50px;
+    height: 71px;
+    overflow: hidden;
+    margin-left: 25px;
+}
+
+#outdated li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 45px;
+}
+
+#outdated_text {
+    width: 30%;
+    float: left;
+    border-right: 1px dotted lightGrey;
+    padding-right: 3em; 
+}
+
+#outdated_ff {
+    background-position: -200px 0px !important;
+}
+#outdated_ie {
+    background-position: -50px 0px !important;
+}
+
+#outdated_chrome {
+    background-position: -150px 0px !important;
+}
+
+#outdated_safari {
+    background-position: -100px 0px !important;
+}
+
 /* </dtml-with> */

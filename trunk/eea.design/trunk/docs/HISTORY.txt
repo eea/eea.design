@@ -3,6 +3,8 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Feature: added outdated browser notification
+  [ichimdav #4669]
 * WIP: Feature: Plone 4.2 compatibility [tiberich #5346]
 * Bug fix: check if value is present when trying to display field values in
   atct_topic_view
