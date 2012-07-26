@@ -90,9 +90,12 @@ h6 {
     padding-bottom: 5px;
 }
 
+/* #5392 disabled clearing of headings in order for them to wrap on floated
+ * content, if heading needs to be cleared add a "clear floats" style with tinymce
 #content-core h2, #content-core h3 {
     clear:both;
 }
+*/
 
 #region-content ul, ul {
 

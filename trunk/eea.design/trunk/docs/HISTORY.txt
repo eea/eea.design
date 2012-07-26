@@ -3,6 +3,8 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: fixed headings not floating because they are cleared 
+  [ichimdav #5392]
 * Bug fix: fixed login form from logged_out template when using it over https
   [ichimdav #5000]
 * Upgrade step:  from portal_setup > import > EEA Design import javascript 
