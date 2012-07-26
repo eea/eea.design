@@ -5,6 +5,12 @@ Changelog
 ----------------------
 * Bug fix: fixed login form from logged_out template when using it over https
   [ichimdav #5000]
+* Upgrade step:  from portal_setup > import > EEA Design import javascript 
+  steps by:
+  1. Checking Javascript registry import step
+  2. Uncheck Include dependecies? checkbox
+  3. Hit Import selected steps button
+  [ichimdav #4699]
 * Feature: added outdated browser notification
   [ichimdav #4699]
 * WIP: Feature: Plone 4.2 compatibility [tiberich #5346]

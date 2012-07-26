@@ -2,7 +2,7 @@
 (function() {
     function badBrowser(){
         if(jQuery.browser.msie && parseInt(jQuery.browser.version, 10) <= 8){ return true;}
-        return true;
+        return false;
     }
 
     function getBadBrowser(c_name)
@@ -31,20 +31,22 @@
 
     if(badBrowser() && getBadBrowser('browserWarning') !== 'seen' ){
         jQuery(function(){
-            var outdated = jQuery("#outdated_wrap"), outdated_fade, timeout;
-            outdated.prependTo("body").fadeIn(1000);
-            outdated_fade = function(){
-                if(outdated.is(':visible')) {
-                    setBadBrowser('browserWarning','seen', 2);
-                    outdated.fadeOut(1000);
-                }
-            };
-            timeout = window.setTimeout(outdated_fade, 10000);
-            outdated.hover(function(){
-                window.clearTimeout(timeout);
-            }, function(){
-                outdated_fade();
-            });
+            window.setTimeout(function(){
+                var outdated = jQuery("#outdated_wrap"), outdated_fade, timeout;
+                outdated.prependTo("body").fadeIn(1000);
+                outdated_fade = function(){
+                    if(outdated.is(':visible')) {
+                        setBadBrowser('browserWarning','seen', 2);
+                        outdated.fadeOut(1000);
+                    }
+                };
+                timeout = window.setTimeout(outdated_fade, 10000);
+                outdated.hover(function(){
+                    window.clearTimeout(timeout);
+                }, function(){
+                    outdated_fade();
+                });
+            }, 2000);
         });
     }
 }());
