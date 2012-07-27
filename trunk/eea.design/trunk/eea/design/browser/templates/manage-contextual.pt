@@ -136,7 +136,7 @@
         <input type="submit"
                class="context"
                value="Convert portlets"
-               i18n:attributes="value label_convert_portlets"
+               i18n:attributes="value"
                name="convert" />
 
     </form>

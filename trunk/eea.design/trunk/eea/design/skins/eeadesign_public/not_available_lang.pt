@@ -100,7 +100,7 @@
                 <input class="context"
                        type="submit"
                        name="createTranslation:method"
-                       i18n:attributes="value label_add_translation;"
+                       i18n:attributes="value"
                        value="Add Translation"
                        />
             </div>

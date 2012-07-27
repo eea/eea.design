@@ -86,11 +86,11 @@
                          tal:define="error python:errors.get(ac_name, None);"
                          tal:attributes="class python:test(error, 'field error', 'field')">
 
-                        <label i18n:translate="label_login_name"
+                        <label i18n:translate=""
                                tal:condition="not:use_email_as_login"
                                tal:attributes="for ac_name">Login Name</label>
 
-                        <label i18n:translate="label_email"
+                        <label i18n:translate=""
                                tal:condition="use_email_as_login"
                                tal:attributes="for ac_name">Email</label>
 
@@ -110,7 +110,7 @@
                          tal:define="error python:errors.get(ac_password, None);"
                          tal:attributes="class python:test(error, 'field error', 'field')">
 
-                        <label i18n:translate="label_password"
+                        <label i18n:translate=""
                                tal:attributes="for ac_password">Password</label>
 
                         <div tal:condition="error"
@@ -137,16 +137,16 @@
                         <tal:username tal:condition="not:use_email_as_login">
                         <label for="cb_remember" i18n:translate="label_remember_my_name">Remember my name.</label>
 
-                        <div i18n:translate="help_remember_my_name"
+                        <div i18n:translate=""
                              class="formHelp">
                             Check this to have your user name filled in automatically when you log in later.
                         </div>
                         </tal:username>
 
                         <tal:email tal:condition="use_email_as_login">
-                        <label for="cb_remember" i18n:translate="label_remember_my_email">Remember my email address.</label>
+                        <label for="cb_remember" i18n:translate="">Remember my email address.</label>
 
-                        <div i18n:translate="help_remember_my_email"
+                        <div i18n:translate=""
                              class="formHelp">
                             Check this to have your email address filled in automatically when you log in later.
                         </div>
@@ -175,11 +175,11 @@
                     Forgot your password?
                 </strong>
                 <p class="discreet"
-                   i18n:translate="help_password_retrieval">
+                   i18n:translate="">
                     If you have forgotten your password,
                     <span i18n:name="click_here">
                         <a tal:attributes="href python:'mail_password_form?'+ztu.make_query(userid=login_name)"
-                           i18n:translate="label_click_here_to_retrieve">we can send you a new one</a></span>.
+                           i18n:translate="">we can send you a new one</a></span>.
                 </p>
             </div>
 
@@ -191,11 +191,11 @@
                 New user?
                 </h3>
                 
-                <p i18n:translate="description_sign_in">
+                <p i18n:translate="">
                 To access this part of the site, you need to log in with your user name and password. You can use your Eionet username and password.
                 </p>
 
-                <p i18n:translate="description_no_account">
+                <p i18n:translate="">
                 If you do not have an account here, head over to the
                 <span i18n:name="registration_form">
                     <a href=""

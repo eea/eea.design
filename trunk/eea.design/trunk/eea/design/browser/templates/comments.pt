@@ -106,7 +106,7 @@
                                    class="destructive"
                                    type="submit"
                                    value="Delete"
-                                   i18n:attributes="value label_delete;"
+                                   i18n:attributes="value"
                                    />
                         </form>
 
