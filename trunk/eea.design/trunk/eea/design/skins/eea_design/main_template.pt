@@ -233,7 +233,7 @@
         <p class="note" i18n:translate="">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
     </div>
 
-    <tal:comment tal:replace="nothing">
+    <tal:comment replace="nothing">
         #4699 display a pop-up to alert users that their browser is outdated
     </tal:comment>
     <!--[if lt IE 9]>
