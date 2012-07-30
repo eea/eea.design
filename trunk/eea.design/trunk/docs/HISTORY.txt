@@ -3,6 +3,8 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Cleanup: removed back ported HTML5 functionality from Plone 4.2
+  [ghicaale refs #5346]
 * Bug fix: fixed headings not floating because they are cleared 
   [ichimdav #5392]
 * Bug fix: fixed login form from logged_out template when using it over https

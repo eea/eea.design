@@ -69,11 +69,6 @@ class SearchViewlet(links.SearchViewlet):
     """
     _template = ViewPageTemplateFile('templates/links_search.pt')
 
-#class NavigationViewlet(links.NavigationViewlet):
-    #"""A custom version of the links-navigation viewlet
-    #"""
-    #_template = ViewPageTemplateFile('templates/links_navigation.pt')
-
 class LanguageSelectorViewlet(common.ViewletBase):
     """ A custom viewlet registered below the title for language selection
     """
