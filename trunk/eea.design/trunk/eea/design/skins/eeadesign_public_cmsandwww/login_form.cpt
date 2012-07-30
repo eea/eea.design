@@ -27,7 +27,7 @@
             <dt i18n:translate="">
                 Error
             </dt>
-            <dd i18n:translate="enable_cookies_message_before_login">
+            <dd i18n:translate="">
                 Cookies are not enabled. You must enable cookies before you can log in.
             </dd>
         </dl>
@@ -43,7 +43,7 @@
                      ac_persist auth/persist_cookie|nothing;
                      login_name python:request.get('login_name', request.get(ac_name, ''));">
     <div id="content-core">
-        <div tal:condition="python: not auth" i18n:translate="login_form_disabled">
+        <div tal:condition="python: not auth" i18n:translate="">
             Since cookie authentication is disabled, cookie-based login is not available.
         </div>
         <metal:login define-macro="login"
@@ -135,7 +135,7 @@
                                />
 
                         <tal:username tal:condition="not:use_email_as_login">
-                        <label for="cb_remember" i18n:translate="label_remember_my_name">Remember my name.</label>
+                        <label for="cb_remember" i18n:translate="">Remember my name.</label>
 
                         <div i18n:translate=""
                              class="formHelp">
@@ -160,7 +160,7 @@
                                type="submit"
                                name="submit"
                                value="Log in"
-                               i18n:attributes="value label_log_in;"
+                               i18n:attributes="value"
                                />
 
                     </div>
@@ -171,7 +171,7 @@
 
             <div id="login-forgotten-password"
                  tal:condition="python:checkPermission('Mail forgotten password', context)">
-                <strong i18n:translate="box_forgot_password_option">
+                <strong i18n:translate="">
                     Forgot your password?
                 </strong>
                 <p class="discreet"
@@ -187,7 +187,7 @@
                tal:define="actions python:context.portal_actions.listActionInfos('user/join', object=context);
                            join python:[a['url'] for a in actions];"
                tal:condition="python: join and checkPermission('Add portal member', context)">
-                <h3 i18n:translate="heading_new_user">
+                <h3 i18n:translate="">
                 New user?
                 </h3>
                 
@@ -203,7 +203,7 @@
                                    join join;
                                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztu.make_query(came_from=came_from);"
                        tal:attributes="href join"
-                       i18n:translate="description_no_account_registration_linktext">
+                       i18n:translate="">
                         registration form</a></span>.
                 </p>
 

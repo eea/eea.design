@@ -38,7 +38,7 @@
                            href python:'%s?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s#calendar-previous' % (request['ACTUAL_URL'], query_string, prevMonthMonth, prevMonthYear, url_quote_plus(query_string));
                            class string:kssCalendarChange kssattr-year-${prevMonthYear} kssattr-month-${prevMonthMonth} calendarPrevious;"
            tal:condition="showPrevMonth"
-           i18n:attributes="title title_previous_month;">&laquo;</a>
+           i18n:attributes="title">&laquo;</a>
 
         <tal:month tal:define="first_day_of_month python:DateTime(year,month,01);
                                last_day_of_month python:DateTime(year,month,last_day);
@@ -47,7 +47,7 @@
                    tal:omit-tag="">
             <a href="" title="Month events"
                tal:attributes="href string:${portal_url}/events/search?${view/getReviewStateString}start.query:record:list:date=${begin}&amp;start.range:record=max&amp;end.query:record:list:date=${end}&amp;end.range:record=min&amp;year:int=${year}&amp;month:int=${month}"
-               i18n:attributes="title month_events;">
+               i18n:attributes="title">
      <span i18n:translate="" tal:omit-tag=""> 
             <span i18n:name="monthname" i18n:translate=""
                   tal:content="view/monthName"
@@ -68,7 +68,7 @@
                            href python:'%s?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (request['ACTUAL_URL'], query_string, nextMonthMonth, nextMonthYear, url_quote_plus(query_string));
                            class string:kssCalendarChange kssattr-year-${nextMonthYear} kssattr-month-${nextMonthMonth} calendarNext;"
            tal:condition="showNextMonth"
-           i18n:attributes="title title_next_month;">&raquo;</a>
+           i18n:attributes="title">&raquo;</a>
         <span class="portletTopRight"></span>
     </dt>
 

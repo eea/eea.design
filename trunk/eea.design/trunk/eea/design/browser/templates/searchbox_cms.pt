@@ -25,7 +25,7 @@
         <input class="searchButton"
                type="submit"
                value="Search"
-               i18n:attributes="value label_search;" />
+               i18n:attributes="value" />
 
         <div class="searchSection">
             <input id="searchbox_currentfolder_only"

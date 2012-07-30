@@ -19,6 +19,8 @@ Changelog
 * Bug fix: check if value is present when trying to display field values in
   atct_topic_view
   [ichimdav #5376]
+* Bug fix: removed default entries in i18n tags 
+  [propschr refs #5258]"
 
 5.3 - (2012-07-16)
 ------------------

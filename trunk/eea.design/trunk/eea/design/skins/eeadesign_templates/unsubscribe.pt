@@ -28,13 +28,13 @@
                  value="Enter email"
                  size="20"
                  tal:attributes="value email"
-                 i18n:attributes="alt label_email;" />
+                 i18n:attributes="value; alt" />
           <input class="standalone"
                  type="submit"
                  name="submit"
                  value="Unsubscribe"
                  alt="Unsubscribe"
-                 i18n:attributes="value alt_unsubscribe" />
+                 i18n:attributes="value; alt" />
         </div>
 
         </div>

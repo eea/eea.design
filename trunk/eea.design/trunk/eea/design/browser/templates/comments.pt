@@ -31,7 +31,7 @@
                    style="margin-bottom: 1.25em;"
                    type="submit"
                    value="Log in to add comments"
-                   i18n:attributes="value label_login_to_add_comments;"
+                   i18n:attributes="value"
                    />
         </form>
     </div>
@@ -156,7 +156,7 @@
                    style="margin-bottom: 1.25em;"
                    type="submit"
                    value="Log in to add comments"
-                   i18n:attributes="value label_login_to_add_comments;"
+                   i18n:attributes="value"
                    />
         </form>
     </div>

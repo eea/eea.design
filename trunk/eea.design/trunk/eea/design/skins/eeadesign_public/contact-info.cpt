@@ -18,7 +18,7 @@
                  isAnon context/@@plone_portal_state/anonymous;">
 
     <h1 class="documentFirstHeading"
-        i18n:translate="heading_contact_form">Contact EEA Web Team</h1>
+        i18n:translate="">Contact EEA Web Team</h1>
 
     <div class="documentDescription"
          tal:condition="portal/description"

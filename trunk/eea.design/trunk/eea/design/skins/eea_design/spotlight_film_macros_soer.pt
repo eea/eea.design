@@ -42,11 +42,11 @@
                  href="http://www.eea.europa.eu/soer/journalists/viral/video_popup_view" 
                  alt="SOER message" 
                  class="video-fancybox" 
-                 i18n:attributes="title soer-message;alt soer-message">
+                 i18n:attributes="title; alt">
                         <img title="SOER viral video message" 
                              alt="SOER viral video message" 
                              src="http://www.eea.europa.eu/soer/journalists/viral-video-preview"
-                             i18n:attributes="title soer-video;alt soer-video" />
+                             i18n:attributes="title; alt" />
               </a>
             </div>
             <span i18n:translate="">
