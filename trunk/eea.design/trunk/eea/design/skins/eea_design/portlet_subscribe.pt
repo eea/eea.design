@@ -52,7 +52,7 @@
             </tal:block>
 
              <div class="field">
-              <label for="email" class="hiddenStructure" i18n:translate="">Email</label>
+              <label  class="hiddenStructure" i18n:translate="">Email</label>
               <input type="text"
                      name="email"
                      value="Enter email"
@@ -141,7 +141,7 @@
             </tal:block>
 
              <div class="field">
-              <label for="email" class="hiddenStructure" i18n:translate="">Email</label>
+              <label  class="hiddenStructure" i18n:translate="">Email</label>
               <input type="text"
                      name="email"
                      value="Enter email"
