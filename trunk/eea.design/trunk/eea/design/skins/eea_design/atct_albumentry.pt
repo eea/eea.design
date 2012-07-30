@@ -6,7 +6,7 @@
     tal:attributes="class css">
     <a tal:attributes="
       href listing_url;
-      alt obj/pretty_title_or_id;
+      title obj/pretty_title_or_id;
       class python:video or animation">
       <span class="photoAlbumEntryWrapper">
       <img tal:attributes="
