@@ -3,6 +3,9 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: only include published date when effectiveDate is not None
+  in document_byline template
+  [tiberich refs #5396]
 * Cleanup: removed back ported HTML5 functionality from Plone 4.2
   [ghicaale refs #5346]
 * Bug fix: fixed headings not floating because they are cleared 
