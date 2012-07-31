@@ -14,6 +14,3 @@ body:load {
     action-client: EEAPloneAdminChangeWorkflowState;
 }
 
-#plone-contentmenu-workflow dd.actionMenuContent a:click {
-    action-client: EEAPloneAdminChangeWorkflowState;
-}

@@ -3,6 +3,9 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: associate change_workflow_state only for the load action to prevent
+  the changeWorkflowState from loading if an error is present 
+  [ichimdav #5263]
 * Bug fix: only include published date when effectiveDate is not None
   in document_byline template
   [tiberich refs #5396]
