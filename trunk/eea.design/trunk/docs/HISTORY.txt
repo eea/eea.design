@@ -3,6 +3,8 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Feature: Plone 4.2 compatibility, previous versions of eea.design were not
+  compatible with Plone 4.2 [tiberich #5346]
 * Bug fix: associate change_workflow_state only for the load action to prevent
   the changeWorkflowState from loading if an error is present 
   [ichimdav #5263]
@@ -23,7 +25,6 @@ Changelog
   [ichimdav #4699]
 * Feature: added outdated browser notification
   [ichimdav #4699]
-* WIP: Feature: Plone 4.2 compatibility [tiberich #5346]
 * Bug fix: check if value is present when trying to display field values in
   atct_topic_view
   [ichimdav #5376]
