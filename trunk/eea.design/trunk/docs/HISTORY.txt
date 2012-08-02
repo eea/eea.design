@@ -3,6 +3,8 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: fixed display of edit page formHelp for Plone 4.2
+  [ichimdav #5346]
 * Bug fix: removed authenticated flag for table_sorter.js which is responsible
   for sortable table headers in order to have the functionality also for anons
   [ichimdav #5404]

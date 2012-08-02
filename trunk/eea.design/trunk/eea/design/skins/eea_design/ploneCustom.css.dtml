@@ -1060,6 +1060,7 @@ a.moreLink {
     font-size: 90%;
     color: &dtml-discreetColor;;
     margin: 0 0 0.2em 0;
+    display: block;
 }
 
 .formHelp:hover {
