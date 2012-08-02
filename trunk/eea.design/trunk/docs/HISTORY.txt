@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.5-dev - (unreleased)
+----------------------
+
 5.4 - (2012-08-02)
 ------------------
 * Bug fix: fixed display of edit page formHelp for Plone 4.2
