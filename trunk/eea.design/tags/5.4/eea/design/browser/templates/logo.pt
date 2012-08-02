@@ -1,0 +1,25 @@
+<h2 id="translated-logo"
+    class="portal-logo"
+    tal:define="portal_url context/@@plone_portal_state/portal_url;
+                local_site context/@@plone_portal_state/local_site;
+                portal_properties context/portal_properties;
+                logo request/LANGUAGE|string:en"
+    tal:attributes="id string:logo-${logo}">
+
+     <img src="" alt="" id="printLogo"
+          tal:define="lang  context/@@plone_portal_state/language;
+                      logo python:'++resource++eea.translations.images/printlogo-%s.gif' % lang"
+          tal:attributes="alt portal_properties/title;
+                          src string:${portal_url}/${logo}" />
+    <a href="/"
+       tal:attributes="href local_site|portal_url"
+       tal:define="portal_title portal_properties/title;"
+       tal:content="string:$portal_title"
+       accesskey="1">
+        Plone
+    </a>
+</h2>
+
+<h3 class="site-description" i18n:translate="">
+    Sound and independent information<br /> on the environment
+</h3>
