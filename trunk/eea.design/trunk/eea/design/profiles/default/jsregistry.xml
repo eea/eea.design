@@ -31,6 +31,10 @@
  <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
      enabled="True" expression="" 
      id="outdated_browser.js" inline="False" position-after="eea-tags.js"/>
+
+ <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
+     enabled="True" expression="" 
+     id="table_sorter.js" inline="False" position-after="orderablereference.js" />
  <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
  <!--     enabled="True" expression="python: request.get('jsdisable','') != 'jquery'"  -->
  <!--     id="slide.js" inline="False" position-after="eea-tabs.js" /> -->

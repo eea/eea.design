@@ -3,6 +3,9 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: removed authenticated flag for table_sorter.js which is responsible
+  for sortable table headers in order to have the functionality also for anons
+  [ichimdav #5404]
 * Feature: Plone 4.2 compatibility, previous versions of eea.design were not
   compatible with Plone 4.2 [tiberich #5346]
 * Bug fix: associate change_workflow_state only for the load action to prevent
