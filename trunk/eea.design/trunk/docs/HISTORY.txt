@@ -3,6 +3,15 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Bug fix: load specific ie fixes as well as iefixes for fixes that affect all
+  IE versions
+  [ichimdav #5407]
+* Upgrade step:  from portal_setup > import > EEA Design import Stylesheet 
+  steps by:
+  1. Checking Stylesheet registry import step
+  2. Uncheck Include dependecies? checkbox
+  3. Hit Import selected steps button
+  [ichimdav #5407]
 
 5.4 - (2012-08-02)
 ------------------

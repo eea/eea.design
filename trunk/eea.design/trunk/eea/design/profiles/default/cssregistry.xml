@@ -35,23 +35,7 @@
     <!--     position-after="ploneCustom.css" -->
     <!--     /> -->
 
-    <!-- <stylesheet title="" -->
-    <!--     id="IE7Fixes.css" -->
-    <!--     media="screen" rel="stylesheet" rendering="import" -->
-    <!--     cacheable="True" compression="safe" cookable="True" -->
-    <!--     conditionalcomment="IE 7" -->
-    <!--     expression="" -->
-    <!--     position-after="IEFixes.css" -->
-    <!--     /> -->
 
-    <!-- <stylesheet title="" -->
-    <!--     id="IE8Fixes.css" -->
-    <!--     media="screen" rel="stylesheet" rendering="import" -->
-    <!--     cacheable="True" compression="safe" cookable="True" -->
-    <!--     conditionalcomment="IE 8" -->
-    <!--     expression="" -->
-    <!--     position-after="IE7Fixes.css" -->
-    <!--     /> -->
 
     <!-- <stylesheet title="" -->
     <!--     id="IEFixes.css" -->
@@ -79,6 +63,33 @@
     <!--     expression="" -->
     <!--     position-after="organisations.css" -->
     <!--     /> -->
+
+    <stylesheet title=""
+        id="IEFixes.css"
+        media="screen" rel="stylesheet" rendering="link"
+        cacheable="True" compression="safe" cookable="True"
+        conditionalcomment="lte IE 9"
+        expression=""
+        position-after="ploneCustom.css"
+        />
+
+    <stylesheet title=""
+        id="IE7Fixes.css"
+        media="screen" rel="stylesheet" rendering="link"
+        cacheable="True" compression="safe" cookable="True"
+        conditionalcomment="IE 7"
+        expression=""
+        position-after="IEFixes.css"
+        />
+
+    <stylesheet title="" 
+        id="IE8Fixes.css"
+        media="screen" rel="stylesheet" rendering="link"
+        cacheable="True" compression="safe" cookable="True"
+        conditionalcomment="IE 8"
+        expression=""
+        position-after="IE7Fixes.css"
+        /> 
     <stylesheet title=""
         id="IE9Fixes.css"
         media="screen" rel="stylesheet" rendering="link"
@@ -88,22 +99,4 @@
         position-after="IE8Fixes.css"
         />
 
-    <stylesheet title=""
-        id="IEFixes.css"
-        media="screen" rel="stylesheet" rendering="link"
-        cacheable="True" compression="safe" cookable="True"
-        conditionalcomment="lt IE 9"
-        expression=""
-        position-after="IE8Fixes.css"
-        />
-
-    <stylesheet title=""
-        id="IE7Fixes.css"
-        media="screen" rel="stylesheet" rendering="link"
-        cacheable="True" compression="safe" cookable="True"
-        conditionalcomment="IE 7"
-        expression=""
-        position-after="IE8Fixes.css"
-        />
 </object>
-

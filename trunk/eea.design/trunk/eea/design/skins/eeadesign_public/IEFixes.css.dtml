@@ -17,10 +17,6 @@
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c346f83, endColorstr=#4c346f83);
 }
 
-body.section-multimedia #portal-colophon {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83');
-}
-
 .photoAlbumEntry {
     border-width: 0px 1px 2px 1px;
     border-style: solid;
