@@ -68,7 +68,7 @@
         id="IEFixes.css"
         media="screen" rel="stylesheet" rendering="link"
         cacheable="True" compression="safe" cookable="True"
-        conditionalcomment="lte IE 9"
+        conditionalcomment="lt IE 9"
         expression=""
         position-after="ploneCustom.css"
         />
