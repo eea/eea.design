@@ -10,9 +10,8 @@
     <div class="colophonWrapper">
         <div class="colophon-left">
             <tal:address>
-                <a href="/" tal:attributes="href string:${portal_state/portal_url}" >
-                    <tal:block i18n:translate="">European Environment Agency</tal:block> (<tal:block i18n:translate="">EEA</tal:block>)
-                </a>                <br/>
+                <a href="/" tal:attributes="href string:${portal_state/portal_url}" i18n:translate="">European Environment Agency (EEA)</a>
+                <br/>
                 <tal:c1 condition="not:short_colophon_cond">
                     <tal:block i18n:translate="">
                         Kongens Nytorv 6, 1050, Copenhagen K, Denmark.
