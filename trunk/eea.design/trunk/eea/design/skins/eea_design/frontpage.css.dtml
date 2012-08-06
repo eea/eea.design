@@ -72,9 +72,11 @@ body.frontpage ul {
     margin-top: 0.5em;
 }
 
-#highlights-block .date {
+#highlights-block .date, #content .date {
     font: normal  x-small "Verdana";
     color: #808285;
+    border: 0;
+    font-size: 90%;
 }
 
 
