@@ -1949,7 +1949,7 @@ div.overlay .formControls a {
 .contenttype-plone-site {
     background: no-repeat transparent 0px -1512px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
-.contenttype-topic {
+.contenttype-topic, .contenttype-collection {
     background: no-repeat transparent 0px -1728px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 
@@ -1967,6 +1967,7 @@ div.overlay .formControls a {
 .contenttype-news-item,
 .contenttype-plone-site,
 .contenttype-topic,
+.contenttype-collection,
 #plone-contentmenu-factories .contenttype-file,
 #plone-contentmenu-factories .contenttype-image {
     line-height: 2em;

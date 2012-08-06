@@ -3,6 +3,8 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Bug fix: added type icon for Collection from plone.app.collection 
+  [tiberich #5397]
 * Bug fix: load specific ie fixes as well as iefixes for fixes that affect all
   IE versions
   [ichimdav #5407]
