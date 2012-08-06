@@ -22,4 +22,12 @@
         layer="eea.design.browser.interfaces.IEEACommonLayer"
         allowed_interface="plonetheme.sunburst.browser.interfaces.ISunburstView"
         />                
+
+      <!-- customize plone.app.search js #5346 -->
+    <browser:resource
+        name="search.js"
+        file="javascripts/search.js"
+        layer="eea.design.browser.interfaces.IEEACommonLayer"
+        />
+
 </configure>

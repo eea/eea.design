@@ -3,6 +3,9 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Bug fix: override search.js from new plone search with upstream changes 
+  to avoid javascript errors when no search input is present
+  [ichimdav #5346]
 * Bug fix: added type icon for Collection from plone.app.collection 
   [tiberich #5397]
 * Bug fix: load specific ie fixes as well as iefixes for fixes that affect all
