@@ -8,7 +8,8 @@
                 frontpage_gallery frontpage|nothing;
                 small_factor python: '' if frontpage_gallery else '-sm';
                 image_scale python: 'image_thumb' if frontpage_gallery else 'image_tile';"
-                tal:condition="highlights">
+                tal:condition="highlights"
+       i18n:domain="eea">
 
 <div id="promo-gallery-wrapper">
 <div tal:attributes="id string:gallery-content-outer${small_factor};"> 
