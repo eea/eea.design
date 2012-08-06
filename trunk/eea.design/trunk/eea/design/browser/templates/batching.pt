@@ -3,6 +3,7 @@ the metal:use-macro="context/batch_macros/macros/navigation" statement in your
 template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
 </tal:comment>
 <div class="listingBar"
+     i18n:domain="plone"
      metal:define-macro="navigation"
      tal:define="request request|context/request|container/request|nothing;
                batch nocall:view/batch;
