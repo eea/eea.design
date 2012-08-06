@@ -3,6 +3,8 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Bug fix: fixed livesearch_reply from return invalid xml on show all link
+  [ichimdav #5346]
 * Bug fix: override search.js from new plone search with upstream changes 
   to avoid javascript errors when no search input is present
   [ichimdav #5346]

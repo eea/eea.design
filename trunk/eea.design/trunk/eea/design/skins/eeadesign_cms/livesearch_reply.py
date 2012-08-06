@@ -33,7 +33,8 @@ MAX_TITLE = 29
 MAX_DESCRIPTION = 93
 
 # generate a result set for the query
-catalog = context.queryCatalog
+#### catalog = context.queryCatalog
+catalog = context.portal_catalog
 
 friendly_types = ploneUtils.getUserFriendlyTypes()
 
@@ -62,23 +63,33 @@ multispace = u'\u3000'.encode('utf-8')
 for char in ('?', '-', '+', '*', multispace):
     q = q.replace(char, ' ')
 r = q.split()
-r = [w for w in r if w.lower() in  ('and', 'or')]
+#r = [w for w in r if w.lower() in  ('and', 'or')]
 r = " AND ".join(r)
-#r = quote_bad_chars(r)+'*'
+r = quote_bad_chars(r)+'*'
 searchterms = url_quote_plus(r)
 
 site_encoding = context.plone_utils.getSiteEncoding()
+
+params = {'SearchableText': r,
+          'portal_type': friendly_types,
+          'sort_limit': limit + 1}
+
 if path is None:
-    path = getNavigationRoot(context)
+    # useful for subsides
+    params['path'] = getNavigationRoot(context)
+else:
+    params['path'] = path
 
 #results = catalog(SearchableText=r, portal_type=friendly_types, path=path,
 #    sort_limit=limit)
 
+# search limit+1 results to know if limit is exceeded
+results = catalog(**params)
 ### eea
-request = context.REQUEST
-request.set('SearchableText', r)
-request.set('path', path)
-results = catalog(REQUEST=request, use_types_blacklist=True)
+#request = context.REQUEST
+#request.set('SearchableText', r)
+#request.set('path', path)
+#results = catalog(REQUEST=request, use_types_blacklist=True)
 ###
 
 searchterm_query = '?searchterm=%s'%url_quote_plus(q)
@@ -90,10 +101,10 @@ RESPONSE.setHeader('Content-Type', 'text/xml;charset=%s' % site_encoding)
 # replace named entities with their numbered counterparts, in the xml the named ones are not correct
 #   &darr;      --> &#8595;
 #   &hellip;    --> &#8230;
-legend_livesearch = _(u'LiveSearch &hellip;')
-label_no_results_found = _(u'No matching results found.')
-label_advanced_search = _(u'Advanced Search&hellip;')
-label_show_all = _(u'Show all items')
+legend_livesearch = _('legend_livesearch', default='LiveSearch &#8595;')
+label_no_results_found = _('label_no_results_found', default='No matching results found.')
+label_advanced_search = _('label_advanced_search', default='Advanced Search&#8230;')
+label_show_all = _('label_show_all', default='Show all items')
 
 ts = getToolByName(context, 'translation_service')
 
@@ -147,13 +158,19 @@ else:
         full_title, display_title, display_description = None, None, None
 
     write('''<li class="LSRow">''')
-    write( '<a href="search_form" style="font-weight:normal">%s</a>' % ts.translate(label_advanced_search, context=REQUEST))
+    write('<a href="%s" style="font-weight:normal">%s</a>' %
+         (portal_url + '/@@search',
+          ts.translate(label_advanced_search, context=REQUEST)))
     write('''</li>''')
 
     if len(results)>limit:
         # add a more... row
         write('''<li class="LSRow">''')
-        write( '<a href="%s" style="font-weight:normal">%s</a>' % ('search?SearchableText=' + searchterms, ts.translate(label_show_all, context=REQUEST)))
+        # 5346; escape = and & for show all link since it returns invalid xml without them being escaped
+        searchquery = '@@search?SearchableText&#61;%s&amp;path&#61;%s' % (searchterms, params['path'])
+        write('<a href="%s" style="font-weight:normal">%s</a>' % (
+                             searchquery,
+                             ts.translate(label_show_all, context=REQUEST)))
         write('''</li>''')
     write('''</ul>''')
     write('''</div>''')
