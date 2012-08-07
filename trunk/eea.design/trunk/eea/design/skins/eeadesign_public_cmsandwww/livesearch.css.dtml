@@ -50,12 +50,11 @@
 }
 
 .LSResult {
-    position: relative;
+    position: absolute;
     display: block;
     text-align: right;
-    padding-top: 5px;
-    margin: 0;
-    left: 3px;
+    margin: -1.5em 0 0 -7em;
+    right: 0;
     z-index: 3;
 }
 
@@ -65,13 +64,10 @@
 }
 
 .livesearchContainer {
-    background-color: &dtml-backgroundColor;;
+    background-color: #FFF;
     margin-top: 0;
     padding: 0 !important;
-    position: absolute;
-    right: 0px;
     /* Currently exposes a rendering bug in Mozilla */
-    top: 0;
     white-space: normal;
     font-family:  <dtml-var fontFamily>;
     visibility: visible;
