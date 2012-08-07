@@ -273,7 +273,7 @@
                                       <a href="#"
                                          tal:attributes="href item/getURL;
                                                          class string:state-${item/review_state}"
-                                         tal:content="item/Title" />
+                                         tal:content="item/title_or_id" />
                                     </dt>
                                     <dd>
                                       <span class="discreet" i18n:domain="plone"
