@@ -39,7 +39,7 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                                 <option  
                                 tal:define="value python: item[0];"
                                 tal:attributes="value value;"
-                                tal:content="python: item[1]" />
+                                tal:content="python:context.translate(item[1], domain='eea')" />
                                 </tal:items>
                             </select>
                         </div>
