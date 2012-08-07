@@ -143,22 +143,23 @@
                                            tal:define="typeLists python:context.createMultiColumnList(types_list, numCols=2, sort_on='self');"
                                            tal:attributes="style python:isRTL and 'float: right;; margin-left: 2em;;' or 'float: left;; margin-right: 2em;;';"
                                            tal:repeat="sublist typeLists">
-                                          <tal:items repeat="type sublist">
-                                              <input type="checkbox"
-                                                     name="portal_type:list"
-                                                     value="#"
-                                                     class="noborder"
-                                                     checked="checked"
-                                                     tal:attributes="value type;
-                                                                     id string:portal_type_${repeat/sublist/number}_${repeat/type/number};
-                                                                     checked python:((type in request.get('portal_type', [])) or first_call) and 'checked' or ''"/>
-                                              <label for=""
-                                                     i18n:translate=""
-                                                     tal:attributes="for string:portal_type_${repeat/sublist/number}_${repeat/type/number}"
-                                                     tal:content="python: portal_types.getTypeInfo(type).Title()"
-                                                     tal:condition="python:portal_types.getTypeInfo(type)"
-                                                     />
-                                              <br />
+                                          <tal:items repeat="type sublist" >
+                                            <tal:item condition="python:portal_types.getTypeInfo(type)">
+                                                <input type="checkbox"
+                                                      name="portal_type:list"
+                                                      value="#"
+                                                      class="noborder"
+                                                      checked="checked"
+                                                      tal:attributes="value type;
+                                                                      id string:portal_type_${repeat/sublist/number}_${repeat/type/number};
+                                                                      checked python:((type in request.get('portal_type', [])) or first_call) and 'checked' or ''"/>
+                                                <label for=""
+                                                      i18n:translate=""
+                                                      tal:attributes="for string:portal_type_${repeat/sublist/number}_${repeat/type/number}"
+                                                      tal:content="python: portal_types.getTypeInfo(type).Title()"
+                                                      />
+                                                <br />
+                                            </tal:item>
                                           </tal:items>
                                       </div>
                                       <div class="visualClear"><!-- --></div>
