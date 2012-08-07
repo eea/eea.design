@@ -29,13 +29,16 @@
         file="javascripts/search.js"
         layer="eea.design.browser.interfaces.IEEACommonLayer"
         />
-    <browser:page
-        name="search"
-        class="plone.app.search.browser.Search"
-        permission="zope2.View"
-        for="*"
-        layer="eea.design.browser.interfaces.IEEACommonLayer"
-        template="templates/search.pt"
-        />
+
+    <configure zcml:condition="installed plone.app.search">
+      <browser:page
+          name="search"
+          class="plone.app.search.browser.Search"
+          permission="zope2.View"
+          for="*"
+          layer="eea.design.browser.interfaces.IEEACommonLayer"
+          template="templates/search.pt"
+          />
+    </configure>
 
 </configure>

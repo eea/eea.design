@@ -159,7 +159,6 @@
                                                      tal:attributes="for string:portal_type_${repeat/sublist/number}_${repeat/type/number}"
                                                      tal:content="python: portal_types.getTypeInfo(type).Title()"
                                                      tal:condition="python:portal_types.getTypeInfo(type)"
-                                                     "
                                                      />
                                               <br />
                                           </tal:items>
