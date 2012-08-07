@@ -54,7 +54,7 @@
 
         <div class="row">
 
-            <div class="cell width-16 position-0">
+            <div class="cell width-full position-0">
                 <h1 class="documentFirstHeading"
                     i18n:translate=""
                     tal:condition="not:st">
@@ -71,8 +71,6 @@
 
                 <p id="rss-subscription" i18n:domain="plone"
                    tal:condition="context/portal_syndication/isSiteSyndicationAllowed">
-                      <img src="" alt="RSS"
-                           tal:attributes="src string:${portal_url}/rss.gif"/>
                     <a href=""
                        class="link-feed"
                        tal:define="here_url context/@@plone_context_state/object_url"
@@ -85,7 +83,7 @@
             </div>
             <div class="visualClear"><!-- --></div>
             <div id="search-results-wrapper"
-                 class="cell width-16 position-0"
+                 class="cell width-full position-0"
                  tal:define="b_start python:0;
                              b_start request/b_start | b_start;
                              batch python: view.results(b_start=b_start);
