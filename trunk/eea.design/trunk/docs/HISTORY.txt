@@ -3,6 +3,9 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Bug fix: override new search.pt from plone.app.search to avoid failing when
+  iterating over types 
+  [ichimdav #5346]
 * Bug fix: fixed livesearch_reply from return invalid xml on show all link
   [ichimdav #5346]
 * Bug fix: override search.js from new plone search with upstream changes 
