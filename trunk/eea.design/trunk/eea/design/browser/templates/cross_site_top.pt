@@ -31,7 +31,7 @@
                                      title  title;
                                      alt    title;"
                      tal:condition="icon"/>
-       <tal:title tal:content="title"></tal:title></a></li>
+       <tal:title tal:content="python:title.strip()" i18n:translate=""></tal:title></a></li>
 </ul>
 
    <div metal:use-macro="here/cross_site_panels/macros/main">
