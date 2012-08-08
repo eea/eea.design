@@ -53,7 +53,8 @@
     position: absolute;
     display: block;
     text-align: right;
-    margin: -1.5em 0 0 -7em;
+    margin: 0;
+    top: 115px;
     right: 0;
     z-index: 3;
 }
@@ -87,8 +88,7 @@
 
 #livesearchLegend {
     line-height: 1em;
-    margin-top: -2em;
-    margin-left: -0.1em;
+    margin-left: -1px;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     border-bottom: 0;
 }
