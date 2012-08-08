@@ -6,7 +6,8 @@ jQuery(function ($) {
 
     var query, pushState, popState, popped, initialURL,
         Search = {},
-        $default_res_container = $('#search-results');
+        $default_res_container = $('#search-results'),
+        $content = $("#content");
 
     // The globally available method to pull the search results for the
     // 'query' into the element, on which the method is invoked
@@ -34,7 +35,16 @@ jQuery(function ($) {
                         data_search_term = $('#ajax-search-res #updated-search-term').text(),
                         data_res_number = $('#ajax-search-res #updated-search-results-number').text(),
                         data_sorting_opt = $('#ajax-search-res #updated-sorting-options').html();
-
+                    // #5346; EEA fix height of #content when no results are set and actionMenuContent 
+                    // is open
+                    if($data_res[0].nodeName === "P" && $default_res_container.find('.actionMenu'))
+                    { 
+                        $content.height(1000);
+                    }
+                    else if ($content[0].style.height === '1000px') {
+                        $content.css('height', "");
+                    }
+                    // end #5356
                     $container.html($data_res);
                     $container.fadeIn();
 
