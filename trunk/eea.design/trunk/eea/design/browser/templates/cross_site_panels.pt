@@ -169,7 +169,7 @@
                                 url python: 'localhost' in url and (('www' in url) and
                                     'http://www.eea.europa.eu/%s' % url.split('/www/')[1]) or url;
                                 "
-                                tal:content="python: '%s (%s)' % (context.translate(lang['lang'], domain='eea'), lang['langcode'])"
+                                tal:content="python: '%s (%s)' % (context.translate(lang['lang'], domain='eea', target_language=lang['langcode']), lang['langcode'])"
                                 tal:attributes="href url; title lang/lang"></a></li>
                         </tal:language>
                     </ul>
