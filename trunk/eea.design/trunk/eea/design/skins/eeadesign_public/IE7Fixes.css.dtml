@@ -682,5 +682,10 @@ ul.eea-tabs li, ul.eea-tabs.two-rows li {
     display: inline !important;
 }
 
+/* 5346 fixed position of search result bar */
+#search-results-bar {
+    margin-top: 2em;
+}
+
 /* </dtml-with> */
 
