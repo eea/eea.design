@@ -1174,7 +1174,15 @@ h3.site-description {
     clear: both;
     display: block;
     position: relative;
-    background: &dtml-corporateGreen;;
+    background-color: &dtml-corporateGreenTwo;;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(&dtml-corporateGreen;), to(&dtml-corporateGreenTwo;));
+    background-image: -webkit-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+    background-image:    -moz-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+    background-image:     -ms-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+    background-image:      -o-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
+    background: linear-gradient(&dtml-corporateGreen;, &dtml-corporateGreenTwo;); /* the w3c standard */
 }
 
 #portal-header {
@@ -1559,11 +1567,13 @@ h3.site-description {
     clear: both;
     margin-top: -11px;
     min-height: 10px;
+    float: right;
 }
 
 #portal-personaltools #user-name {
     background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
     padding-left: 15px;
+    color: white;
 }
 
 #portal-personaltools .portalNotLoggedIn {

@@ -3,6 +3,12 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Feature: Improved eea header design. Removed old personal_bar so that we get 
+  the new Plone standard login and bar.
+  Upgrade step:
+  1. move personal_bar viewlet on top of eea_cross_site_top
+  2. in portal_javascripts enable the popupforms.js
+  [demarant fixes #5443]
 * Bug fix: fixed active edit menu when it spans over more than one line
   [ichimdav #5343]
 * Bug fix: override new search.pt from plone.app.search to avoid failing when

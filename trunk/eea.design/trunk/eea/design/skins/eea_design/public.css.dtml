@@ -72,7 +72,6 @@ color: #fff;
 padding: 0.5em 3em 0.5em 3em;
 margin: 0.5em 0;
 text-align: right;
-text-transform: lowercase;
 list-style: none;
 border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -953,7 +952,6 @@ dl.error a {
     padding-top: 0.5em;
 }
 #portal-personaltools dd {
-    background: #e3e3e3;
     padding-bottom: 0.5em;
 }
 #portal-personaltools dd a {
@@ -961,7 +959,6 @@ dl.error a {
     padding: 0 0.75em;
 }
 #portal-personaltools dd a:hover {
-    background: #205c90;
     color: White;
 }
 
