@@ -7,7 +7,8 @@ Changelog
   the new Plone standard login and bar.
   Upgrade step:
   1. move personal_bar viewlet on top of eea_cross_site_top
-  2. in portal_javascripts enable the popupforms.js
+  2. hide any other duplicate old personal_bar viewlet
+  3. in portal_javascripts enable the popupforms.js
   [demarant fixes #5443]
 * Bug fix: fixed active edit menu when it spans over more than one line
   [ichimdav #5343]
