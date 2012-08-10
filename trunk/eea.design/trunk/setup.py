@@ -43,6 +43,8 @@ setup(name=name,
           'setuptools',
           'valentine.linguaflow',
 
+          'selenium',
+
           # -*- Extra requirements: -*-
       ],
       entry_points="""
