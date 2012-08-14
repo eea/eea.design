@@ -44,6 +44,7 @@ setup(name=name,
           'valentine.linguaflow',
 
           'selenium',
+          'gocept.selenium[plone]',
 
           # -*- Extra requirements: -*-
       ],

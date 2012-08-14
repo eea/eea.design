@@ -3,6 +3,8 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* WIP: added simple selenium test to prove that selenium tests work
+  [tiberich #4011]
 * Feature: Improved eea header design. Removed old personal_bar so that we get 
   the new Plone standard login and bar.
   Upgrade step:
