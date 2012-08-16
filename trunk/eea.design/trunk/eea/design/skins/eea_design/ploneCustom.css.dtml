@@ -2519,4 +2519,9 @@ form[name="edit_form"] table {
     background-position: -100px 0px !important;
 }
 
+/* #5454; we have required spans with where we don't need the background image */
+.no-bg:after {
+    background-image: none !important;
+    content: "" !important;
+}
 /* </dtml-with> */
