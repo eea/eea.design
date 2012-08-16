@@ -1,15 +1,18 @@
 jQuery(document).ready(function($) {
 
-        if (!$("#multimedia-widgets").length) {
-            var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
-                global_nav = $('#portal-globalnav');
-            // Fix for EEATemplatesService for sites with jquery < 1.4
-            //$("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
-            $("#portaltab-pressroom, #portaltab-abouteea", global_nav).clone(true).appendTo(secundary_portaltabs);
-            $("#portaltab-pressroom, #portaltab-abouteea", global_nav).remove();
-            secundary_portaltabs.appendTo(global_nav);
-        }
-
+    if (!$("#multimedia-widgets").length) {
+        var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
+            global_nav = $('#portal-globalnav');
+        // Fix for EEATemplatesService for sites with jquery < 1.4
+        //$("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
+        $("#portaltab-pressroom, #portaltab-abouteea", global_nav).clone(true).appendTo(secundary_portaltabs);
+        $("#portaltab-pressroom, #portaltab-abouteea", global_nav).remove();
+        secundary_portaltabs.appendTo(global_nav);
+    }
+    
+    // #5454 remove background for required fields that have the red square 
+    $(".required:contains('■')").addClass('no-bg');
+    
     // removed portal-column-two from @@usergroup-userprefs #4817
     if($("#portlet-prefs").length) {
         $("#portal-column-two").remove();

@@ -3,6 +3,8 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Bug fix: show required symbol on edit form gone after updating to Plone 4.2
+  [ichimdav fixes #5454]
 * WIP: added simple selenium test to prove that selenium tests work
   [tiberich #4011]
 * Feature: Improved eea header design. Removed old personal_bar so that we get 

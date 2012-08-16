@@ -918,12 +918,21 @@ dl.error a {
     background-color: red;
     color: White;
 }
-#content li.formTab a.required span {
+
+#content li.formTab a.required span, 
+div.field span.required {
     background-image: url(&dtml-portal_url;/required.png);
     background-position: center right;
     background-repeat: no-repeat;
     padding-right: 1em;
 }
+
+/* #5454; we have required spans with where we don't need the background image */
+.no-bg {
+    background-image: none !important;
+    content: "";
+}
+
 #content fieldset.formPanel {
     border: none;
 }
