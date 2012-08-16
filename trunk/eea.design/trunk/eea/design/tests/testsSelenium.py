@@ -32,6 +32,8 @@ class TestCase(SeleniumTestCase):
             pass
 
     def testOpen(self):
+        """simple demo test
+        """
         self.selenium.open('plone')
         assert 'Plone' in self.selenium.getBodyText()
 
