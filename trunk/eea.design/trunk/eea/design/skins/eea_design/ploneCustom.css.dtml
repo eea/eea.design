@@ -2023,88 +2023,6 @@ option.hiddenStructure {
     width: 1px;
 }
 
-/* Album view classes */
-
-.photoAlbumEntry {
-    border: 0px;
-    background-color: transparent;
-    float: left;
-    height: 125px;
-    width: 129px;
-    margin: 0 3px 7px 3px;
-    padding: 0px;
-    text-align: center;
-    box-shadow: 0px 1px 2px #CCCCCC;
-}
-
-.photoAlbumEntry:hover {
-    background: transparent;
-    box-shadow: 0px 2px 3px #ACACAC;
-}
-
-#whatsnew-gallery .photoAlbumEntry,
-#whatsnew-gallery .photoAlbumEntry:hover{ 
-    background: transparent;
-    box-shadow: none;
-}
-
-.photoAlbumEntry img {
-    display: block;
-    margin: 0 auto;
-    max-height: 71px;
-}
-
-.photoAlbumEntry a.video-fancybox img {
-    margin-top: -29px;
-    max-height: 128px;
-}
-
-.photoAlbumEntryWrapper {
-    display: block;
-    background: white;
-    max-height: 71px;
-    width: 128px;
-    margin-bottom: 0px;
-    overflow: hidden;
-}
-
-.photoAlbumEntry a {
-    display: block;
-    text-decoration: none;
-    font-size: &dtml-fontSmallSize;;
-    height: 128px;
-    width: 128px;
-    margin: 10px 0px;
-    overflow: hidden;
-}
-
-.photoAlbumEntryPreview,
-.photoAlbumEntryPreview a,
-.photoAlbumEntryPreview .photoAlbumEntryTitle {
-    height: auto;
-    width: auto;
-    background-image: none;
-    margin: 0.5em  0 2em 0;
-}
-
-.photoAlbumEntryTitle {
-    display: block;
-    overflow: hidden;
-    color: #76797c;
-    width: 128px;
-    height: 3.2em;
-    margin-top: 0.4em;
-    font-weight: bold;
-}
-
-.photoAlbumEntryDescription {
-    display:none;
-}
-
-/* bigger title for products section */
-.section-products .photoAlbumEntryTitle {
-    font-size:160%;
-}
 
 /* Link types */
 
@@ -3007,4 +2925,221 @@ fieldset,
 /* @end Forms */
 /* @end styles changes for public.css */
 
+/* @group Table of Contents */
+
+dl.toc dd {
+  padding-left: 0;
+}
+/* @end Table of Contents */
+
+/* @group Footer */
+
+#portal-footer {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    font-size: 12px;
+    color: white;
+    min-width: 950px;
+    background: transparent;
+}
+#portal-colophon {
+    font-size: 12px;
+}
+/* @end Footer */
+
+/* @group Album view classes */
+.photoAlbumEntry {
+    border: 0px;
+    background-color: transparent;
+    background-image: none;
+    float: left;
+    height: 125px;
+    width: 129px;
+    margin: 0 3px 7px 3px;
+    padding: 0px;
+    box-shadow: 0px 1px 2px #CCCCCC;
+}
+
+.photoAlbumEntry img {
+    max-height: 71px;
+    border: 0;
+}
+
+.photoAlbumEntryWrapper {
+    display: block;
+    background: white;
+    max-height: 71px;
+    height: 100%;
+    width: 128px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    border: 0;
+}
+
+.photoAlbumEntry a {
+    font-size: &dtml-fontSmallSize;;
+    height: 128px;
+    width: 128px;
+    margin: 10px 0px;
+    overflow: hidden;
+}
+
+.photoAlbumFolder {
+    background: transparent;
+}
+
+.photoAlbumEntryTitle {
+    overflow: hidden;
+    height: 3.2em;
+    margin-top: 0.4em;
+    font-weight: bold;
+}
+/* our additional photoAlbumEntry styles */
+.photoAlbumEntry:hover {
+    background: transparent;
+    box-shadow: 0px 2px 3px #ACACAC;
+}
+
+#whatsnew-gallery .photoAlbumEntry,
+#whatsnew-gallery .photoAlbumEntry:hover{ 
+    background: transparent;
+    box-shadow: none;
+}
+
+.photoAlbumEntry a.video-fancybox img {
+    margin-top: -29px;
+    max-height: 128px;
+}
+
+.photoAlbumEntryPreview,
+.photoAlbumEntryPreview a,
+.photoAlbumEntryPreview .photoAlbumEntryTitle {
+    height: auto;
+    width: auto;
+    background-image: none;
+    margin: 0.5em  0 2em 0;
+}
+
+.photoAlbumEntryDescription {
+    display:none;
+}
+
+/* bigger title for products section */
+.section-products .photoAlbumEntryTitle {
+    font-size:160%;
+}
+/* @end Album view classes */
+
+/* @group Accessibility elements, applied by JS */
+/* default close button positioned on upper-left corner */
+div.overlaybg div.close,
+div.overlay div.close {
+    background-image: url(&dtml-portal_url;/pb_close.png);
+}
+
+.pb-ajax, .pb-image, .overlay iframe {
+    -webkit-box-shadow: 0 0 3em 0.5em #666;
+       -moz-box-shadow: 0 0 3em 0.5em #666;
+        -ms-box-shadow: 0 0 3em 0.5em #666;
+         -o-box-shadow: 0 0 3em 0.5em #666;
+            box-shadow: 0 0 3em 0.5em #666;
+}
+
+div.overlay a:hover {
+    color: &dtml-corporateGreen;;
+}
+/* @end Accessibility elements, applied by JS */
+
+
+/* @group Core content type sprites */
+
+/* Generated using http://spritegen.website-performance.org, with the following
+   parameters:
+   - Build direction: Vertical
+   - Horizontal offset: (doesn't matter, but can't be 0)
+   - Vertical offset: 200px
+   - Compress image with OptiPNG: yes
+   - Class prefix: contenttype-
+   - Display width and height: no
+  Then, add 4 px to the background-position to line up the icons to text.
+
+.contenttype-document_icon { background-position: 0 0;  }
+.contenttype-event_icon { background-position: 0 -216px;  }
+.contenttype-file_icon { background-position: 0 -432px;  }
+.contenttype-folder_icon { background-position: 0 -648px;  }
+.contenttype-image_icon { background-position: 0 -864px;  }
+.contenttype-link_icon { background-position: 0 -1080px;  }
+.contenttype-newsitem_icon { background-position: 0 -1296px;  }
+.contenttype-site_icon { background-position: 0 -1512px;  }
+.contenttype-topic_icon { background-position: 0 -1728px;  }
+
+*/
+
+.contenttype-document {
+    background: no-repeat transparent 0px 0px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-event {
+    background: no-repeat transparent 0px -216px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+ .contenttype-folder {
+    /* background: no-repeat transparent 0px -648px url(&dtml-portal_url;/contenttypes-sprite.png); */
+    background: none;
+}
+.contenttype-link {
+    background: no-repeat transparent 0px -1080px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-news-item {
+    background: no-repeat transparent 0px -1296px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-plone-site {
+    background: no-repeat transparent 0px -1512px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-topic, .contenttype-collection {
+    background: no-repeat transparent 0px -1728px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+
+/* These should only appear in the add menu */
+#plone-contentmenu-factories .contenttype-file {
+    background: no-repeat transparent 0px -431px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+#plone-contentmenu-factories .contenttype-image {
+    background: no-repeat transparent 0px -862px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+
+.contenttype-document,
+.contenttype-event,
+.contenttype-link,
+.contenttype-news-item,
+.contenttype-plone-site,
+.contenttype-topic,
+.contenttype-collection,
+#plone-contentmenu-factories .contenttype-file,
+#plone-contentmenu-factories .contenttype-image {
+    line-height: 2em;
+    display: inline-block;
+    *display: block;
+    padding-left: 20px !important;
+}
+
+/* our customizations */
+#portal-column-content .contenttype-folder {
+    padding-left: 0px !important;
+}
+
+/* #5243 wrongly indented folder icon */
+#portal-column-content .portletNavigationTree .contenttype-folder {
+    padding-left: 10px !important;
+}
+
+.documentEditable .mceLayout {
+    /* fixes width of edit forms because tinymce has hardcoded width */
+    width:100% !important;
+    /* fixes edit without visual editor placement because it has an inline
+     * negative margin-top */
+    margin-bottom: 1em;
+}
+
+/* @end Core content type sprites */
 /* </dtml-with> */
