@@ -2549,6 +2549,15 @@ span.languageCodes a.translated,
 form[name="users_search"] input.context {
     display: block !important;
 }
+
+#contentActionMenus .actionMenuContent ul {
+    margin:0px !important;
+}
+
+#contentActionMenus .actionSeparator a {
+    padding-top: 0.2em;
+    border-top: 2px solid &dtml-contentViewBorderColor;;
+}
 /* @end previously in public.css not found in stock plone */
 
 /* @group styles changes for public.css */
@@ -2904,5 +2913,98 @@ dl.warning dd, dl.error dd {
 }
 /* @end group Tabs */
 
+/* @group Personal Tools pulldown */
+#portal-personaltools dd a:hover {
+    background:transparent;
+}
+/* @end Personal Tools pulldown */
+
+/* @group Content pulldowns */
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+    background-color: transparent;
+}
+
+#contentActionMenus dl.actionMenu.activated dd {
+    border-bottom: 0.5em solid &dtml-corporateGreenTwo;;
+    right: 0;
+}
+/* @end Content pulldowns */
+
+#contentActionMenus {
+    background: &dtml-corporateGreenTwo;;
+    padding: 0.1em 0.24em 0 0 !important;
+}
+
+/* @group Collapsible */
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+    background: White url(&dtml-portal_url;/treeExpanded.png) no-repeat 0.5em 50%;
+}
+
+dl.collapsedInlineCollapsible dt.collapsibleHeader,
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+    background: White url(&dtml-portal_url;/treeCollapsed.png) no-repeat 0.5em 50%;
+}
+/* @end Collapsible */
+
+/* @group Comments */
+.comment .documentByLine {
+    font-size: 100%;
+}
+
+.commentBody {
+    -webkit-box-shadow: 0 0 0.5em 0 #888;
+       -moz-box-shadow: 0 0 0.5em 0 #888;
+        -ms-box-shadow: 0 0 0.5em 0 #888;
+         -o-box-shadow: 0 0 0.5em 0 #888;
+            box-shadow: 0 0 0.5em 0 #888;
+}
+/* @end Comments */
+
+/* @group Search results page */
+fieldset#search-field {
+    text-align: left;
+    margin-left: 1em;
+}
+
+#rss-subscription {
+    float: left;
+    line-height: 2.2em;
+}
+
+form.searchPage h1.documentFirstHeading {
+    border: 0;
+    padding-right: 0;
+}
+
+#search-results-bar dd.actionMenuContent {
+    min-width: 460px;
+}
+/* @end Search results page */
+
+/* @group Image alignment classes */
+
+.image-inline {
+   float: none;
+   max-width: 100%;
+}
+/* @end Image alignment classes */
+
+/* @group Forms */
+fieldset,
+.editionComment {
+    padding:0;
+}
+
+#content label {
+   cursor: pointer;
+}
+
+.fieldRequired {
+    background: url(&dtml-portal_url;/required.png) center left no-repeat;
+}
+/* @end Forms */
 /* @end styles changes for public.css */
+
 /* </dtml-with> */
