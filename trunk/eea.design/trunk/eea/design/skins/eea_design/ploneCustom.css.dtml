@@ -2524,4 +2524,216 @@ form[name="edit_form"] table {
     background-image: none !important;
     content: "" !important;
 }
+
+/* ichimdav styles from public.css */
+/* @group Basics */
+
+/*
+body {
+    font: 100% Arial, FreeSans, sans-serif;
+    background: White;
+    color: Black;
+    /* width: 58em; margin: 1em auto; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font-weight: bold;
+    color: Black;
+    line-height: 1.5em;
+}
+h1, h2 {
+    letter-spacing: -0.05em;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.75em;
+}
+h3 {
+    font-size: 1.25em;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+    font-size: 0.8em;
+}
+h2, h3, h4, h5, h6 {
+    color: #444;
+}
+h2 a, h3 a, h4 a {
+    border-bottom: none !important;
+}
+
+p {
+}
+
+a:link, a:visited {
+    color: #205c90;
+}
+a:focus img {
+    outline: thin dotted;
+}
+dt {
+    font-weight: bold;
+}
+input {
+    font-family: "Lucida Grande", Arial, FreeSans;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+*/
+
+/* @end */
+
+/* @group Navigation/search */
+
+#portal-personaltools {
+    background-color: &dtml-corporateGreenTwo;;
+    -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+          border-radius: 5px;
+    border:none;
+    color: #fff;
+    line-height: 1.6em;
+    list-style: none;
+    margin: 0.5em 0;
+    padding: 0.5em 3em 0.5em 3em;
+    text-align: right;
+    text-shadow: 0 2px 1px #333;
+}
+
+#portal-personaltools li a {
+    color: #FFFFFF;
+}
+/* @end */
+/* @group Site actions */
+#portal-siteactions li a:hover {
+    color: &dtml-corporateGreen;;
+}
+
+/* @end */
+
+/* @group Portlets */
+
+dl.portlet {
+    margin: 0 0 1em;
+/*    font-size: 80%;*/
+}
+
+dl.portlet dt,
+div.portletAssignments div.portletHeader {
+    background: &dtml-lightBackgroundColor;;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover {
+    display: inline; /* ichimdav rule for calendar */
+}
+.ploneCalendar tbody {
+    padding-bottom: 1em;
+}
+
+dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter,
+dl.portletError dd {
+    padding: 0em;
+}
+
+
+div.managePortletsLink,
+a.managePortletsFallback {
+    font-size: 90%;
+}
+/* @end */
+
+/* @group Navigation portlet */
+dl.portlet ul.navTree li a {
+    margin: 0;
+    padding: 5px 5px 5px 10px !important;
+    text-shadow: none;
+    -webkit-transition: background-color .3s, color .3s, background .3s;
+       -moz-transition: background-color .3s, color .3s, background .3s;
+         -o-transition: background-color .3s, color .3s, background .3s;
+            transition: background-color .3s, color .3s, background .3s;
+   border-top: 1px dotted #BABBB8;
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 1.5;
+}
+
+dl.portlet ul.navTree li a:hover {
+   background-color:&dtml-corporateOrange;;
+   -webkit-transition: background-color .3s, color .3s, background .3s;
+      -moz-transition: background-color .3s, color .3s, background .3s;
+        -o-transition: background-color .3s, color .3s, background .3s;
+           transition: background-color .3s, color .3s, background .3s;
+   color: #FFFFFF !important;
+}
+
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+    padding: 0;
+    border-bottom: 0;
+}
+
+dl.portlet ul.navTree .navTreeCurrentItem {
+  color: #FFFFFF !important;
+  background-color: &dtml-corporateOrange;;
+  text-shadow: none;
+  margin: 0;
+  border-left: 0;
+}
+
+.navTreeItemInPath > ul.navTreeLevel0 li > a {
+   padding-left: 10px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel1 li > a {
+   padding-left: 25px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel2 li > a {
+   padding-left: 35px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel3 li > a {
+   padding-left: 45px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel4 li > a {
+   padding-left: 55px !important;
+}
+
+/* @end */
+
+/* @group Related portlets EEA Specific */
+#related-pages, #related-multimedia, #auto-related, 
+#related-pages dl, #related-multimedia dl, #auto-related dl {
+  clear: both;
+}
+/* @end */
+
+/* @group Content Area */
+
+#content {
+    font-size: inherit;
+    margin: 1em 0em 2em 0em;
+}
+
+#content h1.documentFirstHeading {
+    margin-top: 0;
+}
+
+#content p a:link {
+    border-bottom: 1px solid #CCCCCC;
+}
+/* @end */
 /* </dtml-with> */
