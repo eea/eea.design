@@ -2544,6 +2544,11 @@ span.languageCodes a.translated,
 #featured-datasets {
    margin-bottom: 2.5em;
 }
+
+/* display input as block for users search form  #4817 */
+form[name="users_search"] input.context {
+    display: block !important;
+}
 /* @end previously in public.css not found in stock plone */
 
 /* @group styles changes for public.css */
@@ -2835,6 +2840,69 @@ dl.portlet a:visited {
     font-size:125%;
 }
 /* @end Content Area */
+
+/* @group Data tables */
+
+table.listing {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+    border-width: 0px 0px 0px 1px;
+    border-style: dotted;
+}
+
+table.listing th {
+    color: #fff;
+    background: &dtml-corporateBlueTwo;;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+}
+/* @end Data tables */
+
+/* @group Status messages */
+dl.portalMessage {
+    background-color: &dtml-lightBackgroundColor;;
+}
+
+dl.portalMessage dt {
+    background-color: transparent;
+}
+
+dl.warning {
+    border-color: &dtml-globalBorderColor;;
+}
+dl.warning dt {
+    background-color: &dtml-lightBackgroundColor;;
+}
+
+dl.error dt {
+    color: white;
+    text-shadow: none;
+}
+
+dl.warning dd, dl.error dd {
+    background-color: transparent;
+}
+/* @end Status messages */
+
+/* @group Tabs */
+
+#edit-bar {
+    font-size: 100%;
+    margin: 1em 0;
+    border: 0;
+}
+
+#content-views {
+    background-color: transparent;
+    margin:0px !important;
+}
+
+#edit-bar,
+#content ul.formTabs {
+    border-style: none;
+    padding-top:0.2em;
+}
+/* @end group Tabs */
 
 /* @end styles changes for public.css */
 /* </dtml-with> */
