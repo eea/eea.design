@@ -1,26 +1,12 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-body {
-    font: 70% Verdana, Arial, Helvetica, sans-serif;
-    color: &dtml-fontColor;;
-    margin:0;
-    padding:0px;
-    background-color: &dtml-backgroundColor;;
+/* #5392 disabled clearing of headings in order for them to wrap on floated
+ * content, if heading needs to be cleared add a "clear floats" style with tinymce
+#content-core h2, #content-core h3 {
+    clear:both;
 }
-
-a { color: &dtml-linkColor;; }
-a:link { color: &dtml-linkColor;; }
-a:visited { color: &dtml-linkVisitedColor;; }
-a:hover { color: &dtml-linkHoverColor;; }
-a:active { color: &dtml-linkActiveColor;; }
-
-p {
-    font-family:  Verdana, Arial, Helvetica, sans-serif;
-    margin: 0 0 0.75em 0;
-    line-height: 1.5em;
-}
-
+*/
 #content-core p, 
 #content-core li {
     font-size: 115%;
@@ -44,58 +30,9 @@ hr {
     margin: 0.5em 0 1em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: &dtml-headingColor;;
-    font-weight: bold;
-    background-color: transparent;
-    font-family: &dtml-headingFontFamily;;
-    text-shadow: 1px 1px white;
-}
-
-h1 {
-    color: #00446a;
-    font-size: 180%;
-    line-height: 1.4;
-    margin: 0.67em 0;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
-    padding-bottom: 0.25em;
-    padding-right: 5em; /* to avoid overlapping with document actions */}
-    
-h2 {
-    font-size: 150%;
-    margin: 0.83em 0;
-    text-shadow: 1px 1px white;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
-    color: &dtml-corporateBlueTwo;;
-    padding-bottom: 0.25em;}
-h3 {
-    font-size: 125%;
-    line-height: 1.5;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
-    margin: 1em 0;}
-h4 {
-    font-size: 110%;
-    margin: 1.33em 0;
-    color: #000;}
-h5 {
-    font-size: 100%;
-    margin: 1.67em 0;
-    color: #000;}
-h6 {
-    font-size: 85%;
-    margin: 2.33em 0;
-    color: #000;}
-
 #content-core h3 {
     padding-bottom: 5px;
 }
-
-/* #5392 disabled clearing of headings in order for them to wrap on floated
- * content, if heading needs to be cleared add a "clear floats" style with tinymce
-#content-core h2, #content-core h3 {
-    clear:both;
-}
-*/
 
 #region-content ul, ul {
 
@@ -114,10 +51,6 @@ h6 {
 
 li {
     margin-bottom: 0.5em;
-}
-
-dt {
-    font-weight: bold;
 }
 
 dd {
@@ -141,7 +74,6 @@ q {
     font-style: italic;
     font-size: 120%;
 }
-
 
 code {
     font-family: Monaco, "Courier New", Courier, monospace;

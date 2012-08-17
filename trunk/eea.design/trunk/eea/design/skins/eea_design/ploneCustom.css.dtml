@@ -1775,14 +1775,6 @@ h3.site-description {
 }
 
 
-.documentDescription {
-    /* The summary text describing the document */
-    font-weight: bold;
-    display: block;
-    margin: 0em 0em 0.5em 0em;
-    line-height: 1.5em;
-    font-size:125%;
-}
 
 .documentByLine {
     font-size: &dtml-fontSmallSize;;
@@ -2525,73 +2517,113 @@ form[name="edit_form"] table {
     content: "" !important;
 }
 
-/* ichimdav styles from public.css */
+/* @group previously in public.css not found in stock plone */
+dl#featured-datasets {
+  margin-bottom: 2.5em;
+}
+
+#content-core .languageCodes {
+    display: inline-block;
+}
+
+span.languageCodes a.translated,
+#content span.link-external a.translated {
+    background: none repeat scroll 0 0 #ECECEC;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    color: black;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 0;
+    padding: 0 5px;
+}
+
+#featured-datasets dd {
+    margin: 0 0 0.5em 2em;
+}
+
+#featured-datasets {
+   margin-bottom: 2.5em;
+}
+/* @end previously in public.css not found in stock plone */
+
+/* @group styles changes for public.css */
+
 /* @group Basics */
 
-/*
 body {
-    font: 100% Arial, FreeSans, sans-serif;
-    background: White;
-    color: Black;
-    /* width: 58em; margin: 1em auto; */
+    font: 70% Verdana, Arial, Helvetica, sans-serif;
+    color: &dtml-fontColor;;
+    margin:0;
+    padding:0px;
+    background-color: &dtml-backgroundColor;;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    color: &dtml-headingColor;;
     font-weight: bold;
-    color: Black;
-    line-height: 1.5em;
+    background-color: transparent;
+    font-family: &dtml-headingFontFamily;;
+    text-shadow: 1px 1px white;
 }
+
 h1, h2 {
-    letter-spacing: -0.05em;
+    letter-spacing: 0;
 }
 h1 {
-    font-size: 2em;
+    color: #00446a;
+    font-size: 180%;
+    line-height: 1.4;
+    margin: 0.67em 0;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    padding-bottom: 0.25em;
+    padding-right: 5em; /* to avoid overlapping with document actions */
 }
 h2 {
-    font-size: 1.75em;
+    font-size: 150%;
+    margin: 0.83em 0;
+    text-shadow: 1px 1px white;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    color: &dtml-corporateBlueTwo;;
+    padding-bottom: 0.25em;
 }
 h3 {
-    font-size: 1.25em;
+    font-size: 125%;
+    line-height: 1.5;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    margin: 1em 0;
 }
 h4 {
-    font-size: 1.25em;
+    font-size: 110%;
+    margin: 1.33em 0;
+    color: #000;
 }
 h5 {
-    font-size: 1em;
+    font-size: 100%;
+    margin: 1.67em 0;
+    color: #000;
 }
 h6 {
-    font-size: 0.8em;
-}
-h2, h3, h4, h5, h6 {
-    color: #444;
+    font-size: 85%;
+    margin: 2.33em 0;
+    color: #000;
 }
 h2 a, h3 a, h4 a {
     border-bottom: none !important;
 }
 
 p {
+    font-family:  Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 0 0.75em 0;
+    line-height: 1.5em;
 }
 
-a:link, a:visited {
-    color: #205c90;
-}
-a:focus img {
-    outline: thin dotted;
-}
-dt {
-    font-weight: bold;
-}
-input {
-    font-family: "Lucida Grande", Arial, FreeSans;
-}
+a { color: &dtml-linkColor;; }
+a:link { color: &dtml-linkColor;; }
+a:visited { color: &dtml-linkVisitedColor;; }
+a:hover { color: &dtml-linkHoverColor;; }
+a:active { color: &dtml-linkActiveColor;; }
 
-q {
-    quotes: "“" "”" "‘" "’";
-}
-*/
-
-/* @end */
+/* @end Basics */
 
 /* @group Navigation/search */
 
@@ -2613,13 +2645,14 @@ q {
 #portal-personaltools li a {
     color: #FFFFFF;
 }
-/* @end */
+/* @end Navigation/search */
+
 /* @group Site actions */
 #portal-siteactions li a:hover {
     color: &dtml-corporateGreen;;
 }
 
-/* @end */
+/* @end Site actions */
 
 /* @group Portlets */
 
@@ -2648,12 +2681,11 @@ dl.portletError dd {
     padding: 0em;
 }
 
-
 div.managePortletsLink,
 a.managePortletsFallback {
     font-size: 90%;
 }
-/* @end */
+/* @end Portlets */
 
 /* @group Navigation portlet */
 dl.portlet ul.navTree li a {
@@ -2712,14 +2744,14 @@ dl.portlet ul.navTree .navTreeCurrentItem {
    padding-left: 55px !important;
 }
 
-/* @end */
+/* @end Navigation portlet */
 
 /* @group Related portlets EEA Specific */
 #related-pages, #related-multimedia, #auto-related, 
 #related-pages dl, #related-multimedia dl, #auto-related dl {
   clear: both;
 }
-/* @end */
+/* @end Related portlets EEA Specific */
 
 /* @group Content Area */
 
@@ -2735,5 +2767,74 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 #content p a:link {
     border-bottom: 1px solid #CCCCCC;
 }
-/* @end */
+
+#content a:link,
+dl.portlet a:link {
+    color: &dtml-linkColor;;
+    border-bottom: 0;
+}
+
+#content a:visited,
+dl.portlet a:visited {
+    color: &dtml-linkVisitedColor;;
+    border-bottom: 0;
+}
+
+#content span.link-external a {
+    background: transparent url(&dtml-portal_url;/link_icon.gif) 0px 1px no-repeat;
+    padding: 2px 0px 1px 16px;
+}
+
+#category, #themes-tags {
+    font-size: 100%;
+    margin-bottom: 1em;
+    color: #666;
+    text-align: right;
+    line-height: 2em;
+}
+
+#category a.link-category,
+#themes-tags a.link-category,
+#languageCodes a.translated, #languageCodes li.selected, span.selectedTag {
+    color: black;
+    padding: 0 5px;
+    margin: 2px 0;
+    word-break: keep-all;
+    display: inline-block;
+    background: &dtml-mediumBackgroundColor;;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    font-size: 10px;
+}
+
+#category a.link-category:hover,
+#themes-tags a.link-category:hover,
+#languageCodes a.translated:hover, #languageCodes li.selected {
+    background: &dtml-corporateOrange;;
+    color: White;
+    border-color: #205c90;
+}
+
+#category .separator, #themes-tags .separator {
+    display: none;
+}
+
+#content table {
+    max-width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+#content .documentDescription,
+#content #description {
+    font-weight: bold;
+    display: block;
+    margin: 0em 0em 0.5em 0em;
+    line-height: 1.5em;
+    font-size:125%;
+}
+/* @end Content Area */
+
+/* @end styles changes for public.css */
 /* </dtml-with> */
