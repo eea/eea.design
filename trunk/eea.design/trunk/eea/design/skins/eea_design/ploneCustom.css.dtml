@@ -1308,7 +1308,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 /* folder_tabs_view and folder_accordion_view styling
  * as well as generic tabs and accordion styling */
 
-ul.eea-tabs {
+#visual-portal-wrapper ul.eea-tabs {
     background-color: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
@@ -1318,11 +1318,11 @@ ul.eea-tabs {
     padding: 0;
     margin: 0px !important;
 }
-ul.eea-tabs.two-rows {
+#visual-portal-wrapper ul.eea-tabs.two-rows {
     height: 48px;
 }
 
-ul.eea-tabs li {
+#visual-portal-wrapper ul.eea-tabs li {
     text-indent: 0;
     margin: 0 !important;
     max-width: 140px;
@@ -1335,13 +1335,13 @@ ul.eea-tabs li {
     list-style-image: none;
     font-size: inherit;
 }
-ul.eea-tabs.two-rows li {
+#visual-portal-wrapper ul.eea-tabs.two-rows li {
     line-height: 1.8em !important;
     margin: -2px 0px !important;
     max-width: 94px;
 }
 
-ul.eea-tabs li a {
+#visual-portal-wrapper ul.eea-tabs li a {
     height: auto;
     max-height: 17px;
     min-height: 17px;
@@ -1354,38 +1354,38 @@ ul.eea-tabs li a {
     border: 0px;
 }
 
-#content-core ul.eea-tabs li a {
+#visual-portal-wrapper ul.eea-tabs li a {
     font-size: 110%;
 }
-ul.eea-tabs.two-rows li a {
+#visual-portal-wrapper ul.eea-tabs.two-rows li a {
     min-height: 4em;
     max-height: 4.1em;
     font-size: 120%;
     padding: 0.5em 1em 0em;
 }
 
-ul.eea-tabs li, ul.eea-tabs a {
+#visual-portal-wrapper ul.eea-tabs li, #visual-portal-wrapper ul.eea-tabs a {
     color: white;
     text-shadow: 1px 1px 1px #000000;
 }
 
-ul.eea-tabs li a:hover, ul.eea-tabs li a.current {
+#visual-portal-wrapper ul.eea-tabs li a:hover, #visual-portal-wrapper ul.eea-tabs li a.current {
     background-color: &dtml-greyBackgroundColor;;
     color: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px #FFFFFF;
 }
-ul.eea-tabs li:first-child a  {
+#visual-portal-wrapper ul.eea-tabs li:first-child a  {
     border-radius: 8px 0px 0px 0px;
     -webkit-border-radius: 8px 0 0 0;
     -moz-border-radius: 8px 0 0 0;
 }
-ul.eea-tabs li:last-child a {
+#visual-portal-wrapper ul.eea-tabs li:last-child a {
     border-radius: 0px 8px 0px 0px;
     -webkit-border-radius: 0 8px 0 0;
     -moz-border-radius: 0 8px 0 0;
     margin: 0px -4px;
 }
-ul.eea-tabs span {
+#visual-portal-wrapper ul.eea-tabs span {
     height: 21px;
     padding-left: 30px;
     display: inline-block;
