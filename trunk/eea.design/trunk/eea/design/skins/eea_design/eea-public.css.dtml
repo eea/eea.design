@@ -116,7 +116,7 @@ a:active { color: &dtml-linkActiveColor;; }
 
 dl.portlet {
     margin: 0 0 1em;
-/*    font-size: 80%;*/
+    font-size: 100%;
 }
 
 dl.portlet dt,
@@ -160,7 +160,7 @@ dl.portlet ul.navTree li a {
    line-height: 1.5;
 }
 
-dl.portlet ul.navTree li a:hover {
+#content dl.portlet ul.navTree li a:hover {
    background-color:&dtml-corporateOrange;;
    -webkit-transition: background-color .3s, color .3s, background .3s;
       -moz-transition: background-color .3s, color .3s, background .3s;
@@ -220,6 +220,10 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 
 #content h1.documentFirstHeading {
     margin-top: 0;
+}
+
+#content h1#parent-fieldname-title {
+   width: 75%;
 }
 
 #content p a:link {
@@ -294,7 +298,8 @@ dl.portlet a:visited {
     display: block;
     margin: 0em 0em 0.5em 0em;
     line-height: 1.5em;
-    font-size:125%;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color: #333;
 }
 /* @end Content Area */
 
