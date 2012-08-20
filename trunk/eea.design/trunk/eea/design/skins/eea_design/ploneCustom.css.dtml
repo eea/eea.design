@@ -353,6 +353,7 @@ input.standalone {
 }
 
 #portal-columns input[type="submit"]:hover, .standardButton:hover,
+#content a.standardButton:hover,
  .qq-upload-button:hover,
  .searchButton:hover,
  input.context:hover,
@@ -640,9 +641,9 @@ body.section-signals #nonfolderish-subfolder-view-items {
     border: 0px;
 }
 
-#visual-portal-wrapper ul.eea-tabs li a {
+/* #visual-portal-wrapper ul.eea-tabs li a {
     font-size: 110%;
-}
+} */
 #visual-portal-wrapper ul.eea-tabs.two-rows li a {
     min-height: 4em;
     max-height: 4.1em;
@@ -2297,17 +2298,6 @@ body.kupu {
 /* visual */
 #content img.tileImage, #content div.newsImageContainer {
     float: left;
-}
-
-div.listingBar a:hover {
-    background: transparent;
-    color: #8E004D !important;
-}
-#content a:hover, dl.portlet a:hover {
-    color: #8E004D;
-}
-div.listingBar a {
-    border: 0px;
 }
 
 /* Plone center FAQ custom css*/

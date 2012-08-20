@@ -16,6 +16,7 @@
     height: 40px;
 }
 
+/* @group Navigation/search customizes public.css */
 #portal-globalnav {
     display: block;
     position: relative;
@@ -64,6 +65,7 @@
 #portal-globalnav a:hover, #portal-globalnav li a:hover,  
 #portal-globalnav .selected a {
     color: &dtml-corporateOrange;;
+    background: transparent;
 }
 
 #portal-globalnav .selected a
@@ -73,6 +75,7 @@
     position: relative;
     height: 15px;
 }
+
 
 #secundary-portaltabs {
     float: right;

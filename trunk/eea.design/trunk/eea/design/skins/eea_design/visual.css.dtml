@@ -298,7 +298,7 @@ table.datatable {
             box-shadow: 0px 2px 2px #333;
 }
 
-.greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools,
+.greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools, #portal-personaltools dd,
 #faceted-form .widget-fieldset legend {
     background-color: &dtml-corporateGreenTwo;;
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(&dtml-corporateGreen;), to(&dtml-corporateGreenTwo;));

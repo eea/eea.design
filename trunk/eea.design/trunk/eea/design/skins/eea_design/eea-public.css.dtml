@@ -238,6 +238,10 @@ dl.portlet a:visited {
     border-bottom: 0;
 }
 
+#content a:hover, dl.portlet a:hover {
+    color: #8E004D !important;
+}
+
 #content span.link-external a {
     background: transparent url(&dtml-portal_url;/link_icon.gif) 0px 1px no-repeat;
     padding: 2px 0px 1px 16px;
@@ -309,6 +313,14 @@ table.listing th {
     background: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px rgba(0,0,0,.4);
 }
+
+div.listingBar a:hover {
+    background: transparent;
+    color: #8E004D;
+}
+div.listingBar a {
+    border: 0px;
+}
 /* @end Data tables */
 
 /* @group Status messages */
@@ -367,6 +379,7 @@ dl.warning dd, dl.error dd {
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
     background-color: transparent;
+    z-index: 900;
 }
 
 #contentActionMenus dl.actionMenu.activated dd {
