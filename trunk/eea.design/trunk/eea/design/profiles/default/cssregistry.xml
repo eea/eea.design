@@ -65,6 +65,14 @@
     <!--     /> -->
 
     <stylesheet title=""
+        id="eea-public.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        conditionalcomment=""
+        expression=""
+        position-after="public.css"
+        />
+    <stylesheet title=""
         id="IEFixes.css"
         media="screen" rel="stylesheet" rendering="link"
         cacheable="True" compression="safe" cookable="True"
