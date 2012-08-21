@@ -1536,7 +1536,7 @@ h3.site-description {
     display: inline;
     color: white;
     border-right: 1px solid &dtml-darkBackgroundColor;;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 #portal-externalsites li:last-child,
@@ -1565,36 +1565,6 @@ h3.site-description {
     padding-left: 35px;
 }
 
-#portal-personaltools-wrapper {
-    clear: both;
-    margin-top: -11px;
-    min-height: 10px;
-    float: right;
-}
-
-#portal-personaltools #user-name {
-    background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
-    padding-left: 15px;
-    color: white;
-}
-
-#portal-personaltools .portalNotLoggedIn {
-    /* Used on all descriptions relevant to those not logged in */
-    color: &dtml-fontColor;;
-    padding: 0;
-    background: transparent;
-    background-image: none;
-}
-
-#portal-personaltools li {
-    margin: 0em 0em 0em 1em;
-    display: inline-block;
-}
-
-
-#portal-personaltools .visualIconPadding {
-    padding-left: 10px;
-}
 
 .visualCaseSensitive {
     text-transform: none;

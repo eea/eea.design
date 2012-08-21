@@ -85,24 +85,6 @@ a:active { color: &dtml-linkActiveColor;; }
 
 /* @group Navigation/search */
 
-#portal-personaltools {
-    background-color: &dtml-corporateGreenTwo;;
-    -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-          border-radius: 5px;
-    border:none;
-    color: #fff;
-    line-height: 1.6em;
-    list-style: none;
-    margin: 0.5em 0;
-    padding: 0.5em 3em 0.5em 3em;
-    text-align: right;
-    text-shadow: 0 2px 1px #333;
-}
-
-#portal-personaltools li a {
-    color: #FFFFFF;
-}
 /* @end Navigation/search */
 
 /* @group Site actions */
@@ -375,8 +357,60 @@ dl.warning dd, dl.error dd {
 /* @end group Tabs */
 
 /* @group Personal Tools pulldown */
+#portal-personaltools {
+    background-color: &dtml-corporateGreenTwo;;
+    -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+          border-radius: 5px;
+    border:none;
+    color: #fff;
+    line-height: 1.6em;
+    list-style: none;
+    margin: 0.5em 0;
+    padding: 0.5em 3em 0.5em 3em;
+    text-align: right;
+    text-shadow: 0 2px 1px #333;
+}
+#portal-personaltools dd {
+    margin-top: 6px;
+}
+#portal-personaltools li a, #portal-personaltools a:hover {
+    color: #FFFFFF !important;
+}
+#portal-personaltools-wrapper {
+    clear: both;
+    margin-top: -5px;
+    min-height: 10px;
+    float: right;
+    font-size: 110%;
+}
+
+#portal-personaltools #user-name {
+    background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
+    padding-left: 15px;
+    color: white;
+}
+
+#portal-personaltools .portalNotLoggedIn {
+    /* Used on all descriptions relevant to those not logged in */
+    color: &dtml-fontColor;;
+    padding: 0;
+    background: transparent;
+    background-image: none;
+}
+
+#portal-personaltools li {
+    margin: 0em 0em 0em 1em;
+    display: inline-block;
+}
+
+
+#portal-personaltools .visualIconPadding {
+    padding-left: 10px;
+}
 #portal-personaltools dd a:hover {
     background:transparent;
+    color: white !important;
 }
 /* @end Personal Tools pulldown */
 
