@@ -378,7 +378,6 @@ dl.warning dd, dl.error dd {
     color: #FFFFFF !important;
 }
 #portal-personaltools-wrapper {
-    clear: both;
     margin-top: -5px;
     min-height: 10px;
     float: right;

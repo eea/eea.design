@@ -604,13 +604,11 @@ img
     background-color: #FFF;
 }
 
-#edit-bar, #contentActionMenus, 
-#portal-personaltools, #faceted-form .widget-fieldset legend,
+#edit-bar,
+#faceted-form .widget-fieldset legend
 {
-    filter: progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=2, Color='#b1b1b1')
-    progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1c748', endColorstr='#777c1f') !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1c748', endColorstr='#777c1f') !important;
 }
-
 #multimedia-vids #whatsnew-gallery .eea-tabs-panel {
     background: transparent; 
 }

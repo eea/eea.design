@@ -686,6 +686,14 @@ ul.eea-tabs li, ul.eea-tabs.two-rows li {
 #search-results-bar {
     margin-top: 2em;
 }
-
+/* 5443 personal tools  */
+#portal-personaltools-wrapper {
+    width: 135px;
+    position: absolute;
+    right: 0;
+}
+#portal-siteactions {
+    margin-right: 135px;
+}
 /* </dtml-with> */
 

@@ -37,6 +37,18 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 /* 5346; fixed placement of livesearch */
 
 .LSResult {
-  top: 95px;
+    top: 95px;
 }
+
+/* don't assign color to contentActionMenus as it can use the one from edit-form */
+#contentActionMenus {
+    background: transparent !important;
+}
+
+/* 5443 personaltools filter hides the submenu so we use a simple color to fix it */ 
+#portal-personaltools {
+    filter: none;
+    background-color: &dtml-corporateGreen;;
+} 
+
 /* </dtml-with> */
