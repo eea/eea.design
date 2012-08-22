@@ -583,6 +583,7 @@ dl.toc dd {
 #whatsnew-gallery .photoAlbumEntry:hover{ 
     background: transparent;
     box-shadow: none;
+    padding: 0px;
 }
 
 .photoAlbumEntry a.video-fancybox img {
