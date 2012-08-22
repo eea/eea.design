@@ -3,6 +3,9 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.design
+  [ichimdav #5443 #5407] 
 * Upgrade step: 
   1. www/portal_actions/site_actions/plone_setup > Disable visible state
   2. www/portal_actions/user/plone_setup > Enable visible state
@@ -14,7 +17,7 @@ Changelog
 * Feature: Improved eea header design. Removed old personal_bar so that we get 
   the new Plone standard login and bar.
   Upgrade step:
-  1. move personal_bar viewlet on top of eea_cross_site_top
+  1. move personal_bar viewlet on top of eea_cross_site_top if neccesary
   2. hide any other duplicate old personal_bar viewlet
   3. in portal_javascripts enable the popupforms.js
   [demarant fixes #5443]
@@ -32,12 +35,6 @@ Changelog
   [tiberich #5397]
 * Bug fix: load specific ie fixes as well as iefixes for fixes that affect all
   IE versions
-  [ichimdav #5407]
-* Upgrade step:  from portal_setup > import > EEA Design import Stylesheet 
-  steps by:
-  1. Checking Stylesheet registry import step
-  2. Uncheck Include dependecies? checkbox
-  3. Hit Import selected steps button
   [ichimdav #5407]
 
 5.4 - (2012-08-02)

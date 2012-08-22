@@ -15,4 +15,25 @@
 
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="*"
+    destination="5.5"
+    profile="eea.design:default">
+
+    <genericsetup:upgradeDepends
+      title="Import profile steps with changes: stylesheets"
+      import_steps="cssregistry"
+      />
+
+    <genericsetup:upgradeDepends
+      title="Import profile steps with changes: jsregistry"
+      import_steps="jsregistry"
+      />
+
+    <genericsetup:upgradeDepends
+      title="Import profile steps with changes: viewlets"
+      import_steps="viewlets"
+      />
+
+  </genericsetup:upgradeSteps>
 </configure>
