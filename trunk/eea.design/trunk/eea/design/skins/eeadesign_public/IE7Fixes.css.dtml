@@ -405,6 +405,11 @@ dd.portletFooter {
     padding: 0em 0em 0.5em 0em;
 }
 
+/* 5455 font-size for content is smaller on IE7 and it doesn't know of inherit */
+#content {
+    font-size: 100% !important;
+}
+
 #content-core {
     display: block;
     clear: both;
