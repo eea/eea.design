@@ -692,6 +692,10 @@ ul.eea-tabs li, ul.eea-tabs.two-rows li {
     position: absolute;
     right: 0;
 }
+
+#portal-personaltools dd {
+    margin-top: 15px;
+}
 #portal-siteactions {
     margin-right: 135px;
 }

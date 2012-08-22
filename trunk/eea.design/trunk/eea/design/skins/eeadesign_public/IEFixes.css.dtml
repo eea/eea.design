@@ -45,10 +45,14 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
     background: transparent !important;
 }
 
-/* 5443 personaltools filter hides the submenu so we use a simple color to fix it */ 
+/* 5443 personaltools and header holder needs position static when we have 
+ * hovering items over our gradient */ 
 #portal-personaltools {
-    filter: none;
-    background-color: &dtml-corporateGreen;;
+    position: static;
 } 
-
+#header-holder {
+    position: static;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
+}
 /* </dtml-with> */
