@@ -3,6 +3,10 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Upgrade step: 
+  1. www/portal_actions/site_actions/plone_setup > Disable visible state
+  2. www/portal_actions/user/plone_setup > Enable visible state
+  [ichimdav #5443]
 * Bug fix: show required symbol on edit form gone after updating to Plone 4.2
   [ichimdav fixes #5454]
 * WIP: added simple selenium test to prove that selenium tests work
