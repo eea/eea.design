@@ -2302,11 +2302,6 @@ form[name="edit_form"] table {
     float: none;
 }
 
-/* hide ImageFs images from listing #4762 */
-.summary img[alt="ImageFS"] {
-    display: none;
-}
-
 /* #4669 display outdated browser message */
 #outdated_wrap {
     background-color: #fcfdde;
