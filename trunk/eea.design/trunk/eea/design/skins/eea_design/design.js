@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
-
+    'use strict';
+    var ie = $.browser.msie  && parseInt($.browser.version, 10);
     if (!$("#multimedia-widgets").length) {
         var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
             global_nav = $('#portal-globalnav');
@@ -61,9 +62,8 @@ jQuery(document).ready(function($) {
     */
     var toggleEcotipClass = function(){
         var ecotip = jQuery('#portlet-ecotip'),
-            ie = $.browser.msie  && (parseInt($.browser.version, 10) < 10),
             action, bulb, led;
-        if(ie) {
+        if(ie && ie < 10) {
             bulb = ecotip.find('.ecotip-bulb');
             led = ecotip.find('.led-bulb');
             action = function(){
@@ -91,8 +91,8 @@ jQuery(document).ready(function($) {
 
     function themePromotionPortlets(top_news) {
         var top_news_width = top_news.width();
-        var margin = top_news_width * 0.012;
-        w = Math.floor((top_news_width - 5 * margin) / 5);
+        var margin = top_news_width * 0.012,
+            w = Math.floor((top_news_width - 5 * margin) / 5);
         var promotions = top_news.find('.portlet-promotions');
         promotions.width(w);
         var last = promotions.last();
