@@ -45,6 +45,9 @@
     color: white;
 }
 
+#contentActionMenus dl.actionMenu a.actionMenuSelected span {
+    color: #666;
+}
 #contentActionMenus dl.actionMenu a:hover span {
     color: black;
 }

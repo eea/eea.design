@@ -91,7 +91,7 @@ th {
     text-decoration: none;
 }
 th a, th a:link, th a:visited {
-    color: #000;
+    color: #000 !important;
 }
 
 /* Data tables */

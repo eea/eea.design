@@ -1016,7 +1016,11 @@ dd.embeddedMedia .magnify {
     text-decoration: none !important;
 }
 
-
+/* 5455 fix publicationMessage link color */
+#content dl.publicationMessage a {
+    border: 0;
+    color: &dtml-linkColor;;
+}
 dl a:hover, dd a:hover, dt a:hover {
     color: &dtml-linkUnderlineHoverColor; !important;
 }
@@ -1707,6 +1711,11 @@ h3.site-description {
 
 /* .system-message and #error-handling are reST error indicators */
 
+dl.portalMessage dt,
+dl.system-message dt {
+    color: &dtml-fontColor;;
+}
+
 .portalMessage,
 .system-message,
 #error-handling {
@@ -1838,6 +1847,11 @@ h3.site-description {
     float: left;
     margin: 1em 1em 1em 0em;
     border: 1px solid &dtml-globalBorderColor;;
+}
+
+/* related video thumbnails don't need a float left */
+#content .portlet a.tileImage {
+    float: none !important;
 }
 
 .tileImage:hover {

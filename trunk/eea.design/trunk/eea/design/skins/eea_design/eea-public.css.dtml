@@ -300,6 +300,10 @@ table.listing th {
     background: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px rgba(0,0,0,.4);
 }
+/* fix icon placement in listings  like foloder_contents */
+table.listing a {
+    display: inline-block !important;
+}
 
 div.listingBar a:hover {
     background: transparent;
