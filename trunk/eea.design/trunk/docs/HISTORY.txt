@@ -7,14 +7,14 @@ Changelog
   [ghicaale refs #4190]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
-  [ichimdav #5443 #5407] 
-* Upgrade step: 
+  [ichimdav #5443 #5407]
+* Upgrade step:
   1. www/portal_actions/site_actions/plone_setup > Disable visible state
   2. www/portal_actions/user/plone_setup > Enable visible state
   [ichimdav #5443]
 * Bug fix: show required symbol on edit form gone after updating to Plone 4.2
   [ichimdav fixes #5454]
-* WIP: added simple selenium test to prove that selenium tests work
+* Feature: added simple selenium test to prove that selenium tests work
   [tiberich #4011]
 * Feature: Improved eea header design. Removed old personal_bar so that we get 
   the new Plone standard login and bar.
