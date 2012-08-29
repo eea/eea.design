@@ -1,13 +1,15 @@
 <metal:entry define-macro="entry">
   <div tal:define="
       css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
-      video python:'video-fancybox' if is_video and obj.portal_type != 'FlashFile' else '';
-      animation python:'animation-fancybox' if is_video and obj.portal_type == 'FlashFile' else '';"
+      portal_type obj/portal_type;
+      video python:'video-fancybox' if is_video and portal_type != 'FlashFile' else '';
+      animation python:'animation-fancybox' if is_video and portal_type == 'FlashFile' else '';
+      cloud python: 'video-fancybox cloudvideo' if is_video and portal_type == 'CloudVideo' else '';"
     tal:attributes="class css">
     <a tal:attributes="
       href listing_url;
       title obj/pretty_title_or_id;
-      class python:video or animation">
+      class python:cloud or video or animation">
       <span class="photoAlbumEntryWrapper">
       <img tal:attributes="
         title desc_or_title;

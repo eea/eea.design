@@ -300,10 +300,6 @@ table.listing th {
     background: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px rgba(0,0,0,.4);
 }
-/* fix icon placement in listings  like foloder_contents */
-table.listing a {
-    display: inline-block !important;
-}
 
 div.listingBar a:hover {
     background: transparent;
@@ -559,6 +555,11 @@ dl.toc dd {
     border: 0;
 }
 
+a.cloudvideo .photoAlbumEntryWrapper {
+    position: relative;
+    background: url(&dtml-portal_url;/play-button-cloud.png) no-repeat 2px -32px;
+;
+}
 .photoAlbumEntry a {
     font-size: &dtml-fontSmallSize;;
     height: 128px;
@@ -588,11 +589,20 @@ dl.toc dd {
     background: transparent;
     box-shadow: none;
     padding: 0px;
+    z-index: 3;
 }
 
-.photoAlbumEntry a.video-fancybox img {
+.photoAlbumEntry a.cloudvideo img,
+.photoAlbumEntry a.video-fancybox img,
+.photoAlbumEntry a.animation-fancybox img
+{
     margin-top: -29px;
     max-height: 128px;
+}
+
+.photoAlbumEntry a.cloudvideo img {
+    position: relative;
+    z-index: -1;
 }
 
 .photoAlbumEntryPreview,
