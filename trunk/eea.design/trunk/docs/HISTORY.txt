@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.8-dev - (unreleased)
+----------------------
+
 5.7 - (2012-08-29)
 ------------------
 * Bug fix: fixed syntax error in MANIFEST.in
