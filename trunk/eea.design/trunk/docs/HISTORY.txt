@@ -2,7 +2,16 @@ Changelog
 =========
 
 5.8-dev - (unreleased)
-----------------------
+---------------------
+* Feature: Added "en" icon close to "multimedia" and "data and maps" 
+  in portal-top section.
+  [prospchr #5235]
+* Upgrade step:  from portal_setup > Portal Navigation Manager
+  steps by:
+  1. Click on EEA Website in any language
+  2. Published "multimedia" and "data and maps"
+  3. Repeat for all languages
+  [prospchr #5235]
 
 5.7 - (2012-08-29)
 ------------------
