@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Bug fix: Don't display portal-personaltools activated menus on fullscreen
+  [ichimdav #5509]
 * Feature: Added "en" icon close to "multimedia" and "data and maps" 
   in portal-top section.
   [prospchr #5235]

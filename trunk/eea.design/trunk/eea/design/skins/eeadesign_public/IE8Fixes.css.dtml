@@ -653,5 +653,11 @@ img
     display: block !important;
     float: left;
 }
+
+/* 5509; IE8 displayed portal-personaltools on entire screen width 
+ * because of min-width: 100% */
+dl.actionMenu.activated dd {
+    min-width: 0;
+}
 /* </dtml-with> */
 
