@@ -10,7 +10,7 @@
 
     <metal:content-core fill-slot="content-core">
         <metal:content define-macro="content-core">
-        <metal:block use-macro="context/folder_listing/macros/content-core">
+        <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
             <metal:entries fill-slot="entries">
 
             <table class="listing">

@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Bug fix: fixed folder_tabs_view for the new eea.uberlisting package
+  [ichimdav #5463]
 * Bug fix: Don't display portal-personaltools activated menus on fullscreen
   [ichimdav #5509]
 * Feature: Added "en" icon close to "multimedia" and "data and maps" 
