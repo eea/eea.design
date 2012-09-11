@@ -538,35 +538,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 0;
 }
 
-#smart-view-switch {
-    margin: 2em 0 !important;
-    width: 197px;
-    height: 32px;
-    background: url(&dtml-portal_url;/input_background.gif) repeat-x scroll 0 0 White;
-    border: 1px solid #ccc;
-}
-#smart-view-switch li {
-    cursor: pointer;
-    border-right: 1px solid #ccc;
-    margin: 0;
-    list-style: none outside none;
-}
-#smart-view-switch li.last {
-    border-right: 0;
-}
-#smart-view-switch li img {
-    margin: 0;
-    padding: 0;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-}
-#smart-view-switch li.selected {
-    background: white;
-}
-#smart-view-switch li.selected img {
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
 
 .eea-rounded-corners {
     border-radius: 3px;
@@ -599,7 +570,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     background-color: &dtml-corporateBlueOne;;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
-    height: 37px;
+    height: auto;
     overflow: hidden;
     list-style: none;
     padding: 0;
@@ -635,7 +606,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: 125%;
     padding: 9px 10px 11px 10px;
     display: block !important;
-    float: left;
     margin: 0 -2px;
     font-weight: normal;
     border: 0px;
@@ -709,7 +679,7 @@ div.eea-accordion-panels .pane {
 }
 
 div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
-    background: transparent url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
+    background: transparent url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 98% 12px;
     background-color: #549CAC;
     border-bottom: 1px dotted #DDD;
     margin: 0px;
@@ -727,7 +697,7 @@ div.eea-accordion-panels .eea-accordion-title:hover, div.eea-accordion-panels h2
 
 div.eea-accordion-panels .eea-accordion-title.current,
 div.eea-accordion-panels h2.current {
-    background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
+    background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
 }
 
 div.eea-accordion-panels .eea-accordion-title a,
