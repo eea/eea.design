@@ -20,13 +20,10 @@
  <!--    conditionalcomment="" cookable="True" enabled="True" -->
  <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
  <!--    id="eea-fullscreen.js" inline="False" position-after="eea-toc.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="eea-smartview.js" inline="False" position-after="eea-fullscreen.js" /> -->
+
  <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
      enabled="True" expression="" 
-     id="eea-tabs.js" inline="False" position-after="eea-smartview.js"/>
+     id="eea-tabs.js" inline="False" position-after="eea-fullscreen.js"/>
 
  <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
      enabled="True" expression="" 

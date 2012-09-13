@@ -1,3 +1,0 @@
-<metal:listing-macro define-macro="listing">
-    <div metal:use-macro="here/folder_listing/macros/listing"></div>
-</metal:listing-macro>

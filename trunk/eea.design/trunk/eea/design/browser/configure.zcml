@@ -313,26 +313,6 @@
         allowed_interface=".interfaces.ISubFolderView"
         />
 
-    <browser:page
-        for="*"
-        name="smart_view_logic"
-        class=".smart_view_logic.SmartView"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope.Public"
-        allowed_interface=".interfaces.ISmartView"
-        />
-
-    <!-- added for plone4 migration to be deleted from here -->
-    <!--<browser:page-->
-        <!--        for="*"-->
-        <!--        name="inApplication"-->
-        <!--        class=".main.Main"-->
-        <!--        permission="zope.Public"-->
-        <!--        attribute="inApplication"-->
-        <!--        />-->
-
-
-
     <!-- Customized portlets -->
     <plone:portletRenderer
         portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"

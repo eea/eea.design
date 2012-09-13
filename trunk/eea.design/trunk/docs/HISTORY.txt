@@ -3,6 +3,11 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Upgrade step: remove eea-smartview.js from ZMI > www > portal_javascripts
+  [ichimdav #5463]
+* Change: removed smart_view logic from eea.design as it was moved and enhanced
+  to eea.uberlisting
+  [ichimdav #5463]
 * Bug fix: fixed tabs look when the items needed to span on more than one line
   [ichimdav]
 * Bug fix: fixed folder_tabs_view for the new eea.uberlisting package
