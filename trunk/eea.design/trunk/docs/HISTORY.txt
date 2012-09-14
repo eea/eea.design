@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Bug fix: removed empty recently_modified.pt template, as teh default
+  one from Plone will take place
+  [ghicaale fixes #5527]
 * Bug fix: check if review_state isn't public when we redirect the anonymous
   user to the listing_not_available template
   [ichimdav #5507]
