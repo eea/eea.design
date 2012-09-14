@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Bug fix: check if review_state isn't public when we redirect the anonymous
+  user to the listing_not_available template
+  [ichimdav #5507]
 * Upgrade step: remove eea-smartview.js from ZMI > www > portal_javascripts
   [ichimdav #5463]
 * Change: removed smart_view logic from eea.design as it was moved and enhanced
