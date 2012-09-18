@@ -230,10 +230,6 @@
  </div>
     <!-- end column wrapper -->
 
-    <tal:comment replace="nothing">
-        #4699 display a pop-up to alert users that their browser is outdated
-    </tal:comment>
-
 </div>
 
     <metal:block i18n:domain="eea" tal:condition="not:ajax_load">
