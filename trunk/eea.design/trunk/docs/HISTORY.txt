@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Change: Remove translation centre disclaimer, not valid anymore.
+  [demarant fixes #5518]
 * Bug fix: removed empty recently_modified.pt template, as the default
   one from Plone will take it over
   [ghicaale fixes #5527]

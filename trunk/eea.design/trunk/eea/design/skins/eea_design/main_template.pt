@@ -229,9 +229,6 @@
     <div class="visualClear"><!-- --></div>
  </div>
     <!-- end column wrapper -->
-    <div i18n:domain="eea" tal:condition="python:language != 'en'" id="translation-disclaimer">
-        <p class="note" i18n:translate="">This page was translated by the Translation Centre for the Bodies of the European Union (CdT)</p>
-    </div>
 
     <tal:comment replace="nothing">
         #4699 display a pop-up to alert users that their browser is outdated
