@@ -21,7 +21,7 @@
                             getUrl obj/getUrl|nothing;
                             getURL obj/getURL|nothing;
                             absolute_url obj/absolute_url|nothing;
-                            is_video python:'p4a.video.interfaces.IVideoEnhanced' in hl.object_provides;
+                            is_video python:'eea.mediacentre.interfaces.IVideo' in hl.object_provides;
                             figure_link python:getUrl or getURL or absolute_url;
                             figure_link python: figure_link + '/view' if is_video else figure_link;
                             image_link obj/getURL|obj/absolute_url;

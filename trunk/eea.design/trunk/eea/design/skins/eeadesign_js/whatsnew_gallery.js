@@ -111,8 +111,8 @@ jQuery(document).ready(function($) {
                     break;
                 case "videoclips":
                         address = eea_gal.site_address + 'all/@@tagscloud_counter';
-                        topic_params = "cid=c1&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
-                        tags_params = "cid=c3&c2=p4a.video.interfaces.IVideoEnhanced&c3=all&c8=&c4=published&b_start=0";
+                        topic_params = "cid=c1&c2=eea.mediacentre.interfaces.IVideo&c3=all&c8=&c4=published&b_start=0";
+                        tags_params = "cid=c3&c2=eea.mediacentre.interfaces.IVideo&c3=all&c8=&c4=published&b_start=0";
                         gallery_ajax.html(ajax_loader_img);
                         tabs(address, topic_params, tags_params); 
                     break;

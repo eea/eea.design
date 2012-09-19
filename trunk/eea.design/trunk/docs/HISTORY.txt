@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Change: replaced IVideoEnhanced queries for is_video with IVideo from
+  mediacentre
+  [ichimdav #5480]
 * Change: Remove translation centre disclaimer, not valid anymore.
   [demarant fixes #5518]
 * Bug fix: removed empty recently_modified.pt template, as the default

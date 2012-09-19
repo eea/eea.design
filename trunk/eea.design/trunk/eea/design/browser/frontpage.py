@@ -141,7 +141,7 @@ class Frontpage(BrowserView):
     def getMultimedia(self):
         """ retrieves multimedia objects (videos/animations etc..)
         filtered by date and by topic """
-        interface = 'p4a.video.interfaces.IVideoEnhanced'
+        interface = 'eea.mediacentre.interfaces.IVideo'
         result = _getItems(self,
                     interfaces=interface,
                     noOfItems=self.noOfMultimedia)

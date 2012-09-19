@@ -4,7 +4,7 @@
       portal_type obj/portal_type;
       video python:'video-fancybox' if is_video and portal_type != 'FlashFile' else '';
       animation python:'animation-fancybox' if is_video and portal_type == 'FlashFile' else '';
-      cloud python: 'video-fancybox cloudvideo' if is_video and portal_type == 'CloudVideo' else '';"
+      cloud python: 'video-fancybox cloudvideo' if portal_type == 'CloudVideo' else '';"
     tal:attributes="class css">
     <a tal:attributes="
       href listing_url;

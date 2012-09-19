@@ -38,7 +38,7 @@
         desc_or_title python:brain.Description or obj_title;
         urlview obj/@@url;
         listing_url urlview/listing_url;
-        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        is_video python:'eea.mediacentre.interfaces.IVideo' in brain.object_provides">
         <metal:entry use-macro="entry_macro" />
       </tal:entry>
     </tal:images>
@@ -60,7 +60,7 @@
         desc_or_title python:brain.Description or obj.pretty_title_or_id;
         urlview obj/@@url;
         listing_url urlview/listing_url;
-        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides">
+        is_video python:'eea.mediacentre.interfaces.IVideo' in brain.object_provides">
 
         <metal:entry use-macro="entry_macro" />
       </tal:entry>
@@ -94,7 +94,7 @@
         desc_or_title python:brain.Description or obj_title;
         urlview obj/@@url;
         listing_url urlview/listing_url;
-        is_video python:'p4a.video.interfaces.IVideoEnhanced' in brain.object_provides;">
+        is_video python:'eea.mediacentre.interfaces.IVideo' in brain.object_provides;">
         <metal:entry use-macro="entry_macro" />
       </tal:entry>
     </tal:images>
