@@ -592,7 +592,6 @@ a.cloudvideo .photoAlbumEntryWrapper {
     z-index: 3;
 }
 
-.photoAlbumEntry a.cloudvideo img,
 .photoAlbumEntry a.video-fancybox img,
 .photoAlbumEntry a.animation-fancybox img
 {
