@@ -602,6 +602,7 @@ a.cloudvideo .photoAlbumEntryWrapper {
 .photoAlbumEntry a.cloudvideo img {
     position: relative;
     z-index: -1;
+    margin-top: 0;
 }
 
 .photoAlbumEntryPreview,
