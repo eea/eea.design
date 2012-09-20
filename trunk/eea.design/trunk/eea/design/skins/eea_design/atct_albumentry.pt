@@ -3,7 +3,7 @@
       css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
       portal_type obj/portal_type;
       video python:'video-fancybox' if is_video and portal_type != 'FlashFile' else '';
-      animation python:'animation-fancybox' if is_video and portal_type == 'FlashFile' else '';
+      animation python:'animation-fancybox' if portal_type == 'FlashFile' else '';
       cloud python: 'video-fancybox cloudvideo' if portal_type == 'CloudVideo' else '';"
     tal:attributes="class css">
     <a tal:attributes="
