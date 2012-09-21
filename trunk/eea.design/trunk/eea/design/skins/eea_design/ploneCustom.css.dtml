@@ -1944,8 +1944,6 @@ textarea.proportional {
     padding: 0;
     margin: -1px 0 0 -1px;
     width: 1px;
-    position: absolute;
-    left: -9999px;
 }
 
 option.hiddenStructure {
@@ -2352,4 +2350,27 @@ form[name="edit_form"] table {
     content: "" !important;
 }
 
+/* #5533 new style collection style tweaks */
+.queryindex, .addIndex, .queryoperator, .addOperator { 
+    width: 105px !important;
+}
+.queryresults {
+    float: none !important;
+}
+
+input.queryvalue {
+   width: 200px !important; 
+}
+
+.multipleSelectionWidget dd {
+    width: 600px !important;
+    left: 0;
+    z-index: 600;
+    position: absolute;
+}
+.multipleSelectionWidget label {
+    width: 195px;
+    margin-left: 5px;
+    float: left;
+}
 /* </dtml-with> */
