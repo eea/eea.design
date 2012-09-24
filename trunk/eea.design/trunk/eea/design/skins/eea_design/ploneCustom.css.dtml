@@ -679,13 +679,11 @@ div.eea-accordion-panels .pane {
 }
 
 div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
-    background: transparent url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 98% 12px;
-    background-color: #549CAC;
-    border-bottom: 1px dotted #DDD;
+    background: #E2E2E2 url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
+    border: 1px solid #E0E0E0;
     margin: 0px;
     font-size: 115%;
-    color: #FFF;
-    text-shadow: 1px 1px #000;
+    color: #00446A;
     line-height: 3em;
     padding: 0px 0px 0px 10px;
     font-weight: bold;
@@ -693,18 +691,18 @@ div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
 
 div.eea-accordion-panels .eea-accordion-title:hover, div.eea-accordion-panels h2:hover {
     cursor: pointer;
+    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
 }
 
 div.eea-accordion-panels .eea-accordion-title.current,
 div.eea-accordion-panels h2.current {
-    background: #2C8DA2 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
+    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
 }
 
 div.eea-accordion-panels .eea-accordion-title a,
 div.eea-accordion-panels h2 a
 {
-    color: #FFF;
-    text-shadow: 1px 1px #000;
+    color: #00446A !important;
 }
 
 /* Override jquery.ui style */
