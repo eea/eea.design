@@ -4,17 +4,9 @@ jQuery(document).ready(function($) {
     var eea_gal = window.whatsnew;
 
     (function() {
-        var host = window.location.href,
-            host_length = host.length;
-        eea_gal.site_address = host[host_length - 1] !== '/' ? host + '/': host;
+        // get the site url from the kss-base-url link 
+        eea_gal.site_address = $("link[rel='alternate']").attr('href');
         eea_gal.gallery = $("#whatsnew-gallery");
-        // remove /view from site_address url
-        var regex = /(\/view\/?$)/;
-        eea_gal.site_address = eea_gal.site_address.replace(regex, '');
-        // append / to the end of the url if it's not already present
-        if (eea_gal.site_address.charAt(eea_gal.site_address.length -1) !== '/') { 
-            eea_gal.site_address = eea_gal.site_address + '/';
-        }
         eea_gal.gallery_page = eea_gal.gallery.attr("data-page");
     }());
 
