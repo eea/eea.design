@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ---------------------
+* Bug fix: fixed loading of whatsnewgallery content when clicking on the tabs
+  and the page contained /view
+  [ichimdav]
 * Bug fix: readability issues of accordion headings. discreet color and 
   higher contrast.
   [demarant fixes #5535]
