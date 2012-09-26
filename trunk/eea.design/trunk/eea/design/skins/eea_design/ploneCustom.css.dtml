@@ -2361,11 +2361,17 @@ input.queryvalue {
 }
 
 .multipleSelectionWidget dd {
-    width: 600px !important;
+    width: 615px !important;
+    height: 350px;
     left: 0;
     z-index: 600;
     position: absolute;
 }
+
+.multipleSelectionWidget dt {
+    display: block !important;
+}
+
 .multipleSelectionWidget label {
     width: 195px;
     margin-left: 5px;
