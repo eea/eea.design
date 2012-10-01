@@ -2366,11 +2366,14 @@ input.queryvalue {
 }
 
 .multipleSelectionWidget dd {
-    width: 615px !important;
+    width: 620px !important;
     height: 350px;
     left: 0;
     z-index: 600;
     position: absolute;
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+           -column-count: 3;
 }
 
 .multipleSelectionWidget dt {
