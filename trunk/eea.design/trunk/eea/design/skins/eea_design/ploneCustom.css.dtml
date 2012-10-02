@@ -2290,7 +2290,7 @@ form[name="edit_form"] table {
     border-bottom: solid 1px #778899;
     text-align: center;
     padding:5px 0px 5px 0px;
-    position: absolute;
+    position: fixed;
     z-index: 1001;
 }
 
