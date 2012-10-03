@@ -2,43 +2,5 @@
 <script type="text/javascript">
 var WRInitTime=(new Date()).getTime();
 </script>
-
-<div id="outdated_wrap" i18n:translate="" style="display:none;">
-    <div id="outdated">
-        <div id="outdated_text">
-            <h3>You are using an outdated browser</h3> 
-            <p>For a better experience using this site please upgrade to a modern browser.</p>
-        </div>
-        <div id="outdated_images">
-            <ul>
-                <li id="outdated_ff">
-                <a href='http://www.firefox.com' target='_blank'>
-                    Firefox
-                </a>
-                </li>
-                <li id="outdated_ie">
-                <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank'>
-                    Internet Explorer 9+
-                </a>
-                </li>
-                <li id="outdated_chrome">
-                <a href='http://www.google.com/chrome' target='_blank'>
-                    Google Chrome
-                </a>
-                </li>
-                <li id="outdated_safari">
-                <a href='http://www.apple.com/safari/download/' target='_blank'>
-                    Safari
-                </a>
-                </li>
-                <li id="outdated_opera">
-                <a href='http://www.opera.com/download/' target='_blank'>
-                    Opera
-                </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+<tal:outdated_browsers metal:use-macro="context/outdated_browsers/macros/main" />
 <!-- ClickTale end of Top part -->

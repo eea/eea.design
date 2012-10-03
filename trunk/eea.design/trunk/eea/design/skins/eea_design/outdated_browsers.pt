@@ -1,0 +1,60 @@
+<tal:conditions tal:define="portal_state context/@@plone_portal_state;
+                            isAnon portal_state/anonymous;
+                            roles python:user.getRoles();
+                            active python:False;"
+                            metal:define-macro="main">
+
+    <tal:comment tal:replace="nothing">
+        You can use a condition for a specific role in display certain browsers
+        or messages 
+        ex: <h2 tal:condition="python:'Content-Editor' in roles"> Message for content editors</h2>
+    </tal:comment>
+
+    <metal:browser define-macro="browsers" tal:condition="python:active">
+        <li id="outdated_ff">
+            <a href='http://www.firefox.com' target='_blank'>
+                Firefox
+            </a>
+        </li>
+        <li id="outdated_ie">
+            <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank'>
+                Internet Explorer 9+
+            </a>
+        </li>
+        <li id="outdated_chrome">
+        <a href='http://www.google.com/chrome' target='_blank'>
+            Google Chrome
+        </a>
+        </li>
+        <li id="outdated_safari">
+            <a href='http://www.apple.com/safari/download/' target='_blank'>
+                Safari
+            </a>
+        </li>
+        <li id="outdated_opera">
+            <a href='http://www.opera.com/download/' target='_blank'>
+                Opera
+            </a>
+        </li>
+    </metal:browser>
+
+    <tal:template_defines define="active python:True;">
+        <div id="outdated_wrap"  style="display:none;">
+            <div id="outdated">
+                <div id="outdated_text">
+                    <tal:anon tal:condition="isAnon">
+                        <h3 i18n:translate="">You are using an outdated browser</h3> 
+                        <p i18n:translate="">For a better experience using this site please upgrade to a modern browser.</p>
+                    </tal:anon>
+                </div>
+                <div id="outdated_images" >
+                    <ul>
+                        <tal:anon tal:condition="isAnon">
+                            <metal:browsers use-macro="context/outdated_browsers/macros/browsers" />
+                        </tal:anon>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </tal:template_defines>
+</tal:conditions>
