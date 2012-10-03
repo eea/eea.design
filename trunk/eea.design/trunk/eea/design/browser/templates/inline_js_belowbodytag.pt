@@ -2,5 +2,4 @@
 <script type="text/javascript">
 var WRInitTime=(new Date()).getTime();
 </script>
-<tal:outdated_browsers metal:use-macro="context/outdated_browsers/macros/main" />
 <!-- ClickTale end of Top part -->

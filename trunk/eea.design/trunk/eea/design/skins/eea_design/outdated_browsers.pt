@@ -1,16 +1,16 @@
 <tal:conditions tal:define="portal_state context/@@plone_portal_state;
                             isAnon portal_state/anonymous;
                             roles python:user.getRoles();
-                            active python:False;"
+                            enabled_browsers_macro python:False;"
                             metal:define-macro="main">
 
     <tal:comment tal:replace="nothing">
-        You can use a condition for a specific role in display certain browsers
-        or messages 
-        ex: <h2 tal:condition="python:'Content-Editor' in roles"> Message for content editors</h2>
+        You can use a condition for a specific role for displaying certain browsers
+        images or messages 
+        ex: <h2 tal:condition="python:'ContentEditor' in roles"> Message for content editors</h2>
     </tal:comment>
 
-    <metal:browser define-macro="browsers" tal:condition="python:active">
+    <metal:browser define-macro="browsers" tal:condition="python:enabled_browsers_macro">
         <li id="outdated_ff">
             <a href='http://www.firefox.com' target='_blank'>
                 Firefox
@@ -38,18 +38,18 @@
         </li>
     </metal:browser>
 
-    <tal:template_defines define="active python:True;">
+    <tal:template_defines define="enabled_browsers_macro python:True;">
         <div id="outdated_wrap"  style="display:none;">
             <div id="outdated">
                 <div id="outdated_text">
-                    <tal:anon tal:condition="isAnon">
+                    <tal:anon tal:condition="not:isAnon">
                         <h3 i18n:translate="">You are using an outdated browser</h3> 
                         <p i18n:translate="">For a better experience using this site please upgrade to a modern browser.</p>
                     </tal:anon>
                 </div>
                 <div id="outdated_images" >
                     <ul>
-                        <tal:anon tal:condition="isAnon">
+                        <tal:anon tal:condition="not:isAnon">
                             <metal:browsers use-macro="context/outdated_browsers/macros/browsers" />
                         </tal:anon>
                     </ul>
