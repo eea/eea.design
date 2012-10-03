@@ -1,11 +1,12 @@
 /*jslint browser: true,  */ /*global jQuery */
-(function() {
+(function($, window, document, undef) {
     "use strict";
     var notSupportedBrowsers = [
         {browser : 'MSIE', version : 8, os: 'Any' },
         {browser: 'Chrome', version: 12, os: 'Any' },
         {browser: 'Firefox', version: 4, os: 'Any' }
     ];
+
 
     function getOutdatedBrowser(c_name) {
         var c_start, c_end;
@@ -23,11 +24,30 @@
         return "";
     }
 
-    function setOutdatedBrowser(c_name, value, expiredays) {
+    function setMessage(c_name, value, expiredays) {
         var exdate = new Date();
         exdate.setDate(exdate.getDate() + expiredays);
         document.cookie = c_name+ "=" +window.escape(value) + ((expiredays === null) ? "" : ";expires=" + exdate.toGMTString());
     }
+    
+    function displayMessage(url, message, date, transition) { 
+        $.get(url, function(data) {
+            var message_wrap = $(data), outdated_transition, timeout;
+            message_wrap.prependTo('body').fadeIn(1000);
+            outdated_transition = function() {
+                if(message_wrap.is(':visible')) {
+                    setMessage(message,'seen', date || 2);
+                    message_wrap[transition](1000);
+                }
+            };
+            timeout = window.setTimeout(outdated_transition, 10000);
+            message_wrap.hover(function() {
+                window.clearTimeout(timeout);
+            }, function() {
+                outdated_transition();
+            });
+        });
+    } 
 
     var BrowserDetection = {
         init: function() {
@@ -55,22 +75,7 @@
             }
 
             if(outdatedBrowser){
-                jQuery.get('outdated_browsers', function(data) {
-                    var outdated_wrap = jQuery(data), outdated_fade, timeout;
-                    outdated_wrap.prependTo('body').fadeIn(1000);
-                    outdated_fade = function() {
-                        if(outdated_wrap.is(':visible')) {
-                            setOutdatedBrowser('browserWarning','seen', 2);
-                            outdated_wrap.fadeOut(1000);
-                        }
-                    };
-                    timeout = window.setTimeout(outdated_fade, 10000);
-                    outdated_wrap.hover(function() {
-                        window.clearTimeout(timeout);
-                    }, function() {
-                        outdated_fade();
-                    });
-                });
+                displayMessage('outdated_browsers', 'seen', 2, 'fadeToggle');
             }
         },
 
@@ -122,9 +127,9 @@
     ]
     };
 
-    if(getOutdatedBrowser('browserWarning') !== 'seen' ){
-        jQuery(function() {
+    if(getOutdatedBrowser('outdatedMessage') !== 'seen' ){
+        $(function() {
             BrowserDetection.init();
         });
     }
-}());
+}(jQuery, window, document));
