@@ -16,11 +16,6 @@
                 Firefox
             </a>
         </li>
-        <li id="outdated_ie">
-            <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank'>
-                Internet Explorer 9+
-            </a>
-        </li>
         <li id="outdated_chrome">
         <a href='http://www.google.com/chrome' target='_blank'>
             Google Chrome
@@ -38,19 +33,30 @@
         </li>
     </metal:browser>
 
+    <metal:ie define-macro="ie" tal:condition="python:enabled_browsers_macro">
+        <li id="outdated_ie">
+            <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank'>
+                Internet Explorer 9+
+            </a>
+        </li>
+    </metal:ie>
+
     <tal:template_defines define="enabled_browsers_macro python:True;">
         <div id="outdated_wrap"  style="display:none;">
             <div id="outdated">
                 <div id="outdated_text">
-                    <tal:anon tal:condition="not:isAnon">
+                    <tal:anon tal:condition="isAnon">
                         <h3 i18n:translate="">You are using an outdated browser</h3> 
                         <p i18n:translate="">For a better experience using this site please upgrade to a modern browser.</p>
                     </tal:anon>
                 </div>
                 <div id="outdated_images" >
                     <ul>
-                        <tal:anon tal:condition="not:isAnon">
+                        <tal:anon tal:condition="isAnon">
                             <metal:browsers use-macro="context/outdated_browsers/macros/browsers" />
+                            <tal:load_ie tal:condition="python:'NT 5.1' not in request['HTTP_USER_AGENT']">
+                                <metal:browsers use-macro="context/outdated_browsers/macros/ie"  />
+                            </tal:load_ie>
                         </tal:anon>
                     </ul>
                 </div>
