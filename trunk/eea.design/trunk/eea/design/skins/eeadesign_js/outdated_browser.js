@@ -33,7 +33,7 @@
     function displayMessage(url, message, date, transition) { 
         $.get(url, function(data) {
             var message_wrap = $(data), outdated_transition, timeout;
-            message_wrap.prependTo('body').fadeIn(1000);
+            message_wrap.prependTo('body')[transition](1000);
             outdated_transition = function() {
                 if(message_wrap.is(':visible')) {
                     setMessage(message,'seen', date || 2);
