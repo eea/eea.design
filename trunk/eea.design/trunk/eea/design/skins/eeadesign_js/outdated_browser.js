@@ -30,17 +30,20 @@
         document.cookie = c_name+ "=" +window.escape(value) + ((expiredays === null) ? "" : ";expires=" + exdate.toGMTString());
     }
     
-    function displayMessage(url, message, date, transition) { 
-        $.get(url, function(data) {
-            var message_wrap = $(data), outdated_transition, timeout;
-            message_wrap.prependTo('body')[transition](1000);
+    function displayMessage(obj) { 
+        $.get(obj.template, function(data) {
+            var message_wrap = $(data), outdated_transition, timeout = obj.message_timer || 10000;
+
+            message_wrap.prependTo('body')[obj.transition](1000);
             outdated_transition = function() {
                 if(message_wrap.is(':visible')) {
-                    setMessage(message,'seen', date || 2);
-                    message_wrap[transition](1000);
+                    setMessage(obj.template, 'seen', obj.cookie_days || 2);
+                    message_wrap[obj.transition](1000, function(){
+                        $(document).trigger('messageDisplayed');
+                    });
                 }
             };
-            timeout = window.setTimeout(outdated_transition, 10000);
+            timeout = window.setTimeout(outdated_transition, timeout);
             message_wrap.hover(function() {
                 window.clearTimeout(timeout);
             }, function() {
@@ -75,8 +78,10 @@
             }
 
             if(outdatedBrowser){
-                displayMessage('outdated_browsers', 'seen', 2, 'fadeToggle');
+                displayMessage({ template: 'outdated_browsers', cookie_message: 'seen', 
+                            cookie_days: 2, transition: 'fadeToggle'});
             }
+
         },
 
         detectBrowser: function() {
@@ -127,9 +132,18 @@
     ]
     };
 
-    if(getOutdatedBrowser('outdatedMessage') !== 'seen' ){
-        $(function() {
+    $(function() {
+        if(getOutdatedBrowser('outdated_browsers') !== 'seen' ){
+            $(document).bind('messageDisplayed', function() {
+                displayMessage({template: 'survey_message',
+                    cookie_days: 2, transition: 'slideToggle', message_timer: 60000});
+            });
             BrowserDetection.init();
-        });
-    }
+        }
+        else {
+            displayMessage({template: 'survey_message',
+                cookie_days: 2, transition: 'slideToggle', message_timer: 60000});
+        }
+    });
+
 }(jQuery, window, document));

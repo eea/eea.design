@@ -1,0 +1,13 @@
+<div class="message_wrap" style="display: none;">
+    <div class="message_text">
+        <h3 i18n:translate="">Were interested in your opinion</h3>
+        <p i18n:translate="">We would like for you to take a survey about your experience of using our website today</p>
+        <p i18n:translate="">If you click on 'Take Suervey Now' a new window will open where you can start taking the survey</p>
+        <p i18n:translate="">Would you like to take the survey?</p>
+        <a class="standardButton" href="https://www.inquisiteasp.dk/cgi-bin/qwebcorporate.cgi?idx=u3u3qf" target='_blank' i18n:translate="">Take the online survey</a>
+        <a class="standardButton" href="#" i18n:translate="" id="no_survey">No thank you</a>
+
+    </div>
+    <div class="message_images">
+    </div>
+</div>
