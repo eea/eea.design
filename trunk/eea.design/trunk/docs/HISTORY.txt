@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Feature: added survey popup 
+  [ichimdav #5467]
 * Feature: display outdated browser message also for non IE browsers
   [ichimdav #5588]
 * Bug fix: fixed loading of whatsnewgallery content when clicking on the tabs

@@ -2284,7 +2284,7 @@ form[name="edit_form"] table {
 
 /* #4669 display outdated browser message */
 #outdated_wrap, .message_wrap {
-    background-color: #fcfdde;
+    background-color: #F3F3F3;
     width: 100%;
     border-top: solid 1px #778899;
     border-bottom: solid 1px #778899;
@@ -2295,9 +2295,17 @@ form[name="edit_form"] table {
     z-index: 1001;
 }
 
+.message_wrap {
+    text-align: left;
+}
+
 #outdated, .message_body {
    width: 960px;
    margin: 0 auto;
+}
+.message_images {
+    float: left;
+    padding-right: 1em;
 }
 
 #outdated h3 {

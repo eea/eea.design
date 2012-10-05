@@ -8,27 +8,6 @@
     ];
 
 
-    function getOutdatedBrowser(c_name) {
-        var c_start, c_end;
-        if (document.cookie.length > 0)
-        {
-        c_start=document.cookie.indexOf(c_name + "=");
-        if (c_start !== -1)
-            {
-            c_start = c_start + c_name.length+1;
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end === -1) { c_end = document.cookie.length; }
-            return window.escape(document.cookie.substring(c_start, c_end));
-            }
-        }
-        return "";
-    }
-
-    function setMessage(c_name, value, expiredays) {
-        var exdate = new Date();
-        exdate.setDate(exdate.getDate() + expiredays);
-        document.cookie = c_name+ "=" +window.escape(value) + ((expiredays === null) ? "" : ";expires=" + exdate.toGMTString());
-    }
     
     function displayMessage(obj) { 
         $.get(obj.template, function(data) {
@@ -36,19 +15,19 @@
 
             message_wrap.prependTo('body')[obj.transition](1000);
             outdated_transition = function() {
-                if(message_wrap.is(':visible')) {
-                    setMessage(obj.template, 'seen', obj.cookie_days || 2);
                     message_wrap[obj.transition](1000, function(){
-                        $(document).trigger('messageDisplayed');
+                    window.createCookie(obj.template, obj.cookie_message, obj.cookie_days);
                     });
-                }
             };
-            timeout = window.setTimeout(outdated_transition, timeout);
-            message_wrap.hover(function() {
-                window.clearTimeout(timeout);
-            }, function() {
-                outdated_transition();
-            });
+            if (obj.hover_fade) {
+                timeout = window.setTimeout(outdated_transition, timeout);
+                message_wrap.hover(function() {
+                    window.clearTimeout(timeout);
+                }, function() {
+                    outdated_transition();
+                });
+            }
+            $(document).trigger('messageDisplayed');
         });
     } 
 
@@ -79,8 +58,10 @@
 
             if(outdatedBrowser){
                 displayMessage({ template: 'outdated_browsers', cookie_message: 'seen', 
-                            cookie_days: 2, transition: 'fadeToggle'});
+                            cookie_days: 2, transition: 'fadeToggle', hover_fade: true});
             }
+
+            window.createCookie('outdated_browsers', 'seen', 2);
 
         },
 
@@ -133,17 +114,33 @@
     };
 
     $(function() {
-        if(getOutdatedBrowser('outdated_browsers') !== 'seen' ){
-            $(document).bind('messageDisplayed', function() {
-                displayMessage({template: 'survey_message',
-                    cookie_days: 2, transition: 'slideToggle', message_timer: 60000});
-            });
+        if(!window.readCookie('outdated_browsers') || window.readCookie('outdated_browsers') !== 'seen') {
             BrowserDetection.init();
         }
         else {
-            displayMessage({template: 'survey_message',
-                cookie_days: 2, transition: 'slideToggle', message_timer: 60000});
+            $(document).bind('messageDisplayed', function() {
+                $("#repeat_survey").click(function(e) {
+                        window.createCookie('survey_message', 'seen');
+                        $(".message_wrap").slideUp(1000);
+                        e.preventDefault();
+                });
+
+                $("#no_survey").click(function(e) {
+                        window.createCookie('survey_message', 'never', 365);
+                        $(".message_wrap").slideUp(1000);
+                        e.preventDefault();
+                });
+            });
+            if(window.readCookie('survey_message') !== 'never') {
+                if (window.readCookie('survey_message') !== 'seen') {
+                    displayMessage({template: 'survey_message',
+                     transition: 'slideToggle' });
+                }
+            }
+
         }
+
+
     });
 
 }(jQuery, window, document));
