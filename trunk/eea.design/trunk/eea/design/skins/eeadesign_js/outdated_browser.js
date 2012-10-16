@@ -119,16 +119,21 @@
         }
         else {
             $(document).bind('messageDisplayed', function() {
+                var $message_wrap = $(".message_wrap");
                 $("#repeat_survey").click(function(e) {
                         window.createCookie('survey_message', 'seen');
-                        $(".message_wrap").slideUp(1000);
+                        $message_wrap.slideUp(1000);
                         e.preventDefault();
                 });
 
                 $("#no_survey").click(function(e) {
                         window.createCookie('survey_message', 'never', 365);
-                        $(".message_wrap").slideUp(1000);
+                        $message_wrap.slideUp(1000);
                         e.preventDefault();
+                });
+                $("#take_survey").click(function(e) {
+                        window.createCookie('survey_message', 'seen');
+                        $message_wrap.slideUp(1000);
                 });
             });
             if(window.readCookie('survey_message') !== 'never') {
