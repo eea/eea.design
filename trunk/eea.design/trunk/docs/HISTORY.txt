@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Bug fix: don't prevent event processing on links in portlets management page
+  [tiberich #5574]
 * Feature: added survey popup 
   [ichimdav #5467]
 * Feature: display outdated browser message also for non IE browsers
