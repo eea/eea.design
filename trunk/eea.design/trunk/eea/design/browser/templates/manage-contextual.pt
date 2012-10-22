@@ -110,7 +110,7 @@
                           window.location.href = manage_link;
                       });
                   }
-                  return false;
+                  e.preventDefault();
               }
          });
       });
