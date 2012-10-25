@@ -1,0 +1,5 @@
+<tal:availability tal:condition="view/available">
+    <ul>
+        <li tal:repeat="item view/subfolders_listing" tal:content="item/Title" />
+    </ul>
+</tal:availability>

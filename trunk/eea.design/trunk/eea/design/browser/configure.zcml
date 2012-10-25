@@ -50,6 +50,7 @@
         name="EEADesign2006"
         />
 
+    <interface interface=".interfaces.ISubFoldersListing" />
     <!-- Resource directories -->
 
     <browser:resourceDirectory
@@ -171,6 +172,15 @@
         name="plone.links.search"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
         class=".viewlets.SearchViewlet"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="eea.subfolders"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+        insert-before="*"
+        class=".viewlets.SubFoldersViewlet"
         layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
         />

@@ -10,6 +10,7 @@ from plone.app.layout.viewlets import common, content
 from plone.app.layout.viewlets.content import DocumentBylineViewlet as \
     BaseBelowContentTitleViewlet
 from zope.component import getMultiAdapter
+from eea.design.browser.interfaces import ISubFoldersListing
 
 class LogoViewlet(common.LogoViewlet):
     """A custom version of the logo viewlet
@@ -94,3 +95,20 @@ class JSBelowBodyViewlet(common.ViewletBase):
     """
     render = ViewPageTemplateFile('templates/inline_js_belowbodytag.pt')
 
+
+
+class SubFoldersViewlet(common.ViewletBase):
+    """ A custom viewlet registered above the body tag to insert a listing of
+    subfolders for pages that don't have the navigation portlet
+    """
+    render = ViewPageTemplateFile('templates/subfolders_listing.pt')
+
+    def available(self):
+        """ Condition for rendering of this viewlet
+        """
+        return ISubFoldersListing.providedBy(self.context) 
+
+    def subfolders_listing(self):
+        """ Return all subfolders
+        """
+        return self.context.getFolderContents({'portal_type' : 'Folder'})

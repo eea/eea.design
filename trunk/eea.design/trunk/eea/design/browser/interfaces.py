@@ -119,6 +119,10 @@ class ISubFolderView(Interface):
         """ Return the subfolder contents of the context folder """
 
 
+class ISubFoldersListing(Interface):
+    """Marker interface to indicate that SubFoldersViewlet should be enabled
+    """
+
 class ISmartView(Interface):
     """ Smart view """
 
