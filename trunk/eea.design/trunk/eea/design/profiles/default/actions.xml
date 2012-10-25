@@ -74,6 +74,40 @@
            </object>
     </object>
 
+    <object name="object_buttons" meta_type="CMF Action Category">
+        <!-- subfolder listing -->
+        <object name="subfolderlisting.enable" meta_type="CMF Action" i18n:domain="eea">
+            <property name="title"
+                i18n:translate="">Enable Subfolder Listing</property>
+            <property name="description" i18n:translate=""></property>
+            <property
+                name="url_expr">string:${object/absolute_url}/@@enableSubfolderListing</property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property
+                name="available_expr">python:object.portal_type == "Folder" and 'eea.design.browser.interfaces.ISubFoldersListing' not in object.restrictedTraverse('@@get_interfaces')()</property>
+            <property name="permissions">
+                <element value="eea.facetednavigation: Configure faceted"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+        <object name="subfolderlisting.disable" meta_type="CMF Action" i18n:domain="eea">
+            <property name="title"
+                i18n:translate="">Disable Subfolder Listing</property>
+            <property name="description" i18n:translate=""></property>
+            <property
+                name="url_expr">string:${object/absolute_url}/@@disableSubfolderListing</property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property
+                name="available_expr">python:object.portal_type == "Folder" and 'eea.design.browser.interfaces.ISubFoldersListing' in object.restrictedTraverse('@@get_interfaces')()</property>
+            <-property name="permissions">
+                <element value="eea.facetednavigation: Configure faceted"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+    </object>
+
     <!-- hidden actions -->
     <object name="site_actions">
         <object name="accessibility">

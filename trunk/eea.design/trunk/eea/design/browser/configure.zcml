@@ -6,6 +6,7 @@
     i18n_domain="eea">
 
     <include package="plone.app.portlets"/>
+    <include package="eea.facetednavigation" file="permissions.zcml" />
 
     <browser:page
         for="*"
@@ -321,6 +322,20 @@
         permission="zope.Public"
         layer=".interfaces.IEEACommonLayer"
         allowed_interface=".interfaces.ISubFolderView"
+        />
+
+    <browser:page for="*"
+        name="enableSubfolderListing"
+        class=".subfolder_listing.SubfolderListing"
+        attribute="enable"
+        permission="eea.faceted.configure"
+        />
+
+    <browser:page for="eea.design.browser.interfaces.ISubFoldersListing"
+        name="disableSubfolderListing"
+        class=".subfolder_listing.SubfolderListing"
+        attribute="disable"
+        permission="eea.faceted.configure"
         />
 
     <!-- Customized portlets -->
