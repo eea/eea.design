@@ -504,6 +504,10 @@ fieldset,
 
 /* @group Table of Contents */
 
+dl.toc {
+   float: none;
+}
+
 dl.toc dd {
   padding-left: 0;
 }

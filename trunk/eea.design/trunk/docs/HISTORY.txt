@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Change: adjusted layout of TOC, no more floating issues.
+  [demarant]
 * Bug fix: don't prevent event processing on links in portlets management page
   [tiberich #5574]
 * Feature: added survey popup 
