@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Feature: added action to enable subfolder navigation bar for templates that
+  don't have navigation portlets
+  [ichimdav #5545]
 * Change: adjusted layout of TOC, no more floating issues.
   [demarant]
 * Bug fix: don't prevent event processing on links in portlets management page

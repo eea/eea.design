@@ -1,5 +1,19 @@
 <tal:availability tal:condition="view/available">
-    <ul>
-        <li tal:repeat="item view/subfolders_listing" tal:content="item/Title" />
+<ul tal:define="items view/subfolders_listing; 
+                items_length python:len(items); 
+                first_five_items python:items[0:5] if items_length >= 5 else items; 
+                remaining_items python:items[5:] if items_length > 5 else []" id="subfolders_listing" 
+    tal:condition="items">
+        <tal:repeat tal:repeat="item first_five_items">
+            <li><a tal:attributes="href item/getURL;" tal:content="item/Title" /></li>
+        </tal:repeat>
+        <li tal:condition="remaining_items">
+            <a href='#' i18n:translate="" id="subfolders_more">More</a>
+            <ul>
+                <tal:repeat tal:repeat="item remaining_items">
+                <li><a tal:attributes="href item/getURL;" tal:content="item/Title" /></li>
+                </tal:repeat>
+            </ul>
+        </li>
     </ul>
 </tal:availability>
