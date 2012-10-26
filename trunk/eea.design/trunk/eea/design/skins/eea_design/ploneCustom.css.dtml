@@ -2412,29 +2412,29 @@ input.queryvalue {
     border: 1px solid #E0E0E0;
     border-radius: 5px 5px 5px 5px;
     font-weight: bold;
-    margin: 0 0 1em !important;
-    padding: 2px 4px;
+    margin: 0 !important;
+    padding: 2px 0.3em !important;
     min-height: 37px;
     height: auto;
 }
 #subfolders_listing > li {
     display: inline-block;
     *float: left;
-    padding: 1em 0.5em;
+    padding: 1em 0em;
     position: relative;
     margin: 5px 0px;
 }
 #subfolders_listing a {
-    padding: 1em;
+    padding: 1em 0.8em;
 }
 
 a#subfolders_more {
-    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 90% 50% transparent;
-    padding-right: 25px;
+    background: url("http://localhost:8081/www/accordion_down.png") no-repeat scroll 95% 50% transparent;
+    padding-right: 2.5em;
 }
 
 #subfolders_listing #subfolders_more:hover {
-    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 90% 50% #FFF;
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% #FFF;
 }
 
 #subfolders_listing a:hover {
@@ -2466,7 +2466,7 @@ a#subfolders_more {
 }
 
 #subfolders_listing > li:hover ul {
-    left: 0;
+    left: -2.1em;
 }
 
 /* </dtml-with> */
