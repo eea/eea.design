@@ -686,6 +686,10 @@ body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
 #visual-portal-wrapper ul.eea-tabs li, #visual-portal-wrapper ul.eea-tabs.two-rows li {
     display: inline !important;
 }
+#visual-portal-wrapper ul.eea-tabs li a, #visual-portal-wrapper ul.eea-tabs.two-rows li {
+    float: left;
+    font-size: 100% !important;
+}
 
 /* 5455 header-holder hides navigation bar if set to static on multimedia page */
 body.section-multimedia #header-holder {
