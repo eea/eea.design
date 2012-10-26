@@ -8,7 +8,7 @@
             <li><a tal:attributes="href item/getURL;" tal:content="item/Title" /></li>
         </tal:repeat>
         <li tal:condition="remaining_items">
-            <a href='#' i18n:translate="" id="subfolders_more">More</a>
+            <a  i18n:translate="" id="subfolders_more" onclick="return false;">More</a>
             <ul>
                 <tal:repeat tal:repeat="item remaining_items">
                 <li><a tal:attributes="href item/getURL;" tal:content="item/Title" /></li>

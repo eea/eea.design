@@ -2425,16 +2425,16 @@ input.queryvalue {
     margin: 5px 0px;
 }
 #subfolders_listing a {
-    color: black;
     padding: 1em;
 }
 
 a#subfolders_more {
-    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 44px 15px transparent;
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 90% 50% transparent;
     padding-right: 25px;
 }
+
 #subfolders_listing #subfolders_more:hover {
-    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 44px 15px #FFF;
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 90% 50% #FFF;
 }
 
 #subfolders_listing a:hover {
