@@ -2412,7 +2412,7 @@ input.queryvalue {
     border: 1px solid #E0E0E0;
     border-radius: 5px 5px 5px 5px;
     font-weight: bold;
-    margin: 0 !important;
+    margin: 0 0 2em 0 !important;
     padding: 2px 0.3em !important;
     min-height: 37px;
     height: auto;
@@ -2420,16 +2420,16 @@ input.queryvalue {
 #subfolders_listing > li {
     display: inline-block;
     *float: left;
-    padding: 1em 0em;
+    padding: 0.5em 0em;
     position: relative;
     margin: 5px 0px;
 }
 #subfolders_listing a {
-    padding: 1em 0.8em;
+    padding: 0.8em;
 }
 
 a#subfolders_more {
-    background: url("http://localhost:8081/www/accordion_down.png") no-repeat scroll 95% 50% transparent;
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% transparent;
     padding-right: 2.5em;
 }
 
@@ -2457,8 +2457,8 @@ a#subfolders_more {
 #subfolders_listing ul {
     position: absolute;
     background-color: #E2E2E2;
-    margin-top: 1em;
-    *margin-top: 3.2em;
+    margin: 0.6em 0em;
+    *margin: 3.2em 0 0 0;
     padding: 1em;
     z-index: 1005;
     left: -3000px;
@@ -2466,7 +2466,7 @@ a#subfolders_more {
 }
 
 #subfolders_listing > li:hover ul {
-    left: -2.1em;
+    left: 0em;
 }
 
 /* </dtml-with> */
