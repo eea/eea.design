@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Bug fix: don't show /view twice for folder_summary_view and 
+  folder_tabular_view
+  [ichimdav #5547]
 * Feature: added action to enable subfolder navigation bar for templates that
   don't have navigation portlets
   [ichimdav #5545]
