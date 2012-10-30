@@ -1,6 +1,5 @@
 <tal:availability tal:condition="view/available">
-    <ul tal:define="items view/subfolders_listing;"id="subfolders_listing" 
-        tal:condition="items">
+    <ul tal:define="items view/subfolders_listing;" id="subfolders_listing" tal:condition="items">
         <tal:repeat tal:repeat="item items">
             <li><a tal:attributes="href item/getURL;" tal:content="item/Title" /></li>
         </tal:repeat>
