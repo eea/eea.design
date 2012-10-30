@@ -179,7 +179,7 @@
 
     <browser:viewlet
         name="eea.subfolders"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
         insert-before="*"
         class=".viewlets.SubFoldersViewlet"
         layer=".interfaces.IEEACommonLayer"
