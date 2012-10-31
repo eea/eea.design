@@ -2403,19 +2403,15 @@ input.queryvalue {
 /* #5455 subfolder navigation styling */
 #subfolders_listing {
     background-clip: padding-box;
-    background-color: #E2E2E2;
-    background-image: linear-gradient(top, #F0F0F0, #E2E2E2);
-    background-image: -o-linear-gradient(top, #F0F0F0, #E2E2E2);
-    background-image: -moz-linear-gradient(top, #F0F0F0, #E2E2E2);
-    background-image: -webkit-linear-gradient(top, #F0F0F0, #E2E2E2);
-    background-image: -ms-linear-gradient(top, #F0F0F0, #E2E2E2);
-    border: 1px solid #E0E0E0;
+    background-color: transparent;
+    border: 0px solid #E0E0E0;
     border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 2px 2px #888;
     font-weight: bold;
-    margin: 0 0 2em 0 !important;
+    margin: -1em 0 2em 0 !important;
     padding: 2px 0.3em !important;
     min-height: 37px;
-    height: auto;
+    height: 3.5em;
 }
 #subfolders_listing > li {
     display: inline-block;
@@ -2469,4 +2465,19 @@ a#subfolders_more {
     left: 0em;
 }
 
+.arrowUp {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FFF;
+    display: block;
+    position: relative;
+    top: -5px;
+    left: 50%;
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
 /* </dtml-with> */
