@@ -3,6 +3,10 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Change: use catalog search instead of getFolderContents when searching for
+  fallback images like eea.depiction does for folders with frontpage's 
+  getImageUrl method
+  [ichimdav #9232]
 * Bug fix: don't show /view twice for folder_summary_view and 
   folder_tabular_view
   [ichimdav #5547]
