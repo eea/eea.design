@@ -427,8 +427,18 @@ def _getImageUrl(brain):
         'Products.ATContentTypes.interfaces.image.IImageContent' \
         not in brain.object_provides:
         parent = obj.aq_parent
-        res = parent.getFolderContents({'portal_type': 'Image',
-            'sort_on': 'getObjPositionInParent'})
+
+        here = '/'.join(parent.getPhysicalPath())
+        res = obj.portal_catalog.queryCatalog(
+                {
+                    'portal_type':'Image',
+                    'path': {
+                        'query':here,
+                        'depth':1,
+                        },
+                    'sort_on': 'getObjPositionInParent'
+                    }
+                )
         if res:
             url = parent.absolute_url()
     return url
