@@ -11,17 +11,21 @@ jQuery(function($) {
             first_child_offset = first_child.offsetTop,
             $other_children = $(children.slice(1)),
             longer_elems = [];
+
+        if (!$other_children.length) {
+            return;
+        }
         $other_children.each(function(i,v) {
             if (first_child_offset < v.offsetTop) {
                 longer_elems.push(i);
             }
         });
-        
+
         var i = 0, longer_elems_length =  longer_elems.length, selected_item;
         var $latest_visible = longer_elems_length ? $other_children.eq([longer_elems[0] - 1]) : $other_children.eq($other_children.length - 1);
         if (subfolders_listing.width() - ($latest_visible.position().left + $latest_visible.width()) < 100) {
             $latest_visible.detach().appendTo(holder_ul); 
-        }  
+        }
         if (longer_elems_length) {
             subfolders_listing.detach();
             holder.removeClass('hiddenElem').appendTo(subfolders_listing);
@@ -34,6 +38,9 @@ jQuery(function($) {
             subfolders_listing.removeClass('overflow_hidden');
             subfolders_listing.insertBefore(next_elem);
         }
+        holder.click(function(e) {
+            e.preventDefault();
+        });
         holder.hover(function() {
             holder_link.addClass('moreHover');
         }, function() {

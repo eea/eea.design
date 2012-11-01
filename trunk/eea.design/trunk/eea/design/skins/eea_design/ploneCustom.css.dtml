@@ -2472,8 +2472,8 @@ a#subfolders_more_a {
 .arrowUp {
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-left: 10px solid rgba(255, 255, 255, 0);
+    border-right: 10px solid rgba(255, 255, 255, 0);
     border-bottom: 10px solid #FFF;
     display: block;
     position: relative;
