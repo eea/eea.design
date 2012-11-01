@@ -85,7 +85,7 @@
             <property name="link_target"></property>
             <property name="icon_expr"></property>
             <property
-                name="available_expr">python:object.portal_type == "Folder" and 'eea.design.browser.interfaces.ISubFoldersListing' not in object.restrictedTraverse('@@get_interfaces')()</property>
+                name="available_expr">python:object.portal_type in ["Folder", "Topic", "Collection"] and 'eea.design.browser.interfaces.ISubFoldersListing' not in object.restrictedTraverse('@@get_interfaces')()</property>
             <property name="permissions">
                 <element value="eea.facetednavigation: Configure faceted"/>
             </property>
@@ -100,7 +100,7 @@
             <property name="link_target"></property>
             <property name="icon_expr"></property>
             <property
-                name="available_expr">python:object.portal_type == "Folder" and 'eea.design.browser.interfaces.ISubFoldersListing' in object.restrictedTraverse('@@get_interfaces')()</property>
+                name="available_expr">python:object.portal_type in ["Folder", "Topic", "Collection"] and 'eea.design.browser.interfaces.ISubFoldersListing' in object.restrictedTraverse('@@get_interfaces')()</property>
             <-property name="permissions">
                 <element value="eea.facetednavigation: Configure faceted"/>
             </property>

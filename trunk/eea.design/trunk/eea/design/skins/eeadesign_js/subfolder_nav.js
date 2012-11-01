@@ -23,7 +23,7 @@ jQuery(function($) {
 
         var i = 0, longer_elems_length =  longer_elems.length, selected_item;
         var $latest_visible = longer_elems_length ? $other_children.eq([longer_elems[0] - 1]) : $other_children.eq($other_children.length - 1);
-        if (subfolders_listing.width() - ($latest_visible.position().left + $latest_visible.width()) < 100) {
+        if ( longer_elems_length && subfolders_listing.width() - ($latest_visible.position().left + $latest_visible.width()) < 100) {
             $latest_visible.detach().appendTo(holder_ul); 
         }
         if (longer_elems_length) {

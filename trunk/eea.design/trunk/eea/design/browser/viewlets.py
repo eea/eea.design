@@ -11,6 +11,7 @@ from plone.app.layout.viewlets.content import DocumentBylineViewlet as \
     BaseBelowContentTitleViewlet
 from zope.component import getMultiAdapter
 from eea.design.browser.interfaces import ISubFoldersListing
+from Acquisition import aq_parent, aq_base
 
 class LogoViewlet(common.LogoViewlet):
     """A custom version of the logo viewlet
@@ -106,9 +107,15 @@ class SubFoldersViewlet(common.ViewletBase):
     def available(self):
         """ Condition for rendering of this viewlet
         """
-        return ISubFoldersListing.providedBy(self.context) 
+        parent = aq_parent(self.context)
+        return True if ISubFoldersListing.providedBy(self.context) or \
+            ISubFoldersListing.providedBy(parent) else False
 
     def subfolders_listing(self):
         """ Return all subfolders
         """
+        base_obj = aq_base(self.context)
+        if hasattr(base_obj, 'queryCatalog'):
+            parent = aq_parent(self.context)
+            return parent.getFolderContents({'portal_type' : 'Folder'})
         return self.context.getFolderContents({'portal_type' : 'Folder'})

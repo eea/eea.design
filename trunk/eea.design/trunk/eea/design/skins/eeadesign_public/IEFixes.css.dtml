@@ -55,4 +55,12 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
 }
+
+.arrowUp {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: 0;
+    *top: -10px;
+    *left: 0;
+}
 /* </dtml-with> */
