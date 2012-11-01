@@ -40,7 +40,25 @@ jQuery(function($) {
             holder_link.removeClass('moreHover');
         });
     };
+    var mark_selected_navigation = function() {
+        var portal_breadcrumbs = $("#portal-breadcrumbs"),
+            breadcrumbs = portal_breadcrumbs.find('span:not(.breadcrumbSeparator)'),
+            portal_globalnav = $("#portal-globalnav"),
+            i = 0, breadcrumbs_length = breadcrumbs.length,
+            title, current;
+        for (i; i < breadcrumbs_length; i+= 1) {
+            current = breadcrumbs[i];
+            title = current.getElementsByTagName('a');
+            title = title.length ? title[0].innerHTML : current.innerHTML;
+            var nav_item = portal_globalnav.find("a:contains('" + title + "')");
+            if (nav_item.length) {
+                nav_item.parent().append('<span class="arrowUp" />');
+                break;
+            }
+        }
+    };
     if (subfolders_listing.length) {
         subfolders_init();
+        mark_selected_navigation();
     }
 });
