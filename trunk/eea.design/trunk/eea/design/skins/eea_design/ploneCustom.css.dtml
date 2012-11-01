@@ -2424,16 +2424,19 @@ input.queryvalue {
     padding: 0.8em;
 }
 
-a#subfolders_more {
+a#subfolders_more_a {
     background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% transparent;
     padding-right: 2.5em;
 }
 
-#subfolders_listing #subfolders_more:hover {
-    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% #FFF;
+#subfolders_listing #subfolders_more_a:hover, #subfolders_listing .moreHover {
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% #FFF !important;
+    position: relative;
+    z-index: 1010;
 }
 
-#subfolders_listing a:hover {
+#subfolders_listing a:hover,  
+#subfolders_listing .moreHover {
     background: none repeat scroll 0 0 #FFFFFF;
     border-color: #666666;
     -moz-border-bottom-colors: none;
@@ -2441,18 +2444,19 @@ a#subfolders_more {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-style: solid none none solid;
-    border-width: 1px medium medium 1px;
+    border-style: solid solid none solid;
+    border-width: 1px 1px medium 1px;
     border-radius: 5px;
 }
-
 #subfolders_listing ul a {
     min-width: 150px;
     display: block;
 }
 #subfolders_listing ul {
     position: absolute;
-    background-color: #E2E2E2;
+    background-color: #FFFFFF;
+    border: 1px solid #666;
+    border-radius: 0px 5px 5px 5px;
     margin: 0.6em 0em;
     *margin: 3.2em 0 0 0;
     padding: 1em;
@@ -2479,5 +2483,9 @@ a#subfolders_more {
 
 .overflow_hidden {
     overflow: hidden;
+}
+
+.hiddenElem {
+    display: none !important;
 }
 /* </dtml-with> */
