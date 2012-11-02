@@ -2404,7 +2404,8 @@ input.queryvalue {
 #subfolders_listing {
     font-weight: bold;
     margin: -1em 0 0em -0.5em !important;
-    padding: 2px 0.3em !important;
+    *margin: -1em 0 0em 0 !important;
+    padding: 0;
     min-height: 37px;
     height: 3.5em;
 }
@@ -2413,6 +2414,7 @@ input.queryvalue {
     padding: 0.5em 0em;
     position: relative;
     margin: 5px 0px;
+    min-width: 60px;
 }
 #subfolders_listing a {
     padding: 0.8em;
@@ -2445,7 +2447,7 @@ a#subfolders_more_a {
     border-radius: 5px 5px 0 0;
 }
 #subfolders_listing ul a {
-    min-width: 150px;
+    min-width: 140px;
     display: block;
 }
 #subfolders_listing ul {
@@ -2453,9 +2455,9 @@ a#subfolders_more_a {
     background-color: #FFFFFF;
     border: 1px solid #666;
     border-radius: 0px 5px 5px 5px;
-    margin: 0.8em 0em;
+    margin: 8px 0em;
     *margin: 3.2em 0 0 0;
-    padding: 1em;
+    padding: 0;
     z-index: 1005;
     left: -3000px;
     list-style: none;

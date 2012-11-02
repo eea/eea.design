@@ -8,7 +8,6 @@
         <li id="subfolders_more_li" class="hiddenElem">
             <a href="#" id="subfolders_more_a" i18n:translate="">More</a>
             <ul id="subfolders_more_ul">
-                &nbsp;
             </ul>
         </li>
     </ul>

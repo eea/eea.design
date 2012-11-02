@@ -22,11 +22,25 @@ jQuery(function($) {
         });
 
         var i = 0, longer_elems_length =  longer_elems.length, selected_item;
-        var $latest_visible = longer_elems_length ? $other_children.eq([longer_elems[0] - 1]) : $other_children.eq($other_children.length - 1);
-        if ( longer_elems_length && subfolders_listing.width() - ($latest_visible.position().left + $latest_visible.width()) < 100) {
-            $latest_visible.detach().appendTo(holder_ul); 
+        var $latest_visible = longer_elems_length ? $other_children.eq([longer_elems[0] - 1]) : $other_children.eq($other_children.length - 1),
+            subfolders_listing_width = subfolders_listing.width(),
+            $prev_el = $latest_visible.prev(), 
+            temp;
+
+        if (longer_elems_length &&  subfolders_listing_width - ($latest_visible.position().left + $latest_visible.width()) < 150) {
+            // append last visible item if there isn't enought space for menu list 
+            $latest_visible.appendTo(holder_ul); 
         }
         if (longer_elems_length) {
+            // append even visible items if there isn't enought space for menu popup
+            while(subfolders_listing_width - ($prev_el.position().left + $prev_el.width()) < 150) {
+                temp = $prev_el.prev();
+                $prev_el.appendTo(holder_ul); 
+                $prev_el = temp;
+            } 
+        }
+        if (longer_elems_length) {
+            // add longer items to the more submenu
             subfolders_listing.detach();
             holder.removeClass('hiddenElem').appendTo(subfolders_listing);
             for(i; i < longer_elems_length; i+=  1) { 
@@ -47,6 +61,7 @@ jQuery(function($) {
             holder_link.removeClass('moreHover');
         });
     };
+
     var mark_selected_navigation = function() {
         var portal_breadcrumbs = $("#portal-breadcrumbs"),
             breadcrumbs = portal_breadcrumbs.find('span:not(.breadcrumbSeparator)'),
@@ -64,6 +79,7 @@ jQuery(function($) {
             }
         }
     };
+
     if (subfolders_listing.length) {
         subfolders_init();
         mark_selected_navigation();

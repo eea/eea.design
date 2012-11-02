@@ -59,7 +59,7 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 .arrowUp {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    top: 0;
+    top: -2px;
     *top: -10px;
     *left: 0;
 }
