@@ -97,6 +97,7 @@ class JSBelowBodyViewlet(common.ViewletBase):
     render = ViewPageTemplateFile('templates/inline_js_belowbodytag.pt')
 
 
+from plone.memoize.instance import memoize
 
 class SubFoldersViewlet(common.ViewletBase):
     """ A custom viewlet registered above the body tag to insert a listing of
@@ -104,13 +105,23 @@ class SubFoldersViewlet(common.ViewletBase):
     """
     render = ViewPageTemplateFile('templates/subfolders_listing.pt')
 
+    @property
     def available(self):
         """ Condition for rendering of this viewlet
         """
-        parent = aq_parent(self.context)
-        return True if ISubFoldersListing.providedBy(self.context) or \
-            ISubFoldersListing.providedBy(parent) else False
+        if ISubFoldersListing.providedBy(self.context):
+            return True
+        else:
+            parent = aq_parent(self.context)
+            if ISubFoldersListing.providedBy(parent):
+                plone_view = self.context.restrictedTraverse('@@plone')
+                portlets = plone_view.have_portlets('plone.rightcolumn');
+                return False if portlets else True
+            else:
+                return False
+        return False
 
+    @memoize
     def subfolders_listing(self):
         """ Return all subfolders
         """
