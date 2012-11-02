@@ -717,5 +717,18 @@ body.section-multimedia #header-holder {
 #portal-siteactions {
     margin-right: 135px;
 }
+
+/* #5455 subfolder navigation fixes */
+
+#subfolders_listing > li {
+    z-index: 2000;
+}
+#subfolders_listing {
+    margin: -1em 0 0em 0 !important;
+}
+
+#subfolders_listing ul {
+    margin: 2.7em 0 0 0;
+}
 /* </dtml-with> */
 
