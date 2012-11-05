@@ -116,9 +116,7 @@ class SubFoldersViewlet(common.ViewletBase):
             if ISubFoldersListing.providedBy(parent):
                 plone_view = self.context.restrictedTraverse('@@plone')
                 portlets = plone_view.have_portlets('plone.rightcolumn');
-                return False if portlets else True
-            else:
-                return False
+                return False if portlets == False else True
         return False
 
     @memoize
@@ -126,7 +124,31 @@ class SubFoldersViewlet(common.ViewletBase):
         """ Return all subfolders
         """
         base_obj = aq_base(self.context)
-        if hasattr(base_obj, 'queryCatalog'):
+        if hasattr(base_obj, 'queryCatalog') or base_obj.portal_type \
+                                                                != "Folder":
             parent = aq_parent(self.context)
-            return parent.getFolderContents({'portal_type' : 'Folder'})
-        return self.context.getFolderContents({'portal_type' : 'Folder'})
+            here = '/'.join(parent.getPhysicalPath())
+            res = self.context.portal_catalog.queryCatalog(
+                    {
+                        'portal_type':'Folder',
+                        'path': {
+                            'query':here,
+                            'depth':1,
+                            },
+                        'sort_on': 'getObjPositionInParent'
+                        }
+                    )
+            return res 
+        else:
+            here = '/'.join(self.context.getPhysicalPath())
+            res = self.context.portal_catalog.queryCatalog(
+                    {
+                        'portal_type':'Folder',
+                        'path': {
+                            'query':here,
+                            'depth':1,
+                            },
+                        'sort_on': 'getObjPositionInParent'
+                        }
+                    )
+            return res 
