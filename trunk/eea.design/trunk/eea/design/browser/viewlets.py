@@ -107,7 +107,9 @@ class SubFoldersViewlet(common.ViewletBase):
 
     @property
     def available(self):
-        """ Condition for rendering of this viewlet
+        """ Condition for rendering of this viewlets
+            Will be enabled also if parent has ISubFoldersListing and context
+            doesn't have right column
         """
         if ISubFoldersListing.providedBy(self.context):
             return True
@@ -121,34 +123,16 @@ class SubFoldersViewlet(common.ViewletBase):
 
     @memoize
     def subfolders_listing(self):
-        """ Return all subfolders
+        """ Return all subfolders from parent if context isn't folder
         """
         base_obj = aq_base(self.context)
         if hasattr(base_obj, 'queryCatalog') or base_obj.meta_type \
-                                                                != "Folder":
+                                                                != "ATFolder":
             parent = aq_parent(self.context)
-            here = '/'.join(parent.getPhysicalPath())
-            res = self.context.portal_catalog.queryCatalog(
-                    {
-                        'portal_type':'Folder',
-                        'path': {
-                            'query':here,
-                            'depth':1,
-                            },
-                        'sort_on': 'getObjPositionInParent'
-                        }
-                    )
+            res = parent.getFolderContents({'portal_type' :"Folder"})
+            res = [obj for obj in res if obj.exclude_from_nav != True]
             return res 
         else:
-            here = '/'.join(self.context.getPhysicalPath())
-            res = self.context.portal_catalog.queryCatalog(
-                    {
-                        'portal_type':'Folder',
-                        'path': {
-                            'query':here,
-                            'depth':1,
-                            },
-                        'sort_on': 'getObjPositionInParent'
-                        }
-                    )
+            res = self.context.getFolderContents({'portal_type' :"Folder"})
+            res = [obj for obj in res if obj.exclude_from_nav != True]
             return res 
