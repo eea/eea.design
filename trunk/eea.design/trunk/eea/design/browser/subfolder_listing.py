@@ -27,15 +27,19 @@ class SubfolderListing(BrowserView):
     def enable(self):
         """ Enable subfolder viewlet by providing ISubFoldersListing interface
         """
-        alsoProvides(self.context, ISubFoldersListing)
-        self.context.reindexObject(idxs='object_provides')
+        translations = self.context.getTranslations()
+        for trans in translations.values():
+            alsoProvides(trans[0], ISubFoldersListing)
+            trans[0].reindexObject(idxs='object_provides')
         self._redirect(_('SubfolderListing enabled'))
 
     def disable(self):
         """ Disable subfolder viewlet by noLongerProviding ISubFoldersListing 
         interface
         """
-        noLongerProvides(self.context, ISubFoldersListing)
-        self.context.reindexObject(idxs='object_provides')
+        translations = self.context.getTranslations()
+        for trans in translations.values():
+            noLongerProvides(trans[0], ISubFoldersListing)
+            trans[0].reindexObject(idxs='object_provides')
         self._redirect(_('SubfolderListing disabled'))
 
