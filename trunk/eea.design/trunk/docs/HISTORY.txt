@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Bug fix: added an override for userandgroupselect_popup to change label
+  for search field to something more clear 
+  [tiberich #9972]
 * Change: use catalog search instead of getFolderContents when searching for
   fallback images like eea.depiction does for folders with frontpage's 
   getImageUrl method
