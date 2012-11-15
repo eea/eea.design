@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Bug fix: fixed atct_topic_view to take account of faceted results and passed
+  b_size in order to override batch size when using without faceted
+  [ichimdav #7337]
 * Bug fix: added an override for userandgroupselect_popup to change label
   for search field to something more clear 
   [tiberich #9972]
