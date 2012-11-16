@@ -22,9 +22,11 @@
                                    b_start python:request.get('b_start', 0);
                                    batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=2);
                                    use_view_action site_properties/typesUseViewActionInListings|python:();
-                                   topicContents folderContents;">
+                                   topicContents batch;">
 
         <tal:listing condition="topicContents">
+        <div metal:use-macro="context/batch_macros/macros/navigation" />
+
             <a style='text-align: right' href="#"
                tal:condition="nocall: here/asPDF|nothing"
                tal:attributes="href string:${here_url}/asPDF/atct_topic_pdf_template/atct_topic_pdf"
@@ -75,7 +77,6 @@
                                                 url python: urlview.listing_url(brain=obj);
                                                 obj_type obj/portal_type;
                                                 obj_description obj/Description;
-                                                obj_typeinfo python: here.portal_types.getTypeInfo(obj_type);
                                                 obj_icon python:plone_view.getIcon(obj);
                                                 obj_wf_state obj/review_state|python: wtool.getInfoFor(obj, 'review_state', '');
                                                 obj_wf_state_class python:'state-' + normalizeString(obj_wf_state);
@@ -150,3 +151,4 @@
 
 </body>
 </html>
+
