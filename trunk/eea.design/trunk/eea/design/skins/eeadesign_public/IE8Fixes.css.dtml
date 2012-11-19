@@ -648,11 +648,6 @@ img
     z-index: 2;
 }
 
-/* fix tabs position  because of buggy suport for inline-block */
- ul.eea-tabs li, ul.eea-tabs.two-rows li {
-    display: block !important;
-    float: left;
-}
 
 /* 5509; IE8 displayed portal-personaltools on entire screen width 
  * because of min-width: 100% */

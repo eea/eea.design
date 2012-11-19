@@ -587,7 +587,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 0px;
     font-weight: normal;
     text-align: center;
-    display: inline-block;
+    float: left;
     text-decoration: none;
     list-style-type: none;
     list-style-image: none;

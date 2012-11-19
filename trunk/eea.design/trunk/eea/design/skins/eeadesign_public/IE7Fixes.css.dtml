@@ -681,13 +681,7 @@ body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
     position: relative;
 }
 
-
-/* fix folder_tabs_view tabs because of lack of inline-block support */
-#visual-portal-wrapper ul.eea-tabs li, #visual-portal-wrapper ul.eea-tabs.two-rows li {
-    display: inline !important;
-}
 #visual-portal-wrapper ul.eea-tabs li a, #visual-portal-wrapper ul.eea-tabs.two-rows li {
-    float: left;
     font-size: 100% !important;
 }
 

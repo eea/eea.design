@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
                             first_tab.style.maxWidth = "152px";
                         }
                         else if(cur_tab.clientHeight > first_tab_height) {
-                            cur_tab.style.maxWidth = "152px";
+                            cur_tab.style.maxWidth = "125px";
                         }
                     }
                 }
