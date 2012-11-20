@@ -36,7 +36,7 @@
 }
 
 #promo-gallery-content-sm h3 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-top: 0.2em;
     clear: none !important;
 }
@@ -99,19 +99,23 @@
 	float:left;
 }
 
-#promo-gallery-content li img, #promo-gallery-content-sm li img{
-	padding:0px;	
-	width: 100%;
+#promo-gallery-content li img{
+    padding:0px;
+    width: 100%;
 }
 
+#promo-gallery-content-sm li img  {
+    min-width: 65%;
+    max-width: 101%;
+}
 /* video-fancybox is for videos which have the black border which 
  * we should hide */
 #promo-gallery-content li a.video-fancybox img {
     margin-top: -92px;
 }
 
-#gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li,
-#promo-gallery-content-sm li img{
+#gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li
+{
     width: 100%;
 }
 
@@ -134,6 +138,7 @@
 #promo-gallery-content-sm { 
     height: 250px;
     overflow: hidden;
+    text-align: center;
 }
 
 #promo-navigator li, #promo-navigator-sm li {
@@ -211,7 +216,7 @@
 }
 
 #promo-navigator-sm li div {
-    width: 65px; /* 90px; */
+    width: 100%; /* 90px; */
     height: 50px;
 }
 
@@ -228,9 +233,9 @@
 }
 
 #promo-navigator-sm li img {
-    padding: 6px 8px 0px 6px;
+    padding: 6px 6px 0px 8px;
     height: 38px;
-    width: 53px;
+    width: 75%;
 }
 
 #promo-navigator li.active h3, #promo-navigator-sm li.active h3 {

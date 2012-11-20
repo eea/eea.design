@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Bug fix: fixed over stretching of images for small promo gallery 
+  [ichimdav #9914]
 * Bug fix: fixed atct_topic_view to take account of faceted results and passed
   b_size in order to override batch size when using without faceted
   [ichimdav #7337]
