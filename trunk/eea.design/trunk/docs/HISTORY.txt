@@ -72,7 +72,7 @@ Changelog
 
 5.6 - (2012-08-29)
 ------------------
-* Feature: added watermark image with for CloudVideos
+* Feature: added watermark image with css declarations for CloudVideos
   [ichimdav #5480]
 
 5.5 - (2012-08-28)
