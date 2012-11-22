@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.9-dev - (unreleased)
+----------------------
+
 5.8 - (2012-11-22)
 ------------------
 * Bug fix: fixed over stretching of images for small promo gallery 
