@@ -1,8 +1,8 @@
 Changelog
 =========
 
-5.8-dev - (unreleased)
-----------------------
+5.8 - (2012-11-22)
+------------------
 * Bug fix: fixed over stretching of images for small promo gallery 
   [ichimdav #9914]
 * Bug fix: fixed atct_topic_view to take account of faceted results and passed
