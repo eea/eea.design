@@ -43,8 +43,8 @@ setup(name=name,
           'setuptools',
           'valentine.linguaflow',
 
-          'selenium',
-          'gocept.selenium[plone]',
+          #'selenium',
+          #'gocept.selenium[plone]',
 
           # -*- Extra requirements: -*-
       ],

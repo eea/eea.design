@@ -3,6 +3,9 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Change: disabled selenium tests, other frameworks will be used for functional
+  testing
+  [ichimdav]
 
 5.8 - (2012-11-22)
 ------------------
