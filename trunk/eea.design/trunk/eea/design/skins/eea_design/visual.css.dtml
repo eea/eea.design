@@ -776,8 +776,9 @@ form.manylanguages select {
 }
 
 .awardNotice {
-    float: left;
     padding: 20px;
+    font-size: 160%;
+    margin-bottom: 1em;
 }
 
 #portlet-login {

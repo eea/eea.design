@@ -3,6 +3,8 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Change: brought changes from production for visual.css and green icon images
+  [ichimdav]
 * Change: disabled selenium tests, other frameworks will be used for functional
   testing
   [ichimdav]
