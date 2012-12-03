@@ -81,29 +81,7 @@
     float: right;
 }
 
-#portaltab-multimiediia, #portaltab-danni-i-karti,
-#portaltab-multimedia, #portaltab-data-a-mapy,
-#portaltab-kort-og-data,
-#portaltab-daten-und-karten,
-#portaltab-polumesa, #portaltab-dedomena-kai-khartes,
-#portaltab-galeria-multimedia, #portaltab-datos-y-mapas,
-#portaltab-multimeedia, #portaltab-datos-y-mapas,
-#portaltab-tiedot-ja-kartat,
-#portaltab-cartes-et-donnees,
-#portaltab-adatok-es-terkepek,
-#portaltab-margmidlun, #portaltab-gogn-og-kort,
-#portaltab-dati-e-mappe,
-#portaltab-multimedija, #portaltab-duomenys-ir-zemelapiai,
-#portaltab-multivide, #portaltab-dati-un-kartes,
-#portaltab-data-en-kaarten,
-#portaltab-data-og-kart,
-#portaltab-dane-i-mapy,
-#portaltab-dados-e-mapas,
-#portaltab-date-si-harti,
-#portaltab-data-a-mapy,
-#portaltab-multimedija, #portaltab-podatki-in-karte,
-#portaltab-data-och-kartor,
-#portaltab-multimedya, #portaltab-veriler-ve-haritalar
+#portal-globalnav .en_icon
 {
     background: url(&dtml-portal_url;/en_icon.png) no-repeat scroll right 5px transparent !important;
     padding: 0 15px 0 0 !important;
