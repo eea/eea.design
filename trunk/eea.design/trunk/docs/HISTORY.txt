@@ -8,6 +8,8 @@ Changelog
 * Change: disabled selenium tests, other frameworks will be used for functional
   testing
   [ichimdav]
+* Feature: added UI customisations regarding EEA Chat area
+  [ghicaale refs #9527]
 
 5.8 - (2012-11-22)
 ------------------

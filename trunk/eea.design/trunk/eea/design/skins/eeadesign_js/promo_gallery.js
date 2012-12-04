@@ -4,7 +4,7 @@
 
         var buttons = { previous:$('#prev-promo') ,
                         next:$('#next-promo')  };
-    
+
         var small_navigator = $("#promo-navigator-sm"),
             site_address = small_navigator.length ? true : undefined,
             nav_height = site_address ? 50 : 80,  
@@ -23,7 +23,7 @@
                                              navItemsSelector    : nav_items_selector,
                                              navOuterSelector    : nav_outer_selector,
                                              isPreloaded         : false,
-			                                 maxItemDisplay      : max_item_display,
+                                             maxItemDisplay      : max_item_display,
                                              navigatorHeight     : nav_height,
                                              navigatorWidth      : nav_width,
                                              navPosition         : nav_position,
