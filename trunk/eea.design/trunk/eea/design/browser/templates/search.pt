@@ -275,7 +275,7 @@
                                       <a href="#"
                                          tal:attributes="href item/getURL;
                                                          class string:state-${item/review_state}"
-                                         tal:content="item/title_or_id" />
+                                         tal:content="python:item.Title() or item.getId()" />
                                     </dt>
                                     <dd>
                                       <span class="discreet" i18n:domain="plone"

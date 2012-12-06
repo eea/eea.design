@@ -3,6 +3,12 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Bug fix: use item/Title instead of item/title_or_id; the problem is that
+  item is not a brain but a IContentListingObject adapter and it will fetch
+  attributes from the real object in case the brain is missing the called
+  attribute; this also should improve performance as it will no longer 
+  wake up objects
+  [tiberich #10160]
 * Bug fix: removed column-count css3 rule for FF since buggy implementation
   crashes the browser
   [ichimdav #10125]
