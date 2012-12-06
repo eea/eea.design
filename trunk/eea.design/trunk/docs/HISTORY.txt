@@ -3,6 +3,9 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Bug fix: removed column-count css3 rule for FF since buggy implementation
+  crashes the browser
+  [ichimdav #10125]
 * Change: brought changes from production for visual.css and green icon images
   [ichimdav]
 * Change: disabled selenium tests, other frameworks will be used for functional
