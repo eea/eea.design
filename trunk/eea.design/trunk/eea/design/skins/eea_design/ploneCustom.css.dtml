@@ -1343,7 +1343,7 @@ h3.site-description {
 }
 
 #portal-searchbox input.searchButton {
-    background-position: -404px -83px !important;
+    background-position: -385px -83px !important;
     -webkit-border-radius: 0 4px 4px 0;
     -moz-border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0;
@@ -1358,11 +1358,11 @@ h3.site-description {
     margin: 0;
     padding: 0;
     position: relative;
-    width: 60px;
+    width: 80px;
 }
 
 #portal-searchbox input.searchButton:hover {
-    background-position: -404px -115px !important;
+    background-position: -385px -115px !important;
 }
 
 #portal-searchbox input, .searchField
