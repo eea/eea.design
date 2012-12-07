@@ -17,6 +17,9 @@ Changelog
 * Change: disabled selenium tests, other frameworks will be used for functional
   testing
   [ichimdav]
+* Bug Fix: fixed the english icon in the upper menu. Now it appears everytime
+  a menu link points to an english page.
+  [prospchr fixes #10142]
 * Feature: added UI customisations regarding EEA Chat area
   [ghicaale refs #9527]
 
