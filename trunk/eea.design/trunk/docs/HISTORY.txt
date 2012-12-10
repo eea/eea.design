@@ -27,6 +27,8 @@ Changelog
   [prospchr fixes #10142]
 * Feature: added UI customisations regarding EEA Chat area
   [ghicaale refs #9527]
+* Bug Fix: fixed the tab menu in the 'what's new gallery' in all languages.
+  [prospchr refs #10157]
 
 5.8 - (2012-11-22)
 ------------------
