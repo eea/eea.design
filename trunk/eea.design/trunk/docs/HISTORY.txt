@@ -3,6 +3,9 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Bug fix: reference images and javascripts in ways that can be served when 
+  we are on https pages like login_form
+  [ichimdav #9998]
 * Bug fix: updated image urls to use eea.depiction
   [demarant]
 * Bug fix: use item/Title instead of item/title_or_id; the problem is that

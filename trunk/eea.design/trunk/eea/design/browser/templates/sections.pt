@@ -10,7 +10,7 @@
                  <img src="" 
                       alt="EEA"
                       i18n:attributes="alt"
-                      tal:attributes="src string:logo.gif"  class="visualFloatLeft" id="multimedia-logo" />
+                      tal:attributes="src string:${context/@@plone_portal_state/portal_url}/logo.gif"  class="visualFloatLeft" id="multimedia-logo" />
             </a>
         </tal:cond>
         </metal>
