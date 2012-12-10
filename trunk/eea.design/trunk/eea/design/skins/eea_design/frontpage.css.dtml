@@ -421,7 +421,7 @@ a.album-layout:hover {
 
 .shortcut-default {
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding: 2em 0em;
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 1em;
@@ -454,14 +454,14 @@ a.album-layout:hover {
 }
 
 #enquiry-content {
-   background: url("&dtml-portal_url;/forum.png") no-repeat 35px 18px transparent; /* TODO: to sprite */
-   padding: 25px 0px 5px 40px;
+   background: url("&dtml-portal_url;/forum.png") no-repeat 5px 18px transparent; /* TODO: to sprite */
+   padding: 25px 0px 5px 80px;
    height: 75px;
 }
 
 #mobile-content {
-   background: url("&dtml-portal_url;/mobile-large.png") no-repeat 55px 22px transparent; /* TODO: to sprite */
-   padding: 25px 0px 5px 50px;
+   background: url("&dtml-portal_url;/mobile-large.png") no-repeat 25px 22px transparent; /* TODO: to sprite */
+   padding: 25px 0px 5px 80px;
    height: 75px;
 }
 
