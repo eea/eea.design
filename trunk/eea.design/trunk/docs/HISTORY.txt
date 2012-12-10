@@ -29,7 +29,7 @@ Changelog
   [ghicaale refs #9527]
 * Bug Fix: fixed the tab menu in the 'what's new gallery' in all languages.
   [prospchr refs #10157]
-* Bug Fix: fixed the enquiry and mobile portlet on the right.
+* Bug Fix: fixed the enquiry and mobile portlet on the right side.
   [prospchr refs #10157]
 
 5.8 - (2012-11-22)

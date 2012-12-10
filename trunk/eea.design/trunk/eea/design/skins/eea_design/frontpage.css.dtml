@@ -8,6 +8,7 @@
 /* General frontpage
 ******************************************************************************/
 
+
 /* This div sneaks in a padding for IE it seems. */
 html {
     /*background: url("header.png") top left repeat-x;*/
