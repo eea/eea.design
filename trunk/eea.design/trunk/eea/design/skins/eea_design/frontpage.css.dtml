@@ -467,7 +467,7 @@ a.album-layout:hover {
 
 
 #organisations-content {
-   background: url("&dtml-portal_url;/valentine-imagescales/organisation/image_thumb") no-repeat 35px 10px transparent; /* TODO: to sprite */
+   background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 35px 10px transparent;
    padding: 25px 0 0px 65px;
    height: 75px;
 }

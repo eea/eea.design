@@ -3,6 +3,8 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Bug fix: updated image urls to use eea.depiction
+  [demarant]
 * Bug fix: use item/Title instead of item/title_or_id; the problem is that
   item is not a brain but a IContentListingObject adapter and it will fetch
   attributes from the real object in case the brain is missing the called
