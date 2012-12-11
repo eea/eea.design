@@ -2545,50 +2545,24 @@ max-width: 113px;
 }
 
 .section-et #visual-portal-wrapper ul.eea-tabs li {
-max-width: 135px;
+max-width: 125px;
 }
 
 .section-fr #visual-portal-wrapper ul.eea-tabs li,
 .section-pt #visual-portal-wrapper ul.eea-tabs li {
-max-width: 122px;
-}
-
-
-.section-da #visual-portal-wrapper ul.eea-tabs li,
-.section-cs #visual-portal-wrapper ul.eea-tabs li {
-min-width: 83px;
-}
-
-.section-nl #visual-portal-wrapper ul.eea-tabs li {
-min-width: 75px;
+max-width: 110px;
 }
 
 .section-el #visual-portal-wrapper ul.eea-tabs li {
 max-width: 128px;
 }
 
-.section-fi #visual-portal-wrapper ul.eea-tabs li {
-min-width: 85px;
-}
-
-.section-hu #visual-portal-wrapper ul.eea-tabs li {
-min-width: 58px;
-}
-
-.section-it #visual-portal-wrapper ul.eea-tabs li {
-min-width: 71px;
-}
-
 .section-lt #visual-portal-wrapper ul.eea-tabs li {
-max-width: 104px;
+max-width: 102px;
 }
 
 .section-pl #visual-portal-wrapper ul.eea-tabs li {
-max-width: 116px;
-}
-
-.section-pt #visual-portal-wrapper ul.eea-tabs li {
-min-width: 77px;
+max-width: 106px;
 }
 
 .section-sl #visual-portal-wrapper ul.eea-tabs li {
@@ -2596,22 +2570,17 @@ min-width: 70px;
 }
 
 .section-es #visual-portal-wrapper ul.eea-tabs li {
-max-width: 120px;
-}
-
-.section-sl #visual-portal-wrapper ul.eea-tabs li {
-min-width: 75px;
+max-width: 110px;
 }
 
 .section-mt #visual-portal-wrapper ul.eea-tabs li {
-min-width: 64px;
 max-width: 125px;
 }
 
 .section-mt #visual-portal-wrapper ul.eea-tabs li a {
 max-height: 17px;
 min-height: 17px;
-font-size: 120%;
+font-size: 115%;
 }
 
 .section-de #visual-portal-wrapper ul.eea-tabs li {
@@ -2622,4 +2591,7 @@ min-width: 69px;
 font-size: 111%;
 }
 
+.section-lt #visual-portal-wrapper ul.eea-tabs li a {
+font-size: 120%;
+}
 /* </dtml-with> */
