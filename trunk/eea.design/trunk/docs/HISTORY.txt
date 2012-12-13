@@ -31,6 +31,8 @@ Changelog
   [prospchr refs #10157]
 * Bug Fix: fixed the enquiry and mobile portlet on the right side.
   [prospchr refs #10157]
+* Bug Fix: Fixed missing translations in the comments section on frontpage.
+  [prospchr refs #9570]
 
 5.8 - (2012-11-22)
 ------------------

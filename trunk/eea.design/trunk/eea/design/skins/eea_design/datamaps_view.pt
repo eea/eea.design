@@ -41,6 +41,7 @@
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
 			
 			<tal:featured_item
+                        i18n:translate=""
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
                                          nr_items python:1;
