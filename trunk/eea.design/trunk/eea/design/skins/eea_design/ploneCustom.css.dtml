@@ -2521,6 +2521,10 @@ div.chat-title {
     font-weight: bold;
 }
 
+#chatpanel {
+    bottom: 0.8em;
+}
+
 /* multi-linguals changes on main page */
 
 .section-es #visual-portal-wrapper ul.eea-tabs li a,
