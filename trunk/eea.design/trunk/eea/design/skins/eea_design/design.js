@@ -10,7 +10,14 @@ jQuery(document).ready(function($) {
         $("#portaltab-pressroom, #portaltab-abouteea", global_nav).remove();
         secundary_portaltabs.appendTo(global_nav);
     }
-    
+
+    // #9485; login form as popup
+    var $popup_login = $("#popup_login_form");
+    $("#anon-personalbar, #siteaction-login").click(function( e ) {
+        $popup_login.slideToggle();
+        e.preventDefault();
+    });
+
     // #5454 remove background for required fields that have the red square 
     $(".required:contains('■')").addClass('no-bg');
     
@@ -61,13 +68,13 @@ jQuery(document).ready(function($) {
      * Function to animate ecotip bulb
     */
     var toggleEcotipClass = function(){
-        var ecotip = jQuery('#portlet-ecotip'),
+        var ecotip = $('#portlet-ecotip'),
             action, bulb, led;
         if(ie && ie < 10) {
             bulb = ecotip.find('.ecotip-bulb');
             led = ecotip.find('.led-bulb');
             action = function(){
-                if (jQuery.fadeToggle){
+                if ($.fadeToggle){
                     bulb.fadeToggle();
                     led.fadeToggle();
                 }
@@ -101,7 +108,7 @@ jQuery(document).ready(function($) {
     }
     // Layout of top promotions. It's safer to do this in JS as there was some rounding issues
     // with IE in window sizes that wasn't dividible by 5.
-    var top_news = jQuery('#top-news-area');
+    var top_news = $('#top-news-area');
     if (top_news.length) {
         themePromotionPortlets(top_news);
     }

@@ -40,3 +40,12 @@
 
    <div class="visualClear"><!-- &nbsp; --></div>
 </div>
+
+<tal:comment replace="nothing">
+  #9485; added login form as a popup
+</tal:comment>
+<tal:login_form tal:define="portal_state context/@@plone_portal_state" tal:condition="portal_state/anonymous">
+  <div id="popup_login_form" style="display:none;">
+    <metal:login_form use-macro="context/login_form/macros/login" />
+  </div>
+</tal:login_form>

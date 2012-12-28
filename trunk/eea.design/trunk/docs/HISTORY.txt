@@ -3,6 +3,8 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Feature: added login_form as a slideDown popup
+  [ichimdav #9485]
 * Bug fix: reference images and javascripts in ways that can be served when 
   we are on https pages like login_form
   [ichimdav #9998]

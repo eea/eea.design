@@ -1,4 +1,4 @@
-/** Plone style sheet - Public-facing Elements
+N/** Plone style sheet - Public-facing Elements
 **
 ** Style sheet documentation can be found at http://plone.org/documentation
 **
@@ -2598,4 +2598,25 @@ font-size: 111%;
 .section-lt #visual-portal-wrapper ul.eea-tabs li a {
 font-size: 120%;
 }
+
+/* 9485 login popup */
+#popup_login_form {
+  position: absolute;
+  right: 0px;
+  background-color: #FFF;
+  z-index: 500;
+}
+
+#popup_login_form label {
+  width: 8em;
+  color: #000;
+
+}
+#popup_login_form #login-form input {
+  font-size: 100%;
+}
+#popup_login_form #login-forgotten-password {
+  margin-left: 1em;
+}
+
 /* </dtml-with> */
