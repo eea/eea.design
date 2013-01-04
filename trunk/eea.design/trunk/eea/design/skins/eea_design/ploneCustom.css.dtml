@@ -1,9 +1,9 @@
-N/** Plone style sheet - Public-facing Elements
+/** Plone style sheet - Public-facing Elements
 **
 ** Style sheet documentation can be found at http://plone.org/documentation
 **
 ** You should preferrably use ploneCustom.css to add your own CSS classes and to
-** customize your portal, as these are the base fundaments of Plone, and will
+** customize your portal, as these are the base fundamentals of Plone, and will
 ** change and be refined in newer versions. Keeping your changes in
 ** ploneCustom.css will make it easier to upgrade.
 **
@@ -197,16 +197,16 @@ div.position-3\3a 4 {margin-left: -36.8%;}
    padding: 5px;
    -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
-          -border-radius: 3px;
+           border-radius: 3px;
     background: #FFFFFF;
     -webkit-transition: border-color .218s;
        -moz-transition: border .218s;
-       -ms-transition: border .218s;
+        -ms-transition: border .218s;
          -o-transition: border-color .218s;
             transition: border-color .218s;
     -webkit-transition: box-shadow .218s;
        -moz-transition: box-shadow .218s;
-       -ms-transition: box-shadow .218s;
+        -ms-transition: box-shadow .218s;
          -o-transition: box-shadow .218s;
             transition: box-shadow .218s;
 }
@@ -338,12 +338,12 @@ input.standalone {
     text-shadow: 0 1px 1px #000;
     -webkit-transition: border-color .218s;
        -moz-transition: border .218s;
-       -ms-transition: border-color .218s;
+        -ms-transition: border-color .218s;
          -o-transition: border-color .218s;
             transition: border-color .218s;
     -webkit-transition: box-shadow .218s;
        -moz-transition: box-shadow .218s;
-       -ms-transition: box-shadow .218s;
+        -ms-transition: box-shadow .218s;
          -o-transition: box-shadow .218s;
             transition: box-shadow .218s;
     border: 1px solid #346F83;
@@ -371,11 +371,11 @@ input.standalone {
     color: #FFFFFF !important;
     cursor:pointer;
     border-color: #999999;
-    -webkit-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
-        -ms-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
-         -o-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+         -o-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
     text-shadow: none;
 }
 
@@ -420,7 +420,7 @@ input.standalone {
 }
 
 .faceted-results {
-    padding: 0px;
+    padding: 0;
 }
 
 /* end of specific faceted navigation style */
@@ -552,14 +552,13 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 .eea-no-list-style {
-    list-style-type: none;
-    list-style-image: none;
+    list-style: none none;
     margin: 1em 0;
 }
 
 .subfolder .moreLink {
     float: left;
-    margin: 1em 0em 2em 1em;
+    margin: 1em 0 2em 1em;
     font-weight: bold;
 }
 
@@ -568,13 +567,13 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 #visual-portal-wrapper ul.eea-tabs {
     background-color: &dtml-corporateBlueOne;;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0 0;
     width: 100%;
     height: auto;
     overflow: hidden;
     list-style: none;
     padding: 0;
-    margin: 0px !important;
+    margin: 0 !important;
 }
 #visual-portal-wrapper ul.eea-tabs.two-rows {
     height: 48px;
@@ -584,18 +583,17 @@ body.section-signals #nonfolderish-subfolder-view-items {
     text-indent: 0;
     margin: 0 !important;
     max-width: 140px;
-    padding: 0px;
+    padding: 0;
     font-weight: normal;
     text-align: center;
     float: left;
     text-decoration: none;
-    list-style-type: none;
-    list-style-image: none;
+    list-style: none none;
     font-size: inherit;
 }
 #visual-portal-wrapper ul.eea-tabs.two-rows li {
     line-height: 1.8em !important;
-    margin: -2px 0px !important;
+    margin: -2px 0 !important;
     max-width: 94px;
 }
 
@@ -608,7 +606,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     display: block !important;
     margin: 0 -2px;
     font-weight: normal;
-    border: 0px;
+    border: 0;
 }
 
 /* #visual-portal-wrapper ul.eea-tabs li a {
@@ -618,7 +616,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     min-height: 4em;
     max-height: 4.1em;
     font-size: 120%;
-    padding: 0.5em 1em 0em;
+    padding: 0.5em 1em 0;
 }
 
 #visual-portal-wrapper ul.eea-tabs li, #visual-portal-wrapper ul.eea-tabs a {
@@ -632,15 +630,15 @@ body.section-signals #nonfolderish-subfolder-view-items {
     text-shadow: 1px 1px 1px #FFFFFF;
 }
 #visual-portal-wrapper ul.eea-tabs li:first-child a  {
-    border-radius: 8px 0px 0px 0px;
+    border-radius: 8px 0 0 0;
     -webkit-border-radius: 8px 0 0 0;
     -moz-border-radius: 8px 0 0 0;
 }
 #visual-portal-wrapper ul.eea-tabs li:last-child a {
-    border-radius: 0px 8px 0px 0px;
+    border-radius: 0 8px 0 0;
     -webkit-border-radius: 0 8px 0 0;
     -moz-border-radius: 0 8px 0 0;
-    margin: 0px -4px;
+    margin: 0 -4px;
 }
 #visual-portal-wrapper ul.eea-tabs span {
     height: 21px;
@@ -665,13 +663,13 @@ div.eea-tabs-panel .portalMessage {
 
 div.eea-tabs-panels, div.eea-accordion-panels {
     border: 1px solid #DDD;
-    border-top: 0px;
+    border-top: 0;
     background-color: &dtml-greyBackgroundColor;;
     padding: 10px;
 }
 
 div.eea-accordion-panels {
-    padding: 0px;
+    padding: 0;
 }
 
 div.eea-accordion-panels .pane {
@@ -681,11 +679,11 @@ div.eea-accordion-panels .pane {
 div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
     background: #E2E2E2 url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
     border: 1px solid #E0E0E0;
-    margin: 0px;
+    margin: 0;
     font-size: 115%;
     color: #00446A;
     line-height: 3em;
-    padding: 0px 0px 0px 10px;
+    padding: 0 0 0 10px;
     font-weight: bold;
 }
 
@@ -821,7 +819,7 @@ div.eea-accordion-panels h2 a
 
 .documentContent {
     background: &dtml-backgroundColor;;
-    padding: 0em 0em 2em 0em;
+    padding: 0 0 2em 0;
 }
 
 #translation-disclaimer .note {
@@ -865,7 +863,7 @@ div.eea-accordion-panels h2 a
 
 #objmetadata_pbwidgets_wrapper{
     width: 100%;
-    border-right: 0px;
+    border-right: 0;
     background-color: transparent;
 }
 
@@ -920,7 +918,7 @@ div.eea-accordion-panels h2 a
 
 #auto-related dt {
     background-color:transparent;
-    padding-left:0px;
+    padding-left: 0;
 }
 
 #related-multimedia-top dd.embeddedMedia,
@@ -929,12 +927,12 @@ div.eea-accordion-panels h2 a
     background-color: #FFFFFF;
     border: 1px solid #DFDFDF;
     -webkit-box-shadow: 1px 1px 2px #BFBFBF;
-      -moz-box-shadow:  1px 1px 2px #BFBFBF;
-       -ms-box-shadow:  1px 1px 2px #BFBFBF;
-        -o-box-shadow:  1px 1px 2px #BFBFBF;
-           box-shadow:  1px 1px 2px #BFBFBF;
+       -moz-box-shadow: 1px 1px 2px #BFBFBF;
+        -ms-box-shadow: 1px 1px 2px #BFBFBF;
+         -o-box-shadow: 1px 1px 2px #BFBFBF;
+            box-shadow: 1px 1px 2px #BFBFBF;
     padding: 0 0 15px 0  !important;
-    margin: 0px 15px 15px 0 !important;
+    margin: 0 15px 15px 0 !important;
     text-align: center;
     float: left;
     width: 165px;
@@ -948,8 +946,7 @@ div.eea-accordion-panels h2 a
 
 #related-multimedia-top dd.embeddedMedia {
     float: left;
-    margin-left:0.25em;
-    margin:0.5em 0em 0.5em 0.25em;
+    margin: 0.5em 0 0.5em 0.25em;
 }
 
 .portlet dd.embeddedMedia {
@@ -974,7 +971,7 @@ dd.embeddedMedia .magnify {
 /* Links with differently colored link underlines - only for content */
 #content span.link-external  {
     background: none;
-    padding: 0px;
+    padding: 0;
 }
 
 .flowplayer a,
@@ -994,7 +991,7 @@ dl a:hover, dd a:hover, dt a:hover {
 }
 
 a.moreLink {
-    border: 0px !important;
+    border: 0 !important;
     background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -9px;
     display: inline-block;
     padding-left: 25px;
@@ -1009,7 +1006,7 @@ a.moreLink {
 .field {
     top: 0;
     left: 0;
-    margin: 0 0em 1em 0;
+    margin: 0 0 1em 0;
 }
 
 .field .field {
@@ -1050,7 +1047,7 @@ a.moreLink {
     margin: 1em 0;
 }
 form[name="edit_form"] div.formControls {
-    margin: 1em 1em 1em 0em;
+    margin: 1em 1em 1em 0;
 }
 
 .error {
@@ -1084,8 +1081,7 @@ float:right;
 .documentEditable * .noborder {
     border: none;
     margin: 0;
-    background: none;
-    background-color: transparent;
+    background: transparent none;
 }
 
 /* End edit form elements */
@@ -1103,7 +1099,7 @@ float:right;
 .portal-logo {
     background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat 0 8px;
     border: 0;
-    margin: 0px;
+    margin: 0;
     padding: 0;
     float: left;
     position: relative;
@@ -1119,9 +1115,8 @@ float:right;
     overflow: hidden;
     border: 0;
     margin: 0;
-    padding: 0;
-    padding-top: <dtml-var "_[logoName].height + 16">px;
-    height: 0px !important;
+    padding: <dtml-var "_[logoName].height + 16">px 0 0 0; /* TODO get rid dtml-var */
+    height: 0 !important;
     width: 335px;
     cursor: pointer;
 }
@@ -1153,7 +1148,7 @@ h3.site-description {
     display: block;
     position: relative;
     background-color: &dtml-corporateGreenTwo;;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(&dtml-corporateGreen;), to(&dtml-corporateGreenTwo;));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(&dtml-corporateGreen;), to(&dtml-corporateGreenTwo;));
     background-image: -webkit-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
     background-image:    -moz-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
     background-image:     -ms-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
@@ -1195,7 +1190,7 @@ h3.site-description {
     display: none;
     z-index: 600;
     background: transparent;
-    border: 0px;
+    border: 0;
 }
 
 .panel-top, #tip-article-language .panel-top {
@@ -1276,7 +1271,7 @@ h3.site-description {
 #tip-externalsites-networks, #tip-externalsites-etcssites {
     width: 400px;
     position:absolute;
-    left: 0px !important;
+    left: 0 !important;
 }
 #tip-externalsites-etcssites{
     width: 270px;
@@ -1331,7 +1326,7 @@ h3.site-description {
     color: #FFFFFF;
     border: none;
     font-size: 85%;
-    margin: 0 5px 0 0px;
+    margin: 0 5px 0 0;
 }
 
 #searchbox_terminology input,
@@ -1339,7 +1334,7 @@ h3.site-description {
 #portal-searchbox input.searchButton,
 #portal-searchbox input.searchButton:hover,
 .searchField {
-    background: transparent url('sprite-eeaimages.png') no-repeat scroll left center;
+    background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;
 }
 
 #portal-searchbox input.searchButton {
@@ -1391,8 +1386,7 @@ h3.site-description {
 .searchField:focus {
     font-style: normal;
     color: #000000;
-    background-position: 0px -114px;
-    background-color: transparent;
+    background: transparent 0 -114px;
     outline-color: transparent;
 }
 
@@ -1461,13 +1455,12 @@ h3.site-description {
 #portal-siteactions {
     background-color: white;
     white-space: nowrap;
-    list-style-image: none;
-    list-style-type: none;
+    list-style: none none;
     margin: 4px 0 4px 0;
     height: auto;
     line-height: normal;
     float: right;
-    padding: 0px 10px 0px 0;
+    padding: 0 10px 0 0;
     clear: none;
 }
 
@@ -1552,9 +1545,9 @@ h3.site-description {
 
 #region-content #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    padding-left: 0em;
-    padding-right: 0em;
-    margin-left: 0em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
 }
 
 #region-content {
@@ -1629,10 +1622,6 @@ h3.site-description {
     display: inline;
 }
 
-.newsFooter {
-
-}
-
 .newsFooter li {
     display: inline;
     margin: 0 1em 0 0;
@@ -1687,17 +1676,16 @@ dl.system-message dt {
 .portalMessage,
 .system-message,
 #error-handling {
-    background-color: &dtml-lightBackgroundColor;;
+
     border: 1px solid #ddd;
     color: &dtml-fontColor;;
     font-size: &dtml-fontSmallSize;;
     font-weight: bold;
-    margin: 1em 0em;
+    margin: 1em 0;
     padding: 0.5em 1em 0.5em 3em;
     vertical-align: middle;
     /*background-image: url(&dtml-portal_url;/information.png);*/
-    background-repeat: no-repeat;
-    background-position: 5px 50%;
+    background: &dtml-lightBackgroundColor no-repeat 5px 50%;
     -webkit-box-shadow: 2px 2px 1px #888888;
        -moz-box-shadow: 2px 2px 1px #888888;
         -ms-box-shadow: 2px 2px 1px #888888;
@@ -1725,7 +1713,7 @@ dl.system-message dt {
     font-size: &dtml-fontSmallSize;;
     font-weight: normal;
     color: &dtml-discreetColor;;
-    margin: 0em 0em 0.5em 0em;
+    margin: 0 0 0.5em 0;
     clear: both;
 }
 
@@ -1751,7 +1739,7 @@ dl.system-message dt {
     text-align: center;
     text-transform: &dtml-textTransform;;
     vertical-align: top;
-    margin: 1em 0em;
+    margin: 1em 0;
     font-size: 11px !important;
     clear: both;
 }
@@ -1813,7 +1801,7 @@ dl.system-message dt {
 
 .tileImage, #content a.tileImage {
     float: left;
-    margin: 1em 1em 1em 0em;
+    margin: 1em 1em 1em 0;
     border: 1px solid &dtml-globalBorderColor;;
 }
 
@@ -1849,17 +1837,13 @@ dl.system-message dt {
   padding-bottom: 1.5em;
 }
 
-.eventDetails {
-}
-
 /* Useful deviations from regular style on elements */
 
 /* List classes without markers */
 
 ul.visualNoMarker,
 ol.visualNoMarker {
-    list-style-type: none;
-    list-style-image: none;
+    list-style: none none;
     margin: 0.5em 0 0 0;
     line-height: 1em;
 }
@@ -1934,8 +1918,7 @@ textarea.proportional {
 
 .hiddenStructure {
     display: block;
-    background: transparent;
-    background-image: none; /* safari bug */
+    background: transparent none; /* safari bug */
     border: none;
     height: 1px;
     overflow: hidden;
@@ -1959,8 +1942,7 @@ option.hiddenStructure {
 
 .hiddenLabel {
     display: block;
-    background: transparent;
-    background-image: none; /* safari bug */
+    background: transparent none; /* safari bug */
     border: none;
     height: 1px;
     overflow: hidden;
@@ -1980,67 +1962,67 @@ option.hiddenStructure {
 .link-parent {
     display: block;
     background: transparent url(&dtml-portal_url;/arrowUp.gif) 4px 5px no-repeat;
-    padding: 1px 0px 10px 16px;
+    padding: 1px 0 10px 16px;
     font-size: &dtml-fontSmallSize;;
     text-decoration: none;
 }
 
 .link-user {
     background: transparent url(&dtml-portal_url;/user.gif) 0 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    padding: 1px 0 1px 16px;
 }
 
 .link-external {
     background: transparent url(&dtml-portal_url;/link_icon.gif) 3px 1px no-repeat;
-    padding: 1px 0px 1px 19px;
+    padding: 1px 0 1px 19px;
 }
 /** html .link-external {
     background-position: top left;
 }*/
 
 .link-https {
-    background: transparent url(&dtml-portal_url;/lock_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    background: transparent url(&dtml-portal_url;/lock_icon.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 16px;
 }
 
 .link-mailto {
-    background: transparent url(&dtml-portal_url;/mail_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    background: transparent url(&dtml-portal_url;/mail_icon.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 16px;
 }
 
 .link-news {
-    background: transparent url(&dtml-portal_url;/topic_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    background: transparent url(&dtml-portal_url;/topic_icon.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 16px;
 }
 
 .link-ftp {
-    background: transparent url(&dtml-portal_url;/file_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    background: transparent url(&dtml-portal_url;/file_icon.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 16px;
 }
 
 .link-irc {
-    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 16px;
 }
 
 .link-callto {
-    background: transparent url(&dtml-portal_url;/phone_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    background: transparent url(&dtml-portal_url;/phone_icon.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 16px;
 }
 
 .link-webcal {
-    background: transparent url(&dtml-portal_url;/event_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    background: transparent url(&dtml-portal_url;/event_icon.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 16px;
 }
 
 .link-feed, .link-rss, .link-rdf, .link-xml{
-    background: transparent url(&dtml-portal_url;/rss.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 18px;
+    background: transparent url(&dtml-portal_url;/rss.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 18px;
 }
 
 .link-comment {
     background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) center left no-repeat;
-    padding: 1px 0px 1px 16px !important; /* value:  */
+    padding: 1px 0 1px 16px !important; /* value:  */
 }
 
 .link-anchor {
@@ -2051,89 +2033,89 @@ option.hiddenStructure {
 
 /* Common file types icon */
 .link-pdf {
-    background: transparent url(&dtml-portal_url;/pdf.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 16px;
+    background: transparent url(&dtml-portal_url;/pdf.png) 0 50% no-repeat;
+    padding: 2px 0 2px 16px;
 }
 .link-doc, .link-dot, .link-wiz {
-    background: transparent url(&dtml-portal_url;/doc.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/doc.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 
 .link-aif, .link-aifc, .link-aiff {
-    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 
 .link-gif, .link-jpe, .link-jpeg, .link-jpg, .link-png {
-    background: transparent url(&dtml-portal_url;/image.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-m4a, .link-mp2, .link-mp3, .link-mpega, .link-mpga {
-    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-m3u {
-    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-m1v, .link-mpa, .link-mpe, .link-mpeg, .link-mpg {
-    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-mp4 {
-    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-asf, .link-asx {
-    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-avi {
-    background: transparent url(&dtml-portal_url;/avi.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/avi.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-xlb, .link-xls, .link-xlt, .link-csv, .link-tsv {
-    background: transparent url(&dtml-portal_url;/xls.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/xls.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-ppa, .link-pps, .link-ppt, .link-pwz {
-    background: transparent url(&dtml-portal_url;/ppt.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/ppt.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-wmv, .link-wmf {
-    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-mov, .link-qt {
-    background: transparent url(&dtml-portal_url;/video.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-rgb {
-    background: transparent url(&dtml-portal_url;/image.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-ram, .link-rm {
-    background: transparent url(&dtml-portal_url;/audio.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-ai, .link-eps, .link-ps {
-    background: transparent url(&dtml-portal_url;/ps.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/ps.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-swf, .link-swfl {
-    background: transparent url(&dtml-portal_url;/application.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/application.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-tif, .link-tiff {
-    background: transparent url(&dtml-portal_url;/image.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-wav {
-    background: transparent url(&dtml-portal_url;/wav.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/wav.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-zip {
-    background: transparent url(&dtml-portal_url;/zip.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/zip.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-mdb, .link-dbf {
-    background: transparent url(&dtml-portal_url;/application.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/application.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-rar {
-    background: transparent url(&dtml-portal_url;/rar.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/rar.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-txt {
-    background: transparent url(&dtml-portal_url;/txt.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/txt.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-json {
-    background: transparent url(&dtml-portal_url;/script_code.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/script_code.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-exhibit {
-    background: transparent url(&dtml-portal_url;/script_code_red.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/script_code_red.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-table {
-    background: transparent url(&dtml-portal_url;/table.png) 0% 50% no-repeat;
-    padding: 2px 0px 2px 20px;}
+    background: transparent url(&dtml-portal_url;/table.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 
 /* For ghosted elements */
 .visualGhosted {
@@ -2190,7 +2172,7 @@ body.kupu {
 }
 
 .media-single-item {
-    margin: 1em 0em;
+    margin: 1em 0;
 }
 
 .media-single-item dt {
@@ -2203,7 +2185,7 @@ body.kupu {
     color: #9a9a99;
     font-size: 90%;
     line-height: 1.1;
-    margin: 0pt 0pt 0.2em;
+    margin: 0 0 0.2em;
 }
 
 .richDocumentDescription {
@@ -2217,7 +2199,7 @@ body.kupu {
 }
 
 #portal-column-content  {
-    padding: 0em;
+    padding: 0;
 }
 
 #portal-column-one .visualPadding {
@@ -2236,7 +2218,7 @@ body.kupu {
 }
 
 #portal-column-two .visualPadding {
-    padding: 0em 1em 1em 0em;
+    padding: 0 1em 1em 0;
 }
 
 #portal-column-two {
@@ -2289,7 +2271,7 @@ form[name="edit_form"] table {
     border-top: solid 1px #778899;
     border-bottom: solid 1px #778899;
     text-align: center;
-    padding:5px 0px 5px 0px;
+    padding:5px 0 5px 0;
     position: fixed;
     top: 0;
     z-index: 1001;
@@ -2309,8 +2291,8 @@ form[name="edit_form"] table {
 }
 
 #outdated h3 {
-    border: 0px;
-    margin: 0px;
+    border: 0;
+    margin: 0;
 }
 
 #outdated li {
@@ -2337,18 +2319,18 @@ form[name="edit_form"] table {
 }
 
 #outdated_ff {
-    background-position: -200px 0px !important;
+    background-position: -200px 0 !important;
 }
 #outdated_ie {
-    background-position: -50px 0px !important;
+    background-position: -50px 0 !important;
 }
 
 #outdated_chrome {
-    background-position: -150px 0px !important;
+    background-position: -150px 0 !important;
 }
 
 #outdated_safari {
-    background-position: -100px 0px !important;
+    background-position: -100px 0 !important;
 }
 
 /* #5454; we have required spans where we don't need the background image */
@@ -2370,7 +2352,7 @@ form[name="edit_form"] table {
 }
 
 input.queryvalue {
-   width: 200px !important; 
+   width: 200px !important;
    padding: 6px 0;
 }
 
@@ -2396,22 +2378,22 @@ input.queryvalue {
 }
 
 .ArchetypesQueryWidget .criteria {
-    margin: 0 0em 0.5em 0 !important;
+    margin: 0 0 0.5em 0 !important;
 }
 
 /* #5455 subfolder navigation styling */
 #subfolders_listing {
     font-weight: bold;
-    margin: -1em 0 0em -0.5em !important;
+    margin: -1em 0 0 -0.5em !important;
     padding: 0;
     min-height: 37px;
     height: 3.5em;
 }
 #subfolders_listing > li {
     float: left;
-    padding: 0.5em 0em;
+    padding: 0.5em 0;
     position: relative;
-    margin: 5px 0px;
+    margin: 5px 0;
     min-width: 60px;
 }
 #subfolders_listing a {
@@ -2434,14 +2416,13 @@ a#subfolders_more_a {
 
 #subfolders_listing .moreHover {
     background: none repeat scroll 0 0 #FFFFFF;
-    border-color: #666666;
     -moz-border-bottom-colors: none;
     -moz-border-image: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-style: solid solid none solid;
-    border-width: 1px 1px medium 1px;
+    border: 1px solid #666666;
+    border-bottom: medium none;
     border-radius: 5px 5px 0 0;
 }
 #subfolders_listing ul a {
@@ -2452,8 +2433,8 @@ a#subfolders_more_a {
     position: absolute;
     background-color: #FFFFFF;
     border: 1px solid #666;
-    border-radius: 0px 5px 5px 5px;
-    margin: 8px 0em;
+    border-radius: 0 5px 5px 5px;
+    margin: 8px 0;
     padding: 0;
     z-index: 1005;
     left: -3000px;
@@ -2461,7 +2442,7 @@ a#subfolders_more_a {
 }
 
 #subfolders_listing > li:hover ul {
-    left: 0em;
+    left: 0;
 }
 
 .arrowUp {
@@ -2525,7 +2506,7 @@ div.chat-title {
     bottom: 0.8em;
 }
 
-/* multi-linguals changes on main page */
+/* multi-lingual changes on main page */
 
 .section-es #visual-portal-wrapper ul.eea-tabs li a,
 .section-sl #visual-portal-wrapper ul.eea-tabs li a,
@@ -2539,70 +2520,70 @@ div.chat-title {
 .section-de #visual-portal-wrapper ul.eea-tabs li a,
 .section-hu #visual-portal-wrapper ul.eea-tabs li a,
 .section-el #visual-portal-wrapper ul.eea-tabs li a {
-max-height: 27px;
-min-height: 27px;
-padding: 7px 10px 13px 10px;
+    max-height: 27px;
+    min-height: 27px;
+    padding: 7px 10px 13px 10px;
 }
 
 .section-bg #visual-portal-wrapper ul.eea-tabs li {
-max-width: 113px;
+    max-width: 113px;
 }
 
 .section-et #visual-portal-wrapper ul.eea-tabs li {
-max-width: 125px;
+    max-width: 125px;
 }
 
 .section-fr #visual-portal-wrapper ul.eea-tabs li,
 .section-pt #visual-portal-wrapper ul.eea-tabs li {
-max-width: 110px;
+    max-width: 110px;
 }
 
 .section-el #visual-portal-wrapper ul.eea-tabs li {
-max-width: 128px;
+    max-width: 128px;
 }
 
 .section-lt #visual-portal-wrapper ul.eea-tabs li {
-max-width: 102px;
+    max-width: 102px;
 }
 
 .section-pl #visual-portal-wrapper ul.eea-tabs li {
-max-width: 106px;
+    max-width: 106px;
 }
 
 .section-sl #visual-portal-wrapper ul.eea-tabs li {
-min-width: 70px;
+    min-width: 70px;
 }
 
 .section-es #visual-portal-wrapper ul.eea-tabs li {
-max-width: 110px;
+    max-width: 110px;
 }
 
 .section-mt #visual-portal-wrapper ul.eea-tabs li {
-max-width: 125px;
+    max-width: 125px;
 }
 
 .section-mt #visual-portal-wrapper ul.eea-tabs li a {
-max-height: 17px;
-min-height: 17px;
-font-size: 115%;
+    max-height: 17px;
+    min-height: 17px;
+    font-size: 115%;
 }
 
 .section-de #visual-portal-wrapper ul.eea-tabs li {
-min-width: 69px;
+    min-width: 69px;
 }
 
 .section-de #visual-portal-wrapper ul.eea-tabs li a {
-font-size: 111%;
+    font-size: 111%;
 }
 
 .section-lt #visual-portal-wrapper ul.eea-tabs li a {
-font-size: 120%;
+    font-size: 120%;
 }
 
 /* 9485 login popup */
 #popup_login_form {
   position: absolute;
-  right: 0px;
+  right: 0;
   background-color: #FFF;
   z-index: 500;
 }
