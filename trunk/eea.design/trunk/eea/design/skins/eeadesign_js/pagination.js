@@ -30,7 +30,7 @@
 		/**
 		 * Calculate start and end point of pagination links depending on 
 		 * current_page and num_display_entries.
-		 * @returns {Array}
+		 * @returns {{start: Number, end: Number}}
 		 */
 		getInterval:function(current_page)  {
 			var ne_half = Math.floor(this.opts.num_display_entries/2);
@@ -119,7 +119,8 @@
 			}
 			// Generate "Next"-Link
 			if(this.opts.next_text && (current_page < np-1 || this.opts.next_show_always)){
-				fragment.append(this.createLink(current_page+1, current_page, {text:this.opts.next_text, classes:"next"}));
+				fragment.append(this.createLink(current_page+1, current_page, {text:this.opts.next_text +
+                           " " + this.opts.items_per_page + " " + this.opts.items_text + " »", classes:"next"}));
 			}
 			$('a', fragment).click(eventHandler);
 			return fragment;
@@ -132,15 +133,16 @@
 		// Initialize options with default values
 		opts = $.extend({
 			items_per_page:10,
-			num_display_entries:5,
+			num_display_entries:4,
 			current_page:0,
-			num_edge_entries:0,
+			num_edge_entries:1,
 			link_to:"#",
-			prev_text: $("#pagination-prev").html() || 'Next',
-			next_text:$("#pagination-next").html() || 'Prev',
+			prev_text: 'previous',
+			next_text: 'next',
+            items_text : 'items',
 			ellipse_text:"...",
 			prev_show_always:true,
-			next_show_always:true,
+			next_show_always:false,
 			renderer:"defaultRenderer",
 			show_if_single_page:false,
 			load_first_page:true,
@@ -152,7 +154,7 @@
 		
 		/**
 		 * This is the event handling function for the pagination links. 
-		 * @param {int} page_id The new page number
+         * @param evt
 		 */
 		function paginationClickHandler(evt){
             var new_current_page = $(evt.target).data('page_id'),
