@@ -36,4 +36,17 @@
       />
 
   </genericsetup:upgradeSteps>
+
+
+  <genericsetup:upgradeSteps
+    source="5.5"
+    destination="5.9"
+    profile="eea.design:default">
+
+    <genericsetup:upgradeDepends
+      title="Import profile steps with changes: jsregistry"
+      import_steps="jsregistry"
+      />
+
+  </genericsetup:upgradeSteps>
 </configure>

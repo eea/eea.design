@@ -3,6 +3,9 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Feature: added jquery pagination plugin to be used when we need to paginate
+  listings on clientside
+  [ichimdav #10182]
 * Feature: added login_form as a slideDown popup
   [ichimdav #9485]
 * Bug fix: reference images and javascripts in ways that can be served when 

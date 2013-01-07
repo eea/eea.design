@@ -1,97 +1,118 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="eea-autoscroll.js" inline="False" position-after="eea-mediacentre.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="eea-tooltips.js" inline="False" position-after="eea-autoscroll.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="eea-galleryview.js" inline="False" position-after="eea-tooltips.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="eea-toc.js" inline="False" position-after="eea-galleryview.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="eea-fullscreen.js" inline="False" position-after="eea-toc.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="eea-autoscroll.js" inline="False" position-after="eea-mediacentre.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="eea-tooltips.js" inline="False" position-after="eea-autoscroll.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="eea-galleryview.js" inline="False" position-after="eea-tooltips.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="eea-toc.js" inline="False" position-after="eea-galleryview.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="eea-fullscreen.js" inline="False" position-after="eea-toc.js"/> -->
 
- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
-     enabled="True" expression="" 
-     id="eea-tabs.js" inline="False" position-after="eea-fullscreen.js"/>
+    <javascript authenticated="False" cacheable="True" compression="safe"
+                cookable="True"
+                enabled="True" expression=""
+                id="eea-tabs.js" inline="False"
+                position-after="eea-fullscreen.js"/>
 
- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
-     enabled="True" expression="" 
-     id="outdated_browser.js" inline="False" position-after="eea-tags.js"/>
+    <javascript authenticated="False" cacheable="True" compression="safe"
+                cookable="True"
+                enabled="True" expression=""
+                id="pagination.js" inline="False"
+                position-after="eea-tabs.js"/>
 
- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
-     enabled="True" expression="" 
-     id="subfolder_nav.js" inline="False" position-after="outdated_browser.js"/>
+    <javascript authenticated="False" cacheable="True" compression="safe"
+                cookable="True"
+                enabled="True" expression=""
+                id="eea-pagination.js" inline="False"
+                position-after="pagination.js"/>
 
- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True"
-     enabled="True" expression="" 
-     id="table_sorter.js" inline="False" position-after="orderablereference.js" />
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
- <!--     enabled="True" expression="python: request.get('jsdisable','') != 'jquery'"  -->
- <!--     id="slide.js" inline="False" position-after="eea-tabs.js" /> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="soer_frontpage.js" inline="False" -->
- <!--    position-after="slide.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
- <!--    enabled="True" expression="" id="design.js" inline="False" -->
- <!--    position-after="popupforms.js"/> -->
- <!--  <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
- <!--    enabled="True" expression="" id="promotions.js" inline="False" -->
- <!--    position-after="design.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="++resource++jquery.fancybox.js" inline="False" position-after="++resource++jquery.flashembed.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python:here.restrictedTraverse('@@plone_portal_state').anonymous()" -->
- <!--    id="framebreak.js" inline="False" position-after="++resource++kukit.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
- <!--    enabled="True" expression="" id="sub_cookies.js" inline="False" -->
- <!--    position-after="resize.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="print_warning.js" inline="False" position-after="whatsnew_gallery.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="none" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="promotion_gallery.js" inline="False " position-after="eea.geotags.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="promo_gallery.js" inline="False" -->
- <!--    position-after="promotion_gallery.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" -->
- <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
- <!--    id="whatsnew_gallery.js" inline="False" position-after="promo_gallery.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="none" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" expression="" -->
- <!--    id="eea_vpip.js" inline="False" position-after="eea.multimedia.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="none" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" expression="" -->
- <!--    id="++resource++vPIP/vpip.js" inline="False" position-after="eea_vip.js"/> -->
- <!-- <javascript authenticated="True" cacheable="True" compression="safe" -->
- <!--    conditionalcomment="" cookable="True" enabled="True" expression="" -->
- <!--    id="block_ldapuserfolder_profile.js" inline="False" position-after="formsubmithelpers.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
- <!--    enabled="True" expression="" id="patch_keyword_widget.js" inline="False" -->
- <!--    position-after="block_ldapuserfolder_profile.js"/> -->
- <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
- <!--    enabled="True" expression="" id="global_searchbox.js" inline="False" -->
- <!--    position-after="collapsibleformfields.js"/> -->
+    <javascript authenticated="False" cacheable="True" compression="safe"
+                cookable="True"
+                enabled="True" expression=""
+                id="outdated_browser.js" inline="False"
+                position-after="eea-tags.js"/>
+
+    <javascript authenticated="False" cacheable="True" compression="safe"
+                cookable="True"
+                enabled="True" expression=""
+                id="subfolder_nav.js" inline="False"
+                position-after="outdated_browser.js"/>
+
+    <javascript authenticated="False" cacheable="True" compression="safe"
+                cookable="True"
+                enabled="True" expression=""
+                id="table_sorter.js" inline="False"
+                position-after="orderablereference.js"/>
+
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
+    <!--     enabled="True" expression="python: request.get('jsdisable','') != 'jquery'"  -->
+    <!--     id="slide.js" inline="False" position-after="eea-tabs.js" /> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="soer_frontpage.js" inline="False" -->
+    <!--    position-after="slide.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
+    <!--    enabled="True" expression="" id="design.js" inline="False" -->
+    <!--    position-after="popupforms.js"/> -->
+    <!--  <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
+    <!--    enabled="True" expression="" id="promotions.js" inline="False" -->
+    <!--    position-after="design.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="++resource++jquery.fancybox.js" inline="False" position-after="++resource++jquery.flashembed.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python:here.restrictedTraverse('@@plone_portal_state').anonymous()" -->
+    <!--    id="framebreak.js" inline="False" position-after="++resource++kukit.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
+    <!--    enabled="True" expression="" id="sub_cookies.js" inline="False" -->
+    <!--    position-after="resize.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="print_warning.js" inline="False" position-after="whatsnew_gallery.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="none" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="promotion_gallery.js" inline="False " position-after="eea.geotags.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="promo_gallery.js" inline="False" -->
+    <!--    position-after="promotion_gallery.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" -->
+    <!--    expression="python: request.get('jsdisable','') != 'jquery'" -->
+    <!--    id="whatsnew_gallery.js" inline="False" position-after="promo_gallery.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="none" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" expression="" -->
+    <!--    id="eea_vpip.js" inline="False" position-after="eea.multimedia.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="none" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" expression="" -->
+    <!--    id="++resource++vPIP/vpip.js" inline="False" position-after="eea_vip.js"/> -->
+    <!-- <javascript authenticated="True" cacheable="True" compression="safe" -->
+    <!--    conditionalcomment="" cookable="True" enabled="True" expression="" -->
+    <!--    id="block_ldapuserfolder_profile.js" inline="False" position-after="formsubmithelpers.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
+    <!--    enabled="True" expression="" id="patch_keyword_widget.js" inline="False" -->
+    <!--    position-after="block_ldapuserfolder_profile.js"/> -->
+    <!-- <javascript authenticated="False" cacheable="True" compression="safe" cookable="True" -->
+    <!--    enabled="True" expression="" id="global_searchbox.js" inline="False" -->
+    <!--    position-after="collapsibleformfields.js"/> -->
 
 </object>

@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
                     .appendTo($eea_tabs_panels)
                     .attr('id', id);
 
-                $("<div class='paginator' />").prependTo($this).pagination(orig_entries, {
+                $("<div class='paginator listingBar' />").prependTo($this).pagination(orig_entries, {
                     items_per_page: pagination_count,
                     next_text: $("#eeaPaginationNext").text(),
                     prev_text: $("#eeaPaginationPrev").text(),

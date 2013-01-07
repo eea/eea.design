@@ -2600,4 +2600,12 @@ div.chat-title {
   margin-left: 1em;
 }
 
+/* #10182 pagination style */
+.pagination .current:before {
+    content: "[";
+}
+.pagination .current:after {
+    content: "]";
+}
+
 /* </dtml-with> */

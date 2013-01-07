@@ -92,7 +92,11 @@
 			
 			// Generate "Previous"-Link
 			if(this.opts.prev_text && (current_page > 0 || this.opts.prev_show_always)){
-				fragment.append(this.createLink(current_page-1, current_page, {text:this.opts.prev_text, classes:"prev"}));
+				fragment.append(this.createLink(current_page-1, current_page,
+                    { text: this.opts.prev_text  + " " +
+                      this.opts.items_per_page + " " + this.opts.items_text,
+                      classes:"listingPrevious"
+                    }));
 			}
 			// Generate starting points
 			if (interval.start > 0 && this.opts.num_edge_entries > 0)
@@ -141,7 +145,7 @@
 			next_text: 'next',
             items_text : 'items',
 			ellipse_text:"...",
-			prev_show_always:true,
+			prev_show_always:false,
 			next_show_always:false,
 			renderer:"defaultRenderer",
 			show_if_single_page:false,
