@@ -1,6 +1,6 @@
 <metal:entry define-macro="entry">
   <div tal:define="
-      css python:brain.is_folderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
+      css python:obj.isPrincipiaFolderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
       portal_type obj/portal_type;
       video python:'video-fancybox' if is_video and portal_type != 'FlashFile' else '';
       animation python:'animation-fancybox' if portal_type == 'FlashFile' else '';
