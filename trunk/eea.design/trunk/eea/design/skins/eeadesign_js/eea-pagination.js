@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
     var $related_items = $("#relatedItems"),
-        has_related_items = $related_items.length,
+        has_related_items = $related_items.length &&
+                                         $related_items[0].tagName !== 'SELECT',
         $eea_tabs = $("#eea-tabs"),
         $eea_tabs_panels = $("#eea-tabs-panels"),
         pagination_count = 12;
@@ -39,7 +40,7 @@ jQuery(document).ready(function($) {
                 while ( num_entries > 0 ) {
                     count += 1;
                     items = childes.splice(0, num_entries > pagination_count ? pagination_count : num_entries);
-                    $('<div />', { class: "page",
+                    $('<div />', { 'class': "page",
                                    'data-count': num_entries > pagination_count ? pagination_count : num_entries })
                                  .append(items).append('<div class="visualClear" />').appendTo($this);
                     num_entries = childes.length;
