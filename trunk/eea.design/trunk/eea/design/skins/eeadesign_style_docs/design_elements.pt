@@ -202,8 +202,9 @@
     </a>
 
     <h2 i18n:translate="">Video pop-ups</h2>
-    <a href="/multimedia/electric-car" class="video-fancybox">
-        <img src="/multimedia/electric-car/image_wide" />
+    <a href="http://www.eea.europa.eu/multimedia/electric-car"
+       class="video-fancybox">
+        <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide" />
     </a>
     <pre tal:content="string:
         &lt;a href=&quot;http://www.eea.europa.eu/multimedia/electric-car&quot; class=&quot;video-fancybox&quot;&gt;
@@ -288,8 +289,10 @@
  <p><tal:block i18n:translate="">image_tile</tal:block><br/><img src="giraffe/image_tile" /></p> 
 <p><tal:block i18n:translate="">image_icon</tal:block><br/><img src="giraffe/image_icon" /></p> 
 <p><tal:block i18n:translate="">image_listing</tal:block><br/><img src="giraffe/image_listing" /></p> 
-  <p><tal:block i18n:translate="">image_thumb (videos get play button and black borders applied correctly)</tal:block><br/><img src="/multimedia/rain-on-snow-environmental-atlas-of-europe-2014-sweden/image_thumb" /></p> 
-<p><tal:block i18n:translate="">image_wide (only available for videos)</tal:block><br/><img src="/multimedia/rain-on-snow-environmental-atlas-of-europe-2014-sweden/image_wide" /></p> 
+  <p><tal:block i18n:translate="">image_thumb (videos get play button and black borders applied correctly)</tal:block><br/><img src="resolveuid/af79241214c3088375297823b3ccf560/image_thumb" /></p>
+<p><tal:block i18n:translate="">image_wide (only available for
+    videos)</tal:block><br/><img
+        src="resolveuid/af79241214c3088375297823b3ccf560/image_wide" /></p>
 
     <h2 i18n:translate="">Portal messages</h2>
     <div class="portalMessage">

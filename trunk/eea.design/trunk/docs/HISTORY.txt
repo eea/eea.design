@@ -3,6 +3,9 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Bug fix: fixed link for video and it's image thumbs on design_elements.pt 
+  page
+  [ichimdav]
 * Feature: added jquery pagination plugin to be used when we need to paginate
   listings on clientside
   [ichimdav #10182]
