@@ -2582,22 +2582,28 @@ div.chat-title {
 
 /* 9485 login popup */
 #popup_login_form {
-  position: absolute;
-  right: 0;
-  background-color: #FFF;
-  z-index: 500;
+    position: absolute;
+    right: 0;
+    background-color: #FFF;
+    z-index: 500;
+    padding: 1em;
+    -webkit-box-shadow: 0px 2px 2px #333;
+       -moz-box-shadow: 0px 2px 2px #333;
+        -ms-box-shadow: 0px 2px 2px #333;
+         -o-box-shadow: 0px 2px 2px #333;
+            box-shadow: 0px 2px 2px #333;
 }
 
 #popup_login_form label {
-  width: 8em;
-  color: #000;
+    width: 8em;
+    color: #000;
 
 }
 #popup_login_form #login-form input {
-  font-size: 100%;
+    font-size: 100%;
 }
 #popup_login_form #login-forgotten-password {
-  margin-left: 1em;
+    margin-left: 1em;
 }
 
 /* #10182 pagination style */

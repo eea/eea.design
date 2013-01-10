@@ -3,6 +3,9 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.design
+  [ichimdav #9485 #10182]
 * Bug fix: fixed link for video and it's image thumbs on design_elements.pt 
   page
   [ichimdav]

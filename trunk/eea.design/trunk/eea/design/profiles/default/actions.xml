@@ -87,7 +87,7 @@
             <property
                 name="available_expr">python:object.portal_type in ["Folder", "Topic", "Collection"] and 'eea.design.browser.interfaces.ISubFoldersListing' not in object.restrictedTraverse('@@get_interfaces')()</property>
             <property name="permissions">
-                <element value="eea.facetednavigation: Configure faceted"/>
+                <element value="Plone Site Setup: Navigation"/>
             </property>
             <property name="visible">True</property>
         </object>
@@ -101,8 +101,24 @@
             <property name="icon_expr"></property>
             <property
                 name="available_expr">python:object.portal_type in ["Folder", "Topic", "Collection"] and 'eea.design.browser.interfaces.ISubFoldersListing' in object.restrictedTraverse('@@get_interfaces')()</property>
-            <-property name="permissions">
-                <element value="eea.facetednavigation: Configure faceted"/>
+            <property name="permissions">
+                <element value="Plone Site Setup: Navigation"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+    </object>
+
+    <object name="user" meta_type="CMF Action Category">
+        <object name="login" meta_type="CMF Action" i18n:domain="plone">
+            <property name="title" i18n:translate="">Log in</property>
+            <property name="description" i18n:translate=""></property>
+            <property
+                    name="url_expr">string:${globals_view/navigationRootUrl}/login</property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">not: member</property>
+            <property name="permissions">
+                <element value="View"/>
             </property>
             <property name="visible">True</property>
         </object>
@@ -119,11 +135,9 @@
         <object name="sitemap">
             <property name="visible">False</property>
         </object>
-    </object>
-
-    <!-- removed actions -->
-    <object name="user">
-        <object name="plone_setup" remove="True"/>
+        <object name="login">
+            <property name="visible">False</property>
+        </object>
     </object>
 
 </object>
