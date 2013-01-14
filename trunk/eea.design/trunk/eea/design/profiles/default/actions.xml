@@ -125,17 +125,17 @@
     </object>
 
     <!-- hidden actions -->
-    <object name="site_actions">
-        <object name="accessibility">
+    <object name="site_actions" meta_type="CMF Action Category">
+        <object name="accessibility" meta_type="CMF Action">
             <property name="visible">False</property>
         </object>
-        <object name="contact">
+        <object name="contact" meta_type="CMF Action">
             <property name="visible">False</property>
         </object>
-        <object name="sitemap">
+        <object name="sitemap" meta_type="CMF Action">
             <property name="visible">False</property>
         </object>
-        <object name="login">
+        <object name="login" meta_type="CMF Action">
             <property name="visible">False</property>
         </object>
     </object>
