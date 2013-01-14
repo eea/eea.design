@@ -340,22 +340,504 @@
        </tal:block>
     </p>
 
+        <tal:comment tal:replace="nothing">
+          Replace or delete this example since it's pointing to an asp page
+
+        <h2 i18n:translate="">Scope / Local search</h2>
+        <div class="localSearch lightBGC">
+            <h4 i18n:translate="">Search on data set and application</h4>
+            <form method="get" action="available.asp" id="form2" name="form2">
+                <input type="hidden" name="type" value="search" />
+                <div class="field">
+                    <label i18n:translate="">Title</label>
+                    <div class="formHelp" i18n:translate="">Enter one or more keywords for a search. Use of AND/OR is supported.</div>
+                    <div></div>
+                    <input type="text" name="search" value="" size="30" maxlength="50" tabindex="1" />
+                    <input type="submit" value="Search" class="searchButton" i18n:attributes="value" id="Submit2" name="Submit2" tabindex="2" />
+                </div>
+            </form>
+        </div>
+        </tal:comment>
+
+        <!-- Client Side Pagination -->
+        <h2 i18n:translate="">Client Side Pagination</h2>
+        <p i18n:translate="">
+            All that you need is a block element like a div with class paginate
+            and children as content inside of it.
+        </p>
+
+        <p i18n:translate="">
+            By default after 12 children the content will be paginated.
+        </p>
+
+        <p i18n:translate="">
+            This example has a couple of divs but the div with class paginate
+            could contain anything.
+        </p>
+
+        <div class="paginate">
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                </a>
+            </div>
+            <div class="photoAlbumEntry">
+                <a href="#">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="fish"/>
+                    </span>
+                    <span class="photoAlbumEntryTitle">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <pre>
+            &lt;div class="paginate"&gt;
+                &lt;div class="photoAlbumEntry"&gt;
+                    &lt;a href="#"&gt;
+                        &lt;span class="photoAlbumEntryWrapper"&gt;
+                            &lt;img src="fish"/&gt;
+                        &lt;/span&gt;
+                        &lt;span class="photoAlbumEntryTitle"&gt;Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                        &lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="photoAlbumEntry"&gt;
+                    &lt;a href="#"&gt;
+                        &lt;span class="photoAlbumEntryWrapper"&gt;
+                            &lt;img src="fish"/&gt;
+                        &lt;/span&gt;
+                        &lt;span class="photoAlbumEntryTitle"&gt;Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                        &lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            ...
+            &lt;/div&gt;
+        </pre>
+        <!-- End Client Side Pagination -->
+
+        <!-- Client Side Pagination with tabs -->
+        <h2 i18n:translate="">Client Side Pagination with Tabs</h2>
+        <p i18n:translate="">
+            This example demonstrates the pagination with
+            headers as tabs.
+        </p>
+        <p i18n:translate="">
+            We need some extra markup besides the parent div with class
+            paginate as found in the previous example.
+        </p>
+        <p i18n:translate="">
+            First extra element is an h3 which contains the title of the tab.
+        </p>
+        <p i18n:translate="">
+            Second extra element is a simple div that wraps the content that
+            you would like to have paginated.
+        </p>
+
+
+        <div class="paginate">
+            <h3 i18n:translate="">Tab number 1</h3>
+            <div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- pagination part 2 -->
+
+            <h3 i18n:translate="">Tab number 2</h3>
+            <div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </span>
+                    </a>
+                </div>
+                <div class="photoAlbumEntry">
+                    <a href="#">
+                        <span class="photoAlbumEntryWrapper">
+                            <img src="fish"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <pre>
+
+            &lt;div class="paginate"&gt;
+                &lt;h3&gt;Tab number 1&lt;/h3&gt;
+                &lt;div&gt;
+                    &lt;div class="photoAlbumEntry"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;span class="photoAlbumEntryWrapper"&gt;
+                                &lt;img src="fish"/&gt;
+                            &lt;/span&gt;
+                            &lt;span class="photoAlbumEntryTitle"&gt;Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                            &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="photoAlbumEntry"&gt;
+                            &lt;a href="#"&gt;
+                                &lt;span class="photoAlbumEntryWrapper"&gt;
+                                    &lt;img src="fish"/&gt;
+                                &lt;/span&gt;
+                                &lt;span class="photoAlbumEntryTitle"&gt;Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                                &lt;/span&gt;
+                            &lt;/a&gt;
+                    &lt;/div&gt;
+                    ...
+                &lt;/div&gt;
+                &lt;h3&gt;Tab number 2&lt;/h3&gt;
+                &lt;div&gt;
+                    &lt;div class="photoAlbumEntry"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;span class="photoAlbumEntryWrapper"&gt;
+                                &lt;img src="fish"/&gt;
+                            &lt;/span&gt;
+                            &lt;span class="photoAlbumEntryTitle"&gt;Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                            &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="photoAlbumEntry"&gt;
+                            &lt;a href="#"&gt;
+                                &lt;span class="photoAlbumEntryWrapper"&gt;
+                                    &lt;img src="fish"/&gt;
+                                &lt;/span&gt;
+                                &lt;span class="photoAlbumEntryTitle"&gt;Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                                &lt;/span&gt;
+                            &lt;/a&gt;
+                    &lt;/div&gt;
+                    ...
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <!-- End Client Side Pagination with tabs -->
+
     </metal:main-macro>
     </div>
 
-    <h2 i18n:translate="">Scope / Local search</h2>
-    <div class="localSearch lightBGC">
-        <h4 i18n:translate="">Search on data set and application</h4>
-        <form method="get" action="available.asp" id="form2" name="form2">
-            <input type="hidden" name="type" value="search" />
-            <div class="field">
-                <label i18n:translate="">Title</label>
-                <div class="formHelp" i18n:translate="">Enter one or more keywords for a search. Use of AND/OR is supported.</div>
-                <div></div>
-                <input type="text" name="search" value="" size="30" maxlength="50" tabindex="1" />
-                <input type="submit" value="Search" class="searchButton" i18n:attributes="value" id="Submit2" name="Submit2" tabindex="2" />
-            </div> 
-        </form>
-    </div>
 </body>
 </html>

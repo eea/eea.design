@@ -158,7 +158,7 @@ div.position-3\3a 4 {margin-left: -36.8%;}
 }
 
 #faceted-form .tags-cloud li:hover {
-    background-color: &dtml-corporateOrange;; !important;
+    background-color: &dtml-corporateOrange; !important;
     color: white !important;
 }
 
@@ -1685,7 +1685,7 @@ dl.system-message dt {
     padding: 0.5em 1em 0.5em 3em;
     vertical-align: middle;
     /*background-image: url(&dtml-portal_url;/information.png);*/
-    background: &dtml-lightBackgroundColor no-repeat 5px 50%;
+    background: &dtml-lightBackgroundColor; no-repeat 5px 50%;
     -webkit-box-shadow: 2px 2px 1px #888888;
        -moz-box-shadow: 2px 2px 1px #888888;
         -ms-box-shadow: 2px 2px 1px #888888;

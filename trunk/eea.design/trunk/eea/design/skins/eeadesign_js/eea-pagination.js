@@ -1,22 +1,42 @@
 jQuery(document).ready(function($) {
+    // check if related_items isn't an select tag which is found in the edit
+    // widget
     var $related_items = $("#relatedItems"),
         has_related_items = $related_items.length &&
                                          $related_items[0].tagName !== 'SELECT',
         $eea_tabs = $("#eea-tabs"),
+        $paginate = $(".paginate"),
         $eea_tabs_panels = $("#eea-tabs-panels"),
         pagination_count = 12;
 
-    if ( has_related_items ) {
+    if ( has_related_items  ) {
         if ( !$eea_tabs.length ) {
-            $eea_tabs = $("<ul id='eea-tabs' class='two-rows' ></ul>").insertBefore($related_items);
-            $eea_tabs_panels = $("<div id='eea-tabs-panels' ></div>").insertAfter($eea_tabs);
+            $eea_tabs = $("<ul id='eea-tabs' class='two-rows' ></ul>")
+                        .insertBefore($related_items);
+            $eea_tabs_panels = $("<div id='eea-tabs-panels' ></div>")
+                               .insertAfter($eea_tabs);
         }
     }
 
-    $related_items.find('.visualNoMarker').each(function() {
+//    if ( $paginate.length ) {
+//        $paginate.each(function(){
+//            $eea_tabs = $("<ul class='eea-tabs two-rows' ></ul>")
+//                .insertBefore(this);
+//            $eea_tabs_panels = $("<div class='eea-tabs-panels' ></div>")
+//                .insertAfter($eea_tabs);
+//        });
+//
+//    }
+
+    $.merge($paginate, $related_items.find('.visualNoMarker')).each(function() {
         var $self = $(this),
             $children = $self.children(),
             count = 0, id;
+        // if first element is an h3 then we should get the children since we
+        // will introduce tabs and content will follow as:
+        // h3  followed by a div full of children which will be paginated
+        $children = $self.hasClass('paginate') && $children[0].tagName !== "H3" ?
+                                                               $self : $children;
 
         $children.each(function () {
             var items;
@@ -25,6 +45,11 @@ jQuery(document).ready(function($) {
             var childes;
             var $this = $(this);
             if ( this.tagName === "H3" ) {
+                // insert eea-tabs divs if we have h3 elements
+                $eea_tabs = !$eea_tabs.length ? $("<ul class='eea-tabs two-rows' />")
+                    .insertBefore($self) : $eea_tabs;
+                $eea_tabs_panels = !$eea_tabs_panels.length ? $("<div class='eea-tabs-panels' />")
+                    .insertAfter($eea_tabs) : $eea_tabs_panels;
                 $('<li />').html($this.detach().html()).appendTo($eea_tabs);
             }
             else {
@@ -39,10 +64,14 @@ jQuery(document).ready(function($) {
                 count = 0;
                 while ( num_entries > 0 ) {
                     count += 1;
-                    items = childes.splice(0, num_entries > pagination_count ? pagination_count : num_entries);
+                    items = childes.splice(0, num_entries > pagination_count ?
+                                                pagination_count : num_entries);
                     $('<div />', { 'class': "page",
-                                   'data-count': num_entries > pagination_count ? pagination_count : num_entries })
-                                 .append(items).append('<div class="visualClear" />').appendTo($this);
+                                   'data-count': num_entries > pagination_count ?
+                                                pagination_count : num_entries })
+                                 .append(items)
+                                 .append('<div class="visualClear" />')
+                                 .appendTo($this);
                     num_entries = childes.length;
                 }
 
@@ -50,7 +79,9 @@ jQuery(document).ready(function($) {
                     .appendTo($eea_tabs_panels)
                     .attr('id', id);
 
-                $("<div class='paginator listingBar' />").prependTo($this).pagination(orig_entries, {
+                $("<div class='paginator listingBar' />").prependTo($this)
+                                                         .pagination( orig_entries,
+                {
                     items_per_page: pagination_count,
                     next_text: $("#eeaPaginationNext").text(),
                     prev_text: $("#eeaPaginationPrev").text(),
@@ -60,10 +91,13 @@ jQuery(document).ready(function($) {
                             $page = $parent.find('.page').hide().eq(idx),
                             page_count = $page.next().data('count'),
                             next_item = $parent.find('.next')[0];
+
                         if ( next_item ) {
-                            next_item.innerHTML = next_item.innerHTML.replace(pagination_count, page_count);
+                            next_item.innerHTML = next_item.innerHTML
+                                        .replace(pagination_count, page_count);
                         }
-                            $page.show();
+
+                        $page.show();
                         return false;
                     }
                 });
@@ -100,7 +134,8 @@ jQuery(document).ready(function($) {
     if ( has_related_items ) {
         $eea_tabs_panels.addClass('eea-tabs-panels');
         $eea_tabs.addClass('eea-tabs');
-        window.EEA.eea_tabs();
         figure_batch();
     }
+
+    window.EEA.eea_tabs();
 });
