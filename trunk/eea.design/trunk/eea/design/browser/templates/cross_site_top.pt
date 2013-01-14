@@ -49,3 +49,9 @@
     <metal:login_form use-macro="context/login_form/macros/login" />
   </div>
 </tal:login_form>
+
+<div class="eea-i18n-js hiddenElem" i18n:domain="eea">
+    <div id="eeaPaginationNext" i18n:translate="">next</div>
+    <div id="eeaPaginationPrev" i18n:translate="">« previous</div>
+    <div id="eeaPaginationItems" i18n:translate="">items</div>
+</div>
