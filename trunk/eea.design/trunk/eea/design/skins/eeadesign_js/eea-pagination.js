@@ -9,43 +9,37 @@ jQuery(document).ready(function($) {
         $eea_tabs_panels = $("#eea-tabs-panels"),
         pagination_count = 12;
 
-    if ( has_related_items  ) {
+    if ( has_related_items ) {
         if ( !$eea_tabs.length ) {
-            $eea_tabs = $("<ul id='eea-tabs' class='two-rows' ></ul>")
+            $eea_tabs = $("<ul class='eea-tabs two-rows' ></ul>")
                         .insertBefore($related_items);
-            $eea_tabs_panels = $("<div id='eea-tabs-panels' ></div>")
+            $eea_tabs_panels = $("<div class='eea-tabs-panels' ></div>")
                                .insertAfter($eea_tabs);
         }
     }
 
-//    if ( $paginate.length ) {
-//        $paginate.each(function(){
-//            $eea_tabs = $("<ul class='eea-tabs two-rows' ></ul>")
-//                .insertBefore(this);
-//            $eea_tabs_panels = $("<div class='eea-tabs-panels' ></div>")
-//                .insertAfter($eea_tabs);
-//        });
-//
-//    }
-
     $.merge($paginate, $related_items.find('.visualNoMarker')).each(function() {
         var $self = $(this),
             $children = $self.children(),
-            count = 0, id;
+            count = 0,
+            isPaginate = $self.hasClass('paginate'),
+            custom_pagination_count =  $self.attr('data-paginate-count'),
+            id;
         // if first element is an h3 then we should get the children since we
         // will introduce tabs and content will follow as:
         // h3  followed by a div full of children which will be paginated
-        $children = $self.hasClass('paginate') && $children[0].tagName !== "H3" ?
+        $children = isPaginate && $children[0].tagName !== "H3" ?
                                                                $self : $children;
-
         $children.each(function () {
+
             var items;
             var orig_entries;
             var num_entries;
             var childes;
             var $this = $(this);
             if ( this.tagName === "H3" ) {
-                // insert eea-tabs divs if we have h3 elements
+                // insert eea-tabs divs if we have h3 elements and we don't
+                // already have eea_tabs div inserted like in the case of paginate divs
                 $eea_tabs = !$eea_tabs.length ? $("<ul class='eea-tabs two-rows' />")
                     .insertBefore($self) : $eea_tabs;
                 $eea_tabs_panels = !$eea_tabs_panels.length ? $("<div class='eea-tabs-panels' />")
@@ -82,7 +76,8 @@ jQuery(document).ready(function($) {
                 $("<div class='paginator listingBar' />").prependTo($this)
                                                          .pagination( orig_entries,
                 {
-                    items_per_page: pagination_count,
+                    items_per_page: custom_pagination_count ?
+                        parseInt(custom_pagination_count, 10) : pagination_count,
                     next_text: $("#eeaPaginationNext").text(),
                     prev_text: $("#eeaPaginationPrev").text(),
                     item_text: $("#eeaPaginationItems").text(),
@@ -103,39 +98,15 @@ jQuery(document).ready(function($) {
                 });
             }
         });
+        // reset tabs after each paginate class since we could have more than
+        // one element that is paginated per page
+        if ( isPaginate ) {
+            $eea_tabs = "";
+            $eea_tabs_panels = "";
+        }
     });
 
-    var figure_batch = function() {
-        $eea_tabs_panels.delegate('.listingBar', "click", function(e){
-            var item = e.target, queries_index, queries, href, link, data_attr;
-            var $panel = $(this).closest('.eea-tabs-panel');
-            if ( item.tagName === "A" ) {
-                $panel.html('<img src="++resource++faceted_images/ajax-loader.gif" />');
-                data_attr = $panel.data();
-                href = item.href;
-                if ( href.indexOf('b=true') === -1 ) {
-                    queries_index = href.indexOf('?');
-                    queries = href.slice(queries_index);
-                    link = href.slice(0, queries_index);
-                    href = link            +
-                        data_attr.template +
-                        queries            +
-                        '&'                +
-                        $.param({ m: data_attr.relation, b: true, c: data_attr.count });
-                }
-                $.get(href, function ( data ) {
-                    $panel.html($(data).children().eq(1).remove());
-                });
-            }
-            e.preventDefault();
-        });
-    };
-
-    if ( has_related_items ) {
-        $eea_tabs_panels.addClass('eea-tabs-panels');
-        $eea_tabs.addClass('eea-tabs');
-        figure_batch();
+    if ( has_related_items || $paginate.length ) {
+        window.EEA.eea_tabs();
     }
-
-    window.EEA.eea_tabs();
 });
