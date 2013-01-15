@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.0-dev - (unreleased)
+----------------------
+
 5.9 - (2013-01-15)
 ------------------
 * Upgrade step: run the upgrade step for eea.design as last package since it
