@@ -3,8 +3,12 @@ Changelog
 
 5.9-dev - (unreleased)
 ----------------------
+* Upgrade step: run the upgrade step for eea.design as last package since it
+  moves the order of css and javascript which could be disrupted by other 
+  upgrades
+  [ichimdav #10231]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
-  upgrade button available for eea.design
+  upgrade button available for eea.design_elements
   [ichimdav #9485 #10182]
 * Bug fix: fixed link for video and it's image thumbs on design_elements.pt 
   page

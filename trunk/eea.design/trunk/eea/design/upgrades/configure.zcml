@@ -44,6 +44,11 @@
             profile="eea.design:default">
 
         <genericsetup:upgradeDepends
+                title="Import profile steps with changes: cssregistry"
+                import_steps="cssregistry"
+                />
+
+        <genericsetup:upgradeDepends
                 title="Import profile steps with changes: jsregistry"
                 import_steps="jsregistry"
                 />
