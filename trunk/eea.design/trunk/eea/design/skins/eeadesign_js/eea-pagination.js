@@ -9,22 +9,12 @@ jQuery(document).ready(function($) {
         $eea_tabs_panels = $("#eea-tabs-panels"),
         pagination_count = 12;
 
-    if ( has_related_items ) {
-        if ( !$eea_tabs.length ) {
-            $eea_tabs = $("<ul class='eea-tabs two-rows' ></ul>")
-                        .insertBefore($related_items);
-            $eea_tabs_panels = $("<div class='eea-tabs-panels' ></div>")
-                               .insertAfter($eea_tabs);
-        }
-    }
-
     $.merge($paginate, $related_items.find('.visualNoMarker')).each(function() {
         var $self = $(this),
             $children = $self.children(),
             count = 0,
             isPaginate = $self.hasClass('paginate'),
-            custom_pagination_count =  $self.attr('data-paginate-count'),
-            id;
+            custom_pagination_count =  $self.attr('data-paginate-count');
         // if first element is an h3 then we should get the children since we
         // will introduce tabs and content will follow as:
         // h3  followed by a div full of children which will be paginated
@@ -47,15 +37,12 @@ jQuery(document).ready(function($) {
                 $('<li />').html($this.detach().html()).appendTo($eea_tabs);
             }
             else {
-                count += 1;
-                id = "panel" + count;
                 $this.data($self.data());
                 childes = $this.children();
                 num_entries = childes.length;
                 orig_entries = num_entries;
 
                 $this.empty();
-                count = 0;
                 while ( num_entries > 0 ) {
                     count += 1;
                     items = childes.splice(0, num_entries > pagination_count ?
@@ -69,9 +56,7 @@ jQuery(document).ready(function($) {
                     num_entries = childes.length;
                 }
 
-                $this.addClass('eea-tabs-panel')
-                    .appendTo($eea_tabs_panels)
-                    .attr('id', id);
+                $this.addClass('eea-tabs-panel').appendTo($eea_tabs_panels);
 
                 $("<div class='paginator listingBar' />").prependTo($this)
                                                          .pagination( orig_entries,
@@ -104,9 +89,11 @@ jQuery(document).ready(function($) {
             $eea_tabs = "";
             $eea_tabs_panels = "";
         }
+
     });
 
     if ( has_related_items || $paginate.length ) {
         window.EEA.eea_tabs();
     }
+
 });
