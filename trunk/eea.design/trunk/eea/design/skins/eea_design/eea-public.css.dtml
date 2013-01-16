@@ -548,6 +548,11 @@ dl.toc dd {
     border: 0;
 }
 
+/* #13639 don't limit height of figure album entries */
+.figuresPhotoAlbumEntry .photoAlbumEntryWrapper {
+    max-height: 100%;
+}
+
 .photoAlbumEntryWrapper {
     display: block;
     background: white;
