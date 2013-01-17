@@ -14,7 +14,8 @@ jQuery(document).ready(function($) {
             $children = $self.children(),
             count = 0,
             isPaginate = $self.hasClass('paginate'),
-            custom_pagination_count =  $self.attr('data-paginate-count');
+            pagination_count =  window.parseInt(
+                    $self.attr('data-paginate-count'), 10) || pagination_count;
         // if first element is an h3 then we should get the children since we
         // will introduce tabs and content will follow as:
         // h3  followed by a div full of children which will be paginated
@@ -61,8 +62,7 @@ jQuery(document).ready(function($) {
                 $("<div class='paginator listingBar' />").prependTo($this)
                                                          .pagination( orig_entries,
                 {
-                    items_per_page: custom_pagination_count ?
-                        parseInt(custom_pagination_count, 10) : pagination_count,
+                    items_per_page: pagination_count,
                     next_text: $("#eeaPaginationNext").text(),
                     prev_text: $("#eeaPaginationPrev").text(),
                     item_text: $("#eeaPaginationItems").text(),
