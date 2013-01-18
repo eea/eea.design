@@ -1,0 +1,121 @@
+<dtml-comment>Copied from original public.css</dtml-comment>
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* LiveSearch styles */
+
+.LSRes {
+    font-family:  <dtml-var fontFamily>;
+    visibility: visible;
+    color: &dtml-globalFontColor;;
+    background-color: &dtml-backgroundColor;;
+    vertical-align: middle;
+    display:block;
+    list-style-image: none;
+    list-style-type: none;
+    text-align: left;
+    min-width: 16.5em;
+    text-transform: none;
+    margin-left: 0;
+    line-height: 1.1em;
+}
+
+#LSHighlight {
+    background-color: &dtml-globalBackgroundColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    color: &dtml-globalFontColor;;
+}
+
+.LSRow {
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
+    white-space: normal;
+    padding:0;
+    margin: 0;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+.LSRow a {
+    text-decoration: none;
+    font-weight:bold;
+    white-space:nowrap;
+    color: &dtml-linkColor; !important;
+}
+
+.LSDescr {
+    color: &dtml-discreetColor;;
+    text-transform: &dtml-textTransform;;
+    padding-left:2.1em;
+    margin-top:-0.1em;
+}
+
+.LSResult {
+    position: absolute;
+    display: block;
+    text-align: right;
+    margin: 0;
+    top: 115px;
+    right: 0;
+    z-index: 3;
+}
+
+.LSShadow {
+    position: relative;
+    text-align: right;
+}
+
+.livesearchContainer {
+    background-color: #FFF;
+    margin-top: 0;
+    padding: 0 !important;
+    /* Currently exposes a rendering bug in Mozilla */
+    white-space: normal;
+    font-family:  <dtml-var fontFamily>;
+    visibility: visible;
+    text-align: left;
+    color: &dtml-globalFontColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    width: 30em;
+    text-transform: none;
+}
+
+* html .livesearchContainer {
+    padding: &dtml-borderWidth; !important;
+    padding-top: 0 !important;
+    background-color: &dtml-globalBorderColor;;
+    border: 0;
+}
+
+#livesearchLegend {
+    line-height: 1em;
+    margin-left: -1px;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-bottom: 0;
+}
+
+* html #livesearchLegend {
+    margin-top: -1.9em;
+    margin-left: -8px;
+    position: relative;
+}
+
+/* Workaround for Internet Explorer's broken z-index implementation */
+.LSIEFix {
+    background-color: white;
+    padding: 0.5em !important;
+    z-index: 20;
+}
+
+.LSBox {
+    clear: left;
+    float: left;
+    text-align: right;
+    padding-right: 1px;
+    display:block;
+}
+
+#LSNothingFound {
+    text-align: center;
+    padding: 2px;
+}
+/* </dtml-with> */
