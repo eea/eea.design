@@ -13,8 +13,8 @@ jQuery(document).ready(function($) {
         var $self = $(this),
             $children = $self.children(),
             count = 0,
-            isPaginate = $self.hasClass('paginate'),
-            pagination_count =  window.parseInt(
+            isPaginate = $self.hasClass('paginate');
+        pagination_count =  window.parseInt(
                     $self.attr('data-paginate-count'), 10) || pagination_count;
         // if first element is an h3 then we should get the children since we
         // will introduce tabs and content will follow as:
