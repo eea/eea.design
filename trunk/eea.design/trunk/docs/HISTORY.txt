@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.0-dev - (unreleased)
-----------------------
+6.0 - (2013-01-18)
+------------------
 * Bug fix: fix issue that moved paginated items above relatedItems
   [ichimdav #13639]
 * Bug fix: show title and size information for figures albumEntries
