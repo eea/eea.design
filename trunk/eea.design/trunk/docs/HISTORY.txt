@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.1-dev - (unreleased)
-----------------------
+6.1 - (2013-01-19)
+------------------
 * Bug fix: fixed pagination numbering when paginate divs had no paginate count
   [ichimdav #13639]
 
