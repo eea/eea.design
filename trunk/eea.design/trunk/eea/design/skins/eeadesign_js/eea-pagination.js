@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
             var items;
             var orig_entries;
             var num_entries;
-            var childes;
+            var $childes;
             var $this = $(this);
             if ( this.tagName === "H3" ) {
                 // insert eea-tabs divs if we have h3 elements and we don't
@@ -39,14 +39,17 @@ jQuery(document).ready(function($) {
             }
             else {
                 $this.data($self.data());
-                childes = $this.children();
-                num_entries = childes.length;
+                $childes = $this.children();
+                num_entries = $childes.length;
                 orig_entries = num_entries;
 
-                $this.empty();
                 while ( num_entries > 0 ) {
                     count += 1;
-                    items = childes.splice(0, num_entries > pagination_count ?
+                    // use jquery slice method instead of splice array method
+                    // which modifies the array of dom elements in place since
+                    // the elements lost their attached events after they were
+                    // spliced
+                    items = $childes.slice(0, num_entries > pagination_count ?
                                                 pagination_count : num_entries);
                     $('<div />', { 'class': "page",
                                    'data-count': num_entries > pagination_count ?
@@ -54,7 +57,8 @@ jQuery(document).ready(function($) {
                                  .append(items)
                                  .append('<div class="visualClear" />')
                                  .appendTo($this);
-                    num_entries = childes.length;
+                    $childes = $childes.not(items);
+                    num_entries = $childes.length;
                 }
 
                 $this.addClass('eea-tabs-panel').appendTo($eea_tabs_panels);
