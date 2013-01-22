@@ -16,4 +16,6 @@ class EEAGoToCommentsViewlet(CommentsViewlet):
     index = ViewPageTemplateFile('templates/goto_comments.pt')
 
     def update(self):
+        """override to disable form processing
+        """
         return ViewletBase.update(self)
