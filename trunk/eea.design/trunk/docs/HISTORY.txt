@@ -3,6 +3,8 @@ Changelog
 
 6.2-dev - (unreleased)
 ----------------------
+* Bug fix: fix double posting of comments
+  [tiberich #13644]
 
 6.1 - (2013-01-19)
 ------------------

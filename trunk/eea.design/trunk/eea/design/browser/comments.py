@@ -1,8 +1,10 @@
 """ Override comments viewlet
 """
 
-from plone.app.discussion.browser.comments import CommentsViewlet
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.app.discussion.browser.comments import CommentsViewlet
+from plone.app.layout.viewlets.common import ViewletBase
+
 
 class EEACommentsViewlet(CommentsViewlet):
     """EEA specific comments viewlet"""
@@ -12,3 +14,6 @@ class EEACommentsViewlet(CommentsViewlet):
 class EEAGoToCommentsViewlet(CommentsViewlet):
     """Viewlet with comments section link"""
     index = ViewPageTemplateFile('templates/goto_comments.pt')
+
+    def update(self):
+        return ViewletBase.update(self)
