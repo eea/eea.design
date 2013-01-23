@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.2-dev - (unreleased)
-----------------------
+6.2 - (2013-01-23)
+------------------
 * Change: add login action to site_actions and hide it from user for login 
   slideDown
   [ichimdav #9485]
