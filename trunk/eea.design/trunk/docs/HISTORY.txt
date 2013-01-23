@@ -3,6 +3,9 @@ Changelog
 
 6.2-dev - (unreleased)
 ----------------------
+* Change: add login action to site_actions and hide it from user for login 
+  slideDown
+  [ichimdav #9485]
 * Change: adjusted tworows class of eea-tabs to fit more of the tab text 
   [ichimdav #13639]
 * Bug fix: use jQuery slice method instead of Array splice on a jquery matched
