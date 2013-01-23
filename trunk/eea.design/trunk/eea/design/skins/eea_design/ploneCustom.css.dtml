@@ -139,7 +139,7 @@ div.position-3\3a 4 {margin-left: -36.8%;}
     font-weight: normal;
 }
 
-#faceted-form #right-area, #faceted-form #left-area {
+#right-area, #left-area {
     width: 215px !important;
 }
 
@@ -573,16 +573,17 @@ body.section-signals #nonfolderish-subfolder-view-items {
     overflow: hidden;
     list-style: none;
     padding: 0;
-    margin: 0 !important;
+    margin: 0;
 }
+
 #visual-portal-wrapper ul.eea-tabs.two-rows {
     height: 48px;
 }
 
-#visual-portal-wrapper ul.eea-tabs li {
+#visual-portal-wrapper ul.eea-tabs > li {
     text-indent: 0;
-    margin: 0 !important;
-    max-width: 140px;
+    margin: 0;
+    max-width: 150px;
     padding: 0;
     font-weight: normal;
     text-align: center;
@@ -591,32 +592,27 @@ body.section-signals #nonfolderish-subfolder-view-items {
     list-style: none none;
     font-size: inherit;
 }
-#visual-portal-wrapper ul.eea-tabs.two-rows li {
-    line-height: 1.8em !important;
-    margin: -2px 0 !important;
-    max-width: 94px;
+
+#visual-portal-wrapper ul.eea-tabs.two-rows > li {
+    line-height: 1.6em !important;
 }
 
-#visual-portal-wrapper ul.eea-tabs li a {
+#visual-portal-wrapper ul.eea-tabs a {
     height: auto;
-    max-height: 17px;
     min-height: 17px;
     font-size: 125%;
     padding: 9px 10px 11px 10px;
-    display: block !important;
+    display: block;
     margin: 0 -2px;
     font-weight: normal;
     border: 0;
 }
 
-/* #visual-portal-wrapper ul.eea-tabs li a {
-    font-size: 110%;
-} */
-#visual-portal-wrapper ul.eea-tabs.two-rows li a {
-    min-height: 4em;
+#visual-portal-wrapper ul.eea-tabs.two-rows a {
+    padding: 10px 10px 0px 10px;
+    min-height:  38px;
     max-height: 4.1em;
     font-size: 120%;
-    padding: 0.5em 1em 0;
 }
 
 #visual-portal-wrapper ul.eea-tabs li, #visual-portal-wrapper ul.eea-tabs a {
@@ -624,36 +620,39 @@ body.section-signals #nonfolderish-subfolder-view-items {
     text-shadow: 1px 1px 1px #000000;
 }
 
-#visual-portal-wrapper ul.eea-tabs li a:hover, #visual-portal-wrapper ul.eea-tabs li a.current {
+#visual-portal-wrapper ul.eea-tabs a:hover, #visual-portal-wrapper ul.eea-tabs a.current {
     background-color: &dtml-greyBackgroundColor;;
     color: &dtml-corporateBlueTwo;;
     text-shadow: 1px 1px 1px #FFFFFF;
 }
-#visual-portal-wrapper ul.eea-tabs li:first-child a  {
+
+#visual-portal-wrapper ul.eea-tabs li:first-child > a  {
     border-radius: 8px 0 0 0;
     -webkit-border-radius: 8px 0 0 0;
     -moz-border-radius: 8px 0 0 0;
 }
-#visual-portal-wrapper ul.eea-tabs li:last-child a {
+
+#visual-portal-wrapper ul.eea-tabs li:last-child > a {
     border-radius: 0 8px 0 0;
     -webkit-border-radius: 0 8px 0 0;
     -moz-border-radius: 0 8px 0 0;
     margin: 0 -4px;
 }
-#visual-portal-wrapper ul.eea-tabs span {
+
+#visual-portal-wrapper ul.eea-tabs > span {
     height: 21px;
     padding-left: 30px;
     display: inline-block;
 }
 
-div.eea-tabs-panel {
+.eea-tabs-panel {
     clear: both;
     padding: 0 15px 15px 15px;
     background-color: &dtml-greyBackgroundColor;;
 }
 
 .highlights .portalMessage,
-div.eea-tabs-panel .portalMessage {
+.eea-tabs-panel .portalMessage {
   margin-top: 0;
   position: relative;
   top: 10px;
@@ -661,22 +660,95 @@ div.eea-tabs-panel .portalMessage {
   display: block;
 }
 
-div.eea-tabs-panels, div.eea-accordion-panels {
+.eea-tabs-panels, .eea-accordion-panels {
     border: 1px solid #DDD;
     border-top: 0;
     background-color: &dtml-greyBackgroundColor;;
     padding: 10px;
 }
 
-div.eea-accordion-panels {
+/* multi-lingual changes on main page */
+.section-es #visual-portal-wrapper ul.eea-tabs li a,
+.section-sl #visual-portal-wrapper ul.eea-tabs li a,
+.section-pl #visual-portal-wrapper ul.eea-tabs li a,
+.section-lt #visual-portal-wrapper ul.eea-tabs li a,
+.section-fr #visual-portal-wrapper ul.eea-tabs li a,
+.section-pt #visual-portal-wrapper ul.eea-tabs li a,
+.section-bg #visual-portal-wrapper ul.eea-tabs li a,
+.section-nl #visual-portal-wrapper ul.eea-tabs li a,
+.section-et #visual-portal-wrapper ul.eea-tabs li a,
+.section-de #visual-portal-wrapper ul.eea-tabs li a,
+.section-hu #visual-portal-wrapper ul.eea-tabs li a,
+.section-el #visual-portal-wrapper ul.eea-tabs li a {
+    max-height: 27px;
+    min-height: 27px;
+    padding: 7px 10px 13px 10px;
+}
+
+.section-bg #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 113px;
+}
+
+.section-et #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 125px;
+}
+
+.section-fr #visual-portal-wrapper ul.eea-tabs li,
+.section-pt #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 110px;
+}
+
+.section-el #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 128px;
+}
+
+.section-lt #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 102px;
+}
+
+.section-pl #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 106px;
+}
+
+.section-sl #visual-portal-wrapper ul.eea-tabs li {
+    min-width: 70px;
+}
+
+.section-es #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 110px;
+}
+
+.section-mt #visual-portal-wrapper ul.eea-tabs li {
+    max-width: 125px;
+}
+
+.section-mt #visual-portal-wrapper ul.eea-tabs a {
+    max-height: 17px;
+    min-height: 17px;
+    font-size: 115%;
+}
+
+.section-de #visual-portal-wrapper ul.eea-tabs li {
+    min-width: 69px;
+}
+
+.section-de #visual-portal-wrapper ul.eea-tabs li a {
+    font-size: 111%;
+}
+
+.section-lt #visual-portal-wrapper ul.eea-tabs li a {
+    font-size: 120%;
+}
+
+/* eea accordion styles */
+.eea-accordion-panels {
     padding: 0;
 }
 
-div.eea-accordion-panels .pane {
+.eea-accordion-panels .pane {
     padding: 10px;
 }
-
-div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
+.eea-accordion-panels .eea-accordion-title, .eea-accordion-panels > h2 {
     background: #E2E2E2 url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
     border: 1px solid #E0E0E0;
     margin: 0;
@@ -687,18 +759,18 @@ div.eea-accordion-panels .eea-accordion-title, div.eea-accordion-panels h2 {
     font-weight: bold;
 }
 
-div.eea-accordion-panels .eea-accordion-title:hover, div.eea-accordion-panels h2:hover {
+.eea-accordion-panels .eea-accordion-title:hover, .eea-accordion-panels > h2:hover {
     cursor: pointer;
     background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
 }
 
-div.eea-accordion-panels .eea-accordion-title.current,
-div.eea-accordion-panels h2.current {
+.eea-accordion-panels .eea-accordion-title.current,
+.eea-accordion-panels > h2.current {
     background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
 }
 
-div.eea-accordion-panels .eea-accordion-title a,
-div.eea-accordion-panels h2 a
+.eea-accordion-panels .eea-accordion-title a,
+.eea-accordion-panels > h2 a
 {
     color: #00446A !important;
 }
@@ -1758,6 +1830,7 @@ dl.system-message dt {
     margin-left: 1em;
 }
 
+
 .listingBar img {
     vertical-align: middle;
 }
@@ -1831,6 +1904,10 @@ dl.system-message dt {
     float: left;
     clear: both;
     display: block;
+}
+
+#relatedItems  {
+    margin-bottom:  2em;
 }
 
 #relatedItems .visualClear {
@@ -2504,80 +2581,6 @@ div.chat-title {
 
 #chatpanel {
     bottom: 0.8em;
-}
-
-/* multi-lingual changes on main page */
-
-.section-es #visual-portal-wrapper ul.eea-tabs li a,
-.section-sl #visual-portal-wrapper ul.eea-tabs li a,
-.section-pl #visual-portal-wrapper ul.eea-tabs li a,
-.section-lt #visual-portal-wrapper ul.eea-tabs li a,
-.section-fr #visual-portal-wrapper ul.eea-tabs li a,
-.section-pt #visual-portal-wrapper ul.eea-tabs li a,
-.section-bg #visual-portal-wrapper ul.eea-tabs li a,
-.section-nl #visual-portal-wrapper ul.eea-tabs li a,
-.section-et #visual-portal-wrapper ul.eea-tabs li a,
-.section-de #visual-portal-wrapper ul.eea-tabs li a,
-.section-hu #visual-portal-wrapper ul.eea-tabs li a,
-.section-el #visual-portal-wrapper ul.eea-tabs li a {
-    max-height: 27px;
-    min-height: 27px;
-    padding: 7px 10px 13px 10px;
-}
-
-.section-bg #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 113px;
-}
-
-.section-et #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 125px;
-}
-
-.section-fr #visual-portal-wrapper ul.eea-tabs li,
-.section-pt #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 110px;
-}
-
-.section-el #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 128px;
-}
-
-.section-lt #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 102px;
-}
-
-.section-pl #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 106px;
-}
-
-.section-sl #visual-portal-wrapper ul.eea-tabs li {
-    min-width: 70px;
-}
-
-.section-es #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 110px;
-}
-
-.section-mt #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 125px;
-}
-
-.section-mt #visual-portal-wrapper ul.eea-tabs li a {
-    max-height: 17px;
-    min-height: 17px;
-    font-size: 115%;
-}
-
-.section-de #visual-portal-wrapper ul.eea-tabs li {
-    min-width: 69px;
-}
-
-.section-de #visual-portal-wrapper ul.eea-tabs li a {
-    font-size: 111%;
-}
-
-.section-lt #visual-portal-wrapper ul.eea-tabs li a {
-    font-size: 120%;
 }
 
 /* 9485 login popup */

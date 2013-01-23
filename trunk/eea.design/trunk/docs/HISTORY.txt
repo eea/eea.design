@@ -3,6 +3,8 @@ Changelog
 
 6.2-dev - (unreleased)
 ----------------------
+* Change: adjusted tworows class of eea-tabs to fit more of the tab text 
+  [ichimdav #13639]
 * Bug fix: use jQuery slice method instead of Array splice on a jquery matched
   set to avoid loosing attached event handlers like in the case of 
   eea-pagination
