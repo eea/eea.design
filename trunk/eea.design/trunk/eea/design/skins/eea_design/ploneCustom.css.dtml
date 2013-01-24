@@ -2559,10 +2559,6 @@ a#subfolders_more_a {
     background-color: #AFBC21;
 }
 
-#region-content ul, ul {
-    margin: 0;
-}
-
 .chatroom {
     background-color: #AFBC21;
 }
