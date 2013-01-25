@@ -3,6 +3,9 @@ Changelog
 
 6.3-dev - (unreleased)
 ----------------------
+* Change: removed right_column from default_error_message since it's loaded
+  everytime you get a not found object
+  [ichimdav #13677]
 
 6.2 - (2013-01-23)
 ------------------
