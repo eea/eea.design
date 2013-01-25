@@ -1,7 +1,8 @@
 <!-- Social / Follow us links -->
 <div metal:define-macro="portlet"
       tal:define="portal_url context/@@plone_portal_state/portal_url;"
-      i18n:domain="eea">
+      i18n:domain="eea"
+      tal:condition="context/@@plone_context_state/is_view_template">
 
       <!-- the fancy box email subscription -->
       <div style="display:none;">

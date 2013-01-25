@@ -1,15 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
+      tal:omit-tag=""
       i18n:domain="eea">
-<body >
 
- <div metal:define-macro="portlet" tal:condition="context/@@plone_context_state/is_view_template">
+ <div metal:define-macro="portlet"
+      tal:condition="context/@@plone_context_state/is_view_template">
        <div metal:use-macro="here/portlet_social_links/macros/portlet">
            Social links
        </div>
 </div>
 
 
-</body>
 </html>
