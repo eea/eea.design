@@ -710,10 +710,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     max-width: 106px;
 }
 
-.section-sl #visual-portal-wrapper ul.eea-tabs li {
-    min-width: 70px;
-}
-
 .section-es #visual-portal-wrapper ul.eea-tabs li {
     max-width: 110px;
 }
