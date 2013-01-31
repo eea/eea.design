@@ -252,7 +252,6 @@ div.position-3\3a 4 {margin-left: -36.8%;}
     background-image: linear-gradient(top,#478EA5,#346F83);
     font: bold 12px Verdana, Arial, sans-serif;
     padding: 7px 11px;
-    position: initial;
     display: inline-block;
     text-shadow: 0 1px 0 #000;
     -webkit-transition: border-color .218s;
@@ -1096,7 +1095,7 @@ a.moreLink {
 
 .fieldTextFormat {
     text-align: right;
-    margin-right: 0.75em
+    margin-right: 0.75em;
 }
 
 .formHelp {
@@ -1454,7 +1453,8 @@ h3.site-description {
 .searchField:focus {
     font-style: normal;
     color: #000000;
-    background: transparent 0 -114px;
+    background-position: 0 -114px;
+    background-color: transparent;
     outline-color: transparent;
 }
 
