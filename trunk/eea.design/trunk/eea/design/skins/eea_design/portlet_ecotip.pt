@@ -3,15 +3,17 @@
       i18n:domain="eea">
 <body>
 
-<metal:portlet metal:define-macro="portlet">
+<metal:portlet metal:define-macro="portlet"
+        tal:condition="context/@@plone_context_state/is_view_template">
 
 <dl class="portlet-ecotips portlet" id="portlet-ecotip"
+
     tal:define="ecotip context/@@randomecotip;
                 portal_url context/@@plone_portal_state/portal_url"
     tal:condition="ecotip">
     <dt>
-      <img tal:attributes="src string:${portal_url}/ecotip.png" alt="" title="" class="ecotip-bulb" />
-      <img tal:attributes="src string:${portal_url}/led-bulb.png" alt="" title="" class="led-bulb" />
+      <img tal:attributes="src string:${portal_url}/ecotip.png" alt="" title="" class="ecotip-bulb" width="33" height="60" />
+      <img tal:attributes="src string:${portal_url}/led-bulb.png" alt="" title="" class="led-bulb" width="26" height="60" />
     </dt>
     <dd class="portletItem">
         <strong tal:content="ecotip/title" />
