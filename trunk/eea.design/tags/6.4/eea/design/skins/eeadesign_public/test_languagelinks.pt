@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="eea">
+
+<body>
+
+<div metal:fill-slot="main">
+<p i18n:translate="">This file contains links that should be marked in different ways by the mark_special_link.js script.
+This is to test and verify that it works. Try it with <br />
+<tal:block i18n:name="normal">
+	<a href="http://localhost:8080/www/SITE/themes/test_languagelinks" i18n:translate="">Normal</a>
+</tal:block>
+<tal:block i18n:name="swedish-site">
+	<a href="http://localhost:8080/www/sv/test_languagelinks" i18n:translate="">Swedish site</a>
+</tal:block>
+<br />
+</p>
+<a href="http://themes.eea.europa.eu/IMS/ISpecs/ISpecification20080704102557/IAssessment1226434796626/view_content_pub" i18n:translate="">English themes IMS link </a>
+<br />
+<a href="http://themes.es.eea.europa.eu/IMS/ISpecs/ISpecification20080704102557/IAssessment1226434796626/view_content_pub" i18n:translate="">Spanish  themes IMS link </a>
+<br />
+<a href="http://www.eea.europa.eu/tr/themes" i18n:translate="">Turkish  subfolder </a>
+<br />
+<a href="http://ims.eionet.europa.eu/IMS/ISpecs/ISpecification20080704102557/IAssessment1226435272033" i18n:translate="">English eionet </a>
+<br />
+<a href="http://glossary.sv.eea.europa.eu/" i18n:translate="">Swedish glossary </a>
+<br />
+
+</div>
+
+</body>
+</html>
