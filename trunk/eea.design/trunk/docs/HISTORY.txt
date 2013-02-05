@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.4-dev - (unreleased)
-----------------------
+6.4 - (2013-02-05)
+------------------
 * Change: load portlet_ecotip only in view
   [ichimdav #13677]
 
