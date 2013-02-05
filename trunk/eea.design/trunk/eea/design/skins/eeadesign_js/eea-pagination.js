@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
                     .insertBefore($self) : $eea_tabs;
                 $eea_tabs_panels = !$eea_tabs_panels.length ? $("<div class='eea-tabs-panels' />")
                     .insertAfter($eea_tabs) : $eea_tabs_panels;
-                $('<li />').html($this.detach().html()).appendTo($eea_tabs);
+                $('<li><a href="#" /></li>').children().html($this.detach().html()).end().appendTo($eea_tabs);
             }
             else {
                 $this.data($self.data());

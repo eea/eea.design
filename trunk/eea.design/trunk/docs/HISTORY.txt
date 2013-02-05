@@ -3,6 +3,8 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
+* Bug fix: add links for tabs in daviz sections for relations
+  [ichimdav]
 
 6.4 - (2013-02-05)
 ------------------
