@@ -29,9 +29,10 @@ class TitleViewlet(common.TitleViewlet):
                                         name=u'plone_portal_state')
         context_state = getMultiAdapter((self.context, self.request),
                                          name=u'plone_context_state')
-        page_title = escape(safe_unicode(context_state.object_title()))
+        if not hasattr(self, 'page_title'):
+            self.page_title = escape(safe_unicode(context_state.object_title(
+            )))
         portal_title = escape(safe_unicode(portal_state.portal_title()))
-        self.page_title = page_title
         self.portal_title = portal_title
 
 

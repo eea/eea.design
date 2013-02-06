@@ -3,6 +3,9 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
+* Change: reference page_title for the title viewlet in a way that works with 
+  Plone 4.2.1 and 4.2.4
+  [ichimdav #10255]
 * Bug fix: add links for tabs in daviz sections for relations
   [ichimdav]
 
