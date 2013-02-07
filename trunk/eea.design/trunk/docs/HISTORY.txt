@@ -3,6 +3,9 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
+* Bug fix: override collective.xmpp.chat images to point to the browser 
+  resource directory
+  [ichimdav #13782]
 * Change: reference page_title for the title viewlet in a way that works with 
   Plone 4.2.1 and 4.2.4
   [ichimdav #10255]
