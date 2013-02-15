@@ -3,6 +3,9 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
+* Change: made the max-width of 130px for the eea-tabs tworows in order for 
+  more items to fit
+  [ichimdav #13884]
 * Bug fix: override collective.xmpp.chat images to point to the browser 
   resource directory
   [ichimdav #13782]

@@ -594,6 +594,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 #visual-portal-wrapper ul.eea-tabs.two-rows > li {
     line-height: 1.6em !important;
+    max-width: 130px;
 }
 
 #visual-portal-wrapper ul.eea-tabs a {
