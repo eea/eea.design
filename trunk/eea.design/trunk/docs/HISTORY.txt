@@ -3,17 +3,20 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
-* Change: made the max-width of 130px for the eea-tabs tworows in order for 
+* Change: made the max-width of 130px for the eea-tabs tworows in order for
   more items to fit
   [ichimdav #13884]
-* Bug fix: override collective.xmpp.chat images to point to the browser 
+* Bug fix: override collective.xmpp.chat images to point to the browser
   resource directory
   [ichimdav #13782]
-* Change: reference page_title for the title viewlet in a way that works with 
+* Change: reference page_title for the title viewlet in a way that works with
   Plone 4.2.1 and 4.2.4
   [ichimdav #10255]
 * Bug fix: add links for tabs in daviz sections for relations
   [ichimdav]
+* Feature: also count the current logged in user when display how many
+  users are online on EEA chat
+  [ghicaale refs #13806]
 
 6.4 - (2013-02-05)
 ------------------
@@ -30,13 +33,13 @@ Changelog
 
 6.2 - (2013-01-23)
 ------------------
-* Change: add login action to site_actions and hide it from user for login 
+* Change: add login action to site_actions and hide it from user for login
   slideDown
   [ichimdav #9485]
-* Change: adjusted tworows class of eea-tabs to fit more of the tab text 
+* Change: adjusted tworows class of eea-tabs to fit more of the tab text
   [ichimdav #13639]
 * Bug fix: use jQuery slice method instead of Array splice on a jquery matched
-  set to avoid loosing attached event handlers like in the case of 
+  set to avoid loosing attached event handlers like in the case of
   eea-pagination
   [ichimdav #13639]
 * Bug fix: fix double posting of comments
@@ -57,13 +60,13 @@ Changelog
 5.9 - (2013-01-15)
 ------------------
 * Upgrade step: run the upgrade step for eea.design as last package since it
-  moves the order of css and javascript which could be disrupted by other 
+  moves the order of css and javascript which could be disrupted by other
   upgrades
   [ichimdav #10231]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav #9485 #10182]
-* Bug fix: fixed link for video and it's image thumbs on design_elements.pt 
+* Bug fix: fixed link for video and it's image thumbs on design_elements.pt
   page
   [ichimdav]
 * Feature: added jquery pagination plugin to be used when we need to paginate
@@ -71,7 +74,7 @@ Changelog
   [ichimdav #10182]
 * Feature: added login_form as a slideDown popup
   [ichimdav #9485]
-* Bug fix: reference images and javascripts in ways that can be served when 
+* Bug fix: reference images and javascripts in ways that can be served when
   we are on https pages like login_form
   [ichimdav #9998]
 * Bug fix: updated image urls to use eea.depiction
@@ -79,7 +82,7 @@ Changelog
 * Bug fix: use item/Title instead of item/title_or_id; the problem is that
   item is not a brain but a IContentListingObject adapter and it will fetch
   attributes from the real object in case the brain is missing the called
-  attribute; this also should improve performance as it will no longer 
+  attribute; this also should improve performance as it will no longer
   wake up objects
   [tiberich #10160]
 * Bug fix: removed column-count css3 rule for FF since buggy implementation
@@ -104,19 +107,19 @@ Changelog
 
 5.8 - (2012-11-22)
 ------------------
-* Bug fix: fixed over stretching of images for small promo gallery 
+* Bug fix: fixed over stretching of images for small promo gallery
   [ichimdav #9914]
 * Bug fix: fixed atct_topic_view to take account of faceted results and passed
   b_size in order to override batch size when using without faceted
   [ichimdav #7337]
 * Bug fix: added an override for userandgroupselect_popup to change label
-  for search field to something more clear 
+  for search field to something more clear
   [tiberich #9972]
 * Change: use catalog search instead of getFolderContents when searching for
-  fallback images like eea.depiction does for folders with frontpage's 
+  fallback images like eea.depiction does for folders with frontpage's
   getImageUrl method
   [ichimdav #9232]
-* Bug fix: don't show /view twice for folder_summary_view and 
+* Bug fix: don't show /view twice for folder_summary_view and
   folder_tabular_view
   [ichimdav #5547]
 * Feature: added action to enable subfolder navigation bar for templates that
@@ -126,14 +129,14 @@ Changelog
   [demarant]
 * Bug fix: don't prevent event processing on links in portlets management page
   [tiberich #5574]
-* Feature: added survey popup 
+* Feature: added survey popup
   [ichimdav #5467]
 * Feature: display outdated browser message also for non IE browsers
   [ichimdav #5588]
 * Bug fix: fixed loading of whatsnewgallery content when clicking on the tabs
   and the page contained /view
   [ichimdav]
-* Bug fix: readability issues of accordion headings. discreet color and 
+* Bug fix: readability issues of accordion headings. discreet color and
   higher contrast.
   [demarant fixes #5535]
 * Change: replaced IVideoEnhanced queries for is_video with IVideo from
@@ -158,7 +161,7 @@ Changelog
   [ichimdav #5463]
 * Bug fix: Don't display portal-personaltools activated menus on fullscreen
   [ichimdav #5509]
-* Feature: Added "en" icon close to "multimedia" and "data and maps" 
+* Feature: Added "en" icon close to "multimedia" and "data and maps"
   in portal-top section.
   [prospchr #5235]
 * Upgrade step:  from portal_setup > Portal Navigation Manager
@@ -193,7 +196,7 @@ Changelog
   [ichimdav fixes #5454]
 * Feature: added simple selenium test to prove that selenium tests work
   [tiberich #4011]
-* Feature: Improved eea header design. Removed old personal_bar so that we get 
+* Feature: Improved eea header design. Removed old personal_bar so that we get
   the new Plone standard login and bar.
   Upgrade step:
   1. move personal_bar viewlet on top of eea_cross_site_top if neccesary
@@ -203,14 +206,14 @@ Changelog
 * Bug fix: fixed active edit menu when it spans over more than one line
   [ichimdav #5343]
 * Bug fix: override new search.pt from plone.app.search to avoid failing when
-  iterating over types 
+  iterating over types
   [ichimdav #5346]
 * Bug fix: fixed livesearch_reply from return invalid xml on show all link
   [ichimdav #5346]
-* Bug fix: override search.js from new plone search with upstream changes 
+* Bug fix: override search.js from new plone search with upstream changes
   to avoid javascript errors when no search input is present
   [ichimdav #5346]
-* Bug fix: added type icon for Collection from plone.app.collection 
+* Bug fix: added type icon for Collection from plone.app.collection
   [tiberich #5397]
 * Bug fix: load specific ie fixes as well as iefixes for fixes that affect all
   IE versions
@@ -226,18 +229,18 @@ Changelog
 * Feature: Plone 4.2 compatibility, previous versions of eea.design were not
   compatible with Plone 4.2 [tiberich #5346]
 * Bug fix: associate change_workflow_state only for the load action to prevent
-  the changeWorkflowState from loading if an error is present 
+  the changeWorkflowState from loading if an error is present
   [ichimdav #5263]
 * Bug fix: only include published date when effectiveDate is not None
   in document_byline template
   [tiberich refs #5396]
 * Cleanup: removed back ported HTML5 functionality from Plone 4.2
   [ghicaale refs #5346]
-* Bug fix: fixed headings not floating because they are cleared 
+* Bug fix: fixed headings not floating because they are cleared
   [ichimdav #5392]
 * Bug fix: fixed login form from logged_out template when using it over https
   [ichimdav #5000]
-* Upgrade step:  from portal_setup > import > EEA Design import javascript 
+* Upgrade step:  from portal_setup > import > EEA Design import javascript
   steps by:
   1. Checking Javascript registry import step
   2. Uncheck Include dependecies? checkbox
@@ -248,7 +251,7 @@ Changelog
 * Bug fix: check if value is present when trying to display field values in
   atct_topic_view
   [ichimdav #5376]
-* Bug fix: removed default entries in i18n tags 
+* Bug fix: removed default entries in i18n tags
   [propschr refs #5258]"
 
 5.3 - (2012-07-16)
@@ -278,24 +281,24 @@ Changelog
 * Bug fix: set wf_status variable for anonymous as well, so that
   Draft watermark feature (in r28435) works for anonymous.
   [demarant]
-* Feature: use parent folder image if promoted item doesn't have an 
+* Feature: use parent folder image if promoted item doesn't have an
   image field else use fallback image
   [ichimdav #5247]
-* Bug fix: fixed listing for anomymous users for content that uses 
+* Bug fix: fixed listing for anomymous users for content that uses
   folder_listing and folder_summary_view
   [ichimdav #5300]
-* Bug Fix: Fixed i18n missing tags, invalid token, i18n:domain and 
-  duplicate keys in .zpt 
+* Bug Fix: Fixed i18n missing tags, invalid token, i18n:domain and
+  duplicate keys in .zpt
   [prospchr refs #5162]
 
 5.0 - (2012-06-20)
 ------------------
 * Bug fix: Don't send batch keyword to atct_topic_view if context isn't
-  a topic 
+  a topic
   [ichimdav #5294]
 * Bug fix: fixed padding of folder icons in navigation portlet
   [ichimdav #5243]
-* Bug fix: various layout fixes, e.g. text size in promotion gallery, 
+* Bug fix: various layout fixes, e.g. text size in promotion gallery,
   highlight thumbnails border and more.
   [ichimdav, demarant fixes #5188]
 * Bug fix: removed usage of is_empty
@@ -307,7 +310,7 @@ Changelog
   [ichimdav #3355]
 * Bug fix: don't show overflow scrollbars for edit form in translation
   [ichimdav #5267]
-* Bug fix: display translation form fields and make room for it by setting 
+* Bug fix: display translation form fields and make room for it by setting
   the edit form full screen
   [ichimdav #5267]
 * Feature: Added a watermark DRAFT in content area to make it
@@ -334,10 +337,10 @@ Changelog
   and folder_tabs_view if they are defaultPage of folder
   [ichimdav #5197]
 * Change: Updated code comments
-* Bug Fix: CSS adjust for the extra en link in multimedia default page. 
+* Bug Fix: CSS adjust for the extra en link in multimedia default page.
   The content of the page will be translated in the po files
   [prospchr refs #5184]
-* Bug Fix: Fix long words bug in featured article Titles  
+* Bug Fix: Fix long words bug in featured article Titles
   [prospchr refs #5184]
 
 4.24 - (2012-06-12)
