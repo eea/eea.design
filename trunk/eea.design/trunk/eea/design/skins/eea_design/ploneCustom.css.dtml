@@ -2324,8 +2324,8 @@ form[name="edit_form"] > table > tbody > tr {
     margin-left: 1em;
 }
 form[name="edit_form"] > table > tbody > tr > td {
-    display : inline-block; 
-    margin-left : 1em; 
+    display : inline-block;
+    margin-left : 1em;
     width: 48.6% !important;
 }
 form[name="edit_form"] table {
@@ -2389,7 +2389,7 @@ form[name="edit_form"] table {
     width: 30%;
     float: left;
     border-right: 1px dotted lightGrey;
-    padding-right: 3em; 
+    padding-right: 3em;
 }
 
 #outdated_ff {
@@ -2414,7 +2414,7 @@ form[name="edit_form"] table {
 }
 
 /* #5533 new style collection style tweaks */
- .queryindex, .addIndex, .queryoperator, .addOperator { 
+ .queryindex, .addIndex, .queryoperator, .addOperator {
     width: 105px !important;
     padding: 5px;
 }
@@ -2574,6 +2574,7 @@ div.chat-title {
 
 #chatpanel {
     bottom: 0.8em;
+    z-index: 4000; /*--Keeps the panel on top of all other elements--*/
 }
 
 div#users, div#chatrooms, div#settings, div#controlbox-panes  {

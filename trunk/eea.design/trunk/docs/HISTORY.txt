@@ -17,8 +17,10 @@ Changelog
 * Feature: also count the current logged in user when display how many
   users are online on EEA chat
   [ghicaale refs #13806]
-* Bug fix: Corrected missing i18n attributes for translations.
+* Bug fix: corrected missing i18n attributes for translations.
   [prospchr refs #13827]
+* Bug fix: fixed z-index issue of chat area with promo gallery
+  [ghicaale refs #13824]
 
 6.4 - (2013-02-05)
 ------------------
