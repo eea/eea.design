@@ -25,7 +25,8 @@
                        tal:attributes="href tab/url;
                                        title tab/description|nothing;">
                         Tab Name
-                    </a></li>
+                    </a>
+                    </li>
                 </tal:block>               
                 <tal:block tal:condition="python:here.Language() != 'en'">
                       <li tal:define="tid tab/id;
@@ -42,7 +43,7 @@
                          tal:content="tab/name"
                          tal:attributes="href tab/url;
                                          title tab/description|nothing;">
-                          Tab Name
+                          Tab Name 
                       </a></li>
                   </tal:block>             
                 

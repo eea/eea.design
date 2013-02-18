@@ -57,8 +57,7 @@
                    i18n:attributes="value"/>
 
         </form>
-    <h1>David</h1>
-     
+       
         <script type="text/javascript">
 
             jq(document).ready(function(){

@@ -340,7 +340,7 @@
        </tal:block>
     </p>
 
-        <tal:comment tal:replace="nothing">
+        <tal:comment replace="nothing">
           Replace or delete this example since it's pointing to an asp page
 
         <h2 i18n:translate="">Scope / Local search</h2>
@@ -375,13 +375,13 @@
             could contain anything.
         </p>
 
-        <div class="paginate">
+        <div class="paginate" i18n:domain="eea.notranslation">
             <div class="photoAlbumEntry">
                 <a href="#">
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
                     </span>
                 </a>
             </div>
@@ -390,7 +390,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
                     </span>
                 </a>
             </div>
@@ -399,7 +399,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
                     </span>
                 </a>
             </div>
@@ -408,7 +408,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
                     </span>
                 </a>
             </div>
@@ -417,7 +417,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
                     </span>
                 </a>
             </div>
@@ -426,7 +426,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
                     </span>
                 </a>
             </div>
@@ -435,7 +435,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
                     </span>
                 </a>
             </div>
@@ -444,7 +444,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
                     </span>
                 </a>
             </div>
@@ -453,7 +453,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
                     </span>
                 </a>
             </div>
@@ -462,7 +462,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
                     </span>
                 </a>
             </div>
@@ -471,7 +471,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
                     </span>
                 </a>
             </div>
@@ -480,7 +480,7 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </span>
                 </a>
             </div>
@@ -489,13 +489,13 @@
                     <span class="photoAlbumEntryWrapper">
                         <img src="fish"/>
                     </span>
-                    <span class="photoAlbumEntryTitle">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+                    <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
                     </span>
                 </a>
             </div>
         </div>
 
-        <pre>
+        <pre i18n:domain="eea.notranslation" i18n:translate="">
             &lt;div class="paginate"&gt;
                 &lt;div class="photoAlbumEntry"&gt;
                     &lt;a href="#"&gt;
@@ -541,13 +541,13 @@
 
         <div class="paginate">
             <h3 i18n:translate="">Tab number 1</h3>
-            <div>
+            <div i18n:domain="eea.notranslation">
                 <div class="photoAlbumEntry">
                     <a href="#">
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
                         </span>
                     </a>
                 </div>
@@ -556,7 +556,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
                         </span>
                     </a>
                 </div>
@@ -565,7 +565,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
                         </span>
                     </a>
                 </div>
@@ -574,7 +574,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
                         </span>
                     </a>
                 </div>
@@ -583,7 +583,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
                         </span>
                     </a>
                 </div>
@@ -592,7 +592,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
                         </span>
                     </a>
                 </div>
@@ -601,7 +601,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
                         </span>
                     </a>
                 </div>
@@ -610,7 +610,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
                         </span>
                     </a>
                 </div>
@@ -619,7 +619,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
                         </span>
                     </a>
                 </div>
@@ -628,7 +628,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
                         </span>
                     </a>
                 </div>
@@ -637,7 +637,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
                         </span>
                     </a>
                 </div>
@@ -646,7 +646,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </span>
                     </a>
                 </div>
@@ -655,7 +655,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
                         </span>
                     </a>
                 </div>
@@ -664,13 +664,13 @@
             <!-- pagination part 2 -->
 
             <h3 i18n:translate="">Tab number 2</h3>
-            <div>
+            <div i18n:domain="eea.notranslation">
                 <div class="photoAlbumEntry">
                     <a href="#">
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
                         </span>
                     </a>
                 </div>
@@ -679,7 +679,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
                         </span>
                     </a>
                 </div>
@@ -688,7 +688,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
                         </span>
                     </a>
                 </div>
@@ -697,7 +697,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
                         </span>
                     </a>
                 </div>
@@ -706,7 +706,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
                         </span>
                     </a>
                 </div>
@@ -715,7 +715,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
                         </span>
                     </a>
                 </div>
@@ -724,7 +724,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
                         </span>
                     </a>
                 </div>
@@ -733,7 +733,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
                         </span>
                     </a>
                 </div>
@@ -742,7 +742,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
                         </span>
                     </a>
                 </div>
@@ -751,7 +751,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
                         </span>
                     </a>
                 </div>
@@ -760,7 +760,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
                         </span>
                     </a>
                 </div>
@@ -769,7 +769,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </span>
                     </a>
                 </div>
@@ -778,14 +778,14 @@
                         <span class="photoAlbumEntryWrapper">
                             <img src="fish"/>
                         </span>
-                        <span class="photoAlbumEntryTitle">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+                        <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
                         </span>
                     </a>
                 </div>
             </div>
         </div>
 
-        <pre>
+        <pre i18n:domain="eea.notranslation" i18n:translate="">
 
             &lt;div class="paginate"&gt;
                 &lt;h3&gt;Tab number 1&lt;/h3&gt;

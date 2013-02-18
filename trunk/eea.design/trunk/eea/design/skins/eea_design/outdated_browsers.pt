@@ -3,41 +3,34 @@
                             roles python:user.getRoles();
                             enabled_browsers_macro python:False;
                             http_user_agent python:request['HTTP_USER_AGENT'];"
-                            metal:define-macro="main">
+                            metal:define-macro="main"
+                i18n:domain="eea">
 
 
     <metal:browser define-macro="browsers" tal:condition="python:enabled_browsers_macro">
+      <tal:block i18n:domain="eea.notranslation">
         <li id="outdated_ff">
-            <a href='http://www.firefox.com' target='_blank'>
-                Firefox
-            </a>
+            <a href='http://www.firefox.com' target='_blank' i18n:translate="">Firefox</a>
         </li>
         <li id="outdated_chrome">
-        <a href='http://www.google.com/chrome' target='_blank'>
-            Google Chrome
-        </a>
+        <a href='http://www.google.com/chrome' target='_blank' i18n:translate="">Google Chrome</a>
         </li>
         <li id="outdated_safari" tal:condition="python:'Windows' in http_user_agent or 'Mac' in http_user_agent">
-            <a href='http://www.apple.com/safari/download/' target='_blank'>
-                Safari
-            </a>
+            <a href='http://www.apple.com/safari/download/' target='_blank' i18n:translate="">Safari</a>
         </li>
         <li id="outdated_opera">
-            <a href='http://www.opera.com/download/' target='_blank'>
-                Opera
-            </a>
+            <a href='http://www.opera.com/download/' target='_blank' i18n:translate="">Opera</a>
         </li>
+      </tal:block>
     </metal:browser>
 
     <metal:ie define-macro="ie" tal:condition="python:enabled_browsers_macro">
         <li id="outdated_ie">
-            <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank'>
-                Internet Explorer 9+
-            </a>
+            <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank' i18n:translate="">Internet Explorer 9+</a>
         </li>
     </metal:ie>
 
-    <tal:comment tal:replace="nothing">
+    <tal:comment replace="nothing">
         You can use a condition for a specific role for displaying certain browsers
         images or messages 
         ex: <h2 tal:condition="python:'ContentEditor' in roles"> Message for content editors</h2>
