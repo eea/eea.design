@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="eea">
+      i18n:domain="eea.notranslation">
 
 <body>
     <div metal:fill-slot="content-core">
@@ -361,21 +361,21 @@
 
         <!-- Client Side Pagination -->
         <h2 i18n:translate="">Client Side Pagination</h2>
-        <p i18n:translate="">
+        <p i18n:translate="client-side-description">
             All that you need is a block element like a div with class paginate
             and children as content inside of it.
         </p>
 
-        <p i18n:translate="">
+        <p i18n:translate="client-side-children">
             By default after 12 children the content will be paginated.
         </p>
 
-        <p i18n:translate="">
+        <p i18n:translate="client-side-paginate">
             This example has a couple of divs but the div with class paginate
             could contain anything.
         </p>
 
-        <div class="paginate" i18n:domain="eea.notranslation">
+        <div class="paginate">
             <div class="photoAlbumEntry">
                 <a href="#">
                     <span class="photoAlbumEntryWrapper">
@@ -495,7 +495,7 @@
             </div>
         </div>
 
-        <pre i18n:domain="eea.notranslation" i18n:translate="">
+        <pre i18n:translate="">
             &lt;div class="paginate"&gt;
                 &lt;div class="photoAlbumEntry"&gt;
                     &lt;a href="#"&gt;
@@ -541,7 +541,7 @@
 
         <div class="paginate">
             <h3 i18n:translate="">Tab number 1</h3>
-            <div i18n:domain="eea.notranslation">
+            <div>
                 <div class="photoAlbumEntry">
                     <a href="#">
                         <span class="photoAlbumEntryWrapper">
@@ -664,7 +664,7 @@
             <!-- pagination part 2 -->
 
             <h3 i18n:translate="">Tab number 2</h3>
-            <div i18n:domain="eea.notranslation">
+            <div>
                 <div class="photoAlbumEntry">
                     <a href="#">
                         <span class="photoAlbumEntryWrapper">
@@ -785,7 +785,7 @@
             </div>
         </div>
 
-        <pre i18n:domain="eea.notranslation" i18n:translate="">
+        <pre i18n:translate="">
 
             &lt;div class="paginate"&gt;
                 &lt;h3&gt;Tab number 1&lt;/h3&gt;
