@@ -14,8 +14,7 @@ Changelog
   [ichimdav #10255]
 * Bug fix: add links for tabs in daviz sections for relations
   [ichimdav]
-* Feature: also count the current logged in user when display how many
-  users are online on EEA chat
+* Change: changed missleading label from "logged-in users" into "online contacts"
   [ghicaale refs #13806]
 * Bug fix: corrected missing i18n attributes for translations.
   [prospchr refs #13827]

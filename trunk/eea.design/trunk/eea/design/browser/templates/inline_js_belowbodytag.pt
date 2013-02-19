@@ -5,10 +5,8 @@ var WRInitTime=(new Date()).getTime();
 // #9527 - EEA Chat area
 jQuery(document).ready(function($) {
   var OnlineUsersBox = jQuery('#toggle-online-users span');
-  var OnlineCount = jquery('#online-count');
   if (OnlineUsersBox) {
-    OnlineUsersBox.html('EEA Chat Area, logged-in users');
-    OnlineCount.html(parseInt(OnlineCount.html()) + 1);
+    OnlineUsersBox.html('EEA Chat Area, online contacts');
   };
 });
 
