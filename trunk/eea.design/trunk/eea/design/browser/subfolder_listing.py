@@ -4,7 +4,7 @@ from Products.Five.browser import BrowserView
 from zope.interface import alsoProvides, noLongerProvides
 from eea.design.browser.interfaces import ISubFoldersListing
 from Products.statusmessages.interfaces import IStatusMessage
-from eea.design import EEAMessageFactory as _
+from eea.design import EEANOTRANSLATIONMessageFactory as _
 
 class SubfolderListing(BrowserView):
     """  SubfolderListing BrowserView responsible for enabling the rendering
