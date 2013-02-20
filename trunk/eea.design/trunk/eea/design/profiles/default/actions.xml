@@ -105,7 +105,7 @@
             </property>
             <property name="visible">True</property>
         </object>
-        <object name="subfolderlisting.disable" meta_type="CMF Action" i18n:domain="eea">
+        <object name="subfolderlisting.disable" meta_type="CMF Action" i18n:domain="eea.notranslation">
             <property name="title"
                 i18n:translate="">Disable Subfolder Listing</property>
             <property name="description" i18n:translate=""></property>

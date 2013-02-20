@@ -20,6 +20,9 @@ Changelog
   [prospchr refs #13827]
 * Bug fix: fixed z-index issue of chat area with promo gallery
   [ghicaale refs #13824]
+* Bug fix: Added domain=eea.notranslation to views that don't need
+  translations. 
+  [prospchr refs #13827]
 
 6.4 - (2013-02-05)
 ------------------
