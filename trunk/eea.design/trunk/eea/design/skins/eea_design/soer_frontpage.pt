@@ -27,7 +27,7 @@
                                        <span>
                                           <span tal:replace="structure item/text"></span>
                                            <a href="" title="Read more of the key fact" 
-                                              class="moreLink"
+                                              class="moreLink link-plain"
                                               tal:attributes="href item/url"
                                               i18n:attributes="title"
                                               i18n:translate="">more</a>

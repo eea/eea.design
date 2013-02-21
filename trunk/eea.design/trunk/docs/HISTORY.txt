@@ -23,6 +23,9 @@ Changelog
 * Bug fix: Added domain=eea.notranslation to views that don't need
   translations. 
   [prospchr refs #13827]
+* Bug fix: Corrected the 'more' link at the end of each key fact on translated
+  pages.
+  [prospchr fixes #13783]
 
 6.4 - (2013-02-05)
 ------------------
