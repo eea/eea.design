@@ -30,11 +30,12 @@
                 </tal:block>               
                 <tal:block tal:condition="python:here.Language() != 'en'">
                       <li tal:define="tid tab/id;
+                                      portal context/@@plone_portal_state/portal;
                                       tab_url tab/url;
                                       split_url python:tab_url.split('/');
                                       url_id python:split_url[-1] != '' and split_url[-1] or split_url[-2];
                                       searchPath python:'/www/SITE' + tab_url;
-                                      results python:here.queryCatalog({'Language':'en', 'path':searchPath, 'id':url_id});
+                                      results python:portal.queryCatalog({'Language':'en', 'path':searchPath, 'id':url_id});
                                       class_icon python:results and 'en_icon' or '';
                                       class_selected python:selected_tab==tid and 'selected' or 'plain';"
                        tal:attributes="id string:portaltab-${tid};

@@ -26,6 +26,9 @@ Changelog
 * Bug fix: Corrected the 'more' link at the end of each key fact on translated
   pages.
   [prospchr fixes #13783]
+* Bug fix: Fixed portal-tab menu errors when viewing the site in other
+  languages than English.
+  [prospchr fixes #13952]
 
 6.4 - (2013-02-05)
 ------------------
