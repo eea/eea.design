@@ -3,6 +3,9 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
+* Change: readded left and right arrows with html entities for jQuery 
+  pagination removed from page template because of translation error
+  [ichimdav]
 * Change: made the max-width of 130px for the eea-tabs tworows in order for
   more items to fit
   [ichimdav #13884]
