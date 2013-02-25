@@ -2658,4 +2658,8 @@ div#users, div#chatrooms, div#settings, div#controlbox-panes  {
     content: "]";
 }
 
+/* #13825 remove margin-left from our styles set by twitter bootstrap */
+div.row {
+    margin-left: 0;
+}
 /* </dtml-with> */

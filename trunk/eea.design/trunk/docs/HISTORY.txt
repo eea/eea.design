@@ -3,6 +3,8 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
+* Bug fix: remove margin left from row class which is set by twitter bootstrap
+  [ichimdav #13825]
 * Change: readded left and right arrows with html entities for jQuery 
   pagination removed from page template because of translation error
   [ichimdav]
