@@ -3,6 +3,8 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
+* Bug fix: fixed whitespace differences for right column of frontpage 
+  [ichimdav #13825]
 
 6.5 - (2013-02-26)
 ------------------
