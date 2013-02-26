@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.5-dev - (unreleased)
-----------------------
+6.5 - (2013-02-26)
+------------------
 * Bug fix: remove margin left from row class which is set by twitter bootstrap
   [ichimdav #13825]
 * Change: readded left and right arrows with html entities for jQuery 
