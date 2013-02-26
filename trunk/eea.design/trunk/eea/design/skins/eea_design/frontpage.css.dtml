@@ -132,6 +132,11 @@ a.archives {
     max-width: 39%;
 }
 
+#articles-area h2 {
+    padding-top: 0;
+    line-height: 1em;
+}
+
 #highlights-area {
     float: left;
     width: 58.5%;
@@ -192,8 +197,6 @@ body.frontpage #portal-columns {
 }
 
 #multimedia-highlights ul {
-    /* float: right; */
-    /* width: 100%; */
     list-style: none outside none;
 }
 
@@ -422,12 +425,10 @@ a.album-layout:hover {
 }
 
 #email-link {
-    /*background-position: 0 -279px !important;*/
     background: url("&dtml-portal_url;/email_32.png") no-repeat center center transparent; /* TODO: to sprite */
 }
 
 .shortcut-default {
-    width: 100%;
     text-align: left;
     padding: 2em 0em;
     background: &dtml-lightBackgroundColor;;
@@ -438,7 +439,6 @@ a.album-layout:hover {
 }
 
 .shortcut-light {
-    /*height: 100px;*/
     background: transparent;
     border: 1px solid #e6e7e8;
     margin-bottom: 2.5em;
@@ -448,30 +448,37 @@ a.album-layout:hover {
       -moz-border-radius: 5px;
 }
 
-
-#eea-mobile-shortcut.shortcut-default, 
+#eea-mobile-shortcut.shortcut-default,
 #enquiry-service-shortcut.shortcut-default {
-   padding:0px;
+   padding:25px 21px;
 }
 
+#eea-mobile-shortcut a,
+#enquiry-service-shortcut a {
+    display: table-row;
+    clear: both;
+}
 #semantic-content {
-   background: url("http://www.eea.europa.eu/forum.png") no-repeat 15px 18px transparent; /* TODO: to sprite */
-   padding: 25px 0px 5px 90px;
-   height: 75px;
+   background: url("http://www.eea.europa.eu/forum.png") no-repeat 0 0 transparent; /* TODO: to sprite */
+   padding: 0 0 0 45px;
+   min-height: 60px;
 }
 
+#mobile-content, #enquiry-content {
+    display: table-cell;
+    vertical-align: middle;
+}
 #enquiry-content {
-    background: url("http://localhost:8080/forum.png") no-repeat 15px 8px transparent;
-    padding: 15px 0px 5px 90px;
-    height: 65px;
+    background: url("http://localhost:8080/forum.png") no-repeat -7px -16px transparent;
+    padding: 0 0 0 70px;
+    height: 50px;
 }
 
 #mobile-content {
-   background: url("&dtml-portal_url;/mobile-large.png") no-repeat 23px 24px transparent; /* TODO: to sprite */
-   padding: 15px 0px 5px 70px;
-   height: 85px;
+    background: url("http://localhost:8080/mobile-large.png") no-repeat 0px 0px transparent;
+    padding: 0 0 0 45px;
+    height: 60px;
 }
-
 
 #organisations-content {
    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 35px 10px transparent;
@@ -485,7 +492,6 @@ a.album-layout:hover {
     height: 56px;
     background-position: -401px -469px;
 }
-
 
 .shortcut-light a.portletHeader, .shortcut-default a.portletHeader  {
    display:block;
