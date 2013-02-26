@@ -33,7 +33,7 @@
         <dd>
             <a id="rss-link" title="Subscribe to RSS Feed"
                tal:attributes="href string:$portal_url/subscription/news-feeds"
-               i18n:attributes="title">&nbsp;</a>
+               i18n:attributes="title" class="link-plain">&nbsp;</a>
         </dd>
         <dd>
             <a id="email-link"

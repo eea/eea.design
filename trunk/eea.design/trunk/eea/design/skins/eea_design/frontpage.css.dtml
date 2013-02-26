@@ -132,10 +132,6 @@ a.archives {
     max-width: 39%;
 }
 
-#articles-area .languageCodes {
-    display:none;
-}
-
 #highlights-area {
     float: left;
     width: 58.5%;

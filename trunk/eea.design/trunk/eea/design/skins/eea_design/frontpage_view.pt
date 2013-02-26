@@ -50,7 +50,9 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                             <ul class="eea-tabs"
                                 tal:define="tabnames  python: ['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps', 'All products'];">
                                 <li tal:repeat="tab tabnames">
-                                    <a href="#"  i18n:translate="" tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
+                                    <a href="#"  i18n:translate=""
+                                       tal:content="python:context.translate(tab, domain='eea')" class="block"
+                                       tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
                                 </li>
                             </ul>
                             <!-- end_tabs -->
@@ -107,7 +109,7 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
 
                         <div metal:define-macro="enquiry" id="enquiry-service-shortcut" class="shortcut-default">
                             <div id="enquiry-content">
-                                <a id="enquiry-link" href="" tal:attributes="href string:http://community.eea.europa.eu">
+                                <a id="enquiry-link" href="" tal:attributes="href string:http://community.eea.europa.eu" class="link-plain">
                                     <h2 i18n:translate="">Ask your question</h2>
                                     <tal:block i18n:translate="">EEA Forum, FAQs, discuss and share</tal:block></a>
                             </div>
@@ -115,7 +117,8 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
 
                         <div metal:define-macro="mobile" id="eea-mobile-shortcut" class="shortcut-default">
                             <div id="mobile-content">
-                                <a id="mobileapps-link" href="/mobile" tal:attributes="href string:$portal_url/mobile">
+                                <a id="mobileapps-link" href="/mobile" tal:attributes="href string:$portal_url/mobile"
+                                   class="link-plain">
                                     <h2 i18n:translate="">Apps for your mobile</h2>
                                     <tal:block i18n:translate="">Environmental information anywhere</tal:block></a>
                             </div>

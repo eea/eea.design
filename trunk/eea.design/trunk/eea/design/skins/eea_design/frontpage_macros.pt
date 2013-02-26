@@ -32,7 +32,7 @@
                  i18n:domain="eea">
 
     <tal:translate tal:condition="archive_href">
-    <a tal:attributes="href archive_href; class string: archives">
+    <a tal:attributes="href archive_href; class string: archives link-plain">
         <span metal:define-slot="archive" i18n:translate="">Archive or title for more items</span></a>
     </tal:translate>
      <metal:items tal:repeat="highlight python:highlights[:nr_items]">
