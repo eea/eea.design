@@ -301,7 +301,7 @@ div.current {
 .featured, .portlet {
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 1em;
-    padding:1em 2em;
+    padding:2em;
     border-radius: 10px;
      -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -430,7 +430,7 @@ a.album-layout:hover {
 
 .shortcut-default {
     text-align: left;
-    padding: 2em 0em;
+    padding: 2em;
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 1em;
     border-radius: 5px;
