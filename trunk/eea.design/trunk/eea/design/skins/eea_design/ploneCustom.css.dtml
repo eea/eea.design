@@ -1058,6 +1058,9 @@ dl a:hover, dd a:hover, dt a:hover {
     color: &dtml-linkUnderlineHoverColor; !important;
 }
 
+#content .featured p:last-child {
+    margin-bottom: 0;
+}
 a.moreLink {
     border: 0 !important;
     background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -9px;

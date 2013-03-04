@@ -471,7 +471,7 @@ a.album-layout:hover {
 #enquiry-content {
     background: url("http://localhost:8080/forum.png") no-repeat -7px -16px transparent;
     padding: 0 0 0 70px;
-    height: 50px;
+    height: 40px;
 }
 
 #mobile-content {
