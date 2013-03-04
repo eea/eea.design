@@ -3,14 +3,17 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
-* Bug fix: fixed whitespace differences for right column of frontpage 
+* Bug fix: explicitly expire auth cookies when session expires,
+  not to stick to anonymous users and confusing Varnish
+  [ghicaale refs #13992]
+* Bug fix: fixed whitespace differences for right column of frontpage
   [ichimdav #13825]
 
 6.5 - (2013-02-26)
 ------------------
 * Bug fix: remove margin left from row class which is set by twitter bootstrap
   [ichimdav #13825]
-* Change: readded left and right arrows with html entities for jQuery 
+* Change: readded left and right arrows with html entities for jQuery
   pagination removed from page template because of translation error
   [ichimdav]
 * Change: made the max-width of 130px for the eea-tabs tworows in order for
@@ -31,7 +34,7 @@ Changelog
 * Bug fix: fixed z-index issue of chat area with promo gallery
   [ghicaale refs #13824]
 * Bug fix: Added domain=eea.notranslation to views that don't need
-  translations. 
+  translations.
   [prospchr refs #13827]
 * Bug fix: Corrected the 'more' link at the end of each key fact on translated
   pages.

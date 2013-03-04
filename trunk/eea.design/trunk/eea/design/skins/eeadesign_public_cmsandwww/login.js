@@ -20,7 +20,7 @@ function cookiesEnabled() {
 }
 
 function setLoginVars(user_name_id, alt_user_name_id, password_id, empty_password_id, js_enabled_id, cookies_enabled_id) {
-  // Indicate that javascript is enabled, set cookie status, copy username and password length info to 
+  // Indicate that javascript is enabled, set cookie status, copy username and password length info to
   // alternative variables since these vars are removed from the request by zope's authentication mechanism.
   if (js_enabled_id) {
     el = document.getElementById(js_enabled_id);
@@ -31,14 +31,14 @@ function setLoginVars(user_name_id, alt_user_name_id, password_id, empty_passwor
     // Do a fresh cookies enabled test every time we press the login button
     //   so that we are up to date in case the user enables cookies after seeing
     //   the cookies message.
-    if (el) { el.value = cookiesEnabled(); } 
+    if (el) { el.value = cookiesEnabled(); }
   }
   if (user_name_id && alt_user_name_id) {
     user_name = document.getElementById(user_name_id);
     alt_user_name = document.getElementById(alt_user_name_id);
     if (user_name && alt_user_name) {
        alt_user_name.value = user_name.value;
-    } 
+    }
   }
   if (password_id && empty_password_id) {
     password = document.getElementById(password_id);

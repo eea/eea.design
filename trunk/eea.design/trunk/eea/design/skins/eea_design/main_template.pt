@@ -30,8 +30,7 @@
                         ztu modules/ZTUtils;
                         acl_users nocall: context/acl_users;
                         ifacetool context/portal_interface;
-                        syntool context/portal_syndication;
-                        ">
+                        syntool context/portal_syndication;">
 
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 
@@ -82,18 +81,23 @@
 
         <meta name="generator" content="Plone - http://plone.org" />
     </tal:notajax>
-    
+
     <script type="text/javascript" tal:content="string: context_url='${context/absolute_url}';">
     </script>
 
 </head>
 
 <body tal:define="isRTL portal_state/is_rtl;
-                        wf_state python: context_state.workflow_state();
-                        is_editable context_state/is_editable;
+                  wf_state python: context_state.workflow_state();
+                  is_editable context_state/is_editable;
                   sr python:plone_view.have_portlets('plone.rightcolumn', view) and not request.get('disable_plone.rightcolumn');
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
-    tal:attributes="class python:here.getSectionFromURL(plone_view); dir python:isRTL and 'rtl' or 'ltr'">
+      tal:attributes="class python:here.getSectionFromURL(plone_view);
+                      dir python:isRTL and 'rtl' or 'ltr'">
+
+<tal:expireAuthCookie condition="isAnon">
+    <tal:expire define="dummy python:request.RESPONSE.expireCookie('__ac', path='/');" />
+</tal:expireAuthCookie>
 
 <div id="print-warning" i18n:domain="eea">
              <p i18n:translate="">
@@ -137,11 +141,11 @@
                     </div>
 
                     <metal:slot define-slot="body">
-                        <div id="content"  class="documentContent panels" 
+                        <div id="content"  class="documentContent panels"
                                            tal:attributes="class python:wf_state and ('documentContent panels wf-state-' + str(wf_state)) or 'documentContent panels'">
 
                             <metal:header define-slot="header" tal:content="nothing">
-                         
+
                             </metal:header>
 
                             <metal:bodytext define-slot="main">
@@ -152,7 +156,7 @@
                                     <tal:comment replace="nothing">
                                         If you write a custom title always use
                                         <h1 class="documentFirstHeading"></h1> for it
-                                    </tal:comment>   
+                                    </tal:comment>
                                  </metal:comment>
                                  <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">
                                      Generic KSS Title. Is rendered with class="documentFirstHeading".
@@ -165,7 +169,7 @@
                                     <tal:comment replace="nothing">
                                         If you write a custom description always use
                                         <div class="documentDescription"></div> for it
-                                    </tal:comment>                                          
+                                    </tal:comment>
                                  </metal:comment>
                                  <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
                                      Generic KSS Description. Is rendered with class="documentDescription".
@@ -177,10 +181,10 @@
                                  <metal:text define-slot="content-core" tal:content="nothing">
                                     <tal:comment replace="nothing">
                                         text body page
-                                    </tal:comment>     
+                                    </tal:comment>
                                  </metal:text>
                              </div>
-                             
+
                              <metal:comment tal:content="nothing">
                                 <tal:comment replace="nothing">
                                     possible relation labels. can be made as viewlet.
@@ -189,7 +193,7 @@
                              <tal:block define="thumb_scale thumb_scale | string:image_tile;">
                                <metal:macro use-macro="here/eea_relateditems/macros/relatedItemsWithThumbs" />
                              </tal:block>
-                             
+
                              <div tal:replace="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
 
                             </metal:bodytext>
@@ -237,7 +241,7 @@
     </metal:block>
     <metal:short_footer define-macro="short_colophon" tal:define="short_colophon python:'multimedia_view' in context.getLayout()">
         <tal:footer_slot metal:define-slot="colophon_slot">
-        
+
         </tal:footer_slot>
     </metal:short_footer>
 </body>
