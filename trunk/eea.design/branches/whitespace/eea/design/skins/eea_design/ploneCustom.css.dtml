@@ -2272,7 +2272,7 @@ body.kupu {
 
 #visual-portal-wrapper, #portal-globalnav, #portal-header {
     min-width: 995px;
-    max-width: 1024px;
+    max-width: 1008px;
 }
 
 #portal-column-content  {
