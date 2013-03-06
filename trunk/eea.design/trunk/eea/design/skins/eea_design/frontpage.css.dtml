@@ -60,7 +60,7 @@ body.frontpage ul {
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4em;
-    padding: 0.4em 1em 0.25em 0em;
+    padding: 0 0 0.5em 0;
     border: none;
     clear: left;
     color: #000;
@@ -100,7 +100,7 @@ body.frontpage ul {
 
 .archives {
     float: right;
-    margin: 15px 25px 15px 15px;
+    margin: 22px 25px 15px 15px;
     position: relative;
     top: 8px;
     line-height: 1em;
@@ -388,11 +388,6 @@ a.album-layout:hover {
   margin: 0 0 2px 0;
 }
 
-#portlet-followus > dt {
-    padding: 0 0 0.5em 0;
-    margin: 0;
-}
-
 #twitter-link,
 #facebook-link,
 #youtube-link,
@@ -531,5 +526,4 @@ a.active-list, a.list-layout:hover {
     font-weight: bold;
 }
 /* </dtml-with> */
-
 
