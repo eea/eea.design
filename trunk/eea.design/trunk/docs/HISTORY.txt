@@ -3,6 +3,9 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed margin and padding issues for whatsnewgallery and right 
+  column
+  [ichimdav #13825]
 * Bug fix: explicitly expire auth cookies when session expires,
   not to stick to anonymous users and confusing Varnish
   [ghicaale refs #13992]

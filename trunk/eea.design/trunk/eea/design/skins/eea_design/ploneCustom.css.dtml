@@ -647,7 +647,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .eea-tabs-panel {
     clear: both;
-    padding: 0 25px 25px 25px;
+    padding: 0 22px 25px 23px;
     background-color: &dtml-greyBackgroundColor;;
 }
 
