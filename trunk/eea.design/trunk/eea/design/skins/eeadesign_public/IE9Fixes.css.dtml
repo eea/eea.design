@@ -491,12 +491,6 @@ a.archives {
     z-index: 2;
 }
 
-.frontpage #portal-searchbox input.searchButton {
-    left: -30px;
-    top: -1px;
-}
-
-
 #coverflow img { 
    margin: 0px 0px -35px -92px !important;
 }
