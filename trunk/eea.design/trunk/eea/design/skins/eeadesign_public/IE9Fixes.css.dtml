@@ -509,4 +509,25 @@ ul.eea-tabs.two-rows li {
 /* #5140 set display for ecotip */
 img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none;}
 #portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
+
+
+/* 5443 personaltools and header holder needs position static when we have 
+ * hovering items over our gradient */ 
+/* 14082; added fixes for personaltools also for IE9 */
+#portal-personaltools {
+    position: static;
+} 
+#header-holder {
+    position: static;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
+}
+
+#portal-personaltools dd {
+    margin-top: 15px;
+}
+
+dl.actionMenu.activated dd {
+    min-width: 50%;
+}
 /* </dtml-with> */

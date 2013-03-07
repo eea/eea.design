@@ -3,6 +3,8 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
+* Bug fix: fixed display of personaltools bar for auth on IE9
+  [ichimdav #14082]
 * Bug fix: Fixed margin and padding issues for whatsnewgallery and right 
   column
   [ichimdav #13825]
