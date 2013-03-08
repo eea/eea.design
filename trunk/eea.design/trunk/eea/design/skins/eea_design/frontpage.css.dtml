@@ -264,6 +264,10 @@ div.even {
      background: &dtml-greyBackgroundColor; !important;
 }
 
+#filter_grid div.even {
+    padding: 0px;
+}
+
 div.current {
   display: none;
 }
