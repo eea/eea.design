@@ -62,29 +62,30 @@ jQuery(document).ready(function($) {
                 }
 
                 $this.addClass('eea-tabs-panel').appendTo($eea_tabs_panels);
+                if (orig_entries > pagination_count) {
+                    $("<div class='paginator listingBar' />").prependTo($this)
+                        .pagination( orig_entries,
+                    {
+                        items_per_page: pagination_count,
+                        next_text: $("#eeaPaginationNext").text(),
+                        prev_text: $("#eeaPaginationPrev").text(),
+                        item_text: $("#eeaPaginationItems").text(),
+                        callback: function (idx, el) {
+                            var $parent = el.parent(),
+                                $page = $parent.find('.page').hide().eq(idx),
+                                page_count = $page.next().data('count'),
+                                next_item = $parent.find('.next')[0];
 
-                $("<div class='paginator listingBar' />").prependTo($this)
-                                                         .pagination( orig_entries,
-                {
-                    items_per_page: pagination_count,
-                    next_text: $("#eeaPaginationNext").text(),
-                    prev_text: $("#eeaPaginationPrev").text(),
-                    item_text: $("#eeaPaginationItems").text(),
-                    callback: function (idx, el) {
-                        var $parent = el.parent(),
-                            $page = $parent.find('.page').hide().eq(idx),
-                            page_count = $page.next().data('count'),
-                            next_item = $parent.find('.next')[0];
+                            if ( next_item ) {
+                                next_item.innerHTML = next_item.innerHTML
+                                    .replace(pagination_count, page_count);
+                            }
 
-                        if ( next_item ) {
-                            next_item.innerHTML = next_item.innerHTML
-                                        .replace(pagination_count, page_count);
+                            $page.show();
+                            return false;
                         }
-
-                        $page.show();
-                        return false;
-                    }
-                });
+                    });
+                }
             }
         });
         // reset tabs after each paginate class since we could have more than
