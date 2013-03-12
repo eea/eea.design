@@ -3,6 +3,8 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
+* Bug fix: use jQuery to display Events portlet location without tuples
+  [ichimdav #13816]
 * Bug fix: append pagination div only if the count of the page div is larger
   than the pagination_count
   [ichimdav #13825]

@@ -18,6 +18,17 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
+    // #13816; events portlets displays location as tuple
+    var $portletEvents = $(".portletEvents");
+    $portletEvents.find(".portletItemDetails span").each(function(){
+       var tuple_wrapper = this.innerHTML.indexOf('(u'),
+           right_trimmed_html = this.innerHTML.rtrim();
+        if ( tuple_wrapper !== -1 ) {
+            this.innerHTML = '&mdash; ' + this.innerHTML.slice(tuple_wrapper + 3,
+                right_trimmed_html.length - 3);
+        }
+    });
+
     // #5454 remove background for required fields that have the red square 
     $(".required:contains('■')").addClass('no-bg');
     
