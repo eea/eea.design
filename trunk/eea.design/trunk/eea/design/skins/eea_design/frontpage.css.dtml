@@ -291,7 +291,7 @@ div.current {
   height: 35px;
   clear: both;
   display: block;
-  margin-bottom: 5px;
+  margin:2em 0 5px 0;
 }
 
 /* style for featured boxes */
@@ -444,7 +444,7 @@ a.album-layout:hover {
 .shortcut-light {
     background: transparent;
     border: 1px solid #e6e7e8;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
     text-align: center;
     border-radius: 5px;
      -webkit-border-radius: 5px;

@@ -748,10 +748,6 @@ div.overlay a:hover {
 /* @end styles changes for public.css */
 
 /* @group previously in public.css not found in stock plone */
-dl#featured-datasets {
-  margin-bottom: 2.5em;
-}
-
 #content-core .languageCodes {
     display: inline-block;
 }
