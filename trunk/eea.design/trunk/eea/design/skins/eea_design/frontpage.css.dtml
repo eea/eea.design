@@ -458,9 +458,10 @@ a.album-layout:hover {
     clear: both;
 }
 #semantic-content {
-   background: url("http://www.eea.europa.eu/forum.png") no-repeat 0 0 transparent; /* TODO: to sprite */
-   padding: 0 0 0 45px;
-   min-height: 60px;
+    background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
+    padding: 25px 20px 20px 80px;
+    min-height: 60px;
+    text-align: left;
 }
 
 #mobile-content, #enquiry-content {
@@ -468,21 +469,22 @@ a.album-layout:hover {
     vertical-align: middle;
 }
 #enquiry-content {
-    background: url("http://localhost:8080/forum.png") no-repeat -7px -16px transparent;
+    background: url("&dtml-portal_url;/forum.png") no-repeat -7px -16px transparent;
     padding: 0 0 0 70px;
-    height: 40px;
+    min-height: 40px;
 }
 
 #mobile-content {
-    background: url("http://localhost:8080/mobile-large.png") no-repeat 0px 0px transparent;
+    background: url("&dtml-portal_url;/mobile-large.png") no-repeat 0px 0px transparent;
     padding: 0 0 0 45px;
-    height: 60px;
+    min-height: 60px;
 }
 
 #organisations-content {
-   background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 35px 10px transparent;
-   padding: 25px 0 0px 65px;
-   height: 75px;
+    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px transparent;
+    padding: 25px 20px 20px 90px;
+    min-height: 60px;
+    text-align: left;
 }
 
 #theme-datacentre {
