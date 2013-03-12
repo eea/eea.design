@@ -3,6 +3,9 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
+* Bug fix: append pagination div only if the count of the page div is larger
+  than the pagination_count
+  [ichimdav #13825]
 * Bug fix: fixed display of personaltools bar for auth on IE9
   [ichimdav #14082]
 * Bug fix: Fixed margin and padding issues for whatsnewgallery and right 

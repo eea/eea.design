@@ -647,8 +647,13 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .eea-tabs-panel {
     clear: both;
-    padding: 0 22px 25px 23px;
+    padding: 22px 22px 25px 23px;
     background-color: &dtml-greyBackgroundColor;;
+}
+
+.eea-tabs-panel .listingBar {
+    margin: 0 0 1em 0;
+    padding: 0 1em;
 }
 
 .highlights .portalMessage,
@@ -666,6 +671,10 @@ body.section-signals #nonfolderish-subfolder-view-items {
     background-color: &dtml-greyBackgroundColor;;
     padding: 10px;
 }
+#relatedItems .eea-tabs-panels {
+    padding: 1px;
+}
+
 
 /* multi-lingual changes on main page */
 .section-es #visual-portal-wrapper ul.eea-tabs li a,

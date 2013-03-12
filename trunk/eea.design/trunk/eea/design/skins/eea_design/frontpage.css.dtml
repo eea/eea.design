@@ -523,7 +523,7 @@ a.active-list, a.list-layout:hover {
 .filter-topic {
     float: left;
     text-align: right;
-    width: 84%;
+    width: 83%;
     padding-top: 6px;
 }
 .filter-topic span {
