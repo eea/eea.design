@@ -302,6 +302,10 @@ div.current {
     border-radius: 10px;
 }
 
+.section-multimedia .featured, .section-multimedia .portlet {
+    padding: 1em;
+}
+
 .featured, .portlet {
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 1em;
