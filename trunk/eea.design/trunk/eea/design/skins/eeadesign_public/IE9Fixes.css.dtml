@@ -336,10 +336,6 @@ dd.portletFooter {
     margin-top: 5px;
 }
 
-#portlet-followus dd {
-    padding-left: 0px;
-    margin-left: 0px;
-}
 
 #mobile a:hover {
      border: none !important;
@@ -369,7 +365,7 @@ dd.portletFooter {
 #twitter-link, #facebook-link, #youtube-link, #rss-link, #email-link {
     display: block;
     float: left;
-    margin: 0 20px 0 0;
+    margin: 0;
 }
 
 #document-action-sendto, #document-action-print, #document-action-full_screen, 

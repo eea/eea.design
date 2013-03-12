@@ -460,7 +460,7 @@ a.album-layout:hover {
 #semantic-content {
     background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
     padding: 25px 20px 20px 80px;
-    min-height: 60px;
+    height: 60px;
     text-align: left;
 }
 
@@ -471,19 +471,19 @@ a.album-layout:hover {
 #enquiry-content {
     background: url("&dtml-portal_url;/forum.png") no-repeat -7px -16px transparent;
     padding: 0 0 0 70px;
-    min-height: 40px;
+    height: 40px;
 }
 
 #mobile-content {
     background: url("&dtml-portal_url;/mobile-large.png") no-repeat 0px 0px transparent;
     padding: 0 0 0 45px;
-    min-height: 60px;
+    height: 60px;
 }
 
 #organisations-content {
     background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px transparent;
     padding: 25px 20px 20px 90px;
-    min-height: 60px;
+    height: 60px;
     text-align: left;
 }
 

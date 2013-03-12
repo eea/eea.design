@@ -27,7 +27,7 @@
 }
 
 *:first-child+html .item-content {
-    zoom: 1
+    zoom: 1;
 }
 
 *:first-child+html #portal-globalnav li.plain a.dropTab img,
@@ -48,7 +48,7 @@
  .link-rm, .link-ai, .link-eps, .link-ps, .link-swf, .link-swfl,
  .link-tif, .link-tiff, .link-wav, .link-zip, .link-mdb, .link-dbf,
  .link-rar, .link-txt, .link-external {
-    zoom: 1
+    zoom: 1;
 }
 
 *:first-child+html .portlet-rss .portletFooter a.feedButton img {
@@ -471,7 +471,7 @@ dd.portletFooter {
 #twitter-link, #facebook-link, #youtube-link, #rss-link, #email-link {
     display: block;
     float: left;
-    margin: 0 20px 0 0;
+    margin: 0;
 }
 
 #document-action-sendto, #document-action-print, #document-action-full_screen, #document-action-twitter, #document-action-delicious, #document-action-facebook, #document-action-rdf , #document-action-rss2 {
@@ -708,9 +708,6 @@ body.section-multimedia #header-holder {
 #portal-personaltools dd {
     margin-top: 15px;
 }
-#portal-siteactions {
-    margin-right: 135px;
-}
 
 /* #5455 subfolder navigation fixes */
 
@@ -724,5 +721,6 @@ body.section-multimedia #header-holder {
 #subfolders_listing ul {
     margin: 2.7em 0 0 0;
 }
+
 /* </dtml-with> */
 
