@@ -389,7 +389,7 @@
         />
 
     <!-- Go To Comments viewlet -->
-    <browser:viewlet
+    <!--browser:viewlet
         name="plone.goto_comments"
         for="Products.CMFCore.interfaces.IContentish"
         layer=".interfaces.IEEACommonLayer"
@@ -397,10 +397,10 @@
         view="plone.app.layout.globals.interfaces.IViewView"
         class=".comments.EEAGoToCommentsViewlet"
         permission="zope2.View"
-        />
+        /-->
 
     <!-- Comments viewlet -->
-    <browser:viewlet
+    <!--browser:viewlet
         name="plone.comments"
         for="Products.CMFCore.interfaces.IContentish"
         layer=".interfaces.IEEACommonLayer"
@@ -408,7 +408,7 @@
         view="plone.app.layout.globals.interfaces.IViewView"
         class=".comments.EEACommentsViewlet"
         permission="zope2.View"
-        />
+        /-->
 
 
 </configure>
