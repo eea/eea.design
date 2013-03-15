@@ -3,6 +3,9 @@ Changelog
 
 6.7-dev - (unreleased)
 ----------------------
+* Bug Fix: Corrected the address in the colophon.
+  [prospchr refs #13770]
+
 
 6.6 - (2013-03-15)
 ------------------
