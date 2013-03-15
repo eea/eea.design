@@ -1,0 +1,1 @@
+<div metal:use-macro="here/portlet_promo_gallery/macros/portlet" />

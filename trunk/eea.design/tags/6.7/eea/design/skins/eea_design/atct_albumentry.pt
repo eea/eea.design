@@ -1,0 +1,23 @@
+<metal:entry define-macro="entry">
+  <div tal:define="
+      css python:obj.isPrincipiaFolderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';
+      portal_type obj/portal_type;
+      video python:'video-fancybox' if is_video and portal_type != 'FlashFile' else '';
+      animation python:'animation-fancybox' if portal_type == 'FlashFile' else '';
+      cloud python: 'video-fancybox cloudvideo' if portal_type == 'CloudVideo' else '';"
+    tal:attributes="class css">
+    <a tal:attributes="
+      href listing_url;
+      title obj/pretty_title_or_id;
+      class python:cloud or video or animation">
+      <span class="photoAlbumEntryWrapper">
+      <img tal:attributes="
+        title desc_or_title;
+        alt obj/pretty_title_or_id;
+        src string:${obj/absolute_url}/image_thumb"/>
+      </span>
+      <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+      <span class="photoAlbumEntryDescription" tal:content="python: obj.Description()" />
+    </a>
+  </div>
+</metal:entry>
