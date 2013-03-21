@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Cleanup: removed auth cookie expiration from main_template as due to various
+  reasons will not work.
+  [ghicaale refs #13992]
 
 6.7 - (2013-03-15)
 ------------------

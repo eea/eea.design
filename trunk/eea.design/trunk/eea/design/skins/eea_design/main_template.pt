@@ -95,10 +95,6 @@
       tal:attributes="class python:here.getSectionFromURL(plone_view);
                       dir python:isRTL and 'rtl' or 'ltr'">
 
-<tal:expireAuthCookie condition="isAnon">
-    <tal:expire define="dummy python:request.RESPONSE.expireCookie('__ac', path='/');" />
-</tal:expireAuthCookie>
-
 <div id="print-warning" i18n:domain="eea">
              <p i18n:translate="">
                  Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
