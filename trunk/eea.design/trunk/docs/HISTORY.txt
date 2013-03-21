@@ -18,7 +18,7 @@ Changelog
   [ichimdav #13825]
 * Bug fix: fixed display of personaltools bar for auth on IE9
   [ichimdav #14082]
-* Bug fix: Fixed margin and padding issues for whatsnewgallery and right 
+* Bug fix: Fixed margin and padding issues for whatsnewgallery and right
   column
   [ichimdav #13825]
 * Bug fix: explicitly expire auth cookies when session expires,
