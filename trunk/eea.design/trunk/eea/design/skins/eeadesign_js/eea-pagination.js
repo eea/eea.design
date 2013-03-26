@@ -28,6 +28,8 @@ jQuery(document).ready(function($) {
             var num_entries;
             var $childes;
             var $this = $(this);
+            var keepData = true;
+            var scripts =  $this.find('script');
             if ( this.tagName === "H3" ) {
                 // insert eea-tabs divs if we have h3 elements and we don't
                 // already have eea_tabs div inserted like in the case of paginate divs
@@ -39,6 +41,11 @@ jQuery(document).ready(function($) {
             }
             else {
                 $this.data($self.data());
+                // #8523; remove any scripts that were already loaded but keep
+                // their events and data by passing a true second value to remove
+                if (scripts.length) {
+                    scripts.remove(undefined, keepData);
+                }
                 $childes = $this.children();
                 num_entries = $childes.length;
                 orig_entries = num_entries;
@@ -55,7 +62,6 @@ jQuery(document).ready(function($) {
                                    'data-count': num_entries > pagination_count ?
                                                 pagination_count : num_entries })
                                  .append(items)
-                                 .append('<div class="visualClear" />')
                                  .appendTo($this);
                     $childes = $childes.not(items);
                     num_entries = $childes.length;
