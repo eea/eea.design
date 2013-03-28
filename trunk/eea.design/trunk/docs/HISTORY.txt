@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Cleanup: remove search.js override as we upgraded to Plone 4.2.5
+  (plone.app.search 1.0.8)
+  [voineali refs #14222]
 * Cleanup: removed auth cookie expiration from main_template as due to various
   reasons will not work.
   [ghicaale refs #13992]

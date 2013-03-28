@@ -4,7 +4,7 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:five="http://namespaces.zope.org/five">
-    
+
   <browser:page
      for="plone.portlets.interfaces.ILocalPortletAssignable"
      name="manage-portlets"
@@ -22,13 +22,6 @@
         permission="zope.Public"
         layer="eea.design.browser.interfaces.IEEACommonLayer"
         allowed_interface="plonetheme.sunburst.browser.interfaces.ISunburstView"
-        />                
-
-      <!-- customize plone.app.search js #5346 -->
-    <browser:resource
-        name="search.js"
-        file="javascripts/search.js"
-        layer="eea.design.browser.interfaces.IEEACommonLayer"
         />
 
     <configure zcml:condition="installed plone.app.search">
