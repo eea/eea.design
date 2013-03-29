@@ -649,6 +649,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     clear: both;
     padding: 22px 22px 25px 23px;
     background-color: &dtml-greyBackgroundColor;;
+    overflow: hidden;
 }
 
 .eea-tabs-panel .listingBar {
@@ -2674,4 +2675,5 @@ div#users, div#chatrooms, div#settings, div#controlbox-panes  {
 div.row {
     margin-left: 0;
 }
+
 /* </dtml-with> */

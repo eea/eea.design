@@ -234,6 +234,11 @@ dl.portlet a:visited {
     padding: 2px 0px 1px 16px;
 }
 
+/* stretch eventDetails to full width to avoid scroll bars and right alignment */
+#content .eventDetails {
+    width: 100%;
+}
+
 #category, #themes-tags {
     font-size: 100%;
     margin-bottom: 1em;
