@@ -474,8 +474,14 @@ form.searchPage h1.documentFirstHeading {
     padding-right: 0;
 }
 
+/* 14229 fixed dropdown menu when no results are found */
 #search-results-bar dd.actionMenuContent {
-    min-width: 460px;
+    background: #EEE;
+    -webkit-column-count: 3;
+            column-count: 3;
+    min-width: 700px;
+    padding: 1em 1em 1em 0;
+    position: relative;
 }
 /* @end Search results page */
 
