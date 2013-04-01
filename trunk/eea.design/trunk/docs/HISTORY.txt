@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Bugfix: override data attribute of Events portlet in order to also display
+  QuickEvents
+  [ichimdav refs #13816]
 * Bugfix: properly display filter menu dropdown when no results are found
   [ichimdav #14229]
 * Cleanup: remove search.js override as we upgraded to Plone 4.2.5
