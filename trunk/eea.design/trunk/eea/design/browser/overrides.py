@@ -22,7 +22,7 @@ class EEAEventsRenderer(EventsRenderer):
         state = self.data.state
         path = self.navigation_root_path
         # #13816 start override by passing QuickEvent to portal_type for
-        # events portlet ata
+        # events portlet
         return catalog(portal_type=['Event', 'QuickEvent'],
                        review_state=state,
                        end={'query': DateTime(),
