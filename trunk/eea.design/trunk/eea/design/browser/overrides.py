@@ -1,3 +1,6 @@
+""" IEEACommonLayer specific overrides
+"""
+
 from plone.app.portlets.portlets.events import Renderer as EventsRenderer
 from plone.memoize.instance import memoize
 from Acquisition import aq_inner
@@ -6,9 +9,13 @@ from Products.CMFCore.utils import getToolByName
 
 
 class EEAEventsRenderer(EventsRenderer):
+    """ Customized Events Renderer
+    """
 
     @memoize
     def _data(self):
+        """ :return: catalog search for events with the minimum range of now
+        """
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         limit = self.data.count
