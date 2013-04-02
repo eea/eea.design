@@ -138,7 +138,7 @@
 
 #portal-footer #portlet-ecotip dt {
     padding: 0px;
-    background: transparent;;
+    background: transparent;
 }
 #portal-footer #portlet-ecotip {
     margin: 0;

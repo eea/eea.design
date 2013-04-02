@@ -772,7 +772,7 @@ form.manylanguages select {
 
 .relatedLinks li {
     display: inline;
-    font-size: 0.8em;;
+    font-size: 0.8em;
 }
 
 .awardNotice {
