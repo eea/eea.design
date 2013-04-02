@@ -9,6 +9,7 @@ from types import GeneratorType
 def _get_contents(obj, size_limit, request, facetednav=None):
     """ Get contents of folderish brain (cachable list/dict format)
     """
+    brains = []
     if facetednav:
         query = facetednav.default_criteria
         brains = facetednav.query(batch=False, sort=True, **query)
@@ -19,11 +20,12 @@ def _get_contents(obj, size_limit, request, facetednav=None):
 
     # NOTE: plone4 brains from topics end up as
     # generators therefore we need to convert it
-    # back to a list to have a lenght and be able to slice it
+    # back to a list to have a length and be able to slice it
     if isinstance(brains, GeneratorType):
         brains = [obj for obj in brains]
-    else:
-        pass
+
+    if not brains:
+        return False
     return [{
         'title': brain.Title,
         'description': brain.Title,
@@ -91,18 +93,20 @@ class SubFolderView(BrowserView):
             facetednav = queryMultiAdapter((obj, self.request),
                                            name=u'faceted_query')
             if (obj.portal_type in ['Folder', 'Topic']) or facetednav:
-                contents, nitems = _get_contents(
+                res = _get_contents(
                     obj, size_limit, self.request, facetednav)
-                ret['folderish'].append({
-                    'title': title,
-                    'description': obj.Description(),
-                    'url': url,
-                    'listing_url': listing_url,
-                    'portal_type': obj.portal_type,
-                    'contents': contents,
-                    'has_more': nitems > size_limit,
-                    'nitems': nitems,
-                })
+                if res:
+                    contents, nitems = res
+                    ret['folderish'].append({
+                        'title': title,
+                        'description': obj.Description(),
+                        'url': url,
+                        'listing_url': listing_url,
+                        'portal_type': obj.portal_type,
+                        'contents': contents,
+                        'has_more': nitems > size_limit,
+                        'nitems': nitems,
+                    })
             else:
                 relatedObjects = obj.getRelatedItems()
                 if not relatedObjects:

@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Bugfix: fix a potential issue with subfolder logic which gave an error when
+  no results were found
+  [ichimdav]
 * Bugfix: override data attribute of Events portlet in order to also display
   QuickEvents
   [ichimdav refs #13816]
