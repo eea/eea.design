@@ -3,6 +3,8 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Bug fix: fix redirection to previous page when logging in from the login popup
+  [tiberich #14085]
 * Bugfix: fix a potential issue with subfolder logic which gave an error when
   no results were found
   [ichimdav]

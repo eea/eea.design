@@ -45,7 +45,9 @@
   #9485; added login form as a popup
 </tal:comment>
 <tal:login_form tal:define="portal_state context/@@plone_portal_state" tal:condition="portal_state/anonymous">
-  <div id="popup_login_form" style="display:none;">
+  <div id="popup_login_form" style="display:none;" 
+       tal:define="qs request/QUERY_STRING; 
+                   came_from python:request['URL'] + (qs and '?' or '') + qs">
     <metal:login_form use-macro="context/login_form/macros/login" />
   </div>
 </tal:login_form>
