@@ -592,9 +592,9 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: inherit;
 }
 
-#visual-portal-wrapper ul.eea-tabs.two-rows > li {
+#whatsnew-gallery ul.eea-tabs.two-rows > li {
     line-height: 1.6em !important;
-    max-width: 130px;
+    max-width: 125px;
 }
 
 #visual-portal-wrapper ul.eea-tabs a {
@@ -603,7 +603,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: 125%;
     padding: 9px 10px 11px 10px;
     display: block;
-    margin: 0 -2px;
+    margin: 0;
     font-weight: normal;
     border: 0;
 }
@@ -632,11 +632,39 @@ body.section-signals #nonfolderish-subfolder-view-items {
     -moz-border-radius: 8px 0 0 0;
 }
 
-#visual-portal-wrapper ul.eea-tabs li:last-child > a {
+#visual-portal-wrapper ul.eea-tabs li.last-child > a {
     border-radius: 0 8px 0 0;
     -webkit-border-radius: 0 8px 0 0;
     -moz-border-radius: 0 8px 0 0;
-    margin: 0 -4px;
+    margin: 0;
+}
+
+#whatsnew-gallery ul.eea-tabs.two-rows li.tab-large  {
+    max-width: 150px;
+}
+
+#whatsnew-gallery ul.eea-tabs.two-rows li.tab-medium {
+    max-width: 100px;
+}
+
+.mt #whatsnew-gallery ul.eea-tabs li.last-child > a {
+    max-width: 77px;
+}
+
+.mt #whatsnew-gallery ul.eea-tabs > li {
+    max-width: 140px;
+}
+.lt #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.bg #whatsnew-gallery ul.eea-tabs.two-rows > li
+{
+    max-width: 110px;
+}
+.lt #whatsnew-gallery ul.eea-tabs li.last-child,
+.cs #whatsnew-gallery ul.eea-tabs li.last-child {
+    max-width: 85px;
+}
+.de #whatsnew-gallery ul.eea-tabs li.last-child {
+    max-width: 95px;
 }
 
 #visual-portal-wrapper ul.eea-tabs > span {
@@ -674,76 +702,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 #relatedItems .eea-tabs-panels {
     padding: 1px;
-}
-
-
-/* multi-lingual changes on main page */
-.section-es #visual-portal-wrapper ul.eea-tabs li a,
-.section-sl #visual-portal-wrapper ul.eea-tabs li a,
-.section-pl #visual-portal-wrapper ul.eea-tabs li a,
-.section-lt #visual-portal-wrapper ul.eea-tabs li a,
-.section-fr #visual-portal-wrapper ul.eea-tabs li a,
-.section-pt #visual-portal-wrapper ul.eea-tabs li a,
-.section-bg #visual-portal-wrapper ul.eea-tabs li a,
-.section-nl #visual-portal-wrapper ul.eea-tabs li a,
-.section-et #visual-portal-wrapper ul.eea-tabs li a,
-.section-de #visual-portal-wrapper ul.eea-tabs li a,
-.section-hu #visual-portal-wrapper ul.eea-tabs li a,
-.section-el #visual-portal-wrapper ul.eea-tabs li a {
-    max-height: 27px;
-    min-height: 27px;
-    padding: 7px 10px 13px 10px;
-}
-
-.section-bg #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 113px;
-}
-
-.section-et #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 125px;
-}
-
-.section-fr #visual-portal-wrapper ul.eea-tabs li,
-.section-pt #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 110px;
-}
-
-.section-el #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 128px;
-}
-
-.section-lt #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 102px;
-}
-
-.section-pl #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 106px;
-}
-
-.section-es #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 110px;
-}
-
-.section-mt #visual-portal-wrapper ul.eea-tabs li {
-    max-width: 125px;
-}
-
-.section-mt #visual-portal-wrapper ul.eea-tabs a {
-    max-height: 17px;
-    min-height: 17px;
-    font-size: 115%;
-}
-
-.section-de #visual-portal-wrapper ul.eea-tabs li {
-    min-width: 69px;
-}
-
-.section-de #visual-portal-wrapper ul.eea-tabs li a {
-    font-size: 111%;
-}
-
-.section-lt #visual-portal-wrapper ul.eea-tabs li a {
-    font-size: 120%;
 }
 
 /* eea accordion styles */
@@ -2490,12 +2448,12 @@ input.queryvalue {
     color: #8e004d;
     text-decoration: underline;
 }
-a#subfolders_more_a {
+a#subfolders_more_a, .more_dropdown_a {
     background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% transparent;
     padding-right: 2.5em;
 }
 
-#subfolders_listing #subfolders_more_a:hover, #subfolders_listing .moreHover {
+#subfolders_listing #subfolders_more_a:hover, #subfolders_listing .moreHover, .more_dropdown_a .moreHover {
     background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% #FFF !important;
     position: relative;
     z-index: 1010;
@@ -2512,10 +2470,12 @@ a#subfolders_more_a {
     border-bottom: medium none;
     border-radius: 5px 5px 0 0;
 }
+
 #subfolders_listing ul a {
     min-width: 140px;
     display: block;
 }
+
 #subfolders_listing ul {
     position: absolute;
     background-color: #FFFFFF;

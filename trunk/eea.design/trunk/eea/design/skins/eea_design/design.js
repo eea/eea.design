@@ -11,6 +11,11 @@ jQuery(document).ready(function($) {
         secundary_portaltabs.appendTo(global_nav);
     }
 
+    // 13830 add last-child class since ie < 9 doesn't know this css3 selector
+    $("#whatsnew-gallery").find('.eea-tabs').find('li:last-child').addClass('last-child');
+    $('.de').find('#tab-publications').parent().addClass('tab-large').end().end()
+            .find('#tab-datamaps').parent().addClass('tab-medium');
+
     // #9485; login form as popup
     var $popup_login = $("#popup_login_form");
     $("#anon-personalbar, #siteaction-login").click(function( e ) {

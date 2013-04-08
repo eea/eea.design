@@ -200,13 +200,6 @@ body.frontpage #portal-columns {
     list-style: none outside none;
 }
 
-#multimedia-highlights ul li,
-#multimedia-highlights ul li a
-{
-    padding: 0;
-    margin: 0;
-    border: none;
-}
 
 /* Frontpage news and articles
 ******************************************************************************/
