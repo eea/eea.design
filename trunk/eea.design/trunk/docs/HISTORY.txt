@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Feature: added language code to the body class in order to have language 
+  specific fixes
+  [ichimdav refs #13830]
 * Bug fix: fix redirection to previous page when logging in from the login popup
   [tiberich #14085]
 * Bugfix: fix a potential issue with subfolder logic which gave an error when
