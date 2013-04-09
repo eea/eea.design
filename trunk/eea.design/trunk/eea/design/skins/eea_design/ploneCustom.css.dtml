@@ -639,6 +639,67 @@ body.section-signals #nonfolderish-subfolder-view-items {
     margin: 0;
 }
 
+/* Translations adjustments of width of list items for whatsnew-gallery */
+
+.sl #whatsnew-gallery ul.eea-tabs.two-rows > li {
+    max-width: 165px;
+}
+
+.hu #whatsnew-gallery ul.eea-tabs.two-rows > li {
+    max-width: 155px;
+}
+
+.pt #whatsnew-gallery ul.eea-tabs.two-rows > li {
+    max-width: 150px;
+}
+
+.it #whatsnew-gallery ul.eea-tabs.two-rows > li {
+    max-width: 140px;
+}
+
+.mt #whatsnew-gallery ul.eea-tabs.two-rows > li {
+    max-width: 135px;
+}
+
+.fi #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.ro #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.sk #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.sv #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.tr #whatsnew-gallery ul.eea-tabs.two-rows > li {
+    max-width: 130px;
+}
+
+.bg #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.es #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.lt #whatsnew-gallery ul.eea-tabs.two-rows > li
+{
+    max-width: 110px;
+}
+
+.de #whatsnew-gallery ul.eea-tabs li.last-child {
+    max-width: 95px;
+}
+
+.hu #whatsnew-gallery ul.eea-tabs li.last-child,
+.pl #whatsnew-gallery ul.eea-tabs li.last-child {
+    max-width: 90px;
+}
+
+.cs #whatsnew-gallery ul.eea-tabs li.last-child,
+.es #whatsnew-gallery ul.eea-tabs li.last-child,
+.lt #whatsnew-gallery ul.eea-tabs li.last-child,
+.mt #whatsnew-gallery ul.eea-tabs li.last-child,
+.sv #whatsnew-gallery ul.eea-tabs li.last-child {
+    max-width: 85px;
+}
+
+.fr #whatsnew-gallery ul.eea-tabs li.last-child,
+.it #whatsnew-gallery ul.eea-tabs li.last-child,
+.pt #whatsnew-gallery ul.eea-tabs li.last-child {
+    max-width: 80px;
+}
+
+/* see design.js for languages that add these classes */
 #whatsnew-gallery ul.eea-tabs.two-rows li.tab-large  {
     max-width: 150px;
 }
@@ -647,23 +708,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     max-width: 100px;
 }
 
-.mt #whatsnew-gallery ul.eea-tabs li.last-child > a {
-    max-width: 77px;
-}
-
-.mt #whatsnew-gallery ul.eea-tabs > li {
-    max-width: 140px;
-}
-.lt #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.bg #whatsnew-gallery ul.eea-tabs.two-rows > li
-{
-    max-width: 110px;
-}
-.lt #whatsnew-gallery ul.eea-tabs li.last-child,
-.cs #whatsnew-gallery ul.eea-tabs li.last-child {
-    max-width: 85px;
-}
-.de #whatsnew-gallery ul.eea-tabs li.last-child {
+#whatsnew-gallery ul.eea-tabs.two-rows li.tab-small {
     max-width: 95px;
 }
 
