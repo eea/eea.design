@@ -653,12 +653,9 @@ body.section-signals #nonfolderish-subfolder-view-items {
     max-width: 150px;
 }
 
-.it #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    max-width: 140px;
-}
-
+.it #whatsnew-gallery ul.eea-tabs.two-rows > li,
 .mt #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    max-width: 135px;
+    max-width: 140px;
 }
 
 .fi #whatsnew-gallery ul.eea-tabs.two-rows > li,
@@ -671,24 +668,24 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .bg #whatsnew-gallery ul.eea-tabs.two-rows > li,
 .es #whatsnew-gallery ul.eea-tabs.two-rows > li,
+.el #whatsnew-gallery ul.eea-tabs.two-rows > li,
 .lt #whatsnew-gallery ul.eea-tabs.two-rows > li
 {
     max-width: 110px;
 }
 
-.de #whatsnew-gallery ul.eea-tabs li.last-child {
-    max-width: 95px;
-}
-
+.bg #whatsnew-gallery ul.eea-tabs li.last-child,
 .hu #whatsnew-gallery ul.eea-tabs li.last-child,
+.mt #whatsnew-gallery ul.eea-tabs li.last-child,
 .pl #whatsnew-gallery ul.eea-tabs li.last-child {
     max-width: 90px;
 }
 
 .cs #whatsnew-gallery ul.eea-tabs li.last-child,
+.de #whatsnew-gallery ul.eea-tabs li.last-child,
 .es #whatsnew-gallery ul.eea-tabs li.last-child,
+.el #whatsnew-gallery ul.eea-tabs li.last-child,
 .lt #whatsnew-gallery ul.eea-tabs li.last-child,
-.mt #whatsnew-gallery ul.eea-tabs li.last-child,
 .sv #whatsnew-gallery ul.eea-tabs li.last-child {
     max-width: 85px;
 }
@@ -710,6 +707,14 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 #whatsnew-gallery ul.eea-tabs.two-rows li.tab-small {
     max-width: 95px;
+}
+
+#whatsnew-gallery ul.eea-tabs.two-rows li.tab-xsmall {
+    max-width: 80px;
+}
+
+#whatsnew-gallery ul.eea-tabs.two-rows li.tab-tiny {
+    max-width: 70px;
 }
 
 #visual-portal-wrapper ul.eea-tabs > span {
