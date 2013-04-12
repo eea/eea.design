@@ -1,0 +1,9 @@
+<title tal:define="page_title browser_title|view/page_title">
+  <tal:pagetitle replace="page_title">
+    Inserts page title
+  </tal:pagetitle>
+  &mdash;
+
+  <tal:portaltitle i18n:domain="eea" i18n:translate=""
+      tal:content="view/portal_title">EEA</tal:portaltitle>
+</title>

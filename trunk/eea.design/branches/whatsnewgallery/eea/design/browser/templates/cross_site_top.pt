@@ -1,0 +1,59 @@
+<div id="cross-site-top">
+   <div metal:use-macro="context/@@global_externalsites/external_sites">
+       Eionet, EW ..
+   </div>
+    
+<ul id="portal-siteactions"
+    tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};
+                portal_url context/@@plone_portal_state/portal_url;
+                putils context/plone_utils;
+                context_state    context/@@plone_context_state;
+                site_actions python: context_state.actions('site_actions');
+                getIconFor nocall:putils/getIconFor;"
+    tal:condition="site_actions"
+    i18n:domain="eea">
+
+    <li tal:repeat="saction site_actions"
+        tal:attributes="id string:siteaction-${saction/id}"><a
+           href=""
+           tal:define="title saction/title;
+                       id saction/id;
+
+                       icon python:getIconFor('site_actions', saction['id'], None);
+                       accesskey python: accesskeys.get(id, '');"
+           tal:attributes="href saction/url;
+                           title title;
+                           accesskey accesskey;">
+
+                           <img i18n:attributes="title" src="" alt="" title=""
+                                     tal:attributes="src    string:$icon;
+                                     id     string:icon-${saction/id};
+                                     title  title;
+                                     alt    title;"
+                     tal:condition="icon"/>
+       <tal:title tal:content="python:title.strip()" i18n:translate=""></tal:title></a></li>
+</ul>
+
+   <div metal:use-macro="here/cross_site_panels/macros/main">
+       dropdown for ETCs ..
+   </div>
+
+   <div class="visualClear"><!-- &nbsp; --></div>
+</div>
+
+<tal:comment replace="nothing">
+  #9485; added login form as a popup
+</tal:comment>
+<tal:login_form tal:define="portal_state context/@@plone_portal_state" tal:condition="portal_state/anonymous">
+  <div id="popup_login_form" style="display:none;" 
+       tal:define="qs request/QUERY_STRING; 
+                   came_from python:request['URL'] + (qs and '?' or '') + qs">
+    <metal:login_form use-macro="context/login_form/macros/login" />
+  </div>
+</tal:login_form>
+
+<div class="eea-i18n-js hiddenElem" i18n:domain="eea">
+    <div id="eeaPaginationNext" i18n:translate="">next</div>
+    <div id="eeaPaginationPrev" i18n:translate="">previous</div>
+    <div id="eeaPaginationItems" i18n:translate="">items</div>
+</div>
