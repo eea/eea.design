@@ -12,6 +12,7 @@ jQuery(document).ready(function($) {
 
     eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index, tag_title) {
             var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
+            eea_gal.current_tab_addr = address;
             var gal = eea_gal.gallery.find(".eea-tabs-panel");
             var news = index ? gal[index] : gal.filter(function() {return this.style.display !== 'none';});
             // workaround: we need the first highlights because when we click on the
@@ -42,9 +43,23 @@ jQuery(document).ready(function($) {
                          album.hide().fadeIn('slow');
                     }
                 }
+                if (gallery_ajax.find('.portalMessage').length) {
+                    $(window).trigger('eea.whatnews.emptyresults', gallery_ajax);
+                }
 
             });
     };
+    $(window).bind('eea.whatnews.emptyresults', function(ev, data) {
+        var $self = $(data);
+        $self.load(eea_gal.current_tab_addr, 'AllLanguages=true', function(data){
+            var $data = $(data);
+            $self.find('a').click(function(ev){
+                var params = 'Language=' + ev.target.innerHTML;
+                $self.load(eea_gal.current_tab_addr, params);
+                ev.preventDefault();
+            });
+        });
+    });
 
     $("#whatsnew-gallery .eea-tabs, #multimedia-tabs").tabs("> .eea-tabs-panel", function(event, index) {
         var cur_tab = this.getTabs()[index],

@@ -1,7 +1,32 @@
-<tal:articles metal:define-macro="articles" 
-        tal:define="frontpage_view context/@@frontpage_highlights;
-                    folderContents frontpage_view/getArticles;
-                    ajax python:True">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+<metal:articles tal:condition="python: not request.get('AllLanguages')">
 
-</tal:articles>
+    <tal:articles metal:define-macro="articles"
+            tal:define="frontpage_view context/@@frontpage_highlights;
+                        language python:request.get('Language');
+                        folderContents python: frontpage_view.getArticles() if not language else frontpage_view.getArticles(language=language);
+                        noResults python:request.get('noResults');
+                        ajax python:True">
+            <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+
+    </tal:articles>
+
+</metal:articles>
+
+
+<metal:languages tal:condition="python:request.get('AllLanguages')">
+
+    <tal:articles
+                  tal:define="frontpage_view context/@@frontpage_highlights;
+                            languages frontpage_view/getResultsInAllLanguages;
+                            noResults python:request.get('noResults');
+                            ajax python:True">
+        <ul>
+        <tal:repeat tal:repeat="lang languages">
+            <a href="#">
+               <li tal:content="lang">language</li>
+            </a>
+        </tal:repeat>
+        </ul>
+    </tal:articles>
+
+</metal:languages>

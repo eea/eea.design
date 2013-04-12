@@ -15,6 +15,7 @@ from zope.component import queryMultiAdapter
 class Frontpage(BrowserView):
     """ Front page
     """
+
     def __init__(self, context, request):
         BrowserView.__init__(self, context, request)
 
@@ -55,14 +56,15 @@ class Frontpage(BrowserView):
                 noOfItems = self.noOfNews)
         return items
 
-    def getArticles(self, portaltypes = "Article"):
+    def getArticles(self, portaltypes = "Article", language=None):
         """ retrieves latest articles by date and by topic """
         return _getItems(self,
-                portaltypes = "Article", noOfItems=self.noOfArticles)
+                portaltypes = portaltypes, noOfItems=self.noOfArticles,
+                language = language)
 
     def getPublications(self, portaltypes = "Report"):
         """ retrieves latest publications by date and by topic """
-        return _getItems(self, portaltypes = 'Report',
+        return _getItems(self, portaltypes = portaltypes,
                                     noOfItems=self.noOfPublications)
 
     def getAllProducts(self, no_sort = False):
@@ -207,6 +209,13 @@ class Frontpage(BrowserView):
 
         return result
 
+    def getResultsInAllLanguages(self):
+        """
+        :return: results of given method in any of the context translated languages
+        """
+        translations = self.context.getTranslations()
+        return translations.keys()
+
 ## deprecated visibility methods
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
     def getLow(self, portaltypes=('Highlight', 'PressRelease'),
@@ -326,14 +335,17 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
     """ retrieves items of certain content types and/or interface
     and certain visibility level.
     """
+    # for tests we need to give an int value if noOfItems remains none
+    noOfItems = noOfItems or 6
     query = {
             'review_state'       : 'published',
             'sort_on'            : 'effective',
-            'sort_order'         : 'reverse'
+            'sort_order'         : 'reverse',
+            'sort_limit'         : noOfItems
             }
 
-    if self.context.get('getLanguage'):
-        query['language'] = self.context.getLanguage()
+    if getattr(self.context, 'getLanguage', None):
+        query['Language'] = self.context.getLanguage()
     if portaltypes:
         query['portal_type'] = portaltypes
     if visibilityLevel:
@@ -342,24 +354,26 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
         query['object_provides'] = interfaces
     if topic:
         query['getThemes'] = topic
-    # for tests we need to give an int value if noOfItems remains none
-    noOfItems = noOfItems or 6
     res = self.catalog.searchResults(query)
     filtered_res = filterLatestVersion(self, brains = res,
                                                 noOfItems = noOfItems)
     return filtered_res
 
-def _getTopics(self, topic = None, portaltypes = None,
-                object_provides = None, tags = None, noOfItems = None):
+def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
+               tags = None, noOfItems = None, language = None):
     """ retrieves items of certain content types and/or interface and
     certain visibility level, with the addition of topic filtering """
+    noOfItems = noOfItems or 8
     query = {
         'review_state'   : 'published',
         'sort_on'        : 'effective',
-        'sort_order'     : 'reverse'
+        'sort_order'     : 'reverse',
+        'sort_limit'     : noOfItems
         }
-    if self.context.get('getLanguage'):
-        query['language'] = self.context.getLanguage()
+    if getattr(self.context, 'getLanguage', None):
+        query['Language'] = self.context.getLanguage()
+    if language:
+        query['Language'] = language
     if portaltypes:
         query['portal_type'] = portaltypes
     if object_provides:
@@ -375,7 +389,7 @@ def _getTopics(self, topic = None, portaltypes = None,
 
 
 def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
-                                                                noOfItems=6):
+                                        noOfItems=6, language=None):
     """ generic internal method for getting items from catalog
     (via portaltypes or via interfaces) filtered by topic or not.
     """
@@ -393,7 +407,7 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
         #if there is a topic/theme tag then get items filtered
         if topic:
             result = _getTopics(self, portaltypes = portaltypes,
-                                          topic = topic, noOfItems = noOfItems)
+                      topic = topic, noOfItems = noOfItems, language=language)
         elif tags:
             result = _getTopics(self, portaltypes = portaltypes,
                                             tags = tags, noOfItems = noOfItems)
@@ -465,3 +479,4 @@ def filterLatestVersion(self, brains, noOfItems = 6):
             break  #we got enough items
 
     return res
+
