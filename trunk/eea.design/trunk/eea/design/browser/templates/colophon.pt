@@ -81,7 +81,7 @@
                         tal:attributes="href string:${portal_url}/login_form" 
                         title="CMS login"
                         i18n:attributes="title"><strong i18n:translate="">CMS login</strong></a>
-                    <a href="http://svn.eionet.europa.eu/projects/Zope/browser/trunk/www.eea.europa.eu/trunk/docs" 
+                    <a href="https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk/docs/" 
                         title="Software updates history"
                         i18n:attributes="title"
                         i18n:translate="">Software updates history</a>
