@@ -1,4 +1,4 @@
-<div i18n:domain="plone"
+<div i18n:domain="eea-notranslate"
      class="contentActions"
      tal:define="ploneview context/@@plone"
      tal:condition="ploneview/showEditableBorder">
@@ -12,7 +12,6 @@
         <ul tal:condition="content_actions" class="actionItems">
             <li tal:repeat="action content_actions"
                 tal:attributes="id string:contentaction-${action/id};">
-
                 <a class="" href=""
                    tal:define="icon python:view.icon(action)"
                    tal:attributes="href action/url;
@@ -21,8 +20,8 @@
                     <img alt="" src=""
                          tal:condition="icon"
                          tal:attributes="src icon; alt action/title;" />
-
-                    <tal:action tal:content="action/title" i18n:translate="">
+                   
+                    <tal:action tal:content="python:context.translate(action['title'], target_language='en')">
                         Action name
                     </tal:action>
                 </a>

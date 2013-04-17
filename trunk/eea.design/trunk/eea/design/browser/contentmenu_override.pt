@@ -3,10 +3,9 @@
     xmlns:tal="http://xml.zope.org/namespaces/tal"
     tal:define="menu view/menu"
     tal:condition="view/available"
-    i18n:domain="plone">
+    i18n:domain="eea-notranslate">
 
     <li tal:repeat="menuItem menu">
-
         <dl class="actionMenu deactivated"
             tal:attributes="id menuItem/extra/id"
             tal:define="submenu menuItem/submenu">
@@ -17,17 +16,21 @@
                tal:omit-tag="not:menuItem/action"
                tal:attributes="href menuItem/action;
                                title menuItem/description"
-               i18n:attributes="title;">
+               >
                <span tal:omit-tag="menuItem/action"
                      class="noMenuAction">
-                  <span tal:content="menuItem/title"
-                        i18n:translate="">
+                     <span tal:content="
+                         python:context.translate(menuItem['title'], target_language='en')
+                         "
+                        >
                       Title
                   </span>
                   <span tal:condition="menuItem/extra/stateTitle | nothing"
                         tal:attributes="class menuItem/extra/class | nothing"
-                        tal:content="menuItem/extra/stateTitle"
-                        i18n:translate="">
+                        tal:content="
+                         python:context.translate(menuItem['extra']['stateTitle'], target_language='en')
+"
+                        >
                       State title
                   </span>
                   <span class="arrowDownAlternative"
@@ -46,7 +49,7 @@
                                        title subMenuItem/description;
                                        id subMenuItem/extra/id | nothing;
                                        class subMenuItem/extra/class | nothing"
-                       i18n:attributes="title">
+                       >
                         <img width="16"
                              height="16"
                              alt=""
@@ -55,9 +58,9 @@
                                              title subMenuItem/description;
                                              width subMenuItem/width|string:16;
                                              height subMenuItem/height|string:16;"
-                             i18n:attributes="alt;"/>
-                        <span tal:content="structure subMenuItem/title"
-                              i18n:translate=""
+                             />
+                             <span tal:content="structure 
+                                python:context.translate(subMenuItem['title'], target_language='en')"
                               class="subMenuTitle">
                             Title
                         </span>
@@ -71,9 +74,9 @@
                              tal:condition="subMenuItem/icon"
                              tal:attributes="src subMenuItem/icon;
                                              title subMenuItem/description"
-                             i18n:attributes="alt;"/>
-                        <span tal:content="structure subMenuItem/title"
-                              i18n:translate=""
+                             />
+                        <span tal:content="structure 
+                                python:context.translate(subMenuItem['title'], target_language='en')"
                               class="subMenuTitle">
                             Title
                         </span>
