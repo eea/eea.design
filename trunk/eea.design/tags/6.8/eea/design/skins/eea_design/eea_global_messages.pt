@@ -1,0 +1,16 @@
+<div class="message_wrap" style="display: none;">
+    <div class="message_body">
+        <div class="message_images">
+            <img src="/survey-image.jpg" width="130px" />
+        </div>
+        <div class="message_text">
+            <h3 i18n:translate="">We value your opinion</h3>
+            <p i18n:translate="">Ongoing survey: users' satisfaction with EEA products and services</p>
+            <p i18n:translate="">This survey is carried out in connection with the on-going Five-Year Evaluation of the EEA for the period 2007-2012.</p>
+            <p i18n:translate="">We hope that you will spend <strong>5-10 minutes</strong> to complete the survey</p>
+            <a class="standardButton" href="https://www.inquisiteasp.dk/cgi-bin/qwebcorporate.cgi?idx=u3u3qf" target='_blank' i18n:translate="" id="take_survey">Take the online survey</a>
+            <a class="standardButton" href="#" i18n:translate="" id="repeat_survey">Remind me later</a>
+            <a class="standardButton" href="#" i18n:translate="" id="no_survey">Never show this again</a>
+        </div>
+    </div>
+</div>

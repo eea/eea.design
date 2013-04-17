@@ -1,0 +1,6 @@
+<tal:items metal:define-macro="graphs" 
+        tal:define="datamaps_view context/@@data_and_maps_logic;
+                    folderContents datamaps_view/getLatestGraphs;
+                    ajax python:True">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+</tal:items>
