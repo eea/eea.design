@@ -3,6 +3,9 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Feature: customized content menu templates in order to display edit bar 
+  in english at all times
+  [ichimdav #14087]
 
 6.8 - (2013-04-17)
 ------------------

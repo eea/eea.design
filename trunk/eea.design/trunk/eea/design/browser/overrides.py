@@ -7,6 +7,9 @@ from Acquisition import aq_inner
 from DateTime.DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 
+from plone.app.contentmenu.view import ContentMenuProvider 
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+
 
 class EEAEventsRenderer(EventsRenderer):
     """ Customized Events Renderer
@@ -32,3 +35,8 @@ class EEAEventsRenderer(EventsRenderer):
                        sort_limit=limit)[:limit]
 
 
+class EEAContentMenuProvider(ContentMenuProvider):
+    """ ContentMenuProvider customization to use a template which returns 
+    results only in english
+    """
+    index = ViewPageTemplateFile('contentmenu_override.pt')
