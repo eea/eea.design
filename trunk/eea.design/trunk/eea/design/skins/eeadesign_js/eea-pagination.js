@@ -7,13 +7,25 @@ jQuery(document).ready(function($) {
         $eea_tabs = $("#eea-tabs"),
         $paginate = $(".paginate"),
         $eea_tabs_panels = $("#eea-tabs-panels"),
+        $sorter_ctl = $related_items.find(".sorter_ctl"),
         pagination_count = 12;
 
-    $.merge($paginate, $related_items.find('.visualNoMarker')).each(function() {
-        var $self = $(this),
+        console.log('sorter_ctl', $sorter_ctl);
+
+    $sorter_ctl.change(function(){
+        console.log("Changing this");
+        //redraw()
+        $.merge($paginate, $related_items.find('.visualNoMarker')).each(redraw);
+    });
+
+    var redraw = function(index, el){
+        var $self = $(el),
             $children = $self.children(),
             count = 0,
             isPaginate = $self.hasClass('paginate');
+     console.log("This", $self);
+     // console.log($self);
+     // console.log($children);
         pagination_count =  window.parseInt(
                     $self.attr('data-paginate-count'), 10) || pagination_count;
         // if first element is an h3 then we should get the children since we
@@ -100,8 +112,9 @@ jQuery(document).ready(function($) {
             $eea_tabs = "";
             $eea_tabs_panels = "";
         }
+    }
 
-    });
+    $.merge($paginate, $related_items.find('.visualNoMarker')).each(redraw);
 
     if ( has_related_items || $paginate.length ) {
         window.EEA.eea_tabs();
