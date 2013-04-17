@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.9-dev - (unreleased)
+----------------------
+
 6.8 - (2013-04-17)
 ------------------
 * Feature: added language code to the body class in order to have language 
