@@ -1,4 +1,13 @@
 jQuery(document).ready(function($) {
+
+    $(window).bind('eea.tags.loaded', function (evt, tab) {
+        var $tab = $(tab);
+        $tab.find('a').bind('click', function(ev){
+            window.location.hash = this.id;
+            ev.preventDefault();
+        });
+    });
+
     var eea_tabs = function(){
         if($("#whatsnew-gallery").length) {
             return;
@@ -9,6 +18,11 @@ jQuery(document).ready(function($) {
         if (eea_tabs_length) {
             for (i; i < eea_tabs_length; i += 1) {
                 $eea_tab = $eea_tabs.eq(i);
+                // don't run tab logic if tab already contains tab data
+                if ($eea_tab.data('tabs')) {
+                    $(window).trigger('eea.tags.loaded', $eea_tab);
+                    continue;
+                }
                 // detach tab for dom manipulation
                 $eea_tab.detach();
                 $eea_tabs_panel = $eea_tabs_panels.eq(i);
@@ -32,7 +46,7 @@ jQuery(document).ready(function($) {
                     if (!$tab_title.find('a').length) {
                         tab_title_text = $tab_title.text();
                         $tab_title.text("");
-                        $('<a />').attr('href', '#').html(tab_title_text).appendTo($tab_title);
+                        $('<a />').attr({'href' :'#tab-' + tab_title_text, 'id': '#tab-' + tab_title_text}).html(tab_title_text).appendTo($tab_title);
                     }
                 }
                 // redo children assignment since they could have been changed from
@@ -57,11 +71,22 @@ jQuery(document).ready(function($) {
                         }
                     }
                 }
+                $(window).trigger('eea.tags.loaded', $eea_tab);
             }
         }
+
     };
     window.EEA = window.EEA || {};
     // expose eea_tabs function to the global window for reuse in other scripts
     window.EEA.eea_tabs = eea_tabs;
     eea_tabs();
+
+    $(window).bind('hashchange', function (evt) {
+        $(window.location.hash).click();
+    });
+
+    if (window.location.hash) {
+        $(window).trigger('hashchange');
+    }
+
 });
