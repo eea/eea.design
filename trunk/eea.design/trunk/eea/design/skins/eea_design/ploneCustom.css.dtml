@@ -592,6 +592,10 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: inherit;
 }
 
+#visual-portal-wrapper ul.eea-tabs.two-rows > li {
+    max-width: 125px;
+}
+
 #whatsnew-gallery ul.eea-tabs.two-rows > li {
     line-height: 1.6em !important;
     max-width: 125px;
@@ -602,7 +606,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     min-height: 17px;
     font-size: 125%;
     padding: 9px 10px 11px 10px;
-    display: block;
+    display: table-caption;
     margin: 0;
     font-weight: normal;
     border: 0;
@@ -638,6 +642,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     -moz-border-radius: 0 8px 0 0;
     margin: 0;
 }
+
 
 /* Translations adjustments of width of list items for whatsnew-gallery */
 
