@@ -7,25 +7,13 @@ jQuery(document).ready(function($) {
         $eea_tabs = $("#eea-tabs"),
         $paginate = $(".paginate"),
         $eea_tabs_panels = $("#eea-tabs-panels"),
-        $sorter_ctl = $related_items.find(".sorter_ctl"),
         pagination_count = 12;
 
-        console.log('sorter_ctl', $sorter_ctl);
-
-    $sorter_ctl.change(function(){
-        console.log("Changing this");
-        //redraw()
-        $.merge($paginate, $related_items.find('.visualNoMarker')).each(redraw);
-    });
-
-    var redraw = function(index, el){
-        var $self = $(el),
+    $.merge($paginate, $related_items.find('.visualNoMarker')).each(function() {
+        var $self = $(this),
             $children = $self.children(),
             count = 0,
             isPaginate = $self.hasClass('paginate');
-     console.log("This", $self);
-     // console.log($self);
-     // console.log($children);
         pagination_count =  window.parseInt(
                     $self.attr('data-paginate-count'), 10) || pagination_count;
         // if first element is an h3 then we should get the children since we
@@ -49,7 +37,12 @@ jQuery(document).ready(function($) {
                     .insertBefore($self) : $eea_tabs;
                 $eea_tabs_panels = !$eea_tabs_panels.length ? $("<div class='eea-tabs-panels' />")
                     .insertAfter($eea_tabs) : $eea_tabs_panels;
-                $('<li><a href="#" /></li>').children().html($this.detach().html()).end().appendTo($eea_tabs);
+                var tab_id = this.innerHTML.toLowerCase().replace(/\s/g, '-'),
+                    tab_href = "#tab-" + tab_id;
+                $('<li />').append(
+                    $('<a />').attr({ 'href' :tab_href, 'id': 'tab-' + tab_id}).html($this.detach().html()))
+                    .appendTo($eea_tabs);
+
             }
             else {
                 $this.data($self.data());
@@ -112,12 +105,10 @@ jQuery(document).ready(function($) {
             $eea_tabs = "";
             $eea_tabs_panels = "";
         }
-    }
 
-    $.merge($paginate, $related_items.find('.visualNoMarker')).each(redraw);
+    });
 
     if ( has_related_items || $paginate.length ) {
         window.EEA.eea_tabs();
     }
-
 });

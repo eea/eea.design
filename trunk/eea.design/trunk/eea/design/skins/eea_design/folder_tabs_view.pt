@@ -19,7 +19,10 @@
             <div class="eea-tabs-panels">
                 <tal:children tal:repeat="child FolderishItems">
                     <div class="eea-tabs-panel" tal:condition="child/nitems">
-                        <p class="eea-tabs-title"><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url">title</a></p>
+                        <p class="eea-tabs-title"><a
+                                tal:content="python:'%s' % (child['title'])"
+                                tal:attributes="href child/listing_url; id python:'tab-' + child['title'].lower().replace(' ', '-')"
+                                >title</a></p>
                         <p class="eea-tabs-description" tal:condition="child/description" tal:content="child/description"></p>
                         <div class="eea-tabs-contents" tal:define="subFolderContents child/contents">
                             <div class="photoAlbumEntry"

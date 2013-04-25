@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
 
                 $eea_tab_children = $eea_tab.children();
                 var j = 0, tabs_length = $eea_tab_children.length,
-                    $tab_title, tab_title_text;
+                    $tab_title, tab_title_text, tab_title_id;
 
                 // the tabs need a link so we append a link if one is not found
                 for (j; j < tabs_length; j += 1) {
@@ -45,8 +45,9 @@ jQuery(document).ready(function($) {
                     }
                     if (!$tab_title.find('a').length) {
                         tab_title_text = $tab_title.text();
+                        tab_title_id = tab_title_text.toLowerCase().replace(/\s/g, '-');
                         $tab_title.text("");
-                        $('<a />').attr({'href' :'#tab-' + tab_title_text, 'id': '#tab-' + tab_title_text}).html(tab_title_text).appendTo($tab_title);
+                        $('<a />').attr({'href' :'#tab-' + tab_title_id, 'id': 'tab-' + tab_title_id}).html(tab_title_text).appendTo($tab_title);
                     }
                 }
                 // redo children assignment since they could have been changed from
@@ -84,6 +85,9 @@ jQuery(document).ready(function($) {
     $(window).bind('hashchange', function (evt) {
         $(window.location.hash).click();
     });
+
+    $(window).trigger('eea.tags.loaded', $('#whatsnew-gallery').find('.eea-tabs'));
+    $(window).trigger('eea.tags.loaded', $('#multimedia-tabs'));
 
     if (window.location.hash) {
         $(window).trigger('hashchange');
