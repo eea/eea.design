@@ -118,7 +118,7 @@ class SubFoldersViewlet(common.ViewletBase):
             parent = aq_parent(self.context)
             if ISubFoldersListing.providedBy(parent):
                 plone_view = self.context.restrictedTraverse('@@plone')
-                portlets = plone_view.have_portlets('plone.rightcolumn');
+                portlets = plone_view.have_portlets('plone.rightcolumn')
                 return False if portlets == True else True
         return False
 

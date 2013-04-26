@@ -1,3 +1,4 @@
+/*global jQuery window*/
 jQuery(document).ready(function($) {
     'use strict';
     var ie = $.browser.msie  && parseInt($.browser.version, 10);

@@ -1,4 +1,4 @@
-/*jslint browser: true,  */ /*global jQuery */
+/*jslint browser: true,  */ /*global jQuery window */
 (function($, window, document, undef) {
     "use strict";
     var notSupportedBrowsers = [
