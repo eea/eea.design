@@ -5,14 +5,15 @@
      this.$container = $container;
 
      var settings = $.extend( {
-          'method'      : 'grow',
-          'incrementBy' : 5
-        }, options);
-     var self = this;
+          'method'            : 'grow',
+          'incrementBy'       : 5,
+          'affectSingleWords' : false
+        }, options),
+         self = this;
 
     return this.each(function() {
 
-      if ( !this.innerHTML.split(' ').length > 1 ) {
+      if ( !settings.affectSingleWords && this.innerHTML.split(/\s/).length === 1 ) {
           return;
       }
 
@@ -41,11 +42,12 @@
   };
 
   $(function(){
+      // plugin call
       // this code needs to run after eea-tabs.js
       var $eea_tabs = $('.eea-tabs');
       if ( $eea_tabs.length ) {
           $eea_tabs.find('a').fitContainer($eea_tabs);
       }
   });
-})( jQuery );
+}( jQuery ));
 
