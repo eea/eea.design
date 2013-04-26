@@ -3,6 +3,12 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.design
+  [ichimdav #14365]
+* Feature: added eea-fitcontainer.js which is a plugin that can enlarge a set
+  of elements to better fit the parent area
+  [ichimdav #14365]
 
 6.8 - (2013-04-17)
 ------------------

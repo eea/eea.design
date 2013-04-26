@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <metadata>
    <description>EEA Design profile</description>
-   <version>5.9</version>
+   <version>6.9</version>
    <dependencies>
 
         <!-- <dependency>profile-Products.EEAContentTypes:default</dependency> -->

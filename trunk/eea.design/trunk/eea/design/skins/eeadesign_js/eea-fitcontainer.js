@@ -21,7 +21,7 @@
           initial_container_height = $container.height(),
           initial_width = $this.width();
 
-      switch(settings.method) {
+      switch( settings.method ) {
           case 'grow':
               while ( $this.parent().height() > initial_container_height ) {
                   initial_width += settings.incrementBy;
@@ -41,6 +41,7 @@
   };
 
   $(function(){
+      // this code needs to run after eea-tabs.js
       var $eea_tabs = $('.eea-tabs');
       if ( $eea_tabs.length ) {
           $eea_tabs.find('a').fitContainer($eea_tabs);
