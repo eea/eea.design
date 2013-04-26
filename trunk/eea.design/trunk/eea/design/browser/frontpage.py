@@ -9,8 +9,10 @@ from Products.Five import BrowserView
 from eea.cache import cache
 from eea.promotion.interfaces import IPromotion
 from eea.themecentre.themecentre import getTheme
+from eea.versions.interfaces import IGetVersions
 from plone.app.blob.interfaces import IBlobWrapper
 from zope.component import queryMultiAdapter
+
 
 class Frontpage(BrowserView):
     """ Front page
@@ -453,8 +455,8 @@ def filterLatestVersion(self, brains, noOfItems = 6):
         # if object implements our versioning
         if 'eea.versions.interfaces.IVersionEnhanced' in brain.object_provides:
             obj = brain.getObject()
-            versionsObj = obj.unrestrictedTraverse('@@getLatestVersionUrl')
-            if versionsObj.isLatest():
+            versions = IGetVersions(obj)
+            if versions.isLatest():
                 # keep it, this is latest object
                 res.append(brain)
         else:
