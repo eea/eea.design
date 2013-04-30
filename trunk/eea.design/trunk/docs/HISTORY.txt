@@ -3,6 +3,9 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Bug fix: removed wrong condition on outdate browser message.
+  now it shows again for both anonymous user and logged in.
+  [demarant refs #9543]
 * Bug fix: fix compatibility with latest eea.versions
   [tiberich #14008]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
