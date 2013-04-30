@@ -6,7 +6,6 @@
                             metal:define-macro="main"
                 i18n:domain="eea">
 
-
     <metal:browser define-macro="browsers" tal:condition="python:enabled_browsers_macro">
       <tal:block i18n:domain="eea.notranslation">
         <li id="outdated_ff">
@@ -31,8 +30,7 @@
     </metal:ie>
 
     <tal:comment replace="nothing">
-        You can use a condition for a specific role for displaying certain browsers
-        images or messages 
+        You can use a condition for a specific role for displaying certain browsers images or messages
         ex: <h2 tal:condition="python:'ContentEditor' in roles"> Message for content editors</h2>
     </tal:comment>
 

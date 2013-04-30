@@ -14,7 +14,7 @@ Changelog
 
 6.8 - (2013-04-17)
 ------------------
-* Feature: added language code to the body class in order to have language 
+* Feature: added language code to the body class in order to have language
   specific fixes
   [ichimdav refs #13830]
 * Bug fix: fix redirection to previous page when logging in from the login popup

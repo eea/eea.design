@@ -79,7 +79,7 @@
         />
 
     <!-- Viewlets registration -->
-    
+
     <browser:viewlet
         name="eea.js_belowbodytag"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
@@ -141,7 +141,7 @@
         permission="zope2.View"
         />
 
-    <!-- The personal bar 
+    <!-- The personal bar
     <browser:viewlet
         name="plone.personal_bar"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
@@ -151,7 +151,7 @@
         permission="zope2.View"
         />
     -->
-    
+
     <!-- use plone standard personal bar and move it to the top -->
     <browser:viewlet
         name="plone.personal_bar"
@@ -271,7 +271,7 @@
         permission="zope.Public"
         allowed_interface=".interfaces.IFrontPageHighlights"
         />
-        
+
     <browser:page
         for="*"
         name="data_and_maps_logic"

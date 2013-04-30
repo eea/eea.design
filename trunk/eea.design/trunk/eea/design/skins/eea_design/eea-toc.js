@@ -59,7 +59,7 @@ function build_toc(toc) {
     if(!$first_child.is('ol')) {
         $toc_children.wrapAll('<ol />');
     }
-    // reatach portlet item and show toc since it is hidden by default 
+    // reatach portlet item and show toc since it is hidden by default
     lists.root.appendTo(toc);
     toc.show();
 

@@ -7,9 +7,7 @@
         {browser: 'Firefox', version: 4, os: 'Any' }
     ];
 
-
-    
-    function displayMessage(obj) { 
+    function displayMessage(obj) {
         $.get(obj.template, function(data) {
             var message_wrap = $(data), outdated_transition, timeout = obj.message_timer || 10000;
 
@@ -29,7 +27,7 @@
             }
             $(document).trigger('messageDisplayed');
         });
-    } 
+    }
 
     var BrowserDetection = {
         init: function() {
@@ -37,7 +35,7 @@
             this.detectBrowser();
             this.detectOS();
 
-            if(this.browser === '' || this.browser === 'Unknown' || this.os === '' || 
+            if(this.browser === '' || this.browser === 'Unknown' || this.os === '' ||
             this.os === 'Unknown' || this.browserVersion === '' || this.browserVersion === 0)
             {
                 return;
@@ -52,12 +50,12 @@
                             outdatedBrowser = true;
                             break;
                         }
-                    } 
+                    }
                 }
             }
 
             if(outdatedBrowser){
-                displayMessage({ template: 'outdated_browsers', cookie_message: 'seen', 
+                displayMessage({ template: 'outdated_browsers', cookie_message: 'seen',
                             cookie_days: 2, transition: 'fadeToggle', hover_fade: true});
             }
 
@@ -92,25 +90,26 @@
         },
 
          // Detect operation system
-    detectOS: function() {
-        var i, op_length = this.operatingSystems.length, cur_op;
-        for(i = 0; i < op_length; i+= 1){
-            if(this.operatingSystems[i].searchString.indexOf(this.operatingSystems[i].subStr) !== -1){
-                this.os = this.operatingSystems[i].name;
-                return;
+        detectOS: function() {
+            var i, op_length = this.operatingSystems.length, cur_op;
+            for(i = 0; i < op_length; i+= 1){
+                if(this.operatingSystems[i].searchString.indexOf(this.operatingSystems[i].subStr) !== -1){
+                    this.os = this.operatingSystems[i].name;
+                    return;
+                }
             }
-        }
-        this.os = "Unknown";
-    },
-//  Variables
-    browser: '',
-    os: '',
-    browserVersion: '',
-    operatingSystems: [
-        { 'searchString': navigator.platform, 'name': 'Windows', 'subStr': 'Win' },
-        { 'searchString': navigator.platform, 'name': 'Mac', 'subStr': 'Mac' },
-        { 'searchString': navigator.platform, 'name': 'Linux', 'subStr': 'Linux' }
-    ]
+            this.os = "Unknown";
+        },
+
+        // Variables
+        browser: '',
+        os: '',
+        browserVersion: '',
+        operatingSystems: [
+            { 'searchString': navigator.platform, 'name': 'Windows', 'subStr': 'Win' },
+            { 'searchString': navigator.platform, 'name': 'Mac', 'subStr': 'Mac' },
+            { 'searchString': navigator.platform, 'name': 'Linux', 'subStr': 'Linux' }
+        ]
     };
 
     $(function() {
