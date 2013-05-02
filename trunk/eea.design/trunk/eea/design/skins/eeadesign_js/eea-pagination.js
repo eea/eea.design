@@ -85,7 +85,17 @@ jQuery(document).ready(function($) {
                             var $parent = el.parent(),
                                 $page = $parent.find('.page').hide().eq(idx),
                                 page_count = $page.next().data('count'),
-                                next_item = $parent.find('.next')[0];
+                                next_item = $parent.find('.next')[0],
+                                $pagination = el.find('.pagination'),
+                                $pagination_children = $pagination.children();
+
+                            if ( $pagination_children[0].tagName === 'SPAN' ) {
+                                $('<a href="#" class="listingPrevious"> </a>').prependTo($pagination);
+                            }
+
+                            if ( $pagination_children[$pagination_children.length - 1].tagName === 'SPAN' ) {
+                                $('<a href="#" class="next"> </a>').appendTo($pagination);
+                            }
 
                             if ( next_item ) {
                                 next_item.innerHTML = next_item.innerHTML

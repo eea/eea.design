@@ -3,6 +3,9 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Bug fix: keep pagination numbers centered even when next or previous link
+  is missing
+  [ichimdav #14371]
 * Bug fix: removed wrong condition on outdate browser message.
   now it shows again for both anonymous user and logged in.
   [demarant refs #9543]

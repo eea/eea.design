@@ -1839,18 +1839,20 @@ dl.system-message dt {
     clear: both;
 }
 
-.listingBar span.previous,
+.listingBar .previous,
 .listingPrevious {
     text-align: left;
     float: left;
     margin-right: 1em;
+    min-width: 110px;
 }
 
-.listingBar span.next,
+.listingBar .next,
 .listingNext {
     text-align: right;
     float: right;
     margin-left: 1em;
+    min-width: 100px;
 }
 
 
