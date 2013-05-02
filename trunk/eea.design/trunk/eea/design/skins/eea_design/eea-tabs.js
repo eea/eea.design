@@ -56,22 +56,6 @@ jQuery(document).ready(function($) {
                 $eea_tab.tabs($eea_panels);
                 $eea_tab.insertBefore($eea_tabs_panel);
 
-                // make width of tab bigger if the height of it
-                // is bigger than first tab's height or make the first tab width
-                // bigger if it's bigger than any of the tabs
-                var k = 1, first_tab = $eea_tab_children[0], first_tab_height, cur_tab;
-                if (first_tab) {
-                    first_tab_height = first_tab.clientHeight;
-                    for (k; k < tabs_length; k += 1) {
-                        cur_tab = $eea_tab_children[k];
-                        if (cur_tab.clientHeight < first_tab_height) {
-                            first_tab.style.maxWidth = "152px";
-                        }
-                        else if (cur_tab.clientHeight > first_tab_height) {
-                            cur_tab.style.maxWidth = "130px";
-                        }
-                    }
-                }
                 $(window).trigger('eea.tags.loaded', $eea_tab);
             }
         }

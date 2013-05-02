@@ -45,7 +45,7 @@
       // plugin call
       // this code needs to run after eea-tabs.js
       var $eea_tabs = $('.eea-tabs');
-      if ( $eea_tabs.length ) {
+      if ( $eea_tabs.length && !$.browser.msie ) {
           $eea_tabs.find('a').fitContainer($eea_tabs);
       }
   });
