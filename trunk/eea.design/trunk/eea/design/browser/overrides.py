@@ -6,11 +6,20 @@ from plone.memoize.instance import memoize
 from Acquisition import aq_inner
 from DateTime.DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.memoize.compress import xhtml_compress
 
 
 class EEAEventsRenderer(EventsRenderer):
     """ Customized Events Renderer
     """
+    
+    _template = ViewPageTemplateFile('templates/events.pt')
+    
+    def render(self):
+        """ Render
+        """
+        return xhtml_compress(self._template())    
 
     @memoize
     def _data(self):
@@ -30,3 +39,14 @@ class EEAEventsRenderer(EventsRenderer):
                        path=path,
                        sort_on='start',
                        sort_limit=limit)[:limit]
+
+    def decode_location(self, location):
+        """ Return a string containing the Location 
+        """
+        liste = []       
+        # #14394: The location tuple contains string in unicode, converting  
+        # them in string decodes them.
+        for item in location:
+            liste.append(item)
+        
+        return ', '.join(liste)
