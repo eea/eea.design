@@ -20,6 +20,9 @@ Changelog
 * Bug fix: fixed the location name in upcoming events portlet. Now the name is
   properly decoded.
   [prospchr fixes #14394]
+* Upgrade step: Add again the events portlet in the highlights section:
+  eea.europa.eu/highlights/
+  [prospchr refs #14394]
 
 6.8 - (2013-04-17)
 ------------------
