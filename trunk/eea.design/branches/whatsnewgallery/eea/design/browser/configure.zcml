@@ -270,7 +270,7 @@
         layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
         allowed_interface=".interfaces.IFrontPageHighlights"
-        allowed_attributes="getArticles getPublications"
+        allowed_attributes="getArticles getPublications getResultsInAllLanguages"
         />
         
     <browser:page

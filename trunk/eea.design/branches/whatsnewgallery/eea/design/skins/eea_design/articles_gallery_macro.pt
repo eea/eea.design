@@ -17,7 +17,7 @@
 
     <tal:articles
                   tal:define="frontpage_view context/@@frontpage_highlights;
-                            languages frontpage_view/getResultsInAllLanguages;
+                            languages python:frontpage_view.getResultsInAllLanguages('getArticles');
                             noResults python:request.get('noResults');
                             ajax python:True">
         <ul>

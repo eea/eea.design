@@ -209,12 +209,21 @@ class Frontpage(BrowserView):
 
         return result
 
-    def getResultsInAllLanguages(self):
+    def getResultsInAllLanguages(self, method=None):
         """
-        :return: results of given method in any of the context translated languages
+        :return: results of given method in any of the context translated
+            languages
         """
-        translations = self.context.getTranslations()
-        return translations.keys()
+        translations = self.context.getTranslationLanguages()
+        search = getattr(self, method, None)
+        if search:
+            results = {}
+            for translation in translations:
+                res = search(language=translation)
+                if res:
+                    results[translation] = res
+            return results
+        # return translations.keys()
 
 ## deprecated visibility methods
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
