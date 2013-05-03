@@ -20,18 +20,26 @@
                             languages languages|python:frontpage_view.getResultsInAllLanguages('getArticles');
                             ajax python:True">
 
-        <div class='portalMessage informationMessage'>
+        <div class='portalMessage informationMessage'
+             tal:condition='languages'>
             <p i18n:translate="">No
                 results are available for this topic in your language</p>
             <p i18n:translate="" class='js-other-languages'>See results in the
                 following languages:</p>
             <ul>
                 <tal:repeat tal:repeat="lang languages">
-                    <a href="#">
-                        <li tal:content="lang">language</li>
-                    </a>
+                        <li>
+                            <a href="#" tal:content="lang">
+                            language
+                            </a>
+                        </li>
                 </tal:repeat>
             </ul>
+        </div>
+        <div class='portalMessage informationMessage'
+             tal:condition='not:languages'>
+            <p i18n:translate="">No
+                results are available for this topic</p>
         </div>
     </tal:articles>
 

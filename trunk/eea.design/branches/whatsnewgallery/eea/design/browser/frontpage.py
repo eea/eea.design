@@ -4,6 +4,7 @@
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
+from Products.EEAContentTypes.browser import language
 from Products.EEAContentTypes.cache import cacheKeyHighlights
 from Products.Five import BrowserView
 from eea.cache import cache
@@ -48,15 +49,15 @@ class Frontpage(BrowserView):
         self.now = DateTime()
 
 
-    def getNews(self):
+    def getNews(self, language=None):
         """ retrieves latest news by date and by topic """
-        visibilityLevel = [ 'top', 'middle', 'low', '']
-        items = _getItems(self, visibilityLevel = visibilityLevel,
-                portaltypes = ('Highlight', 'PressRelease'),
-                noOfItems = self.noOfNews)
+        visibilityLevel = ['top', 'middle', 'low', '']
+        items = _getItems(self, visibilityLevel=visibilityLevel,
+                portaltypes=('Highlight', 'PressRelease'),
+                noOfItems=self.noOfNews, language=language)
         return items
 
-    def getArticles(self, portaltypes = "Article", language=None):
+    def getArticles(self, portaltypes="Article", language=None):
         """ retrieves latest articles by date and by topic """
         return _getItems(self,
                 portaltypes=portaltypes, noOfItems=self.noOfArticles,
@@ -68,16 +69,17 @@ class Frontpage(BrowserView):
                                noOfItems=self.noOfPublications,
                                language=language)
 
-    def getAllProducts(self, no_sort = False):
+    def getAllProducts(self, no_sort=False, language=None):
         """ retrieves all latest published products for frontpage """
         portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
                                     'Assessment', 'Data', 'EEAFigure')
         result = []
         for mytype in portaltypes:
             res1 = _getItems(self, portaltypes = mytype,
-                        noOfItems=self.noOfEachProduct)
+                        noOfItems=self.noOfEachProduct,
+                        language=language)
             result.extend(res1)
-        multimedia = self.getMultimedia()
+        multimedia = self.getMultimedia(language=language)
         result.extend(multimedia[:self.noOfEachProduct])
 
         # resort based on effective date
@@ -141,13 +143,14 @@ class Frontpage(BrowserView):
         result = _getPromotions(self, noOfItems=self.noOfPromotions)
         return result
 
-    def getMultimedia(self):
+    def getMultimedia(self, language=None):
         """ retrieves multimedia objects (videos/animations etc..)
         filtered by date and by topic """
         interface = 'eea.mediacentre.interfaces.IVideo'
         result = _getItems(self,
                     interfaces=interface,
-                    noOfItems=self.noOfMultimedia)
+                    noOfItems=self.noOfMultimedia,
+                    language=language)
 
         return result
 

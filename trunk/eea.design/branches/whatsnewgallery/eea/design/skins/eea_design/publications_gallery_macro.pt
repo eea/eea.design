@@ -1,4 +1,4 @@
-<taldefines tal:define="frontpage_view context/@@frontpage_highlights;">
+<tal:defines tal:define="frontpage_view context/@@frontpage_highlights;">
 
     <metal:articles tal:condition="python: not request.get('AllLanguages')">
         <tal:publications metal:define-macro="publications"
@@ -16,4 +16,4 @@
         </tal:defines>
     </metal:languages>
 
-</taldefines>
+</tal:defines>
