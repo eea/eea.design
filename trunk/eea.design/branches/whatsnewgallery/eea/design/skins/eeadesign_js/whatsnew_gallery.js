@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
             var listing = el.find('.gallery-listing');
             var layout = layout_selection || el.parent().find('.gallery-layout-selection li a')[0];
             if (html.length > 1) {
-                if (layout.className === "list-layout active-list"){
+                if (layout && layout.className === "list-layout active-list"){
                     el.find('.gallery-album').addClass('hiddenStructure');
                     listing.hide().fadeIn('slow');
                 }
