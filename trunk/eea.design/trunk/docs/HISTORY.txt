@@ -23,6 +23,8 @@ Changelog
 * Upgrade step: Add again the events portlet in the highlights section:
   eea.europa.eu/highlights/
   [prospchr refs #14394]
+* Bug fix: Removing on-error tag as the bug is invalid.
+  [prospchr refs #9544]
 
 6.8 - (2013-04-17)
 ------------------
