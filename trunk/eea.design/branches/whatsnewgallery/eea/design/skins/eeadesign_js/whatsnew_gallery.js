@@ -10,6 +10,32 @@ jQuery(document).ready(function($) {
         eea_gal.gallery_page = eea_gal.gallery.attr("data-page");
     }());
 
+    eea_gal.gallery_load = function(el, address, params, layout_selection) {
+
+        el.load(address, params, function(html) {
+            var album = el.find('.gallery-album');
+            var listing = el.find('.gallery-listing');
+            var layout = layout_selection || el.parent().find('.gallery-layout-selection li a')[0];
+            if (html.length > 1) {
+                if (layout.className === "list-layout active-list"){
+                    el.find('.gallery-album').addClass('hiddenStructure');
+                    listing.hide().fadeIn('slow');
+                }
+                else {
+                    el.find('.gallery-listing').addClass('hiddenStructure');
+                    album.hide().fadeIn('slow');
+                }
+            }
+            if (el.find('.js-no-results').length) {
+                $(window).trigger('eea.whatsnew.showEmptyResults', el);
+            }
+            if (el.find('.js-other-languages').length) {
+                $(window).trigger('eea.whatsnew.getOtherLanguages', el);
+            }
+
+        });
+    };
+
     eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index, tag_title) {
             var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
             eea_gal.current_tab_addr = address;
@@ -30,32 +56,17 @@ jQuery(document).ready(function($) {
             var layout_selection = $('.gallery-layout-selection li a', news)[0];
             var params = sel_value ? 'topic' + '=' + sel_value : undefined;
             params = tag_title ? 'tags' + '=' + sel_value : params;
-            gallery_ajax.load( address, params, function(html) {
-                var album = gallery_ajax.find('.gallery-album');
-                var listing = gallery_ajax.find('.gallery-listing');
-                if (html.length > 1) {
-                    if (layout_selection.className === "list-layout active-list"){
-                        gallery_ajax.find('.gallery-album').addClass('hiddenStructure');
-                        listing.hide().fadeIn('slow');
-                    }
-                    else {
-                        gallery_ajax.find('.gallery-listing').addClass('hiddenStructure');
-                         album.hide().fadeIn('slow');
-                    }
-                }
-                if (gallery_ajax.find('.portalMessage').length) {
-                    $(window).trigger('eea.whatnews.emptyresults', gallery_ajax);
-                }
-
-            });
+            eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
     };
-    $(window).bind('eea.whatnews.emptyresults', function(ev, data) {
+
+    $(window).bind('eea.whatsnew.showEmptyResults', function(ev, data) {
         var $self = $(data);
-        $self.load(eea_gal.current_tab_addr, 'AllLanguages=true', function(data){
+        eea_gal.gallery_load($self, eea_gal.current_tab_addr, 'AllLanguages=true');
+        $(window).one('eea.whatsnew.getOtherLanguages', function(ev, data) {
             var $data = $(data);
-            $self.find('a').click(function(ev){
+            $data.find('a').click(function(ev){
                 var params = 'Language=' + ev.target.innerHTML;
-                $self.load(eea_gal.current_tab_addr, params);
+                eea_gal.gallery_load($data, eea_gal.current_tab_addr, params);
                 ev.preventDefault();
             });
         });

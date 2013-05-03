@@ -59,13 +59,14 @@ class Frontpage(BrowserView):
     def getArticles(self, portaltypes = "Article", language=None):
         """ retrieves latest articles by date and by topic """
         return _getItems(self,
-                portaltypes = portaltypes, noOfItems=self.noOfArticles,
-                language = language)
+                portaltypes=portaltypes, noOfItems=self.noOfArticles,
+                language=language)
 
-    def getPublications(self, portaltypes = "Report"):
+    def getPublications(self, portaltypes = "Report", language=None):
         """ retrieves latest publications by date and by topic """
-        return _getItems(self, portaltypes = portaltypes,
-                                    noOfItems=self.noOfPublications)
+        return _getItems(self, portaltypes=portaltypes,
+                               noOfItems=self.noOfPublications,
+                               language=language)
 
     def getAllProducts(self, no_sort = False):
         """ retrieves all latest published products for frontpage """
@@ -223,7 +224,6 @@ class Frontpage(BrowserView):
                 if res:
                     results[translation] = res
             return results
-        # return translations.keys()
 
 ## deprecated visibility methods
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])

@@ -2686,4 +2686,7 @@ div.row {
     margin-left: 0;
 }
 
+.spinner {
+    text-align: center;
+}
 /* </dtml-with> */

@@ -4,7 +4,6 @@
             tal:define="frontpage_view context/@@frontpage_highlights;
                         language python:request.get('Language');
                         folderContents python: frontpage_view.getArticles() if not language else frontpage_view.getArticles(language=language);
-                        noResults python:request.get('noResults');
                         ajax python:True">
             <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
 
@@ -13,20 +12,27 @@
 </metal:articles>
 
 
-<metal:languages tal:condition="python:request.get('AllLanguages')">
+<metal:languages tal:condition="python:request.get('AllLanguages')"
+                 define-macro="noresults">
 
     <tal:articles
-                  tal:define="frontpage_view context/@@frontpage_highlights;
-                            languages python:frontpage_view.getResultsInAllLanguages('getArticles');
-                            noResults python:request.get('noResults');
+                  tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
+                            languages languages|python:frontpage_view.getResultsInAllLanguages('getArticles');
                             ajax python:True">
-        <ul>
-        <tal:repeat tal:repeat="lang languages">
-            <a href="#">
-               <li tal:content="lang">language</li>
-            </a>
-        </tal:repeat>
-        </ul>
+
+        <div class='portalMessage informationMessage'>
+            <p i18n:translate="">No
+                results are available for this topic in your language</p>
+            <p i18n:translate="" class='js-other-languages'>See results in the
+                following languages:</p>
+            <ul>
+                <tal:repeat tal:repeat="lang languages">
+                    <a href="#">
+                        <li tal:content="lang">language</li>
+                    </a>
+                </tal:repeat>
+            </ul>
+        </div>
     </tal:articles>
 
 </metal:languages>
