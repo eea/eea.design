@@ -160,7 +160,12 @@ jQuery(document).ready(function($) {
         if (cur_tab.theme === sel_value && notopics_length !== 0) {
             return;
         }
-        if (sel_text.indexOf("All") !== -1 || album_length === 0) {
+
+        // check if highlight doesn't contain a portalMessage since getting results
+        // in other languages doesn't introduce gallery-album div and in that case
+        // we don't want to reload the gallery macro
+        if (sel_text.indexOf("All") !== -1 ||
+                album_length === 0 && !highlight.find('.portalMessage').length) {
             album.html(ajax_loader_img);
             eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
         }
