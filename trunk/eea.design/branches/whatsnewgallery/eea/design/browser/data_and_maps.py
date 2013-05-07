@@ -12,7 +12,7 @@ from eea.promotion.interfaces import IPromotion
 
 class DataMaps(BrowserView):
     """
-    This browser view class has methos to get all the latest data and maps
+    This browser view class has methods to get all the latest data and maps
     items globally or related to a specific topic.
     """
     __implements__ = (getattr(BrowserView, '__implements__', ()), )
@@ -91,10 +91,10 @@ class DataMaps(BrowserView):
 
 
     def getAllProducts(self, no_sort=False, language=None):
-        """ get all latest data and maps merged into one single list """
+        """ Get all latest data and maps merged into one single list """
         result = []
-        res1 = self.getLatestIndicators(language=language)[:self
-        .noOfEachProduct]
+        res1 = self.getLatestIndicators(
+            language=language)[:self.noOfEachProduct]
         res2 = self.getLatestDatasets(language=language)[:self.noOfEachProduct]
         res3 = self.getLatestMaps(language=language)[:self.noOfEachProduct]
         res4 = self.getLatestGraphs(language=language)[:self.noOfEachProduct]
@@ -130,7 +130,7 @@ class DataMaps(BrowserView):
                 },
             'review_state': 'published',
             'sort_on': 'effective',
-            'sort_order' : 'reverse'
+            'sort_order': 'reverse'
         }
 
         noOfItems = 18
@@ -141,7 +141,7 @@ class DataMaps(BrowserView):
             'eea.dataservice.interfaces.IEEAFigureGraph',
             'eea.dataservice.interfaces.IDataset',
             'eea.dataservice.interfaces.IEEAFigureMap',
-            'eea.indicators.content.interfaces.IIndicatorAssessment' ]
+            'eea.indicators.content.interfaces.IIndicatorAssessment']
         cPromos = []
         for brain in result:
             obj = brain.getObject()
@@ -149,7 +149,7 @@ class DataMaps(BrowserView):
             obj_interfaces = obj.restrictedTraverse('@@get_interfaces')()
             for i in datasets_interfaces:
                 if i in obj_interfaces:
-                    if not(promo.display_on_datacentre):
+                    if not promo.display_on_datacentre:
                         continue
                     cPromos.append(brain)
                     if len(cPromos) == noOfItems:
@@ -163,12 +163,11 @@ class DataMaps(BrowserView):
             return list(set(cPromos))
 
     def getImageUrl(self, brain):
-        """ public method for data-and-maps calling _getImageUrl """
+        """ Public method for data-and-maps calling _getImageUrl """
         return _getImageUrl(brain)
 
     def getResultsInAllLanguages(self, method=None):
-        """
-        :return: results of given method in any of the context translated
-            languages
+        """ Public method for data-and-maps calling
+            _getResultsInAllLanguages
         """
         return _getResultsInAllLanguages(self, method)

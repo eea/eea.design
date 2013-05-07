@@ -279,7 +279,7 @@
         class=".data_and_maps.DataMaps"
         layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
-        allowed_attributes="getResultsInAllLanguages getAllProducts"
+        allowed_attributes="getResultsInAllLanguages getAllProducts getLatestDatasets"
         />
 
     <browser:page
