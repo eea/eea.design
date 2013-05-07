@@ -13,8 +13,7 @@
                  more_href string:highlights;">
 
     <tal:nocond tal:condition="not:folderContents"
-            tal:define="setLang python:request.set('AllLanguages', True);
-                        hide_listing hide_listing|python: False;">
+            tal:define="hide_listing hide_listing|python: False;">
 
         <p class="filter-topic"></p>
         <ul class="gallery-layout-selection"

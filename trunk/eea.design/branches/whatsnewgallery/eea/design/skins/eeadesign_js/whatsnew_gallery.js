@@ -1,10 +1,11 @@
+/*jslint browser: true,  */ /*global jQuery, SubCookieUtil */
 jQuery(document).ready(function($) {
     $("#highlights-high, #highlights-middle").tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
     window.whatsnew = {};
     var eea_gal = window.whatsnew;
 
     (function() {
-        // get the site url from the kss-base-url link 
+        // get the site url from the kss-base-url link
         eea_gal.site_address = $("link[rel='alternate']").attr('href');
         eea_gal.gallery = $("#whatsnew-gallery");
         eea_gal.gallery_page = eea_gal.gallery.attr("data-page");
@@ -25,9 +26,6 @@ jQuery(document).ready(function($) {
                     el.find('.gallery-listing').addClass('hiddenStructure');
                     album.hide().fadeIn('slow');
                 }
-            }
-            if (el.find('.js-no-results').length) {
-                $(window).trigger('eea.whatsnew.showEmptyResults', el);
             }
             if (el.find('.js-other-languages').length) {
                 $(window).trigger('eea.whatsnew.getOtherLanguages', el);
@@ -59,17 +57,13 @@ jQuery(document).ready(function($) {
             eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
     };
 
-    $(window).bind('eea.whatsnew.showEmptyResults', function(ev, data) {
-        var $self = $(data);
-        eea_gal.gallery_load($self, eea_gal.current_tab_addr, 'AllLanguages=true');
-        $(window).one('eea.whatsnew.getOtherLanguages', function(ev, data) {
+    $(window).bind('eea.whatsnew.getOtherLanguages', function(ev, data) {
             var $data = $(data);
             $data.find('a').click(function(ev){
                 var params = 'Language=' + ev.target.innerHTML;
                 eea_gal.gallery_load($data, eea_gal.current_tab_addr, params);
                 ev.preventDefault();
             });
-        });
     });
 
     $("#whatsnew-gallery .eea-tabs, #multimedia-tabs").tabs("> .eea-tabs-panel", function(event, index) {
@@ -79,7 +73,7 @@ jQuery(document).ready(function($) {
         var opt_item,
             sel_value,
             sel_text,
-            tag_title; 
+            tag_title;
 
         var highlight = $("#" + cur_tab_val + "-highlights");
         var gallery_ajax = highlight.find('.gallery-ajax');
@@ -91,13 +85,12 @@ jQuery(document).ready(function($) {
             tag_cloud.find("#c1_widget").fadeOut().empty().end().find('#c3_widget').empty().fadeOut();
         }
         if ( tag_cloud.length ) {
-            var first_tag = tag_cloud.clone().detach();
             var address, topic_params, tags_params;
             var tabs = function (address, topic_params, tags_params) {
                 address = address || eea_gal.site_address + 'all/@@tagscloud_counter';
                 topic_params = topic_params || "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                 tags_params = tags_params || "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
-                tag_cloud.load(address, topic_params, function(html) {
+                tag_cloud.load(address, topic_params, function() {
                     tag_cloud.find("#c1_widget").fadeIn();
                     var themes = $("#c1");
                     themes.tagcloud({type: 'list', height: 280, sizemin:12});
@@ -119,31 +112,31 @@ jQuery(document).ready(function($) {
                         vals.remove();
                         $("#faceted-tabs").tabs("#tag-cloud-content > div.faceted-widget");
                         // repeat
-              
+
                         $('#c1all').addClass('selected');
                         $('#c3all').addClass('selected');
                     });
                 });
             };
-            
+
             switch (cur_tab_val) {
                 case "greentips":
                     address = eea_gal.site_address + 'all/@@tagscloud_counter';
                     topic_params = "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                     tags_params = "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                     gallery_ajax.html(ajax_loader_img);
-                    tabs(address, topic_params, tags_params); 
+                    tabs(address, topic_params, tags_params);
                     break;
                 case "videoclips":
-                        address = eea_gal.site_address + 'all/@@tagscloud_counter';
-                        topic_params = "cid=c1&c2=eea.mediacentre.interfaces.IVideo&c3=all&c8=&c4=published&b_start=0";
-                        tags_params = "cid=c3&c2=eea.mediacentre.interfaces.IVideo&c3=all&c8=&c4=published&b_start=0";
-                        gallery_ajax.html(ajax_loader_img);
-                        tabs(address, topic_params, tags_params); 
+                    address = eea_gal.site_address + 'all/@@tagscloud_counter';
+                    topic_params = "cid=c1&c2=eea.mediacentre.interfaces.IVideo&c3=all&c8=&c4=published&b_start=0";
+                    tags_params = "cid=c3&c2=eea.mediacentre.interfaces.IVideo&c3=all&c8=&c4=published&b_start=0";
+                    gallery_ajax.html(ajax_loader_img);
+                    tabs(address, topic_params, tags_params);
                     break;
             }
         }
-        
+
         opt_item = $("#topic-selector").find(":selected");
         if ( opt_item.length ) {
             sel_value = opt_item.val();
@@ -181,7 +174,7 @@ jQuery(document).ready(function($) {
     });
 
 
-    $topic_selector = $("#topic-selector");
+    var $topic_selector = $("#topic-selector");
     $topic_selector.find('[value="default"]').remove();
     $topic_selector.change(
         function displayResult() {
@@ -195,35 +188,35 @@ jQuery(document).ready(function($) {
                 topic_text = y[x].innerHTML;
             var tab_val = $("#whatsnew-gallery .eea-tabs a.current, #multimedia-tabs a.current")[0].id.substr(4);
 
-            eea_gal.whatsnew_func(cur_tab_val = tab_val, sel_text = topic_text, sel_value = topic_value);
+            eea_gal.whatsnew_func(tab_val, topic_text, topic_value);
         });
 
     // selection of folder_summary_view or atct_album_view
     var layout_links = $(".gallery-layout-selection li a");
     layout_links.click( function(e) {
-         var $this = $(this);
-         var $parent = $this.parent();
-         var $ajax = $this.closest('ul').next();
-         var $hidden_gallery = $ajax.find(".hiddenStructure");
-         var listing = $ajax.find('.gallery-listing');
-         var album = $ajax.find('.gallery-album');
-         var next = $parent.siblings().find('a');
-         var link_class = $this[0].className;
-         var highlight = $this.closest('div')[0].id;
-         if ( link_class === "list-layout active-list" || link_class === "album-layout active-album") {
-             return false;
-         }
-         var cookie_expires = new Date();
-            cookie_expires.setMonth(cookie_expires.getMonth() + 1); // one month
+        var $this = $(this);
+        var $parent = $this.parent();
+        var $ajax = $this.closest('ul').next();
+        var $hidden_gallery = $ajax.find(".hiddenStructure");
+        var listing = $ajax.find('.gallery-listing');
+        var album = $ajax.find('.gallery-album');
+        var next = $parent.siblings().find('a');
+        var link_class = $this[0].className;
+        var highlight = $this.closest('div')[0].id;
+        if ( link_class === "list-layout active-list" || link_class === "album-layout active-album") {
+            e.preventDefault();
+            return;
+        }
+        var cookie_expires = new Date();
+           cookie_expires.setMonth(cookie_expires.getMonth() + 1); // one month
 
-        if (link_class == "list-layout") {
+        if (link_class.indexOf("list-layout") !== -1) {
             album.slideUp('slow');
             listing.slideDown('slow');
             $hidden_gallery.removeClass("hiddenStructure");
             $this.toggleClass("active-list");
             next.toggleClass("active-album");
-            SubCookieUtil.set(eea_gal.gallery_page, highlight, "active-list", expires = cookie_expires);
-            return false;
+            SubCookieUtil.set(eea_gal.gallery_page, highlight, "active-list", cookie_expires);
         }
         else {
             listing.slideUp('slow');
@@ -231,9 +224,10 @@ jQuery(document).ready(function($) {
             $hidden_gallery.removeClass("hiddenStructure");
             $this.toggleClass("active-album");
             next.toggleClass("active-list");
-            SubCookieUtil.set(eea_gal.gallery_page, highlight, "active-album", expires = cookie_expires);
-            return false;
+            SubCookieUtil.set(eea_gal.gallery_page, highlight, "active-album", cookie_expires);
         }
+
+        e.preventDefault();
 
     });
 
@@ -270,5 +264,3 @@ jQuery(document).ready(function($) {
         }
     }
 });
-
-
