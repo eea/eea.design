@@ -1,6 +1,20 @@
-<tal:datamaps metal:define-macro="datamaps" 
-        tal:define="datamaps_view context/@@data_and_maps_logic;
-                    folderContents datamaps_view/getAllProducts;
-                    ajax python:True">
+<tal:defines tal:define="datamaps_view context/@@data_and_maps_logic;">
+
+<metal:datamaps tal:condition="python: not request.get('AllLanguages')">
+    <tal:alldata metal:define-macro="datamaps"
+                  tal:define="language python:request.get('Language');
+                                      folderContents python: datamaps_view.getAllProducts() if not language else datamaps_view.getAllProducts(language=language);
+                                      plone_view nocall:plone_view|context/@@plone;
+                                      ajax python:True">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
-</tal:datamaps>
+    </tal:alldata>
+</metal:datamaps>
+
+<metal:languages tal:condition="python:request.get('AllLanguages')">
+    <tal:defines
+            tal:define="languages python:datamaps_view.getResultsInAllLanguages('getAllProducts')">
+        <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
+    </tal:defines>
+</metal:languages>
+
+</tal:defines>

@@ -4,7 +4,6 @@
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
-from Products.EEAContentTypes.browser import language
 from Products.EEAContentTypes.cache import cacheKeyHighlights
 from Products.Five import BrowserView
 from eea.cache import cache
@@ -43,7 +42,6 @@ class Frontpage(BrowserView):
                                                            'noOfPromotions', 7)
         self.noOfEachProduct = frontpage_properties.getProperty(
                                                           'noOfEachProduct', 3)
-        self.noOfDatasets = frontpage_properties.getProperty('noOfDatasets', 6)
         self.noOfLatestDefault = frontpage_properties.getProperty(
                                                         'noOfLatestDefault', 6)
         self.now = DateTime()
@@ -218,15 +216,7 @@ class Frontpage(BrowserView):
         :return: results of given method in any of the context translated
             languages
         """
-        translations = self.context.getTranslationLanguages()
-        search = getattr(self, method, None)
-        if search:
-            results = {}
-            for translation in translations:
-                res = search(language=translation)
-                if res:
-                    results[translation] = res
-            return results
+        return _getResultsInAllLanguages(self, method)
 
 ## deprecated visibility methods
     @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
@@ -367,12 +357,12 @@ def _getItemsWithVisibility(self, visibilityLevel = None, portaltypes = None,
     if topic:
         query['getThemes'] = topic
     res = self.catalog.searchResults(query)
-    filtered_res = filterLatestVersion(self, brains = res,
-                                                noOfItems = noOfItems)
+    filtered_res = filterLatestVersion(self, brains=res,
+                                                noOfItems=noOfItems)
     return filtered_res
 
-def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
-               tags = None, noOfItems = None, language = None):
+def _getTopics(self, topic=None, portaltypes=None, object_provides=None,
+               tags=None, noOfItems=None, language=None):
     """ retrieves items of certain content types and/or interface and
     certain visibility level, with the addition of topic filtering """
     noOfItems = noOfItems or 8
@@ -395,8 +385,8 @@ def _getTopics(self, topic = None, portaltypes = None, object_provides = None,
     if tags:
         query['Subject'] = tags
     res = self.catalog(query)
-    filtered_res = filterLatestVersion(self, brains = res,
-                                                     noOfItems = noOfItems)
+    filtered_res = filterLatestVersion(self, brains=res,
+                                                     noOfItems=noOfItems)
     return filtered_res
 
 
@@ -418,30 +408,31 @@ def _getItems(self, visibilityLevel=None, portaltypes=None, interfaces=None,
     if portaltypes:
         #if there is a topic/theme tag then get items filtered
         if topic:
-            result = _getTopics(self, portaltypes = portaltypes,
-                      topic = topic, noOfItems = noOfItems, language=language)
+            result = _getTopics(self, portaltypes=portaltypes,
+                      topic=topic, noOfItems=noOfItems, language=language)
         elif tags:
-            result = _getTopics(self, portaltypes = portaltypes,
-                                            tags = tags, noOfItems = noOfItems)
+            result = _getTopics(self, portaltypes=portaltypes,
+                                            tags=tags, noOfItems=noOfItems)
         else:
             result =  _getItemsWithVisibility(self,
-                                            visibilityLevel = visibilityLevel,
-                                            portaltypes = portaltypes,
-                                            noOfItems = noOfItems)
+                                            visibilityLevel=visibilityLevel,
+                                            portaltypes=portaltypes,
+                                            noOfItems=noOfItems)
     elif interfaces:
         #if there is a topic/theme tag then get items filtered
         if topic:
-            result = _getTopics(self, object_provides = interfaces,
-                                          topic = topic, noOfItems = noOfItems)
+            result = _getTopics(self, object_provides=interfaces,
+                                          topic=topic, noOfItems=noOfItems)
         elif tags:
-            result = _getTopics(self, object_provides = interfaces,
-                                tags = tags, noOfItems=noOfItems)
+            result = _getTopics(self, object_provides=interfaces,
+                                tags=tags, noOfItems=noOfItems)
         else:
             result =  _getItemsWithVisibility(self,
-                                            visibilityLevel = visibilityLevel,
-                                            interfaces  = interfaces,
-                                            noOfItems = noOfItems)
+                                            visibilityLevel=visibilityLevel,
+                                            interfaces=interfaces,
+                                            noOfItems=noOfItems)
     return result
+
 
 def _getImageUrl(brain):
     """ #5247 use url of parent image if promoted item doesn't have an image
@@ -469,7 +460,24 @@ def _getImageUrl(brain):
             url = parent.absolute_url()
     return url
 
-def filterLatestVersion(self, brains, noOfItems = 6):
+
+def _getResultsInAllLanguages(self, method=None):
+    """
+    :return: results of given method in any of the context translated
+        languages
+    """
+    translations = self.context.getTranslationLanguages()
+    search = getattr(self, method, None)
+    if search:
+        results = {}
+        for translation in translations:
+            res = search(language=translation)
+            if res:
+                results[translation] = res
+        return results
+
+
+def filterLatestVersion(self, brains, noOfItems=6):
     """ Take a list of catalog brains
     and return only the first noOfItems
     which are either latest versions or not versioned.
@@ -491,4 +499,3 @@ def filterLatestVersion(self, brains, noOfItems = 6):
             break  #we got enough items
 
     return res
-

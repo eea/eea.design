@@ -1,6 +1,7 @@
 <tal:defines tal:define="frontpage_view context/@@frontpage_highlights;">
 
-    <metal:articles tal:condition="python: not request.get('AllLanguages')">
+    <metal:publications
+            tal:condition="python: not request.get('AllLanguages')">
         <tal:publications metal:define-macro="publications"
                           tal:define="language python:request.get('Language');
                                       folderContents python: frontpage_view.getPublications() if not language else frontpage_view.getPublications(language=language);
@@ -8,7 +9,7 @@
                                       ajax python:True">
             <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
         </tal:publications>
-    </metal:articles>
+    </metal:publications>
 
     <metal:languages tal:condition="python:request.get('AllLanguages')">
         <tal:defines tal:define="languages python:frontpage_view.getResultsInAllLanguages('getPublications')">
