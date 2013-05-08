@@ -1806,8 +1806,24 @@ error-handling {
     background-image: url(&dtml-portal_url;/exclamation.png);
 }
 
-.thumbsupMessage {
-    background-image: url(&dtml-portal_url;/thumb_up.png);
+.thumbsUpMessage {
+    background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #E8FFDA;
+    color: #295E07;
+}
+
+.attentionMessage {
+    background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #FCFF9D;
+    color: #555708;
+}
+
+.yesMessage {
+    background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #E8FFDA;
+    color: #295E07;
+}
+
+.noMessage {
+    background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #FFE5F0;
+    color: #A7001D;
 }
 
 .documentByLine {
