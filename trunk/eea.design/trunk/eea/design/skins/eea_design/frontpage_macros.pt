@@ -11,7 +11,24 @@
                  hide_listing python: False;
                  hide_album python: True;
                  more_href string:highlights;">
+
+    <tal:nocond tal:condition="not:folderContents"
+            tal:define="hide_listing hide_listing|python: False;">
+
+        <p class="filter-topic"></p>
+        <ul class="gallery-layout-selection"
+            tal:define="active_list python:' active-list' if not hide_listing else '';
+                     active_album python:' active-album' if not hide_album else '';">
+            <li><a href="#" tal:attributes="class string:list-layout${active_list}"></a></li>
+            <li><a href="#" tal:attributes="class string:album-layout${active_album}"></a></li>
+        </ul>
+        <div class="gallery-ajax visualClear">
+        </div>
+    </tal:nocond>
+
+    <tal:cond tal:condition="folderContents">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+    </tal:cond>
 </div>
 
 <h2 tal:define="statusMessage python:request.get('statusMessage'); 
@@ -202,7 +219,9 @@
     </tal:cond>
     <tal:nocond tal:condition="not:folderContents">
     <div style="display:none" tal:content="string:plone: XXX this is a workaround, somehow the first div from this folder gets it's content removed"></div>
-        <div class='portalMessage informationMessage'><p i18n:translate="">No results are available for this topic</p></div>
+        <div class='portalMessage informationMessage'>
+            <p i18n:translate="" class='js-no-results'>No results are available for this topic</p>
+        </div>
     </tal:nocond>
 </metal:condition>
 

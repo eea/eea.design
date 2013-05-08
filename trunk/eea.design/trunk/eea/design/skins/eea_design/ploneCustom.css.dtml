@@ -2053,6 +2053,14 @@ option.hiddenStructure {
     width: 1px;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
+#content .inline-block li {
+    display: inline-block;
+    margin-right: 1em;
+}
 
 /* Link types */
 
@@ -2693,4 +2701,7 @@ div.row {
     margin-left: 0;
 }
 
+.spinner {
+    text-align: center;
+}
 /* </dtml-with> */

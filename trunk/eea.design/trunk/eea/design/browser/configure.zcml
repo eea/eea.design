@@ -270,6 +270,7 @@
         layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
         allowed_interface=".interfaces.IFrontPageHighlights"
+        allowed_attributes="getArticles getPublications getResultsInAllLanguages getNews getAllProducts"
         />
 
     <browser:page
@@ -278,6 +279,7 @@
         class=".data_and_maps.DataMaps"
         layer=".interfaces.IEEACommonLayer"
         permission="zope.Public"
+        allowed_attributes="getResultsInAllLanguages getAllProducts getLatestDatasets"
         />
 
     <browser:page

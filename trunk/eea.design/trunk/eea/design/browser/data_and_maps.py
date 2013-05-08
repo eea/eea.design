@@ -7,11 +7,12 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
 from eea.design.browser.frontpage import _getItems, _getImageUrl
+from eea.design.browser.frontpage import _getResultsInAllLanguages
 from eea.promotion.interfaces import IPromotion
 
 class DataMaps(BrowserView):
     """
-    This browser view class has methos to get all the latest data and maps
+    This browser view class has methods to get all the latest data and maps
     items globally or related to a specific topic.
     """
     __implements__ = (getattr(BrowserView, '__implements__', ()), )
@@ -36,56 +37,71 @@ class DataMaps(BrowserView):
             'noOfEachProduct', 3)
         self.now = DateTime()
 
-    def getLatestDatasets(self):
+    def getLatestDatasets(self, language=None):
         """ Get latest published datasets. Number configurable via
         ZMI frontpage_properties.
         """
         interfaces = ('eea.dataservice.interfaces.IDataset')
         return _getItems(self,
-                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+                         interfaces=interfaces,
+                         noOfItems=self.noOfLatestDefault,
+                         language=language)
 
-    def getLatestIndicators(self):
+    def getLatestIndicators(self, language=None):
         """ Get latest published indicators. """
         interfaces = ('eea.indicators.content.interfaces.IIndicatorAssessment')
         return _getItems(self,
-                interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+                         interfaces=interfaces,
+                         noOfItems=self.noOfLatestDefault,
+                         language=language)
 
-    def getLatestMaps(self):
+    def getLatestMaps(self, language=None):
         """ Get latest published static maps. """
         interfaces = ('eea.dataservice.interfaces.IEEAFigureMap')
         return _getItems(self,
-                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+                         interfaces=interfaces,
+                         noOfItems=self.noOfLatestDefault,
+                         language=language)
 
-    def getLatestGraphs(self):
+    def getLatestGraphs(self, language=None):
         """ Get latest published static graphs/charts."""
         interfaces = ('eea.dataservice.interfaces.IEEAFigureGraph')
         return _getItems(self,
-                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+                         interfaces=interfaces,
+                         noOfItems=self.noOfLatestDefault,
+                         language=language)
 
-    def getLatestInteractiveMaps(self):
+    def getLatestInteractiveMaps(self, language=None):
         """ Get latest published interactive maps."""
         interfaces = (
             'Products.EEAContentTypes.content.interfaces.IInteractiveMap')
         return _getItems(self,
-                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+                         interfaces=interfaces,
+                         noOfItems=self.noOfLatestDefault,
+                         language=language)
 
-    def getLatestInteractiveData(self):
+    def getLatestInteractiveData(self, language=None):
         """ Get latest published interactive data charts."""
         interfaces = (
             'Products.EEAContentTypes.content.interfaces.IInteractiveData')
         return _getItems(self,
-                    interfaces = interfaces, noOfItems = self.noOfLatestDefault)
+                         interfaces=interfaces,
+                         noOfItems=self.noOfLatestDefault,
+                         language=language)
 
 
-    def getAllProducts(self, no_sort = False):
-        """ get all latest data and maps merged into one single list """
+    def getAllProducts(self, no_sort=False, language=None):
+        """ Get all latest data and maps merged into one single list """
         result = []
-        res1 = self.getLatestIndicators()[:self.noOfEachProduct]
-        res2 = self.getLatestDatasets()[:self.noOfEachProduct]
-        res3 = self.getLatestMaps()[:self.noOfEachProduct]
-        res4 = self.getLatestGraphs()[:self.noOfEachProduct]
-        res5 = self.getLatestInteractiveMaps()[:self.noOfEachProduct]
-        res6 = self.getLatestInteractiveData()[:self.noOfEachProduct]
+        res1 = self.getLatestIndicators(
+            language=language)[:self.noOfEachProduct]
+        res2 = self.getLatestDatasets(language=language)[:self.noOfEachProduct]
+        res3 = self.getLatestMaps(language=language)[:self.noOfEachProduct]
+        res4 = self.getLatestGraphs(language=language)[:self.noOfEachProduct]
+        res5 = self.getLatestInteractiveMaps(
+            language=language)[:self.noOfEachProduct]
+        res6 = self.getLatestInteractiveData(
+            language=language)[:self.noOfEachProduct]
 
         result.extend(res1)
         result.extend(res2)
@@ -96,7 +112,7 @@ class DataMaps(BrowserView):
 
         # sort by effective date and then reverse it as it starts from smallest
         if not no_sort:
-            result.sort(key = lambda x : x.effective)
+            result.sort(key=lambda x: x.effective)
             result.reverse()
         return result
 
@@ -105,27 +121,27 @@ class DataMaps(BrowserView):
             section
         """
         query = {
-          'object_provides': {
-             'query': [
+            'object_provides': {
+                'query': [
                'eea.promotion.interfaces.IPromoted',
                'Products.EEAContentTypes.content.interfaces.IExternalPromotion',
-              ],
-              'operator': 'or',
-            },
+               ],
+                'operator': 'or',
+                },
             'review_state': 'published',
             'sort_on': 'effective',
-            'sort_order' : 'reverse'
+            'sort_order': 'reverse'
         }
 
         noOfItems = 18
         result = self.catalog(query)
         datasets_interfaces = [
-           'Products.EEAContentTypes.content.interfaces.IInteractiveMap',
-           'Products.EEAContentTypes.content.interfaces.IInteractiveData',
-           'eea.dataservice.interfaces.IEEAFigureGraph',
-           'eea.dataservice.interfaces.IDataset',
-           'eea.dataservice.interfaces.IEEAFigureMap',
-           'eea.indicators.content.interfaces.IIndicatorAssessment' ]
+            'Products.EEAContentTypes.content.interfaces.IInteractiveMap',
+            'Products.EEAContentTypes.content.interfaces.IInteractiveData',
+            'eea.dataservice.interfaces.IEEAFigureGraph',
+            'eea.dataservice.interfaces.IDataset',
+            'eea.dataservice.interfaces.IEEAFigureMap',
+            'eea.indicators.content.interfaces.IIndicatorAssessment']
         cPromos = []
         for brain in result:
             obj = brain.getObject()
@@ -133,7 +149,7 @@ class DataMaps(BrowserView):
             obj_interfaces = obj.restrictedTraverse('@@get_interfaces')()
             for i in datasets_interfaces:
                 if i in obj_interfaces:
-                    if not(promo.display_on_datacentre):
+                    if not promo.display_on_datacentre:
                         continue
                     cPromos.append(brain)
                     if len(cPromos) == noOfItems:
@@ -147,5 +163,11 @@ class DataMaps(BrowserView):
             return list(set(cPromos))
 
     def getImageUrl(self, brain):
-        """ public method for data-and-maps calling _getImageUrl """
+        """ Public method for data-and-maps calling _getImageUrl """
         return _getImageUrl(brain)
+
+    def getResultsInAllLanguages(self, method=None):
+        """ Public method for data-and-maps calling
+            _getResultsInAllLanguages
+        """
+        return _getResultsInAllLanguages(self, method)
