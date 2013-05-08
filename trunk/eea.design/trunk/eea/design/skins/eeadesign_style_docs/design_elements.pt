@@ -322,6 +322,14 @@
         &lt;/div&gt;
     </pre>
 
+    <div class="portalMessage thumbsupMessage">
+        <p i18n:translate="">Thumbs up for the content on this site</p>
+    </div>
+    <pre>
+        &lt;div class="portalMessage thumbsupMessage"&gt;
+            &lt;p&gt;Thumbs up for the content on this site&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
 
     <h2 i18n:translate="">Auto-Link-Icons</h2>
     <p i18n:translate="">
