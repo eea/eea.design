@@ -3,6 +3,9 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Feature: show results in other languages for whatsnewgallery if there are no
+  results for language of context
+  [ichimdav #14322]
 * Bug fix: keep pagination numbers centered even when next or previous link
   is missing
   [ichimdav #14371]

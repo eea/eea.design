@@ -18,10 +18,9 @@
 
                 <div class='portalMessage informationMessage'
                      tal:condition='languages'>
-                    <p i18n:translate="">No
-                        results are available for this topic in your language</p>
-                    <p i18n:translate="" class='js-other-languages'>See results in the
-                        following languages:</p>
+                    <p i18n:translate="">No content has been found in your
+                        language.</p>
+                    <p i18n:translate="" class='js-other-languages'>There is content for:</p>
                     <ul class='inline-block'>
                         <tal:repeat tal:repeat="lang languages">
                             <li>

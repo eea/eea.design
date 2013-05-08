@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
                 }
             }
             if (el.find('.js-other-languages').length) {
-                $(window).trigger('eea.whatsnew.getOtherLanguages', el);
+                $(window).trigger('eea.whatsnew.getResultsInAllLanguages', el);
             }
 
         });
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
             eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
     };
 
-    $(window).bind('eea.whatsnew.getOtherLanguages', function(ev, data) {
+    $(window).bind('eea.whatsnew.getResultsInAllLanguages', function(ev, data) {
             var $data = $(data);
             $data.find('a').click(function(ev){
                 var params = 'Language=' + ev.target.innerHTML;
