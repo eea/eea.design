@@ -60,6 +60,28 @@
                         use_email_as_login site_properties/use_email_as_login|nothing;
                         ztu modules/ZTUtils;">
 
+        <div class="portalMessage informationMessage">
+            <tal:template_defines define="enabled_browsers_macro python:True;">
+                <div id="cms-supported-browsers">    
+                        <div id="foutdated_text">
+                           <p i18n:translate="">The EEA Web CMS works best with following browsers:</p>
+                        </div>
+                        <div id="cms-browsers-links">
+                              <ul>
+                                  <li id="cms-chrome">
+                                     Google Chrome (recommended)
+                                  </li>
+                                  <li id="cms-firefox">
+                                      Firefox
+                                  </li>
+                              </ul>
+                         <p  i18n:translate="" class="discreet">Internet Explorer is not recommended for the CMS area.</p>
+                        </div>
+                </div>
+            </tal:template_defines>
+        </div>
+
+
             <form tal:define="url python:context.absolute_url()+'/'+ 'login_form';
                               decide_https python:test(context.portal_url() == 'http://www.eea.europa.eu', 'https://', 'http://');
                               secureUrl python:url.replace('http://', decide_https);"

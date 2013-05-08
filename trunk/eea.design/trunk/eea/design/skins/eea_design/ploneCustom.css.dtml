@@ -2450,6 +2450,11 @@ form[name="edit_form"] table {
     background-position: -100px 0 !important;
 }
 
+#cms-browsers-links ul li {
+    display: list-item;
+    list-style-type: square;
+}
+
 /* #5454; we have required spans where we don't need the background image */
 .no-bg:after {
     background-image: none !important;

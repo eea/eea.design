@@ -3,6 +3,8 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Change: Added info on supported browsers in login macro.
+  [demarant closes #9543]
 * Feature: show results in other languages for whatsnewgallery if there are no
   results for language of context
   [ichimdav #14322]

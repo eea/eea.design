@@ -6,7 +6,8 @@
                             metal:define-macro="main"
                 i18n:domain="eea">
 
-    <metal:browser define-macro="browsers" tal:condition="python:enabled_browsers_macro">
+    <metal:browser define-macro="browsers" tal:condition="python:enabled_browsers_macro" 
+                   tal:define="http_user_agent python:request['HTTP_USER_AGENT'];">
       <tal:block i18n:domain="eea.notranslation">
         <li id="outdated_ff">
             <a href='http://www.firefox.com' target='_blank' i18n:translate="">Firefox</a>
