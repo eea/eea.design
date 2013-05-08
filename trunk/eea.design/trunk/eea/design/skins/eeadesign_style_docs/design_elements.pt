@@ -91,12 +91,12 @@
 
     <h2 i18n:translate="">Jquerytools tabs two rows title</h2>
         <ul class="eea-tabs two-rows">
-            <li i18n:translate="">First tab</li>
+            <li i18n:translate="">First tab two rows</li>
             <li i18n:translate="">Second tab with longer title</li>
-            <li i18n:translate="">Third tab</li>
+            <li i18n:translate="">Third tab two rows</li>
         </ul>
         <p i18n:translate="">
-            If you have tabs that have longer titles consider using the extra 'two-rows' class for the tabs which makes the tabs larger in height and better styled to accomodate larger titles.
+            If you have tabs that have longer titles consider using the extra 'two-rows' class for the tabs which makes the tabs larger in height and better styled to accommodate larger titles.
         </p>
         <div class="eea-tabs-panels">
            
@@ -298,12 +298,29 @@
     <div class="portalMessage">
         <p i18n:translate="">Settings have been applied</p>
     </div>
+    <pre>
+        &lt;div class="portalMessage"&gt;
+            &lt;p&gt;Settings have been applied&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
     <div class="portalMessage informationMessage">
         <p i18n:translate="">Your screensaver has been upgraded, please consider to restart your computer ... Have a good day</p>
     </div>
+    <pre>
+        &lt;div class="portalMessage informationMessage"&gt;
+            &lt;p&gt;Your screensaver has been upgraded, please consider to
+                    restart your computer ... Have a good day&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
     <div class="portalMessage warningMessage">
         <p i18n:translate="">Warning! Core meltdown at EEA HQ, code super-duper-red</p>
     </div>
+    <pre>
+        &lt;div class="portalMessage warningMessage"&gt;
+            &lt;p&gt;Warning! Core meltdown at EEA HQ, code
+                        super-duper-red&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
 
 
     <h2 i18n:translate="">Auto-Link-Icons</h2>
