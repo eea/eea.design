@@ -221,10 +221,7 @@
     <div style="display:none" tal:content="string:plone: XXX this is a workaround, somehow the first div from this folder gets it's content removed"></div>
         <div class='portalMessage informationMessage'>
             <p i18n:translate="" class='js-no-results'>No results are available for this topic</p>
-            <p i18n:translate="">Checking for results in other languages</p>
         </div>
-
-        <p class="spinner"><img src="/++resource++faceted_images/ajax-loader.gif" /></p>
     </tal:nocond>
 </metal:condition>
 

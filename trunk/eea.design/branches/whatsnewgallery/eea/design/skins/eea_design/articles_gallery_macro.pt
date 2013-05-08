@@ -22,7 +22,7 @@
                         results are available for this topic in your language</p>
                     <p i18n:translate="" class='js-other-languages'>See results in the
                         following languages:</p>
-                    <ul>
+                    <ul class='inline-block'>
                         <tal:repeat tal:repeat="lang languages">
                             <li>
                                 <a href="#" tal:content="lang">
