@@ -496,6 +496,8 @@ def filterLatestVersion(self, brains, noOfItems=6):
     and return only the first noOfItems
     which are either latest versions or not versioned.
     """
+    cat = getToolByName(self.context, 'portal_catalog')
+    zcat = cat._catalog
     res = []
     for brain in brains:
         # if object implements our versioning
@@ -504,6 +506,12 @@ def filterLatestVersion(self, brains, noOfItems=6):
             versionsObj = IGetVersions(obj)
             if versionsObj.isLatest():
                 # keep it, this is latest object
+                res.append(brain)
+            else:
+                latest = versionObj.latest_version()
+                rid = cat.getrid(latest)
+                data = zcat.data[rid]
+                brain = zcat.instantiate((rid, data))
                 res.append(brain)
         else:
             #this object is not versioned, so keep it
