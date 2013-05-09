@@ -360,6 +360,47 @@
         &lt;/div&gt;
     </pre>
 
+    <div class="portalMessage rosetteMessage">
+        <p i18n:translate="">Message which could indicate a translation
+            message</p>
+    </div>
+    <pre>
+        &lt;div class="portalMessage rosetteMessage"&gt;
+        &lt;p&gt;Message which could indicate a translation
+            message&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <div class="portalMessage ideaMessage">
+        <p i18n:translate="">Message which could indicate a call to action
+            message</p>
+    </div>
+    <pre>
+        &lt;div class="portalMessage ideaMessage"&gt;
+        &lt;p&gt;Message which could indicate a call to action
+        message&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <div class="portalMessage smileyMessage">
+        <p i18n:translate="">Smiley Message type</p>
+    </div>
+    <pre>
+        &lt;div class="portalMessage smileyMessage"&gt;
+        &lt;p&gt;Smiley Message&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+
+
+    <div class="portalMessage noteMessage">
+        <p i18n:translate="">Note Message</p>
+    </div>
+    <pre>
+        &lt;div class="portalMessage noteMessage"&gt;
+        &lt;p&gt;Note Message &lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+
     <h2 i18n:translate="">Auto-Link-Icons</h2>
     <p i18n:translate="">
         Link types are automatically detected on client side

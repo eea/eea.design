@@ -1826,6 +1826,26 @@ error-handling {
     color: #A7001D;
 }
 
+.rosetteMessage {
+    background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #F1F1F1;
+    color: #666666;
+}
+
+.ideaMessage {
+    background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #FCFF9D;
+    color: #555708;
+}
+
+.smileyMessage {
+    background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FCFF9D;
+    color: #555708;
+}
+
+.noteMessage {
+    background: url(&dtml-portal_url;/note.png) no-repeat scroll 1em 50% #F1F1F1;
+    color: #555708;
+}
+
 .documentByLine {
     font-size: &dtml-fontSmallSize;;
     font-weight: normal;
@@ -2375,6 +2395,11 @@ body.kupu {
 .ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *,
 .ploneSkin .mceText {
     white-space: normal !important;
+}
+
+/* #9499 give the style selector popup a minimum width */
+.ploneSkin .mceMenu {
+    min-width: 145px;
 }
 
 /* #5267 display form fields for translated items */

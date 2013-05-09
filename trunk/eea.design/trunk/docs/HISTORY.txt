@@ -3,6 +3,9 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Feature: Added styles from community site of portalMessages and added all
+  portalMessages to TinyMCE style selector
+  [ichimdav #9499]
 * Change: Added info on supported browsers in login macro.
   [demarant closes #9543]
 * Feature: show results in other languages for whatsnewgallery if there are no
