@@ -508,14 +508,9 @@ def filterLatestVersion(self, brains, noOfItems=6):
                 # keep it, this is latest object
                 res.append(brain)
             else:
-                #avoid doing a catalog search on uid to the get brain by going
-                #straight to the index data
-                #this should have worked with cat.getrid(obj), but doesn't.
                 latest = versionsObj.latest_version()
-                uids = zcat.indexes['UID']
-                rid = uids._index[latest.UID()]
-                data = zcat.data[rid]
-                brain = zcat.instantiate((rid, data))
+                uid = latest.UID()
+                brain = cat.searchResults(UID=uid)[0]
                 res.append(brain)
         else:
             #this object is not versioned, so keep it
