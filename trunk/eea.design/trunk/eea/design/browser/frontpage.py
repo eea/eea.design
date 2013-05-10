@@ -12,6 +12,10 @@ from eea.themecentre.themecentre import getTheme
 from plone.app.blob.interfaces import IBlobWrapper
 from zope.component import queryMultiAdapter
 from eea.versions.interfaces import IGetVersions
+import logging
+
+logger = logging.getLogger("eea.design.browser.frontpage")
+
 
 class Frontpage(BrowserView):
     """ Front page
@@ -510,8 +514,13 @@ def filterLatestVersion(self, brains, noOfItems=6):
             else:
                 latest = versionsObj.latest_version()
                 uid = latest.UID()
-                brain = cat.searchResults(UID=uid)[0]
-                res.append(brain)
+                results = cat.searchResults(UID=uid)
+                if not results:
+                    logger.warning("Couldn't find catalog entry for UID %s", 
+                                    uid)
+                else:
+                    brain = cat.searchResults(UID=uid)[0]
+                    res.append(brain)
         else:
             #this object is not versioned, so keep it
             res.append(brain)
