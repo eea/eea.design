@@ -1,0 +1,12 @@
+<script type="text/javascript">
+   // <![CDATA[
+      document.write('<form id="selectetc_form" onsubmit="this.selectetc.onchange()"><select onchange="document.location = this.options[this.selectedIndex].value">');
+      document.write('<option value="#">Select European Topic Centre (ETC)</option>');
+      document.write('<option value="http://air-climate.eionet.europa.eu">Air and Climate Change</option>');
+      document.write('<option value="http://biodiversity.eionet.europa.eu">Biological Diversity</option>');
+      document.write('<option value="http://etc-lusi.eionet.europa.eu">Land Use and Spatial Information</option>');
+      document.write('<option value="http://etc-scp.eionet.europa.eu">Sustainable Consumption and Production</option>');
+      document.write('<option value="http://water.eionet.europa.eu">Water</option>');      
+      document.write('</select></form>');
+   // ]]>
+</script>           
