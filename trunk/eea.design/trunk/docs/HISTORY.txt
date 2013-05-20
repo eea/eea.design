@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.0-dev - (unreleased)
+----------------------
+
 6.9 - (2013-05-20)
 ------------------
 * Change: added information about change of logic for filterLatestVersion 
