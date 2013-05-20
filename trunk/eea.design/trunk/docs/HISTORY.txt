@@ -3,6 +3,9 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Change: added information about change of logic for filterLatestVersion 
+  because of performace optimization ticket and versions refactoring
+  [ichimdav #14008]
 * Feature: Added styles from community site of portalMessages and added all
   portalMessages to TinyMCE style selector
   [ichimdav #9499]

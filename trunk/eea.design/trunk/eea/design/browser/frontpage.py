@@ -494,7 +494,6 @@ def _getResultsInAllLanguages(self, method=None):
                 results[translation] = res
         return results
 
-
 def filterLatestVersion(self, brains, noOfItems=6):
     """ Take a list of catalog brains
     and return only the first noOfItems
@@ -502,6 +501,11 @@ def filterLatestVersion(self, brains, noOfItems=6):
     """
     cat = getToolByName(self.context, 'portal_catalog')
     res = []
+    # NOTE: ichimdav due to the performance optimization tichet we no longer 
+    # pass the catalog search with all of the results from which we can keep
+    # searching for the latest version and at the end break, instead now 
+    # this method receives the latest brains for the catalog search sorted
+    # by effective date
     for brain in brains:
         # if object implements our versioning
         if 'eea.versions.interfaces.IVersionEnhanced' in brain.object_provides:
@@ -511,6 +515,9 @@ def filterLatestVersion(self, brains, noOfItems=6):
                 # keep it, this is latest object
                 res.append(brain)
             else:
+                # attempt to retrieve the latest versions of the given brain
+                # if this brains doesn't contain the latest version of the 
+                # object
                 latest = versionsObj.latest_version()
                 uid = latest.UID()
                 results = cat.searchResults(UID=uid)
@@ -526,5 +533,9 @@ def filterLatestVersion(self, brains, noOfItems=6):
 
         if len(res) == noOfItems:
             break  #we got enough items
-
+    # because of performance optimization ticket and #14008 
+    # resort based on effective date since getting the latest version could
+    # mess up the sorting that came from the catalog search
+    res.sort(key=lambda x: x.effective)
+    res.reverse()
     return res
