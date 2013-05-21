@@ -67,7 +67,11 @@ jQuery(document).ready(function($) {
     eea_tabs();
 
     $(window).bind('hashchange', function (evt) {
-        $(window.location.hash).click();
+        // #14564 trigger click only if hash contains tab and use find to avoid
+        // js syntax error
+        if (window.location.hash.indexOf('tab') !== -1) {
+            $("#content").find(window.location.hash).click();
+        }
     });
 
     $(window).trigger('eea.tags.loaded', $('#whatsnew-gallery').find('.eea-tabs'));

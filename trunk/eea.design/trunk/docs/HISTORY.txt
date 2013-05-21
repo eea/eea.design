@@ -3,6 +3,9 @@ Changelog
 
 7.0-dev - (unreleased)
 ----------------------
+* Bug fix: don't crash when location hash contains characters which shouldn't
+  be passed to the jQuery constructor
+  [ichimdav #14564]
 
 6.9 - (2013-05-20)
 ------------------
