@@ -3,6 +3,8 @@ Changelog
 
 7.0-dev - (unreleased)
 ----------------------
+* Bug fix: put back wrongfully commented comments viewlet
+  [tiberich]
 * Bug fix: don't crash when location hash contains characters which shouldn't
   be passed to the jQuery constructor
   [ichimdav #14564]
