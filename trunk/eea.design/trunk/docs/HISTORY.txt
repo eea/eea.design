@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.0-dev - (unreleased)
-----------------------
+7.0 - (2013-05-23)
+------------------
 * Bug fix: put back wrongfully commented comments viewlet
   [tiberich]
 * Bug fix: don't crash when location hash contains characters which shouldn't
