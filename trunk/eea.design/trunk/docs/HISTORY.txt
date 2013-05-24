@@ -3,6 +3,9 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed the facebook flyout. It's not hidden anymore under the 
+  footer of the page.
+  [prospchr fixes #14537]
 
 7.0 - (2013-05-23)
 ------------------

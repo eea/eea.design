@@ -1181,7 +1181,7 @@ float:right;
 /* End edit form elements */
 #visual-portal-wrapper {
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible !important;
     padding: 0;
     display: block;
     clear: both;
