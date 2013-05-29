@@ -48,6 +48,38 @@
         &lt;/ul&gt;">
     </pre>
 
+    <p i18n:translate="">
+        You can now use more than you galleryView on the page if needed by using the
+        galleryView class.
+        Also you can disable the filmstrip by assigning the <strong>js-noFilmstrip</strong> class to the gallery
+        as you can see in the example below.
+    </p>
+
+    <p i18n:translate="">
+    Make sure that this gallery has also an id thou as the gallery makes use of an id selector
+    </p>
+    <p i18n:translate="">
+        Also if you add a width and height as an inline style the gallery will match these sizes instead
+        of growing to the size of it's parent as it does by default.
+    </p>
+
+        <ul id="galleryView2" class="galleryView js-noFilmstrip">
+            <li>
+                <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
+                <img src="monkey-with-makeup/image_large" />
+            </li>
+            <li><img src="mr-monkey/image_large" /></li>
+        </ul>
+        <pre tal:content="string:
+        &lt;ul id=&quot;galleryView2&quot; class=&quot;galleryView js-noFilmstrip&quot;&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;panel-overlay&quot;&gt;Overlay text goes here&lt;/span&gt;
+                &lt;img src=&quot;mr-monkey/image_large&quot; /&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;img src=&quot;monkey-with-makeup/image_large&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;">
+        </pre>
+
     <h2 i18n:translate="">Jquerytools tabs</h2>
         <ul class="eea-tabs">
             <li i18n:translate="">First tab</li>

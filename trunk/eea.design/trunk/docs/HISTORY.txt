@@ -3,6 +3,10 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
+* Feature: documented the addition of extra galleryView galleries and what 
+  class to use in order to get rid of the filmstrip.
+  Also documented the use of inline styles to modify gallery size
+  [ichimdav #14606]
 * Bug fix: Fixed the facebook flyout. It's not hidden anymore under the 
   footer of the page.
   [prospchr fixes #14537]
