@@ -54,7 +54,7 @@
                         ac_name auth/name_cookie|string:__ac_name;
                         ac_password auth/pw_cookie|string:__ac_password;
                         ac_persist auth/persist_cookie|nothing;
-                        login_name python:request.get('login_name', request.get(ac_name, ''));
+                        login_name request/login_name | request/ac_name | string:;
                         checkPermission nocall: context/portal_membership/checkPermission;
                         site_properties context/portal_properties/site_properties;
                         use_email_as_login site_properties/use_email_as_login|nothing;
@@ -153,7 +153,7 @@
                                checked="checked"
                                id="cb_remember"
                                tal:attributes="name ac_persist;
-                                               checked python:request.get(ac_name, '') and 'checked' or None;"
+                                              checked python:request.form.get('ac_name', '') and 'checked' or None"
                                />
 
                         <tal:username tal:condition="not:use_email_as_login">

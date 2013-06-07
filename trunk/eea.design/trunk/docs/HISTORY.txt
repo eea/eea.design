@@ -3,6 +3,10 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
+* Bug fix: no longer give error when doing HEAD method on a file field and it
+  returns 404 not found; This was due to some very ordinary looking code in 
+  login_form (which is referenced from cross_site_top viewlet)
+  [tiberich #9335]
 * Feature: documented the addition of extra galleryView galleries and what 
   class to use in order to get rid of the filmstrip.
   Also documented the use of inline styles to modify gallery size
