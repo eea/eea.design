@@ -3,6 +3,9 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
+* Bug fix: fixed a potential issue where eea-fitcontainer could have entered
+  in a recursion loop
+  [ichimdav]
 * Change: added better draft watermark for content not in final published state
   [demarant]
 * Bug fix: no longer give error when doing HEAD method on a file field and it
