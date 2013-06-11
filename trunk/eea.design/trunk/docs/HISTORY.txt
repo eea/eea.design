@@ -3,6 +3,8 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
+* Change: added better draft watermark for content not in final published state
+  [demarant]
 * Bug fix: no longer give error when doing HEAD method on a file field and it
   returns 404 not found; This was due to some very ordinary looking code in 
   login_form (which is referenced from cross_site_top viewlet)
