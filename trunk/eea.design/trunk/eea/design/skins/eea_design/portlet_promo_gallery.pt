@@ -28,30 +28,34 @@
                             parent_image_url python:get_img_url(hl);
                             image_link python:parent_image_url if parent_image_url else image_link;
                             hltitle obj/Title;
-                            hl_class python:'video-fancybox' if is_video else 'noPrint';
                             ">
-                        <tal:image tal:define="figure obj/getImage|nothing;
-                        figure_title figure/title|obj/Title|nothing;">
-                        <tal:Link tal:condition="figure_link">
-                            <a href="" title="" 
-                               tal:attributes="href figure_link; class hl_class;
-                               title figure_title;">
-                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
-                         </a>
-                         </tal:Link>
-                        <tal:noLink tal:condition="not: figure_link">
-                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
-                        </tal:noLink>
-                        </tal:image>
-                    <div tal:attributes="class string:promo-item-desc${small_factor};">
-                        <h3><a href="#" 
-                                tal:attributes="href figure_link; class hl_class"
-                                tal:content="python:plone_view.cropText(hltitle,80)">
-                                Highlight Title</a></h3>
-                    <tal:desc tal:condition="python:frontpage_gallery and show_description">
-                      <span tal:define="description obj/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />   
-                    </tal:desc>  
-                    </div>
+
+                            <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
+                                <metal:fill metal:fill-slot="body">
+                                    <tal:image tal:define="figure obj/getImage|nothing;
+                                                           figure_title figure/title|obj/Title|nothing;">
+                                        <tal:Link tal:condition="figure_link">
+                                            <a href="" title=""
+                                               tal:attributes="href figure_link; class python:cloud or video or animation;
+                                                               title figure_title;">
+                                                <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
+                                            </a>
+                                        </tal:Link>
+                                        <tal:noLink tal:condition="not: figure_link">
+                                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
+                                        </tal:noLink>
+                                    </tal:image>
+                                    <div tal:attributes="class string:promo-item-desc${small_factor};">
+                                        <h3><a href="#"
+                                               tal:attributes="href figure_link; class python:cloud or video or animation;"
+                                               tal:content="python:plone_view.cropText(hltitle,80)">
+                                            Highlight Title</a></h3>
+                                        <tal:desc tal:condition="python:frontpage_gallery and show_description">
+                                            <span tal:define="description obj/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />
+                                        </tal:desc>
+                                    </div>
+                                </metal:fill>
+                            </metal:isVideo>
                         </li>    
         </metal:pritems>
     </ul> 
