@@ -63,7 +63,8 @@
                               image_url python:parent_image_url if parent_image_url else image_url;
                               title highlight/Title|highlight/getNewsTitle;
                               description highlight/Description|highlight/getTeaser;
-                              is_video python:highlight.portal_type == 'File';">
+                              portal_type highlight/portal_type;
+                              is_video python:'eea.mediacentre.interfaces.IVideo' in highlight.object_provides;">
             <div class="featured roundedCorners">
                     <h2 class="column-title" i18n:domain="eea" i18n:translate="">
                             <span tal:omit-tag="" metal:define-slot="box_title">Box Name (Title that shows up)</span>
@@ -71,10 +72,15 @@
                 <div class="featured-highlights">
                     <div class="figure-left">
                         <tal:cond tal:condition="is_video">
-                        <a href="#" class="noPrint"
-                                    tal:attributes="href url; class string:video-fancybox;">
-                                    <img alt="" tal:attributes="src string:${url}/${image_scale}; title title; alt title" />
-                        </a>
+
+                        <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
+                            <metal:fill metal:fill-slot="body">
+                                <a href="#" class="noPrint"
+                                            tal:attributes="href url; class python:cloud or video or animation">
+                                            <img alt="" tal:attributes="src string:${url}/${image_scale}; title title; alt title" />
+                                </a>
+                            </metal:fill>
+                        </metal:isVideo>
                         </tal:cond>
                         <tal:notcond tal:condition="not:is_video">
                         <a href="#" tal:attributes="href url;">
@@ -85,10 +91,15 @@
                 
                 <tal:cond tal:condition="is_video">
                     <h3 class="highlight">
-                        <a href="#" class="noPrint"
-                            tal:attributes="href url; class string:video-fancybox;"
-                           tal:content="title">
-                               Highlight Title</a></h3>
+                        <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
+                            <metal:fill metal:fill-slot="body">
+                                <a href="#" class="noPrint"
+                                    tal:attributes="href url; class python:cloud or video or animation"
+                                   tal:content="title">
+                                       Highlight Title</a>
+                            </metal:fill>
+                        </metal:isVideo>
+                    </h3>
                     <p tal:content="python:plone_view.cropText(description,descr_max_length)">description</p>
                     <p><a href="#" class="moreLink"
                             tal:attributes="href string:${url}/view" i18n:translate="">Read more</a></p>
@@ -241,5 +252,23 @@
     </div>
     <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </metal:empty>
+
+<metal:isVideo metal:define-macro="is-video">
+    <tal:comment replace="nothing">
+        You should provide portal_type and is_video before calling this macro
+        to avoid getting wrong results.
+    </tal:comment>
+
+    <tal:defines tal:define="
+    portal_type portal_type|context/portal_type;
+    item_interfaces context/@@plone_interface_info;
+    is_video is_video|python:item_interfaces.provides('eea.mediacentre.interfaces.IVideo');
+
+    video python:'video-fancybox' if is_video and portal_type != 'FlashFile' else '';
+    animation python:'animation-fancybox' if portal_type == 'FlashFile' else '';
+    cloud python:'video-fancybox cloudvideo' if portal_type == 'CloudVideo' else '';">
+        <span metal:define-slot="body"></span>
+    </tal:defines>
+</metal:isVideo>
 
 </html>
