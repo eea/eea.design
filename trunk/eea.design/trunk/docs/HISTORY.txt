@@ -9,16 +9,20 @@ Changelog
 * Change: added better draft watermark for content not in final published state
   [demarant]
 * Bug fix: no longer give error when doing HEAD method on a file field and it
-  returns 404 not found; This was due to some very ordinary looking code in 
+  returns 404 not found; This was due to some very ordinary looking code in
   login_form (which is referenced from cross_site_top viewlet)
   [tiberich #9335]
-* Feature: documented the addition of extra galleryView galleries and what 
+* Feature: documented the addition of extra galleryView galleries and what
   class to use in order to get rid of the filmstrip.
   Also documented the use of inline styles to modify gallery size
   [ichimdav #14606]
-* Bug fix: Fixed the facebook flyout. It's not hidden anymore under the 
+* Bug fix: Fixed the facebook flyout. It's not hidden anymore under the
   footer of the page.
   [prospchr fixes #14537]
+* Change: /at_download is now redirecting to /download (e.g. /at_download/file and /at_download/image no redirect to /download)
+  to simplify the download methods provided by objects and to be better mapped under
+  plone.app.caching rules.
+  [ghicaale refs #14735]
 
 7.0 - (2013-05-23)
 ------------------
@@ -30,7 +34,7 @@ Changelog
 
 6.9 - (2013-05-20)
 ------------------
-* Change: added information about change of logic for filterLatestVersion 
+* Change: added information about change of logic for filterLatestVersion
   because of performace optimization ticket and versions refactoring
   [ichimdav #14008]
 * Feature: Added styles from community site of portalMessages and added all

@@ -6,16 +6,22 @@
 ##bind script=script
 ##bind subpath=traverse_subpath
 
-from zExceptions import NotFound
+request = container.REQUEST
+response =  request.response
+return response.redirect(context.absolute_url() + '/download')
 
-if traverse_subpath:
-    field = context.getWrappedField(traverse_subpath[0])
-else:
-    field = context.getPrimaryField()
-    if not field:
-        field = context.getWrappedField('file')
+### Disabled due to #14735
 
-if field == None:
-    raise NotFound
-
-return field.download(context)
+#from zExceptions import NotFound
+#
+#if traverse_subpath:
+#    field = context.getWrappedField(traverse_subpath[0])
+#else:
+#    field = context.getPrimaryField()
+#    if not field:
+#        field = context.getWrappedField('file')
+#
+#if field == None:
+#    raise NotFound
+#
+#return field.download(context)
