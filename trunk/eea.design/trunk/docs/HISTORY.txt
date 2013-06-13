@@ -3,6 +3,8 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
+* Bug fix: add extra classes for non File videos to avoid image displacement
+  [ichimdav refs #14762]
 * Bug fix: fixed a potential issue where eea-fitcontainer could have entered
   in a recursion loop
   [ichimdav]
