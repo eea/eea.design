@@ -35,7 +35,7 @@
 
     <metal:main fill-slot="main"
          tal:define="auth nocall:context/acl_users/credentials_cookie_auth|context/cookie_authentication|nothing;
-                     came_from came_from|request/came_from|request/HTTP_REFERER|nothing;
+                     came_from came_from|request/came_from|request/HTTP_REFERER|string:;
                      came_from python:test(context.portal_url.isURLInPortal(came_from), came_from, None);
                      errors options/state/getErrors;
                      ac_name auth/name_cookie|string:__ac_name;
@@ -48,7 +48,7 @@
         </div>
         <metal:login define-macro="login"
             tal:define="auth nocall:context/acl_users/credentials_cookie_auth|context/cookie_authentication|nothing;
-                        came_from came_from|request/came_from|request/HTTP_REFERER|nothing;
+                        came_from came_from|request/came_from|request/HTTP_REFERER|string:;
                         came_from python:test(context.portal_url.isURLInPortal(came_from), came_from, None);
                         errors options/state/getErrors|python:{};
                         ac_name auth/name_cookie|string:__ac_name;
