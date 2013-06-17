@@ -1,0 +1,42 @@
+    <tal:articles metal:define-macro="articles"
+            tal:define="frontpage_view context/@@frontpage_highlights;
+                        language python:request.get('Language');
+                        folderContents python: frontpage_view.getArticles() if not language else frontpage_view.getArticles(language=language);
+                        ajax python:True">
+
+        <tal:folderContents condition="folderContents">
+            <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        </tal:folderContents>
+
+        <tal:notFolderContents condition="not:folderContents"
+                               define="languages
+                               languages|python:frontpage_view.getResultsInAllLanguages('getArticles');"
+                metal:define-macro="noresults">
+            <tal:articles
+                    tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
+                            ajax python:True">
+
+                <div class='portalMessage informationMessage'
+                     tal:condition='languages'>
+                    <p i18n:translate="">No content has been found in your
+                        language.</p>
+                    <p i18n:translate="" class='js-other-languages'>There is content for:</p>
+                    <ul class='inline-block'>
+                        <tal:repeat tal:repeat="lang languages">
+                            <li>
+                                <a href="#" tal:content="lang">
+                                    language
+                                </a>
+                            </li>
+                        </tal:repeat>
+                    </ul>
+                </div>
+                <div class='portalMessage informationMessage'
+                     tal:condition='not:languages'>
+                    <p i18n:translate="">No
+                        results are available for this topic</p>
+                </div>
+            </tal:articles>
+        </tal:notFolderContents>
+
+    </tal:articles>

@@ -1,0 +1,21 @@
+<tal:defines tal:define="frontpage_view context/@@frontpage_highlights;">
+
+    <tal:news metal:define-macro="news"
+              tal:define="language python:request.get('Language');
+                                      folderContents python: frontpage_view.getNews() if not language else frontpage_view.getNews(language=language);
+                    ajax python:True">
+
+        <tal:folderContents condition="folderContents">
+            <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+        </tal:folderContents>
+
+        <metal:languages tal:condition="not:folderContents">
+            <tal:defines
+                    tal:define="languages python:frontpage_view.getResultsInAllLanguages('getNews')">
+                <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
+            </tal:defines>
+        </metal:languages>
+
+    </tal:news>
+
+</tal:defines>

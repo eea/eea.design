@@ -1,0 +1,26 @@
+<metal:entry define-macro="entry">
+    <tal:defines tal:define="portal_type obj/portal_type;">
+
+        <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
+            <metal:fill metal:fill-slot="body">
+                <div tal:define="css python:obj.isPrincipiaFolderish and 'photoAlbumEntry photoAlbumFolder' or 'photoAlbumEntry';"
+                     tal:attributes="class css" >
+
+                    <a tal:attributes="href listing_url;
+                                       title obj/pretty_title_or_id;
+                                       class python:cloud or video or animation">
+                        <span class="photoAlbumEntryWrapper">
+                            <img tal:attributes="title desc_or_title;
+                                                 alt obj/pretty_title_or_id;
+                                                 src string:${obj/absolute_url}/image_thumb"/>
+                        </span>
+                        <span class="photoAlbumEntryTitle" tal:content="obj/pretty_title_or_id" />
+                        <span class="photoAlbumEntryDescription" tal:content="python: obj.Description()" />
+                    </a>
+                </div>
+            </metal:fill>
+        </metal:isVideo>
+
+    </tal:defines>
+
+</metal:entry>

@@ -1,0 +1,115 @@
+/*
+  Style for the left navigation.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+a.navItemLevel1current,
+#eea-portlet-navigation-tree a.navItemLevel3current,
+#eea-portlet-navigation-tree a.navItemLevel2current {
+    background: url("arrow-normal.png") no-repeat scroll 1em 50% &dtml-corporateGreen; !important;
+}
+
+#eea-portlet-navigation-tree a,
+#eea-portlet-navigation-tree a:active,
+#eea-portlet-navigation-tree a:visited  {
+    color:&dtml-fontColor;;
+}
+
+#eea-portlet-navigation-tree {
+    font-weight: bold;
+}
+
+
+#eea-portlet-navigation-tree .navTreeLevel3  {
+    margin-left: 1em;
+}
+
+#eea-portlet-navigation-tree .navTreeLevel2 .navItemLevel2  {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    color: &dtml-linkColor;;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+#eea-portlet-navigation-tree  li.navItemLevel2 {
+    margin-bottom:0.3em;
+}
+
+#eea-portlet-navigation-tree li.navItemLevel3,
+#eea-portlet-navigation-tree li.navItemLevel4 {
+}
+
+#eea-portlet-navigation-tree .navTreeLevel3 .navItemLevel3,
+#eea-portlet-navigation-tree .navTreeLevel4 .navItemLevel4 {
+   font-size: 1em;
+   line-height:	1.5em;
+   color: &dtml-fontColor;;
+   margin-top:0em;
+   margin-bottom:0.1em;
+   padding-left:1.5em;
+}
+
+
+#eea-portlet-navigation-tree a {
+   text-decoration: none;
+}
+
+#eea-portlet-navigation-tree ul {
+   margin-left:0;
+   margin-right:0;
+}
+
+#eea-portlet-navigation-tree ul {
+   list-style: none;
+}
+
+#eea-portlet-navigation-tree li {
+    margin-left: -1em;
+    padding-left: 1em;
+    margin: 0 0 -1em 0;
+    padding: 0 0 1em 0;
+}
+
+#eea-portlet-navigation-tree .roundedBox a {
+    padding: 0.5em 0.5em;
+}
+#eea-portlet-navigation-tree .roundedBox {
+    margin-bottom:0.3em;
+}
+
+/* Mouseover behavior styles */
+
+#eea-portlet-navigation-tree a.navItemLevel3:hover,
+#eea-portlet-navigation-tree a.navItemLevel4:hover {
+     color: &dtml-linkVisitedColor; !important;
+     background-color: &dtml-linkHoverBGColor;;
+}
+
+#eea-portlet-navigation-tree a.navItemLevel2:hover {
+     color:&dtml-linkVisitedColor; !important;
+     background-color:transparent !important;
+}
+
+#eea-portlet-navigation-tree .portletHeader a:hover {
+     color:&dtml-linkHeadingColor; !important;
+     background-color:&dtml-linkHoverBGColor;;
+}
+
+/* Styles for the CURRENT nav item */
+a.navItemLevel1current,
+#eea-portlet-navigation-tree a.navItemLevel3current,
+#eea-portlet-navigation-tree a.navItemLevel2current {
+    color: &dtml-linkVisitedColor; !important;
+    background-color: &dtml-linkHoverBGColor;;
+}
+
+#subsite-logo {
+    width: 150px;
+}
+
+/* YOUR CSS RULES STOP HERE */
+
+/* </dtml-with> */

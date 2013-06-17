@@ -1,0 +1,72 @@
+/* <dtml-with base_properties> */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> */
+
+/* multimedia transparent colors */
+#multimedia-tabs li a.current, ul#multimedia-tabs li a:hover,
+.multimedia-widget #tag-cloud #tag-cloud-content,
+#multimedia-coverflow,
+#multimedia-vids .eea-tabs-panel, 
+#multimedia-widgets .featured,
+#bottomright-widgets #tag-cloud .portletFooter
+{
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2346f83, endColorstr=#b2346f83);
+}
+
+#bottom-widgets ul#multimedia-tabs,
+#bottom-widgets ul#faceted-tabs {
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c346f83, endColorstr=#4c346f83);
+}
+
+.photoAlbumEntry {
+    border-width: 0px 1px 2px 1px;
+    border-style: solid;
+    border-color: #CCC;
+
+}
+
+#whatsnew-gallery .photoAlbumEntry,
+#whatsnew-gallery .photoAlbumEntry:hover{ 
+    background: transparent;
+    border: 0px;
+}
+
+/* 5140 ecotip image overlap */
+img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none; }
+#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 0; display:block; }
+
+/* 5346; fixed placement of livesearch */
+
+.LSResult {
+    top: 95px;
+}
+
+/* don't assign color to contentActionMenus as it can use the one from edit-form */
+#contentActionMenus {
+    background: transparent !important;
+}
+
+/* 5443 personaltools and header holder needs position static when we have 
+ * hovering items over our gradient */ 
+#portal-personaltools {
+    position: static;
+} 
+#header-holder {
+    position: static;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
+}
+
+.arrowUp {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -2px;
+    *top: -10px;
+    *left: 0;
+}
+
+/* #14365 table-caption doesn't work in ie */
+#visual-portal-wrapper ul.eea-tabs a {
+    display: block;
+}
+
+/* </dtml-with> */

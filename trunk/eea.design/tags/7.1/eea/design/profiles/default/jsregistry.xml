@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+
+    <javascript
+                id="eea-tabs.js"
+                position-after="eea-fullscreen.js"/>
+
+    <javascript
+                id="pagination.js"
+                position-after="eea-tabs.js"/>
+
+    <javascript
+                id="eea-pagination.js"
+                position-after="pagination.js"/>
+
+    <javascript
+                id="outdated_browser.js"
+                position-after="eea-tags.js"/>
+
+    <javascript
+                id="subfolder_nav.js"
+                position-after="outdated_browser.js"/>
+
+    <javascript
+                id="table_sorter.js"
+                position-after="orderablereference.js"/>
+
+    <javascript
+            id="eea-fitcontainer.js"
+            insert-after="eea-pagination.js"
+            />
+
+</object>
