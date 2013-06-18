@@ -1,6 +1,6 @@
 <metal:promos metal:define-macro="portlet"
                 tal:define="
-                promo_view promo_view|context/@@frontpage_highlights;       
+                promo_view promo_view|context/@@frontpage_highlights;
                 get_img_url  nocall:promo_view/getImageUrl;
                 highlights view/get_promotions|promo_view/getPromotions|nothing;
                 plone_view nocall:plone_view|context/@@plone;
@@ -12,9 +12,9 @@
        i18n:domain="eea">
 
 <div id="promo-gallery-wrapper">
-<div tal:attributes="id string:gallery-content-outer${small_factor};"> 
-  <ul tal:attributes="id string:promo-gallery-content${small_factor}"> 
-      <metal:pritems  
+<div tal:attributes="id string:gallery-content-outer${small_factor};">
+  <ul tal:attributes="id string:promo-gallery-content${small_factor}">
+      <metal:pritems
                     tal:repeat="hl highlights">
                         <li tal:define="
                             obj hl/getObject;
@@ -22,6 +22,7 @@
                             getURL obj/getURL|nothing;
                             absolute_url obj/absolute_url|nothing;
                             is_video python:'eea.mediacentre.interfaces.IVideo' in hl.object_provides;
+                            portal_type obj/portal_type;
                             figure_link python:getUrl or getURL or absolute_url;
                             figure_link python: figure_link + '/view' if is_video else figure_link;
                             image_link obj/getURL|obj/absolute_url;
@@ -56,15 +57,15 @@
                                     </div>
                                 </metal:fill>
                             </metal:isVideo>
-                        </li>    
+                        </li>
         </metal:pritems>
-    </ul> 
+    </ul>
     </div>
 
 <!-- navigation outer -->
 
 <div tal:attributes="id string:navigator-outer${small_factor}">
-    <ul tal:attributes="id string:promo-navigator${small_factor}"> 
+    <ul tal:attributes="id string:promo-navigator${small_factor}">
   <metal:items tal:repeat="hl highlights">
                     <li>
                         <div>
@@ -95,12 +96,12 @@
             <a  href="#" id="prev-promo"></a>
             <a  href="#" id="next-promo"></a>
         </tal:small>
-        <a  href="#" 
-            id="play-pause" 
+        <a  href="#"
+            id="play-pause"
             title="Pause slideshow"
-            i18n:attributes="title" 
-            class="pause disabled" 
-            aria-pressed="true" 
+            i18n:attributes="title"
+            class="pause disabled"
+            aria-pressed="true"
             role="button"
             i18n:translate="">Pause</a>
     </div>

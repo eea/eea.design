@@ -3,6 +3,9 @@ Changelog
 
 7.2-dev - (unreleased)
 ----------------------
+* Bug fix: added missing python and css declarations for properly displaying
+  images for CloudVideos
+  [ichimdav fixes #14762]
 
 7.1 - (2013-06-17)
 ------------------
