@@ -2396,6 +2396,10 @@ body.kupu {
 .ploneSkin .mceText {
     white-space: normal !important;
 }
+/* #14814 enlarged mceListBox style links */
+body .ploneSkin .mce_formatPreview a {
+    font-size: 115%;
+}
 
 /* #9499 give the style selector popup a minimum width */
 .ploneSkin .mceMenu {
