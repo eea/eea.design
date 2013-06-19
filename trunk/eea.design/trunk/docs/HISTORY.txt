@@ -3,6 +3,9 @@ Changelog
 
 7.2-dev - (unreleased)
 ----------------------
+* Change: customized s5_pretty.css in order to use the print EEA Logo for 
+  presentation view
+  [ichimdav #14814]
 * Bug fix: enlarged the links inside TinyMCE styles dropdown
   [ichimdav #14814]
 * Bug fix: added missing python and css declarations for properly displaying
