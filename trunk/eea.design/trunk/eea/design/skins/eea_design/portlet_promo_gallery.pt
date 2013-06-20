@@ -97,13 +97,13 @@
             <a  href="#" id="next-promo"></a>
         </tal:small>
         <a  href="#"
-            id="play-pause"
+            class="gallery-slider-controls"
             title="Pause slideshow"
             i18n:attributes="title"
             class="pause disabled"
             aria-pressed="true"
             role="button"
-            i18n:translate="">Pause</a>
+            ></a>
     </div>
 
 </div>

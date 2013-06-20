@@ -260,25 +260,25 @@
 	float:inherit;
 }
 
-#play-pause {
+.gallery-slider-controls {
     float: right;
     margin-right: 3em;
     height: 25px;
 }
 
-.play,
-.pause,
+.action-start,
+.action-stop,
 #prev-promo,
 #next-promo {
   background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
 }
 
-.play {
+.action-start {
     background-position: -446px -215px;
     padding-left: 25px;
 }
 
-.pause {
+.action-stop {
     background-position: -454px -190px;
     padding-left: 16px;
 }

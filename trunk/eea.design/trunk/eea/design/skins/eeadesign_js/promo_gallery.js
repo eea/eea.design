@@ -1,4 +1,5 @@
 // call of the promo_gallery_script gallery
+
 (function($) {
     $(function() {
 
@@ -15,24 +16,26 @@
             nav_position = site_address ? 'horizontal' : 'vertical',
             nav_outer_selector = site_address ? "#navigator-outer-sm" : "#navigator-outer";
 
-        var promotions = $('#promo-gallery-wrapper').lofJSidernews({
-                                             interval            : 9000,
-                                             direction           : 'opacity',
-                                             duration            : 1500,
-                                             wapperSelector      : wrapper_selector,
-                                             navItemsSelector    : nav_items_selector,
-                                             navOuterSelector    : nav_outer_selector,
-                                             isPreloaded         : false,
-                                             maxItemDisplay      : max_item_display,
-                                             navigatorHeight     : nav_height,
-                                             navigatorWidth      : nav_width,
-                                             navPosition         : nav_position,
-                                             auto                : true,
-                                             caption             : '.promo-item-desc',
-                                             opacityClass        : 'lof-opacity',
-                                             buttons             : buttons,
-                                             toggleElement       : '#play-pause'
-                                        });
+        var settings = {
+            interval            : 9000,
+            direction           : 'opacity',
+            duration            : 1500,
+            wrapperSelector     : wrapper_selector,
+            navItemsSelector    : nav_items_selector,
+            navOuterSelector    : nav_outer_selector,
+            isPreloaded         : false,
+            maxItemDisplay      : max_item_display,
+            navigatorHeight     : nav_height,
+            navigatorWidth      : nav_width,
+            navPosition         : nav_position,
+            auto                : true,
+            caption             : '.promo-item-desc',
+            opacityClass        : 'lof-opacity',
+            buttons             : buttons,
+            toggleElement       : '#play-pause'
+        };
+
+        $('#promo-gallery-wrapper').lofJSlider(settings);
 
     });
-})(jQuery);
+}(jQuery));

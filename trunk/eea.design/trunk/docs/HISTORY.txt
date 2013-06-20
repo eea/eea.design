@@ -3,6 +3,9 @@ Changelog
 
 7.2-dev - (unreleased)
 ----------------------
+* Feature: updated promotion gallery to a newer version which triggers events
+  on start and completion of slide
+  [eea #14729]
 * Change: customized s5_pretty.css in order to use the print EEA Logo for 
   presentation view
   [ichimdav #14814]
