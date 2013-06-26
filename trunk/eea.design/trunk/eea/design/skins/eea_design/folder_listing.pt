@@ -8,14 +8,14 @@
 
 <body>
 
-    <metal:content-core fill-slot="content-core" 
+    <metal:content-core fill-slot="content-core"
         tal:define="context_wf_state context/review_state|python: context.portal_workflow.getInfoFor(context, 'review_state', '');">
-    <tal:comment tal:replace="nothing" i18n:translate=""> 
+    <tal:comment tal:replace="nothing" i18n:translate="">
         If folder isn't public and user is anonymous, redirect to a standared message page
     </tal:comment>
     <tal:cond tal:condition="python: isAnon and context_wf_state != 'published' ">
          <tal:redirect tal:define="dummy python: request.RESPONSE.redirect(here_url + '/listing_not_available')" />
-    </tal:cond>    
+    </tal:cond>
 
 <metal:block define-macro="content-core"
                     tal:define="kssClassesView context/@@kss_field_decorator_view;
@@ -36,7 +36,7 @@
         <div metal:define-slot="inside" tal:replace="structure text">The body</div>
     </div>
 
-    <metal:listingdefaults metal:define-macro="listing_defaults" 
+    <metal:listingdefaults metal:define-macro="listing_defaults"
         tal:define="
             parent nocall:context/aq_parent;
             id context/id;
@@ -48,7 +48,9 @@
             contentFilter python: { 'review_state' : 'published' } if isAnon else contentFilter;
             limit_display limit_display|request/limit_display|nothing;
             limit_display python:limit_display and int(limit_display) or None;
-            is_a_topic python:context.portal_type=='Topic';
+            item_interfaces context/@@plone_interface_info;
+            is_faceted python:item_interfaces.provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable');
+            is_a_topic python:context.portal_type=='Topic' if not is_faceted else False;
             folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
 
             Batch python:modules['Products.CMFPlone'].Batch;
@@ -87,7 +89,7 @@
             </a>
 
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
-            <tal:block 
+            <tal:block
                        tal:define="
                                    item_object item/getObject|nocall:item;
                                    urlview item_object/@@url;
@@ -171,7 +173,7 @@
                              <tal:location  tal:condition="python:same_type(location, ())">
                                 <tal:repeat tal:repeat="loc location">
                                      <span tal:content="python:loc.replace(',', ' ')"
-                                         class="location">Oslo</span><tal:last tal:condition="not:repeat/loc/end">,</tal:last> 
+                                         class="location">Oslo</span><tal:last tal:condition="not:repeat/loc/end">,</tal:last>
                                 </tal:repeat>
                             </tal:location>
                         </span>
