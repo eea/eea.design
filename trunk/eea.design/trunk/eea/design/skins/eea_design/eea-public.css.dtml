@@ -553,6 +553,7 @@ dl.toc dd {
     margin: 0 3px 7px 3px;
     padding: 0px;
     box-shadow: 0px 1px 2px #CCCCCC;
+    z-index: 3;
 }
 
 .photoAlbumEntry img {
@@ -578,7 +579,7 @@ dl.toc dd {
 
 a.cloudvideo .photoAlbumEntryWrapper {
     position: relative;
-    background: url(&dtml-portal_url;/play-button-cloud.png) no-repeat 2px -32px;
+    background: url(&dtml-portal_url;/play-button-cloud.png) no-repeat 2px center;
 }
 .photoAlbumEntry a {
     font-size: &dtml-fontSmallSize;;

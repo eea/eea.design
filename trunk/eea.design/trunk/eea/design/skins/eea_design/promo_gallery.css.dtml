@@ -116,7 +116,7 @@
 
 #promo-gallery-content li a.video-fancybox.cloudvideo {
     display: block;
-    background: url(&dtml-portal_url;/play-button-cloud.png) no-repeat center center;
+    background: url(&dtml-portal_url;/play-button.png) no-repeat center center;
 }
 
 #promo-gallery-content li a.video-fancybox.cloudvideo img {

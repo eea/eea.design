@@ -3,6 +3,8 @@ Changelog
 
 7.2-dev - (unreleased)
 ----------------------
+* Bug fix: display image and play button for cloud videos in album listings
+  [ichimdav fixes 14535]
 * Bug fix: faceted gives different results as anonymous than as authorised
   [voineali fixes #14841]
 * Feature: updated promotion gallery to a newer version which triggers events
