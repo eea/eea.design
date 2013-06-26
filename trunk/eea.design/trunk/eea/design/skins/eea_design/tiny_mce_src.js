@@ -12310,6 +12310,42 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 			this.queryValueCommands[name] = {func : callback, scope : scope || this};
 		},
 
+        // EEA fake mceSetCSSClass logic
+        registerPloneFormaters: function(t) {
+            var ed = t;
+            var styles = eval(ed.getParam("theme_advanced_styles"));
+            var i, s, format, tagParam;
+            t._plonestyles = {};
+            for (i = 0; i < styles.length; i++) {
+                s = styles[i];
+                format = {
+                    classes: (s.className || ""),
+                    wrapper: (s.tag === "blockquote" || s.tag === "div")
+                };
+                tagParam = s.type === "Selection" ? "inline" : "block";
+                format[tagParam] = s.tag;
+                if ( s.className ) {
+                    t._styles[s.className] = s.title;
+                }
+                ed.formatter.register(s.title, format)
+            }
+
+        },
+
+        mceSetCSSClass : function(c, u, v) {
+            var t = this;
+            if ( !t.formatter.get('Highlight') ) {
+                this.registerPloneFormaters(t);
+            }
+            if ((tag == "") && (className == "")) {
+                t.execCommand("RemoveFormat", false, null)
+            } else {
+                t.formatter.apply(t._plonestyles[v]);
+            }
+        },
+        // END EEA fake mceSetCSSClass logic
+
+
 		addShortcut : function(pa, desc, cmd_func, sc) {
 			var t = this, c;
 
@@ -13626,6 +13662,11 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 			mceSetContent : function(command, ui, value) {
 				editor.setContent(value);
 			},
+
+            mceSetCSSClass : function(command, ui, value) {
+                    editor.mceSetCSSClass(command, ui, value);
+            },
+
 
 			'Indent,Outdent' : function(command) {
 				var intentValue, indentUnit, value;
