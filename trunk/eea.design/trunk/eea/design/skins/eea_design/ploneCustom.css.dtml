@@ -2400,6 +2400,9 @@ body.kupu {
 body .ploneSkin .mce_formatPreview a {
     font-size: 115%;
 }
+.mceContentBody  {
+    font-size: 80% !important;
+}
 
 /* #9499 give the style selector popup a minimum width */
 .ploneSkin .mceMenu {
@@ -2761,4 +2764,5 @@ div.row {
 .spinner {
     text-align: center;
 }
+
 /* </dtml-with> */
