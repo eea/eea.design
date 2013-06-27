@@ -12314,18 +12314,19 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
         registerPloneFormaters: function(t) {
             var ed = t;
             var styles = eval(ed.getParam("theme_advanced_styles"));
-            var i, s, format, tagParam;
+            var i, s, format, tagParam, className;
             t._plonestyles = {};
             for (i = 0; i < styles.length; i++) {
                 s = styles[i];
+                className = s.className;
                 format = {
-                    classes: (s.className || ""),
+                    classes: (className || ""),
                     wrapper: (s.tag === "blockquote" || s.tag === "div")
                 };
                 tagParam = s.type === "Selection" ? "inline" : "block";
                 format[tagParam] = s.tag;
-                if ( s.className ) {
-                    t._styles[s.className] = s.title;
+                if ( className && className !== '-' ) {
+                    t._plonestyles[className] = s.title;
                 }
                 ed.formatter.register(s.title, format)
             }
@@ -12337,7 +12338,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
             if ( !t.formatter.get('Highlight') ) {
                 this.registerPloneFormaters(t);
             }
-            if ((tag == "") && (className == "")) {
+            if (!v) {
                 t.execCommand("RemoveFormat", false, null)
             } else {
                 t.formatter.apply(t._plonestyles[v]);
