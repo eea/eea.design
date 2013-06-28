@@ -3,6 +3,8 @@ Changelog
 
 7.2-dev - (unreleased)
 ----------------------
+* Bug fix: fixed contrast of colors for as code diff
+  [demarant fixes #14891]
 * Bug fix: added missing  logic for TinyMCE regarding Plone Style selection 
   classes
   [ichimdav refs #14814]

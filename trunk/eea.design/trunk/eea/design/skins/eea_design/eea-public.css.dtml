@@ -234,6 +234,11 @@ dl.portlet a:visited {
     padding: 2px 0px 1px 16px;
 }
 
+#content pre {
+    color: Black;
+    background-color: #f3f3f3;
+}
+
 /* stretch eventDetails to full width to avoid scroll bars and right alignment */
 #content .eventDetails {
     width: 100%;
