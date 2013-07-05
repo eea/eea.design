@@ -15,7 +15,6 @@
             max_item_display = site_address ? 5 : 3,
             nav_position = site_address ? 'horizontal' : 'vertical',
             nav_outer_selector = site_address ? "#navigator-outer-sm" : "#navigator-outer";
-
         var settings = {
             interval            : 9000,
             direction           : 'opacity',
@@ -31,8 +30,7 @@
             auto                : true,
             caption             : '.promo-item-desc',
             opacityClass        : 'lof-opacity',
-            buttons             : buttons,
-            toggleElement       : '#play-pause'
+            buttons             : buttons
         };
 
         $('#promo-gallery-wrapper').lofJSlider(settings);

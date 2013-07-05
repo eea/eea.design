@@ -3,6 +3,9 @@ Changelog
 
 7.2-dev - (unreleased)
 ----------------------
+* Feature: updated promo gallery with the enhancements done within the eunis
+  project
+  [ichimdav]
 * Bug fix: fixed contrast of colors for as code diff
   [demarant fixes #14891]
 * Bug fix: added missing  logic for TinyMCE regarding Plone Style selection 
@@ -14,7 +17,7 @@ Changelog
   [voineali fixes #14841]
 * Feature: updated promotion gallery to a newer version which triggers events
   on start and completion of slide
-  [eea #14729]
+  [ichimdav #14729]
 * Change: customized s5_pretty.css in order to use the print EEA Logo for
   presentation view
   [ichimdav #14814]

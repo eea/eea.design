@@ -36,13 +36,18 @@
             navOuterSelector: '.navigator-wrapper',
             isPreloaded: true,
             easing: 'easeInOutQuad',
-            onPlaySlider: function(obj, slider) {},
-            onComplete: function(slider, index) {}
+            pauseOnHover: false,
+            galleryControls: "#play-pause",
+            galleryPlay: "promo-gallery-play",
+            galleryPause: "promo-gallery-pause",
+            buttons: null,
+            onPlaySlider: function(obj, slider) { obj.wrapper.trigger('promo-gallery:onPlaySlider', { obj: obj, slider: slider }); },
+            onComplete: function(slider, index) { slider.trigger('promo-gallery:onComplete', { slider: slider, index: index }); }
         };
         $.extend(this.settings, settings || {});
         this.nextNo = null;
         this.previousNo = null;
-        this.maxWidth = this.settings.mainWidth || 684;
+        this.maxWidth = this.settings.mainWidth || "100%";
 
         this.wrapper = $(obj).find(this.settings.wrapperSelector);
         var wrapOuter = $('<div class="gallery-slider-wrapper"></div>').width(this.maxWidth);
@@ -102,37 +107,36 @@
             this.onComplete();
         }
 
-        var $buttonControl = $(".gallery-slider-controls", obj);
+        var $buttonControl = $(this.settings.galleryControls, obj);
         if (this.settings.auto) {
-            $buttonControl.addClass("action-stop");
+            $buttonControl.addClass(this.settings.galleryPause);
         } else {
-            $buttonControl.addClass("action-start");
+            $buttonControl.addClass(this.settings.galleryPlay);
         }
         var self = this;
 
-        $(obj).hover(function() {
-            self.stop();
-            $buttonControl.addClass("action-start").removeClass("action-stop").addClass("hover-stop");
-        }, function() {
-            if ($buttonControl.hasClass("hover-stop")) {
-
+        if (this.settings.pauseOnHover) {
+            $(obj).hover(function() {
+                self.stop();
+            }, function() {
                 if (self.settings.auto) {
-                    $buttonControl.removeClass("action-start").removeClass("hover-stop").addClass("action-stop");
-                    self.play(self.settings.interval, 'next', true);
+                    self.play(1, 'next', true);
                 }
-            }
-        });
+            });
 
-        $buttonControl.click(function() {
-            if ($buttonControl.hasClass("action-start")) {
+        }
+
+        $buttonControl.click(function(e) {
+            if ($buttonControl.hasClass(self.settings.galleryPlay)) {
                 self.settings.auto = true;
-                self.play(self.settings.interval, 'next', true);
-                $buttonControl.removeClass("action-start").addClass("action-stop");
+                self.play(1, 'next', true);
+                $buttonControl.removeClass(self.settings.galleryPlay).addClass(self.settings.galleryPause);
             } else {
                 self.settings.auto = false;
                 self.stop();
-                $buttonControl.addClass("action-start").removeClass("action-stop");
+                $buttonControl.addClass(self.settings.galleryPlay).removeClass(self.settings.galleryPause);
             }
+            e.preventDefault();
         });
     };
     $.lofSlider.fn = $.lofSlider.prototype;
@@ -241,7 +245,7 @@
                 e.preventDefault();
             }
             function previous(e) {
-                self.next(true);
+                self.previous(true);
                 e.preventDefault();
             }
             for (var action in objects) {
