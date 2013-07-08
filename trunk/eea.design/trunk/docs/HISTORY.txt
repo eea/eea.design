@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.3-dev - (unreleased)
+----------------------
+
 7.2 - (2013-07-08)
 ------------------
 * Feature: updated promo gallery with the enhancements done within the eunis
