@@ -3,6 +3,9 @@ Changelog
 
 7.3-dev - (unreleased)
 ----------------------
+* Bug fix: fixed the layout issue of featured boxes where title was
+  not properly aligned to the right of the image.
+  [demarant]
 * Change: removed the eyeonearth link in top bar and related css
   [demarant fixes #14921]
 

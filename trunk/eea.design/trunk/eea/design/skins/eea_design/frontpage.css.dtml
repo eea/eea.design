@@ -313,7 +313,7 @@ div.current {
 }
 
 .featured  img {
-    padding-right: 10px;
+    padding: 0 5px 5px 0;
     height: 101px;
 }
 
