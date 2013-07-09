@@ -4,9 +4,6 @@
         <li id="externalsites-networks">
             <a href="#" i18n:translate="">Networks</a>
         </li>
-        <li id="externalsites-eoe">
-            <a href="http://www.eyeonearth.org/" i18n:translate="">Eye on Earth</a>
-        </li>
     </ul>
     <div class="panel" id="tip-externalsites-networks" style="width:450px; margin-left: 10em;">
         <div class="panel-top" style="left: -195px;"><!-- --></div>

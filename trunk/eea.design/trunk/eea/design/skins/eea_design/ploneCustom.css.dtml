@@ -1380,10 +1380,6 @@ h3.site-description {
     background: none !important;
 }
 
-#externalsites-eoe a, .externalsites-eoe a, a.externalsites-eoe {
-    background: url("eyeonearth-icon.png") no-repeat scroll 0 1px transparent !important;
-    padding: 1px 0 5px 36px !important;
-}
 
 /* The skin switcher at the top, only shows up if you have multiple skins available */
 

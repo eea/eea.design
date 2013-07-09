@@ -3,6 +3,8 @@ Changelog
 
 7.3-dev - (unreleased)
 ----------------------
+* Change: removed the eyeonearth link in top bar and related css
+  [demarant fixes #14921]
 
 7.2 - (2013-07-08)
 ------------------
