@@ -3,6 +3,9 @@ Changelog
 
 7.3-dev - (unreleased)
 ----------------------
+* Change: adjusted the colors backround of portal messages
+  to use EEA corporate colors
+  [demarant refs #15235]
 * Bug fix: fixed the layout issue of featured boxes where title was
   not properly aligned to the right of the image.
   [demarant]

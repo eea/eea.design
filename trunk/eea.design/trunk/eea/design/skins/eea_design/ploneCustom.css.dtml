@@ -1779,15 +1779,14 @@ dl.system-message dt {
 .portalMessage,
 .system-message,
 error-handling {
-    border: 1px solid #ddd;
     color: &dtml-fontColor;;
     font-size: &dtml-fontSmallSize;;
     font-weight: bold;
     margin: 1em 0;
-    padding: 0.5em 1em 0.5em 3em;
+    padding: 0.5em 1em 0.5em 3.5em;
     vertical-align: middle;
     /*background-image: url(&dtml-portal_url;/information.png);*/
-    background: &dtml-lightBackgroundColor; no-repeat 1em 50%;
+    background: no-repeat scroll 1em 50% #C7E0E9;
     text-shadow: 1px 1px white;
 }
 
@@ -1796,56 +1795,56 @@ error-handling {
 }
 
 .informationMessage {
-    background: url(&dtml-portal_url;/information.png) no-repeat 1em 50% #FFF;
+    background: url(&dtml-portal_url;/information.png)  no-repeat scroll 1em 50% #C7E0E9;
 }
 
 .warningMessage {
     font-size: 140%;
-    background-image: url(&dtml-portal_url;/error.png);
+    background: url(&dtml-portal_url;/error.png) no-repeat scroll 1em 50% #FFFABE;;
 }
 
 #error-handling, .errorMessage {
     font-size: 160%;
-    background-image: url(&dtml-portal_url;/exclamation.png);
+    background: url(&dtml-portal_url;/exclamation.png) no-repeat scroll 1em 50% #FFFABE;
 }
 
 .thumbsUpMessage {
-    background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #E8FFDA;
+    background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #C7E0E9;
     color: #295E07;
 }
 
 .attentionMessage {
-    background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #FCFF9D;
+    background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #C0CF99;
     color: #555708;
 }
 
 .yesMessage {
-    background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #E8FFDA;
+    background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #C7E0E9;
     color: #295E07;
 }
 
 .noMessage {
-    background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #FFE5F0;
+    background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #C0CF99;
     color: #A7001D;
 }
 
 .rosetteMessage {
-    background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #F1F1F1;
+    background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #FFFABE;
     color: #666666;
 }
 
 .ideaMessage {
-    background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #FCFF9D;
+    background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #C7E0E9;
     color: #555708;
 }
 
 .smileyMessage {
-    background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FCFF9D;
+    background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FFFABE;
     color: #555708;
 }
 
 .noteMessage {
-    background: url(&dtml-portal_url;/note.png) no-repeat scroll 1em 50% #F1F1F1;
+    background: url(&dtml-portal_url;/note.png)  no-repeat scroll 1em 50% #C7E0E9;
     color: #555708;
 }
 
