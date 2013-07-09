@@ -749,12 +749,24 @@ body.section-signals #nonfolderish-subfolder-view-items {
   display: block;
 }
 
-.eea-tabs-panels, .eea-accordion-panels {
+.eea-tabs-panels {
     border: 1px solid #DDD;
     border-top: 0;
     background-color: &dtml-greyBackgroundColor;;
     padding: 10px;
 }
+
+.eea-accordion-panels {
+    border: 1px solid #DDD;
+    border-top: 0;
+    padding: 10px;
+}
+
+.eea-accordion-panel h2 {
+    background-color: &dtml-greyBackgroundColor;;
+    padding: 10px;
+}
+
 #relatedItems .eea-tabs-panels {
     padding: 1px;
 }
@@ -1776,11 +1788,6 @@ error-handling {
     vertical-align: middle;
     /*background-image: url(&dtml-portal_url;/information.png);*/
     background: &dtml-lightBackgroundColor; no-repeat 1em 50%;
-    -webkit-box-shadow: 2px 2px 1px #888888;
-       -moz-box-shadow: 2px 2px 1px #888888;
-        -ms-box-shadow: 2px 2px 1px #888888;
-         -o-box-shadow: 2px 2px 1px #888888;
-            box-shadow: 2px 2px 1px #888888;
     text-shadow: 1px 1px white;
 }
 
