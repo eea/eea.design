@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.3-dev - (unreleased)
-----------------------
+7.3 - (2013-07-11)
+------------------
 * Change: adjusted the colors backround of portal messages
   to use EEA corporate colors
   [demarant refs #15235]
