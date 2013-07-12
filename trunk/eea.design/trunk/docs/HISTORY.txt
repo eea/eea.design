@@ -1,6 +1,11 @@
 Changelog
 =========
 
+7.4-dev - (unreleased)
+----------------------
+* Change: improved the portal messages style.
+  [demarant refs #14910] 
+
 7.3 - (2013-07-11)
 ------------------
 * Change: adjusted the colors backround of portal messages
