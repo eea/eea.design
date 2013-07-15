@@ -21,6 +21,9 @@
                         <li id="externalsites-envirowindows">
                             <a title="EnviroWindows" i18n:attributes="title" accesskey="" href="http://ew.eea.europa.eu/" i18n:translate="">EnviroWindows</a>
                         </li>
+			<li id="eoe-network">
+	                    <a href="http://www.eyeonearth.org/" i18n:translate="">Eye on Earth</a>
+                        </li>
                         <li id="seis-network">
                             <a title="SEIS network" i18n:attributes="title" accesskey="" href="http://www.eea.europa.eu/about-us/what/shared-environmental-information-system" i18n:translate="">Shared Environmental Information System (SEIS)</a>
                         </li>
