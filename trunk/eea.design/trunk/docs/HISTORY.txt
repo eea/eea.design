@@ -3,6 +3,9 @@ Changelog
 
 7.4-dev - (unreleased)
 ----------------------
+* Change: removed negative margin from video-fancybox since the thumbnails  are 
+  no longer customized by eea.depiction
+  [ichimdav refs #15234]
 * Bugfix: Display the  embedded visualizations in plone pages after saving the page
   [szabozo0 refs #15231]
 * Change: improved the portal messages style.

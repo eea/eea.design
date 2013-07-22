@@ -582,7 +582,7 @@ dl.toc dd {
     border: 0;
 }
 
-a.cloudvideo .photoAlbumEntryWrapper {
+a.video-fancybox .photoAlbumEntryWrapper {
     position: relative;
     background: url(&dtml-portal_url;/play-button-cloud.png) no-repeat 2px center;
 }
@@ -618,17 +618,13 @@ a.cloudvideo .photoAlbumEntryWrapper {
     z-index: 3;
 }
 
-.photoAlbumEntry a.video-fancybox img,
-.photoAlbumEntry a.animation-fancybox img
-{
-    margin-top: -29px;
-    max-height: 128px;
-}
-
-.photoAlbumEntry a.cloudvideo img {
+.photoAlbumEntry a.video-fancybox img {
     position: relative;
     z-index: -1;
     margin-top: 0;
+}
+.photoAlbumEntry a.video-fancybox img, .photoAlbumEntry a.animation-fancybox img {
+    max-height: 128px;
 }
 
 .photoAlbumEntryPreview,
