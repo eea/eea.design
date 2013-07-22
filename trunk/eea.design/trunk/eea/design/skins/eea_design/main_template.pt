@@ -33,7 +33,7 @@
                         ifacetool context/portal_interface;
                         syntool context/portal_syndication;">
 
-<tal:comment tal:replace="nothing">xss-disable was added in order to fix the chrome issue from ticket #15231</tal:comment>
+<tal:comment replace="nothing">xss-disable was added in order to fix the chrome issue from ticket #15231</tal:comment>
 
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 

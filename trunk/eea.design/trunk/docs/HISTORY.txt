@@ -7,6 +7,8 @@ Changelog
   [szabozo0 refs #15231]
 * Change: improved the portal messages style.
   [demarant refs #14910] 
+* Bug fix: Fixed missing translations tags.
+  [prospchr refs #15572]
 
 7.3 - (2013-07-11)
 ------------------

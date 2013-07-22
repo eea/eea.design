@@ -335,7 +335,7 @@
     <div class="portalMessage">
         <p i18n:translate="">Settings have been applied</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage"&gt;
             &lt;p&gt;Settings have been applied&lt;/p&gt;
         &lt;/div&gt;
@@ -344,7 +344,7 @@
     <div class="portalMessage informationMessage">
         <p i18n:translate="">Your screensaver has been upgraded, please consider to restart your computer ... Have a good day</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage informationMessage"&gt;
             &lt;p&gt;Your screensaver has been upgraded, please consider to
                     restart your computer ... Have a good day&lt;/p&gt;
@@ -354,7 +354,7 @@
     <div class="portalMessage warningMessage">
         <p i18n:translate="">Warning! Core meltdown at EEA HQ, code super-duper-red</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage warningMessage"&gt;
             &lt;p&gt;Warning! Core meltdown at EEA HQ, code
                         super-duper-red&lt;/p&gt;
@@ -364,7 +364,7 @@
     <div class="portalMessage thumbsUpMessage">
         <p i18n:translate="">Thumbs up for the content on this site</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage thumbsUpMessage"&gt;
             &lt;p&gt;Thumbs up for the content on this site&lt;/p&gt;
         &lt;/div&gt;
@@ -374,7 +374,7 @@
         <p i18n:translate="">Message which could indicate an agreement or
         something done </p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage yesMessage"&gt;
         &lt;p&gt;Message which could indicate an agreement or
                 something done&lt;/p&gt;
@@ -385,7 +385,7 @@
         <p i18n:translate="">Message which could indicate a disagreement or
             something not done</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage noMessage"&gt;
         &lt;p&gt;Message which could indicate a disagreement or
             something not done&lt;/p&gt;
@@ -396,7 +396,7 @@
         <p i18n:translate="">Message which could indicate a translation
             message</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage rosetteMessage"&gt;
         &lt;p&gt;Message which could indicate a translation
             message&lt;/p&gt;
@@ -407,7 +407,7 @@
         <p i18n:translate="">Message which could indicate a call to action
             message</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage ideaMessage"&gt;
         &lt;p&gt;Message which could indicate a call to action
         message&lt;/p&gt;
@@ -417,7 +417,7 @@
     <div class="portalMessage smileyMessage">
         <p i18n:translate="">Smiley Message type</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage smileyMessage"&gt;
         &lt;p&gt;Smiley Message&lt;/p&gt;
         &lt;/div&gt;
@@ -427,7 +427,7 @@
     <div class="portalMessage noteMessage">
         <p i18n:translate="">Note Message</p>
     </div>
-    <pre>
+    <pre i18n:translate="">
         &lt;div class="portalMessage noteMessage"&gt;
         &lt;p&gt;Note Message &lt;/p&gt;
         &lt;/div&gt;
