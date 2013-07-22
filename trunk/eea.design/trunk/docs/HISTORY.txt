@@ -3,6 +3,8 @@ Changelog
 
 7.4-dev - (unreleased)
 ----------------------
+* Bugfix: Display the  embedded visualizations in plone pages after saving the page
+  [szabozo0 refs #15231]
 * Change: improved the portal messages style.
   [demarant refs #14910] 
 
