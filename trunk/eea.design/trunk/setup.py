@@ -39,7 +39,6 @@ setup(name=name,
           'eea.themecentre',
           'eea.translations',
 
-          'p4a.video',
           'setuptools',
           'valentine.linguaflow',
 

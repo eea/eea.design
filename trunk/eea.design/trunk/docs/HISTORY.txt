@@ -3,6 +3,8 @@ Changelog
 
 7.4-dev - (unreleased)
 ----------------------
+* Change: removed p4a.video dependency from setup.py 
+  [ichimdav #15234]
 * Change: removed negative margin from video-fancybox since the thumbnails  are 
   no longer customized by eea.depiction
   [ichimdav refs #15234]
