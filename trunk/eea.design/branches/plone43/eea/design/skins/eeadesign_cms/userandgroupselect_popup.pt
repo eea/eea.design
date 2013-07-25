@@ -5,6 +5,7 @@
       lang="en"
       i18n:domain="userandgroupselectionwidget"
       tal:define="view context/@@userandgroupselectpopup_view;
+                  plone_view context/@@plone;
                   dummy view/initialize;
                   multiVal view/multiValued;
                   fieldId request/fieldId;
@@ -12,7 +13,7 @@
 
   <head>
 
-    <base href="" tal:attributes="href here/renderBase" />
+    <base href="" tal:attributes="href plone_view/renderBase" />
 
     <tal:define define="language here/Language;
                         lang language | default_language;
@@ -23,7 +24,7 @@
       </metal:cache>
 
     </tal:define>
-    
+
     <script language="javascript" tal:content="structure string:
         function addSelectedUsers(e) {
             if (e){
@@ -62,22 +63,22 @@
                 var value = selection.options[selection.selectedIndex].text;
                 window.opener.userandgroupselect_setEntry(id, value, '${fieldId}', $multiVal);
             }
-            
+
             if ($multiVal == 0) {
                 window.close();
             }
         }
 
-	
+
 		function toggleUidsSelect(field) {
-            checkboxes = document.getElementsByName('uids');			
+            checkboxes = document.getElementsByName('uids');
             for (i = 0; i < checkboxes.length; i++) {
                 checkboxes[i].checked = field.checked;
 	        }
         }
 ">
     </script>
-    
+
 </head>
 
 <body id="userandgroupselect-popup-body">
@@ -85,8 +86,8 @@
 <div class="documentContent"
      id="userandgroupselect-popup">
 
-    <form action="#" 
-          tal:attributes="action string:${view/getObjectUrl}" 
+    <form action="#"
+          tal:attributes="action string:${view/getObjectUrl}"
           method="post"
           style="white-space:nowrap">
 
@@ -106,13 +107,13 @@
                  i18n:attributes="title title_search_site;"
                  tal:attributes="style python:test(request.get('searchabletext'), 'background-image: none !important', nothing);
                                  tabindex tabindex/next|nothing" />
-        
-          <input class="searchButton" 
+
+          <input class="searchButton"
                  type="submit"
                  tabindex=""
                  value="Search"
                  tal:attributes="tabindex tabindex/next|nothing"
-                 i18n:attributes="value label_search;"/>   
+                 i18n:attributes="value label_search;"/>
 
         </div>
 
@@ -149,7 +150,7 @@
             </tal:item>
           </select>
 
-          <input type="submit" value="Search" class="searchButton" 
+          <input type="submit" value="Search" class="searchButton"
                  i18n:attributes="value label_search" />
 
           <br />
@@ -181,7 +182,7 @@
                    class="current">X</strong>
             </span>
         </div>
-    
+
         <table tal:define="entries resultBatch/getResults" cellpadding="0" cellspacing="0">
             <thead>
                 <th>
@@ -216,8 +217,8 @@
     </div>
 
     <div tal:condition="multiVal">
-      <input type="button" 
-             i18n:attributes="value add_selected_users" 
+      <input type="button"
+             i18n:attributes="value add_selected_users"
              value="add selected users"
              onclick="javascript:addSelectedUsers(0)" />
 
