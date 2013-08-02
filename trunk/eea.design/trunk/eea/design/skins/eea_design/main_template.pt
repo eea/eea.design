@@ -30,8 +30,7 @@
                         putils context/plone_utils;
                         ztu modules/ZTUtils;
                         acl_users nocall: context/acl_users;
-                        ifacetool context/portal_interface;
-                        syntool context/portal_syndication;">
+                        ifacetool context/portal_interface;">
 
 <tal:comment replace="nothing">xss-disable was added in order to fix the chrome issue from ticket #15231</tal:comment>
 

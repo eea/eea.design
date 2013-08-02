@@ -24,4 +24,11 @@
     <depends name="skins"/>
   </genericsetup:importStep>
 
+  <genericsetup:registerProfile
+      name="upgrade74"
+      title="EEA Design upgrade profile for v7.4"
+      directory="profiles/upgrade74"
+      description='Upgrade profile for EEA Design'
+      provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 </configure>
