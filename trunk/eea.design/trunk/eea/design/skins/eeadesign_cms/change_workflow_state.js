@@ -38,7 +38,6 @@ jQuery.fn.EEAPloneAdminChangeWorkflowState = function(options){
   });
 };
 
-/*kukit.actionsGlobalRegistry.register("EEAPloneAdminChangeWorkflowState", function (oper) {
+kukit.actionsGlobalRegistry.register("EEAPloneAdminChangeWorkflowState", function (oper) {
     jQuery('#plone-contentmenu-workflow').EEAPloneAdminChangeWorkflowState();
-});*/
-console.log('aaaaaaaaaaa');
+});
