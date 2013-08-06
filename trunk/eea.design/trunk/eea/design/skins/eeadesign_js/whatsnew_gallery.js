@@ -5,8 +5,8 @@ jQuery(document).ready(function($) {
     var eea_gal = window.whatsnew;
 
     (function() {
-        // get the site url from the kss-base-url link
-        eea_gal.site_address = $("link[rel='alternate']").attr('href');
+        // get the site url from the base-url link
+        eea_gal.site_address = $("base").attr('href');
         eea_gal.gallery = $("#whatsnew-gallery");
         eea_gal.gallery_page = eea_gal.gallery.attr("data-page");
     }());

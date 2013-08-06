@@ -3,6 +3,9 @@ Changelog
 
 7.4-dev - (unreleased)
 ----------------------
+* Change: use base link instead of link alternative for site link now that
+  kss is gone when referncing the base url
+  [ichimdav refs #14323]
 * Change: removed p4a.video dependency from setup.py
   [ichimdav #15234]
 * Change: removed negative margin from video-fancybox since the thumbnails  are
