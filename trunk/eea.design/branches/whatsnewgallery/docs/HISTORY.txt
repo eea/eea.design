@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Change: use base link instead of link alternative for site link now that
+  kss is gone when referncing the base url
+  [ichimdav refs #14323]
 * Feature: added language code to the body class in order to have language 
   specific fixes
   [ichimdav refs #13830]
