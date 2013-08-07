@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.4-dev - (unreleased)
-----------------------
+7.4 - (2013-08-07)
+------------------
 * Change: use base link instead of link alternative for site link now that
   kss is gone when referncing the base url
   [ichimdav refs #14323]
