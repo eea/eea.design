@@ -1,0 +1,804 @@
+/*
+** Plone style sheet - Public-facing Elements EEA Customizations
+*/
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+/* @group styles changes for public.css */
+
+
+/* @group Basics */
+
+body {
+    font: 70% Verdana, Arial, Helvetica, sans-serif;
+    color: &dtml-fontColor;;
+    margin:0;
+    padding:0px;
+    background-color: &dtml-backgroundColor;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: &dtml-headingColor;;
+    font-weight: bold;
+    background-color: transparent;
+    font-family: &dtml-headingFontFamily;;
+    text-shadow: 1px 1px white;
+}
+
+h1, h2 {
+    letter-spacing: 0;
+}
+h1 {
+    color: #00446a;
+    font-size: 180%;
+    line-height: 1.4;
+    margin: 0.67em 0;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    padding-bottom: 0.25em;
+    padding-right: 5em; /* to avoid overlapping with document actions */
+}
+h2 {
+    font-size: 150%;
+    margin: 0.83em 0;
+    text-shadow: 1px 1px white;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    color: &dtml-corporateBlueTwo;;
+    padding-bottom: 0.25em;
+}
+h3 {
+    font-size: 125%;
+    line-height: 1.5;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    margin: 1em 0;
+}
+h4 {
+    font-size: 110%;
+    margin: 1.33em 0;
+    color: #000;
+}
+h5 {
+    font-size: 100%;
+    margin: 1.67em 0;
+    color: #000;
+}
+h6 {
+    font-size: 85%;
+    margin: 2.33em 0;
+    color: #000;
+}
+h2 a, h3 a, h4 a {
+    border-bottom: none !important;
+}
+
+p {
+    font-family:  Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 0 0.75em 0;
+    line-height: 1.5em;
+}
+
+a { color: &dtml-linkColor;; }
+a:link { color: &dtml-linkColor;; }
+a:visited { color: &dtml-linkVisitedColor;; }
+a:hover { color: &dtml-linkHoverColor;; }
+a:active { color: &dtml-linkActiveColor;; }
+
+/* @end Basics */
+
+/* @group Navigation/search */
+
+/* @end Navigation/search */
+
+/* @group Site actions */
+#portal-siteactions li a:hover {
+    color: &dtml-corporateGreen;;
+}
+
+/* @end Site actions */
+
+/* @group Portlets */
+
+dl.portlet {
+    margin: 0 0 1em;
+    font-size: 100%;
+}
+
+dl.portlet dt,
+div.portletAssignments div.portletHeader {
+    background: &dtml-lightBackgroundColor;;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover {
+    display: inline; /* ichimdav rule for calendar */
+}
+.ploneCalendar tbody {
+    padding-bottom: 1em;
+}
+
+dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter,
+dl.portletError dd {
+    padding: 0em;
+}
+
+div.managePortletsLink,
+a.managePortletsFallback {
+    font-size: 90%;
+}
+/* @end Portlets */
+
+/* @group Navigation portlet */
+dl.portlet ul.navTree li a {
+    margin: 0;
+    padding: 5px 5px 5px 10px !important;
+    text-shadow: none;
+    -webkit-transition: background-color .3s, color .3s, background .3s;
+       -moz-transition: background-color .3s, color .3s, background .3s;
+         -o-transition: background-color .3s, color .3s, background .3s;
+            transition: background-color .3s, color .3s, background .3s;
+   border-top: 1px dotted #BABBB8;
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 1.5;
+}
+
+#content dl.portlet ul.navTree li a:hover {
+   background-color:&dtml-corporateOrange;;
+   -webkit-transition: background-color .3s, color .3s, background .3s;
+      -moz-transition: background-color .3s, color .3s, background .3s;
+        -o-transition: background-color .3s, color .3s, background .3s;
+           transition: background-color .3s, color .3s, background .3s;
+   color: #FFFFFF !important;
+}
+
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+    padding: 0;
+    border-bottom: 0;
+}
+
+dl.portlet ul.navTree .navTreeCurrentItem {
+  color: #FFFFFF !important;
+  background-color: &dtml-corporateOrange;;
+  text-shadow: none;
+  margin: 0;
+  border-left: 0;
+}
+
+.navTreeItemInPath > ul.navTreeLevel0 li > a {
+   padding-left: 10px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel1 li > a {
+   padding-left: 25px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel2 li > a {
+   padding-left: 35px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel3 li > a {
+   padding-left: 45px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel4 li > a {
+   padding-left: 55px !important;
+}
+
+/* @end Navigation portlet */
+
+/* @group Related portlets EEA Specific */
+#related-pages, #related-multimedia, #auto-related, 
+#related-pages dl, #related-multimedia dl, #auto-related dl {
+  clear: both;
+}
+/* @end Related portlets EEA Specific */
+
+/* @group Content Area */
+
+#content {
+    font-size: inherit;
+    margin: 1em 0em 2em 0em;
+}
+
+#content h1.documentFirstHeading {
+    margin-top: 0;
+}
+
+#content h1#parent-fieldname-title {
+   width: 75%;
+}
+
+#content p a:link {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+#content a:link,
+dl.portlet a:link {
+    color: &dtml-linkColor;;
+    border-bottom: 0;
+}
+
+#content a:visited,
+dl.portlet a:visited {
+    color: &dtml-linkVisitedColor;;
+    border-bottom: 0;
+}
+
+#content a:hover, dl.portlet a:hover {
+    color: #8E004D !important;
+}
+
+#content span.link-external a {
+    background: transparent url(&dtml-portal_url;/link_icon.gif) 0px 1px no-repeat;
+    padding: 2px 0px 1px 16px;
+}
+
+#content pre {
+    color: Black;
+    background-color: #f3f3f3;
+}
+
+/* stretch eventDetails to full width to avoid scroll bars and right alignment */
+#content .eventDetails {
+    width: 100%;
+}
+
+#category, #themes-tags {
+    font-size: 100%;
+    margin-bottom: 1em;
+    color: #666;
+    text-align: right;
+    line-height: 2em;
+}
+
+#category a.link-category,
+#themes-tags a.link-category,
+#languageCodes a.translated, #languageCodes li.selected, span.selectedTag {
+    color: black;
+    padding: 0 5px;
+    margin: 2px 0;
+    word-break: keep-all;
+    display: inline-block;
+    background: &dtml-mediumBackgroundColor;;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    font-size: 10px;
+}
+
+#category a.link-category:hover,
+#themes-tags a.link-category:hover,
+#languageCodes a.translated:hover, #languageCodes li.selected {
+    background: &dtml-corporateOrange;;
+    color: White;
+    border-color: #205c90;
+}
+
+#category .separator, #themes-tags .separator {
+    display: none;
+}
+
+#content table {
+    max-width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+#content .documentDescription,
+#content #description {
+    font-weight: bold;
+    display: block;
+    margin: 0em 0em 0.5em 0em;
+    line-height: 1.5em;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color: #333;
+}
+/* @end Content Area */
+
+/* @group Data tables */
+
+table.listing {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+    border-width: 0px 0px 0px 1px;
+    border-style: dotted;
+}
+
+table.listing th {
+    color: #fff;
+    background: &dtml-corporateBlueTwo;;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+}
+
+div.listingBar a:hover {
+    background: transparent;
+    color: #8E004D;
+}
+div.listingBar a {
+    border: 0px;
+}
+/* @end Data tables */
+
+/* @group Status messages */
+dl.portalMessage {
+    background-color: &dtml-lightBackgroundColor;;
+}
+
+dl.portalMessage dt {
+    background-color: transparent;
+}
+
+dl.warning {
+    border-color: &dtml-globalBorderColor;;
+}
+dl.warning dt {
+    background-color: &dtml-lightBackgroundColor;;
+}
+
+dl.error dt {
+    color: white;
+    text-shadow: none;
+}
+
+dl.warning dd, dl.error dd {
+    background-color: transparent;
+}
+/* @end Status messages */
+
+/* @group Tabs */
+
+#edit-bar {
+    font-size: 100%;
+    margin: 1em 0;
+    border: 0;
+}
+
+#content-views {
+    background-color: transparent;
+    margin:0px !important;
+}
+
+#edit-bar,
+#content ul.formTabs {
+    border-style: none;
+    padding-top:0.2em;
+}
+/* @end group Tabs */
+
+/* @group Personal Tools pulldown */
+#portal-personaltools {
+    background-color: &dtml-corporateGreenTwo;;
+    -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+          border-radius: 5px;
+    border:none;
+    color: #fff;
+    line-height: 1.6em;
+    list-style: none;
+    margin: 0.5em 0;
+    padding: 0.5em 3em 0.5em 3em;
+    text-align: right;
+    text-shadow: 0 2px 1px #333;
+}
+#portal-personaltools dd {
+    margin-top: 6px;
+}
+#portal-personaltools li a, #portal-personaltools a:hover {
+    color: #FFFFFF !important;
+}
+#portal-personaltools-wrapper {
+    margin-top: -5px;
+    min-height: 10px;
+    float: right;
+    font-size: 110%;
+}
+
+#portal-personaltools #user-name {
+    background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
+    padding-left: 15px;
+    color: white;
+}
+
+#portal-personaltools .portalNotLoggedIn {
+    /* Used on all descriptions relevant to those not logged in */
+    color: &dtml-fontColor;;
+    padding: 0;
+    background: transparent;
+    background-image: none;
+}
+
+#portal-personaltools li {
+    margin: 0em 0em 0em 1em;
+    display: inline-block;
+}
+
+
+#portal-personaltools .visualIconPadding {
+    padding-left: 10px;
+}
+#portal-personaltools dd a:hover {
+    background:transparent;
+    color: white !important;
+}
+/* @end Personal Tools pulldown */
+
+/* @group Content pulldowns */
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+    background-color: transparent;
+    z-index: 900;
+}
+
+#contentActionMenus dl.actionMenu.activated dd {
+    border-bottom: 0.5em solid &dtml-corporateGreenTwo;;
+    right: 0;
+}
+/* @end Content pulldowns */
+
+#contentActionMenus {
+    background: &dtml-corporateGreenTwo;;
+    padding: 0.1em 0.24em 0 0 !important;
+}
+
+/* @group Collapsible */
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+    background: White url(&dtml-portal_url;/treeExpanded.png) no-repeat 0.5em 50%;
+}
+
+dl.collapsedInlineCollapsible dt.collapsibleHeader,
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+    background: White url(&dtml-portal_url;/treeCollapsed.png) no-repeat 0.5em 50%;
+}
+/* @end Collapsible */
+
+/* @group Comments */
+.comment .documentByLine {
+    font-size: 100%;
+}
+
+.commentBody {
+    -webkit-box-shadow: 0 0 0.5em 0 #888;
+       -moz-box-shadow: 0 0 0.5em 0 #888;
+        -ms-box-shadow: 0 0 0.5em 0 #888;
+         -o-box-shadow: 0 0 0.5em 0 #888;
+            box-shadow: 0 0 0.5em 0 #888;
+}
+/* @end Comments */
+
+/* @group Search results page */
+fieldset#search-field {
+    text-align: left;
+    margin-left: 1em;
+}
+
+#rss-subscription {
+    float: left;
+    line-height: 2.2em;
+}
+
+form.searchPage h1.documentFirstHeading {
+    border: 0;
+    padding-right: 0;
+}
+
+/* 14229 fixed dropdown menu when no results are found */
+#search-results-bar dd.actionMenuContent {
+    background: #EEE;
+    -webkit-column-count: 3;
+            column-count: 3;
+    min-width: 700px;
+    padding: 1em 1em 1em 0;
+    position: relative;
+}
+/* @end Search results page */
+
+/* @group Image alignment classes */
+
+.image-inline {
+   float: none;
+   max-width: 100%;
+}
+/* @end Image alignment classes */
+
+/* @group Forms */
+fieldset,
+.editionComment {
+    padding:0;
+}
+
+#content label {
+   cursor: pointer;
+}
+
+.fieldRequired {
+    background: url(&dtml-portal_url;/required.png) center left no-repeat;
+}
+/* @end Forms */
+/* @end styles changes for public.css */
+
+/* @group Table of Contents */
+
+dl.toc {
+   float: none;
+}
+
+dl.toc dd {
+  padding-left: 0;
+}
+/* @end Table of Contents */
+
+/* @group Footer */
+
+#portal-footer {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    font-size: 12px;
+    color: white;
+    min-width: 950px;
+    background: transparent;
+}
+#portal-colophon {
+    font-size: 12px;
+}
+/* @end Footer */
+
+/* @group Album view classes */
+.photoAlbumEntry {
+    border: 0px;
+    background-color: transparent;
+    background-image: none;
+    float: left;
+    height: 125px;
+    width: 129px;
+    margin: 0 3px 7px 3px;
+    padding: 0px;
+    box-shadow: 0px 1px 2px #CCCCCC;
+    z-index: 3;
+}
+
+.photoAlbumEntry img {
+    max-height: 71px;
+    border: 0;
+}
+
+/* #13639 don't limit height of figure album entries */
+.figuresPhotoAlbumEntry .photoAlbumEntryWrapper {
+    max-height: 100%;
+}
+
+.photoAlbumEntryWrapper {
+    display: block;
+    background: white;
+    max-height: 71px;
+    height: 100%;
+    width: 128px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    border: 0;
+}
+
+a.video-fancybox .photoAlbumEntryWrapper {
+    position: relative;
+    background: url(&dtml-portal_url;/play-button-cloud.png) no-repeat 2px center;
+}
+.photoAlbumEntry a {
+    font-size: &dtml-fontSmallSize;;
+    height: 128px;
+    width: 128px;
+    margin: 10px 0px;
+    overflow: hidden;
+}
+
+.photoAlbumFolder {
+    background: transparent;
+}
+
+.photoAlbumEntryTitle {
+    overflow: hidden;
+    height: 3.2em;
+    margin-top: 0.4em;
+    font-weight: bold;
+}
+/* our additional photoAlbumEntry styles */
+.photoAlbumEntry:hover {
+    background: transparent;
+    box-shadow: 0px 2px 3px #ACACAC;
+}
+
+#whatsnew-gallery .photoAlbumEntry,
+#whatsnew-gallery .photoAlbumEntry:hover{ 
+    background: transparent;
+    box-shadow: none;
+    padding: 0px;
+    z-index: 3;
+}
+
+.photoAlbumEntry a.video-fancybox img {
+    position: relative;
+    z-index: -1;
+    margin-top: 0;
+}
+.photoAlbumEntry a.video-fancybox img, .photoAlbumEntry a.animation-fancybox img {
+    max-height: 128px;
+}
+
+.photoAlbumEntryPreview,
+.photoAlbumEntryPreview a,
+.photoAlbumEntryPreview .photoAlbumEntryTitle {
+    height: auto;
+    width: auto;
+    background-image: none;
+    margin: 0.5em  0 2em 0;
+}
+
+.photoAlbumEntryDescription {
+    display:none;
+}
+
+/* bigger title for products section */
+.section-products .photoAlbumEntryTitle {
+    font-size:160%;
+}
+/* @end Album view classes */
+
+/* @group Accessibility elements, applied by JS */
+/* default close button positioned on upper-left corner */
+div.overlaybg div.close,
+div.overlay div.close {
+    background-image: url(&dtml-portal_url;/pb_close.png);
+}
+
+.pb-ajax, .pb-image, .overlay iframe {
+    -webkit-box-shadow: 0 0 3em 0.5em #666;
+       -moz-box-shadow: 0 0 3em 0.5em #666;
+        -ms-box-shadow: 0 0 3em 0.5em #666;
+         -o-box-shadow: 0 0 3em 0.5em #666;
+            box-shadow: 0 0 3em 0.5em #666;
+}
+
+div.overlay a:hover {
+    color: &dtml-corporateGreen;;
+}
+/* @end Accessibility elements, applied by JS */
+
+
+/* @group Core content type sprites */
+
+/* Generated using http://spritegen.website-performance.org, with the following
+   parameters:
+   - Build direction: Vertical
+   - Horizontal offset: (doesn't matter, but can't be 0)
+   - Vertical offset: 200px
+   - Compress image with OptiPNG: yes
+   - Class prefix: contenttype-
+   - Display width and height: no
+  Then, add 4 px to the background-position to line up the icons to text.
+
+.contenttype-document_icon { background-position: 0 0;  }
+.contenttype-event_icon { background-position: 0 -216px;  }
+.contenttype-file_icon { background-position: 0 -432px;  }
+.contenttype-folder_icon { background-position: 0 -648px;  }
+.contenttype-image_icon { background-position: 0 -864px;  }
+.contenttype-link_icon { background-position: 0 -1080px;  }
+.contenttype-newsitem_icon { background-position: 0 -1296px;  }
+.contenttype-site_icon { background-position: 0 -1512px;  }
+.contenttype-topic_icon { background-position: 0 -1728px;  }
+
+*/
+
+.contenttype-document {
+    background: no-repeat transparent 0px 0px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-event {
+    background: no-repeat transparent 0px -216px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+ .contenttype-folder {
+    /* background: no-repeat transparent 0px -648px url(&dtml-portal_url;/contenttypes-sprite.png); */
+    background: none;
+}
+.contenttype-link {
+    background: no-repeat transparent 0px -1080px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-news-item {
+    background: no-repeat transparent 0px -1296px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-plone-site {
+    background: no-repeat transparent 0px -1512px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+.contenttype-topic, .contenttype-collection {
+    background: no-repeat transparent 0px -1728px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+
+/* These should only appear in the add menu */
+#plone-contentmenu-factories .contenttype-file {
+    background: no-repeat transparent 0px -431px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+#plone-contentmenu-factories .contenttype-image {
+    background: no-repeat transparent 0px -862px url(&dtml-portal_url;/contenttypes-sprite.png);
+}
+
+.contenttype-document,
+.contenttype-event,
+.contenttype-link,
+.contenttype-news-item,
+.contenttype-plone-site,
+.contenttype-topic,
+.contenttype-collection,
+#plone-contentmenu-factories .contenttype-file,
+#plone-contentmenu-factories .contenttype-image {
+    line-height: 2em;
+    display: inline-block;
+    *display: block;
+    padding-left: 20px !important;
+}
+
+/* our customizations */
+#portal-column-content .contenttype-folder {
+    padding-left: 0px !important;
+}
+
+/* #5243 wrongly indented folder icon */
+#portal-column-content .portletNavigationTree .contenttype-folder {
+    padding-left: 10px !important;
+}
+
+.documentEditable .mceLayout {
+    /* fixes width of edit forms because tinymce has hardcoded width */
+    width:100% !important;
+    /* fixes edit without visual editor placement because it has an inline
+     * negative margin-top */
+    margin-bottom: 1em;
+}
+
+/* @end Core content type sprites */
+
+/* @end styles changes for public.css */
+
+/* @group previously in public.css not found in stock plone */
+#content-core .languageCodes {
+    display: inline-block;
+}
+
+span.languageCodes a.translated,
+#content span.link-external a.translated {
+    background: none repeat scroll 0 0 #ECECEC;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    color: black;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 0;
+    padding: 0 5px;
+}
+
+#featured-datasets dd {
+    margin: 0 0 0.5em 2em;
+}
+
+#featured-datasets {
+   margin-bottom: 2.5em;
+}
+
+/* display input as block for users search form  #4817 */
+form[name="users_search"] input.context {
+    display: block !important;
+}
+
+#contentActionMenus .actionMenuContent ul {
+    margin:0px !important;
+}
+
+#contentActionMenus .actionSeparator a {
+    padding-top: 0.2em;
+    border-top: 2px solid &dtml-contentViewBorderColor;;
+}
+
+div.managePortletsLink, a.managePortletsFallback {
+    background: transparent;
+}
+/* @end previously in public.css not found in stock plone */
+/* </dtml-with> */
