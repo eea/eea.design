@@ -86,7 +86,7 @@ div#header {
 ** FOOTER STYLES
 */
 /* #14814; customized this file in order to use the print logo */
-div#footer {
+.layout #footer {
     background: &dtml-backgroundColor; url('&dtml-portal_url;/++resource++eea.translations.images/printlogo-en.gif') 10px 10px no-repeat;
     border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     color: &dtml-fontColor;;

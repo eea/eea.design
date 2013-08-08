@@ -17,9 +17,9 @@
 
 /* columns.css slider-definitions modification */
 
-div.width-3\3a 4 { width:    58.5%; min-width: 600px; }
+div.width-3\3a 4 { width:    58.5%;  }
 div.position-1\3a 4 {margin-left:    -79.875%;}
-div.width-1\3a 4 { width: 36%;   min-width: 350px; } /* .width-1:4 */
+div.width-1\3a 4 { width: 36%;    } /* .width-1:4 */
 div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 
 div.position-3\3a 4 {margin-left: -36.8%;}
@@ -317,6 +317,7 @@ div.position-3\3a 4 {margin-left: -36.8%;}
 
 #portal-columns input[type="submit"], .standardButton, .qq-upload-button,
 .searchButton,
+.plonebutton,
 input.context,
 input.destructive,
 input.standalone {
@@ -2346,6 +2347,7 @@ body.kupu {
 
 #portal-column-content  {
     padding: 0;
+    min-width: 600px;
 }
 
 #portal-column-one .visualPadding {
@@ -2369,6 +2371,7 @@ body.kupu {
 
 #portal-column-two {
     margin-top: 75px;
+    min-width: 350px;
 }
 
 /* visual */

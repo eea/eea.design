@@ -3,6 +3,8 @@ Changelog
 
 7.5-dev - (unreleased)
 ----------------------
+* Bug fix: fixed styles issues for TinyMCE from Plone 4.3
+  [ichimdav refs #14323]
 
 7.4 - (2013-08-07)
 ------------------
