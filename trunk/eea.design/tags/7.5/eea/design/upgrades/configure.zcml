@@ -1,0 +1,87 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+        i18n_domain="eea">
+
+    <genericsetup:upgradeSteps
+            source="6.9"
+            destination="7.4"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 7.4"
+                description="Removes change_workflow_state.js"
+                import_profile="eea.design:upgrade74"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="4.0"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile"
+                import_profile="eea.design:default"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="5.5"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: stylesheets"
+                import_steps="cssregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: jsregistry"
+                import_steps="jsregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: viewlets"
+                import_steps="viewlets"
+                />
+
+    </genericsetup:upgradeSteps>
+
+
+    <genericsetup:upgradeSteps
+            source="5.5"
+            destination="5.9"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: cssregistry"
+                import_steps="cssregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: jsregistry"
+                import_steps="jsregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: actions"
+                import_steps="actions"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="5.9"
+            destination="6.9"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: jsregistry"
+                import_steps="jsregistry"
+                />
+
+    </genericsetup:upgradeSteps>
+</configure>

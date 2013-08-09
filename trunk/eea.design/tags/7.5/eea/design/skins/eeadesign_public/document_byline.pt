@@ -1,0 +1,10 @@
+<!-- obsolete? do we still need this? 
+it is replaced by a  viewlet browser/templates/document_byline -->
+<tal:anonymous 
+tal:define="isAnon context/@@plone_portal_state/anonymous;
+            plone_view context/@@plone;"
+tal:condition="isAnon" metal:define-macro="publishdate">
+      <tal:published  i18n:translate="Published">Published</tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())">
+        August 16, 2001 at 23:35:59
+    </span>
+</tal:anonymous>

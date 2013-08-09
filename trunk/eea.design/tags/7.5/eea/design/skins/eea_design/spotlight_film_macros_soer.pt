@@ -1,0 +1,63 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+      
+<body>
+
+<div metal:define-macro="spotlight" class="highlightMiddle shortNews" id="multimedia-highlights">
+    <h2 class="column-title" i18n:translate="">In the spotlight</h2>
+   <h2 class="shortNewsTitle visualPadding" style="font-size:150%;padding-left:0.7em;padding-bottom:0.25em;">
+        <a href="http://www.eea.europa.eu/soer" i18n:translate="">The European environment &ndash; state and outlook 2010</a>
+    </h2> 
+    <div id="spotlights-area" class="visualPadding" style="padding-top:0em;">
+        <ul>
+            <li class="vidthumb">
+                <a href="http://www.eea.europa.eu/cop15/bend-the-trend/movement">
+                    <img style="border: 1px solid #E0DED5" 
+                         src="http://www.eea.europa.eu/cop15/bend-the-trend/bend-the-trend-1/image_thumb" 
+                         title="Bend the trend social movement" 
+                         i18n:attributes="title"/>
+                </a>
+            </li>
+           <li class="vidthumb last">
+                <a href="http://www.eea.europa.eu/multimedia/spotting-the-signs/view" class="video-fancybox">
+                    <img src="http://www.eea.europa.eu/multimedia/spotting-the-signs/image_wide" 
+                         title="Spotting the signs for a transport system by 2050" 
+                          i18n:attributes="title" />
+                </a>
+            </li>
+
+            <li class="vidthumb">
+                <a href="/cop15/bend-the-trend/environmental-atlas-of-europe-movie">
+                    <img src="/cop15/bend-the-trend/environmental-atlas-of-europe/image_thumb"
+                         title="Environmental Atlas"
+                          i18n:attributes="title" />
+                </a>
+            </li>
+        
+        </ul>
+        <div id="big_vid">
+            <div id="spotlight-film-wrapper">
+              <a title="SOER message" 
+                 href="http://www.eea.europa.eu/soer/journalists/viral/video_popup_view" 
+                 alt="SOER message" 
+                 class="video-fancybox" 
+                 i18n:attributes="title; alt">
+                        <img title="SOER viral video message" 
+                             alt="SOER viral video message" 
+                             src="http://www.eea.europa.eu/soer/journalists/viral-video-preview"
+                             i18n:attributes="title; alt" />
+              </a>
+            </div>
+            <span i18n:translate="">
+             Visit the <span i18n:name="soer-website"><a href="/soer" i18n:translate="">SOER 2010 website</a></span>.
+            </span> 
+         </div>
+        <div class="visualClear"><!-- --></div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

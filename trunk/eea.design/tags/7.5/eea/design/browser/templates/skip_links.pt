@@ -1,0 +1,11 @@
+<p class="hiddenStructure"
+   i18n:domain="eea"
+   tal:define="url view/current_page_url">
+  <a accesskey="2"
+     tal:attributes="href string:#content"
+     i18n:translate="">Skip to content.</a> |
+
+  <a accesskey="6"
+     tal:attributes="href string:${request/ACTUAL_URL}#eea-portlet-navigation-tree"
+     i18n:translate="">Skip to navigation</a>
+</p>
