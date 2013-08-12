@@ -3,6 +3,9 @@ Changelog
 
 7.6-dev - (unreleased)
 ----------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.design
+  [ichimdav #14323]
 * Change: moved style customizations from eea-public to eea-portlets.css
   because of changes in plonetheme.sunburst
   [ichimdav refs #14323]
