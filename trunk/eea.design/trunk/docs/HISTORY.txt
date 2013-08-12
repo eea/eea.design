@@ -3,6 +3,9 @@ Changelog
 
 7.6-dev - (unreleased)
 ----------------------
+* Change: moved style customizations from eea-public to eea-authoring.css
+  because of changes in plonetheme.sunburst
+  [ichimdav refs #14323]
 
 7.5 - (2013-08-09)
 ------------------
