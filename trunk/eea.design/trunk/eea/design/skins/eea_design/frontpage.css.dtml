@@ -181,7 +181,7 @@ body.frontpage #portal-columns {
 
 .featured-highlight-title {
     float: right;
-    width: 130px;
+    width: 125px;
 }
 
 .featured-highlight-description  {

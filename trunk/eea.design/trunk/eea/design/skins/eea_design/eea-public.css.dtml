@@ -10,7 +10,7 @@
 /* @group Basics */
 
 body {
-    font: 70% Verdana, Arial, Helvetica, sans-serif;
+    font: 75% Verdana, Arial, Helvetica, sans-serif;
     color: &dtml-fontColor;;
     margin:0;
     padding:0px;
@@ -136,6 +136,7 @@ fieldset,
 /* @end @group Forms found now in forms.css */
 
 /* @group previously in public.css not found in stock plone */
+
 #content-core .languageCodes {
     display: inline-block;
 }
