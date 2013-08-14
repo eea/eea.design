@@ -2400,6 +2400,15 @@ body .ploneSkin .mce_formatPreview a {
     font-size: 80% !important;
 }
 
+#text_fullscreen .mceVoiceLabel {
+    position: relative;
+    top: -21px;
+    width: 200px;
+    display: block !important;
+    font-size: 12px;
+    left: 21px;
+}
+
 /* #9499 give the style selector popup a minimum width */
 .ploneSkin .mceMenu {
     min-width: 145px;

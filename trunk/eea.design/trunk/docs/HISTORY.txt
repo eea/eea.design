@@ -3,6 +3,9 @@ Changelog
 
 7.6-dev - (unreleased)
 ----------------------
+* Feature: display the text for full screen mode within TinyMCE in order to 
+  make it more obvious what the button does
+  [ichimdav refs #14910]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav #14323]
