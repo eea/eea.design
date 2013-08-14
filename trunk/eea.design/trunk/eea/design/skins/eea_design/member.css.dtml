@@ -1,20 +1,8 @@
-/*
-** Plone style sheet - styles for logged-in users
-**
-** Style sheet documentation can be found at http://plone.org/documentation
-**
-** You should preferrably use ploneCustom.css to add your own CSS classes and to
-** customize your portal, as these are the base fundaments of Plone, and will
-** change and be refined in newer versions. Keeping your changes in
-** ploneCustom.css will make it easier to upgrade.
-**
-** Feel free to use whole or parts of this for your own designs, but give credit
-** where credit is due.
-**
-*/
-
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* ichimdav This file remains customized because of all of these important declarations
+   instead of having another eea-member.css file */
 
 /* workflow state colors */
 
@@ -103,6 +91,58 @@
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
+}
+
+/* @group Dashboard */
+
+#dashboard-actions ul,
+#dashboard-actions ul li {
+    list-style: none;
+}
+#dashboard-actions ul {
+    margin-left: 0;
+}
+
+#dashboard {
+    font-size: 125%;
+    line-height: 1em;
+}
+
+#dashboard dd {
+    margin: 0;
+}
+
+
+#dashboard dl.portlet a:link {
+    border-bottom: none;
+}
+
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3,
+#dashboard-portlets4 {
+    display: inline-block;
+}
+
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3 {
+    float:left;
+    width:23%;
+    padding:0.7em 1.3em 0 0;
+}
+
+#dashboard-portlets4 {
+    float:left;
+    width:23%;
+    padding-top:0.7em;
+}
+
+#dashboard-portlets1 dl.portlet,
+#dashboard-portlets2 dl.portlet,
+#dashboard-portlets3 dl.portlet,
+#dashboard-portlets4 dl.portlet {
+    margin-bottom:1.5em;
 }
 
 #plone-contentmenu-workflow img {
