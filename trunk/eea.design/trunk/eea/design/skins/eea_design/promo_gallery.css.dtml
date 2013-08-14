@@ -108,11 +108,6 @@
     min-width: 65%;
     max-width: 101%;
 }
-/* video-fancybox is for videos which have the black border which 
- * we should hide */
-#promo-gallery-content li a.video-fancybox img {
-    margin-top: -92px;
-}
 
 #promo-gallery-content li a.video-fancybox.cloudvideo {
     display: block;
