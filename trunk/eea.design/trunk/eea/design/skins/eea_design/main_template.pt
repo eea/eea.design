@@ -188,6 +188,7 @@
                                     possible relation labels. can be made as viewlet.
                                 </tal:comment>
                              </metal:comment>
+
                              <tal:block define="thumb_scale thumb_scale | string:image_tile;">
                                <metal:macro use-macro="here/eea_relateditems/macros/relatedItemsWithThumbs" />
                              </tal:block>

@@ -6,7 +6,7 @@ Changelog
 
 7.6 - (2013-08-19)
 ------------------
-* Feature: display the text for full screen mode within TinyMCE in order to 
+* Feature: display the text for full screen mode within TinyMCE in order to
   make it more obvious what the button does
   [ichimdav refs #14910]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
