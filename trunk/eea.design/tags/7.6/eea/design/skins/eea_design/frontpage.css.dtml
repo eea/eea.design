@@ -1,0 +1,532 @@
+/*
+  Style for the promo gallery with highlights/news.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* General frontpage
+******************************************************************************/
+
+
+/* This div sneaks in a padding for IE it seems. */
+html {
+    /*background: url("header.png") top left repeat-x;*/
+
+}
+
+#region-content {
+    padding: 0 0 !important;
+}
+
+.documentContent {
+    padding: 0;
+}
+
+body.frontpage ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+}
+
+#main-content {
+    margin-top: 5px;
+}
+
+#highlights-block h1 a,
+#highlights-block h2 a,
+#highlights-block h3 a {
+	background: none;
+}
+
+#highlights-block h1 a:hover,
+#highlights-block h2 a:hover,
+#highlights-block h3 a:hover {
+    border: none;
+    text-decoration: underline;
+}
+
+
+#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks {
+    margin:0.5em 0 0 1px;
+}
+
+#highlights-block h3 {
+    margin: 0 0 0.5em 0;
+    font-weight: normal;
+}
+
+#highlights-block h2, .featured h2, .featured dt.portletHeader {
+    font-size: 160%;
+    font-weight: normal;
+    line-height: 1.4em;
+    padding: 0 0 0.5em 0;
+    border: none;
+    clear: left;
+    color: #000;
+    margin: 0;
+    background: none;
+    text-shadow: 1px 1px white;
+}
+
+#highlights-block .shortNewsTitle {
+    margin-top: 0.5em;
+}
+
+#highlights-block .date, #content .date {
+    color: #808285;
+    border: 0;
+    font-size: 100%;
+    padding: 0;
+}
+
+
+.frontpage .tileHeadline {
+  padding-left: 0 !important;
+  padding-top: 0.4em !important;
+}
+
+/**
+ * Reset margin between tabs and content from highlights
+*/
+.figure-left {
+    /* clear: left; */
+    float: left;
+}
+/* don't show dates on articles on frontpage as they are not like news */
+#articles-high .date {
+    /* visibility:hidden; */
+}
+
+.archives {
+    float: right;
+    margin: 22px 25px 15px 15px;
+    position: relative;
+    top: 8px;
+    line-height: 1em;
+}
+
+a.archives {
+    color: #869936;
+    border-bottom: 1px solid #869936;
+}
+
+/* Frontpage main content
+******************************************************************************/
+
+.column-area, .right-column-area {
+    width: 61%;
+    margin: 0 0;
+    padding: 0 1em 1em 0;
+    float: left;
+}
+
+.right-column-area {
+    width: 36.5%;
+    padding: 0 0 0 1em;
+}
+
+#articles-area {
+    float: right;
+    min-width: 37%;
+    max-width: 39%;
+}
+
+#articles-area h2 {
+    padding-top: 0;
+    line-height: 1em;
+}
+
+#highlights-area {
+    float: left;
+    width: 58.5%;
+    min-width: 585px;
+    padding: 0em;
+}
+
+body.sections-data-and-maps #promo-gallery-wrapper,  body.frontpage #promo-gallery-wrapper {
+    min-width: 585px;
+}
+
+
+body.frontpage .documentActions,
+body.frontpage #belowContent {
+    display: none;
+}
+
+body.frontpage #highlights-block {
+   padding: 0;
+}
+
+body.frontpage #portal-columns {
+    padding: 0 !important;
+}
+#content ul.gallery-layout-selection  {
+  float: right;
+  position: relative;
+  top: 5px;
+  list-style: none;
+  margin-bottom: 10px;
+  width: 65px;
+  display: inline;
+}
+#content ul.gallery-layout-selection li {
+    display: inline;
+}
+
+#content ul.gallery-layout-selection li a {
+    border-bottom: 0px;
+    display: inline-block;
+}
+
+.featured-highlight-title {
+    float: right;
+    width: 125px;
+}
+
+.featured-highlight-description  {
+    clear: both;
+}
+
+/* Frontpage multimedia area
+******************************************************************************/
+
+#big_vid {
+    float: left;
+    width: 70%;
+}
+
+#multimedia-highlights ul {
+    list-style: none outside none;
+}
+
+
+/* Frontpage news and articles
+******************************************************************************/
+.highlightMiddle {
+    padding: 2em 1.7em 1em 1.7em;
+    background: &dtml-greyBackgroundColor;;
+}
+
+.highlightHigh {
+    display: block;
+    padding: 0em 0em;
+    margin: 0 0 0em 0em;
+}
+
+.visualPadding {
+    padding: 0 1em 1em 1em;
+}
+
+#highlights-block .highlightHigh h2 {
+    font-size: 250%;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.panel .noPrint {
+    margin: 0px !important;
+}
+
+
+#highlights-block .highlightHigh .relatedLinks {
+    font-size: 160%;
+}
+
+
+.highlights ul li .date ,
+.eea-tabs-panel ul li .date {
+    float: left;
+    margin: 0 0 0 -8em;
+}
+
+#highlights-block .portletFooter {
+    padding-right: 1em;
+}
+
+div.even  {
+    background: &dtml-evenRowBackgroundColor;;
+    color: #346f83;
+    margin: 0;
+    padding: 15px 15px 10px 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+}
+div.even {
+     background: &dtml-greyBackgroundColor; !important;
+}
+
+#filter_grid div.even {
+    padding: 0px;
+}
+
+div.current {
+  display: none;
+}
+
+#news-header select {
+    margin-left: 30px;
+    color: &dtml-corporateBlueTwo;;
+    margin-top: 10px;
+    display: table-cell;
+}
+
+#news-header h2 {
+    float: left;
+    padding: 0px;
+    margin: 5px 0px;
+    border:none;
+    line-height:1.2;
+}
+
+#news-header {
+  height: 35px;
+  clear: both;
+  display: block;
+  margin:2em 0 5px 0;
+}
+
+/* style for featured boxes */
+
+.roundedCorners {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.section-multimedia .featured, .section-multimedia .portlet {
+    padding: 1em;
+}
+
+.featured, .portlet {
+    background: &dtml-lightBackgroundColor;;
+    margin-bottom: 1em;
+    padding:1.9em;
+    border-radius: 10px;
+     -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+}
+
+.featured-highlights {
+    min-height: 120px;
+}
+
+.featured  img {
+    padding: 0 5px 5px 0;
+    height: 101px;
+}
+
+.featured dl {
+    padding: 0 1em 0 1em;
+}
+
+/* in featured boxes we do want floating for links and images */
+.featured h2, .featured h3 {
+    clear: none !important;
+}
+
+/* style for shortcuts buttons */
+
+#forum, #community, #mobile {
+    height: 100px;
+    background: &dtml-mediumBackgroundColor;;
+    margin-bottom: 2.5em;
+    text-align: center;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+}
+
+#forum-link,
+#facebook,
+#youtube,
+#twitter,
+#twitter-link,
+#facebook-link,
+#youtube-link,
+#rss-link,
+#email-link,
+a.active-list,
+a.list-layout,
+a.album-layout,
+a.active-album,
+a.list-layout:hover,
+a.album-layout:hover {
+  background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll top right;
+}
+
+#semantic-ds-links a:hover,
+#forum a:hover,
+#community a:hover,
+#mobile a:hover,
+#prev-promo:hover,
+#play-pause:hover,
+#next-promo:hover {
+  text-decoration: none !important;
+}
+
+/* Styles which can be used on any area */
+.shortcut-default:hover, .shortcut-light:hover, #mobile:hover, #portlet-followus dd a:hover {
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+      -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+       -ms-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+        -o-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+}
+/* END Styles which can be used on any area */
+
+#portlet-followus {
+    padding: 2em;
+    margin: 0;
+}
+#portlet-followus dd {
+  display: inline-block;
+  padding-right: 1em;
+  margin: 0 0 2px 0;
+}
+
+#twitter-link,
+#facebook-link,
+#youtube-link,
+#rss-link,
+#email-link{
+  width: 33px;
+  height: 32px;
+  display: block;
+}
+
+#content #twitter-link, #content #facebook-link, #content #youtube-link {
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat;
+    padding: 0px;
+}
+
+ #twitter-link {
+    background-position: 0 -180px !important;
+}
+
+ #facebook-link {
+    background-position: 0 -147px !important;
+}
+
+#youtube-link {
+    background-position: 0 -213px !important;
+}
+
+#rss-link {
+    background-position: 0 -246px !important;
+}
+
+#email-link {
+    background: url("&dtml-portal_url;/email_32.png") no-repeat center center transparent; /* TODO: to sprite */
+}
+
+.shortcut-default {
+    text-align: left;
+    padding: 2em;
+    background: &dtml-lightBackgroundColor;;
+    margin-bottom: 1em;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+}
+
+.shortcut-light {
+    background: transparent;
+    border: 1px solid #e6e7e8;
+    margin-bottom: 1em;
+    text-align: center;
+    border-radius: 5px;
+     -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+}
+
+#eea-mobile-shortcut.shortcut-default,
+#enquiry-service-shortcut.shortcut-default {
+   padding:25px 21px;
+}
+
+#eea-mobile-shortcut a,
+#enquiry-service-shortcut a {
+    display: table-row;
+    clear: both;
+}
+#semantic-content {
+    background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
+    padding: 25px 20px 20px 80px;
+    height: 60px;
+    text-align: left;
+}
+
+#mobile-content, #enquiry-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+#enquiry-content {
+    background: url("&dtml-portal_url;/forum.png") no-repeat -7px -16px transparent;
+    padding: 0 0 0 70px;
+    height: 40px;
+}
+
+#mobile-content {
+    background: url("&dtml-portal_url;/mobile-large.png") no-repeat 0px 0px transparent;
+    padding: 0 0 0 45px;
+    height: 60px;
+}
+
+#organisations-content {
+    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px transparent;
+    padding: 25px 20px 20px 90px;
+    height: 60px;
+    text-align: left;
+}
+
+#theme-datacentre {
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat;
+    padding: 25px 0px 25px 66px;
+    height: 56px;
+    background-position: -401px -469px;
+}
+
+.shortcut-light a.portletHeader, .shortcut-default a.portletHeader  {
+   display:block;
+}
+
+a.list-layout,
+a.album-layout {
+  display: inline-block;
+  height: 17px;
+  margin-right: 10px;
+  width: 20px;
+}
+
+a.album-layout {
+    background-position: -427px -162px;
+}
+
+a.active-album, a.album-layout:hover {
+  background-position: -427px -145px;
+}
+
+a.list-layout {
+  background-position: -448px -162px;
+}
+
+a.active-list, a.list-layout:hover {
+  background-position: -448px -145px;
+}
+
+.filter-topic {
+    float: left;
+    text-align: right;
+    width: 83%;
+    padding-top: 6px;
+}
+.filter-topic span {
+    font-weight: bold;
+}
+/* </dtml-with> */
+
