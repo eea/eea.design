@@ -123,7 +123,7 @@
         </h1>
 
         <p class="discreet"
-           tal:condition="context/portal_syndication/isSiteSyndicationAllowed">
+           tal:condition="context/@@syndication-util/context_allowed">
             <a href=""
                class="link-feed"
                i18n:translate=""
