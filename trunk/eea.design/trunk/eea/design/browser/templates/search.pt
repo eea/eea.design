@@ -71,7 +71,7 @@
                 </h1>
 
                 <p id="rss-subscription" i18n:domain="plone"
-                   tal:condition="context/portal_syndication/isSiteSyndicationAllowed">
+                   tal:condition="context/@@syndication-util/context_allowed">
                     <a href=""
                        class="link-feed"
                        tal:define="here_url context/@@plone_context_state/object_url"

@@ -3,6 +3,9 @@ Changelog
 
 7.7-dev - (unreleased)
 ----------------------
+* Bug fix: no longer reference portal_syndication in templates since we use
+  Plone 4.3 now
+  [ichimdav refs #15969]
 
 7.6 - (2013-08-19)
 ------------------
