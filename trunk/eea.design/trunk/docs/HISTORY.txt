@@ -3,6 +3,8 @@ Changelog
 
 7.8-dev - (unreleased)
 ----------------------
+* Bug fix: define portal_url within language_selector.pt
+  [ichimdav refs #16291]
 
 7.7 - (2013-08-22)
 ------------------

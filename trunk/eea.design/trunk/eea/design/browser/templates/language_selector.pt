@@ -4,6 +4,7 @@
     i18n:domain="eea">
     <tal:languages  tal:define="data context/@@languageSelector;
     portal_state context/@@plone_portal_state;
+    portal_url   portal_state/portal_url;
     isAnon portal_state/anonymous;
     translations python:len(context.portal_languages.getSupportedLanguages()) &gt; 1"
     tal:condition="python:(context.getId() != 'portal_languages') and context.plone_utils.isTranslatable(context)">
