@@ -3,6 +3,9 @@ Changelog
 
 7.8-dev - (unreleased)
 ----------------------
+* Change: updated login_form.cpt and login_next.cpy with latest logic from 
+  Plone
+  [ichimdav refs #16291]
 * Bug fix: define portal_url within language_selector.pt
   [ichimdav refs #16291]
 

@@ -10,7 +10,6 @@
 ##
 
 from Products.CMFPlone import PloneMessageFactory as _
-from DateTime import DateTime
 import ZTUtils
 
 REQUEST = context.REQUEST
@@ -36,6 +35,7 @@ else:
 ### /eea
 
 came_from = REQUEST.get('came_from', None)
+next_url = REQUEST.get('next', None)
 
 # if we weren't called from something that set 'came_from' or if HTTP_REFERER
 # is the 'logged_out' page, return the default 'login_success' form
@@ -56,21 +56,24 @@ if came_from is not None:
     if not context.portal_url.isURLInPortal(came_from):
         came_from = ''
 
+if next_url:
+    if not context.portal_url.isURLInPortal(next_url):
+        came_from = next_url = ''
+    else:
+        state.set(status='external')
 
-if came_from:
+if came_from and not next_url:
     # If javascript is not enabled, it is possible that cookies are not enabled.
     # If cookies aren't enabled, the redirect will log the user out, and confusion
     # may arise.  Redirect only if we know for sure that cookies are enabled.
 
     util.addPortalMessage(_(u'Welcome! You are now logged in.'))
-    #if not query:
-    #    query += 'portal_status_message=Welcome! You are now logged in.'
     came_from = util.urlunparse((scheme, location, path, parameters, query, fragment))
 
     # redirect immediately
     return REQUEST.RESPONSE.redirect(came_from)
 
-state.set(came_from=came_from)
+state.set(came_from=came_from, next=next_url)
 
 return state
 
