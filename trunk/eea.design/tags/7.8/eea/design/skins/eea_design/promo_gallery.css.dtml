@@ -1,0 +1,322 @@
+/*
+  Style for the promo gallery with highlights/news.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/*******************************************************************************/
+
+.promo-item-desc, .promo-item-desc-sm {
+    z-index: 100;
+    position: absolute;
+    top: 232px;
+    left: 0px;
+    width: 91%;
+    color: white;
+    margin: 0 0px;
+    background: &dtml-corporateGreen;;
+    opacity: 0.9;
+    height: 90px;
+    padding: 0px 20px 0px 20px;
+}
+.promo-item-desc-sm {
+    top: 190px;
+    height: 60px;
+}
+
+#promo-gallery-content h3, #promo-gallery-content-sm h3 {
+    margin: 0.4em 0 0.4em 0;
+    font-size: 1.6em;
+    line-height: 1.1em;
+    font-weight: bold;
+    border: none;
+    text-shadow: 1px 1px 1px #000000;
+    clear: none !important;
+}
+
+#promo-gallery-content-sm h3 {
+    font-size: 1.3em;
+    margin-top: 0.2em;
+    clear: none !important;
+}
+
+#promo-gallery-content h3 a, #promo-gallery-content h3 a:visited, 
+#promo-gallery-content-sm h3 a, #promo-gallery-content-sm h3 a:visited {
+    color: #FFF !important;
+    background: none;
+}
+
+#promo-gallery-content h3 a:hover, 
+#promo-gallery-content-sm h3 a:hover {
+    color: &dtml-corporateBlueTwo; !important;
+    background: none;
+}
+
+.promo-item-desc span, .promo-item-desc-sm span {
+   font-size: 1em;
+}
+
+/* main promo content */
+#promo-gallery-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    background: #F7F7F7;
+    border: 0px solid #F7F7F7;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+#gallery-content-outer, #gallery-content-outer-sm {
+    position: relative;
+    height: 100%;
+    width: 415px;
+    z-index: 3;
+    overflow: hidden;
+    float: right;
+}
+
+#promo-gallery-content, #promo-gallery-content-sm {
+	overflow:hidden;
+	background:transparent  scroll 50% 50%;
+	padding:0px;
+	margin:0;
+	height:320px;
+	width:415px;
+	position:relative;
+	overflow:hidden;
+}
+
+#promo-gallery-content li, #promo-gallery-content-sm li {
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+	height:100%;
+	width:415px;
+	float:left;
+}
+
+#promo-gallery-content li img{
+    padding:0px;
+    width: 100%;
+}
+
+#promo-gallery-content-sm li img  {
+    min-width: 65%;
+    max-width: 101%;
+}
+
+#promo-gallery-content li a.video-fancybox.cloudvideo {
+    display: block;
+    background: url(&dtml-portal_url;/play-button.png) no-repeat center center;
+}
+
+#promo-gallery-content li a.video-fancybox.cloudvideo img {
+    margin-top: 0;
+    position: relative;
+    z-index: -1;
+}
+
+#gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li
+{
+    width: 100%;
+}
+
+/* item navigator */
+#promo-navigator, #promo-navigator-sm{
+	top:0;
+	padding:0;
+	margin:0;
+    position: absolute;
+	width:190px;
+}
+#promo-navigator-sm{ 
+    height: 50px;
+}
+#promo-gallery-wrapper ul, #promo-gallery-content ul, #promo-gallery-content-sm ul {
+    margin-left: 0em;
+    list-style: none;
+}
+
+#promo-gallery-content-sm { 
+    height: 250px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#promo-navigator li, #promo-navigator-sm li {
+	cursor:pointer;
+	list-style:none;
+	width:100%;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+    float: left;
+}
+
+#navigator-outer {
+	right:0;
+	top:0px;
+	z-index:100;
+	height:320px;
+	overflow:hidden;
+	color:#FFF;
+}
+
+#navigator-outer-sm {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#promo-navigator li.active, #promo-navigator-sm li.active{
+	color:#FFF;
+    background: transparent url("promotions-gallery-arrow.png") no-repeat right center;
+    position: relative;
+    z-index: 300;
+    width: 182px !important;
+    float: left;
+}
+
+/* #promo-navigator-sm li.active { */
+/*     background: transparent url("promotions-gallery-arrow.png") no-repeat 65px 7px; */
+/* } */
+
+#promo-navigator-sm li, #promo-navigator-sm li.active {
+    width: 65px !important; 
+}
+
+#promo-navigator li h3, #promo-navigator-sm li h3 {
+    color: #4E8192;
+    font-size: 85%;
+    padding: 10px 6px 0 3px;
+    margin:0;
+    font-weight: normal;
+    height: 72px;
+    overflow: hidden;
+    clear: none !important;
+}
+
+#promo-navigator h3, #promo-navigator-sm h3 {
+    border:none !important;
+    text-shadow: none;
+    clear: none !important;
+}
+
+#promo-navigator li div, #promo-navigator-sm li div {
+	color:#FFF;
+	position:relative;
+    width: 170px;
+}
+
+#promo-navigator li div {
+  border-top: 1px solid &dtml-mediumBackgroundColor;;
+}
+
+#promo-navigator li div:hover,
+#promo-navigator-sm li div:hover {
+  background: &dtml-mediumBackgroundColor;;
+}
+
+#promo-navigator-sm li div {
+    width: 100%; /* 90px; */
+    height: 50px;
+}
+
+#promo-navigator li.active div, #promo-navigator-sm li.active div {
+    background: &dtml-corporateGreen;;
+}
+
+#promo-navigator li img, #promo-navigator-sm li img {
+	height:53px;
+	width:70px;
+    margin: 0px;
+    float: left;
+    padding: 14px 5px 18px 10px;
+}
+
+#promo-navigator-sm li img {
+    padding: 6px 6px 0px 8px;
+    height: 38px;
+    width: 75%;
+}
+
+#promo-navigator li.active h3, #promo-navigator-sm li.active h3 {
+	color:#FFF;
+}
+
+.lof-opacity  li{
+	position:absolute;
+	top:0;
+	left:0;
+	float:inherit;
+}
+
+#play-pause {
+    float: right;
+    margin-right: 1.5em;
+    height: 25px;
+}
+
+.promo-gallery-play,
+.promo-gallery-pause,
+#prev-promo,
+#next-promo {
+  background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
+}
+
+.promo-gallery-play {
+    background-position: -446px -215px;
+    padding-left: 25px;
+}
+
+.promo-gallery-pause {
+    background-position: -454px -190px;
+    padding-left: 16px;
+}
+
+#prev-promo, #next-promo {
+    display: inline-block;
+    height: 20px;
+    margin-left: 0;
+    width: 16px;
+}
+
+#prev-promo {
+    background-position: -421px -192px;
+    margin-left: 1.5em;
+}
+
+#next-promo {
+  background-position: -438px -192px;
+}
+
+.controls-sm #next-promo,
+.controls-sm #prev-promo {
+  height: 16px;
+}
+
+.controls-sm  #prev-promo {
+  background-position: left -370px;
+  margin-left: 0;
+}
+
+.controls-sm #next-promo {
+  background-position: left -345px;
+}
+
+.controls, .controls-sm {
+    background: &dtml-mediumBackgroundColor;;
+    -webkit-border-radius: 0 0 10px 10px;
+       -moz-border-radius: 0 0 10px 10px;
+        border-radius: 0px 0px 10px 10px;
+    clear: both;
+    height: 25px;
+    padding: 15px 0px 0px 20px;
+    position: relative;
+}
+
+/* </dtml-with> */
