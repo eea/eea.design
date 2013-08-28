@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.9-dev - (unreleased)
+----------------------
+
 7.8 - (2013-08-28)
 ------------------
 * Change: updated login_form.cpt and login_next.cpy with latest logic from 
