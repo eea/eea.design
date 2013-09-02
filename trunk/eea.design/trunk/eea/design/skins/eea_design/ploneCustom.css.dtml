@@ -777,11 +777,11 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 0;
 }
 
-.eea-accordion-panels .pane {
+.eea-accordion-panel .pane {
     padding: 10px;
 }
-.eea-accordion-panels .eea-accordion-title, .eea-accordion-panels > h2 {
-    background: #E2E2E2 url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 575px 12px;
+.eea-accordion-panel .eea-accordion-title, .eea-accordion-panel > h2 {
+    background: #E2E2E2 url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 98% 12px;
     border: 1px solid #E0E0E0;
     margin: 0;
     font-size: 115%;
@@ -791,18 +791,18 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-.eea-accordion-panels .eea-accordion-title:hover, .eea-accordion-panels > h2:hover {
+.eea-accordion-panel .eea-accordion-title:hover, .eea-accordion-panel > h2:hover {
     cursor: pointer;
-    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 575px 17px;
-}
-
-.eea-accordion-panels .eea-accordion-title.current,
-.eea-accordion-panels > h2.current {
     background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
 }
 
-.eea-accordion-panels .eea-accordion-title a,
-.eea-accordion-panels > h2 a
+.eea-accordion-panel .eea-accordion-title.current,
+.eea-accordion-panel > h2.current {
+    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
+}
+
+.eea-accordion-panel .eea-accordion-title a,
+.eea-accordion-panel > h2 a
 {
     color: #00446A !important;
 }

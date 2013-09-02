@@ -3,6 +3,9 @@ Changelog
 
 7.9-dev - (unreleased)
 ----------------------
+* Bug fix: use proper class names for accordion panels in order to correctly
+  display the accordion arrows
+  [ichimdav refs #15237]
 
 7.8 - (2013-08-28)
 ------------------
