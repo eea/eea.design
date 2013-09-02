@@ -3,13 +3,16 @@ Changelog
 
 7.9-dev - (unreleased)
 ----------------------
+* Bug fix: Display no results within folder_listing template
+  if folderContents comes form faceted query and it's empty
+  [voineali refs #16624]
 * Bug fix: use proper class names for accordion panels in order to correctly
   display the accordion arrows
   [ichimdav refs #15237]
 
 7.8 - (2013-08-28)
 ------------------
-* Change: updated login_form.cpt and login_next.cpy with latest logic from 
+* Change: updated login_form.cpt and login_next.cpy with latest logic from
   Plone
   [ichimdav refs #16291]
 * Bug fix: define portal_url within language_selector.pt

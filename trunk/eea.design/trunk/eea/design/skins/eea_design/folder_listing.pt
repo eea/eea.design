@@ -51,11 +51,12 @@
             item_interfaces context/@@plone_interface_info;
             is_faceted python:item_interfaces.provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable');
             is_a_topic python:context.portal_type=='Topic' if not is_faceted else False;
-            folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
+            folderContents folderContents|nothing;
+            folderContents python:folderContents if (folderContents is not None) else (context.queryCatalog(batch=True, **contentFilter) if is_a_topic else context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100));
 
             Batch python:modules['Products.CMFPlone'].Batch;
             b_start python:request.get('b_start', 0);
-            batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);">
+            batch python:folderContents if isinstance(folderContents, Batch) else Batch(folderContents, limit_display or 100, int(b_start), orphan=1);">
             <metal:defaults_core metal:define-slot="defaults_core"></metal:defaults_core>
     </metal:listingdefaults>
 
