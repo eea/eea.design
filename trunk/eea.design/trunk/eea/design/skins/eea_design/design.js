@@ -14,15 +14,6 @@ jQuery(document).ready(function($) {
 
     // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
     $("#whatsnew-gallery").find('.eea-tabs').find('li:last-child').addClass('last-child');
-    $('.de').find('#tab-publications').parent().addClass('tab-large').end().end()
-            .find('#tab-datamaps').parent().addClass('tab-small');
-    $('.bg').find('#tab-datamaps').parent().addClass('tab-xsmall');
-    $('.es').find('#tab-datamaps').parent().addClass('tab-medium');
-    $('.fr').find('#tab-datamaps').parent().addClass('tab-medium');
-    $('.mt').find('#tab-datamaps').parent().addClass('tab-tiny');
-    $('.nl').find('#tab-datamaps').parent().addClass('tab-medium');
-    $('.et').find('#tab-datamaps').parent().addClass('tab-small');
-    $('.lt').find('#tab-multimedia').parent().addClass('tab-medium');
 
     // #9485; login form as popup
     var $popup_login = $("#popup_login_form");

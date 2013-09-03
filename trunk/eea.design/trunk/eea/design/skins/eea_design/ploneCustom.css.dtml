@@ -593,28 +593,29 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: inherit;
 }
 
-#visual-portal-wrapper ul.eea-tabs.two-rows > li {
-    max-width: 125px;
-}
+/*#visual-portal-wrapper ul.eea-tabs.two-rows > li {*/
+    /*max-width: 125px;*/
+/*}*/
 
 #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    line-height: 1.6em !important;
-    max-width: 125px;
+    line-height: 1.5em !important;
 }
 
 #visual-portal-wrapper ul.eea-tabs a {
-    height: auto;
+    height: 38px;
     min-height: 17px;
     font-size: 125%;
-    padding: 9px 10px 11px 10px;
-    display: table-caption;
+    padding: 9px 8px 11px 8px;
+    display: inline-table;
+    max-width: 30px;
+    white-space: normal;
     margin: 0;
     font-weight: normal;
     border: 0;
 }
 
 #visual-portal-wrapper ul.eea-tabs.two-rows a {
-    padding: 10px 10px 0px 10px;
+    padding: 10px 8px 0px 8px;
     min-height:  38px;
     max-height: 4.1em;
     font-size: 120%;
@@ -642,85 +643,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     -webkit-border-radius: 0 8px 0 0;
     -moz-border-radius: 0 8px 0 0;
     margin: 0;
-}
-
-
-/* Translations adjustments of width of list items for whatsnew-gallery */
-
-.sl #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    max-width: 165px;
-}
-
-.hu #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    max-width: 155px;
-}
-
-.pt #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    max-width: 150px;
-}
-
-.it #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.mt #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    max-width: 140px;
-}
-
-.fi #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.ro #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.sk #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.sv #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.tr #whatsnew-gallery ul.eea-tabs.two-rows > li {
-    max-width: 130px;
-}
-
-.bg #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.es #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.el #whatsnew-gallery ul.eea-tabs.two-rows > li,
-.lt #whatsnew-gallery ul.eea-tabs.two-rows > li
-{
-    max-width: 110px;
-}
-
-.bg #whatsnew-gallery ul.eea-tabs li.last-child,
-.hu #whatsnew-gallery ul.eea-tabs li.last-child,
-.mt #whatsnew-gallery ul.eea-tabs li.last-child,
-.pl #whatsnew-gallery ul.eea-tabs li.last-child {
-    max-width: 90px;
-}
-
-.cs #whatsnew-gallery ul.eea-tabs li.last-child,
-.de #whatsnew-gallery ul.eea-tabs li.last-child,
-.es #whatsnew-gallery ul.eea-tabs li.last-child,
-.el #whatsnew-gallery ul.eea-tabs li.last-child,
-.lt #whatsnew-gallery ul.eea-tabs li.last-child,
-.sv #whatsnew-gallery ul.eea-tabs li.last-child {
-    max-width: 85px;
-}
-
-.fr #whatsnew-gallery ul.eea-tabs li.last-child,
-.it #whatsnew-gallery ul.eea-tabs li.last-child,
-.pt #whatsnew-gallery ul.eea-tabs li.last-child {
-    max-width: 80px;
-}
-
-/* see design.js for languages that add these classes */
-#whatsnew-gallery ul.eea-tabs.two-rows li.tab-large  {
-    max-width: 150px;
-}
-
-#whatsnew-gallery ul.eea-tabs.two-rows li.tab-medium {
-    max-width: 100px;
-}
-
-#whatsnew-gallery ul.eea-tabs.two-rows li.tab-small {
-    max-width: 95px;
-}
-
-#whatsnew-gallery ul.eea-tabs.two-rows li.tab-xsmall {
-    max-width: 80px;
-}
-
-#whatsnew-gallery ul.eea-tabs.two-rows li.tab-tiny {
-    max-width: 70px;
 }
 
 #visual-portal-wrapper ul.eea-tabs > span {
