@@ -661,9 +661,6 @@ body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
     margin-right: 10px !important;
 }
 
-#faceted-form .tags-cloud {
-    /*word-wrap: break-word;*/
-}
 
 /* fix for organizational chart
  * which is too small in ie7
@@ -720,6 +717,17 @@ body.section-multimedia #header-holder {
 
 #subfolders_listing ul {
     margin: 2.7em 0 0 0;
+}
+
+#visual-portal-wrapper ul.eea-tabs a {
+    display: inline;
+    zoom: 1;
+    max-width: 100%;
+}
+
+#visual-portal-wrapper ul.eea-tabs li {
+    display: inline;
+    zoom: 1;
 }
 
 /* </dtml-with> */

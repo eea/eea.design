@@ -3,6 +3,8 @@ Changelog
 
 7.9-dev - (unreleased)
 ----------------------
+* Bug fix: fixed display of whatsnewgallery tabs for IE 
+  [ichimdav #16633]
 * Bug fix: Display no results within folder_listing template
   if folderContents comes form faceted query and it's empty
   [voineali refs #16624]

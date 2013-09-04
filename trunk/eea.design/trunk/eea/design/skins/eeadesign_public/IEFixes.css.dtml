@@ -64,9 +64,4 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
     *left: 0;
 }
 
-/* #14365 table-caption doesn't work in ie */
-#visual-portal-wrapper ul.eea-tabs a {
-    display: block;
-}
-
 /* </dtml-with> */

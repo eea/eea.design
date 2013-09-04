@@ -21,24 +21,25 @@
       var $this = $(this),
           $container = self.$container || $this.parent(),
           initial_container_height = $container.height(),
-          initial_width = $this.width(),
-          $parent = $this.parent();
+          initial_width = $this.width();
 
       switch( settings.method ) {
           case 'grow':
-              while ( $parent.height() > initial_container_height ) {
+              while ( initial_container_height < $this.height() ) {
                   initial_width += settings.incrementBy;
-                  $this.css('min-width', initial_width);
-                  if ( this.offsetWidth > settings.maxWidth ) {
+                  $this.css('max-width', initial_width);
+                  if ( this.offsetWidth > settings.maxWidth ||
+                      initial_width > settings.maxWidth ) {
                       break;
                   }
               }
               break;
           case 'shrink':
-              while ( $parent.height() > initial_container_height ) {
+              while ( initial_container_height < $this.height() ) {
                   initial_width -= settings.incrementBy;
                   $this.css('max-width', initial_width);
-                  if ( this.offsetWidth > settings.maxWidth ) {
+                  if ( this.offsetWidth > settings.maxWidth ||
+                      initial_width > settings.maxWidth ) {
                       break;
                   }
               }
@@ -53,7 +54,7 @@
       // plugin call
       // this code needs to run after eea-tabs.js
       var $eea_tabs = $('.eea-tabs');
-      if ( $eea_tabs.length && !$.browser.msie ) {
+      if ( $eea_tabs.length ) {
           $eea_tabs.find('a').fitContainer($eea_tabs);
       }
   });
