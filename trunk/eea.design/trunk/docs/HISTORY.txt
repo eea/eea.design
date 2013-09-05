@@ -3,6 +3,10 @@ Changelog
 
 7.9-dev - (unreleased)
 ----------------------
+* Change: removed tinymce.xml from eea.design and moved it to 
+  Products.EEAPloneAdmin since most of the configurations for our packages 
+  are done in it
+  [ichimdav #9476]
 * Bug fix: fixed display of whatsnewgallery tabs for IE 
   [ichimdav #16633]
 * Bug fix: Display no results within folder_listing template
