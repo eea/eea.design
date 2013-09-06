@@ -7,15 +7,6 @@
 
 <include package="plone.app.portlets"  />
 
-  <browser:page
-     for="plone.portlets.interfaces.ILocalPortletAssignable"
-     name="manage-portlets"
-     class="plone.app.portlets.browser.manage.ManageContextualPortlets"
-     template="templates/manage-contextual.pt"
-     permission="plone.app.portlets.ManagePortlets"
-     layer="eea.design.browser.interfaces.IEEACommonLayer"
-     />
-
     <!-- EEA Sunburst special view -->
     <browser:page
         for="*"
