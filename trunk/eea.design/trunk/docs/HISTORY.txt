@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.0-dev - (unreleased)
+----------------------
+
 7.9 - (2013-09-06)
 ------------------
 * Change: removed tinymce.xml from eea.design and moved it to
