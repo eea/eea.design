@@ -1,0 +1,524 @@
+/*
+** Stylesheet with Internet Explorer-specific workarounds.
+*/
+/* <dtml-with base_properties> */
+
+
+/* Left Navigation workaround for broken Internet Explorer */
+* html li.navTreeCurrentItem a,
+* html li.navTreeCurrentItem a:hover {
+    height: 1.65em;
+}
+
+#portal-columns {
+  width: 100%;
+}
+
+#portal-header {
+    min-height: 90px;
+}
+
+/* Remove bcpil.gif background image of hiperlinks from spcific headings */
+#portal-header h2 a,
+.shortcut-default h3 a,
+.portletWrapper .highlight a
+{
+    background: transparent !important;
+}
+
+* html*#portal-columns {
+    width: auto;
+}
+
+input {
+    margin-bottom: 1px; /* bug fix */
+}
+input.searchButton, 
+input.standardButton, 
+input.context, 
+input.destructive, 
+input.standalone {
+    font-size: 0.90em !important;
+}
+
+table.listing td.top {
+    /* insane IE row bug workaround */
+    position: relative;
+    left: -1px;
+    top: -1px;
+}
+
+div#portal-columns div.portlet {
+    text-align: left;
+}
+
+div#portal-column-two {
+    margin-top: 0 !important;
+}
+
+textarea {
+    width: 97%;
+}
+
+.visualOverflow {
+    width: 88%;
+}
+
+.visualGhosted {
+    filter:alpha(opacity=20);
+}
+
+#portal-logo {
+  height /**/: <dtml-var "_[logoName].height">px;
+  overflow: hidden;
+}       
+
+#portal-colophon .colophonIcon {
+    height: 0px !important;
+    height /**/: 15px;
+}
+
+.actionMenu .actionMenuHeader a {
+    display: inline;
+}
+
+.actionMenu .actionMenuContent {
+    top: 1.4em;
+}
+
+/* Calendar fixes */
+.ploneCalendar {
+    border-collapse:collapse;
+    width:auto;
+    height:1%;
+    margin: 0;
+}
+
+.ploneCalendar td {
+    width:1%;
+}
+
+.ploneCalendar .todaynoevent,
+.ploneCalendar .todayevent {
+    position: relative;
+}
+
+
+.hiddenStructure { /* This is necessary to eliminate the 1px high object in
+                      the document flow in place of .hiddenStructure block objects */
+    position: absolute;
+}
+
+body { /* These work in IE only, changes the look of the scrollbar + textareas */
+    scrollbar-base-color: &dtml-globalBackgroundColor;;
+    scrollbar-highlight-color: &dtml-globalBackgroundColor;;
+    scrollbar-track-color: &dtml-evenRowBackgroundColor;;
+    scrollbar-darkshadow-color: &dtml-evenRowBackgroundColor;;
+    scrollbar-3dlight-color: &dtml-globalBorderColor;;
+    scrollbar-shadow-color: &dtml-globalBorderColor;;
+    scrollbar-arrow-color: &dtml-globalFontColor;;
+}
+
+/* Holly hack to kill the Peekaboo bug in IE - details at
+   http://www.positioniseverything.net/explorer/peekaboo.html
+   "* html" syntax is added to hide it from IE5/Mac. ~limi
+ */
+
+#floatholder, #float {
+    height: 1%;
+}
+
+* html .link-external,
+* html .link-external a,
+* html .link-mailto a,
+* html .link-mailto {
+     height: 1%;
+} 
+
+/* Fix for IE float bug */
+* html #portal-top,
+* html .visualIEFloatFix,
+* html h1,
+* html h2,
+* html h3,
+* html h4,
+* html h5,
+* html h6,
+* html dd,
+* html .documentDescription,
+* html .visualClear,
+* html .portalMessage,
+* html .portalWarningMessage,
+* html .portalStopMessage,
+* html .system-message,
+* html #error-handling,
+* html .documentContent {
+    height: 0.1%;
+}
+
+/* link background position fix */
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a {
+     background: url(&dtml-portal_url;/bcpil.gif) no-repeat 0.5em right;
+}
+
+/* Fix for IE float bug - have to use the Limi Hack here, since the paragraph
+   tag doesn't take nicely to the height hack above in IE. */
+* html p {
+    height: 0.1%;
+}
+
+* html h1.documentFirstHeading {
+    height: auto;
+}
+
+/* There appears to be a bug in some IE 6 versions that causes dashed borders
+   to get positioned strangely (i.e. out of the portlet in this case), and
+   to move about when scrolling.  May be related to:
+   http://mtiki.mmf.at/mt/archives/000011.html */
+
+dd.portletFooter {
+    border-top-style: solid;
+}
+
+/* Rounded corner workarounds for IE */
+* html .portletHeader {
+    height: 1%;
+}
+.portletTopRight, 
+.portletTopLeft {
+    top: 0px;
+}
+.portletTopRight,
+.portletTopLeft,
+.portletBottomRight,
+.portletBottomLeft {
+    font-size: 1px;
+}
+
+/* fixes for the drop down menus */
+
+* html #objectMenu.actionMenu .actionMenuContent li {
+    height: auto;
+}
+
+* html body {
+   font-size: 69%;
+}
+
+* html .portlet-tabs .portletItem {
+    height: 6.5em;
+    margin: 0 0 0 1px;
+}
+
+* html .portlet .portletItem #selectlang_form{
+    margin: 0;
+}
+ 
+* html .datatable,
+* html .highlightHigh {
+    height: 0.1%;
+}
+
+
+* html body.section-themes .figure img,
+* html .thumbnail-right img,
+* html .figure-plus,
+* html .figure img {
+    position: relative;
+    left: -2px;
+    top: -2px;
+    margin: 0 0 0 -4px;
+}
+
+* html #cross-site-top,
+* html #portal-globalnav li {
+       height: 1.7em;
+}
+
+* html #portal-globalnav li a:visited {
+    color: #fff;
+}
+
+* html #portal-globalnav li.selected a:visited,
+* html #portal-globalnav li.selected a {
+    color: #DE7800;
+}
+
+* html #portal-globalnav li .popper2 li a:visited,
+* html #portal-globalnav li .popper2 li a:link,
+* html #portal-globalnav li .popper2 li a {
+    color: &dtml-linkColor;;
+    width:15em;
+}
+* html .popper2 .listHead {
+    position:relative;
+    left:6px;
+    margin:10px -26px 0 0;
+}
+
+* html #portal-globalnav li .popper2 li a:hover,
+* html #portal-globalnav li a:hover{
+    color:#DE7800;
+}
+* html #portal-globalnav li.plain a.dropTab img,
+* html #portal-globalnav li.plain a.dropTab:hover img,
+* html #portal-globalnav li.selected a.dropTab img,
+* html #portal-globalnav li.selected a.dropTab:hover img {
+    padding-top: 3px;
+} 
+
+
+#portal-column-two .portletTabHead,
+#portal-column-two .portletTabHead_current {
+    margin-top: -2.1em;
+}
+
+* html .portlet-promotions div.portletHeader {
+    padding-top: 0em;
+}
+
+.media-item .item-left {
+    width: 200px;
+}
+
+* html #portlet-etcs-sites,
+* html #portlet-chooselang {
+    font-size: 70%;
+    width: 19em;
+}
+
+* html .documentActions {
+    margin: -2em 0 0.5em 0;
+}
+
+* html .frontpage .documentActions {
+    margin: -3em 0 0.5em 0em;
+} 
+
+.section-copyright .documentActions,
+.section-privacy .documentActions,
+.section-disclaimer .documentActions,
+.section-pressroom .documentActions {
+    margin: -2em 0 -1.25em 0;
+    padding: 0em 0em 0.5em 0em;
+}
+
+#globalnav-holder {
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83');
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83');
+}
+
+#content-core {
+    display: block;
+    clear: both;
+    margin-bottom: 3em;
+}
+
+#portal-globalnav li {
+    display:inline !important;
+    float: left;
+}
+
+#whatsnew-gallery .tileContent {
+    width: 414px;
+}
+
+#whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a { 
+    width: 390pxpx;
+    padding: 0px !important;
+    margin-right: 20px !important;
+}
+#whatsnew-gallery .tileBody { 
+    margin-top: 5px;
+}
+
+
+#mobile a:hover {
+     border: none !important;
+}
+
+#mobile {
+    display: block;
+    position: relative;
+    clear: both;
+    padding-top: 0 !important;
+}
+
+#mobile a { 
+    display: block;
+}
+
+#forum-link { 
+    display: block;
+    height: 50px;
+    width: 200px;
+    clear: both;
+    float: none;
+    top: 0px;
+    right: 100px;
+}
+
+#twitter-link, #facebook-link, #youtube-link, #rss-link, #email-link {
+    display: block;
+    float: left;
+    margin: 0;
+}
+
+#document-action-sendto, #document-action-print, #document-action-full_screen, 
+#document-action-twitter, #document-action-delicious, #document-action-facebook,
+#document-action-rdf , #document-action-rss2 {
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.documentActions {
+    display: block;
+    clear: both;
+}
+
+.documentActions ul {
+    margin-left: 0 !important;
+}
+
+#portal-searchbox {
+    width: 350px;
+}
+
+#languageCodes li, #languageCodes li.selected { 
+    display: inline;
+    margin: 0px 5px;
+}
+
+#languageCodes li.selected  { 
+    padding-bottom: 3px;
+}
+
+
+a.list-layout.active-list, a.list-layout {
+   margin-right: 11px !important;
+}
+
+.column-area .featured .searchforms input[type="submit"]{
+    padding: 7px 2px !important;
+}
+
+#header-holder {
+   z-index: 1000;
+}
+
+.portletWrapper {
+    clear: both;
+    display: block;
+}
+
+.shortcut-default h3 {
+    border: none !important;
+    text-decoration: none !important;
+}
+
+#subtopics {
+    display: block;
+    min-height: 1px;
+}
+
+#subtopics ul {
+    background: transparent !important;
+}
+
+#subtopics ul li {
+    float: left;
+    display: inline !important;
+    position: relative;
+}
+
+.faceted-widget.faceted-text-widget .widget-fieldset form input[type="text"] {
+    float: left;
+}
+
+.faceted-widget.faceted-text-widget .widget-fieldset form input[type="submit"] {
+    float: left;
+    clear: right;
+    min-height: 1px;
+    margin-left: 10px;
+}
+
+.navTreeItem {
+    list-style: none;
+    list-style-type: none;
+    list-style-image: none;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+dd.portletItem {
+    margin-left: 0 !important;
+}
+
+#top-news-area div.portletHeader {
+    opacity: 1 !important;
+    background: #FFFFFF !important;
+    background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#FFFFFF);
+    zoom: 1;
+}
+
+#top-news-area .portlet-promotions img {
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#top-news-area .portlet-promotions .portletHeader a {
+    display: block !important;
+}
+
+
+#top-news-area .portletItem {
+    border: 1px solid #DFDFDF;
+    zoom: 1;
+}
+
+a.archives {
+    z-index: 2;
+}
+
+#coverflow img { 
+   margin: 0px 0px -35px -92px !important;
+}
+
+/* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */ 
+ul.eea-tabs.two-rows li {
+    max-width: 93px;
+}
+
+/* #5140 set display for ecotip */
+img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none;}
+#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
+
+
+/* 5443 personaltools and header holder needs position static when we have 
+ * hovering items over our gradient */ 
+/* 14082; added fixes for personaltools also for IE9 */
+#portal-personaltools {
+    position: static;
+} 
+#header-holder {
+    position: static;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
+}
+
+#portal-personaltools dd {
+    margin-top: 15px;
+}
+
+dl.actionMenu.activated dd {
+    min-width: 50%;
+}
+
+/* </dtml-with> */

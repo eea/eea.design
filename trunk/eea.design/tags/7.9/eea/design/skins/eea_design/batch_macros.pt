@@ -1,0 +1,3 @@
+<metal:macro metal:define-macro="navigation" tal:define="batch batch|nothing">
+  <div tal:define="batchview nocall:context/@@batching; " tal:replace="structure python:batchview(batch)" />
+</metal:macro>
