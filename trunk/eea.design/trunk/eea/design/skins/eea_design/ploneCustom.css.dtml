@@ -357,8 +357,8 @@ input.standalone {
 
 /* #16661; fix text color for disabled tinymce inputs */
 input[disabled], #plonebrowser input[disabled] {
-    color: #000 !important;
-    text-shadow: 0 !important;
+    color: #6D6D6D !important;
+    text-shadow: none !important;
 }
 
 #portal-columns input[type="submit"]:hover, .standardButton:hover,
@@ -2329,6 +2329,11 @@ body .ploneSkin .mce_formatPreview a {
 }
 .mceContentBody  {
     font-size: 80% !important;
+}
+
+/* #16661; override px based width from ui.css of tinymce */
+#content .ploneSkin table.mceLayout {
+    width: 100% !important;
 }
 
 #text_fullscreen .mceVoiceLabel {

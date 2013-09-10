@@ -3,6 +3,8 @@ Changelog
 
 8.0-dev - (unreleased)
 ----------------------
+* Bug fix: fixed css warnings for IE9Fixes.css discovered by Chrome Inspector
+  [ichimdav]
 * Bug fix: fixed display of input fields and window size of TinyMCE popups
   [ichimdav #16661]
 

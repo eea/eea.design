@@ -328,7 +328,7 @@ dd.portletFooter {
 }
 
 #whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a { 
-    width: 390pxpx;
+    width: 390px;
     padding: 0px !important;
     margin-right: 20px !important;
 }
