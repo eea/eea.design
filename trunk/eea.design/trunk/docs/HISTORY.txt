@@ -3,6 +3,8 @@ Changelog
 
 8.0-dev - (unreleased)
 ----------------------
+* Bug fix: fixed display of input fields and window size of TinyMCE popups
+  [ichimdav #16661]
 
 7.9 - (2013-09-06)
 ------------------

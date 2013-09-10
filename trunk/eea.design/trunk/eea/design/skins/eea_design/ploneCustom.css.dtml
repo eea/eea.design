@@ -20,6 +20,9 @@
 div.width-3\3a 4 { width:    58.5%;  }
 div.position-1\3a 4 {margin-left:    -79.875%;}
 div.width-1\3a 4 { width: 36%;    } /* .width-1:4 */
+
+/* #16661 fallback to original width value for tinymce popups */
+#plonebrowser .width-1\3a 4 { width:    22.75%; } /* .width-1:4 */
 div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 
 div.position-3\3a 4 {margin-left: -36.8%;}
@@ -317,7 +320,7 @@ div.position-3\3a 4 {margin-left: -36.8%;}
 
 #portal-columns input[type="submit"], .standardButton, .qq-upload-button,
 .searchButton,
-.plonebutton,
+input.plonebutton,
 input.context,
 input.destructive,
 input.standalone {
@@ -350,6 +353,12 @@ input.standalone {
     -webkit-border-radius: 2px;
        -moz-border-radius: 2px;
             border-radius: 2px;
+}
+
+/* #16661; fix text color for disabled tinymce inputs */
+input[disabled], #plonebrowser input[disabled] {
+    color: #000 !important;
+    text-shadow: 0 !important;
 }
 
 #portal-columns input[type="submit"]:hover, .standardButton:hover,
