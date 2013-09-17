@@ -30,6 +30,8 @@
         tal:attributes="href string:${context/portal_url}/s5_print.css" />
     <link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix"
         tal:attributes="href string:${context/portal_url}/s5_opera.css" />
+    <link rel="stylesheet" type="text/css" media="all"
+        tal:attributes="href string:${context/portal_url}/++resource++eea.design.stylesheets/presentation.css" />
 
     <script type="text/javascript" tal:content="structure string:var base_url=&quot;${here/absolute_url}&quot;;">
       var base_url="/";
@@ -70,6 +72,9 @@
             <h1 tal:content="context/Title" />
             <h2 tal:content="context/Description" />
             <h3 tal:content="view/authorname" />
+            <div class="mainImage">
+              <img tal:attributes= "src string:${context/absolute_url}/image_large" />
+            </div>
         </div>
         <tal:block content="structure view/content" />
     </tal:presentation>

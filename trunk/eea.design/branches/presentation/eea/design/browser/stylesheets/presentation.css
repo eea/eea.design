@@ -1,0 +1,22 @@
+html > body div#controls {
+  left:  0;
+  width:  auto;
+}
+
+.layout #footer {
+  background-position: right;
+  background-color: white;
+}
+
+#slide0 .mainImage {
+  text-align: center;
+}
+
+html > body .slide {
+  overflow: auto;
+  position: absolute;
+}
+
+iframe {
+  display: block;
+}
