@@ -5,9 +5,9 @@
 ** Style sheet documentation can be found at http://plone.org/documentation
 **
 ** You should preferrably use ploneCustom.css to add your own CSS classes and to
-** customize your portal, as these are the base fundaments of Plone, and will 
+** customize your portal, as these are the base fundaments of Plone, and will
 ** change and be refined in newer versions. Keeping your changes in
-** ploneCustom.css will make it easier to upgrade. 
+** ploneCustom.css will make it easier to upgrade.
 **
 ** Feel free to use whole or parts of this for your own designs, but give credit
 ** where credit is due.
@@ -22,6 +22,7 @@
 #portal-footer img,
 #portal-siteactions,
 .hiddenStructure,
+.hiddenElem,
 #portal-searchbox,
 #portal-globalnav .plain,
 #portal-globalnav .selected,
@@ -34,7 +35,8 @@
 .contentActions,
 .help,
 .legend,
-div.portalMessage,
+p.portalMessage,
+dl.portalMessage,
 div.portalWarningMessage,
 div.portalStopMessage,
 div.documentActions,
@@ -46,9 +48,23 @@ body.frontpage .portlet-promotions,
 .moreLink,
 .skipnav,
 .visualNoPrint,
-.visualClear {
+.visualClear,
+.progressbar-viewlet,
+.eea-progressbar,
+#edit-bar,
+#languageCodes,
+#commenting,
+#viewlet-below-content,
+#relatedItems .eea-tabs,
+.managePortletsLink,
+.link-presentation,
+.site-description {
     /* Hides all the elements irrelevant for printing */
     display: none !important;
+}
+
+#relatedItems .eea-tabs-panel {
+    display: block !important;
 }
 
 body {
@@ -81,10 +97,10 @@ div, p, ul, dl, ol {
 }
 
 ul, ol, dl {
-    padding-right: 0.5em;	
+    padding-right: 0.5em;
 }
 
-ul { 
+ul {
     list-style-type: square;
 }
 
@@ -128,7 +144,7 @@ a img {
     white-space: normal;
 }
 
-#content a.noPrint:link:after, 
+#content a.noPrint:link:after,
 #content a.noPrint:visited:after {
     content: '';
 }

@@ -3,6 +3,8 @@ Changelog
 
 8.0-dev - (unreleased)
 ----------------------
+* Feature: Improved print.css also used by PDF generators
+  [voineali refs #14904]
 * Bug fix: fixed login_form redirect after upgrade to Plone 4.3
   [ichimdav #16707]
 * Bug fix: fixed css warnings for IE9Fixes.css discovered by Chrome Inspector
