@@ -2706,4 +2706,15 @@ div.row {
     text-align: center;
 }
 
+.fieldDiff {
+    width: 600px;
+}
+
+#content .keyFact {
+    background: #eee;
+    padding: 1em;
+    border-left: 1em solid #ccc;
+    clear: both;
+}
+
 /* </dtml-with> */

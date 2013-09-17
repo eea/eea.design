@@ -3,6 +3,8 @@ Changelog
 
 8.0-dev - (unreleased)
 ----------------------
+* Feature: added style for keyFact class 
+  [ichimdav refs #9476]
 * Feature: Improved print.css also used by PDF generators
   [voineali refs #14904]
 * Bug fix: fixed login_form redirect after upgrade to Plone 4.3
