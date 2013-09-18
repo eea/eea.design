@@ -38,6 +38,8 @@
     </script>
     <script src="ui/default/slides.js" type="text/javascript"
           tal:attributes="src string:${context/portal_url}/s5_slides.js" ></script>
+    <script type="text/javascript"
+          tal:attributes="src string:${context/portal_url}/++resource++eea.design.javascripts/presentation.js" ></script>
 
     <metal:baseslot define-slot="base">
       <base tal:attributes="href context/@@plone/renderBase" /><!--[if lt IE 7]></base><![endif]-->

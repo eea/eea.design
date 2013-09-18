@@ -67,6 +67,12 @@
         />
 
     <browser:resourceDirectory
+        name="eea.design.javascripts"
+        directory="javascripts"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
+    <browser:resourceDirectory
         name="eea.design.templates"
         directory="templates"
         layer=".interfaces.IEEACommonLayer"

@@ -12,9 +12,18 @@ html > body div#controls {
   text-align: center;
 }
 
+#slide0 .mainImage img {
+  width: auto;
+}
+
 html > body .slide {
   overflow: auto;
   position: absolute;
+  max-height:  69%;
+}
+
+.slide img {
+  width:  100%;
 }
 
 iframe {
