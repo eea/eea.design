@@ -9,6 +9,8 @@ Changelog
   [ichimdav]
 * Bug fix: fixed display of input fields and window size of TinyMCE popups
   [ichimdav #16661]
+* Feature: presentation mode improvements
+  [batradav #16728]
 
 7.9 - (2013-09-06)
 ------------------
