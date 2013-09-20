@@ -34,6 +34,14 @@ div.portletAssignments div.portletHeader {
     background: &dtml-lightBackgroundColor;;
 }
 
+/* #16720; shrink the font-size of portlet headers */
+.portletAssignments .portletHeader,
+.portletAssignments .portlet_visible .portletHeader,
+.portletAssignments .portlet_hidden .portletHeader {
+    font-size: 140%;
+}
+
+
 dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {

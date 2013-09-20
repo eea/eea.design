@@ -3,6 +3,9 @@ Changelog
 
 8.0-dev - (unreleased)
 ----------------------
+* Change: lowered the font-size of portletHeader from manage pages now that 
+  the draggable actions are displayed
+  [ichimdav fixes #16720]
 * Feature: added style for keyFact class 
   [ichimdav refs #9476]
 * Feature: Improved print.css also used by PDF generators
