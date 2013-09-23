@@ -9,6 +9,13 @@
     <include package="plone.app.controlpanel" file="permissions.zcml" />
 
     <browser:page
+        for="Products.Archetypes.interfaces.base.IBaseObject"
+        name="pdf.cover"
+        template="templates/pdf.cover.pt"
+        permission="zope2.View"
+        />
+
+    <browser:page
         for="*"
         name="main_template"
         template="../skins/eea_design/main_template.pt"
