@@ -12,6 +12,7 @@
         for="Products.Archetypes.interfaces.base.IBaseObject"
         name="pdf.cover"
         template="templates/pdf.cover.pt"
+        class=".pdfview.Cover"
         permission="zope2.View"
         />
 

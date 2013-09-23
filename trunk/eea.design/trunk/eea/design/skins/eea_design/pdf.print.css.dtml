@@ -1,0 +1,70 @@
+/* PDF */
+body {
+  font-family: Verdana ! important;
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  max-width: 99%;
+}
+
+#article-language {
+  display: none;
+}
+
+iframe {
+  display: none;
+}
+
+.portal-logo {
+  display: none;
+}
+
+#portal-footer {
+  display: none;
+}
+
+.cover-header {
+  text-align: right;
+  margin: 20px;
+}
+
+.cover-title {
+  text-align: right;
+  margin: 50px 20px;
+}
+
+.cover-body {
+  background-color: #7ad2c4;
+  border-top: 10px solid #7ad2c4;
+  padding-bottom: 250px;
+}
+
+.cover-issn {
+  text-align: right;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.cover-logo {
+  text-align: right;
+  padding: 30px;
+}
+
+.cover-logo img {
+  height: 60px;
+}
+
+.fiche-thumbnail {
+  display: none;
+}
+
+.documentFirstHeading {
+  display: none;
+}
+
+.documentDescription {
+  display: none;
+}
+

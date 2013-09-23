@@ -5,6 +5,20 @@
 
 
     <genericsetup:upgradeSteps
+        source="7.6"
+        destination="8.1"
+        profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+            title="Import all steps from eea.design profile upgrade 8.1"
+            description="Imports new eea.* css files"
+            import_profile="eea.design:upgrade81"
+            />
+
+    </genericsetup:upgradeSteps>
+
+
+    <genericsetup:upgradeSteps
             source="*"
             destination="7.6"
             profile="eea.design:default">

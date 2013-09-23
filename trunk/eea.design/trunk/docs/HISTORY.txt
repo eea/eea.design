@@ -3,13 +3,15 @@ Changelog
 
 8.1-dev - (unreleased)
 ----------------------
+* Feature: Added generic PDF cover and PDF print CSS for all EEA content-types
+  [voineali refs #14904]
 
 8.0 - (2013-09-23)
 ------------------
-* Change: lowered the font-size of portletHeader from manage pages now that 
+* Change: lowered the font-size of portletHeader from manage pages now that
   the draggable actions are displayed
   [ichimdav fixes #16720]
-* Feature: added style for keyFact class 
+* Feature: added style for keyFact class
   [ichimdav refs #9476]
 * Feature: Improved print.css also used by PDF generators
   [voineali refs #14904]

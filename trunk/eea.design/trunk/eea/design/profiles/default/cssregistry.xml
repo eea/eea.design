@@ -117,4 +117,10 @@
                 insert-after="public.css"
             />
 
+    <stylesheet
+        id="pdf.print.css"
+        media="print"
+        expression="python:'download.pdf' in request.URL0"
+    />
+
 </object>
