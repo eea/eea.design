@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.1-dev - (unreleased)
+----------------------
+
 8.0 - (2013-09-23)
 ------------------
 * Change: lowered the font-size of portletHeader from manage pages now that 
