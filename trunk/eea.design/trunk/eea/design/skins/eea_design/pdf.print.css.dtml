@@ -1,8 +1,17 @@
-/* PDF */
+@font-face {
+  font-family: "Palatino Linotype";
+  src: local("Palatino Linotype");
+}
+
 body {
-  font-family: Verdana ! important;
+  font-family: "Palatino Linotype", arial ! important;
   margin: 0px;
   padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana ! important;
+  font-weight: normal;
 }
 
 img {
