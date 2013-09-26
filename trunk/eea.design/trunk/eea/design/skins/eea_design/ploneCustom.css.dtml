@@ -2711,9 +2711,9 @@ div.row {
 }
 
 #content .keyFact {
-    background: #eee;
-    padding: 1em;
-    border-left: 1em solid #ccc;
+    background: #C7E0E9;
+    padding: 1.5em;
+    border-left: 1em solid #346F83;
     clear: both;
 }
 
