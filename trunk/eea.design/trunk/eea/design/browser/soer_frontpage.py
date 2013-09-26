@@ -62,7 +62,6 @@ class SoerFrontpage(BrowserView):
             theme = getTheme(self.context)
         query = {
             'portal_type': 'SOERKeyFact',
-            'review_state': 'published'
         }
         if theme:
             query['getThemes'] = theme
