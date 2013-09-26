@@ -2,15 +2,14 @@
 jQuery(document).ready(function($) {
     'use strict';
     var ie = $.browser.msie  && parseInt($.browser.version, 10);
-    if (!$("#multimedia-widgets").length) {
-        var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
-            global_nav = $('#portal-globalnav');
-        // Fix for EEATemplatesService for sites with jquery < 1.4
-        //$("#portaltab-pressroom, #portaltab-abouteea", global_nav).detach().appendTo(secundary_portaltabs);
-        $("#portaltab-pressroom, #portaltab-abouteea", global_nav).clone(true).appendTo(secundary_portaltabs);
-        $("#portaltab-pressroom, #portaltab-abouteea", global_nav).remove();
+
+    // #16878 move last two links of globalnav to a secundary container
+    var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
+            global_nav = $('#portal-globalnav'),
+            global_nav_children = global_nav.children(),
+            last_two_nav_items = global_nav_children.slice(global_nav_children.length - 2);
+        last_two_nav_items.appendTo(secundary_portaltabs);
         secundary_portaltabs.appendTo(global_nav);
-    }
 
     // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
     $("#whatsnew-gallery").find('.eea-tabs').find('li:last-child').addClass('last-child');

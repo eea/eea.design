@@ -3,6 +3,14 @@ Changelog
 
 8.1-dev - (unreleased)
 ----------------------
+* Change: move the last two items from the globalnav within the 
+  secundary-navigation instead of using harcoded ids
+  [ichimdav refs #16878]
+* Change: removed check for review state when displaying SOERKeyFacts on themes
+  pages
+  [ichimdav refs #9476]
+* Change: changed style of keyFact in order to diferenciate it from callout
+  [ichimdav refs #9476]
 * Feature: Added generic PDF cover and PDF print CSS for all EEA content-types
   [voineali refs #14904]
 
