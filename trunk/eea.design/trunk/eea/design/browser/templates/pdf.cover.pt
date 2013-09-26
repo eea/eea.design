@@ -27,17 +27,24 @@
     Document Title
   </h1>
 
-  <h2 class="cover-subtitle" tal:content="string:">
+  <h2 class="cover-subtitle" tal:define="
+    description context/Description;
+    description python:view.truncate(description)"
+  tal:content="description">
     Document Subtitle
   </h2>
 
 
   <div class="cover-body">
 
+    <div class="cover-issn">
+      <span></span>
+    </div>
+
     <div class="cover-image" tal:condition="context/getImage|nothing">
       <a tal:define="here_url context/@@plone_context_state/object_url"
         tal:attributes="href string:$here_url/image/image_view_fullscreen">
-        <img tal:attributes="src string:$here_url/image" style="min-width: 100%; width: 100%;" />
+        <img tal:attributes="src string:$here_url/image" />
       </a>
     </div>
 

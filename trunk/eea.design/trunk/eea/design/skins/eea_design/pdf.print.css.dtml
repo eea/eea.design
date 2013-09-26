@@ -5,8 +5,8 @@
 
 body {
   font-family: "Palatino Linotype", arial ! important;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,33 +36,62 @@ iframe {
 
 .cover-header {
   text-align: right;
-  margin: 20px;
+  margin: 24pt 42pt;
+  font-size: 10pt;
+  color: #666;
+  font-family: Verdana !important;
 }
 
 .cover-title {
   text-align: right;
-  margin: 50px 20px;
+  margin: 42pt 42pt 0;
+  font-size: 18pt;
+  font-weight: normal;
+  color: #333;
+}
+
+.cover-subtitle {
+  text-align: right;
+  margin: 0 42pt;
+  font-size: 12pt;
+  font-weight: normal;
+  color: #333;
+  height: 70pt;
+  overflow: hidden;
 }
 
 .cover-body {
   background-color: #7ad2c4;
-  border-top: 10px solid #7ad2c4;
-  padding-bottom: 250px;
+  border-top: 7pt solid #7ad2c4;
+  height: 565pt;
 }
 
 .cover-issn {
   text-align: right;
-  padding: 10px 20px;
   background-color: white;
+  height: 20pt;
+}
+
+.cover-image {
+  height: 393pt;
+  overflow: hidden;
+  margin: auto;
+  max-width: 100%;
+}
+
+.cover-image img {
+  width: 150%;
+  margin-left: -25%;
+  max-width: inherit;
 }
 
 .cover-logo {
   text-align: right;
-  padding: 30px;
+  margin: 20pt 42pt 0;
 }
 
 .cover-logo img {
-  height: 60px;
+  height: 42pt;
 }
 
 .fiche-thumbnail {
