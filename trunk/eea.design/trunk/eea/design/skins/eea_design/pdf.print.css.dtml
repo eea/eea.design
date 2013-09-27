@@ -63,13 +63,19 @@ iframe {
 .cover-body {
   background-color: #7ad2c4;
   border-top: 7pt solid #7ad2c4;
+  border-bottom: 1pt solid #333;
   height: 565pt;
 }
 
 .cover-issn {
   text-align: right;
   background-color: white;
-  height: 20pt;
+  height: 15pt;
+  padding-top: 5pt;
+  padding-right: 42pt;
+  font-size: 8pt;
+  color: #666;
+  font-family: Verdana !important;
 }
 
 .cover-image {
@@ -92,6 +98,25 @@ iframe {
 
 .cover-logo img {
   height: 42pt;
+}
+
+.cover-themes {
+  margin-right: 42pt;
+}
+
+.cover-themes div {
+  height: 115pt;
+  max-width: 115pt;
+  overflow: hidden;
+  float: right;
+  border: 3pt solid white;
+  margin: 17pt 0 0 17pt;
+}
+
+.cover-themes img {
+  width: 200%;
+  margin-left: -50%;
+  max-width: inherit;
 }
 
 .fiche-thumbnail {

@@ -38,7 +38,7 @@
   <div class="cover-body">
 
     <div class="cover-issn">
-      <span></span>
+      <span>ISSN 1725-9177</span>
     </div>
 
     <div class="cover-image" tal:condition="context/getImage|nothing">
@@ -46,6 +46,14 @@
         tal:attributes="href string:$here_url/image/image_view_fullscreen">
         <img tal:attributes="src string:$here_url/image" />
       </a>
+    </div>
+
+    <div class="cover-themes">
+      <div tal:repeat="theme view/themes">
+        <a tal:attributes="href theme/url">
+          <img tal:attributes="src theme/image; title theme/title; alt theme/title" />
+        </a>
+      </div>
     </div>
 
   </div>
