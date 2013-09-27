@@ -1,3 +1,7 @@
+
+/* Body
+------- */
+
 @font-face {
   font-family: "Palatino Linotype";
   src: local("Palatino Linotype");
@@ -5,17 +9,18 @@
 
 body {
   font-family: "Palatino Linotype", arial ! important;
+  font-size: 10pt;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Verdana ! important;
-  font-weight: normal;
 }
 
 img {
-  max-width: 99%;
+  max-width: 100%;
 }
 
 #article-language {
@@ -34,6 +39,36 @@ iframe {
   display: none;
 }
 
+.documentFirstHeading {
+  font-family: Verdana !important;
+  font-size: 18pt;
+  text-align: right;
+}
+
+.documentDescription {
+  font-family: Verdana !important;
+  font-size: 12pt;
+  text-align: right;
+  font-weight: normal;
+}
+
+.fiche-thumbnail {
+  display: none;
+}
+
+.figure-plus-container-wide, .figure-plus-wide, .figure-image {
+  display: none;
+}
+
+p.discreet {
+  border-bottom: 1px solid #333;
+  font-family: Verdana !important;
+  font-size: 9pt;
+  padding-bottom: 10pt;
+}
+
+/* Cover
+-------- */
 .cover-header {
   text-align: right;
   margin: 24pt 42pt;
@@ -118,16 +153,3 @@ iframe {
   margin-left: -50%;
   max-width: inherit;
 }
-
-.fiche-thumbnail {
-  display: none;
-}
-
-.documentFirstHeading {
-  display: none;
-}
-
-.documentDescription {
-  display: none;
-}
-

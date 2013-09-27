@@ -3,7 +3,9 @@ Changelog
 
 8.1-dev - (unreleased)
 ----------------------
-* Change: move the last two items from the globalnav within the 
+* Upgrade step: Install Palatino Linotype and Verdana fonts
+  [voineali refs #16802]
+* Change: move the last two items from the globalnav within the
   secundary-navigation instead of using harcoded ids
   [ichimdav refs #16878]
 * Change: removed check for review state when displaying SOERKeyFacts on themes
