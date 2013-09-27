@@ -34,6 +34,7 @@ setup(name=name,
           'Products.eeawebapplication',
 
           'eea.cache',
+          'eea.converter',
           'eea.facetednavigation',
           'eea.promotion',
           'eea.themecentre',
