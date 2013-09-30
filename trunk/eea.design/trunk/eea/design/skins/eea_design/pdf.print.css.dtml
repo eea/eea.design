@@ -7,6 +7,11 @@
   src: local("Palatino Linotype");
 }
 
+.page-break {
+  display: block;
+  page-break-before: always;
+}
+
 body {
   font-family: "Palatino Linotype", arial ! important;
   font-size: 10pt;
@@ -231,4 +236,36 @@ p.discreet {
   width: 200%;
   margin-left: -50%;
   max-width: inherit;
+}
+
+.cover-copyright {
+  margin: 88pt 40pt 0pt 108pt;
+  font-family: Verdana !important;
+  font-weight: normal;
+  font-size: 8pt;
+  min-height: 690pt;
+  position: relative;
+}
+
+.cover-copyright dt, .cover-copyright dd {
+  margin: 0;
+  padding: 0;
+}
+
+.cover-copyright dt {
+  font-weight: bold;
+  line-height: 0.1pt;
+}
+
+.cover-copyright-legal {
+  margin-top: 90pt;
+}
+
+.cover-copyright-notice {
+  margin-top: 17pt;
+}
+
+.cover-copyright-contact {
+  position: absolute;
+  bottom: 0;
 }

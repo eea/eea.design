@@ -17,6 +17,8 @@
 <metal:content-core fill-slot="content-core">
 <metal:content-core define-macro="content-core">
 
+<div class="cover">
+
   <div class="cover-header">
     <span tal:content="python:context.portal_type">Portal Type</span>
     <span>|</span>
@@ -67,6 +69,56 @@
         src string:${portal_url}/${logo}"/>
   </div>
 
+</div>
+
+<div class="page-break"></div>
+
+<div class="cover-copyright">
+
+  <dl class="cover-copyright-photo">
+    <dd>Cover design: EEA</dd>
+    <dd tal:condition="context/imageCopyright|nothing">Cover photo: © <tal:image replace="context/imageCopyright" /></dd>
+    <dd>Layout: EEA</dd>
+  </dl>
+
+  <dl class="cover-copyright-legal">
+    <dt>Legal notice</dt>
+    <dd>
+      The contents of this publication do not necessarily reflect the official opinions of the European
+      Commission or other institutions of the European Union. Neither the European Environment Agency
+      nor any person or company acting on behalf of the Agency is responsible for the use that may be
+      made of the information contained in this report.
+    </dd>
+  </dl>
+
+  <dl class="cover-copyright-notice">
+    <dt>Copyright notice</dt>
+    <dd>© European Environment Agency, <tal:year replace="view/year">2013</tal:year></dd>
+    <dd>Reproduction is authorised, provided the source is acknowledged, save where otherwise stated.</dd>
+    <br />
+    <dd>Information about the European Union is available on the Internet. It can be accessed through the Europa server (www.europa.eu).</dd>
+    <br />
+    <dd>Luxembourg: Publications Office of the European Union, <tal:year replace="view/year">2013</tal:year></dd>
+  </dl>
+
+  <dl class="cover-copyright-book">
+    <dd tal:condition="context/isbn|nothing">ISBN <tal:isbn tal:replace="context/isbn" /></dd>
+    <dd>ISSN 1725-2237</dd>
+    <dd tal:condition="context/doi|nothing">doi:<tal:doi tal:replace="context/doi" /></dd>
+  </dl>
+
+  <dl class="cover-copyright-contact">
+    <dd>European Environment Agency</dd>
+    <dd>Kongens Nytorv 6</dd>
+    <dd>1050 Copenhagen K</dd>
+    <dd>Denmark</dd>
+    <dd>Tel.: + 45 33 36 71 00</dd>
+    <dd>Fax: + 45 33 36 71 99</dd>
+    <dd>Web: eea.europa.eu</dd>
+    <dd>Enquiries: eea.europa.eu/enquiries</dd>
+  </dl>
+
+</div>
 
 </metal:content-core>
 </metal:content-core>

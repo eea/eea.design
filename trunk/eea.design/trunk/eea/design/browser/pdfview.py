@@ -1,5 +1,6 @@
 """ PDF View
 """
+from DateTime import DateTime
 from zope.component.hooks import getSite
 from zope.component import queryMultiAdapter
 from Products.NavigationManager.browser.navigation import getApplicationRoot
@@ -9,6 +10,11 @@ from eea.converter.pdf.adapters import OptionsMaker as PDFOptionsMaker
 class OptionsMaker(PDFOptionsMaker):
     """ Custom PDF options maker for EEA ctypes
     """
+    def __init__(self, context):
+        super(OptionsMaker, self).__init__(context)
+        self._header = None
+        self._footer = None
+
     @property
     def header(self):
         """ Safely get pdf.header
@@ -25,9 +31,24 @@ class OptionsMaker(PDFOptionsMaker):
             self._footer = getSite().absolute_url() + '/pdf.footer'
         return self._footer
 
+    def getOptions(self):
+        """ Custom options
+        """
+        options = super(OptionsMaker, self).getOptions()
+        options['page-offset'] = '3'
+        return options
+
 class Cover(PDFCover):
     """ PDF Cover
     """
+
+    @property
+    def year(self):
+        """ Publication year
+        """
+        published = DateTime(self.context.Date())
+        return published.year()
+
     @property
     def header(self):
         """ Cover header
