@@ -3,6 +3,8 @@ Changelog
 
 8.1-dev - (unreleased)
 ----------------------
+* Bug fix: fixed loading of whatsnewgallery tabs on data-and-maps pages
+  [ichimdav #16914]
 * Upgrade step: Install Palatino Linotype and Verdana fonts
   [voineali refs #16802]
 * Change: move the last two items from the globalnav within the
