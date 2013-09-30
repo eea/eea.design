@@ -12,7 +12,8 @@ class EEAPresentationView(PresentationView):
         """ Presentation slides (format body for presentation)
             * convert h1 and h2 to h1
             * arrange content in slides
-            * convert p to div (s5_slides.css hides p elements)
+            * convert img or iframe containing p tags to div
+            * filter out empty slides (have no/hidden content)
         """
         soup = BeautifulSoup(self.body())
         out = []
@@ -28,12 +29,26 @@ class EEAPresentationView(PresentationView):
                     elem.clear()
                     elem.append(text)
                     first = False
-                elif elem.name == 'p':
+                elif elem.name == 'p' and \
+                        (elem.find('iframe') or elem.find('img')):
                     elem.name = 'div'
             except AttributeError:
                 pass
             if isinstance(elem, NavigableString) and not elem.strip():
                 continue
             out.append(elem.prettify())
+
         out = BeautifulSoup(''.join(out))
-        return out.body.decode_contents(formatter='html')
+
+        final_html = []
+        slides = out.find_all('div', class_='slide')
+        for slide in slides:
+            visible_content = []
+            for elem in slide.contents:
+                name = getattr(elem, 'name', '')
+                if name not in ['', 'p', 'h1']:
+                    visible_content.append(elem)
+            if visible_content:
+                html = slide.decode(formatter='html')
+                final_html.append(html)
+        return ''.join(final_html)
