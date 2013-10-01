@@ -33,10 +33,10 @@
 input {
     margin-bottom: 1px; /* bug fix */
 }
-input.searchButton, 
-input.standardButton, 
-input.context, 
-input.destructive, 
+input.searchButton,
+input.standardButton,
+input.context,
+input.destructive,
 input.standalone {
     font-size: 0.90em !important;
 }
@@ -71,7 +71,7 @@ textarea {
 #portal-logo {
   height /**/: <dtml-var "_[logoName].height">px;
   overflow: hidden;
-}       
+}
 
 #portal-colophon .colophonIcon {
     height: 0px !important;
@@ -133,7 +133,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 * html .link-mailto a,
 * html .link-mailto {
      height: 1%;
-} 
+}
 
 /* Fix for IE float bug */
 * html #portal-top,
@@ -157,10 +157,10 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 }
 
 /* link background position fix */
-h2 a, 
-h3 a, 
-h4 a, 
-h5 a, 
+h2 a,
+h3 a,
+h4 a,
+h5 a,
 h6 a {
      background: url(&dtml-portal_url;/bcpil.gif) no-repeat 0.5em right;
 }
@@ -188,7 +188,7 @@ dd.portletFooter {
 * html .portletHeader {
     height: 1%;
 }
-.portletTopRight, 
+.portletTopRight,
 .portletTopLeft {
     top: 0px;
 }
@@ -217,7 +217,7 @@ dd.portletFooter {
 * html .portlet .portletItem #selectlang_form{
     margin: 0;
 }
- 
+
 * html .datatable,
 * html .highlightHigh {
     height: 0.1%;
@@ -269,7 +269,7 @@ dd.portletFooter {
 * html #portal-globalnav li.selected a.dropTab img,
 * html #portal-globalnav li.selected a.dropTab:hover img {
     padding-top: 3px;
-} 
+}
 
 
 #portal-column-two .portletTabHead,
@@ -297,7 +297,7 @@ dd.portletFooter {
 
 * html .frontpage .documentActions {
     margin: -3em 0 0.5em 0em;
-} 
+}
 
 .section-copyright .documentActions,
 .section-privacy .documentActions,
@@ -327,12 +327,12 @@ dd.portletFooter {
     width: 414px;
 }
 
-#whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a { 
+#whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a {
     width: 390px;
     padding: 0px !important;
     margin-right: 20px !important;
 }
-#whatsnew-gallery .tileBody { 
+#whatsnew-gallery .tileBody {
     margin-top: 5px;
 }
 
@@ -348,11 +348,11 @@ dd.portletFooter {
     padding-top: 0 !important;
 }
 
-#mobile a { 
+#mobile a {
     display: block;
 }
 
-#forum-link { 
+#forum-link {
     display: block;
     height: 50px;
     width: 200px;
@@ -368,7 +368,7 @@ dd.portletFooter {
     margin: 0;
 }
 
-#document-action-sendto, #document-action-print, #document-action-full_screen, 
+#document-action-sendto, #document-action-print, #document-action-full_screen,
 #document-action-twitter, #document-action-delicious, #document-action-facebook,
 #document-action-rdf , #document-action-rss2 {
     display: block;
@@ -389,12 +389,12 @@ dd.portletFooter {
     width: 350px;
 }
 
-#languageCodes li, #languageCodes li.selected { 
+#languageCodes li, #languageCodes li.selected {
     display: inline;
     margin: 0px 5px;
 }
 
-#languageCodes li.selected  { 
+#languageCodes li.selected  {
     padding-bottom: 3px;
 }
 
@@ -487,11 +487,11 @@ a.archives {
     z-index: 2;
 }
 
-#coverflow img { 
+#coverflow img {
    margin: 0px 0px -35px -92px !important;
 }
 
-/* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */ 
+/* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */
 ul.eea-tabs.two-rows li {
     max-width: 93px;
 }
@@ -501,12 +501,12 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 #portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
 
 
-/* 5443 personaltools and header holder needs position static when we have 
- * hovering items over our gradient */ 
+/* 5443 personaltools and header holder needs position static when we have
+ * hovering items over our gradient */
 /* 14082; added fixes for personaltools also for IE9 */
 #portal-personaltools {
     position: static;
-} 
+}
 #header-holder {
     position: static;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
@@ -519,6 +519,29 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 
 dl.actionMenu.activated dd {
     min-width: 50%;
+}
+
+.tileContent {
+    display: inline-block;
+}
+
+body #whatsnew-gallery .tileContent {
+    width: 390px;
+    margin-top: 10px;
+}
+
+#content ul.gallery-layout-selection {
+    width: 130px;
+}
+
+#content ul.gallery-layout-selection li {
+    float: right;
+}
+
+/*  bonus: align h2 with select */
+#news-header h2 {
+    margin-right: 10px;
+    margin-top: 0px;
 }
 
 /* </dtml-with> */

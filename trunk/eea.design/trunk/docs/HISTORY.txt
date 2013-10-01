@@ -17,6 +17,8 @@ Changelog
   [ichimdav refs #9476]
 * Feature: Added generic PDF cover and PDF print CSS for all EEA content-types
   [voineali refs #14904]
+* Bug fix: fixed CSS for IE9 for what's new tabs
+  [soniaand refs #16888]
 
 8.0 - (2013-09-23)
 ------------------
