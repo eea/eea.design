@@ -151,6 +151,22 @@ p.discreet {
   background: url(&dtml-portal_url;/note.png)  no-repeat scroll 1em 50% #C7E0E9;
 }
 
+.warningMessage {
+  font-size: 10pt;
+}
+
+.warningMessage .qr {
+  float: right;
+}
+
+.warningMessage a, .warningMessage a:visited {
+  display: block;
+  color: #346F83 !important;
+}
+
+.pdfMissingImage {
+}
+
 /* Cover
 -------- */
 .cover-header {

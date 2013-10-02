@@ -1,10 +1,15 @@
 """ PDF View
 """
+import os
+import urllib2, urlparse
+import contextlib
+from bs4 import BeautifulSoup
 from DateTime import DateTime
 from zope.component.hooks import getSite
 from zope.component import queryMultiAdapter
 from Products.NavigationManager.browser.navigation import getApplicationRoot
 from eea.converter.browser.app.pdfview import Cover as PDFCover
+from eea.converter.browser.app.pdfview import Body as PDFBody
 from eea.converter.pdf.adapters import OptionsMaker as PDFOptionsMaker
 
 class OptionsMaker(PDFOptionsMaker):
@@ -39,7 +44,7 @@ class OptionsMaker(PDFOptionsMaker):
         return options
 
 class Cover(PDFCover):
-    """ PDF Cover
+    """ Custom PDF cover
     """
 
     @property
@@ -70,3 +75,64 @@ class Cover(PDFCover):
                 continue
             theme['image'] = image.replace('/image_icon', '/image_preview')
             yield theme
+
+class Body(PDFBody):
+    """ Custom PDF body
+    """
+
+    def fix_daviz(self, html):
+        """ Replace daviz iframes with fallback images
+        """
+        soup = BeautifulSoup(html)
+        for iframe in soup.find_all('iframe'):
+            src = iframe.get('src')
+            if u'embed-chart' in src:
+                src = src.replace('embed-chart', 'embed-chart.png')
+                base = src.split('embed-chart.png')[0]
+                query = urlparse.parse_qs(urlparse.urlparse(src).query)
+                chart = query.get('chart')[0]
+            elif u'embed-dashboard' in src:
+                src = src.replace('embed-dashboard', 'embed-dashboard.png')
+                base = src.split('embed-dashboard.png')[0]
+                query = urlparse.parse_qs(urlparse.urlparse(src).query)
+                chart = query.get('dashboard')[0]
+            else:
+                continue
+
+            src += '&tag:int=1&safe:int=0'
+
+            if not src.startswith('http'):
+                src = os.path.join(self.context.absolute_url(), src)
+            if not base.startswith('http'):
+                base = os.path.join(self.context.absolute_url(), base)
+
+            code = ''
+            with contextlib.closing(
+                urllib2.urlopen(src, timeout=15)) as conn:
+                code = conn.read()
+
+            if code:
+                img = BeautifulSoup(code)
+            else:
+                chart_url = u'%s#tab-%s' % (base, chart)
+                qr_url = (
+                    u"http://chart.apis.google.com"
+                    "/chart?cht=qr&chld=H|0&chs=%sx%s&chl=%s" % (
+                        70, 70, urllib2.quote(chart_url)))
+                img = BeautifulSoup(u'''
+                <div class="portalMessage warningMessage pdfMissingImage">
+                  <img class="qr" src="%(qr_url)s" />
+                  <span>
+                    This area contains interactive content
+                    which is not printable.
+                    You may visit the online version at:
+                  </span>
+                  <a href="%(url)s">%(url)s</a>
+                </div>''' % {'url': chart_url, 'qr_url': qr_url})
+            iframe.replaceWith(img)
+        return soup.decode()
+
+    def __call__(self, **kwargs):
+        html = super(Body, self).__call__(**kwargs)
+        html = self.fix_daviz(html)
+        return html
