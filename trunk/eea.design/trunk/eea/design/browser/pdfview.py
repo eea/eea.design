@@ -3,6 +3,7 @@
 import os
 import urllib2, urlparse
 import contextlib
+import logging
 from bs4 import BeautifulSoup
 from DateTime import DateTime
 from zope.component.hooks import getSite
@@ -11,6 +12,8 @@ from Products.NavigationManager.browser.navigation import getApplicationRoot
 from eea.converter.browser.app.pdfview import Cover as PDFCover
 from eea.converter.browser.app.pdfview import Body as PDFBody
 from eea.converter.pdf.adapters import OptionsMaker as PDFOptionsMaker
+logger = logging.getLogger('eea.design')
+
 
 class OptionsMaker(PDFOptionsMaker):
     """ Custom PDF options maker for EEA ctypes
@@ -107,9 +110,12 @@ class Body(PDFBody):
                 base = os.path.join(self.context.absolute_url(), base)
 
             code = ''
-            with contextlib.closing(
-                urllib2.urlopen(src, timeout=15)) as conn:
-                code = conn.read()
+            try:
+                with contextlib.closing(
+                    urllib2.urlopen(src, timeout=15)) as conn:
+                    code = conn.read()
+            except Exception, err:
+                logger.exception(err)
 
             if code:
                 img = BeautifulSoup(code)
@@ -134,5 +140,8 @@ class Body(PDFBody):
 
     def __call__(self, **kwargs):
         html = super(Body, self).__call__(**kwargs)
-        html = self.fix_daviz(html)
+        try:
+            html = self.fix_daviz(html)
+        except Exception, err:
+            logger.exception(err)
         return html
