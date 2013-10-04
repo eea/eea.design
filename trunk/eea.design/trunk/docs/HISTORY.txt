@@ -3,6 +3,10 @@ Changelog
 
 8.2-dev - (unreleased)
 ----------------------
+* Bug fix: Convert daviz iframes relative urls to absolute urls using
+  eea.converter utility method in order to avoid restricted traverse errors
+  within PDF export
+  [voineali refs #16946]
 
 8.1 - (2013-10-04)
 ------------------

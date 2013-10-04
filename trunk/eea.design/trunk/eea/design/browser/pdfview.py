@@ -12,6 +12,7 @@ from Products.NavigationManager.browser.navigation import getApplicationRoot
 from eea.converter.browser.app.pdfview import Cover as PDFCover
 from eea.converter.browser.app.pdfview import Body as PDFBody
 from eea.converter.pdf.adapters import OptionsMaker as PDFOptionsMaker
+from eea.converter.utils import absolute_url
 logger = logging.getLogger('eea.design')
 
 
@@ -91,11 +92,15 @@ class Body(PDFBody):
             src = iframe.get('src')
             if u'embed-chart' in src:
                 src = src.replace('embed-chart', 'embed-chart.png')
+                src = absolute_url(self.context,
+                        url=src, default=src, view='embed-chart.png')
                 base = src.split('embed-chart.png')[0]
                 query = urlparse.parse_qs(urlparse.urlparse(src).query)
                 chart = query.get('chart')[0]
             elif u'embed-dashboard' in src:
                 src = src.replace('embed-dashboard', 'embed-dashboard.png')
+                src = absolute_url(self.context,
+                        url=src, default=src, view='embed-dashboard.png')
                 base = src.split('embed-dashboard.png')[0]
                 query = urlparse.parse_qs(urlparse.urlparse(src).query)
                 chart = query.get('dashboard')[0]
