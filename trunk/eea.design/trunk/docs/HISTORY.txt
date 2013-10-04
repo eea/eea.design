@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.1-dev - (unreleased)
-----------------------
+8.1 - (2013-10-04)
+------------------
 * Bug fix: fixed loading of whatsnewgallery tabs on data-and-maps pages
   [ichimdav #16914]
 * Upgrade step: Install Palatino Linotype and Verdana fonts
