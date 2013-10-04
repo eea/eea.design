@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    lang="en"
+    metal:use-macro="here/main_template/macros/master"
+    i18n:domain="eea">
+    <body>
+    <metal:block fill-slot="portlets_one_slot">       		 
+	</metal:block>
+    <metal:block fill-slot="portlets_two_slot">
+    </metal:block>
+        <metal:main fill-slot="main">
+          <h1 i18n:translate="">List of all icons available</h1>
+			<div class="documentDescription" i18n:translate="">
+			    Link types are automatically detected on client side by a javascript 
+			    (scanforlinks) which will add the necessary class icon before the link.</div>
+			<h3 i18n:translate="">Icons based on protocols</h3>
+			<p>
+			<a href="http://www.externalsite.eu" i18n:translate="">external link</a>,
+			<a href="https://www.externalsite.eu" i18n:translate="">secure link</a>, 
+			<a href="ftp://externalsite.eu" i18n:translate="">FTP link</a>,
+			<a href="callto://externalsite.eu" i18n:translate="">callto link</a>, 
+			<a href="mailto:any@any.eu" i18n:translate="">mailto link</a>
+			<br />
+			<strong i18n:translate="">Test links</strong>: 
+			<a href="https://www.eea.europa.eu" i18n:translate="">new EEA domain link</a>, 
+			<a href="https://www.eea.europa.eu/document.pdf" i18n:translate="">PDF on new EEA domain link</a>, 
+			<a href="https://reports.eea.eu.int/document.ppt" i18n:translate="">Presentation on old EEA domain</a>
+			</p>
+			<h3 i18n:translate="">Mix links examples</h3>
+			<p i18n:translate="">Icons based on file extension, on different external sites and protocols</p>
+			<p>
+			<a href="http://www.externalsite.eu/document.doc" i18n:translate="">Word doc on external link</a>,
+			<a href="https://www.externalsite.eu/doc.pdf" i18n:translate="">PDF on secure external link</a>, 
+			<a href="ftp://externalsite.eu/pres.zip" i18n:translate="">Zip on FTP</a>,
+			<a href="https://externalsite.eu/data.xls" i18n:translate="">Excel doc on secure external link</a>, 
+			</p>
+			<h3 i18n:translate="">Available icons based on file extension</h3>
+			<p i18n:translate="">New icons or updates can be done via the mimetypes_registry in the Plone CMS or through the EEADesign2006 product. Contact the EEA web development team in this case.</p>
+			<p>
+			<tal:block tal:repeat="mimetype here/mimetypes_registry/mimetypes">
+			<tal:block tal:condition="python:mimetype.extensions and mimetype.icon_path!='unknown.png' and mimetype.icon_path!='html.png'">
+			   <tal:block tal:repeat="ext mimetype/extensions">
+			    <a tal:attributes="href string:${here/absolute_url}/file.${ext};title string:file.${ext}"
+									tal:content="string:file.${ext}" />, 
+			   </tal:block> 
+			</tal:block>
+			</tal:block>
+			</p>
+        </metal:main>
+    </body>
+</html>
+
