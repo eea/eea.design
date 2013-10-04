@@ -16,7 +16,7 @@
             nav_position = site_address ? 'horizontal' : 'vertical',
             nav_outer_selector = site_address ? "#navigator-outer-sm" : "#navigator-outer";
         var settings = {
-            interval            : 9000,
+            interval            : 10000,
             direction           : 'opacity',
             duration            : 1500,
             wrapperSelector     : wrapper_selector,

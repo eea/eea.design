@@ -73,7 +73,7 @@
 #gallery-content-outer, #gallery-content-outer-sm {
     position: relative;
     height: 100%;
-    width: 415px;
+    width: 100%;
     z-index: 3;
     overflow: hidden;
     float: right;
@@ -85,7 +85,7 @@
 	padding:0px;
 	margin:0;
 	height:320px;
-	width:415px;
+	width:100%;
 	position:relative;
 	overflow:hidden;
 }
@@ -95,7 +95,7 @@
 	padding:0px;
 	margin:0px;
 	height:100%;
-	width:415px;
+	width:100%;
 	float:left;
 }
 
@@ -118,11 +118,6 @@
     margin-top: 0;
     position: relative;
     z-index: -1;
-}
-
-#gallery-content-outer-sm, #promo-gallery-content-sm,  #promo-gallery-content-sm li
-{
-    width: 100%;
 }
 
 /* item navigator */

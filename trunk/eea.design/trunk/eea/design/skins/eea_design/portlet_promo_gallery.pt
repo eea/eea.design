@@ -64,7 +64,7 @@
 
 <!-- navigation outer -->
 
-<div tal:attributes="id string:navigator-outer${small_factor}">
+<div tal:attributes="id string:navigator-outer${small_factor}" tal:condition="python:small_factor">
     <ul tal:attributes="id string:promo-navigator${small_factor}">
   <metal:items tal:repeat="hl highlights">
                     <li>
