@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.4-dev - (unreleased)
+----------------------
+
 8.3 - (2013-10-07)
 ------------------
 * Change: check if notoc is present instead of strict equal when excluding 
