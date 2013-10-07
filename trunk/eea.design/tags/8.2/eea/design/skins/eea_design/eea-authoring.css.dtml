@@ -1,0 +1,106 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* @group Editing */
+
+/* @group Tabs @parent Editing */
+
+#edit-bar {
+    font-size: 100%;
+    margin: 1em 0;
+    border: 0;
+}
+
+#content-views {
+    background-color: transparent;
+    margin:0px !important;
+}
+
+#edit-bar,
+#content ul.formTabs {
+    border-style: none;
+    padding-top:0.2em;
+}
+/* @end @group Tabs @parent Editing */
+
+/* @group Pulldown menus @parent Editing */
+
+/* @group Personal Tools pulldown @parent Pulldown menus */
+#portal-personaltools {
+    background-color: &dtml-corporateGreenTwo;;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:none;
+    color: #fff;
+    line-height: 1.6em;
+    list-style: none;
+    margin: 0.5em 0;
+    padding: 0.5em 3em 0.5em 3em;
+    text-align: right;
+    text-shadow: 0 2px 1px #333;
+}
+#portal-personaltools dd {
+    margin-top: 6px;
+}
+#portal-personaltools li a, #portal-personaltools a:hover {
+    color: #FFFFFF !important;
+}
+#portal-personaltools-wrapper {
+    margin-top: -5px;
+    min-height: 10px;
+    float: right;
+    font-size: 110%;
+}
+
+#portal-personaltools #user-name {
+    background: transparent url(&dtml-portal_url;/user.gif) center left no-repeat;
+    padding-left: 15px;
+    color: white;
+}
+
+#portal-personaltools .portalNotLoggedIn {
+    /* Used on all descriptions relevant to those not logged in */
+    color: &dtml-fontColor;;
+    padding: 0;
+    background: transparent;
+    background-image: none;
+}
+
+#portal-personaltools li {
+    margin: 0em 0em 0em 1em;
+    display: inline-block;
+}
+
+
+#portal-personaltools .visualIconPadding {
+    padding-left: 10px;
+}
+#portal-personaltools dd a:hover {
+    background:transparent;
+    color: white !important;
+}
+/* @end @group Personal Tools pulldown @parent Pulldown menus */
+
+/* @group Content pulldowns @parent Pulldown menus */
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+    background-color: transparent;
+    z-index: 900;
+}
+
+#contentActionMenus dl.actionMenu.activated dd {
+    border-bottom: 0.5em solid &dtml-corporateGreenTwo;;
+    right: 0;
+}
+/* @end @group Content pulldowns @parent Pulldown menus */
+
+#contentActionMenus {
+    background: &dtml-corporateGreenTwo;;
+    padding: 0.1em 0.24em 0 0 !important;
+}
+/* @end group Pulldown menus @parent Editing */
+
+/* @end group Editing */
+
+/* </dtml-with> */

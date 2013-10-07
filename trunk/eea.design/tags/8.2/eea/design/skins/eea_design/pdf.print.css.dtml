@@ -1,0 +1,287 @@
+
+/* Body
+------- */
+
+@font-face {
+  font-family: "Palatino Linotype";
+  src: local("Palatino Linotype");
+}
+
+.page-break {
+  display: block;
+  page-break-before: always;
+}
+
+body {
+  font-family: "Palatino Linotype", arial ! important;
+  font-size: 10pt;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana ! important;
+}
+
+img {
+  max-width: 100%;
+}
+
+#article-language {
+  display: none;
+}
+
+iframe {
+  display: none;
+}
+
+.portal-logo {
+  display: none;
+}
+
+#portal-footer {
+  display: none;
+}
+
+.documentFirstHeading {
+  font-family: Verdana !important;
+  font-size: 18pt;
+  text-align: right;
+}
+
+.documentDescription {
+  font-family: Verdana !important;
+  font-size: 12pt;
+  text-align: right;
+  font-weight: normal;
+}
+
+.fiche-thumbnail {
+  display: none;
+}
+
+.figure-plus-container-wide, .figure-plus-wide, .figure-image {
+  display: none;
+}
+
+p.discreet {
+  border-bottom: 1px solid #333;
+  font-family: Verdana !important;
+  font-size: 9pt;
+  padding-bottom: 10pt;
+}
+
+.temporal-coverage {
+  display: none;
+}
+
+/* Messages */
+.callout {
+  background: #EEE;
+  padding: 1em;
+  border-left: 1em solid #CCC;
+  clear: both;
+}
+
+.keyFact {
+  background: #C7E0E9;
+  padding: 1.5em;
+  border-left: 1em solid #346F83;
+  clear: both;
+}
+
+.portalMessage,
+.system-message {
+  font-size: 100%;
+  margin: 1em 0;
+  padding: 0.5em 1em 0.5em 3.5em;
+  vertical-align: middle;
+  background: no-repeat scroll 1em 50% #C7E0E9;
+}
+
+.portalMessage p {
+  margin: 1em 0;
+}
+
+.informationMessage {
+  background: url(&dtml-portal_url;/information.png)  no-repeat scroll 1em 50% #C7E0E9;
+}
+
+.warningMessage {
+  font-size: 140%;
+  background: url(&dtml-portal_url;/error.png) no-repeat scroll 1em 50% #FFFABE;;
+}
+
+#error-handling, .errorMessage {
+  font-size: 160%;
+  background: url(&dtml-portal_url;/exclamation.png) no-repeat scroll 1em 50% #FFFABE;
+}
+
+.thumbsUpMessage {
+  background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #C7E0E9;
+}
+
+.attentionMessage {
+  background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #C0CF99;
+}
+
+.yesMessage {
+  background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #C7E0E9;
+}
+
+.noMessage {
+  background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #C0CF99;
+}
+
+.rosetteMessage {
+  background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #FFFABE;
+  color: #666666;
+}
+
+.ideaMessage {
+  background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #C7E0E9;
+}
+
+.smileyMessage {
+  background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FFFABE;
+}
+
+.noteMessage {
+  background: url(&dtml-portal_url;/note.png)  no-repeat scroll 1em 50% #C7E0E9;
+}
+
+.warningMessage {
+  font-size: 10pt;
+}
+
+.warningMessage .qr {
+  float: right;
+}
+
+.warningMessage a, .warningMessage a:visited {
+  display: block;
+  color: #346F83 !important;
+}
+
+.pdfMissingImage {
+}
+
+/* Cover
+-------- */
+.cover-header {
+  text-align: right;
+  margin: 24pt 42pt;
+  font-size: 10pt;
+  color: #666;
+  font-family: Verdana !important;
+}
+
+.cover-title {
+  text-align: right;
+  margin: 42pt 42pt 0;
+  font-size: 18pt;
+  font-weight: normal;
+  color: #333;
+}
+
+.cover-subtitle {
+  text-align: right;
+  margin: 0 42pt;
+  font-size: 12pt;
+  font-weight: normal;
+  color: #333;
+  height: 70pt;
+  overflow: hidden;
+}
+
+.cover-body {
+  background-color: #7ad2c4;
+  border-top: 7pt solid #7ad2c4;
+  border-bottom: 1pt solid #333;
+  height: 565pt;
+}
+
+.cover-issn {
+  text-align: right;
+  background-color: white;
+  height: 15pt;
+  padding-top: 5pt;
+  padding-right: 42pt;
+  font-size: 8pt;
+  color: #666;
+  font-family: Verdana !important;
+}
+
+.cover-image {
+  height: 393pt;
+  overflow: hidden;
+  margin: auto;
+  max-width: 100%;
+}
+
+.cover-image img {
+  width: 150%;
+  margin-left: -25%;
+  max-width: inherit;
+}
+
+.cover-logo {
+  text-align: right;
+  margin: 20pt 42pt 0;
+}
+
+.cover-logo img {
+  height: 42pt;
+}
+
+.cover-themes {
+  margin-right: 42pt;
+}
+
+.cover-themes div {
+  height: 115pt;
+  max-width: 115pt;
+  overflow: hidden;
+  float: right;
+  border: 3pt solid white;
+  margin: 17pt 0 0 17pt;
+}
+
+.cover-themes img {
+  width: 200%;
+  margin-left: -50%;
+  max-width: inherit;
+}
+
+.cover-copyright {
+  margin: 88pt 40pt 0pt 108pt;
+  font-family: Verdana !important;
+  font-weight: normal;
+  font-size: 8pt;
+  min-height: 690pt;
+  position: relative;
+}
+
+.cover-copyright dt, .cover-copyright dd {
+  margin: 0;
+  padding: 0;
+}
+
+.cover-copyright dt {
+  font-weight: bold;
+  line-height: 0.1pt;
+}
+
+.cover-copyright-legal {
+  margin-top: 90pt;
+}
+
+.cover-copyright-notice {
+  margin-top: 17pt;
+}
+
+.cover-copyright-contact {
+  position: absolute;
+  bottom: 0;
+}
