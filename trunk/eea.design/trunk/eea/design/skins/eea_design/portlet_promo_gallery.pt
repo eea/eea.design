@@ -87,15 +87,8 @@
         </ul>
     </div>
     <div tal:attributes="class string:controls${small_factor}">
-        <tal:big condition="not:small_factor">
-        <a  href="#" id="next-promo"></a>
         <a  href="#" id="prev-promo"></a>
-        </tal:big>
-
-        <tal:small condition="small_factor">
-            <a  href="#" id="prev-promo"></a>
-            <a  href="#" id="next-promo"></a>
-        </tal:small>
+        <a  href="#" id="next-promo"></a>
         <a  href="#"
             id="play-pause"
             title="Pause/Play slideshow"

@@ -10,14 +10,14 @@
 .promo-item-desc, .promo-item-desc-sm {
     z-index: 100;
     position: absolute;
-    top: 232px;
+    top: 245px;
     left: 0px;
-    width: 91%;
+    width: 94%;
     color: white;
     margin: 0 0px;
     background: &dtml-corporateGreen;;
     opacity: 0.9;
-    height: 90px;
+    height: 75px;
     padding: 0px 20px 0px 20px;
 }
 .promo-item-desc-sm {
@@ -28,16 +28,16 @@
 #promo-gallery-content h3, #promo-gallery-content-sm h3 {
     margin: 0.4em 0 0.4em 0;
     font-size: 1.6em;
-    line-height: 1.1em;
-    font-weight: bold;
+    line-height: 1.3em;
+    font-weight: normal;
     border: none;
-    text-shadow: 1px 1px 1px #000000;
+    text-shadow: none;
     clear: none !important;
 }
 
 #promo-gallery-content-sm h3 {
     font-size: 1.3em;
-    margin-top: 0.2em;
+    margin-top: 0.6em;
     clear: none !important;
 }
 
@@ -139,7 +139,6 @@
 #promo-gallery-content-sm { 
     height: 250px;
     overflow: hidden;
-    text-align: center;
 }
 
 #promo-navigator li, #promo-navigator-sm li {
@@ -156,7 +155,7 @@
 	right:0;
 	top:0px;
 	z-index:100;
-	height:320px;
+	height:330px;
 	overflow:hidden;
 	color:#FFF;
 }
@@ -275,32 +274,17 @@
 
 #prev-promo, #next-promo {
     display: inline-block;
-    height: 20px;
+    height: 16px;
     margin-left: 0;
     width: 16px;
 }
 
 #prev-promo {
-    background-position: -421px -192px;
-    margin-left: 1.5em;
+    background-position: left -370px;
 }
 
 #next-promo {
-  background-position: -438px -192px;
-}
-
-.controls-sm #next-promo,
-.controls-sm #prev-promo {
-  height: 16px;
-}
-
-.controls-sm  #prev-promo {
-  background-position: left -370px;
-  margin-left: 0;
-}
-
-.controls-sm #next-promo {
-  background-position: left -345px;
+    background-position: left -345px;
 }
 
 .controls, .controls-sm {
