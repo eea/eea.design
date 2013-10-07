@@ -3,6 +3,9 @@ Changelog
 
 8.3-dev - (unreleased)
 ----------------------
+* Change: check if notoc is present instead of strict equal when excluding 
+  headings from the TOC
+  [ichimdav refs #16929]
 
 8.2 - (2013-10-07)
 ------------------
