@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_css tool. -->
+
+<object name="portal_css">
+
+    <!-- <stylesheet title="" -->
+    <!--     id="frontpage.css" -->
+    <!--     media="all" rel="stylesheet" rendering="link" -->
+    <!--     cacheable="True" compression="safe" cookable="True" -->
+    <!--     enabled="1" expression="" -->
+    <!--     position-after="portlets.css" -->
+    <!--     /> -->
+
+    <!-- <stylesheet title="" -->
+    <!--     id="eea-globaltabs.css" -->
+    <!--     media="screen" rel="stylesheet" rendering="link" -->
+    <!--     cacheable="True" compression="safe" cookable="True" -->
+    <!--     enabled="1" expression="" -->
+    <!--     position-after="frontpage.css" -->
+    <!--     /> -->
+
+    <!-- <stylesheet title="" -->
+    <!--     id="footer.css" -->
+    <!--     media="screen" rel="stylesheet" rendering="link" -->
+    <!--     cacheable="True" compression="safe" cookable="True" -->
+    <!--     enabled="1" expression="" -->
+    <!--     position-after="eea-globaltabs.css"/> -->
+
+    <!-- <stylesheet title="" -->
+    <!--     id="ploneAdmin.css" -->
+    <!--     media="screen" rel="stylesheet" rendering="link" -->
+    <!--     cacheable="True" compression="safe" cookable="True" -->
+    <!--     enabled="1" -->
+    <!--     expression="python:here.portal_url.getPortalObject().getCurrentSkinName()==&quot;EEADesignCMS&quot;" -->
+    <!--     position-after="ploneCustom.css" -->
+    <!--     /> -->
+
+
+
+    <!-- <stylesheet title="" -->
+    <!--     id="IEFixes.css" -->
+    <!--     media="screen" rel="stylesheet" rendering="link" -->
+    <!--     cacheable="True" compression="safe" cookable="True" -->
+    <!--     conditionalcomment="gt IE 8" -->
+    <!--     expression="" -->
+    <!--     position-after="eea.multimedia.css" -->
+    <!--     /> -->
+
+    <!-- <stylesheet title="" -->
+    <!--     id="organisations.css" -->
+    <!--     media="screen" rel="stylesheet" rendering="link" -->
+    <!--     cacheable="True" compression="safe" cookable="True" -->
+    <!--     conditionalcomment="" -->
+    <!--     expression="python:'about-us/who/organisational-chart' in request.URL0" -->
+    <!--     position-before="ploneCustom.css" -->
+    <!--     /> -->
+
+    <!-- <stylesheet title="" -->
+    <!--     id="promo_gallery.css" -->
+    <!--     media="screen" rel="stylesheet" rendering="link" -->
+    <!--     cacheable="True" compression="safe" cookable="True" -->
+    <!--     conditionalcomment="" -->
+    <!--     expression="" -->
+    <!--     position-after="organisations.css" -->
+    <!--     /> -->
+    <stylesheet title=""
+                id="IE9Fixes.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment="IE 9"
+                expression=""
+                insert-after="*"
+            />
+
+    <stylesheet title=""
+                id="IE8Fixes.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment="IE 8"
+                expression=""
+                insert-before="IE9Fixes.css"
+            />
+
+    <stylesheet title=""
+                id="IE7Fixes.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment="IE 7"
+                expression=""
+                insert-before="IE8Fixes.css"
+            />
+
+    <stylesheet title=""
+                id="IEFixes.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment="lt IE 9"
+                expression=""
+                insert-before="IE7Fixes.css"
+            />
+
+    <stylesheet title=""
+                id="ploneCustom.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment=""
+                expression=""
+                insert-before="IEFixes.css"
+            />
+
+    <stylesheet title=""
+                id="eea-public.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment=""
+                expression=""
+                insert-after="public.css"
+            />
+
+    <stylesheet
+        id="pdf.print.css"
+        media="print"
+        expression="python:'pdf.' in request.URL0 or '.pdf' in request.URL0"
+    />
+
+</object>

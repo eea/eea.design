@@ -1,0 +1,18 @@
+<div metal:define-macro="figure-plus" tal:omit-tag=""
+     tal:define="figure nocall:figure|nocall:options/fullimage;
+                 figure_title figure_title|figure/Title;
+                 figure_nr string:;
+                 figure_note figure_note|figure/Description|nothing;
+                 figure_source_copyright figure_source_copyright|figure/Rights|nothing;
+                 figure_obj nocall:options/fullimage;
+                 figure_scale figure_scale|string:mini;
+                 figure_css_class options/class|nothing;
+                 figure_width options/width|nothing;
+                 figure_width_str python: test(figure_width, 'width:%spx' % str(figure_width), None);">
+
+     <div tal:attributes="class string:figure-standalone $figure_css_class;
+                          style string:$figure_width_str">
+        <tal:image replace="structure options/tag" />
+        <metal:caption use-macro="context/media_floating_macros/macros/caption" />
+    </div>
+</div>
