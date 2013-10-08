@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.4-dev - (unreleased)
-----------------------
+8.4 - (2013-10-08)
+------------------
 * Bug fix: fixed duplication of results within the whatsnewgallery 
   data-and-maps results
   [ichimdav refs #16994]
