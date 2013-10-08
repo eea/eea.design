@@ -3,6 +3,8 @@ Changelog
 
 8.4-dev - (unreleased)
 ----------------------
+* Bug fix: fixed float issue of relatedItems on themes dc pages
+  [ichimdav]
 
 8.3 - (2013-10-07)
 ------------------

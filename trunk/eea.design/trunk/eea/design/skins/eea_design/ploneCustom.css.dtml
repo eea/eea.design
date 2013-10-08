@@ -1900,7 +1900,8 @@ error-handling {
 }
 
 #relatedItems  {
-    margin-bottom:  2em;
+    margin-bottom: 2em;
+    clear: both;
 }
 
 #relatedItems .visualClear {
