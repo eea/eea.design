@@ -3,6 +3,9 @@ Changelog
 
 8.4-dev - (unreleased)
 ----------------------
+* Bug fix: fixed featured images within the portlets of the right column from
+  spilling the floated text below them
+  [ichimdav refs #16673]
 * Bug fix: fixed float issue of relatedItems on themes dc pages
   [ichimdav]
 
