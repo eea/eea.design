@@ -3,6 +3,9 @@ Changelog
 
 8.4-dev - (unreleased)
 ----------------------
+* Bug fix: fixed duplication of results within the whatsnewgallery 
+  data-and-maps results
+  [ichimdav refs #16994]
 * Bug fix: fixed featured images within the portlets of the right column from
   spilling the floated text below them
   [ichimdav refs #16673]

@@ -349,7 +349,6 @@ def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
             'review_state'       : 'published',
             'sort_on'            : 'effective',
             'sort_order'         : 'reverse',
-            'sort_limit'         : noOfItems
             }
 
     if getattr(self.context, 'getLanguage', None):
@@ -378,7 +377,6 @@ def _getTopics(self, topic=None, portaltypes=None, object_provides=None,
         'review_state'   : 'published',
         'sort_on'        : 'effective',
         'sort_order'     : 'reverse',
-        'sort_limit'     : noOfItems
         }
     if getattr(self.context, 'getLanguage', None):
         query['Language'] = self.context.getLanguage()
@@ -501,19 +499,25 @@ def filterLatestVersion(self, brains, noOfItems=6):
     """
     cat = getToolByName(self.context, 'portal_catalog')
     res = []
-    # NOTE: ichimdav due to the performance optimization tichet we no longer 
-    # pass the catalog search with all of the results from which we can keep
-    # searching for the latest version and at the end break, instead now 
-    # this method receives the latest brains for the catalog search sorted
-    # by effective date
+    res_urls_set = set()
     for brain in brains:
         # if object implements our versioning
         if 'eea.versions.interfaces.IVersionEnhanced' in brain.object_provides:
             obj = brain.getObject()
             versionsObj = IGetVersions(obj)
-            if versionsObj.isLatest():
-                # keep it, this is latest object
-                res.append(brain)
+            brain_url = brain.getURL()
+            try:
+                is_latest = versionsObj.isLatest()
+            except Exception:
+                logger.warning("Couldn't check if object at %s is latest obj",
+                               brain_url)
+                continue
+            if is_latest:
+                # keep it, this is latest object, first checking if the current
+                # brain url is not already added within our results url set
+                if brain_url not in res_urls_set:
+                    res_urls_set.add(brain_url)
+                    res.append(brain)
             else:
                 # attempt to retrieve the latest versions of the given brain
                 # if this brains doesn't contain the latest version of the 
@@ -526,10 +530,16 @@ def filterLatestVersion(self, brains, noOfItems=6):
                                     uid)
                 else:
                     brain = cat.searchResults(UID=uid)[0]
-                    res.append(brain)
+                    brain_url = brain.getURL()
+                    if brain_url not in res_urls_set:
+                        res_urls_set.add(brain_url)
+                        res.append(brain)
         else:
             #this object is not versioned, so keep it
-            res.append(brain)
+            brain_url = brain.getURL()
+            if brain_url not in res_urls_set:
+                res_urls_set.add(brain_url)
+                res.append(brain)
 
         if len(res) == noOfItems:
             break  #we got enough items
