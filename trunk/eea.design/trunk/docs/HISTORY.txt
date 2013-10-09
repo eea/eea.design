@@ -3,10 +3,12 @@ Changelog
 
 8.5-dev - (unreleased)
 ----------------------
+* Change: Set default cover image copyright within PDF export to EEA
+  [voineali refs #17009]
 
 8.4 - (2013-10-08)
 ------------------
-* Bug fix: fixed duplication of results within the whatsnewgallery 
+* Bug fix: fixed duplication of results within the whatsnewgallery
   data-and-maps results
   [ichimdav refs #16994]
 * Bug fix: fixed featured images within the portlets of the right column from
@@ -17,7 +19,7 @@ Changelog
 
 8.3 - (2013-10-07)
 ------------------
-* Change: check if notoc is present instead of strict equal when excluding 
+* Change: check if notoc is present instead of strict equal when excluding
   headings from the TOC
   [ichimdav refs #16929]
 
