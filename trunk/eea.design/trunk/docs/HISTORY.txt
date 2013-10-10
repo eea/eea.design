@@ -3,6 +3,14 @@ Changelog
 
 8.5-dev - (unreleased)
 ----------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.design
+  [ichimdav #17037]
+* Change: added code to eea-admin.js that removes the right column for history
+  and version pages
+  [ichimdav refs #17037]
+* Feature: Added eea-admin.js registered for authenticated users 
+  [ichimdav refs #17037]
 * Change: Set default cover image copyright within PDF export to EEA
   [voineali refs #17009]
 

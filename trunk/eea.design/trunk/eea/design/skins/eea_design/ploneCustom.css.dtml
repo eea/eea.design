@@ -2707,10 +2707,6 @@ div.row {
     text-align: center;
 }
 
-.fieldDiff {
-    width: 600px;
-}
-
 #content .keyFact {
     background: #C7E0E9;
     padding: 1.5em;
