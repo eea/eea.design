@@ -45,4 +45,10 @@
       description='Upgrade profile for EEA Design'
       provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+  <genericsetup:registerProfile
+      name="upgrade85"
+      title="EEA Design upgrade profile for v8.5"
+      directory="profiles/upgrade85"
+      description='Upgrade profile for EEA Design'
+      provides="Products.GenericSetup.interfaces.EXTENSION" />
 </configure>
