@@ -3,6 +3,8 @@ Changelog
 
 8.5-dev - (unreleased)
 ----------------------
+* Feature: Added honeypot to subscribe portlet
+  [tiberich #17013]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav #17037]

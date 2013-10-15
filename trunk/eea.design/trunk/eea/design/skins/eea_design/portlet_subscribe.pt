@@ -44,6 +44,11 @@
             </div>
             </tal:block>
 
+            <label class="hiddenStructure" for="email_verify" i18n:translate="">
+              Human verification: leave empty
+            </label>
+            <input class="hiddenStructure" type="text" name="email_verify" />
+
              <div class="field">
               <label  class="hiddenStructure" i18n:translate="">Email</label>
               <input type="text"
