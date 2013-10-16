@@ -11,6 +11,7 @@ from zope.component import queryMultiAdapter
 from Products.NavigationManager.browser.navigation import getApplicationRoot
 from eea.converter.browser.app.pdfview import Cover as PDFCover
 from eea.converter.browser.app.pdfview import Body as PDFBody
+from eea.converter.browser.app.download import Pdf as PDFDownload
 from eea.converter.pdf.adapters import OptionsMaker as PDFOptionsMaker
 from eea.converter.utils import absolute_url
 logger = logging.getLogger('eea.design')
@@ -79,6 +80,22 @@ class Cover(PDFCover):
                 continue
             theme['image'] = image.replace('/image_icon', '/image_preview')
             yield theme
+
+    def fix_relatedItems(self, html):
+        """ Remove relatedItems
+        """
+        soup = BeautifulSoup(html)
+        for relatedItems in soup.find_all(id='relatedItems'):
+            relatedItems.extract()
+        return soup.decode()
+
+    def __call__(self, **kwargs):
+        html = super(Cover, self).__call__(**kwargs)
+        try:
+            html = self.fix_relatedItems(html)
+        except Exception, err:
+            logger.exception(err)
+        return html
 
 class Body(PDFBody):
     """ Custom PDF body
@@ -150,3 +167,11 @@ class Body(PDFBody):
         except Exception, err:
             logger.exception(err)
         return html
+
+class Download(PDFDownload):
+    """ Custom PDF Download
+    """
+    def __call__(self, **kwargs):
+        # Cheat condition @@plone_context_state/is_view_template
+        self.request['ACTUAL_URL'] = self.context.absolute_url()
+        return super(Download, self).__call__(**kwargs)

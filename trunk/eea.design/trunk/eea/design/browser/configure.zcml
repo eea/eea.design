@@ -32,6 +32,13 @@
         />
 
     <browser:page
+        for="Products.Archetypes.interfaces.base.IBaseObject"
+        name="download.pdf"
+        class=".pdfview.Download"
+        permission="zope2.View"
+        />
+
+    <browser:page
         for="*"
         name="main_template"
         template="../skins/eea_design/main_template.pt"

@@ -285,3 +285,18 @@ p.discreet {
   position: absolute;
   bottom: 0;
 }
+
+#relatedItems .photoAlbumEntry {
+  clear: both;
+}
+
+#relatedItems .photoAlbumEntryWrapper {
+  float: left;
+  min-width: 128px;
+  min-height: 128px;
+  margin: 0.5em;
+  text-align: center;
+}
+
+#relatedItems .photoAlbumEntry img {
+}
