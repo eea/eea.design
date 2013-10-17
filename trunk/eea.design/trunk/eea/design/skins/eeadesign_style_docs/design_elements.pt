@@ -332,6 +332,7 @@
          they can be added on text fields using TinyMCE through the Styles
          DropDown</p>
 
+    <h3>Standard Portal Message</h3>
     <div class="portalMessage">
         <p i18n:translate="">Settings have been applied</p>
     </div>
@@ -341,6 +342,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Information Portal Message</h3>
     <div class="portalMessage informationMessage">
         <p i18n:translate="">Your screensaver has been upgraded, please consider to restart your computer ... Have a good day</p>
     </div>
@@ -352,6 +354,7 @@
     </pre>
 
 
+    <h3>Error Portal Message</h3>
     <div class="portalMessage errorMessage">
         <p i18n:translate="">This is an example of an error message</p>
     </div>
@@ -361,6 +364,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Warning Portal Message</h3>
     <div class="portalMessage warningMessage">
         <p i18n:translate="">Warning! Core meltdown at EEA HQ, code super-duper-red</p>
     </div>
@@ -371,6 +375,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Warning Portal Message</h3>
     <div class="portalMessage attentionMessage">
         <p i18n:translate="">This is an example of an message that requires your attention</p>
     </div>
@@ -380,6 +385,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Thumbs Up Portal Message</h3>
     <div class="portalMessage thumbsUpMessage">
         <p i18n:translate="">Thumbs up for the content on this site</p>
     </div>
@@ -389,6 +395,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Yes Portal Message</h3>
     <div class="portalMessage yesMessage">
         <p i18n:translate="">Message which could indicate an agreement or
         something done </p>
@@ -400,6 +407,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>No Portal Message</h3>
     <div class="portalMessage noMessage">
         <p i18n:translate="">Message which could indicate a disagreement or
             something not done</p>
@@ -411,6 +419,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Rosette Translation Portal Message</h3>
     <div class="portalMessage rosetteMessage">
         <p i18n:translate="">Message which could indicate a translation
             message</p>
@@ -422,6 +431,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Idea Portal Message</h3>
     <div class="portalMessage ideaMessage">
         <p i18n:translate="">Message which could indicate a call to action
             message</p>
@@ -433,6 +443,7 @@
         &lt;/div&gt;
     </pre>
 
+    <h3>Smiley Portal Message</h3>
     <div class="portalMessage smileyMessage">
         <p i18n:translate="">Smiley Message type</p>
     </div>
@@ -442,7 +453,7 @@
         &lt;/div&gt;
     </pre>
 
-
+    <h3>Note Portal Message</h3>
     <div class="portalMessage noteMessage">
         <p i18n:translate="">Note Message</p>
     </div>
