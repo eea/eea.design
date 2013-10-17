@@ -3,6 +3,9 @@ Changelog
 
 8.5-dev - (unreleased)
 ----------------------
+* Feature: replaced png background images of portalMessages with fonts from
+  FontAwesome
+  [ichimdav refs #15235]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav #17037]
