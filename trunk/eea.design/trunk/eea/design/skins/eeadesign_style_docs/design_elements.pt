@@ -351,6 +351,16 @@
         &lt;/div&gt;
     </pre>
 
+
+    <div class="portalMessage errorMessage">
+        <p i18n:translate="">This is an example of an error message</p>
+    </div>
+    <pre i18n:translate="">
+        &lt;div class="portalMessage errorMessage"&gt;
+            &lt;p&gt;This is an example of an error message&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+
     <div class="portalMessage warningMessage">
         <p i18n:translate="">Warning! Core meltdown at EEA HQ, code super-duper-red</p>
     </div>
@@ -358,6 +368,15 @@
         &lt;div class="portalMessage warningMessage"&gt;
             &lt;p&gt;Warning! Core meltdown at EEA HQ, code
                         super-duper-red&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <div class="portalMessage attentionMessage">
+        <p i18n:translate="">This is an example of an message that requires your attention</p>
+    </div>
+    <pre i18n:translate="">
+        &lt;div class="portalMessage attentionMessage"&gt;
+            &lt;p&gt;This is an example of an message that requires your attention&lt;/p&gt;
         &lt;/div&gt;
     </pre>
 
