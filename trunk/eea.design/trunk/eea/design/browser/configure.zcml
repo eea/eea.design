@@ -16,6 +16,7 @@
         factory=".pdfview.OptionsMaker" />
 
     <browser:page
+        zcml:condition="installed collective.sendaspdf"
         for="Products.Archetypes.interfaces.base.IBaseObject"
         name="pdf.cover"
         template="templates/pdf.cover.pt"
@@ -24,6 +25,7 @@
         />
 
     <browser:page
+        zcml:condition="installed collective.sendaspdf"
         for="Products.Archetypes.interfaces.base.IBaseObject"
         name="pdf.body"
         template="templates/pdf.body.pt"
@@ -32,6 +34,7 @@
         />
 
     <browser:page
+        zcml:condition="installed collective.sendaspdf"
         for="Products.Archetypes.interfaces.base.IBaseObject"
         name="download.pdf"
         class=".pdfview.Download"
