@@ -161,6 +161,8 @@ class Body(PDFBody):
         return soup.decode()
 
     def __call__(self, **kwargs):
+        # Cheat condition @@plone_context_state/is_view_template
+        self.request['ACTUAL_URL'] = self.context.absolute_url()
         html = super(Body, self).__call__(**kwargs)
         try:
             html = self.fix_daviz(html)
