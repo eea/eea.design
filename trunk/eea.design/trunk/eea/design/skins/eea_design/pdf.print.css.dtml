@@ -288,15 +288,27 @@ p.discreet {
 
 #relatedItems .photoAlbumEntry {
   clear: both;
+  margin: 0;
 }
 
 #relatedItems .photoAlbumEntryWrapper {
-  float: left;
-  min-width: 128px;
-  min-height: 128px;
-  margin: 0.5em;
-  text-align: center;
+  display: none;
 }
 
-#relatedItems .photoAlbumEntry img {
+#relatedItems .photoAlbumEntryDescription {
+  display: none;
+}
+
+#relatedItems a:link:after,#relatedItems a:visited:after { 
+  content:" [" attr(href) "] "; 
+}
+
+#relatedItems h2 {
+  margin: 50pt 0 20pt 0;
+  padding: 0;
+}
+
+#relatedItems h3 {
+  margin: 0;
+  padding: 0;
 }
