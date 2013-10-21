@@ -3,6 +3,9 @@ Changelog
 
 8.5-dev - (unreleased)
 ----------------------
+* Bug fix: Added hidden came_from input to login button in comments template, 
+  this allows proper redirection when logging in from the comments form
+  [tiberich #17020]
 * Change: Simplified layout for relatedItems for PDF export.
   [demarant refs #17108]
 * Feature: replaced png background images of portalMessages with fonts from
