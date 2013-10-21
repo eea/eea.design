@@ -66,7 +66,8 @@
 
       <dt i18n:translate="">Subscriptions</dt>
       <dd class="portletItem">
-        <span i18n:translate=""><a href="http://www.eea.europa.eu/subscription/targeted-subscription">Sign up</a> to receive our reports (print and/or electronic) and quarterly e-newsletter.</span>
+        <span i18n:translate="">
+		 <span i18n:name="sign-up"><a href="http://www.eea.europa.eu/subscription/targeted-subscription" i18n:translate="">Sign up</a></span> to receive our reports (print and/or electronic) and quarterly e-newsletter.</span>
       </dd>
 
          <dt i18n:translate="">Follow us</dt>

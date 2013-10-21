@@ -22,6 +22,8 @@ Changelog
   [ichimdav refs #17037]
 * Change: Set default cover image copyright within PDF export to EEA
   [voineali refs #17009]
+* Bug fix: Fixed/added  missing i18n attributes most in pdf cover.
+  [prospchr refs #17141]
 
 8.4 - (2013-10-08)
 ------------------

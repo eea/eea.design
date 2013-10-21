@@ -9,7 +9,8 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      metal:define-macro="master">
+      metal:define-macro="master"
+      i18n:domain="eea.notranslation">
 
     <metal:cache use-macro="here/global_cache_settings/macros/cacheheaders">
         Get the global cache headers located in global_cache_settings.
@@ -48,7 +49,7 @@
 </head>
 <body>
 
-<noscript>Note: The slideshow mode requires javascript.</noscript>
+<noscript i18n:translate="">Note: The slideshow mode requires javascript.</noscript>
 
 <div class="layout">
     <div id="controls"><!-- DO NOT EDIT --></div>
