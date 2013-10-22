@@ -1,12 +1,12 @@
 Changelog
 =========
 
-8.5-dev - (unreleased)
-----------------------
+8.5 - (2013-10-22)
+------------------
 * Upgrade step: From 'ZMI > portal_css' remove the 'screen css media' entry
   for ploneCustom.css
   [ichimdav refs #15235]
-* Bug fix: Added hidden came_from input to login button in comments template, 
+* Bug fix: Added hidden came_from input to login button in comments template,
   this allows proper redirection when logging in from the comments form
   [tiberich #17020]
 * Change: Simplified layout for relatedItems for PDF export.
