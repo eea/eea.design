@@ -1793,6 +1793,7 @@ dl.system-message dt {
 
 .informationMessage i:before {
     content: "\f05a";
+    color: &dtml-headingColor;;
 }
 
 .noMessage i:before {
@@ -1827,7 +1828,7 @@ dl.system-message dt {
     content: "\f06a";
 }
 
-.warningMessage i:before {
+.warningMessage {
     font-size: 130%;
 }
 

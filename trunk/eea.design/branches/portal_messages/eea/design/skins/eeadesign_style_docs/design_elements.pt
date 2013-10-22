@@ -370,8 +370,7 @@
     </div>
     <pre i18n:translate="">
         &lt;div class="portalMessage warningMessage"&gt;
-            Warning! Core meltdown at EEA HQ, code
-                        super-duper-red
+            Warning! Core meltdown at EEA HQ, code super-duper-red
         &lt;/div&gt;
     </pre>
 
