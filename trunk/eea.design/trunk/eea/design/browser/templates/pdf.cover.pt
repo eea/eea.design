@@ -64,9 +64,7 @@
     <img tal:define="
         lang  context/@@plone_portal_state/language;
         logo python:'++resource++eea.translations.images/pdflogo-%s.png' % lang"
-      tal:attributes="
-        alt portal_properties/title;
-        src string:${portal_url}/${logo}"/>
+      tal:attributes="src string:${portal_url}/${logo}" />
   </div>
 
 </div>
