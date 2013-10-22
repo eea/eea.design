@@ -1702,137 +1702,73 @@ h3.site-description {
 }
 
 /* .system-message and #error-handling are reST error indicators */
-/* message styles derived from fontAwesome  #15235 */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('&dtml-portal_url;/fontawesome-webfont.eot?v=3.2.1');
-  src: url('&dtml-portal_url;/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'),
-       url('&dtml-portal_url;/fontawesome-webfont.woff?v=3.2.1') format('woff'),
-       url('&dtml-portal_url;/fontawesome-webfont.ttf?v=3.2.1') format('truetype'),
-       url('&dtml-portal_url;/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="portalMessage"]:before,
-[class*=" portalMessage"]:before {
-    display: inline-block;
-    float: left;
-    font-size: 150%;
-    line-height: 2.7em;
-    margin-right: 0.5em;
-    speak: none;
-    text-decoration: inherit;
-}
-
-[class^="portalMessage"],
-[class*=" portalMessage"] {
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-}
 
 dl.portalMessage dt,
 dl.system-message dt {
     color: &dtml-fontColor;;
 }
 
+.portalMessage,
+.system-message,
+error-handling {
+    color: &dtml-fontColor;;
+    font-size: 100%;
+    margin: 1em 0;
+    padding: 0.5em 1em 0.5em 3.5em;
+    vertical-align: middle;
+    /*background-image: url(&dtml-portal_url;/information.png);*/
+    background: no-repeat scroll 1em 50% #C7E0E9;
+}
+
 .portalMessage p {
     margin: 1em 0;
 }
 
-#error-handling,
-.portalMessage,
-.system-message {
-    background-color: #C7E0E9;
-    color: &dtml-fontColor;;
-    font-size: 100%;
-    margin: 1em 0;
-    padding: 0.5em 1.5em;
-    vertical-align: middle;
+.informationMessage {
+    background: url(&dtml-portal_url;/information.png)  no-repeat scroll 1em 50% #C7E0E9;
 }
 
-.ideaMessage,
-.informationMessage,
-.noteMessage,
-.thumbsUpMessage,
-.yesMessage {
-    background-color: #C7E0E9;
-}
-
-#error-handling,
-.errorMessage,
-.smileyMessage,
 .warningMessage {
-    background-color: #FFFABE;
+    font-size: 140%;
+    background: url(&dtml-portal_url;/error.png) no-repeat scroll 1em 50% #FFFABE;;
 }
 
-.attentionMessage:before {
-    color: #FFF577;
-    content: "\f0e7";
+#error-handling, .errorMessage {
+    font-size: 160%;
+    background: url(&dtml-portal_url;/exclamation.png) no-repeat scroll 1em 50% #FFFABE;
 }
 
-.attentionMessage,
+.thumbsUpMessage {
+    background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #C7E0E9;
+}
+
+.attentionMessage {
+    background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #C0CF99;
+}
+
+.yesMessage {
+    background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #C7E0E9;
+}
+
 .noMessage {
-    background-color: #C0CF99;
-}
-
-.errorMessage {
-    color: red;
-}
-
-#error-handling,
-.errorMessage {
-    font-size: 150%;
-}
-
-.ideaMessage:before {
-    content: "\f0eb";
-}
-
-.informationMessage:before {
-    content: "\f05a";
-}
-
-.noMessage:before {
-    color: #f65e5e;
-    content: "\f00d";
-}
-
-.noteMessage:before {
-    content: "\f15c";
-}
-
-.rosetteMessage:before {
-    content: "\f0ac";
+    background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #C0CF99;
 }
 
 .rosetteMessage {
+    background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #FFFABE;
     color: #666666;
 }
 
-.smileyMessage:before {
-    content: "\f118";
+.ideaMessage {
+    background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #C7E0E9;
 }
 
-.thumbsUpMessage:before {
-    content: "\f164";
+.smileyMessage {
+    background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FFFABE;
 }
 
-.errorMessage:before,
-.warningMessage:before {
-    content: "\f06a";
-}
-
-.warningMessage {
-    font-size: 130%;
-}
-
-.yesMessage:before {
-    color: green;
-    content: "\f00c";
+.noteMessage {
+    background: url(&dtml-portal_url;/note.png)  no-repeat scroll 1em 50% #C7E0E9;
 }
 
 .documentByLine {
@@ -2779,3 +2715,4 @@ div.row {
 }
 
 /* </dtml-with> */
+
