@@ -79,16 +79,18 @@ portalMinWidth:string=70em
 columnOneWidth:string=16em
 columnTwoWidth:string=16em
 
-# font icon names and values
+# 15235 font icon names and values
+# always add any new icons here for easier readability and maintainability
+eea-icon-check:string=\f00c
 eea-icon-chevron-down:string=\f078
 eea-icon-chevron-left:string=\f053
+eea-icon-exclamation-circle:string=\f06a
+eea-icon-file-text:string=\f15c
+eea-icon-flash:string=\f0e7
+eea-icon-globe:string=\f0ac
 eea-icon-info-circle:string=\f05a
 eea-icon-lightbulb-o:string=\f0eb
-eea-icon-flash:string=\f0e7
-eea-icon-times:string=\f00d
-eea-icon-file-text:string=\f15c
-eea-icon-globe:string=\f0ac
 eea-icon-smile-o:string=\f118
 eea-icon-thumbs-up:string=\f164
-eea-icon-exclamation-circle:string=\f06a
-eea-icon-check:string=\f00c
+eea-icon-times:string=\f00d
+
