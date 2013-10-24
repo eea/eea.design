@@ -39,6 +39,75 @@
     -moz-osx-font-smoothing: grayscale;
     speak: none;
 }
+/* FontAwesome classes for larger or stacked icon styles */
+.eea-icon-lg {
+  font-size: 1.33em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.eea-icon-2x {
+  font-size: 2em;
+}
+.eea-icon-3x {
+  font-size: 3em;
+}
+.eea-icon-4x {
+  font-size: 4em;
+}
+.eea-icon-5x {
+  font-size: 5em;
+}
+.eea-icon-fw {
+  width: 1.28em;
+  text-align: center;
+}
+.eea-icon-ul {
+  padding-left: 0;
+  margin-left: 2.14em;
+  list-style-type: none;
+}
+.eea-icon-ul > li {
+  position: relative;
+}
+.eea-icon-li {
+  position: absolute;
+  left: -2.14em;
+  width: 2.14em;
+  top: 0.14em;
+  text-align: center;
+}
+.eea-icon-li.eea-icon-lg {
+  left: -1.85em;
+}
+.eea-icon-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+
+.eea-icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.eea-icon-stack-1x,
+.eea-icon-stack-2x {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+.eea-icon-stack-1x {
+  line-height: inherit;
+}
+.eea-icon-stack-2x {
+  font-size: 2em;
+}
+.eea-icon-inverse {
+  color: #ffffff;
+}
 
 .eea-icon-right {
     float: right;
@@ -48,6 +117,15 @@
     float: left;
 }
 
+.eea-icon.eea-icon-left {
+  margin-right: .3em;
+}
+
+.eea-icon.eea-icon-right {
+  margin-left: .3em;
+}
+
+/* icons utf definitions */
 .eea-icon-chevron-down:before {
     content: "\f078";
 }
