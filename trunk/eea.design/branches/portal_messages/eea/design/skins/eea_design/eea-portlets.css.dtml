@@ -952,13 +952,13 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 .portletNavigationTree .eea-icon-right:after,
 .collapsed .portletHeader .eea-icon-right:after
 {
-    content: "\f053";  /* eea-icon-chevron-left */
+    content: "&dtml-eea-icon-chevron-left;";
 }
 
 .portletNavigationTree .current .eea-icon-right:after,
 .portletHeader .eea-icon-right:after
  {
-    content: "\f078"; /* eea-icon-chevron-down */
+    content: "&dtml-eea-icon-chevron-down;";
 }
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {

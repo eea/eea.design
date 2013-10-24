@@ -712,24 +712,33 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
 }
 .eea-accordion-panel .eea-accordion-title, .eea-accordion-panel > h2 {
-    background: #E2E2E2 url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 98% 12px;
+    background-color: #E2E2E2;
     border: 1px solid #E0E0E0;
     margin: 0;
     font-size: 115%;
     color: #00446A;
     line-height: 3em;
-    padding: 0 0 0 10px;
+    padding: 0 10px;
     font-weight: bold;
+}
+
+.eea-accordion-panel i:before {
+    content: "&dtml-eea-icon-chevron-left;";
+}
+
+.eea-accordion-panel h2:hover > i:before,
+.eea-accordion-panel .current i:before {
+    content: "&dtml-eea-icon-chevron-down;";
 }
 
 .eea-accordion-panel .eea-accordion-title:hover, .eea-accordion-panel > h2:hover {
     cursor: pointer;
-    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
+    background-color: #F0F0F0;
 }
 
 .eea-accordion-panel .eea-accordion-title.current,
 .eea-accordion-panel > h2.current {
-    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
+    background-color: #F0F0F0;
 }
 
 .eea-accordion-panel .eea-accordion-title a,
@@ -1745,7 +1754,7 @@ dl.system-message dt {
 
 .attentionMessage i:before {
     color: #FFF577;
-    content: "\f0e7";
+    content: "&dtml-eea-icon-flash;";
 }
 
 .attentionMessage,
@@ -1763,26 +1772,26 @@ dl.system-message dt {
 }
 
 .ideaMessage i:before {
-    content: "\f0eb";
+    content: "&dtml-eea-icon-lightbulb-o;";
 }
 
 .informationMessage i:before {
-    content: "\f05a";
+    content: "&dtml-eea-icon-info-circle;";
     color: &dtml-headingColor;;
     font-size: 125%;
 }
 
 .noMessage i:before {
     color: #f65e5e;
-    content: "\f00d";
+    content: "&dtml-eea-icon-times;";
 }
 
 .noteMessage i:before {
-    content: "\f15c";
+    content: "&dtml-eea-icon-file-text;";
 }
 
 .rosetteMessage i:before {
-    content: "\f0ac";
+    content: "&dtml-eea-icon-globe;";
 }
 
 .rosetteMessage {
@@ -1790,18 +1799,18 @@ dl.system-message dt {
 }
 
 .smileyMessage i:before {
-    content: "\f118";
+    content: "&dtml-eea-icon-smile-o;";
 }
 
 .thumbsUpMessage i:before {
-    content: "\f164";
+    content: "&dtml-eea-icon-thumbs-up;";
 }
 
 .errorMessage i:before,
 .error i:before,
 .warningMessage i:before
 {
-    content: "\f06a";
+    content: "&dtml-eea-icon-exclamation-circle;";
 }
 
 .warningMessage {
@@ -1810,7 +1819,7 @@ dl.system-message dt {
 
 .yesMessage i:before {
     color: green;
-    content: "\f00c";
+    content: "&dtml-eea-icon-check;";
 }
 
 .documentByLine {

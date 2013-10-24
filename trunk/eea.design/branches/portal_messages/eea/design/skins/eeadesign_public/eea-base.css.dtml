@@ -33,7 +33,7 @@
     font-family: 'FontAwesome';
     font-weight: normal;
     font-style: normal;
-    line-height: 1;
+    line-height: inherit;
     text-decoration: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -127,11 +127,11 @@
 
 /* icons utf definitions */
 .eea-icon-chevron-down:before {
-    content: "\f078";
+    content: "&dtml-eea-icon-chevron-down;";
 }
 
 .eea-icon-chevron-left:before {
-    content: "\f053";
+    content: "&dtml-eea-icon-chevron-left;";
 }
 
 img {
