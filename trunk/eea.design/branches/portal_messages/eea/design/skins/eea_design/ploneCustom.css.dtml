@@ -1703,35 +1703,6 @@ h3.site-description {
 
 /* .system-message and #error-handling are reST error indicators */
 /* message styles derived from fontAwesome  #15235 */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('&dtml-portal_url;/fontawesome-webfont.eot?v=3.2.1');
-  src: url('&dtml-portal_url;/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-       url('&dtml-portal_url;/fontawesome-webfont.woff?v=3.2.1') format('woff'),
-       url('&dtml-portal_url;/fontawesome-webfont.ttf?v=3.2.1') format('truetype'),
-       url('&dtml-portal_url;/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-i {
-    display: block;
-    float: left;
-    padding: 0 0.5em 0.5em;
-    width: auto;
-    height: auto;
-    vertical-align: baseline;
-    background: none repeat 0% 0%;
-    margin-top: 0;
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    speak: none;
-}
-
 
 dl.portalMessage dt,
 dl.system-message dt {

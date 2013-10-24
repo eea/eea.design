@@ -128,9 +128,9 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 .portletGradientStandard {
     background: #E6E6E6;
     background-image: -webkit-linear-gradient(top,#E6E6E6,#D6D6D6);
-    background: -webkit-linear-gradient(#E6E6E6, #D6D6D6); /* Safari 5.1+, Chrome 10+ */  
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6')"; /* IE8+ */  
+    background: -webkit-linear-gradient(#E6E6E6, #D6D6D6); /* Safari 5.1+, Chrome 10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6')"; /* IE8+ */
     background: -moz-linear-gradient(#E6E6E6, #D6D6D6) repeat scroll 0 0 transparent;
     background-image: -ms-linear-gradient(top,#E6E6E6,#D6D6D6);
     background-image: -o-linear-gradient(top,#E6E6E6,#D6D6D6);
@@ -145,14 +145,12 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 
 #document-toc {
-    margin: 0 0;
     width: 95%;
     margin-top: 0.5em;
-    padding: 1em;
     clear: both;
     color: #333;
     font-size: 120%;
-    padding: 0.5em 2em 1em 1em;
+    padding: 0.5em 1em 1em 1em;
     text-shadow: 0 1px 1px #fff;
 }
 
@@ -163,11 +161,8 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 .collapsable-portlet .portletHeader {
     cursor: pointer;
     padding: 0 20px 0 0;
-    background: url(&dtml-portal_url;/accordion_down.png) no-repeat center right transparent;
 }
-.collapsable-portlet.collapsed .portletHeader {
-    background: url(&dtml-portal_url;/accordion_right.png) no-repeat center right transparent;
-}
+
 .collapsable-portlet.collapsed .portletItem {
     display: none;
 }
@@ -338,8 +333,8 @@ dd.portletFooter a:visited {
 
 #content img {
     vertical-align: middle;
-    /* don't allow images to be bigger than 
-     * content width #5054  
+    /* don't allow images to be bigger than
+     * content width #5054
     max-width: 100%; */
 }
 
@@ -941,11 +936,29 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
   cursor: pointer;
   margin: 0;
   display: block;
-  background: url("&dtml-portal_url;/accordion_left.png") no-repeat scroll right center transparent;
 }
 
-dl.portletNavigationTree dt.current span.title {
-  background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll right center transparent;
+.portletNavigationTree .eea-icon-right:after,
+.portletHeader .eea-icon-right:after
+{
+    font-size: 1.2em;
+    color: #9cb43c;
+}
+
+.portletHeader .eea-icon-right:after {
+    font-size: 75%;
+}
+
+.portletNavigationTree .eea-icon-right:after,
+.collapsed .portletHeader .eea-icon-right:after
+{
+    content: "\f053";  /* eea-icon-chevron-left */
+}
+
+.portletNavigationTree .current .eea-icon-right:after,
+.portletHeader .eea-icon-right:after
+ {
+    content: "\f078"; /* eea-icon-chevron-down */
 }
 
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
@@ -1114,3 +1127,4 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE
 */
+

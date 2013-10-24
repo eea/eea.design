@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
         }
         var alphanumeric = /^\w+$/i;
         var $children = $el.children();
-        var $i_tag = $("<i class='iconMessage' />");
+        var $i_tag = $("<i class='eea-icon' />");
         if ( $children.length ) {
             // add the i tag to the first child if the node is not text or
             // the node contains only spaces which will not pass the alphanumeric regex
@@ -48,7 +48,15 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $(".eea-icon-left-container").each(function(i, el) {
+        var $i_tag = $("<i class='eea-icon eea-icon-left' />");
+        $(el).prepend($i_tag);
+    });
 
+    $(".eea-icon-right-container").each(function(i, el) {
+        var $i_tag = $("<i class='eea-icon eea-icon-right' />");
+       $(el).append($i_tag);
+    });
 
     // #5454 remove background for required fields that have the red square 
     $(".required:contains('■')").addClass('no-bg');
