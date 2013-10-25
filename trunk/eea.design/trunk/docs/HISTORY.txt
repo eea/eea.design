@@ -3,6 +3,8 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Bug fix: Scroll content only inside the slide body for the presentation_view
+  [ichimdav refs #16879]
 
 8.5 - (2013-10-22)
 ------------------
