@@ -1,43 +1,49 @@
 html > body div#controls {
-  left:  0;
-  width:  auto;
+    left:  0;
+    width:  auto;
 }
 
 .layout #footer {
-  background-position: right;
-  background-color: white;
+    background-position: 98% 50%;
+    background-color: white;
 }
-
+div#header {
+    background-color: transparent;
+    border: 0;
+}
 #slide0 .mainImage {
-  text-align: center;
+    text-align: center;
 }
 
+#slide0 h1 {
+    text-align: right;
+    margin: 0;
+    padding-bottom: 2em;
+}
 #slide0 .mainImage img {
-  width: auto;
+    width: auto;
 }
 
 html > body .slide {
-  overflow: auto;
-  max-height:  69%;
+    overflow: auto;
+    max-height:  69%;
+    margin-top: 2em;
 }
 
 .slide img {
-  width:  100%;
+    width:  100%;
 }
 
 iframe {
-  display: block;
+    display: block;
 }
 
 .slide h1 {
-    position: relative;
     text-align: left;
-    padding: 0.3em 0;
-}
-
-.presentation {
-    height: 100%;
+    padding: 0.5em;
     position: fixed;
     width: 100%;
-    margin-top: 3em;
+    display: block;
+    background: white;
+    border-bottom: 10px solid #6fbfbd;
 }
