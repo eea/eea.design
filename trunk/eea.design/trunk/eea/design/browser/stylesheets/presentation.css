@@ -3,6 +3,10 @@ html > body div#controls {
     width:  auto;
 }
 
+p {
+    display: block;
+}
+
 .layout #footer {
     background-position: 98% 50%;
     background-color: white;
@@ -11,6 +15,18 @@ div#header {
     background-color: transparent;
     border: 0;
 }
+
+div#footer {
+    height: 35px;
+}
+
+div#controls form {
+    position: relative;
+    height: 40px;
+    width: 130px;
+    top: 17px;
+}
+
 #slide0 .mainImage {
     text-align: center;
 }
