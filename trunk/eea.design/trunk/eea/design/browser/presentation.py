@@ -21,7 +21,8 @@ class EEAPresentationView(PresentationView):
         first = True
         for elem in soup.body.contents:
             try:
-                if elem.name in ['h1', 'h2']:
+                tag_name = elem.name
+                if tag_name in ['h1', 'h2']:
                     if not first:
                         out.append('</div>')
                     out.append('<div class="slide">')
@@ -30,11 +31,12 @@ class EEAPresentationView(PresentationView):
                     elem.clear()
                     elem.append(text)
                     first = False
-                elif elem.name == 'p' and \
+                elif tag_name == 'p' and \
                         (elem.find('iframe') or elem.find('img')):
                     elem.name = 'div'
-                elif elem.name == 'p' and not elem.has_attr('class'):
-                    continue
+                elif tag_name == 'p' and not elem.has_attr('class'):
+                    if not elem.find('span', 'markPresentationalText'):
+                        continue
             except AttributeError:
                 pass
             if isinstance(elem, NavigableString) and not elem.strip():
