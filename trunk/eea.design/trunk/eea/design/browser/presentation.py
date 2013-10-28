@@ -44,14 +44,14 @@ class EEAPresentationView(PresentationView):
         out = BeautifulSoup(''.join(out))
 
         final_html = []
-        slides = out.find_all('div', class_='slide')
+        slides = out.find_all('div', 'slide') # slide is the matching class
         for slide in slides:
             visible_content = []
             for elem in slide.contents:
                 name = getattr(elem, 'name', None)
                 if name and name not in ['h1']:
                     visible_content.append(elem)
-            if visible_content:
+            if visible_content or self.can_show_help_message():
                 html = slide.decode(formatter='html')
                 final_html.append(html)
         return ''.join(final_html)

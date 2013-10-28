@@ -1,11 +1,12 @@
-var original_go = go;
-var original_subgo = subgo;
+var original_go = window.go;
+var original_subgo = window.subgo;
 var slides = document.getElementsByClassName('slide');
 
 
 var scroll_top = function(){
   document.body.scrollTop = document.documentElement.scrollTop = 0;
-  for (var i = 0, slides_length = slides.length; i < slides_length; i++){
+  var i, slides_length;
+  for (i = 0, slides_length = slides.length; i < slides_length; i+= 1){
     var slide = slides[i];
     slide.scrollTop = 0;
   }
@@ -18,7 +19,7 @@ function showHelpMessage(el) {
     var current_slide_id = "slide" + current_value;
     var current_slide = document.getElementById(current_slide_id);
     var help_message = document.getElementById('presentation_help_message');
-    if ( current_slide.childNodes.length < 2 && help_message ) {
+    if ( current_slide.childNodes.length < 3 && help_message ) {
         if ( help_message.className !== "visible" ) {
             help_message.className = "visible";
         }
@@ -30,13 +31,13 @@ function showHelpMessage(el) {
     }
 }
 
-go = function(step){
+window.go = function(step){
   original_go(step);
   showHelpMessage("jumplist");
   scroll_top();
 };
 
-subgo = function(step){
+window.subgo = function(step){
   original_subgo(step);
   showHelpMessage("jumplist");
   scroll_top();
