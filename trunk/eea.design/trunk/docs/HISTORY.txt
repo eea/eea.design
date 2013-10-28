@@ -3,6 +3,10 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Upgrade step: Within www/portal_tinymce/@@tinymce-controlpanel
+   - Add the following TinyMCE style:
+     - Mark text for presentation|span|markPresentationalText
+  [ichimdav refs #16879]
 * Change: Simplified data and maps frontpage.
   [demarant fixes #16735]
 * Bug fix: Scroll content only inside the slide body for the presentation_view
