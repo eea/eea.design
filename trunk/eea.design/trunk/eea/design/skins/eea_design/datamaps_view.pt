@@ -18,22 +18,7 @@
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="right-column-area">
 
-		    <!-- data and maps global search -->
-		    <a href="find/global" 
-		       class="archives advanced-search-link" 
-		       title="Go to advanced search"
-		       i18n:attributes="title">
-                    <span i18n:translate="">Advanced</span></a>
-		    <div class="featured">
-		       <h2 i18n:translate="">Search</h2>
-		       <form tal:attributes="action string:${here/absolute_url}/find/global"  method="get" id="faceted-text-search" class="searchforms faceted-external-search">
-                   <input type="text" name="c12" title="Search data, maps, indicators" i18n:attributes="title" value="" />
-                   <input type="submit" value="Search" i18n:attributes="value" name="search" />
-		       </form>
-		    </div>
-
                         <!-- featured content -->
-                       <div metal:use-macro="here/portlet_featured_indicator/macros/portlet" />
 
                         <!--<div class="featured">
                           <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
@@ -86,17 +71,33 @@
                     </div>
 
                     <div id="highlights-area" class="column-area">
-		    <h2 i18n:translate="">Highlights</h2>
+		    <!-- h2 i18n:translate="">Highlights</h2 -->
                     <!-- promotions_gallery_slideshow-->
-                    <metal:promotions
+                    <!-- metal:promotions
                         tal:define="frontpage python: True;
                                     promo_view datamaps_view;
 				    show_description python:False;">
                             <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
                                 promoted item
                             </div>
-                    </metal:promotions>
+                    </metal:promotions -->
                     <!-- end promotions_gallery_slideshow -->
+
+                    <!-- data and maps global search -->
+                    <a href="find/global"
+                       class="archives advanced-search-link"
+                       title="Go to advanced search"
+                       i18n:attributes="title">
+                    <span i18n:translate="">Advanced</span></a>
+                    <div class="featured">
+                       <h2 i18n:translate="">Search data products</h2>
+                       <form tal:attributes="action string:${here/absolute_url}/find/global"  method="get" id="faceted-text-search" class="searchforms 
+faceted-external-search">
+                   <input type="text" name="c12" title="Search data, maps, graphs" i18n:attributes="title" value="" />
+                   <input type="submit" value="Search" i18n:attributes="value" name="search" />
+                       </form>
+                    </div>
+
 
                     <div id="news-header" >
                     <h2 i18n:translate=""> Browse complete catalogue</h2>
@@ -110,7 +111,7 @@
 			                  tal:define="more_hrefs  more_hrefs|python: ['find', 'data', 'find#c1=Map', 'explore-interactive-maps', 'indicators', 'find#c1=Graph' ];
 			                              datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
                             <ul class="eea-tabs two-rows"
-                                tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps', 'Indicators', 'Graphs' ];">
+                                tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps','Indicators', 'Graphs' ];">
                                 <li tal:repeat="tab tabnames">
                                     <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
                                 </li>
@@ -129,7 +130,7 @@
 			    <tal:tab define="more_href python:more_hrefs[3]">
                               <div metal:use-macro="here/datamaps_macros/macros/interactivemaps" />
                             </tal:tab>
-			    <tal:tab define="more_href python:more_hrefs[4]">
+                           <tal:tab define="more_href python:more_hrefs[4]">
                               <div metal:use-macro="here/datamaps_macros/macros/indicators" />
                             </tal:tab>
 			    <tal:tab define="more_href python:more_hrefs[5]">

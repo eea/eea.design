@@ -3,6 +3,8 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Change: Simplified data and maps frontpage.
+  [demarant fixes #16735]
 * Bug fix: Scroll content only inside the slide body for the presentation_view
   [ichimdav refs #16879]
 
