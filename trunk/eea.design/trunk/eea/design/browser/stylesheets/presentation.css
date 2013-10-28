@@ -3,8 +3,12 @@ html > body div#controls {
     width:  auto;
 }
 
-p {
+.visible, p {
     display: block;
+}
+
+.hidden {
+    display: none;
 }
 
 .layout #footer {
@@ -25,6 +29,14 @@ div#controls form {
     height: 40px;
     width: 130px;
     top: 17px;
+}
+
+#presentation_help_message {
+    position: fixed;
+    top: 25%;
+    padding: 0.5em;
+    background: #FFF;
+    z-index: 5;
 }
 
 #slide0 .mainImage {
