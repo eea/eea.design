@@ -7,6 +7,9 @@ Changelog
   [demarant fixes #16735]
 * Bug fix: Scroll content only inside the slide body for the presentation_view
   [ichimdav refs #16879]
+* Bug fix: Removed some style in IE8fixes and IE9fixes for compatibility with
+  other changes.
+  [prospchr refs #17288]
 
 8.5 - (2013-10-22)
 ------------------

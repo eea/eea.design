@@ -474,7 +474,7 @@ dd.portletItem {
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
-    display: block !important;
+/* Removed display: block !important in order for the 'en' icon to come up */
 }
 
 
