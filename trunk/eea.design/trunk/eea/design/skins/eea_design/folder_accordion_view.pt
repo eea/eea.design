@@ -19,7 +19,8 @@
             <div class="eea-accordion-panels">
                 <tal:children tal:repeat="child FolderishItems">
                     <div class="eea-accordion-panel" tal:condition="child/nitems">
-                        <h2><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a></h2>
+                        <h2 class="eea-icon-right-container"><a tal:content="python:'%s' % (child['title'])" tal:attributes="href child/listing_url"></a>
+                        </h2>
                         <div class="pane">
                             <p class="subfolder-description" tal:condition="child/description" tal:content="child/description"></p>
                             <div class="subfolder-contents" tal:define="subFolderContents child/contents">
@@ -47,7 +48,7 @@
                 <div tal:define="nitems python:len(nonFolderishItems)"
                     tal:condition="nitems"
                     class="eea-accordion-panel">
-                    <h2><a href="#" i18n:translate="">Other resources</a></h2>
+                    <h2 class="eea-icon-right-container"><a href="#" i18n:translate="">Other resources</a></h2>
                     <div class="pane">
                         <div class="subfolder-contents">
                             <div class="photoAlbumEntry"

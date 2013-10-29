@@ -22,17 +22,53 @@ jQuery(document).ready(function($) {
     });
 
 
+//    #15235; add a 'i' tag to portalMessage classes for icon usage
+    var $portal_messages =  $(".portalMessage");
+    $portal_messages.each(function(i, el) {
+        var $el = $(el);
+        if ( el.className === "portalMessage" ) {
+            return;
+        }
+        var alphanumeric = /^\w+$/i;
+        var $children = $el.children();
+        var $i_tag = $("<i class='eea-icon' />");
+        if ( $children.length ) {
+            // add the i tag to the first child if the node is not text or
+            // the node contains only spaces which will not pass the alphanumeric regex
+            if ( el.childNodes[0].nodeName !== "#text" ||
+                !alphanumeric.test(el.childNodes[0].nodeValue) ) {
+                $children.eq(0).prepend($i_tag);
+            }
+            else {
+                $el.prepend($i_tag);
+            }
+        }
+        else {
+            $el.prepend($i_tag);
+        }
+    });
+
+    $(".eea-icon-left-container").each(function(i, el) {
+        var $i_tag = $("<i class='eea-icon eea-icon-left' />");
+        $(el).prepend($i_tag);
+    });
+
+    $(".eea-icon-right-container").each(function(i, el) {
+        var $i_tag = $("<i class='eea-icon eea-icon-right' />");
+       $(el).append($i_tag);
+    });
+
     // #5454 remove background for required fields that have the red square 
     $(".required:contains('■')").addClass('no-bg');
     
     // removed portal-column-two from @@usergroup-userprefs #4817
-    if($("#portlet-prefs").length) {
+    if( $("#portlet-prefs").length ) {
         $("#portal-column-two").remove();
         $("#portal-column-content").removeClass('width-3:4').addClass('width-full');
     }
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
-    if (r.test(window.location.pathname)) {
+    if ( r.test(window.location.pathname) ) {
         $('body').addClass('fullscreen');
         $('#icon-full_screen').parent().remove();
     }
@@ -41,11 +77,11 @@ jQuery(document).ready(function($) {
     var edit_bar = $("#edit-bar");
     var edit_translate = function() {
         var translating = $("#content").find('form').find('.hiddenStructure').text().indexOf('Translating');
-        if(translating !== -1) {
+        if ( translating !== -1 ) {
             edit_bar.closest('#portal-column-content')[0].className = "cell width-full position-0";
         }
     };
-    if(edit_bar) {
+    if ( edit_bar ) {
         edit_translate();
     }
 
@@ -54,7 +90,7 @@ jQuery(document).ready(function($) {
     var $auto_related = $("#auto-related"),
         $prev = $auto_related.prev(),
         $dls = $auto_related.find('dl');
-    if($dls.length) {
+    if ( $dls.length ) {
         $auto_related.detach();
         $dls.each(function(idx, item){
             var $item = $(item),
@@ -74,15 +110,15 @@ jQuery(document).ready(function($) {
     var toggleEcotipClass = function(){
         var ecotip = $('#portlet-ecotip'),
             action, bulb, led;
-        if(ie && ie < 10) {
+        if ( ie && ie < 10 ) {
             bulb = ecotip.find('.ecotip-bulb');
             led = ecotip.find('.led-bulb');
             action = function(){
-                if ($.fadeToggle){
+                if ( $.fadeToggle ) {
                     bulb.fadeToggle();
                     led.fadeToggle();
                 }
-                else{
+                else {
                     bulb.is(":visible") ? bulb.fadeOut() : bulb.fadeIn();
                     led.is(":visible") ? led.fadeOut() : led.fadeIn();
                 }
@@ -113,7 +149,7 @@ jQuery(document).ready(function($) {
     // Layout of top promotions. It's safer to do this in JS as there was some rounding issues
     // with IE in window sizes that wasn't dividible by 5.
     var top_news = $('#top-news-area');
-    if (top_news.length) {
+    if ( top_news.length ) {
         themePromotionPortlets(top_news);
     }
 });

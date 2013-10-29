@@ -712,24 +712,33 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
 }
 .eea-accordion-panel .eea-accordion-title, .eea-accordion-panel > h2 {
-    background: #E2E2E2 url("&dtml-portal_url;/accordion_left.png") no-repeat scroll 98% 12px;
+    background-color: #E2E2E2;
     border: 1px solid #E0E0E0;
     margin: 0;
     font-size: 115%;
     color: #00446A;
     line-height: 3em;
-    padding: 0 0 0 10px;
+    padding: 0 10px;
     font-weight: bold;
+}
+
+.eea-accordion-panel i:before {
+    content: "&dtml-eea-icon-chevron-left;";
+}
+
+.eea-accordion-panel h2:hover > i:before,
+.eea-accordion-panel .current i:before {
+    content: "&dtml-eea-icon-chevron-down;";
 }
 
 .eea-accordion-panel .eea-accordion-title:hover, .eea-accordion-panel > h2:hover {
     cursor: pointer;
-    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
+    background-color: #F0F0F0;
 }
 
 .eea-accordion-panel .eea-accordion-title.current,
 .eea-accordion-panel > h2.current {
-    background: #F0F0F0 url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 98% 17px;
+    background-color: #F0F0F0;
 }
 
 .eea-accordion-panel .eea-accordion-title a,
@@ -1702,73 +1711,115 @@ h3.site-description {
 }
 
 /* .system-message and #error-handling are reST error indicators */
+/* message styles derived from fontAwesome  #15235 */
 
 dl.portalMessage dt,
 dl.system-message dt {
     color: &dtml-fontColor;;
 }
 
-.portalMessage,
-.system-message,
-error-handling {
-    color: &dtml-fontColor;;
-    font-size: 100%;
-    margin: 1em 0;
-    padding: 0.5em 1em 0.5em 3.5em;
-    vertical-align: middle;
-    /*background-image: url(&dtml-portal_url;/information.png);*/
-    background: no-repeat scroll 1em 50% #C7E0E9;
-}
-
 .portalMessage p {
     margin: 1em 0;
 }
 
-.informationMessage {
-    background: url(&dtml-portal_url;/information.png)  no-repeat scroll 1em 50% #C7E0E9;
+.portalMessage i:before {
+    margin-right: .3em;
+}
+
+#error-handling,
+.portalMessage,
+.system-message {
+    background-color: #C7E0E9;
+    color: &dtml-fontColor;;
+    font-size: 100%;
+    margin: 1em 0;
+    padding: 0.5em 1.5em;
+    vertical-align: middle;
+}
+
+.ideaMessage,
+.informationMessage,
+.noteMessage,
+.thumbsUpMessage,
+.yesMessage {
+    background-color: #C7E0E9;
+}
+
+#error-handling,
+.errorMessage,
+.smileyMessage,
+.warningMessage {
+    background-color: #FFFABE;
+}
+
+.attentionMessage i:before {
+    color: #FFF577;
+    content: "&dtml-eea-icon-flash;";
+}
+
+.attentionMessage,
+.noMessage {
+    background-color: #C0CF99;
+}
+
+.errorMessage {
+    color: red;
+}
+
+#error-handling,
+.errorMessage {
+    font-size: 160%;
+}
+
+.ideaMessage i:before {
+    content: "&dtml-eea-icon-lightbulb-o;";
+}
+
+.informationMessage i:before {
+    content: "&dtml-eea-icon-info-circle;";
+    color: &dtml-headingColor;;
+    font-size: 125%;
+}
+
+.noMessage i:before {
+    color: #f65e5e;
+    content: "&dtml-eea-icon-times;";
+}
+
+.noteMessage i:before {
+    content: "&dtml-eea-icon-file-text;";
+}
+
+.rosetteMessage i:before {
+    content: "&dtml-eea-icon-globe;";
+}
+
+.rosetteMessage {
+    color: #666666;
+}
+
+.smileyMessage i:before {
+    content: "&dtml-eea-icon-smile-o;";
+}
+
+.thumbsUpMessage i:before {
+    content: "&dtml-eea-icon-thumbs-up;";
+}
+
+.errorMessage i:before,
+.error i:before,
+.warningMessage i:before
+{
+    content: "&dtml-eea-icon-exclamation-circle;";
 }
 
 .warningMessage {
     font-size: 140%;
-    background: url(&dtml-portal_url;/error.png) no-repeat scroll 1em 50% #FFFABE;;
 }
 
-#error-handling, .errorMessage {
-    font-size: 160%;
-    background: url(&dtml-portal_url;/exclamation.png) no-repeat scroll 1em 50% #FFFABE;
-}
-
-.thumbsUpMessage {
-    background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.attentionMessage {
-    background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #C0CF99;
-}
-
-.yesMessage {
-    background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.noMessage {
-    background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #C0CF99;
-}
-
-.rosetteMessage {
-    background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #FFFABE;
-    color: #666666;
-}
-
-.ideaMessage {
-    background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.smileyMessage {
-    background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FFFABE;
-}
-
-.noteMessage {
-    background: url(&dtml-portal_url;/note.png)  no-repeat scroll 1em 50% #C7E0E9;
+.yesMessage i:before {
+    color: green;
+    content: "&dtml-eea-icon-check;";
 }
 
 .documentByLine {
@@ -2715,4 +2766,3 @@ div.row {
 }
 
 /* </dtml-with> */
-
