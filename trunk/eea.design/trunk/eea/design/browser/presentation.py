@@ -4,6 +4,10 @@ from Products.CMFCore.utils import getToolByName
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString
 from plone.app.layout.presentation.presentation import PresentationView
+from plone.memoize.view import memoize
+import logging
+
+logger = logging.getLogger("presentation")
 
 
 class EEAPresentationView(PresentationView):
@@ -58,9 +62,11 @@ class EEAPresentationView(PresentationView):
                 final_html.append(html)
         return ''.join(final_html)
 
+    @memoize
     def can_show_help_message(self):
         """ Check permission before displaying help text within presentation
         """
+        logger.info("called can_show")
         mtool = getToolByName(self.context, "portal_membership")
         return mtool.checkPermission('eea.daviz: Add presentation',
                                      self.context)
