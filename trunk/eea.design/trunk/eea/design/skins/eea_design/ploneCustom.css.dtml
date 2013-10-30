@@ -1729,7 +1729,7 @@ dl.system-message dt {
     color: &dtml-fontColor;;
     font-size: 100%;
     margin: 1em 0;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.5em;
     vertical-align: middle;
     line-height: 1;
 }
