@@ -1,3 +1,5 @@
+/* <dtml-with base_properties> */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> */
 @font-face {
     font-family: 'FontAwesome';
     src: url('&dtml-portal_url;/fontawesome-webfont.eot?v=3.2.1');
@@ -1658,3 +1660,5 @@
 .eea-icon-try:before {
   content: "\f195";
 }
+
+/* END OF eea-fonts.CSS RULES </dtml-with> */
