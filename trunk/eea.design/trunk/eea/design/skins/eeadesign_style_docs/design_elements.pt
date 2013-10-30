@@ -454,6 +454,35 @@
         &lt;/div&gt;
     </pre>
 
+
+    <h2 i18n:translate="">EEA Icons</h2>
+    <p>We load the entire set of FontAwesome icons within our portal
+        These means that all of the icons found
+        <a href="http://fontawesome.io/icons/">here</a> can also be
+        used as part of our portal.
+    </p>
+    <p>One change that we have made for these icons is to use our own class name from the generic <strong>fa</strong> classname to <strong>eea-icon</strong></p>
+    <p>Therefore this original example:</p>
+    <pre>&lt;a href="#">&lt;i class="fa fa-anchor">&lt;/i>Anchor link&lt;/a&gt;</pre>
+    <p>Becomes:</p>
+    <pre>&lt;a href="#"&gt;&lt;i class="eea-icon eea-icon-anchor"&gt;&lt;/i&gt;Anchor link&lt;/a&gt;</pre>
+    <p>Which results into the following link with icon:</p>
+    <p><a href="#"><i class="eea-icon eea-icon-anchor"></i>Anchor link</a></p>
+    <h3>Icons placed to the right of the text</h3>
+    <p>You can also move the icon to the right of the text by placing the <strong>i tag</strong> to the right of the text as seen in this example:</p>
+    <pre>&lt;a href="#"&gt;Anchor link&lt;i class="eea-icon eea-icon-anchor"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
+    <p><a href="#">Anchor link<i class="eea-icon eea-icon-anchor"></i></a></p>
+    <h3>Right floated Icons</h3>
+    <p>By using the following markup which adds an extra <strong>eea-icon-right</strong> class:</p>
+    <pre>&lt;a href="#"&gt;Anchor link with right floated icon&lt;i class="eea-icon
+        eea-icon-right eea-icon-anchor"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
+    <p>We can float the icon to the right of the text as we can see
+    from the following example, useful when using these icons as actions buttons like the ones found on the Navigation menu:</p>
+
+    <p><a href="#" style="display:block;">Anchor link with right floated icon<i class="eea-icon eea-icon-right eea-icon-anchor"></i></a></p>
+
+
+
     <h2 i18n:translate="">Auto-Link-Icons</h2>
     <p i18n:translate="">
         Link types are automatically detected on client side
