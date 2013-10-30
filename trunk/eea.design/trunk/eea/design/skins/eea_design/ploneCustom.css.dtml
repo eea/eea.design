@@ -2395,6 +2395,11 @@ body .ploneSkin .mce_formatPreview a {
     min-width: 145px;
 }
 
+/* #16879 highlight class only on TinyMCE edit */
+.mceContentBody .markPresentationalText {
+    background-color: #ffb;
+}
+
 /* #5267 display form fields for translated items */
 form[name="edit_form"] > table > tbody > tr {
     display: table-row;
