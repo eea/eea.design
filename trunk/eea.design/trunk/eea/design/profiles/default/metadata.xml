@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <metadata>
    <description>EEA Design profile</description>
-   <version>8.7</version>
+   <version>8.6</version>
    <dependencies>
         <dependency>profile-Products.EEAPloneAdmin:default</dependency>
         <dependency>profile-Products.NavigationManager:default</dependency>
