@@ -64,18 +64,11 @@
     <div tal:condition="view/can_show_help_message"
         id="presentation_help_message" class="hidden">
         <h3 i18n:translate="text_presentation_missing_content">
-            For Plone to show this page as a presentation to work, it must
-            find some headings in your document. The document will be split
-            into slides based upon those tags.
-            Further you must have the
-           'Enable Presentation' setting turned on in the user interface
-           for this piece of content.
+            <span tal:condition="view/default_empty_slide_help_text"
+                    tal:content="view/default_empty_slide_help_text"
+                    tal:omit-tag="">
+            </span>
         </h3>
-        <p>
-            For body content you can only
-            use the following TinyMCE classes:
-            Portal Messages, Pull-quote, Call-out, Highlight
-        </p>
     </div>
 
     <div class="slide"

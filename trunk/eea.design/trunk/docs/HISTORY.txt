@@ -3,6 +3,9 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Feature: Added empty_slide_help_text property to site_properties on 
+  production which will be used for the empty slide help message
+  [ichimdav refs #16879]
 * Change: Simplified data and maps frontpage.
   [demarant fixes #16735]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
