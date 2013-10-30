@@ -1722,10 +1722,6 @@ dl.system-message dt {
     margin: 1em 0;
 }
 
-.portalMessage i:before {
-    margin-right: .3em;
-}
-
 #error-handling,
 .portalMessage,
 .system-message {
@@ -1735,6 +1731,7 @@ dl.system-message dt {
     margin: 1em 0;
     padding: 0.5em 1.5em;
     vertical-align: middle;
+    line-height: 1;
 }
 
 .ideaMessage,
@@ -1753,13 +1750,12 @@ dl.system-message dt {
 }
 
 .attentionMessage i:before {
-    color: #FFF577;
     content: "&dtml-eea-icon-flash;";
 }
 
 .attentionMessage,
 .noMessage {
-    background-color: #C0CF99;
+    background-color: #FFFABE;
 }
 
 .errorMessage {
@@ -1777,12 +1773,10 @@ dl.system-message dt {
 
 .informationMessage i:before {
     content: "&dtml-eea-icon-info-circle;";
-    color: &dtml-headingColor;;
     font-size: 125%;
 }
 
 .noMessage i:before {
-    color: #f65e5e;
     content: "&dtml-eea-icon-times;";
 }
 
@@ -1818,7 +1812,6 @@ dl.system-message dt {
 }
 
 .yesMessage i:before {
-    color: green;
     content: "&dtml-eea-icon-check;";
 }
 
