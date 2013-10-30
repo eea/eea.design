@@ -5,11 +5,11 @@
 
     <stylesheet title=""
                 id="eea-fonts.css"
-                media="screen" rel="stylesheet" rendering="link"
+                media="" rel="stylesheet" rendering="link"
                 cacheable="True" compression="safe" cookable="True"
                 conditionalcomment=""
                 expression=""
-                insert-after="eea-base.css"
+                insert-before="eea-base.css"
             />
 
 </object>

@@ -18,16 +18,7 @@
 }
 
 /* #15235; Expose FontAwesome throught eea-icon-* classes */
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('&dtml-portal_url;/fontawesome-webfont.eot?v=3.2.1');
-    src: url('&dtml-portal_url;/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-    url('&dtml-portal_url;/fontawesome-webfont.woff?v=3.2.1') format('woff'),
-    url('&dtml-portal_url;/fontawesome-webfont.ttf?v=3.2.1') format('truetype'),
-    url('&dtml-portal_url;/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 .eea-icon {
     display: inline-block;
     font-family: 'FontAwesome';
@@ -117,6 +108,9 @@
     float: left;
 }
 
+i:before {
+    margin:0 .3em;
+}
 .eea-icon.eea-icon-left {
   margin-right: .3em;
 }

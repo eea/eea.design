@@ -55,7 +55,7 @@
 
     <genericsetup:registerProfile
             name="upgrade86"
-            title="EEA Design"
+            title="EEA Design upgrade profile for v8.6"
             directory="profiles/upgrades/to_86"
             description='EEA Design upgrade profile for v8.6'
             provides="Products.GenericSetup.interfaces.EXTENSION" />

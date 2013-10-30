@@ -374,7 +374,7 @@
         &lt;/div&gt;
     </pre>
 
-    <h3 i18n:translate="">Warning Portal Message</h3>
+    <h3 i18n:translate="">Attention Portal Message</h3>
     <div class="portalMessage attentionMessage">
         This is an example of an message that requires your attention
     </div>
@@ -456,10 +456,9 @@
 
 
     <h2 i18n:translate="">EEA Icons</h2>
-    <p>We load the entire set of FontAwesome icons within our portal
-        These means that all of the icons found
-        <a href="http://fontawesome.io/icons/">here</a> can also be
-        used as part of our portal.
+    <p>We load the entire set of FontAwesome icons within our portal.
+        This means that all of the icons found
+        <a rel="external" href="http://fontawesome.io/icons/">on the FontAwesome icon page</a> can be used as part of our portal.
     </p>
     <p>One change that we have made for these icons is to use our own class name from the generic <strong>fa</strong> classname to <strong>eea-icon</strong></p>
     <p>Therefore this original example:</p>
