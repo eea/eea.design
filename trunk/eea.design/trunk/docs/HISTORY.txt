@@ -3,6 +3,10 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Pre-upgrade step: The upgrade step for eea.design should be the first thing
+  that needs to be done as soon as the instances are restarted to avoid
+  having missing or broken styles
+  [ichimdav refs #15235]
 * Feature: Added empty_slide_help_text property to site_properties on 
   production which will be used for the empty slide help message
   [ichimdav refs #16879]
