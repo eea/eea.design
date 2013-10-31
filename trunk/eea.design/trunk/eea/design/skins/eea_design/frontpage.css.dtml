@@ -78,6 +78,7 @@ body.frontpage ul {
     border: 0;
     font-size: 100%;
     padding: 0;
+    box-shadow: none;
 }
 
 

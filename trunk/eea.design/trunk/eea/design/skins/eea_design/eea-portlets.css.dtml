@@ -78,7 +78,7 @@ dl.portlet ul.navTree li a {
     line-height: 1.5;
 }
 
-#content dl.portlet ul.navTree li a:hover {
+dl.portlet ul.navTree li a:hover, #content dl.portlet ul.navTree li a:hover {
     background-color:&dtml-corporateOrange;;
     -webkit-transition: background-color .3s, color .3s, background .3s;
     -moz-transition: background-color .3s, color .3s, background .3s;
@@ -713,12 +713,15 @@ a.noHover {
    border: none;
 }
 
-#content .portlet .date {
+.portlet .date, #content .portlet .date {
    font-weight: bold;
    font-size: x-small;
    margin: 0px;
    padding-top: 0px;
    padding-bottom: 0px;
+   box-shadow: none;
+   border: none;
+   text-align: left;
 }
 
 .portlet dt.portletItem {
@@ -745,7 +748,7 @@ a.noHover {
    display:inline;
 }
 
-#content dt.portletItem a {
+dt.portletItem a, #content dt.portletItem a {
    font-weight: normal;
 }
 

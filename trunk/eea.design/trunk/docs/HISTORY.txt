@@ -3,6 +3,8 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Change: css style for date
+  [simiamih refs #16781]
 * Pre-upgrade step: The upgrade step for eea.design should be the first thing
   that needs to be done as soon as the instances are restarted to avoid
   having missing or broken styles
