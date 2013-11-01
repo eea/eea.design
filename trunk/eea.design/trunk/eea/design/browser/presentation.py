@@ -35,6 +35,11 @@ class EEAPresentationView(PresentationView):
                 elif tag_name == 'p' and \
                         (elem.find('iframe') or elem.find('img')):
                     elem.name = 'div'
+                    if not elem.has_attr('class'):
+                        elem.attrs['class'] = "centered"
+                    else:
+                        elem.attrs['class'] += " centered"
+
                 elif tag_name == 'p' and not elem.has_attr('class'):
                     if not elem.find('span', 'markPresentationalText'):
                         continue
