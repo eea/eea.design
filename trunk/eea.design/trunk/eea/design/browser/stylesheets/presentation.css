@@ -1,3 +1,5 @@
+html,body{height:100%;}
+
 html > body div#controls {
     left:  0;
     width:  auto;
@@ -6,7 +8,31 @@ html > body div#controls {
 .centered {
     text-align: center;
     display: block;
+    height: 100%;
 }
+
+.left-presentation-image, 
+.right-presentation-image,
+.center-presentation-image {
+    position: fixed;
+    z-index: -1;
+}
+
+.left-presentation-image {
+    left: 4%;
+}
+.right-presentation-image { 
+    right: 4%;
+}
+
+.center-presentation-image { 
+    left: 36%;
+    top: 120px;
+}
+
+.markPresentationalText {
+    display: block;
+} 
 
 .visible, p {
     display: block;
@@ -37,6 +63,9 @@ div#controls form {
     top: 17px;
 }
 
+.presentation { 
+    height: 100%;
+}
 #presentation_help_message {
     position: fixed;
     top: 25%;
@@ -66,15 +95,21 @@ div#controls form {
 
 html > body .slide {
     overflow: auto;
-    max-height: 79%;
+    max-height: 75%;
     margin: 0em 2em 0 2em;
-    font-size: 0.75em;
-    padding: 1em 0 0 0;
+    font-size: 0.70em;
+    padding: 1em;
     top: 90px;
 }
 
+.ie8 .slide { 
+    top: 70px;
+    max-height: 73%;
+}
+
 .slide img {
-    max-height:  70%;
+    max-height:  17em;
+    height: auto;
 }
 
 iframe {

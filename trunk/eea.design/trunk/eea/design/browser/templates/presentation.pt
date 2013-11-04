@@ -47,7 +47,10 @@
     </metal:baseslot>
 
 </head>
-<body>
+<!--[if lte IE 7]> <body class="ie7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie8"> <![endif]-->
+<!--[if IE 9]>     <body class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <body>             <!--<![endif]-->
 
 <noscript i18n:translate="">Note: The slideshow mode requires javascript.</noscript>
 
