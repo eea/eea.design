@@ -11,23 +11,31 @@ html > body div#controls {
     height: 100%;
 }
 
-.left-presentation-image, 
-.right-presentation-image,
-.center-presentation-image {
+.presentation-left-image, 
+.presentation-right-image,
+.presentation-center-image {
     position: fixed;
     z-index: -1;
 }
 
-.left-presentation-image {
+.presentation-left-image {
     left: 4%;
 }
-.right-presentation-image { 
+.presentation-right-image { 
     right: 4%;
 }
 
-.center-presentation-image { 
+.presentation-center-image { 
     left: 36%;
     top: 120px;
+}
+
+.slide .presentation-title-image {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 2%;
+    max-height: 72px;
 }
 
 .markPresentationalText {
@@ -105,6 +113,10 @@ html > body .slide {
 .ie8 .slide { 
     top: 70px;
     max-height: 73%;
+}
+
+.ie8 h1 {
+    font: bold 180%/1em Helvetica, sans-serif;
 }
 
 .slide img {
