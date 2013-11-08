@@ -27,7 +27,7 @@ html > body div#controls {
 
 .presentation-center-image { 
     left: 36%;
-    top: 120px;
+    top: 23%;
 }
 
 .slide .presentation-title-image {
@@ -35,7 +35,7 @@ html > body div#controls {
     z-index: 10;
     top: 0;
     right: 2%;
-    max-height: 72px;
+    max-height: 2.9em;
 }
 
 .markPresentationalText {
@@ -61,14 +61,13 @@ div#header {
 }
 
 div#footer {
-    height: 35px;
+    height: 2.7em;
 }
 
 div#controls form {
     position: relative;
-    height: 40px;
-    width: 130px;
-    top: 17px;
+    height: 2em;
+    top: 1em;
 }
 
 .presentation { 
@@ -103,11 +102,11 @@ div#controls form {
 
 html > body .slide {
     overflow: auto;
-    max-height: 75%;
+    max-height: 71%;
     margin: 0em 2em 0 2em;
     font-size: 0.70em;
     padding: 1em;
-    top: 90px;
+    top: 11%;
 }
 
 .ie8 .slide { 
@@ -135,5 +134,5 @@ iframe {
     width: 100%;
     display: block;
     background: white;
-    border-bottom: 10px solid #6fbfbd;
+    border-bottom: 0.25em solid #6fbfbd;
 }
