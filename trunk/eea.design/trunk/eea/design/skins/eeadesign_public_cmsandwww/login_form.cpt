@@ -76,21 +76,17 @@
 
         <div class="portalMessage informationMessage">
             <tal:template_defines define="enabled_browsers_macro python:True;">
-                <div id="cms-supported-browsers">    
-                        <div id="foutdated_text">
-                           <p i18n:translate="">The EEA Web CMS works best with following browsers:</p>
-                        </div>
-                        <div id="cms-browsers-links">
-                              <ul>
-                                  <li id="cms-chrome">
-                                     Google Chrome (recommended)
-                                  </li>
-                                  <li id="cms-firefox">
-                                      Firefox
-                                  </li>
-                              </ul>
-                         <p  i18n:translate="" class="discreet">Internet Explorer is not recommended for the CMS area.</p>
-                        </div>
+                <p i18n:translate="">The EEA Web CMS works best with following browsers:</p>
+                <div id="cms-browsers-links">
+                    <ul>
+                        <li id="cms-chrome">
+                            Google Chrome (recommended)
+                        </li>
+                        <li id="cms-firefox">
+                            Firefox
+                        </li>
+                    </ul>
+                    <p  i18n:translate="" class="discreet">Internet Explorer is not recommended for the CMS area.</p>
                 </div>
             </tal:template_defines>
         </div>
