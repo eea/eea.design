@@ -20,9 +20,16 @@ class EEAPresentationView(PresentationView):
         soup = BeautifulSoup(self.body())
         out = []
         first = True
+        headings = []
         for elem in soup.body.contents:
             try:
                 tag_name = elem.name
+                # start a new slide div with the last heading if we encounter
+                # an element with a class of presentationBreak for slide
+                # continuation
+                if "presentationBreak" in elem.attrs.get('class', ""):
+                    tag_name = 'h1'
+                    elem = headings[-1]
                 if tag_name in ['h1', 'h2']:
                     if not first:
                         out.append('</div>')
@@ -31,6 +38,7 @@ class EEAPresentationView(PresentationView):
                     text = elem.text
                     elem.clear()
                     elem.append(text)
+                    headings.append(elem)
                     first = False
                 elif tag_name == 'p' and \
                         (elem.find('iframe') or elem.find('img')):
