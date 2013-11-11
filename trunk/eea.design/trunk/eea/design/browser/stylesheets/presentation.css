@@ -1,4 +1,7 @@
-html,body{height:100%;}
+html, body{
+    height:100%;
+    line-height: 1.1em;
+}
 
 html > body div#controls {
     left:  0;
@@ -42,9 +45,9 @@ html > body div#controls {
     display: block;
 } 
 
-.visible, p {
+p {
     display: block;
-    margin: 0.5em 0;
+    margin: 0 0 0.5em 0;
 }
 
 .hidden {
@@ -55,6 +58,7 @@ html > body div#controls {
     /* This rule is not optimized because it would override the footer image */
     background-position: 98% 50%;
     background-color: white;
+    padding: 0.5em 0;
 }
 div#header {
     background-color: transparent;
@@ -68,7 +72,7 @@ div#footer {
 div#controls form {
     position: relative;
     height: 2em;
-    top: 1em;
+    top: 1.2em;
 }
 
 .presentation { 
@@ -103,16 +107,16 @@ div#controls form {
 
 html > body .slide {
     overflow: auto;
-    max-height: 76%;
+    max-height: 77%;
     margin: 0em 2em 0 2em;
-    font-size: 0.65em;
+    font-size: 0.6em;
     padding: 1em;
-    top: 10%;
+    top: 9%;
 }
 
 .ie8 .slide { 
-    top: 70px;
-    max-height: 73%;
+    top: 11%;
+    max-height: 75%;
 }
 
 .ie8 h1 {

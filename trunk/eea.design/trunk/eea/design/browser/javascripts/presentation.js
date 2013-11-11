@@ -1,6 +1,6 @@
 var original_go = window.go;
 var original_subgo = window.subgo;
-var slides = document.getElementsByClassName('slide');
+var slides = document.querySelectorAll('.slide');
 
 
 var scroll_top = function(){
@@ -42,3 +42,4 @@ window.subgo = function(step){
   showHelpMessage("jumplist");
   scroll_top();
 };
+
