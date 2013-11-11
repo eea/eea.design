@@ -11,26 +11,26 @@ html > body div#controls {
     height: 100%;
 }
 
-.presentation-left-image, 
-.presentation-right-image,
-.presentation-center-image {
+.presentation-left-bg-image,
+.presentation-right-bg-image,
+.presentation-center-bg-image {
     position: fixed;
     z-index: -1;
 }
 
-.presentation-left-image {
+.presentation-left-bg-image {
     left: 4%;
 }
-.presentation-right-image { 
+.presentation-right-bg-image {
     right: 4%;
 }
 
-.presentation-center-image { 
+.presentation-center-bg-image {
     left: 36%;
     top: 23%;
 }
 
-.slide .presentation-title-image {
+.slide .presentation-title-bg-image {
     position: fixed;
     z-index: 10;
     top: 0;
