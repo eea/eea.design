@@ -5,10 +5,10 @@
 
             <element value="Mark text for presentation|span|markPresentationalText"/>
             <element value="Presentation Break|span|presentationBreak"/>
-            <element value="Presentation Left Background Image|div|presentation-left-bg-image"/>
-            <element value="Presentation Right Background Image|div|presentation-right-bg-image" />
-            <element value="Presentation Center Background Image|div|presentation-center-bg-image" />
-            <element value="Presentation Title Background Image|div|presentation-title-bg-image" />
+            <element value="Presentation Left Background Image|div|presentation-images presentation-left-bg-image"/>
+            <element value="Presentation Right Background Image|div|presentation-images presentation-right-bg-image" />
+            <element value="Presentation Center Background Image|div|presentation-images presentation-center-bg-image" />
+            <element value="Presentation Title Background Image|div|presentation-images presentation-title-bg-image" />
 
         </styles>
     </layout>

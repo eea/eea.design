@@ -2408,7 +2408,15 @@ body .ploneSkin .mce_formatPreview a {
 }
 
 .mceContentBody .presentationBreak:before {
-    content: "Presentational Break for braking a slide while keeping the same header";
+    content: "Presentational Break for splitting a slide while keeping the same header";
+}
+/* #16916; hide the background images on view pages as they should only appear within the
+tinyMCE editor or the presentation_view */
+.presentation-images {
+    display: none;
+}
+.mceContentBody .presentation-images {
+    display: block;
 }
 
 /* #5267 display form fields for translated items */

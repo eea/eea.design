@@ -52,6 +52,7 @@ html > body div#controls {
 }
 
 .layout #footer {
+    /* This rule is not optimized because it would override the footer image */
     background-position: 98% 50%;
     background-color: white;
 }
@@ -102,11 +103,11 @@ div#controls form {
 
 html > body .slide {
     overflow: auto;
-    max-height: 71%;
+    max-height: 76%;
     margin: 0em 2em 0 2em;
-    font-size: 0.70em;
+    font-size: 0.65em;
     padding: 1em;
-    top: 11%;
+    top: 10%;
 }
 
 .ie8 .slide { 
@@ -119,7 +120,7 @@ html > body .slide {
 }
 
 .slide img {
-    max-height:  17em;
+    max-height:  15em;
     height: auto;
 }
 
