@@ -3,6 +3,9 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Feature: added 'Presentation Break' TinyMCE style useful for spliting a slide
+  in order to avoid overflow scrolling
+  [ichimdav refs #16916]
 * Change: css style for date
   [simiamih refs #16781]
 * Pre-upgrade step: The upgrade step for eea.design should be the first thing
@@ -20,7 +23,8 @@ Changelog
 * Upgrade step: Within www/portal_tinymce/@@tinymce-controlpanel
    - Add the following TinyMCE style:
      - Mark text for presentation|span|markPresentationalText
-  [ichimdav refs #16879]
+     - Presentation Break|span|presentationBreak
+  [ichimdav refs #16879 and #16916]
 * Feature: added help text to presentation_view for authorised users
   [ichimdav refs #16879]
 * Bug fix: Scroll content only inside the slide body for the presentation_view

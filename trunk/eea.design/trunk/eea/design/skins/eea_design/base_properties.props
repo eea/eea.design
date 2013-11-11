@@ -15,6 +15,7 @@ corporateGreenTwo:string=#777c1f
 corporateBlueOne:string=#2c8da2
 corporateBlueTwo:string=#005e7d
 
+
 #color used for	buttons / actions / special links (not for plain text)
 corporateOrange:string=#f6a800
 
@@ -34,6 +35,8 @@ mediumBackgroundColor:string=#ececec
 darkBackgroundColor:string=#D6D6D6
 greyBackgroundColor:string=#f3f3f3
 headerBackgroundColor:string=#F0F4F5
+# background used for portalMessages and keyFacts
+corporateBlueBackgroundColor:string=#C7E0E9
 
 #top navigation colors
 tabBackgroundColor:string=#2c8da2
