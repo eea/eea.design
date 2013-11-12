@@ -30,7 +30,7 @@ html > body div#controls {
 
 .presentation-center-bg-image {
     left: 36%;
-    top: 23%;
+    top: 10%;
 }
 
 .slide .presentation-title-bg-image {
@@ -95,6 +95,8 @@ div#controls form {
     text-align: right;
     margin: 0;
     padding-bottom: 2em;
+    position: relative;
+    left: -1em;
 }
 
 #slide0 .mainImage {
@@ -124,7 +126,8 @@ html > body .slide {
 }
 
 .slide img {
-    max-height:  15em;
+    max-height:  23em;
+    max-width: 98%;
     height: auto;
 }
 
