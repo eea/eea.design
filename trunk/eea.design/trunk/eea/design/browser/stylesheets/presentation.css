@@ -77,7 +77,15 @@ div#controls form {
 
 .presentation { 
     height: 100%;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
 }
+
+.presentation-loader {
+    text-align: center;
+}
+
 #presentation_help_message {
     position: fixed;
     top: 25%;

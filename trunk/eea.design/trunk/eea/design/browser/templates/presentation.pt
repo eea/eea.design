@@ -34,13 +34,6 @@
     <link rel="stylesheet" type="text/css" media="all"
         tal:attributes="href string:${context/portal_url}/++resource++eea.design.stylesheets/presentation.css" />
 
-    <script type="text/javascript" tal:content="structure string:var base_url=&quot;${here/absolute_url}&quot;;">
-      var base_url="/";
-    </script>
-    <script src="ui/default/slides.js" type="text/javascript"
-          tal:attributes="src string:${context/portal_url}/s5_slides.js" ></script>
-    <script type="text/javascript"
-          tal:attributes="src string:${context/portal_url}/++resource++eea.design.javascripts/presentation.js" ></script>
 
     <metal:baseslot define-slot="base">
       <base tal:attributes="href context/@@plone/renderBase" /><!--[if lt IE 7]></base><![endif]-->
@@ -55,14 +48,17 @@
 <noscript i18n:translate="">Note: The slideshow mode requires javascript.</noscript>
 
 <div class="layout">
-    <div id="controls"><!-- DO NOT EDIT --></div>
+    <div id="controls" style="display:none;"><!-- DO NOT EDIT --></div>
     <div id="currentSlide"><!-- DO NOT EDIT --></div>
     <div id="header"></div>
-    <div id="footer"></div>
+    <div id="footer" style="display:none"></div>
 </div>
 
+     <div class="presentation-loader">
+         <img src="++resource++faceted_images/ajax-loader.gif" />
+    </div>
 <div class="presentation"
-     tal:define="enabled view/enabled">
+     tal:define="enabled view/enabled" style="display: none; opacity: 0; ">
 
     <div tal:condition="view/can_show_help_message"
         id="presentation_help_message" class="hidden">
@@ -100,5 +96,12 @@
     </tal:presentation>
 </div>
 
+    <script type="text/javascript" tal:content="structure string:var base_url=&quot;${here/absolute_url}&quot;;">
+      var base_url="/";
+    </script>
+    <script src="ui/default/slides.js" type="text/javascript"
+          tal:attributes="src string:${context/portal_url}/s5_slides.js" ></script>
+    <script type="text/javascript"
+          tal:attributes="src string:${context/portal_url}/++resource++eea.design.javascripts/presentation.js" ></script>
 </body>
 </html>

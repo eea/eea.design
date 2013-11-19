@@ -1,5 +1,6 @@
 var original_go = window.go;
 var original_subgo = window.subgo;
+var original_startup = window.startup;
 var slides = document.querySelectorAll('.slide');
 
 
@@ -43,3 +44,20 @@ window.subgo = function(step){
   scroll_top();
 };
 
+
+var presentation = document.querySelectorAll(".presentation");
+var presentation_loader = document.querySelectorAll(".presentation-loader");
+var controls = document.querySelectorAll("#controls");
+var footer = document.querySelectorAll("#footer");
+window.startup = function startup() {
+    original_startup();
+    // hide the loading gif after s5_slides logic is done 
+    presentation_loader[0].style.display = "none";
+    presentation[0].style.display = "block";
+    controls[0].style.display = "block";
+    footer[0].style.display = "block";
+    window.setTimeout(function() {
+        presentation[0].style.opacity = 1;
+    }, 100); 
+};
+window.onload = window.startup;
