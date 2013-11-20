@@ -127,14 +127,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 /* portlets.css pre Plone 4.3 */
 .portletGradientStandard {
     background: #E6E6E6;
-    background-image: -webkit-linear-gradient(top,#E6E6E6,#D6D6D6);
-    background: -webkit-linear-gradient(#E6E6E6, #D6D6D6); /* Safari 5.1+, Chrome 10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6')"; /* IE8+ */
-    background: -moz-linear-gradient(#E6E6E6, #D6D6D6) repeat scroll 0 0 transparent;
-    background-image: -ms-linear-gradient(top,#E6E6E6,#D6D6D6);
-    background-image: -o-linear-gradient(top,#E6E6E6,#D6D6D6);
-    background-image: linear-gradient(top,#E6E6E6,#D6D6D6);
     margin-top: 0.5em;
     padding: 1em;
     clear: both;

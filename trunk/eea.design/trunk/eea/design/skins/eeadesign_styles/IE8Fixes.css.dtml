@@ -573,27 +573,6 @@ img
     display: inline;
 }
 
-#articles-area .featured.roundedCorners,
-#forum,
-.shortcut-default,
-#portal-column-two .featured.roundedCorners,
-#content-core .column-area .featured,
-#content-core .right-column-area .shortcut-default.roundedCorners,
-.shortcut-default:hover, .shortcut-light:hover, #mobile:hover,
-.portletGradientStandard,
-.portlet
-{
-    -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
-
-    filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#b1b1b1')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=360, Strength=2, Color='#b1b1b1');
-}
-
 #cross-site-top .portlet,
 #portal-footer .portlet {
     filter: none;
@@ -621,20 +600,6 @@ img
     progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#b1b1b1')
     progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1c748', endColorstr='#777c1f') !important;
-}
-
-.section-multimedia #content-core #multimedia-widgets #sliders .multimedia-widget .featured,
-#multimedia-coverflow   {
-    -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#252525')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#252525')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#252525')
-    progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2346f83, endColorstr=#b2346f83)
-    alpha(opacity=80) !important;
-    filter: progid:DXImageTransform.Microsoft.Shadow(Direction=90, Strength=2, Color='#252525')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=-90, Strength=2, Color='#252525')
-    progid:DXImageTransform.Microsoft.Shadow(Direction=180, Strength=4, Color='#252525')
-    progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2346f83, endColorstr=#b2346f83)
-    alpha(opacity=80) !important;
 }
 
 .frontpage .right-column-area#articles-area a.archives,
