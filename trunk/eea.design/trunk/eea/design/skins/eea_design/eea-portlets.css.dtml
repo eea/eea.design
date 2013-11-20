@@ -141,7 +141,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     margin-top: 0.5em;
     clear: both;
     color: #333;
-    font-size: 120%;
     padding: 0.5em 1em 1em 1em;
     text-shadow: 0 1px 1px #fff;
 }
@@ -149,6 +148,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 #document-toc li {
    list-style-image: url("bullet.gif");
 }
+
 
 .collapsable-portlet .portletHeader {
     cursor: pointer;

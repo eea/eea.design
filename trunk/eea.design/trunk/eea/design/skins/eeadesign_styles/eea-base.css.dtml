@@ -303,9 +303,6 @@ dl.portlet a:visited {
     word-break: keep-all;
     display: inline-block;
     background: &dtml-mediumBackgroundColor;;
-    border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
     font-size: 10px;
 }
 
