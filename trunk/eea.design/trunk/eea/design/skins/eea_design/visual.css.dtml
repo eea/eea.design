@@ -279,7 +279,7 @@ table.datatable {
             box-shadow: 2px 2px 1px #888;
 }
 
-#keyfacts-slider .slidePortlet, #globalnav-holder {
+#globalnav-holder {
     -webkit-box-shadow: 0px 2px 2px #333;
        -moz-box-shadow: 0px 2px 2px #333;
         -ms-box-shadow: 0px 2px 2px #333;
