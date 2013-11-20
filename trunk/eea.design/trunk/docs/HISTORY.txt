@@ -3,6 +3,9 @@ Changelog
 
 8.6-dev - (unreleased)
 ----------------------
+* Change: removed box-shadow and rounded-corners on portlets.
+  Fixes double boxes in top banner overlays.
+  [demarant refs #16676]
 * Feature: added 'Presentation Break' TinyMCE style useful for spliting a slide
   in order to avoid overflow scrolling
   [ichimdav refs #16916]

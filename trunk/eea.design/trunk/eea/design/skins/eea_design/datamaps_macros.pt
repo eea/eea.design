@@ -46,7 +46,7 @@
                  tal:define="spotlight frontpage_view/getSpotlight;
                              plone_view nocall:plone_view|context/@@plone;"
                  tal:condition="spotlight">
-    <div class="featured roundedCorners">
+    <div class="featured">
         <h2 class="column-title" i18n:translate="">Topic in the spotlight</h2>
 
         <div id="spotlight-item"

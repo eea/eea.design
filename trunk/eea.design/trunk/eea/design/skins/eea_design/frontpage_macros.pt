@@ -65,7 +65,7 @@
                               description highlight/Description|highlight/getTeaser;
                               portal_type highlight/portal_type;
                               is_video python:'eea.mediacentre.interfaces.IVideo' in highlight.object_provides;">
-            <div class="featured roundedCorners">
+            <div class="featured">
                     <h2 class="column-title" i18n:domain="eea" i18n:translate="">
                             <span tal:omit-tag="" metal:define-slot="box_title">Box Name (Title that shows up)</span>
                     </h2>

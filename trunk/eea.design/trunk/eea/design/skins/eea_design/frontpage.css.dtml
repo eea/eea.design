@@ -304,9 +304,6 @@ div.current {
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 1em;
     padding:1.9em;
-    border-radius: 10px;
-     -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
 }
 
 .featured-highlights {

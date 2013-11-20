@@ -271,17 +271,6 @@ table.datatable {
 
 /* Styles which can be used on any area */
 
-.boxShadowedDown, .featured, #edit-bar, #contentActionMenus, #portal-personaltools,
-#portal-personaltools, #faceted-form .widget-fieldset legend,
-#forum, #community, #mobile, .portlet,
-.shortcut-default {
-    -webkit-box-shadow: 0px 2px 2px #888;
-       -moz-box-shadow: 0px 2px 2px #888;
-        -ms-box-shadow: 0px 2px 2px #888;
-         -o-box-shadow: 0px 2px 2px #888;
-            box-shadow: 0px 2px 2px #888;
-}
-
 .boxShadowedDownRight, .actionMenuContent {
     -webkit-box-shadow: 2px 2px 1px #888;
        -moz-box-shadow: 2px 2px 1px #888;
