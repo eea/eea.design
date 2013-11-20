@@ -64,9 +64,6 @@
     overflow: hidden; 
     background: #F7F7F7;
     border: 0px solid #F7F7F7;
-    -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;
     margin-bottom: 1em;
 }
 
@@ -289,9 +286,6 @@
 
 .controls, .controls-sm {
     background: &dtml-mediumBackgroundColor;;
-    -webkit-border-radius: 0 0 10px 10px;
-       -moz-border-radius: 0 0 10px 10px;
-        border-radius: 0px 0px 10px 10px;
     clear: both;
     height: 25px;
     padding: 15px 0px 0px 20px;
