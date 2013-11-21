@@ -1719,6 +1719,9 @@ dl.system-message dt {
     color: &dtml-fontColor;;
 }
 
+dl.portalMessage, div.attention, div.caution, 
+div.danger, div.error, div.hint, div.important, 
+div.note, div.tip, div.warning,
 #error-handling,
 .portalMessage,
 .system-message {
@@ -1728,6 +1731,7 @@ dl.system-message dt {
     margin: 1em 0;
     padding: 1em 1.5em 1em 5.5em;
     vertical-align: middle;
+    border: none;
 }
 
 .portalMessage .eea-icon {
@@ -1738,21 +1742,29 @@ dl.system-message dt {
     line-height: 1;
 }
 
+div.hint, div.tip, div.note,
 .ideaMessage,
 .informationMessage,
 .noteMessage,
+.smileyMessage,
 .thumbsUpMessage,
 .yesMessage {
     background-color: &dtml-corporateBlueBackgroundColor;;
 }
 
+
+div.attention, div.caution,
+div.danger, div.error, div.important,
+div.warning,
 #error-handling,
 .errorMessage,
-.smileyMessage,
 .warningMessage {
     background-color: #FFFABE;
 }
 
+div.attention i:before, div.caution i:before,
+div.danger i:before, div.important i:before,
+div.warning i:before,
 .attentionMessage i:before {
     content: "&dtml-eea-icon-flash;";
 }
@@ -1762,6 +1774,7 @@ dl.system-message dt {
     background-color: #FFFABE;
 }
 
+div.error,
 .errorMessage {
     color: red;
 }
@@ -1798,6 +1811,7 @@ dl.system-message dt {
     content: "&dtml-eea-icon-thumbs-up;";
 }
 
+div.error i:before,
 .errorMessage i:before,
 .error i:before,
 .warningMessage i:before
