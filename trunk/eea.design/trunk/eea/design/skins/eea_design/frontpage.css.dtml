@@ -367,7 +367,7 @@ a.album-layout:hover {
 }
 
 /* Styles which can be used on any area */
-.shortcut-default:hover, .shortcut-light:hover, #mobile:hover, #portlet-followus dd a:hover {
+#portlet-followus dd a:hover {
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
      -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
       -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
@@ -429,19 +429,12 @@ a.album-layout:hover {
     padding: 2em;
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 1em;
-    border-radius: 5px;
-     -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
 }
 
 .shortcut-light {
     background: transparent;
-    border: 1px solid #e6e7e8;
     margin-bottom: 1em;
     text-align: center;
-    border-radius: 5px;
-     -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
 }
 
 #eea-mobile-shortcut.shortcut-default,
@@ -454,6 +447,7 @@ a.album-layout:hover {
     display: table-row;
     clear: both;
 }
+
 #semantic-content {
     background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
     padding: 25px 20px 20px 80px;
@@ -478,7 +472,7 @@ a.album-layout:hover {
 }
 
 #organisations-content {
-    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px transparent;
+    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px &dtml-lightBackgroundColor;;
     padding: 25px 20px 20px 90px;
     height: 60px;
     text-align: left;
