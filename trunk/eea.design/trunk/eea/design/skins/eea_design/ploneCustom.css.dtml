@@ -128,10 +128,6 @@ div.position-3\3a 4 {margin-left: -36.8%;}
 
 /* Style for faceted used in section-publications */
 
-.section-publications #c0_widget {
-   background-color: #ffffff;
-}
-
 .faceted-top-widgets .faceted-widget form,
 .faceted-center-widgets .faceted-widget form {
    min-width: 510px;
