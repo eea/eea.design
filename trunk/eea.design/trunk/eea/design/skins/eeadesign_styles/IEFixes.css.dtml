@@ -1,21 +1,6 @@
 /* <dtml-with base_properties> */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> */
 
-/* multimedia transparent colors */
-#multimedia-tabs li a.current, ul#multimedia-tabs li a:hover,
-.multimedia-widget #tag-cloud #tag-cloud-content,
-#multimedia-coverflow,
-#multimedia-vids .eea-tabs-panel, 
-#multimedia-widgets .featured,
-#bottomright-widgets #tag-cloud .portletFooter
-{
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2346f83, endColorstr=#b2346f83);
-}
-
-#bottom-widgets ul#multimedia-tabs,
-#bottom-widgets ul#faceted-tabs {
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c346f83, endColorstr=#4c346f83);
-}
 
 .photoAlbumEntry {
     border-width: 0px 1px 2px 1px;

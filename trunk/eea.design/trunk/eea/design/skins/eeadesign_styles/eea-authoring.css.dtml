@@ -28,9 +28,6 @@
 /* @group Personal Tools pulldown @parent Pulldown menus */
 #portal-personaltools {
     background-color: &dtml-corporateGreenTwo;;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     border:none;
     color: #fff;
     line-height: 1.6em;
@@ -38,8 +35,8 @@
     margin: 0.5em 0;
     padding: 0.5em 3em 0.5em 3em;
     text-align: right;
-    text-shadow: 0 2px 1px #333;
 }
+
 #portal-personaltools dd {
     margin-top: 6px;
 }
@@ -85,7 +82,7 @@
 /* @group Content pulldowns @parent Pulldown menus */
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
-    background-color: transparent;
+    background-color: &dtml-corporateGreenTwo;;
     z-index: 900;
 }
 

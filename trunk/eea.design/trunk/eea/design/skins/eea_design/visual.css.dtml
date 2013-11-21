@@ -290,23 +290,10 @@ table.datatable {
 .greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools, #portal-personaltools dd,
 #faceted-form .widget-fieldset legend {
     background-color: &dtml-corporateGreenTwo;;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(&dtml-corporateGreen;), to(&dtml-corporateGreenTwo;));
-    background-image: -webkit-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    background-image:    -moz-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    background-image:     -ms-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    background-image:      -o-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
-    background: linear-gradient(&dtml-corporateGreen;, &dtml-corporateGreenTwo;); /* the w3c standard */
 }
 
 .greenGradientBackgroundDown, #contentActionMenus {
     background-color: &dtml-corporateGreenTwo;;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(&dtml-corporateGreenTwo;), to(&dtml-corporateGreen;));
-    background-image: -webkit-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
-    background-image:    -moz-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
-    background-image:     -ms-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
-    background-image:      -o-linear-gradient(center top , &dtml-corporateGreenTwo;, &dtml-corporateGreen;);
 }
 
 /* standard figure, used for articles and pages.
