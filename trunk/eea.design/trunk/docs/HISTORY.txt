@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.7-dev - (unreleased)
-----------------------
+8.7 - (2013-11-21)
+------------------
 * Change: harmonizing box style.
   [demarant refs #16676]
 
@@ -20,7 +20,7 @@ Changelog
   that needs to be done as soon as the instances are restarted to avoid
   having missing or broken styles
   [ichimdav refs #15235]
-* Feature: Added empty_slide_help_text property to site_properties on 
+* Feature: Added empty_slide_help_text property to site_properties on
   production which will be used for the empty slide help message
   [ichimdav refs #16879]
 * Change: Simplified data and maps frontpage.
