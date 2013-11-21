@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+
+<object name="portal_actions" meta_type="Plone Actions Tool"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <object name="site_actions" meta_type="CMF Action Category">
+
+         <object name="contactus" meta_type="CMF Action" i18n:domain="plone">
+               <property name="title" i18n:translate="">Contact us</property>
+               <property name="description" i18n:translate=""></property>
+               <property name="url_expr">string:$portal_url/address.html</property>
+               <property name="link_target"></property>
+               <property name="available_expr"></property>
+               <property name="permissions">
+                    <element value="View"/>
+               </property>
+               <property name="visible">True</property>
+        </object>
+
+         <object name="chooselang" meta_type="CMF Action" i18n:domain="plone">
+               <property name="title" i18n:translate="">EEA homepage in your language</property>
+               <property name="description" i18n:translate=""></property>
+               <property name="url_expr">string:$portal_url/chooselang</property>
+               <property name="link_target"></property>
+               <property name="icon_expr"></property>
+               <property name="available_expr"></property>
+               <property name="permissions">
+                    <element value="View"/>
+               </property>
+               <property name="visible">True</property>
+           <property name="visible">True</property>
+        </object>
+
+         <object name="subscriptions" meta_type="CMF Action" i18n:domain="plone">
+               <property name="title" i18n:translate="">Subscriptions</property>
+               <property name="description" i18n:translate=""></property>
+               <property name="url_expr">string:$portal_url/subscription</property>
+               <property name="link_target"></property>
+               <property name="available_expr">python: request.get('LANGUAGE', 'en') == 'en'</property>
+               <property name="permissions">
+                    <element value="View"/>
+               </property>
+               <property name="visible">True</property>
+           <property name="visible">True</property>
+        </object>
+
+         <object name="formobile" meta_type="CMF Action" i18n:domain="plone">
+               <property name="title" i18n:translate="">Mobile</property>
+               <property name="description" i18n:translate=""></property>
+               <property name="url_expr">string:$portal_url/mobile</property>
+               <property name="link_target"></property>
+               <property name="available_expr"></property>
+               <property name="permissions">
+                    <element value="View"/>
+               </property>
+               <property name="visible">True</property>
+           <property name="visible">True</property>
+        </object>
+
+        <object name="login" meta_type="CMF Action" i18n:domain="plone">
+            <property name="title" i18n:translate="">Log in</property>
+            <property name="description" i18n:translate=""></property>
+            <property
+                    name="url_expr">string:${globals_view/navigationRootUrl}/login</property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">not: member</property>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+
+    </object>
+
+    <object name="externalsite_actions" meta_type="CMF Action Category">
+         <object name="etcssites" meta_type="CMF Action" i18n:domain="plone">
+               <property name="title" i18n:translate="">European Topic Centres</property>
+               <property name="description" i18n:translate=""></property>
+               <property name="url_expr">string:http://www.eionet.europa.eu/topics</property>
+               <property name="link_target"></property>
+               <property name="icon_expr"></property>
+               <property name="available_expr"></property>
+               <property name="permissions">
+                    <element value="View"/>
+               </property>
+               <property name="visible">True</property>
+           </object>
+    </object>
+
+    <object name="object_buttons" meta_type="CMF Action Category">
+        <!-- subfolder listing -->
+        <object name="subfolderlisting.enable" meta_type="CMF Action" i18n:domain="eea">
+            <property name="title"
+                i18n:translate="">Enable Subfolder Listing</property>
+            <property name="description" i18n:translate=""></property>
+            <property
+                name="url_expr">string:${object/absolute_url}/@@enableSubfolderListing</property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property
+                name="available_expr">python:object.portal_type in ["Folder", "Topic", "Collection"] and 'eea.design.browser.interfaces.ISubFoldersListing' not in object.restrictedTraverse('@@get_interfaces')()</property>
+            <property name="permissions">
+                <element value="Plone Site Setup: Navigation"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+        <object name="subfolderlisting.disable" meta_type="CMF Action" i18n:domain="eea.notranslation">
+            <property name="title"
+                i18n:translate="">Disable Subfolder Listing</property>
+            <property name="description" i18n:translate=""></property>
+            <property
+                name="url_expr">string:${object/absolute_url}/@@disableSubfolderListing</property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property
+                name="available_expr">python:object.portal_type in ["Folder", "Topic", "Collection"] and 'eea.design.browser.interfaces.ISubFoldersListing' in object.restrictedTraverse('@@get_interfaces')()</property>
+            <property name="permissions">
+                <element value="Plone Site Setup: Navigation"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+    </object>
+
+    <object name="user" meta_type="CMF Action Category">
+        <object name="login" meta_type="CMF Action" i18n:domain="plone">
+            <property name="title" i18n:translate="">Log in</property>
+            <property name="description" i18n:translate=""></property>
+            <property
+                    name="url_expr">string:${globals_view/navigationRootUrl}/login</property>
+            <property name="link_target"></property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">not: member</property>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
+            <property name="visible">False</property>
+        </object>
+    </object>
+
+    <!-- hidden actions -->
+    <object name="site_actions" meta_type="CMF Action Category">
+        <object name="accessibility" meta_type="CMF Action">
+            <property name="visible">False</property>
+        </object>
+        <object name="contact" meta_type="CMF Action">
+            <property name="visible">False</property>
+        </object>
+        <object name="sitemap" meta_type="CMF Action">
+            <property name="visible">False</property>
+        </object>
+    </object>
+
+</object>
