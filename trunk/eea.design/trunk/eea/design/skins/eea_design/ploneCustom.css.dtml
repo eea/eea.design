@@ -28,6 +28,12 @@ div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
 div.position-3\3a 4 {margin-left: -36.8%;}
 /* @end columns.css slider-definitions modification */
 
+/* remove borders on image gallery from eea.jquery */
+
+#galleryView {
+   border: none;
+}
+
 /*
 ** demarant: Specific faceted navigation style for certain site sections
 */
