@@ -3,6 +3,8 @@ Changelog
 
 8.7-dev - (unreleased)
 ----------------------
+* Change: harmonizing box style.
+  [demarant refs #16676]
 
 8.6 - (2013-11-21)
 ------------------
