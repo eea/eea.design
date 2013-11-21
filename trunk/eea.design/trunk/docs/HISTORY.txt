@@ -3,6 +3,9 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Bug fix: Fix PDF export CSS (hide inline comments,
+  temporal coverage and location)
+  [voineali]
 
 8.7 - (2013-11-21)
 ------------------

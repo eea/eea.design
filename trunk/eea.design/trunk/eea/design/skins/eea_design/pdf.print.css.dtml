@@ -299,8 +299,8 @@ p.discreet {
   display: none;
 }
 
-#relatedItems a:link:after,#relatedItems a:visited:after { 
-  content:" [" attr(href) "] "; 
+#relatedItems a:link:after,#relatedItems a:visited:after {
+  content:" [" attr(href) "] ";
 }
 
 #relatedItems h2 {
@@ -311,4 +311,24 @@ p.discreet {
 #relatedItems h3 {
   margin: 0;
   padding: 0;
+}
+
+.eea-annotator {
+  display: none;
+}
+
+.annotator-widget {
+  display: none;
+}
+
+.portlet.toc {
+  display: none !important;
+}
+
+.geographical-coverage {
+    display: none;
+}
+
+.eea-location-listing {
+    display: none;
 }
