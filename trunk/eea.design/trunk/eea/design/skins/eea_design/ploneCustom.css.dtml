@@ -1766,18 +1766,12 @@ dl.system-message dt {
     color: red;
 }
 
-#error-handling,
-.errorMessage {
-    font-size: 160%;
-}
-
 .ideaMessage i:before {
     content: "&dtml-eea-icon-lightbulb-o;";
 }
 
 .informationMessage i:before {
     content: "&dtml-eea-icon-info-circle;";
-    font-size: 125%;
 }
 
 .noMessage i:before {
@@ -1809,10 +1803,6 @@ dl.system-message dt {
 .warningMessage i:before
 {
     content: "&dtml-eea-icon-exclamation-circle;";
-}
-
-.warningMessage {
-    font-size: 140%;
 }
 
 .yesMessage i:before {
