@@ -2655,51 +2655,6 @@ a#subfolders_more_a, .more_dropdown_a {
     display: none !important;
 }
 
-/* #9527 - EEA Chat area */
-#toggle-controlbox {
-    font-size: 130% !important;
-}
-
-.oc-chat-head {
-    background-color: #51697A;
-}
-
-.chat-head-chatbox {
-    background-color: #AFBC21;
-}
-
-.chat-head-chatroom {
-    background-color: #AFBC21;
-}
-
-.chatroom {
-    background-color: #AFBC21;
-}
-
-div.chat-title {
-    height: 2.1em;
-}
-
-.participants ul.participant-list li {
-    padding: 0.1em 0 0.1em 0.5em;
-}
-
-.chat-head #controlbox-tabs li {
-    font-weight: bold;
-}
-
-#chatpanel {
-    bottom: 0.8em;
-    z-index: 4000; /*--Keeps the panel on top of all other elements--*/
-}
-
-div#users, div#chatrooms, div#settings, div#controlbox-panes  {
-    width: 100%;
-}
-.chatbox {
-    width: 260px;
-}
-
 /* 9485 login popup */
 #popup_login_form {
     position: absolute;
