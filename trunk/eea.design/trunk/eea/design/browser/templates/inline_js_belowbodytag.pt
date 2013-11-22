@@ -1,14 +1,5 @@
 <!-- ClickTale Top part -->
 <script type="text/javascript">
 var WRInitTime=(new Date()).getTime();
-
-// #9527 - EEA Chat area
-jQuery(document).ready(function($) {
-  var OnlineUsersBox = jQuery('#toggle-online-users span');
-  if (OnlineUsersBox) {
-    OnlineUsersBox.html('EEA Chat Area, online contacts');
-  };
-});
-
 </script>
 <!-- ClickTale end of Top part -->

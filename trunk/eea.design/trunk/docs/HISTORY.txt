@@ -3,7 +3,7 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
-* Change: removed custom css for XMPP suite
+* Change: removed custom css and js related to XMPP suite
   [ghicaale refs #17513]
 * Bug fix: Fix PDF export CSS (hide inline comments,
   temporal coverage and location)
