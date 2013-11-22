@@ -1719,8 +1719,8 @@ dl.system-message dt {
     color: &dtml-fontColor;;
 }
 
-dl.portalMessage, div.attention, div.caution, 
-div.danger, div.error, div.hint, div.important, 
+dl.portalMessage, div.attention, div.caution,
+div.danger, div.error, div.hint, div.important,
 div.note, div.tip, div.warning,
 #error-handling,
 .portalMessage,
@@ -2699,46 +2699,6 @@ div#users, div#chatrooms, div#settings, div#controlbox-panes  {
 .chatbox {
     width: 260px;
 }
-
-/* #13782 fix broken links for xmpp chat images by appending browser directory */
-#xmppchat-roster dd.current-xmpp-contact,
-#xmppchat-roster dd.current-xmpp-contact:hover {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_online_panel.png) no-repeat 5px 2px;
-}
-
-#xmppchat-roster dd.current-xmpp-contact.offline:hover,
-#xmppchat-roster dd.current-xmpp-contact.unavailable:hover,
-#xmppchat-roster dd.current-xmpp-contact.offline,
-#xmppchat-roster dd.current-xmpp-contact.unavailable {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_offline_panel.png) no-repeat 5px 2px;
-}
-
-#xmppchat-roster dd.current-xmpp-contact.busy,
-#xmppchat-roster dd.current-xmpp-contact.busy:hover {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_busy_panel.png) no-repeat 5px 2px;
-}
-
-#xmppchat-roster dd.current-xmpp-contact.away,
-#xmppchat-roster dd.current-xmpp-contact.away:hover {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_away_panel.png) no-repeat 5px 2px;
-}
-
-.dropdown a.online {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_online_panel.png) no-repeat left;
-}
-
-.dropdown a.offline {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_offline_panel.png) no-repeat left;
-}
-
-.dropdown a.busy {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_busy_panel.png) no-repeat left;
-}
-
-.dropdown a.away {
-    background: url(++resource++collective.xmpp.chat.resources/images/user_away_panel.png) no-repeat left;
-}
-
 
 /* 9485 login popup */
 #popup_login_form {
