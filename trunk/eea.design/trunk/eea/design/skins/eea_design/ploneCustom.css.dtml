@@ -1816,7 +1816,7 @@ div.error i:before,
 .error i:before,
 .warningMessage i:before
 {
-    content: "&dtml-eea-icon-exclamation-circle;";
+    content: "&dtml-eea-icon-exclamation-triangle;";
 }
 
 .yesMessage i:before {
