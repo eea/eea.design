@@ -10,6 +10,8 @@ Changelog
 * Bug fix: Fix PDF export CSS (hide inline comments,
   temporal coverage and location)
   [voineali]
+* Change: cleanup old geo implementation
+  [ghicaale refs #9155]
 
 8.7 - (2013-11-21)
 ------------------

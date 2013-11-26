@@ -2286,22 +2286,6 @@ body.kupu {
     border: 1px dashed;
 }
 
-/* style for geoposition */
-.mapContainer {
-    margin-right: 3em;
-}
-
-.mapContainer #map_yahoo {
-    border: 1px solid black;
-    height: 300px;
-}
-
-.mapContainer #map_google {
-    border: 1px solid black;
-    width: 400px;
-    height: 400px;
-}
-
 .media-single-item {
     margin: 1em 0;
 }
