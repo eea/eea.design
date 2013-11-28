@@ -3,6 +3,8 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Bug fix: css fix - bad style for pagination in portal_registry
+  [simiamih refs #17558]
 * Change: use warning triangle for error/warning portal messages
   [demarant refs #16676]
 * Change: removed custom css and js related to XMPP suite

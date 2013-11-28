@@ -170,6 +170,10 @@ table.datatable {
     padding:1px 0.5em;
 }
 
+.listing th .listingBar a{
+    display: inline;
+}
+
 .sortable thead th a:hover,
 .listing thead th a:hover,
 .listing thead th:hover {
