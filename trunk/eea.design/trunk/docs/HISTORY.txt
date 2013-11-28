@@ -12,6 +12,8 @@ Changelog
   [voineali]
 * Change: cleanup old geo implementation
   [ghicaale refs #9155]
+* Change: removed the dependecy to eea.locationwidget
+  [ghicaale refs #9155]
 
 8.7 - (2013-11-21)
 ------------------
