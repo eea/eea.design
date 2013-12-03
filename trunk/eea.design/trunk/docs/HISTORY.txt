@@ -3,6 +3,9 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Change: use font icons for portal top actions. Improve
+  documentation of design elements.
+  [demarant refs 15235]
 * Bug fix: no longer open multiple tabs when clicking on currently opened
   accordion tab
   [ichimdav refs #17631]

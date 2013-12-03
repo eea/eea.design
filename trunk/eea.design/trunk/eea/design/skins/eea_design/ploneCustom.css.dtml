@@ -1512,26 +1512,34 @@ h3.site-description {
 #siteaction-subscriptions a,
 #siteaction-formobile a,
 #siteaction-contactus a {
-    background: url("sprite-eeaimages.png") no-repeat scroll transparent;
     display: inline-block;
     line-height: 1.4;
-    height: 16px !important;
 }
 
-#siteaction-subscriptions a {
-    background-position: 0 -29px !important;
-    padding-left: 22px;
+/* use font awesome unicode icons */
+
+#siteaction-events i:before {
+   content: "\f133";
 }
 
-#siteaction-formobile a {
-    background-position: 0 -12px !important;
-    padding-left: 16px;
+#siteaction-subscriptions i:before {
+   content: "\f09e";
 }
 
-#siteaction-contactus a {
-    height: 14px !important;
-    background-position: 0 2px !important;
-    padding-left: 23px;
+#siteaction-formobile i:before {
+    content: "\f10b";
+}
+
+#siteaction-contactus i:before {
+    content: "\f0e6";
+}
+
+#siteaction-chooselang i:before {
+    content: "\f11d";
+}
+
+#siteaction-login i:before {
+    content: "\f090";
 }
 
 #portal-externalsites {
@@ -1542,8 +1550,6 @@ h3.site-description {
 #portal-externalsites li,
 #portal-siteactions li {
     display: inline;
-    color: white;
-    border-right: 1px solid &dtml-darkBackgroundColor;;
     padding: 0 5px;
 }
 
@@ -1555,7 +1561,6 @@ h3.site-description {
 #portal-externalsites li a,
 #portal-siteactions li a {
     background-color: transparent;
-    color: black;
     height: auto;
     text-decoration: none;
     text-transform: none;
@@ -1565,14 +1570,6 @@ h3.site-description {
 #siteaction-contactus {
     font-weight: bold;
 }
-
-#siteaction-chooselang a {
-    background: url("sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
-    color: black;
-    padding-bottom: 4px;
-    padding-left: 35px;
-}
-
 
 .visualCaseSensitive {
     text-transform: none;

@@ -11,8 +11,8 @@
         table of contents
     </div>
 
-    <h1 class="autoscroll-to-here" i18n:translate="">
-        Welcome to EEA Web design elements, your browser should have autoscrolled down to me
+    <h1 i18n:translate="">
+        Welcome to EEA Web design elements
     </h1>
     <div class="documentDescription" i18n:translate="">
         This page shows common html markup, css classes and javascripts we use across the EEA website. See example code and use Firefox Firebug plugin to inspect elements code.
@@ -313,6 +313,18 @@
     <p>
         <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;<a href="#" class="moreLink" i18n:translate="">This is a moreLink</a></p>
 
+    <h2>Lists</h2>
+    <p>Unordered lists:</p>
+    <ul><li>Item 1</li><li>Item 2</li></ul>
+    <p>Definition lists:</p>
+    <dt>Term item 1</dt><dd>Description 1</dd><dt>Term item 2</dt><dd>Description 2</dd>
+    <h2>Buttons</h2>
+    <p>Below the standard button style applied to <code>&lt;input type="submit"&gt;</code></p>
+    <input type="submit" value="Submit">
+    <p>You can also give a standard link the button style by adding 
+<code>class="standardButton"</code>:<br><a 
+href="#" class="standardButton">Link (button style)</a></p>
+
     <h2 i18n:translate="">Image scales</h2>
      <p><tal:block i18n:translate="">image_large</tal:block><br/><img src="giraffe/image_large" /></p>
      <p><tal:block i18n:translate="">image_preview</tal:block><br/><img src="giraffe/image_preview" /></p>
@@ -321,12 +333,12 @@
  <p><tal:block i18n:translate="">image_tile</tal:block><br/><img src="giraffe/image_tile" /></p>
 <p><tal:block i18n:translate="">image_icon</tal:block><br/><img src="giraffe/image_icon" /></p>
 <p><tal:block i18n:translate="">image_listing</tal:block><br/><img src="giraffe/image_listing" /></p>
-  <p><tal:block i18n:translate="">image_thumb (videos get play button and black borders applied correctly)</tal:block><br/><img src="resolveuid/af79241214c3088375297823b3ccf560/image_thumb" /></p>
-<p><tal:block i18n:translate="">image_wide (only available for
-    videos)</tal:block><br/><img
+<p><tal:block i18n:translate="">image_wide (only available for videos)</tal:block><br/><img
         src="resolveuid/af79241214c3088375297823b3ccf560/image_wide" /></p>
 
     <h2 i18n:translate="">Portal messages</h2>
+     <p i18n:translate="">Portal messages are used to highlight certain content and get 
+user's attention to specific information.</p>
 
      <p i18n:translate="">These classes can be added manually in markup or
          they can be added on text fields using TinyMCE through the Styles
@@ -455,32 +467,40 @@
     </pre>
 
 
-    <h2 i18n:translate="">EEA Icons</h2>
-    <p>We load the entire set of FontAwesome icons within our portal.
-        This means that all of the icons found
-        <a rel="external" href="http://fontawesome.io/icons/">on the FontAwesome icon page</a> can be used as part of our portal.
-    </p>
-    <p>One change that we have made for these icons is to use our own class name from the generic <strong>fa</strong> classname to <strong>eea-icon</strong></p>
-    <p>Therefore this original example:</p>
-    <pre>&lt;a href="#">&lt;i class="fa fa-anchor">&lt;/i>Anchor link&lt;/a&gt;</pre>
-    <p>Becomes:</p>
-    <pre>&lt;a href="#"&gt;&lt;i class="eea-icon eea-icon-anchor"&gt;&lt;/i&gt;Anchor link&lt;/a&gt;</pre>
-    <p>Which results into the following link with icon:</p>
-    <p><a href="#"><i class="eea-icon eea-icon-anchor"></i>Anchor link</a></p>
-    <h3>Icons placed to the right of the text</h3>
-    <p>You can also move the icon to the right of the text by placing the <strong>i tag</strong> to the right of the text as seen in this example:</p>
-    <pre>&lt;a href="#"&gt;Anchor link&lt;i class="eea-icon eea-icon-anchor"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
-    <p><a href="#">Anchor link<i class="eea-icon eea-icon-anchor"></i></a></p>
-    <h3>Right floated Icons</h3>
-    <p>By using the following markup which adds an extra <strong>eea-icon-right</strong> class:</p>
-    <pre>&lt;a href="#"&gt;Anchor link with right floated icon&lt;i class="eea-icon
-        eea-icon-right eea-icon-anchor"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
-    <p>We can float the icon to the right of the text as we can see
-    from the following example, useful when using these icons as actions buttons like the ones found on the Navigation menu:</p>
+    <h2 i18n:translate="">EEA Icons (scalable vector icons)</h2>
+    <p i18n:translate="">You can use the entire set of <a rel="external" 
+href="http://fontawesome.io/icons/">Font Awesome icons</a> as part of the EEA web design. Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop 
+shadow, and anything that can be done with the power of CSS.</p>
+    <p i18n:translate="">Simply use the <strong>&lt;i&gt;</strong> tag with specific classes 
+as following:</p>
+    <i class="eea-icon eea-icon-camera-retro"></i> eea-icon-camera-retro    
+    <pre>&lt;i class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/i&gt; 
+eea-icon-camera-retro</pre>
+    <h4 i18n:translate="">More icons</h4>
+    <p><i class="eea-icon eea-icon-flag"></i><i class="eea-icon eea-icon-ban"></i><i 
+class="eea-icon 
+eea-icon-arrows-alt"><i 
+class="eea-icon eea-icon-microphone"></i><i class="eea-icon eea-icon-pencil"></i><i 
+class="eea-icon eea-icon-eye"><i 
+class="eea-icon eea-icon-thumbs-o-up"></i><i class="eea-icon eea-icon-desktop"></i><i 
+class="eea-icon eea-icon-search"> <a rel="external"
+href="http://fontawesome.io/icons/">More than 360 icons available</a></p>
 
-    <p><a href="#" style="display:block;">Anchor link with right floated icon<i class="eea-icon eea-icon-right eea-icon-anchor"></i></a></p>
-
-
+    <p i18n:translate="">There are many ways to customise the icons display. See the <a 
+href="http://fontawesome.io/examples/">Font Awesome Examples</a> and just
+replace the generic <strong>fa</strong> classname with our <strong>eea-icon</strong> 
+class prefix</p>
+    <h4 i18n:translate="">Floated Icons</h4>
+    <p i18n:translate="">You can float icons right or left by using 
+<strong>eea-icon-right</strong> or 
+<strong>eea-icon-left</strong> class, instead of font awesome .pull-left and .pull-right:</p>
+    <pre>&lt;p&gt;&lt;i class="eea-icon eea-icon-right eea-icon-comment"&gt;&lt;/i&gt;&lt;/a&gt;Right 
+floated comment icon&lt;/p&gt;</pre>
+    <p i18n:translate=""><i class="eea-icon eea-icon-right eea-icon-comment"></i>We can float 
+the icon to the right of the 
+text as we can see from this example.</p>
+    <p i18n:translate="">You can use all the <a href="http://fontawesome.io/examples/">Font 
+Awesome Examples</a></p>
 
     <h2 i18n:translate="">Auto-Link-Icons</h2>
     <p i18n:translate="">
