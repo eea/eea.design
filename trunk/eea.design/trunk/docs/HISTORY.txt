@@ -3,6 +3,9 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Bug fix: no longer open multiple tabs when clicking on currently opened
+  accordion tab
+  [ichimdav refs #17631]
 * Bug fix: css fix - bad style for pagination in portal_registry
   [simiamih refs #17558]
 * Change: use warning triangle for error/warning portal messages
