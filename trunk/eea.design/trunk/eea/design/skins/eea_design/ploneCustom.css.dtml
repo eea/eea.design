@@ -1784,6 +1784,10 @@ div.error,
     content: "&dtml-eea-icon-info-circle;";
 }
 
+.info i:before {
+    content: "&dtml-eea-icon-info-circle;";
+}
+
 .noMessage i:before {
     content: "&dtml-eea-icon-times;";
 }

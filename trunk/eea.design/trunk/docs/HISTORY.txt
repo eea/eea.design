@@ -15,6 +15,8 @@ Changelog
   [simiamih refs #17558]
 * Change: use warning triangle for error/warning portal messages
   [demarant refs #16676]
+* Change: use info portal messages with class info
+  [ghicaale refs #16676]
 * Change: removed custom css and js related to XMPP suite
   [ghicaale refs #17513]
 * Bug fix: Fix PDF export CSS (hide inline comments,
