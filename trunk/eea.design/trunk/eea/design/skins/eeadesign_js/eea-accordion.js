@@ -43,15 +43,74 @@ jQuery(document).ready(function($) {
 
     }
 
-    // general accordion implementation 
+    // temporary fix for missing icons of navigation portlet
+    $(".portletNavigationTree").find('.title').each(function(){
+       $(this).append($('<i class="eea-icon eea-icon-right" />'));
+    });
+
+    $.tools.tabs.addEffect("collapsed", function(i, done) {
+        // #17555; passed an empty effect for the collapsed accordion
+        // using instead use a simple slide for the accordion headers
+
+    });
+    // general accordion implementation
     var eea_accordion = function() {
         var $folder_panels = $('.eea-accordion-panels');
-        if($folder_panels.length) {
-            $($folder_panels).tabs(
-                ".eea-accordion-panels div.pane",
-                {tabs: '.eea-accordion-title, h2', effect: 'slide', initialIndex: 0}
-            );
+        if ($folder_panels.length) {
+
+            $folder_panels.each(function(idx, el){
+                var $el = $(el);
+                var effect = 'slide';
+                var current_class = "current";
+                var initial_index = 0;
+                var $pane = $el.find('.pane');
+
+                if ( $el.hasClass('collapsed-by-default') ) {
+                   // hide all panels if using the above class
+                   effect = 'slide';
+                   initial_index = null;
+                   $pane.hide();
+                }
+
+                if ( $el.hasClass('non-exclusive') ) {
+                    // show the first panel only if we don't have also the
+                    // collapsed-by-default class
+                    if ( !$el.hasClass('collapsed-by-default') ) {
+                        $pane.not(':first').hide();
+                        $pane.eq(0).prev().addClass('current');
+                    }
+
+                    effect = 'collapsed';
+                    current_class = "default";
+                    // allow the hiding of the currently opened accordion
+                    $el.find('.eea-accordion-title, h2').click(function(ev) {
+                       var $el = $(this);
+                       if ( !$el.hasClass('current'))  {
+                           $el.addClass('current').next().slideDown();
+                       }
+                       else {
+                           $el.removeClass('current').next().slideUp();
+                       }
+                    });
+                }
+
+                $el.tabs($pane,
+                {   tabs: '.eea-accordion-title, h2',
+                    effect: effect, initialIndex: initial_index,
+                    current: current_class,
+                    onBeforeClick: function(ev, idx) {
+                        // allows third party applications to hook into these 2 event handlers
+                        $(ev.target).trigger("eea-accordion-before-click", { event: ev, index: idx});
+                    },
+                    onClick: function(ev, idx) {
+                        $(ev.target).trigger("eea-accordion-on-click", { event: ev, index: idx});
+                    }
+                }
+                );
+            });
+
         }
+
     };
 
     eea_accordion();

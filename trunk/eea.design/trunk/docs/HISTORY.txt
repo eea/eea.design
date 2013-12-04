@@ -3,6 +3,10 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Feature: added collapsed-by-default and non-exclusive classes for
+  eea-accordion allowing the accordion to have multiple panels open or have
+  them all collapsed to start with
+  [ichimdav refs #17555]
 * Bug fix: customized tiny_mce.js in order to fix Firefox missing content bug
   [ichimdav #17394]
 * Change: use font icons for portal top actions. Improve
