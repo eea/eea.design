@@ -3,6 +3,8 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Bug fix: customized tiny_mce.js in order to fix Firefox missing content bug
+  [ichimdav #17394]
 * Change: use font icons for portal top actions. Improve
   documentation of design elements.
   [demarant refs 15235]
