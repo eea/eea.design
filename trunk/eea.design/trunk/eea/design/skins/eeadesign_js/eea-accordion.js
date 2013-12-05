@@ -2,12 +2,12 @@ jQuery(document).ready(function($) {
     // NOTE: this file is overriding the one found in
     // Products.NavigationManager
     var portlet = jQuery('dl.portletNavigationTree');
-    if(portlet.length){
+    if (portlet.length) {
         var tabs = jQuery('dd.portletItem', portlet);
 
         // Find current index
         var index = 0;
-        tabs.each(function(idx, obj){
+        tabs.each(function(idx, obj) {
             var here = jQuery(this);
             if(jQuery('.navTreeCurrentNode', here).length > 0){
                 index = idx;
@@ -31,7 +31,8 @@ jQuery(document).ready(function($) {
                 if(tabs.getCurrentTab().hasClass('current')){
                     tabs.getCurrentPane().dequeue().stop().slideUp();
                     tabs.getCurrentTab().removeClass('current').addClass('collapsed');
-                }else{
+                }
+                else {
                     $this.addClass('current')
                         .removeClass('collapsed')
                         .next()
@@ -44,7 +45,7 @@ jQuery(document).ready(function($) {
     }
 
     // temporary fix for missing icons of navigation portlet
-    $(".portletNavigationTree").find('.title').each(function(){
+    $(".portletNavigationTree").find('.title').each(function() {
        $(this).append($('<i class="eea-icon eea-icon-right" />'));
     });
 
@@ -58,21 +59,21 @@ jQuery(document).ready(function($) {
         var $folder_panels = $('.eea-accordion-panels');
         if ($folder_panels.length) {
 
-            $folder_panels.each(function(idx, el){
+            $folder_panels.each(function(idx, el) {
                 var $el = $(el);
                 var effect = 'slide';
                 var current_class = "current";
                 var initial_index = 0;
                 var $pane = $el.find('.pane');
 
-                if ( $el.hasClass('collapsed-by-default') ) {
+                if ($el.hasClass('collapsed-by-default')) {
                    // hide all panels if using the above class
                    effect = 'slide';
                    initial_index = null;
                    $pane.hide();
                 }
 
-                if ( $el.hasClass('non-exclusive') ) {
+                if ($el.hasClass('non-exclusive')) {
                     // show the first panel only if we don't have also the
                     // collapsed-by-default class
                     if ( !$el.hasClass('collapsed-by-default') ) {
@@ -85,7 +86,7 @@ jQuery(document).ready(function($) {
                     // allow the hiding of the currently opened accordion
                     $el.find('.eea-accordion-title, h2').click(function(ev) {
                        var $el = $(this);
-                       if ( !$el.hasClass('current'))  {
+                       if (!$el.hasClass('current')) {
                            $el.addClass('current').next().slideDown();
                        }
                        else {
