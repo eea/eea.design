@@ -165,118 +165,216 @@
         ">
     </pre>
 
-    <h2 i18n:translate="">Jquerytools accordion</h2>
+    <h2>Jquerytools accordions</h2>
+
+    <h3>Default Jquerytools accordion</h3>
     <div class="eea-accordion-panels">
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane"
-                 tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.">
+            <div class="pane">
+             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
             </div>
         </div>
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane"
-                 tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+            <div class="pane">
+             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
             </div>
         </div>
+
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
-            <div class="pane"
-                 tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.">
+            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+            <div class="pane">
+             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
             </div>
         </div>
+
     </div>
+    <pre>
+        &lt;div class=&quot;eea-accordion-panels&quot;&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;First panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Second panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Third panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
 
 
-    <h2 i18n:translate="">Jquerytools accordion with collapsed-by-default class</h2>
+    <p>&nbsp;</p>
+    <h3>Jquerytools accordion with collapsed panels</h3>
+    <p>This accordion starts with all of the panels collapsed by default.</p>
+    <p>The difference of markup from the default accordion consists of the addition
+    of the <strong>collapsed-by-default</strong> class within the div with the 'eea-accordion-panels' class.</p>
     <div class="eea-accordion-panels collapsed-by-default">
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane"
-                    tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.">
+            <div class="pane">
+             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
             </div>
         </div>
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane"
-                    tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+            <div class="pane">
+             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
             </div>
         </div>
-        <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
-            <div class="pane"
-                    tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.">
-            </div>
-        </div>
-    </div>
 
-    <h2 i18n:translate="">Jquerytools accordion collapsed-by-default with non-exclusive</h2>
+        <div class="eea-accordion-panel">
+            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+            <div class="pane">
+             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+            </div>
+        </div>
+
+    </div>
+    <pre>
+        &lt;div class=&quot;eea-accordion-panels collapsed-by-default&quot;&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;First panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Second panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Third panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <p>&nbsp;</p>
+    <h3>Jquerytools accordion with collapsed panels and non exclusive</h3>
+    <p>This accordion starts with all of the panels collapsed by default and with non exclusive panels, meaning that you can have more than one opened panel at a time.</p>
+    <p>Note that clicking on an opened panel title will collapse it's corresponding panel.</p>
+    <p>The difference of markup from the default accordion consists of the addition
+        of the <strong>collapsed-by-default non-exclusive</strong> class within the div with the 'eea-accordion-panels' class.</p>
     <div class="eea-accordion-panels collapsed-by-default non-exclusive">
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane"
-                    tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.">
+            <div class="pane">
+             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
             </div>
         </div>
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane"
-                    tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+            <div class="pane">
+             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
             </div>
         </div>
+
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
-            <div class="pane"
-                    tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.">
+            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+            <div class="pane">
+             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
             </div>
         </div>
+
     </div>
+    <pre>
+        &lt;div class=&quot;eea-accordion-panels collapsed-by-default non-exclusive&quot;&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;First panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Second panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Third panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
 
 
-    <h2 i18n:translate="">Jquerytools accordion with non-exclusive class</h2>
+    <p>&nbsp;</p>
+    <h3 i18n:translate="">Jquerytools accordion with non exclusive panels</h3>
+    <p>This accordion starts with non exclusive panels, meaning that you can have more than one opened panel at a time.</p>
+    <p>Note that clicking on an opened panel title will collapse it's corresponding panel.</p>
+    <p>The difference of markup from the default accordion consists of the addition
+        of the <strong>non-exclusive</strong> class within the div with the 'eea-accordion-panels' class.</p>
     <div class="eea-accordion-panels non-exclusive">
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane"
-                    tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.">
+            <div class="pane">
+             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
             </div>
         </div>
+
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane"
-                    tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+            <div class="pane">
+             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
             </div>
         </div>
+
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
-            <div class="pane"
-                    tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.">
+            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+            <div class="pane">
+             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
             </div>
-        </div>
+        </div>>
+
     </div>
-<pre tal:content="string:
-    &lt;div class=&quot;eea-accordion-panels&quot;&gt;
-        &lt;div class=&quot;eea-accordion-panel&quot;&gt;
-            &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;First panel title&lt;/h2&gt;
-            &lt;div class=&quot;pane&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+    <pre>
+        &lt;div class=&quot;eea-accordion-panels non-exclusive&quot;&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;First panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Second panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Third panel title&lt;/h2&gt;
+                &lt;div class=&quot;pane&quot;&gt;
+                    Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;eea-accordion-panel&quot;&gt;
-            &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Second panel title&lt;/h2&gt;
-            &lt;div class=&quot;pane&quot;&gt;
-                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;eea-accordion-panel&quot;&gt;
-            &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Third panel title&lt;/h2&gt;
-            &lt;div class=&quot;pane&quot;&gt;
-                Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    ">
-</pre>
+    </pre>
+
 
     <h2 i18n:translate="">Fancybox pop-ups</h2>
     <div style="display:none">
