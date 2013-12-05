@@ -165,29 +165,53 @@
         ">
     </pre>
 
-    <h2>Jquerytools accordions</h2>
+    <h2 i18n:translate="">Jquerytools accordion (standard)</h2>
 
-    <h3>Default Jquerytools accordion</h3>
+<pre tal:content="string:
+    &lt;div class=&quot;eea-accordion-panels&quot;&gt;
+        &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+            &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;First panel title&lt;/h2&gt;
+            &lt;div class=&quot;pane&quot;&gt;
+                Lorem ipsum dolor sit amet...
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+            &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Second panel title&lt;/h2&gt;
+            &lt;div class=&quot;pane&quot;&gt;
+                Claritas est etiam processus dynamicus...
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;eea-accordion-panel&quot;&gt;
+            &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Third panel title&lt;/h2&gt;
+            &lt;div class=&quot;pane&quot;&gt;
+                Suspendisse tristique sapien non ipsum...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ">
+</pre>
+
+
     <div class="eea-accordion-panels">
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane">
-             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+            <div class="pane"
+                 tal:content="string:Lorem ipsum dolor sit amet...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane">
-             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            <div class="pane"
+                 tal:content="string:Claritas est etiam processus dynamicus...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
-            <div class="pane">
-             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
+            <div class="pane"
+                 tal:content="string:Suspendisse tristique sapien non ipsum...">
             </div>
         </div>
 
@@ -216,31 +240,33 @@
     </pre>
 
 
-    <p>&nbsp;</p>
-    <h3>Jquerytools accordion with collapsed panels</h3>
-    <p>This accordion starts with all of the panels collapsed by default.</p>
-    <p>The difference of markup from the default accordion consists of the addition
-    of the <strong>collapsed-by-default</strong> class within the div with the 'eea-accordion-panels' class.</p>
+    <h2 i18n:translate="">Jquerytools accordion (collapsed-by-default)</h2>
+
+    <pre tal:content="string:
+    &lt;div class=&quot;eea-accordion-panels collapsed-by-default&quot;&gt;
+    ...
+    &lt;/div&gt;"></pre>
+
     <div class="eea-accordion-panels collapsed-by-default">
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane">
-             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+            <div class="pane"
+                    tal:content="string:Lorem ipsum dolor sit amet...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane">
-             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            <div class="pane"
+                    tal:content="string:Claritas est etiam processus dynamicus...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
-            <div class="pane">
-             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
+            <div class="pane"
+                    tal:content="string:Suspendisse tristique sapien non ipsum...">
             </div>
         </div>
 
@@ -268,32 +294,33 @@
         &lt;/div&gt;
     </pre>
 
-    <p>&nbsp;</p>
-    <h3>Jquerytools accordion with collapsed panels and non exclusive</h3>
-    <p>This accordion starts with all of the panels collapsed by default and with non exclusive panels, meaning that you can have more than one opened panel at a time.</p>
-    <p>Note that clicking on an opened panel title will collapse it's corresponding panel.</p>
-    <p>The difference of markup from the default accordion consists of the addition
-        of the <strong>collapsed-by-default non-exclusive</strong> class within the div with the 'eea-accordion-panels' class.</p>
+    <h2 i18n:translate="">Jquerytools accordion (collapsed-by-default and non-exclusive)</h2>
+
+    <pre tal:content="string:
+    &lt;div class=&quot;eea-accordion-panels collapsed-by-default non-exclusive&quot;&gt;
+    ...
+    &lt;/div&gt;"></pre>
+
     <div class="eea-accordion-panels collapsed-by-default non-exclusive">
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane">
-             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+            <div class="pane"
+                    tal:content="string:Lorem ipsum dolor sit amet...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane">
-             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            <div class="pane"
+                    tal:content="string:Claritas est etiam processus dynamicus...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
-            <div class="pane">
-             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
+            <div class="pane"
+                    tal:content="string:Suspendisse tristique sapien non ipsum...">
             </div>
         </div>
 
@@ -322,58 +349,37 @@
     </pre>
 
 
-    <p>&nbsp;</p>
-    <h3 i18n:translate="">Jquerytools accordion with non exclusive panels</h3>
-    <p>This accordion starts with non exclusive panels, meaning that you can have more than one opened panel at a time.</p>
-    <p>Note that clicking on an opened panel title will collapse it's corresponding panel.</p>
-    <p>The difference of markup from the default accordion consists of the addition
-        of the <strong>non-exclusive</strong> class within the div with the 'eea-accordion-panels' class.</p>
+    <h2 i18n:translate="">Jquerytools accordion (non-exclusive)</h2>
+
+    <pre tal:content="string:
+    &lt;div class=&quot;eea-accordion-panels non-exclusive&quot;&gt;
+    ...
+    &lt;/div&gt;"></pre>
+
     <div class="eea-accordion-panels non-exclusive">
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">First panel title</h2>
-            <div class="pane">
-             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+            <div class="pane"
+                    tal:content="string:Lorem ipsum dolor sit amet...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
             <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-            <div class="pane">
-             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+            <div class="pane"
+                    tal:content="string:Claritas est etiam processus dynamicus...">
             </div>
         </div>
 
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
-            <div class="pane">
-             Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
+            <h2 class="notoc eea-icon-right-container" i18n:translate="">Third panel title</h2>
+            <div class="pane"
+                    tal:content="string:Suspendisse tristique sapien non ipsum...">
             </div>
         </div>
 
     </div>
-    <pre>
-        &lt;div class=&quot;eea-accordion-panels non-exclusive&quot;&gt;
-            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
-                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;First panel title&lt;/h2&gt;
-                &lt;div class=&quot;pane&quot;&gt;
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
-                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Second panel title&lt;/h2&gt;
-                &lt;div class=&quot;pane&quot;&gt;
-                    Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;eea-accordion-panel&quot;&gt;
-                &lt;h2 class=&quot;eea-icon-right-container&quot;&gt;Third panel title&lt;/h2&gt;
-                &lt;div class=&quot;pane&quot;&gt;
-                    Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris. Sed auctor, mauris sit amet ornare condimentum, odio mauris pulvinar libero, in bibendum odio risus et metus. Vivamus sit amet viverra arcu. Nunc non sem et nulla ultricies ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dictum congue est, eget volutpat elit vestibulum eu. Ut id dui augue, vitae pretium elit. Fusce porta, quam sit amet fermentum ultricies, nisi nisl condimentum est, et dignissim urna tortor suscipit est. Ut libero felis, fringilla convallis tristique a, sollicitudin vel est. Nullam quis sagittis augue.
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    </pre>
 
 
     <h2 i18n:translate="">Fancybox pop-ups</h2>
@@ -412,6 +418,8 @@
     </pre>
 
     <h2 i18n:translate="">Tooltips</h2>
+    <h3 i18n:translate="">Fixed size</h3>
+    <p>The following tooltips have fixed width and height.</p>
     <img src="fish" title="Tooltips can go right" i18n:attributes="title" class="eea-tooltip-left" />
     <img src="fish" title="Tooltips can go up" i18n:attributes="title" class="eea-tooltip-top" />
     <img src="fish" title="Tooltips can go down" i18n:attributes="title" class="eea-tooltip-bottom" />
@@ -423,7 +431,9 @@
 &lt;img src=&quot;fish&quot; class=&quot;eea-tooltip-right&quot; title=&quot;Tooltips can go left&quot; /&gt;
     "></pre>
 
-    <h2 i18n:translate="">Flexible tooltips</h2>
+    <h3 i18n:translate="">Flexible size</h3>
+    <p>The following tooltips have a dynamic height which is automatically adjusted depending
+ on the amount of text used.</p>
     <img src="fish"
          class="eea-flexible-tooltip-left"
          title="The name given to the resource. Typically, a title will be a name by which the resource is formally known"
@@ -485,11 +495,11 @@
     <p>Definition lists:</p>
     <dt>Term item 1</dt><dd>Description 1</dd><dt>Term item 2</dt><dd>Description 2</dd>
     <h2>Buttons</h2>
-    <p>Below the standard button style applied to <code>&lt;input type="submit"&gt;</code></p>
-    <input type="submit" value="Submit">
-    <p>You can also give a standard link the button style by adding 
-<code>class="standardButton"</code>:<br><a 
-href="#" class="standardButton">Link (button style)</a></p>
+    <p>Below the standard button style applied to<br><code>&lt;input type="submit" ...</code>:
+    <br><input type="submit" value="Submit"></p>
+    <p>You can also give a standard link the button style by adding<br><code>&lt;a class="standardButton" ...
+</code>:
+    <br><a href="#" class="standardButton">Link (button style)</a></p>
 
     <h2 i18n:translate="">Image scales</h2>
      <p><tal:block i18n:translate="">image_large</tal:block><br/><img src="giraffe/image_large" /></p>
@@ -634,26 +644,30 @@ user's attention to specific information.</p>
 
 
     <h2 i18n:translate="">EEA Icons (scalable vector icons)</h2>
+   <p i18n:translate="">Simply use the <strong>&lt;i&gt;</strong> tag with specific classes
+as following:</p>
+    <i class="eea-icon eea-icon-camera-retro"></i> eea-icon-camera-retro
+    <pre>&lt;i class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/i&gt;
+eea-icon-camera-retro</pre>
     <p i18n:translate="">You can use the entire set of <a rel="external" 
 href="http://fontawesome.io/icons/">Font Awesome icons</a> as part of the EEA web design. Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop 
 shadow, and anything that can be done with the power of CSS.</p>
-    <p i18n:translate="">Simply use the <strong>&lt;i&gt;</strong> tag with specific classes 
-as following:</p>
-    <i class="eea-icon eea-icon-camera-retro"></i> eea-icon-camera-retro    
-    <pre>&lt;i class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/i&gt; 
-eea-icon-camera-retro</pre>
     <h4 i18n:translate="">More icons</h4>
-    <p><i class="eea-icon eea-icon-flag"></i><i class="eea-icon eea-icon-ban"></i><i 
-class="eea-icon 
-eea-icon-arrows-alt"><i 
-class="eea-icon eea-icon-microphone"></i><i class="eea-icon eea-icon-pencil"></i><i 
-class="eea-icon eea-icon-eye"><i 
-class="eea-icon eea-icon-thumbs-o-up"></i><i class="eea-icon eea-icon-desktop"></i><i 
-class="eea-icon eea-icon-search"> <a rel="external"
-href="http://fontawesome.io/icons/">More than 360 icons available</a></p>
+    <p>
+     <i class="eea-icon eea-icon-flag eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-ban eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-arrows-alt eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-microphone eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-pencil eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-eye eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-thumbs-o-up eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-desktop eea-icon-2x"></i>
+     <i class="eea-icon eea-icon-search eea-icon-2x"></i> 
+     <a rel="external" href="http://fontawesome.io/icons/">More than 360 icons</a>
+    </p>
 
-    <p i18n:translate="">There are many ways to customise the icons display. See the <a 
-href="http://fontawesome.io/examples/">Font Awesome Examples</a> and just
+    <p class="callout" i18n:translate="">There are many ways to customise the icons display. See the <a 
+href="http://fontawesome.io/examples/">practical examples</a> and just
 replace the generic <strong>fa</strong> classname with our <strong>eea-icon</strong> 
 class prefix</p>
     <h4 i18n:translate="">Floated Icons</h4>
@@ -665,12 +679,10 @@ floated comment icon&lt;/p&gt;</pre>
     <p i18n:translate=""><i class="eea-icon eea-icon-right eea-icon-comment"></i>We can float 
 the icon to the right of the 
 text as we can see from this example.</p>
-    <p i18n:translate="">You can use all the <a href="http://fontawesome.io/examples/">Font 
-Awesome Examples</a></p>
 
-    <h2 i18n:translate="">Auto-Link-Icons</h2>
+    <h2 i18n:translate="">Auto-Link-Icons based protocol and file extension</h2>
     <p i18n:translate="">
-        Link types are automatically detected on client side
+        Link types (url protocol and file extension type) are automatically detected on client side
         by a javascript which will add the necessary class icon before the link.
         Here you see some examples:
     </p>
@@ -701,25 +713,6 @@ Awesome Examples</a></p>
         <a href="all_icons" i18n:translate="">list of all icons available</a>
        </tal:block>
     </p>
-
-        <tal:comment replace="nothing">
-          Replace or delete this example since it's pointing to an asp page
-
-        <h2 i18n:translate="">Scope / Local search</h2>
-        <div class="localSearch lightBGC">
-            <h4 i18n:translate="">Search on data set and application</h4>
-            <form method="get" action="available.asp" id="form2" name="form2">
-                <input type="hidden" name="type" value="search" />
-                <div class="field">
-                    <label i18n:translate="">Title</label>
-                    <div class="formHelp" i18n:translate="">Enter one or more keywords for a search. Use of AND/OR is supported.</div>
-                    <div></div>
-                    <input type="text" name="search" value="" size="30" maxlength="50" tabindex="1" />
-                    <input type="submit" value="Search" class="searchButton" i18n:attributes="value" id="Submit2" name="Submit2" tabindex="2" />
-                </div>
-            </form>
-        </div>
-        </tal:comment>
 
         <!-- Client Side Pagination -->
         <h2 i18n:translate="">Client Side Pagination</h2>

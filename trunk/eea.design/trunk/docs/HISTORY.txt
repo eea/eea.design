@@ -3,6 +3,10 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Change: removed EoE link.
+  [demarant fixes #17581]
+* Change: Improved documentation, accordion, icons and removed old code.
+  [demarant refs #17555]
 * Feature: added collapsed-by-default and non-exclusive classes for
   eea-accordion allowing the accordion to have multiple panels open or have
   them all collapsed to start with
