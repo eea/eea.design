@@ -1716,9 +1716,10 @@ dl.system-message dt {
     color: &dtml-fontColor;;
 }
 
-dl.portalMessage, div.attention, div.caution,
-div.danger, div.error, div.hint, div.important,
-div.note, div.tip, div.warning,
+div.attention, div.caution,
+div.danger, div.error, div.hint,
+div.important, div.note, div.tip,
+div.warning,
 #error-handling,
 .portalMessage,
 .system-message {
@@ -1731,12 +1732,19 @@ div.note, div.tip, div.warning,
     border: none;
 }
 
-.portalMessage .eea-icon {
-    display: block;
+.portalMessage:before {
     float: left;
-    font-size: 150%;
-    margin-left: -2.5em;
+    display: block;
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
     line-height: 1;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+    margin-left: -2.3em;
+    font-size: 150%;
 }
 
 div.hint, div.tip, div.note,
@@ -1749,7 +1757,6 @@ div.hint, div.tip, div.note,
     background-color: &dtml-corporateBlueBackgroundColor;;
 }
 
-
 div.attention, div.caution,
 div.danger, div.error, div.important,
 div.warning,
@@ -1759,11 +1766,17 @@ div.warning,
     background-color: #FFFABE;
 }
 
-div.attention i:before, div.caution i:before,
-div.danger i:before, div.important i:before,
-div.warning i:before,
-.attentionMessage i:before {
+div.attention:before, div.caution:before,
+div.danger:before, div.important:before,
+div.warning:before,
+.attentionMessage:before {
     content: "&dtml-eea-icon-flash;";
+    vertical-align: baseline;
+    line-height: 2;
+}
+
+.attentionMessage:before {
+    line-height: 1;
 }
 
 .attentionMessage,
@@ -1776,27 +1789,27 @@ div.error,
     color: red;
 }
 
-.ideaMessage i:before {
+.ideaMessage:before {
     content: "&dtml-eea-icon-lightbulb-o;";
 }
 
-.informationMessage i:before {
+.informationMessage:before {
     content: "&dtml-eea-icon-info-circle;";
 }
 
-.info i:before {
+.info:before {
     content: "&dtml-eea-icon-info-circle;";
 }
 
-.noMessage i:before {
+.noMessage:before {
     content: "&dtml-eea-icon-times;";
 }
 
-.noteMessage i:before {
+.noteMessage:before {
     content: "&dtml-eea-icon-file-text;";
 }
 
-.rosetteMessage i:before {
+.rosetteMessage:before {
     content: "&dtml-eea-icon-globe;";
 }
 
@@ -1804,23 +1817,23 @@ div.error,
     color: #666666;
 }
 
-.smileyMessage i:before {
+.smileyMessage:before {
     content: "&dtml-eea-icon-smile-o;";
 }
 
-.thumbsUpMessage i:before {
+.thumbsUpMessage:before {
     content: "&dtml-eea-icon-thumbs-up;";
 }
 
-div.error i:before,
-.errorMessage i:before,
-.error i:before,
-.warningMessage i:before
+div.error:before,
+.errorMessage:before,
+.error:before,
+.warningMessage:before
 {
     content: "&dtml-eea-icon-exclamation-triangle;";
 }
 
-.yesMessage i:before {
+.yesMessage:before {
     content: "&dtml-eea-icon-check;";
 }
 

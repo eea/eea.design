@@ -3,6 +3,9 @@ Changelog
 
 8.8-dev - (unreleased)
 ----------------------
+* Change: put the icons directly on the portalMessage classes in order for 
+  the icons to appear when editing text with TinyMCE
+  [ichimdav refs #17633]
 * Change: removed EoE link.
   [demarant fixes #17581]
 * Change: Improved documentation, accordion, icons and removed old code.

@@ -76,30 +76,6 @@
   border-radius: .1em;
 }
 
-.eea-icon-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle;
-}
-.eea-icon-stack-1x,
-.eea-icon-stack-2x {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-}
-.eea-icon-stack-1x {
-  line-height: inherit;
-}
-.eea-icon-stack-2x {
-  font-size: 2em;
-}
-.eea-icon-inverse {
-  color: #ffffff;
-}
-
 .eea-icon-right {
     float: right;
 }
@@ -117,15 +93,6 @@ i:before {
 
 .eea-icon.eea-icon-right {
   margin-left: .3em;
-}
-
-/* icons utf definitions */
-.eea-icon-chevron-down:before {
-    content: "&dtml-eea-icon-chevron-down;";
-}
-
-.eea-icon-chevron-left:before {
-    content: "&dtml-eea-icon-chevron-left;";
 }
 
 img {

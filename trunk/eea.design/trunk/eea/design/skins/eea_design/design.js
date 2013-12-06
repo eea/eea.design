@@ -21,32 +21,8 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
-
-//    #15235; add a 'i' tag to portalMessage classes for icon usage
-    var $portal_messages =  $(".portalMessage");
-    $portal_messages.each(function(i, el) {
-        var $el = $(el);
-        if ( el.className === "portalMessage" ) {
-            return;
-        }
-        var alphanumeric = /^\w+$/i;
-        var $children = $el.children();
-        var $i_tag = $("<i class='eea-icon' />");
-        if ( $children.length ) {
-            // add the i tag to the first child if the node is not text or
-            // the node contains only spaces which will not pass the alphanumeric regex
-            if ( el.childNodes[0].nodeName !== "#text" ||
-                !alphanumeric.test(el.childNodes[0].nodeValue) ) {
-                $children.eq(0).prepend($i_tag);
-            }
-            else {
-                $el.prepend($i_tag);
-            }
-        }
-        else {
-            $el.prepend($i_tag);
-        }
-    });
+     // #17633 add eea-icon class to the plone message classes
+     $(".attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning").addClass('eea-icon');
 
     $(".eea-icon-left-container").each(function(i, el) {
         var $i_tag = $("<i class='eea-icon eea-icon-left' />");
