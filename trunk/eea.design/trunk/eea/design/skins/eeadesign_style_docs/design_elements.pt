@@ -632,6 +632,20 @@ user's attention to specific information.</p>
         &lt;/div&gt;
     </pre>
 
+    <h3 i18n:translate="">Custom Portal Message</h3>
+    <p>By using the &lt;i&gt;-tag icon syntax, you can create custom portal messages. See section "EEA Icons" 
+for all available icons.</p>
+    <div class="portalMessage">
+        <i class="eea-icon eea-icon-eye"></i>
+        Message with custom Icon.
+    </div>
+    <pre>
+        &lt;div class="portalMessage"&gt;
+             &lt;i class=&quot;eea-icon eea-icon-eye&quot;&gt;&lt;/i&gt;
+            Message with custom Icon.
+        &lt;/div&gt;
+    </pre>
+
 
     <h2 i18n:translate="">EEA Icons (scalable vector icons)</h2>
    <p i18n:translate="">Simply use the <strong>&lt;i&gt;</strong> tag with specific classes
