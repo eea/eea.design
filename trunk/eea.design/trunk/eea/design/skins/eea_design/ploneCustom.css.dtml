@@ -1732,7 +1732,7 @@ div.warning,
     border: none;
 }
 
-.portalMessage:before {
+.portalMessage:before, .portalMessage i.eea-icon {
     float: left;
     display: block;
     font-family: 'FontAwesome';
@@ -1745,6 +1745,10 @@ div.warning,
     speak: none;
     margin-left: -2.3em;
     font-size: 150%;
+}
+
+.portalMessage i.eea-icon:before {
+    margin: 0;
 }
 
 div.hint, div.tip, div.note,
