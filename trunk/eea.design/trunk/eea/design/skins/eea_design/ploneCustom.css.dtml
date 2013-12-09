@@ -1732,13 +1732,14 @@ div.warning,
     border: none;
 }
 
-.portalMessage:before, .portalMessage i.eea-icon {
+
+.portalMessage:before, .portalMessage .eea-icon:before {
     float: left;
     display: block;
     font-family: 'FontAwesome';
     font-weight: normal;
     font-style: normal;
-    line-height: 1;
+    line-height: inherit;
     text-decoration: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1747,8 +1748,17 @@ div.warning,
     font-size: 150%;
 }
 
-.portalMessage i.eea-icon:before {
+.portalMessage .eea-icon:before {
     margin: 0;
+}
+
+div.attention:before, div.caution:before,
+div.danger:before, div.error:before, div.hint:before,
+div.important:before, div.note:before, div.tip:before,
+div.warning:before {
+    float: left;
+    display: block;
+    margin-right: .3em;
 }
 
 div.hint, div.tip, div.note,

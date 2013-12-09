@@ -19,7 +19,7 @@
 
 /* #15235; Expose FontAwesome throught eea-icon-* classes */
 
-.eea-icon {
+.eea-icon:before {
     display: inline-block;
     font-family: 'FontAwesome';
     font-weight: normal;
