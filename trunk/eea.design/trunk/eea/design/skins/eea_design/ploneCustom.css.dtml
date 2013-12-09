@@ -1748,10 +1748,6 @@ div.warning,
     font-size: 150%;
 }
 
-.portalMessage .eea-icon:before {
-    margin: 0;
-}
-
 div.attention:before, div.caution:before,
 div.danger:before, div.error:before, div.hint:before,
 div.important:before, div.note:before, div.tip:before,
