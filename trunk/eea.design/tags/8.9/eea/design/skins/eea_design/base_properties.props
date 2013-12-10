@@ -1,0 +1,100 @@
+title:string=eea.design's color, font, logo and border defaults
+
+plone_skin:string=EEADesign2006
+
+logoName:string=logo.gif
+
+fontFamily:string=Lucida Grande, Verdana, Lucida, Helvetica, Arial, sans-serif
+fontBaseSize:string=69%
+fontColor:string=#333333
+fontSmallSize:string=85%
+
+#corporate main colors
+corporateGreen:string=#b1c748
+corporateGreenTwo:string=#777c1f
+corporateBlueOne:string=#2c8da2
+corporateBlueTwo:string=#005e7d
+
+
+#color used for	buttons / actions / special links (not for plain text)
+corporateOrange:string=#f6a800
+
+#different headings colors
+linkHeadingColor:string=#346f83
+headingColor:string=#2d749c
+headingFontFamily:string= Verdana, Lucida, Helvetica, Arial, sans-serif
+
+backgroundColor:string=transparent
+
+#general divisions colors
+lightGreyDivisionColor:string=#cccccc
+
+#general bgc for boxes and portlets
+lightBackgroundColor:string=#f3f3f3
+mediumBackgroundColor:string=#ececec
+darkBackgroundColor:string=#D6D6D6
+greyBackgroundColor:string=#f3f3f3
+headerBackgroundColor:string=#F0F4F5
+# background used for portalMessages and keyFacts
+corporateBlueBackgroundColor:string=#C7E0E9
+
+#top navigation colors
+tabBackgroundColor:string=#2c8da2
+
+#link colors
+linkColor:string=#346f83
+linkActiveColor:string=#f5821f
+linkVisitedColor:string=#8e004d
+linkHoverColor:string=#8e004d
+linkHoverBGColor:string=#e9efcd
+linkUnderlineColor:string=#a6bacd
+linkUnderlineHoverColor:string=#8e004d
+
+borderWidth:string=1px
+borderStyle:string=solid
+borderStyleAnnotations:string=dashed
+
+globalBorderColor:string=#cccccc
+globalGreenBorderColor:string=#9db481
+globalBackgroundColor:string=#f3f3f3
+globalFontColor:string=#333333
+
+
+contentViewBorderColor:string=#74ae0b
+contentViewBackgroundColor:string=#cde2a7
+contentViewFontColor:string=#578308
+
+inputFontColor:string=Black
+
+textTransform:string=lowercase
+
+#For zebra styles. odd items in lists / tables 
+evenRowBackgroundColor:string=#ececec
+oddRowBackgroundColor:string=#f7f7f7
+
+notifyBorderColor:string=#ffa500
+notifyBackgroundColor:string=#febe86
+
+discreetColor:string=#808285
+helpBackgroundColor:string=#ffffe1
+
+portalMinWidth:string=70em
+columnOneWidth:string=16em
+columnTwoWidth:string=16em
+
+# 15235 font icon names and values
+# always add any new icons here for easier readability and maintainability
+eea-icon-check:string=\f00c
+eea-icon-chevron-down:string=\f078
+eea-icon-chevron-left:string=\f053
+eea-icon-exclamation-circle:string=\f06a
+eea-icon-file-text:string=\f15c
+eea-icon-flash:string=\f0e7
+eea-icon-globe:string=\f0ac
+eea-icon-info-circle:string=\f05a
+eea-icon-lightbulb-o:string=\f0eb
+eea-icon-smile-o:string=\f118
+eea-icon-thumbs-up:string=\f164
+eea-icon-times:string=\f00d
+eea-icon-exclamation-triangle:string=\f071
+
