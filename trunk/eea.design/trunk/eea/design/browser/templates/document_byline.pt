@@ -3,7 +3,8 @@
          id="plone-document-byline"
          tal:define="isAnon context/@@plone_portal_state/anonymous;
                      plone_view context/@@plone;
-                     siteprops context/portal_properties/site_properties;"
+                     siteprops context/portal_properties/site_properties;
+                     friendly_type context/Type|nothing;"
         i18n:domain="eea">
 
         <noscript>
@@ -11,35 +12,39 @@
             #5233 IE8 has a bug which renders the noscript tag when using 
             background color and border so we set the class to a div
           </tal:comment>
-          <div class="portalMessage" i18n:translate="">
+          <div class="portalMessage warning" i18n:translate="">
             This website has limited functionality with javascript off.
             Please make sure javascript is enabled in your browser.
           </div>
         </noscript>
+
         <tal:dates tal:define="metatypes_showpubdate siteprops/metatypes_showpubdate|python:['Highlight','PressRelease','Article','Speech','Assessment','Specification'];
                                    metatypes_showmoddate siteprops/metatypes_showmoddate|python:['ATDocument','Highlight','PressRelease','Article','Speech','Assessment','Specification'];
-                                   metatypes_showcredate siteprops/metatypes_showcredate|python:['Assessment','Specification'];"
+                                   metatypes_showcredate siteprops/metatypes_showcredate|python:['Assessment','Specification'];
+                                   metatypes_labeling_blacklist siteprops/metatypes_labeling_blacklist|python:['ATFolder']"
                     metal:define-macro="publishdate">
+            <span class="portalType" tal:content="friendly_type"
+                                 tal:condition="python:context.meta_type not in metatypes_labeling_blacklist"></span>
+            <tal:expired tal:condition="view/isExpired">
+                —
+                <span class="state-expired"
+                      i18n:translate="">expired</span>
+            </tal:expired>
             <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
                 <tal:published i18n:translate="">
                     Created
-                </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
+                </tal:published><span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
             </span>
             <span class="docDate publishDate" tal:condition="python:(context.meta_type in metatypes_showpubdate) and here.getEffectiveDate()">
                 <tal:published i18n:translate="">
                     Published
-                </tal:published>: <span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
+                </tal:published><span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
             </span>
             <span class="docDate modificationDate" tal:condition="python:isAnon and context.meta_type in metatypes_showmoddate">
                    <tal:modified i18n:translate="">
                     Last modified
-                   </tal:modified>: <span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59</span>
+                   </tal:modified><span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59</span>
             </span>
-            <tal:expired tal:condition="view/isExpired">
-                — 
-                <span class="state-expired"
-                      i18n:translate="">expired</span>
-            </tal:expired>
         </tal:dates>
         <br />
         <tal:loggedin tal:condition="not: isAnon">

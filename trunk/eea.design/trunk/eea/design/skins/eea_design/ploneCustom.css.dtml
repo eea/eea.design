@@ -1855,6 +1855,16 @@ div.error:before,
     clear: both;
 }
 
+.documentByLine .portalType {
+    background: &dtml-lightBackgroundColor;;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.documentByLine .docDate {
+    padding-right: 0.5em;
+}
+
 .discussion {
     margin-top: 1em;
 }
@@ -1908,6 +1918,7 @@ div.error:before,
     font-size: 11px;
     text-decoration: none;
 }
+
 
 .tileItem {
     border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;

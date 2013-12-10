@@ -3,6 +3,11 @@ Changelog
 
 8.9-dev - (unreleased)
 ----------------------
+* Change: Improved documentByLine, added warning message style
+  when javascript not available. Improved display of dates.
+* Feature: content type label is now visible in documentByLine.
+  Which types NOT to show can be configured in ZMI > portal_properties >
+  > metatypes_labeling_blacklist, default to not show on ATFolder.
 
 8.8 - (2013-12-10)
 ------------------
