@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.9-dev - (unreleased)
-----------------------
+8.9 - (2013-12-10)
+------------------
 * Change: Improved documentByLine, added warning message style
   when javascript not available. Improved display of dates.
 * Feature: content type label is now visible in documentByLine.
