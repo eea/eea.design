@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.9-dev - (unreleased)
+----------------------
+
 8.8 - (2013-12-10)
 ------------------
 * Change: be backward compatible and allow to use <i>-style-icon
