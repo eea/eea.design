@@ -24,7 +24,7 @@
            tal:attributes="href saction/url;
                            title title;
                            accesskey accesskey;">
-                           <i class="eea-icon eea-icon-lg"></i>
+                           <i class="eea-icon eea-icon-lg"><!-- --></i>
                            <img i18n:attributes="title" src="" alt="" title=""
                                      tal:attributes="src    string:$icon;
                                      id     string:icon-${saction/id};
