@@ -633,40 +633,40 @@ user's attention to specific information.</p>
     </pre>
 
     <h3 i18n:translate="">Custom Portal Message</h3>
-    <p>By using the &lt;i&gt;-tag icon syntax, you can create custom portal messages. See section "EEA Icons" 
+    <p>By using the &lt;span&gt;-tag icon syntax, you can create custom portal messages. See section "EEA Icons"
 for all available icons.</p>
     <div class="portalMessage">
-        <i class="eea-icon eea-icon-eye"></i>
+        <span class="eea-icon eea-icon-eye"></span>
         Message with custom Icon.
     </div>
     <pre>
         &lt;div class="portalMessage"&gt;
-             &lt;i class=&quot;eea-icon eea-icon-eye&quot;&gt;&lt;/i&gt;
+             &lt;span class=&quot;eea-icon eea-icon-eye&quot;&gt;&lt;/span&gt;
             Message with custom Icon.
         &lt;/div&gt;
     </pre>
 
 
     <h2 i18n:translate="">EEA Icons (scalable vector icons)</h2>
-   <p i18n:translate="">Simply use the <strong>&lt;i&gt;</strong> tag with specific classes
+   <p i18n:translate="">Simply use the <strong>&lt;span&gt;</strong> tag with specific classes
 as following:</p>
-    <i class="eea-icon eea-icon-camera-retro"></i> eea-icon-camera-retro
-    <pre>&lt;i class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/i&gt;
+    <span class="eea-icon eea-icon-camera-retro"></span> eea-icon-camera-retro
+    <pre>&lt;span class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/span&gt;
 eea-icon-camera-retro</pre>
     <p i18n:translate="">You can use the entire set of <a rel="external" 
 href="http://fontawesome.io/icons/">Font Awesome icons</a> as part of the EEA web design. Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop 
 shadow, and anything that can be done with the power of CSS.</p>
     <h4 i18n:translate="">More icons</h4>
     <p>
-     <i class="eea-icon eea-icon-flag eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-ban eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-arrows-alt eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-microphone eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-pencil eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-eye eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-thumbs-o-up eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-desktop eea-icon-2x"></i>
-     <i class="eea-icon eea-icon-search eea-icon-2x"></i> 
+     <span class="eea-icon eea-icon-flag eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-ban eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-arrows-alt eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-microphone eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-pencil eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-eye eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-thumbs-o-up eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-desktop eea-icon-2x"></span>
+     <span class="eea-icon eea-icon-search eea-icon-2x"></span>
      <a rel="external" href="http://fontawesome.io/icons/">More than 360 icons</a>
     </p>
 
@@ -678,9 +678,9 @@ class prefix</p>
     <p i18n:translate="">You can float icons right or left by using 
 <strong>eea-icon-right</strong> or 
 <strong>eea-icon-left</strong> class, instead of font awesome .pull-left and .pull-right:</p>
-    <pre>&lt;p&gt;&lt;i class="eea-icon eea-icon-right eea-icon-comment"&gt;&lt;/i&gt;&lt;/a&gt;Right 
+    <pre>&lt;p&gt;&lt;span class="eea-icon eea-icon-right eea-icon-comment"&gt;&lt;/span&gt;&lt;/a&gt;Right
 floated comment icon&lt;/p&gt;</pre>
-    <p i18n:translate=""><i class="eea-icon eea-icon-right eea-icon-comment"></i>We can float 
+    <p i18n:translate=""><span class="eea-icon eea-icon-right eea-icon-comment"></span>We can float
 the icon to the right of the 
 text as we can see from this example.</p>
 

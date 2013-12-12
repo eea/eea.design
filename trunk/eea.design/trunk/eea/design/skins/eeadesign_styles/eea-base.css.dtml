@@ -85,7 +85,7 @@
     float: left;
 }
 
-i:before {
+.eea-icon:before {
     margin:0 .3em;
 }
 .eea-icon.eea-icon-left {

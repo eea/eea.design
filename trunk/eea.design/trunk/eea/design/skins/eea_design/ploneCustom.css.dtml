@@ -724,12 +724,12 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-.eea-accordion-panel i:before {
+.eea-accordion-panel .eea-icon:before {
     content: "&dtml-eea-icon-chevron-left;";
 }
 
-.eea-accordion-panel h2:hover > i:before,
-.eea-accordion-panel .current i:before {
+.eea-accordion-panel h2:hover > .eea-icon:before,
+.eea-accordion-panel .current .eea-icon:before {
     content: "&dtml-eea-icon-chevron-down;";
 }
 
@@ -1518,27 +1518,27 @@ h3.site-description {
 
 /* use font awesome unicode icons */
 
-#siteaction-events i:before {
+#siteaction-events .eea-icon:before {
    content: "\f133";
 }
 
-#siteaction-subscriptions i:before {
+#siteaction-subscriptions .eea-icon:before {
    content: "\f09e";
 }
 
-#siteaction-formobile i:before {
+#siteaction-formobile .eea-icon:before {
     content: "\f10b";
 }
 
-#siteaction-contactus i:before {
+#siteaction-contactus .eea-icon:before {
     content: "\f0e6";
 }
 
-#siteaction-chooselang i:before {
+#siteaction-chooselang .eea-icon:before {
     content: "\f11d";
 }
 
-#siteaction-login i:before {
+#siteaction-login .eea-icon:before {
     content: "\f090";
 }
 

@@ -25,18 +25,18 @@ jQuery(document).ready(function($) {
      $(".attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning").addClass('eea-icon');
 
     $(".eea-icon-left-container").each(function(i, el) {
-        var $i_tag = $("<i class='eea-icon eea-icon-left' />");
+        var $i_tag = $("<span class='eea-icon eea-icon-left'></span>");
         $(el).prepend($i_tag);
     });
 
     $(".eea-icon-right-container").each(function(i, el) {
-        var $i_tag = $("<i class='eea-icon eea-icon-right' />");
+        var $i_tag = $("<span class='eea-icon eea-icon-right'></span>");
        $(el).append($i_tag);
     });
 
-    // #5454 remove background for required fields that have the red square 
+    // #5454 remove background for required fields that have the red square
     $(".required:contains('■')").addClass('no-bg');
-    
+
     // removed portal-column-two from @@usergroup-userprefs #4817
     if( $("#portlet-prefs").length ) {
         $("#portal-column-two").remove();
