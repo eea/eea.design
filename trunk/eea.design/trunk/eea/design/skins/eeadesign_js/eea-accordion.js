@@ -44,11 +44,6 @@ jQuery(document).ready(function($) {
 
     }
 
-    // temporary fix for missing icons of navigation portlet
-    $(".portletNavigationTree").find('.title').each(function() {
-       $(this).append($('<i class="eea-icon eea-icon-right" />'));
-    });
-
     $.tools.tabs.addEffect("collapsed", function(i, done) {
         // #17555; passed an empty effect for the collapsed accordion
         // using instead use a simple slide for the accordion headers
