@@ -1733,6 +1733,19 @@ div.warning,
 }
 
 
+.extra .attention,
+.extra .caution,
+.extra .danger,
+.extra .error,
+.extra .hint,
+.extra .important,
+.extra .note,
+.extra .tip,
+.extra .warning {
+    padding-left: 1.5em;
+}
+
+
 .portalMessage:before, .portalMessage .eea-icon:before {
     float: left;
     display: block;
@@ -1755,6 +1768,7 @@ div.warning:before {
     float: left;
     display: block;
     margin-right: .3em;
+    font-family: 'FontAwesome';
 }
 
 div.hint, div.tip, div.note,

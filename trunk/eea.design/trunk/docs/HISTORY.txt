@@ -3,6 +3,8 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Bug fix: show FontAwesome icons for the plone warning classes
+  [ichimdav refs #17709]
 * Change: changed the default markup of icons to use a span from an i tag
   [ichimdav refs #17708]
 * Bug fix: added the empty comments within the icons of cross_site_top
