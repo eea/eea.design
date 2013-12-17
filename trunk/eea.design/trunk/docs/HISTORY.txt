@@ -3,6 +3,9 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.design
+  [ichimdav #17709]
 * Change: depend of eea.icons package for the font icons
   [ichimdav refs #17709]
 * Bug fix: show FontAwesome icons for the plone warning classes
