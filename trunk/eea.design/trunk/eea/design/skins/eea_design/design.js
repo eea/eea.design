@@ -24,15 +24,6 @@ jQuery(document).ready(function($) {
      // #17633 add eea-icon class to the plone message classes
      $(".attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning").addClass('eea-icon');
 
-    $(".eea-icon-left-container").each(function(i, el) {
-        var $i_tag = $("<span class='eea-icon eea-icon-left'></span>");
-        $(el).prepend($i_tag);
-    });
-
-    $(".eea-icon-right-container").each(function(i, el) {
-        var $i_tag = $("<span class='eea-icon eea-icon-right'></span>");
-       $(el).append($i_tag);
-    });
 
     // #5454 remove background for required fields that have the red square
     $(".required:contains('■')").addClass('no-bg');
