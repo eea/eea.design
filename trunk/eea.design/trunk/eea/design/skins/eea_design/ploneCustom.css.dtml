@@ -1519,27 +1519,27 @@ h3.site-description {
 /* use font awesome unicode icons */
 
 #siteaction-events .eea-icon:before {
-   content: "\f133";
+   content: "&dtml-eea-icon-calendar-o;";
 }
 
 #siteaction-subscriptions .eea-icon:before {
-   content: "\f09e";
+    content: "&dtml-eea-icon-rss;";
 }
 
 #siteaction-formobile .eea-icon:before {
-    content: "\f10b";
+    content: "&dtml-eea-icon-mobile;";
 }
 
 #siteaction-contactus .eea-icon:before {
-    content: "\f0e6";
+    content: "&dtml-eea-icon-comments-o;";
 }
 
 #siteaction-chooselang .eea-icon:before {
-    content: "\f11d";
+    content: "&dtml-eea-icon-flag-o;";
 }
 
 #siteaction-login .eea-icon:before {
-    content: "\f090";
+    content: "&dtml-eea-icon-sign-in;";
 }
 
 #portal-externalsites {
