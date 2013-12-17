@@ -3,6 +3,8 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Change: depend of eea.icons package for the font icons
+  [ichimdav refs #17709]
 * Bug fix: show FontAwesome icons for the plone warning classes
   [ichimdav refs #17709]
 * Change: changed the default markup of icons to use a span from an i tag
