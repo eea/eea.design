@@ -17,85 +17,6 @@
     font-size: 100%;
 }
 
-/* #15235; Expose FontAwesome throught eea-icon-* classes */
-
-.eea-icon:before,
-.eea-icon:after {
-    display: inline-block;
-    font-family: 'FontAwesome';
-    font-weight: normal;
-    font-style: normal;
-    line-height: inherit;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    speak: none;
-}
-/* FontAwesome classes for larger or stacked icon styles */
-.eea-icon-lg {
-  font-size: 1.33em;
-  line-height: 0.75em;
-  vertical-align: -15%;
-}
-.eea-icon-2x {
-  font-size: 2em;
-}
-.eea-icon-3x {
-  font-size: 3em;
-}
-.eea-icon-4x {
-  font-size: 4em;
-}
-.eea-icon-5x {
-  font-size: 5em;
-}
-.eea-icon-fw {
-  width: 1.28em;
-  text-align: center;
-}
-.eea-icon-ul {
-  padding-left: 0;
-  margin-left: 2.14em;
-  list-style-type: none;
-}
-.eea-icon-ul > li {
-  position: relative;
-}
-.eea-icon-li {
-  position: absolute;
-  left: -2.14em;
-  width: 2.14em;
-  top: 0.14em;
-  text-align: center;
-}
-.eea-icon-li.eea-icon-lg {
-  left: -1.85em;
-}
-.eea-icon-border {
-  padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
-  border-radius: .1em;
-}
-
-.eea-icon-right {
-    float: right;
-}
-
-.eea-icon-left {
-    float: left;
-}
-
-.eea-icon:before {
-    margin:0 .3em;
-}
-.eea-icon.eea-icon-left {
-  margin-right: .3em;
-}
-
-.eea-icon.eea-icon-right {
-  margin-left: .3em;
-}
-
 img {
     border: none;
     vertical-align: middle;
@@ -115,7 +36,7 @@ hr {
 
 #region-content ul, ul {
 
-    margin: 0em 0 0 1.5em;
+    margin: 0 0 0 1.5em;
     padding: 0;
     list-style-image: url(&dtml-portal_url;/bullet.gif);
     list-style-type: square;
