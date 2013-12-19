@@ -25,12 +25,15 @@
         directory="eea.design:skins/eeadesign_style_docs" />
     <object name="eeadesign_2011" meta_type="Filesystem Directory View"
         directory="eea.design:skins/eea_design_2011" />
+    <object name="eeadesign_overrides" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_overrides" />
 
     <object name="wisetheme_images" meta_type="Filesystem Directory View"
         directory="eea.design:skins/wisetheme_images" />
 
     <skin-path name="EEADesign2006" based-on="Sunburst Theme">
-        <layer name="eea_design" insert-after="custom" />
+        <layer name="eeadesign_overrides" insert-after="custom" />
+        <layer name="eea_design" insert-after="eeadesign_overrides" />
         <layer name="eea_images" insert-after="eea_design"/>
         <layer name="eeadesign_templates" insert-after="eea_images" />
         <layer name="eeadesign_js" insert-after="eeadesign_templates" />
@@ -43,7 +46,8 @@
     </skin-path>
 
     <skin-path name="EEADesignCMS" based-on="EEADesign2006">
-        <layer name="eeadesign_cms" insert-after="custom" />
+        <layer name="eeadesign_overrides" insert-after="custom" />
+        <layer name="eeadesign_cms" insert-after="eeadesign_overrides" />
         <layer name="eea_design" insert-after="eeadesign_cms" />
         <layer name="eea_images" insert-after="eea_design"/>
         <layer name="eeadesign_templates" insert-after="eea_images" />
