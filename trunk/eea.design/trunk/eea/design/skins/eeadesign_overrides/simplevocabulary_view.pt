@@ -39,6 +39,7 @@
             <div metal:use-macro="here/batch_macros/macros/navigation" />
 
             <form method="POST" tal:attributes="action context_state/canonical_object_url">
+            <input tal:replace="structure context/@@authenticator/authenticator" />
             <table class="listing">
                 <thead>
                     <tr>

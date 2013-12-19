@@ -107,6 +107,8 @@
               action="folder_object"
               tal:attributes="action context/absolute_url">
 
+        <input tal:replace="structure context/@@authenticator/authenticator" />
+
         <metal:listing define-macro="folder_listing"
                        tal:define="canModifyFolderContent context/@@plone_context_state/is_editable;
                                    batch python:context.getFolderContents({'sort_on': 'getId'});">
@@ -218,9 +220,9 @@
                  tabindex=""
                  tal:condition="python:(button['id'] != 'change_state' and batch) or (here.cb_dataValid and button['id'] == 'paste')"
                  i18n:attributes="value"
-                 tal:attributes="value button/name;
+                 tal:attributes="value button/title;
                                  name button/url;
-                                 tabindex tabindex/next;
+                                 tabindex tabindex/next|nothing;
                                  class python:test((button['id'] == 'paste'), 'standalone', 'context')" />
         </tal:buttons>
 
