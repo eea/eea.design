@@ -27,7 +27,7 @@
                         <tr>
                             <td style="width: 45%;">
                                 <h2>
-                                    <img width="47" height="47" 
+                                    <img width="47" height="47"
                                          alt="Write to us"
                                          i18n:attributes="alt"
                                          tal:attributes="src string:$portal_url/icon-send.gif"/>

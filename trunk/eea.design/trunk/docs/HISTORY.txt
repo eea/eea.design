@@ -3,6 +3,8 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Bug fix: fixed portal_vocabulary templates and actions
+  [ghicaale refs #17795]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav #17709]

@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/prefs_main_template/macros/master"
+      i18n:domain="atvocabularymanager">
+
+    <metal:block fill-slot="top_slot">
+        <tal:defines tal:define="controlPanel python:modules['Products.CMFCore.utils'].getToolByName(here, 'portal_controlpanel');
+                                 show_leftcolumn controlPanel/maySeeSomeConfiglets;
+                                 disable_column_one python:request.set('disable_plone.leftcolumn', not show_leftcolumn);
+                                 disable_column_two python:request.set('disable_plone.rightcolumn',1);"/>
+    </metal:block>
+
+<body>
+
+    <div metal:fill-slot="prefs_configlet_main">
+
+        <h1 tal:content="here/title_or_id" class="documentFirstHeading">
+            Title or id
+        </h1>
+
+        <metal:use_body use-macro="context/base/macros/body" />
+
+        <p>
+            <a class="context" href="createObject?type_name=SimpleVocabularyTerm"
+               i18n:translate="">Create New Vocabulary Term</a>
+        </p>
+
+        <h2 i18n:translate="heading_defined_pairs">Currently defined Key/value pairs:</h2>
+
+        <metal:listingmacro define-macro="listing">
+        <tal:foldercontents i18n:domain="plone"
+                define="Batch python:modules['Products.CMFPlone'].Batch;
+                        b_start python:request.get('b_start', 0);
+                        batch python:Batch(context.getVocabularyLines(), 50, int(b_start), orphan=1);
+                        context_ppath python:'/'.join(context.getPhysicalPath());
+                        portal_actions context/portal_actions;
+                        button_actions python:portal_actions.listActionInfos(object=context, categories=('folder_buttons', ))">
+
+            <div metal:use-macro="here/batch_macros/macros/navigation" />
+
+            <form method="POST" tal:attributes="action context_state/canonical_object_url">
+            <table class="listing">
+                <thead>
+                    <tr>
+                        <th class="nosort"><input type="checkbox" name="select_all" onclick="toggleSelect(this, 'paths:list')" /></th>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr tal:repeat="item batch">
+                        <td><input type="checkbox" name="paths:list"
+                                tal:attributes="value python:'%s/%s' % (context_ppath, item[0])" /></td>
+                        <td>
+                            <a tal:attributes="href python:'%s/%s' % (context.absolute_url(), item[0])"
+                               tal:content="python:item[0]">key</a></td>
+                        <td tal:content="python:item[1]">value</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div metal:use-macro="here/batch_macros/macros/navigation" />
+
+            <tal:block repeat="button button_actions">
+                <input type="submit"
+                       class="context"
+                       tal:condition="python:(len(batch) > 0) or (context.cb_dataValid() and button['id'] == 'paste')"
+                       tal:attributes="name button/url;
+                                       value python:context.translate(button['title'], domain='plone')" />
+            </tal:block>
+
+            </form>
+
+        </tal:foldercontents>
+        </metal:listingmacro>
+    </div>
+
+</body>
+</html>
