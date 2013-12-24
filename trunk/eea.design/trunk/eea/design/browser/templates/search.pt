@@ -5,14 +5,13 @@
       lang="en"
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
-
+<metal:defines tal:define="portal_url context/@@plone_context_state/portal_url">
 <head>
   <metal:block metal:fill-slot="head_slot">
 
     <link rel="alternate" title="" type="application/rss+xml"
-          tal:define="here_url context/@@plone_context_state/object_url;"
           tal:condition="request/SearchableText|nothing"
-          tal:attributes="href string:$here_url/search_rss?${request/QUERY_STRING};
+          tal:attributes="href string:$portal_url/search_rss?${request/QUERY_STRING};
                           title string:RSS 1.0"/>
 
   </metal:block>
@@ -26,7 +25,6 @@
 <body>
 
   <div id="content-core" metal:fill-slot="main">
-
     <form name="searchform"
           action="@@search"
           class="searchPage enableAutoFocus"
@@ -74,8 +72,7 @@
                    tal:condition="context/@@syndication-util/context_allowed">
                     <a href=""
                        class="link-feed"
-                       tal:define="here_url context/@@plone_context_state/object_url"
-                       tal:attributes="href string:$here_url/search_rss?${request/QUERY_STRING}">
+                       tal:attributes="href string:$portal_url/search_rss?${request/QUERY_STRING}">
                         <span i18n:translate="title_subscribe_rss_feed">
                           Subscribe to an always-updated RSS feed.
                         </span>
@@ -383,4 +380,6 @@
   </div>
 
 </body>
+
+</metal:defines>
 </html>
