@@ -3,6 +3,9 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Change: do not check for related content within 404 pages if the link
+  was accessing an RSS page since bots can hit many of these pages
+  [ichimdav refs #17812]
 * Bug fix: fixed portal_vocabulary templates and actions
   [ghicaale refs #17795]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
