@@ -3,8 +3,9 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
-* Change: removed search.pt from eeadesign_cms and referenced search_rss
-  from portal_url/search_rss only
+* Change: Reference search_rss from portal_url/search_rss only
+  [ichimdav refs #17812]
+* Change: removed search.pt from eeadesign_cms and eeadesign_public
   [ichimdav refs #17812]
 * Change: do not check for related content within 404 pages if the link
   was accessing an RSS page since bots can hit many of these pages
