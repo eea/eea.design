@@ -3,6 +3,8 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Feature: Added possibility to call eea_accordion JS method on specific elements
+  [voineali refs #17729]
 * Change: Reference search_rss from portal_url/search_rss only
   [ichimdav refs #17812]
 * Change: removed search.pt from eeadesign_cms and eeadesign_public

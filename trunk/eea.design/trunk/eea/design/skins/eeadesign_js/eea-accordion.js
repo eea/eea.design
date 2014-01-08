@@ -50,8 +50,10 @@ jQuery(document).ready(function($) {
 
     });
     // general accordion implementation
-    var eea_accordion = function() {
-        var $folder_panels = $('.eea-accordion-panels');
+    var eea_accordion = function($folder_panels) {
+        if(!$folder_panels){
+          $folder_panels = $('.eea-accordion-panels');
+        }
         if ($folder_panels.length) {
 
             $folder_panels.each(function(idx, el) {
