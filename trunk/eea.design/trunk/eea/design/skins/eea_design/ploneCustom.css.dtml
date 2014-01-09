@@ -712,6 +712,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .eea-accordion-panel .pane {
     padding: 10px;
+    overflow: hidden;
 }
 .eea-accordion-panel .eea-accordion-title, .eea-accordion-panel > h2 {
     background-color: #E2E2E2;
