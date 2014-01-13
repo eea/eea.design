@@ -3,6 +3,9 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Bug fix: prefix eea-icon classes when used on accordion so that they may not
+  override the icon closses of the accordion body
+  [ichimdav refs #17729]
 * Change: Added proper css classes to body
   [olimpiurob #17135]
 * Bug fix: contain floats within accordion pane classes

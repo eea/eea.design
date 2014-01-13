@@ -714,7 +714,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
     overflow: hidden;
 }
-.eea-accordion-panel .eea-accordion-title, .eea-accordion-panel > h2 {
+.eea-accordion-title, .eea-accordion-panel > h2 {
     background-color: #E2E2E2;
     border: 1px solid #E0E0E0;
     margin: 0;
@@ -725,26 +725,27 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-weight: bold;
 }
 
-.eea-accordion-panel .eea-icon:before {
+.eea-accordion-panel > h2 .eea-icon:before,
+.eea-accordion-title > .eea-icon:before {
     content: "&dtml-eea-icon-chevron-left;";
 }
 
 .eea-accordion-panel h2:hover > .eea-icon:before,
-.eea-accordion-panel .current .eea-icon:before {
+.eea-accordion-panel .current > .eea-icon:before {
     content: "&dtml-eea-icon-chevron-down;";
 }
 
-.eea-accordion-panel .eea-accordion-title:hover, .eea-accordion-panel > h2:hover {
+.eea-accordion-title:hover, .eea-accordion-panel > h2:hover {
     cursor: pointer;
     background-color: #F0F0F0;
 }
 
-.eea-accordion-panel .eea-accordion-title.current,
+.eea-accordion-title.current,
 .eea-accordion-panel > h2.current {
     background-color: #F0F0F0;
 }
 
-.eea-accordion-panel .eea-accordion-title a,
+.eea-accordion-title a,
 .eea-accordion-panel > h2 a
 {
     color: #00446A !important;
