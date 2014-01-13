@@ -3,6 +3,8 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Change: Added proper css classes to body
+  [olimpiurob #17135]
 * Bug fix: contain floats within accordion pane classes
   [ichimdav refs #14733]
 * Feature: Added possibility to call eea_accordion JS method on specific elements

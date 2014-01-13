@@ -93,8 +93,10 @@
                   wf_state python: context_state.workflow_state();
                   is_editable context_state/is_editable;
                   sr python:plone_view.have_portlets('plone.rightcolumn', view) and not request.get('disable_plone.rightcolumn');
+                  body_class python:plone_view.bodyClass(template, view);
+                  frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
-      tal:attributes="class python:here.getSectionFromURL(plone_view) + ' ' + language;
+      tal:attributes="class python:body_class + ' ' + language + frontpage;
                       dir python:isRTL and 'rtl' or 'ltr'">
 
 <div id="print-warning" i18n:domain="eea">
