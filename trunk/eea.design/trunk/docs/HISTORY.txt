@@ -3,6 +3,9 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Bug fix: TinyMCE now checks for Range.prototype with Firefox in order to avoid
+  missing body text
+  [ichimdav refs #17394]
 * Bug fix: prefix eea-icon classes when used on accordion so that they may not
   override the icon closses of the accordion body
   [ichimdav refs #17729]
