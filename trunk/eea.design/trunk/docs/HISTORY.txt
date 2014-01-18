@@ -3,6 +3,8 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Feature: Make diff tool styling more familiar to users
+  [olimpiurob #17702]
 * Bug fix: TinyMCE now checks for Range.prototype with Firefox in order to avoid
   missing body text
   [ichimdav refs #17394]

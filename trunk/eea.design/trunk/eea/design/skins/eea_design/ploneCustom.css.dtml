@@ -2740,4 +2740,17 @@ div.row {
     clear: both;
 }
 
+/* #17702 Make diff tool look more familiar to users
+.fieldDiff .delete, #diff-table .diff_sub {
+    color: red;
+    text-decoration: line-through;
+    background-color: transparent;
+}
+
+.fieldDiff .insert, #diff-table .diff_add {
+    color: green;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
 /* </dtml-with> */
