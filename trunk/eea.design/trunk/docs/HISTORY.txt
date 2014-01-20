@@ -41,6 +41,8 @@ Changelog
 * Bug fix: added the empty comments within the icons of cross_site_top
   otherwise the i tags close inline and mess up the layout
   [ichimdav refs #17741]
+* Bug fix: Fixed archive link on frontpage.
+  [prospchr fixes #18047]
 
 8.9 - (2013-12-10)
 ------------------
