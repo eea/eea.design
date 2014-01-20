@@ -3,6 +3,9 @@ Changelog
 
 9.0-dev - (unreleased)
 ----------------------
+* Feature: Improvements to the tinymce fullscreen mode
+  center editor since we have a fixed width layout
+  [demarant fixes #18086]
 * Change: reference the context using only context within main_template instead
   of here
   [ichimdav refs #18064]
