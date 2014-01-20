@@ -51,6 +51,7 @@
     <!-- viewport meta needed for proper view on an ipad -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
 
+
     <tal:notajax tal:condition="python:not ajax_load or ajax_include_head">
         <div tal:replace="structure provider:plone.htmlhead" />
         <link tal:replace="structure provider:plone.htmlhead.links" />
@@ -62,8 +63,7 @@
         <metal:topslot define-slot="top_slot" />
 
         <metal:headslot define-slot="head_slot"
-            tal:define="
-            charset site_properties/default_charset|string:utf-8">
+            tal:define="charset site_properties/default_charset|string:utf-8">
             <tal:anonymousNoBorder condition="isAnon|nothing">
                 <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
             </tal:anonymousNoBorder>
@@ -74,7 +74,7 @@
 
         <metal:styleslot define-slot="style_slot" />
 
-        <metal:pagedesign use-macro="here/page_design_macros/macros/pagedesign" />
+        <metal:pagedesign use-macro="context/page_design_macros/macros/pagedesign" />
 
         <tal:comment replace="nothing"> This is deprecated, please use style_slot instead. </tal:comment>
         <metal:cssslot define-slot="css_slot" />
@@ -192,7 +192,7 @@
                              </metal:comment>
 
                              <tal:block define="thumb_scale thumb_scale | string:image_tile;">
-                               <metal:macro use-macro="here/eea_relateditems/macros/relatedItemsWithThumbs" />
+                               <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
                              </tal:block>
 
                              <div tal:replace="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
