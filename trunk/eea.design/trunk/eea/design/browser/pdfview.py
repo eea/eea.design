@@ -72,7 +72,6 @@ class Cover(PDFCover):
         """
         themes = queryMultiAdapter((self.context, self.request),
                                    name='themes-object')
-        #import pdb; pdb.set_trace()
         if not themes:
             return
         for theme in themes.items():
