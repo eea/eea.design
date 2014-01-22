@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+    default_skin="EEADesign2006">
+
+    <object name="eea_design" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eea_design" />
+    <object name="eea_images" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eea_images" />
+
+    <object name="eeadesign_templates" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_templates" />
+    <object name="eeadesign_js" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_js" />
+    <object name="eeadesign_green_images" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_green_images" />
+    <object name="eeadesign_public" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_public" />
+    <object name="eeadesign_green" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_green" />
+    <object name="eeadesign_public_cmsandwww" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_public_cmsandwww" />
+    <object name="eeadesign_cms" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_cms" />
+    <object name="eeadesign_style_docs" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_style_docs" />
+    <object name="eeadesign_2011" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eea_design_2011" />
+    <object name="eeadesign_overrides" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/eeadesign_overrides" />
+
+    <object name="wisetheme_images" meta_type="Filesystem Directory View"
+        directory="eea.design:skins/wisetheme_images" />
+
+    <skin-path name="EEADesign2006" based-on="Sunburst Theme">
+        <layer name="eeadesign_overrides" insert-after="custom" />
+        <layer name="eea_design" insert-after="eeadesign_overrides" />
+        <layer name="eea_images" insert-after="eea_design"/>
+        <layer name="eeadesign_templates" insert-after="eea_images" />
+        <layer name="eeadesign_js" insert-after="eeadesign_templates" />
+        <layer name="eeadesign_green_images" insert-after="eeadesign_js" />
+        <layer name="eeadesign_style_docs" insert-after="eeadesign_green_images" />
+        <layer name="eeadesign_public" insert-after="eeadesign_green_images" />
+        <layer name="eeadesign_green" insert-after="eeadesign_public" />
+        <layer name="eeadesign_public_cmsandwww" insert-after="eeadesign_green" />
+        <layer name="wisetheme_images" insert-after="eeadesign_public_cmsandwww" />
+    </skin-path>
+
+    <skin-path name="EEADesignCMS" based-on="EEADesign2006">
+        <layer name="eeadesign_overrides" insert-after="custom" />
+        <layer name="eeadesign_cms" insert-after="eeadesign_overrides" />
+        <layer name="eea_design" insert-after="eeadesign_cms" />
+        <layer name="eea_images" insert-after="eea_design"/>
+        <layer name="eeadesign_templates" insert-after="eea_images" />
+        <layer name="eeadesign_js" insert-after="eeadesign_templates" />
+        <layer name="eeadesign_green_images" insert-after="eeadesign_js" />
+        <layer name="eeadesign_style_docs" insert-after="eeadesign_green_images" />
+        <layer name="eeadesign_public" insert-after="eeadesign_green_images" />
+        <layer name="eeadesign_green" insert-after="eeadesign_public" />
+        <layer name="eeadesign_public_cmsandwww" insert-after="eeadesign_green" />
+        <layer name="wisetheme_images" insert-after="eeadesign_public_cmsandwww" />
+    </skin-path>
+
+    <skin-path name="Plone Default">
+        <layer name="eeadesign_cms" insert-after="custom" />
+    </skin-path>
+
+</object>

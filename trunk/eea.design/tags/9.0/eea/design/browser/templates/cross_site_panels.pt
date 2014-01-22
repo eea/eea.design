@@ -1,0 +1,183 @@
+<div metal:use-macro="context/main_template/macros/master">
+    <div metal:fill-slot="main">
+        <tal:main-macro metal:define-macro="main"
+         tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
+
+        <div>
+            <div class="panel" id="tip-siteaction-subscriptions"
+                style="width: 240px">
+                <div class="panel-top">
+                    <!-- -->
+                </div>
+                <div class="panel-content shadow"
+                    tal:define="includeSocialMedia python:True">
+                    <tal:block condition="exists:context/portlet_subscribe">
+                      <metal:portlet use-macro="context/portlet_subscribe/macros/portlet" />
+                    </tal:block>
+                </div>
+            </div>
+
+            <div class="panel" id="tip-siteaction-contactus"
+                style="width: 420px">
+                <div class="panel-top">
+                    <!-- -->
+                </div>
+                <div class="panel-content shadow">
+                    <table>
+                        <tr>
+                            <td style="width: 45%;">
+                                <h2>
+                                    <img width="47" height="47"
+                                         alt="Write to us"
+                                         i18n:attributes="alt"
+                                         tal:attributes="src string:$portal_url/icon-send.gif"/>
+                                    <tal:block i18n:translate="">Write to us</tal:block>
+                                </h2>
+                                <p>
+                                    <strong i18n:translate="">For the public:</strong>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            <a target="_self"
+                                                tal:attributes="href string:$portal_url/help/infocentre/enquiries/"
+                                                i18n:translate="">
+                                                Ask your question
+                                                <br/>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br/>
+                                <strong style="white-space: nowrap" i18n:translate="">
+                                    For media and journalists:
+                                </strong>
+                                <br/>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            <a target="_self"
+                                                tal:attributes="href string:$portal_url/pressroom"
+                                                i18n:translate="">
+                                                Press room
+                                                <br/>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                                <br/>
+                                <a tal:attributes="href string:$portal_url/about-us/who/staff-list"
+                                    class="internal-link"
+                                    title="Staff list"
+                                    i18n:attributes="title">
+                                    <strong i18n:translate="">Contact EEA staff</strong>
+                                </a>
+                                <br/>
+                                <a tal:attributes="href string:$portal_url/help/contact-info"
+                                    class="internal-link">
+                                    <strong i18n:translate="">Contact the web team</strong>
+                                </a>
+                                <br/>
+                                <a tal:attributes="href string:$portal_url/help/eea-help-centre/faqs"
+                                    class="internal-link">
+                                    <strong i18n:translate="">FAQ</strong>
+                                </a>
+                                <br/>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <br/>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <h2>
+                                    <img width="47" height="47" alt="Call us" i18n:attributes="alt"
+                                    tal:attributes="src string:$portal_url/icon-telephone.gif"/>
+                                    <tal:block i18n:translate="">Call us</tal:block>
+                                </h2>
+                                <strong i18n:translate="">Reception:</strong>
+                                    <br/>
+                                    <br/>
+                                <strong i18n:translate="">Phone:</strong>
+                                (+45) 33 36 71 00
+                                <br/>
+                                <strong i18n:translate="">Fax:</strong>
+                                (+45) 33 36 71 99
+                                <br/>
+                                <br/>
+                                <strong>
+                                    <a target="_self"
+                                        tal:attributes="href string:$portal_url/help/infocentre/index_html">
+                                        <br/>
+                                    </a>
+                                </strong>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="portletFooter">
+                        <a class="moreLink"
+                            tal:attributes="href string:$portal_url/address.html">
+                            <span i18n:translate="">More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel" id="tip-siteaction-events" style="width: 450px">
+                <div class="panel-top">
+                    <!-- -->
+                </div>
+                <div class="panel-content shadow">
+
+                    <tal:comment replace="nothing">
+                        smartfolder_portlets comes from eeacontenttypes
+                        portlet_themes_common comes from eea.themcentre
+                    </tal:comment>
+
+                    <tal:publications tal:define="portal_object  context/@@plone_portal_state/portal;
+                    specific python:portal_object.restrictedTraverse('SITE/events/environmental-events-calendar');">
+                        <tal:cond tal:condition="nocall:specific">
+                            <tal:publication tal:define="feeds specific/@@smartfolder_portlets|nothing;"
+                                    tal:repeat="portlet feeds">
+                                <tal:block condition="exists:context/portlet_themes_common">
+                                  <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
+                                </tal:block>
+                            </tal:publication>
+                        </tal:cond>
+                    </tal:publications>
+
+                    <a id="submit-event-link"
+                        class="moreLink"
+                        href=""
+                        title="Submit an environmental event"
+                        i18n:attributes="title"
+                        tal:attributes="href string:$portal_url/events/submitted/createQuickEvent">
+                        <span i18n:translate="">Submit a new event</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel" id="tip-siteaction-chooselang"
+                style="width: 125px">
+                <div class="panel-top">
+                    <!-- -->
+                </div>
+                <div class="panel-content shadow">
+                    <tal:languages define="languages here/@@translatedSites">
+                    <ul id="chooselang">
+                        <tal:language repeat="lang languages">
+                        <li><a href=""
+                                tal:define="url lang/url;
+                                url python: 'localhost' in url and (('www' in url) and
+                                    'http://www.eea.europa.eu/%s' % url.split('/www/')[1]) or url;
+                                "
+                                tal:content="python: '%s (%s)' % (context.translate(lang['lang'], domain='eea', target_language=lang['langcode']), lang['langcode'])"
+                                tal:attributes="href url; title lang/lang"></a></li>
+                        </tal:language>
+                    </ul>
+                    </tal:languages>
+                </div>
+            </div>
+
+        </div>
+        </tal:main-macro>
+    </div>
+</div>
