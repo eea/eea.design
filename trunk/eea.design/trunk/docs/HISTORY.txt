@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.0-dev - (unreleased)
-----------------------
+9.0 - (2014-01-22)
+------------------
 * Feature: Improvements to the tinymce fullscreen mode
   center editor since we have a fixed width layout
   [demarant fixes #18086]
