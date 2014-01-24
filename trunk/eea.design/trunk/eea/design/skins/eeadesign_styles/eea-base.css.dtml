@@ -490,26 +490,26 @@ div.overlay a:hover {
 
 */
 
-.contenttype-document {
+.icons-on .contenttype-document {
     background: no-repeat transparent 0px 0px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
-.contenttype-event {
+.icons-on .contenttype-event {
     background: no-repeat transparent 0px -216px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
-.contenttype-folder {
+.icons-on .contenttype-folder {
     /* background: no-repeat transparent 0px -648px url(&dtml-portal_url;/contenttypes-sprite.png); */
     background: none;
 }
-.contenttype-link {
+.icons-on .contenttype-link {
     background: no-repeat transparent 0px -1080px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
-.contenttype-news-item {
+.icons-on .contenttype-news-item {
     background: no-repeat transparent 0px -1296px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
-.contenttype-plone-site {
+.icons-on .contenttype-plone-site {
     background: no-repeat transparent 0px -1512px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
-.contenttype-topic, .contenttype-collection {
+.icons-on .contenttype-topic, .icons-on .contenttype-collection {
     background: no-repeat transparent 0px -1728px url(&dtml-portal_url;/contenttypes-sprite.png);
 }
 

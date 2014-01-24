@@ -3,6 +3,9 @@ Changelog
 
 9.1-dev - (unreleased)
 ----------------------
+* Bug fix: prefix contenttype classes from eea-base in order to override base
+  classes
+  [ichimdav refs #17959]
 
 9.0 - (2014-01-22)
 ------------------
