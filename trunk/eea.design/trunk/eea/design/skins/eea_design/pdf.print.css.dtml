@@ -82,6 +82,7 @@ p.discreet {
   padding: 1em;
   border-left: 1em solid #CCC;
   clear: both;
+  page-break-inside: avoid;
 }
 
 .keyFact {
@@ -89,6 +90,7 @@ p.discreet {
   padding: 1.5em;
   border-left: 1em solid #346F83;
   clear: both;
+  page-break-inside: avoid;
 }
 
 .portalMessage,
@@ -98,6 +100,7 @@ p.discreet {
   padding: 0.5em 1em 0.5em 3.5em;
   vertical-align: middle;
   background: no-repeat scroll 1em 50% #C7E0E9;
+  page-break-inside: avoid;
 }
 
 .portalMessage p {
