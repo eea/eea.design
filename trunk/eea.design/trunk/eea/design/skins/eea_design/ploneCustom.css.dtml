@@ -2435,7 +2435,9 @@ body .ploneSkin .mce_formatPreview a {
 }
 
 /* #16661; override px based width from ui.css of tinymce */
-#content .ploneSkin table.mceLayout {
+/* #18189 override inline style that gets applied when resizing browser window */
+#content .ploneSkin table.mceLayout,
+.ploneSkin iframe {
     width: 100% !important;
 }
 

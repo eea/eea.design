@@ -3,6 +3,8 @@ Changelog
 
 9.1-dev - (unreleased)
 ----------------------
+* Bug fix: preserve TinyMCE width when resizing browser window
+  [ichimdav refs #18189]
 * Bug fix: avoid page-break-inside portal messages in PDF printing
   [demarant]
 * Bug fix: prefix contenttype classes from eea-base in order to override base
