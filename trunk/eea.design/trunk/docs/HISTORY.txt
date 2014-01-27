@@ -3,6 +3,9 @@ Changelog
 
 9.1-dev - (unreleased)
 ----------------------
+* Change: removed tiny_mce.js from eea.design, opting to move the fixes directly
+  to Products.TinyMCE
+  [ichimdav refs #18200]
 * Bug fix: preserve TinyMCE width when resizing browser window
   [ichimdav refs #18189]
 * Bug fix: avoid page-break-inside portal messages in PDF printing
