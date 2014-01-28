@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<object>
+    <layout>
+        <styles>
+            <element value="Basic styles"/>
+            <element value="Normal paragraph|p"/>
+            <element value="Heading|h2"/>
+            <element value="Subheading|h3"/>
+            <element value="Discreet|span|discreet"/>
+            <element value="Clear floats|div|visualClear"/>
+            <element value="Boxes and messages"/>
+            <element value="Call-out|p|callout"/>
+            <element value="Pull-quote|blockquote|pullquote"/>
+            <element value="Inline Quote|span|inlinequote"/>
+            <element value="Key Facts|ul|keyFact"/>
+            <element value="Key Fact|div|keyFact"/>
+            <element value="Attention Message|div|portalMessage attentionMessage"/>
+            <element value="Idea Message|div|portalMessage ideaMessage"/>
+            <element value="Information Message|div|portalMessage informationMessage"/>
+            <element value="Literal|pre"/>
+            <element value="No Message|div|portalMessage noMessage"/>
+            <element value="Note Message|div|portalMessage noteMessage"/>
+            <element value="Portal Message|div|portalMessage"/>
+            <element value="Rosette Message|div|portalMessage rosetteMessage"/>
+            <element value="Smiley Message|div|portalMessage smileyMessage"/>
+            <element value="Thumbs Up Message|div|portalMessage thumbsUpMessage"/>
+            <element value="Warning Message|div|portalMessage warningMessage"/>
+            <element value="Yes Message|div|portalMessage yesMessage"/>
+            <element value="Presentation"/>
+            <element value="Mark text for presentation|span|markPresentationalText"/>
+            <element value="Presentation Break|span|presentationBreak"/>
+            <element
+                    value="Presentation Center Background Image|div|presentation-images presentation-center-bg-image"/>
+            <element
+                    value="Presentation Left Background Image|div|presentation-images presentation-left-bg-image"/>
+            <element
+                    value="Presentation Right Background Image|div|presentation-images presentation-right-bg-image"/>
+            <element
+                    value="Presentation Title Background Image|div|presentation-images presentation-title-bg-image"/>
+            <element value="Lists"/>
+            <element value="Circle|ul|listTypeCircle"/>
+            <element value="Definition description|dd"/>
+            <element value="Definition term|dt"/>
+            <element value="Disc|ul|listTypeDisc"/>
+            <element value="Lower Alpha|ol|listTypeLowerAlpha"/>
+            <element value="Lower Roman|ol|listTypeLowerRoman"/>
+            <element value="Numbers|ol|listTypeDecimal"/>
+            <element value="Square|ul|listTypeSquare"/>
+            <element value="Upper Alpha|ol|listTypeUpperAlpha"/>
+            <element value="Upper Roman|ol|listTypeUpperRoman"/>
+            <element value="Tables"/>
+            <element value="Even row|tr|even"/>
+            <element value="Odd row|tr|odd"/>
+            <element value="Heading cell|th|"/>
+            <element value="Print"/>
+            <element value="Page break (print only)|div|pageBreak"/>
+        </styles>
+        <tablestyles>
+            <element value="Subdued grid|plain"/>
+            <element value="Invisible grid|invisible"/>
+            <element value="Fancy listing|listing"/>
+            <element value="Fancy grid listing|grid listing"/>
+            <element value="Fancy vertical listing|vertical listing"/>
+        </tablestyles>
+    </layout>
+
+    <resourcetypes>
+        <customplugins purge="False">
+            <element value="eeaplonestyles"/>
+        </customplugins>
+    </resourcetypes>
+
+</object>
