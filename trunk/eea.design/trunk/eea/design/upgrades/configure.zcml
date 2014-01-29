@@ -5,6 +5,19 @@
 
     <genericsetup:upgradeSteps
             source="*"
+            destination="9.1"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 9.1"
+                description="Adds eea_tinymce_plugins skin layer"
+                import_profile="eea.design:upgrade91"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
             destination="9.0"
             profile="eea.design:default">
 

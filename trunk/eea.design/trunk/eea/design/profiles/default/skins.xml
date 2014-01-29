@@ -28,12 +28,16 @@
     <object name="eeadesign_overrides" meta_type="Filesystem Directory View"
         directory="eea.design:skins/eeadesign_overrides" />
 
+    <object name="eea_tinymce_plugins" meta_type="Filesystem Directory View"
+            directory="eea.design:skins/eea_tinymce_plugins" />
+
     <object name="wisetheme_images" meta_type="Filesystem Directory View"
         directory="eea.design:skins/wisetheme_images" />
 
     <skin-path name="EEADesign2006" based-on="Sunburst Theme">
         <layer name="eeadesign_overrides" insert-after="custom" />
         <layer name="eea_design" insert-after="eeadesign_overrides" />
+        <layer name="eea_tinymce_plugins" insert-after="eea_design" />
         <layer name="eea_images" insert-after="eea_design"/>
         <layer name="eeadesign_templates" insert-after="eea_images" />
         <layer name="eeadesign_js" insert-after="eeadesign_templates" />
@@ -50,6 +54,7 @@
         <layer name="eeadesign_cms" insert-after="eeadesign_overrides" />
         <layer name="eea_design" insert-after="eeadesign_cms" />
         <layer name="eea_images" insert-after="eea_design"/>
+        <layer name="eea_tinymce_plugins" insert-after="eea_design" />
         <layer name="eeadesign_templates" insert-after="eea_images" />
         <layer name="eeadesign_js" insert-after="eeadesign_templates" />
         <layer name="eeadesign_green_images" insert-after="eeadesign_js" />
