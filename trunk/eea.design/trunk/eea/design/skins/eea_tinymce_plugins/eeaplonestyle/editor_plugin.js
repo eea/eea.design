@@ -1,4 +1,4 @@
-
+// fork of original ploneStyle plugin done by Rob Gietema
 (function() {
     tinymce.create("tinymce.plugins.EEAPloneStylePlugin", {
         _previousNode: null,
@@ -189,13 +189,15 @@
             var ul = this._getParentNode(n, ["ul"]);
             var ol = this._getParentNode(n, ["ol"]);
             var dl = this._getParentNode(n, ["dl"]);
-//            var label_ids = ["Text", "Selection", "Tables", "Lists", "Print"];
-            var label_ids = ["Basic styles", "Boxes and messages", "Tables", "Presentation mode", "Lists", "Print", "Other"];
             for (var i = 0; i < this._styles.length; i++) {
+                if ( !t && this._styles[i].type == "Tables") {
+                  continue;
+                }
+                if ( !ul && !ol && !dl && this._styles[i].type == "Lists" ) {
+                  continue
+                }
                 tag = this._styles[i].tag;
                 if ((((tag != "td") && (tag != "th") && (tag != "tr") && (tag != "table")) || t) && (tag != "ul" || ul) && (tag != "ol" || ol) && (((tag != "dl") && (tag != "dd") && (tag != "dt")) || dl)) {
-//                    style_title = label_ids.indexOf(this._styles[i].title) > -1 ? this.labels["label_" + this._styles[i].title.toLowerCase()] : this._styles[i].title;
-
                     style_title = this._styles[i].title;
                     this._control.add(style_title, this._styles[i].className == "-" ? "-" : i, {
                         "class": this._styles[i].className == "-" ? "mceMenuItemTitle" : "mce_formatPreview mce_" + this._styles[i].tag
@@ -241,7 +243,7 @@
         getInfo: function() {
             return {
                 longname: "EEA Plone style",
-                author: "Rob Gietema",
+                author: "David Ichim",
                 authorurl: "http://plone.org",
                 infourl: "http://plone.org/products/tinymce",
                 version: tinymce.majorVersion + "." + tinymce.minorVersion
