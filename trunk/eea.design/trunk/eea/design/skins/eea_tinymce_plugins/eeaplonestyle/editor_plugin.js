@@ -53,31 +53,6 @@
                 var tag = styles[parseInt(v)].tag,
                     className = styles[parseInt(v)].className;
                 switch (styles[parseInt(v)].type) {
-                    case "Text":
-                    case "Print":
-                        tinymce.each(ed.selection.getSelectedBlocks(), function(e) {
-                            if ((tag == "") && (className == "")) {
-                                ed.execCommand("RemoveFormat", false, null)
-                            } else {
-                                if (e.nodeName.toLowerCase() != "body") {
-                                    if (e.tagName.toLowerCase() != tag.toLowerCase()) {
-                                        e = ReplaceTag(e, tag)
-                                    }
-                                    if (className != "") {
-                                        var classnames = ed.dom.getAttrib(e, "class").split(" ");
-                                        var newclassnames = new Array();
-                                        newclassnames.push(className);
-                                        for (var i = 0; i < classnames.length; i++) {
-                                            if ((classnames[i] == "image-left") || (classnames[i] == "image-right") || (classnames[i] == "image-inline") || (classnames[i] == "captioned")) {
-                                                newclassnames.push(classnames[i])
-                                            }
-                                        }
-                                        e.className = newclassnames.join(" ")
-                                    }
-                                }
-                            }
-                        });
-                        break;
                     case "Tables":
                         var n;
                         switch (tag) {
@@ -108,13 +83,37 @@
                             n.className = className
                         }
                         break;
-                    case "Selection":
+                    default:
                         if ((tag == "") && (className == "")) {
                             ed.execCommand("RemoveFormat", false, null)
-                        } else {
+                        }
+                        else if (tag == "span"){
                             ed.formatter.apply(styles[parseInt(v)].title)
                         }
-                        break
+                        else {
+                            tinymce.each(ed.selection.getSelectedBlocks(), function(e) {
+                                if ((tag == "") && (className == "")) {
+                                    ed.execCommand("RemoveFormat", false, null)
+                                } else {
+                                    if (e.nodeName.toLowerCase() != "body") {
+                                        if (e.tagName.toLowerCase() != tag.toLowerCase()) {
+                                            e = ReplaceTag(e, tag)
+                                        }
+                                        if (className != "") {
+                                            var classnames = ed.dom.getAttrib(e, "class").split(" ");
+                                            var newclassnames = [];
+                                            newclassnames.push(className);
+                                            for (var i = 0; i < classnames.length; i++) {
+                                                if ((classnames[i] == "image-left") || (classnames[i] == "image-right") || (classnames[i] == "image-inline") || (classnames[i] == "captioned")) {
+                                                    newclassnames.push(classnames[i])
+                                                }
+                                            }
+                                            e.className = newclassnames.join(" ")
+                                        }
+                                    }
+                                }
+                            });
+                        }
                 }
                 ed.nodeChanged()
             }
@@ -162,7 +161,7 @@
                     classes: (s.className || ""),
                     wrapper: (s.tag === "blockquote" || s.tag === "div")
                 };
-                tagParam = s.type === "Selection" ? "inline" : "block";
+                tagParam = s.tag === "span" ? "inline" : "block";
                 format[tagParam] = s.tag;
                 ed.formatter.register(s.title, format)
             }
@@ -231,7 +230,8 @@
             this._control.renderMenu()
         },
         createControl: function(n, cm) {
-            if (n == "style") {
+
+          if (n == "style") {
                 this._control = cm.createListBox("style_" + tinyMCE.activeEditor.id, {
                     title: this.labels.label_style_ldots,
                     cmd: "mceSetStyle"
