@@ -5,11 +5,8 @@
     <object name="eea_tinymce_plugins" meta_type="Filesystem Directory View"
             directory="eea.design:skins/eea_tinymce_plugins" />
 
-    <skin-path name="EEADesign2006" based-on="Sunburst Theme" purge="False">
+    <skin-path name="*">
         <layer name="eea_tinymce_plugins" insert-after="eea_design" />
     </skin-path>
 
-    <skin-path name="EEADesignCMS" based-on="EEADesign2006" purge="False">
-        <layer name="eea_tinymce_plugins" insert-after="eea_design" />
-    </skin-path>
 </object>
