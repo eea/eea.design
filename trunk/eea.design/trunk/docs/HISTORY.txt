@@ -3,6 +3,9 @@ Changelog
 
 9.1-dev - (unreleased)
 ----------------------
+* Upgrade step: from www/portal_tinymce/@@tinymce-controlpanel:
+  - Move plonestyle editor plugin to the left select form in order to disable it
+  [ichimdav refs #18180]
 * Change: removed tiny_mce.js from eea.design, opting to move the fixes directly
   to Products.TinyMCE
   [ichimdav refs #18200]
