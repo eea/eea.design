@@ -86,9 +86,8 @@
         <div class="slide">
             <h1 tal:content="context/Title" />
             <h2 tal:content="context/Description" />
-            <h3 tal:content="view/authorname" />
             <div class="mainImage">
-              <img tal:attributes= "src string:${context/absolute_url}/image_large" />
+              <img tal:attributes= "src string:${context/absolute_url}/image_preview" />
             </div>
 
         </div>
