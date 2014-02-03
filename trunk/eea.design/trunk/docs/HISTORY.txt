@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.1-dev - (unreleased)
-----------------------
+9.1 - (2014-02-03)
+------------------
 * Bug fix: improved presentation mode. removed authorname. cover image now
   fits in first slide.
   [demarant refs #16916]
