@@ -4,7 +4,7 @@
         i18n_domain="eea">
 
     <genericsetup:upgradeSteps
-            source="*"
+            source="9.0"
             destination="9.1"
             profile="eea.design:default">
 
