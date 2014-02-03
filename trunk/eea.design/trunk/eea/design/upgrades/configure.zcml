@@ -9,6 +9,11 @@
             profile="eea.design:default">
 
         <genericsetup:upgradeDepends
+                title="Import profile steps with changes: tinymce"
+                import_steps="tinymce_settings"
+                />
+
+        <genericsetup:upgradeDepends
                 title="Import all steps from eea.design profile upgrade 9.1"
                 description="Adds eea_tinymce_plugins skin layer"
                 import_profile="eea.design:upgrade91"

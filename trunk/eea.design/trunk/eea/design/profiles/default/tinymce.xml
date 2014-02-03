@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <object>
-    <layout>
+    <layout type="lines">
         <styles purge="True">
             <element value="Basic styles"/>
             <element value="Normal paragraph|p"/>
             <element value="Heading|h2"/>
             <element value="Subheading|h3"/>
-            <element value="Discreet|span|discreet"/>
+            <element value="Discreet for selected text|span|discreet"/>
             <element value="Clear floats|div|visualClear"/>
             <element value="Boxes and messages"/>
             <element value="Call-out|p|callout"/>
