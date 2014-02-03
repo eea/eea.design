@@ -11,13 +11,13 @@ Changelog
   [demarant refs #16916]
 * Bug fix: Properly closed comment in difftool styling
   [olimpiurob refs #17702]
-* Manual Upgrade step: from www/portal_tinymce/@@tinymce-controlpanel:
+* [DONE] Upgrade step: from www/portal_tinymce/@@tinymce-controlpanel:
   - Run it only after upgrading eea.design through the automatic upgrade step
   - Move plonestyle editor plugin to the left select form in order to disable it
   - replace the styles from the layout tab with the list found within the ticket
     as attachment
   [ichimdav refs #18180]
-* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+* [DONE] Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav #18180]
 * Change: removed tiny_mce.js from eea.design, opting to move the fixes directly
