@@ -369,6 +369,7 @@ input.standalone {
 
 #mce_fullscreen_container {
    background-color: #ececec !important; /* in order to override ui.css */
+   width: 100% !important;
 }
 
 
@@ -2439,6 +2440,14 @@ body .ploneSkin .mce_formatPreview a {
 #content .ploneSkin table.mceLayout,
 .ploneSkin iframe {
     width: 100% !important;
+}
+
+.ploneSkin table.mceLayout td.mceToolbar {
+    height: 85px;
+}
+
+#mce_fullscreen_container table.mceLayout {
+    height: 100% !important;
 }
 
 #text_fullscreen .mceVoiceLabel {
