@@ -357,27 +357,6 @@ input.standalone {
             border-radius: 2px;
 }
 
-/* #18086: Improvements to the tinymce fullscreen mode 
-**  center editor since we have a fixed width layout
-*/
-
-#mce_fullscreen_tbl {
-   margin-left: auto;
-   margin-right: auto;
-   background-color: #ffffff;
-} 
-
-#mce_fullscreen_container {
-   background-color: #ececec !important; /* in order to override ui.css */
-   width: 100% !important;
-}
-
-
-/* #16661; fix text color for disabled tinymce inputs */
-input[disabled], #plonebrowser input[disabled] {
-    color: #6D6D6D !important;
-    text-shadow: none !important;
-}
 
 #portal-columns input[type="submit"]:hover, .standardButton:hover,
 #content a.standardButton:hover,
@@ -2440,14 +2419,43 @@ body .ploneSkin .mce_formatPreview a {
 #content .ploneSkin table.mceLayout,
 .ploneSkin iframe {
     width: 100% !important;
+    min-height: 400px;
+    max-height: 400px;
 }
 
 .ploneSkin table.mceLayout td.mceToolbar {
     height: 85px;
 }
 
-#mce_fullscreen_container table.mceLayout {
+/* #18223 avoid page content from spilling after browser resize */
+#mce_fullscreen_container table.mceLayout,
+#mce_fullscreen_container iframe {
     height: 100% !important;
+    min-height: 500px;
+    max-height: 100% !important;
+}
+
+/* #18086: Improvements to the tinymce fullscreen mode
+**  center editor since we have a fixed width layout
+*/
+
+#mce_fullscreen_tbl {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+#mce_fullscreen_container {
+    background-color: #ececec !important; /* in order to override ui.css */
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* #16661; fix text color for disabled tinymce inputs */
+input[disabled], #plonebrowser input[disabled] {
+    color: #6D6D6D !important;
+    text-shadow: none !important;
 }
 
 #text_fullscreen .mceVoiceLabel {
