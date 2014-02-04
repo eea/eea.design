@@ -2458,7 +2458,8 @@ input[disabled], #plonebrowser input[disabled] {
     text-shadow: none !important;
 }
 
-#text_fullscreen .mceVoiceLabel {
+#text_fullscreen > .mceVoiceLabel,
+#mce_fullscreen_fullscreen > .mceVoiceLabel {
     position: relative;
     top: -21px;
     width: 200px;
