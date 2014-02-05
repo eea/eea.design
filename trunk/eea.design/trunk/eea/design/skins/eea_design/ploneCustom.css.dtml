@@ -2458,6 +2458,16 @@ input[disabled], #plonebrowser input[disabled] {
     text-shadow: none !important;
 }
 
+/* #18352 remove after fix is applied within Products.TinyMCE
+   fixes Chrome popup dialog zoom issue by setting a width to 100% */
+.plonepopup .mceMiddle span {
+    top:29px;
+    left:5px;
+    height:100%;
+    width:100%;
+    background:#FFF
+}
+
 #text_fullscreen > .mceVoiceLabel,
 #mce_fullscreen_fullscreen > .mceVoiceLabel {
     position: relative;

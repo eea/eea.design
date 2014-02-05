@@ -3,6 +3,8 @@ Changelog
 
 9.2-dev - (unreleased)
 ----------------------
+* Bug fix: fixed TinyMCE popup zoom issue within Chrome browser
+  [ichimdav refs #18352]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav refs #18223]
