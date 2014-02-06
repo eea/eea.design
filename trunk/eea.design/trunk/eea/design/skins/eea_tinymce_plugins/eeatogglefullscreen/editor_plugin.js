@@ -12,17 +12,19 @@
     }
     tinymce.create("tinymce.plugins.EEAToggleFullScreenPlugin", {
         init: function(d, e) {
-            var f = this;
-            f.editor = d;
-
+            ed = d;
             var tinymce_container = document.getElementById('mce_fullscreen_container');
 
             if ( tinymce_container) {
                 tinymce_container.onclick = function(e) {
-                    var fullscreen_button = document.getElementById('mce_fullscreen_fullscreen');
-                    triggerClick(fullscreen_button);
+                    if (e.target.id === "mce_fullscreen_parent") {
+                        var fullscreen_button = document.getElementById('mce_fullscreen_fullscreen');
+                        tinymce_container.onclick = null;
+                        triggerClick(fullscreen_button);
+                    }
                 };
             }
+
         },
         getInfo: function() {
             return {
@@ -33,6 +35,7 @@
                 version: tinymce.majorVersion + "." + tinymce.minorVersion
             }
         }
+
     });
     tinymce.PluginManager.add("eeatogglefullscreen", tinymce.plugins.EEAToggleFullScreenPlugin)
 })();
