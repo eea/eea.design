@@ -1694,6 +1694,10 @@ h3.site-description {
     display: block;
 }
 
+#themes-tags span span span.languageCodes {
+    display: none;
+}
+
 #article-language {
     float: right;
     margin-top: -30px;

@@ -14,6 +14,8 @@ Changelog
 * Bug fix: resizing the window on fullscreen no longer displays the content
   outside of the TinyMCE fullscreen div
   [ichimdav refs #18223]
+* Bug fix: Hide the span languageCodes in the themes-tags.
+  [prospchr refs #17807]
 
 9.1 - (2014-02-03)
 ------------------
