@@ -74,10 +74,11 @@
         },
         loadContent: function (ed) {
             var body = ed.getBody();
+            var container = ed.getContainer();
             if (!body.location) {
                 if (!document.getElementById('mce_fullscreen_fullscreen')) {
                     $(body).click(function () {
-                        var fullscreen_button = document.querySelector('.mce_fullscreen');
+                        var fullscreen_button = container.querySelector('.mceButton.mce_fullscreen');
                         if (!document.getElementById('mce_fullscreen_fullscreen')) {
                             triggerEvent(fullscreen_button, 'click');
                         }
