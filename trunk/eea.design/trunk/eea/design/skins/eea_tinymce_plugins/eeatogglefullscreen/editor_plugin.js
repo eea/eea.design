@@ -1,8 +1,9 @@
 (function () {
 
     function triggerEvent (node, type) {
+        var evt;
         if (document.createEvent) {
-            var evt = document.createEvent('MouseEvents');
+            evt = document.createEvent('MouseEvents');
             evt.initEvent(type, true, false);
             node.dispatchEvent(evt);
         } else if (document.createEventObject) {
@@ -10,10 +11,35 @@
         }
     }
 
+    var debounce = function (func, threshold, execAsap) {
+        //http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
+        var timeout;
+        return function debounced () {
+            var obj = this;
+
+            function delayed () {
+                if (!execAsap)
+                    func.apply(obj, arguments);
+                timeout = null;
+            }
+
+            if (timeout)
+                clearTimeout(timeout);
+            else if (execAsap)
+                func.apply(obj, arguments);
+
+            timeout = setTimeout(delayed, threshold || 100);
+        };
+
+    };
+
     tinymce.create("tinymce.plugins.EEAToggleFullScreenPlugin", {
         init: function (d) {
             ed = d;
-            var tinymce_container = document.getElementById('mce_fullscreen_container');
+            var tinymce_container = document.getElementById('mce_fullscreen_container'),
+                $tinymce_container,
+                setHeight,
+                debouncedSetHeight;
 
             if (tinymce_container) {
                 tinymce_container.onclick = function (e) {
@@ -23,9 +49,20 @@
                         triggerEvent(fullscreen_button, 'click');
                     }
                 };
+                $tinymce_container = $(tinymce_container);
+
+                setHeight = function (evt) {
+                    $tinymce_container.find('iframe').css({ 'height': $tinymce_container.height() - 85});
+                };
+                debouncedSetHeight = debounce(setHeight, 200, false);
+
+                window.addEventListener('resize', debouncedSetHeight);
             }
+
             ed.onLoadContent.add(this.loadContent, this);
+
         },
+
         getInfo: function () {
             return {
                 longname: "EEA Toggle Fullscreen",
