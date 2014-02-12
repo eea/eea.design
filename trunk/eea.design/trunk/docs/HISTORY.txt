@@ -8,8 +8,12 @@ Changelog
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav refs #18223]
-* Feature: added TinyMCE eeatogglefullscreen plugin which for now exits
-  fullscreen when clicking outside the editor area
+* Feature: eeatogglefullscreen now has an option within tinymce controlpanel
+  which assigns the contenttypes that enter fullscreen when clicking on the
+  TinyMCE text fields
+  [ichimdav fixes #18195]
+* Feature: added TinyMCE eeatogglefullscreen plugin which exits fullscreen 
+  when clicking outside the editor area
   [ichimdav refs #18223]
 * Bug fix: resizing the window on fullscreen no longer displays the content
   outside of the TinyMCE fullscreen div

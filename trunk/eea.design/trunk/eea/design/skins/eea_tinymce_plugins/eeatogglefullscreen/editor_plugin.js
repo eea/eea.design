@@ -75,7 +75,7 @@
         loadContent: function (ed) {
             var body = ed.getBody();
             var container = ed.getContainer();
-            if (!body.location) {
+            if (ed.getParam('fullscreen_for')) {
                 if (!document.getElementById('mce_fullscreen_fullscreen')) {
                     $(body).click(function () {
                         var fullscreen_button = container.querySelector('.mceButton.mce_fullscreen');
