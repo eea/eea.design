@@ -15,8 +15,26 @@
         Welcome to EEA Web design elements
     </h1>
     <div class="documentDescription" i18n:translate="">
-        This page shows common html markup, css classes and javascripts we use across the EEA website. See example code and use Firefox Firebug plugin to inspect elements code.
+        This page shows common html markup, css classes and javascripts we use across the EEA website. See 
+example code and use Firefox Firebug plugin to inspect elements code. Intended audience: web designers, web 
+developers, UX/UI experts.
     </div>
+
+
+    <h2 i18n:translate="">Basic text styles</h2>
+    <h1 i18n:translate="">This is a h1</h1>
+    <h2 i18n:translate="">This is a h2</h2>
+    <h3 i18n:translate="">This is a h3</h3>
+    <h4 i18n:translate="">This is a h4</h4>
+    <p>
+        <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;
+    <a href="#" class="moreLink" i18n:translate="">This is a moreLink</a></p>
+
+    <h2>Lists</h2>
+    <h3>Unordered lists:</h3>
+    <ul><li>Item 1</li><li>Item 2</li></ul>
+    <h3>Definition lists:</h3>
+    <dt>Term item 1</dt><dd>Description 1</dd><dt>Term item 2</dt><dd>Description 2</dd>
 
     <h2 i18n:translate="">Quotations</h2>
     <blockquote>
@@ -471,19 +489,6 @@
 &lt;/table&gt;
 "></pre>
 
-    <h2 i18n:translate="">Basic text styles</h2>
-    <h1 i18n:translate="">This is a h1</h1>
-    <h2 i18n:translate="">This is a h2</h2>
-    <h3 i18n:translate="">This is a h3</h3>
-    <h4 i18n:translate="">This is a h4</h4>
-    <p>
-        <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;<a href="#" class="moreLink" i18n:translate="">This is a moreLink</a></p>
-
-    <h2>Lists</h2>
-    <p>Unordered lists:</p>
-    <ul><li>Item 1</li><li>Item 2</li></ul>
-    <p>Definition lists:</p>
-    <dt>Term item 1</dt><dd>Description 1</dd><dt>Term item 2</dt><dd>Description 2</dd>
     <h2>Buttons</h2>
     <p>Below the standard button style applied to<br><code>&lt;input type="submit" ...</code>:
     <br><input type="submit" value="Submit"></p>
@@ -502,13 +507,30 @@
 <p><tal:block i18n:translate="">image_wide (only available for videos)</tal:block><br/><img
         src="resolveuid/af79241214c3088375297823b3ccf560/image_wide" /></p>
 
-    <h2 i18n:translate="">Portal messages</h2>
-     <p i18n:translate="">Portal messages are used to highlight certain content and get 
-user's attention to specific information.</p>
+    <h2 i18n:translate="">Portal messages and callouts</h2>
+     <p i18n:translate="">Portal messages (aka callout / text boxes) are 
+"in publishing ... a short piece of text set in larger type than the rest of the page 
+and intended to attract attention ... in word processing is a special text box with or without 
+a small 'tail' that can be pointed to different locations 
+on a document..." (definition source: <a href="http://en.wikipedia.org/wiki/Callout">Wikipedia</a>)</p>
 
-     <p i18n:translate="">These classes can be added manually in markup or
-         they can be added on text fields using TinyMCE through the Styles
-         DropDown</p>
+     <p i18n:translate="">These styles can be added manually in HTML by a developer or
+         they can be added on text fields by content authors using the WYSIWYG editor (TinyMCE Styles
+         DropDown)
+     </p>
+
+    <h3 i18n:translate="">Standard call-out</h3>
+ 
+    <p class="callout">This is a callout: a piece of text set in a special layout intended to attract 
+attention.</p>
+
+    <h3>Key Facts call-out</h3>
+    <p>We have a specific css class "keyFact" which we have given a call-out style. This helps us to 
+systematically identify key facts / key messages added by content authors on webpages, extract them and create 
+distinct list about them.</p>
+
+<div class="keyFact"><strong>Key messages</strong><ul><li>Key message 1</li><li>Key message 
+2</li><li>...</li><li>Key message n</li></ul></div>
 
     <h3 i18n:translate="">Standard Portal Message</h3>
     <div class="portalMessage">
