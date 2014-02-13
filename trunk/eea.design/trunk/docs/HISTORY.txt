@@ -18,7 +18,7 @@ Changelog
   which assigns the contenttypes that enter fullscreen when clicking on the
   TinyMCE text fields
   [ichimdav fixes #18195]
-* Feature: added TinyMCE eeatogglefullscreen plugin which exits fullscreen 
+* Feature: added TinyMCE eeatogglefullscreen plugin which exits fullscreen
   when clicking outside the editor area
   [ichimdav refs #18223]
 * Bug fix: resizing the window on fullscreen no longer displays the content
@@ -35,11 +35,10 @@ Changelog
 * Bug fix: Properly closed comment in difftool styling
   [olimpiurob refs #17702]
 * [DONE] Upgrade step: from www/portal_tinymce/@@tinymce-controlpanel:
-  - Run it only after upgrading eea.design through the automatic upgrade step
-  - Move plonestyle editor plugin to the left select form in order to disable it
-  - replace the styles from the layout tab with the list found within the ticket
-    as attachment
-  [ichimdav refs #18180]
+    - Run it only after upgrading eea.design through the automatic upgrade step
+    - Move plonestyle editor plugin to the left select form in order to disable it
+    - replace the styles from the layout tab with the list found within the ticket as attachment
+    - [ichimdav refs #18180]
 * [DONE] Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.design
   [ichimdav #18180]
@@ -1792,4 +1791,3 @@ Changelog
 0.1 - (2009-11-10)
 ------------------
 * Initial release
-
