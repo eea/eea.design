@@ -1,0 +1,181 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+        i18n_domain="eea">
+
+    <genericsetup:upgradeSteps
+            source="9.1"
+            destination="9.2"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 9.2"
+                description="Adds eeatogglefullscreen tinymce plugin"
+                import_profile="eea.design:upgrade92"
+                />
+
+    </genericsetup:upgradeSteps>
+    <genericsetup:upgradeSteps
+            source="9.0"
+            destination="9.1"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: tinymce"
+                import_steps="tinymce_settings"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 9.1"
+                description="Adds eea_tinymce_plugins skin layer"
+                import_profile="eea.design:upgrade91"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="9.0"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 9.0"
+                description="Imports new eea.* css files"
+                import_profile="eea.design:upgrade90"
+                />
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="8.6"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 8.6"
+                description="Imports new eea.* css files"
+                import_profile="eea.design:upgrade86"
+                />
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="8.5"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 8.5"
+                description="Imports new eea.* js files"
+                import_profile="eea.design:upgrade85"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="7.6"
+            destination="8.1"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 8.1"
+                description="Imports new eea.* css files"
+                import_profile="eea.design:upgrade81"
+                />
+
+    </genericsetup:upgradeSteps>
+
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="7.6"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 7.6"
+                description="Imports new eea.* css files"
+                import_profile="eea.design:upgrade76"
+                />
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="6.9"
+            destination="7.4"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 7.4"
+                description="Removes change_workflow_state.js"
+                import_profile="eea.design:upgrade74"
+                />
+
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="4.0"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile"
+                import_profile="eea.design:default"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="*"
+            destination="5.5"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: stylesheets"
+                import_steps="cssregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: jsregistry"
+                import_steps="jsregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: viewlets"
+                import_steps="viewlets"
+                />
+
+    </genericsetup:upgradeSteps>
+
+
+    <genericsetup:upgradeSteps
+            source="5.5"
+            destination="5.9"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: cssregistry"
+                import_steps="cssregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: jsregistry"
+                import_steps="jsregistry"
+                />
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: actions"
+                import_steps="actions"
+                />
+
+    </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="5.9"
+            destination="6.9"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import profile steps with changes: jsregistry tinymce"
+                import_steps="jsregistry tinymce"
+                />
+
+    </genericsetup:upgradeSteps>
+</configure>
