@@ -3,6 +3,9 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Bug fix: fixed slides from showing up on Windows when using Chrome which
+  contained youtube iframes
+  [ichimdav refs #18518]
 * Change: Update presentation_styles to include blockquote, keyFact, callout and
   pullquote
   [olimpiurob refs #18425]

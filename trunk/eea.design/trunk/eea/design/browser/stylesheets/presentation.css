@@ -118,10 +118,11 @@ div#controls form {
 html > body .slide {
     overflow: auto;
     max-height: 77%;
-    margin: 0em 2em 0 2em;
+    margin: 0 2em 0 2em;
     font-size: 0.6em;
     padding: 1em;
     top: 9%;
+    visibility: hidden;
 }
 
 .ie8 .slide { 
