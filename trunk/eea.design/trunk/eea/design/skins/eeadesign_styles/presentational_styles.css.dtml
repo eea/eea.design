@@ -167,4 +167,56 @@ div.error:before,
     content: "&dtml-eea-icon-check;";
 }
 
+/* Styles moved from visual.css */
+
+blockquote {
+    width: 70%;
+    margin: 1.0em auto;
+    padding: 1.5em 1em 1em 3em;
+    background: &dtml-lightBackgroundColor; url(&dtml-portal_url;/open_quote.gif) 0.5em 0.75em no-repeat;
+    color: #000000;
+    clear:both;
+}
+
+/* Styles copied from base.css */
+
+.pullquote {
+    margin: 0 1em 0.5em 0.5em;
+    font-weight: bold;
+    line-height: 1.25em;
+    float: right;
+    width: 35%;
+    clear: right;
+    color: #444;
+    font-size: 1.6em;
+    letter-spacing: -0.08em !important;
+}
+
+.callout {
+    background: #eee;
+    padding: 1em;
+    border-left: 1em solid #ccc;
+    clear: both;
+}
+
+.keyFact {
+    background: &dtml-corporateBlueBackgroundColor;;
+    padding: 1.5em;
+    border-left: 1em solid #346F83;
+    clear: both;
+}
+
+/* pre is the tag used when selecting the literal style */
+
+pre {
+    background-color: #222;
+    color: White;
+    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    padding: 1em;
+    overflow-x: auto;
+    font-size: 90%;
+    margin-bottom: 1em;
+    line-height: 1.25em;
+}
+
 /* </dtml-with> */

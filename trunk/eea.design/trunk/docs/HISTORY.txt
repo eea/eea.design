@@ -3,6 +3,9 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Change: Update presentation_styles to include blockquote, keyFact, callout and
+  pullquote
+  [olimpiurob refs #18425]
 * Upgrade step: Moved box styles into a separate css file. Added to presentation
   template.
   [olimpiurob refs #18425]

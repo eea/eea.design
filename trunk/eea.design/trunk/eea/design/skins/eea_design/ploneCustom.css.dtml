@@ -2619,13 +2619,6 @@ div.row {
     text-align: center;
 }
 
-#content .keyFact {
-    background: &dtml-corporateBlueBackgroundColor;;
-    padding: 1.5em;
-    border-left: 1em solid #346F83;
-    clear: both;
-}
-
 /* #17702 Make diff tool look more familiar to users */
 .fieldDiff .delete, #diff-table .diff_sub {
     color: red;

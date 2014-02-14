@@ -216,15 +216,6 @@ table.datatable {
 
 /* Styles which apply only in central content area */
 
-#content blockquote {
-    width: 70%;
-    margin: 1.0em auto;
-    padding: 1.5em 1em 1em 3em;
-    background: &dtml-lightBackgroundColor; url(&dtml-portal_url;/open_quote.gif) 0.5em 0.75em no-repeat;
-    color: #000000;
-    clear:both;
-}
-
 #content blockquote.quote-right {
   float: right;
   width: 15em;
