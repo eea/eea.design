@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix"
         tal:attributes="href string:${context/portal_url}/s5_opera.css" />
     <link rel="stylesheet" type="text/css" media="all"
+        tal:attributes="href string:${context/portal_url}/presentational_styles.css" />
+    <link rel="stylesheet" type="text/css" media="all"
         tal:attributes="href string:${context/portal_url}/++resource++eea.design.stylesheets/presentation.css" />
 
 

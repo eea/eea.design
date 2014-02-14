@@ -109,6 +109,15 @@
             />
 
     <stylesheet title=""
+                id="presentational_styles.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment=""
+                expression=""
+                insert-before="ploneCustom.css"
+            />
+
+    <stylesheet title=""
                 id="eea-public.css"
                 media="screen" rel="stylesheet" rendering="link"
                 cacheable="True" compression="safe" cookable="True"

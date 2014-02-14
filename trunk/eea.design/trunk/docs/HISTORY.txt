@@ -3,6 +3,10 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Upgrade step: Moved box styles into a separate css file. Added to presentation
+  template.
+  [olimpiurob refs #18425]
+
 
 9.2 - (2014-02-13)
 ------------------
