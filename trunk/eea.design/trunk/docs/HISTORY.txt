@@ -3,6 +3,10 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Feature: improved PDF generation. 
+  avoid page break inside images.
+  avoid page break just after headings.
+  [demarant refs #18539]
 * Bug fix: fixed slides from showing up on Windows when using Chrome which
   contained youtube iframes
   [ichimdav refs #18518]

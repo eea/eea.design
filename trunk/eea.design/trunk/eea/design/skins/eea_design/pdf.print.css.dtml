@@ -22,10 +22,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Verdana ! important;
+  page-break-after: avoid;
 }
 
 img {
   max-width: 100%;
+  page-break-inside: avoid;
 }
 
 #article-language {
