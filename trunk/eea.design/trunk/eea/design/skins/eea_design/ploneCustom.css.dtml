@@ -2324,21 +2324,26 @@ input[disabled], #plonebrowser input[disabled] {
     min-width: 145px;
 }
 
-/* #16879 highlight class only on TinyMCE edit */
-.mceContentBody .markPresentationalText {
-    background-color: #ffb;
-}
-
-.mceContentBody .presentationBreak {
+.mceContentBody .presentationBreak, .mceContentBody .pageBreak {
     background-color: &dtml-corporateBlueBackgroundColor;;
     border-bottom: 3px solid #000;
     padding: 0.5em;
     text-align: center;
 }
 
+/* #16879 highlight class only on TinyMCE edit */
+.mceContentBody .markPresentationalText, .mceContentBody .pageBreak {
+    background-color: #ffb;
+}
+
 .mceContentBody .presentationBreak:before {
     content: "Presentational Break for splitting a slide while keeping the same header";
 }
+
+.mceContentBody .pageBreak:before {
+    content: "Print Page Break used for breaking a page when printing";
+}
+
 /* #16916; hide the background images on view pages as they should only appear within the
 tinyMCE editor or the presentation_view */
 .presentation-images {

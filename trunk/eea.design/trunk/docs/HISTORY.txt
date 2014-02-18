@@ -3,6 +3,9 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Change: styled page breaks in the same way as presentational breaks within
+  TinyMCE in order to better spot them
+  [ichimdav refs #18539]
 * Feature: improved PDF generation. 
   avoid page break inside images.
   avoid page break just after headings.
