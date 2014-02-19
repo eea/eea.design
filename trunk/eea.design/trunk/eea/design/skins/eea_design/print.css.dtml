@@ -152,7 +152,7 @@ div.metadata-switch {
 /* ichimdav added from sunburst's print.css */
 
 /* Page break class for use when printing */
-div.pageBreak {
+.pageBreak {
 	page-break-before: always;
 }
 
@@ -192,8 +192,6 @@ div.pageBreak {
 .contentActions,
 .help,
 .legend,
-p.portalMessage,
-dl.portalMessage,
 div.portalWarningMessage,
 div.portalStopMessage,
 div.documentActions,

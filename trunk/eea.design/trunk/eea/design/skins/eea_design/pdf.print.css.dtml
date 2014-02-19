@@ -23,22 +23,6 @@ img {
   page-break-inside: avoid;
 }
 
-#article-language {
-  display: none;
-}
-
-iframe {
-  display: none;
-}
-
-.portal-logo {
-  display: none;
-}
-
-#portal-footer {
-  display: none;
-}
-
 .documentFirstHeading {
   font-family: Verdana !important;
   font-size: 18pt;
@@ -52,14 +36,6 @@ iframe {
   font-weight: normal;
 }
 
-.fiche-thumbnail {
-  display: none;
-}
-
-.figure-plus-container-wide, .figure-plus-wide, .figure-image {
-  display: none;
-}
-
 p.discreet {
   border-bottom: 1px solid #333;
   font-family: Verdana !important;
@@ -67,15 +43,11 @@ p.discreet {
   padding-bottom: 10pt;
 }
 
-.temporal-coverage {
-  display: none;
-}
 
 /* Messages */
 .callout, .keyFact,
 .portalMessage,
-.system-message
-{
+.system-message {
   page-break-inside: avoid;
 }
 
@@ -90,9 +62,6 @@ p.discreet {
 .warningMessage a, .warningMessage a:visited {
   display: block;
   color: #346F83 !important;
-}
-
-.pdfMissingImage {
 }
 
 /* Cover
@@ -219,15 +188,7 @@ p.discreet {
   margin: 0;
 }
 
-#relatedItems .photoAlbumEntryWrapper {
-  display: none;
-}
-
-#relatedItems .photoAlbumEntryDescription {
-  display: none;
-}
-
-#relatedItems a:link:after,#relatedItems a:visited:after {
+#relatedItems a:link:after, #relatedItems a:visited:after {
   content:" [" attr(href) "] ";
 }
 
@@ -241,22 +202,23 @@ p.discreet {
   padding: 0;
 }
 
-.eea-annotator {
+/* hidden elements */
+.annotator-widget,
+#article-language,
+.eea-annotator,
+.eea-location-listing,
+.fiche-thumbnail,
+.figure-plus-container-wide,
+.figure-plus-wide,
+.figure-image,
+.geographical-coverage,
+iframe,
+#portal-footer,
+.portal-logo,
+.portlet.toc,
+#relatedItems .photoAlbumEntryWrapper,
+#relatedItems .photoAlbumEntryDescription,
+.temporal-coverage
+{
   display: none;
-}
-
-.annotator-widget {
-  display: none;
-}
-
-.portlet.toc {
-  display: none !important;
-}
-
-.geographical-coverage {
-    display: none;
-}
-
-.eea-location-listing {
-    display: none;
 }
