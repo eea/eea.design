@@ -3,10 +3,12 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Bug fix: Use open-source version of "Palatino Linotype" font "TeX Gyre Pagella"
+  [voineali refs #17717]
 * Change: styled page breaks in the same way as presentational breaks within
   TinyMCE in order to better spot them
   [ichimdav refs #18539]
-* Feature: improved PDF generation. 
+* Feature: improved PDF generation.
   avoid page break inside images.
   avoid page break just after headings.
   [demarant refs #18539]

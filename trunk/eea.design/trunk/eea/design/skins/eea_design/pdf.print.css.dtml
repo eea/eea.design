@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Palatino Linotype";
-  src: local("Palatino Linotype");
+  src: local("TeX Gyre Pagella");
 }
 
 .page-break {
