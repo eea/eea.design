@@ -7,7 +7,7 @@
                 cacheable="True" compression="safe" cookable="True"
                 conditionalcomment=""
                 expression=""
-                insert-before="ploneCustom.css"
+                insert-before="++resource++eea.progressbar.css"
             />
 
 </object>
