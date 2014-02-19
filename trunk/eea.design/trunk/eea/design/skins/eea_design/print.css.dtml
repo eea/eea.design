@@ -5,7 +5,7 @@
 ** Style sheet documentation can be found at http://plone.org/documentation
 **
 ** You should preferrably use ploneCustom.css to add your own CSS classes and to
-** customize your portal, as these are the base fundaments of Plone, and will
+** customize your portal, as these are the base fundamentals of Plone, and will
 ** change and be refined in newer versions. Keeping your changes in
 ** ploneCustom.css will make it easier to upgrade.
 **
@@ -14,54 +14,6 @@
 **
 */
 
-#auto-related,
-#related-multimedia,
-.languageCodes,
-#themes-object,
-#cross-site-top,
-#portal-footer img,
-#portal-siteactions,
-.hiddenStructure,
-.hiddenElem,
-#portal-searchbox,
-#portal-globalnav .plain,
-#portal-globalnav .selected,
-#portal-globalnav,
-#portal-personaltools,
-#portal-breadcrumbs,
-#portal-column-one,
-#portal-column-two,
-.contentViews,
-.contentActions,
-.help,
-.legend,
-p.portalMessage,
-dl.portalMessage,
-div.portalWarningMessage,
-div.portalStopMessage,
-div.documentActions,
-.documentByLine,
-.netscape4,
-#portal-colophon,
-#multimedia-highlights,
-body.frontpage .portlet-promotions,
-.moreLink,
-.skipnav,
-.visualNoPrint,
-.visualClear,
-.progressbar-viewlet,
-.eea-progressbar,
-#edit-bar,
-#languageCodes,
-#commenting,
-#viewlet-below-content,
-#relatedItems .eea-tabs,
-.managePortletsLink,
-.link-presentation,
-.site-description {
-    /* Hides all the elements irrelevant for printing */
-    display: none !important;
-}
 
 #relatedItems .eea-tabs-panel {
     display: block !important;
@@ -86,6 +38,8 @@ h1, h2, h3, h4, h5, h6
     font-family: Baskerville, Georgia, Garamond, Times, serif;
     width: auto;
     clear: both;
+    page-break-inside: avoid;
+    page-break-after: avoid;
 }
 
 div, p, ul, dl, ol {
@@ -214,6 +168,67 @@ div.pageBreak {
     margin:0.5em 0 1.31em;
 }
 
+/* Hide all the elements that are irrelevant for printing */
+#auto-related,
+#related-multimedia,
+.languageCodes,
+#themes-object,
+#cross-site-top,
+#portal-footer img,
+#portal-siteactions,
+.hiddenStructure,
+.hiddenElem,
+#portal-searchbox,
+#portal-globalnav .plain,
+#portal-globalnav .selected,
+#portal-globalnav,
+#portal-personaltools,
+#portal-breadcrumbs,
+#edit-bar,
+#portal-column-one,
+#portal-column-two,
+#portal-languageselector,
+.contentViews,
+.contentActions,
+.help,
+.legend,
+p.portalMessage,
+dl.portalMessage,
+div.portalWarningMessage,
+div.portalStopMessage,
+div.documentActions,
+.documentByLine,
+#multimedia-highlights,
+body.frontpage .portlet-promotions,
+.moreLink,
+.skipnav,
+.visualNoPrint,
+.visualClear,
+.progressbar-viewlet,
+.eea-progressbar,
+#languageCodes,
+#commenting,
+#viewlet-below-content,
+#relatedItems .eea-tabs,
+.managePortletsLink,
+#portal-colophon,
+#kss-spinner,
+#review-history,
+#content-history,
+.listingBar,
+.link-presentation,
+input.standalone,
+.overlay,
+.managePortletsFallback,
+.close,
+.link-parent,
+.draggingHook,
+#foldercontents-order-column,
+input.context,
+.site-description {
+    /* Hides all the elements irrelevant for printing */
+    display: none !important;
+}
 
 /* Image alignment classes */
 .image-left {

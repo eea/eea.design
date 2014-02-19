@@ -3,6 +3,8 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Change: updated print.css stylesheet with rules from plonetheme.sunburst theme
+  [ichimdav refs #18539]
 * Bug fix: Use open-source version of "Palatino Linotype" font "TeX Gyre Pagella"
   [voineali refs #17717]
 * Change: styled page breaks in the same way as presentational breaks within
