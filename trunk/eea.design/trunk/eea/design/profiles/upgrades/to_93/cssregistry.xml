@@ -3,7 +3,7 @@
 
     <stylesheet title=""
                 id="presentational_styles.css"
-                media="screen" rel="stylesheet" rendering="link"
+                media="all" rel="stylesheet" rendering="link"
                 cacheable="True" compression="safe" cookable="True"
                 conditionalcomment=""
                 expression=""
