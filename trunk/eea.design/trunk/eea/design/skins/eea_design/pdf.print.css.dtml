@@ -1,4 +1,3 @@
-
 /* Body
 ------- */
 
@@ -13,7 +12,7 @@
 }
 
 body {
-  font-family: "Palatino Linotype", arial ! important;
+  font-family: "Palatino Linotype", Arial, sans-serif !important;
   font-size: 10pt;
   color: #333;
   margin: 0;
@@ -21,7 +20,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Verdana ! important;
+  font-family: Verdana !important;
   page-break-after: avoid;
 }
 
@@ -79,81 +78,11 @@ p.discreet {
 }
 
 /* Messages */
-.callout {
-  background: #EEE;
-  padding: 1em;
-  border-left: 1em solid #CCC;
-  clear: both;
-  page-break-inside: avoid;
-}
-
-.keyFact {
-  background: #C7E0E9;
-  padding: 1.5em;
-  border-left: 1em solid #346F83;
-  clear: both;
-  page-break-inside: avoid;
-}
-
+.callout, .keyFact,
 .portalMessage,
-.system-message {
-  font-size: 100%;
-  margin: 1em 0;
-  padding: 0.5em 1em 0.5em 3.5em;
-  vertical-align: middle;
-  background: no-repeat scroll 1em 50% #C7E0E9;
+.system-message
+{
   page-break-inside: avoid;
-}
-
-.portalMessage p {
-  margin: 1em 0;
-}
-
-.informationMessage {
-  background: url(&dtml-portal_url;/information.png)  no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.warningMessage {
-  font-size: 140%;
-  background: url(&dtml-portal_url;/error.png) no-repeat scroll 1em 50% #FFFABE;;
-}
-
-#error-handling, .errorMessage {
-  font-size: 160%;
-  background: url(&dtml-portal_url;/exclamation.png) no-repeat scroll 1em 50% #FFFABE;
-}
-
-.thumbsUpMessage {
-  background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.attentionMessage {
-  background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #C0CF99;
-}
-
-.yesMessage {
-  background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.noMessage {
-  background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #C0CF99;
-}
-
-.rosetteMessage {
-  background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #FFFABE;
-  color: #666666;
-}
-
-.ideaMessage {
-  background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.smileyMessage {
-  background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FFFABE;
-}
-
-.noteMessage {
-  background: url(&dtml-portal_url;/note.png)  no-repeat scroll 1em 50% #C7E0E9;
 }
 
 .warningMessage {
@@ -260,7 +189,7 @@ p.discreet {
 }
 
 .cover-copyright {
-  margin: 88pt 40pt 0pt 108pt;
+  margin: 88pt 40pt 0 108pt;
   font-family: Verdana !important;
   font-weight: normal;
   font-size: 8pt;
