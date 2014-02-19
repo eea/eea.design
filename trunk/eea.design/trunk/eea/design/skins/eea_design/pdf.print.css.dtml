@@ -6,11 +6,6 @@
   src: local("TeX Gyre Pagella");
 }
 
-.page-break {
-  display: block;
-  page-break-before: always;
-}
-
 body {
   font-family: "Palatino Linotype", Arial, sans-serif !important;
   font-size: 10pt;
@@ -21,7 +16,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Verdana !important;
-  page-break-after: avoid;
 }
 
 img {
