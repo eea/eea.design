@@ -14,11 +14,6 @@
 **
 */
 
-
-#relatedItems .eea-tabs-panel {
-    display: block !important;
-}
-
 body {
     font-family: Baskerville, Georgia, Garamond, Times, serif;
     font-size: 11pt;
@@ -42,11 +37,7 @@ h1, h2, h3, h4, h5, h6
     page-break-after: avoid;
 }
 
-div, p, ul, dl, ol {
-    width: auto !important;
-}
-
-* html #content {
+#content, div, p, ul, dl, ol {
     width: auto !important;
 }
 
@@ -168,6 +159,10 @@ div.metadata-switch {
     margin:0.5em 0 1.31em;
 }
 
+#relatedItems .eea-tabs-panel {
+  display: block !important;
+}
+
 /* Hide all the elements that are irrelevant for printing */
 #auto-related,
 #related-multimedia,
@@ -256,4 +251,3 @@ dl.captioned {
 	margin: 0 0 0.5em 1em;
 	width: 16em;
 }
-

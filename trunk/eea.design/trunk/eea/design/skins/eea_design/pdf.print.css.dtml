@@ -14,8 +14,15 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Verdana !important;
+h1, h2, h3, h4, h5, h6,
+.documentFirstHeading,
+.documentDescription,
+p.discreet,
+.cover-header,
+.cover-issn,
+.cover-copyright
+{
+  font-family: Verdana, sans-serif !important;
 }
 
 img {
@@ -24,13 +31,11 @@ img {
 }
 
 .documentFirstHeading {
-  font-family: Verdana !important;
   font-size: 18pt;
   text-align: right;
 }
 
 .documentDescription {
-  font-family: Verdana !important;
   font-size: 12pt;
   text-align: right;
   font-weight: normal;
@@ -38,7 +43,6 @@ img {
 
 p.discreet {
   border-bottom: 1px solid #333;
-  font-family: Verdana !important;
   font-size: 9pt;
   padding-bottom: 10pt;
 }
@@ -71,7 +75,6 @@ p.discreet {
   margin: 24pt 42pt;
   font-size: 10pt;
   color: #666;
-  font-family: Verdana !important;
 }
 
 .cover-title {
@@ -107,7 +110,6 @@ p.discreet {
   padding-right: 42pt;
   font-size: 8pt;
   color: #666;
-  font-family: Verdana !important;
 }
 
 .cover-image {
@@ -153,7 +155,6 @@ p.discreet {
 
 .cover-copyright {
   margin: 88pt 40pt 0 108pt;
-  font-family: Verdana !important;
   font-weight: normal;
   font-size: 8pt;
   min-height: 690pt;
