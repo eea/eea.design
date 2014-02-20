@@ -27,8 +27,7 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6
-{
+h1, h2, h3, h4, h5, h6 {
     border: none;
     font-family: Baskerville, Georgia, Garamond, Times, serif;
     width: auto;
@@ -114,54 +113,62 @@ h2.highlight {
 
 
 /* indicators styles */
-
 .documentEditable .documentContent {
     border:none !important;
 }
+
 #portal-column-content {
     margin:0 !important;
 }
+
 body {
     background-image:none !important;
 }
+
 #box-classification {
     float:none !important;
 }
+
 div.metadata-switch {
     display:none !important;
 }
+
 .keyMessage {
     page-break-inside:avoid !important;
 }
+
 .indicator-figure-plus-container {
     page-break-inside:avoid !important;
 }
+
 .indicator-figure-plus .figure-title {
-   clear:both !important;
+    clear:both !important;
 }
+
 
 /* ichimdav added from sunburst's print.css */
 
 /* Page break class for use when printing */
 .pageBreak {
-	page-break-before: always;
+    page-break-before: always;
 }
 
 /* Basic styles for listing and document views */
 #content dt {
-	margin:1em 0 0.625em;
+    margin:1em 0 0.625em;
 }
 #content p, #content table {
-	margin-bottom:0.625em;
-	margin-top:0.625em;
+    margin-bottom:0.625em;
+    margin-top:0.625em;
 }
 #content .documentDescription, #content #description {
     margin:0.5em 0 1.31em;
 }
 
 #relatedItems .eea-tabs-panel {
-  display: block !important;
+    display: block !important;
 }
+
 
 /* Hide all the elements that are irrelevant for printing */
 #auto-related,
@@ -223,31 +230,36 @@ input.context,
     display: none !important;
 }
 
+
 /* Image alignment classes */
 .image-left {
-	float: left;
-	clear: both;
-	margin: 0.5em 1em 0.5em 0;
-	border: 0.4pt solid Black;
+    float: left;
+    clear: both;
+    margin: 0.5em 1em 0.5em 0;
+    border: 0.4pt solid Black;
 }
 .image-inline {
-	float: none;
+    float: none;
 }
 .image-right {
-	float: right;
-	clear: both;
-	margin: 0.5em;
-	border: 0.4pt solid Black;
+    float: right;
+    clear: both;
+    margin: 0.5em;
+    border: 0.4pt solid Black;
 }
+
 dd.image-caption {
-	text-align:left;
-	padding: 0; margin:0;
+    text-align:left;
+    padding: 0;
+    margin:0;
 }
+
 dl.captioned {
-	padding: 0.8em;
+    padding: 0.8em;
 }
+
 .newsImageContainer {
-	float:right;
-	margin: 0 0 0.5em 1em;
-	width: 16em;
+    float:right;
+    margin: 0 0 0.5em 1em;
+    width: 16em;
 }

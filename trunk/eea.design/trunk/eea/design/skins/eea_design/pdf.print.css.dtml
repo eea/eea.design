@@ -41,15 +41,32 @@ img {
   font-weight: normal;
 }
 
-p.discreet {
-  border-bottom: 1px solid #333;
-  font-size: 9pt;
-  padding-bottom: 10pt;
+
+/* hidden elements */
+.annotator-widget,
+#article-language,
+.eea-annotator,
+.eea-location-listing,
+.fiche-thumbnail,
+.figure-plus-container-wide,
+.figure-plus-wide,
+.figure-image,
+.geographical-coverage,
+iframe,
+#portal-footer,
+.portal-logo,
+.portlet.toc,
+#relatedItems .photoAlbumEntryWrapper,
+#relatedItems .photoAlbumEntryDescription,
+.temporal-coverage
+{
+  display: none;
 }
 
 
 /* Messages */
-.callout, .keyFact,
+.callout,
+.keyFact,
 .portalMessage,
 .system-message {
   page-break-inside: avoid;
@@ -66,6 +83,12 @@ p.discreet {
 .warningMessage a, .warningMessage a:visited {
   display: block;
   color: #346F83 !important;
+}
+
+p.discreet {
+  border-bottom: 1px solid #333;
+  font-size: 9pt;
+  padding-bottom: 10pt;
 }
 
 /* Cover
@@ -186,6 +209,8 @@ p.discreet {
   bottom: 0;
 }
 
+
+/* related items */
 #relatedItems .photoAlbumEntry {
   clear: both;
   margin: 0;
@@ -205,23 +230,3 @@ p.discreet {
   padding: 0;
 }
 
-/* hidden elements */
-.annotator-widget,
-#article-language,
-.eea-annotator,
-.eea-location-listing,
-.fiche-thumbnail,
-.figure-plus-container-wide,
-.figure-plus-wide,
-.figure-image,
-.geographical-coverage,
-iframe,
-#portal-footer,
-.portal-logo,
-.portlet.toc,
-#relatedItems .photoAlbumEntryWrapper,
-#relatedItems .photoAlbumEntryDescription,
-.temporal-coverage
-{
-  display: none;
-}
