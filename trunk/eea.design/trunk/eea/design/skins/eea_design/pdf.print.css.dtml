@@ -72,9 +72,10 @@ p.discreet {
 -------- */
 .cover-header {
   text-align: right;
-  margin: 24pt 42pt;
+  margin: 0 42pt;
   font-size: 10pt;
   color: #666;
+  padding-top: 24pt;
 }
 
 .cover-title {
@@ -154,11 +155,12 @@ p.discreet {
 }
 
 .cover-copyright {
-  margin: 88pt 40pt 0 108pt;
+  margin: 0 40pt 0 108pt;
   font-weight: normal;
   font-size: 8pt;
   min-height: 690pt;
   position: relative;
+  padding-top: 88pt;
 }
 
 .cover-copyright dt, .cover-copyright dd {

@@ -90,10 +90,19 @@ class Cover(PDFCover):
             relatedItems.extract()
         return soup.decode()
 
+    def fix_portalMessages(self, html):
+        """ Remove portal messages
+        """
+        soup = BeautifulSoup(html)
+        for portalMessage in soup.find_all('p', {'class': 'portalMessage'}):
+            portalMessage.extract()
+        return soup.decode()
+
     def __call__(self, **kwargs):
         html = super(Cover, self).__call__(**kwargs)
         try:
             html = self.fix_relatedItems(html)
+            html = self.fix_portalMessages(html)
         except Exception, err:
             logger.exception(err)
         return html
@@ -161,11 +170,20 @@ class Body(PDFBody):
             iframe.replaceWith(img)
         return soup.decode()
 
+    def fix_portalMessages(self, html):
+        """ Remove portal messages
+        """
+        soup = BeautifulSoup(html)
+        for portalMessage in soup.find_all('p', {'class': 'portalMessage'}):
+            portalMessage.extract()
+        return soup.decode()
+
     def __call__(self, **kwargs):
         # Cheat condition @@plone_context_state/is_view_template
         self.request['ACTUAL_URL'] = self.context.absolute_url()
         html = super(Body, self).__call__(**kwargs)
         try:
+            html = self.fix_portalMessages(html)
             html = self.fix_daviz(html)
         except Exception, err:
             logger.exception(err)
