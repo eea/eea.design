@@ -88,7 +88,7 @@ class Cover(PDFCover):
         soup = BeautifulSoup(html)
         for relatedItems in soup.find_all(id='relatedItems'):
             relatedItems.extract()
-        return soup.decode()
+        return soup.find_all('html')[0].decode()
 
     def fix_portalMessages(self, html):
         """ Remove portal messages
@@ -96,7 +96,7 @@ class Cover(PDFCover):
         soup = BeautifulSoup(html)
         for portalMessage in soup.find_all('p', {'class': 'portalMessage'}):
             portalMessage.extract()
-        return soup.decode()
+        return soup.find_all('html')[0].decode()
 
     def __call__(self, **kwargs):
         html = super(Cover, self).__call__(**kwargs)
@@ -168,7 +168,7 @@ class Body(PDFBody):
                   <a href="%(url)s">%(url)s</a>
                 </div>''' % {'url': chart_url, 'qr_url': qr_url})
             iframe.replaceWith(img)
-        return soup.decode()
+        return soup.find_all('html')[0].decode()
 
     def fix_portalMessages(self, html):
         """ Remove portal messages
@@ -176,7 +176,7 @@ class Body(PDFBody):
         soup = BeautifulSoup(html)
         for portalMessage in soup.find_all('p', {'class': 'portalMessage'}):
             portalMessage.extract()
-        return soup.decode()
+        return soup.find_all('html')[0].decode()
 
     def __call__(self, **kwargs):
         # Cheat condition @@plone_context_state/is_view_template

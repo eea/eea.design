@@ -3,6 +3,8 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Bug fix: Avoid multiple html tags within pdf.cover, pdf.body
+  [voineali refs #18552]
 * Change: updated print.css stylesheet to work with wkhtmltopdf 0.12
   [voineali refs #18550]
 * Change: updated print.css stylesheet with rules from plonetheme.sunburst theme
