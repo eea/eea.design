@@ -233,7 +233,10 @@ p.discreet {
 
 /* Overrides */
 
-/* portalMessage have too much padding which ends up clipping the portalMessage text */
+/* portalMessage have too much padding which ends up clipping the portalMessage text
+   also font-size set to 100% to keep pages close in style to how they were when
+   portalMessage styles were added with background images
+*/
 div.attention, div.caution,
 div.danger, div.error, div.hint,
 div.important, div.note, div.tip,
@@ -242,6 +245,7 @@ div.warning,
 .portalMessage,
 .system-message {
   padding: 1em 1.5em 1em 3.5em;
+  font-size: 100%;
 }
 
 .portalMessage:before, .portalMessage .eea-icon:before {
