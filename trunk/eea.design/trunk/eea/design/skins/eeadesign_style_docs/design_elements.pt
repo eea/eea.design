@@ -15,8 +15,8 @@
         Welcome to EEA Web design elements
     </h1>
     <div class="documentDescription" i18n:translate="">
-        This page shows common html markup, css classes and javascripts we use across the EEA website. See 
-example code and use Firefox Firebug plugin to inspect elements code. Intended audience: web designers, web 
+        This page shows common html markup, css classes and javascripts we use across the EEA website. See
+example code and use Firefox Firebug plugin to inspect elements code. Intended audience: web designers, web
 developers, UX/UI experts.
     </div>
 
@@ -98,7 +98,33 @@ developers, UX/UI experts.
         &lt;/ul&gt;">
         </pre>
 
-    <h2 i18n:translate="">jQuerytools tabs</h2>
+    <h2 i18n:translate="">Tabs</h2>
+    <h3 i18n:translate="">Navigation tabs</h3>
+        <div class="tabbedmenu">
+            <ul>
+                <li i18n:translate=""><a href="#first" class="first-tab">First tab</a></li>
+                <li i18n:translate=""><a href="#second" class="current">Second tab</a></li>
+                <li i18n:translate=""><a href="#third">Third tab</a></li>
+            </ul>
+        </div>
+        <div class="border-tabbedmenu">
+            <div class="eea-tabs-panel"
+                 tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.">
+            </div>
+    <pre tal:content="string:
+        &lt;ul class=&quot;tabbedmenu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#first&quot; class=&quot;first-tab&quot;&gt;First Tab&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#second&quot; class=&quot;current&quot;&gt;Second Tab&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#third&quot;&gt;Third Tab&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;border-tabbedmenu&quot;&gt;
+            Content
+        &lt;/div&gt;
+        ">
+    </pre>
+        </div>
+
+    <h3 i18n:translate="">jQuerytools tabs</h3>
         <ul class="eea-tabs">
             <li i18n:translate="">First tab</li>
             <li i18n:translate="">Second tab</li>
@@ -139,7 +165,7 @@ developers, UX/UI experts.
         ">
     </pre>
 
-    <h2 i18n:translate="">jQuerytools tabs two rows title</h2>
+    <h3 i18n:translate="">jQuerytools tabs two rows title</h3>
         <ul class="eea-tabs two-rows">
             <li i18n:translate="">First tab two rows</li>
             <li i18n:translate="">Second tab with longer title</li>
@@ -508,10 +534,10 @@ developers, UX/UI experts.
         src="resolveuid/af79241214c3088375297823b3ccf560/image_wide" /></p>
 
     <h2 i18n:translate="">Portal messages and callouts</h2>
-     <p i18n:translate="">Portal messages (aka callout / text boxes) are 
-"in publishing ... a short piece of text set in larger type than the rest of the page 
-and intended to attract attention ... in word processing is a special text box with or without 
-a small 'tail' that can be pointed to different locations 
+     <p i18n:translate="">Portal messages (aka callout / text boxes) are
+"in publishing ... a short piece of text set in larger type than the rest of the page
+and intended to attract attention ... in word processing is a special text box with or without
+a small 'tail' that can be pointed to different locations
 on a document..." (definition source: <a href="http://en.wikipedia.org/wiki/Callout">Wikipedia</a>)</p>
 
      <p i18n:translate="">These styles can be added manually in HTML by a developer or
@@ -520,16 +546,16 @@ on a document..." (definition source: <a href="http://en.wikipedia.org/wiki/Call
      </p>
 
     <h3 i18n:translate="">Standard call-out</h3>
- 
-    <p class="callout">This is a callout: a piece of text set in a special layout intended to attract 
+
+    <p class="callout">This is a callout: a piece of text set in a special layout intended to attract
 attention.</p>
 
     <h3>Key Facts call-out</h3>
-    <p>We have a specific css class "keyFact" which we have given a call-out style. This helps us to 
-systematically identify key facts / key messages added by content authors on webpages, extract them and create 
+    <p>We have a specific css class "keyFact" which we have given a call-out style. This helps us to
+systematically identify key facts / key messages added by content authors on webpages, extract them and create
 distinct list about them.</p>
 
-<div class="keyFact"><strong>Key messages</strong><ul><li>Key message 1</li><li>Key message 
+<div class="keyFact"><strong>Key messages</strong><ul><li>Key message 1</li><li>Key message
 2</li><li>...</li><li>Key message n</li></ul></div>
 
     <h3 i18n:translate="">Standard Portal Message</h3>
@@ -675,8 +701,8 @@ as following:</p>
     <span class="eea-icon eea-icon-camera-retro"></span> eea-icon-camera-retro
     <pre>&lt;span class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/span&gt;
 eea-icon-camera-retro</pre>
-    <p i18n:translate="">You can use the entire set of <a rel="external" 
-href="http://fontawesome.io/icons/">Font Awesome icons</a> as part of the EEA web design. Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop 
+    <p i18n:translate="">You can use the entire set of <a rel="external"
+href="http://fontawesome.io/icons/">Font Awesome icons</a> as part of the EEA web design. Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop
 shadow, and anything that can be done with the power of CSS.</p>
     <h4 i18n:translate="">More icons</h4>
     <p>
@@ -692,18 +718,18 @@ shadow, and anything that can be done with the power of CSS.</p>
      <a rel="external" href="http://fontawesome.io/icons/">More than 360 icons</a>
     </p>
 
-    <p class="callout" i18n:translate="">There are many ways to customise the icons display. See the <a 
+    <p class="callout" i18n:translate="">There are many ways to customise the icons display. See the <a
 href="http://fontawesome.io/examples/">practical examples</a> and just
-replace the generic <strong>fa</strong> classname with our <strong>eea-icon</strong> 
+replace the generic <strong>fa</strong> classname with our <strong>eea-icon</strong>
 class prefix</p>
     <h4 i18n:translate="">Floated Icons</h4>
-    <p i18n:translate="">You can float icons right or left by using 
-<strong>eea-icon-right</strong> or 
+    <p i18n:translate="">You can float icons right or left by using
+<strong>eea-icon-right</strong> or
 <strong>eea-icon-left</strong> class, instead of font awesome .pull-left and .pull-right:</p>
     <pre>&lt;p&gt;&lt;span class="eea-icon eea-icon-right eea-icon-comment"&gt;&lt;/span&gt;&lt;/a&gt;Right
 floated comment icon&lt;/p&gt;</pre>
     <p i18n:translate=""><span class="eea-icon eea-icon-right eea-icon-comment"></span>We can float
-the icon to the right of the 
+the icon to the right of the
 text as we can see from this example.</p>
 
     <h2 i18n:translate="">Auto-Link-Icons based protocol and file extension</h2>

@@ -2637,4 +2637,71 @@ div.row {
     background-color: transparent;
 }
 
+/* EUNIS navigation proposal, see #16978 */
+.tabbedmenu {
+border-bottom: 0px;
+float:left;
+width: 100%;
+line-height: normal;
+}
+
+.tabbedmenu ul {
+float: left;
+width: 100%;
+border-bottom: 0px;
+font-size: 12px;
+line-height: normal!important;
+background-color: rgb(44, 141, 162)!important;
+border-radius: 10px 10px 0 0;
+margin: 0!important;
+padding: 0!important;
+list-style: none!important;
+list-style-image: none!important;
+}
+
+.tabbedmenu ul li {
+color: rgb(255, 255, 255)!important;
+text-shadow: 1px 1px 1px rgb(0, 0, 0);
+margin: 0!important;
+padding: 0!important;
+max-width: 150px;
+text-align: center;
+background: none;
+float: left;
+white-space: nowrap;
+}
+
+.tabbedmenu a:hover{
+background-color: rgb(243, 243, 243)!important;
+color: #8E004D!important;
+text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+.tabbedmenu a.current {
+background-color: rgb(255, 255, 255);
+color: rgb(0, 94, 125)!important;
+text-shadow: 1px 1px 1px rgb(243, 243, 243);
+}
+
+.tabbedmenu a {
+min-height: 17px;
+padding: 9px 8px 11px 8px!important;
+display: block!important;
+white-space: normal;
+margin: 0;
+font-weight: normal;
+border: 0;
+color: rgb(255, 255, 255)!important;
+}
+
+.tabbedmenu .first-tab {
+border-top-left-radius: 10px;
+}
+
+.border-tabbedmenu {
+border: 1px solid rgb(221, 221, 221);
+border-top: 0;
+padding: 10px;
+}
+
 /* </dtml-with> */

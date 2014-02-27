@@ -27,7 +27,9 @@ Changelog
 * Upgrade step: Moved box styles into a separate css file. Added to presentation
   template.
   [olimpiurob refs #18425]
-
+* Feature: added tabbedmenu css classes to be available via EEA Template Service.
+  Design element page updated.
+  [ghicaale refs #16978]
 
 9.2 - (2014-02-13)
 ------------------
