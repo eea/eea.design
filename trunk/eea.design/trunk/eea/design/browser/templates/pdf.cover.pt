@@ -20,7 +20,7 @@
 <div class="cover">
 
   <div class="cover-header">
-    <span tal:content="python:context.portal_type">Portal Type</span>
+    <span tal:content="context/Type">Content Type</span>
     <span>|</span>
     <span tal:content="view/header">Navigation Root Title</span>
   </div>
@@ -38,10 +38,6 @@
 
 
   <div class="cover-body">
-
-    <div class="cover-issn" i18n:domain="eea.notranslation">
-      <span i18n:translate="">ISSN 1725-9177</span>
-    </div>
 
     <div class="cover-image" tal:condition="context/getImage|nothing">
       <a tal:define="here_url context/@@plone_context_state/object_url"
@@ -101,7 +97,6 @@
 
   <dl class="cover-copyright-book" i18n:domain="eea.notranslation">
     <dd tal:condition="context/isbn|nothing">ISBN <tal:isbn tal:replace="context/isbn" /></dd>
-    <dd i18n:translate="">ISSN 1725-2237</dd>
     <dd tal:condition="context/doi|nothing">doi:<tal:doi tal:replace="context/doi" /></dd>
   </dl>
 
@@ -112,7 +107,7 @@
     <dd i18n:translate="">Denmark</dd>
     <dd i18n:translate="copyright-phone">Tel.: + 45 33 36 71 00</dd>
     <dd i18n:translate="copyright-fax">Fax: + 45 33 36 71 99</dd>
-    <dd i18n:translate="copyright-email">Web: eea.europa.eu</dd>
+    <dd i18n:translate="copyright-web">Web: eea.europa.eu</dd>
     <dd i18n:translate="copyright-enquiries">Enquiries: eea.europa.eu/enquiries</dd>
   </dl>
 

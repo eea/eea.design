@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6,
 .documentDescription,
 p.discreet,
 .cover-header,
-.cover-issn,
 .cover-copyright
 {
   font-family: Verdana, sans-serif !important;
@@ -124,16 +123,6 @@ p.discreet {
   border-top: 7pt solid #7ad2c4;
   border-bottom: 1pt solid #333;
   height: 565pt;
-}
-
-.cover-issn {
-  text-align: right;
-  background-color: white;
-  height: 15pt;
-  padding-top: 5pt;
-  padding-right: 42pt;
-  font-size: 8pt;
-  color: #666;
 }
 
 .cover-image {

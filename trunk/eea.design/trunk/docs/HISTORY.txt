@@ -3,6 +3,9 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Bug fix: use user-friendly content type on PDF cover.
+  removed issn (not needed).
+  [demarant refs #18539] 
 * Bug fix: Avoid multiple html tags within pdf.cover, pdf.body
   [voineali refs #18552]
 * Change: updated print.css stylesheet to work with wkhtmltopdf 0.12
