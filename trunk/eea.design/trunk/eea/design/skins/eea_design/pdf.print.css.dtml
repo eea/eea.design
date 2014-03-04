@@ -64,6 +64,17 @@ iframe,
 
 
 /* Messages */
+.callout {
+  background: #EEE;
+  padding: 1em;
+  border-left: 1em solid #CCC;
+  page-break-inside: avoid;
+  clear: none;
+  float: right;
+  width: 200pt !important;
+  margin-left: 10pt;
+}
+
 .callout,
 .keyFact,
 .portalMessage,
