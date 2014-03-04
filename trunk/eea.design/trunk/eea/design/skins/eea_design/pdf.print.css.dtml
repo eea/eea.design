@@ -6,22 +6,22 @@
   src: local("TeX Gyre Pagella");
 }
 
-.page-break {
-  display: block;
-  page-break-before: always;
-}
-
 body {
-  font-family: "Palatino Linotype", arial ! important;
+  font-family: "Palatino Linotype", Arial, sans-serif !important;
   font-size: 10pt;
   color: #333;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Verdana ! important;
-  page-break-after: avoid;
+h1, h2, h3, h4, h5, h6,
+.documentFirstHeading,
+.documentDescription,
+p.discreet,
+.cover-header,
+.cover-copyright
+{
+  font-family: Verdana, sans-serif !important;
 }
 
 img {
@@ -29,145 +29,46 @@ img {
   page-break-inside: avoid;
 }
 
-#article-language {
-  display: none;
-}
-
-iframe {
-  display: none;
-}
-
-.portal-logo {
-  display: none;
-}
-
-#portal-footer {
-  display: none;
-}
-
 .documentFirstHeading {
-  font-family: Verdana !important;
   font-size: 18pt;
   text-align: right;
 }
 
 .documentDescription {
-  font-family: Verdana !important;
   font-size: 12pt;
   text-align: right;
   font-weight: normal;
 }
 
-.fiche-thumbnail {
+
+/* hidden elements */
+.annotator-widget,
+#article-language,
+.eea-annotator,
+.eea-location-listing,
+.fiche-thumbnail,
+.figure-plus-container-wide,
+.figure-plus-wide,
+.figure-image,
+.geographical-coverage,
+iframe,
+#portal-footer,
+.portal-logo,
+.portlet.toc,
+#relatedItems .photoAlbumEntryWrapper,
+#relatedItems .photoAlbumEntryDescription,
+.temporal-coverage
+{
   display: none;
 }
 
-.figure-plus-container-wide, .figure-plus-wide, .figure-image {
-  display: none;
-}
-
-p.discreet {
-  border-bottom: 1px solid #333;
-  font-family: Verdana !important;
-  font-size: 9pt;
-  padding-bottom: 10pt;
-}
-
-.temporal-coverage {
-  display: none;
-}
-
-/* Columns layout */
-
-.eea-two-columns {
--moz-column-count:2; /* Firefox */
--webkit-column-count:2; /* Safari and Chrome */
-column-count:2;
-
--moz-column-gap:20pt; /* Firefox */
--webkit-column-gap:20pt; /* Safari and Chrome */
-column-gap:20pt;
-}
 
 /* Messages */
-.callout {
-  background: #EEE;
-  padding: 1em;
-  border-left: 1em solid #CCC;
-  page-break-inside: avoid;
-  clear: none;
-  float: right;
-  width: 200pt !important;
-  margin-left: 10pt;
-}
-
-.keyFact {
-  background: #C7E0E9;
-  padding: 1.5em;
-  border-left: 1em solid #346F83;
-  clear: both;
-  page-break-inside: avoid;
-}
-
+.callout,
+.keyFact,
 .portalMessage,
 .system-message {
-  font-size: 100%;
-  margin: 1em 0;
-  padding: 0.5em 1em 0.5em 3.5em;
-  vertical-align: middle;
-  background: no-repeat scroll 1em 50% #C7E0E9;
   page-break-inside: avoid;
-}
-
-.portalMessage p {
-  margin: 1em 0;
-}
-
-.informationMessage {
-  background: url(&dtml-portal_url;/information.png)  no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.warningMessage {
-  font-size: 140%;
-  background: url(&dtml-portal_url;/error.png) no-repeat scroll 1em 50% #FFFABE;;
-}
-
-#error-handling, .errorMessage {
-  font-size: 160%;
-  background: url(&dtml-portal_url;/exclamation.png) no-repeat scroll 1em 50% #FFFABE;
-}
-
-.thumbsUpMessage {
-  background: url(&dtml-portal_url;/thumb_up.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.attentionMessage {
-  background: url(&dtml-portal_url;/lightning.png) no-repeat scroll 1em 50% #C0CF99;
-}
-
-.yesMessage {
-  background: url(&dtml-portal_url;/tick.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.noMessage {
-  background: url(&dtml-portal_url;/cross.png) no-repeat scroll 1em 50% #C0CF99;
-}
-
-.rosetteMessage {
-  background: url(&dtml-portal_url;/rosette.png) no-repeat scroll 1em 50% #FFFABE;
-  color: #666666;
-}
-
-.ideaMessage {
-  background: url(&dtml-portal_url;/lightbulb.png) no-repeat scroll 1em 50% #C7E0E9;
-}
-
-.smileyMessage {
-  background: url(&dtml-portal_url;/emoticon_smile.png) no-repeat scroll 1em 50% #FFFABE;
-}
-
-.noteMessage {
-  background: url(&dtml-portal_url;/note.png)  no-repeat scroll 1em 50% #C7E0E9;
 }
 
 .warningMessage {
@@ -183,17 +84,20 @@ column-gap:20pt;
   color: #346F83 !important;
 }
 
-.pdfMissingImage {
+p.discreet {
+  border-bottom: 1px solid #333;
+  font-size: 9pt;
+  padding-bottom: 10pt;
 }
 
 /* Cover
 -------- */
 .cover-header {
   text-align: right;
-  margin: 24pt 42pt;
+  margin: 0 42pt;
   font-size: 10pt;
   color: #666;
-  font-family: Verdana !important;
+  padding-top: 24pt;
 }
 
 .cover-title {
@@ -219,17 +123,6 @@ column-gap:20pt;
   border-top: 7pt solid #7ad2c4;
   border-bottom: 1pt solid #333;
   height: 565pt;
-}
-
-.cover-issn {
-  text-align: right;
-  background-color: white;
-  height: 15pt;
-  padding-top: 5pt;
-  padding-right: 42pt;
-  font-size: 8pt;
-  color: #666;
-  font-family: Verdana !important;
 }
 
 .cover-image {
@@ -274,12 +167,12 @@ column-gap:20pt;
 }
 
 .cover-copyright {
-  margin: 88pt 40pt 0pt 108pt;
-  font-family: Verdana !important;
+  margin: 0 40pt 0 108pt;
   font-weight: normal;
   font-size: 8pt;
   min-height: 690pt;
   position: relative;
+  padding-top: 88pt;
 }
 
 .cover-copyright dt, .cover-copyright dd {
@@ -305,20 +198,14 @@ column-gap:20pt;
   bottom: 0;
 }
 
+
+/* related items */
 #relatedItems .photoAlbumEntry {
   clear: both;
   margin: 0;
 }
 
-#relatedItems .photoAlbumEntryWrapper {
-  display: none;
-}
-
-#relatedItems .photoAlbumEntryDescription {
-  display: none;
-}
-
-#relatedItems a:link:after,#relatedItems a:visited:after {
+#relatedItems a:link:after, #relatedItems a:visited:after {
   content:" [" attr(href) "] ";
 }
 
@@ -332,22 +219,24 @@ column-gap:20pt;
   padding: 0;
 }
 
-.eea-annotator {
-  display: none;
+
+/* Overrides */
+
+/* portalMessage have too much padding which ends up clipping the portalMessage text
+   also font-size set to 100% to keep pages close in style to how they were when
+   portalMessage styles were added with background images
+*/
+div.attention, div.caution,
+div.danger, div.error, div.hint,
+div.important, div.note, div.tip,
+div.warning,
+#error-handling,
+.portalMessage,
+.system-message {
+  padding: 1em 1.5em 1em 3.5em;
+  font-size: 100%;
 }
 
-.annotator-widget {
-  display: none;
-}
-
-.portlet.toc {
-  display: none !important;
-}
-
-.geographical-coverage {
-    display: none;
-}
-
-.eea-location-listing {
-    display: none;
+.portalMessage:before, .portalMessage .eea-icon:before {
+  margin-left: -1.5em;
 }

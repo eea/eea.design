@@ -3,8 +3,6 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
-* Change: Update pdf.print.css with custom changes manually made via portal_skins
-  [voineali refs #18639]
 * Bug fix: use user-friendly content type on PDF cover.
   removed issn (not needed).
   [demarant refs #18539]
