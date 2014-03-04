@@ -107,7 +107,7 @@ developers, UX/UI experts.
                 <li i18n:translate=""><a href="#third">Third tab</a></li>
             </ul>
         </div>
-        <div class="border-tabbedmenu">
+        <div class="tabbedmenu-panel">
             <div class="eea-tabs-panel"
                  tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.">
             </div>
@@ -117,7 +117,7 @@ developers, UX/UI experts.
             &lt;li&gt;&lt;a href=&quot;#second&quot; class=&quot;current&quot;&gt;Second Tab&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href=&quot;#third&quot;&gt;Third Tab&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
-        &lt;div class=&quot;border-tabbedmenu&quot;&gt;
+        &lt;div class=&quot;tabbedmenu-panel&quot;&gt;
             Content
         &lt;/div&gt;
         ">
@@ -167,9 +167,9 @@ developers, UX/UI experts.
 
     <h3 i18n:translate="">jQuerytools tabs two rows title</h3>
         <ul class="eea-tabs two-rows">
-            <li i18n:translate="">First tab two rows</li>
-            <li i18n:translate="">Second tab with longer title</li>
-            <li i18n:translate="">Third tab two rows</li>
+            <li i18n:translate="">First tab</li>
+            <li i18n:translate="">Second tab with a long title that spans across two rows</li>
+            <li i18n:translate="">Third tab</li>
         </ul>
         <p i18n:translate="">
             If you have tabs that have longer titles consider using the extra 'two-rows' class for the tabs which makes the tabs larger in height and better styled to accommodate larger titles.

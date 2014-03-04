@@ -3,6 +3,8 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed navigation tabs CSS
+  [popesval refs #18728]
 * Bug fix: Fixed callout float right not working in PDF
   [voineali refs #18639]
 * Bug fix: use user-friendly content type on PDF cover.

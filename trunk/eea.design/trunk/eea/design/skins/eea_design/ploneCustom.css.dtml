@@ -570,98 +570,69 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* folder_tabs_view and folder_accordion_view styling
  * as well as generic tabs and accordion styling */
-
 #visual-portal-wrapper ul.eea-tabs {
-    background-color: &dtml-corporateBlueOne;;
+    padding: 0 10px 0 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: normal!important;
+    list-style-image: none;
+    list-style-type: none;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    background-color: &dtml-corporateBlueOne;;
 }
-
-#visual-portal-wrapper ul.eea-tabs.two-rows {
-    height: 48px;
-}
-
 #visual-portal-wrapper ul.eea-tabs > li {
-    text-indent: 0;
-    margin: 0;
-    max-width: 150px;
-    padding: 0;
-    font-weight: normal;
-    text-align: center;
     float: left;
-    text-decoration: none;
-    list-style: none none;
-    font-size: inherit;
-}
-
-/*#visual-portal-wrapper ul.eea-tabs.two-rows > li {*/
-    /*max-width: 125px;*/
-/*}*/
-
-#whatsnew-gallery ul.eea-tabs.two-rows > li {
-    line-height: 1.5em !important;
-}
-
-#visual-portal-wrapper ul.eea-tabs a {
-    height: 38px;
-    min-height: 17px;
-    font-size: 125%;
-    padding: 9px 8px 11px 8px;
-    display: inline-table;
-    max-width: 30px;
-    white-space: normal;
     margin: 0;
-    font-weight: normal;
-    border: 0;
+    padding: 0;
 }
-
-#visual-portal-wrapper ul.eea-tabs.two-rows a {
-    padding: 10px 8px 0px 8px;
-    min-height:  38px;
-    max-height: 4.1em;
-    font-size: 120%;
-}
-
-#visual-portal-wrapper ul.eea-tabs li, #visual-portal-wrapper ul.eea-tabs a {
-    color: white;
+#visual-portal-wrapper ul.eea-tabs > li > a {
+    display: block;
+    color: #fff;
     text-shadow: 1px 1px 1px #000000;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 8px 8px;
 }
-
-#visual-portal-wrapper ul.eea-tabs a:hover, #visual-portal-wrapper ul.eea-tabs a.current {
-    background-color: &dtml-greyBackgroundColor;;
-    color: &dtml-corporateBlueTwo;;
-    text-shadow: 1px 1px 1px #FFFFFF;
+#visual-portal-wrapper ul.eea-tabs.two-rows > li > a {
+    height: 40px;
+    white-space: normal;
+    max-width: 144px;
 }
-
-#visual-portal-wrapper ul.eea-tabs li:first-child > a  {
-    border-radius: 8px 0 0 0;
+#visual-portal-wrapper ul.eea-tabs > li:first-child > a {
     -webkit-border-radius: 8px 0 0 0;
     -moz-border-radius: 8px 0 0 0;
+    border-radius: 8px 0 0 0;
+}
+#visual-portal-wrapper ul.eea-tabs > li > a:hover {
+    color: &dtml-corporateBlueTwo;!important;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    background-color: &dtml-greyBackgroundColor;;
+}
+#visual-portal-wrapper ul.eea-tabs > li > a.current,
+#visual-portal-wrapper ul.eea-tabs > li > a.current:hover {
+    cursor: default;
+    color: &dtml-corporateBlueTwo;!important;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    background-color: &dtml-greyBackgroundColor;;
 }
 
-#visual-portal-wrapper ul.eea-tabs li.last-child > a {
-    border-radius: 0 8px 0 0;
-    -webkit-border-radius: 0 8px 0 0;
-    -moz-border-radius: 0 8px 0 0;
-    margin: 0;
+/* Clear floated elements */
+#visual-portal-wrapper ul.eea-tabs:before,
+#visual-portal-wrapper ul.eea-tabs:after {
+    display: table;
+    content: " ";
 }
-
-#visual-portal-wrapper ul.eea-tabs > span {
-    height: 21px;
-    padding-left: 30px;
-    display: inline-block;
+#visual-portal-wrapper ul.eea-tabs:after {
+    clear: both;
 }
 
 .eea-tabs-panel {
-    clear: both;
-    padding: 22px 22px 25px 23px;
+    padding: 20px;
     background-color: &dtml-greyBackgroundColor;;
-    overflow: hidden;
 }
 
 .eea-tabs-panel .listingBar {
@@ -2614,6 +2585,14 @@ a#subfolders_more_a, .more_dropdown_a {
 .pagination .current:after {
     content: "]";
 }
+.page:before,
+.page:after {
+    display: table;
+    content: " ";
+}
+.page:after {
+    clear: both;
+}
 
 /* #13825 remove margin-left from our styles set by twitter bootstrap */
 div.row {
@@ -2638,70 +2617,72 @@ div.row {
 }
 
 /* EUNIS navigation proposal, see #16978 */
-.tabbedmenu {
-border-bottom: 0px;
-float:left;
-width: 100%;
-line-height: normal;
-}
 
+@media screen {
 .tabbedmenu ul {
-float: left;
-width: 100%;
-border-bottom: 0px;
-font-size: 12px;
-line-height: normal!important;
-background-color: rgb(44, 141, 162)!important;
-border-radius: 10px 10px 0 0;
-margin: 0!important;
-padding: 0!important;
-list-style: none!important;
-list-style-image: none!important;
+    padding: 0 10px 0 0!important;
+    margin: 0!important;
+    font-size: 12px;
+    line-height: normal!important;
+    list-style-image: none!important;
+    list-style-type: none!important;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    background-color: &dtml-corporateBlueOne;;
 }
-
-.tabbedmenu ul li {
-color: rgb(255, 255, 255)!important;
-text-shadow: 1px 1px 1px rgb(0, 0, 0);
-margin: 0!important;
-padding: 0!important;
-max-width: 150px;
-text-align: center;
-background: none;
-float: left;
-white-space: nowrap;
+.tabbedmenu ul > li {
+    float: left;
+    margin: 0!important;
+    padding: 0!important;
 }
-
-.tabbedmenu a:hover{
-background-color: rgb(243, 243, 243)!important;
-color: #8E004D!important;
-text-shadow: 1px 1px 1px rgb(255, 255, 255);
+/* Clear floated elements */
+    .tabbedmenu ul:before,
+    .tabbedmenu ul:after {
+        display: table;
+        content: " ";
+    }
+    .tabbedmenu ul:after {
+        clear: both;
+    }
+    .tabbedmenu ul > li > a {
+        display: block;
+        color: #fff!important;
+        text-shadow: 1px 1px 1px #000000;
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 8px 8px;
+    }
+    .tabbedmenu.two-rows ul > li > a {
+        height: 40px;
+        white-space: normal;
+        max-width: 144px;
+    }
+    .tabbedmenu .first-tab,
+    .tabbedmenu ul > li:first-child > a {
+        -webkit-border-radius: 8px 0 0 0;
+        -moz-border-radius: 8px 0 0 0;
+        border-radius: 8px 0 0 0;
+    }
+    .tabbedmenu ul > li > a:hover {
+        color: &dtml-corporateBlueTwo;!important;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px #FFFFFF;
+        background-color: &dtml-greyBackgroundColor;;
+    }
+    .tabbedmenu ul > li > a.current,
+    .tabbedmenu ul > li > a.current:hover {
+        cursor: default;
+        color: &dtml-corporateBlueTwo;!important;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px #FFFFFF;
+        background-color: &dtml-greyBackgroundColor;;
+    }
+    .border-tabbedmenu,
+    .tabbedmenu-panel {
+        border: 1px solid #DDD;
+        border-top: 0;
+        padding: 10px;
+    }
 }
-
-.tabbedmenu a.current {
-background-color: rgb(255, 255, 255);
-color: rgb(0, 94, 125)!important;
-text-shadow: 1px 1px 1px rgb(243, 243, 243);
-}
-
-.tabbedmenu a {
-min-height: 17px;
-padding: 9px 8px 11px 8px!important;
-display: block!important;
-white-space: normal;
-margin: 0;
-font-weight: normal;
-border: 0;
-color: rgb(255, 255, 255)!important;
-}
-
-.tabbedmenu .first-tab {
-border-top-left-radius: 10px;
-}
-
-.border-tabbedmenu {
-border: 1px solid rgb(221, 221, 221);
-border-top: 0;
-padding: 10px;
-}
-
 /* </dtml-with> */
