@@ -3,6 +3,8 @@ Changelog
 
 9.3-dev - (unreleased)
 ----------------------
+* Bug fix: fixed length of the shows characters to 250 and added effectivedate
+  [mironovi refs #18430]
 * Bug fix: Fixed navigation tabs CSS
   [popesval refs #18728]
 * Bug fix: Fixed callout float right not working in PDF

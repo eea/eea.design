@@ -534,6 +534,29 @@ width:16px;
     height: 280px;
 }
 
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.slidePortlet .corner-date {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
 /* standard elements with shadow background */
 .dropshadow, .thumbnail-right {
   display: block;

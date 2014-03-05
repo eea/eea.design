@@ -4,7 +4,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from eea.themecentre.themecentre import getTheme
 
-LIMIT_CHARS = 300
+LIMIT_CHARS = 250
 
 class SoerFrontpage(BrowserView):
     """ SOER View
@@ -29,6 +29,13 @@ class SoerFrontpage(BrowserView):
             text = text.replace(keyword, '<b>%s</b>' % keyword, 1)
         return text
 
+    @staticmethod
+    def getEffective(brain):
+        try:
+            return brain.effective.strftime("%b %d, %Y %I:%M %p")
+        except ValueError:
+            return ""
+
     def getMessages(self, topic = ''):
         """ Get messages
         """
@@ -46,9 +53,11 @@ class SoerFrontpage(BrowserView):
         brains = catalog.searchResults(query)
         for brain in brains:
             text = self._prepareText(brain)
+
             ret.append({
                 'text': text,
                 'url': brain.getURL,
+                'effective': SoerFrontpage.getEffective(brain),
             })
         return ret
 
@@ -71,8 +80,10 @@ class SoerFrontpage(BrowserView):
             ret.append({
                 'text': text,
                 'url': brain.getURL,
+                'effective': SoerFrontpage.getEffective(brain),
             })
         return ret
+
 
     def getAllFactsAndMessages(self):
         """Return all SOER key facts and messages in one list

@@ -26,13 +26,19 @@
                                      <dd class="portletItem" style="left: 650px;"  tal:repeat="item items">
                                        <span>
                                           <span tal:replace="structure item/text"></span>
+                                        </span>
+                                        <div class="clearfix" style="padding: 0
+                                            25px">
                                            <a href="" title="Read more of the key fact" 
-                                              class="moreLink link-plain"
+                                              class="moreLink link-plain
+                                              pull-left"
                                               tal:attributes="href item/url"
                                               i18n:attributes="title"
                                               i18n:translate="">more</a>
-                                        </span>
-                                     </dd>
+                                          <div class="corner-date pull-right"
+                                              tal:content="structure item/effective"></div>
+                                     </div>
+                                    </dd>
                                 </dl>
                             </div>
                     </div>
