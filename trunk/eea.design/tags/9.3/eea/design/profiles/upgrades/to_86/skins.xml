@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+
+    <object name="eeadesign_styles" meta_type="Filesystem Directory View"
+            directory="eea.design:skins/eeadesign_styles" />
+    <skin-path name="*" purge="False">
+        <layer name="eeadesign_styles" insert-after="eeadesign_fonts" />
+    </skin-path>
+</object>
