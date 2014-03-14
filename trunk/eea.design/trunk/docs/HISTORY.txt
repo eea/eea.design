@@ -3,6 +3,8 @@ Changelog
 
 9.4-dev - (unreleased)
 ----------------------
+* Change: increased the size of the TinyMCE mceListBox
+  [ichimdav refs #18785]
 
 9.3 - (2014-03-10)
 ------------------

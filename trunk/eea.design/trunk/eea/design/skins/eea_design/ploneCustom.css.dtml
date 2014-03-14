@@ -2292,7 +2292,11 @@ input[disabled], #plonebrowser input[disabled] {
 
 /* #9499 give the style selector popup a minimum width */
 .ploneSkin .mceMenu {
-    min-width: 145px;
+    min-width: 220px;
+}
+/* #18785 increased the site of the list box */
+.ploneSkin table.mceListBox .mceText {
+    min-width: 207px;
 }
 
 .mceContentBody .presentationBreak, .mceContentBody .pageBreak {
@@ -2685,4 +2689,5 @@ div.row {
         padding: 10px;
     }
 }
+
 /* </dtml-with> */
