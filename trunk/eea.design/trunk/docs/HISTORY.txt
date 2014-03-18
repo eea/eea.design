@@ -3,6 +3,8 @@ Changelog
 
 9.4-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed Daviz chart image raw embed within PDF export
+  [voineali refs #18910]
 * Change: increased the size of the TinyMCE mceListBox
   [ichimdav refs #18785]
 * Feature: documented not sortable table unde design elements

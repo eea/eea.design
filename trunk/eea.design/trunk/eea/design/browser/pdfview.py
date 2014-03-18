@@ -1,7 +1,9 @@
 """ PDF View
 """
 import os
-import urllib2, urlparse
+import urllib
+import urllib2
+import urlparse
 import contextlib
 import logging
 from bs4 import BeautifulSoup
@@ -134,12 +136,19 @@ class Body(PDFBody):
             else:
                 continue
 
-            src += '&tag:int=1&safe:int=0'
-
             if not src.startswith('http'):
                 src = os.path.join(self.context.absolute_url(), src)
             if not base.startswith('http'):
                 base = os.path.join(self.context.absolute_url(), base)
+
+            src = list(urlparse.urlparse(src))
+            query = urlparse.parse_qs(src[4])
+            query.update({
+                'tag:int': 1,
+                'safe:int': 0
+            })
+            src[4] = urllib.urlencode(query, doseq=True)
+            src = urlparse.urlunparse(src)
 
             code = ''
             try:
