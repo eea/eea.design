@@ -5,6 +5,8 @@ Changelog
 ----------------------
 * Change: increased the size of the TinyMCE mceListBox
   [ichimdav refs #18785]
+* Feature: documented not sortable table unde design elements
+  [ghicaale refs #18942]
 
 9.3 - (2014-03-10)
 ------------------

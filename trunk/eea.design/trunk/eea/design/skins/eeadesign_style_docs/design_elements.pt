@@ -491,10 +491,13 @@ developers, UX/UI experts.
 &lt;img src=&quot;fish&quot; class=&quot;eea-flexible-tooltip-right&quot; title=&quot;Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights&quot; /&gt;
     "></pre>
 
-    <h2 i18n:translate="">Sortable tables</h2>
+    <h2 i18n:translate="">Tables - sortable and no sortable</h2>
     <table class="listing">
         <thead>
-           <tr><th i18n:translate="">Product</th><th i18n:translate="">Price</th></tr>
+           <tr>
+               <th i18n:translate="" class="nosort">Product - not sortable</th>
+               <th i18n:translate="">Price - sortable</th>
+           </tr>
         </thead>
         <tbody>
             <tr><td i18n:translate="">Ice cream</td><td>50</td></tr>
@@ -505,7 +508,10 @@ developers, UX/UI experts.
     <pre tal:content="string:
     &lt;table class=&quot;listing&quot;&gt;
     &lt;thead&gt;
-        &lt;tr&gt;&lt;th&gt;Product&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;nosort&quot;&gt;Product - not sortable&lt;/th&gt;
+            &lt;th&gt;Price - sortable&lt;/th&gt;
+        &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
         &lt;tr&gt;&lt;td&gt;Ice cream&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;&lt;/tr&gt;
