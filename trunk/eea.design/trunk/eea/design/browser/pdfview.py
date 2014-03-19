@@ -120,17 +120,27 @@ class Body(PDFBody):
         for iframe in soup.find_all('iframe'):
             src = iframe.get('src')
             if u'embed-chart' in src:
+                # XXX wkhtmltopdf->= 0.12 Use svg instead of png
                 src = src.replace('embed-chart', 'embed-chart.png')
                 src = absolute_url(self.context,
                         url=src, default=src, view='embed-chart.png')
                 base = src.split('embed-chart.png')[0]
+                # src = src.replace('embed-chart', 'embed-chart.svg')
+                # src = absolute_url(self.context,
+                #         url=src, default=src, view='embed-chart.svg')
+                # base = src.split('embed-chart.svg')[0]
                 query = urlparse.parse_qs(urlparse.urlparse(src).query)
                 chart = query.get('chart')[0]
             elif u'embed-dashboard' in src:
+                # XXX wkhtmltopdf->= 0.12 Use svg instead of png
                 src = src.replace('embed-dashboard', 'embed-dashboard.png')
                 src = absolute_url(self.context,
                         url=src, default=src, view='embed-dashboard.png')
                 base = src.split('embed-dashboard.png')[0]
+                # src = src.replace('embed-dashboard', 'embed-dashboard.svg')
+                # src = absolute_url(self.context,
+                #         url=src, default=src, view='embed-dashboard.svg')
+                # base = src.split('embed-dashboard.svg')[0]
                 query = urlparse.parse_qs(urlparse.urlparse(src).query)
                 chart = query.get('dashboard')[0]
             else:
