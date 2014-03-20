@@ -1,0 +1,54 @@
+<tal:sections tal:define="portal_tabs view/portal_tabs"
+     i18n:domain="eea">
+     <div id="globalnav-holder">
+        <h5 class="hiddenStructure" i18n:translate="">Sections</h5>
+        <ul id="portal-globalnav" 
+            tal:define="selected_tab python:view.selected_portal_tab">
+        <metal metal:use-macro="here/main_template/macros/short_colophon">
+        <tal:cond condition="short_colophon" metal:fill-slot="colophon_slot">
+            <a href="/" accesskey="2">
+                 <img src="" 
+                      alt="EEA"
+                      i18n:attributes="alt"
+                      tal:attributes="src string:${context/@@plone_portal_state/portal_url}/logo.gif"  class="visualFloatLeft" id="multimedia-logo" />
+            </a>
+        </tal:cond>
+        </metal>
+
+            <tal:tabs tal:repeat="tab portal_tabs">
+                <tal:block tal:condition="python:here.Language() == 'en'">
+                    <li tal:define="tid tab/id"
+                     tal:attributes="id string:portaltab-${tid};
+                                     class python:selected_tab==tid and 'selected' or 'plain';">
+                     <a href=""
+                       tal:content="tab/name"
+                       tal:attributes="href tab/url;
+                                       title tab/description|nothing;">
+                        Tab Name
+                    </a>
+                    </li>
+                </tal:block>               
+                <tal:block tal:condition="python:here.Language() != 'en'">
+                      <li tal:define="tid tab/id;
+                                      portal context/@@plone_portal_state/portal;
+                                      tab_url tab/url;
+                                      split_url python:tab_url.split('/');
+                                      url_id python:split_url[-1] != '' and split_url[-1] or split_url[-2];
+                                      searchPath python:'/www/SITE' + tab_url;
+                                      results python:portal.queryCatalog({'Language':'en', 'path':searchPath, 'id':url_id});
+                                      class_icon python:results and 'en_icon' or '';
+                                      class_selected python:selected_tab==tid and 'selected' or 'plain';"
+                       tal:attributes="id string:portaltab-${tid};
+                                       class python:' '.join([class_selected,class_icon])">
+                       <a href=""
+                         tal:content="tab/name"
+                         tal:attributes="href tab/url;
+                                         title tab/description|nothing;">
+                          Tab Name 
+                      </a></li>
+                  </tal:block>             
+                
+            </tal:tabs>
+        </ul>
+    </div>
+</tal:sections>
