@@ -1,6 +1,12 @@
 Changelog
 =========
 
+9.4-dev - (unreleased)
+----------------------
+* Change: Update document by line viewlet with more info about the authors and
+  contributors
+  [voineali]
+
 9.3 - (2014-03-10)
 ------------------
 * Bug fix: fixed length of the shows characters to 250 and added effectivedate
