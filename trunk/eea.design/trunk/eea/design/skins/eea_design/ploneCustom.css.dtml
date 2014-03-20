@@ -1698,6 +1698,14 @@ h3.site-description {
     padding-right: 0.5em;
 }
 
+.documentByLineAuthor a:after, .documentByLineContributor a:after {
+  content: ',';
+}
+
+.documentByLineAuthor:last-child a:after, .documentByLineContributor:last-child a:after {
+  content: '';
+}
+
 .discussion {
     margin-top: 1em;
 }
