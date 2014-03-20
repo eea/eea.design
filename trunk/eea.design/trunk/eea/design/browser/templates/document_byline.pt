@@ -9,7 +9,7 @@
 
         <noscript>
           <tal:comment replace="nothing">
-            #5233 IE8 has a bug which renders the noscript tag when using 
+            #5233 IE8 has a bug which renders the noscript tag when using
             background color and border so we set the class to a div
           </tal:comment>
           <div class="portalMessage warning" i18n:translate="">
@@ -33,7 +33,7 @@
             <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
                 <tal:published i18n:translate="">
                     Created
-                </tal:published><span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span> 
+                </tal:published><span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span>
             </span>
             <span class="docDate publishDate" tal:condition="python:(context.meta_type in metatypes_showpubdate) and here.getEffectiveDate()">
                 <tal:published i18n:translate="">
@@ -52,17 +52,17 @@
                 title="This document is locked."
                 i18n:attributes="title"
                 tal:define="lock_icon view/locked_icon"
-                tal:condition="python:lock_icon"> <img tal:replace="structure lock_icon" /> 
+                tal:condition="python:lock_icon"> <img tal:replace="structure lock_icon" />
             </span>
 
-            <tal:creator tal:define="creator_short_form view/creator;"
+            <div tal:define="creator_short_form view/creator;" class="documentByLineCreator"
                 tal:condition="creator_short_form">
                 <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
                                     creator_is_openid python:'/' in creator_short_form;
                                     creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
                     <span>
                         <tal:i18n i18n:translate="">
-                            by
+                            Contact Author:
                             <a href="#"
                             tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${creator_id}"
                             tal:content="view/authorname"
@@ -70,40 +70,68 @@
                             i18n:name="author">Roland Barthes</a>
                         </tal:i18n>
                     </span>
-                    -
                 </tal:name>
-            </tal:creator>
-            <span i18n:translate=""> last modified </span>
-            <span tal:replace="python:view.toLocalizedTime(context.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59 </span>
-
-            <tal:expired tal:condition="view/isExpired">
-                -
-                <span class="state-expired"
-                      i18n:translate="">expired</span>
-            </tal:expired>
-
-            <span class="contentHistory" 
-                  id="content-history"
-                  tal:condition="view/show_history"> — 
-                  <a href="#"
-                     tal:attributes="href string:${here/absolute_url}/@@historyview"
-                     i18n:translate="">History</a>
-            </span>
-            <div tal:define="contributors context/Contributors"
-                 tal:condition="contributors"
-                 i18n:translate="">
-                    Contributors:
-                    <span i18n:name="name"
-                        tal:omit-tag=""
-                        tal:content="python: ', '.join(contributors)"> Mary </span>
             </div>
 
-            <tal:rights tal:define="rights context/Rights"
-                        tal:condition="rights">
+            <div tal:define="creators view/creators;" tal:condition="creators" class="documentByLineAuthors">
+                <tal:name>
+                    <span i18n:translate="" class="documentByLineLabel">
+                      Author(s):
+                    </span>
+                    <span tal:repeat="creator creators" class="documentByLineAuthor">
+                        <tal:i18n i18n:translate="">
+                            <a href="#"
+                            tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${creator}"
+                            tal:content="python:view.authorname(creator)"
+                            tal:omit-tag="python:view.author(creator) is None"
+                            i18n:name="author">Roland Barthes</a>
+                        </tal:i18n>
+                    </span>
+                </tal:name>
+            </div>
+
+            <div tal:define="contributors context/Contributors;" tal:condition="contributors" class="documentByLineContributors">
+                <tal:name>
+                    <span i18n:translate="" class="documentByLineLabel">
+                      Contributors:
+                    </span>
+                    <span tal:repeat="contributor contributors" class="documentByLineContributor">
+                        <tal:i18n i18n:translate="">
+                            <a href="#"
+                            tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${contributor}"
+                            tal:content="python:view.authorname(contributor)"
+                            tal:omit-tag="python:view.author(contributor) is None"
+                            i18n:name="author">Roland Barthes</a>
+                        </tal:i18n>
+                    </span>
+                </tal:name>
+            </div>
+
+            <div class="documentByLineModified">
+                <span i18n:translate="">Last modified:</span>
+                <span tal:replace="python:view.toLocalizedTime(context.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59 </span>
+
+                <tal:expired tal:condition="view/isExpired">
+                    -
+                    <span class="state-expired"
+                          i18n:translate="">expired</span>
+                </tal:expired>
+
+                <span class="contentHistory"
+                      tal:condition="view/show_history"
+                      id="content-history"> —
+                      <a href="#"
+                         tal:attributes="href string:${here/absolute_url}/@@historyview"
+                         i18n:translate="">History</a>
+                </span>
+            </div>
+
+            <div tal:define="rights context/Rights" class="documentByLineRights" tal:condition="rights">
                 <div tal:replace="rights">
                     Copyleft NiceCorp Inc.
                 </div>
-            </tal:rights>
+            </div>
+
         </tal:loggedin>
     </div>
 </tal:block>

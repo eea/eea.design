@@ -3,6 +3,9 @@ Changelog
 
 9.4-dev - (unreleased)
 ----------------------
+* Change: Update document by line viewlet with more info about the authors and
+  contributors
+  [voineali]
 * Bug fix: Fixed Daviz chart image raw embed within PDF export
   [voineali refs #18910]
 * Change: increased the size of the TinyMCE mceListBox

@@ -47,6 +47,35 @@ class DocumentBylineViewlet(content.DocumentBylineViewlet):
     """
     render = ViewPageTemplateFile('templates/document_byline.pt')
 
+    def author(self, name=None):
+        """ Override author to also be able to get author by given name
+        """
+        if not name:
+            name = self.creator()
+        membership = getToolByName(self.context, 'portal_membership')
+        return membership.getMemberInfo(name)
+
+    def authorname(self, name=None):
+        """ Override authorname to also be able to get authorname by given name
+        """
+        if not name:
+            name = self.creator()
+        author = self.author(name)
+        return author and author['fullname'] or name
+
+    def creators(self, skipCreator=True):
+        """ Return all the other authors if skipCreator is True
+        """
+        creator = self.creator()
+        creators = self.context.listCreators()
+
+        authors = []
+        for author in creators:
+            if skipCreator and author == creator:
+                continue
+            authors.append(author)
+        return authors
+
 class FooterPortletsViewlet(common.ViewletBase):
     """A modified footer viewlet to contain portlet information
     """
@@ -89,8 +118,8 @@ class BelowEditContentTitleViewlet(BaseBelowContentTitleViewlet):
                                 self.context):
             return False
         return True
-    
-    
+
+
 class JSBelowBodyViewlet(common.ViewletBase):
     """ A custom viewlet registered below the body tag specifically for js
     that needs to be just below the body tag.
@@ -132,8 +161,8 @@ class SubFoldersViewlet(common.ViewletBase):
             parent = aq_parent(self.context)
             res = parent.getFolderContents({'portal_type' :"Folder"})
             res = [obj for obj in res if obj.exclude_from_nav != True]
-            return res 
+            return res
         else:
             res = self.context.getFolderContents({'portal_type' :"Folder"})
             res = [obj for obj in res if obj.exclude_from_nav != True]
-            return res 
+            return res

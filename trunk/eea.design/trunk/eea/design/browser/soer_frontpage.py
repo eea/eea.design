@@ -31,6 +31,8 @@ class SoerFrontpage(BrowserView):
 
     @staticmethod
     def getEffective(brain):
+        """ Get effective date
+        """
         try:
             return brain.effective.strftime("%b %d, %Y %I:%M %p")
         except ValueError:
