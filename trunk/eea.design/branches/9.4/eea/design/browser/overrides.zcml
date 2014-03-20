@@ -1,0 +1,38 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:five="http://namespaces.zope.org/five">
+
+<include package="plone.app.portlets"  />
+
+    <!-- EEA Sunburst special view -->
+    <browser:page
+        for="*"
+        name="sunburstview"
+        class=".eea_sunburst_view.EEASunburstView"
+        permission="zope.Public"
+        layer="eea.design.browser.interfaces.IEEACommonLayer"
+        allowed_interface="plonetheme.sunburst.browser.interfaces.ISunburstView"
+        />
+
+    <configure zcml:condition="installed plone.app.search">
+      <browser:page
+          name="search"
+          class="plone.app.search.browser.Search"
+          permission="zope2.View"
+          for="*"
+          layer="eea.design.browser.interfaces.IEEACommonLayer"
+          template="templates/search.pt"
+          />
+    </configure>
+
+    <!-- #13816 override _data to include QuickEvent for Events portlet catalog
+         search -->
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.events.IEventsPortlet"
+        class=".overrides.EEAEventsRenderer"
+        layer="eea.design.browser.interfaces.IEEACommonLayer"
+        />
+</configure>
