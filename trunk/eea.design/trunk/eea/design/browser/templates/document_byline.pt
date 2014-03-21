@@ -58,7 +58,7 @@
             <div tal:define="creators python:view.creators(skipCreator=False);" tal:condition="creators" class="documentByLineAuthors">
                 <tal:name>
                     <span i18n:translate="" class="documentByLineLabel">
-                      Author(s):
+                      Authors:
                     </span>
                     <span tal:repeat="creator creators" class="documentByLineAuthor">
                         <tal:i18n i18n:translate="">
