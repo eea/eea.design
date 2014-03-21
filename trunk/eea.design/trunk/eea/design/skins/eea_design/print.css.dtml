@@ -165,8 +165,37 @@ div.metadata-switch {
     margin:0.5em 0 1.31em;
 }
 
+/* Display related items in a simpler list way */
+
 #relatedItems .eea-tabs-panel {
     display: block !important;
+}
+
+#relatedItems .photoAlbumEntry {
+  clear: both;
+  margin: 0;
+}
+
+#relatedItems .photoAlbumEntryWrapper {
+  display: none;
+}
+
+#relatedItems .photoAlbumEntryDescription {
+  display: none;
+}
+
+#relatedItems a:link:after,#relatedItems a:visited:after {
+  content:" [" attr(href) "] ";
+}
+
+#relatedItems h2 {
+  margin: 50pt 0 20pt 0;
+  padding: 0;
+}
+
+#relatedItems h3 {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -225,7 +254,9 @@ input.standalone,
 .draggingHook,
 #foldercontents-order-column,
 input.context,
-.site-description {
+.site-description,
+.table-definition-map,
+.portal-logo a {
     /* Hides all the elements irrelevant for printing */
     display: none !important;
 }
