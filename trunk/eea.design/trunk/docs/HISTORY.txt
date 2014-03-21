@@ -3,6 +3,9 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Upgrade step: Cleanup portal_skins and portal_view_customizations
+  marked with eea.design 9.5
+  [voineali refs #18987]
 * Feature: Update documentByLine look and feel
   [voineali refs #18987]
 * Bug fix: Fixed Daviz chart image raw embed within PDF export
