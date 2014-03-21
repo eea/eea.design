@@ -55,25 +55,7 @@
                 tal:condition="python:lock_icon"> <img tal:replace="structure lock_icon" />
             </span>
 
-            <div tal:define="creator_short_form view/creator;" class="documentByLineCreator"
-                tal:condition="creator_short_form">
-                <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
-                                    creator_is_openid python:'/' in creator_short_form;
-                                    creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
-                    <span>
-                        <tal:i18n i18n:translate="">
-                            Contact Author:
-                            <a href="#"
-                            tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${creator_id}"
-                            tal:content="view/authorname"
-                            tal:omit-tag="python:view.author() is None"
-                            i18n:name="author">Roland Barthes</a>
-                        </tal:i18n>
-                    </span>
-                </tal:name>
-            </div>
-
-            <div tal:define="creators view/creators;" tal:condition="creators" class="documentByLineAuthors">
+            <div tal:define="creators python:view.creators(skipCreator=False);" tal:condition="creators" class="documentByLineAuthors">
                 <tal:name>
                     <span i18n:translate="" class="documentByLineLabel">
                       Author(s):
@@ -85,6 +67,7 @@
                             tal:content="python:view.authorname(creator)"
                             tal:omit-tag="python:view.author(creator) is None"
                             i18n:name="author">Roland Barthes</a>
+                            <span tal:condition="python:repeat['creator'].index == 0" i18n:translate="">(Contact Author)</span>
                         </tal:i18n>
                     </span>
                 </tal:name>

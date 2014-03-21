@@ -3,6 +3,8 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Feature: Update documentByLine look and feel
+  [voineali refs #18987]
 * Bug fix: Fixed Daviz chart image raw embed within PDF export
   [voineali refs #18910]
 * Change: increased the size of the TinyMCE mceListBox
@@ -12,9 +14,9 @@ Changelog
 
 9.4 - (2014-03-20)
 ------------------
-* Change: Update document by line viewlet with more info about the authors and
+* Feature: Update document by line viewlet with more info about the authors and
   contributors
-  [voineali]
+  [voineali refs #18987]
 
 9.3 - (2014-03-10)
 ------------------

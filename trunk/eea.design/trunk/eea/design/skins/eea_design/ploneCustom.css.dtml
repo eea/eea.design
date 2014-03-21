@@ -1698,10 +1698,12 @@ h3.site-description {
     padding-right: 0.5em;
 }
 
+.documentByLineAuthor:nth-child(2) span:after,
 .documentByLineAuthor a:after, .documentByLineContributor a:after {
   content: ',';
 }
 
+.documentByLineAuthor:nth-child(2) a:after,
 .documentByLineAuthor:last-child a:after, .documentByLineContributor:last-child a:after {
   content: '';
 }
