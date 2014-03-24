@@ -18,11 +18,12 @@
             ed.onNodeChange.add(this._nodeChange, this)
         },
         _execCommand: function(ed, v, styles) {
+            var e;
             if (e = ed.selection.getNode()) {
                 if (v == "-") {
                     return
                 }
-                function ReplaceTag(curelm, newtag) {
+                function ReplaceTag (curelm, newtag) {
                     if (curelm.nodeName.toLowerCase() != newtag) {
                         var newelm;
                         if (((curelm.nodeName.toLowerCase() == "td") || (curelm.nodeName.toLowerCase() == "th")) && ((newtag != "td") && (newtag != "th"))) {
@@ -50,10 +51,11 @@
                     }
                     return curelm
                 }
+
                 var tag = styles[parseInt(v)].tag,
-                    className = styles[parseInt(v)].className;
-                switch (styles[parseInt(v)].type) {
-                    case "Tables":
+                    className = styles[parseInt(v)].className,
+                    style_type = styles[parseInt(v)].type;
+                    if (style_type === "Tables") {
                         var n;
                         switch (tag) {
                             case "th":
@@ -72,26 +74,26 @@
                                 if (n = this._getParentNode(e, ["table"])) {
                                     n.className = className
                                 }
-                                break
+                                break;
                         }
-                        break;
-                    case "Lists":
+                    }
+                    else if (style_type == "Lists" || (tag === "ol" || tag === "ul")) {
                         if (tag == "dd" || tag == "dt") {
                             e = ReplaceTag(e, tag)
                         } else {
                             var n = this._getParentNode(e, ["ol", "ul"]);
                             n.className = className
                         }
-                        break;
-                    default:
+                    }
+                    else {
                         if ((tag == "") && (className == "")) {
                             ed.execCommand("RemoveFormat", false, null)
                         }
-                        else if (tag == "span"){
+                        else if (tag == "span") {
                             ed.formatter.apply(styles[parseInt(v)].title)
                         }
                         else {
-                            tinymce.each(ed.selection.getSelectedBlocks(), function(e) {
+                            tinymce.each(ed.selection.getSelectedBlocks(), function (e) {
                                 if ((tag == "") && (className == "")) {
                                     ed.execCommand("RemoveFormat", false, null)
                                 } else {

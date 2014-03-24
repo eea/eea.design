@@ -3,6 +3,8 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Bug fix: Key Facts class is now correctly applied on the parent ul tag
+  [ichimdav refs #18785]
 * Bug fix: Do not show old versions promo, only display the latest published 
   version of promoted objects.
   [olimpiurob refs #18918]
