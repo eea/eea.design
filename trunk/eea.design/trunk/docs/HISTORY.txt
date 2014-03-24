@@ -3,6 +3,9 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Bug fix: Do not show old versions promo, only display the latest published 
+  version of promoted objects.
+  [olimpiurob refs #18918]
 * Feature: improved print css and pdf css. More discreet related items.
   removed floating on generic callout in pdf.
   [demarant refs #18639]

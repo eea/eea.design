@@ -324,7 +324,12 @@ def _getPromotions(self, noOfItems=6):
                 continue
         if not promo.active:
             continue
-        cPromos.append(brain)
+
+        promo_versionIds = [b.getVersionId for b in cPromos]
+        # Add to promo list if we do not already have a newer version of this
+        # versionId in the promo list
+        if not brain.getVersionId in promo_versionIds:
+            cPromos.append(brain)
         if len(cPromos) == noOfItems:
             break
     return cPromos
