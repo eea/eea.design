@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Bug fix: TinyMCE now correctly sets the KeyFacts class on the parent element
+  instead of changing the tag of the selected list item
+  [ichimdav refs #18785]
 * Change: use base link instead of link alternative for site link now that
   kss is gone when referncing the base url
   [ichimdav refs #14323]
