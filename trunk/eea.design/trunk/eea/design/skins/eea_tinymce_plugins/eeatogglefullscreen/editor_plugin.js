@@ -77,7 +77,7 @@
             var container = ed.getContainer();
             if (ed.getParam('fullscreen_for')) {
                 if (!document.getElementById('mce_fullscreen_fullscreen')) {
-                    $(body).click(function () {
+                    $(body).focus(function () {
                         var fullscreen_button = container.querySelector('.mceButton.mce_fullscreen');
                         if (!document.getElementById('mce_fullscreen_fullscreen')) {
                             triggerEvent(fullscreen_button, 'click');
