@@ -36,28 +36,21 @@
     tinymce.create("tinymce.plugins.EEAToggleFullScreenPlugin", {
         init: function (d) {
             ed = d;
-            var tinymce_container = document.getElementById('mce_fullscreen_container'),
-                $tinymce_container,
-                setHeight,
-                debouncedSetHeight;
-
-            if (tinymce_container) {
-                tinymce_container.onclick = function (e) {
-                    if (e.target.id === "mce_fullscreen_parent") {
-                        var fullscreen_button = document.getElementById('mce_fullscreen_fullscreen');
-                        tinymce_container.onclick = null;
-                        triggerEvent(fullscreen_button, 'click');
-                    }
-                };
-                $tinymce_container = $(tinymce_container);
-
-                setHeight = function (evt) {
-                    $tinymce_container.find('iframe').css({ 'height': $tinymce_container.height() - 85});
-                };
-                debouncedSetHeight = debounce(setHeight, 200, false);
-
-                window.addEventListener('resize', debouncedSetHeight);
-            }
+//          if (ed.getParam('fullscreen_for')) {
+            ed.addCommand("mceFullScreen", function() {
+                var $container = $(ed.container);
+                if (ed.container.className.indexOf('mceFullScreen') === -1) {
+                    $container.addClass("mceFullScreen").find('.mceLayout').addClass("mceFullScreen");
+                }
+                else  {
+                    $container.removeClass("mceFullScreen").find('.mceLayout').removeClass("mceFullScreen");
+                }
+            });
+            ed.addButton("fullscreen", {
+                title: "fullscreen.desc",
+                cmd: "mceFullScreen"
+            });
+//          }
 
             ed.onLoadContent.add(this.loadContent, this);
 
@@ -74,12 +67,32 @@
         },
         loadContent: function (ed) {
             var body = ed.getBody();
-            var container = ed.getContainer();
+            var tinymce_container = ed.getContainer(),
+                container = tinymce_container,
+                $tinymce_container,
+                setHeight,
+                debouncedSetHeight;
+
+            if (tinymce_container) {
+                tinymce_container.onclick = function (e) {
+                    if (e.target.className.indexOf('mceEditor') !== -1) {
+                        ed.execCommand('mceFullScreen');
+                    }
+                };
+                $tinymce_container = $(tinymce_container);
+
+                setHeight = function (evt) {
+                    $tinymce_container.find('iframe').css({ 'height': $tinymce_container.height() - 85});
+                };
+                debouncedSetHeight = debounce(setHeight, 200, false);
+
+                window.addEventListener('resize', debouncedSetHeight);
+            }
             if (ed.getParam('fullscreen_for')) {
-                if (!document.getElementById('mce_fullscreen_fullscreen')) {
-                    $(body).focus(function () {
+                if (container.className.indexOf('mceFullScreen') === -1) {
+                    $(body).click(function () {
                         var fullscreen_button = container.querySelector('.mceButton.mce_fullscreen');
-                        if (!document.getElementById('mce_fullscreen_fullscreen')) {
+                        if (container.className.indexOf('mceFullScreen') === -1) {
                             triggerEvent(fullscreen_button, 'click');
                         }
                     });
