@@ -1,3 +1,5 @@
+// jslint:disable
+
 (function () {
 
     function triggerEvent (node, type) {
@@ -36,14 +38,20 @@
     tinymce.create("tinymce.plugins.EEAToggleFullScreenPlugin", {
         init: function (d) {
             ed = d;
+
 //          if (ed.getParam('fullscreen_for')) {
             ed.addCommand("mceFullScreen", function() {
-                var $container = $(ed.container);
-                if (ed.container.className.indexOf('mceFullScreen') === -1) {
-                    $container.addClass("mceFullScreen").find('.mceLayout').addClass("mceFullScreen");
+                var container =  this.container;
+                var $container = $(container);
+                if (container.className.indexOf('mceFullScreen') === -1) {
+                    $container.addClass("mceFullScreen")
+                        .find('.mceLayout').addClass("mceFullScreen").end()
+                        .find('.mce_fullscreen').addClass("mceButtonActive");
                 }
                 else  {
-                    $container.removeClass("mceFullScreen").find('.mceLayout').removeClass("mceFullScreen");
+                    $container.removeClass("mceFullScreen")
+                        .find('.mceLayout').removeClass("mceFullScreen").end()
+                        .find('.mce_fullscreen').removeClass("mceButtonActive");
                 }
             });
             ed.addButton("fullscreen", {

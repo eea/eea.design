@@ -1,3 +1,4 @@
+// jslint:disable
 /*
 vPIP version 1.13g Beta
     * Fixed embed code available when video is playing to be

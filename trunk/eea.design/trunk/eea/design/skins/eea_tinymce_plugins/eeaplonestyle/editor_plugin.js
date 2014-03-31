@@ -1,3 +1,4 @@
+// jslint:disable
 // fork of original ploneStyle plugin done by Rob Gietema
 (function() {
     tinymce.create("tinymce.plugins.EEAPloneStylePlugin", {
