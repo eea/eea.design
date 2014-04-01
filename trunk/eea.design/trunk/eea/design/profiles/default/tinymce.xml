@@ -64,10 +64,4 @@
         </tablestyles>
     </layout>
 
-    <resourcetypes>
-        <customplugins purge="False">
-        <element value="eeaplonestyle|portal_skins/eea_tinymce_plugins/eeaplonestyle/editor_plugin.js"/>
-        </customplugins>
-    </resourcetypes>
-
 </object>
