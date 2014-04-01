@@ -88,7 +88,7 @@
             }
             if (ed.getParam('fullscreen_for')) {
                 if (container.className.indexOf('mceFullScreen') === -1) {
-                    $(body).focus(function () {
+                    $(body).on('focus mouseup', function () {
                         if (container.className.indexOf('mceFullScreen') === -1) {
                             ed.execCommand('mceFullScreen');
                         }
