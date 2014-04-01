@@ -2248,7 +2248,7 @@ body .ploneSkin .mce_formatPreview a {
 
 /* #16661; override px based width from ui.css of tinymce */
 /* #18189 override inline style that gets applied when resizing browser window */
-#content .ploneSkin table.mceLayout,
+.mceLayout,
 .ploneSkin iframe {
     width: 100% !important;
     min-height: 400px;
@@ -2262,18 +2262,21 @@ body .ploneSkin .mce_formatPreview a {
 **  center editor since we have a fixed width layout
 */
 
-#mce_fullscreen_tbl {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff;
-}
-
-#mce_fullscreen_container {
+.mceEditor.mceFullScreen {
     background-color: #ececec !important; /* in order to override ui.css */
     width: 100% !important;
     height: 100% !important;
+    z-index: 10;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
+.mceLayout.mceFullScreen {
+    margin: 0 auto;
+    background-color: #FFF;
+}
 
 /* #16661; fix text color for disabled tinymce inputs */
 input[disabled], #plonebrowser input[disabled] {
@@ -2308,6 +2311,7 @@ input[disabled], #plonebrowser input[disabled] {
 .ploneSkin table.mceListBox .mceText {
     min-width: 207px;
 }
+
 
 .mceContentBody .presentationBreak, .mceContentBody .pageBreak {
     background-color: &dtml-corporateBlueBackgroundColor;;
