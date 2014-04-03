@@ -3,7 +3,11 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
-* Change: Removed tinymce plugins from this package through an upgrade step
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [olimpiurob refs #18641]
+* Change: Removed tinymce plugins from this package. Moved to eea.tinymce
+  package
   [olimpiurob refs #18641]
 * Change: eea fullscreen plugin no longer uses the bundled fullscreen plugin
   which has many issues given the fact that it inserts a new editor when using
