@@ -3,6 +3,9 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Feature: Use high resolution SVG for daviz charts embed within PDF export
+  instead of PNG
+  [voineali refs #18910]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
   [olimpiurob refs #18641]
@@ -15,7 +18,7 @@ Changelog
   [ichimdav refs #19082]
 * Bug fix: Key Facts class is now correctly applied on the parent ul tag
   [ichimdav refs #18785]
-* Bug fix: Do not show old versions promo, only display the latest published 
+* Bug fix: Do not show old versions promo, only display the latest published
   version of promoted objects.
   [olimpiurob refs #18918]
 * Feature: improved print css and pdf css. More discreet related items.
