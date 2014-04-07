@@ -101,6 +101,11 @@ p.discreet {
   padding-top: 24pt;
 }
 
+.cover-bellow-header {
+  min-height: 145pt;
+  overflow: hidden;
+}
+
 .cover-title {
   text-align: right;
   margin: 42pt 42pt 0;
@@ -111,11 +116,10 @@ p.discreet {
 
 .cover-subtitle {
   text-align: right;
-  margin: 0 42pt;
+  margin: 0 42pt 10pt;
   font-size: 12pt;
   font-weight: normal;
   color: #333;
-  height: 70pt;
   overflow: hidden;
 }
 
@@ -123,7 +127,7 @@ p.discreet {
   background-color: #7ad2c4;
   border-top: 7pt solid #7ad2c4;
   border-bottom: 1pt solid #333;
-  height: 565pt;
+  height: 555pt;
 }
 
 .cover-image {

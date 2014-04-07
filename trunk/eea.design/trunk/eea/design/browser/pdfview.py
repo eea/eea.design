@@ -100,6 +100,17 @@ class Cover(PDFCover):
             portalMessage.extract()
         return soup.find_all('html')[0].decode()
 
+    def truncate(self, text, length=300, orphans=10, suffix=u".", end=u"."):
+        """ Custom truncate
+        """
+        title = self.context.Title()
+        rows = len(title) / 65
+
+        rowLength = length / 4
+        length = length - rowLength * rows
+
+        return super(Cover, self).truncate(text, length, orphans, suffix, end)
+
     def __call__(self, **kwargs):
         html = super(Cover, self).__call__(**kwargs)
         try:

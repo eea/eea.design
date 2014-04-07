@@ -3,6 +3,8 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Bug fix: Allow titles within PDF cover export longer than 65 chars (one line)
+  [voineali refs #18953]
 * Bugfix: Removed eea_vpip.js as it is obsolete and was in conflict with
   googlechart filters
   [szabozo0 refs #19174]

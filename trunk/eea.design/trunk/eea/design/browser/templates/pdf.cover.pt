@@ -25,16 +25,18 @@
     <span tal:content="view/header">Navigation Root Title</span>
   </div>
 
-  <h1 class="cover-title" tal:content="context/Title">
-    Document Title
-  </h1>
+  <div class="cover-bellow-header">
+    <h1 class="cover-title" tal:content="context/Title">
+      Document Title
+    </h1>
 
-  <h2 class="cover-subtitle" tal:define="
-    description context/Description;
-    description python:view.truncate(description)"
-  tal:content="description">
-    Document Subtitle
-  </h2>
+    <h2 class="cover-subtitle" tal:define="
+      description context/Description;
+      description python:view.truncate(description)"
+    tal:content="description">
+      Document Subtitle
+    </h2>
+  </div>
 
 
   <div class="cover-body">
