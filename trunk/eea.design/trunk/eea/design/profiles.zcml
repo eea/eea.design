@@ -95,4 +95,11 @@
             description='EEA Design upgrade profile for v9.4'
             provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+    <genericsetup:registerProfile
+            name="upgrade95"
+            title="EEA Design upgrade profile for v9.5"
+            directory="profiles/upgrades/to_95"
+            description='EEA Design upgrade profile for v9.5'
+            provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 </configure>

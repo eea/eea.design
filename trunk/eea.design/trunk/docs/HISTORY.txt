@@ -3,6 +3,9 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Bugfix: Removed eea_vpip.js as it is obsolete and was in conflict with
+  googlechart filters
+  [szabozo0 refs #19174]
 * Feature: Use high resolution SVG for daviz charts embed within PDF export
   instead of PNG
   [voineali refs #18910]
