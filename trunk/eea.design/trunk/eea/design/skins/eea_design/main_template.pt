@@ -30,7 +30,8 @@
                         putils context/plone_utils;
                         ztu modules/ZTUtils;
                         acl_users nocall: context/acl_users;
-                        ifacetool context/portal_interface;">
+                        ifacetool context/portal_interface;
+                        wf_state python: context_state.workflow_state();">
 
 <tal:comment replace="nothing">xss-disable was added in order to fix the chrome issue from ticket #15231</tal:comment>
 
@@ -51,6 +52,11 @@
     <!-- viewport meta needed for proper view on an ipad -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
 
+    <tal:comment replace="nothing">
+            Prevent public draft content to be indexed and cached by search engines.
+    </tal:comment>
+    <meta tal:condition="python: wf_state in ['visible']" name="robots" content="noindex" />
+    <meta tal:condition="python: wf_state in ['visible']" name="robots" content="noarchive" />
 
     <tal:notajax tal:condition="python:not ajax_load or ajax_include_head">
         <div tal:replace="structure provider:plone.htmlhead" />

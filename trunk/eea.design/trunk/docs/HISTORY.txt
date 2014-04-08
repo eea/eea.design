@@ -3,6 +3,9 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Feature: Added robots meta tag in <head> to disallow search
+  engines to index "public draft" states (visible only with direct link).
+  [demarant fixes #19091]
 * Bug fix: Allow titles within PDF cover export longer than 65 chars (one line)
   [voineali refs #18953]
 * Bugfix: Removed eea_vpip.js as it is obsolete and was in conflict with
