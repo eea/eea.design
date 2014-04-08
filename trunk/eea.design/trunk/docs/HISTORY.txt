@@ -3,6 +3,8 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Feature: Non-exclusive accordion default open panel
+  [popesval refs #19056]
 * Feature: Added robots meta tag in <head> to disallow search
   engines to index "public draft" states (visible only with direct link).
   [demarant fixes #19091]

@@ -80,15 +80,22 @@ jQuery(document).ready(function($) {
 
                     effect = 'collapsed';
                     current_class = "default";
+
                     // allow the hiding of the currently opened accordion
-                    $el.find('.eea-accordion-title, h2').click(function(ev) {
-                       var $el = $(this);
-                       if (!$el.hasClass('current')) {
-                           $el.addClass('current').next().slideDown();
-                       }
-                       else {
-                           $el.removeClass('current').next().slideUp();
-                       }
+                    $el.find('.eea-accordion-title, h2').each(function() {
+                      var $el = $(this);
+                      if ($el.hasClass('current')) {
+                        $el.next().slideDown();
+                      }
+                      $el.click(function(ev) {
+                        var $el = $(this);
+                        if (!$el.hasClass('current')) {
+                          $el.addClass('current').next().slideDown();
+                        }
+                        else {
+                          $el.removeClass('current').next().slideUp();
+                        }
+                      });
                     });
                 }
 
