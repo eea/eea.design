@@ -3,6 +3,7 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Feature: SEO, link EEA content with G+ publisher markup.
 * Feature: Non-exclusive accordion default open panel
   [popesval refs #19056]
 * Feature: Added robots meta tag in <head> to disallow search
