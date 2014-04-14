@@ -102,7 +102,7 @@ p.discreet {
 }
 
 .cover-bellow-header {
-  min-height: 145pt;
+  min-height: 128pt;
   overflow: hidden;
 }
 
