@@ -3,6 +3,9 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Change: relatedItems no longer has float issues if javascript is disabled or
+  the tabs logic isn't executed because of a javascript error
+  [ichimdav refs #19315]
 * Feature: SEO, link EEA content with G+ publisher markup.
 * Feature: Non-exclusive accordion default open panel
   [popesval refs #19056]

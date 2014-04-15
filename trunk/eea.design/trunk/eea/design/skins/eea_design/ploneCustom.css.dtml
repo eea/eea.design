@@ -1832,10 +1832,16 @@ h3.site-description {
 #relatedItems  {
     margin-bottom: 2em;
     clear: both;
+    overflow: hidden;
 }
 
 #relatedItems .visualClear {
-  padding-bottom: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+/* #19315 fix floating issues */
+#relatedItems  h3 {
+    clear: both;
 }
 
 /* Useful deviations from regular style on elements */
