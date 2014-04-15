@@ -8,7 +8,7 @@ Changelog
   [ichimdav refs #19315]
 * Feature: SEO, link EEA content with G+ publisher markup.
 * Feature: Non-exclusive accordion default open panel
-  [popesval refs #19056]
+  [voineali refs #19056]
 * Feature: Added robots meta tag in <head> to disallow search
   engines to index "public draft" states (visible only with direct link).
   [demarant fixes #19091]

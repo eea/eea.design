@@ -63,6 +63,14 @@ jQuery(document).ready(function($) {
                 var initial_index = 0;
                 var $pane = $el.find('.pane');
 
+                $el.find('.eea-accordion-title, h2').each(function(idx){
+                    var $el = $(this);
+                    if( $el.hasClass('current') ){
+                        $el.removeClass('current');
+                        initial_index = idx;
+                    }
+                });
+
                 if ($el.hasClass('collapsed-by-default')) {
                    // hide all panels if using the above class
                    effect = 'slide';
@@ -74,28 +82,21 @@ jQuery(document).ready(function($) {
                     // show the first panel only if we don't have also the
                     // collapsed-by-default class
                     if ( !$el.hasClass('collapsed-by-default') ) {
-                        $pane.not(':first').hide();
-                        $pane.eq(0).prev().addClass('current');
+                        $pane.not(':nth-child(' + (initial_index + 1) + ')').hide();
+                        $pane.eq(initial_index).prev().addClass('current');
                     }
 
                     effect = 'collapsed';
                     current_class = "default";
-
                     // allow the hiding of the currently opened accordion
-                    $el.find('.eea-accordion-title, h2').each(function() {
-                      var $el = $(this);
-                      if ($el.hasClass('current')) {
-                        $el.next().slideDown();
-                      }
-                      $el.click(function(ev) {
-                        var $el = $(this);
-                        if (!$el.hasClass('current')) {
-                          $el.addClass('current').next().slideDown();
-                        }
-                        else {
-                          $el.removeClass('current').next().slideUp();
-                        }
-                      });
+                    $el.find('.eea-accordion-title, h2').click(function(ev) {
+                       var $el = $(this);
+                       if (!$el.hasClass('current')) {
+                           $el.addClass('current').next().slideDown();
+                       }
+                       else {
+                           $el.removeClass('current').next().slideUp();
+                       }
                     });
                 }
 
