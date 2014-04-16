@@ -3,7 +3,7 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
-* Feature: folder_accordion_view now checks for a 'hideOtherResultsForAccordionView'
+* Feature: folder_accordion_view now checks for a 'hideOtherResultsFromAccordionView'
   property which is present and is True will hide the other results section
   [ichimdav refs #19335]
 * Change: relatedItems no longer has float issues if javascript is disabled or

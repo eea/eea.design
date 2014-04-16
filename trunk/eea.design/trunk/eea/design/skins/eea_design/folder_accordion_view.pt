@@ -13,7 +13,7 @@
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents);
                                             nonFolderishItems formattedFolderContents/nonfolderish; 
                                             FolderishItems formattedFolderContents/folderish;
-                                            hideNonFolderishItems python: getattr(context, 'hideOtherResultsForAccordionView', False);">
+                                            hideNonFolderishItems python: getattr(context, 'hideOtherResultsFromAccordionView', False);">
 
           <div class="listingBar" style="display: none"></div>
             <div class="eea-accordion-panels">
