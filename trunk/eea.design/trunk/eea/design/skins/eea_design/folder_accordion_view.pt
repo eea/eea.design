@@ -10,10 +10,10 @@
             <metal:entries fill-slot="entries">
         <metal:listingmacro define-macro="listing" tal:define="subfolderView subfolderView|context/@@subfolder_view_logic;
                                                                folderContents folderContents|python:None">
-            <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, 
-                                            folderContents=folderContents); 
+            <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(size_limit=10, folderContents=folderContents);
                                             nonFolderishItems formattedFolderContents/nonfolderish; 
-                                            FolderishItems formattedFolderContents/folderish;">
+                                            FolderishItems formattedFolderContents/folderish;
+                                            hideNonFolderishItems python: getattr(context, 'hideOtherResultsForAccordionView', False);">
 
           <div class="listingBar" style="display: none"></div>
             <div class="eea-accordion-panels">
@@ -39,14 +39,14 @@
                                 <div class="visualClear"></div>
                             </div>
                             <div class="portletFooter">
-     <a class="standardButton" i18n:translate="" tal:attributes="href child/listing_url" tal:condition="child/has_more">All Items</a> 
+                                 <a class="standardButton" i18n:translate="" tal:attributes="href child/listing_url" tal:condition="child/has_more">All Items</a>
                             </div>
                         </div>
                     </div>
                 </tal:children>
 
                 <div tal:define="nitems python:len(nonFolderishItems)"
-                    tal:condition="nitems"
+                    tal:condition="python: nitems  and not hideNonFolderishItems"
                     class="eea-accordion-panel">
                     <h2 class="eea-icon-right-container"><a href="#" i18n:translate="">Other resources</a></h2>
                     <div class="pane">
