@@ -228,7 +228,7 @@ developers, UX/UI experts.
         </div>
 
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container">Second panel title</h2>
+            <h2 class="notoc eea-icon-right-container current">Second panel title</h2>
             <div class="pane">Claritas est etiam processus dynamicus...
             </div>
         </div>
@@ -249,7 +249,7 @@ developers, UX/UI experts.
             &lt;/div&gt;
 
             &lt;div class="eea-accordion-panel"&gt;
-                &lt;h2 class="notoc eea-icon-right-container"&gt;Second panel title&lt;/h2&gt;
+                &lt;h2 class="notoc eea-icon-right-container current"&gt;Second panel title&lt;/h2&gt;
                 &lt;div class="pane"&gt;Claritas est etiam processus dynamicus...
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -381,13 +381,13 @@ developers, UX/UI experts.
         </div>
 
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container">Second panel title</h2>
+            <h2 class="notoc eea-icon-right-container current">Second panel title</h2>
             <div class="pane">Claritas est etiam processus dynamicus...
             </div>
         </div>
 
         <div class="eea-accordion-panel">
-            <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+            <h2 class="notoc eea-icon-right-container current">Third panel title</h2>
             <div class="pane">Suspendisse tristique sapien non ipsum...
             </div>
         </div>
@@ -402,19 +402,18 @@ developers, UX/UI experts.
             &lt;/div&gt;
 
             &lt;div class="eea-accordion-panel"&gt;
-                &lt;h2 class="notoc eea-icon-right-container"&gt;Second panel title&lt;/h2&gt;
+                &lt;h2 class="notoc eea-icon-right-container current"&gt;Second panel title&lt;/h2&gt;
                 &lt;div class="pane"&gt;Claritas est etiam processus dynamicus...
                 &lt;/div&gt;
             &lt;/div&gt;
 
             &lt;div class="eea-accordion-panel"&gt;
-                &lt;h2 class="notoc eea-icon-right-container"&gt;Third panel title&lt;/h2&gt;
+                &lt;h2 class="notoc eea-icon-right-container current"&gt;Third panel title&lt;/h2&gt;
                 &lt;div class="pane"&gt;Suspendisse tristique sapien non ipsum...
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     </pre>
-
 
     <h2 i18n:translate="">Fancybox pop-ups</h2>
     <div style="display:none">
