@@ -1924,7 +1924,7 @@ textarea.proportional {
 /* Accessibility and visual enhancement elements */
 
 .hiddenStructure {
-    display: block;
+    display: block !important;    /*  prefix with important since many times specificity will override this display setting */
     background: transparent none; /* safari bug */
     border: none;
     height: 1px;

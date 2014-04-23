@@ -3,6 +3,9 @@ Changelog
 
 9.5-dev - (unreleased)
 ----------------------
+* Change: hiddenStructure class now has an important declaration set to the
+  display property in order to avoid being overriden by specificity
+  [ichimdav refs #19369]
 * Feature: folder_accordion_view now checks for a 'hideOtherResultsFromAccordionView'
   property which is present and is True will hide the other results section
   [ichimdav refs #19335]
