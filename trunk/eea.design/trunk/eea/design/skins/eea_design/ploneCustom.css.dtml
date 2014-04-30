@@ -681,7 +681,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     overflow: hidden;
 }
 .eea-accordion-title, .eea-accordion-panel > h2 {
-    background-color: #E2E2E2;
+    background: #E2E2E2 none;
     border: 1px solid #E0E0E0;
     margin: 0;
     font-size: 115%;
