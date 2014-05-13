@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.6-dev - (unreleased)
+----------------------
+
 9.5 - (2014-05-13)
 ------------------
 * Change: hiddenStructure class now has an important declaration set to the
