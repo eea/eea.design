@@ -3,6 +3,11 @@ Changelog
 
 9.6-dev - (unreleased)
 ----------------------
+* Change: EEA Tabs no longer detaches the tabs when performing it's tabs logic
+  [ichimdav refs #19536]
+* Feature: EEA Tabs will now load panel content with ajax requests if eea-tabs-ajax
+  class is present
+  [ichimdav refs #19536]
 
 9.5 - (2014-05-13)
 ------------------

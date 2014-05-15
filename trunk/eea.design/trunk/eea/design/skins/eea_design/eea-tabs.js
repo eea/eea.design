@@ -14,17 +14,18 @@ jQuery(document).ready(function($) {
         }
         var $eea_tabs = $(".eea-tabs"), eea_tabs_length = $eea_tabs.length,
             $eea_tabs_panels = $(".eea-tabs-panels"), i = 0;
-        var $eea_tab, $eea_tabs_panel, $eea_panels, $eea_tab_children;
+        var $eea_tab, $eea_tab_parent, $eea_tabs_panel, $eea_panels, $eea_tab_children;
         if (eea_tabs_length) {
             for (i; i < eea_tabs_length; i += 1) {
                 $eea_tab = $eea_tabs.eq(i);
+                $eea_tab_parent = $eea_tab.parent();
                 // don't run tab logic if tab already contains tab data
                 if ($eea_tab.data('tabs')) {
                     $(window).trigger('eea.tags.loaded', $eea_tab);
                     continue;
                 }
-                // detach tab for dom manipulation
-                $eea_tab.detach();
+                // hide tab while dom manipulation is performed for better performance
+                $eea_tab.hide();
                 $eea_tabs_panel = $eea_tabs_panels.eq(i);
 
                 $eea_panels = $eea_tabs_panel.children();
@@ -53,8 +54,16 @@ jQuery(document).ready(function($) {
                 // redo children assignment since they could have been changed from
                 // p to li
                 $eea_tab_children = $eea_tab.children();
-                $eea_tab.tabs($eea_panels);
-                $eea_tab.insertBefore($eea_tabs_panel);
+
+                // load panel data through ajax if eea-tabs-ajax class is present
+                if ($eea_tab.hasClass('eea-tabs-ajax')) {
+                    $eea_tab.tabs($eea_panels, {effect: 'ajax', history: true});
+                }
+                else {
+                    $eea_tab.tabs($eea_panels);
+                }
+
+                $eea_tab.show();
 
                 $(window).trigger('eea.tags.loaded', $eea_tab);
             }
