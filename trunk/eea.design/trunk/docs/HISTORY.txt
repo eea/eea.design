@@ -8,6 +8,8 @@ Changelog
 * Feature: EEA Tabs will now load panel content with ajax requests if eea-tabs-ajax
   class is present
   [ichimdav refs #19536]
+* Fix: make sure item is locked on edit page load
+  [batradav refs #19405]
 
 9.5 - (2014-05-13)
 ------------------

@@ -9,3 +9,38 @@ jQuery(function($) {
         $("#portal-column-two").hide();
     }
 });
+
+if (typeof(eea) === 'undefined') {
+    var eea = {};
+}
+
+(function($){
+eea.LockHandler = {
+    init: function() {
+        // set up the handler, if there are any forms
+        if ($('form.enableUnlockProtection').length) {
+            eea.LockHandler.lock();
+        }
+    },
+
+    lock: function(){
+        if (this.submitting) {return;}
+        $.ajax({url: eea.LockHandler._baseUrl() + '/@@plone_lock_operations/create_lock', async: false});
+    },
+
+    _baseUrl: function() {
+        var baseUrl, pieces;
+
+        baseUrl = $('base').attr('href');
+        if (!baseUrl) {
+            pieces = window.location.href.split('/');
+            pieces.pop();
+            baseUrl = pieces.join('/');
+        }
+        return baseUrl;
+    }
+};
+
+$(eea.LockHandler.init);
+
+})(jQuery);
