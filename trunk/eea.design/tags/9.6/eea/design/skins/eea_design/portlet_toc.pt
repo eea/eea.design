@@ -1,0 +1,22 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    i18n:domain="eea">
+    <body>
+
+        <metal:portlet metal:define-macro="portlet" tal:define="queryString queryString|string:h2, h3, h4">
+<!--toc -->
+            <dl id="document-toc" class="portlet toc collapsable-portlet">
+                <span style="display:none" id="queryString" tal:content="queryString"></span>
+                <dt class="portletHeader eea-icon-right-container">
+                    <span i18n:translate="">Contents</span>
+                </dt>
+                <dd class="portletItem">
+                    <ol>
+                    </ol>
+                </dd>
+            </dl>
+            <div class="visualClear">&nbsp;</div>
+
+        </metal:portlet>
+    </body>
+</html>
