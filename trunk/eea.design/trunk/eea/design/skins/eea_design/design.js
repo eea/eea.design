@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
         secundary_portaltabs.appendTo(global_nav);
 
     // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
-    $("#whatsnew-gallery").find('.eea-tabs').find('li:last-child').addClass('last-child');
+    $('.eea-tabs').find('li:last-child').addClass('last-child');
 
     // #9485; login form as popup
     var $popup_login = $("#popup_login_form");

@@ -3,6 +3,9 @@ Changelog
 
 9.7-dev - (unreleased)
 ----------------------
+* Change: last-child class is now applied through javascript to all eea-tabs not
+  just those from the whatsnewgallery
+  [ichimdav refs #19536]
 
 9.6 - (2014-05-19)
 ------------------
