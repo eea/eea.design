@@ -3,9 +3,9 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+
 /* .system-message and #error-handling are reST error indicators */
 /* message styles derived from fontAwesome  #15235 */
-
 @font-face {
   font-family: 'FontAwesome';
   src: url('&dtml-portal_url;/fontawesome-webfont.eot?v=4.0.3');
@@ -38,7 +38,6 @@ div.warning,
     border: none;
 }
 
-
 .extra .attention,
 .extra .caution,
 .extra .danger,
@@ -51,8 +50,7 @@ div.warning,
     padding-left: 1.5em;
 }
 
-
-.portalMessage:before, .portalMessage .eea-icon:before {
+.system-message:before, .portalMessage:before, .portalMessage .eea-icon:before {
     float: left;
     display: block;
     font-family: 'FontAwesome';
@@ -167,8 +165,8 @@ div.error:before,
     content: "&dtml-eea-icon-check;";
 }
 
-/* Styles moved from visual.css */
 
+/* Styles moved from visual.css */
 blockquote {
     width: 70%;
     margin: 1.0em auto;
@@ -178,8 +176,8 @@ blockquote {
     clear:both;
 }
 
-/* Styles copied from base.css */
 
+/* Styles copied from base.css */
 .pullquote {
     margin: 0 1em 0.5em 0.5em;
     font-weight: bold;
@@ -207,7 +205,6 @@ blockquote {
 }
 
 /* pre is the tag used when selecting the literal style */
-
 pre {
     background-color: #222;
     color: White;
