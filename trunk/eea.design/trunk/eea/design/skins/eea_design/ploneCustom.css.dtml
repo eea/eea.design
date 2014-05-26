@@ -605,15 +605,15 @@ body.section-signals #nonfolderish-subfolder-view-items {
     border-radius: 8px 0 0 0;
 }
 #visual-portal-wrapper .eea-tabs > li > a:hover {
-    color: &dtml-corporateBlueTwo;!important;
+    color: &dtml-corporateBlueTwo;;
     text-decoration: none;
     text-shadow: 1px 1px 1px #FFFFFF;
     background-color: &dtml-greyBackgroundColor;;
 }
-#visual-portal-wrapper .eea-tabs > li > a.current,
-#visual-portal-wrapper .eea-tabs > li > a.current:hover {
+#visual-portal-wrapper .eea-tabs > li > .current,
+#visual-portal-wrapper .eea-tabs > li > .current:hover {
     cursor: default;
-    color: &dtml-corporateBlueTwo;!important;
+    color: &dtml-corporateBlueTwo;;
     text-decoration: none;
     text-shadow: 1px 1px 1px #FFFFFF;
     background-color: &dtml-greyBackgroundColor;;
