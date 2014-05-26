@@ -35,16 +35,8 @@ mediumBackgroundColor:string=#ececec
 darkBackgroundColor:string=#D6D6D6
 greyBackgroundColor:string=#f3f3f3
 headerBackgroundColor:string=#F0F4F5
-soerBackgroundColor:string=#e8f0fb
 # background used for portalMessages and keyFacts
 corporateBlueBackgroundColor:string=#C7E0E9
-
-#soer 2015 section colors
-soerMegatrendsSectionColor:string=#7e407e;
-soerSynthesysSectionColor:string=#202854;
-soerCountrySectionColor:string=#007385;
-soerThematicSectionColor:string=#76a830;
-soerRegionsSectionColor:string=#f14825;
 
 #top navigation colors
 tabBackgroundColor:string=#2c8da2
