@@ -570,24 +570,23 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 /* folder_tabs_view and folder_accordion_view styling
  * as well as generic tabs and accordion styling */
-#visual-portal-wrapper ul.eea-tabs {
+#visual-portal-wrapper .eea-tabs {
     padding: 0 10px 0 0;
     margin: 0;
     font-size: 12px;
     line-height: normal!important;
-    list-style-image: none;
-    list-style-type: none;
+    list-style: none none;
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
     background-color: &dtml-corporateBlueOne;;
 }
-#visual-portal-wrapper ul.eea-tabs > li {
+#visual-portal-wrapper .eea-tabs > li {
     float: left;
     margin: 0;
     padding: 0;
 }
-#visual-portal-wrapper ul.eea-tabs > li > a {
+#visual-portal-wrapper .eea-tabs > li > a {
     display: block;
     color: #fff;
     text-shadow: 1px 1px 1px #000000;
@@ -595,24 +594,24 @@ body.section-signals #nonfolderish-subfolder-view-items {
     white-space: nowrap;
     padding: 8px 8px;
 }
-#visual-portal-wrapper ul.eea-tabs.two-rows > li > a {
+#visual-portal-wrapper .eea-tabs.two-rows > li > a {
     height: 40px;
     white-space: normal;
     max-width: 144px;
 }
-#visual-portal-wrapper ul.eea-tabs > li:first-child > a {
+#visual-portal-wrapper .eea-tabs > li:first-child > a {
     -webkit-border-radius: 8px 0 0 0;
     -moz-border-radius: 8px 0 0 0;
     border-radius: 8px 0 0 0;
 }
-#visual-portal-wrapper ul.eea-tabs > li > a:hover {
+#visual-portal-wrapper .eea-tabs > li > a:hover {
     color: &dtml-corporateBlueTwo;!important;
     text-decoration: none;
     text-shadow: 1px 1px 1px #FFFFFF;
     background-color: &dtml-greyBackgroundColor;;
 }
-#visual-portal-wrapper ul.eea-tabs > li > a.current,
-#visual-portal-wrapper ul.eea-tabs > li > a.current:hover {
+#visual-portal-wrapper .eea-tabs > li > a.current,
+#visual-portal-wrapper .eea-tabs > li > a.current:hover {
     cursor: default;
     color: &dtml-corporateBlueTwo;!important;
     text-decoration: none;
@@ -621,12 +620,12 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 /* Clear floated elements */
-#visual-portal-wrapper ul.eea-tabs:before,
-#visual-portal-wrapper ul.eea-tabs:after {
+#visual-portal-wrapper .eea-tabs:before,
+#visual-portal-wrapper .eea-tabs:after {
     display: table;
     content: " ";
 }
-#visual-portal-wrapper ul.eea-tabs:after {
+#visual-portal-wrapper .eea-tabs:after {
     clear: both;
 }
 
