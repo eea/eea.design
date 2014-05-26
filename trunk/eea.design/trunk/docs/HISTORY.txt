@@ -3,6 +3,11 @@ Changelog
 
 9.7-dev - (unreleased)
 ----------------------
+* Change: removed styles that were applied on selectors that are too agressive
+  within eea-base.css, ploneCustom.css or eea-public.css.
+  This way other styles can apply new styles instead of having to do overrides.
+  See ticket for the exact changesets
+  [ichimdav refs #19536]
 * Change: last-child class is now applied through javascript to all eea-tabs not
   just those from the whatsnewgallery
   [ichimdav refs #19536]
