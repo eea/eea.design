@@ -21,6 +21,13 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
+    $('.js-adoptHeight').each(function() {
+        var $el = $(arguments[1]);
+        var $target_el = $($el.data('target-element'));
+        $el.css('height', $target_el.outerHeight());
+
+    });
+
     // #19536; hide navigation submenus if there are less than 2 of them
     var $navigation_submenus = $(".portletSubMenuHeader");
     if ($navigation_submenus && $navigation_submenus.length < 2) {
