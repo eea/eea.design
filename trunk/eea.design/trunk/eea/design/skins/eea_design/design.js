@@ -21,6 +21,11 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
+    // #19536; hide navigation submenus if there are less than 2 of them
+    var $navigation_submenus = $(".portletSubMenuHeader");
+    if ($navigation_submenus && $navigation_submenus.length < 2) {
+      $navigation_submenus.hide();
+    }
      // #17633 add eea-icon class to the plone message classes
      $(".attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning").addClass('eea-icon');
 

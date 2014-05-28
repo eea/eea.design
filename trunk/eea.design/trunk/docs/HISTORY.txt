@@ -3,6 +3,9 @@ Changelog
 
 9.7-dev - (unreleased)
 ----------------------
+* Change: navigation submenu is hidden if there are less than 2 of them since
+  the new navigation design doesn't contain then at all.
+  [ichimdav refs #19536]
 * Change: updated portal navigation style based on the new design of soer2015
   [ichimdav refs #19536]
 * Change: removed styles that were applied on selectors that are too agressive
