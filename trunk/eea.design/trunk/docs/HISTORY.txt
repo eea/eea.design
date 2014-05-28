@@ -3,6 +3,8 @@ Changelog
 
 9.7-dev - (unreleased)
 ----------------------
+* Change: updated portal navigation style based on the new design of soer2015
+  [ichimdav refs #19536]
 * Change: removed styles that were applied on selectors that are too agressive
   within eea-base.css, ploneCustom.css or eea-public.css.
   This way other styles can apply new styles instead of having to do overrides.

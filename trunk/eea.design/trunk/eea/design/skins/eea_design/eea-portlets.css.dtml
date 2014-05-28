@@ -66,16 +66,20 @@ a.managePortletsFallback {
 /* @group Navigation portlet */
 dl.portlet ul.navTree li a {
     margin: 0;
-    padding: 5px 5px 5px 10px !important;
+    padding: 10px;
     text-shadow: none;
     -webkit-transition: background-color .3s, color .3s, background .3s;
     -moz-transition: background-color .3s, color .3s, background .3s;
     -o-transition: background-color .3s, color .3s, background .3s;
     transition: background-color .3s, color .3s, background .3s;
-    border-top: 1px dotted #BABBB8;
+    border-top: 1px dashed #BABBB8;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
+}
+
+dl.portlet ul.navTree li:first-child > a {
+  border-top: 0; /* no top border on the first link of the navigation menu */
 }
 
 dl.portlet ul.navTree li a:hover, #content dl.portlet ul.navTree li a:hover {
