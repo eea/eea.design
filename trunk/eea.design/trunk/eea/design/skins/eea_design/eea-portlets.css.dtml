@@ -78,7 +78,7 @@ dl.portlet ul.navTree li a {
     line-height: 1.5;
 }
 
-dl.portlet ul.navTree li:first-child > a {
+dl.portlet ul.navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
 
