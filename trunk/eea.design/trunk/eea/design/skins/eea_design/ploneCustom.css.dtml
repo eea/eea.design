@@ -1549,7 +1549,6 @@ h3.site-description {
     margin: 3px 0 0 0;
     position: relative;
     clear: both;
-    background: white;
 }
 
 #region-content #portal-breadcrumbs {

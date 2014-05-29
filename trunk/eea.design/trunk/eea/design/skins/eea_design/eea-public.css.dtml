@@ -35,7 +35,6 @@ h1 {
     margin: 0.67em 0;
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     padding-bottom: 0.25em;
-    padding-right: 5em; /* to avoid overlapping with document actions */
 }
 h2 {
     font-size: 150%;

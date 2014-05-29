@@ -129,12 +129,8 @@ select {
     margin: 1em 0em 2em 0em;
 }
 
-#content h1.documentFirstHeading {
-    margin-top: 0;
-}
-
-#content h1#parent-fieldname-title {
-    width: 75%;
+.userrole-anonymous .documentFirstHeading {
+    padding-right: 7em; /* to avoid overlapping with language switcher which appears only for anonymous users */
 }
 
 #content p a:link {
