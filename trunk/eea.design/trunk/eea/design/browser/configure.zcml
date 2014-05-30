@@ -9,12 +9,6 @@
     <include package="plone.app.portlets"/>
     <include package="plone.app.controlpanel" file="permissions.zcml" />
 
-  <adapter
-        zcml:condition="installed collective.sendaspdf"
-        for="Products.Archetypes.interfaces.base.IBaseObject"
-        provides="collective.sendaspdf.interfaces.ISendAsPDFOptionsMaker"
-        factory=".pdfview.OptionsMaker" />
-
     <browser:page
         zcml:condition="installed collective.sendaspdf"
         for="Products.Archetypes.interfaces.base.IBaseObject"
@@ -30,14 +24,6 @@
         name="pdf.body"
         template="templates/pdf.body.pt"
         class=".pdfview.Body"
-        permission="zope2.View"
-        />
-
-    <browser:page
-        zcml:condition="installed collective.sendaspdf"
-        for="Products.Archetypes.interfaces.base.IBaseObject"
-        name="download.pdf"
-        class=".pdfview.Download"
         permission="zope2.View"
         />
 

@@ -3,6 +3,8 @@ Changelog
 
 9.7-dev - (unreleased)
 ----------------------
+* Change: Moved PDF export adapters and option makers as to eea.pdf
+  [voineali refs #19882]
 * Change: cleaned keyfacts-slider css implementation
   [ichimdav refs #19536]
 * Change: navigation submenu is hidden if there are less than 2 of them since

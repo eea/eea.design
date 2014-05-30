@@ -8,47 +8,12 @@ import contextlib
 import logging
 from bs4 import BeautifulSoup
 from DateTime import DateTime
-from zope.component.hooks import getSite
 from zope.component import queryMultiAdapter
 from Products.NavigationManager.browser.navigation import getApplicationRoot
 from eea.converter.browser.app.pdfview import Cover as PDFCover
 from eea.converter.browser.app.pdfview import Body as PDFBody
-from eea.converter.browser.app.download import Pdf as PDFDownload
-from eea.converter.pdf.adapters import OptionsMaker as PDFOptionsMaker
 from eea.converter.utils import absolute_url
 logger = logging.getLogger('eea.design')
-
-
-class OptionsMaker(PDFOptionsMaker):
-    """ Custom PDF options maker for EEA ctypes
-    """
-    def __init__(self, context):
-        super(OptionsMaker, self).__init__(context)
-        self._header = None
-        self._footer = None
-
-    @property
-    def header(self):
-        """ Safely get pdf.header
-        """
-        if not self._header:
-            self._header = getSite().absolute_url() + '/pdf.header'
-        return self._header
-
-    @property
-    def footer(self):
-        """ Safely get pdf.footer
-        """
-        if not self._footer:
-            self._footer = getSite().absolute_url() + '/pdf.footer'
-        return self._footer
-
-    def getOptions(self):
-        """ Custom options
-        """
-        options = super(OptionsMaker, self).getOptions()
-        options['page-offset'] = '3'
-        return options
 
 class Cover(PDFCover):
     """ Custom PDF cover
@@ -208,11 +173,3 @@ class Body(PDFBody):
         except Exception, err:
             logger.exception(err)
         return html
-
-class Download(PDFDownload):
-    """ Custom PDF Download
-    """
-    def __call__(self, **kwargs):
-        # Cheat condition @@plone_context_state/is_view_template
-        self.request['ACTUAL_URL'] = self.context.absolute_url()
-        return super(Download, self).__call__(**kwargs)
