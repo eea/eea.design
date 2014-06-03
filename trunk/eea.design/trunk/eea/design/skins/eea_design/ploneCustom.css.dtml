@@ -692,7 +692,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 .eea-accordion-title-manual-icons {
     text-shadow: none;
     padding: 0 1em;
-    margin: 0;
+    margin: 1px 0; /* #19875; 1px is needed because of a visual bug with IE where the floated icons are not moved to the margin */
     line-height: 3em;
     cursor: pointer;
 }
