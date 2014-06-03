@@ -3,6 +3,10 @@ Changelog
 
 9.7-dev - (unreleased)
 ----------------------
+* Feature: added eea-accordion-title-manual-icons class to the accordion logic
+  to be used instead of eea-accordion-title class when we need to have different
+  icons instead of the default ones provided by the accordion styles
+  [ichimdav refs #19875]
 * Change: Moved PDF export adapters and option makers as to eea.pdf
   [voineali refs #19882]
 * Change: cleaned keyfacts-slider css implementation

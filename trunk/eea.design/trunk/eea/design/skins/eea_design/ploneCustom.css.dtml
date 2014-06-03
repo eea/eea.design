@@ -696,7 +696,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 .eea-accordion-panel h2:hover > .eea-icon:before,
-.eea-accordion-panel .current > .eea-icon:before {
+.eea-accordion-panel .eea-accordion-title.current > .eea-icon:before {
     content: "&dtml-eea-icon-chevron-down;";
 }
 
@@ -711,8 +711,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 .eea-accordion-title a,
-.eea-accordion-panel > h2 a
-{
+.eea-accordion-panel > h2 a {
     color: #00446A !important;
 }
 

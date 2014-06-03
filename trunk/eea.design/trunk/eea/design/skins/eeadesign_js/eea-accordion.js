@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
     // NOTE: this file is overriding the one found in
     // Products.NavigationManager
-    var portlet = jQuery('dl.portletNavigationTree');
+    var portlet = jQuery('.portletNavigationTree');
     if (portlet.length) {
-        var tabs = jQuery('dd.portletItem', portlet);
+        var tabs = jQuery('.portletItem', portlet);
 
         // Find current index
         var index = 0;
@@ -17,8 +17,8 @@ jQuery(document).ready(function($) {
 
         // Make accordion using jquery.tools
         portlet.tabs(
-            "dl.portletNavigationTree dd.portletItem", {
-                tabs: "dt.portletSubMenuHeader",
+            ".portletNavigationTree .portletItem", {
+                tabs: ".portletSubMenuHeader",
                 effect: "slide",
                 initialIndex: index
             });
@@ -64,7 +64,7 @@ jQuery(document).ready(function($) {
                 var initial_indexes = [];
                 var $pane = $el.find('.pane');
 
-                $el.find('.eea-accordion-title, h2').each(function(idx){
+                $el.find('.eea-accordion-title, .eea-accordion-title-manual-icons, h2').each(function(idx){
                     var $title = $(this);
                     if( $title.hasClass('current') ){
                         $title.removeClass('current');
@@ -95,7 +95,7 @@ jQuery(document).ready(function($) {
                     effect = 'collapsed';
                     current_class = "default";
                     // allow the hiding of the currently opened accordion
-                    $el.find('.eea-accordion-title, h2').click(function(ev) {
+                    $el.find('.eea-accordion-title, .eea-accordion-title-manual-icons, h2').click(function(ev) {
                        var $el = $(this);
                        if (!$el.hasClass('current')) {
                            $el.addClass('current').next().slideDown();
@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
                 }
 
                 $el.tabs($pane,
-                {   tabs: '.eea-accordion-title, h2',
+                {   tabs: '.eea-accordion-title, .eea-accordion-title-manual-icons, h2',
                     effect: effect,
                     initialIndex: initial_index,
                     current: current_class,
@@ -122,7 +122,7 @@ jQuery(document).ready(function($) {
 
                 // Allow multiple open-by-default panes
                 if(initial_indexes.length && $el.hasClass('non-exclusive')) {
-                  $el.find('.eea-accordion-title, h2').each(function(idx){
+                  $el.find('.eea-accordion-title, .eea-accordion-title-manual-icons, h2').each(function(idx){
                     var $title = $(this);
 
                     // Nothing to do
