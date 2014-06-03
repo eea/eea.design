@@ -689,6 +689,13 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 0 10px;
     font-weight: bold;
 }
+.eea-accordion-title-manual-icons {
+    text-shadow: none;
+    padding: 0 1em;
+    margin: 0;
+    line-height: 3em;
+    cursor: pointer;
+}
 
 .eea-accordion-panel > h2 .eea-icon:before,
 .eea-accordion-title > .eea-icon:before {
