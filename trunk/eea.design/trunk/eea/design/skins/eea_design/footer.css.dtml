@@ -15,6 +15,7 @@
     padding: 2em 1em;
     clear: both;
     min-width: 973px;
+    border-top: 8px solid #FFF;
 }
 
 #bg-wrapper {
