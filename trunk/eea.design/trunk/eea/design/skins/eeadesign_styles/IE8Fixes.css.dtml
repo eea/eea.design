@@ -50,10 +50,6 @@ div#portal-columns div.portlet {
     text-align: left;
 }
 
-div#portal-column-two {
-    margin-top: 0 !important;
-}
-
 textarea {
     width: 97%;
 }

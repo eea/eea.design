@@ -140,10 +140,6 @@ div#portal-columns div.portlet {
 /*     overflow: hidden; */
 /* } */
 
-div#portal-column-two {
-    margin-top: 0 !important;
-}
-
 .column-area .featured .searchforms input[type="submit"], .right-column-area .featured .searchforms input[type="submit"] { 
     padding: 7px 4px !important;
 }
