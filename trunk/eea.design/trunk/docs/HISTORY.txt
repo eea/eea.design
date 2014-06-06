@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.8-dev - (unreleased)
+----------------------
+
 9.7 - (2014-06-06)
 ------------------
 * Feature: added eea-accordion-title-manual-icons class to the accordion logic
