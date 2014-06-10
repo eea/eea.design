@@ -1,0 +1,1 @@
+<img class="qr" tal:attributes="src string:http://chart.apis.google.com/chart?cht=qr&chld=H|0&chs=70x70&chl=${context/absolute_url}" />

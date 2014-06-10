@@ -1,0 +1,89 @@
+<div id="portal-colophon"
+    metal:define-macro="colophon"
+    i18n:domain="eea"
+    tal:define="portal_state context/@@plone_portal_state;">
+    <metal>
+    <tal:condition
+    tal:define="local_site context/@@plone_portal_state/local_site;
+    isViewTemplate context/@@plone_context_state/is_view_template;
+    portal_url portal_state/portal_url;">
+    <div class="colophonWrapper">
+        <div class="colophon-left">
+            <tal:address>
+                <a href="/" tal:attributes="href string:${portal_state/portal_url}" i18n:translate="">European Environment Agency (EEA)</a>
+                <br/>
+                <tal:c1>
+                    <tal:block i18n:translate="eea_address">
+                        Kongens Nytorv 6<br/>
+                        1050 Copenhagen K<br/>
+                        Denmark
+                    </tal:block>
+                    <br/> 
+                    <tal:block i18n:translate="">Phone:</tal:block> +45 3336 7100
+                </tal:c1>
+            </tal:address>
+        </div>
+
+        <tal:c5>
+        <div class="colophon-right colophon-links">
+            <span>
+                <tal:block i18n:translate="">
+                    The European Environment Agency (EEA) is an agency of the European Union.
+                </tal:block>
+                <br/>
+                <a href="http://www.eea.europa.eu/legal" 
+                   tal:attributes="href string:${local_site}/legal/"
+                   i18n:translate="">Legal notice</a>
+            </span>
+             <img tal:attributes="src string:${portal_url}/eu-flag.gif"
+                  alt="EU flag" 
+                  title="European Union Flag"
+                  i18n:attributes="alt;title" />
+            <br />  
+        </div>
+
+        <div class="footer-clear">&nbsp;</div>
+
+        </tal:c5>
+        
+    </div>
+    <div  class="colophon-middle">
+       <p class="discreet colophon-links">
+            <tal:comments i18n:translate="">engineered by</tal:comments><br />
+            <a href="http://www.eea.europa.eu/help/contact-info" 
+               i18n:translate="" 
+               tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>
+       </p>
+
+        <p class="discreet colophon-links">
+                    <a rel="license"
+                        href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
+                        title="Creative Commons Attribution License"
+                        i18n:attributes="title">
+                    <img alt="Creative Commons Attribution License"
+                        i18n:attributes="alt"
+                        style="border-width: 0pt;"
+                        tal:attributes="src string:${portal_url}/creativecommons-by-2.5-dk-80x15.png"/>
+                    </a>
+                    <a href="/login_form" 
+                        tal:attributes="href string:${portal_url}/login_form" 
+                        title="CMS login"
+                        i18n:attributes="title"><strong i18n:translate="">CMS login</strong></a>
+                    <a href="https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk/docs/" 
+                        title="Software updates history"
+                        i18n:attributes="title"
+                        i18n:translate="">Software updates history</a>
+                    <a href="/code" 
+                        tal:attributes="href string:${portal_state/portal_url}/code" 
+                        title="Software updates history"
+                        i18n:attributes="title"
+                        i18n:translate="">Code for developers</a>
+                    <a href="@@invalidate_cache"
+                      rel="nofollow" title="Refresh this page"
+                      i18n:attributes="title"
+                      i18n:translate="">Refresh this page</a>
+        </p>
+    </div>
+    </tal:condition>
+    </metal>
+</div>
