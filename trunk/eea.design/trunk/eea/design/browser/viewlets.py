@@ -166,3 +166,14 @@ class SubFoldersViewlet(common.ViewletBase):
             res = self.context.getFolderContents({'portal_type' :"Folder"})
             res = [obj for obj in res if obj.exclude_from_nav != True]
             return res
+
+class QRBox(common.ViewletBase):
+    """ Custom viewlet for qr box
+    """
+    render = ViewPageTemplateFile('templates/qrbox.viewlet.pt')
+
+    @property
+    def available(self):
+        """ Available
+        """
+        return True

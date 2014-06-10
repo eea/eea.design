@@ -243,6 +243,13 @@
         permission="zope2.View"
         />
 
+    <browser:viewlet
+        name="eea.pdf.qrbox"
+        layer=".interfaces.IEEACommonLayer"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        class=".viewlets.QRBox"
+        permission="zope2.View"
+        />
 
     <!-- Browser pages -->
 

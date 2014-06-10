@@ -216,4 +216,9 @@ pre {
     line-height: 1.25em;
 }
 
+div.featured.qrbox {
+    text-align: right;
+    display: none;
+}
+
 /* </dtml-with> */
