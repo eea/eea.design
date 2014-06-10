@@ -4,16 +4,6 @@
         <h5 class="hiddenStructure" i18n:translate="">Sections</h5>
         <ul id="portal-globalnav" 
             tal:define="selected_tab python:view.selected_portal_tab">
-        <metal metal:use-macro="here/main_template/macros/short_colophon">
-        <tal:cond condition="short_colophon" metal:fill-slot="colophon_slot">
-            <a href="/" accesskey="2">
-                 <img src="" 
-                      alt="EEA"
-                      i18n:attributes="alt"
-                      tal:attributes="src string:${context/@@plone_portal_state/portal_url}/logo.gif"  class="visualFloatLeft" id="multimedia-logo" />
-            </a>
-        </tal:cond>
-        </metal>
 
             <tal:tabs tal:repeat="tab portal_tabs">
                 <tal:block tal:condition="python:here.Language() == 'en'">

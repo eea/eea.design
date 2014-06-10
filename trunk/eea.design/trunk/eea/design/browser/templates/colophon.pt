@@ -2,18 +2,17 @@
     metal:define-macro="colophon"
     i18n:domain="eea"
     tal:define="portal_state context/@@plone_portal_state;">
-    <metal metal:use-macro="here/main_template/macros/short_colophon">
+    <metal>
     <tal:condition
     tal:define="local_site context/@@plone_portal_state/local_site;
     isViewTemplate context/@@plone_context_state/is_view_template;
-    portal_url portal_state/portal_url;
-    short_colophon_cond python:short_colophon and isViewTemplate;" metal:fill-slot="colophon_slot">
+    portal_url portal_state/portal_url;">
     <div class="colophonWrapper">
         <div class="colophon-left">
             <tal:address>
                 <a href="/" tal:attributes="href string:${portal_state/portal_url}" i18n:translate="">European Environment Agency (EEA)</a>
                 <br/>
-                <tal:c1 condition="not:short_colophon_cond">
+                <tal:c1>
                     <tal:block i18n:translate="eea_address">
                         Kongens Nytorv 6<br/>
                         1050 Copenhagen K<br/>
@@ -25,7 +24,7 @@
             </tal:address>
         </div>
 
-        <tal:c5 condition="not:short_colophon_cond">
+        <tal:c5>
         <div class="colophon-right colophon-links">
             <span>
                 <tal:block i18n:translate="">
@@ -46,20 +45,9 @@
         <div class="footer-clear">&nbsp;</div>
 
         </tal:c5>
-
-        <tal:c6 condition="short_colophon_cond">
-        <div class="colophon-right" tal:define="local python:'/SITE' if 'localhost' in context.REQUEST['URL0'] else '';img_url string:${portal_state/portal_url}${local}/multimedia/backgrounds/background">
-            <a href="#"> <img tal:attributes="src string:${img_url}.jpg/image_thumb" class="selected" /> </a>
-            <a href="#"> <img tal:attributes="src string:${img_url}2.jpg/image_thumb" /> </a>
-            <a href="#"> <img tal:attributes="src string:${img_url}3.jpg/image_thumb" /> </a>
-            <a href="#"> <img tal:attributes="src string:${img_url}4.jpg/image_thumb" /> </a>
-            <a href="#"> <img tal:attributes="src string:${img_url}5.jpg/image_thumb" /> </a>
-            <a href="#"> <img tal:attributes="src string:${img_url}6.jpg/image_thumb" /> </a>
-        </div>
-        </tal:c6>
         
     </div>
-    <div tal:condition="not:short_colophon_cond" class="colophon-middle">
+    <div  class="colophon-middle">
        <p class="discreet colophon-links">
             <tal:comments i18n:translate="">engineered by</tal:comments><br />
             <a href="http://www.eea.europa.eu/help/contact-info" 

@@ -3,6 +3,10 @@ Changelog
 
 9.8-dev - (unreleased)
 ----------------------
+* Change: removed short_colophon login since multimedia_view is no longer applied
+  on site and the pdf output was complaining about getLayout call when using the
+  main_template macros
+  [ichimdav refs #19880]
 
 9.7 - (2014-06-06)
 ------------------
