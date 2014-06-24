@@ -34,10 +34,12 @@ h1, h2, h3, h4, h5, h6 {
     clear: both;
     page-break-inside: avoid;
     page-break-after: avoid;
+
 }
 
-#content, div, p, ul, dl, ol {
-    width: auto !important;
+/* #19880 set 100% width for column-content instead of width auto with important */
+#portal-column-content {
+    width: 100%;
 }
 
 ul, ol, dl {

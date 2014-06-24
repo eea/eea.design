@@ -3,6 +3,9 @@ Changelog
 
 9.9-dev - (unreleased)
 ----------------------
+* Change: removed important declaration for print.css for content making it
+  easier to have different width containers
+  [ichimdav refs #19880]
 * Change: Copied check_id.py and check_id.py.metadata from eea.soercontent
   in order to fix permissions
   [voineali refs #20010]
