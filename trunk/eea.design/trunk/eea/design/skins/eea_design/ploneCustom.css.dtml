@@ -2714,4 +2714,9 @@ div.row {
     }
 }
 
+div.featured.qrbox {
+    text-align: right;
+    display: none;
+}
+
 /* </dtml-with> */
