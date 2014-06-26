@@ -3,6 +3,8 @@ Changelog
 
 9.9-dev - (unreleased)
 ----------------------
+* Change: made diff tool more clear to authors by hiding tags diffs.
+  [demarant #17702]
 * Change: removed important declaration for print.css for content making it
   easier to have different width containers
   [ichimdav refs #19880]

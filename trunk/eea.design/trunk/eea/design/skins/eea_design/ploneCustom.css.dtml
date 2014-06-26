@@ -2644,6 +2644,10 @@ div.row {
     background-color: transparent;
 }
 
+.tagInsert, .tagDelete {
+    display: none;
+}
+
 /* EUNIS navigation proposal, see #16978 */
 
 @media screen {
