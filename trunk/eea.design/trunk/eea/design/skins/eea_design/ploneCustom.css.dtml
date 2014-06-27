@@ -2718,7 +2718,7 @@ div.row {
     }
 }
 
-div.featured.qrbox {
+.qrbox {
     text-align: right;
     display: none;
 }
