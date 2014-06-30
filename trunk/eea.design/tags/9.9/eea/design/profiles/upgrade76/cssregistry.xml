@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_css tool. -->
+
+<object name="portal_css">
+
+
+    <stylesheet title=""
+                id="eea-authoring.css"
+                media="all" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment=""
+                expression=""
+                insert-after="authoring.css"
+            />
+    <stylesheet title=""
+                id="eea-base.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment=""
+                expression=""
+                insert-before="eea-public.css"
+            />
+    <stylesheet title=""
+                id="eea-portlets.css"
+                media="screen" rel="stylesheet" rendering="link"
+                cacheable="True" compression="safe" cookable="True"
+                conditionalcomment=""
+                expression=""
+                insert-after="portlets.css"
+            />
+
+</object>

@@ -1,0 +1,74 @@
+<metal:external metal:define-macro="external_sites"
+                i18n:domain="eea">
+    <ul id="portal-externalsites">
+        <li id="externalsites-networks">
+            <a href="#" i18n:translate="">Networks</a>
+        </li>
+    </ul>
+    <div class="panel" id="tip-externalsites-networks" style="width:450px; margin-left: 10em;">
+        <div class="panel-top" style="left: -195px;"><!-- --></div>
+        <div class="panel-content shadow">
+            <dl class="portlet networkSites">
+                <dt i18n:translate="">Networks</dt>
+                <dd>
+                    <ul>
+                        <li id="externalsites-eionet">
+                            <a title="Eionet" i18n:attributes="title" accesskey="" href="http://www.eionet.europa.eu/" i18n:translate="">Eionet</a>
+                        </li>
+                        <li id="externalsites-epanet">
+                            <a title="EPA network" i18n:attributes="title" accesskey="" href="http://epanet.ew.eea.europa.eu/" i18n:translate="">Network of the Heads of Environment Protection Agencies (EPA network)</a>
+                        </li>
+                        <li id="externalsites-envirowindows">
+                            <a title="EnviroWindows" i18n:attributes="title" accesskey="" href="http://ew.eea.europa.eu/" i18n:translate="">EnviroWindows</a>
+                        </li>
+                        <li id="seis-network">
+                            <a title="SEIS network" i18n:attributes="title" accesskey="" href="http://www.eea.europa.eu/about-us/what/shared-environmental-information-system" i18n:translate="">Shared Environmental Information System (SEIS)</a>
+                        </li>
+                    </ul>
+                </dd>
+                <dt>
+                    <tal:block i18n:translate="">European Topic Centres (ETCs)</tal:block>
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <a href="http://acm.eionet.europa.eu" i18n:translate="">Air pollution
+                            and Climate Change mitigation (ACM)</a>
+                        </li>
+                        <li>
+                            <a href="http://bd.eionet.europa.eu" i18n:translate="">Biological
+                            Diversity (BD)</a>
+
+                        </li>
+                        <li>
+                            <a href="http://cca.eionet.europa.eu" i18n:translate="">Climate Change
+                            Impacts, Vulnerability and Adaptation (CCA)</a>
+                        </li>
+                        <li>
+                            <a href="http://icm.eionet.europa.eu" i18n:translate="">Inland,
+                            Coastal and Marine waters (ICM)</a>
+                        </li>
+                        <li>
+
+                            <a href="http://sia.eionet.europa.eu" i18n:translate="">Spatial
+                            Information and Analysis (SIA)</a>
+                        </li>
+                        <li>
+                            <a href="http://scp.eionet.europa.eu" i18n:translate="">Sustainable
+                            Consumption and Production (SCP)</a>
+                        </li>
+                    </ul>
+                </dd>
+                <dt class="hiddenStructure">
+                    <tal:block i18n:translate="">More networks</tal:block>
+                </dt>
+                <dd style="padding-bottom: 0.5em" class="portletFooter">
+                    <a class="moreLink" href="http://www.eea.europa.eu/about-us/key-partners" i18n:translate="">EU partners</a>&nbsp;&nbsp; 
+                    <a class="moreLink" href="http://www.eea.europa.eu/about-us/international-cooperation" i18n:translate="">International cooperation</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+</metal:external>
+
