@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.0-dev - (unreleased)
+-----------------------
+
 9.9 - (2014-06-30)
 ------------------
 * Change: made diff tool more clear to authors by hiding tags diffs.
