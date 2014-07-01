@@ -3,6 +3,8 @@ Changelog
 
 10.0-dev - (unreleased)
 -----------------------
+* Bug fix: Hide QR Box viewlet by default also in print mode.
+  [voineali refs #20267]
 
 9.9 - (2014-06-30)
 ------------------

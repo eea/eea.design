@@ -296,3 +296,8 @@ dl.captioned {
     margin: 0 0 0.5em 1em;
     width: 16em;
 }
+
+.qrbox {
+    text-align: right;
+    display: none;
+}
