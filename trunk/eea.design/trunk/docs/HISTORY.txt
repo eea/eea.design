@@ -3,6 +3,8 @@ Changelog
 
 10.0-dev - (unreleased)
 -----------------------
+* Bug fix: fixed icons placement for icons of soer2015 section navigation
+  [ichimdav refs #19875]
 * Bug fix: Hide QR Box viewlet by default also in print mode.
   [voineali refs #20267]
 
