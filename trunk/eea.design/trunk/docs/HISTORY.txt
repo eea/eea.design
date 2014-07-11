@@ -3,6 +3,11 @@ Changelog
 
 10.0-dev - (unreleased)
 -----------------------
+* Feature: allow editor to exclude page parts from PDF generation via
+  a special style in tinymce.
+  Upgrade step:	Plone >	Site setup > TinyMCE > 
+  In styles add line "Exclude from PDF|span|excludeFromPDF"
+  [demarant #20255]
 * Bug fix: fixed icons placement for icons of soer2015 section navigation
   [ichimdav refs #19875]
 * Bug fix: Hide QR Box viewlet by default also in print mode.

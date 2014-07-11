@@ -2330,8 +2330,10 @@ input[disabled], #plonebrowser input[disabled] {
     text-align: center;
 }
 
-/* #16879 highlight class only on TinyMCE edit */
-.mceContentBody .markPresentationalText, .mceContentBody .pageBreak {
+/* #16879,#20255 highlight class only on TinyMCE edit */
+.mceContentBody .markPresentationalText, 
+.mceContentBody .pageBreak, 
+.mceContentBody .excludeFromPDF {
     background-color: #ffb;
 }
 
@@ -2341,6 +2343,14 @@ input[disabled], #plonebrowser input[disabled] {
 
 .mceContentBody .pageBreak:before {
     content: "Print Page Break used for breaking a page when printing";
+}
+
+.mceContentBody .excludeFromPDF:before {
+    margin-right: .3em;
+    padding: .3em;
+    background-color: &dtml-corporateBlueBackgroundColor;;
+    font-family: 'FontAwesome';
+    content: "Excluded from PDF \f0a4";
 }
 
 /* #16916; hide the background images on view pages as they should only appear within the
