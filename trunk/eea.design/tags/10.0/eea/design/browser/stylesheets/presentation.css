@@ -1,0 +1,155 @@
+html, body{
+    height:100%;
+    line-height: 1.1em;
+}
+
+html > body div#controls {
+    left:  0;
+    width:  auto;
+}
+
+.centered {
+    text-align: center;
+    display: block;
+    height: 100%;
+}
+
+.presentation-left-bg-image,
+.presentation-right-bg-image,
+.presentation-center-bg-image {
+    position: fixed;
+    z-index: -1;
+}
+
+.presentation-left-bg-image {
+    left: 4%;
+}
+.presentation-right-bg-image {
+    right: 4%;
+}
+
+.presentation-center-bg-image {
+    left: 36%;
+    top: 10%;
+}
+
+.slide .presentation-title-bg-image {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 2%;
+    max-height: 2.9em;
+}
+
+.markPresentationalText {
+    display: block;
+} 
+
+p {
+    display: block;
+    margin: 0 0 0.5em 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.layout #footer {
+    /* This rule is not optimized because it would override the footer image */
+    background-position: 98% 50%;
+    background-color: white;
+    padding: 0.5em 0;
+}
+div#header {
+    background-color: transparent;
+    border: 0;
+}
+
+div#footer {
+    height: 2.7em;
+}
+
+div#controls form {
+    position: relative;
+    height: 2em;
+    top: 1.2em;
+}
+
+.presentation { 
+    height: 100%;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.presentation-loader {
+    text-align: center;
+}
+
+#presentation_help_message {
+    position: fixed;
+    top: 25%;
+    padding: 0.5em;
+    background: #FFF;
+    z-index: 5;
+}
+
+
+#slide0 {
+    top: 0;
+}
+
+#slide0 h1 {
+    text-align: right;
+    margin: 0;
+    padding-bottom: 2em;
+    position: relative;
+    left: -1em;
+}
+
+#slide0 .mainImage {
+    text-align: center;
+}
+
+#slide0 .mainImage img {
+    width: auto;
+}
+
+html > body .slide {
+    overflow: auto;
+    max-height: 77%;
+    margin: 0 2em 0 2em;
+    font-size: 0.6em;
+    padding: 1em;
+    top: 9%;
+    visibility: hidden;
+}
+
+.ie8 .slide { 
+    top: 11%;
+    max-height: 75%;
+}
+
+.ie8 h1 {
+    font: bold 180%/1em Helvetica, sans-serif;
+}
+
+.slide img {
+    max-height:  23em;
+    max-width: 98%;
+    height: auto;
+}
+
+iframe {
+    display: block;
+}
+
+.slide h1 {
+    text-align: left;
+    padding: 0.5em;
+    position: fixed;
+    width: 100%;
+    display: block;
+    background: white;
+    border-bottom: 0.25em solid #6fbfbd;
+}
