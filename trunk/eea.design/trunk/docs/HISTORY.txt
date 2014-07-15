@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.0-dev - (unreleased)
------------------------
+10.0 - (2014-07-15)
+-------------------
 * Feature: allow editor to exclude page parts from PDF generation via
   a special style in tinymce.
   Upgrade step:	Plone >	Site setup > TinyMCE > 
