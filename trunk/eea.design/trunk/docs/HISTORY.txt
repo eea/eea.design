@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.1-dev - (unreleased)
------------------------
+10.1 - (2014-07-16)
+-------------------
 * Feature: show inactive content in folder_listing if user
   has 'Access inactive portal content' permission.
   [ghicaale refs #17865]
