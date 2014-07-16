@@ -211,7 +211,7 @@
                 }
             }
 
-            this.navigatorInner.stop().animate(eval('({' + this.navigratorStep[0] + ':-' + this.settings.startItem * this.navigratorStep[1] + '})'), {
+            this.navigatorInner.stop().animate((0,eval)('({' + this.navigratorStep[0] + ':-' + this.settings.startItem * this.navigratorStep[1] + '})'), {
                 duration: 500,
                 easing: 'easeInOutQuad'
             });
@@ -276,7 +276,7 @@
             this.settings.onPlaySlider(this, $(this.slides).eq(this.currentNo));
         },
         getObjectDirection: function(start, end) {
-            return eval("({'" + this.directionMode[0] + "':-" + (this.currentNo * start) + "})");
+            return (0,eval)("({'" + this.directionMode[0] + "':-" + (this.currentNo * start) + "})");
         },
         fxStart: function(index, obj, currentObj) {
             var s = this;
@@ -315,7 +315,7 @@
         jumping: function(no, manual) {
             this.stop();
             if (this.currentNo === no) { return; }
-            var obj = eval("({'" + this.directionMode[0] + "':-" + (this.maxSize * no) + "})");
+            var obj = (0,eval)("({'" + this.directionMode[0] + "':-" + (this.maxSize * no) + "})");
             this.onProcessing(null, manual, 0, this.maxSize)
                 .fxStart(no, obj, this)
                 .finishFx(manual);

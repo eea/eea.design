@@ -14,14 +14,7 @@
 
     <tal:nocond tal:condition="not:folderContents"
             tal:define="hide_listing hide_listing|python: False;">
-
-        <p class="filter-topic"></p>
-        <ul class="gallery-layout-selection"
-            tal:define="active_list python:' active-list' if not hide_listing else '';
-                     active_album python:' active-album' if not hide_album else '';">
-            <li><a href="#" tal:attributes="class string:list-layout${active_list}"></a></li>
-            <li><a href="#" tal:attributes="class string:album-layout${active_album}"></a></li>
-        </ul>
+        <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
         <div class="gallery-ajax visualClear">
         </div>
     </tal:nocond>
@@ -209,14 +202,17 @@
             </div>
 </metal:ajax-items>
 
-<metal:gallery-layout-selection metal:define-macro="gallery-layout-selection">
-     <p class="filter-topic"></p>
-     <ul class="gallery-layout-selection"
-         tal:define="active_list python:' active-list' if not hide_listing else '';
+    <metal:filter_topic metal:define-macro="filter-topic">
+        <p class="filter-topic hiddenStructure" i18n:translate="">Filtered by <span> &nbsp;</span></p>
+        <ul class="gallery-layout-selection"
+            tal:define="active_list python:' active-list' if not hide_listing else '';
                      active_album python:' active-album' if not hide_album else '';">
             <li><a href="#" tal:attributes="class string:list-layout${active_list}"></a></li>
             <li><a href="#" tal:attributes="class string:album-layout${active_album}"></a></li>
         </ul>
+    </metal:filter_topic>
+<metal:gallery-layout-selection metal:define-macro="gallery-layout-selection">
+        <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />
         <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </metal:gallery-layout-selection>
@@ -237,13 +233,7 @@
 </metal:condition>
 
 <metal:empty metal:define-macro="gallery-empty" tal:define="more_title string:All items;">
-     <p class="filter-topic"></p>
-     <ul class="gallery-layout-selection"
-         tal:define="active_list python:' active-list' if not hide_listing else '';
-                     active_album python:' active-album' if not hide_album else '';">
-            <li><a href="#" tal:attributes="class string:list-layout${active_list}"></a></li>
-            <li><a href="#" tal:attributes="class string:album-layout${active_album}"></a></li>
-        </ul>
+    <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
     <div class="gallery-ajax visualClear">
         <div class="gallery-listing">
         </div>

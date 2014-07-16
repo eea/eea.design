@@ -17,7 +17,7 @@ var SubCookieUtil = {
 
         if (cookieStart > -1){
             var cookieEnd = document.cookie.indexOf(";", cookieStart);
-            if (cookieEnd == -1){
+            if (cookieEnd === -1){
                 cookieEnd = document.cookie.length;
             }
             cookieValue = document.cookie.substring(cookieStart + cookieName.length, cookieEnd);

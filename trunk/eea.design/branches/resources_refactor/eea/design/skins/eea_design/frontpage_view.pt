@@ -52,7 +52,7 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                                 <li tal:repeat="tab tabnames">
                                     <a href="#"  i18n:translate=""
                                        tal:content="python:context.translate(tab, domain='eea')" class="block"
-                                       tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
+                                       tal:attributes="id python: 'tab-datamaps' if tab == context.translate('Data and maps', domain='eea') else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
                                 </li>
                             </ul>
                             <!-- end_tabs -->
