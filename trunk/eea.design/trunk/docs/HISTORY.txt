@@ -3,12 +3,15 @@ Changelog
 
 10.1-dev - (unreleased)
 -----------------------
+* Feature: show inactive content in folder_listing if user
+  has 'Access inactive portal content' permission.
+  [ghicaale refs #17865]
 
 10.0 - (2014-07-15)
 -------------------
 * Feature: allow editor to exclude page parts from PDF generation via
   a special style in tinymce.
-  Upgrade step:	Plone >	Site setup > TinyMCE > 
+  Upgrade step:	Plone >	Site setup > TinyMCE >
   In styles add line "Exclude from PDF|span|excludeFromPDF"
   [demarant #20255]
 * Bug fix: fixed icons placement for icons of soer2015 section navigation
