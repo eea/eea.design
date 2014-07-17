@@ -3,6 +3,8 @@ Changelog
 
 10.2-dev - (unreleased)
 -----------------------
+* Bug fix: fixed checkpermission import under folder_listing.pt
+  [ghicaale]
 
 10.1 - (2014-07-16)
 -------------------

@@ -43,7 +43,7 @@
             isAnon context/@@plone_portal_state/anonymous;
             defaultPage parent/default_page;
             context python: parent if defaultPage == id and context.portal_type == 'Document' else context;
-            showInactiveContent python: checkPermission('Access inactive portal content', here);
+            showInactiveContent python:context.portal_membership.checkPermission('Access inactive portal content', here);
             contentFilter contentFilter|request/contentFilter|nothing;
             contentFilter python:contentFilter and dict(contentFilter) or {};
             contentFilter python:{ 'review_state' : 'published' } if isAnon else contentFilter;
