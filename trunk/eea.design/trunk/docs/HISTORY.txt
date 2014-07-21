@@ -5,6 +5,8 @@ Changelog
 -----------------------
 * Bug fix: fixed checkpermission import under folder_listing.pt
   [ghicaale]
+* Feature: timeout dialog will appear after 15 minutes if the document is not saved.
+  [ghicaale refs #20389]
 
 10.1 - (2014-07-16)
 -------------------
