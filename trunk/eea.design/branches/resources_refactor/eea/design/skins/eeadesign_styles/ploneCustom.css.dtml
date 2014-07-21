@@ -1263,7 +1263,6 @@ h3.site-description {
 
 #cross-site-top .panel .portlet-subscribtion .portletFooter {
     margin-bottom: 0;
-    margin-bottom: 0;
 }
 
 #tip-siteaction-events {
