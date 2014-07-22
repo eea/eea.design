@@ -1,28 +1,9 @@
 <?xml version="1.0"?>
 <object name="portal_skins">
 
-
-    <object name="eeadesign_scripts" meta_type="Filesystem Directory View"
-            directory="eea.design:skins/eeadesign_scripts" />
-    <object name="eeadesign_templates_portlets" meta_type="Filesystem Directory View"
-            directory="eea.design:skins/eeadesign_templates_portlets" />
-
-    <object name="eea_overrides_javascripts" meta_type="Filesystem Directory View"
-            directory="eea.design:skins/eea_overrides_javascripts" />
-    <object name="eea_overrides_scripts" meta_type="Filesystem Directory View"
-            directory="eea.design:skins/eea_overrides_scripts" />
-    <object name="eea_overrides_styles" meta_type="Filesystem Directory View"
-            directory="eea.design:skins/eea_overrides_styles" />
-    <object name="eea_overrides_templates" meta_type="Filesystem Directory View"
-            directory="eea.design:skins/eea_overrides_templates" />
-
+    <object name="eeadesign_styles" meta_type="Filesystem Directory View"
+            directory="eea.design:skins/eeadesign_styles" />
     <skin-path name="*" purge="False">
-        <layer name="eeadesign_scripts" insert-after="eeadesign_fonts" />
-        <layer name="eeadesign_templates_portlets" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_javascripts" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_scripts" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_styles" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_templates" insert-after="eeadesign_fonts" />
+        <layer name="eeadesign_styles" insert-after="eeadesign_fonts" />
     </skin-path>
 </object>
-

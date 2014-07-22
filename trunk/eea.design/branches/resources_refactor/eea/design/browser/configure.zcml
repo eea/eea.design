@@ -12,7 +12,7 @@
     <browser:page
         for="*"
         name="main_template"
-        template="../skins/eea_design/main_template.pt"
+        template="../skins/eea_overrides_templates/main_template.pt"
         layer=".interfaces.IEEACommonLayer"
         permission="zope.Public" />
 
