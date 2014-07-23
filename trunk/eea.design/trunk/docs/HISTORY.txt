@@ -7,6 +7,8 @@ Changelog
   [ghicaale]
 * Feature: timeout dialog will appear after 15 minutes if the document is not saved.
   [ghicaale refs #20389]
+* Change: removed state "closed" from the list of states marked with "draft" background
+  [ghicaale refs #20490]
 
 10.1 - (2014-07-16)
 -------------------
