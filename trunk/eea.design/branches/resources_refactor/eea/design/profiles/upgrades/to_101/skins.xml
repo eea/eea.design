@@ -23,6 +23,17 @@
 
         <layer name="eeadesign_scripts" insert-after="eea_overrides_javascripts" />
         <layer name="eeadesign_templates_portlets" insert-after="eea_overrides_javascripts" />
+
+
+        <!--? Removed filesystem Directories -->
+        <object name="eeadesign_overrides" meta_type="Filesystem Directory View" directory="eea.design:skins/eeadesign_overrides" remove="True" />
+        <object name="eeadesign_fonts" meta_type="Filesystem Directory View" directory="eea.design:skins/eeadesign_fonts" remove="True" />
+        <object name="eeadesign_green" meta_type="Filesystem Directory View" directory="eea.design:skins/eeadesign_green" remove="True" />
+
+        <!--? Removed layers -->
+        <layer name="eeadesign_overrides" remove="True" />
+        <layer name="eeadesign_fonts" remove="True" />
+        <layer name="eeadesign_green" remove="True" />
     </skin-path>
 
 </object>
