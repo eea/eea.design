@@ -16,12 +16,13 @@
             directory="eea.design:skins/eea_overrides_templates" />
 
     <skin-path name="*" purge="False">
-        <layer name="eeadesign_scripts" insert-after="eeadesign_fonts" />
-        <layer name="eeadesign_templates_portlets" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_javascripts" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_scripts" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_styles" insert-after="eeadesign_fonts" />
-        <layer name="eea_overrides_templates" insert-after="eeadesign_fonts" />
+        <layer name="eea_overrides_javascripts" insert-after="custom" />
+        <layer name="eea_overrides_scripts" insert-after="eea_overrides_javascripts" />
+        <layer name="eea_overrides_styles" insert-after="eea_overrides_javascripts" />
+        <layer name="eea_overrides_templates" insert-after="eea_overrides_javascripts" />
+
+        <layer name="eeadesign_scripts" insert-after="eea_overrides_javascripts" />
+        <layer name="eeadesign_templates_portlets" insert-after="eea_overrides_javascripts" />
     </skin-path>
 
 </object>

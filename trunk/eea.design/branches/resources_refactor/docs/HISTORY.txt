@@ -3,6 +3,12 @@ Changelog
 
 10.1-dev - (unreleased)
 -----------------------
+* Pre-upgrade step: The upgrade step for eea.design should be the first thing
+  that needs to be done as soon as the instances are restarted to avoid
+  having missing or broken styles
+  [ichimdav refs #17336]
+* Change: reorganized resources within skins folders
+  [ichimdav refs #17336]
 
 10.0 - (2014-07-15)
 -------------------
