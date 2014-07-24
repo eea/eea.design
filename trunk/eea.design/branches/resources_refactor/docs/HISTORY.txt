@@ -5,7 +5,8 @@ Changelog
 -----------------------
 * Pre-upgrade step: The upgrade step for eea.design should be the first thing
   that needs to be done as soon as the instances are restarted to avoid
-  having missing or broken styles
+  having missing or broken styles.
+  Use www8 instance to run upgrade from www/portal_setup/manage_upgrades
   [ichimdav refs #17336]
 * Change: reorganized resources within skins folders
   [ichimdav refs #17336]
