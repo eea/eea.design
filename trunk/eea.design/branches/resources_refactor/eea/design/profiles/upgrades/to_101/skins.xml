@@ -16,24 +16,37 @@
             directory="eea.design:skins/eea_overrides_templates" />
 
     <skin-path name="*" purge="False">
+        <!--? eeadesign overrides layers -->
         <layer name="eea_overrides_javascripts" insert-after="custom" />
         <layer name="eea_overrides_scripts" insert-after="eea_overrides_javascripts" />
         <layer name="eea_overrides_styles" insert-after="eea_overrides_javascripts" />
         <layer name="eea_overrides_templates" insert-after="eea_overrides_javascripts" />
-
-        <layer name="eeadesign_scripts" insert-after="eea_overrides_javascripts" />
-        <layer name="eeadesign_templates_portlets" insert-after="eea_overrides_javascripts" />
+        <!--? eeadesign layers -->
+        <layer name="eeadesign_styles" insert-after="eea_overrides_templates" />
+        <layer name="eeadesign_js" insert-after="eeadesign_styles" />
+        <layer name="eeadesign_scripts" insert-after="eeadesign_js" />
+        <layer name="eeadesign_templates_portlets" insert-after="eeadesign_scripts" />
+        <layer name="eeadesign_templates" insert-after="eeadesign_templates_portlets" />
+        <layer name="eeadesign_style_docs" insert-after="eeadesign_public" />
+        <layer name="eeadesign_public" insert-after="eea_design_2011" />
+        <layer name="eea_design_2011" insert-after="wisetheme_images" />
+        <layer name="wisetheme_images" insert-after="eea_images" />
+        <layer name="eea_images" insert-after="eeadesign_green_images" />
+        <layer name="eeadesign_green_images" insert-after="eea_design" />
+        <layer name="eea_design" insert-before="eeapdf_styles" />
 
 
         <!--? Removed filesystem Directories -->
         <object name="eeadesign_overrides" meta_type="Filesystem Directory View" directory="eea.design:skins/eeadesign_overrides" remove="True" />
         <object name="eeadesign_fonts" meta_type="Filesystem Directory View" directory="eea.design:skins/eeadesign_fonts" remove="True" />
         <object name="eeadesign_green" meta_type="Filesystem Directory View" directory="eea.design:skins/eeadesign_green" remove="True" />
+        <object name="eeadesign_public_cmsandwww" meta_type="Filesystem Directory View" directory="eea.design:skins/eeadesign_public_cmsandwww" remove="True" />
 
         <!--? Removed layers -->
         <layer name="eeadesign_overrides" remove="True" />
         <layer name="eeadesign_fonts" remove="True" />
         <layer name="eeadesign_green" remove="True" />
+        <layer name="eeadesign_public_cmsandwww" remove="True" />
     </skin-path>
 
     <skin-path name="EEADesignCMS" purge="False">
