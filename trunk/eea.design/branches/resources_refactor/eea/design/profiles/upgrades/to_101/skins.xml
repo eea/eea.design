@@ -36,5 +36,9 @@
         <layer name="eeadesign_green" remove="True" />
     </skin-path>
 
+    <skin-path name="EEADesignCMS" purge="False">
+        <layer name="eeadesign_cms" insert-after="custom" />
+    </skin-path>
+
 </object>
 
