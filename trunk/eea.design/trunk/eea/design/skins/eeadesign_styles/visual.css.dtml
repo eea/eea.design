@@ -19,7 +19,7 @@
 #content.wf-state-visible,
 #content.wf-state-published_eionet,
 #content.wf-state-new,
-#content.wf-state-closed,
+/* #content.wf-state-closed, */ /* Due to #20490 */
 #content.wf-state-content_pending,
 #content.wf-state-draft,
 #content.wf-state-in-progress,
