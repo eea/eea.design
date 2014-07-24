@@ -19,21 +19,21 @@
         <!--? eeadesign overrides layers -->
         <layer name="eea_overrides_javascripts" insert-after="custom" />
         <layer name="eea_overrides_scripts" insert-after="eea_overrides_javascripts" />
-        <layer name="eea_overrides_styles" insert-after="eea_overrides_javascripts" />
-        <layer name="eea_overrides_templates" insert-after="eea_overrides_javascripts" />
+        <layer name="eea_overrides_styles" insert-after="eea_overrides_scripts" />
+        <layer name="eea_overrides_templates" insert-after="eea_overrides_styles" />
         <!--? eeadesign layers -->
         <layer name="eeadesign_styles" insert-after="eea_overrides_templates" />
         <layer name="eeadesign_js" insert-after="eeadesign_styles" />
         <layer name="eeadesign_scripts" insert-after="eeadesign_js" />
         <layer name="eeadesign_templates_portlets" insert-after="eeadesign_scripts" />
         <layer name="eeadesign_templates" insert-after="eeadesign_templates_portlets" />
-        <layer name="eeadesign_style_docs" insert-after="eeadesign_public" />
-        <layer name="eeadesign_public" insert-after="eea_design_2011" />
-        <layer name="eea_design_2011" insert-after="wisetheme_images" />
-        <layer name="wisetheme_images" insert-after="eea_images" />
-        <layer name="eea_images" insert-after="eeadesign_green_images" />
-        <layer name="eeadesign_green_images" insert-after="eea_design" />
-        <layer name="eea_design" insert-before="eeapdf_styles" />
+        <layer name="eeadesign_style_docs" insert-after="eeadesign_templates" />
+        <layer name="eeadesign_public" insert-after="eeadesign_style_docs" />
+        <layer name="eea_design_2011" insert-after="eeadesign_public" />
+        <layer name="wisetheme_images" insert-after="eea_design_2011" />
+        <layer name="eea_images" insert-after="wisetheme_images" />
+        <layer name="eeadesign_green_images" insert-after="eea_images" />
+        <layer name="eea_design" insert-after="eeadesign_green_images" />
 
 
         <!--? Removed filesystem Directories -->
