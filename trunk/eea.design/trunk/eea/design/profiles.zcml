@@ -102,4 +102,10 @@
             description='EEA Design upgrade profile for v9.5'
             provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+    <genericsetup:registerProfile
+            name="upgrade101"
+            title="EEA Design upgrade profile for v10.1"
+            directory="profiles/upgrades/to_101"
+            description='EEA Design upgrade profile for v10.1'
+            provides="Products.GenericSetup.interfaces.EXTENSION" />
 </configure>

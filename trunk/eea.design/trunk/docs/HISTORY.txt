@@ -3,6 +3,13 @@ Changelog
 
 10.2-dev - (unreleased)
 -----------------------
+* Pre-upgrade step: The upgrade step for eea.design should be the first thing
+  that needs to be done as soon as the instances are restarted to avoid
+  having missing or broken styles.
+  Use www8 instance to run upgrade from www/portal_setup/manage_upgrades
+  [ichimdav refs #17336]
+* Change: reorganized resources within skins folders
+  [ichimdav refs #17336]
 * Bug fix: fixed checkpermission import under folder_listing.pt
   [ghicaale]
 * Feature: timeout dialog will appear after 15 minutes if the document is not saved.
@@ -20,7 +27,7 @@ Changelog
 -------------------
 * Feature: allow editor to exclude page parts from PDF generation via
   a special style in tinymce.
-  Upgrade step:	Plone >	Site setup > TinyMCE >
+  Upgrade step:	Plone >	Site setup > TinyMCE > 
   In styles add line "Exclude from PDF|span|excludeFromPDF"
   [demarant #20255]
 * Bug fix: fixed icons placement for icons of soer2015 section navigation

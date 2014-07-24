@@ -5,7 +5,7 @@
 ##bind script=script
 ##bind subpath=traverse_subpath
 ##parameters=contentFilter=None,batch=False,b_size=100,full_objects=False
-##title=show all languages on www-cms
+##title=wrapper method around to use catalog to get folder contents
 ##
 
 mtool = context.portal_membership
@@ -13,7 +13,6 @@ cur_path = '/'.join(context.getPhysicalPath())
 path = {}
 
 if not contentFilter:
-#    contentFilter = {}
     # The form and other are what really matters
     contentFilter = dict(getattr(context.REQUEST, 'form',{}))
     contentFilter.update(dict(getattr(context.REQUEST, 'other',{})))
@@ -27,8 +26,6 @@ if contentFilter.get('path', None) is None:
     path['query'] = cur_path
     path['depth'] = 1
     contentFilter['path'] = path
-
-contentFilter['Language'] = 'all'
 try:
     show_inactive = mtool.checkPermission('Access inactive portal content', context)
 except:
@@ -37,6 +34,10 @@ except:
     # i.e private :)
     show_inactive = False
 
+if mtool.isAnonymousUser() and contentFilter.get('review_state', None) is None:
+    contentFilter['review_state'] = 'published'
+
+contentFilter['Language'] = 'all'
 # Provide batching hints to the catalog
 b_start = int(context.REQUEST.get('b_start', 0))
 contentFilter['b_start'] = b_start
@@ -45,7 +46,7 @@ contentFilter['b_size'] = b_size
 # Evaluate in catalog context because some containers override queryCatalog
 # with their own unrelated method (Topics)
 contents = context.portal_catalog.queryCatalog(contentFilter, show_all=1,
-    show_inactive=show_inactive, )
+                                                  show_inactive=show_inactive)
 
 if full_objects:
     contents = [b.getObject() for b in contents]
