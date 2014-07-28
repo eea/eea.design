@@ -8,6 +8,8 @@ Changelog
   having missing or broken styles.
   Use www8 instance to run upgrade from www/portal_setup/manage_upgrades
   [ichimdav refs #17336]
+* Change: Add space after ul within #content-core
+  [voineali refs #20457]
 * Change: reorganized resources within skins folders
   [ichimdav refs #17336]
 * Bug fix: fixed checkpermission import under folder_listing.pt
@@ -27,7 +29,7 @@ Changelog
 -------------------
 * Feature: allow editor to exclude page parts from PDF generation via
   a special style in tinymce.
-  Upgrade step:	Plone >	Site setup > TinyMCE > 
+  Upgrade step:	Plone >	Site setup > TinyMCE >
   In styles add line "Exclude from PDF|span|excludeFromPDF"
   [demarant #20255]
 * Bug fix: fixed icons placement for icons of soer2015 section navigation

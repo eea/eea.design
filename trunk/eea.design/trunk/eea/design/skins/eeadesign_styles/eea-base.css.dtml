@@ -7,7 +7,7 @@
     clear:both;
 }
 */
-#content-core p, 
+#content-core p,
 #content-core li {
     font-size: 115%;
 }
@@ -44,6 +44,10 @@ hr {
     line-height: 1.5em;
     margin: 0.5em 0 0 2.5em;
     list-style-image: none;
+}
+
+#content-core ul {
+  margin-bottom: 1.5em;
 }
 
 li {
