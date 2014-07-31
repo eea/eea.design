@@ -13,7 +13,7 @@
 
 /*
 ** Watermark style
-** for content that is not pub;lished
+** for content that is not published
 */
 
 #content.wf-state-visible,
@@ -27,7 +27,18 @@
 #content.wf-state-rejected,
 #content.wf-state-retracted,
 #content.wf-state-submitted,
-#content.wf-state-webqa_pending {
+#content.wf-state-marked_for_deletion,
+#content.wf-state-published_internally,
+#content.wf-state-webqa_pending,
+#content.wf-state-redraft_and_web_integration,
+#content.wf-state-final_revision,
+#content.wf-state-proofreading,
+#content.wf-state-ready_for_eionet_review,
+#content.wf-state-web_editing,
+#content.wf-state-web_integration,
+#content.wf-state-in-progress,
+#content.wf-state-obsolete,
+#content.wf-state-pending {
    background: url(&dtml-portal_url;/draft.png);
 }
 

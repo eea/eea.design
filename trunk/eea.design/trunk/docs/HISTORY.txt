@@ -18,6 +18,8 @@ Changelog
   [ghicaale refs #20389]
 * Change: removed state "closed" from the list of states marked with "draft" background
   [ghicaale refs #20490]
+* Feature: added "draft" watermark for all non-final-published states
+  [ghicaale refs #18538]
 
 10.1 - (2014-07-16)
 -------------------
