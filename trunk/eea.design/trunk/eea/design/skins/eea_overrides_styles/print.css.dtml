@@ -155,6 +155,10 @@ div.metadata-switch {
     page-break-before: always;
 }
 
+.noPageBreak {
+  page-break-inside: avoid;
+}
+
 /* Basic styles for listing and document views */
 #content dt {
     margin:1em 0 0.625em;
