@@ -2344,12 +2344,20 @@ input[disabled], #plonebrowser input[disabled] {
     content: "Print Page Break used for breaking a page when printing";
 }
 
-.mceContentBody .excludeFromPDF:before {
+.mceContentBody .excludeFromPDF:before,
+.mceContentBody .noPageBreak:before {
     margin-right: .3em;
     padding: .3em;
     background-color: &dtml-corporateBlueBackgroundColor;;
     font-family: 'FontAwesome';
     content: "Excluded from PDF \f0a4";
+}
+
+.mceContentBody .noPageBreak {
+    background-color: &dtml-corporateBlueBackgroundColor;;
+}
+.mceContentBody .noPageBreak:before {
+    content: "No page break \f0a4";
 }
 
 /* #16916; hide the background images on view pages as they should only appear within the
