@@ -27,6 +27,11 @@ Changelog
 * Feature: blocked collective.deletepermission profile not to be installed
   (by mistake) via site setup
   [ghicaale refs #17478]
+* Change: removed block_ldapuserfolder_profile.js as I registered new
+  handlers to block un-wanted profiles
+  [ghicaale refs #17478]
+* Upgrade step: under /www/portal_javascripts/manage_jsForm remove block_ldapuserfolder_profile.js
+  [ghicaale refs #17478]
 
 10.1 - (2014-07-16)
 -------------------
@@ -38,7 +43,7 @@ Changelog
 -------------------
 * Feature: allow editor to exclude page parts from PDF generation via
   a special style in tinymce.
-  Upgrade step:	Plone >	Site setup > TinyMCE >
+  Upgrade step: Plone > Site setup > TinyMCE >
   In styles add line "Exclude from PDF|span|excludeFromPDF"
   [demarant #20255]
 * Bug fix: fixed icons placement for icons of soer2015 section navigation
