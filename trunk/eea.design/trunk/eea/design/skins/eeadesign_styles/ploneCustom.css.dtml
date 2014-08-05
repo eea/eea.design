@@ -2303,8 +2303,8 @@ input[disabled], #plonebrowser input[disabled] {
     background:#FFF
 }
 
-.mce_fullscreen {
-    width: 200px;
+.ploneSkin .mce_fullscreen {
+    width: 170px !important; /* 20461; enlarge fullscreen button since it contains description text */
 }
 .mce_fullscreen > .mceVoiceLabel {
     position: relative;
