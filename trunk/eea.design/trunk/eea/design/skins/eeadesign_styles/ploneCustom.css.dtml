@@ -2303,10 +2303,12 @@ input[disabled], #plonebrowser input[disabled] {
     background:#FFF
 }
 
+.mce_fullscreen {
+    width: 200px;
+}
 .mce_fullscreen > .mceVoiceLabel {
     position: relative;
-    top: -21px;
-    width: 200px;
+    top: -18px;
     display: block !important;
     font-size: 12px;
     left: 21px;

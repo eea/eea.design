@@ -3,6 +3,8 @@ Changelog
 
 10.2-dev - (unreleased)
 -----------------------
+* Change: fullscreen button help text now spans over entire button
+  [ichimdav refs #20461]
 * Change: added styling for noPageBreak on TinyMCE body
   [ichimdav 20461]
 * Pre-upgrade step: The upgrade step for eea.design should be the first thing
