@@ -22,6 +22,9 @@ Changelog
   [ghicaale refs #20490]
 * Feature: added "draft" watermark for all non-final-published states
   [ghicaale refs #18538]
+* Feature: blocked collective.deletepermission profile not to be installed
+  (by mistake) via site setup
+  [ghicaale refs #17478]
 
 10.1 - (2014-07-16)
 -------------------
