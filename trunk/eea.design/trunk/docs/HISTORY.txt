@@ -3,6 +3,10 @@ Changelog
 
 10.2-dev - (unreleased)
 -----------------------
+* Change: subfolder folder_contents method now accepts a new parameter
+  include_excluded_objects for situations where we want to show content listings
+  for objects that were excluded from navigation
+  [ichimdav refs #20124]
 * Change: fullscreen button help text now spans over entire button
   [ichimdav refs #20461]
 * Change: added styling for noPageBreak on TinyMCE body
