@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
     'use strict';
     var ie = $.browser.msie && parseInt($.browser.version, 10);
 
+
     // #16878 move last two links of globalnav to a secundary container
     var secundary_portaltabs = $("<ul id='secundary-portaltabs'></ul>"),
         global_nav = $('#portal-globalnav'),
@@ -45,6 +46,15 @@ jQuery(document).ready(function($) {
     catch(err) {
         // console.log(err);
     }
+    // #20302; save state on submit attempt
+    $("form[name='edit_form']").submit(function(){
+        var $this = $(this);
+        if ($this.rememberState) {
+            $this.rememberState({
+                objName: window.location.href
+            });
+        }
+    });
 
     // #5454 remove background for required fields that have the red square
     $(".required:contains('■')").addClass('no-bg');
