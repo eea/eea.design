@@ -55,9 +55,7 @@ jQuery(document).ready(function($) {
                         objName: window.location.href,
                         clearOnSubmit: false
                     };
-//            edit_form.rememberState(options).submit(false);
             edit_form.submit(function(){
-                debugger;
                 var $this = $(this);
                 if ($this.rememberState) {
                     $this.rememberState(options);
