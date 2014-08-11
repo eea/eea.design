@@ -47,14 +47,25 @@ jQuery(document).ready(function($) {
         // console.log(err);
     }
     // #20302; save state on submit attempt
-    $("form[name='edit_form']").submit(function(){
-        var $this = $(this);
-        if ($this.rememberState) {
-            $this.rememberState({
-                objName: window.location.href
+
+    var edit_form = $("form[name='edit_form']");
+    if (edit_form) {
+        (function() {
+            var options = {
+                        objName: window.location.href,
+                        clearOnSubmit: false
+                    };
+//            edit_form.rememberState(options).submit(false);
+            edit_form.submit(function(){
+                debugger;
+                var $this = $(this);
+                if ($this.rememberState) {
+                    $this.rememberState(options);
+                }
             });
-        }
-    });
+        }());
+    }
+
 
     // #5454 remove background for required fields that have the red square
     $(".required:contains('■')").addClass('no-bg');

@@ -46,7 +46,7 @@ class SubFolderView(BrowserView):
 
 
     def folder_contents(self, size_limit=10, folderContents=None,
-                        obj_link=None, include_excluded_objects=None):
+                        obj_link=None):
         """ Get the folderish items in cachable list/dict format
         """
         size_limit = int(self.request.get('size_limit', size_limit))
@@ -69,9 +69,6 @@ class SubFolderView(BrowserView):
 
         for brain in folderContents:
             if brain.getURL() == self.context.absolute_url():
-                continue
-            # don't add contenttypes that are excluded from navigation
-            if brain.exclude_from_nav and not include_excluded_objects:
                 continue
 
             obj = brain.getObject()

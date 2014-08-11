@@ -11,11 +11,10 @@
         <metal:listingmacro define-macro="listing" tal:define="subfolderView subfolderView|context/@@subfolder_view_logic;
                                                                folderContents folderContents|python:None">
             <tal:foldercontents tal:define="formattedFolderContents python:subfolderView.folder_contents(
-                    folderContents=folderContents, include_excluded_objects=True);
+                    folderContents=folderContents);
                                             nonFolderishItems formattedFolderContents/nonfolderish; 
                                             FolderishItems formattedFolderContents/folderish;
                                             hideNonFolderishItems context/hideOtherResultsFromAccordionView|python:False">
-
           <div class="listingBar" style="display: none"></div>
             <div class="eea-accordion-panels">
                 <tal:children tal:repeat="child FolderishItems">
