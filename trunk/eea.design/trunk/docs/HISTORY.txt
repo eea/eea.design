@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.3-dev - (unreleased)
+-----------------------
+
 10.2 - (2014-08-12)
 -------------------
 * Change: subfolder folder_contents now display content excluded from navigation
