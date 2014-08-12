@@ -47,22 +47,21 @@ jQuery(document).ready(function($) {
         // console.log(err);
     }
     // #20302; save state on submit attempt
-
-    var edit_form = $("form[name='edit_form']");
-    if (edit_form) {
-        (function() {
-            var options = {
-                        objName: window.location.href,
-                        clearOnSubmit: false
-                    };
-            edit_form.submit(function(){
-                var $this = $(this);
-                if ($this.rememberState) {
-                    $this.rememberState(options);
-                }
-            });
-        }());
-    }
+    //    var edit_form = $("form[name='edit_form']");
+    //    if (edit_form) {
+    //        (function() {
+    //            var options = {
+    //                        objName: window.location.href,
+    //                        clearOnSubmit: false
+    //                    };
+    //            edit_form.submit(function(){
+    //                var $this = $(this);
+    //                if ($this.rememberState) {
+    //                    $this.rememberState(options);
+    //                }
+    //            });
+    //        }());
+    //    }
 
 
     // #5454 remove background for required fields that have the red square
