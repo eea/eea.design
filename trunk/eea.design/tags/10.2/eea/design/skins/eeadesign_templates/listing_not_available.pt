@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="eea">
+
+<head>
+    <metal:top fill-slot="top_slot">
+        <tal:border define="dummy python:request.set('disable_border', 1)"/>
+    </metal:top>
+</head>
+
+<body>
+
+<metal:main metal:fill-slot="main">
+
+
+    <h1 i18n:translate="">
+        Listing not available
+    </h1>
+
+    <p i18n:translate="">
+        The folder you are trying to access is still in draft and therefore its
+        content cannot be listed. If you are a content manager of this site,
+        you need to login and publish this folder. 
+    </p>
+
+
+</metal:main>
+
+</body>
+</html>
