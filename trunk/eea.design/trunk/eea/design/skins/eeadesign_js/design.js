@@ -1,7 +1,14 @@
 /* global jQuery window */
 jQuery(document).ready(function($) {
     'use strict';
-    var ie = $.browser.msie && parseInt($.browser.version, 10);
+    var ie;
+    if ($.browser) {
+	ie = $.browser.msie && parseInt($.browser.version, 10);
+    } else {
+	var nav = navigator.userAgent;
+	ie = nav.indexOf('MSIE');
+	ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
+    }
 
 
     // #16878 move last two links of globalnav to a secundary container
