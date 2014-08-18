@@ -2,6 +2,7 @@ jQuery(document).ready(function($) {
     'use strict';
 //    #20302; save state on submit attempt and remove it on success
     var url_path_name = window.location.pathname;
+    var saved_search_path = window.location.search.indexOf("Changes%20saved");
     window.EEA = window.EEA || {};
     window.EEA.storage_utils = {};
     var storage_utils = window.EEA.storage_utils;
@@ -62,5 +63,10 @@ jQuery(document).ready(function($) {
                     .end().removeClass('visualHidden');
             }
         }());
+    }
+
+    // remove form state on successful form submission
+    if (saved_search_path) {
+        storage_utils.delLocalStorageEntry(url_path_name);
     }
 });
