@@ -1,6 +1,7 @@
 /* global jQuery window */
 jQuery(document).ready(function($) {
     'use strict';
+    var url_path_name = window.location.pathname;
     var ie;
     if ($.browser) {
 	ie = $.browser.msie && parseInt($.browser.version, 10);
