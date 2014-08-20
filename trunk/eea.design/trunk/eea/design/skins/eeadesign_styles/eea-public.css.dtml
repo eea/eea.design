@@ -93,6 +93,15 @@ a:active { color: &dtml-linkActiveColor;; }
 }
 /* @end Site actions */
 
+
+/* @group Image alignment classes */
+img.image-left,
+img.image-right,
+.captioned img {
+    border: 0;
+}
+/* @end */
+
 /* @group Footer */
 
 #portal-footer {

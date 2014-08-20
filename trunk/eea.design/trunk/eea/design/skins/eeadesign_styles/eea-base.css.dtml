@@ -38,6 +38,7 @@ hr {
     margin: 0 0 0 1.5em;
     list-style-image: url(&dtml-portal_url;/bullet.gif);
     list-style-type: square;
+    list-style-position: inside;
 }
 
 #region-content ol, ol {
