@@ -3,8 +3,8 @@
         i18n:domain="eea">
 
 <div metal:define-macro="portlet" id="js-portletRestoreForm" class="portlet">
-        <h2 class="portletHeader" i18n:translate="">Locally saved form</h2>
-        <p class="discreet" i18n:translate="">We detected that your last attempt to save ended in a timeout</p>
+        <h2 class="portletHeader" i18n:translate="">Locally saved form input</h2>
+        <p class="discreet" i18n:translate="">We detected that your last attempt to save ended in an error</p>
         <p class="" i18n:translate="">Would you like to restore the form state found at the time of your last save attempt?</p>
 </div>
 </tal:content>

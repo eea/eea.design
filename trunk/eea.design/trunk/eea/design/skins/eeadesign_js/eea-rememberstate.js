@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     var url_path_name = window.location.pathname;
     var search_path = window.location.search;
     var saved_search_path = search_path.indexOf("Changes%20saved");
-    var timeout_search_path = search_path.indexOf('timeout=True');
+    var error_search_path = search_path.indexOf('errored=True');
     window.EEA = window.EEA || {};
     window.EEA.storage_utils = {};
     var storage_utils = window.EEA.storage_utils;
@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
 
             var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
             if (edit_form_data) {
-                if (timeout_search_path !== -1) {
+                if (error_search_path !== -1) {
                     (function(){
                         $.get('/restore_form_values')
                             .done(function( data ) {
