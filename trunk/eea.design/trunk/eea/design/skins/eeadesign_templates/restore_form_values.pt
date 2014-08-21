@@ -6,5 +6,6 @@
         <h2 class="portletHeader" i18n:translate="">Locally saved form input</h2>
         <p class="discreet" i18n:translate="">We detected that your last attempt to save ended in an error</p>
         <p class="" i18n:translate="">Would you like to restore the form state found at the time of your last save attempt?</p>
+        <p class="discreet" i18n:translate=""><span class="eea-icon eea-icon-info-circle eea-icon-lg"></span>Note: not all widgets will display the values or function correctly after the restore so we advice you to save and reedit if you need to continue your editing work</p>
 </div>
 </tal:content>
