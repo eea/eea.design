@@ -68,8 +68,26 @@ jQuery(document).ready(function($) {
                                 portlet_restore.dialog({
                                     buttons: {
                                         'Yes': function() {
-                                            edit_form.data("rememberState", {"objName": url_path_name, "$el": edit_form});
+                                            var $tmpl = $("<li class='token-input-token-facebook'><p></p>" +
+                                                         "<span class='token-input-delete-token-facebook'>×</span></li>");
+                                            var restoreCallback = function($el, data){
+                                                var name = $el.attr('name');
+                                                if (name === "subject_keywords:lines" || name === "temporalCoverage:lines") {
+                                                    (function(){
+                                                        var $ul = $el.prev();
+                                                        $ul.empty();
+                                                        var values = data['value'].split('\r');
+                                                        var i, length, value;
+                                                        for (i = 0, length = values.length; i < length; i+= 1) {
+                                                            value = values[i].trim();
+                                                            $tmpl.clone().find('p').text(value).end().appendTo($ul);
+                                                        }
+                                                    }());
+                                                }
+                                            };
+                                            edit_form.data("rememberState", {"objName": url_path_name, "$el": edit_form, "onRestoreCallback": restoreCallback});
                                             edit_form.rememberState('restoreState');
+
                                             $(this).dialog('close');
                                         },
                                         'No': function() {
