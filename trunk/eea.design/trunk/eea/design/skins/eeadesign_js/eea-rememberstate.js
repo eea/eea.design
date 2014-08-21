@@ -38,7 +38,8 @@ jQuery(document).ready(function($) {
     };
 
     var edit_form = $("form[name='edit_form']");
-    if (edit_form) {
+    var edit_form_found = edit_form.length;
+    if (edit_form_found) {
         (function() {
             var options = {
                 objName: url_path_name,
@@ -60,7 +61,7 @@ jQuery(document).ready(function($) {
 
             var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
             if (edit_form_data) {
-                if (error_search_path !== -1) {
+                if (error_search_path !== -1 && edit_form_found) {
                     (function(){
                         $.get('/restore_form_values')
                             .done(function( data ) {
