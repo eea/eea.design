@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
             if (edit_form_data) {
                 if (error_search_path !== -1 && edit_form_found) {
                     (function(){
-                        $.get('/restore_form_values')
+                        $.get('/www/restore_form_values')
                             .done(function( data ) {
                                 var portlet_restore = $(data);
                                 portlet_restore.dialog({
@@ -77,12 +77,14 @@ jQuery(document).ready(function($) {
                                                     (function(){
                                                         var $ul = $el.prev();
                                                         $ul.empty();
-                                                        var values = data['value'].split('\r');
+                                                        var data_value = data['value'];
+                                                        var values = data_value.split('\r');
                                                         var i, length, value;
                                                         for (i = 0, length = values.length; i < length; i+= 1) {
                                                             value = values[i].trim();
                                                             $tmpl.clone().find('p').text(value).end().appendTo($ul);
                                                         }
+                                                        $el.val(data_value);
                                                     }());
                                                 }
                                             };
