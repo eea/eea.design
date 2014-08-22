@@ -75,16 +75,15 @@ jQuery(document).ready(function($) {
                                                 var name = $el.attr('name');
                                                 if (name === "subject_keywords:lines" || name === "temporalCoverage:lines") {
                                                     (function(){
-                                                        var $ul = $el.prev();
-                                                        $ul.empty();
+                                                        $el.tokenInput("clear");
                                                         var data_value = data['value'];
                                                         var values = data_value.split('\r');
                                                         var i, length, value;
+
                                                         for (i = 0, length = values.length; i < length; i+= 1) {
                                                             value = values[i].trim();
-                                                            $tmpl.clone().find('p').text(value).end().appendTo($ul);
+                                                            $el.tokenInput("add", {name: value, id: value});
                                                         }
-                                                        $el.val(data_value);
                                                     }());
                                                 }
                                             };
