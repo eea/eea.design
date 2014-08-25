@@ -45,8 +45,9 @@ jQuery(document).ready(function($) {
     var edit_form_found = edit_form.length;
     if (edit_form_found) {
         (function() {
+            var obj_name = storage_utils.getLocalStorageKey(url_path_name) || url_path_name;
             var options = {
-                objName: url_path_name,
+                objName: obj_name,
                 clearOnSubmit: false,
                 onSaveCallback: function(values) {
                     values.push({
@@ -117,7 +118,6 @@ jQuery(document).ready(function($) {
                                                     $themes_insert_btn.click();
                                                 }
                                             };
-                                            var obj_name = storage_utils.getLocalStorageKey(url_path_name) || url_path_name;
                                             edit_form.data("rememberState", {"objName": obj_name, "$el": edit_form, "onRestoreCallback": restoreCallback, "onSelectTagCallback": selectCallback });
                                             edit_form.rememberState('restoreState');
 
