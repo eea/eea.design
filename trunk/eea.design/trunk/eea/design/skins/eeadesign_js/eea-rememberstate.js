@@ -45,7 +45,6 @@ jQuery(document).ready(function($) {
     var edit_form_found = edit_form.length;
     if (edit_form_found) {
         (function() {
-            debugger;
             var obj_name = storage_utils.getLocalStorageKey(url_path_name) || url_path_name;
             var options = {
                 objName: obj_name,
@@ -139,7 +138,6 @@ jQuery(document).ready(function($) {
 
     // remove form state on successful form submission
     if (saved_search_path) {
-        debugger;
         storage_utils.delLocalStorageEntry(url_path_name);
     }
 });
