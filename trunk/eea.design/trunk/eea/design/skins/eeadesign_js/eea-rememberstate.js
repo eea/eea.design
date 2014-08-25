@@ -137,7 +137,7 @@ jQuery(document).ready(function($) {
     }
 
     // remove form state on successful form submission
-    if (saved_search_path) {
+    if (saved_search_path !== -1) {
         storage_utils.delLocalStorageEntry(url_path_name);
     }
 });
