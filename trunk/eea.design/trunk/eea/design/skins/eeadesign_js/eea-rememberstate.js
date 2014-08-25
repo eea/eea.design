@@ -8,8 +8,12 @@ jQuery(document).ready(function($) {
     window.EEA = window.EEA || {};
     window.EEA.storage_utils = {};
     var storage_utils = window.EEA.storage_utils;
+    storage_utils.getLocalStorageKey = function(name) {
+        return window.localStorage.key(name);
+    };
+
     storage_utils.getLocalStorageEntry = function(key) {
-        var storage_key = window.localStorage.key(key);
+        var storage_key = storage_utils.getLocalStorageKey(key);
 //        if (storage_key  !== key) {
 //            return null;
 //        }
@@ -17,7 +21,7 @@ jQuery(document).ready(function($) {
     };
 
     storage_utils.delLocalStorageEntry = function(key) {
-        var storage_key = window.localStorage.key(key);
+        var storage_key = storage_utils.getLocalStorageKey(key);
 //        if (storage_key  !== key) {
 //            return null;
 //        }
@@ -113,7 +117,8 @@ jQuery(document).ready(function($) {
                                                     $themes_insert_btn.click();
                                                 }
                                             };
-                                            edit_form.data("rememberState", {"objName": url_path_name, "$el": edit_form, "onRestoreCallback": restoreCallback, "onSelectTagCallback": selectCallback });
+                                            var obj_name = storage_utils.getLocalStorageKey(url_path_name) || url_path_name;
+                                            edit_form.data("rememberState", {"objName": obj_name, "$el": edit_form, "onRestoreCallback": restoreCallback, "onSelectTagCallback": selectCallback });
                                             edit_form.rememberState('restoreState');
 
                                             $(this).dialog('close');
