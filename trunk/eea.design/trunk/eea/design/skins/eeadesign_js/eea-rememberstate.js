@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     'use strict';
 //    #20302; save state on submit attempt and remove it on success
-    var url_path_name = window.location.pathname;
+    var url_path_name = $("base").attr('href');
     var search_path = window.location.search;
     var saved_search_path = search_path.indexOf("Changes%20saved");
     var error_search_path = search_path.indexOf('errored=True');
@@ -14,17 +14,17 @@ jQuery(document).ready(function($) {
 
     storage_utils.getLocalStorageEntry = function(key) {
         var storage_key = storage_utils.getLocalStorageKey(key);
-//        if (storage_key  !== key) {
-//            return null;
-//        }
+        if (storage_key  !== key) {
+            return null;
+        }
         return storage_key ? window.localStorage.getItem(storage_key) : null;
     };
 
     storage_utils.delLocalStorageEntry = function(key) {
         var storage_key = storage_utils.getLocalStorageKey(key);
-//        if (storage_key  !== key) {
-//            return null;
-//        }
+        if (storage_key  !== key) {
+            return null;
+        }
         return storage_key ? window.localStorage.removeItem(storage_key) : null;
     };
 
@@ -45,6 +45,7 @@ jQuery(document).ready(function($) {
     var edit_form_found = edit_form.length;
     if (edit_form_found) {
         (function() {
+            debugger;
             var obj_name = storage_utils.getLocalStorageKey(url_path_name) || url_path_name;
             var options = {
                 objName: obj_name,
@@ -125,7 +126,7 @@ jQuery(document).ready(function($) {
                                         },
                                         'No': function() {
                                             $(this).dialog('close');
-                                            storage_utils.delLocalStorageEntry(url_path_name + '/edit');
+                                            storage_utils.delLocalStorageEntry(url_path_name);
                                         }
                                     }
                                 });
@@ -138,6 +139,7 @@ jQuery(document).ready(function($) {
 
     // remove form state on successful form submission
     if (saved_search_path) {
-        storage_utils.delLocalStorageEntry(url_path_name + '/edit');
+        debugger;
+        storage_utils.delLocalStorageEntry(url_path_name);
     }
 });
