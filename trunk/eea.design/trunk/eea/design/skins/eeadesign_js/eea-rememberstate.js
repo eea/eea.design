@@ -71,6 +71,7 @@ jQuery(document).ready(function($) {
                                         'Yes': function() {
                                             var $tmpl = $("<li class='token-input-token-facebook'><p></p>" +
                                                          "<span class='token-input-delete-token-facebook'>×</span></li>");
+                                            var cleaned_select = false;
                                             var restoreCallback = function($el, data){
                                                 var name = $el.attr('name');
                                                 if (name === "subject_keywords:lines" || name === "temporalCoverage:lines") {
@@ -87,7 +88,18 @@ jQuery(document).ready(function($) {
                                                     }());
                                                 }
                                             };
-                                            edit_form.data("rememberState", {"objName": url_path_name, "$el": edit_form, "onRestoreCallback": restoreCallback});
+                                            var selectCallback = function($el, data){
+                                                var name = $el.attr('name');
+                                                var value = data.value;
+                                                if (name === "relatedItems:list") {
+                                                    if (!cleaned_select) {
+                                                         cleaned_select = true;
+                                                         $el.empty();
+                                                    }
+                                                    $("<option>", {value: value, selected: true}).text(value).appendTo($el);
+                                                }
+                                            };
+                                            edit_form.data("rememberState", {"objName": url_path_name, "$el": edit_form, "onRestoreCallback": restoreCallback, "onSelectTagCallback": selectCallback });
                                             edit_form.rememberState('restoreState');
 
                                             $(this).dialog('close');
