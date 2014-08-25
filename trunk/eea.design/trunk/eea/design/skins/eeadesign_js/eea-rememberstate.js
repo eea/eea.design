@@ -5,27 +5,18 @@ jQuery(document).ready(function($) {
     var search_path = window.location.search;
     var saved_search_path = search_path.indexOf("Changes%20saved");
     var error_search_path = search_path.indexOf('errored=True');
+    var referrer = document.referrer;
     window.EEA = window.EEA || {};
     window.EEA.storage_utils = {};
     var storage_utils = window.EEA.storage_utils;
-    storage_utils.getLocalStorageKey = function(name) {
-        return window.localStorage.key(name);
-    };
+    var local_storage = window.localStorage;
 
     storage_utils.getLocalStorageEntry = function(key) {
-        var storage_key = storage_utils.getLocalStorageKey(key);
-        if (storage_key  !== key) {
-            return null;
-        }
-        return storage_key ? window.localStorage.getItem(storage_key) : null;
+        return local_storage.getItem(key);
     };
 
     storage_utils.delLocalStorageEntry = function(key) {
-        var storage_key = storage_utils.getLocalStorageKey(key);
-        if (storage_key  !== key) {
-            return null;
-        }
-        return storage_key ? window.localStorage.removeItem(storage_key) : null;
+        return local_storage.removeItem(key);
     };
 
     storage_utils.getLocalStorageEntryValue = function(storage, value) {
@@ -45,9 +36,8 @@ jQuery(document).ready(function($) {
     var edit_form_found = edit_form.length;
     if (edit_form_found) {
         (function() {
-            var obj_name = storage_utils.getLocalStorageKey(url_path_name) || url_path_name;
             var options = {
-                objName: obj_name,
+                objName: url_path_name,
                 clearOnSubmit: false,
                 onSaveCallback: function(values) {
                     values.push({
@@ -118,7 +108,7 @@ jQuery(document).ready(function($) {
                                                     $themes_insert_btn.click();
                                                 }
                                             };
-                                            edit_form.data("rememberState", {"objName": obj_name, "$el": edit_form, "onRestoreCallback": restoreCallback, "onSelectTagCallback": selectCallback });
+                                            edit_form.data("rememberState", {"objName": url_path_name, "$el": edit_form, "onRestoreCallback": restoreCallback, "onSelectTagCallback": selectCallback });
                                             edit_form.rememberState('restoreState');
 
                                             $(this).dialog('close');
@@ -138,6 +128,16 @@ jQuery(document).ready(function($) {
 
     // remove form state on successful form submission
     if (saved_search_path !== -1) {
-        storage_utils.delLocalStorageEntry(url_path_name);
+        if (referrer.indexOf('portal_factory') !== -1) {
+            (function() {
+               var edit_ref = referrer.substring(0, referrer.length - 5);
+               var atct_edit_ref = referrer.substring(0, referrer.length - 10);
+                storage_utils.delLocalStorageEntry(edit_ref);
+                storage_utils.delLocalStorageEntry(atct_edit_ref);
+            }());
+        }
+        else {
+            storage_utils.delLocalStorageEntry(url_path_name);
+        }
     }
 });
