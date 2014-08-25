@@ -4,7 +4,6 @@ jQuery(document).ready(function($) {
     var url_path_name = window.location.pathname;
     var search_path = window.location.search;
     var saved_search_path = search_path.indexOf("Changes%20saved");
-    var error_search_path = search_path.indexOf('errored=True');
     window.EEA = window.EEA || {};
     window.EEA.storage_utils = {};
     var storage_utils = window.EEA.storage_utils;
@@ -61,7 +60,7 @@ jQuery(document).ready(function($) {
 
             var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
             if (edit_form_data) {
-                if (error_search_path !== -1 && edit_form_found) {
+                if (edit_form_found && edit_form_data) {
                     (function(){
                         $.get('/www/restore_form_values')
                             .done(function( data ) {
