@@ -75,8 +75,8 @@ jQuery(document).ready(function($) {
                                             var cleaned_themes = false;
                                             var $themes_options = $("#themes_options");
                                             var $themes_buttons = $('.context');
-                                            var $themes_insert_btn = $themes_buttons.eq(0);
-                                            var $themes_remove_btn = $themes_buttons.eq(1);
+                                            var $themes_insert_btn = $themes_buttons.filter(function(idx, el) { return el.value === ">>"});
+                                            var $themes_remove_btn = $themes_buttons.filter(function(idx, el) { return el.value === "<<"});
                                             var restoreCallback = function($el, data){
                                                 var name = $el.attr('name');
                                                 if (name === "subject_keywords:lines" || name === "temporalCoverage:lines") {
