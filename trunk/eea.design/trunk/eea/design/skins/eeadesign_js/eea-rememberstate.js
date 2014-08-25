@@ -72,6 +72,11 @@ jQuery(document).ready(function($) {
                                             var $tmpl = $("<li class='token-input-token-facebook'><p></p>" +
                                                          "<span class='token-input-delete-token-facebook'>×</span></li>");
                                             var cleaned_select = false;
+                                            var cleaned_themes = false;
+                                            var $themes_options = $("#themes_options");
+                                            var $themes_buttons = $('.context');
+                                            var $themes_insert_btn = $themes_buttons.eq(0);
+                                            var $themes_remove_btn = $themes_buttons.eq(1);
                                             var restoreCallback = function($el, data){
                                                 var name = $el.attr('name');
                                                 if (name === "subject_keywords:lines" || name === "temporalCoverage:lines") {
@@ -97,6 +102,15 @@ jQuery(document).ready(function($) {
                                                          $el.empty();
                                                     }
                                                     $("<option>", {value: value, selected: true}).text(value).appendTo($el);
+                                                }
+
+                                                if (name === "themes:list") {
+                                                    if (!cleaned_themes) {
+                                                        cleaned_themes = true;
+                                                        $themes_remove_btn.click();
+                                                    }
+                                                    $themes_options.find("[value='" + value + "']").attr('selected', true);
+                                                    $themes_insert_btn.click();
                                                 }
                                             };
                                             edit_form.data("rememberState", {"objName": url_path_name, "$el": edit_form, "onRestoreCallback": restoreCallback, "onSelectTagCallback": selectCallback });
