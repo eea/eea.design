@@ -62,10 +62,21 @@ jQuery(document).ready(function($) {
                             .done(function( data ) {
                                 var portlet_restore = $(data);
                                 portlet_restore.dialog({
+                                    open: function(event) {
+                                        var entries = storage_utils.getLocalStorageEntry(url_path_name);
+                                        var entry, value;
+                                        if (entries) {
+                                           entries = JSON.parse(entries);
+                                           entry = entries[entries.length -1];
+                                           if (entry.name === "saveDate") {
+                                               value = entry.value;
+                                               $(event.target).find('#js-restore-save-timestamp')
+                                                              .html("(" + value.substring(0, value.length - 16) + ")");
+                                           }
+                                        }
+                                    },
                                     buttons: {
-                                        'Yes': function() {
-                                            var $tmpl = $("<li class='token-input-token-facebook'><p></p>" +
-                                                         "<span class='token-input-delete-token-facebook'>×</span></li>");
+                                        'Restore & Resubmit': function() {
                                             var cleaned_select = false;
                                             var cleaned_themes = false;
                                             var $themes_options = $("#themes_options");
@@ -112,8 +123,9 @@ jQuery(document).ready(function($) {
                                             edit_form.rememberState('restoreState');
 
                                             $(this).dialog('close');
+                                            edit_form.submit();
                                         },
-                                        'No': function() {
+                                        'Cancel': function() {
                                             $(this).dialog('close');
                                             storage_utils.delLocalStorageEntry(url_path_name);
                                         }
