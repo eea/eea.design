@@ -92,13 +92,13 @@ jQuery(document).ready(function($) {
                         if (same_values) {
                             return;
                         }
-                        $.get('/www/restore_form_values')
+                        $.get(url_path_name + '/restore_form_values')
                             .done(function( data ) {
                                 var portlet_restore = $(data);
                                 portlet_restore.dialog({
                                     open: function(event) {
                                         var entries = storage_utils.getLocalStorageEntry(url_path_name);
-                                        var entry, value;
+                                        var entry, value, save_date, modified_date;
                                         if (entries) {
                                            entries = JSON.parse(entries);
                                            entry = entries[entries.length -1];
@@ -106,6 +106,11 @@ jQuery(document).ready(function($) {
                                                value = entry.value;
                                                $(event.target).find('#js-restore-save-timestamp')
                                                               .html("(" + value.substring(0, value.length - 16) + ")");
+                                               save_date = new Date(value);
+                                               modified_date = new Date($("#js-restore-object-modification-timestamp").text());
+                                               if (save_date - modified_date < 0) {
+                                                  $("#js-restore-object-modification-timestamp-message").removeClass('visualHidden');
+                                               }
                                            }
                                         }
                                     },

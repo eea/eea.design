@@ -3,8 +3,10 @@
         i18n:domain="eea">
 
 <div metal:define-macro="portlet" id="js-portletRestoreForm" class="portlet">
-        <h2 class="portletHeader" i18n:translate="">We detected that your last changes were not saved</h2>
-        <p class="" i18n:translate="">Would you like to resubmit the form data found at the time of your last save attempt? <span
+        <h2 class="portletHeader">We detected that your last changes were not saved</h2>
+        <p class="">Would you like to resubmit the form data found at the time of your last save attempt? <span
                 class="discreet" id="js-restore-save-timestamp"></span></p>
+       <p class="visualHidden" tal:content="python:context.toLocalizedTime(here.modified(), long_format=True)" id="js-restore-object-modification-timestamp"></p>
+       <p class="visualHidden" id="js-restore-object-modification-timestamp-message"><span class="eea-icon eea-icon-exclamation-circle"></span> The form has been modified between the time of this save attempt and now. Please check the history of the object before using this dialog in order to ensure that this data is still relevant</p>
 </div>
 </tal:content>
