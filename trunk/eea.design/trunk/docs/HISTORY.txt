@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.3-dev - (unreleased)
------------------------
+10.3 - (2014-08-27)
+-------------------
 * Change: moved button style position to inside for region-content ul and
   removed border from tinymce image classes
   [ichimdav]
