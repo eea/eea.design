@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.5-dev - (unreleased)
+-----------------------
+
 10.4 - (2014-08-27)
 -------------------
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
