@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object>
+    <resourcetypes>
+        <customplugins purge="False">
+            <element value="eeatogglefullscreen|portal_skins/eea_tinymce_plugins/eeatogglefullscreen/editor_plugin.js"/>
+        </customplugins>
+    </resourcetypes>
+
+</object>

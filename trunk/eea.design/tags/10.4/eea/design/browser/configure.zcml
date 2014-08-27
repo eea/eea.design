@@ -1,0 +1,440 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="eea">
+
+    <include package="plone.app.portlets"/>
+    <include package="plone.app.controlpanel" file="permissions.zcml" />
+
+    <browser:page
+        for="*"
+        name="main_template"
+        template="../skins/eea_overrides_templates/main_template.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public" />
+
+    <browser:page
+        for="*"
+        name="test_skin"
+        class=".changeskin.TestSkin"
+        permission="zope.Public"
+        layer=".interfaces.IEEADesignCMS"
+        />
+
+    <browser:page
+        for="*"
+        name="batching"
+        class=".batching.Batching"
+        permission="zope.Public"
+        template="templates/batching.pt"
+        />
+
+    <browser:page
+        for="*"
+        name="format_catalog_metadata"
+        class=".batching.FormatCatalogMetadata"
+        permission="zope.Public"
+        />
+
+
+    <interface
+        interface=".interfaces.IEEADesignCMS"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="EEADesignCMS"
+        />
+
+    <interface
+        interface=".interfaces.IEEADesignPublic"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="EEADesign2006"
+        />
+
+    <interface interface=".interfaces.ISubFoldersListing" />
+    <!-- Resource directories -->
+
+    <browser:resourceDirectory
+        name="eea.design.images"
+        directory="images"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
+    <browser:resourceDirectory
+        name="eea.design.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
+    <browser:resourceDirectory
+        name="eea.design.javascripts"
+        directory="javascripts"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
+    <browser:resourceDirectory
+        name="eea.design.templates"
+        directory="templates"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
+    <browser:resourceDirectory
+        name="eea.design.portlets"
+        directory="portlets"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
+    <!-- Viewlets registration -->
+
+    <browser:viewlet
+        name="eea.js_belowbodytag"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        insert-before="eea.cross_site_top"
+        class=".viewlets.JSBelowBodyViewlet"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="eea.cross_site_top"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        template="templates/cross_site_top.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.skip_links"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.SkipLinksViewlet"
+        template="templates/skip_links.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.searchbox"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.SearchBoxViewlet"
+        template="templates/global_searchbox.pt"
+        layer=".interfaces.IEEADesignPublic"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.searchbox"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.SearchBoxViewlet"
+        template="templates/searchbox_cms.pt"
+        layer=".interfaces.IEEADesignCMS"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.logo"
+        class=".viewlets.LogoViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
+        template="templates/sections.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <!-- The personal bar
+    <browser:viewlet
+        name="plone.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        template="templates/personal_bar.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+    -->
+
+    <!-- use plone standard personal bar and move it to the top -->
+    <browser:viewlet
+        name="plone.personal_bar"
+        layer=".interfaces.IEEACommonLayer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.htmlhead.title"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".viewlets.TitleViewlet"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.links.search"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+        class=".viewlets.SearchViewlet"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="eea.subfolders"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        insert-before="*"
+        class=".viewlets.SubFoldersViewlet"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.belowcontentbody.relateditems"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        class="plone.app.layout.viewlets.content.ContentRelatedItems"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        template="templates/pl_document_relateditems.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.abovecontenttitle.documentactions"
+        class=".viewlets.DocumentActionsViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.app.i18n.locales.languageselector"
+        class=".viewlets.LanguageSelectorViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.belowcontenttitle.documentbyline"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        class=".viewlets.DocumentBylineViewlet"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.colophon"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        template="templates/colophon.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.footer"
+        class=".viewlets.FooterPortletsViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="eea.pdf.qrbox"
+        layer=".interfaces.IEEACommonLayer"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        class=".viewlets.QRBox"
+        permission="zope2.View"
+        />
+
+    <!-- Browser pages -->
+
+    <browser:page
+        name="manage-portlets-footer"
+        for="plone.portlets.interfaces.ILocalPortletAssignable"
+        class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+        template="templates/manage_footer.pt"
+        permission="plone.app.portlets.ManagePortlets"
+        />
+
+    <browser:page
+        name="global_externalsites"
+        for="*"
+        template="templates/global_externalsites.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        name="cross_site_panels"
+        for="*"
+        template="templates/cross_site_panels.pt"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="*"
+        name="frontpage_highlights"
+        class=".frontpage.Frontpage"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        allowed_interface=".interfaces.IFrontPageHighlights"
+        allowed_attributes="getArticles getPublications getResultsInAllLanguages getNews getAllProducts"
+        />
+
+    <browser:page
+        for="*"
+        name="data_and_maps_logic"
+        class=".data_and_maps.DataMaps"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        allowed_attributes="getResultsInAllLanguages getAllProducts getLatestDatasets"
+        />
+
+    <browser:page
+        for="*"
+        name="soer_topic_search_logic"
+        class=".soer_topic_search_logic.SoerTopicSearch"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        allowed_interface=".interfaces.ISoerTopicSearch"
+        />
+
+    <browser:page
+        for="*"
+        name="soer_frontpage_logic"
+        class=".soer_frontpage.SoerFrontpage"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        allowed_interface=".interfaces.ISoerFrontpage"
+        />
+
+    <browser:page
+        for="zope.interface.Interface"
+        name="soer_tagcloud"
+        class=".tagcloud.TagCloud"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope.Public"
+        />
+
+    <browser:page
+        for="zope.interface.Interface"
+        name="faceted_tagclouds"
+        class=".tagcloud.TagCloud"
+        layer=".interfaces.IEEACommonLayer"
+        allowed_attributes="tagclouds"
+        permission="zope.Public"
+        />
+
+    <browser:page
+        for="*"
+        name="subfolder_view_logic"
+        class=".subfolder_view_logic.SubFolderView"
+        permission="zope.Public"
+        layer=".interfaces.IEEACommonLayer"
+        allowed_interface=".interfaces.ISubFolderView"
+        />
+
+    <browser:page for="*"
+        name="enableSubfolderListing"
+        class=".subfolder_listing.SubfolderListing"
+        attribute="enable"
+        permission="plone.app.controlpanel.Navigation"
+        />
+
+    <browser:page for="eea.design.browser.interfaces.ISubFoldersListing"
+        name="disableSubfolderListing"
+        class=".subfolder_listing.SubfolderListing"
+        attribute="disable"
+        permission="plone.app.controlpanel.Navigation"
+        />
+
+    <!-- Presentation view override -->
+    <browser:page
+        name="presentation_view"
+        for="Products.ATContentTypes.interface.IATDocument"
+        class=".presentation.EEAPresentationView"
+        layer=".interfaces.IEEACommonLayer"
+        template="templates/presentation.pt"
+        permission="zope2.View"
+        />
+
+    <!-- Customized portlets -->
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"
+        template="templates/calendar.pt"
+        layer=".interfaces.IEEACommonLayer"
+        />
+
+    <plone:portlet
+        name="portlets.PromoGallery"
+        interface=".portlets.promogallery.IPromoGallery"
+        assignment=".portlets.promogallery.Assignment"
+        renderer=".portlets.promogallery.Renderer"
+        addview=".portlets.promogallery.AddForm"
+        />
+
+    <plone:portlet
+        name="portlets.FeaturedArticle"
+        interface=".portlets.featured_article.IFeaturedArticle"
+        assignment=".portlets.featured_article.Assignment"
+        renderer=".portlets.featured_article.Renderer"
+        addview=".portlets.featured_article.AddForm"
+        />
+
+    <!-- ADAPTERS -->
+
+    <!-- make an adapter for our very own footer manager renderer -->
+    <adapter
+        factory="eea.design.browser.portlets.footer.EEAFooterPortletRenderer"
+        provides="plone.portlets.interfaces.IPortletManagerRenderer"
+        />
+
+     <!--SUBSCRIBERS -->
+
+
+     <!--Viewlets-->
+
+    <browser:viewletManager
+        name="eea.below_edit_contenttitle"
+        provides=".interfaces.IBelowEditContentTitle"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        />
+
+    <browser:viewlet
+        name="eea.below_edit_contenttitle.documentbyline"
+        manager=".interfaces.IBelowEditContentTitle"
+        class=".viewlets.BelowEditContentTitleViewlet"
+        permission="zope2.View"
+        />
+
+    <!-- Go To Comments viewlet -->
+    <browser:viewlet
+        name="plone.goto_comments"
+        for="Products.CMFCore.interfaces.IContentish"
+        layer=".interfaces.IEEACommonLayer"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        class=".comments.EEAGoToCommentsViewlet"
+        permission="zope2.View"
+        />
+
+    <!-- Comments viewlet -->
+    <browser:viewlet
+        name="plone.comments"
+        for="Products.CMFCore.interfaces.IContentish"
+        layer=".interfaces.IEEACommonLayer"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        class=".comments.EEACommentsViewlet"
+        permission="zope2.View"
+        />
+
+
+</configure>
