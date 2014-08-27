@@ -230,4 +230,17 @@
                 />
 
     </genericsetup:upgradeSteps>
+
+    <genericsetup:upgradeSteps
+            source="6.9"
+            destination="10.3"
+            profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+                title="Import all steps from eea.design profile upgrade 10.3"
+                description="Added rememberstate jquery plugin"
+                import_profile="eea.design:upgrade103"
+                />
+
+    </genericsetup:upgradeSteps>
 </configure>

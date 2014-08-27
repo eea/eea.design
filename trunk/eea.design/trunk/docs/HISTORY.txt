@@ -3,6 +3,13 @@ Changelog
 
 10.4-dev - (unreleased)
 -----------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [ichimdav refs #20302]
+* Feature: added jquery-rememberstate and eea-rememberstate jquery plugins
+  which saves the edit form data on submit and prompts the user to restore
+  the data in case of a failure
+  [ichimdav refs #20302]
 
 10.3 - (2014-08-27)
 -------------------
