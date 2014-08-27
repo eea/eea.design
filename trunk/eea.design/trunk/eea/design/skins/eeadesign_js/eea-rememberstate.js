@@ -4,7 +4,6 @@ jQuery(document).ready(function($) {
     var url_path_name = $("base").attr('href');
     var search_path = window.location.search;
     var saved_search_path = search_path.indexOf("Changes%20saved");
-    var error_search_path = search_path.indexOf('errored=True');
     var referrer = document.referrer;
     window.EEA = window.EEA || {};
     window.EEA.storage_utils = {};
@@ -56,8 +55,43 @@ jQuery(document).ready(function($) {
 
             var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
             if (edit_form_data) {
-                if (error_search_path !== -1 && edit_form_found || edit_form && edit_form_data) {
+                if (edit_form && edit_form_data) {
                     (function(){
+                        var saved_form_objs = JSON.parse(edit_form_data);
+                        var current_form_objs = edit_form.serializeArray();
+                        var same_values = true;
+                        var saved_form_objs_length = saved_form_objs.length;
+                        var current_form_objs_length = current_form_objs.length;
+                        var i, length, saved_form_obj, current_form_obj, saved_form_obj_name;
+                        // saved form contains one extra entry which is the saved date
+                        // therefore if there are more that one extra items saved
+                        // as appose to the number of items currently in the form than
+                        // we can continue with the restore dialog procedure
+                        if (saved_form_objs_length - current_form_objs_length > 1) {
+                            length = 0;
+                            same_values = false;
+                        }
+                        else {
+                            length = saved_form_objs_length;
+                        }
+                        for (i = 0; i < length; i++) {
+                            saved_form_obj = saved_form_objs[i];
+                            current_form_obj = current_form_objs[i];
+                            saved_form_obj_name = saved_form_obj.name;
+                            // we skip location entry check since the keys are not ordered in the same plus
+                            // the saved entries are escaped
+                            if (saved_form_obj_name === "location" || saved_form_obj_name === "last_referer"
+                                || saved_form_obj_name === "saveDate")    {
+                                continue;
+                            }
+                            if (saved_form_obj.value !== current_form_obj.value) {
+                               same_values = false;
+                                break;
+                            }
+                        }
+                        if (same_values) {
+                            return;
+                        }
                         $.get('/www/restore_form_values')
                             .done(function( data ) {
                                 var portlet_restore = $(data);
@@ -125,7 +159,7 @@ jQuery(document).ready(function($) {
                                             $(this).dialog('close');
                                             edit_form.submit();
                                         },
-                                        'Cancel': function() {
+                                        'No & Remove data': function() {
                                             $(this).dialog('close');
                                             storage_utils.delLocalStorageEntry(url_path_name);
                                         }
