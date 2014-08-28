@@ -2332,8 +2332,8 @@ input[disabled], #plonebrowser input[disabled] {
 }
 
 /* #16879,#20255 highlight class only on TinyMCE edit */
-.mceContentBody .markPresentationalText, 
-.mceContentBody .pageBreak, 
+.mceContentBody .markPresentationalText,
+.mceContentBody .pageBreak,
 .mceContentBody .excludeFromPDF {
     background-color: #ffb;
 }
@@ -2742,4 +2742,22 @@ div.row {
     display: none;
 }
 
+a.downloading {
+    background: transparent url(&dtml-portal_url;/icon-downloading.gif) no-repeat center center;
+}
+
+a.downloading img {
+    visibility: hidden;
+}
+
+.downloading-lock::before {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 20px;
+  position: absolute;
+  right: 0;
+}
+
 /* </dtml-with> */
+

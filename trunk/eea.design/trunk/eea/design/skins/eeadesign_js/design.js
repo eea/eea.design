@@ -4,11 +4,11 @@ jQuery(document).ready(function($) {
     var url_path_name = window.location.pathname;
     var ie;
     if ($.browser) {
-	ie = $.browser.msie && parseInt($.browser.version, 10);
+      ie = $.browser.msie && parseInt($.browser.version, 10);
     } else {
-	var nav = navigator.userAgent;
-	ie = nav.indexOf('MSIE');
-	ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
+      var nav = navigator.userAgent;
+      ie = nav.indexOf('MSIE');
+      ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
     }
 
     // #16878 move last two links of globalnav to a secundary container
@@ -151,5 +151,35 @@ jQuery(document).ready(function($) {
     if (top_news.length) {
         themePromotionPortlets(top_news);
     }
-});
 
+    /**
+     * Function to avoid multiple clicks on document actions (Download as PDF, etc.)
+     */
+    jQuery.fn.avoidMultipleClicks = function(options){
+      var settings = {
+        timeout: 3000
+      };
+
+      if(options){
+        jQuery.extend(settings, options);
+      }
+
+      var self = this;
+      return this.each(function(){
+        self.find('a').click(function(){
+          var context = $(this);
+          context.addClass('downloading');
+          self.addClass('downloading-lock');
+
+          setTimeout(function(){
+            self.removeClass('downloading-lock');
+            context.removeClass('downloading');
+          }, settings.timeout);
+
+        });
+      });
+    };
+
+    $('.documentActions .action-items').avoidMultipleClicks();
+
+});

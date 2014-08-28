@@ -3,6 +3,8 @@ Changelog
 
 10.5-dev - (unreleased)
 -----------------------
+* Feature: Avoid multiple clicks within document actions (download as PDF, etc.)
+  [voineali refs #20842]
 
 10.4 - (2014-08-27)
 -------------------
