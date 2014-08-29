@@ -72,7 +72,7 @@ dl.portlet ul.navTree li a {
     -moz-transition: background-color .3s, color .3s, background .3s;
     -o-transition: background-color .3s, color .3s, background .3s;
     transition: background-color .3s, color .3s, background .3s;
-    border-top: 1px dashed #BABBB8;
+    border-top: 1px dotted #BABBB8;
     font-weight: normal;
     font-size: 14px;
     line-height: 1.5;
@@ -132,7 +132,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 .portletGradientStandard {
     background: #E6E6E6;
     margin-top: 0.5em;
-    padding: 1em;
     clear: both;
     color: #333;
     font-size: 120%;
@@ -230,7 +229,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 
 .portletHeader, dl.portlet dt.portletHeader {
     font-weight:normal !important;
-    margin-left:0;
     font: normal 160% &dtml-fontFamily;;
     color: black;
     line-height: 1.4;
@@ -261,7 +259,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 
 .portletFooter {
-    margin: 0em;
+    margin: 0;
     padding: 0;
     text-align: right;
     border: 0;
@@ -274,7 +272,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     border-color:&dtml-lightGreyDivisionColor;;
     border-style:dotted none none;
     border-width:1px;
-    margin:0em;
+    margin:0;
     padding:1em 1em;
     text-align:right;
 }
@@ -441,19 +439,17 @@ dl.portlet-navigation-tree {
 .portletNavigationTree {
     margin: 0;
     padding: 1em;
-    list-style: none;
-    list-style-image: none;
+    list-style: none none;
     line-height: 1em;
     background: #FFFFFF;
 }
 
 .navTree {
-    list-style: none;
-    list-style-image: none;
+    list-style: none none;
 }
 
 .navTree li {
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
 }
 
 .navTreeItem {
@@ -637,7 +633,6 @@ font-size: 0.75em;
 span.promoNumber,
 span.promoNumber:visited {
    height: 1.8em;
-   line-height: 1.8em;
    margin-left: 3px;
    margin-top: -20px;
    text-align: center;
@@ -653,7 +648,6 @@ span.promoNumber:visited {
 span.promoNext, span.promoPrev,
 span.promoNext:visited, span.promoPrev:visited {
    height: 1.8em;
-   line-height: 1.8em;
    margin-left: 3px;
    margin-top: -20px;
    text-align: center;
@@ -825,9 +819,8 @@ dt.portletItem a, #content dt.portletItem a {
 }
 
 #chooselang {
-   list-style-image: none;
-   list-style-type: none;
-   margin: 0;
+    list-style: none none;
+    margin: 0;
    padding: 0;
 }
 
@@ -880,9 +873,8 @@ dt.portletItem a, #content dt.portletItem a {
 }
 #portal-column-two dl.portlet-rss-dbl {
    margin: 0 0 0.6em 0;
-   padding: 0;
-   padding-top: 28px;
-   background: url(&dtml-portal_url;/tabhead-bg.gif) repeat-x left top;
+    padding: 28px 0 0;
+    background: url(&dtml-portal_url;/tabhead-bg.gif) repeat-x left top;
    border: none;
 }
 .portletFooter .feedButton {

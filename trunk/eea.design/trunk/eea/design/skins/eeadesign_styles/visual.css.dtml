@@ -441,6 +441,7 @@ width:16px;
 /* style for keyfacts slider */
 #keyfacts-slider {
     position: relative;
+    margin-bottom: 2em;
 }
 #keyfacts-slider img.keyfacts-bgimg {
     min-width: 600px;
