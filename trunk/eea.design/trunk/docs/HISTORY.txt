@@ -3,6 +3,8 @@ Changelog
 
 10.5-dev - (unreleased)
 -----------------------
+* Bug fix: fixed design issues regarding box sizes within portal-column-two
+  [ichimdav refs #20873]
 * Feature: Avoid multiple clicks within document actions (download as PDF, etc.)
   [voineali refs #20842]
 
