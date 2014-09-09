@@ -12,14 +12,27 @@
 
 <metal:main fill-slot="main"
         tal:define="err_type options/error_type|nothing;
-                    url python:request.URL.split('/')[-1].lower();">
+                    url python:request.URL.split('/')[-1].lower();
+                    pdfdownload python:request.URL.startswith(context.portal_url()+'/downloads');">
 
-      <tal:comment tal:replace="nothing">
-          #17812 avoid redirection logic and other computed logic if link ends with rss
-          in order to avoid expensive computation on these links which can be called many
-          times by bots or RSS clients
-      </tal:comment>
-     <tal:rssfound tal:condition="python:err_type=='NotFound'">
+     <tal:comment tal:replace="nothing">
+         #17812 avoid redirection logic and other computed logic if link ends with rss
+         in order to avoid expensive computation on these links which can be called many
+         times by bots or RSS clients
+     </tal:comment>
+
+     <tal:pdfdoqnload tal:condition="python:(err_type=='NotFound') and pdfdownload">
+
+<h1 class="documentFirstHeading"
+    i18n:translate="">
+    PDF Missing&hellip;
+</h1>
+
+Please go back to the <a href="#" tal:attributes="href python:context.portal_url()+'/resolveuid/'+url">original content</a>.
+
+     </tal:pdfdoqnload>
+
+     <tal:rssfound tal:condition="python:(err_type=='NotFound') and not pdfdownload">
          <tal:rss tal:condition="python: 'rss' in url">
              <div id="content-core">
                  <p i18n:translate="">
@@ -33,7 +46,7 @@
          </tal:rss>
      </tal:rssfound>
 
-     <tal:rssnotfound tal:condition="python: 'rss' not in url">
+     <tal:rssnotfound tal:condition="python:('rss' not in url) and not pdfdownload">
      <tal:content
              tal:define="err_type options/error_type|nothing;
                          err_message options/error_message|nothing;

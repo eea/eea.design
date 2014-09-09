@@ -9,6 +9,8 @@ Changelog
   [ichimdav refs #20873]
 * Feature: Avoid multiple clicks within document actions (download as PDF, etc.)
   [voineali refs #20842]
+* Feature: added custom 404 message for PDF download
+  [ghicaale refs #20972]
 
 10.4 - (2014-08-27)
 -------------------
