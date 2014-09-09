@@ -182,4 +182,29 @@ jQuery(document).ready(function($) {
 
     $('.documentActions .action-items').avoidMultipleClicks();
 
+    if (edit_bar) {
+        (function(){
+          var $text = $("#text");
+          var $text_portlet = $("#stats");
+          if ($text_portlet.length < 1) {
+              return;
+          }
+          var text_count_obj = window.textstatistics($text.html());
+          $("#smog_index").html(text_count_obj.smogIndex());
+          $("#flesch_kincaid_reading_ease").html(text_count_obj.fleschKincaidReadingEase());
+          var $kincaid_grade_level = $("#flesch_kincaid_grade_level");
+          $kincaid_grade_level.html(text_count_obj.fleschKincaidGradeLevel());
+          $("#average_grade_level").html(Math.round($kincaid_grade_level.html()));
+          $("#gunning_fog_score").html(text_count_obj.gunningFogScore());
+          $("#coleman_liau_index").html(text_count_obj.colemanLiauIndex());
+          $("#automated_readability_index").html(text_count_obj.automatedReadabilityIndex());
+          $("#syllable_count").html(text_count_obj.syllableCount(text_count_obj.text));
+          $("#word_count").html(text_count_obj.wordCount());
+          $("#sentence_count").html(text_count_obj.sentenceCount());
+          $("#words_per_sentence").html(text_count_obj.averageWordsPerSentence().toFixed(1));
+          $("#syllables_per_word").html(text_count_obj.averageSyllablesPerWord(text_count_obj.text).toFixed(1));
+          $("#letters_per_word").html(text_count_obj.averageCharactersPerWord(text_count_obj.text).toFixed(1));
+        }());
+    }
+
 });

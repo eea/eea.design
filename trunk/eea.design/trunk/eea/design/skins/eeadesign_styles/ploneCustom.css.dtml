@@ -2759,5 +2759,9 @@ a.downloading img {
   right: 0;
 }
 
+#stats td {
+    padding-right: 1em;
+}
+
 /* </dtml-with> */
 
