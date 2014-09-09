@@ -91,6 +91,11 @@
         return this.wordCount(text) / this.sentenceCount(text);
     };
 
+    TextStatistics.prototype.averageCharactersPerWord = function(text) {
+        text = text ? cleanText(text) : this.text;
+        return this.letterCount(text) / this.wordCount(text);
+    };
+
     TextStatistics.prototype.averageSyllablesPerWord = function(text) {
         text = text ? cleanText(text) : this.text;
         var syllableCount = 0,
@@ -190,7 +195,6 @@
     };
 
     function textStatistics(text) {
-        debugger;
         return new TextStatistics(text);
     }
 
