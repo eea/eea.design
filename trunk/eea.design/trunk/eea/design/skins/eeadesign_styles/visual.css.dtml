@@ -10,6 +10,22 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+/* sub/sup must not alter the line-height #20996 */
+
+sub {
+   top: 0.5ex;
+}
+
+sup {
+   bottom: 1ex;
+}
+
+sup, sub {
+   height: 0px;
+   line-height: 1;
+   vertical-align: baseline;
+   position: relative;
+}
 
 /*
 ** Watermark style

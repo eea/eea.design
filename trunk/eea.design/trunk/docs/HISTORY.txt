@@ -3,6 +3,8 @@ Changelog
 
 10.5-dev - (unreleased)
 -----------------------
+* Bug fix: fixed PDF/print line-height altered by sup/sub tags
+  [demarant refs #20996]
 * Bug fix: fixed design issues regarding box sizes within portal-column-two
   [ichimdav refs #20873]
 * Feature: Avoid multiple clicks within document actions (download as PDF, etc.)
