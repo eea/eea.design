@@ -12,6 +12,9 @@
             <td><a href="http://en.wikipedia.org/wiki/Flesch-Kincaid#Flesch_Reading_Ease" target="_blank">Flesch-Kincaid Reading Ease</a></td>
             <td id="flesch_kincaid_reading_ease">-</td>
         </tr>
+        <tr>
+            <td><a href="#" id="update-stats" class="portalButton">Refresh check</a></td>
+        </tr>
         </tbody></table>
 
     <h3>Grade Levels</h3>
