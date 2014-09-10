@@ -28,6 +28,20 @@ sup, sub {
 }
 
 /*
+** Info styles
+**
+*/
+
+.visualHighlight {
+    background-color: &dtml-evenRowBackgroundColor;;
+}
+
+.discreet {
+    color: &dtml-discreetColor;;
+    font-size: &dtml-fontSmallSize;;
+    font-weight: normal;
+}
+/*
 ** Watermark style
 ** for content that is not published
 */

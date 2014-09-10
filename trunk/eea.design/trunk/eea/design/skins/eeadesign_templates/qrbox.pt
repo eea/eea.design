@@ -1,1 +1,8 @@
+<div class="qrbox-text" tal:define="
+        toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+        current_date python:toLocalizedTime(DateTime(), long_format=1)">
+    <p><strong>For references</strong>, please go to <a href="www.eea.europa.eu/soer">www.eea.europa.eu/soer</a> or scan the QR code.</p>
+    <p>This briefing is part of the EEA's report <strong>The European Environment - State and Outlook 2015</strong>. The EEA is an official agency of the EU, tasked with providing information on Europe’s environment.</p>
+    <p>This PDF was generated on <span class="discreet" tal:content="python:current_date"></span></p>
+</div>
 <img class="qr" tal:attributes="src string:http://chart.apis.google.com/chart?cht=qr&chld=H|0&chs=70x70&chl=${context/absolute_url}" />

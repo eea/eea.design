@@ -1715,15 +1715,6 @@ h3.site-description {
     margin-top: 1em;
 }
 
-.visualHighlight {
-    background-color: &dtml-evenRowBackgroundColor;;
-}
-
-.discreet {
-    color: &dtml-discreetColor;;
-    font-size: &dtml-fontSmallSize;;
-    font-weight: normal;
-}
 
 
 /* Batch selector */
@@ -2738,7 +2729,6 @@ div.row {
 }
 
 .qrbox {
-    text-align: right;
     display: none;
 }
 

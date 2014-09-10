@@ -302,6 +302,5 @@ dl.captioned {
 }
 
 .qrbox {
-    text-align: right;
     display: none;
 }
