@@ -1,7 +1,7 @@
-<tal:directives
-     tal:define="remove_rightcolumn python:request.set('disable_plone.rightcolumn', True);
-                 remove_leftcolumn python:request.set('disable_plone.leftcolumn', True);
-                 remove_editbar python:request.set('disable_border', 1);" />
+<tal:directives tal:define="remove_rightcolumn python:request.set('disable_plone.rightcolumn', True);
+                            remove_leftcolumn python:request.set('disable_plone.leftcolumn', True);
+                            remove_editbar python:request.set('disable_border', 1);" />
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
@@ -11,61 +11,56 @@
       i18n:domain="eea">
 
 <metal:main fill-slot="main"
-        tal:define="err_type options/error_type|nothing;
-                    url python:request.URL.split('/')[-1].lower();
-                    pdfdownload python:request.URL.startswith(context.portal_url()+'/downloads');">
+            tal:define="err_type options/error_type|nothing;
+                        url python:request.URL.split('/')[-1].lower();
+                        pdfdownload python:request.URL.startswith(context.portal_url()+'/downloads');">
 
-     <tal:comment tal:replace="nothing">
-         #17812 avoid redirection logic and other computed logic if link ends with rss
-         in order to avoid expensive computation on these links which can be called many
-         times by bots or RSS clients
-     </tal:comment>
+    <tal:comment tal:replace="nothing">
+        #17812 avoid redirection logic and other computed logic if link ends with rss
+        in order to avoid expensive computation on these links which can be called many
+        times by bots or RSS clients
+    </tal:comment>
 
-     <tal:pdfdoqnload tal:condition="python:(err_type=='NotFound') and pdfdownload">
+    <tal:pdfdoqnload tal:condition="python:(err_type=='NotFound') and pdfdownload">
+        <h1 class="documentFirstHeading" i18n:translate="">
+            PDF Missing&hellip;
+        </h1>
 
-<h1 class="documentFirstHeading"
-    i18n:translate="">
-    PDF Missing&hellip;
-</h1>
+        Please go back to the <a href="#" tal:attributes="href python:context.portal_url()+'/resolveuid/'+url">original content</a>.
+    </tal:pdfdoqnload>
 
-Please go back to the <a href="#" tal:attributes="href python:context.portal_url()+'/resolveuid/'+url">original content</a>.
+    <tal:rssfound tal:condition="python:(err_type=='NotFound') and not pdfdownload">
+        <tal:rss tal:condition="python: 'rss' in url">
+            <div id="content-core">
+                <p i18n:translate="">
+                    RSS feeds are not enabled for this link.
+                </p>
 
-     </tal:pdfdoqnload>
+                <a href="#" i18n:translate=""
+                   tal:attributes="href string:${context/absolute_url}">Go back to the main page of this link</a>.
+            </div>
+        </tal:rss>
+    </tal:rssfound>
 
-     <tal:rssfound tal:condition="python:(err_type=='NotFound') and not pdfdownload">
-         <tal:rss tal:condition="python: 'rss' in url">
-             <div id="content-core">
-                 <p i18n:translate="">
-                     RSS feeds are not enabled for this link.
-                 </p>
+    <tal:rssnotfound tal:condition="python:('rss' not in url) and not pdfdownload">
+    <tal:content tal:define="err_type options/error_type|nothing;
+                             err_message options/error_message|nothing;
+                             err_tb options/error_tb|nothing;
+                             err_value options/error_value|nothing;
+                             err_traceback options/error_traceback|nothing;
+                             err_log_url options/error_log_url|nothing;
+                             err_log_id options/error_log_id|nothing;
+                             isAnon context/@@plone_portal_state/anonymous;
+                             toLocalizedTime nocall: context/@@plone/toLocalizedTime;">
 
-                 <a href="#"
-                         i18n:translate=""
-                         tal:attributes="href string:${context/absolute_url}">Go back to the main page of this link</a>.
-             </div>
-         </tal:rss>
-     </tal:rssfound>
-
-     <tal:rssnotfound tal:condition="python:('rss' not in url) and not pdfdownload">
-     <tal:content
-             tal:define="err_type options/error_type|nothing;
-                         err_message options/error_message|nothing;
-                         err_tb options/error_tb|nothing;
-                         err_value options/error_value|nothing;
-                         err_traceback options/error_traceback|nothing;
-                         err_log_url options/error_log_url|nothing;
-                         err_log_id options/error_log_id|nothing;
-                         isAnon context/@@plone_portal_state/anonymous;
-                         toLocalizedTime nocall: context/@@plone/toLocalizedTime;">
-        <tal:block tal:define="
-                            redirect_similar_items context/@@plone_redirector_view/search_for_similar;
-                            wrong_title python: request.URL.split('/')[-1];
-                            url_query python:request.QUERY_STRING;
-                            redirect_url python:[item.getURL() for item in redirect_similar_items if item.getURL().split('/')[-1]==wrong_title]"
+        <tal:block tal:define="redirect_similar_items context/@@plone_redirector_view/search_for_similar;
+                               wrong_title python: request.URL.split('/')[-1];
+                               url_query python:request.QUERY_STRING;
+                               redirect_url python:[item.getURL() for item in redirect_similar_items if item.getURL().split('/')[-1]==wrong_title]"
                    tal:condition="redirect_url">
-                   <metal:redirect tal:define="
-                                        redirect_url python:url_query and redirect_url[0]+'?'+url_query or redirect_url[0];
-                                        dummy python:request.response.redirect(redirect_url,status=301,lock=1)"/>
+            <metal:redirect tal:define="
+                                redirect_url python:url_query and redirect_url[0]+'?'+url_query or redirect_url[0];
+                                dummy python:request.response.redirect(redirect_url,status=301,lock=1)"/>
         </tal:block>
 
         <metal:notfound tal:condition="python:err_type=='NotFound'">
