@@ -3,6 +3,8 @@ Changelog
 
 10.5-dev - (unreleased)
 -----------------------
+* Bug fix: fixed extension identification for links with arguments
+  [pasoviul refs #19537]
 * Bug fix: fixed PDF/print line-height altered by sup/sub tags
   [demarant refs #20996]
 * Bug fix: fixed design issues regarding box sizes within portal-column-two

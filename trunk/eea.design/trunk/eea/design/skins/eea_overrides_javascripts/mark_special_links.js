@@ -5,9 +5,9 @@
  */
 
 function getLanguageFromLink(link) {
-    if (link.toLowerCase().indexOf('://')>0 && 
-        (link.toLowerCase().indexOf(window.location.host)>0 || 
-                                    link.toLowerCase().indexOf('eu.int')>0 || 
+    if (link.toLowerCase().indexOf('://')>0 &&
+        (link.toLowerCase().indexOf(window.location.host)>0 ||
+                                    link.toLowerCase().indexOf('eu.int')>0 ||
                                     link.toLowerCase().indexOf('europa.eu')>0)){
         // we assume it's english for local and known domains
 
@@ -79,23 +79,34 @@ function scanforlinksinarea(contentarea) {
                     linkval = 'http://'+window.location.host+linkval;
                 }
             }
-            ext_idx0 = linkval.lastIndexOf('.');
-            slashIdx = linkval.lastIndexOf('/');
-            colonIdx = linkval.lastIndexOf(':');
+
+            //remove arguments to identify extension
+            argIdx = linkval.indexOf('?');
+            if (argIdx == -1) {
+                argIdx = linkval.length;
+            }
+            var shortlinkval = linkval.substring(0, argIdx);
+
+            ext_idx0 = shortlinkval.lastIndexOf('.');
+            slashIdx = shortlinkval.lastIndexOf('/');
+            colonIdx = shortlinkval.lastIndexOf(':');
+
+
             if(slashIdx > colonIdx+2 && slashIdx < ext_idx0) {
-                extension = linkval.substring(ext_idx0+1);
+                extension = shortlinkval.substring(ext_idx0 + 1);
             // add class name = link-extension
             // it can be styled as you prefer in your css
-               if (ext_idx0 > 0 && links[i].getElementsByTagName('img').length === 0  ) {
-                  wrapNode(links[i], 'span', 'link-'+extension.toLowerCase());
+               if (ext_idx0 > 0 &&
+                links[i].getElementsByTagName('img').length === 0  ) {
+                    wrapNode(links[i], 'span', 'link-'+extension.toLowerCase());
                 }
             }
             // ADD CSS CLASSES FOR SPECIAL PROTOCOLS
             // check if the link href is a relative link, or an absolute link to
             // the current host.
-            if (linkval.toLowerCase().indexOf('://')>0 && 
-                (linkval.toLowerCase().indexOf(window.location.host)>0 || 
-                                               linkval.toLowerCase().indexOf('eea.eu.int')>0 || 
+            if (linkval.toLowerCase().indexOf('://')>0 &&
+                (linkval.toLowerCase().indexOf(window.location.host)>0 ||
+                                               linkval.toLowerCase().indexOf('eea.eu.int')>0 ||
                                                linkval.toLowerCase().indexOf('eea.europa.eu')>0)){
                 // absolute link internal to our host
                 var jslint_pleaser = 1; // pleases jslint
