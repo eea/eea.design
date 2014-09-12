@@ -13,6 +13,7 @@
 <metal:main fill-slot="main"
             tal:define="err_type options/error_type|nothing;
                         url python:request.URL.split('/')[-1].lower();
+                        uid python:request.ACTUAL_URL.split('/')[-3].lower();
                         pdfdownload python:request.URL.startswith(context.portal_url()+'/downloads');">
 
     <tal:comment tal:replace="nothing">
@@ -24,10 +25,10 @@
             PDF file not available for download &hellip;
         </h1>
 
-        <p i18n:translate="">The requested PDF file may be unavailable either because is still being processed or was kept for too long in our
-        system and expired. <br />You can go back to the <a href="#" title="Original page" tal:attributes="href python:context.portal_url()+'/resolveuid/'+url" i18n:name="original_page" i18n:attributes="title">original page</a>
-        and request the PDF again.</p>
-
+        <p i18n:translate="">
+            The PDF you are requested does not exist or has expired, please request it again
+            from <a href="#" title="Original page" tal:attributes="href python:context.portal_url()+'/resolveuid/'+uid" i18n:name="original_page" i18n:attributes="title">here</a>.
+        </p>
     </tal:pdfdownload>
 
     <tal:comment tal:replace="nothing">
