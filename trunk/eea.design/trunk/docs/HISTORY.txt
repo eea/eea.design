@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.5-dev - (unreleased)
------------------------
+10.5 - (2014-09-15)
+-------------------
 * Bug fix: fixed extension identification for links with arguments
   [pasoviul refs #19537]
 * Bug fix: fixed PDF/print line-height altered by sup/sub tags
