@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.6-dev - (unreleased)
+-----------------------
+
 10.5 - (2014-09-15)
 -------------------
 * Bug fix: fixed extension identification for links with arguments
