@@ -46,10 +46,10 @@ jQuery(document).ready(function($) {
                     return values;
                 }
             };
-            edit_form.submit(function(){
-                var $this = $(this);
-                if ($this.rememberState) {
-                    $this.rememberState(options);
+            var save_btn =$(".context").filter("[name='form.button.save']");
+            save_btn.click(function(){
+                if (edit_form.rememberState) {
+                    edit_form.rememberState(options);
                 }
             });
 

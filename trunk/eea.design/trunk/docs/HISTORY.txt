@@ -3,6 +3,9 @@ Changelog
 
 10.6-dev - (unreleased)
 -----------------------
+* Bug fix: only save form input when the save button is clicked within
+  eea-rememberstate since cancel triggers the form submit event
+  [ichimdav]
 
 10.5 - (2014-09-15)
 -------------------
