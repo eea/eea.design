@@ -6,6 +6,8 @@ Changelog
 * Bug fix: only save form input when the save button is clicked within
   eea-rememberstate since cancel triggers the form submit event
   [ichimdav]
+* Feature: added custom 404 message for PDF download in-progress
+  [ghicaale refs #20972]
 
 10.5 - (2014-09-15)
 -------------------
