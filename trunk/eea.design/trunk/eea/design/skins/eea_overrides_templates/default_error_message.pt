@@ -21,7 +21,7 @@
     </tal:comment>
 
     <tal:pdfdownload tal:condition="python:(err_type=='NotFound') and pdfdownload"
-                     tal:define="inprogress python:context.restrictedTraverse('/www/' + '/'.join(request.URL.split('/')[3:]) + '.tmp', False)">
+                     tal:define="inprogress python:context.restrictedTraverse('/www/' + '/'.join(request.URL.split('/')[3:]) + '.lock', False)">
 
         <tal:missing condition="not:nocall:inprogress">
             <h1 class="documentFirstHeading" i18n:translate="">
