@@ -3,6 +3,14 @@ Changelog
 
 10.6-dev - (unreleased)
 -----------------------
+* Change: modified wording of info message letting the user know that the form
+  has been modified between the time of the restoration date and now for the
+  eea-rememberstate plugin
+  [ichimdav]
+* Bug fix: fixed the display of the date of restoration date by display it
+  from the Date object instead of cutting off values from the date string
+  for the eea-rememberstate plugin
+  [ichimdav]
 * Bug fix: only save form input when the save button is clicked within
   eea-rememberstate since cancel triggers the form submit event
   [ichimdav]

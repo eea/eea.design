@@ -46,7 +46,8 @@ jQuery(document).ready(function($) {
                     return values;
                 }
             };
-            var save_btn =$(".context").filter("[name='form.button.save']");
+
+            var save_btn = $(".context").filter("[name='form.button.save']");
             save_btn.click(function(){
                 if (edit_form.rememberState) {
                     edit_form.rememberState(options);
@@ -103,9 +104,9 @@ jQuery(document).ready(function($) {
                                            entries = JSON.parse(entries);
                                            entry = entries[entries.length -1];
                                            if (entry.name === "saveDate") {
-                                               value = entry.value;
+                                               value = new Date(entry.value);
                                                $(event.target).find('#js-restore-save-timestamp')
-                                                              .html("(" + value.substring(0, value.length - 16) + ")");
+                                                          .html("(" + value.toDateString() + " " + value.toLocaleTimeString() + ")");
                                                save_date = new Date(value);
                                                modified_date = new Date($("#js-restore-object-modification-timestamp").text());
                                                if (save_date - modified_date < 0) {
