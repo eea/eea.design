@@ -25,25 +25,25 @@
 
         <tal:missing condition="not:nocall:inprogress">
             <h1 class="documentFirstHeading" i18n:translate="">
-                PDF file not available for download &hellip;
+                PDF not available
             </h1>
 
-            <p i18n:translate="">
-                The PDF you are requested does not exist or has expired, please request it again
+            <div class="portalMessage warningMessage" i18n:translate="">
+                The PDF does not exist or has expired, please request it again
                 from <a href="#" title="Original page" tal:attributes="href python:context.portal_url()+'/resolveuid/'+uuid" i18n:name="original_page" i18n:attributes="title">here</a>.
-            </p>
+            </div>
         </tal:missing>
 
         <tal:inprogress condition="nocall:inprogress">
             <h1 class="documentFirstHeading" i18n:translate="">
-                PDF file under preparation &hellip;
+                The PDF file will be available in a few moments &hellip;
             </h1>
 
-            <p i18n:translate="" tal:define="object_url python:context.portal_catalog(UID=uuid)[0].getURL();
+            <div class="portalMessage smileyMessage" i18n:translate="" tal:define="object_url python:context.portal_catalog(UID=uuid)[0].getURL();
                                              object_title python:context.portal_catalog(UID=uuid)[0].Title">
-                The PDF <a href="" title="" tal:attributes="href object_url; title object_title" tal:content="object_title" /> you have requested is still under preparation. <br />
-                Be patient and it will be available in a few moments. We will notify you via email when it is ready or try to refresh this page in a few moments.
-            </p>
+                We are preparing the PDF for "<span tal:replace="object_title" />" (<span class="discreet" tal:content="object_url" />). <br />
+                It will be available soon. <strong>We will notify you via email when it is ready or try to refresh this page in a few moments.</strong>
+            </div>
         </tal:inprogress>
 
     </tal:pdfdownload>
