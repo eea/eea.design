@@ -57,7 +57,10 @@ jQuery(document).ready(function($) {
             var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
             if (edit_form_data) {
                 if (edit_form && edit_form_data) {
-                    (function(){
+                    (function() {
+                        if ($(".error").length) {
+                            return;
+                        }
                         var saved_form_objs = JSON.parse(edit_form_data);
                         var current_form_objs = edit_form.serializeArray();
                         var same_values = true;
