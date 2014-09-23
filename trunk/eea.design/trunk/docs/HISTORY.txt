@@ -3,6 +3,8 @@ Changelog
 
 10.6-dev - (unreleased)
 -----------------------
+* Change: rememberstate no longer saves the DavizVisualization contenttype
+  [ichimdav refs #21127]
 * Change: modified wording of info message letting the user know that the form
   has been modified between the time of the restoration date and now for the
   eea-rememberstate plugin

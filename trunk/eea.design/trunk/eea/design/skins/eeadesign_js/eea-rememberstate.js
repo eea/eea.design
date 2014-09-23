@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
             if (edit_form_data) {
                 if (edit_form && edit_form_data) {
                     (function() {
-                        if ($(".error").length) {
+                        if ($(".error").length || $("#davizvisualization-base-edit").length) {
                             return;
                         }
                         var saved_form_objs = JSON.parse(edit_form_data);
