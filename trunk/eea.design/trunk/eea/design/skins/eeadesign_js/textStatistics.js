@@ -6,15 +6,26 @@
 
 (function(glob) {
 
-    function cleanText(text) {
+    var TextStatistics = function TextStatistics(text) {
+        this.text = text ? this.cleanText(text) : "";
+    };
+
+    TextStatistics.prototype.cleanText = function(text) {
         // all these tags should be preceeded by a full stop.
+        // return text if it's the same as the text saved on the plugin
+        // since it was already cleaned
+        var txt = text;
+        if (this.text && txt === this.text) {
+            return txt;
+        }
         var fullStopTags = ['li', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'dd'];
 
         fullStopTags.forEach(function(tag) {
-            text = text.replace("</" + tag + ">", ".");
-        })
+            // use regex search in order to replace all found tags not just first entry
+            txt = txt.replace(new RegExp("</" + tag + ">", 'g'), ".");
+        });
 
-        text = text.replace(/<[^>]+>/g, "") // Strip tags
+        txt = txt.replace(/<[^>]+>/g, "") // Strip tags
             .replace(/[,:;()\-]/, " ") // Replace commans, hyphens etc (count them as spaces)
             .replace(/[\.!?]/, ".") // Unify terminators
             .replace(/^\s+/, "") // Strip leading whitespace
@@ -24,85 +35,82 @@
             .replace(/\s+/, " ") // Remove multiple spaces
             .replace(/\s+$/, ""); // Strip trailing whitespace
 
-        text += "."; // Add final terminator, just in case it's missing.
-
-        return text;
-    }
-
-    var TextStatistics = function TextStatistics(text) {
-        this.text = text ? cleanText(text) : this.text;
+        if (txt.charAt(txt.length - 1) !== ".") {
+            txt += "."; // Add final terminator, in case it's missing.
+        }
+        return txt;
     };
 
     TextStatistics.prototype.fleschKincaidReadingEase = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return Math.round((206.835 - (1.015 * this.averageWordsPerSentence(text)) - (84.6 * this.averageSyllablesPerWord(text))) * 10) / 10;
+        var txt = text ? this.cleanText(text) : this.text;
+        return Math.round((206.835 - (1.015 * this.averageWordsPerSentence(txt)) - (84.6 * this.averageSyllablesPerWord(txt))) * 10) / 10;
     };
 
     TextStatistics.prototype.fleschKincaidGradeLevel = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return Math.round(((0.39 * this.averageWordsPerSentence(text)) + (11.8 * this.averageSyllablesPerWord(text)) - 15.59) * 10) / 10;
+        var txt = text ? this.cleanText(text) : this.text;
+        return Math.round(((0.39 * this.averageWordsPerSentence(txt)) + (11.8 * this.averageSyllablesPerWord(txt)) - 15.59) * 10) / 10;
     };
 
     TextStatistics.prototype.gunningFogScore = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return Math.round(((this.averageWordsPerSentence(text) + this.percentageWordsWithThreeSyllables(text, false)) * 0.4) * 10) / 10;
+        var txt = text ? this.cleanText(text) : this.text;
+        return Math.round(((this.averageWordsPerSentence(txt) + this.percentageWordsWithThreeSyllables(txt, false)) * 0.4) * 10) / 10;
     };
 
     TextStatistics.prototype.colemanLiauIndex = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return Math.round(((5.89 * (this.letterCount(text) / this.wordCount(text))) - (0.3 * (this.sentenceCount(text) / this.wordCount(text))) - 15.8) * 10) / 10;
+        var txt = text ? this.cleanText(text) : this.text;
+        return Math.round(((5.89 * (this.letterCount(txt) / this.wordCount(txt))) - (0.3 * (this.sentenceCount(txt) / this.wordCount(txt))) - 15.8) * 10) / 10;
     };
 
     TextStatistics.prototype.smogIndex = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return Math.round(1.043 * Math.sqrt((this.wordsWithThreeSyllables(text) * (30 / this.sentenceCount(text))) + 3.1291) * 10) / 10;
+        var txt = text ? this.cleanText(text) : this.text;
+        return Math.round(1.043 * Math.sqrt((this.wordsWithThreeSyllables(txt) * (30 / this.sentenceCount(txt))) + 3.1291) * 10) / 10;
     };
 
     TextStatistics.prototype.automatedReadabilityIndex = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return Math.round(((4.71 * (this.letterCount(text) / this.wordCount(text))) + (0.5 * (this.wordCount(text) / this.sentenceCount(text))) - 21.43) * 10) / 10;
+        var txt = text ? this.cleanText(text) : this.text;
+        return Math.round(((4.71 * (this.letterCount(txt) / this.wordCount(txt))) + (0.5 * (this.wordCount(txt) / this.sentenceCount(txt))) - 21.43) * 10) / 10;
     };
 
     TextStatistics.prototype.textLength = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return text.length;
+        var txt = text ? this.cleanText(text) : this.text;
+        return txt.length;
     };
 
     TextStatistics.prototype.letterCount = function(text) {
-        text = text ? cleanText(text) : this.text;
-        text = text.replace(/[^a-z]+/ig, "");
-        return text.length;
+        var txt = text ? this.cleanText(text) : this.text;
+        txt = txt.replace(/[^a-z]+/ig, "");
+        return txt.length;
     };
 
     TextStatistics.prototype.sentenceCount = function(text) {
-        text = text ? cleanText(text) : this.text;
+        var txt = text ? this.cleanText(text) : this.text;
 
         // Will be tripped up by "Mr." or "U.K.". Not a major concern at this point.
-        return text.replace(/[^\.!?]/g, '').length || 1;
+        return txt.replace(/[^\.!?]/g, '').length || 1;
     };
 
     TextStatistics.prototype.wordCount = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return text.split(/[^a-z0-9]+/i).length || 1;
+        var txt = text ? this.cleanText(text) : this.text;
+        return txt.split(/[^a-z0-9]+/i).length || 1;
     };
 
     TextStatistics.prototype.averageWordsPerSentence = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return this.wordCount(text) / this.sentenceCount(text);
+        var txt = text ? this.cleanText(text) : this.text;
+        return this.wordCount(txt) / this.sentenceCount(txt);
     };
 
     TextStatistics.prototype.averageCharactersPerWord = function(text) {
-        text = text ? cleanText(text) : this.text;
-        return this.letterCount(text) / this.wordCount(text);
+        var txt = text ? this.cleanText(text) : this.text;
+        return this.letterCount(txt) / this.wordCount(txt);
     };
 
     TextStatistics.prototype.averageSyllablesPerWord = function(text) {
-        text = text ? cleanText(text) : this.text;
+        var txt = text ? this.cleanText(text) : this.text;
         var syllableCount = 0,
-            wordCount = this.wordCount(text),
+            wordCount = this.wordCount(txt),
             self = this;
 
-        text.split(/\s+/).forEach(function(word) {
+        txt.split(/\s+/).forEach(function(word) {
             syllableCount += self.syllableCount(word);
         });
 
@@ -111,18 +119,18 @@
     };
 
     TextStatistics.prototype.wordsWithThreeSyllables = function(text, countProperNouns) {
-        text = text ? cleanText(text) : this.text;
+        var txt = text ? this.cleanText(text) : this.text;
         var longWordCount = 0,
             self = this;
 
-        countProperNouns = countProperNouns === false ? false : true;
+        var lcountProperNouns = countProperNouns !== false;
 
-        text.split(/\s+/).forEach(function(word) {
+        txt.split(/\s+/).forEach(function(word) {
 
             // We don't count proper nouns or capitalised words if the countProperNouns attribute is set.
             // Defaults to true.
-            if (!word.match(/^[A-Z]/) || countProperNouns) {
-                if (self.syllableCount(word) > 2) longWordCount++;
+            if (!word.match(/^[A-Z]/) || lcountProperNouns) {
+                if (self.syllableCount(word) > 2) { longWordCount++; }
             }
         });
 
@@ -130,9 +138,9 @@
     };
 
     TextStatistics.prototype.percentageWordsWithThreeSyllables = function(text, countProperNouns) {
-        text = text ? cleanText(text) : this.text;
+        var txt = text ? this.cleanText(text) : this.text;
 
-        return (this.wordsWithThreeSyllables(text, countProperNouns) / this.wordCount(text)) * 100;
+        return (this.wordsWithThreeSyllables(txt, countProperNouns) / this.wordCount(txt)) * 100;
     };
 
     TextStatistics.prototype.syllableCount = function(word) {
@@ -141,7 +149,7 @@
             wordPartCount = 0;
 
         // Prepare word - make lower case and remove non-word characters
-        word = word.toLowerCase().replace(/[^a-z]/g, "");
+        var lword = word.toLowerCase().replace(/[^a-z]/g, "");
 
         // Specific common exceptions that don't follow the rule set below are handled individually
         // Array of problem words (with word as key, syllable count as value)
@@ -152,7 +160,7 @@
         };
 
         // Return if we've hit one of those...
-        if (problemWords.hasOwnProperty(word)) return problemWords[word];
+        if (problemWords.hasOwnProperty(lword)) { return problemWords[lword]; }
 
         // These syllables would be counted as two but should be one
         var subSyllables = [/cial/, /tia/, /cius/, /cious/, /giu/, /ion/, /iou/, /sia$/, /[^aeiuoyt]{2,}ed$/, /.ely$/, /[cg]h?e[rsd]?$/, /rved?$/, /[aeiouy][dt]es?$/, /[aeiouy][^aeiouydt]e[rsd]?$/, /^[dr]e[aeiou][^aeiou]+$/, // Sorts out deal, deign etc
@@ -167,15 +175,15 @@
 
         // Remove prefixes and suffixes and count how many were taken
         prefixSuffix.forEach(function(regex) {
-            if (word.match(regex)) {
-                word = word.replace(regex, "");
+            if (lword.match(regex)) {
+                lword = lword.replace(regex, "");
                 prefixSuffixCount++;
             }
         });
 
-        wordPartCount = word.split(/[^aeiouy]+/ig)
+        wordPartCount = lword.split(/[^aeiouy]+/ig)
             .filter(function(wordPart) {
-                return !!wordPart.replace(/\s+/ig, "").length
+                return !!wordPart.replace(/\s+/ig, "").length;
             })
             .length;
 
@@ -184,11 +192,11 @@
 
         // Some syllables do not follow normal rules - check for them
         subSyllables.forEach(function(syllable) {
-            if (word.match(syllable)) syllableCount--;
+            if (lword.match(syllable)) { syllableCount--; }
         });
 
         addSyllables.forEach(function(syllable) {
-            if (word.match(syllable)) syllableCount++;
+            if (lword.match(syllable)) { syllableCount++; }
         });
 
         return syllableCount || 1;
@@ -201,4 +209,4 @@
     (typeof module != "undefined" && module.exports) ? (module.exports = textStatistics) : (typeof define != "undefined" ? (define("textstatistics", [], function() {
         return textStatistics;
     })) : (glob.textstatistics = textStatistics));
-})(this);
+}(this));
