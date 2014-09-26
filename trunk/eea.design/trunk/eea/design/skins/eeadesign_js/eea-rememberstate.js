@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
                                                save_date = new Date(value);
                                                modified_date = new Date($("#js-restore-object-modification-timestamp").text());
                                                if (save_date - modified_date < 0) {
-                                                  $("#js-restore-object-modification-timestamp-message").removeClass('visualHidden');
+                                                  $(this).dialog('close');
                                                }
                                            }
                                         }

@@ -3,6 +3,9 @@ Changelog
 
 10.6-dev - (unreleased)
 -----------------------
+* Change: no longer show the restore dialog if the modification date of object
+  is greater than that of the form restore data
+  [ichimdav refs #21127]
 * Change: rememberstate no longer saves the DavizVisualization contenttype
   [ichimdav refs #21127]
 * Change: modified wording of info message letting the user know that the form
