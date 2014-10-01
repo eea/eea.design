@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.6-dev - (unreleased)
------------------------
+10.6 - (2014-10-01)
+-------------------
 * Change: no longer show the restore dialog if the modification date of object
   is greater than that of the form restore data
   [ichimdav refs #21127]
