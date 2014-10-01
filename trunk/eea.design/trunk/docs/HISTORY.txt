@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.7-dev - (unreleased)
+-----------------------
+
 10.6 - (2014-10-01)
 -------------------
 * Change: no longer show the restore dialog if the modification date of object
