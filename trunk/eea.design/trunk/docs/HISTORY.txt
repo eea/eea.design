@@ -3,6 +3,8 @@ Changelog
 
 10.7-dev - (unreleased)
 -----------------------
+* Bug fix: Fix Font-Awesome icons within PDFs generated with wkhtmltopdf
+  [voineali refs #21149]
 
 10.6 - (2014-10-01)
 -------------------
