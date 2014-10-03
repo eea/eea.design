@@ -3,6 +3,9 @@ Changelog
 
 10.7-dev - (unreleased)
 -----------------------
+* Change: removed FontAwesome declaration from presentation_styles.css
+  now that we have eea-icons.css
+  [ichimdav refs 21149]
 * Bug fix: Fix Font-Awesome icons within PDFs generated with wkhtmltopdf
   [voineali refs #21149]
 
