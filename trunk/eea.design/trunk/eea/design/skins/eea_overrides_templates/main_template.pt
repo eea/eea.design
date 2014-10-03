@@ -54,6 +54,8 @@
 
     <link href="https://plus.google.com/104345627234408209119" rel="publisher" />
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+
     <tal:comment replace="nothing">
             Prevent public draft content to be indexed and cached by search engines.
     </tal:comment>
