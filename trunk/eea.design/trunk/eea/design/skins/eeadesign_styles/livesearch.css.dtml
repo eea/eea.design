@@ -5,7 +5,7 @@
 /* LiveSearch styles */
 
 .LSRes {
-    font-family:  <dtml-var fontFamily>;
+    font-family:  &dtml-fontFamily;;
     visibility: visible;
     color: &dtml-globalFontColor;;
     background-color: &dtml-backgroundColor;;
@@ -70,7 +70,7 @@
     padding: 0 !important;
     /* Currently exposes a rendering bug in Mozilla */
     white-space: normal;
-    font-family:  <dtml-var fontFamily>;
+    font-family:  &dtml-fontFamily;;
     visibility: visible;
     text-align: left;
     color: &dtml-globalFontColor;;

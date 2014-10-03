@@ -356,9 +356,8 @@ dd.portletFooter a:visited {
     min-width: 2em;
     text-align: center;
     overflow: hidden;
-    font: normal x-small Verdana;
+    font: normal x-small &dtml-fontFamily;;
     color: white;
-
 }
 
 .portlet-promotions .portletHeader a {

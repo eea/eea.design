@@ -131,7 +131,7 @@ html > body .slide {
 }
 
 .ie8 h1 {
-    font: bold 180%/1em Helvetica, sans-serif;
+    font: bold 180%/1em 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
 }
 
 .slide img {

@@ -3,6 +3,9 @@ Changelog
 
 10.7-dev - (unreleased)
 -----------------------
+* Feature: Use google Open Sans as primary font. Use fontFamily variable
+  in css.
+  [demarant fixes #20690]
 * Change: removed FontAwesome declaration from presentation_styles.css
   now that we have eea-icons.css
   [ichimdav refs 21149]

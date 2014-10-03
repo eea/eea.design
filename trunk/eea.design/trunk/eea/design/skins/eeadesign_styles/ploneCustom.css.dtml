@@ -39,7 +39,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 */
 
 .ui-widget {
-    font-family: Verdana, Arial, sans-serif;
+    font-family: &dtml-fontFamily;;
 }
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
@@ -255,7 +255,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
     background-image: -ms-linear-gradient(top,#478EA5,#346F83);
     background-image: -o-linear-gradient(top,#478EA5,#346F83);
     background-image: linear-gradient(top,#478EA5,#346F83);
-    font: bold 12px Verdana, Arial, sans-serif;
+    font: bold 12px &dtml-fontFamily;;
     padding: 7px 11px;
     display: inline-block;
     text-shadow: 0 1px 0 #000;
@@ -336,7 +336,7 @@ input.standalone {
     background-image: -ms-linear-gradient(top,#478EA5,#346F83);
     background-image: -o-linear-gradient(top,#478EA5,#346F83);
     background-image: linear-gradient(top,#478EA5,#346F83);
-    font: bold 12px Verdana, Arial, sans-serif;
+    font: bold 12px &dtml-fontFamily;;
     padding: 7px 11px;
     position: relative;
     display: inline-block;
@@ -1360,7 +1360,7 @@ h3.site-description {
     border-radius: 0 4px 4px 0;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Arial,Verdana,sans-serif;
+    font-family: &dtml-fontFamily;;
     font-size: 12px;
     font-style: normal;
     height: 29px;
@@ -1381,7 +1381,7 @@ h3.site-description {
     height: 30px;
     padding: 0 0 0 25px;
     background-position: 0 -82px;
-    font-family: Arial, Verdana, sans-serif;
+    font-family: &dtml-fontFamily;;
     font-style: italic;
     color: #777777;
     border: none;
@@ -1408,7 +1408,7 @@ h3.site-description {
 }
 
 .searchforms input {
-    font-family: Arial, Verdana, sans-serif;
+    font-family: &dtml-fontFamily;;
     font-style: italic;
     color: #777777;
     font-size: 0.8em;
@@ -1850,7 +1850,7 @@ ol.visualNoMarker {
 }
 
 textarea.proportional {
-    font: 100% <dtml-var fontFamily>;
+    font: 100% &dtml-fontFamily;;
 }
 
 .productCredits {

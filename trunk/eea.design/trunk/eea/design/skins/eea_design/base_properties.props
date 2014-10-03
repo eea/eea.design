@@ -4,7 +4,7 @@ plone_skin:string=EEADesign2006
 
 logoName:string=logo.gif
 
-fontFamily:string=Lucida Grande, Verdana, Lucida, Helvetica, Arial, sans-serif
+fontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
 fontBaseSize:string=69%
 fontColor:string=#333333
 fontSmallSize:string=85%
@@ -22,7 +22,7 @@ corporateOrange:string=#f6a800
 #different headings colors
 linkHeadingColor:string=#346f83
 headingColor:string=#2d749c
-headingFontFamily:string= Verdana, Lucida, Helvetica, Arial, sans-serif
+headingFontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
 
 backgroundColor:string=transparent
 

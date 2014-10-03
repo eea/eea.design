@@ -10,7 +10,7 @@
 /* @group Basics */
 
 body {
-    font: 75% Verdana, Arial, Helvetica, sans-serif;
+    font: 75% &dtml-fontFamily;;
     color: &dtml-fontColor;;
     margin:0;
     padding:0px;
@@ -70,7 +70,7 @@ h2 a, h3 a, h4 a {
 }
 
 p {
-    font-family:  Verdana, Arial, Helvetica, sans-serif;
+    font-family: &dtml-fontFamily;;
     margin: 0 0 0.75em 0;
     line-height: 1.5em;
 }

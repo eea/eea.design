@@ -112,7 +112,7 @@ label {
 }
 
 input {
-    font-family: Verdana;
+    font-family: &dtml-fontFamily;;
     visibility: visible;
     border: 1px solid &dtml-globalBorderColor;;
     color: &dtml-fontColor;;
@@ -217,7 +217,7 @@ dl.portlet a:visited {
     display: block;
     margin: 0em 0em 0.5em 0em;
     line-height: 1.5em;
-    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-family: &dtml-fontFamily;;
     color: #333;
 }
 /* @end @group Content Area */

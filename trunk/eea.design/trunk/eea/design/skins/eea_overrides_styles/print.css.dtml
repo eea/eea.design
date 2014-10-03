@@ -15,7 +15,7 @@
 */
 
 body {
-    font-family: Baskerville, Georgia, Garamond, Times, serif;
+    font-family: &dtml-fontFamily;;
     font-size: 11pt;
     min-width: 10cm;
     width: auto;
@@ -29,7 +29,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     border: none;
-    font-family: Baskerville, Georgia, Garamond, Times, serif;
+    font-family: &dtml-headingFontFamily;;
     width: auto;
     clear: both;
     page-break-inside: avoid;
