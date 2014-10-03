@@ -3,6 +3,8 @@ Changelog
 
 10.7-dev - (unreleased)
 -----------------------
+* Bug fix: hide certain elements from print.
+  [demarant]
 * Feature: Use google Open Sans as primary font. Use fontFamily variable
   in css.
   [demarant fixes #20690]
