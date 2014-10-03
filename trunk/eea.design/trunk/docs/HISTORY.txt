@@ -8,6 +8,8 @@ Changelog
   [ichimdav refs 21149]
 * Bug fix: Fix Font-Awesome icons within PDFs generated with wkhtmltopdf
   [voineali refs #21149]
+* Bug fix: fixed 404 message for PDF download when context is not published.
+  [ghicaale refs #21253]
 
 10.6 - (2014-10-01)
 -------------------
