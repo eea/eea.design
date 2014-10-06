@@ -121,40 +121,6 @@
                 </div>
             </div>
 
-            <div class="panel" id="tip-siteaction-events" style="width: 450px">
-                <div class="panel-top">
-                    <!-- -->
-                </div>
-                <div class="panel-content shadow">
-
-                    <tal:comment replace="nothing">
-                        smartfolder_portlets comes from eeacontenttypes
-                        portlet_themes_common comes from eea.themcentre
-                    </tal:comment>
-
-                    <tal:publications tal:define="portal_object  context/@@plone_portal_state/portal;
-                    specific python:portal_object.restrictedTraverse('SITE/events/environmental-events-calendar');">
-                        <tal:cond tal:condition="nocall:specific">
-                            <tal:publication tal:define="feeds specific/@@smartfolder_portlets|nothing;"
-                                    tal:repeat="portlet feeds">
-                                <tal:block condition="exists:context/portlet_themes_common">
-                                  <metal:macro use-macro="here/portlet_themes_common/macros/portlet" />
-                                </tal:block>
-                            </tal:publication>
-                        </tal:cond>
-                    </tal:publications>
-
-                    <a id="submit-event-link"
-                        class="moreLink"
-                        href=""
-                        title="Submit an environmental event"
-                        i18n:attributes="title"
-                        tal:attributes="href string:$portal_url/events/submitted/createQuickEvent">
-                        <span i18n:translate="">Submit a new event</span>
-                    </a>
-                </div>
-            </div>
-
             <div class="panel" id="tip-siteaction-chooselang"
                 style="width: 125px">
                 <div class="panel-top">

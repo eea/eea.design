@@ -15,6 +15,11 @@ Changelog
   [voineali refs #21149]
 * Bug fix: fixed 404 message for PDF download when context is not published.
   [ghicaale refs #21253]
+* Feature: hidden the "Events" from the top banner.
+  [ghicaale refs #21123]
+* Upgrade step: under /www/portal_actions/site_actions/manage_main delete
+  the action with id "events"
+  [ghicaale refs #21123]
 
 10.6 - (2014-10-01)
 -------------------

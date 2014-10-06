@@ -1265,12 +1265,6 @@ h3.site-description {
     margin-bottom: 0;
 }
 
-#tip-siteaction-events {
-     min-width: 600px;
-     width: 600px;
-     min-height: 430px;
-}
-
 #cross-site-top .panel .portlet,
 #cross-site-top .panel .portletHeader {
     background: transparent;
@@ -1489,10 +1483,6 @@ h3.site-description {
 }
 
 /* use font awesome unicode icons */
-
-#siteaction-events .eea-icon:before {
-   content: "&dtml-eea-icon-calendar-o;";
-}
 
 #siteaction-subscriptions .eea-icon:before {
     content: "&dtml-eea-icon-rss;";

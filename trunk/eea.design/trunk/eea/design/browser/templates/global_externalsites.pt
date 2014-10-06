@@ -9,7 +9,7 @@
         <div class="panel-top" style="left: -195px;"><!-- --></div>
         <div class="panel-content shadow">
             <dl class="portlet networkSites">
-                <dt i18n:translate="">Networks</dt>
+                <dt i18n:translate="">Networks xxx</dt>
                 <dd>
                     <ul>
                         <li id="externalsites-eionet">
@@ -63,7 +63,7 @@
                     <tal:block i18n:translate="">More networks</tal:block>
                 </dt>
                 <dd style="padding-bottom: 0.5em" class="portletFooter">
-                    <a class="moreLink" href="http://www.eea.europa.eu/about-us/key-partners" i18n:translate="">EU partners</a>&nbsp;&nbsp; 
+                    <a class="moreLink" href="http://www.eea.europa.eu/about-us/key-partners" i18n:translate="">EU partners</a>&nbsp;&nbsp;
                     <a class="moreLink" href="http://www.eea.europa.eu/about-us/international-cooperation" i18n:translate="">International cooperation</a>
                 </dd>
             </dl>

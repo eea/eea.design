@@ -23,7 +23,7 @@
 
 <div class="portlet-calendar">
     <div class="portletHeader">
-        <a href="/events" 
+        <a href="/events"
            title="Environmental events around the world"
            i18n:attributes="title"
            i18n:translate="">Environmental events around the world</a>
@@ -48,7 +48,7 @@
             <a href="" title="Month events"
                tal:attributes="href string:${portal_url}/events/search?${view/getReviewStateString}start.query:record:list:date=${begin}&amp;start.range:record=max&amp;end.query:record:list:date=${end}&amp;end.range:record=min&amp;year:int=${year}&amp;month:int=${month}"
                i18n:attributes="title">
-     <span i18n:translate="" tal:omit-tag=""> 
+     <span i18n:translate="" tal:omit-tag="">
             <span i18n:name="monthname" i18n:translate=""
                   tal:content="view/monthName"
                   tal:omit-tag="">monthname</span>
@@ -127,8 +127,8 @@
         <span class="portletBottomLeft"></span>
         <span class="portletBottomRight"></span>
                 <div class="portletFooter">
-                    <a href="" 
-                       title="Submit an environmental event" 
+                    <a href=""
+                       title="Submit an environmental event"
                        tal:attributes="href string:${portal_url}/events/submitted/createQuickEvent"
                        i18n:attributes="title"
                        i18n:translate="">Submit a new event</a>

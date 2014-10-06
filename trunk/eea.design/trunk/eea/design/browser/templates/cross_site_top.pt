@@ -2,7 +2,7 @@
    <div metal:use-macro="context/@@global_externalsites/external_sites">
        Eionet, EW ..
    </div>
-    
+
 <ul id="portal-siteactions"
     tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};
                 portal_url context/@@plone_portal_state/portal_url;
@@ -45,8 +45,8 @@
   #9485; added login form as a popup
 </tal:comment>
 <tal:login_form tal:define="portal_state context/@@plone_portal_state" tal:condition="portal_state/anonymous">
-  <div id="popup_login_form" style="display:none;" 
-       tal:define="qs request/QUERY_STRING; 
+  <div id="popup_login_form" style="display:none;"
+       tal:define="qs request/QUERY_STRING;
                    came_from python:request['URL'] + (qs and '?' or '') + qs">
     <metal:login_form use-macro="context/login_form/macros/login" />
   </div>
