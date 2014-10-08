@@ -1,5 +1,5 @@
 <metal:entry define-macro="entry">
-    <tal:defines tal:define="portal_type obj/portal_type;">
+    <tal:defines tal:define="portal_type obj/portal_type|nothing;">
 
         <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
             <metal:fill metal:fill-slot="body">

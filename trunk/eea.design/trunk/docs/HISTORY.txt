@@ -23,6 +23,8 @@ Changelog
 * Upgrade step: under /www/portal_actions/site_actions/manage_main delete
   the action with id "events"
   [ghicaale refs #21123]
+* Bug fix: fixed atct_albumentry to display Disscusion Items
+  [ghicaale]
 
 10.6 - (2014-10-01)
 -------------------
