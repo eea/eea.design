@@ -3,6 +3,9 @@ Changelog
 
 10.7-dev - (unreleased)
 -----------------------
+* Bug fix: Speedup History overlay within plone.app.viewlet by removing expensive
+  check "isUpToDate"
+  [voineali refs #21254]
 * Bug fix: hide certain elements from print.
   [demarant]
 * Feature: Use google Open Sans as primary font. Use fontFamily variable

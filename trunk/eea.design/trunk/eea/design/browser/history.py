@@ -43,8 +43,8 @@ class HistoryView(ContentHistoryView):
                 if version_id>0:
                     info["diff_previous_url"]=("%s/@@history?one=%s&two=%s" %
                             (context_url, version_id, version_id-1))
-                if not rt.isUpToDate(context, version_id):
-                    info["diff_current_url"]=("%s/@@history?one=current&two=%s" %
+
+                info["diff_current_url"]=("%s/@@history?one=current&two=%s" %
                                               (context_url, version_id))
             if can_revert:
                 info["revert_url"]="%s/revertversion" % context_url
