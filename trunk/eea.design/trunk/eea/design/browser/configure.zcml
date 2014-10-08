@@ -24,6 +24,14 @@
         layer=".interfaces.IEEADesignCMS"
         />
 
+    <browser:view
+        for="*"
+        name="contenthistory"
+        class=".history.HistoryView"
+        permission="zope2.View"
+        layer=".interfaces.IEEADesignCMS"
+        />
+
     <browser:page
         for="*"
         name="batching"
