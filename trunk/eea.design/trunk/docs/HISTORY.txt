@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.7-dev - (unreleased)
------------------------
+10.7 - (2014-10-15)
+-------------------
 * Bug fix: Speedup History overlay within plone.app.viewlet by removing expensive
   check "isUpToDate"
   [voineali refs #21254]
