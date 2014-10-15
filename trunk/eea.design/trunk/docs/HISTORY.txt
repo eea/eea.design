@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.8-dev - (unreleased)
+-----------------------
+
 10.7 - (2014-10-15)
 -------------------
 * Bug fix: Speedup History overlay within plone.app.viewlet by removing expensive
