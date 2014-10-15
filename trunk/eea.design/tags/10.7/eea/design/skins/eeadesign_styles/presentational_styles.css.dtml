@@ -1,0 +1,209 @@
+/* EEA Presentational styles */
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+
+/* .system-message and #error-handling are reST error indicators */
+/* message styles derived from fontAwesome  #15235 */
+dl.portalMessage dt,
+dl.system-message dt {
+    color: &dtml-fontColor;;
+}
+
+div.attention, div.caution,
+div.danger, div.error, div.hint,
+div.important, div.note, div.tip,
+div.warning,
+#error-handling,
+.portalMessage,
+.system-message {
+    background-color: &dtml-corporateBlueBackgroundColor;;
+    color: &dtml-fontColor;;
+    font-size: 120%;
+    margin: 1em 0;
+    padding: 1em 1.5em 1em 5.5em;
+    vertical-align: middle;
+    border: none;
+}
+
+.extra .attention,
+.extra .caution,
+.extra .danger,
+.extra .error,
+.extra .hint,
+.extra .important,
+.extra .note,
+.extra .tip,
+.extra .warning {
+    padding-left: 1.5em;
+}
+
+.system-message:before, .portalMessage:before, .portalMessage .eea-icon:before {
+    float: left;
+    display: block;
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+    line-height: inherit;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+    margin-left: -2.3em;
+    font-size: 150%;
+}
+
+div.attention:before, div.caution:before,
+div.danger:before, div.error:before, div.hint:before,
+div.important:before, div.note:before, div.tip:before,
+div.warning:before {
+    float: left;
+    display: block;
+    margin-right: .3em;
+    font-family: 'FontAwesome';
+}
+
+div.hint, div.tip, div.note,
+.ideaMessage,
+.informationMessage,
+.noteMessage,
+.smileyMessage,
+.thumbsUpMessage,
+.yesMessage {
+    background-color: &dtml-corporateBlueBackgroundColor;;
+}
+
+div.attention, div.caution,
+div.danger, div.error, div.important,
+div.warning,
+#error-handling,
+.errorMessage,
+.warningMessage {
+    background-color: #FFFABE;
+}
+
+div.attention:before, div.caution:before,
+div.danger:before, div.important:before,
+div.warning:before,
+.attentionMessage:before {
+    content: "&dtml-eea-icon-flash;";
+    vertical-align: baseline;
+    line-height: 2;
+}
+
+.attentionMessage:before {
+    line-height: 1;
+}
+
+.attentionMessage,
+.noMessage {
+    background-color: #FFFABE;
+}
+
+div.error,
+.errorMessage {
+    color: red;
+}
+
+.ideaMessage:before {
+    content: "&dtml-eea-icon-lightbulb-o;";
+}
+
+.informationMessage:before {
+    content: "&dtml-eea-icon-info-circle;";
+}
+
+.info:before {
+    content: "&dtml-eea-icon-info-circle;";
+}
+
+.noMessage:before {
+    content: "&dtml-eea-icon-times;";
+}
+
+.noteMessage:before {
+    content: "&dtml-eea-icon-file-text;";
+}
+
+.rosetteMessage:before {
+    content: "&dtml-eea-icon-globe;";
+}
+
+.rosetteMessage {
+    color: #666666;
+}
+
+.smileyMessage:before {
+    content: "&dtml-eea-icon-smile-o;";
+}
+
+.thumbsUpMessage:before {
+    content: "&dtml-eea-icon-thumbs-up;";
+}
+
+div.error:before,
+.errorMessage:before,
+.error:before,
+.warningMessage:before
+{
+    content: "&dtml-eea-icon-exclamation-triangle;";
+}
+
+.yesMessage:before {
+    content: "&dtml-eea-icon-check;";
+}
+
+
+/* Styles moved from visual.css */
+blockquote {
+    width: 70%;
+    margin: 1.0em auto;
+    padding: 1.5em 1em 1em 3em;
+    background: &dtml-lightBackgroundColor; url(&dtml-portal_url;/open_quote.gif) 0.5em 0.75em no-repeat;
+    color: #000000;
+    clear:both;
+}
+
+
+/* Styles copied from base.css */
+.pullquote {
+    margin: 0 1em 0.5em 0.5em;
+    font-weight: bold;
+    line-height: 1.25em;
+    float: right;
+    width: 35%;
+    clear: right;
+    color: #444;
+    font-size: 1.6em;
+    letter-spacing: -0.08em !important;
+}
+
+.callout {
+    background: #eee;
+    padding: 1em;
+    border-left: 1em solid #ccc;
+    clear: both;
+}
+
+.keyFact {
+    background: &dtml-corporateBlueBackgroundColor;;
+    padding: 1.5em;
+    border-left: 1em solid #346F83;
+    clear: both;
+}
+
+/* pre is the tag used when selecting the literal style */
+pre {
+    background-color: #222;
+    color: White;
+    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    padding: 1em;
+    overflow-x: auto;
+    font-size: 90%;
+    margin-bottom: 1em;
+    line-height: 1.25em;
+}
+
+
+/* </dtml-with> */
