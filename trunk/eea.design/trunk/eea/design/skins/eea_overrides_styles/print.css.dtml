@@ -19,7 +19,7 @@
 
 body {
     font-family: &dtml-fontFamily;;
-    font-size: 11pt;
+    font-size: 9pt;
     min-width: 10cm;
     width: auto;
 }

@@ -3,6 +3,8 @@ Changelog
 
 10.8-dev - (unreleased)
 -----------------------
+* Change: set font size to 9pt for printing from web and PDF.
+  [demarant fixes #21455 and refs #20690]
 
 10.7 - (2014-10-15)
 -------------------
