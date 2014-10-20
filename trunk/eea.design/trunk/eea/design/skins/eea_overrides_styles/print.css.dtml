@@ -67,7 +67,6 @@ pre {
 
 table.listing,
 table.listing td {
-    border: 1pt solid black;
     border-collapse: collapse;
 }
 

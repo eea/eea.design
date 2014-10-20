@@ -189,9 +189,12 @@ table.datatable {
     padding: 0.2em;
     border-bottom: 1px dotted #b6b6b6;
 }
+
 .sortable th, .listing th {
-    background: #f1efe5;
-    border: 2px outset #adc095; /* #495b6b;*/
+    font-weight: bold;
+    color: #FFF;
+    background: #005E7D;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     margin: 0;
     padding: 0;
     white-space: nowrap;
