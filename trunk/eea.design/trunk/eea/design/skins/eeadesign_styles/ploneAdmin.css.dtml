@@ -105,6 +105,10 @@ div.managePortletsLink:hover {
     display:none;
 }
 
+#lock-icon {
+    float:left;
+}
+
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE
 */
