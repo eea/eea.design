@@ -47,6 +47,20 @@ jQuery(document).ready(function($) {
 
     // #20389 - time counter to remind editors save their work
     // Delay can be overriten like this (value in miliseconds): $.timeoutDialog({delay: 900000});
+
+    $(document).ajaxComplete(function(event, xhr, settings) {
+        var url = settings.url.split('/');
+        var method = url[url.length-1];
+        var reset_methods = ['@@googlechart.googledashboard.edit',
+                             '@@googlechart.googledashboards.edit',
+                             '@@googlechart.savepngchart',
+                             '@@googlechart.setthumb',
+                             '@@daviz.properties.edit'];
+        if (reset_methods.indexOf(method) > -1) {
+            $.timeoutDialog.reset();
+        }
+    });
+
     try {
         $.timeoutDialog({delay: 900000}); // set to be triggered after 15 minutes
     }

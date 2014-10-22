@@ -91,7 +91,6 @@
             </tal:template_defines>
         </div>
 
-
             <form tal:define="url python:context.absolute_url()+'/'+ 'login_form';
                               decide_https python:test(context.portal_url() == 'http://www.eea.europa.eu', 'https://', 'http://');
                               secureUrl python:url.replace('http://', decide_https);"
@@ -318,7 +317,7 @@
                 <h3 i18n:translate="">
                 New user?
                 </h3>
-                
+
                 <p i18n:translate="">
                 To access this part of the site, you need to log in with your user name and password. You can use your Eionet username and password.
                 </p>

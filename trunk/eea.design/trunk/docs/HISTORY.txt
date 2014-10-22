@@ -9,6 +9,10 @@ Changelog
   [demarant fixes #21455 and refs #20690]
 * Bug fix: fixed CSS for locked icon displayed under plone.belowcontenttitle.documentbyline viewlet
   [ghicaale refs #21457]
+* Feature: timeout dialog is now aware of ajax calls which modify the object
+  [ghicaale refs #21457]
+* Bug fix: fixed timeout dialog to be aware of DaViz ajax calls
+  [ghicaale refs #21457]
 
 10.7 - (2014-10-15)
 -------------------
