@@ -3,6 +3,9 @@ Changelog
 
 10.8-dev - (unreleased)
 -----------------------
+* Bug fix: Patched unlockOnFormUnload.js to stop calling refresh_lock via AJAX
+  if the user's auth cookie expired or an error occurred
+  [voineali refs #21857]
 * Bug fix: harmonise table style on web and print.
   [demarant fixes #21009]
 * Change: set font size to 9pt for printing from web and PDF.

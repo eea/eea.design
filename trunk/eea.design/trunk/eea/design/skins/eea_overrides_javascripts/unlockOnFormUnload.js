@@ -1,6 +1,6 @@
 /*
   Plone unlock handler; attaches an unlock handler to $('form.enableUnlockProtection')
-  
+
   provides global plone
 */
 
@@ -22,12 +22,12 @@ plone.UnlockHandler = {
             plone.UnlockHandler._refresher = setInterval(plone.UnlockHandler.refresh, 300000);
         }
     },
-    
+
     cleanup: function() {
         $(window).unbind('unload', plone.UnlockHandler.execute);
         clearInterval(plone.UnlockHandler._refresher);
     },
-    
+
     execute: function() {
         // this.submitting is set from the form unload handler
         // (formUnload.js) and signifies that we are in the
@@ -36,12 +36,22 @@ plone.UnlockHandler = {
         if (this.submitting) {return;}
         $.ajax({url: plone.UnlockHandler._baseUrl() + '/@@plone_lock_operations/safe_unlock', async: false});
     },
-    
+
     refresh: function() {
         if (this.submitting) {return;}
-        $.get(plone.UnlockHandler._baseUrl() + '/@@plone_lock_operations/refresh_lock');
+        $.ajax({
+          url: plone.UnlockHandler._baseUrl() + '/@@plone_lock_operations/refresh_lock',
+          success: function(data, textStatus, jqXHR){
+           if($(data).find('input[type="password"]').length){
+             return plone.UnlockHandler.cleanup();
+           }
+          },
+          error: function(jqXHR, textStatus, errorThrown){
+             return plone.UnlockHandler.cleanup();
+          }
+        });
     },
-    
+
     _baseUrl: function() {
         var baseUrl, pieces;
 
