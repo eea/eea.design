@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.9-dev - (unreleased)
+-----------------------
+
 10.8 - (2014-11-20)
 -------------------
 * Bug fix: Patched unlockOnFormUnload.js to stop calling refresh_lock via AJAX
