@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.8-dev - (unreleased)
------------------------
+10.8 - (2014-11-20)
+-------------------
 * Bug fix: Patched unlockOnFormUnload.js to stop calling refresh_lock via AJAX
   if the user's auth cookie expired or an error occurred
   [voineali refs #21857]
