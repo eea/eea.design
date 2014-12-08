@@ -11,7 +11,7 @@
                         ajax_load request/ajax_load | nothing;
                         ajax_include_head request/ajax_include_head | nothing;
                         dummy python:request.RESPONSE.setHeader('X-UA-Compatible', 'IE=edge,chrome=1');
-                        xss-disable python:request.RESPONSE.setHeader('X-XSS-Protection', '0');
+                        xssDisable python:request.RESPONSE.setHeader('X-XSS-Protection', '0');
                         template_id template/getId|string:;
                         normalizeString nocall:plone_view/normalizeString;
                         toLocalizedTime nocall:plone_view/toLocalizedTime;
@@ -33,7 +33,7 @@
                         ifacetool context/portal_interface;
                         wf_state python: context_state.workflow_state();">
 
-<tal:comment replace="nothing">xss-disable was added in order to fix the chrome issue from ticket #15231</tal:comment>
+<tal:comment replace="nothing">xssDisable was added in order to fix the chrome issue from ticket #15231</tal:comment>
 
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
 
