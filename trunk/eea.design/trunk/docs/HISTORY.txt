@@ -3,6 +3,8 @@ Changelog
 
 10.9-dev - (unreleased)
 -----------------------
+* Bug fix: Fixed frontpage_macros to work with Chameleon
+  [voineali refs #21919]
 * Bug fix: Fixed main_template to work with Chameleon
   [voineali refs #21919]
 

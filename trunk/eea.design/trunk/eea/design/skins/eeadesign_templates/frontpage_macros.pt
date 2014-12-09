@@ -24,15 +24,15 @@
     </tal:cond>
 </div>
 
-<h2 tal:define="statusMessage python:request.get('statusMessage'); 
-                   domain python:request.get('domain')" 
-       tal:attributes="i18n:domain domain; 
+<h2 tal:define="statusMessage python:request.get('statusMessage');
+                   domain python:request.get('domain')"
+       tal:attributes="i18n:domain domain;
                        i18n:translate string:"></h2>
 
 <metal:featured metal:define-macro="featured-item"
      tal:define="featured_class featured_class|context/@@frontpage_highlights;
                  get_img_url  nocall:featured_class/getImageUrl;
-                 nr_items nr_items|python:1; 
+                 nr_items nr_items|python:1;
                  highlights highlights|featured_class/getHighArticles;
                  plone_view nocall:plone_view|context/@@plone;
                  descr_max_length descr_max_length|python:200;
@@ -81,7 +81,7 @@
                         </a>
                         </tal:notcond>
                     </div>
-                
+
                 <tal:cond tal:condition="is_video">
                     <h3 class="highlight">
                         <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
@@ -156,7 +156,7 @@
 
 <div metal:define-macro="datamaps"
      class="eea-tabs-panel"
-     id="datamaps-highlights" 
+     id="datamaps-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;
                  more_href string:${portal_url}/data-and-maps;">
@@ -167,7 +167,7 @@
     tal:define="more_href more_href|string:/;
                 more_title more_title|string:All Items">
                 <p>
-		   <a title="archive" class="standardButton" i18n:attributes="title" 
+		   <a title="archive" class="standardButton" i18n:attributes="title"
                        tal:attributes="href more_href;" >
 				<span i18n:translate=""
                                       tal:omit-tag="">
@@ -218,11 +218,11 @@
 </metal:gallery-layout-selection>
 
 <metal:condition metal:define-macro="gallery-condition">
-    <tal:cond tal:condition="folderContents"
-        tal:define="ajax ajax|nothing;
-        limit_display limit_display|nothing;
-        foldermacro python:context.frontpage_macros.macros['ajax-items'] if ajax else context.frontpage_macros.macros['gallery-layout-selection'];">
-        <div metal:use-macro="foldermacro" />
+    <tal:cond tal:condition="folderContents" tal:define="
+        ajax ajax|nothing;
+        limit_display limit_display|nothing;">
+        <tal:ajax tal:condition="ajax" metal:use-macro="context/frontpage_macros/macros/ajax-items" />
+        <tal:noajax tal:condition="not:ajax" metal:use-macro="context/frontpage_macros/macros/gallery-layout-selection" />
     </tal:cond>
     <tal:nocond tal:condition="not:folderContents">
     <div style="display:none" tal:content="string:plone: XXX this is a workaround, somehow the first div from this folder gets it's content removed"></div>
