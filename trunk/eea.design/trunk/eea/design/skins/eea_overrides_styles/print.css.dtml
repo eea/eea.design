@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     font-family: &dtml-headingFontFamily;;
     width: auto;
-    clear: both;
     page-break-inside: avoid;
     page-break-after: avoid;
 

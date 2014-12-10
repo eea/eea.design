@@ -3,6 +3,10 @@ Changelog
 
 10.9-dev - (unreleased)
 -----------------------
+* Change: removed float clearing for h tags within print.css in order to avoid
+  clearing floats when not expected. If clearing is expected a div with
+  clearFloats can be added
+  [ichimdav refs #22212]
 * Bug fix: Fixed frontpage_macros to work with Chameleon
   [voineali refs #21919]
 * Bug fix: Fixed main_template to work with Chameleon
