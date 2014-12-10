@@ -3,6 +3,9 @@ Changelog
 
 10.9-dev - (unreleased)
 -----------------------
+* Feature: added figureContainer class to presentation_styles.css used by
+  the figures title and image div which can be added as an TinyMCE style
+  [ichimdav refs #21882]
 * Change: removed float clearing for h tags within print.css in order to avoid
   clearing floats when not expected. If clearing is expected a div with
   clearFloats can be added

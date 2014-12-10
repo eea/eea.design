@@ -205,5 +205,10 @@ pre {
     line-height: 1.25em;
 }
 
+/* 21882 added figure container class */
+.figureContainer {
+    width: 50%;
+    float: left;
+}
 
 /* </dtml-with> */
