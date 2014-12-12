@@ -3,6 +3,8 @@ Changelog
 
 10.9-dev - (unreleased)
 -----------------------
+* Bug fix: Show goto_comments message only when comments are enabled
+  [voineali refs demarant]
 * Feature: added figureContainer class to presentation_styles.css used by
   the figures title and image div which can be added as an TinyMCE style
   [ichimdav refs #21882]

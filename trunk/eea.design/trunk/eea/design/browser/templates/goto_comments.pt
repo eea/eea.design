@@ -4,11 +4,10 @@
                        isAnon view/is_anonymous;
                        canReview view/can_review;
                        replies python:view.get_replies(canReview);
-                       has_replies python:view.has_replies(canReview);
                        showCommenterImage view/show_commenter_image;
                        errors options/state/getErrors|nothing;
                        wtool context/@@plone_tools/workflow;"
-           tal:condition="python:isDiscussionAllowed or has_replies"
+           tal:condition="isDiscussionAllowed"
            i18n:domain="eea">
 
 <p class="portalMessage">
