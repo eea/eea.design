@@ -3,6 +3,8 @@ Changelog
 
 10.9-dev - (unreleased)
 -----------------------
+* Change: added basic style for figures
+  [demarant, ichimdav refs #21882]
 * Bug fix: Show goto_comments message only when comments are enabled
   [voineali refs demarant]
 * Feature: added figureContainer class to presentation_styles.css used by

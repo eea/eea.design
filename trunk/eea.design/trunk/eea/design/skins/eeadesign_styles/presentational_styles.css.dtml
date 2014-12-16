@@ -206,9 +206,23 @@ pre {
 }
 
 /* 21882 added figure container class */
-.figureContainer {
-    width: 50%;
-    float: left;
+
+.figureContainer, .figureContainer50Left, .figureContainer50Right { 
+  page-break-inside: avoid;
+}
+
+.figureContainer { 
+   width: 100%;
+}
+
+.figureContainer50Left { 
+   float: left;
+   width: 50%;
+}
+
+.figureContainer50Right { 
+   float: right;
+   width: 50%;
 }
 
 /* </dtml-with> */
