@@ -1,6 +1,9 @@
 Changelog
 =========
 
+11.0-dev - (unreleased)
+-----------------------
+
 10.9 - (2014-12-23)
 -------------------
 * Change: added basic style for figures
