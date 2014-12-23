@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.9-dev - (unreleased)
------------------------
+10.9 - (2014-12-23)
+-------------------
 * Change: added basic style for figures
   [demarant, ichimdav refs #21882]
 * Bug fix: Show goto_comments message only when comments are enabled
