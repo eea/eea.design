@@ -1,0 +1,46 @@
+<tal:master define="level options/level|python:2;
+                    children options/children | nothing;
+                    bottomLevel options/bottomLevel | nothing;"
+            i18n:domain="eea">
+
+<metal:main define-macro="nav_main">
+<tal:navitem repeat="node children">
+
+<li tal:define="show_children   node/show_children;
+                children        node/children;
+                item_url        node/getURL;
+                item            node/item;
+                link       python:item.getURL  or item_url;
+                item_icon       nocall:node/item_icon;
+                item_type       node/portal_type;
+                is_current      node/currentItem;
+                is_in_path      node/currentParent;
+                li_class        python:is_current and ' navTreeCurrentNode' or '';
+                li_extr_class   python:is_in_path and ' navTreeItemInPath' or '';
+                li_folder_class python:show_children and ' navTreeFolderish' or '';
+                normalizeString nocall: context/plone_utils/normalizeString;"
+    tal:attributes="class python: node['currentItem'] and 'navTreeCurrentItem visualMoMarker' or 'navTreeItem visualNoMarker';"
+
+    tal:condition="python:bottomLevel &lt;= 0 or level &lt;= bottomLevel">
+
+    <tal:level define="item_class string:state-${node/normalized_review_state};
+                       item_type_class python:'contenttype-' + normalizeString(item_type);
+                       item_class python:is_current and item_class + ' navTreeCurrentItem' or item_class;">
+
+
+        <a tal:attributes="href link;
+                           title node/Description;
+			   class python: is_current and 'navItemLevel%s navItemLevel%scurrent' % (level, level) or 'navItemLevel%s' % level;">
+                           
+            <span tal:content="node/Title">Selected Item Title</span>
+        </a>
+
+    <ul tal:attributes="class python:'portletNavigationTree navTreeLevel'+str(level+2)"
+        tal:condition="python: len(children) > 0 and show_children">
+        <span tal:replace="structure python:view.recurse(children=children, level=level+1, bottomLevel=bottomLevel)" />
+    </ul>
+    </tal:level>
+</li>
+</tal:navitem>
+</metal:main>
+</tal:master>

@@ -1,0 +1,189 @@
+/*
+** Plone style sheet - Public-facing Elements EEA Customizations
+*/
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+/* @group styles changes for public.css */
+
+
+/* @group Basics */
+
+body {
+    font: 75% &dtml-fontFamily;;
+    color: &dtml-fontColor;;
+    margin:0;
+    padding:0px;
+    background-color: &dtml-backgroundColor;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: &dtml-headingColor;;
+    font-weight: bold;
+    background-color: transparent;
+    font-family: &dtml-headingFontFamily;;
+    text-shadow: 1px 1px white;
+}
+
+h1, h2 {
+    letter-spacing: 0;
+}
+h1 {
+    color: #00446a;
+    font-size: 180%;
+    line-height: 1.4;
+    margin: 0.67em 0;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    padding-bottom: 0.25em;
+}
+h2 {
+    font-size: 150%;
+    margin: 0.83em 0;
+    text-shadow: 1px 1px white;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    color: &dtml-corporateBlueTwo;;
+    padding-bottom: 0.25em;
+}
+h3 {
+    font-size: 125%;
+    line-height: 1.5;
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+    margin: 1em 0;
+}
+h4 {
+    font-size: 110%;
+    margin: 1.33em 0;
+    color: #000;
+}
+h5 {
+    font-size: 100%;
+    margin: 1.67em 0;
+    color: #000;
+}
+h6 {
+    font-size: 85%;
+    margin: 2.33em 0;
+    color: #000;
+}
+h2 a, h3 a, h4 a {
+    border-bottom: none !important;
+}
+
+p {
+    font-family: &dtml-fontFamily;;
+    margin: 0 0 0.75em 0;
+    line-height: 1.5em;
+}
+
+a { color: &dtml-linkColor;; }
+a:link { color: &dtml-linkColor;; }
+a:visited { color: &dtml-linkVisitedColor;; }
+a:hover { color: &dtml-linkHoverColor;; }
+a:active { color: &dtml-linkActiveColor;; }
+
+/* @end Basics */
+
+/* @group Navigation/search */
+
+/* @end Navigation/search */
+
+/* @group Site actions */
+#portal-siteactions li a:hover {
+    color: &dtml-corporateGreen;;
+}
+/* @end Site actions */
+
+
+/* @group Image alignment classes */
+img.image-left,
+img.image-right,
+.captioned img {
+    border: 0;
+}
+/* @end */
+
+/* @group Footer */
+
+#portal-footer {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    font-size: 12px;
+    color: white;
+    min-width: 950px;
+    background: transparent;
+}
+#portal-colophon {
+    font-size: 12px;
+}
+/* @end @group Footer */
+/* @end styles changes for public.css */
+
+
+/* @group Related portlets EEA Specific */
+#related-pages, #related-multimedia, #auto-related, 
+#related-pages dl, #related-multimedia dl, #auto-related dl {
+  clear: both;
+}
+/* @end Related portlets EEA Specific */
+
+/* @group Forms found now in forms.css */
+fieldset,
+.editionComment {
+    padding:0;
+}
+
+#content label {
+   cursor: pointer;
+}
+
+.fieldRequired {
+    background: url(&dtml-portal_url;/required.png) center left no-repeat;
+}
+/* @end @group Forms found now in forms.css */
+
+/* @group previously in public.css not found in stock plone */
+
+#content-core .languageCodes {
+    display: inline-block;
+}
+
+span.languageCodes a.translated,
+#content span.link-external a.translated {
+    background: none repeat scroll 0 0 #ECECEC;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    color: black;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 0;
+    padding: 0 5px;
+}
+
+#featured-datasets dd {
+    margin: 0 0 0.5em 2em;
+}
+
+#featured-datasets {
+   margin-bottom: 2.5em;
+}
+
+/* display input as block for users search form  #4817 */
+form[name="users_search"] input.context {
+    display: block !important;
+}
+
+#contentActionMenus .actionMenuContent ul {
+    margin:0px !important;
+}
+
+#contentActionMenus .actionSeparator a {
+    padding-top: 0.2em;
+    border-top: 2px solid &dtml-contentViewBorderColor;;
+}
+
+div.managePortletsLink, a.managePortletsFallback {
+    background: transparent;
+}
+/* @end previously in public.css not found in stock plone */
+/* </dtml-with> */
