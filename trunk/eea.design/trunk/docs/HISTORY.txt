@@ -3,6 +3,10 @@ Changelog
 
 11.0-dev - (unreleased)
 -----------------------
+* Change: cleaned pl_document_related.pt of feeds and pages macros
+  since they are no longer found within document_relateditems.pt
+  This avoids a relatedItems viewlet error
+  [ichimdav refs #22604]
 
 10.9 - (2014-12-23)
 -------------------

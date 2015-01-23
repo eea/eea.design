@@ -6,15 +6,6 @@
 
     <div class="visualClear" id="clear-space-before-relatedItemBox"><!-- --></div>
 
-    <!-- eea related - DISABLED here, since it is now an indipendent viewlet
-    <div metal:use-macro="here/document_relateditems/macros/pages">
-        show related feeds if they exist
-    </div>
-    -->
-    <div metal:use-macro="here/document_relateditems/macros/feeds">
-        show related feeds if they exist
-    </div>
-
     <div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">
         show all (back and forward refs) related items if they exist
     </div>
