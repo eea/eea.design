@@ -2740,8 +2740,50 @@ a.downloading img {
 }
 
 #stats td {
-    padding-right: 1em;
+  padding-right: 1em;
+}
+
+#region-content .documentExportActions {
+  float: right;
+  height: 0.5em;
+}
+
+
+#region-content .documentExportActions ul, .documentExportActions ul {
+  list-style: none;
+  padding: 0px;
+  margin: 1em -0.15em 0px 0px;
+}
+
+#region-content .documentExportActions li, .documentExportActions li {
+  display: inline;
+}
+
+#region-content .documentExportActions .link-pdf,
+#region-content .documentExportActions .link-epub,
+.documentExportActions .link-pdf,
+.documentExportActions .link-epub {
+  background: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#content .documentExportActions a {
+  color: rgb(186, 60, 13);
+  border-bottom: none !important;
+}
+
+.documentExportActions .export-action-title {
+  display: block;
+  padding-left: 0.7em;
+}
+
+.documentExportActions .eea-icon::before {
+  margin: 0px 0.15em;
+}
+
+#plone-document-byline {
+  max-width: 80%;
 }
 
 /* </dtml-with> */
-

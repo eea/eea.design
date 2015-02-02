@@ -177,3 +177,15 @@ class QRBox(common.ViewletBase):
         """ Available
         """
         return True
+
+class ExportActionsViewlet(common.ViewletBase):
+    """ Custom viewlet for exporting actions
+    """
+    render = ViewPageTemplateFile('templates/export_actions.pt')
+
+    def update(self):
+        super(ExportActionsViewlet, self).update()
+
+        self.context_state = getMultiAdapter((self.context, self.request),
+                                             name=u'plone_context_state')
+        self.actions = self.context_state.actions('export_actions')

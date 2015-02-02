@@ -3,6 +3,9 @@ Changelog
 
 11.0-dev - (unreleased)
 -----------------------
+* Feature: Added "export actions" viewlet bellow content title in order to easily
+  insert action with high visibility like download as PDF
+  [voineali refs #22686]
 * Change: cleaned pl_document_related.pt of feeds and pages macros
   since they are no longer found within document_relateditems.pt
   This avoids a relatedItems viewlet error

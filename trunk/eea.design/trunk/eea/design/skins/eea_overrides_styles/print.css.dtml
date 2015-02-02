@@ -266,6 +266,7 @@ input.standalone,
 input.context,
 .site-description,
 .table-definition-map,
+.documentExportActions,
 .portal-logo a {
     /* Hides all the elements irrelevant for printing */
     display: none !important;
