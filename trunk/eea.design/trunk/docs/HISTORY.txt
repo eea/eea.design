@@ -1,8 +1,8 @@
 Changelog
 =========
 
-11.0-dev - (unreleased)
------------------------
+11.0 - (2015-02-03)
+-------------------
 * Feature: Added "export actions" viewlet bellow content title in order to easily
   insert action with high visibility like download as PDF
   [voineali refs #22686]
