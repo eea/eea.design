@@ -87,7 +87,7 @@
             directory="profiles/upgrades/to_93"
             description='EEA Design upgrade profile for v9.3'
             provides="Products.GenericSetup.interfaces.EXTENSION" />
-    
+
     <genericsetup:registerProfile
             name="upgrade94"
             title="EEA Design upgrade profile for v9.4"
@@ -114,6 +114,13 @@
             title="EEA Design upgrade profile for v10.3"
             directory="profiles/upgrades/to_103"
             description='EEA Design upgrade profile for v10.3'
+            provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+    <genericsetup:registerProfile
+            name="upgrade111"
+            title="EEA Design upgrade profile for v11.1"
+            directory="profiles/upgrades/to_111"
+            description='EEA Design upgrade profile for v11.1'
             provides="Products.GenericSetup.interfaces.EXTENSION" />
 
 </configure>

@@ -2745,7 +2745,6 @@ a.downloading img {
 
 #region-content .documentExportActions {
   float: right;
-  height: 0.5em;
 }
 
 
@@ -2771,11 +2770,11 @@ a.downloading img {
 #content .documentExportActions a {
   color: rgb(186, 60, 13);
   border-bottom: none !important;
+  text-align: center;
 }
 
 .documentExportActions .export-action-title {
   display: block;
-  padding-left: 0.7em;
 }
 
 .documentExportActions .eea-icon::before {
@@ -2784,6 +2783,10 @@ a.downloading img {
 
 #plone-document-byline {
   max-width: 80%;
+}
+
+.portaltype-fiche .link-presentation {
+  display: none;
 }
 
 /* </dtml-with> */
