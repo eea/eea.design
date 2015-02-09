@@ -1658,6 +1658,10 @@ h3.site-description {
     display: block;
 }
 
+#languageCodes {
+  max-width: 80%;
+}
+
 #themes-tags span span span.languageCodes {
     display: none;
 }
@@ -2744,7 +2748,8 @@ a.downloading img {
 }
 
 #region-content .documentExportActions {
-  float: right;
+  position: absolute;
+  right: 0;
 }
 
 
@@ -2781,8 +2786,9 @@ a.downloading img {
   margin: 0px 0.15em;
 }
 
-#plone-document-byline {
+#content .documentByLine {
   max-width: 80%;
+  text-align: left;
 }
 
 .portaltype-fiche .link-presentation {

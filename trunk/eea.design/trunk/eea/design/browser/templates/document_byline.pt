@@ -2,12 +2,10 @@
     <div class="documentByLine"
          id="plone-document-byline"
          tal:define="isAnon context/@@plone_portal_state/anonymous;
-                     roles user/getRoles|python:[];
-                     roles python:[role for role in roles if role not in ('Anonymous', 'Authenticated')];
                      plone_view context/@@plone;
                      siteprops context/portal_properties/site_properties;
                      friendly_type context/Type|nothing;"
-        i18n:domain="eea" tal:condition="roles">
+        i18n:domain="eea">
 
         <noscript>
           <tal:comment replace="nothing">
@@ -35,17 +33,17 @@
             <span class="docDate creationDate" tal:condition="python:context.meta_type in metatypes_showcredate">
                 <tal:published i18n:translate="">
                     Created
-                </tal:published><span tal:replace="python:plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span>
+                </tal:published><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span>
             </span>
             <span class="docDate publishDate" tal:condition="python:(context.meta_type in metatypes_showpubdate) and here.getEffectiveDate()">
                 <tal:published i18n:translate="">
                     Published
-                </tal:published><span tal:replace="python:plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
+                </tal:published><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
             </span>
             <span class="docDate modificationDate" tal:condition="python:isAnon and context.meta_type in metatypes_showmoddate">
                    <tal:modified i18n:translate="">
                     Last modified
-                   </tal:modified><span tal:replace="python:plone_view.toLocalizedTime(here.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59</span>
+                   </tal:modified><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59</span>
             </span>
         </tal:dates>
         <br />
