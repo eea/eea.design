@@ -2795,4 +2795,8 @@ a.downloading img {
   display: none;
 }
 
+.eea-pdf-download {
+  font-size: 150%;
+}
+
 /* </dtml-with> */
