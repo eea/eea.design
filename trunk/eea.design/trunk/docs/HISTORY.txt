@@ -3,6 +3,8 @@ Changelog
 
 11.1.dev0 - (unreleased)
 ------------------------
+* Change: Do not merge print.css in order to easily reuse it within epub export
+  [voineali refs #22686]
 * Feature: Added presentation mode action to export_actions category
   [voineali refs #22686]
 
