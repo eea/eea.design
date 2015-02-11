@@ -1,4 +1,7 @@
-/** Plone style sheet - Public-facing Elements
+/*
+** KEEP IN CUSTOM UNTIL original_chart_div fix is commited
+
+** Plone style sheet - Public-facing Elements
 **
 ** Style sheet documentation can be found at http://plone.org/documentation
 **
@@ -2745,6 +2748,10 @@ a.downloading img {
 
 #stats td {
   padding-right: 1em;
+}
+
+div#original_chart_div {
+    overflow: hidden;
 }
 
 #region-content .documentExportActions {
