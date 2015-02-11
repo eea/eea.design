@@ -171,7 +171,10 @@ jQuery(document).ready(function($) {
      */
     jQuery.fn.avoidMultipleClicks = function(options){
       var settings = {
-        timeout: 3000
+        timeout: 3000,
+        linkSelector: 'a',
+        linkCSS: 'downloading',
+        lockCSS: 'downloading-lock'
       };
 
       if(options){
@@ -180,14 +183,18 @@ jQuery(document).ready(function($) {
 
       var self = this;
       return this.each(function(){
-        self.find('a').click(function(){
+        self.find(settings.linkSelector).click(function(){
           var context = $(this);
-          context.addClass('downloading');
-          self.addClass('downloading-lock');
+          var oldCSS = context.attr('class');
+          context.removeClass();
+          context.addClass(settings.linkCSS);
+
+          self.addClass(settings.lockCSS);
 
           setTimeout(function(){
-            self.removeClass('downloading-lock');
-            context.removeClass('downloading');
+            self.removeClass(settings.lockCSS);
+            context.removeClass(settings.linkCSS);
+            context.addClass(oldCSS);
           }, settings.timeout);
 
         });
@@ -195,5 +202,9 @@ jQuery(document).ready(function($) {
     };
 
     $('.documentActions .action-items').avoidMultipleClicks();
+    $('.documentExportActions').avoidMultipleClicks({
+      linkSelector: '.eea-icon',
+      linkCSS: 'eea-icon eea-icon-3x eea-icon-download eea-icon-anim-burst animated'
+    });
 
 });

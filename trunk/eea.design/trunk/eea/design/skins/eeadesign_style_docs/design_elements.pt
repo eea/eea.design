@@ -737,6 +737,36 @@ floated comment icon&lt;/p&gt;</pre>
 the icon to the right of the
 text as we can see from this example.</p>
 
+    <h4 i18n:translate="">Animated icons</h4>
+    <p i18n:translate="">
+      You can animate icons using
+      <a href="http://l-lin.github.io/font-awesome-animation/" i18n:name="link">Font Awesome Animation</a>
+      classes together with font awesome icons as following:
+    </p>
+    <span class="eea-icon eea-icon-heart eea-icon-anim-burst animated"></span>eea-icon-anim-burst animated
+    <pre>&lt;span class="eea-icon eea-icon-heart eea-icon-anim-burst animated"&gt;&lt;/span&gt;
+eea-icon-heart eea-icon-anim-burst animated</pre>
+
+    <h4 i18n:translate="">
+      More animated icons
+    </h4>
+
+    <p>
+     <span class="eea-icon eea-icon-wrench eea-icon-2x eea-icon-anim-wrench animated"></span>
+     <span class="eea-icon eea-icon-bell eea-icon-2x eea-icon-anim-ring animated"></span>
+     <span class="eea-icon eea-icon-envelope eea-icon-2x eea-icon-anim-horizontal animated"></span>
+     <span class="eea-icon eea-icon-thumbs-o-up eea-icon-2x eea-icon-anim-vertical animated"></span>
+     <span class="eea-icon eea-icon-warning eea-icon-2x eea-icon-anim-flash animated"></span>
+     <span class="eea-icon eea-icon-thumbs eea-icon-2x eea-icon-anim-bounce animated"></span>
+     <span class="eea-icon eea-icon-spinner eea-icon-2x eea-icon-anim-spin animated"></span>
+     <span class="eea-icon eea-icon-plane eea-icon-2x eea-icon-anim-float animated"></span>
+     <span class="eea-icon eea-icon-heart eea-icon-2x eea-icon-anim-pulse animated"></span>
+     <span class="eea-icon eea-icon-envelope eea-icon-2x eea-icon-anim-shake animated"></span>
+     <span class="eea-icon eea-icon-trophy eea-icon-2x eea-icon-anim-tada animated"></span>
+     <span class="eea-icon eea-icon-space-shuttle eea-icon-2x eea-icon-anim-passing animated"></span>
+     <span class="eea-icon eea-icon-circle-o eea-icon-2x eea-icon-anim-burst animated"></span>
+    </p>
+
     <h2 i18n:translate="">Auto-Link-Icons based protocol and file extension</h2>
     <p i18n:translate="">
         Link types (url protocol and file extension type) are automatically detected on client side
