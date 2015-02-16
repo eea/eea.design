@@ -36,7 +36,7 @@
                         ac_name auth/name_cookie|string:__ac_name;
                         ac_password auth/pw_cookie|string:__ac_password;
                         ac_persist auth/persist_cookie|nothing;
-                        login_name python:request.get('login_name', request.get(ac_name, ''));
+                        login_name python:request.get('login_name', request.get(ac_name));
                         checkPermission nocall: context/portal_membership/checkPermission;
                         site_properties context/portal_properties/site_properties;
                         use_email_as_login site_properties/use_email_as_login|nothing;

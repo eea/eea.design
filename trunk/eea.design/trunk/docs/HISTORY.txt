@@ -3,6 +3,9 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Bug fix: Fixed login_form from giving a getSlice error when template
+  was called from default_error_message
+  [ichimdav refs #23090]
 
 11.1 - (2015-02-16)
 -------------------
