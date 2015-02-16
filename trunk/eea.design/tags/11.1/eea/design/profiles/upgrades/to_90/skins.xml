@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+
+    <object name="eeadesign_overrides" meta_type="Filesystem Directory View"
+            directory="eea.design:skins/eeadesign_overrides" />
+    <skin-path name="*" purge="False">
+        <layer name="eeadesign_overrides" insert-after="custom" />
+    </skin-path>
+</object>
