@@ -1,8 +1,8 @@
 Changelog
 =========
 
-11.1.dev0 - (unreleased)
-------------------------
+11.1 - (2015-02-16)
+-------------------
 * Upgrade step: Remove portal_skins / custom / ploneCustom.css
   [voineali refs #22969]
 * Feature: Also avoid multiple clicks within **export actions** viewlet
