@@ -3,6 +3,10 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: readded rule that sets the max-width to 100 percent for content images
+  in order to avoid images from spanning over the width of the content area such
+  as the epub view or the fiche view
+  [ichimdav refs #23150]
 * Change: added skip_relations condition for rendering the portal relations
   [ichimdav refs #23090]
 * Bug fix: Fixed login_form from giving a getSlice error when template
