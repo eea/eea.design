@@ -3,6 +3,8 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: added skip_relations condition for rendering the portal relations
+  [ichimdav refs #23090]
 * Bug fix: Fixed login_form from giving a getSlice error when template
   was called from default_error_message
   [ichimdav refs #23090]

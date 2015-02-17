@@ -9,6 +9,7 @@
                         checkPermission nocall: context/portal_membership/checkPermission;
                         site_properties context/portal_properties/site_properties;
                         ajax_load request/ajax_load | nothing;
+                        skip_relations request/skipRelations | nothing;
                         ajax_include_head request/ajax_include_head | nothing;
                         dummy python:request.RESPONSE.setHeader('X-UA-Compatible', 'IE=edge,chrome=1');
                         xssDisable python:request.RESPONSE.setHeader('X-XSS-Protection', '0');
@@ -53,7 +54,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
 
     <link href="https://plus.google.com/104345627234408209119" rel="publisher" />
-
+    <!--?<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>-->
+    <!--?<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
 
     <tal:comment replace="nothing">
@@ -201,7 +203,8 @@
                                 </tal:comment>
                              </metal:comment>
 
-                             <tal:block define="thumb_scale thumb_scale | string:image_tile;">
+                             <tal:block define="thumb_scale thumb_scale | string:image_tile;"
+                                     tal:condition="python:not skip_relations">
                                <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
                              </tal:block>
 
