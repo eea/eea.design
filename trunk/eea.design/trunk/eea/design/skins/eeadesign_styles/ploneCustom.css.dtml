@@ -1558,6 +1558,7 @@ h3.site-description {
 
 #region-content {
     border: none;
+    position: relative;
 }
 
 #portal-breadcrumbs a {
@@ -2245,6 +2246,10 @@ body .ploneSkin .mce_formatPreview a {
 }
 .mceContentBody  {
     font-size: 80% !important;
+}
+
+.ploneSkin .mceIcon.mce_eeaReadabilityChecker {
+    background-position: -120px -20px;
 }
 
 /* #16661; override px based width from ui.css of tinymce */
