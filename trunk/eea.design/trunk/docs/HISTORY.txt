@@ -3,6 +3,9 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: added body print class to body tag and isPrint declaration to 
+  main_template rules if pdf is found within the request url
+  [ichimdav refs #23090]
 * Change: readded rule that sets the max-width to 100 percent for content images
   in order to avoid images from spanning over the width of the content area such
   as the epub view or the fiche view

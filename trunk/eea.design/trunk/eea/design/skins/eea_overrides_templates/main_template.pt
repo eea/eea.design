@@ -32,6 +32,7 @@
                         ztu modules/ZTUtils;
                         acl_users nocall: context/acl_users;
                         ifacetool context/portal_interface;
+                        isPrint python:1 if ('pdf.' in request['URL0'] or '.pdf' in request['URL0']) else 0;
                         wf_state python: context_state.workflow_state();">
 
 <tal:comment replace="nothing">xssDisable was added in order to fix the chrome issue from ticket #15231</tal:comment>
@@ -106,6 +107,7 @@
                   is_editable context_state/is_editable;
                   sr python:plone_view.have_portlets('plone.rightcolumn', view) and not request.get('disable_plone.rightcolumn');
                   body_class python:plone_view.bodyClass(template, view);
+                  body_class python: body_class + ' body-print' if isPrint else body_class;
                   frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
       tal:attributes="class python:body_class + ' ' + language + frontpage;
