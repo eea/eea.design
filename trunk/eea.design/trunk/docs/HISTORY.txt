@@ -3,6 +3,10 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: updated visual.css with latest changes found within custom
+  [ichimdav refs #23150]
+* Change: normalized background color and padding of documentbyline portalType
+  [ichimdav refs #23150]
 * Change: added body print class to body tag and isPrint declaration to 
   main_template rules if pdf is found within the request url
   [ichimdav refs #23090]

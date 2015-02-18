@@ -1693,9 +1693,7 @@ h3.site-description {
     clear: both;
 }
 
-.documentByLine .portalType {
-    background: &dtml-lightBackgroundColor;;
-    padding: 0.5em;
+.documentByLine .portalType, .listHead {
     font-weight: bold;
 }
 
