@@ -3,6 +3,10 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: conditioned most of the blocks that had ajax_load condition to also
+  check for print since print doesn't use any of those blocks. This speeds up
+  rendering and greatly reduces filesize of outputed html
+  [ichimdav refs #23090]
 * Change: removed doctype when printing pdf in order to avoid display quirks
   with nested spans, images and br tags within paragraphs
   [ichimdav refs #23090]

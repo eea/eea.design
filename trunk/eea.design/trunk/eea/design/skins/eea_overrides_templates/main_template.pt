@@ -124,8 +124,10 @@
 
          <div id="header-holder">
             <div id="portal-top"
-                tal:condition="not:ajax_load">
+                tal:condition="python: not ajax_load">
+                <tal:not4Print tal:condition="python:not isPrint">
                     <div tal:replace="structure provider:plone.portaltop" />
+                </tal:not4Print>
             </div>
         </div>
 
@@ -138,7 +140,11 @@
 
         <div id="portal-column-content" class="cell" tal:attributes="class python:sunburst_view.getColumnsClass(view)">
 
-            <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" />
+            <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+                <tal:not4Print tal:condition="python:not isPrint">
+                    <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent"  />
+                </tal:not4Print>
+            </tal:not4AjaxLoad>
 
             <metal:block define-slot="content">
                 <div metal:define-macro="content"
@@ -146,9 +152,11 @@
                     tal:attributes="class python:show_border and 'documentEditable' or ''"
                     id="region-content">
 
-                    <div id="edit-bar"
-                        tal:condition="show_border"
-                        tal:content="structure provider:plone.contentviews" />
+                    <tal:not4Print tal:condition="python:not isPrint">
+                        <div id="edit-bar"
+                            tal:condition="show_border"
+                            tal:content="structure provider:plone.contentviews" />
+                    </tal:not4Print>
 
                     <div metal:use-macro="context/global_statusmessage/macros/portal_message">
                      Status message
@@ -176,7 +184,11 @@
                                      Generic KSS Title. Is rendered with class="documentFirstHeading".
                                  </h1>
                              </metal:title>
-                             <div tal:replace="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+                            <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+                                <tal:not4Print tal:condition="python:not isPrint">
+                                    <div tal:replace="structure provider:plone.belowcontenttitle" />
+                                </tal:not4Print>
+                            </tal:not4AjaxLoad>
 
                              <metal:description define-slot="content-description">
                                  <metal:comment tal:content="nothing">
@@ -210,7 +222,11 @@
                                <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
                              </tal:block>
 
-                             <div tal:replace="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
+                            <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+                                <tal:not4Print tal:condition="python:not isPrint">
+                                    <div tal:replace="structure provider:plone.belowcontentbody" />
+                                </tal:not4Print>
+                            </tal:not4AjaxLoad>
 
                             </metal:bodytext>
                         </div>
@@ -226,7 +242,11 @@
 
             </metal:block>
 
-            <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" tal:condition="not:ajax_load" />
+            <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+                <tal:not4Print tal:condition="python:not isPrint">
+                    <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" />
+                </tal:not4Print>
+            </tal:not4AjaxLoad>
         </div>
 
         <tal:notajax tal:condition="not:ajax_load">
@@ -252,9 +272,11 @@
 
 </div>
 
-    <metal:block i18n:domain="eea" tal:condition="not:ajax_load">
+<metal:block i18n:domain="eea" tal:condition="python:not ajax_load">
+    <tal:not4Print tal:condition="python:not isPrint">
         <div tal:replace="structure provider:plone.portalfooter" />
-    </metal:block>
+    </tal:not4Print>
+</metal:block>
 </body>
 </html>
 
