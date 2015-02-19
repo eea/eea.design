@@ -37,7 +37,7 @@
 
 <tal:comment replace="nothing">xssDisable was added in order to fix the chrome issue from ticket #15231</tal:comment>
 
-<tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
+<tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" tal:condition="python: not isPrint"/>
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js ie6 oldie"><![endif]-->

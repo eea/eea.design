@@ -3,6 +3,9 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: removed doctype when printing pdf in order to avoid display quirks
+  with nested spans, images and br tags within paragraphs
+  [ichimdav refs #23090]
 * Change: updated visual.css with latest changes found within custom
   [ichimdav refs #23150]
 * Change: normalized background color and padding of documentbyline portalType
