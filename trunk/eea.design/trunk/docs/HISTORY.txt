@@ -3,6 +3,10 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: documentExportActions are now floated instead of positioned absolute
+  in order to avoid situations where the icons overlap content below it when
+  documentbyline constains fewer items
+  [ichimdav refs #23265]
 * Change: conditioned most of the blocks that had ajax_load condition to also
   check for print since print doesn't use any of those blocks. This speeds up
   rendering and greatly reduces filesize of outputed html

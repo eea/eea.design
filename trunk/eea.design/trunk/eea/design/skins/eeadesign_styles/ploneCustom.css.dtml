@@ -1690,7 +1690,6 @@ h3.site-description {
     font-weight: normal;
     color: &dtml-discreetColor;;
     margin: 0 0 0.5em 0;
-    clear: both;
 }
 
 .documentByLine .portalType, .listHead {
@@ -2759,8 +2758,7 @@ div#original_chart_div {
 }
 
 #region-content .documentExportActions {
-  position: absolute;
-  right: 0;
+    float: right;
 }
 
 
