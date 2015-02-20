@@ -12,39 +12,43 @@
 
 <metal:main fill-slot="main"
             tal:define="err_type options/error_type|nothing;
-                        url python:request.URL.split('/')[-1].lower();
-                        uuid python:request.URL.split('/')[-3].lower();
-                        pdfdownload python:request.URL.startswith(context.portal_url()+'/downloads');">
+                        actual_url python:getattr(request, 'ACTUAL_URL', request.URL);
+                        url python:actual_url.split('/')[-1].lower();
+                        pdfdownload python:actual_url.startswith(context.portal_url()+'/downloads');">
 
     <tal:comment tal:replace="nothing">
-        #20972 custom 404 message for PDF download
+        #20972 custom 404 message for PDF/ePub download
     </tal:comment>
 
     <tal:pdfdownload tal:condition="python:(err_type=='NotFound') and pdfdownload"
-                     tal:define="inprogress python:context.restrictedTraverse('/www/' + '/'.join(request.URL.split('/')[3:]) + '.lock', False);
-                                 redirect_url python:context.portal_url()+'/resolveuid/'+uuid">
+                     tal:define="inprogress python:context.restrictedTraverse('/www/' + '/'.join(actual_url.split('/')[3:]) + '.lock', False);
+                                 paths python:actual_url.split('/downloads/')[-1].split('/');
+                                 uuid python:paths[0].lower() if len(paths) else '';
+                                 redirect_url python:context.portal_url()+'/resolveuid/'+uuid;
+                                 download_type python:actual_url.split('.')[-1].upper();
+                                 download_type python:download_type if len(download_type) <= 4 else 'File';">
 
         <tal:missing condition="not:nocall:inprogress">
             <h1 class="documentFirstHeading" i18n:translate="">
-                PDF not available
+                <tal:dtype replace="download_type" i18n:name="download_type">PDF</tal:dtype> not available
             </h1>
 
             <div class="portalMessage warningMessage" i18n:translate="">
-                The PDF does not exist or has expired, please request it again
+                The <tal:dtype replace="download_type" i18n:name="download_type">PDF</tal:dtype> does not exist or has expired, please request it again
                 from <a href="#" title="Original page" tal:attributes="href redirect_url" i18n:name="original_page" i18n:attributes="title">here</a>.
             </div>
         </tal:missing>
 
         <tal:inprogress condition="nocall:inprogress">
             <h1 class="documentFirstHeading" i18n:translate="">
-                The PDF file will be available in a few moments &hellip;
+                The <tal:dtype replace="download_type" i18n:name="download_type">PDF</tal:dtype> file will be available in a few moments &hellip;
             </h1>
 
             <div class="portalMessage smileyMessage" i18n:translate=""
                  tal:define="object_data python:context.portal_catalog(UID=uuid);
                              object_url python:object_data[0].getURL() if object_data else redirect_url;
                              object_title python:object_data[0].Title if object_data else 'Un-published page'">
-                We are preparing the PDF for "<span tal:replace="object_title" />" (<span class="discreet" tal:content="object_url" />). It will be available soon.<br />
+                We are preparing the <tal:dtype replace="download_type" i18n:name="download_type">PDF</tal:dtype> for "<span tal:replace="object_title" />" (<span class="discreet" tal:content="object_url" />). It will be available soon.<br />
                 <strong>We will notify you via email when it is ready or try to refresh this page in a few moments.</strong>
             </div>
         </tal:inprogress>
