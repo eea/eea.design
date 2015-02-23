@@ -219,13 +219,13 @@
 
                              <tal:block define="thumb_scale thumb_scale | string:image_tile;"
                                      tal:condition="python:not skip_relations">
+                                 <tal:soer tal:condition="python:False if isPrint == 1 and '/soer-2015' in here_url else True">
                                <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
+                                 </tal:soer>
                              </tal:block>
 
                             <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-                                <tal:not4Print tal:condition="python:not isPrint">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />
-                                </tal:not4Print>
                             </tal:not4AjaxLoad>
 
                             </metal:bodytext>
@@ -261,7 +261,10 @@
             tal:condition="sr"
             tal:attributes="class python:'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
-                <tal:block replace="structure provider:plone.rightcolumn" />
+
+                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer-2015' in here_url else True">
+                    <tal:block replace="structure provider:plone.rightcolumn" />
+                </tal:soer>
             </metal:portlets>
         </div>
         </tal:notajax>
