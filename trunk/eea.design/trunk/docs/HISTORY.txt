@@ -3,6 +3,9 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Feature: added logo.png as a higher resolution eea white logo on a transparent
+  background
+  [ichimdav refs #23324]
 * Change: Fix default_error_message to display missing or in progress
   PDF/ePub related messages accordingly. Removed hard-coded **PDF**
   [voineali refs #23244]
