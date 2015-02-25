@@ -3,6 +3,8 @@ Changelog
 
 11.3.dev0 - (unreleased)
 ------------------------
+* Change: Persist custom CSS within ploneCustom.css
+  [voineali]
 
 11.2 - (2015-02-25)
 -------------------
