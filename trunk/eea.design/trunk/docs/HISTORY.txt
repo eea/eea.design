@@ -3,6 +3,8 @@ Changelog
 
 11.3.dev0 - (unreleased)
 ------------------------
+* Bug fix: Fixed missing object_title within main_template
+  [voineali]
 * Change: Persist custom CSS within ploneCustom.css
   [voineali]
 

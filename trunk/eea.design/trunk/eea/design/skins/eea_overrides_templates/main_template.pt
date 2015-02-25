@@ -27,7 +27,7 @@
                         wtool context/portal_workflow;
                         default_language portal_state/default_language;
                         isContextDefaultPage context_state/is_default_page;
-                        object_title context_state/object_title;
+                        object_title context_state/object_title|string:;
                         putils context/plone_utils;
                         ztu modules/ZTUtils;
                         acl_users nocall: context/acl_users;
