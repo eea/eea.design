@@ -3,6 +3,9 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Bug fix: correctly display anchor links within listing headers when using
+  url navigation
+  [ichimdav refs #23408]
 * Change: reference eea-spriteimages only from portalRoot within eea.design css
   [ichimdav refs #23276]
 * Bug fix: removed header links padding right which indented the headers

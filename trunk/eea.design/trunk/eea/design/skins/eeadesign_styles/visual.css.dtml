@@ -134,6 +134,16 @@ th a, th a:link, th a:visited {
     color: #000 !important;
 }
 
+
+/* #23408; give height to empty anchor links in order for
+*  url navigation to point to the correct element
+*/
+.listing th > a:after {
+    display: block;
+    content: " ";
+    height: 16px;
+}
+
 /* Data tables */
 table.datatable {
     border: 1px solid #b6b6b6;
