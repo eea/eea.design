@@ -1,0 +1,13 @@
+<div class="relatedItems"
+     i18n:domain="eea"
+     tal:define="related view/related_items;
+                 isViewTemplate python:True"
+     tal:condition="related">
+
+    <div class="visualClear" id="clear-space-before-relatedItemBox"><!-- --></div>
+
+    <div metal:use-macro="here/document_relateditems/macros/relatedItemsWithThumbs">
+        show all (back and forward refs) related items if they exist
+    </div>
+
+</div>
