@@ -1,8 +1,8 @@
 Changelog
 =========
 
-11.2.dev0 - (unreleased)
-------------------------
+11.2 - (2015-02-25)
+-------------------
 * Bug fix: correctly display anchor links within listing headers when using
   url navigation
   [ichimdav refs #23408]
