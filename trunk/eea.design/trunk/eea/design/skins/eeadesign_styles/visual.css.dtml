@@ -45,31 +45,31 @@ sup, sub {
 ** for content that is not published
 */
 
-#content.wf-state-visible,
-#content.wf-state-published_eionet,
-#content.wf-state-new,
-/* #content.wf-state-closed, */ /* Due to #20490 */
-#content.wf-state-content_pending,
-#content.wf-state-draft,
-#content.wf-state-in-progress,
-#content.wf-state-private,
-#content.wf-state-rejected,
-#content.wf-state-retracted,
-#content.wf-state-submitted,
-#content.wf-state-marked_for_deletion,
-#content.wf-state-published_internally,
-#content.wf-state-webqa_pending,
-#content.wf-state-redraft_and_web_integration,
-#content.wf-state-final_revision,
-#content.wf-state-proofreading,
-#content.wf-state-ready_for_eionet_review,
-#content.wf-state-web_editing,
-#content.wf-state-web_integration,
-#content.wf-state-in-progress,
-#content.wf-state-obsolete,
-#content.wf-state-pending {
-    background: url(&dtml-portal_url;/draft.png);
-}
+/*#content.wf-state-visible,*/
+/*#content.wf-state-published_eionet,*/
+/*#content.wf-state-new,*/
+/* #content.wf-state-closed, *//* *//* Due to #20490 */
+/*#content.wf-state-content_pending,*/
+/*#content.wf-state-draft,*/
+/*#content.wf-state-in-progress,*/
+/*#content.wf-state-private,*/
+/*#content.wf-state-rejected,*/
+/*#content.wf-state-retracted,*/
+/*#content.wf-state-submitted,*/
+/*#content.wf-state-marked_for_deletion,*/
+/*#content.wf-state-published_internally,*/
+/*#content.wf-state-webqa_pending,*/
+/*#content.wf-state-redraft_and_web_integration,*/
+/*#content.wf-state-final_revision,*/
+/*#content.wf-state-proofreading,*/
+/*#content.wf-state-ready_for_eionet_review,*/
+/*#content.wf-state-web_editing,*/
+/*#content.wf-state-web_integration,*/
+/*#content.wf-state-in-progress,*/
+/*#content.wf-state-obsolete,*/
+/*#content.wf-state-pending {*/
+    /*background: url(&dtml-portal_url;/draft.png);*/
+/*}*/
 
 
 /*
@@ -292,7 +292,7 @@ table.datatable {
 #content h5 a,
 #content h6 a {
     text-decoration: none;
-    padding-right: 0.9em !important;
+/*  padding-right: 0.9em !important; 23407 removed padding right from header links */
     border: none;
 }
 
@@ -314,13 +314,13 @@ table.datatable {
     box-shadow: 2px 2px 1px #888;
 }
 
-#globalnav-holder {
-    -webkit-box-shadow: 0px 2px 2px #333;
-    -moz-box-shadow: 0px 2px 2px #333;
-    -ms-box-shadow: 0px 2px 2px #333;
-    -o-box-shadow: 0px 2px 2px #333;
-    box-shadow: 0px 2px 2px #333;
-}
+/*#globalnav-holder {*/
+    /*-webkit-box-shadow: 0px 2px 2px #333;*/
+    /*-moz-box-shadow: 0px 2px 2px #333;*/
+    /*-ms-box-shadow: 0px 2px 2px #333;*/
+    /*-o-box-shadow: 0px 2px 2px #333;*/
+    /*box-shadow: 0px 2px 2px #333;*/
+/*}*/
 
 .greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools, #portal-personaltools dd,
 #faceted-form .widget-fieldset legend {
