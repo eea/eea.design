@@ -256,7 +256,7 @@
 .promo-gallery-pause,
 #prev-promo,
 #next-promo {
-  background: transparent url('sprite-eeaimages.png') no-repeat scroll top right;
+  background: transparent url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll top right;
 }
 
 .promo-gallery-play {

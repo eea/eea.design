@@ -1017,7 +1017,7 @@ dl a:hover, dd a:hover, dt a:hover {
 }
 a.moreLink {
     border: 0 !important;
-    background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -9px;
+    background: transparent url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll -441px -9px;
     display: inline-block;
     padding-left: 25px;
     height: 18px;
@@ -1347,7 +1347,7 @@ h3.site-description {
 #portal-searchbox input.searchButton,
 #portal-searchbox input.searchButton:hover,
 .searchField {
-    background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;
+    background: transparent url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll left center;
 }
 
 #portal-searchbox input.searchButton {
@@ -1677,7 +1677,7 @@ h3.site-description {
 #article-language {
     float: right;
     margin-top: -30px;
-    background: url("sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
+    background: url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
     padding-left: 35px;
 }
 

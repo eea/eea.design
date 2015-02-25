@@ -3,6 +3,8 @@ Changelog
 
 11.2.dev0 - (unreleased)
 ------------------------
+* Change: reference eea-spriteimages only from portalRoot within eea.design css
+  [ichimdav refs #23276]
 * Bug fix: removed header links padding right which indented the headers
   inconsistently
   [ichimdav refs #23407]
