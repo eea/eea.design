@@ -3,6 +3,8 @@ Changelog
 
 11.4.dev0 - (unreleased)
 ------------------------
+* Change: merged ploneCustom.css from custom
+  [ghicaale refs #23271]
 
 11.3 - (2015-02-26)
 -------------------

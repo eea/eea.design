@@ -2792,7 +2792,6 @@ div#original_chart_div {
 }
 
 #content .documentExportActions a {
-  color: rgb(186, 60, 13);
   border-bottom: none !important;
   text-align: center;
 }
@@ -2823,5 +2822,6 @@ div#original_chart_div {
 .fiche-copyright {
   display: none;
 }
+
 
 /* </dtml-with> */
