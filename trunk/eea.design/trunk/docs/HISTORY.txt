@@ -1,8 +1,8 @@
 Changelog
 =========
 
-11.3.dev0 - (unreleased)
-------------------------
+11.3 - (2015-02-26)
+-------------------
 * Bug fix: Fixed ePub download popup font size
   [voineali]
 * Bug fix: Fixed missing object_title within main_template
