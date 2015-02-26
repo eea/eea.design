@@ -1,0 +1,138 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+.org_container dt, .director_container dt {
+    font-weight: bold;
+}
+.org_container dd, .director_container dd {
+    margin: 0;
+    padding: 0;
+}
+.director_container {
+    margin: 0;
+    padding: 0;
+}
+.director_head {
+    background-color: #CCCCCC;
+    border: 1px solid #888888;
+    font: 10px &dtml-fontFamily;;
+    height: 150px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    text-align: left;
+    width: 245px;
+}
+* html .org_container {
+    margin: 0;
+    padding: 0;
+    width: 109px;
+}
+:first-child + html .org_container {
+    width: 109px;
+}
+.org_container {
+    float: left;
+    width: 108px;
+}
+* html .org_head {
+    margin: 0;
+}
+:first-child + html .org_head {
+    margin: 0;
+}
+.org_head {
+    background-color: #CCCCCC;
+    border: 1px solid #888888;
+    font: 9px &dtml-fontFamily;;
+    height: 128px;
+    margin: 0 10px;
+    padding: 0 3px;
+    position: relative;
+    text-align: left;
+    width: 85px;
+}
+* html .org_subhead {
+    margin: 10px 5px 0;
+}
+:first-child + html .org_subhead {
+    margin: 10px 5px 0;
+}
+.org_subhead {
+    background-color: #EFEFEF;
+    border: 1px solid #888888;
+    font: 9px &dtml-fontFamily;;
+    height: 128px;
+    margin: 10px 35px 0 26px;
+    padding: 6px 3px 0;
+    position: relative;
+    text-align: left;
+    width: 85px;
+}
+.org_staff_number {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+.org_staff_total {
+    bottom: 1em;
+    padding-bottom: 2px;
+}
+.org_line {
+    border-top: 1px solid black;
+    font: 10px &dtml-fontFamily;;
+    height: 20px;
+    margin: 15px 0 0;
+    padding: 0;
+    text-align: left;
+}
+* html .org_line_first {
+    margin: 0 0 0 2px;
+}
+:first-child + html .org_line_first {
+    margin: 0 0 0 5px;
+}
+.org_line_first {
+    border-left: 1px solid black;
+    height: 20px;
+    margin: 0 0 0 20px;
+}
+.org_line_upper {
+    border-left: 1px solid black;
+    height: 15px;
+    margin-left: 56px;
+}
+.org_line_last {
+    width: 57px;
+}
+.org_line div {
+    border-right: 1px solid black;
+    height: 20px;
+    width: 56px;
+}
+* html .org_child {
+    margin: 0;
+}
+:first-child + html .org_child {
+    margin: 0 0 0 5px;
+}
+.org_child {
+    border-left: 1px solid black;
+    float: left;
+    height: 146px;
+    margin: 0 0 0 20px;
+    padding: 0;
+    width: 5px;
+}
+.org_child_last {
+    height: 76px;
+}
+.org_child div {
+    border-bottom: 1px solid black;
+    margin-top: 75px;
+}
+#EDO1, #EDO2 {
+    margin: 0 10px;
+}
+
+/* </dtml-with> */
