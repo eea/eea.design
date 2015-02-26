@@ -2814,6 +2814,7 @@ div#original_chart_div {
   display: none;
 }
 
+.eea-epub-download,
 .eea-pdf-download {
   font-size: 150%;
 }
