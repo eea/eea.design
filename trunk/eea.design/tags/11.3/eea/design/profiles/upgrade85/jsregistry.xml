@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+
+    <javascript
+            id="eea-admin.js"
+            authenticated="True"
+            position-after="++resource++eeaploneadmin.rewriterules.js"/>
+
+</object>

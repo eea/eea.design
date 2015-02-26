@@ -1,0 +1,34 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea">
+<body>
+
+<metal:portlet metal:define-macro="portlet"
+        tal:condition="context/@@plone_context_state/is_view_template">
+
+<dl class="portlet-ecotips portlet" id="portlet-ecotip"
+
+    tal:define="ecotip context/@@randomecotip;
+                portal_url context/@@plone_portal_state/portal_url"
+    tal:condition="ecotip">
+    <dt>
+      <img tal:attributes="src string:${portal_url}/ecotip.png" alt="" title="" class="ecotip-bulb" width="33" height="60" />
+      <img tal:attributes="src string:${portal_url}/led-bulb.png" alt="" title="" class="led-bulb" width="26" height="60" />
+    </dt>
+    <dd class="portletItem">
+        <strong tal:content="ecotip/title" />
+        <p><span tal:content="ecotip/description" />&nbsp;
+           <a class="" 
+              title="more green tips"
+              i18n:attributes="title" 
+              href="/green-tips/" 
+              tal:attributes="href string:${portal_url}/green-tips/">
+            <tal:block i18n:translate="">More green tips</tal:block>
+           </a>
+        </p>
+    </dd>
+</dl>
+
+</metal:portlet>
+</body>
+</html>

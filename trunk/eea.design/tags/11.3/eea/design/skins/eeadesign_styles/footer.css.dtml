@@ -1,0 +1,240 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+#footer-wrapper {
+    background: #478EA5;
+    background-image: -webkit-linear-gradient(top,#478EA5,#346F83);
+    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background: -moz-linear-gradient(#478EA5, #346F83) repeat scroll 0 0 transparent;
+    background-image: -ms-linear-gradient(top,#478EA5,#346F83);
+    background-image: -o-linear-gradient(top,#478EA5,#346F83);
+    background-image: linear-gradient(top,#478EA5,#346F83);
+    margin: 2em 0 2em 0;
+    padding: 2em 1em;
+    clear: both;
+    min-width: 973px;
+    border-top: 8px solid #FFF;
+}
+
+#bg-wrapper {
+    padding: 0px;
+    margin: 0;
+}
+
+#portal-footer {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 2em;
+    text-align: left;
+    font-size: 12px;
+    color: white;
+    min-width: 950px;
+}
+
+#portal-footer .image-right {
+   margin-top: 1em;
+}
+
+#portal-footer a {
+    text-transform: none;
+    color: white;
+    border: none;
+    text-decoration: underline;
+}
+
+#portal-footer a:visited {
+    color: white;
+}
+
+#portal-footer a:hover {
+    color: &dtml-linkHoverColor;;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#portal-colophon {
+    float: none;
+    margin: 0em 0em 2em 0em;
+    padding: 0.5em 1em 1em 1em;
+    text-align: center;
+    clear:both;
+}
+
+#portal-colophon ul,
+#portal-colophon ul li,
+#portal-colophon ul li a {
+    list-style-image: none;
+    list-style-type: none;
+    display: inline;
+    text-decoration: none;
+    color: &dtml-fontColor;;
+}
+
+#portal-colophon ul {
+    list-style-type: none;
+}
+
+#portal-colophon ul li {
+    display: inline;
+    font-size: 11px;
+    margin: 0 0.25em;
+    padding: 0.1em 0.2em;
+}
+
+#portal-colophon .colophonWrapper {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    margin: 0 auto;
+    min-width: 950px;
+}
+
+
+#portal-colophon .colophonIcon {
+    display: block; /* This is for Mozilla, as it doesn't support
+                       inline-block. The colophon icons aren't in
+                       one line though. */
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 15px;
+    height: 0px !important;
+    height /**/: 15px;
+    width: 80px;
+}
+
+#portal-colophon a.colophonIcon {
+    cursor: pointer;
+}
+#portal-colophon .colophonIconPlone {
+    background-image: url(&dtml-portal_url;/plone_powered.gif);
+}
+
+#portal-colophon .colophonIcon508 {
+    background-image: url(&dtml-portal_url;/colophon_sec508.gif);
+}
+
+#portal-colophon .colophonIconWAI {
+    background-image: url(&dtml-portal_url;/colophon_wai-aa.gif);
+}
+
+#portal-colophon .colophonIconXHTML {
+    background-image: url(&dtml-portal_url;/colophon_xhtml.png);
+}
+
+#portal-colophon .colophonIconCSS {
+    background-image: url(&dtml-portal_url;/colophon_css.png);
+}
+
+#portal-colophon .colophonIconAnyBrowser {
+    background-image: url(&dtml-portal_url;/colophon_anybrowser.png);
+}
+
+
+#portal-footer #portlet-ecotip dt {
+    padding: 0px;
+    background: transparent;
+}
+#portal-footer #portlet-ecotip {
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#portal-footer #portlet-ecotip .portletFooter {
+  border: none;
+  padding: 0;
+}
+
+
+#portal-footer #portlet-ecotip .portletItem {
+    padding: 9px 0 0 0;
+    margin-left: 75px !important;
+}
+
+#portal-footer #portlet-ecotip .portletItem strong {
+    font-size: 14px;
+}
+
+.colophon-left {
+    float: left;
+    width: 215px;
+}
+
+.colophon-middle {
+    margin-top:-17px;
+    text-align: center;
+}
+
+.colophon-right {
+    float: right;
+    width: 215px;
+}
+
+.colophon-right span {
+    float: left;
+    width: 155px;
+}
+
+.colophon-right img {
+    float: right;
+    width: 50px;
+}
+
+.colophon-links {
+    font-size: 11px !important;
+    padding: 0 5px !important;
+}
+
+.colophon-links a, .colophon-links a:visited {
+    display: inline;
+    font-size: 11px !important;
+    color: #346f83 !important;
+    text-decoration: underline !important;
+}
+
+.colophon-links a:hover {
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.colophon-full {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    width: 760px;
+}
+
+img.ecotip-bulb {
+    float: left;
+    margin-top: 5px;
+}
+
+img.led-bulb {
+    float: left;
+    margin-top: 6px;
+    position: absolute;
+    left: 30px;
+}
+
+#portlet-ecotip img { 
+    -webkit-transition: all 1s ease-in-out; 
+       -moz-transition: all 1s ease-in-out; 
+        -ms-transition: all 1s ease-in-out;
+         -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out; 
+    margin-right: 15px; margin-top: 10px; 
+}
+
+img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0;}
+#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 0;}
+
+/* </dtml-with> */
