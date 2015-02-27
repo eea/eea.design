@@ -49,7 +49,7 @@
 
 #promo-gallery-content h3 a:hover, 
 #promo-gallery-content-sm h3 a:hover {
-    color: &dtml-corporateBlueTwo; !important;
+    color: #FFFFFF !important;
     background: none;
 }
 
