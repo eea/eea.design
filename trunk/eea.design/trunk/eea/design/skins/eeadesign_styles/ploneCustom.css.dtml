@@ -582,7 +582,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
-    background-color: &dtml-corporateBlueOne;;
+    background-color: &dtml-corporateBlue;;
 }
 #visual-portal-wrapper .eea-tabs > li {
     float: left;
@@ -1141,10 +1141,12 @@ float:right;
     overflow: hidden;
     border: 0;
     margin: 0;
-    padding: <dtml-var "_[logoName].height + 16">px 0 0 0; /* TODO get rid dtml-var */
+    padding: 90px 0 0 0;
     height: 0 !important;
     width: 335px;
     cursor: pointer;
+    position: absolute;
+    top: 0;
 }
 
 .portal-logo a:hover {
@@ -1173,13 +1175,6 @@ h3.site-description {
     clear: both;
     display: block;
     position: relative;
-    background-color: &dtml-corporateGreenTwo;;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(&dtml-corporateGreen;), to(&dtml-corporateGreenTwo;));
-    background-image: -webkit-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    background-image:    -moz-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    background-image:     -ms-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    background-image:      -o-linear-gradient(center top , &dtml-corporateGreen;, &dtml-corporateGreenTwo;);
-    background: linear-gradient(&dtml-corporateGreen;, &dtml-corporateGreenTwo;); /* the w3c standard */
 }
 
 #portal-header {
@@ -1194,13 +1189,12 @@ h3.site-description {
 }
 
 #cross-site-top {
-    background-color: white;
+    background-color: &dtml-corporateBlue;;
     height: 25px;
     margin: 0;
     padding: 0;
     width: 100%;
     min-width: 970px;
-    border-top: 2px solid #B1C748;
 }
 
 .shadow {
@@ -1469,7 +1463,6 @@ h3.site-description {
 
 #portal-externalsites,
 #portal-siteactions {
-    background-color: white;
     white-space: nowrap;
     list-style: none none;
     margin: 4px 0 4px 0;
@@ -1527,7 +1520,7 @@ h3.site-description {
 
 #portal-externalsites li a,
 #portal-siteactions li a {
-    background-color: transparent;
+    color: #FFF;
     height: auto;
     text-decoration: none;
     text-transform: none;
@@ -2673,7 +2666,7 @@ div.row {
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
-    background-color: &dtml-corporateBlueOne;;
+    background-color: &dtml-corporateBlue;;
 }
 .tabbedmenu ul > li {
     float: left;

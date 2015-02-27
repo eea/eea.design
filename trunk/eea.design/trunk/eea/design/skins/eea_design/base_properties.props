@@ -10,9 +10,9 @@ fontColor:string=#333333
 fontSmallSize:string=85%
 
 #corporate main colors
-corporateGreen:string=#b1c748
+corporateGreen:string=#009966
 corporateGreenTwo:string=#777c1f
-corporateBlueOne:string=#2c8da2
+corporateBlue:string=#006699
 corporateBlueTwo:string=#005e7d
 
 

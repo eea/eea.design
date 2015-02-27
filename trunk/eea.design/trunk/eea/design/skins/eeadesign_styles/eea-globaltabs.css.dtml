@@ -2,14 +2,7 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 #globalnav-holder {
-    background-image: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
-    background-image: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
-    background-image: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
-    background-image: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
-    background-image: linear-gradient(#478EA5, #346F83); /* the standard */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background-color: &dtml-corporateBlue;;
     width: 100%;
     display: block;
     clear: both;
@@ -23,20 +16,12 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1024px;
-    height: 40px;
+    height: 39px;
     list-style: none;
-    padding: 0px;
+    padding: 0;
     clear: both;
     font-size: 120%;
-    background-color: #478EA5;
-    background-image: -moz-linear-gradient(#478EA5, #346F83); /* FF 3.6+ */  
-    background-image: -ms-linear-gradient(#478EA5, #346F83); /* IE10 */  
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #478EA5), color-stop(100%, #346F83)); /* Safari 4+, Chrome 2+ */  
-    background-image: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */  
-    background-image: -o-linear-gradient(#478EA5, #346F83); /* Opera 11.10 */  
-    background-image: linear-gradient(#478EA5, #346F83); /* the standard */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */  
+    background-color: &dtml-corporateBlue;;
 }
 
 #portal-globalnav li {
@@ -47,7 +32,6 @@
     display: inline-block;
     padding: 0;
     white-space: nowrap;
-    text-shadow: black 0px 0px 3px;
     background: transparent;
 }
 
@@ -79,6 +63,7 @@
 
 #secundary-portaltabs {
     float: right;
+    margin-right: 0.8em;
 }
 
 #portal-globalnav .en_icon
