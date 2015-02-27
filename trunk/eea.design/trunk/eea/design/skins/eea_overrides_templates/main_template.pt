@@ -32,7 +32,7 @@
                         ztu modules/ZTUtils;
                         acl_users nocall: context/acl_users;
                         ifacetool context/portal_interface;
-                        isPrint python:1 if ('pdf.' in request['URL0'] or '.pdf' in request['URL0']) else 0;
+                        isPrint python:1 if 'pdf.' in request['URL0'] else 0;
                         wf_state python: context_state.workflow_state();">
 
 <tal:comment replace="nothing">xssDisable was added in order to fix the chrome issue from ticket #15231</tal:comment>

@@ -3,6 +3,10 @@ Changelog
 
 11.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: check only if pdf. is found within the request since we have
+  have real pdfs uploaded within the site which triggered the isPrint
+  condition
+  [ichimdav refs #23477]
 * Change: merged ploneCustom.css from custom
   [ghicaale refs #23271]
 
