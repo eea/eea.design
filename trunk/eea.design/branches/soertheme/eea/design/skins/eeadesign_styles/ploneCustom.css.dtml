@@ -1122,17 +1122,19 @@ float:right;
 
 /* Logo properties */
 
+#printLogo {
+    padding: 0.9em 0 0 0.5em;
+    display: block;
+    width: auto;
+    height: 55px;
+}
 .portal-logo {
-    background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat 0 8px;
     border: 0;
     margin: 0;
     padding: 0;
     float: left;
     position: relative;
 
-}
-#printLogo {
-    display: none;
 }
 
 .portal-logo a {
@@ -1182,6 +1184,8 @@ h3.site-description {
     clear: both;
     position: relative;
     margin: 0 auto;
+    overflow: hidden;
+    height: 90px;
 }
 
 .header-holder #portal-top .cell {
@@ -1332,7 +1336,7 @@ h3.site-description {
 
 #portal-searchbox a {
     text-transform: none;
-    color: #FFFFFF;
+    color: &dtml-linkColor;;
     border: none;
     font-size: 85%;
     margin: 0 5px 0 0;
@@ -1347,7 +1351,7 @@ h3.site-description {
 }
 
 #portal-searchbox input.searchButton {
-    background-position: -385px -83px !important;
+    background: &dtml-corporateBlue; none;
     -webkit-border-radius: 0 4px 4px 0;
     -moz-border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0;
@@ -1481,18 +1485,6 @@ h3.site-description {
 }
 
 /* use font awesome unicode icons */
-
-#siteaction-subscriptions .eea-icon:before {
-    content: "&dtml-eea-icon-rss;";
-}
-
-#siteaction-formobile .eea-icon:before {
-    content: "&dtml-eea-icon-mobile;";
-}
-
-#siteaction-contactus .eea-icon:before {
-    content: "&dtml-eea-icon-comments-o;";
-}
 
 #siteaction-chooselang .eea-icon:before {
     content: "&dtml-eea-icon-flag-o;";

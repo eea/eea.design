@@ -7,9 +7,6 @@
 
 /* YOUR CSS RULES START HERE */
 
-#printLogo {
-    display: none;
-}
 
 .visualClear {
     display: block;

@@ -509,8 +509,6 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 }
 #header-holder {
     position: static;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
 }
 
 #portal-personaltools dd {
