@@ -89,7 +89,7 @@ a:active { color: &dtml-linkActiveColor;; }
 
 /* @group Site actions */
 #portal-siteactions li a:hover {
-    color: &dtml-corporateGreen;;
+    color: #FFFFFF;
 }
 /* @end Site actions */
 
