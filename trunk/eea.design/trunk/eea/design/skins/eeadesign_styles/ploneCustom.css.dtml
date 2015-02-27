@@ -64,9 +64,6 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 }
 
 #faceted-form .faceted-widget {
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
     background-color: &dtml-lightBackgroundColor;;
 }
 
@@ -199,24 +196,11 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"],
 .faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]{
-   min-width:82%;
-   height: 22px;
-   font-size: 16px;
-   padding: 5px;
-   -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-           border-radius: 3px;
+    min-width:82%;
+    height: 22px;
+    font-size: 16px;
+    padding: 5px;
     background: #FFFFFF;
-    -webkit-transition: border-color .218s;
-       -moz-transition: border .218s;
-        -ms-transition: border .218s;
-         -o-transition: border-color .218s;
-            transition: border-color .218s;
-    -webkit-transition: box-shadow .218s;
-       -moz-transition: box-shadow .218s;
-        -ms-transition: box-shadow .218s;
-         -o-transition: box-shadow .218s;
-            transition: box-shadow .218s;
 }
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"]:focus,
@@ -249,54 +233,19 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 .faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton,
 .faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton {
     color:#fff;
-    background:#346F83;
-    background: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
-    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */
-    background: -moz-linear-gradient(270deg, #478EA5, #346F83) repeat scroll 0 0 transparent;
-    background-image: -ms-linear-gradient(top,#478EA5,#346F83);
-    background-image: -o-linear-gradient(top,#478EA5,#346F83);
-    background-image: linear-gradient(top,#478EA5,#346F83);
+    background-color: &dtml-corporateBlue;;
     font: bold 12px &dtml-fontFamily;;
     padding: 7px 11px;
     display: inline-block;
-    text-shadow: 0 1px 0 #000;
-    -webkit-transition: border-color .218s;
-       -moz-transition: border .218s;
-       -ms-transition: border .218s;
-         -o-transition: border-color .218s;
-            transition: border-color .218s;
-    -webkit-transition: box-shadow .218s;
-    -ms-transition: box-shadow .218s;
-       -moz-transition: box-shadow .218s;
-         -o-transition: box-shadow .218s;
-            transition: box-shadow .218s;
     border: 1px solid #DCDCDC;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
     float: right;
 }
 .faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton:hover,
 .faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton:hover {
     background-color:&dtml-corporateOrange;;
-    background: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
-    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */
-    background: -moz-linear-gradient(270deg, orange, #FF9123) repeat scroll 0 0 transparent;
-    background-image: -ms-linear-gradient(top,orange,#FF9123);
-    background-image: -o-linear-gradient(top,orange,#FF9123);
-    background-image: linear-gradient(top,orange,#FF9123);
     color: #FFFFFF;
     cursor:pointer;
     border-color: #999999;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-        -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-         -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
     text-shadow: none;
 }
 
@@ -330,34 +279,13 @@ input.context,
 input.destructive,
 input.standalone {
     color:#fff !important;
-    background:#346F83;
-    background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(#478EA5),to(#346F83));
-    background: -webkit-linear-gradient(#478EA5, #346F83); /* Safari 5.1+, Chrome 10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#478EA5', endColorstr='#346F83')"; /* IE8+ */
-    background-image: -moz-linear-gradient(270deg, #478EA5, #346F83);
-    background-image: -ms-linear-gradient(top,#478EA5,#346F83);
-    background-image: -o-linear-gradient(top,#478EA5,#346F83);
-    background-image: linear-gradient(top,#478EA5,#346F83);
+    background-color: &dtml-corporateBlue;;
     font: bold 12px &dtml-fontFamily;;
     padding: 7px 11px;
     position: relative;
     display: inline-block;
     text-shadow: 0 1px 1px #000;
-    -webkit-transition: border-color .218s;
-       -moz-transition: border .218s;
-        -ms-transition: border-color .218s;
-         -o-transition: border-color .218s;
-            transition: border-color .218s;
-    -webkit-transition: box-shadow .218s;
-       -moz-transition: box-shadow .218s;
-        -ms-transition: box-shadow .218s;
-         -o-transition: box-shadow .218s;
-            transition: box-shadow .218s;
     border: 1px solid #346F83;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
 }
 
 
@@ -369,22 +297,9 @@ input.standalone {
  input.destructive:hover,
  input.standalone:hover {
     background-color:&dtml-corporateOrange;;
-    background-image: -webkit-gradient(linear,0% 40%,0% 70%,from(orange),to(#FF9123));
-    background: -webkit-linear-gradient(orange, #FF9123); /* Safari 5.1+, Chrome 10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#FF9123')"; /* IE8+ */
-    background-image: -moz-linear-gradient(270deg, orange, #FF9123);
-    background-image: -ms-linear-gradient(top,orange,#FF9123);
-    background-image: -o-linear-gradient(top,orange,#FF9123);
-    background-image: linear-gradient(top,orange,#FF9123);
     color: #FFFFFF !important;
     cursor:pointer;
     border-color: #999999;
-    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-        -ms-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-         -o-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
     text-shadow: none;
 }
 
@@ -399,9 +314,6 @@ input.standalone {
     -o-transition: box-shadow 0.218s ease 0s;
     transition: box-shadow 0.218s ease 0s;
     background: none repeat scroll 0 0 #FFFFFF;
-    -webkit-border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px 3px 3px 3px;
-    border-radius: 3px 3px 3px 3px;
     font-size: 16px;
     height: 22px;
     padding: 5px;
@@ -579,9 +491,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: 12px;
     line-height: normal!important;
     list-style: none none;
-    -webkit-border-radius: 10px 10px 0 0;
-    -moz-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
     background-color: &dtml-corporateBlue;;
 }
 #visual-portal-wrapper .eea-tabs > li {
@@ -602,11 +511,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     white-space: normal;
     max-width: 144px;
 }
-#visual-portal-wrapper .eea-tabs > li:first-child > a {
-    -webkit-border-radius: 8px 0 0 0;
-    -moz-border-radius: 8px 0 0 0;
-    border-radius: 8px 0 0 0;
-}
+
 #visual-portal-wrapper .eea-tabs > li > a:hover {
     color: &dtml-corporateBlueTwo;;
     text-decoration: none;
@@ -1177,6 +1082,10 @@ h3.site-description {
     position: relative;
 }
 
+#portal-top {
+    background-color: #FFFFFF;
+}
+
 #portal-header {
     display: block;
     clear: both;
@@ -1348,9 +1257,6 @@ h3.site-description {
 
 #portal-searchbox input.searchButton {
     background-position: -385px -83px !important;
-    -webkit-border-radius: 0 4px 4px 0;
-    -moz-border-radius: 0 4px 4px 0;
-    border-radius: 0 4px 4px 0;
     color: #FFFFFF;
     cursor: pointer;
     font-family: &dtml-fontFamily;;
@@ -1438,14 +1344,8 @@ h3.site-description {
 
 #portal-searchbox label {
     font-size: 11px;
-    color: #FFFFFF;
+    color: &dtml-linkColor;;
     vertical-align: middle;
-}
-
-/*  IE7 fixes */
-* + html #region-content,
-* + html #portal-searchbox {
-    overflow: hidden;
 }
 
 #portal-advanced-search {
@@ -2200,9 +2100,6 @@ body.kupu {
     float: left;
     width: 220px;
     border: 1px solid &dtml-mediumBackgroundColor;;
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
     background-color: #FFFFFF;
 }
 
@@ -2541,7 +2438,6 @@ a#subfolders_more_a, .more_dropdown_a {
     -moz-border-top-colors: none;
     border: 1px solid #666666;
     border-bottom: medium none;
-    border-radius: 5px 5px 0 0;
 }
 
 #subfolders_listing ul a {
@@ -2553,7 +2449,6 @@ a#subfolders_more_a, .more_dropdown_a {
     position: absolute;
     background-color: #FFFFFF;
     border: 1px solid #666;
-    border-radius: 0 5px 5px 5px;
     margin: 8px 0;
     padding: 0;
     z-index: 1005;
@@ -2663,9 +2558,6 @@ div.row {
     line-height: normal!important;
     list-style-image: none!important;
     list-style-type: none!important;
-    -webkit-border-radius: 10px 10px 0 0;
-    -moz-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
     background-color: &dtml-corporateBlue;;
 }
 .tabbedmenu ul > li {
@@ -2694,12 +2586,6 @@ div.row {
         height: 40px;
         white-space: normal;
         max-width: 144px;
-    }
-    .tabbedmenu .first-tab,
-    .tabbedmenu ul > li:first-child > a {
-        -webkit-border-radius: 8px 0 0 0;
-        -moz-border-radius: 8px 0 0 0;
-        border-radius: 8px 0 0 0;
     }
     .tabbedmenu ul > li > a:hover {
         color: &dtml-corporateBlueTwo;!important;
