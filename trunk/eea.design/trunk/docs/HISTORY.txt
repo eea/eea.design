@@ -7,6 +7,8 @@ Changelog
   have real pdfs uploaded within the site which triggered the isPrint
   condition
   [ichimdav refs #23477]
+* Change: merged qrbox.pt from custom
+  [voineali]
 * Change: merged ploneCustom.css from custom
   [ghicaale refs #23271]
 
