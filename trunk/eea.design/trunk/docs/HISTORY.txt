@@ -3,6 +3,9 @@ Changelog
 
 11.4.dev0 - (unreleased)
 ------------------------
+* Change: modified header footer and corporateGreen color to follow new
+  design
+  [ichimdav refs #23211]
 * Bug fix: check only if pdf. is found within the request since we have
   have real pdfs uploaded within the site which triggered the isPrint
   condition
