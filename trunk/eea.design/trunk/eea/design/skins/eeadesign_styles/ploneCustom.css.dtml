@@ -1048,12 +1048,8 @@ form[name="edit_form"] div.formControls {
     overflow: hidden;
     border: 0;
     margin: 0;
-    padding: 90px 0 0 0;
-    height: 0 !important;
-    width: 335px;
+    padding: 0;
     cursor: pointer;
-    position: absolute;
-    top: 0;
 }
 
 .portal-logo a:hover {
