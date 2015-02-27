@@ -1,0 +1,152 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* ichimdav This file remains customized because of all of these important declarations
+   instead of having another eea-member.css file */
+
+/* workflow state colors */
+
+/* all states that are about author drafting stages goes here */
+.state-private, .state-draft, .state-published_eionet, .state-retracted, .state-published_internally, .state-rejected
+{
+    color: Red !important;
+}
+
+.state-visible 
+{
+    color: #74AE0B !important;
+}
+
+.state-published
+{
+    color: &dtml-linkColor; !important;
+}
+
+/* all states that are about reviewing/approvals get same color and goes here */
+.state-pending, .state-content_pending, .state-new, .state-submitted, .state-sent, .state-proof_reading, .state-webqa_pending
+{
+    color: #FFA500;
+}
+
+
+#contentActionMenus dl.actionMenu a span {
+    color: white;
+}
+
+#contentActionMenus dl.actionMenu a.actionMenuSelected span {
+    color: #666;
+}
+#contentActionMenus dl.actionMenu a:hover span {
+    color: black;
+}
+
+.state-expired 
+{
+    color: &dtml-discreetColor; !important;
+}
+
+.syndicated 
+{
+    color: #008000 !important;
+}
+
+#contentActionMenus dl.actionMenu a
+
+
+/* ichimdav styles brought from sunburst's members.css */
+/* Pulldown menu state indicators */
+
+#plone-contentmenu-workflow .state-private {
+    padding: 0 0.5em;
+    background-color: Red;
+    border: 0.1em solid Red;
+    color: White !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+#plone-contentmenu-workflow .state-visible {
+    padding: 0 0.5em;
+    background-color: #74AE0B;
+    border: 0.1em solid #74AE0B;
+    color: White !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+#plone-contentmenu-workflow .state-published {
+    padding: 0 0.5em;
+    background-color: #436976;
+    border: 0.1em solid #436976;
+    color: White !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+#plone-contentmenu-workflow .state-pending {
+    padding: 0 0.5em;
+    background-color: #FFA500;
+    border: 0.1em solid #FFA500;
+    color: White !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+
+/* @group Dashboard */
+
+#dashboard-actions ul,
+#dashboard-actions ul li {
+    list-style: none;
+}
+#dashboard-actions ul {
+    margin-left: 0;
+}
+
+#dashboard {
+    font-size: 125%;
+    line-height: 1em;
+}
+
+#dashboard dd {
+    margin: 0;
+}
+
+
+#dashboard dl.portlet a:link {
+    border-bottom: none;
+}
+
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3,
+#dashboard-portlets4 {
+    display: inline-block;
+}
+
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3 {
+    float:left;
+    width:23%;
+    padding:0.7em 1.3em 0 0;
+}
+
+#dashboard-portlets4 {
+    float:left;
+    width:23%;
+    padding-top:0.7em;
+}
+
+#dashboard-portlets1 dl.portlet,
+#dashboard-portlets2 dl.portlet,
+#dashboard-portlets3 dl.portlet,
+#dashboard-portlets4 dl.portlet {
+    margin-bottom:1.5em;
+}
+
+#plone-contentmenu-workflow img {
+    margin-right: 0.5em;
+}
+
+/* </dtml-with> */

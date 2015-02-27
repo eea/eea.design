@@ -1,0 +1,100 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea" tal:omit-tag="">
+
+<div metal:define-macro="datasets"
+     id="datasets-highlights"
+     class="eea-tabs-panel"
+     tal:define="plone_view nocall:plone_view|context/@@plone;
+                 hide_listing python: False;
+                 hide_album python: True;
+                 more_href more_href|string:data;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+</div>
+
+<div metal:define-macro="maps"
+     class="eea-tabs-panel"
+     id="maps-highlights"
+     tal:define="hide_listing python: True;
+                 hide_album python: False;
+                 more_href more_href|string:figures;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+</div>
+
+<div metal:define-macro="indicators"
+     id="indicators-highlights"
+     class="eea-tabs-panel"
+     tal:define="plone_view nocall:plone_view|context/@@plone;
+                 hide_listing python: True;
+                 hide_album python: False;
+                 more_href more_href|string:indicators;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+</div>
+
+
+
+
+<div metal:define-macro="highArticles"
+     id="articles-high"
+     tal:define="frontpage_view datamaps_view|context/@@frontpage_highlights;
+                 highlights highlights|frontpage_view/getHighArticles;
+                 plone_view nocall:plone_view|context/@@plone;">
+    <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
+</div>
+
+<metal:spotlight metal:define-macro="spotlightItem"
+                 tal:define="spotlight frontpage_view/getSpotlight;
+                             plone_view nocall:plone_view|context/@@plone;"
+                 tal:condition="spotlight">
+    <div class="featured">
+        <h2 class="column-title" i18n:translate="">Topic in the spotlight</h2>
+
+        <div id="spotlight-item"
+            class="eea-tabs-panel">
+            <div class="figure-left"><img alt="" tal:attributes="src string:${spotlight/url}/image_thumb; title spotlight/title; alt spotlight/title" /></div>
+            <h3 class="highlight">
+                <a href="#" class="noPrint"
+                   tal:attributes="href spotlight/url"
+                   tal:content="spotlight/title">
+                       Spotlight Title</a></h3>
+            <p tal:content="spotlight/description">description</p>
+
+            <p><a href="#" class="moreLink"
+                tal:attributes="href spotlight/url" i18n:translate="">Read more</a></p>
+
+        </div>
+    </div>
+
+</metal:spotlight>
+
+<div metal:define-macro="graphs"
+     class="eea-tabs-panel"
+     id="graphs-highlights"
+     tal:define="hide_album python: False;
+                 hide_listing python: True;
+                 more_href more_href|string:figures;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+</div>
+
+<div metal:define-macro="interactivemaps"
+     class="eea-tabs-panel"
+     id="interactivemaps-highlights"
+     tal:define="hide_album python: False;
+                 hide_listing python: True;
+                 more_href more_href|string:explore-interactive-maps;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+</div>
+
+
+<div metal:define-macro="alldataproducts"
+     class="eea-tabs-panel"
+     id="alldataproducts-highlights" 
+     tal:define="datamaps_view datamaps_view|context/@@data_and_maps_logic;
+                 folderContents datamaps_view/getAllProducts|nothing;
+                 hide_album python: False;
+                 hide_listing python: True;
+                 more_href more_href|string:dm;">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+</div>
+
+</html>

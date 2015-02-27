@@ -1,0 +1,74 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+#globalnav-holder {
+    background-color: &dtml-corporateBlue;;
+    width: 100%;
+    display: block;
+    clear: both;
+    height: 50px;
+}
+
+/* @group Navigation/search customizes public.css */
+#portal-globalnav {
+    background: none;
+    clear: both;
+    display: block;
+    font-size: 120%;
+    height: 49px;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1024px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+#portal-globalnav li {
+    margin-bottom: 0;
+    float: none;
+    text-align: center;
+    height: 40px;
+    display: inline-block;
+    padding: 0;
+    white-space: nowrap;
+    background: transparent;
+}
+
+#portal-globalnav li a  {
+    background: transparent;
+    color: white;
+    display: inline-block;
+    padding: 1em;
+    border: 0;
+    min-width: 0;
+    font-weight:bold;
+}
+
+#portal-globalnav a:hover, #portal-globalnav li a:hover,
+#portal-globalnav .selected a {
+    color: &dtml-corporateOrange;;
+    background: transparent;
+}
+
+#portal-globalnav .selected a
+{
+    background-color: white;
+    text-shadow: none;
+    position: relative;
+    height: 15px;
+}
+
+#secundary-portaltabs {
+    float: right;
+    margin-right: 0.8em;
+}
+
+#portal-globalnav .en_icon {
+    background: url(&dtml-portal_url;/en_icon.png) no-repeat scroll right 5px transparent !important;
+    padding: 0 15px 0 0 !important;
+}
+
+/* </dtml-with> */
+
