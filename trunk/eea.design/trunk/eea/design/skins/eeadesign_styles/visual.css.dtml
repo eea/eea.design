@@ -48,7 +48,7 @@ sup, sub {
 #content.wf-state-visible,
 #content.wf-state-published_eionet,
 #content.wf-state-new,
- #content.wf-state-closed,   Due to #20490
+#content.wf-state-closed,   Due to #20490
 #content.wf-state-content_pending,
 #content.wf-state-draft,
 #content.wf-state-in-progress,
@@ -302,7 +302,7 @@ table.datatable {
 #content h5 a,
 #content h6 a {
     text-decoration: none;
-/*  padding-right: 0.9em !important; 23407 removed padding right from header links */
+    /*  padding-right: 0.9em !important; 23407 removed padding right from header links */
     border: none;
 }
 
@@ -316,7 +316,7 @@ table.datatable {
 
 /* Styles which can be used on any area */
 
-.boxShadowedDownRight, .actionMenuContent {
+.boxShadowedDownRight {
     -webkit-box-shadow: 2px 2px 1px #888;
     -moz-box-shadow: 2px 2px 1px #888;
     -ms-box-shadow: 2px 2px 1px #888;
@@ -324,21 +324,14 @@ table.datatable {
     box-shadow: 2px 2px 1px #888;
 }
 
-#globalnav-holder {
-    -webkit-box-shadow: 0px 2px 2px #333;
-    -moz-box-shadow: 0px 2px 2px #333;
-    -ms-box-shadow: 0px 2px 2px #333;
-    -o-box-shadow: 0px 2px 2px #333;
-    box-shadow: 0px 2px 2px #333;
-}
 
 .greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools, #portal-personaltools dd,
 #faceted-form .widget-fieldset legend {
-    background-color: &dtml-corporateGreenTwo;;
+    background-color: &dtml-corporateGreen;;
 }
 
 .greenGradientBackgroundDown, #contentActionMenus {
-    background-color: &dtml-corporateGreenTwo;;
+    background-color: &dtml-corporateGreen;;
 }
 
 /* standard figure, used for articles and pages.

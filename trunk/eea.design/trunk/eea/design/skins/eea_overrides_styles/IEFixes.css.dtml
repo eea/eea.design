@@ -10,7 +10,7 @@
 }
 
 #whatsnew-gallery .photoAlbumEntry,
-#whatsnew-gallery .photoAlbumEntry:hover{ 
+#whatsnew-gallery .photoAlbumEntry:hover{
     background: transparent;
     border: 0px;
 }
@@ -30,15 +30,13 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
     background: transparent !important;
 }
 
-/* 5443 personaltools and header holder needs position static when we have 
- * hovering items over our gradient */ 
+/* 5443 personaltools and header holder needs position static when we have
+ * hovering items over our gradient */
 #portal-personaltools {
     position: static;
-} 
+}
 #header-holder {
     position: static;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
 }
 
 .arrowUp {
@@ -50,3 +48,4 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 }
 
 /* </dtml-with> */
+

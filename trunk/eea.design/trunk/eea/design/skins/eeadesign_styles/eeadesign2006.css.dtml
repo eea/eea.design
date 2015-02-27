@@ -1,15 +1,15 @@
 /*
   This file is based on the ploneCustom.css.dtml shipped with Plone.
 
+/*
+  This file is based on the ploneCustom.css.dtml shipped with Plone.
+
   <dtml-with base_properties> (do not remove this)
   <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
 */
 
 /* YOUR CSS RULES START HERE */
 
-#printLogo {
-    display: none;
-}
 
 .visualClear {
     display: block;
@@ -17,30 +17,30 @@
 }
 
 .image-right {
-   float: right;
-   clear: both;
-   margin: 1.5em 0 0 0;
-   padding-right: 0.5em;
-   border: none;
-   vertical-align: middle;
+    float: right;
+    clear: both;
+    margin: 1.5em 0 0 0;
+    padding-right: 0.5em;
+    border: none;
+    vertical-align: middle;
 }
 
 /* Subsite, subsection identification */
 
 #portal-subsite {
- position:absolute;
- margin-top:-35px;
+    position:absolute;
+    margin-top:-35px;
 }
 
 
 #portal-subsite a {
- color: &dtml-linkColor;;
- text-decoration: none;
- font-size:85%;
+    color: &dtml-linkColor;;
+    text-decoration: none;
+    font-size:85%;
 }
 
 #portal-subsite a:hover {
- color: &dtml-linkColor;
+    color: &dtml-linkColor;
 }
 
 

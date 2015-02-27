@@ -6,17 +6,15 @@
                 logo request/LANGUAGE|string:en"
     tal:attributes="id string:logo-${logo}">
 
-     <img src="" alt="" id="printLogo"
-          tal:define="lang  context/@@plone_portal_state/language;
-                      logo python:'++resource++eea.translations.images/printlogo-%s.gif' % lang"
-          tal:attributes="alt portal_properties/title;
-                          src string:${portal_url}/${logo}" />
     <a href="/"
-       tal:attributes="href local_site|portal_url"
        tal:define="portal_title portal_properties/title;"
-       tal:content="string:$portal_title"
+       tal:attributes="href local_site|portal_url; title string:${portal_title}"
        accesskey="1">
-        Plone
+        <img src="" alt="" id="printLogo"
+                tal:define="lang  context/@@plone_portal_state/language;
+                logo python:'++resource++eea.translations.images/pdflogo-%s.png' % lang"
+                tal:attributes="alt portal_properties/title;
+                        src string:${portal_url}/${logo}" />
     </a>
 </h2>
 

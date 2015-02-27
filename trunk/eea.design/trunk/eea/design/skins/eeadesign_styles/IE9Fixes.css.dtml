@@ -11,7 +11,7 @@
 }
 
 #portal-columns {
-  width: 100%;
+    width: 100%;
 }
 
 #portal-header {
@@ -69,8 +69,8 @@ textarea {
 }
 
 #portal-logo {
-  height /**/: <dtml-var "_[logoName].height">px;
-  overflow: hidden;
+    height /**/: <dtml-var "_[logoName].height">px;
+    overflow: hidden;
 }
 
 #portal-colophon .colophonIcon {
@@ -132,7 +132,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 * html .link-external a,
 * html .link-mailto a,
 * html .link-mailto {
-     height: 1%;
+    height: 1%;
 }
 
 /* Fix for IE float bug */
@@ -162,7 +162,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-     background: url(&dtml-portal_url;/bcpil.gif) no-repeat 0.5em right;
+    background: url(&dtml-portal_url;/bcpil.gif) no-repeat 0.5em right;
 }
 
 /* Fix for IE float bug - have to use the Limi Hack here, since the paragraph
@@ -206,7 +206,7 @@ dd.portletFooter {
 }
 
 * html body {
-   font-size: 69%;
+    font-size: 69%;
 }
 
 * html .portlet-tabs .portletItem {
@@ -236,7 +236,7 @@ dd.portletFooter {
 
 * html #cross-site-top,
 * html #portal-globalnav li {
-       height: 1.7em;
+    height: 1.7em;
 }
 
 * html #portal-globalnav li a:visited {
@@ -338,7 +338,7 @@ dd.portletFooter {
 
 
 #mobile a:hover {
-     border: none !important;
+    border: none !important;
 }
 
 #mobile {
@@ -400,7 +400,7 @@ dd.portletFooter {
 
 
 a.list-layout.active-list, a.list-layout {
-   margin-right: 11px !important;
+    margin-right: 11px !important;
 }
 
 .column-area .featured .searchforms input[type="submit"]{
@@ -408,7 +408,7 @@ a.list-layout.active-list, a.list-layout {
 }
 
 #header-holder {
-   z-index: 1000;
+    z-index: 1000;
 }
 
 .portletWrapper {
@@ -474,7 +474,7 @@ dd.portletItem {
 }
 
 #top-news-area .portlet-promotions .portletHeader a {
-/* Removed display: block !important in order for the 'en' icon to come up */
+    /* Removed display: block !important in order for the 'en' icon to come up */
 }
 
 
@@ -488,7 +488,7 @@ a.archives {
 }
 
 #coverflow img {
-   margin: 0px 0px -35px -92px !important;
+    margin: 0px 0px -35px -92px !important;
 }
 
 /* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */
@@ -509,8 +509,6 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 }
 #header-holder {
     position: static;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='&dtml-corporateGreen;', endColorstr='&dtml-corporateGreenTwo;')"; /* IE8+ */
 }
 
 #portal-personaltools dd {
@@ -545,3 +543,4 @@ body #whatsnew-gallery .tileContent {
 }
 
 /* </dtml-with> */
+

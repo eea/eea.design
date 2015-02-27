@@ -6,22 +6,23 @@
     width: 100%;
     display: block;
     clear: both;
-    height: 40px;
+    height: 50px;
 }
 
 /* @group Navigation/search customizes public.css */
 #portal-globalnav {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1024px;
-    height: 39px;
-    list-style: none;
-    padding: 0;
+    background: none;
     clear: both;
+    display: block;
     font-size: 120%;
-    background-color: &dtml-corporateBlue;;
+    height: 49px;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1024px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
 }
 
 #portal-globalnav li {
@@ -40,13 +41,12 @@
     color: white;
     display: inline-block;
     padding: 1em;
-    border: 0px;
-    min-width: 0px;
-    line-height: 0.9;
+    border: 0;
+    min-width: 0;
     font-weight:bold;
 }
 
-#portal-globalnav a:hover, #portal-globalnav li a:hover,  
+#portal-globalnav a:hover, #portal-globalnav li a:hover,
 #portal-globalnav .selected a {
     color: &dtml-corporateOrange;;
     background: transparent;
@@ -60,18 +60,15 @@
     height: 15px;
 }
 
-
 #secundary-portaltabs {
     float: right;
     margin-right: 0.8em;
 }
 
-#portal-globalnav .en_icon
-{
+#portal-globalnav .en_icon {
     background: url(&dtml-portal_url;/en_icon.png) no-repeat scroll right 5px transparent !important;
     padding: 0 15px 0 0 !important;
 }
 
-
-
 /* </dtml-with> */
+

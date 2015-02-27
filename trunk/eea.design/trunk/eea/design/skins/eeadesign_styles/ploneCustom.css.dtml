@@ -34,7 +34,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 /* remove borders on image gallery from eea.jquery */
 
 #galleryView {
-   border: none;
+    border: none;
 }
 
 /*
@@ -51,16 +51,16 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 }
 
 #faceted-form .faceted-widget {
-   margin: 0 0 1em 0;
-   padding-bottom: 0.5em;
+    margin: 0 0 1em 0;
+    padding-bottom: 0.5em;
 }
 
 #faceted-form #center-content-area {
-   padding: 0 0.5em 0 0.5em;
+    padding: 0 0.5em 0 0.5em;
 }
 
 #faceted-form .faceted-widget fieldset {
-   border-style: none !important;
+    border-style: none !important;
 }
 
 #faceted-form .faceted-widget {
@@ -68,12 +68,12 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 }
 
 #faceted-form .widget-fieldset legend {
-  color: #ffffff;
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.6;
-  font-weight: normal;
-  text-shadow: 1px 1px 1px #555555;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px #555555;
 }
 
 .widget-fieldset {
@@ -115,22 +115,22 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 }
 
 #tag-cloud {
-   background-color: &dtml-lightBackgroundColor;;
+    background-color: &dtml-lightBackgroundColor;;
 }
 
 #tag-cloud .portletFooter {
-  margin: 0 1em 1em 0;
+    margin: 0 1em 1em 0;
 }
 
 .tags-cloud {
-  padding: 0.5em 1em !important;
+    padding: 0.5em 1em !important;
 }
 
 /* Style for faceted used in section-publications */
 
 .faceted-top-widgets .faceted-widget form,
 .faceted-center-widgets .faceted-widget form {
-   min-width: 510px;
+    min-width: 510px;
 }
 
 .faceted_letter_selected {
@@ -159,7 +159,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 }
 
 #faceted-form .tags-cloud li {
-   color: &dtml-linkColor; !important;
+    color: &dtml-linkColor; !important;
 }
 
 #faceted-form .tags-cloud li:hover {
@@ -206,18 +206,18 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 .faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"]:focus,
 .faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]:focus {
     -webkit-box-shadow: 1px 1px 3px #DFDFDF;
-       -moz-box-shadow: 1px 1px 3px #DFDFDF;
-        -ms-box-shadow: 1px 1px 3px #DFDFDF;
-         -o-box-shadow: 1px 1px 3px #DFDFDF;
-            box-shadow: 1px 1px 3px #DFDFDF;
+    -moz-box-shadow: 1px 1px 3px #DFDFDF;
+    -ms-box-shadow: 1px 1px 3px #DFDFDF;
+    -o-box-shadow: 1px 1px 3px #DFDFDF;
+    box-shadow: 1px 1px 3px #DFDFDF;
     border-color: &dtml-corporateGreen;;
 }
 
 .faceted-top-widgets .faceted-widget,
 .faceted-center-widgets .faceted-widget {
-   /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
-   background-color: &dtml-lightBackgroundColor;;
-   min-height: 110px;
+    /*background: url("http://www.upress.umn.edu/++theme++ump.theme/_images/explore-magnify.gif") no-repeat scroll left top lightBackgroundColor;*/
+    background-color: &dtml-lightBackgroundColor;;
+    min-height: 110px;
 }
 
 .faceted-top-widgets .faceted-widget .faceted-textwidget-place-all,
@@ -291,11 +291,11 @@ input.standalone {
 
 #portal-columns input[type="submit"]:hover, .standardButton:hover,
 #content a.standardButton:hover,
- .qq-upload-button:hover,
- .searchButton:hover,
- input.context:hover,
- input.destructive:hover,
- input.standalone:hover {
+.qq-upload-button:hover,
+.searchButton:hover,
+input.context:hover,
+input.destructive:hover,
+input.standalone:hover {
     background-color:&dtml-corporateOrange;;
     color: #FFFFFF !important;
     cursor:pointer;
@@ -323,9 +323,9 @@ input.standalone {
 /*portlet subscription*/
 .section-publications #c10_widget.faceted-widget,
 .section-publications #c10_widget fieldset {
-  background-color: transparent;
-  padding:0 !important;
-  margin:0 !important;
+    background-color: transparent;
+    padding:0 !important;
+    margin:0 !important;
 }
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
@@ -549,11 +549,11 @@ body.section-signals #nonfolderish-subfolder-view-items {
 
 .highlights .portalMessage,
 .eea-tabs-panel .portalMessage {
-  margin-top: 0;
-  position: relative;
-  top: 10px;
-  margin-bottom: 10px;
-  display: block;
+    margin-top: 0;
+    position: relative;
+    top: 10px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .eea-tabs-panels {
@@ -669,73 +669,73 @@ body.section-signals #nonfolderish-subfolder-view-items {
 /* Flexible tooltips */
 
 .eea-tooltip-markup {
-  display: none;
-  z-index: 100;
+    display: none;
+    z-index: 100;
 }
 
 .eea-tooltip-markup .tooltip-box-br {
-  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-bottom-right.png) no-repeat right bottom;
-  position:relative;
-  max-height:1000px;
-  min-height:50px;
-  min-width:100px;
-  width:250px;
-  padding-bottom:3px;
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-bottom-right.png) no-repeat right bottom;
+    position:relative;
+    max-height:1000px;
+    min-height:50px;
+    min-width:100px;
+    width:250px;
+    padding-bottom:3px;
 }
 
 .eea-tooltip-markup .tooltip-box-tl {
-  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-top-left.png) no-repeat left top;
-  position:relative;
-  left:-30px;
-  top:-20px;
-  margin-right:-19px;
-  max-height:1000px;
-  min-height:50px;
-  min-width:100px;
-  width: 269px;
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-top-left.png) no-repeat left top;
+    position:relative;
+    left:-30px;
+    top:-20px;
+    margin-right:-19px;
+    max-height:1000px;
+    min-height:50px;
+    min-width:100px;
+    width: 269px;
 }
 
 .eea-tooltip-markup .tooltip-box-rcontent {
-  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-left.png) no-repeat left center;
-  position: relative;
-  top: 11px;
-  padding:2em 1em 2em 3em;
-  text-align:justify;
-  font-size: 12px;
-  color:#ffffff;
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-left.png) no-repeat left center;
+    position: relative;
+    top: 11px;
+    padding:2em 1em 2em 3em;
+    text-align:justify;
+    font-size: 12px;
+    color:#ffffff;
 }
 
 .eea-tooltip-markup .tooltip-box-lcontent {
-  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-right.png) no-repeat right center;
-  position: relative;
-  top: 11px;
-  right: -31px;
-  padding:2em 3.5em 2em 1em;
-  text-align:justify;
-  font-size: 12px;
-  color:#ffffff;
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-right.png) no-repeat right center;
+    position: relative;
+    top: 11px;
+    right: -31px;
+    padding:2em 3.5em 2em 1em;
+    text-align:justify;
+    font-size: 12px;
+    color:#ffffff;
 }
 
 .eea-tooltip-markup .tooltip-box-bcontent {
-  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-top.png) no-repeat center top;
-  color:#FFFFFF;
-  font-size:12px;
-  left:10px;
-  padding:2.5em 1.5em 1em 2.5em;
-  position:relative;
-  text-align:justify;
-  top:-2px;
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-top.png) no-repeat center top;
+    color:#FFFFFF;
+    font-size:12px;
+    left:10px;
+    padding:2.5em 1.5em 1em 2.5em;
+    position:relative;
+    text-align:justify;
+    top:-2px;
 }
 
 .eea-tooltip-markup .tooltip-box-tcontent {
-  background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-bottom.png) no-repeat center bottom;
-  bottom:-22px;
-  color:#FFFFFF;
-  font-size:12px;
-  left:10px;
-  padding:0.5em 1.5em 2.5em 2.5em;
-  position:relative;
-  text-align:justify;
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-bottom.png) no-repeat center bottom;
+    bottom:-22px;
+    color:#FFFFFF;
+    font-size:12px;
+    left:10px;
+    padding:0.5em 1.5em 2.5em 2.5em;
+    position:relative;
+    text-align:justify;
 }
 
 /* */
@@ -752,25 +752,25 @@ body.section-signals #nonfolderish-subfolder-view-items {
     clear:both;
 }
 #translation-disclaimer .note {
-   background:transparent url(http://glossary.eea.europa.eu/misc_/EEAGlossary/note_ico.gif) no-repeat scroll 0.3em 50%;
-   padding:0.2em 0.3em 0.3em 22px;
-   color:#8F8F8F;
-   font-size:1em;
-   /* border: 1px solid #efefef; */
+    background:transparent url(http://glossary.eea.europa.eu/misc_/EEAGlossary/note_ico.gif) no-repeat scroll 0.3em 50%;
+    padding:0.2em 0.3em 0.3em 22px;
+    color:#8F8F8F;
+    font-size:1em;
+    /* border: 1px solid #efefef; */
 }
 #translation-disclaimer {
-   margin: 0 1em 0 1em;
-   display: inline-block;
+    margin: 0 1em 0 1em;
+    display: inline-block;
 }
 
 /* related styles amd flowplayer videos style */
 
 .media-player {
-   text-align:center;
+    text-align:center;
 }
 
 .media-player .embeddedvideo {
-   width: 100%;
+    width: 100%;
 }
 
 .media-player #embeddedvideo.sixteen-nine {
@@ -797,7 +797,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 .related-in-content-area .portlet {
-   margin-left: 2em;
+    margin-left: 2em;
 }
 
 #auto-related .tileImage,
@@ -856,10 +856,10 @@ body.section-signals #nonfolderish-subfolder-view-items {
     background-color: #FFFFFF;
     border: 1px solid #DFDFDF;
     -webkit-box-shadow: 1px 1px 2px #BFBFBF;
-       -moz-box-shadow: 1px 1px 2px #BFBFBF;
-        -ms-box-shadow: 1px 1px 2px #BFBFBF;
-         -o-box-shadow: 1px 1px 2px #BFBFBF;
-            box-shadow: 1px 1px 2px #BFBFBF;
+    -moz-box-shadow: 1px 1px 2px #BFBFBF;
+    -ms-box-shadow: 1px 1px 2px #BFBFBF;
+    -o-box-shadow: 1px 1px 2px #BFBFBF;
+    box-shadow: 1px 1px 2px #BFBFBF;
     padding: 0 0 15px 0  !important;
     margin: 0 15px 15px 0 !important;
     text-align: center;
@@ -995,16 +995,16 @@ form[name="edit_form"] div.formControls {
 
 /* portlet for translation feedback */
 #translationfeedback textarea, #translationfeedback input#sender_from_address {
- width:97%;
- margin-bottom:0.1em;
+    width:97%;
+    margin-bottom:0.1em;
 }
 
 #portlet-translationfeedback {
-margin-left:0.25em;
-margin-right:0.25em;
+    margin-left:0.25em;
+    margin-right:0.25em;
 }
 #translationfeedback input.standalone {
-float:right;
+    float:right;
 }
 
 /* Code to work around IE's lacking support of sub-elements of the input element */
@@ -1027,17 +1027,19 @@ float:right;
 
 /* Logo properties */
 
+#printLogo {
+    padding: 0.9em 0 0 0.5em;
+    display: block;
+    width: auto;
+    height: 55px;
+}
 .portal-logo {
-    background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat 0 8px;
     border: 0;
     margin: 0;
     padding: 0;
     float: left;
     position: relative;
 
-}
-#printLogo {
-    display: none;
 }
 
 .portal-logo a {
@@ -1055,7 +1057,7 @@ float:right;
 }
 
 .portal-logo a:hover {
-     /* no background highlight on logo */
+    /* no background highlight on logo */
     background-color: transparent;
 }
 
@@ -1091,6 +1093,8 @@ h3.site-description {
     clear: both;
     position: relative;
     margin: 0 auto;
+    overflow: hidden;
+    height: 90px;
 }
 
 .header-holder #portal-top .cell {
@@ -1108,10 +1112,10 @@ h3.site-description {
 
 .shadow {
     -webkit-box-shadow: 1px 1px 5px #afafaf;
-       -moz-box-shadow: 1px 1px 5px #afafaf;
-        -ms-box-shadow: 1px 1px 5px #afafaf;
-         -o-box-shadow: 1px 1px 5px #afafaf;
-            box-shadow: 1px 1px 5px #afafaf;
+    -moz-box-shadow: 1px 1px 5px #afafaf;
+    -ms-box-shadow: 1px 1px 5px #afafaf;
+    -o-box-shadow: 1px 1px 5px #afafaf;
+    box-shadow: 1px 1px 5px #afafaf;
 }
 
 /* drop down panels for portal siteactions */
@@ -1241,7 +1245,7 @@ h3.site-description {
 
 #portal-searchbox a {
     text-transform: none;
-    color: #FFFFFF;
+    color: &dtml-linkColor;;
     border: none;
     font-size: 85%;
     margin: 0 5px 0 0;
@@ -1256,7 +1260,7 @@ h3.site-description {
 }
 
 #portal-searchbox input.searchButton {
-    background-position: -385px -83px !important;
+    background: &dtml-corporateBlue; none;
     color: #FFFFFF;
     cursor: pointer;
     font-family: &dtml-fontFamily;;
@@ -1381,18 +1385,6 @@ h3.site-description {
 }
 
 /* use font awesome unicode icons */
-
-#siteaction-subscriptions .eea-icon:before {
-    content: "&dtml-eea-icon-rss;";
-}
-
-#siteaction-formobile .eea-icon:before {
-    content: "&dtml-eea-icon-mobile;";
-}
-
-#siteaction-contactus .eea-icon:before {
-    content: "&dtml-eea-icon-comments-o;";
-}
 
 #siteaction-chooselang .eea-icon:before {
     content: "&dtml-eea-icon-flag-o;";
@@ -1530,7 +1522,7 @@ h3.site-description {
 }
 
 .documentActions {
-  position: relative;
+    position: relative;
 }
 
 .documentActions ul {
@@ -1555,14 +1547,14 @@ h3.site-description {
 /* TODO: see about hiding logic for document actions */
 /* Top documentActions should show languageCodes */
 /*.documentActions ul {*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 .languageCodes {
     display: block;
 }
 
 #languageCodes {
-  max-width: 80%;
+    max-width: 80%;
 }
 
 #themes-tags span span span.languageCodes {
@@ -1598,12 +1590,12 @@ h3.site-description {
 
 .documentByLineAuthor:nth-child(2) span:after,
 .documentByLineAuthor a:after, .documentByLineContributor a:after {
-  content: ',';
+    content: ',';
 }
 
 .documentByLineAuthor:nth-child(2) a:after,
 .documentByLineAuthor:last-child a:after, .documentByLineContributor:last-child a:after {
-  content: '';
+    content: '';
 }
 
 .discussion {
@@ -1681,7 +1673,7 @@ h3.site-description {
 }
 
 .tileContent {
-  display: table-cell;
+    display: table-cell;
 }
 
 .tileImage, #content a.tileImage {
@@ -1700,7 +1692,7 @@ h3.site-description {
 }
 
 .highlights .tileItem, .eea-tabs-panel .tileItem {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 #news-highlights .tileItem:last-child,
@@ -1784,18 +1776,18 @@ textarea.proportional {
 #portal-sitemap a,
 #portal-sitemap .portletNavigationTree ,
 #portal-sitemap .portletNavigationTree  li.navTreeItem {
-  border: 0;
+    border: 0;
 }
 
 #portal-sitemap > li > a {
-   font-size: 1.4em;
-   font-weight: bold;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 #portal-sitemap > li {
-   border: 0;
-   margin-left: 1em;
-   padding-bottom: 2em;
+    border: 0;
+    margin-left: 1em;
+    padding-bottom: 2em;
 }
 
 #portal-sitemap .navTreeLevel1 {
@@ -2031,21 +2023,21 @@ option.hiddenStructure {
 /* Kupu image alignment classes */
 
 .image-left {
-   float: left;
-   clear: both;
-   margin:  2em 1em 0.5em 0;
-   border: 0;
+    float: left;
+    clear: both;
+    margin:  2em 1em 0.5em 0;
+    border: 0;
 }
 
 .image-inline {
-   float: none;
+    float: none;
 }
 
 .image-right {
-   float: right;
-   clear: both;
-   margin: 0.5em;
-   border: 0;
+    float: right;
+    clear: both;
+    margin: 0.5em;
+    border: 0;
 }
 
 html.kupu-html,
@@ -2120,7 +2112,7 @@ body.kupu {
 /* Plone center FAQ custom css*/
 
 .faqSection {
-   padding-left: 1em;
+    padding-left: 1em;
 }
 
 
@@ -2292,8 +2284,8 @@ form[name="edit_form"] table {
 }
 
 #outdated, .message_body {
-   width: 960px;
-   margin: 0 auto;
+    width: 960px;
+    margin: 0 auto;
 }
 .message_images {
     float: left;
@@ -2355,7 +2347,7 @@ form[name="edit_form"] table {
 }
 
 /* #5533 new style collection style tweaks */
- .queryindex, .addIndex, .queryoperator, .addOperator {
+.queryindex, .addIndex, .queryoperator, .addOperator {
     width: 105px !important;
     padding: 5px;
 }
@@ -2367,8 +2359,8 @@ form[name="edit_form"] table {
 }
 
 input.queryvalue {
-   width: 200px !important;
-   padding: 6px 0;
+    width: 200px !important;
+    padding: 6px 0;
 }
 
 .multipleSelectionWidget dd {
@@ -2378,7 +2370,7 @@ input.queryvalue {
     z-index: 600;
     position: absolute;
     -webkit-column-count: 3;
-            column-count: 3;
+    column-count: 3;
 }
 
 .multipleSelectionWidget dt {
@@ -2488,10 +2480,10 @@ a#subfolders_more_a, .more_dropdown_a {
     z-index: 500;
     padding: 1em;
     -webkit-box-shadow: 0px 2px 2px #333;
-       -moz-box-shadow: 0px 2px 2px #333;
-        -ms-box-shadow: 0px 2px 2px #333;
-         -o-box-shadow: 0px 2px 2px #333;
-            box-shadow: 0px 2px 2px #333;
+    -moz-box-shadow: 0px 2px 2px #333;
+    -ms-box-shadow: 0px 2px 2px #333;
+    -o-box-shadow: 0px 2px 2px #333;
+    box-shadow: 0px 2px 2px #333;
 }
 
 #popup_login_form label {
@@ -2551,21 +2543,21 @@ div.row {
 /* EUNIS navigation proposal, see #16978 */
 
 @media screen {
-.tabbedmenu ul {
-    padding: 0 10px 0 0!important;
-    margin: 0!important;
-    font-size: 12px;
-    line-height: normal!important;
-    list-style-image: none!important;
-    list-style-type: none!important;
-    background-color: &dtml-corporateBlue;;
-}
-.tabbedmenu ul > li {
-    float: left;
-    margin: 0!important;
-    padding: 0!important;
-}
-/* Clear floated elements */
+    .tabbedmenu ul {
+        padding: 0 10px 0 0!important;
+        margin: 0!important;
+        font-size: 12px;
+        line-height: normal!important;
+        list-style-image: none!important;
+        list-style-type: none!important;
+        background-color: &dtml-corporateBlue;;
+    }
+    .tabbedmenu ul > li {
+        float: left;
+        margin: 0!important;
+        padding: 0!important;
+    }
+    /* Clear floated elements */
     .tabbedmenu ul:before,
     .tabbedmenu ul:after {
         display: table;
@@ -2622,17 +2614,17 @@ a.downloading img {
 }
 
 .downloading-lock::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  z-index: 9999;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
 }
 
 #stats td {
-  padding-right: 1em;
+    padding-right: 1em;
 }
 
 div#original_chart_div {
@@ -2640,18 +2632,18 @@ div#original_chart_div {
 }
 
 #region-content .documentExportActions {
-  float:right;
+    float:right;
 }
 
 
 #region-content .documentExportActions ul, .documentExportActions ul {
-  list-style: none;
-  padding: 0px;
-  margin: 1em -0.15em 0px 0px;
+    list-style: none;
+    padding: 0px;
+    margin: 1em -0.15em 0px 0px;
 }
 
 #region-content .documentExportActions li, .documentExportActions li {
-  display: inline;
+    display: inline;
 }
 
 .eea-footer-right .link-pdf,
@@ -2660,47 +2652,48 @@ div#original_chart_div {
 #region-content .documentExportActions .link-epub,
 .documentExportActions .link-pdf,
 .documentExportActions .link-epub {
-  background: none;
-  padding: 0px;
-  margin: 0px;
+    background: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 #content .eea-footer-right a.download-pdf,
 #content .eea-footer-right a.download-epub {
-  border-bottom: none !important;
+    border-bottom: none !important;
 }
 
 #content .documentExportActions a {
-  border-bottom: none !important;
-  text-align: center;
+    color: rgb(186, 60, 13);
+    border-bottom: none !important;
+    text-align: center;
 }
 
 .documentExportActions .export-action-title {
-  display: block;
+    display: block;
 }
 
 .documentExportActions .eea-icon::before {
-  margin: 0px 0.15em;
+    margin: 0px 0.15em;
 }
 
 #content .documentByLine {
-  max-width: 80%;
-  text-align: left;
+    max-width: 80%;
+    text-align: left;
 }
 
 .portaltype-fiche .link-presentation {
-  display: none;
+    display: none;
 }
 
 .eea-epub-download,
 .eea-pdf-download {
-  font-size: 150%;
+    font-size: 150%;
 }
 
 /* do not show copyright info on soer briefings */
 .fiche-copyright {
-  display: none;
+    display: none;
 }
 
-
 /* </dtml-with> */
+

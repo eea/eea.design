@@ -48,7 +48,7 @@ hr {
 }
 
 #content-core ul {
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 li {
@@ -554,3 +554,4 @@ div.overlay a:hover {
 /* @end @group Core content type sprites */
 
 /* END OF BASE.CSS RULES </dtml-with> */
+

@@ -27,13 +27,13 @@
 
 /* @group Personal Tools pulldown @parent Pulldown menus */
 #portal-personaltools {
-    background-color: &dtml-corporateGreenTwo;;
+    background-color: &dtml-corporateGreen;;
     border:none;
     color: #fff;
     line-height: 1.6em;
     list-style: none;
     margin: 0.5em 0;
-    padding: 0.5em 3em 0.5em 3em;
+    padding: 0.3em 0.5em 0.5em !important; /* important because right now authoring is bellow public */
     text-align: right;
 }
 
@@ -82,18 +82,18 @@
 /* @group Content pulldowns @parent Pulldown menus */
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
-    background-color: &dtml-corporateGreenTwo;;
+    background-color: &dtml-corporateGreen;;
     z-index: 900;
 }
 
 #contentActionMenus dl.actionMenu.activated dd {
-    border-bottom: 0.5em solid &dtml-corporateGreenTwo;;
+    border-bottom: 0.5em solid &dtml-corporateGreen;;
     right: 0;
 }
 /* @end @group Content pulldowns @parent Pulldown menus */
 
 #contentActionMenus {
-    background: &dtml-corporateGreenTwo;;
+    background: &dtml-corporateGreen;;
     padding: 0.1em 0.24em 0 0 !important;
 }
 /* @end group Pulldown menus @parent Editing */
@@ -101,3 +101,4 @@
 /* @end group Editing */
 
 /* </dtml-with> */
+
