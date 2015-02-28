@@ -509,7 +509,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 #visual-portal-wrapper .eea-tabs.two-rows > li > a {
     height: 40px;
     white-space: normal;
-    max-width: 144px;
+    max-width: 150px;
 }
 
 #visual-portal-wrapper .eea-tabs > li > a:hover {
@@ -1217,6 +1217,10 @@ h3.site-description {
 }
 
 /* Searchbox style and positioning */
+.searchSection {
+    left: -5px;
+    position: relative;
+}
 
 #portal-searchbox {
     float: right;
@@ -2573,7 +2577,7 @@ div.row {
     .tabbedmenu.two-rows ul > li > a {
         height: 40px;
         white-space: normal;
-        max-width: 144px;
+        max-width: 150px;
     }
     .tabbedmenu ul > li > a:hover {
         color: &dtml-corporateBlueTwo;!important;

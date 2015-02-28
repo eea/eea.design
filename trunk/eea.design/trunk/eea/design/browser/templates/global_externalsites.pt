@@ -9,7 +9,7 @@
         <div class="panel-top" style="left: -195px;"><!-- --></div>
         <div class="panel-content shadow">
             <dl class="portlet networkSites">
-                <dt i18n:translate="">Networks xxx</dt>
+                <dt i18n:translate="">Networks</dt>
                 <dd>
                     <ul>
                         <li id="externalsites-eionet">
@@ -19,7 +19,7 @@
                             <a title="EPA network" i18n:attributes="title" accesskey="" href="http://epanet.ew.eea.europa.eu/" i18n:translate="">Network of the Heads of Environment Protection Agencies (EPA network)</a>
                         </li>
                         <li id="externalsites-envirowindows">
-                            <a title="EnviroWindows" i18n:attributes="title" accesskey="" href="http://ew.eea.europa.eu/" i18n:translate="">EnviroWindows</a>
+                            <a title="Partnerships beyond Eionet (PBE)" i18n:attributes="title" accesskey="" href="http://ew.eea.europa.eu/" i18n:translate="">Partnerships beyond Eionet (PBE)</a>
                         </li>
                         <li id="seis-network">
                             <a title="SEIS network" i18n:attributes="title" accesskey="" href="http://www.eea.europa.eu/about-us/what/shared-environmental-information-system" i18n:translate="">Shared Environmental Information System (SEIS)</a>
