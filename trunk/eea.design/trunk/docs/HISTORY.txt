@@ -3,6 +3,9 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: removed hardcoded height for better 
+  and more flexible vertical alignment.
+  [demarant refs #23500]
 * Change: normal weight for europe tab as the text is smaller.
   [demarant refs #23500]
 * Bug fix: fixed issues described in ticket description regarding
