@@ -3,6 +3,8 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: use standard link colors for document actions icons.
+  [demarant refs #23500]
 
 11.4 - (2015-02-27)
 -------------------
