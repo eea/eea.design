@@ -73,6 +73,10 @@
     background: url("&dtml-portal_url;/eu-flag.png") no-repeat 155px -5px;
 }
 
+#portaltab-europe a {
+    font-weight:normal !important;
+}
+
 #portal-globalnav .en_icon {
     background: url(&dtml-portal_url;/en_icon.png) no-repeat scroll right 5px transparent !important;
     padding: 0 15px 0 0 !important;
