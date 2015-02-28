@@ -27,10 +27,7 @@
                         <tr>
                             <td style="width: 45%;">
                                 <h2>
-                                    <img width="47" height="47"
-                                         alt="Write to us"
-                                         i18n:attributes="alt"
-                                         tal:attributes="src string:$portal_url/icon-send.gif"/>
+                                    <span class="eea-icon eea-icon-lg eea-icon-envelope"></span>
                                     <tal:block i18n:translate="">Write to us</tal:block>
                                 </h2>
                                 <p>
@@ -89,8 +86,7 @@
                             </td>
                             <td style="vertical-align: top;">
                                 <h2>
-                                    <img width="47" height="47" alt="Call us" i18n:attributes="alt"
-                                    tal:attributes="src string:$portal_url/icon-telephone.gif"/>
+                                    <span class="eea-icon eea-icon-lg eea-icon-phone"></span>
                                     <tal:block i18n:translate="">Call us</tal:block>
                                 </h2>
                                 <strong i18n:translate="">Reception:</strong>

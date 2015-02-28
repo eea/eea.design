@@ -3,6 +3,9 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed issues described in ticket description regarding
+  the new design
+  [ichimdav refs #23500]
 * Change: use standard link colors for document actions icons.
   [demarant refs #23500]
 
