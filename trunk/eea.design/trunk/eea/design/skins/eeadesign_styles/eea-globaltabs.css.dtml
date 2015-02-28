@@ -58,7 +58,7 @@
     height: 15px;
 }
 
-#secundary-portaltabs {
+#secondary-portaltabs {
     float: right;
     margin-right: 0.8em;
     height: 100%;
