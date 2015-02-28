@@ -1134,7 +1134,7 @@ h3.site-description {
     margin-top: 1em;
 }
 .panel-content, #tip-article-language .panel-content {
-    background: white url(&dtml-portal_url;/portlet_bg.png) repeat-x;
+    background: white;
     color: black;
     padding: 10px;
     border: 1px solid #BABBB8;

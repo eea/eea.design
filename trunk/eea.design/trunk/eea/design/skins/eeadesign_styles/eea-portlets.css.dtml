@@ -1086,7 +1086,6 @@ dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
 .portletCalendar .portlet-calendar .portletHeader {
     font-weight:bold!important;
     background-color: #EEEEEE;
-    background-image: url("portlet_bg.png");
 }
 
 .portletCalendar #calendar-previous{
