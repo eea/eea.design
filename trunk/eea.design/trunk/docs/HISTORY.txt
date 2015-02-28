@@ -3,6 +3,8 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: fixed daviz buttons background.
+  [demarant refs #23500]
 * Change: removed unnecessary skeuomorphism.
   [demarant refs #23500]
 * Change: removed hardcoded height for better 

@@ -280,6 +280,7 @@ input.destructive,
 input.standalone {
     color:#fff !important;
     background-color: &dtml-corporateBlue;;
+    background-image: none;
     font: bold 12px &dtml-fontFamily;;
     padding: 7px 11px;
     position: relative;
