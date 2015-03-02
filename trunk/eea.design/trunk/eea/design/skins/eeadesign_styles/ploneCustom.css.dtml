@@ -1019,7 +1019,7 @@ form[name="edit_form"] div.formControls {
 /* End edit form elements */
 #visual-portal-wrapper {
     margin: 0 auto;
-    overflow: visible !important;
+    overflow: hidden;
     padding: 0;
     display: block;
     clear: both;

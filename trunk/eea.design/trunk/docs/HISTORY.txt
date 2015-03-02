@@ -3,6 +3,9 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: fixed input, portal-searchbox and site width for
+  mobile and especially webkit based browsers
+  [ichimdav refs #23500]
 * Change: fixed daviz buttons background.
   [demarant refs #23500]
 * Change: removed unnecessary skeuomorphism.

@@ -117,6 +117,15 @@ input {
     border: 1px solid &dtml-globalBorderColor;;
     color: &dtml-fontColor;;
     vertical-align: middle;
+
+}
+
+/* #23500 disable webkit special button look in order to get the consistent button
+* we have styled throught the site
+*/
+input, textarea {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
 }
 
 select {
