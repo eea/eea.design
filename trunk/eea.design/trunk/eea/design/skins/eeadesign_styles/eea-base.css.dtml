@@ -124,8 +124,11 @@ input {
 * we have styled throught the site
 */
 input, textarea {
-    -webkit-appearance: none;
     -webkit-border-radius: 0;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
 }
 
 select {
