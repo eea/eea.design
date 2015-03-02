@@ -54,6 +54,11 @@ div.warning,
     font-size: 150%;
 }
 
+/* #23500 portal-column-two has less space for the icon to fit the portalMessage area */
+#portal-column-two .portalMessage .eea-icon:before {
+    margin-left: -1.3em;
+}
+
 div.attention:before, div.caution:before,
 div.danger:before, div.error:before, div.hint:before,
 div.important:before, div.note:before, div.tip:before,

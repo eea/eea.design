@@ -3,6 +3,9 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: modified margin left of portalMessage icons when
+  inside portal-column-two since the available space is less
+  [ichimdav refs #23500]
 * Change: fixed input, portal-searchbox and site width for
   mobile and especially webkit based browsers
   [ichimdav refs #23500]
