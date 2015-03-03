@@ -3,6 +3,9 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: Updated default_error_message to show PDF/ePub in progress even if the
+  async worker is down or busy
+  [voineali refs #23411]
 * Change: modified margin left of portalMessage icons when
   inside portal-column-two since the available space is less
   [ichimdav refs #23500]
@@ -13,7 +16,7 @@ Changelog
   [demarant refs #23500]
 * Change: removed unnecessary skeuomorphism.
   [demarant refs #23500]
-* Change: removed hardcoded height for better 
+* Change: removed hardcoded height for better
   and more flexible vertical alignment.
   [demarant refs #23500]
 * Change: normal weight for europe tab as the text is smaller.

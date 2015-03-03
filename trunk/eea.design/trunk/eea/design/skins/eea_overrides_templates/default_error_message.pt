@@ -22,6 +22,7 @@
 
     <tal:pdfdownload tal:condition="python:(err_type=='NotFound') and pdfdownload"
                      tal:define="inprogress python:context.restrictedTraverse('/www/' + '/'.join(actual_url.split('/')[3:]) + '.lock', False);
+                                 inprogress python:inprogress or request.get('direct', False);
                                  paths python:actual_url.split('/downloads/')[-1].split('/');
                                  uuid python:paths[0].lower() if len(paths) else '';
                                  redirect_url python:context.portal_url()+'/resolveuid/'+uuid;
