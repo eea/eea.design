@@ -32,14 +32,6 @@ textarea {
     width: 97%;
 }
 
-.actionMenu .actionMenuHeader a {
-    display: inline;
-}
-
-.actionMenu .actionMenuContent {
-    top: 1.4em;
-}
-
 /* Calendar fixes */
 .ploneCalendar {
     border-collapse:collapse;
@@ -63,16 +55,6 @@ textarea {
     position: absolute;
 }
 
-body { /* These work in IE only, changes the look of the scrollbar + textareas */
-    scrollbar-base-color: &dtml-globalBackgroundColor;;
-    scrollbar-highlight-color: &dtml-globalBackgroundColor;;
-    scrollbar-track-color: &dtml-evenRowBackgroundColor;;
-    scrollbar-darkshadow-color: &dtml-evenRowBackgroundColor;;
-    scrollbar-3dlight-color: &dtml-globalBorderColor;;
-    scrollbar-shadow-color: &dtml-globalBorderColor;;
-    scrollbar-arrow-color: &dtml-globalFontColor;;
-}
-
 
 #floatholder, #float {
     height: 1%;
@@ -80,7 +62,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 
 .portletTopRight,
 .portletTopLeft {
-    top: 0px;
+    top: 0;
 }
 .portletTopRight,
 .portletTopLeft,
@@ -103,7 +85,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 .section-disclaimer .documentActions,
 .section-pressroom .documentActions {
     margin: -2em 0 -1.25em 0;
-    padding: 0em 0em 0.5em 0em;
+    padding: 0 0 0.5em 0;
 }
 
 
@@ -124,7 +106,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 
 #whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a {
     width: 390px;
-    padding: 0px !important;
+    padding: 0 !important;
     margin-right: 20px !important;
 }
 #whatsnew-gallery .tileBody {
@@ -153,7 +135,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
     width: 200px;
     clear: both;
     float: none;
-    top: 0px;
+    top: 0;
     right: 100px;
 }
 
@@ -186,7 +168,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 
 #languageCodes li, #languageCodes li.selected {
     display: inline;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 #languageCodes li.selected  {
@@ -243,9 +225,7 @@ a.list-layout.active-list, a.list-layout {
 }
 
 .navTreeItem {
-    list-style: none;
-    list-style-type: none;
-    list-style-image: none;
+    list-style: none none;
     padding-left: 0 !important;
     margin-left: 0 !important;
 }
@@ -275,7 +255,7 @@ a.archives {
 }
 
 #coverflow img {
-    margin: 0px 0px -35px -92px !important;
+    margin: 0 0 -35px -92px !important;
 }
 
 /* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */
@@ -326,7 +306,7 @@ body #whatsnew-gallery .tileContent {
 /*  bonus: align h2 with select */
 #news-header h2 {
     margin-right: 10px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 /* </dtml-with> */
