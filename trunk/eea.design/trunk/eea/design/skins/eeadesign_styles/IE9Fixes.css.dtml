@@ -3,117 +3,22 @@
 */
 /* <dtml-with base_properties> */
 
-
-
 .hiddenStructure { /* This is necessary to eliminate the 1px high object in
                       the document flow in place of .hiddenStructure block objects */
     position: absolute;
-}
-
-
-.portletWrapper {
-    clear: both;
-    display: block;
-}
-
-.shortcut-default h3 {
-    border: none !important;
-    text-decoration: none !important;
-}
-
-#subtopics {
-    display: block;
-    min-height: 1px;
-}
-
-#subtopics ul {
-    background: transparent !important;
-}
-
-#subtopics ul li {
-    float: left;
-    display: inline !important;
-    position: relative;
-}
-
-.faceted-widget.faceted-text-widget .widget-fieldset form input[type="text"] {
-    float: left;
-}
-
-.faceted-widget.faceted-text-widget .widget-fieldset form input[type="submit"] {
-    float: left;
-    clear: right;
-    min-height: 1px;
-    margin-left: 10px;
-}
-
-.navTreeItem {
-    list-style: none none;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-}
-
-dd.portletItem {
-    margin-left: 0 !important;
-}
-
-#top-news-area div.portletHeader {
-    opacity: 1 !important;
-    background: #FFFFFF;
-    zoom: 1;
-}
-
-#top-news-area .portlet-promotions .portletHeader a {
-    /* Removed display: block !important in order for the 'en' icon to come up */
-}
-
-
-#top-news-area .portletItem {
-    border: 1px solid #DFDFDF;
-    zoom: 1;
 }
 
 a.archives {
     z-index: 2;
 }
 
-#coverflow img {
-    margin: 0 0 -35px -92px !important;
-}
-
-/* for ie9 signals folder_tabs_view needs 1px smaller tabs max-width */
-ul.eea-tabs.two-rows li {
-    max-width: 93px;
-}
-
 /* #5140 set display for ecotip */
 img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none;}
 #portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
 
-
-
-#portal-personaltools dd {
-    margin-top: 15px;
-}
-
-dl.actionMenu.activated dd {
-    min-width: 50%;
-}
-
-.tileContent {
+/*  bonus: align h2 with select  since h2 with float doesn't play nice with select table-cell*/
+#news-header select {
     display: inline-block;
-}
-
-body #whatsnew-gallery .tileContent {
-    width: 390px;
-    margin-top: 10px;
-}
-
-
-/*  bonus: align h2 with select */
-#news-header h2 {
-    margin-right: 10px;
-    margin-top: 0;
 }
 
 /* </dtml-with> */

@@ -3,6 +3,8 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: cleaned IE9fixes of most of the rules since they were no longer valid
+  [ichimdav refs #23607]
 * Change: Updated default_error_message to show PDF/ePub in progress even if the
   async worker is down or busy
   [voineali refs #23411]
