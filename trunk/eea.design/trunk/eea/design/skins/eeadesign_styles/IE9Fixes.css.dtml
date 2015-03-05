@@ -5,145 +5,11 @@
 
 
 
-input {
-    margin-bottom: 1px; /* bug fix */
-}
-
-input.searchButton,
-input.standardButton,
-input.context,
-input.destructive,
-input.standalone {
-    font-size: 0.90em !important;
-}
-
-table.listing td.top {
-    /* insane IE row bug workaround */
-    position: relative;
-    left: -1px;
-    top: -1px;
-}
-
-div#portal-columns div.portlet {
-    text-align: left;
-}
-
-textarea {
-    width: 97%;
-}
-
-/* Calendar fixes */
-.ploneCalendar {
-    border-collapse:collapse;
-    width:auto;
-    height:1%;
-    margin: 0;
-}
-
-.ploneCalendar td {
-    width:1%;
-}
-
-.ploneCalendar .todaynoevent,
-.ploneCalendar .todayevent {
-    position: relative;
-}
-
-
 .hiddenStructure { /* This is necessary to eliminate the 1px high object in
                       the document flow in place of .hiddenStructure block objects */
     position: absolute;
 }
 
-
-#floatholder, #float {
-    height: 1%;
-}
-
-.portletTopRight,
-.portletTopLeft {
-    top: 0;
-}
-.portletTopRight,
-.portletTopLeft,
-.portletBottomRight,
-.portletBottomLeft {
-    font-size: 1px;
-}
-
-#portal-column-two .portletTabHead,
-#portal-column-two .portletTabHead_current {
-    margin-top: -2.1em;
-}
-
-.media-item .item-left {
-    width: 200px;
-}
-
-.section-copyright .documentActions,
-.section-privacy .documentActions,
-.section-disclaimer .documentActions,
-.section-pressroom .documentActions {
-    margin: -2em 0 -1.25em 0;
-    padding: 0 0 0.5em 0;
-}
-
-
-#content-core {
-    display: block;
-    clear: both;
-    margin-bottom: 3em;
-}
-
-#portal-globalnav li {
-    display:inline !important;
-    float: left;
-}
-
-#whatsnew-gallery .tileContent {
-    width: 414px;
-}
-
-#whatsnew-gallery .tileHeadline, #whatsnew-gallery .tileHeadline a {
-    width: 390px;
-    padding: 0 !important;
-    margin-right: 20px !important;
-}
-#whatsnew-gallery .tileBody {
-    margin-top: 5px;
-}
-
-
-#mobile a:hover {
-    border: none !important;
-}
-
-#mobile {
-    display: block;
-    position: relative;
-    clear: both;
-    padding-top: 0 !important;
-}
-
-#mobile a {
-    display: block;
-}
-
-#forum-link {
-    display: block;
-    height: 50px;
-    width: 200px;
-    clear: both;
-    float: none;
-    top: 0;
-    right: 100px;
-}
-
-#twitter-link, #facebook-link, #youtube-link, #rss-link, #email-link {
-    display: block;
-    float: left;
-    margin: 0;
-}
 
 #document-action-sendto, #document-action-print, #document-action-full_screen,
 #document-action-twitter, #document-action-delicious, #document-action-facebook,
@@ -160,10 +26,6 @@ textarea {
 
 .documentActions ul {
     margin-left: 0 !important;
-}
-
-#portal-searchbox {
-    width: 350px;
 }
 
 #languageCodes li, #languageCodes li.selected {
@@ -268,15 +130,6 @@ img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: non
 #portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
 
 
-/* 5443 personaltools and header holder needs position static when we have
- * hovering items over our gradient */
-/* 14082; added fixes for personaltools also for IE9 */
-#portal-personaltools {
-    position: static;
-}
-#header-holder {
-    position: static;
-}
 
 #portal-personaltools dd {
     margin-top: 15px;
