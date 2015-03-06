@@ -38,7 +38,7 @@
     background: transparent;
     color: white;
     display: inline-block;
-    padding: 1em;
+    padding: 1em 0.8em;
     border: 0;
     min-width: 0;
     font-weight:bold;
@@ -53,7 +53,6 @@
 #portal-globalnav .selected a
 {
     background-color: white;
-    text-shadow: none;
     position: relative;
     height: 15px;
 }

@@ -29,10 +29,10 @@
 #portal-personaltools {
     background-color: &dtml-corporateGreen;;
     border:none;
+    border-radius: 0;
     color: #fff;
     line-height: 1.6em;
     list-style: none;
-    margin: 0.5em 0;
     padding: 0.3em 0.5em 0.5em !important; /* important because right now authoring is bellow public */
     text-align: right;
 }
@@ -44,7 +44,7 @@
     color: #FFFFFF !important;
 }
 #portal-personaltools-wrapper {
-    margin-top: -5px;
+    margin-right: 1em;
     min-height: 10px;
     float: right;
     font-size: 110%;

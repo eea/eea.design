@@ -22,7 +22,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     background-color: transparent;
     font-family: &dtml-headingFontFamily;;
-    text-shadow: 1px 1px white;
 }
 
 h1, h2 {
@@ -39,7 +38,6 @@ h1 {
 h2 {
     font-size: 150%;
     margin: 0.83em 0;
-    text-shadow: 1px 1px white;
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     color: &dtml-corporateBlueTwo;;
     padding-bottom: 0.25em;
@@ -152,7 +150,6 @@ fieldset,
 span.languageCodes a.translated,
 #content span.link-external a.translated {
     background: none repeat scroll 0 0 #ECECEC;
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
     color: black;
     display: inline-block;
     font-size: 10px;

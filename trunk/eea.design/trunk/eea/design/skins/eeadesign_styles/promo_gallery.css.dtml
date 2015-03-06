@@ -31,7 +31,6 @@
     line-height: 1.3em;
     font-weight: normal;
     border: none;
-    text-shadow: none;
     clear: none !important;
 }
 
@@ -193,7 +192,6 @@
 
 #promo-navigator h3, #promo-navigator-sm h3 {
     border:none !important;
-    text-shadow: none;
     clear: none !important;
 }
 

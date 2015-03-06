@@ -66,7 +66,6 @@ body.frontpage ul {
     color: #000;
     margin: 0;
     background: none;
-    text-shadow: 1px 1px white;
 }
 
 #highlights-block .shortNewsTitle {
@@ -171,12 +170,12 @@ body.frontpage #portal-columns {
   width: 65px;
   display: inline;
 }
-#content ul.gallery-layout-selection li {
+#content .gallery-layout-selection li {
     display: inline;
 }
 
-#content ul.gallery-layout-selection li a {
-    border-bottom: 0px;
+#content .gallery-layout-selection a {
+    border-bottom: 0;
     display: inline-block;
 }
 
@@ -328,17 +327,13 @@ div.current {
 
 /* style for shortcuts buttons */
 
-#forum, #community, #mobile {
+#community {
     height: 100px;
     background: &dtml-mediumBackgroundColor;;
     margin-bottom: 2.5em;
     text-align: center;
-    -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;
 }
 
-#forum-link,
 #facebook,
 #youtube,
 #twitter,
@@ -359,7 +354,6 @@ a.album-layout:hover {
 #semantic-ds-links a:hover,
 #forum a:hover,
 #community a:hover,
-#mobile a:hover,
 #prev-promo:hover,
 #play-pause:hover,
 #next-promo:hover {
@@ -373,9 +367,6 @@ a.album-layout:hover {
       -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
        -ms-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
         -o-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    border-radius: 5px;
-     -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
 }
 /* END Styles which can be used on any area */
 

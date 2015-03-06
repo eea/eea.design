@@ -524,9 +524,6 @@ span.figure-left {
     height: 8px;
     background: transparent url(&dtml-portal_url;/accordion_left.png) no-repeat scroll center center;
     cursor: pointer;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
 }
 
 #keyfacts-slider .slidePortlet .slideButton.next {
@@ -541,9 +538,6 @@ span.figure-left {
     margin-right: 10px;
     padding: 5px;
     border: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
     background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll -446px -216px;
 }
 
@@ -565,7 +559,6 @@ span.figure-left {
 
 #keyfacts-slider .slidePortlet .portletHeader {
     padding-left: 25px !important;
-    text-shadow: 1px 1px #000000;
     background: &dtml-corporateBlueTwo;;
     color: #FFFFFF !important;
 }

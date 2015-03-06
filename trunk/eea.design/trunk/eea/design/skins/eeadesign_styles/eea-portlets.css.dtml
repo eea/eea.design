@@ -67,11 +67,6 @@ a.managePortletsFallback {
 dl.portlet ul.navTree li a {
     margin: 0;
     padding: 10px;
-    text-shadow: none;
-    -webkit-transition: background-color .3s, color .3s, background .3s;
-    -moz-transition: background-color .3s, color .3s, background .3s;
-    -o-transition: background-color .3s, color .3s, background .3s;
-    transition: background-color .3s, color .3s, background .3s;
     border-top: 1px dotted #BABBB8;
     font-weight: normal;
     font-size: 14px;
@@ -99,7 +94,6 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 dl.portlet ul.navTree .navTreeCurrentItem {
     color: #FFFFFF !important;
     background-color: &dtml-corporateOrange;;
-    text-shadow: none;
     margin: 0;
     border-left: 0;
 }
@@ -136,7 +130,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     color: #333;
     font-size: 120%;
     padding: 0.5em 2em 1em 2em;
-    text-shadow: 0 1px 1px #fff;
 }
 
 #document-toc {
@@ -145,7 +138,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     clear: both;
     color: #333;
     padding: 0.5em 1em 1em 1em;
-    text-shadow: 0 1px 1px #fff;
 }
 
 #document-toc li {
@@ -181,7 +173,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     line-height: 1.4;
     margin: 0;
     padding: 1em 1em 0.25em;
-    text-shadow: 1px 1px white;
 }
 
 .portlet-promotions dl.portlet .promo-prev {
@@ -255,7 +246,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
    margin-top: 0;
    line-height: 1.2;
    font-size: 1.6em;
-   text-shadow: none;
 }
 
 .portletFooter {
@@ -912,7 +902,6 @@ dl.portletNavigationTree dt.portletSubMenuHeader {
    font-size: 12px;
    padding: 10px;
    margin: 0;
-   text-shadow: 0 1px 0 #FFFFFF;
    cursor: pointer;
    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
 }
@@ -957,7 +946,6 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
   color: #FFFFFF !important;
   background-color: &dtml-corporateOrange;;
-  text-shadow: none;
 }
 
 #portal-column-one .portlet {
