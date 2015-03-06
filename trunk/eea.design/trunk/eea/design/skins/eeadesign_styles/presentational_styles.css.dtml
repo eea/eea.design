@@ -27,6 +27,12 @@ div.warning,
     border: none;
 }
 
+/* #23017 simple portal messages get the gray background */
+.portalMessage {
+    background-color: &dtml-lightBackgroundColor;;
+
+}
+
 .extra .attention,
 .extra .caution,
 .extra .danger,
@@ -111,6 +117,9 @@ div.error,
     color: red;
 }
 
+.archiveMessage:before {
+    content: "&dtml-eea-icon-history;";
+}
 .ideaMessage:before {
     content: "&dtml-eea-icon-lightbulb-o;";
 }
