@@ -3,6 +3,8 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed error on main_template when view an un-published content
+  [ghicaale refs #23724]
 * Change: Added archiveMessage and modified portalMessage in order to contain
   the light background instead of the light blue
   [ichimdav refs #23017]
