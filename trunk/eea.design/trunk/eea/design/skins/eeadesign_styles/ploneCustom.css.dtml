@@ -1026,6 +1026,15 @@ form[name="edit_form"] div.formControls {
     position: relative;
 }
 
+@media (min-width: 1025px) {
+    /* #23500 allow the control panel widget to be placed outside of their context
+        by having overflow visible for screen with size larger than 1024px
+    */
+    #visual-portal-wrapper {
+        overflow: visible;
+    }
+}
+
 /* Logo properties */
 
 #printLogo {
