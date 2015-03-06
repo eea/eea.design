@@ -54,23 +54,11 @@ textarea {
     width: 97%;
 }
 
-.visualOverflow {
-    width: 88%;
-}
-
-.visualGhosted {
-    filter:alpha(opacity=20);
-}
 
 #portal-logo {
   height /**/: <dtml-var "_[logoName].height">px;
   overflow: hidden;
 }       
-
-#portal-colophon .colophonIcon {
-    height: 0px !important;
-    height /**/: 15px;
-}
 
 .actionMenu .actionMenuHeader a {
     display: inline;
@@ -329,20 +317,6 @@ dd.portletFooter {
     margin-top: 5px;
 }
 
-#mobile a:hover {
-     border: none !important;
-}
-
-#mobile {
-    display: block;
-    position: relative;
-    clear: both;
-    padding-top: 0 !important;
-}
-
-#mobile a { 
-    display: block;
-}
 
 #forum-link { 
     display: block;
@@ -485,11 +459,6 @@ dd.portletItem {
     zoom: 1;
 }
 
-#top-news-area .portlet-promotions img {
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-}
 
 #top-news-area .portlet-promotions .portletHeader a {
 /* Removed display: block !important in order for the 'en' icon to come up */
@@ -575,7 +544,7 @@ img
     -ms-filter: none;
 }
 
-.shortcut-default:hover, .shortcut-light:hover, #mobile:hover {
+.shortcut-default:hover, .shortcut-light:hover {
     background-color: #FFF;
 }
 

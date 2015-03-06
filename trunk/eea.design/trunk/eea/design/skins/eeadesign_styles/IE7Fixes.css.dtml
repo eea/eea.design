@@ -151,23 +151,12 @@ textarea {
     width: 97%;
 }
 
-.visualOverflow {
-    width: 88%;
-}
-
-.visualGhosted {
-    filter:alpha(opacity=20);
-}
 
 #portal-logo {
   height /**/: <dtml-var "_[logoName].height">px;
   overflow: hidden;
 }       
 
-#portal-colophon .colophonIcon {
-    height: 0px !important;
-    height /**/: 15px;
-}
 #portal-colophon .colophonWrapper {
     width: 950px;
 }
@@ -439,22 +428,7 @@ dd.portletFooter {
     margin-top: -22px;
 }
 
-#mobile a:hover {
-     border: none !important;
-}
-
-#mobile {
-    display: block;
-    position: relative;
-    clear: both;
-    padding-top: 0 !important;
-}
-
-#mobile a { 
-    display: block;
-}
-
-#forum-link { 
+#forum-link {
     display: block;
     height: 50px;
     width: 200px;
