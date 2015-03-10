@@ -976,7 +976,7 @@ a.moreLink {
     cursor: default;
 }
 
-.formControls {
+div.formControls {
     margin: 1em 0;
 }
 form[name="edit_form"] div.formControls {
@@ -2495,16 +2495,24 @@ a#subfolders_more_a, .more_dropdown_a {
     box-shadow: 0px 2px 2px #333;
 }
 
-#popup_login_form label {
-    width: 8em;
-    color: #000;
-
+/* customize form.css rule in order to remove center alignment */
+body.template-login_form #content,
+.pb-ajax #login-form  {
+    text-align: left;
+}
+#fieldset-openid-login label, #login-form label {
+    width: 6em; /* was 10em on stock plone */
+}
+.enableAutoFocus,
+#login-forgotten-password
+{
+    margin-left: 6.5em;
 }
 #popup_login_form #login-form input {
     font-size: 100%;
 }
 #popup_login_form #login-forgotten-password {
-    margin-left: 1em;
+    margin-left: 6.5em;
 }
 
 /* #10182 pagination style */
