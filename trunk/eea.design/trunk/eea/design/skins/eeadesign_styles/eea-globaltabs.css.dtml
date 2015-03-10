@@ -74,6 +74,8 @@
 
 #portaltab-europe a {
     font-weight:normal !important;
+    text-align:right;
+    padding-right:0 !important;
 }
 
 #portal-globalnav .en_icon {
