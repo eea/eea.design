@@ -316,11 +316,11 @@ def _getPromotions(self, noOfItems=6):
         promo = IPromotion(obj)
 
         if themes:
-            if not(promo.display_on_themepage or promo.display_globally):
+            if not promo.display_on_themepage:
                 continue
         if hasattr(context, 'layout') and \
                                     context.layout == 'frontpage_view':
-            if not(promo.display_on_frontpage or promo.display_globally):
+            if not promo.display_on_frontpage:
                 continue
         if not promo.active:
             continue
@@ -525,13 +525,13 @@ def filterLatestVersion(self, brains, noOfItems=6):
                     res.append(brain)
             else:
                 # attempt to retrieve the latest versions of the given brain
-                # if this brains doesn't contain the latest version of the 
+                # if this brains doesn't contain the latest version of the
                 # object
                 latest = versionsObj.latest_version()
                 uid = latest.UID()
                 results = cat.searchResults(UID=uid)
                 if not results:
-                    logger.warning("Couldn't find catalog entry for UID %s", 
+                    logger.warning("Couldn't find catalog entry for UID %s",
                                     uid)
                 else:
                     brain = cat.searchResults(UID=uid)[0]
@@ -548,7 +548,7 @@ def filterLatestVersion(self, brains, noOfItems=6):
 
         if len(res) == noOfItems:
             break  #we got enough items
-    # because of performance optimization ticket and #14008 
+    # because of performance optimization ticket and #14008
     # resort based on effective date since getting the latest version could
     # mess up the sorting that came from the catalog search
     res.sort(key=lambda x: x.effective)
