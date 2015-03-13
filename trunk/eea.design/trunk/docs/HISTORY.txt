@@ -3,6 +3,9 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: removed padding from portal-column-content since it wasn't necessary
+  and we need to customize it within soer
+  [ichimdav refs #23944]
 * Cleanup: Removed "Global promotions" portlet references
   [voineali refs #23725]
 * Change: login form data is not aligned left from the default plone center

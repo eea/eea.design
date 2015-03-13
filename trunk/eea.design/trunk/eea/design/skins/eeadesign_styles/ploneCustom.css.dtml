@@ -2088,7 +2088,6 @@ body.kupu {
 }
 
 #portal-column-content  {
-    padding: 0;
     min-width: 600px;
 }
 
