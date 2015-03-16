@@ -3,6 +3,11 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Change: updated ga.js to use the async version code snippet given by google
+  which improves our tracking capabilities. One fix that this new code brings
+  is the logging of the reports pdf downloads for both anonymous and logged in
+  users
+  [ichimdav refs #23277]
 * Change: removed padding from portal-column-content since it wasn't necessary
   and we need to customize it within soer
   [ichimdav refs #23944]
