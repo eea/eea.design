@@ -44,27 +44,33 @@ function addLanguageLink(link, lang) {
 }
 
 function scanforlinksinarea(contentarea) {
-    // terminate if we hit a non-compliant DOM implementation
-    if (!W3CDOM) { return false; }
 
     // scan for links only in content area or the area supplied
     if (!contentarea) { return false; }
 
-    links = contentarea.getElementsByTagName('a');
-    currentLanguage = getLanguageFromLink(location.href);
-
-    for (i=0; i < links.length; i++) {
-        var parent = jQuery(links[i]).parent();
-        if(parent.hasClass('actionMenuHeader')){
+    var links = contentarea.getElementsByTagName('a');
+    var currentLanguage = getLanguageFromLink(location.href);
+    var i, length;
+    var colonIdx;
+    var relativeLink;
+    var argIdx;
+    var ext_idx0;
+    var slashIdx;
+    var extension;
+    var link;
+    for (i = 0, length = links.length; i < length; i++) {
+        link = links[i];
+        var parent = jQuery(link).parent();
+        if (parent.hasClass('actionMenuHeader')) {
             continue;
         }
-        if ( (links[i].getAttribute('href')) &&
-            (links[i].className.indexOf('link-plain') === -1)    &&
-            (links[i].className.indexOf('noTranslation') === -1) &&
-            (links[i].className.indexOf('translated') === -1)    &&
-            (links[i].className.indexOf('feedButton') === -1)    &&
-            (links[i].className.indexOf('breadcrumbitem') === -1)) {
-            var linkval = links[i].getAttribute('href');
+        if ((link.getAttribute('href')) &&
+            (link.className.indexOf('link-plain') === -1) &&
+            (link.className.indexOf('noTranslation') === -1) &&
+            (link.className.indexOf('translated') === -1) &&
+            (link.className.indexOf('feedButton') === -1) &&
+            (link.className.indexOf('breadcrumbitem') === -1)) {
+            var linkval = link.getAttribute('href');
 
             // ADD CSS CLASSES FOR FILE EXTENSIONS
             // grab file extension
@@ -72,11 +78,11 @@ function scanforlinksinarea(contentarea) {
             // add host name if relative links (for FireFox)
             relativeLink = 0;
             if (colonIdx < 0) {
-                if (linkval.indexOf('/') > 0 || linkval.indexOf('/') === -1 ) {
-                    linkval = 'http://'+window.location.host+'/'+linkval;
+                if (linkval.indexOf('/') > 0 || linkval.indexOf('/') === -1) {
+                    linkval = 'http://' + window.location.host + '/' + linkval;
                     relativeLink = 1;
                 } else {
-                    linkval = 'http://'+window.location.host+linkval;
+                    linkval = 'http://' + window.location.host + linkval;
                 }
             }
 
@@ -92,55 +98,54 @@ function scanforlinksinarea(contentarea) {
             colonIdx = shortlinkval.lastIndexOf(':');
 
 
-            if(slashIdx > colonIdx+2 && slashIdx < ext_idx0) {
+            if (slashIdx > colonIdx + 2 && slashIdx < ext_idx0) {
                 extension = shortlinkval.substring(ext_idx0 + 1);
-            // add class name = link-extension
-            // it can be styled as you prefer in your css
-               if (ext_idx0 > 0 &&
-                links[i].getElementsByTagName('img').length === 0  ) {
-                    wrapNode(links[i], 'span', 'link-'+extension.toLowerCase());
+                // add class name = link-extension
+                // it can be styled as you prefer in your css
+                if (ext_idx0 > 0 &&
+                    link.getElementsByTagName('img').length === 0) {
+                    wrapNode(link, 'span', 'link-' + extension.toLowerCase());
                 }
             }
             // ADD CSS CLASSES FOR SPECIAL PROTOCOLS
             // check if the link href is a relative link, or an absolute link to
             // the current host.
-            if (linkval.toLowerCase().indexOf('://')>0 &&
-                (linkval.toLowerCase().indexOf(window.location.host)>0 ||
-                                               linkval.toLowerCase().indexOf('eea.eu.int')>0 ||
-                                               linkval.toLowerCase().indexOf('eea.europa.eu')>0)){
+            if (linkval.toLowerCase().indexOf('://') > 0 &&
+                (linkval.toLowerCase().indexOf(window.location.host) > 0 ||
+                linkval.toLowerCase().indexOf('eea.eu.int') > 0 ||
+                linkval.toLowerCase().indexOf('eea.europa.eu') > 0)) {
                 // absolute link internal to our host
-                var jslint_pleaser = 1; // pleases jslint
             } else if (linkval.indexOf('http:') !== 0) {
                 // not a http-link. Possibly an internal relative link, but also
                 // possibly a mailto or other protocol add tests for relevant
                 // protocols as you like.
                 protocols = ['mailto', 'ftp', 'news', 'irc', 'h323', 'sip',
-                             'callto', 'https', 'feed', 'webcal'];
+                    'callto', 'https', 'feed', 'webcal'];
                 // h323, sip and callto are internet telephony VoIP protocols
-                for (p=0; p < protocols.length; p++) {
-                    if (linkval.indexOf(protocols[p]+':') === 0) {
+                for (p = 0; p < protocols.length; p++) {
+                    if (linkval.indexOf(protocols[p] + ':') === 0) {
                         // if the link matches one of the listed protocols, add
                         // className = link-protocol
-                        wrapNode(links[i], 'span', 'link-'+protocols[p]);
+                        wrapNode(link, 'span', 'link-' + protocols[p]);
                         break;
                     }
                 }
             } else {
                 // we are in here if the link points to somewhere else than our site.
-                if ( links[i].getElementsByTagName('img').length === 0 ) {
+                if (link.getElementsByTagName('img').length === 0) {
                     // we do not want to mess with those links that already have
                     // images in them
-                    wrapNode(links[i], 'span', 'link-external');
+                    wrapNode(link, 'span', 'link-external');
                     // uncomment the next line if you want external links to be
                     // opened in a new window.
                     //links[i].setAttribute('target', '_blank');
                 }
             }
 
-            if (linkval.toLowerCase().indexOf('://')>0 && relativeLink === 0 && links[i].getElementsByTagName('img').length === 0){
+            if (linkval.toLowerCase().indexOf('://') > 0 && relativeLink === 0 && link.getElementsByTagName('img').length === 0) {
                 lang = getLanguageFromLink(linkval);
-                if (lang !== currentLanguage && lang !== 'unknown'){
-                    addLanguageLink(links[i], lang);
+                if (lang !== currentLanguage && lang !== 'unknown') {
+                    addLanguageLink(link, lang);
                 }
             }
         }
@@ -149,7 +154,9 @@ function scanforlinksinarea(contentarea) {
 
 function scanforlinks() {
     contentarea = getContentArea();
+    console.time("link transform");
     scanforlinksinarea(contentarea);
+    console.timeEnd("link transform");
 }
 
 // http://domain/LL/....
