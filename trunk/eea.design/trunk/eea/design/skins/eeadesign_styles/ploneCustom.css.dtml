@@ -18,6 +18,10 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+/* TODO HACK demarant removed description from promo-gallery for the launch of soer2015 */
+.frontpage .promo-item-desc {
+  display: none;
+}
 /* columns.css slider-definitions modification */
 
 div.width-3\3a 4 { width:    58.5%;  }
@@ -1235,7 +1239,7 @@ h3.site-description {
     float: right;
     clear: right;
     background-color: transparent;
-    margin: 25px 7px 0 0;
+    margin: 25px 0 0 0;
     padding: 0 0 0 0;
     text-align: right;
     text-transform: &dtml-textTransform;;

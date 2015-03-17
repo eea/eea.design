@@ -3,6 +3,9 @@ Changelog
 
 11.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: changed size of secondary sections of portal-globalnav in order to
+  avoid the section from being hidden on verbose languages like lt, el and fi
+  [ichimdav refs #24032]
 * Change: updated ga.js to use the async version code snippet given by google
   which improves our tracking capabilities. One fix that this new code brings
   is the logging of the reports pdf downloads for both anonymous and logged in

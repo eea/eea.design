@@ -59,23 +59,23 @@
 
 #secondary-portaltabs {
     float: right;
-    margin-right: 0.8em;
+    margin: 0;
     height: 100%;
 }
 
 #portaltab-europe {
-    width: 145px;
+    width: 120px;
     font-size: 75%;
     vertical-align: top;
     line-height: 1.1;
-    padding-right: 9em;
-    background: url("&dtml-portal_url;/eu-flag.png") no-repeat 155px -5px;
+    padding-right: 97px;
+    background: url("&dtml-portal_url;/eu-flag.png") no-repeat 123px -5px;
 }
 
 #portaltab-europe a {
-    font-weight:normal !important;
-    text-align:right;
-    padding-right:0 !important;
+    font-weight: normal !important;
+    text-align: right;
+    padding: 1em 0 !important;
 }
 
 #portal-globalnav .en_icon {
