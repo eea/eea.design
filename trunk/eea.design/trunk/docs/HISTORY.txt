@@ -1,6 +1,9 @@
 Changelog
 =========
 
+11.6.dev0 - (unreleased)
+------------------------
+
 11.5 - (2015-03-17)
 -------------------
 * Bug fix: changed size of secondary sections of portal-globalnav in order to
