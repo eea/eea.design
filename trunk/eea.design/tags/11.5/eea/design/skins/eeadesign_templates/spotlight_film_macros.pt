@@ -1,0 +1,55 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="eea" tal:omit-tag="">
+      
+
+<div metal:define-macro="spotlight" class="highlightMiddle shortNews" id="multimedia-highlights">
+    <h2 class="column-title" i18n:translate="">In the spotlight</h2>
+    <div id="spotlights-area" class="visualPadding" style="padding-top:1.5em;">
+        <ul>
+            <li class="vidthumb">
+                <a href="http://www.eea.europa.eu/data-and-maps/explore-interactive-maps/eye-on-earth">
+                    <img style="border: 1px solid #E0DED5" 
+                         src="http://www.eea.europa.eu/data-and-maps/explore-interactive-maps/promotions/eoe/image_thumb" 
+                         title="Eye On Earth &ndash; Citizen observatory on air and bathing water quality"
+                         i18n:attributes="title" />
+                </a>
+            </li>
+           <li class="vidthumb last">
+                <a href="http://www.eea.europa.eu/multimedia/spotting-the-signs/view" class="video-fancybox">
+                    <img src="http://www.eea.europa.eu/multimedia/spotting-the-signs/image_wide" 
+                         title="Spotting the signs for a transport system by 2050" 
+                         i18n:attributes="title" />
+                </a>
+            </li>
+
+            <li class="vidthumb">
+                <a href="/atlas">
+                    <img src="http://www.eea.europa.eu/cop15/bend-the-trend/environmental-atlas-of-europe/image_thumb" 
+                         title="Environmental Atlas" 
+                         i18n:attributes="title" />
+                </a>
+            </li>
+        
+        </ul>
+        <div id="big_vid">
+            <div id="spotlight-film-wrapper">
+              <a title="The European environment &ndash; state and outlook 2010" 
+                 href="http://www.eea.europa.eu/soer" 
+                 alt="The European environment &ndash; state and outlook 2010"
+                 i18n:attributes="title;alt" >
+                        <img title="visit the SOER 2010 website" 
+                             alt="visit the SOER 2010 website" 
+                             src="http://www.eea.europa.eu/soer/soer-2010-logo-large" 
+                             i18n:attributes="title;alt"/>
+              </a>
+            </div>
+             <h3><a href="http://www.eea.europa.eu/soer" i18n:translate="">The European environment &ndash; state and outlook 2010</a></h3>
+         </div>
+        <div class="visualClear"><!-- --></div>
+    </div>
+</div>
+
+
+</html>
+
