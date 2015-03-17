@@ -3,6 +3,8 @@ Changelog
 
 11.6.dev0 - (unreleased)
 ------------------------
+* Change; cleaned mark_special_links.js
+  [ichimdav refs #23277]
 * Change: updated portal-globalnav styling in order to better fit the content
   on mobile devices
   [ichimdav refs #24032]
