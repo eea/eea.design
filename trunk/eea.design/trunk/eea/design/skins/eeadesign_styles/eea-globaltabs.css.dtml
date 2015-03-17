@@ -25,6 +25,7 @@
     width: 100%;
 }
 
+
 #portal-globalnav li {
     margin-bottom: 0;
     float: none;
@@ -68,7 +69,7 @@
     font-size: 75%;
     vertical-align: top;
     line-height: 1.1;
-    padding-right: 97px;
+    padding-right: 92px;
     background: url("&dtml-portal_url;/eu-flag.png") no-repeat 123px -5px;
 }
 
@@ -79,8 +80,7 @@
 }
 
 #portal-globalnav .en_icon {
-    background: url(&dtml-portal_url;/en_icon.png) no-repeat scroll right 5px transparent !important;
-    padding: 0 15px 0 0 !important;
+    background: url(&dtml-portal_url;/en_icon.png) no-repeat scroll right -2px transparent;
 }
 
 /* </dtml-with> */

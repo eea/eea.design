@@ -3,6 +3,9 @@ Changelog
 
 11.6.dev0 - (unreleased)
 ------------------------
+* Change: updated portal-globalnav styling in order to better fit the content
+  on mobile devices
+  [ichimdav refs #24032]
 
 11.5 - (2015-03-17)
 -------------------
