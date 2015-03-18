@@ -3,6 +3,8 @@ Changelog
 
 11.6.dev0 - (unreleased)
 ------------------------
+* Feature: added google analytics tracking of download.pdf and download.epub
+  [ichimdav refs #23277]
 * Change; cleaned mark_special_links.js
   [ichimdav refs #23277]
 * Change: updated portal-globalnav styling in order to better fit the content

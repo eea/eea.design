@@ -2,6 +2,7 @@
 jQuery(document).ready(function($) {
     'use strict';
     var url_path_name = window.location.pathname;
+    var $body = $("body");
     var ie;
     if ($.browser) {
       ie = $.browser.msie && parseInt($.browser.version, 10);
@@ -80,7 +81,7 @@ jQuery(document).ready(function($) {
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;
     if (r.test(url_path_name)) {
-        $('body').addClass('fullscreen');
+        $body.addClass('fullscreen');
         $('#icon-full_screen').parent().remove();
     }
 
@@ -207,5 +208,21 @@ jQuery(document).ready(function($) {
       linkSelector: '.eea-icon',
       linkCSS: 'eea-icon eea-icon-3x eea-icon-download eea-icon-anim-burst animated'
     });
+
+
+    // #23277 track download of PDF and EPUBS
+    var pdfs = $body.find('a[href$="download.pdf"]');
+    var epubs = $body.find('a[href$="download.epub"]');
+
+    function add_downloads_tracking_code(idx, el) {
+        var name = el.href.indexOf('download.pdf') !== -1 ? 'PDF' : 'EPUB';
+        el.onclick = function() {
+            var _gaq = _gaq || [];
+            _gaq.push(['_trackEvent', 'Downloads', window.location.pathname, name]);
+        };
+        return el;
+    }
+    $.each(pdfs, add_downloads_tracking_code);
+    $.each(epubs, add_downloads_tracking_code);
 
 });
