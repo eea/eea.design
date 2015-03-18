@@ -128,7 +128,8 @@
     height: 50px;
 }
 #promo-gallery-wrapper ul, #promo-gallery-content ul, #promo-gallery-content-sm ul {
-    margin-left: 0em;
+    margin-left: 0;
+    margin-bottom: 0;
     list-style: none;
 }
 
