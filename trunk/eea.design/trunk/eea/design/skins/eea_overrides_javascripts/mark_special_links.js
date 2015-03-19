@@ -86,7 +86,6 @@ function scanforlinksinarea(contentarea) {
             (linkClass.indexOf('feedButton') === -1) &&
             (linkClass.indexOf('breadcrumbitem') === -1)) {
             var linkval = link.getAttribute('href');
-            linkValLowCase = linkval.toLowerCase();
 
             // ADD CSS CLASSES FOR FILE EXTENSIONS
             // grab file extension
@@ -101,6 +100,8 @@ function scanforlinksinarea(contentarea) {
                     linkval = 'http://' + window.location.host + linkval;
                 }
             }
+
+            linkValLowCase = linkval.toLowerCase();
 
             //remove arguments to identify extension
             argIdx = linkval.indexOf('?');
