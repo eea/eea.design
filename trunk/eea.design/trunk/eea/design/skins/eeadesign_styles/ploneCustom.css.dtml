@@ -2506,7 +2506,8 @@ body.template-login_form #content,
 #fieldset-openid-login label, #login-form label {
     width: 6em; /* was 10em on stock plone */
 }
-.enableAutoFocus,
+
+#login-form,
 #login-forgotten-password
 {
     margin-left: 6.5em;
