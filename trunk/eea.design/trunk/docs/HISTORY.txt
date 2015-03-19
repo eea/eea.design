@@ -3,6 +3,8 @@ Changelog
 
 11.6.dev0 - (unreleased)
 ------------------------
+* Bug fix: readded comment tag for the css rule that enabled the draft image
+  [ichimdav refs #24177]
 * Bug fix: removed enableAutoFocus from the styling that added margin-left since
   the edit form constains this class therefore rendering the content with wrong
   margin
