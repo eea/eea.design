@@ -3,6 +3,10 @@ Changelog
 
 11.6.dev0 - (unreleased)
 ------------------------
+* Bug fix: sections should check if language is available in order to avoid
+  getting the en_icon for sections where no language is available such as in
+  the case of controlpanel
+  [ichimdav]
 * Bug fix: readded comment tag for the css rule that enabled the draft image
   [ichimdav refs #24177]
 * Bug fix: removed enableAutoFocus from the styling that added margin-left since

@@ -1,4 +1,5 @@
-<tal:sections tal:define="portal_tabs view/portal_tabs"
+<tal:sections tal:define="portal_tabs view/portal_tabs;
+                          language python:here.Language();"
      i18n:domain="eea">
      <div id="globalnav-holder">
         <h5 class="hiddenStructure" i18n:translate="">Sections</h5>
@@ -6,7 +7,7 @@
             tal:define="selected_tab python:view.selected_portal_tab">
 
             <tal:tabs tal:repeat="tab portal_tabs">
-                <tal:block tal:condition="python:here.Language() == 'en'">
+                <tal:block tal:condition="python:not language or language == 'en'">
                     <li tal:define="tid tab/id"
                      tal:attributes="id string:portaltab-${tid};
                                      class python:selected_tab==tid and 'selected' or 'plain';">
@@ -17,8 +18,9 @@
                         Tab Name
                     </a>
                     </li>
-                </tal:block>               
-                <tal:block tal:condition="python:here.Language() != 'en'">
+                </tal:block>
+
+                <tal:block tal:condition="python:language and language != 'en'">
                       <li tal:define="tid tab/id;
                                       portal context/@@plone_portal_state/portal;
                                       tab_url tab/url;
