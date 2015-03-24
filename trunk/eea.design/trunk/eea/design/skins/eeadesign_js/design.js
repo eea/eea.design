@@ -211,18 +211,51 @@ jQuery(document).ready(function($) {
 
 
     // #23277 track download of PDF and EPUBS
-    var pdfs = $body.find('a[href$="download.pdf"]');
-    var epubs = $body.find('a[href$="download.epub"]');
+    function extract_file_type(url) {
+        var tokens = url.split('.');
+        // we might have a rought extension in case we have at_download links such as
+        // landcoverflows_060701.pdf/at_download/file
+        var rought_ext = tokens[tokens.length - 1];
+        var extension = rought_ext.length > 4 ? rought_ext.split('/')[0] : rought_ext;
+        return extension;
 
+    }
+    var links = document.getElementsByTagName('a');
+    function match_download_links(links) {
+        var list = [];
+        var links_length = links.length;
+        var link, link_href;
+        for (var i = 0; i < links_length; i++) {
+            link = links[i];
+            link_href = link.href;
+            if (link_href.match("download.[a-zA-Z]*") ||
+                link_href.match("ftp.eea.europa")) {
+                list.push(link);
+            }
+        }
+        return list;
+    }
+
+    function normalize_link(href) {
+        // removed download.* matches from hrefs
+        var down_match = href.match("download.[a-zA-Z]*");
+        if (down_match) {
+            href = href.replace(down_match, "");
+        }
+        return href;
+    }
+    var downloads_list = match_download_links(links);
     function add_downloads_tracking_code(idx, el) {
-        var name = el.href.indexOf('download.pdf') !== -1 ? 'PDF' : 'EPUB';
+        var name = extract_file_type(el.href);
+
+
         el.onclick = function() {
-            var _gaq = _gaq || [];
-            _gaq.push(['_trackEvent', 'Downloads', window.location.pathname, name]);
+            var _gaq = window._gaq || [];
+            var link =  normalize_link(el.href);
+            _gaq.push(['_trackEvent', 'Downloads', link, name]);
         };
         return el;
     }
-    $.each(pdfs, add_downloads_tracking_code);
-    $.each(epubs, add_downloads_tracking_code);
+    $.each(downloads_list, add_downloads_tracking_code);
 
 });
