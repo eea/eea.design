@@ -29,12 +29,10 @@
                                         </span>
                                         <div class="clearfix" style="padding: 0
                                             25px">
-                                           <a href="" title="Read more of the key fact" 
-                                              class="moreLink link-plain
-                                              pull-left"
-                                              tal:attributes="href item/url"
-                                              i18n:attributes="title"
-                                              i18n:translate="">more</a>
+                                            <a class="moreLink link-plain"
+                                                    tal:attributes="href item/parent_url; title item/parent_title;"
+                                                    i18n:attributes="title"
+                                                    i18n:translate="">more</a>
                                           <div class="corner-date pull-right"
                                               tal:content="structure item/effective"></div>
                                      </div>

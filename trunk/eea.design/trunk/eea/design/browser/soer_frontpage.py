@@ -6,6 +6,7 @@ from eea.themecentre.themecentre import getTheme
 
 LIMIT_CHARS = 250
 
+
 class SoerFrontpage(BrowserView):
     """ SOER View
     """
@@ -38,7 +39,7 @@ class SoerFrontpage(BrowserView):
         except ValueError:
             return ""
 
-    def getMessages(self, topic = ''):
+    def getMessages(self, topic=False):
         """ Get messages
         """
         ret = []
@@ -47,7 +48,7 @@ class SoerFrontpage(BrowserView):
         if topic:
             theme = getTheme(self.context)
         query = {
-            'portal_type': 'SOERMessage',
+            'portal_type': 'KeyMessage',
             'review_state': 'published'
         }
         if theme:
@@ -55,33 +56,40 @@ class SoerFrontpage(BrowserView):
         brains = catalog.searchResults(query)
         for brain in brains:
             text = self._prepareText(brain)
-
+            obj = brain.getObject()
+            parent = obj.aq_parent
             ret.append({
                 'text': text,
                 'url': brain.getURL,
+                'parent_url': parent.absolute_url(),
+                'parent_title': parent.Title(),
                 'effective': SoerFrontpage.getEffective(brain),
             })
         return ret
 
-    def getKeyFacts(self, topic = ''):
+    def getKeyFacts(self, topic=False):
         """ Get keyfacts
         """
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
-        theme = ''
+        theme = None
         if topic:
             theme = getTheme(self.context)
         query = {
-            'portal_type': 'SOERKeyFact',
+            'portal_type': 'SoerKeyFacts',
         }
         if theme:
             query['getThemes'] = theme
         brains = catalog.searchResults(query)
         for brain in brains:
+            obj = brain.getObject()
+            parent = obj.aq_parent
             text = self._prepareText(brain)
             ret.append({
                 'text': text,
-                'url': brain.getURL,
+                'url': brain.getURL(),
+                'parent_url': parent.absolute_url(),
+                'parent_title': parent.Title(),
                 'effective': SoerFrontpage.getEffective(brain),
             })
         return ret
@@ -92,12 +100,12 @@ class SoerFrontpage(BrowserView):
         """
         topics = 'themes' in self.context.REQUEST['URL0']
         if topics:
-            ret1 = self.getMessages(topic = topics)
-            ret2 = self.getKeyFacts(topic = topics)
+            ret1 = self.getMessages(topic=topics)
+            # ret2 = self.getKeyFacts(topic=topics)
         else:
             ret1 = self.getMessages()
-            ret2 = self.getKeyFacts()
-        ret1.extend(ret2)
+            # ret2 = self.getKeyFacts()
+        # ret1.extend(ret2)
         return ret1
 
     def getSoerTopics(self):
