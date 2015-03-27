@@ -63,7 +63,6 @@ class SoerFrontpage(BrowserView):
                 'url': brain.getURL,
                 'parent_url': parent.absolute_url(),
                 'parent_title': parent.Title(),
-                'effective': SoerFrontpage.getEffective(brain),
             })
         return ret
 
