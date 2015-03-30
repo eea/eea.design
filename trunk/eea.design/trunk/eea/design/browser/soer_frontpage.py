@@ -40,7 +40,7 @@ class SoerFrontpage(BrowserView):
             return ""
 
     def getMessages(self, topic=False):
-        """ Get messages
+        """ Get KeyMessage which replaces Message ctype
         """
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
@@ -67,7 +67,7 @@ class SoerFrontpage(BrowserView):
         return ret
 
     def getKeyFacts(self, topic=False):
-        """ Get keyfacts
+        """ Get keyfacts DEPRECATED, to be removed in the future
         """
         ret = []
         catalog = getToolByName(self.context, 'portal_catalog')
@@ -93,9 +93,8 @@ class SoerFrontpage(BrowserView):
             })
         return ret
 
-
     def getAllFactsAndMessages(self):
-        """Return all SOER key facts and messages in one list
+        """Return all SOER KeyMssages as Facts are now DEPRECATED
         """
         topics = 'themes' in self.context.REQUEST['URL0']
         if topics:
