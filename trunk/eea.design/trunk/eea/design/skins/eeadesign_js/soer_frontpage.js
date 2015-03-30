@@ -34,7 +34,11 @@
             portlet.append(play);
             // Start positions
         var items = portlet.find('.portletItem');
-        var randomnumber=Math.floor(Math.random()*items.length);
+        var items_length = items.length;
+        if (items_length < 2) {
+            $(".slideButton").css('display', 'none');
+        }
+        var randomnumber=Math.floor(Math.random()*items_length);
         var elem = items[randomnumber];
         $(elem).addClass('selected');
         $(elem).css('left', 0);
@@ -73,7 +77,7 @@
                 next.addClass('selected');
 
                 var p = portlet.width() + 100;
-                current.animate({'left': portlet.width() + 100});
+                current.animate({'left': p});
                 next.animate({'left': 0});
             });
 

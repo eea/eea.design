@@ -4,7 +4,7 @@ Changelog
 11.6.dev0 - (unreleased)
 ------------------------
 * Change: soer_fronpage keyFacts now display only the KeyMessage Content type
-    [ichimdav refs #24410]
+  [ichimdav refs #24410]
 * Bug fix: sections should check if language is available in order to avoid
   getting the en_icon for sections where no language is available such as in
   the case of controlpanel

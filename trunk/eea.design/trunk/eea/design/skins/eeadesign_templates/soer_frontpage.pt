@@ -6,21 +6,26 @@
 <head>
 </head>
 
+<tal:comment replace="nothing">
+IGNORE THIS WILL BE REPLACED BY SOER 2015
+</tal:comment>
+
 <body>
     <div metal:fill-slot="content-core">
         <metal:main-macro define-macro="main">
             <div id="boxes" tal:define="view nocall:context/@@soer_frontpage_logic;">
-	    
-		<div metal:define-macro="keyfacts-slider" 
+
+		<div metal:define-macro="keyfacts-slider"
 		    tal:define="view view|nocall:context/@@soer_frontpage_logic;
-		                background_img_path background_img_path| python: context.getCanonical().absolute_url() + '/image_large'  " 
-		     id="keyfacts-slider" class="figure keyFactsSlider">
+                        items view/getAllFactsAndMessages;
+		                background_img_path background_img_path| python: context.getCanonical().absolute_url() + '/image_large'  "
+		     id="keyfacts-slider" class="figure keyFactsSlider" >
                     <div class="keyfactsImgContainer"><img class="keyfacts-bgimg" src=""
                       tal:attributes="src background_img_path"  /></div>
-                    <div id="boxes" tal:define="items view/getAllFactsAndMessages">
+                    <div id="boxes" tal:condition="items">
                             <div id="soer-top-area">
                                 <!-- all key facts and messages -->
-                                <dl  
+                                <dl
                                     class="portlet slidePortlet" >
                                     <dt class="portletHeader" style="padding:5px;" i18n:translate="">Key messages</dt>
                                      <dd class="portletItem" style="left: 650px;"  tal:repeat="item items">
@@ -43,29 +48,29 @@
                     </div>
                 </div>
 		<p>
-		      <a title="All key facts" 
-		         class="internal-link moreLink" 
+		      <a title="All key facts"
+		         class="internal-link moreLink"
 		         href="resolveuid/10fa976d921e0e9a44d329a927835668"
 		         i18n:attributes="title"
                  i18n:translate="">All key facts</a>&nbsp;
-		      <a title="All key messages" 
-		         class="internal-link moreLink" 
+		      <a title="All key messages"
+		         class="internal-link moreLink"
 		         href="resolveuid/d4435d3dae471bb24ae9b24f7a67ef5c"
 		         i18n:attributes="title"
-                 i18n:translate="">All key messages</a>
+                 i18n:translate="" tal:replace="nothing">All key messages</a>
 		</p>
-		    
+
                 <div id="soer-search-area">
 
                     <dl class="portlet" id="soerSearchBox">
                         <dt class="portletHeader" i18n:translate="">Search SOER</dt>
                         <dd class="portletItem">
-			   <a title="Advanced search" 
-			      class="moreLink" 
+			   <a title="Advanced search"
+			      class="moreLink"
 			      href="./advanced-search"
 			      i18n:attributes="title"
                   i18n:translate="">Advanced search</a>
-                  
+
 			   <div class="visualClear">
                             </div>
 			    <form id="faceted-text-search" method="get" action="advanced-search" class="faceted-external-search">
@@ -88,9 +93,9 @@
                                 <input type="submit" value="Find" i18n:attributes="value" />
                                 </p>
                             </form>
-			       
-			      <a href="#portal-sitemap" 
-			         id="browsegeo" 
+
+			      <a href="#portal-sitemap"
+			         id="browsegeo"
 			         class="fancybox hiddenStructure"
 			         i18n:translate="">Browse geographically</a>
                                <form onsubmit="$('#browsegeo').click(); return false;" style="float:left;">
@@ -98,7 +103,7 @@
                                     <input type="submit" value="Browse geographically" onclick="" i18n:attributes="value" />
                                 </p>
                                </form>
-		
+
                                 <div class="hiddenStructure">
 			          <metal:geographically use-macro="context/soer_geographically/macros/main" />
 			        </div>
@@ -112,7 +117,7 @@
                 <div class="visualClear"></div>
 
 		<hr />
-		
+
                 <div id="free-text-space" tal:define="txt context/getText|nothing">
                     <p tal:condition="txt" tal:replace="structure txt">[Free text]</p>
                 </div>
