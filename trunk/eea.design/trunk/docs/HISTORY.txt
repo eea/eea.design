@@ -1,6 +1,9 @@
 Changelog
 =========
 
+11.7.dev0 - (unreleased)
+------------------------
+
 11.6 - (2015-04-02)
 -------------------
 * Change: soer_fronpage keyFacts now display only the KeyMessage Content type
