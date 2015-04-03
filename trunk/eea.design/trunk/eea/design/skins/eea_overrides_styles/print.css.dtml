@@ -132,10 +132,6 @@ body {
     float:none !important;
 }
 
-div.metadata-switch {
-    display:none !important;
-}
-
 .keyMessage {
     page-break-inside:avoid !important;
 }

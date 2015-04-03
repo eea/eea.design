@@ -3,6 +3,8 @@ Changelog
 
 11.7.dev0 - (unreleased)
 ------------------------
+* Change: cleaned print.css of indicators metadata-switch css logic
+  [ichimdav refs #24440]
 
 11.6 - (2015-04-02)
 -------------------
