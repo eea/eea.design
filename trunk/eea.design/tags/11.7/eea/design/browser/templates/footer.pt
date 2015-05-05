@@ -1,0 +1,24 @@
+<div metal:define-macro="portal_footer"
+     i18n:domain="eea"
+     class="row">
+    <div id="footer-wrapper">
+        <div id="bg-wrapper">
+
+                <div id="portal-footer">
+                    <tal:block replace="structure provider:plone.footer" tal:condition="exists: provider:plone.footer" />
+                    <div class="managePortletsLink"
+                       tal:condition="view/canManagePortlets">
+                        <a href=""
+                           class="managePortletsFallback"
+                           tal:attributes="href view/manageUrl"
+                           i18n:translate="">Manage footer portlets</a>
+                    </div>
+                 </div>
+                 <script type="text/javascript">
+                    jQuery(document).ready(function($){                
+			jQuery("#portal-footer").find(".managePortletsLink a").not(".managePortletsFallback").parent().remove();
+                    });
+                 </script>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="eea">
+
+<body>
+<div metal:define-macro="menu"
+     tal:define="portal_tabs here/@@application_menu;"
+     tal:omit-tag=""
+     tal:condition="portal_tabs">
+    <h5 class="hiddenStructure" i18n:translate="">Sections</h5>
+
+    <ul class="tabnavigation" id="webapp-globalnav">
+        <tal:tabs tal:repeat="tab portal_tabs">
+        <li tal:attributes="id string:portaltab_${tab/tabId};
+                            class tab/class;">
+            <a href="" 
+               tal:content="tab/title"
+               tal:attributes="href tab/url;
+                               title tab/description|nothing;">
+            Tab Name
+            </a></li></tal:tabs>
+    </ul>
+
+</div>
+
+
+
+<div metal:define-macro="submenu"
+     tal:define="portal_tabs context/@@application_submenu_direct;
+		 contextId context/getId"
+     tal:omit-tag=""
+     tal:condition="portal_tabs">
+    <ul id="webapp-submenu" class="webapp-submenu"
+        tal:attributes="id string:submenu-${contextId}">
+        <tal:tabs tal:repeat="tab portal_tabs">
+         <li tal:attributes="id string:subportaltab_${tab/tabId};
+                            class tab/class;">
+            <a href="" 
+               tal:content="tab/title"
+               tal:define="tabvar python:contextId.replace('-','_')"
+               tal:attributes="href tab/url;
+                               title tab/description|nothing;">
+            Tab Name
+            </a></li></tal:tabs>
+    </ul>
+</div>
+
+</body>
+</html>
