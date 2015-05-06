@@ -2715,5 +2715,25 @@ div#original_chart_div {
     display: none;
 }
 
+/* #20319 cookie policy viewlet styling */
+#viewlet-cookiepolicy {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom:0;
+    z-index: 100;
+    padding: 0.9em;
+    box-sizing: border-box;
+
+}
+#tlspu_cookiepolicy_form, .cookieMessage, #tlspu_cookiepolicy_message {
+    margin: 0 auto;
+    max-width: 970px;
+    padding: 0;
+}
+
 /* </dtml-with> */
 
