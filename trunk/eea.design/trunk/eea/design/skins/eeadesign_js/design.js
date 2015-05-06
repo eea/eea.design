@@ -210,14 +210,19 @@ jQuery(document).ready(function($) {
     });
 
 
-    // #23277 track download of PDF and EPUBS
-    function extract_file_type(url) {
+    // #23277 track download of PDF and EPUBS #18753 as well as other downloads
+    function extract_file_type(url, txt_contents) {
         var tokens = url.split('.');
+        var tokens_length = tokens.length;
+        //data-and-maps/data/eea-coastline-for-analysis/gis-data/europe-coastline-shapefile/at_download/file
+        // or synthesis/report/action-download-pdf/at_download/file have the file type as txt content of link
+        if (tokens_length === 1) {
+            tokens = txt_contents.trim().split('.');
+        }
         // we might have a rought extension in case we have at_download links such as
         // landcoverflows_060701.pdf/at_download/file
         var rought_ext = tokens[tokens.length - 1];
-        var extension = rought_ext.length > 4 ? rought_ext.split('/')[0] : rought_ext;
-        return extension;
+        return rought_ext.length > 4 ? rought_ext.split('/')[0] : rought_ext;
 
     }
     var links = document.getElementsByTagName('a');
@@ -228,7 +233,7 @@ jQuery(document).ready(function($) {
         for (var i = 0; i < links_length; i++) {
             link = links[i];
             link_href = link.href;
-            if (link_href.match("download.[a-zA-Z]*") ||
+            if (link_href.match("download[.a-zA-Z]*") ||
                 link_href.match("ftp.eea.europa")) {
                 list.push(link);
             }
@@ -238,24 +243,43 @@ jQuery(document).ready(function($) {
 
     function normalize_link(href) {
         // removed download.* matches from hrefs
-        var down_match = href.match("download.[a-zA-Z]*");
+        var down_match = href.match("/download[.a-zA-Z]*");
+        var at_down_match = href.match("/at_download/[a-zA-Z]*");
+        var clean_link;
         if (down_match) {
-            href = href.replace(down_match, "");
+            clean_link = href.replace(down_match, "");
         }
-        return href;
+        if (at_down_match) {
+            clean_link = href.replace(at_down_match, "");
+        }
+        return clean_link || href;
     }
     var downloads_list = match_download_links(links);
     function add_downloads_tracking_code(idx, el) {
-        var name = extract_file_type(el.href);
 
 
         el.onclick = function() {
+            var text = el.textContent || el.innerText;
+            var ftype = extract_file_type(el.href, text);
             var _gaq = window._gaq || [];
-            var link =  normalize_link(el.href);
-            _gaq.push(['_trackEvent', 'Downloads', link, name]);
+            //var link =  normalize_link(el.href);
+            var link = el.href;
+            //_gaq.push(['_trackEvent', 'Downloads', link, ftype]);
         };
         return el;
     }
     $.each(downloads_list, add_downloads_tracking_code);
+
+    // #20319; delete cookies when clicking the link to delete them
+    (function clear_cookie(obj){
+        if (!obj) {
+            return;
+        }
+        $("#delete_eea_cookie_data").click(function(evt){
+            evt.preventDefault();
+            obj.deleteCookies();
+            alert('Cookies deleted');
+        });
+    }(window.CookiePolicy));
 
 });
