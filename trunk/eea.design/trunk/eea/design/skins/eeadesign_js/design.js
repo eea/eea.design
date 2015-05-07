@@ -211,18 +211,29 @@ jQuery(document).ready(function($) {
 
 
     // #23277 track download of PDF and EPUBS #18753 as well as other downloads
+    var file_types = ['pdf', 'gif', 'tif', 'png', 'zip', 'xls', 'eps', 'csv',
+                      'tsv', 'exhibit', 'txt', 'doc', 'docx'];
     function extract_file_type(url, txt_contents) {
         var tokens = url.split('.');
         var tokens_length = tokens.length;
         //data-and-maps/data/eea-coastline-for-analysis/gis-data/europe-coastline-shapefile/at_download/file
         // or synthesis/report/action-download-pdf/at_download/file have the file type as txt content of link
-        if (tokens_length === 1) {
+        if (tokens_length === 4) {
             tokens = txt_contents.trim().split('.');
         }
         // we might have a rought extension in case we have at_download links such as
         // landcoverflows_060701.pdf/at_download/file
         var rought_ext = tokens[tokens.length - 1];
-        return rought_ext.length > 4 ? rought_ext.split('/')[0] : rought_ext;
+        var guess = "";
+        if (rought_ext.length > 4) {
+            guess = rought_ext.split('/')[0];
+            if (file_types.indexOf(guess) === -1) {
+                // return file extension in case we can't figure out the correct file type
+                return 'file';
+            }
+            return guess;
+        }
+        return rought_ext;
 
     }
     var links = document.getElementsByTagName('a');
@@ -264,7 +275,7 @@ jQuery(document).ready(function($) {
             var _gaq = window._gaq || [];
             //var link =  normalize_link(el.href);
             var link = el.href;
-            //_gaq.push(['_trackEvent', 'Downloads', link, ftype]);
+            _gaq.push(['_trackEvent', 'Downloads', link, ftype]);
         };
         return el;
     }
