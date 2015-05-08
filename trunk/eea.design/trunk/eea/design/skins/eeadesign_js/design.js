@@ -212,28 +212,30 @@ jQuery(document).ready(function($) {
 
     // #23277 track download of PDF and EPUBS #18753 as well as other downloads
     var file_types = ['pdf', 'gif', 'tif', 'png', 'zip', 'xls', 'eps', 'csv',
-                      'tsv', 'exhibit', 'txt', 'doc', 'docx'];
-    function extract_file_type(url, txt_contents) {
-        var tokens = url.split('.');
+                      'tsv', 'exhibit', 'txt', 'doc', 'docx', 'xlsx'];
+
+    function check_file_type(tokens) {
         var tokens_length = tokens.length;
+        var rought_ext = tokens[tokens_length - 1];
+        var guess = rought_ext.split('/')[0];
+        // return file extension in case we can't figure out the correct file type
+        return file_types.indexOf(guess) === -1 ? 'file' : guess;
+    }
+
+    function extract_file_type(url, txt_contents) {
+        var url_tokens = url.split('.');
         //data-and-maps/data/eea-coastline-for-analysis/gis-data/europe-coastline-shapefile/at_download/file
         // or synthesis/report/action-download-pdf/at_download/file have the file type as txt content of link
-        if (tokens_length === 4) {
-            tokens = txt_contents.trim().split('.');
-        }
         // we might have a rought extension in case we have at_download links such as
         // landcoverflows_060701.pdf/at_download/file
-        var rought_ext = tokens[tokens.length - 1];
-        var guess = "";
-        if (rought_ext.length > 4) {
-            guess = rought_ext.split('/')[0];
-            if (file_types.indexOf(guess) === -1) {
-                // return file extension in case we can't figure out the correct file type
-                return 'file';
-            }
-            return guess;
+        // check first the extension from the link text content and fallback to the url if we can't find
+        // it in the text content otherwise return a generic file extension
+        var txt_tokens = txt_contents.trim().split('.').toLowerCase();
+        var txt_tokes_outcome = check_file_type(txt_tokens);
+        if (txt_tokes_outcome === 'file') {
+            return check_file_type(url_tokens);
         }
-        return rought_ext;
+        return txt_tokes_outcome;
 
     }
     var links = document.getElementsByTagName('a');
@@ -281,16 +283,5 @@ jQuery(document).ready(function($) {
     }
     $.each(downloads_list, add_downloads_tracking_code);
 
-    // #20319; delete cookies when clicking the link to delete them
-    (function clear_cookie(obj){
-        if (!obj) {
-            return;
-        }
-        $("#delete_eea_cookie_data").click(function(evt){
-            evt.preventDefault();
-            obj.deleteCookies();
-            alert('Cookies deleted');
-        });
-    }(window.CookiePolicy));
 
 });
