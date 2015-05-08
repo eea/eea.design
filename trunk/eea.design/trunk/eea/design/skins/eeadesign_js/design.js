@@ -212,7 +212,7 @@ jQuery(document).ready(function($) {
 
     // #23277 track download of PDF and EPUBS #18753 as well as other downloads
     var file_types = ['pdf', 'gif', 'tif', 'png', 'zip', 'xls', 'eps', 'csv',
-                      'tsv', 'exhibit', 'txt', 'doc', 'docx', 'xlsx'];
+                      'tsv', 'exhibit', 'txt', 'doc', 'docx', 'xlsx', 'table'];
 
     function check_file_type(tokens) {
         var tokens_length = tokens.length;
@@ -230,7 +230,7 @@ jQuery(document).ready(function($) {
         // landcoverflows_060701.pdf/at_download/file
         // check first the extension from the link text content and fallback to the url if we can't find
         // it in the text content otherwise return a generic file extension
-        var txt_tokens = txt_contents.trim().split('.').toLowerCase();
+        var txt_tokens = txt_contents.trim().toLowerCase().split('.');
         var txt_tokes_outcome = check_file_type(txt_tokens);
         if (txt_tokes_outcome === 'file') {
             return check_file_type(url_tokens);
@@ -246,7 +246,14 @@ jQuery(document).ready(function($) {
         for (var i = 0; i < links_length; i++) {
             link = links[i];
             link_href = link.href;
-            if (link_href.match("download[.a-zA-Z]*") ||
+            // match only links that are comming from the eea site
+            if (!link_href.match('eea.europa')) {
+                continue;
+            }
+            if (
+                link_href.match("/download[.a-zA-Z]*") ||
+                link_href.match("at_download") ||
+                link_href.match("/download$") ||
                 link_href.match("ftp.eea.europa")) {
                 list.push(link);
             }
@@ -254,19 +261,6 @@ jQuery(document).ready(function($) {
         return list;
     }
 
-    function normalize_link(href) {
-        // removed download.* matches from hrefs
-        var down_match = href.match("/download[.a-zA-Z]*");
-        var at_down_match = href.match("/at_download/[a-zA-Z]*");
-        var clean_link;
-        if (down_match) {
-            clean_link = href.replace(down_match, "");
-        }
-        if (at_down_match) {
-            clean_link = href.replace(at_down_match, "");
-        }
-        return clean_link || href;
-    }
     var downloads_list = match_download_links(links);
     function add_downloads_tracking_code(idx, el) {
 
@@ -275,7 +269,6 @@ jQuery(document).ready(function($) {
             var text = el.textContent || el.innerText;
             var ftype = extract_file_type(el.href, text);
             var _gaq = window._gaq || [];
-            //var link =  normalize_link(el.href);
             var link = el.href;
             _gaq.push(['_trackEvent', 'Downloads', link, ftype]);
         };

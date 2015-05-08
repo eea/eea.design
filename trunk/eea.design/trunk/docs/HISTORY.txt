@@ -3,6 +3,9 @@ Changelog
 
 11.8.dev0 - (unreleased)
 ------------------------
+* Change:fixed the clipping on file tracking urls and added a check to
+  track files only from eea.europa.eu
+  [ichimdav refs #23277]
 
 11.7 - (2015-05-05)
 -------------------
