@@ -113,7 +113,6 @@
     };
 
     $(function() {
-        debugger;
         if(!window.readCookie('outdated_browsers') || window.readCookie('outdated_browsers') !== 'seen') {
             BrowserDetection.init();
         }
