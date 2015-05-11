@@ -2299,9 +2299,9 @@ form[name="edit_form"] table {
     width: 960px;
     margin: 0 auto;
 }
-.message_images {
-    float: left;
-    padding-right: 1em;
+.message_images .eea-icon {
+    font-size: 1.5em;
+    color: &dtml-headingColor;;
 }
 
 #outdated h3 {
