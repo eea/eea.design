@@ -120,7 +120,7 @@
             $(document).bind('messageDisplayed', function() {
                 var $message_wrap = $(".message_wrap");
                 $("#repeat_survey").click(function(e) {
-                    window.createCookie('survey_message', 'seen');
+                    window.createCookie('survey_message', 'seen', 1);
                     $message_wrap.slideUp(1000);
                     e.preventDefault();
                 });
@@ -131,7 +131,7 @@
                     e.preventDefault();
                 });
                 $("#take_survey").click(function(e) {
-                    window.createCookie('survey_message', 'seen');
+                    window.createCookie('survey_message', 'seen', 1);
                     $message_wrap.slideUp(1000);
                 });
             });
