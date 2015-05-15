@@ -1,8 +1,8 @@
 Changelog
 =========
 
-11.8.dev0 - (unreleased)
-------------------------
+11.8 - (2015-05-15)
+-------------------
 * Change: readded survey_message and logic back to eea.design now that we
   have another survey to promote
   [ichimdav refs #24873]
