@@ -1,0 +1,169 @@
+<tal:block tal:define="foo python:request.set('disable_plone.leftcolumn', 1);
+            bar python:request.set('disable_plone.rightcolumn', 1);"/>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      i18n:domain="eea"
+      metal:use-macro="context/main_template/macros/master">
+    <head>
+
+    </head>
+    <body>
+
+    <div metal:fill-slot="content-core">
+        <tal:main-macro metal:define-macro="main">
+            <div id="highlights-block" 
+                 tal:define="global frontpage_view context/@@frontpage_highlights;
+                             global datamaps_view context/@@data_and_maps_logic;">
+                <div id="main-content">
+                    <div class="visualClear"><!-- &nbsp; --></div>
+                    <div id="articles-area" class="right-column-area">
+
+                        <!-- featured content -->
+
+                        <!--<div class="featured">
+                          <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
+                        </div>-->
+                        <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
+			
+			<tal:featured_item
+                             tal:define="featured_class datamaps_view;
+                                         highlights featured_class/getLatestInteractiveData;
+                                         nr_items python:1;
+                                         archive_href string:data/data-viewers;">
+                                         <div metal:use-macro="here/frontpage_macros/macros/featured-item">
+                                              <span metal:fill-slot="archive" i18n:translate="">See all</span>
+                                              <span metal:fill-slot="box_title" i18n:translate="">Interactive data viewers</span>
+                                          </div>
+                        </tal:featured_item>
+
+			<div id="organisations-links" class="shortcut-light">
+			   <div id="organisations-content">
+			   <a id="organisations-link" href="/data-and-maps/data-providers-and-partners">
+			     <h2 i18n:translate="">Browse by organisation</h2>
+			   </a>
+			   </div>
+                        </div>			
+			
+			<div id="semantic-ds-links" class="shortcut-light">
+			   <div id="semantic-content">
+			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
+    			   <h2 i18n:translate="">Semantic Data Service</h2>
+    			   <span i18n:translate="">Access our data via semantic APIs</span></a>
+			   </div>
+                        </div>
+
+                        <!-- community  divs -->
+
+                        <!--div id="mobile" class="shortcut-light">
+                            <a id="mobile-link" href="/mobile"></a>
+                        </div-->
+
+
+                           <div metal:use-macro="here/portlet_social_links/macros/portlet">
+                               Social links
+                           </div>
+
+                        <!-- end community divs -->
+
+                        <div class="portletFooter">
+
+                        </div>
+                    </div>
+
+                    <div id="highlights-area" class="column-area">
+		    <!-- h2 i18n:translate="">Highlights</h2 -->
+                    <!-- promotions_gallery_slideshow-->
+                    <!-- metal:promotions
+                        tal:define="frontpage python: True;
+                                    promo_view datamaps_view;
+				    show_description python:False;">
+                            <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
+                                promoted item
+                            </div>
+                    </metal:promotions -->
+                    <!-- end promotions_gallery_slideshow -->
+
+                    <!-- data and maps global search -->
+                    <a href="find/global"
+                       class="archives advanced-search-link"
+                       title="Go to advanced search"
+                       i18n:attributes="title">
+                    <span i18n:translate="">Advanced</span></a>
+                    <div class="featured">
+                       <h2 i18n:translate="">Search data products</h2>
+                       <form tal:attributes="action string:${here/absolute_url}/find/global"  method="get" id="faceted-text-search" class="searchforms 
+faceted-external-search">
+                   <input type="text" name="c12" title="Search data, maps, graphs" i18n:attributes="title" value="" />
+                   <input type="submit" value="Search" i18n:attributes="value" name="search" />
+                       </form>
+                    </div>
+
+
+                    <div id="news-header" >
+                    <h2 i18n:translate=""> Browse complete catalogue</h2>
+                        <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
+                            Whatsnew select topic.
+                        </div>
+                    </div>
+
+                        <!-- tabs -->
+                        <div metal:define-macro="whatsnew-gallery" 
+			                  tal:define="more_hrefs  more_hrefs|python: ['find', 'data', 'find#c1=Map', 'explore-interactive-maps', 'indicators', 'find#c1=Graph' ];
+			                              datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
+                            <ul class="eea-tabs two-rows"
+                                tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps','Indicators', 'Graphs' ];">
+                                <li tal:repeat="tab tabnames">
+                                    <a href="#"  tal:content="tab" class="block" tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
+                                </li>
+                            </ul>
+                            <!-- end_tabs -->
+
+                            <tal:tab define="more_href python:more_hrefs[0]">
+			      <div metal:use-macro="here/datamaps_macros/macros/alldataproducts" />
+			    </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[1]">
+                              <div metal:use-macro="here/datamaps_macros/macros/datasets" />
+                            </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[2]">
+                              <div metal:use-macro="here/datamaps_macros/macros/maps" />
+                            </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[3]">
+                              <div metal:use-macro="here/datamaps_macros/macros/interactivemaps" />
+                            </tal:tab>
+                           <tal:tab define="more_href python:more_hrefs[4]">
+                              <div metal:use-macro="here/datamaps_macros/macros/indicators" />
+                            </tal:tab>
+			    <tal:tab define="more_href python:more_hrefs[5]">
+                              <div metal:use-macro="here/datamaps_macros/macros/graphs" />
+                            </tal:tab>
+
+                        </div>
+			
+			<!-- Popular tags --> 
+			<div id="faceted-form"> 
+			  <div id="tag-cloud"> 
+			    <div id="tag-cloud-content" tal:define="faceted_path python:'find/global'"> 
+				    <metal:tags use-macro="here/portlet_soer_tagcloud/macros/portlet" /> 
+			        
+			    </div> 
+                <div class="portletFooter">
+		                <p>
+		                    <a href="tags" 
+		                      class="standardButton" 
+		                      title="archive" 
+		                      i18n:attributes="title"
+		                      i18n:translate="">Explore all tags</a>
+                        </p>
+			    </div>
+			  </div> 
+			</div> 			
+                    </div>
+                    <div class="visualClear"><!-- &nbsp; --></div>
+                </div>
+            </div>
+
+        </tal:main-macro>
+    </div>
+
+    </body>
+</html>
