@@ -264,6 +264,7 @@ input.context,
 .table-definition-map,
 .documentExportActions,
 .sorter_ctl,
+.message_wrap,
 .portal-logo a {
     /* Hides all the elements irrelevant for printing */
     display: none !important;

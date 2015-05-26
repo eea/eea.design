@@ -3,6 +3,8 @@ Changelog
 
 11.9.dev0 - (unreleased)
 ------------------------
+* Bug fix: survey_message is not hidden when serving print stylesheets
+  [ichimdav refs #25563]
 
 11.8 - (2015-05-15)
 -------------------
