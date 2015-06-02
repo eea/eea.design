@@ -9,6 +9,10 @@
 
     function displayMessage(obj) {
         $.get(obj.template, function(data) {
+            var trimmed_data = data.trim();
+            if (!trimmed_data) {
+                return;
+            }
             var message_wrap = $(data), outdated_transition, timeout = obj.message_timer || 10000;
 
             message_wrap.prependTo('body')[obj.transition](1000);

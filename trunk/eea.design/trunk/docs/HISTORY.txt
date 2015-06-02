@@ -3,6 +3,9 @@ Changelog
 
 11.9.dev0 - (unreleased)
 ------------------------
+* Change: disabled survey_message by passing a tal replace nothing
+  since the survey time is over
+  [ichimdav refs #26057]
 * Bug fix: survey_message is not hidden when serving print stylesheets
   [ichimdav refs #25563]
 
