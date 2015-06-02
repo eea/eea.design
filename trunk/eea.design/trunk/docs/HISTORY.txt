@@ -1,8 +1,8 @@
 Changelog
 =========
 
-11.9.dev0 - (unreleased)
-------------------------
+11.9 - (2015-06-02)
+-------------------
 * Change: disabled survey_message by passing a tal replace nothing
   since the survey time is over
   [ichimdav refs #26057]
