@@ -1,0 +1,107 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  i18n:domain="eea">
+<body>
+
+<div metal:define-macro="portlet">
+
+<dl class="portlet" id="portlet-navigation-tree">
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <metal:header use-macro="here/portlet_navigation/macros/header" />
+    <span class="portletTopRight"></span>
+  </dt>
+  <dd class="portletItem lastItem">
+    <ul class="portletNavigationTree navTreeLevel0">
+
+      <!-- Latest reports -->
+
+      <li class="navTreeItem visualNoMarker">
+        <div class="visualIcon contenttype-topic">
+          <a class="state-published visualIconPadding"
+            title="Latest publications about Europe's environment published by EEA."
+            tal:attributes="href string:http://www.eea.europa.eu/publications"
+            i18n:attributes="title"
+            i18n:translate="">Latest publications
+          </a>
+        </div>
+      </li>
+
+
+      <!-- Alphabetically -->
+
+      <li class="navTreeItem visualNoMarker">
+        <div class="visualIcon contenttype-topic">
+          <a class="state-published visualIconPadding"
+            title="Alphabetically"
+            tal:attributes="href string:http://www.eea.europa.eu/publications/reports_alphabetically"
+            i18n:attributes="title"
+            i18n:translate="">Alphabetically
+          </a>
+        </div>
+      </li>
+
+      <!-- Thematically -->
+
+      <li class="navTreeItem visualNoMarker">
+        <div class="visualIcon contenttype-topic">
+          <a class="state-published visualIconPadding" title="Thematically"
+            tal:attributes="href string:http://www.eea.europa.eu/publications/reports_thematically"
+            i18n:attributes="title"
+            i18n:translate="">
+              Thematically
+          </a>
+        </div>
+      </li>
+
+      <!-- by language -->
+
+      <li class="navTreeItem visualNoMarker">
+        <div class="visualIcon contenttype-topic">
+          <a class="state-published visualIconPadding" title="by language"
+            tal:attributes="href string:http://www.eea.europa.eu/publications/reports_language"
+            i18n:attributes="title"
+            i18n:translate="">
+              by language
+          </a>
+        </div>
+      </li>
+
+      <!-- by serial title -->
+
+      <li class="navTreeItem visualNoMarker">
+        <div class="visualIcon contenttype-topic">
+          <a class="state-published visualIconPadding" title="by language"
+            tal:attributes="href string:http://www.eea.europa.eu/publications/reports_serialtitle"
+            i18n:attributes="title"
+            i18n:translate="">
+              by serial title
+          </a>
+        </div>
+      </li>
+
+      <!-- by SOE -->
+
+      <li class="navTreeItem visualNoMarker">
+        <div class="visualIcon contenttype-topic">
+          <a class="state-published visualIconPadding" title="National SOE reports"
+            href="http://www.eionet.europa.eu/seris"
+            i18n:attributes="title"
+            i18n:translate="">
+              National SOE reports
+          </a>
+        </div>
+      </li>
+
+  </ul>
+  <span class="portletBottomLeft"></span>
+  <span class="portletBottomRight"></span>
+</dd>
+
+</dl>
+</div>
+
+
+</body>
+</html>
+
