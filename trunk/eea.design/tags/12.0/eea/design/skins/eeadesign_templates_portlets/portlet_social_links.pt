@@ -1,0 +1,46 @@
+<!-- Social / Follow us links -->
+<div metal:define-macro="portlet"
+      tal:define="portal_url context/@@plone_portal_state/portal_url;"
+      i18n:domain="eea"
+      tal:condition="context/@@plone_context_state/is_view_template">
+
+      <!-- the fancy box email subscription -->
+      <div style="display:none;">
+          <div style="width: 280px; height: 250px;" id="subscribe-popup">
+              <div metal:use-macro="here/portlet_subscribe/macros/portlet-subscribe">
+                                email subscribe
+              </div>
+          </div>
+      </div>
+
+      <dl class="portlet" id="portlet-followus">
+        <dt class="portletHeader" i18n:translate="">Follow us</dt>
+        <dd>
+            <a id="twitter-link" title="Follow us on Twitter"
+               href="http://twitter.com/euenvironment"
+               i18n:attributes="title">&nbsp;</a>
+        </dd>
+        <dd>
+            <a id="facebook-link" title="Follow us on Facebook"
+               href="http://www.facebook.com/European.Environment.Agency"
+               i18n:attributes="title">&nbsp;</a>
+        </dd>
+        <dd>
+            <a id="youtube-link" title="Follow us on YouTube"
+               href="http://www.youtube.com/user/EEAvideos"
+               i18n:attributes="title">&nbsp;</a>
+        </dd>
+        <dd>
+            <a id="rss-link" title="Subscribe to RSS Feed"
+               tal:attributes="href string:$portal_url/subscription/news-feeds"
+               i18n:attributes="title" class="link-plain">&nbsp;</a>
+        </dd>
+        <dd>
+            <a id="email-link"
+               title="Subscribe by email"
+               href="#subscribe-popup"
+               class="fancybox"
+               i18n:attributes="title">&nbsp;</a>
+        </dd>
+      </dl>
+</div>
