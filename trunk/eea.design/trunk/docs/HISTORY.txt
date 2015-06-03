@@ -1,6 +1,11 @@
 Changelog
 =========
 
+12.0.dev0 - (unreleased)
+------------------------
+* Change: release new egg
+  [ghicaale refs #25722]
+
 11.9 - (2015-06-02)
 -------------------
 * Change: disabled survey_message by passing a tal replace nothing
