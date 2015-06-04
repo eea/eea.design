@@ -1,0 +1,19 @@
+<div class="message_wrap" style="display: none;" tal:replace="nothing">
+    <div class="message_body">
+        <div class="message_images pull-left">
+            <span class="eea-icon eea-icon-2x eea-icon-check-square"></span>
+        </div>
+        <div class="message_text">
+            <h3 i18n:translate="">User survey</h3>
+            <div class="pull-left">
+                <p i18n:translate="">The European Environment Agency is trying to improve its online presence.</p>
+                <p i18n:translate="">We would be grateful if you could answer <strong>3 short questions</strong>. It will only take a minute.</p>
+            </div>
+            <div class="pull-right">
+                <a class="standardButton" href="https://www.surveymonkey.com/r/7YMLHJD" target='_blank' i18n:translate="" id="take_survey">Take the online survey</a>
+                <a class="standardButton" href="#" i18n:translate="" id="repeat_survey">Not now</a>
+            </div>
+            <a class="standardButton" href="#" i18n:translate="" id="no_survey" tal:replace="nothing">Never show this again</a>
+        </div>
+    </div>
+</div>
