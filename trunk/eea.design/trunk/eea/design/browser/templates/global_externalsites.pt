@@ -32,30 +32,22 @@
                 <dd>
                     <ul>
                         <li>
-                            <a href="http://acm.eionet.europa.eu" i18n:translate="">Air pollution
-                            and Climate Change mitigation (ACM)</a>
+                            <a href="http://acm.eionet.europa.eu" i18n:translate="">Air pollution and Climate Change mitigation (ACM)</a>
                         </li>
                         <li>
-                            <a href="http://bd.eionet.europa.eu" i18n:translate="">Biological
-                            Diversity (BD)</a>
-
+                            <a href="http://bd.eionet.europa.eu" i18n:translate="">Biological Diversity (BD)</a>
                         </li>
                         <li>
-                            <a href="http://cca.eionet.europa.eu" i18n:translate="">Climate Change
-                            Impacts, Vulnerability and Adaptation (CCA)</a>
+                            <a href="http://cca.eionet.europa.eu" i18n:translate="">Climate Change Impacts, Vulnerability and Adaptation (CCA)</a>
                         </li>
                         <li>
-                            <a href="http://icm.eionet.europa.eu" i18n:translate="">Inland,
-                            Coastal and Marine waters (ICM)</a>
+                            <a href="http://icm.eionet.europa.eu" i18n:translate="">Inland, Coastal and Marine waters (ICM)</a>
                         </li>
                         <li>
-
-                            <a href="http://sia.eionet.europa.eu" i18n:translate="">Spatial
-                            Information and Analysis (SIA)</a>
+                            <a href="http://etc-wmge.vito.be" i18n:translate="">Land and Soil systems (ULS)</a>
                         </li>
                         <li>
-                            <a href="http://scp.eionet.europa.eu" i18n:translate="">Sustainable
-                            Consumption and Production (SCP)</a>
+                            <a href="http://etc-wmge.vito.be" i18n:translate="">Waste and Materials in a Green Economy (WMGE)</a>
                         </li>
                     </ul>
                 </dd>
