@@ -3,6 +3,8 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Bug: cirrect url for ETC/ULS.
+  [demarant refs #25415]
 
 12.1 - (2015-06-04)
 -------------------
