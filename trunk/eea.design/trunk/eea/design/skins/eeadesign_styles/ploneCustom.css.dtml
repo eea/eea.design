@@ -924,6 +924,35 @@ dl a:hover, dd a:hover, dt a:hover {
     color: &dtml-linkUnderlineHoverColor; !important;
 }
 
+/* used by datamaps_view set on SITE/data-and-maps */
+.shortcut-light {
+    background: transparent;
+    margin-bottom: 1em;
+    text-align: center;
+}
+#organisations-content {
+    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px &dtml-lightBackgroundColor;;
+    padding: 25px 20px 20px 90px;
+    height: 60px;
+    text-align: left;
+}
+#semantic-content {
+    background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
+    padding: 25px 20px 20px 80px;
+    height: 60px;
+    text-align: left;
+}
+/* /used by datamaps_view set on SITE/data-and-maps */
+
+/* used by dc_view and portlet_datacenter_overview */
+#theme-datacentre {
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat;
+    padding: 25px 0px 25px 66px;
+    height: 56px;
+    background-position: -401px -469px;
+}
+/* /used by dc_view and portlet_datacenter_overview */
+
 #content .featured p:last-child {
     margin-bottom: 0;
 }
@@ -2095,6 +2124,9 @@ body.kupu {
     min-width: 600px;
 }
 
+.visualPadding {
+    padding: 0 1em 1em 1em;
+}
 #portal-column-one .visualPadding {
     padding: 0;
     background: transparent;

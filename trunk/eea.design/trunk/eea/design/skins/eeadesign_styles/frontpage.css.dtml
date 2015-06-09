@@ -36,7 +36,7 @@ body.frontpage ul {
 #highlights-block h1 a,
 #highlights-block h2 a,
 #highlights-block h3 a {
-	background: none;
+    background: none;
 }
 
 #highlights-block h1 a:hover,
@@ -44,11 +44,6 @@ body.frontpage ul {
 #highlights-block h3 a:hover {
     border: none;
     text-decoration: underline;
-}
-
-
-#highlights-high ul.relatedLinks, #articles-high ul.relatedLinks {
-    margin:0.5em 0 0 1px;
 }
 
 #highlights-block h3 {
@@ -66,10 +61,6 @@ body.frontpage ul {
     color: #000;
     margin: 0;
     background: none;
-}
-
-#highlights-block .shortNewsTitle {
-    margin-top: 0.5em;
 }
 
 #highlights-block .date, #content .date {
@@ -92,10 +83,6 @@ body.frontpage ul {
 .figure-left {
     /* clear: left; */
     float: left;
-}
-/* don't show dates on articles on frontpage as they are not like news */
-#articles-high .date {
-    /* visibility:hidden; */
 }
 
 .archives {
@@ -148,12 +135,6 @@ body.sections-data-and-maps #promo-gallery-wrapper,  body.frontpage #promo-galle
     min-width: 585px;
 }
 
-
-body.frontpage .documentActions,
-body.frontpage #belowContent {
-    display: none;
-}
-
 body.frontpage #highlights-block {
    padding: 0;
 }
@@ -188,81 +169,11 @@ body.frontpage #portal-columns {
     clear: both;
 }
 
-/* Frontpage multimedia area
-******************************************************************************/
-
-#big_vid {
-    float: left;
-    width: 70%;
-}
-
-#multimedia-highlights ul {
-    list-style: none outside none;
-}
-
 
 /* Frontpage news and articles
 ******************************************************************************/
-.highlightMiddle {
-    padding: 2em 1.7em 1em 1.7em;
-    background: &dtml-greyBackgroundColor;;
-}
-
-.highlightHigh {
-    display: block;
-    padding: 0em 0em;
-    margin: 0 0 0em 0em;
-}
-
-.visualPadding {
-    padding: 0 1em 1em 1em;
-}
-
-#highlights-block .highlightHigh h2 {
-    font-size: 250%;
-    line-height: 1.5;
-    margin-top: 0;
-}
-
-.panel .noPrint {
-    margin: 0px !important;
-}
-
-
-#highlights-block .highlightHigh .relatedLinks {
-    font-size: 160%;
-}
-
-
-.highlights ul li .date ,
-.eea-tabs-panel ul li .date {
-    float: left;
-    margin: 0 0 0 -8em;
-}
-
 #highlights-block .portletFooter {
     padding-right: 1em;
-}
-
-div.even  {
-    background: &dtml-evenRowBackgroundColor;;
-    color: #346f83;
-    margin: 0;
-    padding: 15px 15px 10px 15px;
-    font-weight: normal;
-    border-bottom: 1px solid #DDD;
-    cursor: pointer;
-}
-div.even {
-     background: &dtml-greyBackgroundColor; !important;
-}
-
-#filter_grid div.even {
-    padding: 0px;
-}
-
-div.current {
-  display: none;
 }
 
 #news-header select {
@@ -288,17 +199,6 @@ div.current {
 }
 
 /* style for featured boxes */
-
-.roundedCorners {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-}
-
-.section-multimedia .featured, .section-multimedia .portlet {
-    padding: 1em;
-}
-
 .featured, .portlet {
     background: &dtml-lightBackgroundColor;;
     margin-bottom: 1em;
@@ -316,23 +216,12 @@ div.current {
     max-width: 170px !important;
 }
 
-.featured dl {
-    padding: 0 1em 0 1em;
-}
-
 /* in featured boxes we do want floating for links and images */
 .featured h2, .featured h3 {
     clear: none !important;
 }
 
 /* style for shortcuts buttons */
-
-#community {
-    height: 100px;
-    background: &dtml-mediumBackgroundColor;;
-    margin-bottom: 2.5em;
-    text-align: center;
-}
 
 #facebook,
 #youtube,
@@ -353,7 +242,6 @@ a.album-layout:hover {
 
 #semantic-ds-links a:hover,
 #forum a:hover,
-#community a:hover,
 #prev-promo:hover,
 #play-pause:hover,
 #next-promo:hover {
@@ -422,11 +310,6 @@ a.album-layout:hover {
     margin-bottom: 1em;
 }
 
-.shortcut-light {
-    background: transparent;
-    margin-bottom: 1em;
-    text-align: center;
-}
 
 #eea-mobile-shortcut.shortcut-default,
 #enquiry-service-shortcut.shortcut-default {
@@ -439,12 +322,6 @@ a.album-layout:hover {
     clear: both;
 }
 
-#semantic-content {
-    background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
-    padding: 25px 20px 20px 80px;
-    height: 60px;
-    text-align: left;
-}
 
 #mobile-content, #enquiry-content {
     display: table-cell;
@@ -462,23 +339,7 @@ a.album-layout:hover {
     height: 60px;
 }
 
-#organisations-content {
-    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px &dtml-lightBackgroundColor;;
-    padding: 25px 20px 20px 90px;
-    height: 60px;
-    text-align: left;
-}
 
-#theme-datacentre {
-    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat;
-    padding: 25px 0px 25px 66px;
-    height: 56px;
-    background-position: -401px -469px;
-}
-
-.shortcut-light a.portletHeader, .shortcut-default a.portletHeader  {
-   display:block;
-}
 
 a.list-layout,
 a.album-layout {

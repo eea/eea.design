@@ -3,6 +3,21 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Cleanup: removed getHigh, getMedium, getLow, getMediumArticles, getLowArticles
+  as we only display getHighArticles, the rest have been deprecated for a long time
+  [ichimdav refs #24986]
+* Cleanup: removed highArticles macro fron datamaps_macro.pt since datamaps_view
+  no longer displays any high articles
+  [ichimdav refs #24986]
+* Cleanup: removed highArticles macro fron datamaps_macro.pt since datamaps_view
+  no longer displays any high articles
+  [ichimdav refs #24986]
+* Cleanup: removed spotlight_film_macros and spotlight_film_macros_soer since
+  they are long gone from the frontpage
+  [ichimdav refs #24986]
+* Cleanup: cleaned frontpage.css of rules that were no longer found within
+  our frontpage
+  [ichimdav refs #25986]
 * Bug: cirrect url for ETC/ULS.
   [demarant refs #25415]
 

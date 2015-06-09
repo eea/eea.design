@@ -1,6 +1,5 @@
 /*jslint browser: true,  */ /*global jQuery, SubCookieUtil */
 jQuery(document).ready(function($) {
-    $("#highlights-high, #highlights-middle").tabs("div.highlightMiddle", {tabs: 'div.panel', effect: 'slide'});
     window.whatsnew = {};
     var eea_gal = window.whatsnew;
 

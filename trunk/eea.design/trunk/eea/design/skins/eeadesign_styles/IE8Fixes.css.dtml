@@ -200,8 +200,7 @@ dd.portletFooter {
     margin: 0;
 }
  
-* html .datatable,
-* html .highlightHigh {
+* html .datatable {
     height: 0.1%;
 }
 
@@ -479,10 +478,6 @@ dd.portletItem {
     top: -1px;
 }
 
-body.section-multimedia  .left-widget {
-    max-width: 636px;
-}
-
 #featured-location {
     height: 257px;
 }
@@ -529,10 +524,6 @@ img
     width: 100%;
 }
 
-.section-multimedia #globalnav-holder {
-    position: relative;
-    top: -2px;
-}
 
 #portal-breadcrumbs a{
     display: inline;

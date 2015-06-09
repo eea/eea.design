@@ -32,16 +32,6 @@
 </div>
 
 
-
-
-<div metal:define-macro="highArticles"
-     id="articles-high"
-     tal:define="frontpage_view datamaps_view|context/@@frontpage_highlights;
-                 highlights highlights|frontpage_view/getHighArticles;
-                 plone_view nocall:plone_view|context/@@plone;">
-    <metal:items use-macro="here/frontpage_macros/macros/middlenews-long" />
-</div>
-
 <metal:spotlight metal:define-macro="spotlightItem"
                  tal:define="spotlight frontpage_view/getSpotlight;
                              plone_view nocall:plone_view|context/@@plone;"

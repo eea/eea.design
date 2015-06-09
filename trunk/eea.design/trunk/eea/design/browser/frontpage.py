@@ -92,20 +92,6 @@ class Frontpage(BrowserView):
 
         return result
 
-#    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getHigh(self, portaltypes=('Highlight', 'PressRelease'),
-                                    scale='thumb', topic=''):
-        """ retrieves high visibility portaltypes """
-        visibilityLevel = 'top'
-        topic = topic
-        results = _getItemsWithVisibility(self, visibilityLevel,
-                        portaltypes, topic=topic)[:self.noOfHigh]
-        highlights = []
-        for high in results:
-            highlights.append(self._getTeaserMedia(high, scale))
-
-        return highlights
-
     def getHighArticles(self):
         """ return a defined number of high visibility articles items """
         return _getHighArticles(self, noOfItems=self.noOfHigh)
@@ -223,70 +209,6 @@ class Frontpage(BrowserView):
         """
         return _getResultsInAllLanguages(self, method)
 
-## deprecated visibility methods
-    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getLow(self, portaltypes=('Highlight', 'PressRelease'),
-                                                        scale='dummy'):
-        """ Low
-        """
-        visibilityLevel = [ 'top', 'middle', 'bottom' ]
-        otherIds = [h['id'] for h in self.getMedium(portaltypes)]
-        otherIds.extend([ high['id'] for high in self.getHigh(portaltypes)] )
-        result = _getItemsWithVisibility(self, visibilityLevel, portaltypes) \
-                            [:self.noOfHigh + self.noOfMedium + self.noOfLow]
-        highlights = []
-
-        for high in result:
-            # remove highlights that are display as top or middle
-            if high['id'] not in otherIds:
-                obj = high.getObject()
-                adapter = queryMultiAdapter((obj, self.request),
-                                        name=u'themes-object', default=None)
-                themes = []
-                if adapter is not None:
-                    themes = adapter.short_items()
-
-                highlights.append({'id': high['id'],
-                 'getUrl': high['getUrl'] or high.getURL(),
-                 'getNewsTitle': high['getNewsTitle'],
-                 'getTeaser': high['getTeaser'],
-                 'effective': high['effective'],
-                 'expires': high['expires'],
-                 'getVisibilityLevel': high['getVisibilityLevel'],
-                 'themes': themes,
-                  })
-
-        return highlights[:self.noOfLow]
-
-    @cache(cacheKeyHighlights, dependencies=['frontpage-highlights'])
-    def getMedium(self, portaltypes=('Highlight', 'PressRelease'),
-                                                    scale='thumb'):
-        """ Medium
-        """
-        visibilityLevel = ['top', 'middle']
-        result = _getItemsWithVisibility(self, visibilityLevel, portaltypes) \
-                                            [:self.noOfMedium + self.noOfHigh]
-        topIds = [h['id'] for h in self.getHigh(portaltypes)]
-        highlights = []
-        #topRemoved = 0
-        for high in result:
-            # remove the self.noOfHigh top highlights from the result,
-            # they are displayd on top
-            if high['id'] not in topIds:
-                highlights.append(self._getTeaserMedia(high, scale))
-
-        return highlights[:self.noOfMedium]
-
-    def getMediumArticles(self):
-        """ return a defined number of medium visibility articles items """
-        results = self.getMedium(('Article', ))
-        return results
-
-    def getLowArticles(self):
-        """ return a defined number of low visibility articles items """
-        results = self.getLow(('Article', ))
-        return results
-## end deprecated visibility methods
 
 ## Utility functions
 

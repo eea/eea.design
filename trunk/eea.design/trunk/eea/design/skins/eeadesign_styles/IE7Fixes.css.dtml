@@ -301,8 +301,7 @@ dd.portletFooter {
     margin: 0;
 }
  
-* html .datatable,
-* html .highlightHigh {
+* html .datatable {
     height: 0.1%;
 }
 
@@ -570,8 +569,7 @@ img
    margin: 0px 0px -35px -92px !important;
 }
 
-body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
-#featured-location,
+#featured-location
 {
     background: transparent !important;
 }
@@ -650,11 +648,6 @@ body.section-multimedia #whatsnew-gallery .eea-tabs-panel,
 
 #visual-portal-wrapper ul.eea-tabs li a, #visual-portal-wrapper ul.eea-tabs.two-rows li {
     font-size: 100% !important;
-}
-
-/* 5455 header-holder hides navigation bar if set to static on multimedia page */
-body.section-multimedia #header-holder {
-    position: relative !important;
 }
 
 /* 5346 fixed position of search result bar */
