@@ -15,8 +15,8 @@ Changelog
 * Cleanup: removed spotlight_film_macros and spotlight_film_macros_soer since
   they are long gone from the frontpage
   [ichimdav refs #24986]
-* Cleanup: cleaned frontpage.css of rules that were no longer found within
-  our frontpage
+* Cleanup: cleaned frontpage.css, eea-authoring.css of rules that were no longer
+  found on site
   [ichimdav refs #25986]
 * Bug: cirrect url for ETC/ULS.
   [demarant refs #25415]

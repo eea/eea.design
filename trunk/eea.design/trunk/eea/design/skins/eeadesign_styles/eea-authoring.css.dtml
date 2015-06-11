@@ -56,13 +56,6 @@
     color: white;
 }
 
-#portal-personaltools .portalNotLoggedIn {
-    /* Used on all descriptions relevant to those not logged in */
-    color: &dtml-fontColor;;
-    padding: 0;
-    background: transparent;
-    background-image: none;
-}
 
 #portal-personaltools li {
     margin: 0em 0em 0em 1em;
@@ -70,9 +63,6 @@
 }
 
 
-#portal-personaltools .visualIconPadding {
-    padding-left: 10px;
-}
 #portal-personaltools dd a:hover {
     background:transparent;
     color: white !important;
