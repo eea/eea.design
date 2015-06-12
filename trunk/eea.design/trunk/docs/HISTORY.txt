@@ -3,6 +3,9 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Feature: added customized bootstrap styles which can be enabled per sections
+  in order to take advantage of it's responsive design styles
+  [ichimdav refs #25986]
 * Cleanup: removed getHigh, getMedium, getLow, getMediumArticles, getLowArticles
   as we only display getHighArticles, the rest have been deprecated for a long time
   [ichimdav refs #24986]

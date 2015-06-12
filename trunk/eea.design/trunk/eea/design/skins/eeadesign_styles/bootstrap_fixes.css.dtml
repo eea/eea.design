@@ -1,0 +1,63 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+html {
+    font-size: 16px;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+#printLogo {
+    height: 71px;
+}
+
+#portaltab-europe {
+    width: 212px;
+}
+
+dl {
+    margin-bottom: 0;
+}
+
+dt, dd {
+    line-height: inherit;
+}
+
+/* ==== eea_base.css ==== */
+/* compensate for padding from eea_soer.css */
+#relatedItems .photoAlbumEntry {
+    height: 155px;
+}
+
+/* ==== Frontpage.css ==== */
+.right-column-area {
+    width: 38%;
+}
+
+/* ==== promo_gallery.css ==== */
+.controls, .controls-sm {
+    height: 40px;
+}
+
+/* ==== presentational_styles.css ==== */
+blockquote {
+    width: 78%;
+}
+
+/* ==== ploneCustom.css ==== */
+#visual-portal-wrapper .eea-tabs.two-rows > li > a {
+  height: 50px;
+}
+
+/* jquery.fancybox.css */
+#fancybox-content, #fancybox-wrap,
+/* ploneCustom.css */
+.eea-tooltip-markup-top, .eea-tooltip-markup-bottom, .eea-tooltip-markup-left, .eea-tooltip-markup-right
+{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* </dtml-with> */

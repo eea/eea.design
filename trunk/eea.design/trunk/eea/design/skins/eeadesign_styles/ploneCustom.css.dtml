@@ -320,7 +320,6 @@ input.standalone:hover {
     transition: box-shadow 0.218s ease 0s;
     background: none repeat scroll 0 0 #FFFFFF;
     font-size: 16px;
-    height: 22px;
     padding: 5px;
     width: 68%;
 }
@@ -932,14 +931,12 @@ dl a:hover, dd a:hover, dt a:hover {
 }
 #organisations-content {
     background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px &dtml-lightBackgroundColor;;
-    padding: 25px 20px 20px 90px;
-    height: 60px;
+    padding: 25px 20px 50px 90px;
     text-align: left;
 }
 #semantic-content {
     background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
-    padding: 25px 20px 20px 80px;
-    height: 60px;
+    padding: 25px 20px 35px 80px;
     text-align: left;
 }
 /* /used by datamaps_view set on SITE/data-and-maps */
