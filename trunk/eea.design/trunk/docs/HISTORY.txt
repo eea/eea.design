@@ -3,6 +3,9 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [ichimdav refs #25986]
 * Feature: added customized bootstrap styles which can be enabled per sections
   in order to take advantage of it's responsive design styles
   [ichimdav refs #25986]
