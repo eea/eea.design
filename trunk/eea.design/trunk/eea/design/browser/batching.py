@@ -16,6 +16,7 @@ class Batching(BrowserView):
         self.batch = batch
         return self.index()
 
+
 class FormatCatalogMetadata(BrowserView):
     """ Determine whether the input is a DateTime or ISO date and localize
     it if so, also convert lists and dicts into reasonable strings.
@@ -28,7 +29,7 @@ class FormatCatalogMetadata(BrowserView):
 
         if isinstance(value, DateTime):
             return self.context.toLocalizedTime(
-                value.ISO8601(), long_format = long_format)
+                value.ISO8601(), long_format=long_format)
 
         # Ugly but fast check for ISO format (ensure we have '-'
         # and positions 4 and 7,
@@ -39,14 +40,14 @@ class FormatCatalogMetadata(BrowserView):
                 DateTime(value)
             except ConflictError:
                 raise
-            except:
+            except Exception:
                 # Bare excepts are ugly, but DateTime raises a
                 # whole bunch of different
                 # errors for bad input (Syntax, Time, Date, Index, etc.),
                 # best to be safe.
                 return value
             return self.context.toLocalizedTime(
-                value, long_format = long_format)
+                value, long_format=long_format)
 
         try:
             # Missing.Value and others have items()
@@ -77,8 +78,8 @@ class FormatCatalogMetadata(BrowserView):
         site_props = getattr(pt, 'site_properties', None)
         if site_props is not None:
             max_length = site_props.getProperty(
-                'search_results_description_length', 160  )
-            ellipsis = site_props.getProperty('ellipsis', '...' )
+                'search_results_description_length', 160)
+            ellipsis = site_props.getProperty('ellipsis', '...')
         else:
             max_length = 160
             ellipsis = '...'

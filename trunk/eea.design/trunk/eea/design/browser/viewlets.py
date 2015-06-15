@@ -1,34 +1,41 @@
 """ Custom viewlets
 """
+from cgi import escape
+from Acquisition import aq_parent, aq_base
+
 from Products.CMFCore.utils import _checkPermission
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from cgi import escape
 from plone.app.layout.links import viewlets as links
 from plone.app.layout.viewlets import common, content
 from plone.app.layout.viewlets.content import DocumentBylineViewlet as \
     BaseBelowContentTitleViewlet
 from zope.component import getMultiAdapter
+
 from eea.design.browser.interfaces import ISubFoldersListing
-from Acquisition import aq_parent, aq_base
+
+from plone.memoize.instance import memoize
+
 
 class LogoViewlet(common.LogoViewlet):
     """A custom version of the logo viewlet
     """
     render = ViewPageTemplateFile('templates/logo.pt')
 
+
 class TitleViewlet(common.TitleViewlet):
     """A custom version of the title viewlet
     """
     index = ViewPageTemplateFile('templates/title.pt')
+
     def update(self):
         """ Update
         """
         portal_state = getMultiAdapter((self.context, self.request),
-                                        name=u'plone_portal_state')
+                                       name=u'plone_portal_state')
         context_state = getMultiAdapter((self.context, self.request),
-                                         name=u'plone_context_state')
+                                        name=u'plone_context_state')
         if not hasattr(self, 'page_title'):
             self.page_title = escape(safe_unicode(context_state.object_title(
             )))
@@ -76,6 +83,7 @@ class DocumentBylineViewlet(content.DocumentBylineViewlet):
             authors.append(author)
         return authors
 
+
 class FooterPortletsViewlet(common.ViewletBase):
     """A modified footer viewlet to contain portlet information
     """
@@ -87,8 +95,8 @@ class FooterPortletsViewlet(common.ViewletBase):
         """
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
-        self.manageUrl =  '%s/@@manage-portlets-footer' % \
-                                        context_state.view_url()
+        self.manageUrl = '%s/@@manage-portlets-footer' % \
+                         context_state.view_url()
 
         # This is the way it's done in plone.app.portlets.manager
         mt = getToolByName(self.context, 'portal_membership')
@@ -100,6 +108,7 @@ class SearchViewlet(links.SearchViewlet):
     """A custom version of the links-search viewlet
     """
     _template = ViewPageTemplateFile('templates/links_search.pt')
+
 
 class LanguageSelectorViewlet(common.ViewletBase):
     """ A custom viewlet registered below the title for language selection
@@ -127,8 +136,6 @@ class JSBelowBodyViewlet(common.ViewletBase):
     render = ViewPageTemplateFile('templates/inline_js_belowbodytag.pt')
 
 
-from plone.memoize.instance import memoize
-
 class SubFoldersViewlet(common.ViewletBase):
     """ A custom viewlet registered above the body tag to insert a listing of
     subfolders for pages that don't have the navigation portlet
@@ -148,7 +155,7 @@ class SubFoldersViewlet(common.ViewletBase):
             if ISubFoldersListing.providedBy(parent):
                 plone_view = self.context.restrictedTraverse('@@plone')
                 portlets = plone_view.have_portlets('plone.rightcolumn')
-                return False if portlets == True else True
+                return False if portlets is not True else True
         return False
 
     @memoize
@@ -157,15 +164,16 @@ class SubFoldersViewlet(common.ViewletBase):
         """
         base_obj = aq_base(self.context)
         if hasattr(base_obj, 'queryCatalog') or base_obj.meta_type \
-                                                                != "ATFolder":
+                != "ATFolder":
             parent = aq_parent(self.context)
-            res = parent.getFolderContents({'portal_type' :"Folder"})
-            res = [obj for obj in res if obj.exclude_from_nav != True]
+            res = parent.getFolderContents({'portal_type': "Folder"})
+            res = [obj for obj in res if obj.exclude_from_nav is not True]
             return res
         else:
-            res = self.context.getFolderContents({'portal_type' :"Folder"})
-            res = [obj for obj in res if obj.exclude_from_nav != True]
+            res = self.context.getFolderContents({'portal_type': "Folder"})
+            res = [obj for obj in res if obj.exclude_from_nav is not True]
             return res
+
 
 class QRBox(common.ViewletBase):
     """ Custom viewlet for qr box
@@ -178,12 +186,15 @@ class QRBox(common.ViewletBase):
         """
         return True
 
+
 class ExportActionsViewlet(common.ViewletBase):
     """ Custom viewlet for exporting actions
     """
     render = ViewPageTemplateFile('templates/export_actions.pt')
 
     def update(self):
+        """ update
+        """
         super(ExportActionsViewlet, self).update()
 
         self.context_state = getMultiAdapter((self.context, self.request),

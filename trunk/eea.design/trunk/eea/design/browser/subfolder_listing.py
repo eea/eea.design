@@ -34,7 +34,7 @@ class SubfolderListing(BrowserView):
         self._redirect(_('SubfolderListing enabled'))
 
     def disable(self):
-        """ Disable subfolder viewlet by noLongerProviding ISubFoldersListing 
+        """ Disable subfolder viewlet by noLongerProviding ISubFoldersListing
         interface
         """
         translations = self.context.getTranslations()

@@ -4,9 +4,7 @@
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
-from Products.EEAContentTypes.cache import cacheKeyHighlights
 from Products.Five import BrowserView
-from eea.cache import cache
 from eea.promotion.interfaces import IPromotion
 from eea.themecentre.themecentre import getTheme
 from plone.app.blob.interfaces import IBlobWrapper
@@ -66,7 +64,7 @@ class Frontpage(BrowserView):
                 portaltypes=portaltypes, noOfItems=self.noOfArticles,
                 language=language)
 
-    def getPublications(self, portaltypes = "Report", language=None):
+    def getPublications(self, portaltypes="Report", language=None):
         """ retrieves latest publications by date and by topic """
         return _getItems(self, portaltypes=portaltypes,
                                noOfItems=self.noOfPublications,
@@ -78,9 +76,9 @@ class Frontpage(BrowserView):
                                     'Assessment', 'Data', 'EEAFigure')
         result = []
         for mytype in portaltypes:
-            res1 = _getItems(self, portaltypes = mytype,
-                        noOfItems=self.noOfEachProduct,
-                        language=language)
+            res1 = _getItems(self, portaltypes=mytype,
+                             noOfItems=self.noOfEachProduct,
+                             language=language)
             result.extend(res1)
         multimedia = self.getMultimedia(language=language)
         result.extend(multimedia[:self.noOfEachProduct])
@@ -177,15 +175,15 @@ class Frontpage(BrowserView):
         if adapter is not None:
             themes = adapter.short_items()
         result = {
-                 'id'                 : high['id'],
-                 'getUrl'             : high.get('getUrl',high.getURL()),
-                 'getNewsTitle'       : high['getNewsTitle'],
-                 'getTeaser'          : high['getTeaser'],
-                 'effective'          : high['effective'],
-                 'expires'            : high['expires'],
-                 'getVisibilityLevel' : high['getVisibilityLevel'],
-                 'themes'             : themes,
-                  }
+            'id': high['id'],
+            'getUrl': high.get('getUrl', high.getURL()),
+            'getNewsTitle': high['getNewsTitle'],
+            'getTeaser': high['getTeaser'],
+            'effective': high['effective'],
+            'expires': high['expires'],
+            'getVisibilityLevel': high['getVisibilityLevel'],
+            'themes': themes,
+        }
 
         if media is not None:
             result['media'] = {

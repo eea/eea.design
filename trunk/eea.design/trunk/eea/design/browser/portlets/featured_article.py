@@ -66,7 +66,7 @@ class Renderer(base.Renderer):
 
     def get_articles(self):
         """ retrieve high visibility articles """
-        result = _getHighArticles(self, noOfItems = self.noOfItems)
+        result = _getHighArticles(self, noOfItems=self.noOfItems)
         return result
 
 class AddForm(base.NullAddForm):

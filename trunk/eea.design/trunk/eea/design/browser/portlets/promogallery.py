@@ -66,7 +66,7 @@ class Renderer(base.Renderer):
 
     def get_promotions(self):
         """ promotions """
-        result = _getPromotions(self, noOfItems = self.noOfItems)
+        result = _getPromotions(self, noOfItems=self.noOfItems)
         return result
 
 class AddForm(base.NullAddForm):

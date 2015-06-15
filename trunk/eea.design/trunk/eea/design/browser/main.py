@@ -15,7 +15,7 @@ class Main(BrowserView):
             portal = portal_url.getPortalObject()
             obj = self.context
             while aq_base(obj) is not aq_base(portal):
-                obj =  aq_parent(aq_inner(obj))
+                obj = aq_parent(aq_inner(obj))
             self._root = [obj]
         return self._root[0]
 

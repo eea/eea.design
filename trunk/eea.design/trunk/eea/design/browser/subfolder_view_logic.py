@@ -73,7 +73,7 @@ class SubFolderView(BrowserView):
 
             obj = brain.getObject()
             # #5197
-            # get the folder url and title instead of default's page 
+            # get the folder url and title instead of default's page
             # for pages that need it like folder_tabs_view
             # but get the results of the topic if it's default page
             title = obj.Title()
@@ -81,7 +81,7 @@ class SubFolderView(BrowserView):
             if not obj_link:
                 defaultPage = obj.getDefaultPage()
                 if defaultPage:
-                    item  = getattr(obj, defaultPage)
+                    item = getattr(obj, defaultPage)
                     if item.portal_type == "Topic":
                         obj = item
 
