@@ -45,16 +45,25 @@ blockquote {
     width: 78%;
 }
 
+/* ++resource++eea.faceted-navigation-edit.css */
+.faceted-widget .ui-widget-header {
+    margin: -5px -5px 1em -5px;
+}
+
 /* ==== ploneCustom.css ==== */
 #visual-portal-wrapper .eea-tabs.two-rows > li > a {
   height: 50px;
 }
 
+
 /* jquery.fancybox.css */
 #fancybox-content, #fancybox-wrap,
 /* ploneCustom.css */
-.eea-tooltip-markup-top, .eea-tooltip-markup-bottom, .eea-tooltip-markup-left, .eea-tooltip-markup-right
-{
+.eea-tooltip-markup-top, .eea-tooltip-markup-bottom, .eea-tooltip-markup-left, .eea-tooltip-markup-right,
+/* presentational_styles.css */
+.portalMessage,
+/* ++resource++eea.faceted-navigation-edit.css */
+.faceted-add-button .ui-icon {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
