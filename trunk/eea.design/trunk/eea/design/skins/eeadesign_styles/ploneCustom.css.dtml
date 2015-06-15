@@ -1306,7 +1306,8 @@ h3.site-description {
     background-position: -385px -115px !important;
 }
 
-#portal-searchbox input, .searchField
+#portal-searchbox input, .searchField,
+#content input.searchField
 {
     height: 30px;
     padding: 0 0 0 25px;

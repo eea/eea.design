@@ -24,9 +24,17 @@ dt, dd {
     line-height: inherit;
 }
 
+.label {
+    padding: 0;
+    font-size: inherit;
+    color: #000;
+}
+
 /* ==== eea_base.css ==== */
 /* compensate for padding from eea_soer.css */
-#relatedItems .photoAlbumEntry {
+#relatedItems .photoAlbumEntry,
+#faceted-results .photoAlbumEntry
+{
     height: 155px;
 }
 
