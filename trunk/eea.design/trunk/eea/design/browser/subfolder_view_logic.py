@@ -22,7 +22,7 @@ def _get_contents(obj, size_limit, request, facetednav=None):
     # generators therefore we need to convert it
     # back to a list to have a length and be able to slice it
     if isinstance(brains, GeneratorType):
-        brains = [obj for obj in brains]
+        brains = [objs for objs in brains]
 
     if not brains:
         return False
