@@ -184,6 +184,16 @@ table.datatable {
     background-color: #f6f6f6;
 }
 
+.even {
+    background: #ececec;
+    color: #346f83;
+    margin: 0;
+    padding: 15px 15px 10px 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+}
+
 /* Sortable table columns */
 .sortable, .listing {
     border: 1px solid #b6b6b6;

@@ -24,11 +24,6 @@ dt, dd {
     line-height: inherit;
 }
 
-.label {
-    padding: 0;
-    font-size: inherit;
-    color: #000;
-}
 
 /* ==== eea_base.css ==== */
 /* compensate for padding from eea_soer.css */
@@ -71,7 +66,9 @@ blockquote {
 /* presentational_styles.css */
 .portalMessage,
 /* ++resource++eea.faceted-navigation-edit.css */
-.faceted-add-button .ui-icon {
+.faceted-add-button .ui-icon,
+/* ++resource++jquery.slickgrid.css */
+.slick-header-column.ui-state-default, .slick-cell {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;

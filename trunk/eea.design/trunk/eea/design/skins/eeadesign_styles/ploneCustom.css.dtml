@@ -960,6 +960,13 @@ a.moreLink {
     margin: 0 0 1em 0;
 }
 
+/* bootstrap also has a label class which is white while plone uses black */
+.field .label {
+    padding: 0;
+    font-size: inherit;
+    color: #000;
+}
+
 .field .field {
     margin: 1em 0 0 0;
 }
