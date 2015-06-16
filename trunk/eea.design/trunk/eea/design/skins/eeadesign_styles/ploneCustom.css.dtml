@@ -1423,6 +1423,10 @@ h3.site-description {
 
 /* use font awesome unicode icons */
 
+/* daviz -edit sets eea-icon color to #000 */
+#siteaction-chooselang .eea-icon {
+    color: #FFF;
+}
 #siteaction-chooselang .eea-icon:before {
     content: "&dtml-eea-icon-flag-o;";
 }
