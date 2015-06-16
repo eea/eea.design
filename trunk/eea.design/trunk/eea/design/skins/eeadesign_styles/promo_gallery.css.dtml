@@ -12,7 +12,7 @@
     position: absolute;
     top: 245px;
     left: 0px;
-    width: 94%;
+    width: 100%;
     color: white;
     margin: 0 0px;
     background: &dtml-corporateGreen;;

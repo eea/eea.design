@@ -1603,10 +1603,11 @@ h3.site-description {
 }
 
 #article-language {
-    float: right;
-    margin-top: -30px;
+    margin-top: -40px;
     background: url("sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
     padding-left: 35px;
+    position: absolute;
+    right: 0;
 }
 
 .width-full #article-language {

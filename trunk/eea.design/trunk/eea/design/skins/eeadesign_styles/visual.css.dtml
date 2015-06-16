@@ -283,7 +283,7 @@ table.datatable {
 
 #content blockquote.quote-left {
     float: left;
-    width: 15em;
+    width: 19em;
     margin:2em 2em 0.4em 0em;
 }
 
@@ -530,8 +530,8 @@ span.figure-left {
     top: 40%;
     margin: 4px;
     padding: 10px 2px;
-    width: 8px;
-    height: 8px;
+    width: 17px;
+    height: 17px;
     background: transparent url(&dtml-portal_url;/accordion_left.png) no-repeat scroll center center;
     cursor: pointer;
 }
