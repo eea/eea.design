@@ -1,11 +1,23 @@
 /* Footer.css responsive styles */
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 @media screen and (min-width: 992px) {
   #footer-wrapper {
     min-width: 973px; }
 
   #portal-footer,
   #portal-colophon .colophonWrapper {
-    min-width: 950px; } }
+    min-width: 950px; }
+
+  #cross-site-top {
+    min-width: 970px; }
+
+  #header-holder {
+    min-width: 995px; }
+
+  #visual-portal-wrapper, #portal-globalnav, #portal-header {
+    min-width: 995px;
+    max-width: 1024px; } }
 @media screen and (max-width: 768px) {
   #portal-colophon .colophonWrapper, .colophon-middle {
     text-align: center; }
@@ -21,5 +33,14 @@
     margin-top: 1em; }
 
   .colophon-middle {
-    margin-top: 0; } }
+    margin-top: 0; }
 
+  #portaltab-europe {
+    width: 185px;
+    padding-right: 95px;
+    background: url("&dtml-portal_url;/eu-flag.png") no-repeat 97px -5px; }
+    #portaltab-europe a {
+      padding-top: 0.5em !important; } }
+/* </dtml-with> */
+
+/*# sourceMappingURL=eea-responsive.css.dtml.map */

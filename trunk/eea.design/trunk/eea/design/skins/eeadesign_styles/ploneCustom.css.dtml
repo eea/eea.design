@@ -1111,7 +1111,6 @@ h3.site-description {
 
 #header-holder {
     width: 100%;
-    min-width: 995px;
     clear: both;
     display: block;
     position: relative;
@@ -1139,7 +1138,6 @@ h3.site-description {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-width: 970px;
 }
 
 .shadow {
@@ -2115,10 +2113,6 @@ body.kupu {
     width: 65%;
 }
 
-#visual-portal-wrapper, #portal-globalnav, #portal-header {
-    min-width: 995px;
-    max-width: 1024px;
-}
 
 #portal-column-content  {
     min-width: 600px;
