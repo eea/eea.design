@@ -123,14 +123,12 @@
          </a>
 
          <div id="header-holder">
-             <div class="navbar navbar-default navbar-fixed-top">
             <div id="portal-top"
                 tal:condition="python: not ajax_load">
                 <tal:not4Print tal:condition="python:not isPrint">
                     <div tal:replace="structure provider:plone.portaltop" />
                 </tal:not4Print>
             </div>
-             </div>
         </div>
 
 <div id="visual-portal-wrapper">
