@@ -109,7 +109,6 @@ img.image-right,
     text-align: left;
     font-size: 12px;
     color: white;
-    min-width: 950px;
     background: transparent;
 }
 #portal-colophon {

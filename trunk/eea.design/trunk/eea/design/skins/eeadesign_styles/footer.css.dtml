@@ -6,7 +6,6 @@
     margin: 2em 0 2em 0;
     padding: 2em 1em;
     clear: both;
-    min-width: 973px;
     border-top: 8px solid #FFF;
 }
 
@@ -23,7 +22,6 @@
     text-align: left;
     font-size: 12px;
     color: white;
-    min-width: 950px;
 }
 
 #portal-footer .image-right {
@@ -81,7 +79,6 @@
     border-spacing: 0;
     text-align: left;
     margin: 0 auto;
-    min-width: 950px;
 }
 
 #portal-footer #portlet-ecotip dt {
@@ -132,11 +129,6 @@
 .colophon-right img {
     float: right;
     width: 50px;
-}
-
-.colophon-links {
-    font-size: 11px !important;
-    padding: 0 5px !important;
 }
 
 .colophon-links a, .colophon-links a:visited {

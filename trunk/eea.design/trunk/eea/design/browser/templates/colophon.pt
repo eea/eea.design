@@ -2,7 +2,6 @@
     metal:define-macro="colophon"
     i18n:domain="eea"
     tal:define="portal_state context/@@plone_portal_state;">
-    <metal>
     <tal:condition
     tal:define="local_site context/@@plone_portal_state/local_site;
     isViewTemplate context/@@plone_context_state/is_view_template;
@@ -65,7 +64,8 @@
                         style="border-width: 0pt;"
                         tal:attributes="src string:${portal_url}/creativecommons-by-2.5-dk-80x15.png"/>
                     </a>
-                    <a href="/login_form" 
+
+                    <a href="/login_form"
                         tal:attributes="href string:${portal_url}/login_form" 
                         title="CMS login"
                         i18n:attributes="title"><strong i18n:translate="">CMS login</strong></a>
@@ -85,5 +85,4 @@
         </p>
     </div>
     </tal:condition>
-    </metal>
 </div>

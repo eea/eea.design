@@ -1,0 +1,25 @@
+/* Footer.css responsive styles */
+@media screen and (min-width: 992px) {
+  #footer-wrapper {
+    min-width: 973px; }
+
+  #portal-footer,
+  #portal-colophon .colophonWrapper {
+    min-width: 950px; } }
+@media screen and (max-width: 768px) {
+  #portal-colophon .colophonWrapper, .colophon-middle {
+    text-align: center; }
+
+  .colophon-left, .colophon-right, .colophon-right span {
+    width: 100%;
+    float: none; }
+
+  .colophon-right img {
+    float: none; }
+
+  .colophon-right {
+    margin-top: 1em; }
+
+  .colophon-middle {
+    margin-top: 0; } }
+
