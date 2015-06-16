@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_css tool. -->
+
+<object name="portal_css">
+    <stylesheet title=""
+        id="bootstrap.css"
+        media="screen" rel="stylesheet" rendering="link"
+        cacheable="true" compression="safe" cookable="true"
+        conditionalcomment=""
+        expression=""
+        insert-after="public.css"
+        />
+
+    <stylesheet
+        id="bootstrap_fixes.css"
+        media="screen" rel="stylesheet" rendering="link"
+        cacheable="true" compression="safe" cookable="true"
+        conditionalcomment=""
+        expression=""
+        insert-after="ploneCustom.css"
+        />
+</object>
