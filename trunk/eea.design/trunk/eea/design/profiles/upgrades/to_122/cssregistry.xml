@@ -19,4 +19,13 @@
         expression=""
         insert-after="ploneCustom.css"
         />
+
+    <stylesheet
+        id="eea-responsive.css"
+        media="screen" rel="stylesheet" rendering="link"
+        cacheable="true" compression="safe" cookable="true"
+        conditionalcomment=""
+        expression=""
+        insert-after="bootstrap_fixes.css"
+        />
 </object>
