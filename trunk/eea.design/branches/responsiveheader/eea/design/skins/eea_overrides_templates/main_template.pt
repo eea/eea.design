@@ -122,14 +122,28 @@
          <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title">
          </a>
 
-         <div id="header-holder">
-            <div id="portal-top"
-                tal:condition="python: not ajax_load">
-                <tal:not4Print tal:condition="python:not isPrint">
-                    <div tal:replace="structure provider:plone.portaltop" />
-                </tal:not4Print>
+<div id="header-holder">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div id="portal-top"
+                            tal:condition="python: not ajax_load">
+                        <tal:not4Print tal:condition="python:not isPrint">
+                            <div tal:replace="structure provider:plone.portaltop" />
+                        </tal:not4Print>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+</div>
 
 <div id="visual-portal-wrapper">
 

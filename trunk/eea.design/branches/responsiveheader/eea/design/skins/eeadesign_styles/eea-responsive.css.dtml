@@ -41,6 +41,65 @@
     background: url("&dtml-portal_url;/eu-flag.png") no-repeat 97px -5px; }
     #portaltab-europe a {
       padding-top: 0.5em !important; } }
+@media screen and (max-width: 480px) {
+  #portal-top {
+    margin-top: 50px;
+    background-color: transparent; }
+
+  #portal-searchbox {
+    text-align: left; }
+    #portal-searchbox input {
+      width: 215px; }
+    #portal-searchbox a {
+      color: #FFF; }
+    #portal-searchbox input.searchButton {
+      color: orange; }
+
+  .panel {
+    max-width: 335px;
+    left: 20px !important; }
+
+  .panel-top {
+    left: 0 !important; }
+
+  .panel-content {
+    min-width: 320px; }
+
+  #chooselang {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2; }
+
+  #portal-siteactions a {
+    display: block;
+    padding: 0.5em 0; }
+
+  #portal-externalsites, #portal-siteactions,
+  #secondary-portaltabs,
+  #portal-searchbox {
+    float: none; }
+
+  #portal-externalsites li, #portal-siteactions li,
+  #portal-globalnav li {
+    display: block;
+    text-align: left; }
+
+  #portal-globalnav li a {
+    padding: 0.5em; }
+
+  #portal-personaltools-wrapper,
+  .portal-logo,
+  #siteaction-login {
+    display: none !important; }
+
+  .frontpage #searchbox_terminology input[type="text"], .frontapage .searchField {
+    width: 260px; }
+
+  navbar-collapse.in {
+    overflow-y: visible; }
+
+  #globalnav-holder, #portal-globalnav {
+    height: inherit; } }
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */
