@@ -3,7 +3,7 @@
         <tal:main-macro metal:define-macro="main"
          tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
 
-        <div>
+        <div id="js-siteaction-panels">
             <div class="panel" id="tip-siteaction-subscriptions"
                 style="width: 240px">
                 <div class="panel-top">

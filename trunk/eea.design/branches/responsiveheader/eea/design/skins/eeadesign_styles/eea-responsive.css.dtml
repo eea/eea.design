@@ -40,20 +40,23 @@
     padding-right: 95px;
     background: url("&dtml-portal_url;/eu-flag.png") no-repeat 97px -5px; }
     #portaltab-europe a {
-      padding-top: 0.5em !important; } }
+      padding-top: 0.5em !important; }
+
+  .navbar-collapse {
+    width: 100%; } }
 @media screen and (max-width: 480px) {
   #portal-top {
-    margin-top: 50px;
     background-color: transparent; }
 
   #portal-searchbox {
+    max-width: 300px;
     text-align: left; }
     #portal-searchbox input {
       width: 215px; }
     #portal-searchbox a {
       color: #FFF; }
     #portal-searchbox input.searchButton {
-      color: orange; }
+      background-color: orange; }
 
   .panel {
     max-width: 335px;
@@ -70,7 +73,7 @@
     -moz-column-count: 2;
     column-count: 2; }
 
-  #portal-siteactions a {
+  #portal-externalsites a, #portal-siteactions a {
     display: block;
     padding: 0.5em 0; }
 
@@ -92,14 +95,26 @@
   #siteaction-login {
     display: none !important; }
 
-  .frontpage #searchbox_terminology input[type="text"], .frontapage .searchField {
-    width: 260px; }
+  #searchbox_terminology input[type="text"] {
+    width: 64%; }
 
   navbar-collapse.in {
     overflow-y: visible; }
 
   #globalnav-holder, #portal-globalnav {
-    height: inherit; } }
+    height: inherit; }
+
+  #cross-site-top .portlet {
+    margin-bottom: 0;
+    padding: 0; }
+  #cross-site-top .pane, #cross-site-top .portlet {
+    background-color: #FFF; }
+
+  #chooselang li {
+    display: list-item;
+    list-style-image: url("/www/bullet.gif");
+    list-style-type: square;
+    list-style-position: inside; } }
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */

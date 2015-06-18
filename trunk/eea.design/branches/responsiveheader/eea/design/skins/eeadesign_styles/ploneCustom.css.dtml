@@ -561,11 +561,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
 }
 
-.eea-accordion-panel h2 {
-    background-color: &dtml-greyBackgroundColor;;
-    padding: 10px;
-}
-
 #relatedItems .eea-tabs-panels {
     padding: 1px;
 }
@@ -1268,6 +1263,9 @@ h3.site-description {
     z-index: 2;
     font-size: 1.2em;
 }
+#portal-searchbox form {
+    background-color: #FFF;
+}
 
 #portal-column-content #portal-searchbox {
     float: none;
@@ -1285,13 +1283,13 @@ h3.site-description {
     margin: 0 5px 0 0;
 }
 
-#searchbox_terminology input,
-#searchbox_terminology input:focus,
-#portal-searchbox input.searchButton,
-#portal-searchbox input.searchButton:hover,
-.searchField {
-    background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;
-}
+/*#searchbox_terminology input,*/
+/*#searchbox_terminology input:focus,*/
+/*#portal-searchbox input.searchButton,*/
+/*#portal-searchbox input.searchButton:hover,*/
+/*.searchField {*/
+    /*background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;*/
+/*}*/
 
 #portal-searchbox input.searchButton {
     background: &dtml-corporateBlue; none;
@@ -1300,8 +1298,8 @@ h3.site-description {
     font-family: &dtml-fontFamily;;
     font-size: 12px;
     font-style: normal;
-    height: 29px;
-    left: -5px;
+    height: 30px;
+    left: 0;
     letter-spacing: 0;
     margin: 0;
     padding: 0;
@@ -1317,7 +1315,7 @@ h3.site-description {
 #content input.searchField
 {
     height: 30px;
-    padding: 0 0 0 25px;
+    padding: 0;
     background-position: 0 -82px;
     font-family: &dtml-fontFamily;;
     font-style: italic;
@@ -1330,8 +1328,8 @@ h3.site-description {
     width: 258px !important;
 }
 
-.frontpage #searchbox_terminology input[type="text"],
-.frontapage .searchField {
+#searchbox_terminology input[type="text"],
+.searchField {
     width: 286px;
 }
 
