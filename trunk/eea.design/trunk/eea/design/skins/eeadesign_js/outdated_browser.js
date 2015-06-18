@@ -8,7 +8,8 @@
     ];
 
     function displayMessage(obj) {
-        $.get(obj.template, function(data) {
+        $.get(obj.template)
+        .done(function(data) {
             var trimmed_data = data.trim();
             if (!trimmed_data) {
                 return;
@@ -30,6 +31,9 @@
                 });
             }
             $(document).trigger('messageDisplayed');
+        })
+        .fail(function(data) {
+            //nothing to do
         });
     }
 
