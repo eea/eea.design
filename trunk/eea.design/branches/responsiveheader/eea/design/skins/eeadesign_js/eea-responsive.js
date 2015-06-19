@@ -1,5 +1,8 @@
 /* global jQuery window */
 jQuery(document).ready(function($) {
+    if (window.innerWidth > 767) {
+        return;
+    }
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
     var $cross_site_top = $("#cross-site-top");
     $holder.prependTo($cross_site_top);

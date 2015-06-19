@@ -1291,7 +1291,7 @@ h3.site-description {
     /*background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;*/
 /*}*/
 
-#portal-searchbox input.searchButton {
+#portal-searchbox .searchButton {
     background: &dtml-corporateBlue; none;
     color: #FFFFFF;
     cursor: pointer;
@@ -1305,6 +1305,7 @@ h3.site-description {
     padding: 0;
     position: relative;
     width: 80px;
+    margin-left: -5px;
 }
 
 #portal-searchbox input.searchButton:hover {
@@ -1324,9 +1325,10 @@ h3.site-description {
     margin: 0;
     font-size: 0.8em;
 }
-.searchField {
-    width: 258px !important;
-}
+/* TODO: check why this was added with important */
+/*.searchField {*/
+    /*width: 258px !important;*/
+/*}*/
 
 #searchbox_terminology input[type="text"],
 .searchField {

@@ -16,6 +16,14 @@
                     </tal:block>
                 </div>
             </div>
+          <div id="tip-siteaction-formobile" class="panel">
+              <div class="panel-top">
+                  <!--? -->
+              </div>
+              <div class="panel-content shadow">
+                  <a href="/www/mobile" title="Mobile apps" i18n:translate="" i18n:attributes="title">Mobile apps</a>
+              </div>
+            </div>
 
             <div class="panel" id="tip-siteaction-contactus"
                 style="width: 420px">
