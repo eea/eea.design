@@ -65,7 +65,10 @@
 
   .navbar-collapse {
     width: 100%; } }
-@media (max-width: 767px) and (orientation: landscape) {
+@media (orientation: landscape) {
+  #secondary-portaltabs #portaltab-europe {
+    margin-bottom: 2em; } }
+@media (max-height: 320px) and (orientation: landscape) {
   #secondary-portaltabs #portaltab-europe {
     margin-bottom: 4em; } }
 @media screen and (max-width: 767px) {
@@ -73,9 +76,27 @@
     background-color: #FFF; }
   #header-holder .navbar-collapse {
     background-color: #006699; }
+  #header-holder .navbar-toggle {
+    margin-top: 1em; }
 
   #portal-top {
+    margin-top: 2em;
     background-color: transparent; }
+
+  .site-cs #printLogo,
+  .site-fr #printLogo,
+  .site-hu #printLogo {
+    height: 51px; }
+
+  .site-es #printLogo,
+  .site-el #printLogo,
+  .site-sk #printLogo {
+    height: 53px; }
+
+  .site-mt #printLogo,
+  .site-pl #printLogo,
+  .site-ru #printLogo {
+    height: 55px; }
 
   #printLogo {
     height: 60px;
@@ -153,6 +174,10 @@
     list-style-image: url("/www/bullet.gif");
     list-style-type: square;
     list-style-position: inside; } }
+@media (max-height: 480px) and (orientation: landscape) {
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    max-height: 300px; } }
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */

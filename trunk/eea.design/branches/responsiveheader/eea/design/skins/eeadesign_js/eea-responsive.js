@@ -1,6 +1,6 @@
 /* global jQuery window */
 jQuery(document).ready(function($) {
-    if (window.innerWidth > 767) {
+    if (window.innerHeight >= 600 && window.innerWidth > 767) {
         return;
     }
     $("#portal-logo-link").prependTo(".navbar-header");
