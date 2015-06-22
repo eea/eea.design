@@ -1,76 +1,16 @@
 /* Footer.css responsive styles */
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
-@media screen and (min-width: 992px) {
-  #footer-wrapper {
-    min-width: 973px; }
-
-  #portal-footer,
-  #portal-colophon .colophonWrapper {
-    min-width: 950px; }
-
-  #cross-site-top {
-    min-width: 970px; }
-
-  #header-holder {
-    min-width: 995px; }
-
-  #visual-portal-wrapper, #portal-globalnav, #portal-header {
-    min-width: 995px;
-    max-width: 1024px; } }
-@media screen and (min-width: 768px) {
-  #header-holder .container-fluid {
-    padding: 0; }
-  #header-holder .navbar-header {
-    float: none; }
-  #header-holder .navbar-fixed-top {
-    position: relative; }
-
-  #portal-searchbox .searchField {
-    border: 1px solid gray;
-    padding-left: 2em; }
-  #portal-searchbox .eea-icon {
-    margin-right: -2em; } }
-@media screen and (max-width: 768px) {
-  #portal-colophon .colophonWrapper, .colophon-middle {
-    text-align: center; }
-
-  .colophon-left, .colophon-right, .colophon-right span {
-    width: 100%;
-    float: none; }
-
-  .colophon-right img {
-    float: none; }
-
-  .colophon-right {
-    margin-top: 1em; }
-
-  .colophon-middle {
-    margin-top: 0; }
-
-  #portaltab-europe {
-    margin-top: 1em;
-    padding-bottom: 2em;
-    width: 100%;
-    padding-right: 90px;
-    background: url("&dtml-portal_url;/eu-flag.png") no-repeat top right; }
-    #portaltab-europe a {
-      text-align: left;
-      margin-top: 1em; }
-
-  #secondary-portaltabs #portaltab-europe a {
-    padding: 0.5em 0 2em 0;
-    border-bottom: 0;
-    text-align: left; }
-
-  .navbar-collapse {
-    width: 100%; } }
 @media (orientation: landscape) {
   #secondary-portaltabs #portaltab-europe {
     margin-bottom: 2em; } }
 @media (max-height: 320px) and (orientation: landscape) {
   #secondary-portaltabs #portaltab-europe {
     margin-bottom: 4em; } }
+@media (max-height: 480px) and (orientation: landscape) {
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    max-height: 300px; } }
 @media screen and (max-width: 767px) {
   #header-holder .navbar-default {
     background-color: #FFF; }
@@ -82,6 +22,8 @@
   #portal-top {
     margin-top: 2em;
     background-color: transparent; }
+    #portal-top .eea-accordion-panel:last-child {
+      display: none; }
 
   .site-cs #printLogo,
   .site-fr #printLogo,
@@ -174,10 +116,70 @@
     list-style-image: url("/www/bullet.gif");
     list-style-type: square;
     list-style-position: inside; } }
-@media (max-height: 480px) and (orientation: landscape) {
-  .navbar-fixed-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse {
-    max-height: 300px; } }
+@media screen and (max-width: 768px) {
+  #portal-colophon .colophonWrapper, .colophon-middle {
+    text-align: center; }
+
+  .colophon-left, .colophon-right, .colophon-right span {
+    width: 100%;
+    float: none; }
+
+  .colophon-right img {
+    float: none; }
+
+  .colophon-right {
+    margin-top: 1em; }
+
+  .colophon-middle {
+    margin-top: 0; }
+
+  #portaltab-europe {
+    margin-top: 1em;
+    padding-bottom: 2em;
+    width: 100%;
+    padding-right: 90px;
+    background: url("&dtml-portal_url;/eu-flag.png") no-repeat top right; }
+    #portaltab-europe a {
+      text-align: left;
+      margin-top: 1em; }
+
+  #secondary-portaltabs #portaltab-europe a {
+    padding: 0.5em 0 2em 0;
+    border-bottom: 0;
+    text-align: left; }
+
+  .navbar-collapse {
+    width: 100%; } }
+@media screen and (min-width: 768px) {
+  #header-holder .container-fluid {
+    padding: 0; }
+  #header-holder .navbar-header {
+    float: none; }
+  #header-holder .navbar-fixed-top {
+    position: relative; }
+
+  #portal-searchbox .searchField {
+    border: 1px solid gray;
+    padding-left: 2em; }
+  #portal-searchbox .eea-icon {
+    margin-right: -2em; } }
+@media screen and (min-width: 992px) {
+  #footer-wrapper {
+    min-width: 973px; }
+
+  #portal-footer,
+  #portal-colophon .colophonWrapper {
+    min-width: 950px; }
+
+  #cross-site-top {
+    min-width: 970px; }
+
+  #header-holder {
+    min-width: 995px; }
+
+  #visual-portal-wrapper, #portal-globalnav, #portal-header {
+    min-width: 995px;
+    max-width: 1024px; } }
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */
