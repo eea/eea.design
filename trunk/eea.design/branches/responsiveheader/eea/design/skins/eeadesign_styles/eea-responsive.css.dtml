@@ -49,17 +49,38 @@
     margin-top: 0; }
 
   #portaltab-europe {
-    width: 185px;
-    padding-right: 95px;
-    background: url("&dtml-portal_url;/eu-flag.png") no-repeat 97px -5px; }
+    margin-top: 1em;
+    padding-bottom: 2em;
+    width: 100%;
+    padding-right: 90px;
+    background: url("&dtml-portal_url;/eu-flag.png") no-repeat top right; }
     #portaltab-europe a {
-      padding-top: 0.5em !important; }
+      text-align: left;
+      margin-top: 1em; }
+
+  #secondary-portaltabs #portaltab-europe a {
+    padding: 0.5em 0 2em 0;
+    border-bottom: 0;
+    text-align: left; }
 
   .navbar-collapse {
     width: 100%; } }
+@media (max-width: 767px) and (orientation: landscape) {
+  #secondary-portaltabs #portaltab-europe {
+    margin-bottom: 4em; } }
 @media screen and (max-width: 767px) {
+  #header-holder .navbar-default {
+    background-color: #FFF; }
+  #header-holder .navbar-collapse {
+    background-color: #006699; }
+
   #portal-top {
     background-color: transparent; }
+
+  #printLogo {
+    height: 60px;
+    float: left;
+    padding: 0.5em; }
 
   #portal-searchbox {
     text-align: left; }
