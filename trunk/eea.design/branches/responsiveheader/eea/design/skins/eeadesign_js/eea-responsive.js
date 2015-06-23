@@ -1,9 +1,18 @@
 /* global jQuery window */
 jQuery(document).ready(function($) {
-    var window_height = window.innerHeight;
-    if (window_height >= 600 && window.innerWidth > 767) {
+
+    var window_height = document.documentElement.clientHeight;
+    if (window_height >= 600 && window.outerWidth > 767) {
         return;
     }
+
+    var $nav_collapse = $("#bs-example-navbar-collapse-1");
+    function setMaxHeight(window_height) {
+       $nav_collapse.css('max-height', window_height - 60);
+        alert($nav_collapse.css('max-height'));
+    }
+    setMaxHeight(window_height);
+
     $("#portal-logo-link").prependTo(".navbar-header");
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
     var $cross_site_top = $("#cross-site-top");
@@ -29,8 +38,9 @@ jQuery(document).ready(function($) {
         });
         $el.remove();
     });
-    $("#bs-example-navbar-collapse-1").css('max-height', window_height - 60);
+    window.addEventListener("orientationchange", function() {
+        setMaxHeight(document.documentElement.clientHeight);
+    }, false);
 
-    //$cross_site_top.insertAfter("#portal-personaltools-wrapper");
 });
 
