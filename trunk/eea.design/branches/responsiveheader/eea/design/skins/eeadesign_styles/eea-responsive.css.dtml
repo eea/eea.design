@@ -4,9 +4,6 @@
 @media (orientation: landscape) {
   #secondary-portaltabs #portaltab-europe {
     margin-bottom: 2em; } }
-@media (max-height: 320px) and (orientation: landscape) {
-  #secondary-portaltabs #portaltab-europe {
-    margin-bottom: 4em; } }
 @media (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
@@ -22,8 +19,6 @@
   #portal-top {
     margin-top: 2em;
     background-color: transparent; }
-    #portal-top .eea-accordion-panel:last-child {
-      display: none; }
 
   .site-cs #printLogo,
   .site-fr #printLogo,

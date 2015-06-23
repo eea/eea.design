@@ -1,6 +1,7 @@
 /* global jQuery window */
 jQuery(document).ready(function($) {
-    if (window.innerHeight >= 600 && window.innerWidth > 767) {
+    var window_height = window.innerHeight;
+    if (window_height >= 600 && window.innerWidth > 767) {
         return;
     }
     $("#portal-logo-link").prependTo(".navbar-header");
@@ -11,7 +12,8 @@ jQuery(document).ready(function($) {
         var $el = $(el);
         var lists = $el.find('li');
         lists.each(function(idx, el){
-            var $acordion_panel = $("<div class='eea-accordion-panel' />");
+            var $acordion_panel = $("<div  />",
+                {id: el.id, class: 'eea-accordion-panel'});
             var $el = $(el);
             var $old_panel = $("#tip-" + el.id);
             var $panel = $("<div />", {
@@ -27,6 +29,8 @@ jQuery(document).ready(function($) {
         });
         $el.remove();
     });
+    $("#bs-example-navbar-collapse-1").css('max-height', window_height - 60);
+
     //$cross_site_top.insertAfter("#portal-personaltools-wrapper");
 });
 

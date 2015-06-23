@@ -1422,10 +1422,11 @@ h3.site-description {
 /* use font awesome unicode icons */
 
 /* daviz -edit sets eea-icon color to #000 */
-#siteaction-chooselang .eea-icon {
+#portal-siteactions #siteaction-chooselang .eea-icon {
     color: #FFF;
 }
-#siteaction-chooselang .eea-icon:before {
+/* big specificity because we remove icon within mobile view */
+#portal-siteactions #siteaction-chooselang .eea-icon:before {
     content: "&dtml-eea-icon-flag-o;";
 }
 
