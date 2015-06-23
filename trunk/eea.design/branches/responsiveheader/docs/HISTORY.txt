@@ -3,6 +3,8 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed survey_message error when template isn't available
+  [ichimdav refs #26746]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
   [ichimdav refs #25986]
