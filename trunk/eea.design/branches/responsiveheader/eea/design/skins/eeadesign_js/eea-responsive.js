@@ -9,7 +9,6 @@ jQuery(document).ready(function($) {
     var $nav_collapse = $("#bs-example-navbar-collapse-1");
     function setMaxHeight(window_height) {
        $nav_collapse.css('max-height', window_height - 60);
-        alert($nav_collapse.css('max-height'));
     }
     setMaxHeight(window_height);
 
@@ -38,8 +37,18 @@ jQuery(document).ready(function($) {
         });
         $el.remove();
     });
+
+    var height = function() {
+        if (window.navigator.userAgent.indexOf('Iphone') !== -1) {
+            return document.documentElement.clientHeight;
+        }
+        else {
+            return window.outerHeight;
+        }
+    }
+
     window.addEventListener("orientationchange", function() {
-        setMaxHeight(document.documentElement.clientHeight);
+        setMaxHeight(height());
     }, false);
 
 });
