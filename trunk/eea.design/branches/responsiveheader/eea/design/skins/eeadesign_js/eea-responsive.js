@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
     });
 
     var height = function() {
-        if (window.navigator.userAgent.indexOf('Iphone') !== -1) {
+        if (window.navigator.userAgent.indexOf('iPhone') !== -1) {
             return document.documentElement.clientHeight;
         }
         else {
