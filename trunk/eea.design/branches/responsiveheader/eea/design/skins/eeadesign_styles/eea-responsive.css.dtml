@@ -31,6 +31,23 @@
   #portal-top {
     margin-top: 2em;
     background-color: transparent; }
+    #portal-top .eea-accordion-panels {
+      border: 0; }
+    #portal-top .eea-accordion-title, #portal-top .eea-accordion-panel > h2 {
+      font-size: 100%;
+      background-color: #006699;
+      color: #FFF;
+      border: 0;
+      border-bottom: 1px solid gray; }
+    #portal-top .eea-accordion-panel a {
+      color: #346f83;
+      border-bottom: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+      font-weight: normal; }
+
+  #portal-header {
+    height: 100%; }
 
   .site-cs #printLogo,
   .site-fr #printLogo,
@@ -53,6 +70,7 @@
     padding: 0.5em; }
 
   #portal-searchbox {
+    margin-top: 0;
     text-align: left; }
     #portal-searchbox input {
       width: 100%; }
@@ -93,7 +111,8 @@
   #portal-globalnav li a {
     padding: 0.5em;
     display: block;
-    border-bottom: 1px solid gray; }
+    border-bottom: 1px solid gray;
+    line-height: 2em; }
 
   #portal-personaltools-wrapper,
   .portal-logo,
@@ -150,7 +169,7 @@
     height: 100%; }
 
   #news-header select {
-    margin-left: 20px; }
+    margin-left: 10px; }
 
   #viewlet-below-content .standalone {
     white-space: pre-wrap; }

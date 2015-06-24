@@ -15,7 +15,10 @@ jQuery(document).ready(function($) {
     $("#portal-logo-link").prependTo(".navbar-header");
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
     var $cross_site_top = $("#cross-site-top");
+    $("#portal-header").prependTo($("#portal-top"));
     $holder.prependTo($cross_site_top);
+    $cross_site_top.insertBefore("#portaltab-abouteea");
+
     $("#portal-externalsites, #portal-siteactions").each(function accordions(idx, el){
         var $el = $(el);
         var lists = $el.find('li');
