@@ -1,10 +1,25 @@
 /* Footer.css responsive styles */
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+@media (max-width: 360px) {
+  .filter-topic {
+    width: 69%; } }
+@media (min-width: 361px) and (max-width: 479px) {
+  .filter-topic {
+    width: 74%; } }
 @media (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
-    max-height: 300px; } }
+    max-height: 300px; }
+
+  .filter-topic {
+    width: 80%; }
+
+  .featured-highlight-title {
+    width: 58%; } }
+@media (min-width: 481px) {
+  .featured-highlight-title {
+    width: 65%; } }
 @media screen and (max-width: 767px) {
   #header-holder .navbar-default {
     background-color: #FFF; }
@@ -110,7 +125,38 @@
     list-style-position: inside; }
 
   #portal-column-content {
-    margin-top: 60px; } }
+    margin-top: 60px; }
+
+  #highlights-area,
+  body.sections-data-and-maps #promo-gallery-wrapper, body.frontpage #promo-gallery-wrapper,
+  #portal-column-content {
+    min-width: initial; }
+
+  #highlights-area,
+  #articles-area {
+    float: none;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%; }
+
+  #articles-area {
+    margin-top: 2em;
+    padding: 0; }
+
+  .lof-opacity li {
+    position: relative; }
+
+  #promo-gallery-content, #promo-gallery-content-sm {
+    height: 100%; }
+
+  #news-header select {
+    margin-left: 20px; }
+
+  #viewlet-below-content .standalone {
+    white-space: pre-wrap; }
+
+  .frontpage #content {
+    margin-bottom: 0; } }
 @media screen and (max-width: 768px) {
   #portal-colophon .colophonWrapper, .colophon-middle {
     text-align: center; }
