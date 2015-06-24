@@ -107,7 +107,10 @@
     display: list-item;
     list-style-image: url("/www/bullet.gif");
     list-style-type: square;
-    list-style-position: inside; } }
+    list-style-position: inside; }
+
+  #portal-column-content {
+    margin-top: 60px; } }
 @media screen and (max-width: 768px) {
   #portal-colophon .colophonWrapper, .colophon-middle {
     text-align: center; }
