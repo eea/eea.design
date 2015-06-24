@@ -1,9 +1,6 @@
 /* Footer.css responsive styles */
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
-@media (orientation: landscape) {
-  #secondary-portaltabs #portaltab-europe {
-    margin-bottom: 2em; } }
 @media (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {

@@ -47,17 +47,11 @@ jQuery(document).ready(function($) {
         }
     }
 
-    if (window.mozRequestAnimationFrame) {
-        (function(){
-            var mqOrientation = window.matchMedia("(orientation: portrait)");
-            // The Listener will fire whenever this either matches or ceases to match
-            mqOrientation.addListener(function() { setMaxHeight(height()); });
-        })();
-    }
-
-    window.addEventListener("orientationchange", function() {
+    var mqOrientation = window.matchMedia("(orientation: portrait)");
+    // The Listener will fire whenever this either matches or ceases to match
+    mqOrientation.addListener(function() {
         setMaxHeight(height());
-    }, false);
+    });
 
 });
 
