@@ -3,6 +3,9 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed externalTemplate error from design.js which used readCookie
+  without checking for it's existance
+  [ichimdav refs #26892]
 * Bug fix: fixed survey_message error when template isn't available
   [ichimdav refs #26746]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button

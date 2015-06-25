@@ -277,7 +277,7 @@ jQuery(document).ready(function($) {
     $.each(downloads_list, add_downloads_tracking_code);
 
     /* #26746 do now show the survey message for 1 year as we no longer need to show it */
-    if (!window.readCookie('survey_message')) {
+    if (window.readCookie && !window.readCookie('survey_message')) {
         window.createCookie('survey_message', 'never', 365);
     }
 
