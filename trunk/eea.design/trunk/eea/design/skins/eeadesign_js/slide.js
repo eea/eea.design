@@ -10,7 +10,9 @@
     }
 
     $(document).ready(function() {
-
+        if (window.innerWidth < 768) {
+            return;
+        }
         function panel(i) {
             var a = $(this);
             var buttonID = a.parent().attr('id');

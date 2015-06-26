@@ -6,6 +6,11 @@ Changelog
 * Bug fix: Adding done and fail callbasks to function displayMessage from
   /eea/design/skins/eeadesign_js/outdated_browser.js
   [malduvit refs #26644]
+* Bug fix: fixed externalTemplate error from design.js which used readCookie
+  without checking for it's existance
+  [ichimdav refs #26892]
+* Bug fix: fixed survey_message error when template isn't available
+  [ichimdav refs #26746]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
   [ichimdav refs #25986]

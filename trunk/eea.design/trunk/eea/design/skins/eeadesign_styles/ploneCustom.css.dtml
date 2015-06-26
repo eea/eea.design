@@ -561,11 +561,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
 }
 
-.eea-accordion-panel h2 {
-    background-color: &dtml-greyBackgroundColor;;
-    padding: 10px;
-}
-
 #relatedItems .eea-tabs-panels {
     padding: 1px;
 }
@@ -586,7 +581,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     font-size: 115%;
     color: #00446A;
     line-height: 3em;
-    padding: 0 10px;
+    padding: 0 0.5em;
     font-weight: bold;
 }
 .eea-accordion-title-manual-icons {
@@ -603,7 +598,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 .eea-accordion-panel h2:hover > .eea-icon:before,
-.eea-accordion-panel .eea-accordion-title.current > .eea-icon:before {
+.eea-accordion-panel .current > .eea-icon:before {
     content: "&dtml-eea-icon-chevron-down;";
 }
 
@@ -1268,6 +1263,9 @@ h3.site-description {
     z-index: 2;
     font-size: 1.2em;
 }
+#portal-searchbox form {
+    background-color: #FFF;
+}
 
 #portal-column-content #portal-searchbox {
     float: none;
@@ -1285,28 +1283,29 @@ h3.site-description {
     margin: 0 5px 0 0;
 }
 
-#searchbox_terminology input,
-#searchbox_terminology input:focus,
-#portal-searchbox input.searchButton,
-#portal-searchbox input.searchButton:hover,
-.searchField {
-    background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;
-}
+/*#searchbox_terminology input,*/
+/*#searchbox_terminology input:focus,*/
+/*#portal-searchbox input.searchButton,*/
+/*#portal-searchbox input.searchButton:hover,*/
+/*.searchField {*/
+    /*background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;*/
+/*}*/
 
-#portal-searchbox input.searchButton {
+#portal-searchbox .searchButton {
     background: &dtml-corporateBlue; none;
     color: #FFFFFF;
     cursor: pointer;
     font-family: &dtml-fontFamily;;
     font-size: 12px;
     font-style: normal;
-    height: 29px;
-    left: -5px;
+    height: 30px;
+    left: 0;
     letter-spacing: 0;
     margin: 0;
     padding: 0;
     position: relative;
     width: 80px;
+    margin-left: -5px;
 }
 
 #portal-searchbox input.searchButton:hover {
@@ -1317,7 +1316,7 @@ h3.site-description {
 #content input.searchField
 {
     height: 30px;
-    padding: 0 0 0 25px;
+    padding: 0;
     background-position: 0 -82px;
     font-family: &dtml-fontFamily;;
     font-style: italic;
@@ -1326,12 +1325,13 @@ h3.site-description {
     margin: 0;
     font-size: 0.8em;
 }
-.searchField {
-    width: 258px !important;
-}
+/* TODO: check why this was added with important */
+/*.searchField {*/
+    /*width: 258px !important;*/
+/*}*/
 
-.frontpage #searchbox_terminology input[type="text"],
-.frontapage .searchField {
+#searchbox_terminology input[type="text"],
+.searchField {
     width: 286px;
 }
 
@@ -1422,10 +1422,11 @@ h3.site-description {
 /* use font awesome unicode icons */
 
 /* daviz -edit sets eea-icon color to #000 */
-#siteaction-chooselang .eea-icon {
+#portal-siteactions #siteaction-chooselang .eea-icon {
     color: #FFF;
 }
-#siteaction-chooselang .eea-icon:before {
+/* big specificity because we remove icon within mobile view */
+#portal-siteactions #siteaction-chooselang .eea-icon:before {
     content: "&dtml-eea-icon-flag-o;";
 }
 

@@ -9,7 +9,7 @@
     <a href="/"
        tal:define="portal_title portal_properties/title;"
        tal:attributes="href local_site|portal_url; title string:${portal_title}"
-       accesskey="1">
+       accesskey="1" id="portal-logo-link">
         <img src="" alt="" id="printLogo"
                 tal:define="lang  context/@@plone_portal_state/language;
                 logo python:'++resource++eea.translations.images/pdflogo-%s.png' % lang"

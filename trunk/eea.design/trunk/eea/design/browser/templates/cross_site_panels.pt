@@ -3,7 +3,7 @@
         <tal:main-macro metal:define-macro="main"
          tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
 
-        <div>
+        <div id="js-siteaction-panels">
             <div class="panel" id="tip-siteaction-subscriptions"
                 style="width: 240px">
                 <div class="panel-top">
@@ -15,6 +15,14 @@
                       <metal:portlet use-macro="context/portlet_subscribe/macros/portlet" />
                     </tal:block>
                 </div>
+            </div>
+          <div id="tip-siteaction-formobile" class="panel">
+              <div class="panel-top">
+                  <!--? -->
+              </div>
+              <div class="panel-content shadow">
+                  <a href="/www/mobile" title="Mobile apps" i18n:translate="" i18n:attributes="title">Mobile apps</a>
+              </div>
             </div>
 
             <div class="panel" id="tip-siteaction-contactus"
