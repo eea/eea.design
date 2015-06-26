@@ -1345,6 +1345,10 @@ h3.site-description {
     outline-color: transparent;
 }
 
+#portal-searchbox .searchButton:focus {
+    background-color: &dtml-corporateOrange;;
+}
+
 .searchforms input {
     font-family: &dtml-fontFamily;;
     font-style: italic;

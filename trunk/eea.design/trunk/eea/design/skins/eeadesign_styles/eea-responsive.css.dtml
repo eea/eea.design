@@ -10,6 +10,9 @@
 @media (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%; } }
+@media (max-width: 480px) {
+  #whatsnew-gallery .tileImage {
+    display: none; } }
 @media (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
@@ -183,6 +186,9 @@
   #news-header select {
     margin-left: 10px; }
 
+  #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {
+    display: none; }
+
   #viewlet-below-content .standalone {
     white-space: pre-wrap; } }
 @media screen and (max-width: 768px) {
@@ -252,3 +258,4 @@
     min-width: 950px; } }
 /* </dtml-with> */
 
+/*# sourceMappingURL=eea-responsive.css.dtml.map */
