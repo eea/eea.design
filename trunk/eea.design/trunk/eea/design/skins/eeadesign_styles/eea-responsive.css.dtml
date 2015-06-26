@@ -3,13 +3,29 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 @media (max-width: 320px) {
   .eea-accordion-panels table {
-    font-size: 0.7em; } }
+    font-size: 0.7em; }
+
+  #content ul.gallery-layout-selection {
+    display: none; }
+
+  ul.social-buttons > li {
+    padding: 0 5px; }
+
+  #content .action-items ul {
+    margin-left: 0; }
+
+  #faceted-text-search input[type="text"] {
+    font-size: 15px;
+    width: 73%; } }
 @media (max-width: 360px) {
   .filter-topic {
     width: 69%; } }
 @media (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
-    width: 74%; } }
+    width: 74%; }
+
+  #faceted-text-search input[type="text"] {
+    width: 77%; } }
 @media (max-width: 480px) {
   #whatsnew-gallery .tileImage {
     display: none; } }
@@ -166,21 +182,24 @@
   #portal-column-content {
     min-width: initial; }
 
+  .column-area,
+  .right-column-area,
   #highlights-area,
   #articles-area {
     float: none;
     width: 100%;
     min-width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    padding: 0 0em 1em 0; }
 
   #articles-area {
     margin-top: 2em;
     padding: 0; }
 
-  #promo-gallery-content, #promo-gallery-content-sm {
+  #promo-gallery-content {
     height: 100%; }
 
-  .lof-opacity li {
+  #promo-gallery-content .lof-opacity li {
     position: relative; }
 
   #news-header select {
