@@ -10,7 +10,7 @@
 .promo-item-desc, .promo-item-desc-sm {
     z-index: 100;
     position: absolute;
-    top: 245px;
+    bottom: 0;
     left: 0px;
     width: 100%;
     color: white;
@@ -21,7 +21,6 @@
     padding: 0px 20px 0px 20px;
 }
 .promo-item-desc-sm {
-    top: 190px;
     height: 60px;
 }
 
@@ -84,6 +83,10 @@
 	width:100%;
 	position:relative;
 	overflow:hidden;
+}
+
+#promo-gallery-content a {
+    display: block;
 }
 
 #promo-gallery-content li, #promo-gallery-content-sm li {

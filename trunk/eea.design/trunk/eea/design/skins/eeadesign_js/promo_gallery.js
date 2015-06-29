@@ -34,6 +34,10 @@
         };
 
         $('#promo-gallery-wrapper').lofJSlider(settings);
-
+        var $content = $("#promo-gallery-content");
+        var $items = $content.find('li');
+        if ($items.length === 1) {
+            $items.css('position', 'relative');
+        }
     });
 }(jQuery));

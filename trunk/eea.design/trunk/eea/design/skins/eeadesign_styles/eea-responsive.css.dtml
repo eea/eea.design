@@ -199,8 +199,8 @@
   #promo-gallery-content {
     height: 100%; }
 
-  #promo-gallery-content .lof-opacity li {
-    position: relative; }
+  #promo-gallery-content-sm li img {
+    width: 100%; }
 
   #news-header select {
     margin-left: 10px; }
