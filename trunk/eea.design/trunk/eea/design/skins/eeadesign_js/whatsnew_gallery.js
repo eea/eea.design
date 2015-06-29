@@ -44,10 +44,6 @@ jQuery(document).ready(function($) {
             // index is 0
                 news = index === 0 ? gal.first() : news;
                 news = news[0] !== undefined ? news[0] : news;
-            var filter_topic;
-            filter_topic = news.firstElementChild !== undefined ? news.firstElementChild : news.firstChild;
-            var filter_topic_text = "Filtered by <span>" + sel_text + "</span> topic";
-                filter_topic.innerHTML = sel_value ? filter_topic_text : "";
 
             var gallery_ajax = $(".gallery-ajax", news);
             var layout_selection = $('.gallery-layout-selection li a', news)[0];
@@ -140,16 +136,6 @@ jQuery(document).ready(function($) {
         if ( opt_item.length ) {
             sel_value = opt_item.val();
             sel_text = opt_item.text();
-        }
-        else {
-            opt_item = $("#topright-widgets").find('.selected').filter(':visible');
-            if( opt_item.length !== 0 ) {
-                var tags = opt_item.parent().prev().text().indexOf('tags');
-                sel_value = tags !== -1 ? opt_item[0].title : opt_item[0].id.substr(3);
-                tag_title = tags !== -1 ? opt_item[0].title : undefined;
-            }
-            sel_text = opt_item.text();
-            sel_value = sel_value !== 'all' ?  sel_value : '';
         }
 
         var album = highlight.find('.gallery-album');

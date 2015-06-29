@@ -485,6 +485,18 @@ body.section-signals #nonfolderish-subfolder-view-items {
     list-style: none none;
     background-color: &dtml-corporateBlue;;
 }
+
+#whatsnew-gallery {
+    position: relative;
+}
+
+#topic-selector {
+    position: absolute;
+    margin-top: 2em;
+    left: 0;
+    margin-left: 8em;
+}
+
 #visual-portal-wrapper .eea-tabs > li {
     float: left;
     margin: 0;

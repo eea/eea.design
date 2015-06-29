@@ -203,7 +203,7 @@
 </metal:ajax-items>
 
     <metal:filter_topic metal:define-macro="filter-topic">
-        <p class="filter-topic hiddenStructure" i18n:translate="">Filtered by <span> &nbsp;</span></p>
+        <p class="filter-topic" i18n:translate="">Filtered by</p>
         <ul class="gallery-layout-selection"
             tal:define="active_list python:' active-list' if not hide_listing else '';
                      active_album python:' active-album' if not hide_album else '';">
