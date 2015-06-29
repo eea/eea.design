@@ -102,38 +102,25 @@ a.archives {
 ******************************************************************************/
 
 .column-area, .right-column-area {
-    width: 61%;
+    width: 58.5%;
     margin: 0 0;
-    padding: 0 1em 1em 0;
+    padding: 0;
     float: left;
 }
 
 .right-column-area {
-    width: 36.5%;
+    width: 39%;
     padding: 0 0 0 1em;
+    float: right;
 }
 
-#articles-area {
-    float: right;
-    min-width: 37%;
-    max-width: 39%;
-}
 
 #articles-area h2 {
     padding-top: 0;
     line-height: 1em;
 }
 
-#highlights-area {
-    float: left;
-    width: 58.5%;
-    min-width: 585px;
-    padding: 0em;
-}
 
-body.sections-data-and-maps #promo-gallery-wrapper,  body.frontpage #promo-gallery-wrapper {
-    min-width: 585px;
-}
 
 body.frontpage #highlights-block {
    padding: 0;
@@ -176,12 +163,6 @@ body.frontpage #portal-columns {
     padding-right: 1em;
 }
 
-#news-header select {
-    margin-left: 30px;
-    color: &dtml-corporateBlueTwo;;
-    margin-top: 10px;
-    display: table-cell;
-}
 
 #news-header h2 {
     float: left;

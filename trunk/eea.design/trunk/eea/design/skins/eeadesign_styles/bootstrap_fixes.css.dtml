@@ -34,9 +34,6 @@ dt, dd {
 }
 
 /* ==== Frontpage.css ==== */
-.right-column-area {
-    width: 38%;
-}
 
 /* ==== promo_gallery.css ==== */
 .controls, .controls-sm {

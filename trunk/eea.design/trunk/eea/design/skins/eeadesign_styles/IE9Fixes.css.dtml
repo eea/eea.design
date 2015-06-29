@@ -16,10 +16,6 @@ a.archives {
 img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none;}
 #portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
 
-/*  bonus: align h2 with select  since h2 with float doesn't play nice with select table-cell*/
-#news-header select {
-    display: inline-block;
-}
 
 /* </dtml-with> */
 

@@ -99,11 +99,8 @@ faceted-external-search">
                     </div>
 
 
-                    <div id="news-header" >
+                    <div id="news-header">
                     <h2 i18n:translate=""> Browse complete catalogue</h2>
-                        <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
-                            Whatsnew select topic.
-                        </div>
                     </div>
 
                         <!-- tabs -->
@@ -117,6 +114,10 @@ faceted-external-search">
                                 </li>
                             </ul>
                             <!-- end_tabs -->
+
+                            <div metal:use-macro="here/frontpage_view/macros/whatsnew-select-topic">
+                                Whatsnew select topic.
+                            </div>
 
                             <tal:tab define="more_href python:more_hrefs[0]">
 			      <div metal:use-macro="here/datamaps_macros/macros/alldataproducts" />

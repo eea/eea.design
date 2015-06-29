@@ -5,9 +5,6 @@
   .eea-accordion-panels table {
     font-size: 0.7em; }
 
-  #content ul.gallery-layout-selection {
-    display: none; }
-
   ul.social-buttons > li {
     padding: 0 5px; }
 
@@ -28,6 +25,9 @@
     width: 77%; } }
 @media (max-width: 480px) {
   #whatsnew-gallery .tileImage {
+    display: none; }
+
+  #content ul.gallery-layout-selection {
     display: none; } }
 @media (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
@@ -177,19 +177,16 @@
   .frontpage #content {
     margin-bottom: 0; }
 
-  #highlights-area,
-  body.sections-data-and-maps #promo-gallery-wrapper, body.frontpage #promo-gallery-wrapper,
-  #portal-column-content {
+  .frontpage #portal-column-content,
+  .sections-data-and-maps #portal-column-content,
+  .template-themecentre_view #portal-column-content,
+  .template-dc_view #portal-column-content {
     min-width: initial; }
 
   .column-area,
-  .right-column-area,
-  #highlights-area,
-  #articles-area {
+  .right-column-area {
     float: none;
     width: 100%;
-    min-width: 100%;
-    max-width: 100%;
     padding: 0 0em 1em 0; }
 
   #articles-area {
@@ -202,15 +199,15 @@
   #promo-gallery-content-sm li img {
     width: 100%; }
 
-  #news-header select {
-    margin-left: 10px; }
-
   #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {
     display: none; }
 
   #viewlet-below-content .standalone {
     white-space: pre-wrap; } }
 @media screen and (max-width: 768px) {
+  #visual-portal-wrapper {
+    overflow: auto; }
+
   .navbar-collapse {
     width: 100%; }
 
