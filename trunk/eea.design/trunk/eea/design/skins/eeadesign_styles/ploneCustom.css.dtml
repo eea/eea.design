@@ -604,13 +604,13 @@ body.section-signals #nonfolderish-subfolder-view-items {
     cursor: pointer;
 }
 
-.eea-accordion-panel > h2 .eea-icon:before,
+.eea-accordion-panel > h2 .eea-icon-right:before,
 .eea-accordion-title > .eea-icon:before {
     content: "&dtml-eea-icon-chevron-left;";
 }
 
-.eea-accordion-panel h2:hover > .eea-icon:before,
-.eea-accordion-panel .current > .eea-icon:before {
+.eea-accordion-panel h2:hover > .eea-icon-right:before,
+.eea-accordion-panel .current > .eea-icon-right:before {
     content: "&dtml-eea-icon-chevron-down;";
 }
 

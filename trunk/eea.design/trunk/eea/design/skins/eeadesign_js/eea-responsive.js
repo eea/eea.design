@@ -50,6 +50,26 @@ jQuery(document).ready(function($) {
         }
     }
 
+    var $soer_panel = $(".eea-tabs-panels-soer");
+    $soer_panel.attr('class', 'eea-accordion-panels eea-accordion-panels-soer collapsed-by-default non-exclusive');
+    var $soer_panels = $soer_panel.find('.eea-tabs-panel');
+
+    var $soer_tab = $(".eea-tabs-soer");
+    var $soer_tabs = $soer_tab.find('li');
+    $soer_tabs.each(function(idx, el){
+       var $panel = $soer_panels.eq(idx);
+        var $el  = $(el);
+        var link = $el.find('a')[0];
+        $panel.attr('class', 'eea-accordion-panel');
+        $panel.wrapInner("<div class='pane' />");
+        var $result = $("<h2 />", {
+            class: 'eea-icon-right-container',
+            id: link.id,
+            html: link.innerHTML});
+        $result.prependTo($panel);
+    });
+    $soer_tab.remove();
+
     var mqOrientation = window.matchMedia("(orientation: portrait)");
     // The Listener will fire whenever this either matches or ceases to match
     mqOrientation.addListener(function() {

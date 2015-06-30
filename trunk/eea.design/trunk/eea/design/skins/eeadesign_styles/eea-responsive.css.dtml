@@ -193,8 +193,9 @@
     margin-bottom: 0; }
 
   .frontpage #portal-column-content,
-  .sections-data-and-maps #portal-column-content,
+  .template-datamaps_view #portal-column-content,
   .template-themecentre_view #portal-column-content,
+  .template-soer2015_frontpage #portal-column-content,
   .template-dc_view #portal-column-content {
     min-width: initial; }
 
