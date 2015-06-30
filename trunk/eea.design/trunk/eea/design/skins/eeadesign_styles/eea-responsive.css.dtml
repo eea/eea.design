@@ -85,6 +85,21 @@
   #cross-site-top .pane, #cross-site-top .portlet {
     background-color: #FFF; }
 
+  #portaltab-europe {
+    margin-top: 1em;
+    padding-bottom: 2em;
+    width: 100%;
+    padding-right: 90px;
+    background: url("&dtml-portal_url;/eu-flag.png") no-repeat top right; }
+    #portaltab-europe a {
+      text-align: left;
+      margin-top: 1em; }
+
+  #secondary-portaltabs #portaltab-europe a {
+    padding: 0.5em 0 2em 0;
+    border-bottom: 0;
+    text-align: left; }
+
   .panel {
     max-width: 335px;
     left: 20px !important; }
@@ -211,21 +226,6 @@
   .navbar-collapse {
     width: 100%; }
 
-  #portaltab-europe {
-    margin-top: 1em;
-    padding-bottom: 2em;
-    width: 100%;
-    padding-right: 90px;
-    background: url("&dtml-portal_url;/eu-flag.png") no-repeat top right; }
-    #portaltab-europe a {
-      text-align: left;
-      margin-top: 1em; }
-
-  #secondary-portaltabs #portaltab-europe a {
-    padding: 0.5em 0 2em 0;
-    border-bottom: 0;
-    text-align: left; }
-
   #portal-colophon .colophonWrapper, .colophon-middle {
     text-align: center; }
 
@@ -255,6 +255,14 @@
     padding-left: 2em; }
   #portal-searchbox .eea-icon {
     margin-right: -2em; } }
+@media (min-width: 768px) and (max-width: 800px) {
+  #portaltab-europe {
+    padding-right: 95px;
+    width: 185px;
+    background: url("&dtml-portal_url;/eu-flag.png") no-repeat top right; }
+    #portaltab-europe a {
+      margin-top: 7px;
+      padding: 0 !important; } }
 @media screen and (min-width: 992px) {
   #header-holder {
     min-width: 995px; }
