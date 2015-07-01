@@ -13,10 +13,24 @@
 
   #faceted-text-search input[type="text"] {
     font-size: 15px;
-    width: 73%; } }
+    width: 73%; }
+
+  .eea-list-columns {
+    padding: 0 1em 0 0.5em;
+    float: none;
+    display: inline-block; }
+
+  .eea-three-columns {
+    width: 48.3%; }
+
+  #panel-tab-regions-countries .eea-list-columns:nth-child(3) {
+    margin-left: 10em; } }
 @media (max-width: 360px) {
   .filter-topic {
-    width: 69%; } }
+    width: 69%; }
+
+  .eea-list-columns {
+    padding: 0 1em 0 0.5em; } }
 @media (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%; }
@@ -241,7 +255,14 @@
     margin-top: 1em; }
 
   .colophon-middle {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .template-soer2015_frontpage .eea-row {
+    margin-left: 0; }
+  .template-soer2015_frontpage .eea-accordion-panels.eea-accordion-panels-soer .pane {
+    padding: 10px; }
+  .template-soer2015_frontpage .eea-icon:before {
+    margin: 0 .2em; } }
 @media screen and (min-width: 768px) {
   #header-holder .container-fluid {
     padding: 0; }
@@ -263,7 +284,18 @@
     background: url("&dtml-portal_url;/eu-flag.png") no-repeat top right; }
     #portaltab-europe a {
       margin-top: 7px;
-      padding: 0 !important; } }
+      padding: 0 !important; }
+
+  .template-soer2015_frontpage .column-area {
+    width: 61%; }
+  .template-soer2015_frontpage .right-column-area {
+    width: 39%; }
+
+  #visual-portal-wrapper .eea-tabs.eea-tabs-soer > li {
+    width: 20%;
+    margin-right: 0; }
+    #visual-portal-wrapper .eea-tabs.eea-tabs-soer > li > a {
+      padding: 0.8em 1em 1em 0.8em; } }
 @media screen and (min-width: 992px) {
   #header-holder {
     min-width: 995px; }
