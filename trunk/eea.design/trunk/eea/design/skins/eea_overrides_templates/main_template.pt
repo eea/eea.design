@@ -52,7 +52,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- viewport meta needed for proper view on an ipad -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://plus.google.com/104345627234408209119" rel="publisher" />
     <!--?<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>-->
@@ -114,13 +114,12 @@
                       dir python:isRTL and 'rtl' or 'ltr'">
 
 <div id="print-warning" i18n:domain="eea">
-             <p i18n:translate="">
-                 Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
-             </p>
-         </div>
+    <p i18n:translate="">
+        Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
+    </p>
+</div>
 
-         <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title">
-         </a>
+<a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title"></a>
 
 <div id="header-holder">
     <div class="navbar navbar-default navbar-fixed-top">
