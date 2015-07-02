@@ -255,7 +255,10 @@
   .template-soer2015_frontpage .eea-accordion-panels.eea-accordion-panels-soer .pane {
     padding: 10px; }
   .template-soer2015_frontpage .eea-icon:before {
-    margin: 0 .2em; } }
+    margin: 0 .2em; }
+
+  #portlet-followus dd {
+    padding-right: 0.7em; } }
 @media screen and (min-width: 768px) {
   #header-holder .container-fluid {
     padding: 0; }

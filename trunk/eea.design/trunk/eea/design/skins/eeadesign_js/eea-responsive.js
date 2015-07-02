@@ -2,7 +2,7 @@
 jQuery(document).ready(function($) {
 
     var window_height = document.documentElement.clientHeight;
-    if (window_height >= 600 && window.outerWidth > 767) {
+    if (window_height >= 600 && window.innerWidth > 767) {
         return;
     }
 
