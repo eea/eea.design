@@ -1200,6 +1200,8 @@ h3.site-description {
 
 #portal-columns {
     padding-top: 1em;
+    min-width: 995px;
+    max-width: 1024px;
 }
 
 #portal-column-one .portlet-subscribtion {
@@ -2781,10 +2783,6 @@ div#original_chart_div {
     padding: 0;
 }
 
-#portal-columns {
-    min-width: 995px;
-    max-width: 1024px;
-}
 
 
 /* </dtml-with> */

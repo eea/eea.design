@@ -206,12 +206,6 @@
   .frontpage #content {
     margin-bottom: 0; }
 
-  .frontpage #portal-column-content,
-  .template-datamaps_view #portal-column-content,
-  .template-soer2015_frontpage #portal-column-content,
-  .template-dc_view #portal-column-content {
-    min-width: initial; }
-
   .column-area,
   .right-column-area {
     float: none;
@@ -295,13 +289,29 @@
     margin-right: 0; }
     #visual-portal-wrapper .eea-tabs.eea-tabs-soer > li > a {
       padding: 0.8em 1em 1em 0.8em; } }
-.frontpage #visual-portal-wrapper,
-.template-datamaps_view #visual-portal-wrapper,
-.template-soer2015_frontpage #visual-portal-wrapper,
-.template-dc_view #visual-portal-wrapper {
-  min-width: inherit;
-  max-width: inherit; }
+@media (min-width: 768px) and (max-width: 1024px) {
+  #portal-searchbox {
+    margin: 25px 0.5em 0 0; } }
+@media screen and (min-width: 961px) {
+  #visual-portal-wrapper, #portal-header {
+    min-width: 995px !important;
+    max-width: 1024px !important; } }
+@media screen and (max-width: 1024px) {
+  .frontpage #portal-column-content,
+  .frontpage #portal-columns,
+  .template-datamaps_view #portal-column-content,
+  .template-datamaps_view #portal-columns,
+  .template-soer2015_frontpage #portal-column-content,
+  .template-soer2015_frontpage #portal-columns,
+  .template-dc_view #portal-column-content
+  .template-dc_view #portal-columns {
+    min-width: initial; }
 
+  .frontpage #visual-portal-wrapper,
+  .template-datamaps_view #visual-portal-wrapper,
+  .template-soer2015_frontpage #visual-portal-wrapper,
+  .template-dc_view #visual-portal-wrapper {
+    overflow: hidden; } }
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */
