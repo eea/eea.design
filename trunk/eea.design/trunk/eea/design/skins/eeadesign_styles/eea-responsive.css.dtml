@@ -312,7 +312,7 @@
   .template-datamaps_view #portal-columns,
   .template-soer2015_frontpage #portal-column-content,
   .template-soer2015_frontpage #portal-columns,
-  .template-dc_view #portal-column-content
+  .template-dc_view #portal-column-content,
   .template-dc_view #portal-columns {
     min-width: initial; }
 
