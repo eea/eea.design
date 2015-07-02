@@ -66,7 +66,8 @@
     overflow-y: visible; }
 
   #header-holder .navbar-default {
-    background-color: #FFF; }
+    background-color: #FFF;
+    will-change: transform; }
   #header-holder .navbar-collapse {
     background-color: #006699; }
   #header-holder .navbar-toggle {
@@ -205,6 +206,9 @@
 
   .frontpage #content {
     margin-bottom: 0; }
+
+  .section-soer-2015 #portal-column-two {
+    margin-top: 92px; }
 
   .column-area,
   .right-column-area {
