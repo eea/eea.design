@@ -3,6 +3,9 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Change: cleaned ecotip logic from eea.design, therefore
+  removing unnecessary code from loading, saving bytes for mobile views
+  [ichimdav refs #26378]
 * Bug fix: Adding done and fail callbasks to function displayMessage from
   /eea/design/skins/eeadesign_js/outdated_browser.js
   [malduvit refs #26644]

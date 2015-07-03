@@ -81,31 +81,6 @@
     margin: 0 auto;
 }
 
-#portal-footer #portlet-ecotip dt {
-    padding: 0px;
-    background: transparent;
-}
-#portal-footer #portlet-ecotip {
-    margin: 0;
-    background-color: transparent;
-    box-shadow: none;
-}
-
-#portal-footer #portlet-ecotip .portletFooter {
-  border: none;
-  padding: 0;
-}
-
-
-#portal-footer #portlet-ecotip .portletItem {
-    padding: 9px 0 0 0;
-    margin-left: 75px !important;
-}
-
-#portal-footer #portlet-ecotip .portletItem strong {
-    font-size: 14px;
-}
-
 .colophon-left {
     float: left;
     width: 215px;
@@ -151,29 +126,5 @@
     position: relative;
     width: 760px;
 }
-
-img.ecotip-bulb {
-    float: left;
-    margin-top: 5px;
-}
-
-img.led-bulb {
-    float: left;
-    margin-top: 6px;
-    position: absolute;
-    left: 30px;
-}
-
-#portlet-ecotip img { 
-    -webkit-transition: all 1s ease-in-out; 
-       -moz-transition: all 1s ease-in-out; 
-        -ms-transition: all 1s ease-in-out;
-         -o-transition: all 1s ease-in-out;
-            transition: all 1s ease-in-out; 
-    margin-right: 15px; margin-top: 10px; 
-}
-
-img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0;}
-#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 0;}
 
 /* </dtml-with> */

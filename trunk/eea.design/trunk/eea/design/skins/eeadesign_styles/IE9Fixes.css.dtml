@@ -12,10 +12,6 @@ a.archives {
     z-index: 2;
 }
 
-/* #5140 set display for ecotip */
-img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none;}
-#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 1.0; display: block;}
-
 
 /* </dtml-with> */
 

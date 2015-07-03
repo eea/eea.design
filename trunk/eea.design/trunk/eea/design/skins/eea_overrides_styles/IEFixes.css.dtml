@@ -15,9 +15,6 @@
     border: 0px;
 }
 
-/* 5140 ecotip image overlap */
-img.ecotip-bulb, #portlet-ecotip.hover img.led-bulb { opacity: 1.0; display: none; }
-#portlet-ecotip.hover img.ecotip-bulb, img.led-bulb { opacity: 0; display:block; }
 
 /* 5346; fixed placement of livesearch */
 

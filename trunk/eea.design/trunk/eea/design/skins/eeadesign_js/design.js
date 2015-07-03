@@ -116,40 +116,6 @@ jQuery(document).ready(function($) {
         $auto_related.insertAfter($prev);
     }
 
-    /**
-     * Function to animate ecotip bulb
-     */
-    var toggleEcotipClass = function() {
-        var ecotip = $('#portlet-ecotip'),
-            action, bulb, led;
-        if (ie && ie < 10) {
-            bulb = ecotip.find('.ecotip-bulb');
-            led = ecotip.find('.led-bulb');
-            action = function() {
-                if ($.fadeToggle) {
-                    bulb.fadeToggle();
-                    led.fadeToggle();
-                }
-                else {
-                    bulb.is(":visible") ? bulb.fadeOut() : bulb.fadeIn();
-                    led.is(":visible") ? led.fadeOut() : led.fadeIn();
-                }
-            };
-        }
-        else {
-            action = function() {
-                ecotip.toggleClass('hover');
-            };
-        }
-
-        toggleEcotipClass = function() {
-            return action();
-        };
-        return toggleEcotipClass();
-    };
-    toggleEcotipClass();
-    window.setInterval(toggleEcotipClass, 5000);
-
     function themePromotionPortlets(top_news) {
         var top_news_width = top_news.width();
         var margin = top_news_width * 0.012,
