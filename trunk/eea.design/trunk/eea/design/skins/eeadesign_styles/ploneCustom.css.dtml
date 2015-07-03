@@ -1139,6 +1139,17 @@ h3.site-description {
 .header-holder #portal-top .cell {
     float: none;
 }
+#header-holder .navbar {
+    box-shadow: 0px 1px 10px #005078;
+    border: 0;
+}
+.navbar-hidden {
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    display: none;
+}
 
 #cross-site-top {
     background-color: &dtml-corporateBlue;;
