@@ -3,6 +3,9 @@ Changelog
 
 12.2.dev0 - (unreleased)
 ------------------------
+* Feature: header and footer is now responsive as well as the frontpage,
+  datamaps_view, dc_view and soer2015_frontpage
+  [ichimdav refs #26378]
 * Change: cleaned ecotip logic from eea.design, therefore
   removing unnecessary code from loading, saving bytes for mobile views
   [ichimdav refs #26378]

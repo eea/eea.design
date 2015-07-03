@@ -142,7 +142,8 @@
 
   #portal-externalsites, #portal-siteactions,
   #secondary-portaltabs,
-  #portal-searchbox {
+  #portal-searchbox,
+  .LSBox {
     float: none; }
 
   #portal-externalsites li, #portal-siteactions li,
@@ -180,19 +181,22 @@
   #portal-searchbox {
     margin-top: 0;
     text-align: left; }
-    #portal-searchbox input {
+    #portal-searchbox input[type="text"] {
       width: 100%; }
-    #portal-searchbox a {
+    #portal-searchbox a, #portal-searchbox label {
       color: #FFF;
       margin: 0; }
     #portal-searchbox .searchButton {
       display: none; }
 
+  .LSBox {
+    padding-right: 0; }
+    .LSBox .searchSection {
+      left: 0;
+      background-color: #006699; }
+
   #portal-searchbox input.searchButton {
     margin-left: 0; }
-
-  #searchbox_terminology input[type="text"] {
-    width: 100%; }
 
   #globalnav-holder, #portal-globalnav {
     height: inherit; }

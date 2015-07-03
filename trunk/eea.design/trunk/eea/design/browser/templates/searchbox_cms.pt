@@ -8,18 +8,14 @@
           id string:${search_input_id}_form">
 
         <div class="LSBox">
-        <label class="hiddenStructure"
-               tal:attributes="for search_input_id"
-               i18n:translate=""></label>
-
+        <span class="eea-icon eea-icon-search"></span>
         <input name="SearchableText"
                type="text"
                size="34"
                value=""
                title=""
                accesskey="4"
-               tal:attributes="value request/form/SearchableText|nothing;
-                               id search_input_id"
+               tal:attributes="value request/form/SearchableText|nothing;"
                class="searchField inputLabel" />
 
         <input class="searchButton"
