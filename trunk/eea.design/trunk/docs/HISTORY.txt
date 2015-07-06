@@ -1,8 +1,8 @@
 Changelog
 =========
 
-12.2.dev0 - (unreleased)
-------------------------
+12.2 - (2015-07-06)
+-------------------
 * Feature: header and footer is now responsive as well as the frontpage,
   datamaps_view, dc_view and soer2015_frontpage
   [ichimdav refs #26378]
