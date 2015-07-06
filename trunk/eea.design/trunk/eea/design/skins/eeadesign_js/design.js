@@ -247,30 +247,5 @@ jQuery(document).ready(function($) {
         window.createCookie('survey_message', 'never', 365);
     }
 
-    // #26378 hide and show navbar on scroll up and down
-    var lastScrollTop = 0;
-    var $header_holder = $("#header-holder");
-    var navbar = $header_holder.find('.navbar')[0];
-    var navbar_content = $header_holder.find(".navbar-collapse")[0];
-
-    function navScroll(ev) {
-        var st = $(this).scrollTop();
-        var def_class = "navbar navbar-default navbar-fixed-top";
-        if (st > lastScrollTop){
-            // downscroll code
-            if (navbar.className.indexOf("navbar-hidden") === -1  && navbar_content.className.indexOf("in") === -1) {
-                navbar.className = "navbar navbar-default navbar-fixed-top navbar-hidden";
-            }
-        } else {
-            // upscroll code
-            if (navbar.className !== def_class) {
-                navbar.className = def_class;
-            }
-        }
-        lastScrollTop = st;
-    }
-
-    var lazyNavScroll = _.debounce(navScroll, 100);
-    $(window).scroll(lazyNavScroll);
 
 });
