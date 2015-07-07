@@ -11,6 +11,6 @@
              url_expr="string:${portal_url}/@@eea-rights-controlpanel"
              visible="True"
              i18n:attributes="title">
-    <permission>Manage Portal</permission>
+    <permission>Manage portal</permission>
   </configlet>
 </object>
