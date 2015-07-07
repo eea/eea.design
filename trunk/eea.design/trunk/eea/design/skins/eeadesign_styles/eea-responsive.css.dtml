@@ -232,6 +232,17 @@
   #promo-gallery-content-sm li img {
     width: 100%; }
 
+  /* FACETED NAVIGATION */
+  #right-area, #left-area {
+    float: none;
+    width: 100%; }
+
+  .right-area-js {
+    margin-right: 0; }
+
+  .left-area-js {
+    margin-left: 0; }
+
   #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {
     display: none; }
 
@@ -310,20 +321,23 @@
     min-width: 995px !important;
     max-width: 1024px !important; } }
 @media screen and (max-width: 1024px) {
-  .frontpage #portal-column-content,
   .frontpage #portal-columns,
-  .template-datamaps_view #portal-column-content,
+  .frontpage #portal-column-content,
   .template-datamaps_view #portal-columns,
-  .template-soer2015_frontpage #portal-column-content,
+  .template-datamaps_view #portal-column-content,
   .template-soer2015_frontpage #portal-columns,
+  .template-soer2015_frontpage #portal-column-content,
+  .template-dc_view #portal-columns,
   .template-dc_view #portal-column-content,
-  .template-dc_view #portal-columns {
+  .template-facetednavigation_view #portal-columns,
+  .template-facetednavigation_view #portal-column-content {
     min-width: initial; }
 
   .frontpage #visual-portal-wrapper,
   .template-datamaps_view #visual-portal-wrapper,
   .template-soer2015_frontpage #visual-portal-wrapper,
-  .template-dc_view #visual-portal-wrapper {
+  .template-dc_view #visual-portal-wrapper,
+  .template-facetednavigation_view #visual-portal-wrapper {
     overflow: hidden; } }
 /* </dtml-with> */
 
