@@ -129,5 +129,12 @@
         directory="profiles/upgrades/to_122"
         description='EEA Design upgrade profile for v12.2'
         provides="Products.GenericSetup.interfaces.EXTENSION" />
+    
+    <genericsetup:registerProfile
+        name="upgrade123"
+        title="EEA Design upgrade profile for v12.3"
+        directory="profiles/upgrades/to_123"
+        description='EEA Design upgrade profile for v12.3'
+        provides="Products.GenericSetup.interfaces.EXTENSION" />
 
 </configure>

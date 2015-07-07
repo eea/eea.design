@@ -27,7 +27,7 @@
   <metal:listingmacro define-macro="listing" tal:define="
     entry_macro  entry_macro|context/atct_albumentry/macros/entry;
     folderContents folderContents|nothing;">
-  
+
 
   <tal:folderContents condition="folderContents" tal:define="batch folderContents">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
@@ -36,6 +36,8 @@
         obj brain/getObject;
         obj_title python:obj.pretty_title_or_id();
         desc_or_title python:brain.Description or obj_title;
+        rights obj/Rights;
+        desc_or_title python:rights and '%s (%s)' % (desc_or_title, rights) or desc_or_title;
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'eea.mediacentre.interfaces.IVideo' in brain.object_provides">
@@ -57,7 +59,10 @@
     <tal:folderItems tal:condition="batch" tal:repeat="brain batch">
       <tal:entry tal:define="
         obj brain/getObject;
-        desc_or_title python:brain.Description or obj.pretty_title_or_id;
+        obj_title python:obj.pretty_title_or_id();
+        desc_or_title python:brain.Description or obj_title;
+        rights obj/Rights;
+        desc_or_title python:rights and '%s (%s)' % (desc_or_title, rights) or desc_or_title;
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'eea.mediacentre.interfaces.IVideo' in brain.object_provides">
@@ -92,6 +97,8 @@
         obj brain/getObject;
         obj_title python:obj.pretty_title_or_id();
         desc_or_title python:brain.Description or obj_title;
+        rights obj/Rights;
+        desc_or_title python:rights and '%s (%s)' % (desc_or_title, rights) or desc_or_title;
         urlview obj/@@url;
         listing_url urlview/listing_url;
         is_video python:'eea.mediacentre.interfaces.IVideo' in brain.object_provides;">

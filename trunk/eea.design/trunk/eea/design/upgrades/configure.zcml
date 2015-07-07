@@ -4,6 +4,19 @@
         i18n_domain="eea">
 
     <genericsetup:upgradeSteps
+        source="12.2"
+        destination="12.3"
+        profile="eea.design:default">
+
+        <genericsetup:upgradeDepends
+            title="Import all steps from eea.design profile upgrade 12.3"
+            description="Added Rights configlet"
+            import_profile="eea.design:upgrade123"
+            />
+
+    </genericsetup:upgradeSteps>
+    
+    <genericsetup:upgradeSteps
         source="11.1"
         destination="12.2"
         profile="eea.design:default">

@@ -7,6 +7,7 @@
 
   <five:registerPackage package="." initialize=".initialize" />
   <include package=".browser" />
+  <include package=".controlpanel" />
   <include package="plone.portlets" />
   <include package="Products.eeawebapplication" />
   <include file="skins.zcml" />

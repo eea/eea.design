@@ -1,10 +1,11 @@
 """ Custom viewlets
 """
 from cgi import escape
-from Acquisition import aq_parent, aq_base
+from Acquisition import aq_parent, aq_base, aq_inner
 
 from Products.CMFCore.utils import _checkPermission
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.interfaces import IPloneSiteRoot
 from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.links import viewlets as links
@@ -12,7 +13,9 @@ from plone.app.layout.viewlets import common, content
 from plone.app.layout.viewlets.content import DocumentBylineViewlet as \
     BaseBelowContentTitleViewlet
 from zope.component import getMultiAdapter
+from zope.component import getUtility
 
+from eea.design.controlpanel.controlpanel import IRightsPrefsForm
 from eea.design.browser.interfaces import ISubFoldersListing
 
 from plone.memoize.instance import memoize
@@ -82,6 +85,16 @@ class DocumentBylineViewlet(content.DocumentBylineViewlet):
                 continue
             authors.append(author)
         return authors
+
+    def showRights(self):
+        """ Return True if context portal types it set to show rights
+        """
+        portal = getUtility(IPloneSiteRoot)
+        rights_prefs =  IRightsPrefsForm(portal)
+        context = aq_inner(self.context)
+        portal_type = getattr(context, 'portal_type', None)
+        return portal_type in rights_prefs.allowed_types
+
 
 
 class FooterPortletsViewlet(common.ViewletBase):

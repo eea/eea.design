@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+ <object name="rights_properties" meta_type="Plone Property Sheet">
+  <property name="title">Rights Properties</property>
+  <property name="allowed_types" type="lines" purge="False">
+    <element value="Image" />
+  </property>
+ </object>
+</object>

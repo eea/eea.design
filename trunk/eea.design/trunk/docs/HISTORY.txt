@@ -3,7 +3,11 @@ Changelog
 
 12.3.dev0 - (unreleased)
 ------------------------
-
+* Feature: show copyright in title attribute on album_view
+  [lucas refs #26855]
+* Upgrade step: add a configlet to select which content type must show copyright
+  [lucas refs #26855]
+  
 12.2 - (2015-07-06)
 -------------------
 * Feature: header and footer is now responsive as well as the frontpage,

@@ -109,12 +109,13 @@
                 </span>
             </div>
 
-            <div tal:define="rights context/Rights" class="documentByLineRights" tal:condition="rights">
-                <div tal:replace="rights">
-                    Copyleft NiceCorp Inc.
-                </div>
-            </div>
-
         </tal:loggedin>
+        <div tal:define="rights context/Rights;
+                         show_rights view/showRights"
+             class="documentByLineRights" tal:condition="python: show_rights and rights">
+            <div tal:replace="rights">
+                Copyleft NiceCorp Inc.
+            </div>
+        </div>
     </div>
 </tal:block>
