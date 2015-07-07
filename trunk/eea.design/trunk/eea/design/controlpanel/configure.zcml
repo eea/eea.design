@@ -9,10 +9,9 @@
     <adapter factory=".controlpanel.RightsControlPanelAdapter" />
 
     <browser:page
-         name="rights-controlpanel"
+         name="eea-rights-controlpanel"
          for="Products.CMFPlone.interfaces.IPloneSiteRoot"
          class=".controlpanel.RightsPrefsForm"
-         layer="..browser.interfaces.IEEADesignCMS"
          permission="cmf.ManagePortal"
     />
 

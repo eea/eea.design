@@ -8,7 +8,7 @@
              category="Products"
              conditional_expression=""
              icon_expr="string:${portal_url}/logoIcon.png"
-             url_expr="string:${portal_url}/@@rights-controlpanel"
+             url_expr="string:${portal_url}/@@eea-rights-controlpanel"
              visible="True"
              i18n:attributes="title">
     <permission>Manage Portal</permission>

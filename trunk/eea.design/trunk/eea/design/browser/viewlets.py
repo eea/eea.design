@@ -90,7 +90,7 @@ class DocumentBylineViewlet(content.DocumentBylineViewlet):
         """ Return True if context portal types it set to show rights
         """
         portal = getUtility(IPloneSiteRoot)
-        rights_prefs =  IRightsPrefsForm(portal)
+        rights_prefs = IRightsPrefsForm(portal)
         context = aq_inner(self.context)
         portal_type = getattr(context, 'portal_type', None)
         return portal_type in rights_prefs.allowed_types
