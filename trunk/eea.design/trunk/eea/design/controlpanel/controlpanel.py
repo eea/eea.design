@@ -19,11 +19,14 @@ class IRightsPrefsForm(Interface):
 
     allowed_types = schema.List(
         title=_(u'Portal types'),
-        description=_(u'Copyright info is displayed for the following portal types'),
+        description=_(
+            u'Copyright info is displayed for the following portal types'),
         missing_value=tuple(),
         value_type=schema.Choice(
-            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"),
-            required=False)
+            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
+        ),
+        required=False
+    )
 
 
 class RightsControlPanelAdapter(SchemaAdapterBase):
@@ -40,12 +43,10 @@ class RightsControlPanelAdapter(SchemaAdapterBase):
 
     def get_allowed_types(self):
         """ get allowed_types from rights_props """
-        
         return self.rights_props.allowed_types
 
     def set_allowed_types(self, allowed_types):
         """ set allowed_types to rights_props """
-        
         self.rights_props.allowed_types = allowed_types
 
     allowed_types = property(get_allowed_types, set_allowed_types)
