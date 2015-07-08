@@ -3,6 +3,9 @@ Changelog
 
 12.3.dev0 - (unreleased)
 ------------------------
+* Bug fix: added a space on the search icons in order to avoid having the
+  spans as an inline tag which in some cases end up covering adjacent tags
+  [ichimdav refs #27280]
 * Feature: show copyright in title attribute on album_view
   [lucas refs #26855]
 * Upgrade step: add a configlet to select which content type must show copyright

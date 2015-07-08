@@ -3,7 +3,7 @@
      tal:define="local_site context/@@plone_portal_state/local_site"
      i18n:domain="eea">
     <form action="http://glossary.eea.europa.eu/terminology/sitesearch" tal:attributes="action python:'http://glossary.'+request.get('LANGUAGE', 'en')+'.eea.europa.eu/terminology/sitesearch'" id="searchbox_terminology" class="searchforms">
-            <span class="eea-icon eea-icon-search"></span>
+            <span class="eea-icon eea-icon-search">&nbsp;</span>
             <input type="text" name="term" size="35" i18n:attributes="title" title="Search Europe's environment" class="searchField"  />
             <input class="searchButton"
                    type="submit"

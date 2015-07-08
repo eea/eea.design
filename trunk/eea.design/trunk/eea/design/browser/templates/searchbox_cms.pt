@@ -8,7 +8,7 @@
           id string:${search_input_id}_form">
 
         <div class="LSBox">
-        <span class="eea-icon eea-icon-search"></span>
+        <span class="eea-icon eea-icon-search">&nbsp;</span>
         <input name="SearchableText"
                type="text"
                size="34"
