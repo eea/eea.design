@@ -1,10 +1,31 @@
-/* global jQuery window */
+/* global jQuery, window, _ */
 jQuery(document).ready(function($) {
+    var doc = document.documentElement;
 
+    var $logo = $("#portal-logo-link");
+    var $logo_holder = $(".portal-logo");
+    var $navbar_header = $(".navbar-header");
+    function windowResize() {
+        var $logo_parent = $logo.parent();
+        if (window.outerWidth < 768) {
+            if (!$logo_parent.hasClass('navbar-header')) {
+                $logo.prependTo($navbar_header);
+            }
+        }
+        else {
+            if (!$logo_parent.hasClass('portal-logo')) {
+                $logo.appendTo($logo_holder);
+            }
+        }
+    }
+
+    var lazyWindowResize = _.debounce(windowResize, 100);
+
+    $(window).resize(lazyWindowResize);
     if (window.outerHeight >= 600 && window.innerWidth > 767) {
         return;
     }
-    var client_height = document.documentElement.clientHeight;
+    var client_height = doc.clientHeight;
 
 
     var $nav_collapse = $("#bs-example-navbar-collapse-1");
@@ -13,7 +34,7 @@ jQuery(document).ready(function($) {
     }
     setMaxHeight(client_height);
 
-    $("#portal-logo-link").prependTo(".navbar-header");
+    $logo.prependTo($navbar_header);
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
     var $cross_site_top = $("#cross-site-top");
     $("#portal-header").prependTo($("#portal-top"));
@@ -36,20 +57,22 @@ jQuery(document).ready(function($) {
                 html: $el.find('a').text()});
             $old_panel.remove();
             $result.appendTo($acordion_panel);
-            $panel.appendTo($acordion_panel)
+            $panel.appendTo($acordion_panel);
             $acordion_panel.appendTo($holder);
         });
         $el.remove();
     });
 
     var height = function() {
+        // iPhone clientHeight matches better the document height while other
+        // devices give better results when using outerHeight
         if (window.navigator.userAgent.indexOf('iPhone') !== -1) {
-            return document.documentElement.clientHeight;
+            return doc.clientHeight;
         }
         else {
             return window.outerHeight;
         }
-    }
+    };
 
     var $soer_panel = $(".eea-tabs-panels-soer");
     $soer_panel.attr('class', 'eea-accordion-panels eea-accordion-panels-soer collapsed-by-default non-exclusive');
@@ -71,8 +94,11 @@ jQuery(document).ready(function($) {
     });
     $soer_tab.remove();
 
-    var mqOrientation = window.matchMedia("(orientation: portrait)");
+    var mqOrientation = window.matchMedia && window.matchMedia("(orientation: portrait)");
     // The Listener will fire whenever this either matches or ceases to match
+    if (!mqOrientation) {
+        return;
+    }
     mqOrientation.addListener(function() {
         setMaxHeight(height());
     });
@@ -83,7 +109,7 @@ jQuery(document).ready(function($) {
     var navbar = $header_holder.find('.navbar')[0];
     var navbar_content = $header_holder.find(".navbar-collapse")[0];
 
-    function navScroll(ev) {
+    function navScroll() {
         var st = $(this).scrollTop();
         var def_class = "navbar navbar-default navbar-fixed-top";
         if (st > lastScrollTop){
@@ -102,6 +128,7 @@ jQuery(document).ready(function($) {
 
     var lazyNavScroll = _.debounce(navScroll, 100);
     $(window).scroll(lazyNavScroll);
+
 
 });
 
