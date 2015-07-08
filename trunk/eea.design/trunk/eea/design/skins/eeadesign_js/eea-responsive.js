@@ -1,5 +1,15 @@
 /* global jQuery, window, _ */
 jQuery(document).ready(function($) {
+
+    /* #27280 quickfix for templateService, insert search icons
+    in correct places, to remove after next production upgrade */
+    var $icon_search = $(".eea-icon-search");
+    var $icon_search_children =$icon_search .children();
+    if($icon_search_children.length) {
+        $("#search_advanced_link, #search_glossary_link").appendTo("#portal-searchbox");
+        $icon_search.find('input').appendTo("#searchbox_terminology");
+    }
+
     var doc = document.documentElement;
 
     var $logo = $("#portal-logo-link");
