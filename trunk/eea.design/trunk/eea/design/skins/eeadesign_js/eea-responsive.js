@@ -1,16 +1,17 @@
 /* global jQuery window */
 jQuery(document).ready(function($) {
 
-    var window_height = window.outerHeight;
-    if (window_height >= 600 && window.innerWidth > 767) {
+    if (window.outerHeight >= 600 && window.innerWidth > 767) {
         return;
     }
+    var client_height = document.documentElement.clientHeight;
+
 
     var $nav_collapse = $("#bs-example-navbar-collapse-1");
-    function setMaxHeight(window_height) {
-       $nav_collapse.css('max-height', window_height - 60);
+    function setMaxHeight(client_height) {
+        $nav_collapse.css('max-height', client_height - 60);
     }
-    setMaxHeight(window_height);
+    setMaxHeight(client_height);
 
     $("#portal-logo-link").prependTo(".navbar-header");
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
@@ -57,7 +58,7 @@ jQuery(document).ready(function($) {
     var $soer_tab = $(".eea-tabs-soer");
     var $soer_tabs = $soer_tab.find('li');
     $soer_tabs.each(function(idx, el){
-       var $panel = $soer_panels.eq(idx);
+        var $panel = $soer_panels.eq(idx);
         var $el  = $(el);
         var link = $el.find('a')[0];
         $panel.attr('class', 'eea-accordion-panel');
@@ -103,4 +104,5 @@ jQuery(document).ready(function($) {
     $(window).scroll(lazyNavScroll);
 
 });
+
 
