@@ -2,7 +2,7 @@
 <object name="portal_controlpanel"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n"
        i18n:domain="eea">
-  <configlet title="Document by line setting"
+  <configlet title="Document by line settings"
              action_id="EEARights"
              appId="eea.design"
              category="Products"

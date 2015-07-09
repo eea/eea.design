@@ -143,6 +143,6 @@ class DocumentByLinePrefsForm(ControlPanelForm):
     implements(IDocumentByLinePrefsForm)
     form_fields = form.FormFields(IDocumentByLinePrefsForm)
 
-    label = _(u'Document by line setting')
+    label = _(u'Document by line settings')
     description = _(u'Select which content type must show in documentbyline')
     form_name = _(u'')
