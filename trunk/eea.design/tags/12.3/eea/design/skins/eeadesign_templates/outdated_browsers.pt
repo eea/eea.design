@@ -1,0 +1,59 @@
+<tal:conditions tal:define="portal_state context/@@plone_portal_state;
+                            isAnon portal_state/anonymous;
+                            roles python:user.getRoles();
+                            enabled_browsers_macro python:False;
+                            http_user_agent python:request['HTTP_USER_AGENT'];"
+                            metal:define-macro="main"
+                i18n:domain="eea">
+
+    <metal:browser define-macro="browsers" tal:condition="python:enabled_browsers_macro" 
+                   tal:define="http_user_agent python:request['HTTP_USER_AGENT'];">
+      <tal:block i18n:domain="eea.notranslation">
+        <li id="outdated_ff">
+            <a href='http://www.firefox.com' target='_blank' i18n:translate="">Firefox</a>
+        </li>
+        <li id="outdated_chrome">
+        <a href='http://www.google.com/chrome' target='_blank' i18n:translate="">Google Chrome</a>
+        </li>
+        <li id="outdated_safari" tal:condition="python:'Windows' in http_user_agent or 'Mac' in http_user_agent">
+            <a href='http://www.apple.com/safari/download/' target='_blank' i18n:translate="">Safari</a>
+        </li>
+        <li id="outdated_opera">
+            <a href='http://www.opera.com/download/' target='_blank' i18n:translate="">Opera</a>
+        </li>
+      </tal:block>
+    </metal:browser>
+
+    <metal:ie define-macro="ie" tal:condition="python:enabled_browsers_macro">
+        <li id="outdated_ie">
+            <a href='http://www.microsoft.com/windows/internet-explorer/' target='_blank' i18n:translate="">Internet Explorer 9+</a>
+        </li>
+    </metal:ie>
+
+    <tal:comment replace="nothing">
+        You can use a condition for a specific role for displaying certain browsers images or messages
+        ex: <h2 tal:condition="python:'ContentEditor' in roles"> Message for content editors</h2>
+    </tal:comment>
+
+    <tal:template_defines define="enabled_browsers_macro python:True;">
+        <div id="outdated_wrap"  style="display:none;">
+            <div id="outdated">
+                <div id="outdated_text">
+                   <h3 i18n:translate="">You are using an outdated browser</h3>
+                   <p i18n:translate="">For a better experience using this site please upgrade to a modern browser.</p>
+                </div>
+                <div id="outdated_images">
+                    <ul>
+                        <metal:browsers use-macro="context/outdated_browsers/macros/browsers" />
+                            <tal:comment replace="nothing">
+                            Do not display IE upgrade if user is on win XP.
+                            </tal:comment>
+                        <tal:load_ie tal:condition="python:'Windows' in http_user_agent and 'NT 5.1' not in http_user_agent">
+                            <metal:browsers use-macro="context/outdated_browsers/macros/ie"  />
+                        </tal:load_ie>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </tal:template_defines>
+</tal:conditions>

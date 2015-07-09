@@ -1,0 +1,90 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+#globalnav-holder {
+    background-color: &dtml-corporateBlue;;
+    width: 100%;
+    display: block;
+    clear: both;
+    height: 50px;
+}
+
+/* @group Navigation/search customizes public.css */
+#portal-globalnav {
+    background: none;
+    clear: both;
+    display: block;
+    font-size: 120%;
+    height: 49px;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1024px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+
+#portal-globalnav li {
+    margin-bottom: 0;
+    float: none;
+    text-align: center;
+    height: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+#portal-globalnav li a  {
+    background: transparent;
+    color: white;
+    display: inline-block;
+    padding: 1em 0.8em;
+    border: 0;
+    min-width: 0;
+    font-weight:bold;
+}
+
+#portal-globalnav a:hover, #portal-globalnav li a:hover,
+#portal-globalnav .selected a {
+    color: &dtml-corporateOrange;;
+    background: transparent;
+}
+
+#portal-globalnav .selected a
+{
+    background-color: white;
+    position: relative;
+    height: 15px;
+}
+
+#secondary-portaltabs {
+    float: right;
+    margin: 0;
+    height: 100%;
+}
+
+#portaltab-europe {
+    width: 120px;
+    font-size: 75%;
+    vertical-align: top;
+    line-height: 1.1;
+    padding-right: 92px;
+    background: url("&dtml-portal_url;/eu-flag.png") no-repeat 123px -5px;
+}
+
+#secondary-portaltabs #portaltab-europe a {
+    font-weight: normal;
+    text-align: right;
+    padding: 1em 0;
+}
+
+#portal-globalnav .en_icon {
+    background: url(&dtml-portal_url;/en_icon.png) no-repeat scroll right -2px transparent;
+}
+
+/* </dtml-with> */
+

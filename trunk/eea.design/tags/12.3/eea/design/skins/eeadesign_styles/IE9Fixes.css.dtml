@@ -1,0 +1,17 @@
+/*
+** Stylesheet with Internet Explorer-specific workarounds.
+*/
+/* <dtml-with base_properties> */
+
+.hiddenStructure { /* This is necessary to eliminate the 1px high object in
+                      the document flow in place of .hiddenStructure block objects */
+    position: absolute;
+}
+
+a.archives {
+    z-index: 2;
+}
+
+
+/* </dtml-with> */
+
