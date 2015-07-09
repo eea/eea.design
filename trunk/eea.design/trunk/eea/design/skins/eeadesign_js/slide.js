@@ -83,8 +83,8 @@
             }
         });
 
-        $("#portal-siteactions a").each(panel);
-        $("#portal-externalsites a").each(panel);
+        $("#portal-siteactions").find("a").each(panel);
+        $("#portal-externalsites").find("a").each(panel);
         $("#article-language").find('a').each(panel);
         $("#tip-externalsites-networks").find(".externalsites a").each(panel);
     });

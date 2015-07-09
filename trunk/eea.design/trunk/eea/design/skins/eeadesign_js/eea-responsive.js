@@ -1,15 +1,6 @@
 /* global jQuery, window, _ */
 jQuery(document).ready(function($) {
 
-    /* #27280 quickfix for templateService, insert search icons
-    in correct places, to remove after next production upgrade */
-    var $icon_search = $(".eea-icon-search");
-    var $icon_search_children = $icon_search.children();
-    if($icon_search_children.length) {
-        $("#search_advanced_link, #search_glossary_link").appendTo("#portal-searchbox");
-        $icon_search.find('input').appendTo("#searchbox_terminology");
-    }
-
     var doc = document.documentElement;
 
     var $logo = $("#portal-logo-link");
@@ -32,11 +23,17 @@ jQuery(document).ready(function($) {
     var lazyWindowResize = _.debounce(windowResize, 100);
 
     $(window).resize(lazyWindowResize);
-    if (window.outerHeight >= 600 && window.innerWidth > 767) {
-        return;
-    }
     var client_height = doc.clientHeight;
 
+    var mobile_desktop = false;
+    if (window.innerWidth < 768 && window.innerHeight > 768 ||
+        window.innerWidth > 768 && window.innerHeight < 768) {
+        mobile_desktop = true;
+    }
+    /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
+    if (window.outerHeight >= 600 && window.innerWidth > 767 && !mobile_desktop) {
+        return;
+    }
 
     var $nav_collapse = $("#bs-example-navbar-collapse-1");
     function setMaxHeight(client_height) {
@@ -47,11 +44,14 @@ jQuery(document).ready(function($) {
     $logo.prependTo($navbar_header);
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
     var $cross_site_top = $("#cross-site-top");
+    //var $cross_site_top_clone = $cross_site_top.clone();
+    //window.$cross_site_top_clone = $cross_site_top.clone();
     $("#portal-header").prependTo($("#portal-top"));
     $holder.prependTo($cross_site_top);
     $cross_site_top.insertBefore("#portaltab-abouteea");
 
-    $("#portal-externalsites, #portal-siteactions").each(function accordions(idx, el){
+    var $cross_site_top_panels = $("#portal-externalsites, #portal-siteactions");
+    function accordions(idx, el) {
         var $el = $(el);
         var lists = $el.find('li');
         lists.each(function(idx, el){
@@ -71,7 +71,8 @@ jQuery(document).ready(function($) {
             $acordion_panel.appendTo($holder);
         });
         $el.remove();
-    });
+    }
+    $cross_site_top_panels.each(accordions);
 
     var height = function() {
         // iPhone clientHeight matches better the document height while other

@@ -318,7 +318,10 @@
     width: 20%;
     margin-right: 0; }
     #visual-portal-wrapper .eea-tabs.eea-tabs-soer > li > a {
-      padding: 0.8em 1em 1em 0.8em; } }
+      padding: 0.8em 1em 1em 0.8em; }
+
+  .photoAlbumEntry {
+    width: 127px; } }
 @media (min-width: 768px) and (max-width: 1024px) {
   #portal-searchbox {
     margin: 25px 0.5em 0 0; } }
