@@ -5,7 +5,6 @@ from Acquisition import aq_parent, aq_base, aq_inner
 
 from Products.CMFCore.utils import _checkPermission
 from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.interfaces import IPloneSiteRoot
 from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.links import viewlets as links
@@ -13,9 +12,7 @@ from plone.app.layout.viewlets import common, content
 from plone.app.layout.viewlets.content import DocumentBylineViewlet as \
     BaseBelowContentTitleViewlet
 from zope.component import getMultiAdapter
-from zope.component import getUtility
 
-from eea.design.controlpanel.controlpanel import IRightsPrefsForm
 from eea.design.browser.interfaces import ISubFoldersListing
 
 from plone.memoize.instance import memoize
@@ -86,15 +83,48 @@ class DocumentBylineViewlet(content.DocumentBylineViewlet):
             authors.append(author)
         return authors
 
+    @property
+    def prefs_properties(self):
+        """ Return portal properties
+        """
+        properties = getToolByName(self.context, 'portal_properties')
+        return getattr(properties, 'site_properties')
+
+    def showPubDate(self):
+        """ Return True if context portal types it set to show publication date
+        """
+        context = aq_inner(self.context)
+        portal_type = getattr(context, 'portal_type', None)
+        return portal_type in self.prefs_properties.metatypes_showpubdate
+
+    def showModDate(self):
+        """ Return True if context portal types it set to show modification
+            date
+        """
+        context = aq_inner(self.context)
+        portal_type = getattr(context, 'portal_type', None)
+        return portal_type in self.prefs_properties.metatypes_showmoddate
+
+    def showCreDate(self):
+        """ Return True if context portal types it set to show creation date
+        """
+        context = aq_inner(self.context)
+        portal_type = getattr(context, 'portal_type', None)
+        return portal_type in self.prefs_properties.metatypes_showcredate
+
+    def labelBlacklist(self):
+        """ Return True if context portal types it set to label blaklist
+        """
+        context = aq_inner(self.context)
+        portal_type = getattr(context, 'portal_type', None)
+        return portal_type in self.prefs_properties.metatypes_labeling_blacklist
+
     def showRights(self):
         """ Return True if context portal types it set to show rights
         """
-        portal = getUtility(IPloneSiteRoot)
-        rights_prefs = IRightsPrefsForm(portal)
         context = aq_inner(self.context)
         portal_type = getattr(context, 'portal_type', None)
-        return portal_type in rights_prefs.allowed_types
-
+        return portal_type in self.prefs_properties.allowed_types_rights
 
 
 class FooterPortletsViewlet(common.ViewletBase):

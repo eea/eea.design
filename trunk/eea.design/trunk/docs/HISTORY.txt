@@ -3,6 +3,8 @@ Changelog
 
 12.3.dev0 - (unreleased)
 ------------------------
+* Cleanup: move metatypes_* properties into configlet
+  [lucas refs #26855]
 * Bug fix: added a space on the search icons in order to avoid having the
   spans as an inline tag which in some cases end up covering adjacent tags
   [ichimdav refs #27280]

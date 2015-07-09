@@ -6,12 +6,12 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="eea">
 
-    <adapter factory=".controlpanel.RightsControlPanelAdapter" />
+    <adapter factory=".controlpanel.DocumentByLineControlPanelAdapter" />
 
     <browser:page
-         name="eea-rights-controlpanel"
+         name="eea-documentbyline-controlpanel"
          for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-         class=".controlpanel.RightsPrefsForm"
+         class=".controlpanel.DocumentByLinePrefsForm"
          permission="cmf.ManagePortal"
     />
 

@@ -2,13 +2,13 @@
 <object name="portal_controlpanel"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n"
        i18n:domain="eea">
-  <configlet title="Portal types rights setting"
+  <configlet title="Document by line setting"
              action_id="EEARights"
              appId="eea.design"
              category="Products"
              conditional_expression=""
              icon_expr="string:${portal_url}/logoIcon.png"
-             url_expr="string:${portal_url}/@@eea-rights-controlpanel"
+             url_expr="string:${portal_url}/@@eea-documentbyline-controlpanel"
              visible="True"
              i18n:attributes="title">
     <permission>Manage portal</permission>

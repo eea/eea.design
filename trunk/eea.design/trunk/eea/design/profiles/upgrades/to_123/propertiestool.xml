@@ -1,8 +1,52 @@
 <?xml version="1.0"?>
 <object name="portal_properties" meta_type="Plone Properties Tool">
- <object name="rights_properties" meta_type="Plone Property Sheet">
-  <property name="title">Rights Properties</property>
-  <property name="allowed_types" type="lines" purge="False">
+ <object name="site_properties" meta_type="Plone Property Sheet">
+  <property name="metatypes_showpubdate" type="lines">
+   <element value="Data"/>
+   <element value="EEAFigure"/>
+   <element value="DavizVisualization"/>
+   <element value="Image"/>
+   <element value="CloudVideo"/>
+   <element value="Report"/>
+   <element value="Fiche"/>
+   <element value="Infographic"/>
+   <element value="Highlight"/>
+   <element value="PressRelease"/>
+   <element value="Article"/>
+   <element value="Speech"/>
+   <element value="Assessment"/>
+   <element value="Specification"/>
+  </property>
+  <property name="metatypes_showmoddate" type="lines">
+   <element value="Data"/>
+   <element value="EEAFigure"/>
+   <element value="DavizVisualization"/>
+   <element value="Image"/>
+   <element value="CloudVideo"/>
+   <element value="Fiche"/>
+   <element value="Infographic"/>
+   <element value="Document"/>
+   <element value="Highlight"/>
+   <element value="PressRelease"/>
+   <element value="Article"/>
+   <element value="Speech"/>
+   <element value="Assessment"/>
+   <element value="Specification"/>
+  </property>
+  <property name="metatypes_showcredate" type="lines">
+   <element value="Data"/>
+   <element value="EEAFigure"/>
+   <element value="DavizVisualization"/>
+   <element value="Report"/>
+   <element value="Assessment"/>
+   <element value="Specification"/>
+  </property>
+  <property name="metatypes_labeling_blacklist" type="lines">
+   <element value="Topic"/>
+   <element value="Collection"/>
+   <element value="Folder"/>
+  </property>
+  <property name="allowed_types_rights" type="lines">
     <element value="Image" />
   </property>
  </object>
