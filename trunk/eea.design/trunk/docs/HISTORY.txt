@@ -3,6 +3,8 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: Fixed document_byline for items without copyright info
+  [voineali refs #26848]
 
 12.3 - (2015-07-09)
 -------------------

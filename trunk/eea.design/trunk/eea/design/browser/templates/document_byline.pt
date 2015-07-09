@@ -109,8 +109,8 @@
             </div>
 
         </tal:loggedin>
-        <div tal:define="rights context/Rights;
-                         show_rights view/showRights"
+        <div tal:define="rights context/Rights|nothing;
+                         show_rights view/showRights|nothing"
              class="documentByLineRights" tal:condition="python: show_rights and rights">
             <div tal:replace="rights">
                 Copyleft NiceCorp Inc.
