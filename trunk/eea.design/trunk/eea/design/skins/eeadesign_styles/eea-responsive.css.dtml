@@ -59,7 +59,7 @@
 
   .featured img {
     max-width: 130px !important; } }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   #portal-personaltools-wrapper,
   .portal-logo,
   #siteaction-login {
@@ -251,7 +251,7 @@
 
   #viewlet-below-content .standalone {
     white-space: pre-wrap; } }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #visual-portal-wrapper {
     overflow: auto; }
 
@@ -283,10 +283,10 @@
 
   #portlet-followus dd {
     padding-right: 0.7em; } }
-@media screen and (width: 768px) {
+@media (width: 768px) {
   .right-column-area {
     width: 41%; } }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #header-holder .container-fluid {
     padding: 0; }
   #header-holder .navbar-header {
@@ -322,11 +322,11 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   #portal-searchbox {
     margin: 25px 0.5em 0 0; } }
-@media screen and (min-width: 961px) {
+@media (min-width: 961px) {
   #visual-portal-wrapper, #portal-header {
     min-width: 995px !important;
     max-width: 1024px !important; } }
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .frontpage #portal-columns,
   .frontpage #portal-column-content,
   .template-datamaps_view #portal-columns,
@@ -337,7 +337,7 @@
   .template-dc_view #portal-column-content,
   .template-facetednavigation_view #portal-columns,
   .template-facetednavigation_view #portal-column-content {
-    min-width: initial; }
+    min-width: inherit; }
 
   .frontpage #visual-portal-wrapper,
   .template-datamaps_view #visual-portal-wrapper,
