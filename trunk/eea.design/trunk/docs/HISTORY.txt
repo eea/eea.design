@@ -1,8 +1,8 @@
 Changelog
 =========
 
-12.3.dev0 - (unreleased)
-------------------------
+12.3 - (2015-07-09)
+-------------------
 * Cleanup: move metatypes_* properties into configlet
   [lucas refs #26855]
 * Bug fix: added a space on the search icons in order to avoid having the
@@ -12,7 +12,7 @@ Changelog
   [lucas refs #26855]
 * Upgrade step: add a configlet to select which content type must show copyright
   [lucas refs #26855]
-  
+
 12.2 - (2015-07-06)
 -------------------
 * Feature: header and footer is now responsive as well as the frontpage,
