@@ -199,6 +199,7 @@ body.frontpage #portal-columns {
 /* in featured boxes we do want floating for links and images */
 .featured h2, .featured h3 {
     clear: none !important;
+    margin: 0 0 1em 0;
 }
 
 /* style for shortcuts buttons */
