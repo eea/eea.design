@@ -148,8 +148,7 @@ body.frontpage #portal-columns {
 }
 
 .featured-highlight-title {
-    float: right;
-    width: 125px;
+    display: table-cell;
 }
 
 .featured-highlight-description  {
@@ -194,7 +193,7 @@ body.frontpage #portal-columns {
 .featured img {
     padding: 0 5px 5px 0;
     width: 100%;
-    max-width: 170px !important;
+    max-width: 150px !important;
 }
 
 /* in featured boxes we do want floating for links and images */
