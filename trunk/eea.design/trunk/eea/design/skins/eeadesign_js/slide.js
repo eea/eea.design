@@ -11,7 +11,6 @@
 
     $(document).ready(function() {
         if (window.innerWidth < 768 && !window.mobile_desktop_browser_resolution) {
-            console.log('fds');
             return;
         }
         function panel(i) {
