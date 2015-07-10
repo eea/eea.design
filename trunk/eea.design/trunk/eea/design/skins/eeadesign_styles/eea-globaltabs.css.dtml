@@ -28,7 +28,7 @@
 
 #portal-globalnav li {
     margin-bottom: 0;
-    float: none;
+    float: left;
     text-align: center;
     height: 100%;
     display: inline-block;

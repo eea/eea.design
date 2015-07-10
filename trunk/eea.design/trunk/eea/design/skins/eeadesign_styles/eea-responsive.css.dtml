@@ -76,6 +76,9 @@
   #header-holder .navbar-toggle {
     margin-top: 1em; }
 
+  #cross-site-top {
+    display: none; }
+
   #portal-top {
     margin-top: 1.3em;
     background-color: transparent; }
@@ -97,10 +100,13 @@
       padding-top: 0;
       font-weight: normal; }
 
-  #cross-site-top .portlet {
+  #secondary-portaltabs .portlet {
     margin-bottom: 0;
     padding: 0; }
-  #cross-site-top .pane, #cross-site-top .portlet {
+    #secondary-portaltabs .portlet dt, #secondary-portaltabs .portlet ul {
+      margin: 0;
+      padding: 0; }
+  #secondary-portaltabs .pane, #secondary-portaltabs .portlet {
     background-color: #FFF; }
 
   #portaltab-europe {
@@ -152,11 +158,15 @@
   #portal-externalsites li, #portal-siteactions li,
   #portal-globalnav li {
     display: block;
-    text-align: left; }
+    text-align: left;
+    float: none; }
 
   #portal-header {
     height: 100%;
     margin-bottom: 1em; }
+
+  #portal-logo-link {
+    display: none; }
 
   /* site logo height differences set for each language in order to fit the bootstrap navbar */
   .site-cs #printLogo,
@@ -293,6 +303,10 @@
     float: none; }
   #header-holder .navbar-fixed-top {
     position: relative; }
+
+  #secondary-portaltabs .eea-accordion-panels,
+  #portal-logo-link-header {
+    display: none; }
 
   /* move the search icon inside the input of the searchfield */
   #portal-searchbox .searchField {
