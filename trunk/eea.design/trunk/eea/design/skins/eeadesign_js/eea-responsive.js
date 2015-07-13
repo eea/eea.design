@@ -95,19 +95,9 @@ jQuery(document).ready(function($) {
         }
     }, 500));
 
-    $(window).trigger('resize');
 
-    var $faceted_left_column = $("#faceted-left-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
-    var $faceted_right_column = $("#faceted-right-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
-    $faceted_left_column.find(".faceted-widget").add($faceted_right_column.find(".faceted-widget")).each(function(idx, el){
-        var $el = $(el);
-        $el.addClass('eea-accordion-panel');
-        var $children = $el.wrapInner("<div class='pane' />");
-        var $legend = $children.find("legend");
-        var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-icon-right-container"});
-        $h2.prependTo($el);
-        $legend.remove();
-    });
+
+    $(window).trigger('resize');
 
     // insert the logo also on the navbar for the bootstrap menu
     // this ensures that switching from portrait to landscape is without any flash since
@@ -127,6 +117,17 @@ jQuery(document).ready(function($) {
         return;
     }
 
+    var $faceted_left_column = $("#faceted-left-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
+    var $faceted_right_column = $("#faceted-right-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
+    $faceted_left_column.find(".faceted-widget").add($faceted_right_column.find(".faceted-widget")).each(function(idx, el){
+        var $el = $(el);
+        $el.addClass('eea-accordion-panel');
+        var $children = $el.wrapInner("<div class='pane' />");
+        var $legend = $children.find("legend");
+        var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-icon-right-container"});
+        $h2.prependTo($el);
+        $legend.remove();
+    });
 
     // adjust navigation height when switching between orientation modes
     var $nav_collapse = $("#bs-example-navbar-collapse-1");
