@@ -36,9 +36,9 @@ jQuery(document).ready(function($) {
                 $result.prependTo($panel);
             });
             tab.addClass('tabbing-hide');
-            if (typeof window.EEA.eea_accordion !== "undefined"){
-                window.EEA.eea_accordion();
-            }
+                if (typeof window.EEA.eea_accordion !== "undefined"){
+                    window.EEA.eea_accordion(tabs_panel);
+                }
         }
     }
 
@@ -85,13 +85,14 @@ jQuery(document).ready(function($) {
             make_toaccordion($('.tabbedmenu ul'), $('.tabbedmenu-panel'));
             make_toaccordion($('.eea-tabs-arrows'), $('.eea-tabs-panels-arrows'));
         } else {
-            make_totabs();
+            //make_totabs();
         }
     }, 500));
 
-
-
     $(window).trigger('resize');
+
+    // DAVIZ responsive
+
 
     // insert the logo also on the navbar for the bootstrap menu
     // this ensures that switching from portrait to landscape is without any flash since
@@ -119,7 +120,7 @@ jQuery(document).ready(function($) {
         var $children = $el.wrapInner("<div class='pane' />");
         var $legend = $children.find("legend");
         var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-icon-right-container"});
-        $h2.prependTo($el);
+        $h2.prependTo($children);
         $legend.remove();
     });
 
