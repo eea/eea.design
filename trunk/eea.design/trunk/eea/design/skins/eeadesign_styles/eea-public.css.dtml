@@ -119,7 +119,7 @@ img.image-right,
 
 
 /* @group Related portlets EEA Specific */
-#related-pages, #related-multimedia, #auto-related, 
+#related-pages, #related-multimedia, #auto-related,
 #related-pages dl, #related-multimedia dl, #auto-related dl {
   clear: both;
 }
@@ -181,5 +181,10 @@ form[name="users_search"] input.context {
 div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
+
+.tabbing-hide {
+    display: none !important;
+}
+
 /* @end previously in public.css not found in stock plone */
 /* </dtml-with> */

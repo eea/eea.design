@@ -215,14 +215,14 @@ developers, UX/UI experts.
         ">
     </pre>
 
-    <h3 i18n:translate="">SOER TAB</h3>
-    <ul class="eea-tabs eea-tabs-soer" style="display: block;">
+    <h3 i18n:translate="">Arrows TAB</h3>
+    <ul class="eea-tabs eea-tabs-arrows" style="display: block;">
         <li><a id="tab-synthesis-report" href="#tab-synthesis-report"><span class="eea-icon eea-icon-clipboard eea-icon-2x"></span>TAB 1</a></li>
         <li><a id="tab-global-megatrends" href="#tab-global-megatrends"><span class="eea-icon eea-icon-globe eea-icon-2x"></span>TAB 2</a></li>
         <li><a id="tab-thematic-briefing" href="#tab-thematic-briefing"><span class="eea-icon eea-icon-leaf eea-icon-2x"></span>TAB 3</a></li>
         <li><a id="tab-cross-country-comparisons" href="#tab-cross-country-comparisons"><span class="eea-icon eea-icon-bar-chart-o eea-icon-2x"></span>TAB 4</a></li>
     </ul>
-    <div class="eea-tabs-panels eea-tabs-panels-soer">
+    <div class="eea-tabs-panels eea-tabs-panels-arrows">
         <div class="eea-tabs-panel">
             <p>The synthesis report informs future European environmental policy in general and its implementation between 2015 and 2020 in particular. It includes a reflection on the European environment in a global context, as well as chapters summarising the state of, trends in, and prospects for the environment in Europe.</p>
         </div>
@@ -237,12 +237,12 @@ developers, UX/UI experts.
         </div>
     </div>
     <pre tal:content="string:
-        &lt;ul class=&quot;eea-tabs eea-tabs-soer&quot;&gt;
+        &lt;ul class=&quot;eea-tabs eea-tabs-arrows&quot;&gt;
             &lt;li&gt;&lt;span class=&quot;eea-icon eea-icon-clipboard eea-icon-2x&quot;&gt;&lt;/&gt;First tab&lt;/li&gt;
             &lt;li&gt;&lt;span class=&quot;eea-icon eea-icon-globe eea-icon-2x&quot;&gt;&lt;/&gt;Second tab&lt;/li&gt;
             &lt;li&gt;&lt;span class=&quot;eea-icon eea-icon-leaf eea-icon-2x&quot;&gt;&lt;/&gt;Third tab&lt;/li&gt;
         &lt;/ul&gt;
-        &lt;div class=&quot;eea-tabs-panels eea-tabs-panels-soer&quot;&gt;
+        &lt;div class=&quot;eea-tabs-panels eea-tabs-panels-arrows&quot;&gt;
 
             &lt;div class=&quot;eea-tabs-panel&quot;&gt;
                 Content for first tab

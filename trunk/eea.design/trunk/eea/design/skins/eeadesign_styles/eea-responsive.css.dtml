@@ -270,6 +270,18 @@
   #visual-portal-wrapper {
     overflow: auto; }
 
+  #portal-columns {
+    min-width: 100% !important;
+}
+
+  #portal-column-content  {
+    float: none;
+    left: 0;
+    margin: 0 1%;
+    min-width: 98% !important;
+    width: 98% !important;
+}
+
   .navbar-collapse {
     width: 100%; }
 
@@ -322,9 +334,7 @@
 
   .navbar-toggle {
     display: none; }
-
-  .tabbing-hide {
-    display: none !important; } }
+ }
 @media (min-width: 768px) and (max-width: 800px) {
   #portaltab-europe {
     padding-right: 95px;
