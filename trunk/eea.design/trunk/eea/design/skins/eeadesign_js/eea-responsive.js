@@ -2,10 +2,96 @@
 jQuery(document).ready(function($) {
     var doc = document.documentElement;
 
+    function escapeRegExp(string) {
+        return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    }
+
+    function replaceAll(string, find, replace) {
+        return string.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    }
+
+    function make_toaccordion(tab, tabs_panel){
+        var css = tabs_panel.attr('class');
+        if (css){
+            css = replaceAll(css, 'eea-tabs-panels', 'eea-accordion-panels');
+            css = replaceAll(css, 'tabbedmenu-panel', 'eea-accordion-panels tabbed-accordion-menu');
+            tabs_panel.attr('class', css);
+        }
+        tabs_panel.addClass('collapsed-by-default eea-tabs-transformed');
+        var $tabs_panels = tabs_panel.find('.eea-tabs-panel');
+
+        var $tabs_tabs = tab.find('li');
+        $tabs_tabs.each(function(idx, el){
+            var $panel = $tabs_panels.eq(idx);
+            var $el  = $(el);
+            var link = $el.find('a')[0];
+            $panel.attr('class', 'eea-accordion-panel').show();
+            $panel.wrapInner("<div class='pane' />");
+            var $result = $("<h2 />", {
+                'class': (link && $(link).hasClass('current')) ? 'accordion-header-tab current' : 'accordion-header-tab',
+                id: link ? link.id : '',
+                html: el.innerHTML});
+            $result.append('<span class="eea-icon eea-icon-right"></span>');
+            $result.prependTo($panel);
+        });
+        tab.addClass('tabbing-hide');
+        if (typeof window.EEA.eea_accordion !== "undefined"){
+            window.EEA.eea_accordion();
+        }
+    }
+
+    function make_totabs(){
+        var $tabs_accordion = $(".eea-tabs-transformed");
+        if ($tabs_accordion.length > 0){
+            $tabs_accordion.each(function(idx, item){
+                var $item = $(item);
+                var css = $item.attr('class');
+                if (css){
+                    css = replaceAll(css, 'eea-accordion-panels tabbed-accordion-menu', 'tabbedmenu-panel');
+                    css = replaceAll(css, 'eea-accordion-panels', 'eea-tabs-panels');
+                    $item.attr('class', css);
+                }
+                $item.removeClass('collapsed-by-default eea-tabs-transformed');
+                var $tabs_accordions = $(item).find('.eea-accordion-panel');
+
+                $tabs_accordions.each(function(idx, panel){
+                    var $panel  = $(panel);
+                    $panel.attr('class', 'eea-tabs-panel');
+                    if($('h2.current', $panel).length){
+                        $panel.show();
+                    } else{
+                        $panel.hide();
+                    }
+                    $panel.html($('div.pane', $panel).html());
+                });
+            });
+            $(".tabbing-hide").removeClass('tabbing-hide');
+        }
+    }
+
+    var $buttonnavbar = $('button.navbar-toggle');
+    var $notransform = $('.eea-tabs-panels-soer, #whatsnew-gallery');
+    $(window).resize(_.debounce(function() {
+        if ($buttonnavbar.css('display') != 'none'){
+            var $tabs_panel = $(".eea-tabs-panels").not($notransform);
+            if ($tabs_panel.length > 0){
+                $tabs_panel.each(function(idx, tab_panel){
+                    var $tab_panel  = $(tab_panel);
+                    make_toaccordion($tab_panel.prev('.eea-tabs'), $tab_panel);
+                });
+            }
+            make_toaccordion($('.tabbedmenu ul'), $('.tabbedmenu-panel'));
+            make_toaccordion($('.eea-tabs-soer'), $('.eea-tabs-panels-soer'));
+        } else {
+            make_totabs();
+        }
+    }, 500));
+
+    $(window).trigger('resize');
+
     var $faceted_left_column = $("#faceted-left-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
     var $faceted_right_column = $("#faceted-right-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
-
-        $faceted_left_column.find(".faceted-widget").add($faceted_right_column.find(".faceted-widget")).each(function(idx, el){
+    $faceted_left_column.find(".faceted-widget").add($faceted_right_column.find(".faceted-widget")).each(function(idx, el){
         var $el = $(el);
         $el.addClass('eea-accordion-panel');
         var $children = $el.wrapInner("<div class='pane' />");
@@ -72,14 +158,14 @@ jQuery(document).ready(function($) {
         var lists = $el.find('li');
         lists.each(function(idx, el){
             var $acordion_panel = $("<div  />",
-                {id: el.id, class: 'eea-accordion-panel'});
+                {id: el.id, 'class': 'eea-accordion-panel'});
             var $el = $(el);
             var $old_panel = $("#tip-" + el.id);
             var $panel = $("<div />", {
-                class: 'pane',
+                'class': 'pane',
                 html: $old_panel.find('.panel-content').html()});
             var $result = $("<h2 />", {
-                class: 'eea-icon-right-container',
+                'class': 'eea-icon-right-container',
                 html: $el.find('a').text()});
             $result.appendTo($acordion_panel);
             $panel.appendTo($acordion_panel);
@@ -90,6 +176,7 @@ jQuery(document).ready(function($) {
 
 
     // make accordion-panels out of soer2015 tabs
+    /*
     var $soer_panel = $(".eea-tabs-panels-soer");
     $soer_panel.attr('class', 'eea-accordion-panels eea-accordion-panels-soer collapsed-by-default non-exclusive');
     var $soer_panels = $soer_panel.find('.eea-tabs-panel');
@@ -108,7 +195,7 @@ jQuery(document).ready(function($) {
         $result.prependTo($panel);
     });
     $soer_tab.remove();
-
+    */
 
     // #26378 hide and show navbar on scroll up and down
     var lastScrollTop = 0;

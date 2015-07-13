@@ -1,6 +1,15 @@
 /* Footer.css responsive styles */
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+@media (min-width: 768px) {
+.navbar-toggle {
+    display: none;
+}
+}
+
+.tabbing-hide{ display: none !important; }
+
 @media (max-width: 320px) {
   .eea-accordion-panels table {
     font-size: 0.7em; }
