@@ -256,6 +256,10 @@
   .left-area-js {
     margin-left: 0; }
 
+  #faceted-form .eea-accordion-panel {
+    margin: 0;
+    padding-bottom: 0; }
+
   #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {
     display: none; }
 
