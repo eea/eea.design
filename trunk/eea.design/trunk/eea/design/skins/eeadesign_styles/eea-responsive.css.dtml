@@ -1,15 +1,6 @@
 /* Footer.css responsive styles */
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
-
-@media (min-width: 768px) {
-.navbar-toggle {
-    display: none;
-}
-}
-
-.tabbing-hide{ display: none !important; }
-
 @media (max-width: 320px) {
   .eea-accordion-panels table {
     font-size: 0.7em; }
@@ -267,7 +258,8 @@
 
   #faceted-form .eea-accordion-panel {
     margin: 0;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    background-color: #FFF; }
 
   #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {
     display: none; }
@@ -326,7 +318,13 @@
     border: 1px solid gray;
     padding-left: 2em; }
   #portal-searchbox .eea-icon {
-    margin-right: -2em; } }
+    margin-right: -2em; }
+
+  .navbar-toggle {
+    display: none; }
+
+  .tabbing-hide {
+    display: none !important; } }
 @media (min-width: 768px) and (max-width: 800px) {
   #portaltab-europe {
     padding-right: 95px;

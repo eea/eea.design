@@ -12,13 +12,6 @@ jQuery(document).ready(function($) {
       ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
     }
 
-    // #16878 move last two links of globalnav to a secondary container
-    // #23500 we now have an extra list item (europe)
-    var $secondary_portaltabs = $("<ul id='secondary-portaltabs'></ul>"),
-        global_nav = $('#portal-globalnav'),
-        global_nav_children = global_nav.children(),
-        $secondary_nav_items = global_nav_children.slice(global_nav_children.length - 3);
-    $secondary_nav_items.wrapAll($secondary_portaltabs);
 
     // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
     $('.eea-tabs').find('li:last-child').addClass('last-child');

@@ -2,6 +2,14 @@
 jQuery(document).ready(function($) {
     var doc = document.documentElement;
 
+    // #16878 move last two links of globalnav to a secondary container
+    // #23500 we now have an extra list item (europe)
+    var $secondary_portaltabs = $("<ul id='secondary-portaltabs'></ul>"),
+        global_nav = $('#portal-globalnav'),
+        global_nav_children = global_nav.children(),
+        $secondary_nav_items = global_nav_children.slice(global_nav_children.length - 3);
+    $secondary_nav_items.wrapAll($secondary_portaltabs);
+
     function escapeRegExp(string) {
         return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
     }
@@ -191,6 +199,7 @@ jQuery(document).ready(function($) {
         $panel.wrapInner("<div class='pane' />");
         var $result = $("<h2 />", {
             class: 'eea-icon-right-container',
+            id: link ? link.id : '',
             html: link.innerHTML});
         $result.prependTo($panel);
     });
