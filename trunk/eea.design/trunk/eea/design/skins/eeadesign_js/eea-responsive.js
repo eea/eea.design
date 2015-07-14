@@ -1,6 +1,13 @@
 /* global jQuery, window, _ */
 jQuery(document).ready(function($) {
     var doc = document.documentElement;
+ // #16878 move last two links of globalnav to a secondary container
+    // #23500 we now have an extra list item (europe)
+    var $secondary_portaltabs = $("<ul id='secondary-portaltabs'></ul>"),
+        global_nav = $('#portal-globalnav'),
+        global_nav_children = global_nav.children(),
+        $secondary_nav_items = global_nav_children.slice(global_nav_children.length - 3);
+    $secondary_nav_items.wrapAll($secondary_portaltabs);
 
     function escapeRegExp(string) {
         return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
@@ -74,7 +81,7 @@ jQuery(document).ready(function($) {
     var $buttonnavbar = $('button.navbar-toggle');
     var $notransform = $('.eea-tabs-panels-arrows, .eea-tabs-panels-soer, #whatsnew-gallery');
     $(window).resize(_.debounce(function() {
-        if ($buttonnavbar.css('display') != 'none'){
+        if ($buttonnavbar.css('display') !== 'none'){
             var $tabs_panel = $(".eea-tabs-panels").not($notransform);
             if ($tabs_panel.length > 0){
                 $tabs_panel.each(function(idx, tab_panel){
@@ -84,12 +91,14 @@ jQuery(document).ready(function($) {
             }
             make_toaccordion($('.tabbedmenu ul'), $('.tabbedmenu-panel'));
             make_toaccordion($('.eea-tabs-arrows'), $('.eea-tabs-panels-arrows'));
-        } else {
+        }
+        else {
             make_totabs();
         }
     }, 500));
 
     $(window).trigger('resize');
+
 
     // insert the logo also on the navbar for the bootstrap menu
     // this ensures that switching from portrait to landscape is without any flash since
@@ -109,17 +118,41 @@ jQuery(document).ready(function($) {
         return;
     }
 
+    // make accordions out of the left and right areas of faceted navigation pages
     var $faceted_left_column = $("#faceted-left-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
     var $faceted_right_column = $("#faceted-right-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
-    $faceted_left_column.find(".faceted-widget").add($faceted_right_column.find(".faceted-widget")).each(function(idx, el){
+    $faceted_left_column.find(".faceted-widget").appendTo($faceted_right_column);
+    $faceted_right_column.find(".faceted-widget").each(function(idx, el){
         var $el = $(el);
         $el.addClass('eea-accordion-panel');
         var $children = $el.wrapInner("<div class='pane' />");
         var $legend = $children.find("legend");
-        var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-icon-right-container"});
-        $h2.prependTo($children);
+        var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-accordion-title eea-icon-right-container"});
+        $h2.prependTo($el);
         $legend.remove();
     });
+
+
+    // WIP code for faceted navigation
+    window.setTimeout(function(){
+       $(".eea-icon-caret-left").removeClass("animated");
+    }, 5000);
+
+    var $slide_right = $('<div class="eea-slide-left eea-transition-all"><span class="eea-icon eea-icon-4x eea-icon-caret-left eea-icon-anim-horizontal animated"></span></div>');
+    $slide_right.insertBefore("#right-area");
+    $slide_right.insertBefore("#portal-column-two");
+    $slide_right.click(function(){
+        $(this).toggleClass("eea-active-left-button")
+               .next().toggleClass("eea-active-left");
+    });
+
+    $("<a href='#' class='pull-right eea-faceted-filter' style='margin-right: 4em;'>Filter »</a>").appendTo(".faceted-text-widget");
+    $(".eea-faceted-filter").click(function(e){
+        e.preventDefault();
+       $slide_right.click();
+    });
+    // END WIP code for faceted navigation
+
 
     // adjust navigation height when switching between orientation modes
     var $nav_collapse = $("#bs-example-navbar-collapse-1");
@@ -191,6 +224,7 @@ jQuery(document).ready(function($) {
         $panel.wrapInner("<div class='pane' />");
         var $result = $("<h2 />", {
             class: 'eea-icon-right-container',
+            id: link.id,
             html: link.innerHTML});
         $result.prependTo($panel);
     });
@@ -219,7 +253,7 @@ jQuery(document).ready(function($) {
         lastScrollTop = st;
     }
 
-    var lazyNavScroll = _.debounce(navScroll, 100);
+    var lazyNavScroll = _.debounce(navScroll, 10);
     $(window).scroll(lazyNavScroll);
 
 });

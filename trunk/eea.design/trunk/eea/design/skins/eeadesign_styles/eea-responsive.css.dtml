@@ -245,7 +245,7 @@
   #promo-gallery-content-sm li img {
     width: 100%; }
 
-  /* FACETED NAVIGATION */
+  /*** SECTION FACETED NAVIGATION ****/
   #right-area, #left-area {
     float: none;
     width: 100%; }
@@ -261,6 +261,57 @@
     padding-bottom: 0;
     background-color: #FFF; }
 
+  #right-area {
+    width: 97%;
+    position: fixed;
+    -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    right: 100%;
+    top: 0;
+    overflow: auto;
+    z-index: 1000;
+    height: 100%;
+    background-color: #006699; }
+    #right-area .eea-accordion-panels {
+      margin-top: 65px;
+      overflow: auto;
+      border: 0; }
+    #right-area .eea-accordion-title {
+      background-color: #006699;
+      color: #FFF;
+      border: 0;
+      border-bottom: 1px solid gray; }
+    #right-area .eea-accordion-title.current {
+      background-color: #0077b3; }
+
+  #right-area {
+    right: inherit;
+    left: 100%; }
+
+  .eea-slide-left {
+    position: fixed;
+    top: 50%;
+    display: table;
+    right: 0; }
+
+  .eea-slide-left .eea-icon:before {
+    margin: 0;
+    color: #006699; }
+
+  .eea-transition-all {
+    -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out; }
+
+  .eea-active-left {
+    left: 3% !important; }
+
+  .eea-active-left-button {
+    right: 96%;
+    z-index: 1000; }
+
+  /*** END SECTION FACETED NAVIGATION ****/
   #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {
     display: none; }
 
@@ -271,16 +322,14 @@
     overflow: auto; }
 
   #portal-columns {
-    min-width: 100% !important;
-}
+    min-width: 100% !important; }
 
-  #portal-column-content  {
+  #portal-column-content {
     float: none;
     left: 0;
     margin: 0 1%;
     min-width: 98% !important;
-    width: 98% !important;
-}
+    width: 98% !important; }
 
   .navbar-collapse {
     width: 100%; }
@@ -333,8 +382,7 @@
     margin-right: -2em; }
 
   .navbar-toggle {
-    display: none; }
- }
+    display: none; } }
 @media (min-width: 768px) and (max-width: 800px) {
   #portaltab-europe {
     padding-right: 95px;
