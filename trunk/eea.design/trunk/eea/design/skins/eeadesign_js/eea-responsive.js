@@ -85,7 +85,7 @@ jQuery(document).ready(function($) {
             make_toaccordion($('.tabbedmenu ul'), $('.tabbedmenu-panel'));
             make_toaccordion($('.eea-tabs-arrows'), $('.eea-tabs-panels-arrows'));
         } else {
-            //make_totabs();
+            make_totabs();
         }
     }, 500));
 
