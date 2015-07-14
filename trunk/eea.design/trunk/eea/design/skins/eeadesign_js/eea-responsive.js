@@ -91,9 +91,6 @@ jQuery(document).ready(function($) {
 
     $(window).trigger('resize');
 
-    // DAVIZ responsive
-
-
     // insert the logo also on the navbar for the bootstrap menu
     // this ensures that switching from portrait to landscape is without any flash since
     // we can show and hide with css
