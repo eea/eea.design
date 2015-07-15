@@ -182,9 +182,5 @@ div.managePortletsLink, a.managePortletsFallback {
     background: transparent;
 }
 
-.tabbing-hide {
-    display: none !important;
-}
-
 /* @end previously in public.css not found in stock plone */
 /* </dtml-with> */
