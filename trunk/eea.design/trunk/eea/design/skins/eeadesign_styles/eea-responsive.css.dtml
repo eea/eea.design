@@ -65,9 +65,6 @@
   #siteaction-login {
     display: none !important; }
 
-  navbar-collapse.in {
-    overflow-y: visible; }
-
   #header-holder .navbar-default {
     background-color: #FFF;
     will-change: transform; }
@@ -141,9 +138,7 @@
 
   #chooselang li {
     display: list-item;
-    list-style-image: url("/www/bullet.gif");
-    list-style-type: square;
-    list-style-position: inside; }
+    list-style: square inside url("/www/bullet.gif"); }
 
   #portal-externalsites a, #portal-siteactions a {
     display: block;
@@ -233,7 +228,7 @@
   .right-column-area {
     float: none;
     width: 100%;
-    padding: 0 0em 1em 0; }
+    padding: 0 0 1em 0; }
 
   #articles-area {
     margin-top: 2em;
@@ -248,7 +243,8 @@
   /*** SECTION FACETED NAVIGATION ****/
   #right-area, #left-area {
     float: none;
-    width: 100%; }
+    width: 100%;
+    overflow: auto; }
 
   .right-area-js {
     margin-right: 0; }
@@ -261,53 +257,54 @@
     padding-bottom: 0;
     background-color: #FFF; }
 
-  #right-area {
-    width: 97%;
-    position: fixed;
+  .eea-faceted-filter {
+    margin-right: 4em; }
+
+  .eea-section {
     -webkit-transition: all .25s ease-out;
     -o-transition: all .25s ease-out;
     transition: all .25s ease-out;
+    left: 100%;
+    right: inherit; }
+    .eea-section .eea-accordion-panels {
+      margin-top: 65px;
+      overflow: auto;
+      border: 0; }
+    .eea-section .eea-accordion-title {
+      background-color: #006699;
+      color: #FFF;
+      border: 0;
+      border-bottom: 1px solid gray; }
+      .eea-section .eea-accordion-title:hover {
+        background-color: #006699; }
+    .eea-section .eea-accordion-title.current {
+      background-color: #0077b3; }
+
+  .eea-right-section-active {
+    left: 3% !important; }
+
+  .eea-right-section {
+    width: 97% !important;
+    position: fixed;
     right: 100%;
     top: 0;
     overflow: auto;
     z-index: 1000;
     height: 100%;
     background-color: #006699; }
-    #right-area .eea-accordion-panels {
-      margin-top: 65px;
-      overflow: auto;
-      border: 0; }
-    #right-area .eea-accordion-title {
-      background-color: #006699;
-      color: #FFF;
-      border: 0;
-      border-bottom: 1px solid gray; }
-    #right-area .eea-accordion-title.current {
-      background-color: #0077b3; }
 
-  #right-area {
-    right: inherit;
-    left: 100%; }
-
-  .eea-slide-left {
+  .eea-right-section-slider {
     position: fixed;
     top: 50%;
     display: table;
-    right: 0; }
+    right: 0;
+    left: inherit;
+    z-index: 1000; }
+    .eea-right-section-slider .eea-icon:before {
+      margin: 0;
+      color: #006699; }
 
-  .eea-slide-left .eea-icon:before {
-    margin: 0;
-    color: #006699; }
-
-  .eea-transition-all {
-    -webkit-transition: all .25s ease-out;
-    -o-transition: all .25s ease-out;
-    transition: all .25s ease-out; }
-
-  .eea-active-left {
-    left: 3% !important; }
-
-  .eea-active-left-button {
+  .eea-right-section-slider-active {
     right: 96%;
     z-index: 1000; }
 

@@ -13,7 +13,7 @@
         if (window.innerWidth < 768 && !window.mobile_desktop_browser_resolution) {
             return;
         }
-        function panel(i) {
+        function panel() {
             var a = $(this);
             var buttonID = a.parent().attr('id');
             var tooltip = $('#tip-' + buttonID);
@@ -26,14 +26,15 @@
             var article_lang = buttonID === "article-language";
             var networks_panel = buttonID === "externalsites-networks";
 
+            var fordef;
             if (tooltip.length > 0) {
-                a.attr("title","").attr("href", "#");
+                a.attr("title", "").attr("href", "#");
 
                 fordef = 'click, blur';
                 a.tooltip({
                     tip: tooltip[0],
                     position: 'bottom center',
-                    offset: [0,0],
+                    offset: [0, 0],
                     delay: 10000000,
                     events: {
                         def: fordef
@@ -44,26 +45,26 @@
                     ev.preventDefault();
 
                     var parents = $('#cross-site-top, #content'),
-                    panels = parents.find('.panel');
-                    panels.each(function(){
+                        panels = parents.find('.panel');
+                    panels.each(function() {
                         var $this = $(this);
                         var $id = $this.attr('id');
-                        if ( $id !== "" && $id !== tooltip.attr('id')){
+                        if ($id !== "" && $id !== tooltip.attr('id')) {
                             $this.fadeOut('fast');
                         }
                     });
 
-                    if(article_lang) {
+                    if (article_lang) {
                         $("#tip-article-language").css({
                             position: 'absolute',
                             top: '48px',
                             display: 'block',
-                            right : '0px',
+                            right: '0px',
                             left: ''
                         });
                     }
 
-                    if(networks_panel) {
+                    if (networks_panel) {
                         $("#tip-externalsites-networks").css('margin-left', '2em');
                     }
 

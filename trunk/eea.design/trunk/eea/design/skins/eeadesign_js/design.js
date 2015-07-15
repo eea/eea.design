@@ -239,5 +239,27 @@ jQuery(document).ready(function($) {
         window.createCookie('survey_message', 'never', 365);
     }
 
+    /* #27214 generic panel slider functionality */
+    var $right_section_container = $(".eea-right-section");
+    if ($right_section_container.length) {
+        (function insert_section(){
+            $right_section_container.each(function(idx, el){
+                // insert the slider button in case we are missing it if we want
+                // to keep the needed markup as small as possible
+                var $el = $(el), $right_section_slider = $el.prev();
+                 if (!$right_section_slider.hasClass('eea-right-section-slider')) {
+                    $right_section_slider = $('<div class="eea-section eea-right-section-slider eea-scrolling-toggle-visibility"><span class="eea-icon eea-icon-4x eea-icon-caret-left eea-icon-anim-horizontal animated"></span></div>');
+                     $right_section_slider.insertBefore($el);
+                 }
+                $right_section_slider.click(function(){
+                    $(this).toggleClass("eea-right-section-slider-active")
+                        .next().toggleClass("eea-right-section-active eea-scrolling-keep-visible");
+                });
+
+            });
+        })();
+
+    }
+
 
 });

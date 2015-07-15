@@ -1,4 +1,4 @@
-/* global jQuery, window, _ */
+/* global jQuery, window, _, document */
 jQuery(document).ready(function($) {
     var doc = document.documentElement;
  // #16878 move last two links of globalnav to a secondary container
@@ -138,18 +138,13 @@ jQuery(document).ready(function($) {
        $(".eea-icon-caret-left").removeClass("animated");
     }, 5000);
 
-    var $slide_right = $('<div class="eea-slide-left eea-transition-all"><span class="eea-icon eea-icon-4x eea-icon-caret-left eea-icon-anim-horizontal animated"></span></div>');
-    $slide_right.insertBefore("#right-area");
-    $slide_right.insertBefore("#portal-column-two");
-    $slide_right.click(function(){
-        $(this).toggleClass("eea-active-left-button")
-               .next().toggleClass("eea-active-left");
-    });
 
-    $("<a href='#' class='pull-right eea-faceted-filter' style='margin-right: 4em;'>Filter »</a>").appendTo(".faceted-text-widget");
+    var $right_area = $("#right-area").addClass("eea-section eea-right-section");
+
+    $("<a href='#' class='pull-right eea-faceted-filter'>Filter »</a>").appendTo(".faceted-text-widget");
     $(".eea-faceted-filter").click(function(e){
         e.preventDefault();
-       $slide_right.click();
+       $right_area.prev().click();
     });
     // END WIP code for faceted navigation
 
@@ -230,30 +225,46 @@ jQuery(document).ready(function($) {
     });
     $soer_tab.remove();
 
-    // #26378 hide and show navbar on scroll up and down
+    // #26378 hide and show eea-scrolling-toggle-visibility when scrolling up or down
     var lastScrollTop = 0;
     var $header_holder = $("#header-holder");
-    var navbar = $header_holder.find('.navbar')[0];
-    var navbar_content = $header_holder.find(".navbar-collapse")[0];
+    var $navbar = $header_holder.find('.navbar');
+    $navbar.addClass("eea-scrolling-toggle-visibility");
 
+    var navbar_content = $header_holder.find(".navbar-collapse")[0];
     function navScroll() {
+        // faceted loading trigger a window scroll as such we need to
+        // wait for it to finish before checking for the scroll event
+        var faceted = document.querySelectorAll('.faceted-results')[0];
+        if (faceted && faceted.style.opacity) {
+            return;
+        }
+        var $keep_visible = $(".eea-scrolling-keep-visible");
+        var $items = $(".eea-scrolling-toggle-visibility");
         var st = $(this).scrollTop();
-        var def_class = "navbar navbar-default navbar-fixed-top";
+        //var def_class = "navbar navbar-default navbar-fixed-top";
         if (st > lastScrollTop){
             // downscroll code
-            if (navbar.className.indexOf("navbar-hidden") === -1  && navbar_content.className.indexOf("in") === -1) {
-                navbar.className = "navbar navbar-default navbar-fixed-top navbar-hidden";
-            }
+            $items.each(function(idx, el){
+                if (el.className.indexOf("is-eea-hidden") === -1 &&
+                    navbar_content.className.indexOf("in") === -1) {
+                    if (!$keep_visible.length) {
+                        el.className += " is-eea-hidden";
+                    }
+                }
+            });
         } else {
             // upscroll code
-            if (navbar.className !== def_class) {
-                navbar.className = def_class;
-            }
+            $items.each(function(idx, el){
+                if (el.className.indexOf('is-eea-hidden') !== -1) {
+                    el.className = el.className.substr(0, el.className.length - 14);
+                }
+            });
         }
         lastScrollTop = st;
     }
 
-    var lazyNavScroll = _.debounce(navScroll, 10);
+    var lazyNavScroll = _.throttle(navScroll, 10);
     $(window).scroll(lazyNavScroll);
 
 });

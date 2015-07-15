@@ -1144,12 +1144,13 @@ h3.site-description {
     box-shadow: 0px 1px 10px #005078;
     border: 0;
 }
-.navbar-hidden {
+
+.is-eea-hidden {
     -moz-transition: all 1s;
     -o-transition: all 1s;
     -webkit-transition: all 1s;
     transition: all 1s;
-    display: none;
+    display: none !important;
 }
 
 #cross-site-top {
