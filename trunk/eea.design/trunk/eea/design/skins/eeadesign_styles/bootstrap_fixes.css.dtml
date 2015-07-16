@@ -4,6 +4,16 @@
 html {
     font-size: 16px;
 }
+
+body {
+    line-height: normal;
+}
+
+sup, sub {
+    font-size: smaller;
+    top: inherit;
+}
+
 a:hover, a:focus {
     text-decoration: none;
 }
@@ -22,6 +32,12 @@ dl {
 
 dt, dd {
     line-height: inherit;
+}
+
+/* #13825 remove margin-left from our styles set by twitter bootstrap */
+div.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 

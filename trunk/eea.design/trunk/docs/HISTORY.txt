@@ -3,6 +3,9 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: added print fixes to bootstrap_fixes.css needed since it broke the
+  pdf output
+  [ichimdav refs #27437]
 * Bug fix: Fixed document_byline for items without copyright info
   [voineali refs #26848]
 

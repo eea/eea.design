@@ -22,6 +22,7 @@
 .frontpage .promo-item-desc {
   display: none;
 }
+
 /* columns.css slider-definitions modification */
 
 div.width-3\3a 4 { width:    58.5%;  }
@@ -2107,12 +2108,6 @@ option.hiddenStructure {
     border: 0;
 }
 
-html.kupu-html,
-body.kupu {
-    font-size: 100%;
-    min-width: 55em;
-}
-
 .linkbox {
     margin-top: 2em;
     border: 1px dashed;
@@ -2591,11 +2586,6 @@ body.template-login_form #content,
     clear: both;
 }
 
-/* #13825 remove margin-left from our styles set by twitter bootstrap */
-div.row {
-    margin-left: 0;
-}
-
 .spinner {
     text-align: center;
 }
@@ -2681,6 +2671,7 @@ div.row {
 .qrbox {
     display: none;
 }
+
 
 a.downloading {
     background: transparent url(&dtml-portal_url;/icon-downloading.gif) no-repeat center center;
