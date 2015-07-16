@@ -210,6 +210,7 @@ body {
 #related-multimedia,
 .languageCodes,
 #themes-object,
+#header-holder .navbar,
 #cross-site-top,
 #portal-footer img,
 #portal-siteactions,

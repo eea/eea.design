@@ -1,7 +1,7 @@
 /* Footer.css responsive styles */
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .eea-accordion-panels table {
     font-size: 0.7em; }
 
@@ -25,25 +25,25 @@
 
   #panel-tab-regions-countries .eea-list-columns:nth-child(3) {
     margin-left: 10em; } }
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
   .filter-topic {
     width: 69%; }
 
   .eea-list-columns {
     padding: 0 1em 0 0.5em; } }
-@media (min-width: 361px) and (max-width: 479px) {
+@media screen and (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%; }
 
   #faceted-text-search input[type="text"] {
     width: 77%; } }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #whatsnew-gallery .tileImage {
     display: none; }
 
   #content ul.gallery-layout-selection {
     display: none; } }
-@media (max-height: 480px) and (orientation: landscape) {
+@media screen and (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 300px; }
@@ -53,13 +53,13 @@
 
   .featured-highlight-title {
     width: 58%; } }
-@media (min-width: 481px) {
+@media screen and (min-width: 481px) {
   .featured-highlight-title {
     width: 45%; }
 
   .featured img {
     max-width: 130px !important; } }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   #portal-personaltools-wrapper,
   .portal-logo,
   #siteaction-login {
@@ -314,7 +314,7 @@
 
   #viewlet-below-content .standalone {
     white-space: pre-wrap; } }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #visual-portal-wrapper {
     overflow: auto; }
 
@@ -356,10 +356,10 @@
 
   #portlet-followus dd {
     padding-right: 0.7em; } }
-@media (width: 768px) {
+@media screen and (width: 768px) {
   .right-column-area {
     width: 41%; } }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #header-holder .container-fluid {
     padding: 0; }
   #header-holder .navbar-header {
@@ -380,7 +380,7 @@
 
   .navbar-toggle {
     display: none; } }
-@media (min-width: 768px) and (max-width: 800px) {
+@media screen and (min-width: 768px) and (max-width: 800px) {
   #portaltab-europe {
     padding-right: 95px;
     width: 185px;
@@ -402,14 +402,14 @@
 
   .photoAlbumEntry {
     width: 127px; } }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   #portal-searchbox {
     margin: 25px 0.5em 0 0; } }
-@media (min-width: 961px) {
+@media screen and (min-width: 961px) {
   #visual-portal-wrapper, #portal-header {
     min-width: 995px !important;
     max-width: 1024px !important; } }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .frontpage #portal-columns,
   .frontpage #portal-column-content,
   .template-datamaps_view #portal-columns,

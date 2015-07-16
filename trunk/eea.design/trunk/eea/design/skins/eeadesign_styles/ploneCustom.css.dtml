@@ -1052,22 +1052,16 @@ form[name="edit_form"] div.formControls {
 }
 
 /* End edit form elements */
+/* #23500 allow the control panel widget to be placed outside of their context
+    by having overflow visible for screen with size larger than 1024px
+*/
 #visual-portal-wrapper {
     margin: 0 auto;
-    overflow: auto;
     padding: 0;
     display: block;
     clear: both;
     position: relative;
-}
-
-@media (min-width: 1025px) {
-    /* #23500 allow the control panel widget to be placed outside of their context
-        by having overflow visible for screen with size larger than 1024px
-    */
-    #visual-portal-wrapper {
-        overflow: visible;
-    }
+    overflow: visible;
 }
 
 /* Logo properties */
@@ -1211,9 +1205,11 @@ h3.site-description {
     clear: both;
 }
 
-#portal-columns {
-    padding-top: 1em;
-    min-width: 1024px;
+@media screen {
+    #portal-columns {
+        padding-top: 1em;
+        min-width: 1024px;
+    }
 }
 
 #portal-column-one .portlet-subscribtion {

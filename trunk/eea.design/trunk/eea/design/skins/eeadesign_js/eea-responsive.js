@@ -112,12 +112,13 @@ jQuery(document).ready(function($) {
 
     /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
     var mobile_desktop = false;
-    if (window.innerWidth < 768 && window.innerHeight > 768 ||
-        window.innerWidth > 768 && window.innerHeight < 768) {
+    var window_height = window.outerHeight || window.innerHeight;
+    if (window.innerWidth < 768 && window_height > 768 ||
+        window.innerWidth > 768 && window_height < 768) {
         mobile_desktop = true;
     }
     window.mobile_desktop_browser_resolution = mobile_desktop;
-    if (window.outerHeight >= 600 && window.innerWidth > 767 && !mobile_desktop) {
+    if ( window_height >= 600 && window.innerWidth > 767 && !mobile_desktop) {
         return;
     }
 
