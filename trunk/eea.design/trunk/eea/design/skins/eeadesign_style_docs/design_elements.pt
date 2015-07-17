@@ -104,8 +104,8 @@ developers, UX/UI experts.
         <p>As template logic you have to supply the current class on the tab that should be activated given the page visited</p>
         <div class="tabbedmenu">
             <ul>
-                <li i18n:translate=""><a href="http://localhost:8081/www/SITE/code/design-elements#first" class="first-tab">First tab</a></li>
-                <li i18n:translate=""><a href="http://localhost:8081/www/SITE/code/design-elements#second" class="current">Second tab</a></li>
+                <li i18n:translate=""><a href="#first" class="first-tab">First tab</a></li>
+                <li i18n:translate=""><a href="#second" class="current">Second tab</a></li>
                 <li i18n:translate=""><a href="#third">Third tab</a></li>
             </ul>
         </div>
