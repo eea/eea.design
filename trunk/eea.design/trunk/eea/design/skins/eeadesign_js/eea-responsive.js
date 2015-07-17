@@ -199,7 +199,7 @@ jQuery(document).ready(function($) {
 
     var $cross_site_top_panels = $("#portal-externalsites, #portal-siteactions");
 
-    function accordions(idx, el) {
+    function turn_cross_panels_into_accordions(el) {
         var $el = $(el);
         var lists = $el.find('li');
         lists.each(function(idx, el) {
@@ -221,7 +221,9 @@ jQuery(document).ready(function($) {
         });
     }
 
-    $cross_site_top_panels.each(accordions);
+    $cross_site_top_panels.each(function(idx, el) {
+        turn_cross_panels_into_accordions(el);
+    });
 
 
     // make accordion-panels out of soer2015 tabs
