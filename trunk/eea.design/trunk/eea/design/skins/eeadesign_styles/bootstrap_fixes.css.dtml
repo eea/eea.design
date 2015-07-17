@@ -40,6 +40,11 @@ div.row {
     margin-right: 0;
 }
 
+/* #27501 needed because bootstrap navbar has an z-index of 1030 which hides the jquery ui dialog */
+.ui-widget {
+    z-index: 1031;
+}
+
 
 /* ==== eea_base.css ==== */
 /* compensate for padding from eea_soer.css */

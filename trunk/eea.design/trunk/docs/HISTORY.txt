@@ -3,6 +3,9 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: jquery dialogs need to have an z-index bigger than 1030 in order
+  to avoid having popups hidden by the navbar
+  [ichimdav refs #27501]
 * Bug fix: added print fixes to bootstrap_fixes.css needed since it broke the
   pdf output
   [ichimdav refs #27437]
