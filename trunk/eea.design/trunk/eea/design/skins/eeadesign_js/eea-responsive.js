@@ -9,8 +9,14 @@ jQuery(document).ready(function($) {
         $secondary_nav_items = global_nav_children.slice(global_nav_children.length - 3);
     $secondary_nav_items.wrapAll($secondary_portaltabs);
 
-    var $tabbed_menu = $('.tabbedmenu'),
-        $tabbed_menu_found = $tabbed_menu.length;
+    //var $tabbed_menu = $('.tabbedmenu'),
+    //var $tabbed_menu_found = $tabbed_menu.length;
+    // #27215 disable accordion transform of the tabbed menu, since it's a server side transform
+    // and the accordion expects the panels to already have content and ignore the link from the
+    // header the content would never be reachable. To be enabled after work is done in eunis side
+    // or we enhance the accordion to have a server side accordion as well
+    var $tabbed_menu;
+    var $tabbed_menu_found = false;
     var $eea_tabs_with_arrows = $('.eea-tabs-arrows'),
         $eea_tabs_with_arrows_found = $eea_tabs_with_arrows.length;
     function escapeRegExp(string) {
