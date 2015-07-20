@@ -266,6 +266,8 @@ input.context,
 .documentExportActions,
 .sorter_ctl,
 .message_wrap,
+#viewlet-cookiepolicy,
+#popup_login_form,
 .portal-logo a {
     /* Hides all the elements irrelevant for printing */
     display: none !important;

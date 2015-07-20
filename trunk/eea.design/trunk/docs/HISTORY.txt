@@ -3,6 +3,8 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: hid viewlet-cookiepolicy and popup_login_form from print
+  [ichimdav refs #27511]
 * Bug fix: fixed column position for Briefings on mobile devices, avoiding column
   hiding this way
   [ichimdav refs #27507]
