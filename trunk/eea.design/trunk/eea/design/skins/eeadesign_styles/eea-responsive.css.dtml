@@ -328,6 +328,9 @@
     min-width: 98% !important;
     width: 98% !important; }
 
+  .template-fiche_view #portal-column-content {
+    left: 100%; }
+
   .navbar-collapse {
     width: 100%; }
 

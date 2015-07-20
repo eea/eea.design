@@ -3,6 +3,9 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed column position for Briefings on mobile devices, avoiding column
+  hiding this way
+  [ichimdav refs #27507]
 * Bug fix: jquery dialogs need to have an z-index bigger than 1030 in order
   to avoid having popups hidden by the navbar
   [ichimdav refs #27501]
