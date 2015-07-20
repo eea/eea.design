@@ -78,6 +78,14 @@ a {
     text-decoration: none !important;
 }
 
+/* #27511 temporary set important to the tabs link colors until we can get rid of the important from the link colors */
+#visual-portal-wrapper .eea-tabs > li > a {
+    color: #fff !important;
+}
+#visual-portal-wrapper .eea-tabs > li > .current, #visual-portal-wrapper .eea-tabs > li > .current:hover {
+    color: #005e7d !important;
+}
+
 a:link, a:visited {
     color: #520;
     background: transparent;
