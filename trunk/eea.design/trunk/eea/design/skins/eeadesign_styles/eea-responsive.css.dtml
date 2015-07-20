@@ -316,7 +316,8 @@
     white-space: pre-wrap; } }
 @media screen and (max-width: 768px) {
   #visual-portal-wrapper {
-    overflow: auto; }
+    overflow: auto;
+    margin-top: 45px; }
 
   #portal-columns {
     min-width: 100% !important; }

@@ -3,6 +3,9 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: force visual-portal-wrapper to have a margin top in order to always
+  display the content which would otherwise be hidden by the header and it's logo
+  [ichimdav refs #27508]
 * Bug fix: hid viewlet-cookiepolicy and popup_login_form from print
   [ichimdav refs #27511]
 * Bug fix: fixed column position for Briefings on mobile devices, avoiding column
