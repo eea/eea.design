@@ -324,4 +324,19 @@ dl.captioned {
     display: none;
 }
 
+.cover-image img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+#relatedItems .pane{ display: block !important; }
+#relatedItems .photoAlbumEntry{ height: auto !important; }
+#relatedItems .eea-tabs-panel,
+#relatedItems .eea-tabs-panels,
+#relatedItems .eea-accordion-panels { border: none; background-color: transparent; }
+#relatedItems .eea-accordion-panels h2{ border: none; margin: 0; background-color: transparent; }
+#relatedItems .eea-accordion-panels h2 a { color: #000 !important; }
+#relatedItems .eea-accordion-panels h2 a:link:after{ content: ""; }
+#relatedItems .eea-accordion-panels h2 span.eea-icon{ display: none; }
+
 /* </dtml-with> */

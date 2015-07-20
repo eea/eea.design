@@ -3,6 +3,8 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: fix related items for print pdf
+  [lucas refs #27484]
 * Change: hid login_form info from print and pdf output
   [ichimdav refs #27516]
 * Bug fix: force visual-portal-wrapper to have a margin top in order to always
