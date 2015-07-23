@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
             var listing = el.find('.gallery-listing');
             var layout = layout_selection || el.parent().find('.gallery-layout-selection li a')[0];
             if (html.length > 1) {
-                if (layout && layout.className === "list-layout active-list"){
+                if (layout && layout.className === "list-layout active-list") {
                     el.find('.gallery-album').addClass('hiddenStructure');
                     listing.hide().fadeIn('slow');
                 }
@@ -34,37 +34,39 @@ jQuery(document).ready(function($) {
     };
 
     eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index, tag_title) {
-            var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
-            eea_gal.current_tab_addr = address;
-            var gal = eea_gal.gallery.find(".eea-tabs-panel");
-            var news = index ? gal[index] : gal.filter(function() {return this.style.display !== 'none';});
-            // workaround: we need the first highlights because when we click on the
-            // first tab gal[0] returns the second highlights instead of
-            // the first so we redefine news to the first found match if
-            // index is 0
-                news = index === 0 ? gal.first() : news;
-                news = news[0] !== undefined ? news[0] : news;
+        var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
+        eea_gal.current_tab_addr = address;
+        var gal = eea_gal.gallery.find(".eea-tabs-panel");
+        var news = index ? gal[index] : gal.filter(function() {
+            return this.style.display !== 'none';
+        });
+        // workaround: we need the first highlights because when we click on the
+        // first tab gal[0] returns the second highlights instead of
+        // the first so we redefine news to the first found match if
+        // index is 0
+        news = index === 0 ? gal.first() : news;
+        news = news[0] !== undefined ? news[0] : news;
 
-            var gallery_ajax = $(".gallery-ajax", news);
-            var layout_selection = $('.gallery-layout-selection li a', news)[0];
-            var params = sel_value ? 'topic' + '=' + sel_value : undefined;
-            params = tag_title ? 'tags' + '=' + sel_value : params;
-            eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
+        var gallery_ajax = $(".gallery-ajax", news);
+        var layout_selection = $('.gallery-layout-selection li a', news)[0];
+        var params = sel_value ? 'topic' + '=' + sel_value : undefined;
+        params = tag_title ? 'tags' + '=' + sel_value : params;
+        eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
     };
 
     $(window).bind('eea.whatsnew.getResultsInAllLanguages', function(ev, data) {
-            var $data = $(data);
-            $data.find('a').click(function(ev){
-                var params = 'Language=' + ev.target.innerHTML;
-                eea_gal.gallery_load($data, eea_gal.current_tab_addr, params);
-                ev.preventDefault();
-            });
+        var $data = $(data);
+        $data.find('a').click(function(ev) {
+            var params = 'Language=' + ev.target.innerHTML;
+            eea_gal.gallery_load($data, eea_gal.current_tab_addr, params);
+            ev.preventDefault();
+        });
     });
 
     $("#whatsnew-gallery .eea-tabs, #multimedia-tabs").tabs("> .eea-tabs-panel", function(event, index) {
         var cur_tab = this.getTabs()[index],
             cur_tab_val = cur_tab.id.substr(4);
-            cur_tab.theme = cur_tab.theme || "none";
+        cur_tab.theme = cur_tab.theme || "none";
         var opt_item,
             sel_value,
             sel_text,
@@ -74,34 +76,34 @@ jQuery(document).ready(function($) {
         var gallery_ajax = highlight.find('.gallery-ajax');
 
         var ajax_loader_img = '<div style="text-align: center;"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
-    // change tags and topics for multimedia when clicking tabs
+        // change tags and topics for multimedia when clicking tabs
         var tag_cloud = $("#bottomright-widgets").find('#tag-cloud-content');
-        if (cur_tab_val.indexOf('green') === -1 || cur_tab_val.indexOf('video') === -1 ) {
+        if (cur_tab_val.indexOf('green') === -1 || cur_tab_val.indexOf('video') === -1) {
             tag_cloud.find("#c1_widget").fadeOut().empty().end().find('#c3_widget').empty().fadeOut();
         }
-        if ( tag_cloud.length ) {
+        if (tag_cloud.length) {
             var address, topic_params, tags_params;
-            var tabs = function (address, topic_params, tags_params) {
+            var tabs = function(address, topic_params, tags_params) {
                 address = address || eea_gal.site_address + 'all/@@tagscloud_counter';
                 topic_params = topic_params || "cid=c1&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                 tags_params = tags_params || "cid=c3&c2=Products.EEAContentTypes.content.interfaces.IFlashAnimation&c3=all&c8=Animation+(swf)&c4=published&b_start=0";
                 tag_cloud.load(address, topic_params, function() {
                     tag_cloud.find("#c1_widget").fadeIn();
                     var themes = $("#c1");
-                    themes.tagcloud({type: 'list', height: 280, sizemin:12});
+                    themes.tagcloud({type: 'list', height: 280, sizemin: 12});
                     var themes_li = themes.find('li');
                     var theme_vals;
-                    theme_vals = themes_li.filter( function(){
+                    theme_vals = themes_li.filter(function() {
                         return this.value === 1;
                     });
                     theme_vals.remove();
 
-                    $.get(address, tags_params, function(data){
+                    $.get(address, tags_params, function(data) {
                         tag_cloud.append(data);
                         $("#c3_widget").fadeIn();
                         var tags = $("#c3");
                         tags.tagcloud({type: 'list', height: 280, sizemin: 12});
-                        var vals = tags.find('li').filter( function(){
+                        var vals = tags.find('li').filter(function() {
                             return this.value === 1;
                         });
                         vals.remove();
@@ -133,13 +135,16 @@ jQuery(document).ready(function($) {
         }
 
         opt_item = $("#topic-selector").find(":selected");
-        if ( opt_item.length ) {
+        if (opt_item.length) {
             sel_value = opt_item.val();
             sel_text = opt_item.text();
         }
+        else {
+            $(".filter-topic").hide();
+        }
 
         var album = highlight.find('.gallery-album');
-        var album_length =  album.length !== 0 ? album.children().length : 0;
+        var album_length = album.length !== 0 ? album.children().length : 0;
         var notopics = highlight.find('.portalMessage'),
             notopics_length = notopics.length !== 0 ? 1 : 0;
         if (cur_tab.theme === sel_value && notopics_length !== 0) {
@@ -149,8 +154,8 @@ jQuery(document).ready(function($) {
         // check if highlight doesn't contain a portalMessage since getting results
         // in other languages doesn't introduce gallery-album div and in that case
         // we don't want to reload the gallery macro
-        if (sel_text.indexOf("All") !== -1 ||
-                album_length === 0 && !highlight.find('.portalMessage').length) {
+        if (sel_text && sel_text.indexOf("All") !== -1 ||
+            album_length === 0 && !highlight.find('.portalMessage').length) {
             album.html(ajax_loader_img);
             eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
         }
@@ -183,7 +188,7 @@ jQuery(document).ready(function($) {
 
     // selection of folder_summary_view or atct_album_view
     var layout_links = $(".gallery-layout-selection li a");
-    layout_links.click( function(e) {
+    layout_links.click(function(e) {
         var $this = $(this);
         var $parent = $this.parent();
         var $ajax = $this.closest('ul').next();
@@ -193,12 +198,12 @@ jQuery(document).ready(function($) {
         var next = $parent.siblings().find('a');
         var link_class = $this[0].className;
         var highlight = $this.closest('div')[0].id;
-        if ( link_class === "list-layout active-list" || link_class === "album-layout active-album") {
+        if (link_class === "list-layout active-list" || link_class === "album-layout active-album") {
             e.preventDefault();
             return;
         }
         var cookie_expires = new Date();
-           cookie_expires.setMonth(cookie_expires.getMonth() + 1); // one month
+        cookie_expires.setMonth(cookie_expires.getMonth() + 1); // one month
 
         if (link_class.indexOf("list-layout") !== -1) {
             album.slideUp('slow');
@@ -225,7 +230,7 @@ jQuery(document).ready(function($) {
     if (eea_gal.gallery.length > 0) {
         var gallery_cookies = SubCookieUtil.getAll(eea_gal.gallery_page);
         if (gallery_cookies !== null) {
-            eea_gal.gallery.find('.eea-tabs-panel').each(function(){
+            eea_gal.gallery.find('.eea-tabs-panel').each(function() {
                 var $this = $(this);
                 var layouts = $this.find(".gallery-layout-selection li a");
                 var $hidden_gallery = $this.find(".hiddenStructure");
@@ -242,7 +247,7 @@ jQuery(document).ready(function($) {
                         link_listing.removeClass("active-list");
                         link_album.addClass("active-album");
                     }
-                    else if (gallery_cookie === "active-list"){
+                    else if (gallery_cookie === "active-list") {
                         listing.show();
                         album.hide();
                         $hidden_gallery.removeClass("hiddenStructure");

@@ -3,6 +3,8 @@ Changelog
 
 12.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed whatsnewgallery error when no filter topic was present
+  [ichimdav]
 * Bug fix: fix related items for print pdf
   [lucas refs #27484]
 * Change: hid login_form info from print and pdf output
