@@ -58,6 +58,13 @@ jQuery(document).ready(function($) {
 
             $folder_panels.each(function(idx, el) {
                 var $el = $(el);
+
+                // 27215 only initilize the accordion once
+                // using an added class instead of $.data since
+                // reinjecting jquery will make the data attribute disappear
+                if ($el.hasClass("eea-accordion-initialized")) {
+                    return;
+                }
                 var effect = 'slide';
                 var current_class = "current";
                 var initial_index = 0;
@@ -140,6 +147,7 @@ jQuery(document).ready(function($) {
                   });
                 }
 
+                $el.addClass("eea-accordion-initialized");
             });
 
         }

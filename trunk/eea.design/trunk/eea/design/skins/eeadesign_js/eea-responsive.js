@@ -5,20 +5,21 @@ jQuery(document).ready(function($) {
     // #23500 we now have an extra list item (europe)
     var $secondary_portaltabs = $("<ul id='secondary-portaltabs'></ul>"),
         global_nav = $('#portal-globalnav'),
-        global_nav_children = global_nav.children(),
-        $secondary_nav_items = global_nav_children.slice(global_nav_children.length - 3);
-    $secondary_nav_items.wrapAll($secondary_portaltabs);
+        $global_nav_children = global_nav.children();
+    if ($global_nav_children.length === 7) {
+        $global_nav_children.slice($global_nav_children.length - 3).wrapAll($secondary_portaltabs);
+    }
 
-    //var $tabbed_menu = $('.tabbedmenu'),
-    //var $tabbed_menu_found = $tabbed_menu.length;
+    //var $tabbed_menu = $('.tabbedmenu');
+    //var tabbed_menu_found = $tabbed_menu.length;
     // #27215 disable accordion transform of the tabbed menu, since it's a server side transform
     // and the accordion expects the panels to already have content and ignore the link from the
     // header the content would never be reachable. To be enabled after work is done in eunis side
     // or we enhance the accordion to have a server side accordion as well
     var $tabbed_menu;
-    var $tabbed_menu_found = false;
+    var tabbed_menu_found = false;
     var $eea_tabs_with_arrows = $('.eea-tabs-arrows'),
-        $eea_tabs_with_arrows_found = $eea_tabs_with_arrows.length;
+        eea_tabs_with_arrows_found = $eea_tabs_with_arrows.length;
     function escapeRegExp(string) {
         return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
     }
@@ -34,7 +35,7 @@ jQuery(document).ready(function($) {
         var css = $tabs_panel.attr('class');
         if (css) {
             css = replaceAll(css, 'eea-tabs-panels', 'eea-accordion-panels');
-            css = $tabbed_menu_found ? replaceAll(css, 'tabbedmenu-panel', 'eea-accordion-panels tabbed-accordion-menu') : css;
+            css = tabbed_menu_found ? replaceAll(css, 'tabbedmenu-panel', 'eea-accordion-panels tabbed-accordion-menu') : css;
             $tabs_panel.attr('class', css);
         }
         $tabs_panel.addClass('collapsed-by-default eea-tabs-transformed');
@@ -70,7 +71,8 @@ jQuery(document).ready(function($) {
             var $item = $(item);
             var css = $item.attr('class');
             if (css) {
-                css = replaceAll(css, 'eea-accordion-panels tabbed-accordion-menu', 'tabbedmenu-panel');
+                css = tabbed_menu_found ?
+                    replaceAll(css, 'eea-accordion-panels tabbed-accordion-menu', 'tabbedmenu-panel') : css;
                 css = replaceAll(css, 'eea-accordion-panels', 'eea-tabs-panels');
                 $item.attr('class', css);
             }
@@ -102,10 +104,10 @@ jQuery(document).ready(function($) {
                     make_tabs_into_accordions($tab_panel.prev('.eea-tabs'), $tab_panel);
                 });
             }
-            if ($tabbed_menu_found) {
+            if (tabbed_menu_found) {
                 make_tabs_into_accordions($tabbed_menu.find("ul"), $('.tabbedmenu-panel'));
             }
-            if ($eea_tabs_with_arrows_found) {
+            if (eea_tabs_with_arrows_found) {
                 make_tabs_into_accordions($eea_tabs_with_arrows, $('.eea-tabs-panels-arrows'));
             }
         }
@@ -121,8 +123,10 @@ jQuery(document).ready(function($) {
     // this ensures that switching from portrait to landscape is without any flash since
     // we can show and hide with css
     var $navbar_header = $(".navbar-header");
-    $("#portal-logo-link").clone().attr('id', 'portal-logo-link-header').prependTo($navbar_header);
-
+    var $portal_logo_link = $("#portal-logo-link");
+    if (!$navbar_header.children("#portal-logo-link-header").length) {
+        $portal_logo_link.clone().attr('id', 'portal-logo-link-header').prependTo($navbar_header);
+    }
 
     /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
     var mobile_desktop = false;
@@ -201,12 +205,8 @@ jQuery(document).ready(function($) {
 
     // make accordion panels out of cross-site-top content
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
-    $holder.prependTo($("#secondary-portaltabs"));
 
-    var $cross_site_top_panels = $("#portal-externalsites, #portal-siteactions");
-
-    function turn_cross_panels_into_accordions(el) {
-        var $el = $(el);
+    function turn_cross_panels_into_accordions($el) {
         var lists = $el.find('li');
         lists.each(function(idx, el) {
             var $acordion_panel = $("<div  />",
@@ -226,10 +226,17 @@ jQuery(document).ready(function($) {
             $acordion_panel.appendTo($holder);
         });
     }
-
-    $cross_site_top_panels.each(function(idx, el) {
-        turn_cross_panels_into_accordions(el);
-    });
+    var $secondary_portaltabs_modified = $("#secondary-portaltabs");
+    if (!$secondary_portaltabs_modified.find('.eea-accordion-panels').length) {
+        $holder.prependTo($secondary_portaltabs_modified);
+        (function(){
+            var $cross_site_top_panels = $("#portal-externalsites, #portal-siteactions");
+            $cross_site_top_panels.each(function(idx, el) {
+                var $el = $(el);
+                turn_cross_panels_into_accordions($el);
+            });
+        })();
+    }
 
 
     // make accordion-panels out of soer2015 tabs
@@ -237,9 +244,9 @@ jQuery(document).ready(function($) {
     $soer_panel.attr('class', 'eea-accordion-panels eea-accordion-panels-soer collapsed-by-default non-exclusive');
     var $soer_panels = $soer_panel.find('.eea-tabs-panel');
 
-    var $soer_tab = $(".eea-tabs-soer");
-    var $soer_tabs = $soer_tab.find('li');
-    $soer_tabs.each(function(idx, el) {
+    var $soer_tabs = $(".eea-tabs-soer");
+    var $soer_tabs_items = $soer_tabs.find('li');
+    $soer_tabs_items.each(function(idx, el) {
         var $panel = $soer_panels.eq(idx);
         var $el = $(el);
         var link = $el.find('a')[0];
@@ -252,7 +259,7 @@ jQuery(document).ready(function($) {
         });
         $result.prependTo($panel);
     });
-    $soer_tab.remove();
+    $soer_tabs.remove();
 
     // #26378 hide and show eea-scrolling-toggle-visibility when scrolling up or down
     var lastScrollTop = 0;
