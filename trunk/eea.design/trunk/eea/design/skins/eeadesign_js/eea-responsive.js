@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
     var mobile_desktop = false;
     var window_height = window.outerHeight || window.innerHeight;
     if (window.innerWidth < 768 && window_height > 768 ||
-        window.innerWidth > 768 && window_height < 768) {
+        window.innerWidth > 768 && window_height < 601) {
         mobile_desktop = true;
     }
     window.mobile_desktop_browser_resolution = mobile_desktop;
@@ -274,6 +274,10 @@ jQuery(document).ready(function($) {
         // wait for it to finish before checking for the scroll event
         var faceted = document.querySelectorAll('.faceted-results')[0];
         if (faceted && faceted.style.opacity) {
+            return;
+        }
+
+        if ($buttonnavbar.css('display') === 'none') {
             return;
         }
         var $keep_visible = $(".eea-scrolling-keep-visible");
