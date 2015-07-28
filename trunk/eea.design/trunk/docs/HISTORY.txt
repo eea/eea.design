@@ -3,9 +3,13 @@ Changelog
 
 12.5.dev0 - (unreleased)
 ------------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [lucas refs #26903']
 
 12.4 - (2015-07-28)
 -------------------
+>>>>>>> .r38974
 * Bug fix: fixed header showing and hiding on the IPad
   [ichimdav]
 * Bug fix: fixed whatsnewgallery error when no filter topic was present
@@ -61,7 +65,8 @@ Changelog
   [ichimdav refs #26746]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
-  [ichimdav refs #25986]
+  [ichimdav refswithin "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design #25986]
 * Feature: added customized bootstrap styles which can be enabled per sections
   in order to take advantage of it's responsive design styles
   [ichimdav refs #25986]
