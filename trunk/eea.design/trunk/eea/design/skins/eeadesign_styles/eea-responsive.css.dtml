@@ -256,6 +256,8 @@
     margin: 0;
     padding-bottom: 0;
     background-color: #FFF; }
+  #faceted-form legend {
+    display: none; }
 
   .eea-faceted-filter {
     margin-right: 4em; }
@@ -281,10 +283,10 @@
       background-color: #0077b3; }
 
   .eea-right-section-active {
-    left: 3% !important; }
+    left: 7% !important; }
 
   .eea-right-section {
-    width: 97% !important;
+    width: 93% !important;
     position: fixed;
     right: 100%;
     top: 0;
@@ -305,7 +307,7 @@
       color: #006699; }
 
   .eea-right-section-slider-active {
-    right: 96%;
+    right: 93%;
     z-index: 1000; }
 
   /*** END SECTION FACETED NAVIGATION ****/
@@ -383,7 +385,16 @@
     margin-right: -2em; }
 
   .navbar-toggle {
-    display: none; } }
+    display: none; }
+
+  .eea-right-section-slider {
+    display: none; }
+
+  #faceted-form .eea-accordion-title, #faceted-form .eea-faceted-filter {
+    display: none; }
+  #faceted-form .pane {
+    display: block !important;
+    padding: 0; } }
 @media screen and (min-width: 768px) and (max-width: 800px) {
   #portaltab-europe {
     padding-right: 95px;

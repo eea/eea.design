@@ -144,21 +144,20 @@ jQuery(document).ready(function($) {
     // make accordions out of the left and right areas of faceted navigation pages
     var $faceted_left_column = $("#faceted-left-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
     var $faceted_right_column = $("#faceted-right-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
-    $faceted_left_column.find(".faceted-widget").appendTo($faceted_right_column);
-    $faceted_right_column.find(".faceted-widget").each(function(idx, el) {
+    $faceted_left_column.find(".faceted-widget").addClass("widget-fieldset").appendTo($faceted_right_column);
+    $faceted_right_column.find(".faceted-widget").addClass("widget-fieldset").each(function(idx, el) {
         var $el = $(el);
         $el.addClass('eea-accordion-panel');
         var $children = $el.wrapInner("<div class='pane' />");
         var $legend = $children.find("legend");
         var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-accordion-title eea-icon-right-container"});
         $h2.prependTo($el);
-        $legend.remove();
     });
 
 
     // WIP code for faceted navigation
     window.setTimeout(function() {
-        $(".eea-icon-caret-left").removeClass("animated");
+        $(".eea-right-section-slider").find(".eea-icon").removeClass("animated");
     }, 5000);
 
 
