@@ -100,4 +100,9 @@ input.removecriteria {
     height: 2.6em;
 }
 
+/* uberlisting.css */
+#uber-view-switch a {
+    height: 55px;
+}
+
 /* </dtml-with> */
