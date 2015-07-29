@@ -93,10 +93,10 @@ blockquote {
 }
 
 /* ++resource++archetypes.querywidget.querywidget.css */
-.removecriteria {
+input.removecriteria {
     margin-left: 0.5em;
 }
-.multipleSelectionWidget dt {
+.ArchetypesQueryWidget .multipleSelectionWidget dt {
     height: 2.6em;
 }
 
