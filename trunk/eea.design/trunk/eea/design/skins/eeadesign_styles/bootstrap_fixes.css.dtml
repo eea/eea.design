@@ -92,4 +92,12 @@ blockquote {
     box-sizing: content-box;
 }
 
+/* ++resource++archetypes.querywidget.querywidget.css */
+.removecriteria {
+    margin-left: 0.5em;
+}
+.multipleSelectionWidget dt {
+    height: 2.6em;
+}
+
 /* </dtml-with> */

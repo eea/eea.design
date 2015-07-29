@@ -60,7 +60,7 @@
   .featured img {
     max-width: 130px !important; }
 
-  #portal-columns input[type="submit"], .standardButton, .qq-upload-button, .searchButton, input.plonebutton, input.context, input.destructive, input.standalone {
+  .faceted-widget .searchButton {
     margin-right: 5em; } }
 @media screen and (max-width: 767px) {
   #portal-personaltools-wrapper,
