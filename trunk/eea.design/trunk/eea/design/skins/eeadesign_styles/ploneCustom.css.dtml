@@ -228,7 +228,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
     padding: 7px 11px;
     display: inline-block;
     border: 1px solid #DCDCDC;
-    margin-left: -3px;
+    margin-left: -4px;
 }
 .faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton:hover,
 .faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton:hover {

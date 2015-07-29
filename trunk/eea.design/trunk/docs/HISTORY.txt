@@ -3,6 +3,9 @@ Changelog
 
 12.5.dev0 - (unreleased)
 ------------------------
+* Feature: faceted navigation is now responsive, we hide the columns
+  to the right and transform the filters into accordions
+  [ichimdav refs #27214]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
   [lucas refs #26903]
