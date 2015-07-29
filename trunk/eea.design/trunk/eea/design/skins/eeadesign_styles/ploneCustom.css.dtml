@@ -82,11 +82,6 @@ div.position-3\3a 4 {margin-left: -36.5%;}
     text-shadow: 1px 1px 1px #555555;
 }
 
-.widget-fieldset {
-    padding: 0 !important;
-    margin: 5px !important;
-}
-
 #faceted-form .widget-fieldset form,
 #faceted-form .faceted-criteria-hide-show,
 #faceted-form .faceted-criteria-reset {

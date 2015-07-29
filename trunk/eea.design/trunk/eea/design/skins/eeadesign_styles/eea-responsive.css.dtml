@@ -392,6 +392,9 @@
 
   #faceted-form .eea-accordion-title, #faceted-form .eea-faceted-filter {
     display: none; }
+  #faceted-form .eea-accordion-panels {
+    border: 0;
+    overflow: auto; }
   #faceted-form .pane {
     display: block !important;
     padding: 0; } }

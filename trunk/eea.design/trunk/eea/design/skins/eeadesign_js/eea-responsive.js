@@ -4,13 +4,13 @@ jQuery(document).ready(function($) {
     // #16878 move last two links of globalnav to a secondary container
     // #23500 we now have an extra list item (europe)
     var $secondary_portaltabs = $("<ul id='secondary-portaltabs'></ul>"),
-        global_nav = $('#portal-globalnav'),
+        global_nav = $("#portal-globalnav"),
         $global_nav_children = global_nav.children();
     if ($global_nav_children.length === 7) {
         $global_nav_children.slice($global_nav_children.length - 3).wrapAll($secondary_portaltabs);
     }
 
-    //var $tabbed_menu = $('.tabbedmenu');
+    //var $tabbed_menu = $(".tabbedmenu");
     //var tabbed_menu_found = $tabbed_menu.length;
     // #27215 disable accordion transform of the tabbed menu, since it's a server side transform
     // and the accordion expects the panels to already have content and ignore the link from the
@@ -18,45 +18,45 @@ jQuery(document).ready(function($) {
     // or we enhance the accordion to have a server side accordion as well
     var $tabbed_menu;
     var tabbed_menu_found = false;
-    var $eea_tabs_with_arrows = $('.eea-tabs-arrows'),
+    var $eea_tabs_with_arrows = $(".eea-tabs-arrows"),
         eea_tabs_with_arrows_found = $eea_tabs_with_arrows.length;
     function escapeRegExp(string) {
         return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
     }
 
     function replaceAll(string, find, replace) {
-        return string.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+        return string.replace(new RegExp(escapeRegExp(find), "g"), replace);
     }
 
     function make_tabs_into_accordions($tab, $tabs_panel) {
         if (!$tabs_panel.length) {
             return;
         }
-        var css = $tabs_panel.attr('class');
+        var css = $tabs_panel.attr("class");
         if (css) {
-            css = replaceAll(css, 'eea-tabs-panels', 'eea-accordion-panels');
-            css = tabbed_menu_found ? replaceAll(css, 'tabbedmenu-panel', 'eea-accordion-panels tabbed-accordion-menu') : css;
-            $tabs_panel.attr('class', css);
+            css = replaceAll(css, "eea-tabs-panels", "eea-accordion-panels");
+            css = tabbed_menu_found ? replaceAll(css, "tabbedmenu-panel", "eea-accordion-panels tabbed-accordion-menu") : css;
+            $tabs_panel.attr("class", css);
         }
-        $tabs_panel.addClass('collapsed-by-default eea-tabs-transformed');
-        var $tabs_panels = $tabs_panel.find('.eea-tabs-panel');
+        $tabs_panel.addClass("collapsed-by-default eea-tabs-transformed");
+        var $tabs_panels = $tabs_panel.find(".eea-tabs-panel");
 
-        var $tabs_tabs = $tab.find('li');
+        var $tabs_tabs = $tab.find("li");
         $tabs_tabs.each(function(idx, el) {
             var $panel = $tabs_panels.eq(idx);
             var $el = $(el);
-            var link = $el.find('a')[0];
-            $panel.attr('class', 'eea-accordion-panel').show();
+            var link = $el.find("a")[0];
+            $panel.attr("class", "eea-accordion-panel").show();
             $panel.wrapInner("<div class='pane' />");
             var $result = $("<h2 />", {
-                'class': (link && link.className.indexOf('current') !== -1) ? 'accordion-header-tab current' : 'accordion-header-tab',
+                "class": (link && link.className.indexOf("current") !== -1) ? "accordion-header-tab current" : "accordion-header-tab",
                 id: link ? link.id : '',
                 html: el.innerHTML
             });
             $result.append('<span class="eea-icon eea-icon-right"></span>');
             $result.prependTo($panel);
         });
-        $tab.addClass('js-eea-tabs-to-hide hidden');
+        $tab.addClass("js-eea-tabs-to-hide hidden");
         if (window.EEA && window.EEA.eea_accordion) {
             window.EEA.eea_accordion($tabs_panel);
         }
@@ -69,46 +69,46 @@ jQuery(document).ready(function($) {
         }
         $tabs_accordion.each(function(idx, item) {
             var $item = $(item);
-            var css = $item.attr('class');
+            var css = $item.attr("class");
             if (css) {
                 css = tabbed_menu_found ?
-                    replaceAll(css, 'eea-accordion-panels tabbed-accordion-menu', 'tabbedmenu-panel') : css;
-                css = replaceAll(css, 'eea-accordion-panels', 'eea-tabs-panels');
-                $item.attr('class', css);
+                    replaceAll(css, "eea-accordion-panels tabbed-accordion-menu", "tabbedmenu-panel") : css;
+                css = replaceAll(css, "eea-accordion-panels", "eea-tabs-panels");
+                $item.attr("class", css);
             }
-            $item.removeClass('collapsed-by-default eea-tabs-transformed');
-            var $tabs_accordions = $item.find('.eea-accordion-panel');
+            $item.removeClass("collapsed-by-default eea-tabs-transformed");
+            var $tabs_accordions = $item.find(".eea-accordion-panel");
 
             $tabs_accordions.each(function(idx, panel) {
                 var $panel = $(panel);
-                $panel.attr('class', 'eea-tabs-panel');
-                if ($('h2.current', $panel).length) {
+                $panel.attr("class", "eea-tabs-panel");
+                if ($("h2.current", $panel).length) {
                     $panel.show();
                 } else {
                     $panel.hide();
                 }
-                $panel.html($('.pane', $panel).html());
+                $panel.html($(".pane", $panel).html());
             });
         });
-        $(".js-eea-tabs-to-hide").removeClass('hidden');
+        $(".js-eea-tabs-to-hide").removeClass("hidden");
     }
 
-    var $buttonnavbar = $('button.navbar-toggle');
-    var $notransform = $('.eea-tabs-panels-arrows, .eea-tabs-panels-soer, #whatsnew-gallery');
+    var $buttonnavbar = $("button.navbar-toggle");
+    var $notransform = $(".eea-tabs-panels-arrows, .eea-tabs-panels-soer, #whatsnew-gallery");
     $(window).resize(_.debounce(function() {
-        if ($buttonnavbar.css('display') !== 'none') {
+        if ($buttonnavbar.css("display") !== "none") {
             var $tabs_panel = $(".eea-tabs-panels").not($notransform);
             if ($tabs_panel.length) {
                 $tabs_panel.each(function(idx, tab_panel) {
                     var $tab_panel = $(tab_panel);
-                    make_tabs_into_accordions($tab_panel.prev('.eea-tabs'), $tab_panel);
+                    make_tabs_into_accordions($tab_panel.prev(".eea-tabs"), $tab_panel);
                 });
             }
             if (tabbed_menu_found) {
-                make_tabs_into_accordions($tabbed_menu.find("ul"), $('.tabbedmenu-panel'));
+                make_tabs_into_accordions($tabbed_menu.find("ul"), $(".tabbedmenu-panel"));
             }
             if (eea_tabs_with_arrows_found) {
-                make_tabs_into_accordions($eea_tabs_with_arrows, $('.eea-tabs-panels-arrows'));
+                make_tabs_into_accordions($eea_tabs_with_arrows, $(".eea-tabs-panels-arrows"));
             }
         }
         else {
@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
         }
     }, 500));
 
-    $(window).trigger('resize');
+    $(window).trigger("resize");
 
 
     // insert the logo also on the navbar for the bootstrap menu
@@ -125,8 +125,33 @@ jQuery(document).ready(function($) {
     var $navbar_header = $(".navbar-header");
     var $portal_logo_link = $("#portal-logo-link");
     if (!$navbar_header.children("#portal-logo-link-header").length) {
-        $portal_logo_link.clone().attr('id', 'portal-logo-link-header').prependTo($navbar_header);
+        $portal_logo_link.clone().attr("id", "portal-logo-link-header").prependTo($navbar_header);
     }
+
+    // make accordions out of the left and right areas of faceted navigation pages
+    var $faceted_left_column = $("#faceted-left-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
+    var $faceted_right_column = $("#faceted-right-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
+    $faceted_left_column.find(".faceted-widget").addClass("widget-fieldset").appendTo($faceted_right_column);
+    $faceted_right_column.find(".faceted-widget").addClass("widget-fieldset").each(function(idx, el) {
+        var $el = $(el);
+        $el.addClass("eea-accordion-panel");
+        var $children = $el.wrapInner("<div class='pane' />");
+        var $legend = $children.find("legend");
+        var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-accordion-title eea-icon-right-container"});
+        $h2.prependTo($el);
+    });
+
+    window.setTimeout(function() {
+        $(".eea-right-section-slider").find(".eea-icon").removeClass("animated");
+    }, 5000);
+
+    var $right_area = $("#right-area").addClass("eea-section eea-right-section");
+
+    $("<a href='#' class='pull-right eea-faceted-filter'>Filter »</a>").appendTo(".faceted-text-widget");
+    $(".eea-faceted-filter").click(function(e) {
+        e.preventDefault();
+        $right_area.prev().click();
+    });
 
     /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
     var mobile_desktop = false;
@@ -136,39 +161,9 @@ jQuery(document).ready(function($) {
         mobile_desktop = true;
     }
     window.mobile_desktop_browser_resolution = mobile_desktop;
-    if ( window_height >= 600 && window.innerWidth > 767 && !mobile_desktop) {
+    if (window_height >= 600 && window.innerWidth > 767 && !mobile_desktop) {
         return;
     }
-
-
-    // make accordions out of the left and right areas of faceted navigation pages
-    var $faceted_left_column = $("#faceted-left-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
-    var $faceted_right_column = $("#faceted-right-column").addClass("eea-accordion-panels collapsed-by-default non-exclusive");
-    $faceted_left_column.find(".faceted-widget").addClass("widget-fieldset").appendTo($faceted_right_column);
-    $faceted_right_column.find(".faceted-widget").addClass("widget-fieldset").each(function(idx, el) {
-        var $el = $(el);
-        $el.addClass('eea-accordion-panel');
-        var $children = $el.wrapInner("<div class='pane' />");
-        var $legend = $children.find("legend");
-        var $h2 = $("<h2 />", {"html": $legend.text(), "class": "eea-accordion-title eea-icon-right-container"});
-        $h2.prependTo($el);
-    });
-
-
-    // WIP code for faceted navigation
-    window.setTimeout(function() {
-        $(".eea-right-section-slider").find(".eea-icon").removeClass("animated");
-    }, 5000);
-
-
-    var $right_area = $("#right-area").addClass("eea-section eea-right-section");
-
-    $("<a href='#' class='pull-right eea-faceted-filter'>Filter »</a>").appendTo(".faceted-text-widget");
-    $(".eea-faceted-filter").click(function(e) {
-        e.preventDefault();
-        $right_area.prev().click();
-    });
-    // END WIP code for faceted navigation
 
 
     // adjust navigation height when switching between orientation modes
@@ -176,7 +171,7 @@ jQuery(document).ready(function($) {
     var client_height = doc.clientHeight;
 
     function setMaxHeight(client_height) {
-        $nav_collapse.css('max-height', client_height - 60);
+        $nav_collapse.css("max-height", client_height - 60);
     }
 
     setMaxHeight(client_height);
@@ -184,7 +179,7 @@ jQuery(document).ready(function($) {
     function height() {
         // iPhone clientHeight matches better the document height while other
         // devices give better results when using outerHeight
-        if (window.navigator.userAgent.indexOf('iPhone') !== -1) {
+        if (window.navigator.userAgent.indexOf("iPhone") !== -1) {
             return doc.clientHeight;
         }
         else {
@@ -206,19 +201,19 @@ jQuery(document).ready(function($) {
     var $holder = $("<div class='eea-accordion-panels collapsed-by-default non-exclusive' />");
 
     function turn_cross_panels_into_accordions($el) {
-        var lists = $el.find('li');
+        var lists = $el.find("li");
         lists.each(function(idx, el) {
             var $acordion_panel = $("<div  />",
-                {id: el.id, 'class': 'eea-accordion-panel'});
+                {id: el.id, "class": "eea-accordion-panel"});
             var $el = $(el);
             var $old_panel = $("#tip-" + el.id);
             var $panel = $("<div />", {
-                'class': 'pane',
-                html: $old_panel.find('.panel-content').html()
+                "class": "pane",
+                html: $old_panel.find(".panel-content").html()
             });
             var $result = $("<h2 />", {
-                'class': 'eea-icon-right-container',
-                html: $el.find('a').text()
+                "class": "eea-icon-right-container",
+                html: $el.find("a").text()
             });
             $result.appendTo($acordion_panel);
             $panel.appendTo($acordion_panel);
@@ -226,7 +221,7 @@ jQuery(document).ready(function($) {
         });
     }
     var $secondary_portaltabs_modified = $("#secondary-portaltabs");
-    if (!$secondary_portaltabs_modified.find('.eea-accordion-panels').length) {
+    if (!$secondary_portaltabs_modified.find(".eea-accordion-panels").length) {
         $holder.prependTo($secondary_portaltabs_modified);
         (function(){
             var $cross_site_top_panels = $("#portal-externalsites, #portal-siteactions");
@@ -240,19 +235,19 @@ jQuery(document).ready(function($) {
 
     // make accordion-panels out of soer2015 tabs
     var $soer_panel = $(".eea-tabs-panels-soer");
-    $soer_panel.attr('class', 'eea-accordion-panels eea-accordion-panels-soer collapsed-by-default non-exclusive');
-    var $soer_panels = $soer_panel.find('.eea-tabs-panel');
+    $soer_panel.attr("class", "eea-accordion-panels eea-accordion-panels-soer collapsed-by-default non-exclusive");
+    var $soer_panels = $soer_panel.find(".eea-tabs-panel");
 
     var $soer_tabs = $(".eea-tabs-soer");
-    var $soer_tabs_items = $soer_tabs.find('li');
+    var $soer_tabs_items = $soer_tabs.find("li");
     $soer_tabs_items.each(function(idx, el) {
         var $panel = $soer_panels.eq(idx);
         var $el = $(el);
-        var link = $el.find('a')[0];
-        $panel.attr('class', 'eea-accordion-panel');
+        var link = $el.find("a")[0];
+        $panel.attr("class", "eea-accordion-panel");
         $panel.wrapInner("<div class='pane' />");
         var $result = $("<h2 />", {
-            class: 'eea-icon-right-container',
+            class: "eea-icon-right-container",
             id: link.id,
             html: link.innerHTML
         });
@@ -263,7 +258,7 @@ jQuery(document).ready(function($) {
     // #26378 hide and show eea-scrolling-toggle-visibility when scrolling up or down
     var lastScrollTop = 0;
     var $header_holder = $("#header-holder");
-    var $navbar = $header_holder.find('.navbar');
+    var $navbar = $header_holder.find(".navbar");
     $navbar.addClass("eea-scrolling-toggle-visibility");
 
     var navbar_content = $header_holder.find(".navbar-collapse")[0];
@@ -271,12 +266,12 @@ jQuery(document).ready(function($) {
     function navScroll() {
         // faceted loading trigger a window scroll as such we need to
         // wait for it to finish before checking for the scroll event
-        var faceted = document.querySelectorAll('.faceted-results')[0];
+        var faceted = document.querySelectorAll(".faceted-results")[0];
         if (faceted && faceted.style.opacity) {
             return;
         }
 
-        if ($buttonnavbar.css('display') === 'none') {
+        if ($buttonnavbar.css("display") === "none") {
             return;
         }
         var $keep_visible = $(".eea-scrolling-keep-visible");
@@ -296,7 +291,7 @@ jQuery(document).ready(function($) {
         } else {
             // upscroll code
             $items.each(function(idx, el) {
-                if (el.className.indexOf('is-eea-hidden') !== -1) {
+                if (el.className.indexOf("is-eea-hidden") !== -1) {
                     el.className = el.className.substr(0, el.className.length - 14);
                 }
             });
