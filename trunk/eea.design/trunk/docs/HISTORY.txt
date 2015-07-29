@@ -5,11 +5,10 @@ Changelog
 ------------------------
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
-  [lucas refs #26903']
+  [lucas refs #26903]
 
 12.4 - (2015-07-28)
 -------------------
->>>>>>> .r38974
 * Bug fix: fixed header showing and hiding on the IPad
   [ichimdav]
 * Bug fix: fixed whatsnewgallery error when no filter topic was present
