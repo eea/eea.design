@@ -49,7 +49,6 @@ jQuery(document).ready(function($) {
                         tab_title_id = tab_title_text.toLowerCase().replace(/\s/g, '-');
                         $tab_title.text("");
                         if ($('#tab-' + tab_title_id).length) {
-                            debugger;
                             tab_id = 'tab-' + tab_title_id + '-' + 1;
                         }
                         else {
