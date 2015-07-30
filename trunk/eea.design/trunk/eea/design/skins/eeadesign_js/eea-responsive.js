@@ -46,12 +46,18 @@ jQuery(document).ready(function($) {
             var $panel = $tabs_panels.eq(idx);
             var $el = $(el);
             var link = $el.find("a")[0];
-            $panel.attr("class", "eea-accordion-panel").show();
-            $panel.wrapInner("<div class='pane' />");
+            $panel.attr("class", "eea-accordion-panel");
+            if (!$panel.find(".pane").length) {
+                $panel.wrapInner("<div class='pane' />");
+            }
+            $panel.show();
+            if ($panel.find(".eea-accordion-title").length) {
+                return;
+            }
             var $result = $("<h2 />", {
-                "class": (link && link.className.indexOf("current") !== -1) ? "accordion-header-tab current" : "accordion-header-tab",
-                id: link ? link.id : '',
-                html: el.innerHTML
+                "class": (link && link.className.indexOf("current") !== -1) ? "eea-accordion-title current" : "eea-accordion-title",
+                id: link ? link.id + '-accordion': '',
+                html: link.innerHTML || el.innerHTML
             });
             $result.append('<span class="eea-icon eea-icon-right"></span>');
             $result.prependTo($panel);
@@ -87,7 +93,6 @@ jQuery(document).ready(function($) {
                 } else {
                     $panel.hide();
                 }
-                $panel.html($(".pane", $panel).html());
             });
         });
         $(".js-eea-tabs-to-hide").removeClass("hidden");

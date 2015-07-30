@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 
                 $eea_tab_children = $eea_tab.children();
                 var j = 0, tabs_length = $eea_tab_children.length,
-                    $tab_title, tab_title_text, tab_title_id;
+                    $tab_title, tab_title_text, tab_title_id, tab_id;
 
                 // the tabs need a link so we append a link if one is not found
                 for (j; j < tabs_length; j += 1) {
@@ -48,7 +48,14 @@ jQuery(document).ready(function($) {
                         tab_title_text = $tab_title.text();
                         tab_title_id = tab_title_text.toLowerCase().replace(/\s/g, '-');
                         $tab_title.text("");
-                        $('<a />').attr({'href' :'#tab-' + tab_title_id, 'id': 'tab-' + tab_title_id}).html(tab_title_text).appendTo($tab_title);
+                        if ($('#tab-' + tab_title_id).length) {
+                            debugger;
+                            tab_id = 'tab-' + tab_title_id + '-' + 1;
+                        }
+                        else {
+                            tab_id = 'tab-' + tab_title_id;
+                        }
+                        $('<a />').attr({'href' :'#tab-' + tab_title_id, 'id': tab_id}).html(tab_title_text).appendTo($tab_title);
                     }
                 }
                 // redo children assignment since they could have been changed from

@@ -602,7 +602,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 }
 
 .eea-accordion-panel > h2 .eea-icon-right:before,
-.eea-accordion-title > .eea-icon:before {
+.eea-accordion-title > .eea-icon-right:before {
     content: "&dtml-eea-icon-chevron-left;";
 }
 

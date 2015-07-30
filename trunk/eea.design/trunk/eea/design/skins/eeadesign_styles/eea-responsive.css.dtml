@@ -400,7 +400,12 @@
     overflow: auto; }
   #faceted-form .pane {
     display: block !important;
-    padding: 0; } }
+    padding: 0; }
+
+  .eea-tabs-panel .eea-accordion-title {
+    display: none; }
+  .eea-tabs-panel .pane {
+    display: block !important; } }
 @media screen and (min-width: 768px) and (max-width: 800px) {
   #portaltab-europe {
     padding-right: 95px;
