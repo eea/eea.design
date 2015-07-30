@@ -105,4 +105,15 @@ input.removecriteria {
     height: 55px;
 }
 
+/* community.css */
+#col1 .mainsearchboxinputtext,
+#col1 #statusinputtextarea {
+    height: inherit;
+}
+#sidenavigationlogoholder a {
+    width: 198px !important;
+}
+#languageselectorcombo {
+  height: 25px !important;
+}
 /* </dtml-with> */

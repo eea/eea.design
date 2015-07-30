@@ -3,6 +3,9 @@ Changelog
 
 12.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: various fixes to community styles as well as eea.europa.eu after
+  addition of bootstrap.css
+  [ichimdav refs #27537]
 * Feature: faceted navigation is now responsive, we hide the columns
   to the right and transform the filters into accordions
   [ichimdav refs #27214]
