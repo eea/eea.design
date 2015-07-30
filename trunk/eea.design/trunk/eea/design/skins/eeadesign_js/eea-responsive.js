@@ -50,8 +50,11 @@ jQuery(document).ready(function($) {
             if (!$panel.find(".pane").length) {
                 $panel.wrapInner("<div class='pane' />");
             }
-            $panel.show();
-            if ($panel.find(".eea-accordion-title").length) {
+            var $accordion_title = $panel.find(".eea-accordion-title");
+            if ($accordion_title.length) {
+                if (link.className.indexOf("current") !== -1 && !$accordion_title.hasClass('current')) {
+                    $accordion_title.click();
+                }
                 return;
             }
             var $result = $("<h2 />", {
@@ -61,6 +64,7 @@ jQuery(document).ready(function($) {
             });
             $result.append('<span class="eea-icon eea-icon-right"></span>');
             $result.prependTo($panel);
+            $panel.show();
         });
         $tab.addClass("js-eea-tabs-to-hide hidden");
         if (window.EEA && window.EEA.eea_accordion) {
@@ -87,8 +91,10 @@ jQuery(document).ready(function($) {
 
             $tabs_accordions.each(function(idx, panel) {
                 var $panel = $(panel);
+                var $tabs =  $panel.parent().prev();
                 $panel.attr("class", "eea-tabs-panel");
                 if ($("h2.current", $panel).length) {
+                    $tabs.find('a').removeClass('current').eq(idx).click();
                     $panel.show();
                 } else {
                     $panel.hide();
