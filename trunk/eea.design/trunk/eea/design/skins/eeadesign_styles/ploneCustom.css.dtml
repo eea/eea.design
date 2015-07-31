@@ -510,7 +510,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
 #visual-portal-wrapper .eea-tabs.two-rows > li > a {
     height: 40px;
     white-space: normal;
-    max-width: 150px;
+    max-width: 195px;
 }
 
 #visual-portal-wrapper .eea-tabs > li > a:hover {

@@ -3,6 +3,8 @@ Changelog
 
 12.5.dev0 - (unreleased)
 ------------------------
+* Feature: tabs now turn into accordions on mobile and viceversa
+  [ichimdav and lucas refs #27215]
 * Bug fix: various fixes to community styles as well as eea.europa.eu after
   addition of bootstrap.css
   [ichimdav refs #27537]

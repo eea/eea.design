@@ -50,21 +50,23 @@ jQuery(document).ready(function($) {
             if (!$panel.find(".pane").length) {
                 $panel.wrapInner("<div class='pane' />");
             }
+            $panel.show();
             var $accordion_title = $panel.find(".eea-accordion-title");
+            var link_is_current = link.className.indexOf("current") !== -1;
             if ($accordion_title.length) {
-                if (link.className.indexOf("current") !== -1 && !$accordion_title.hasClass('current')) {
+                if (link_is_current && !$accordion_title.hasClass('current')) {
+                    $tabs_panels.find('.pane').hide();
                     $accordion_title.click();
                 }
                 return;
             }
             var $result = $("<h2 />", {
                 "class": (link && link.className.indexOf("current") !== -1) ? "eea-accordion-title current" : "eea-accordion-title",
-                id: link ? link.id + '-accordion': '',
+                id: link ? link.id : '',
                 html: link.innerHTML || el.innerHTML
             });
             $result.append('<span class="eea-icon eea-icon-right"></span>');
             $result.prependTo($panel);
-            $panel.show();
         });
         $tab.addClass("js-eea-tabs-to-hide hidden");
         if (window.EEA && window.EEA.eea_accordion) {
@@ -94,7 +96,7 @@ jQuery(document).ready(function($) {
                 var $tabs =  $panel.parent().prev();
                 $panel.attr("class", "eea-tabs-panel");
                 if ($("h2.current", $panel).length) {
-                    $tabs.find('a').removeClass('current').eq(idx).click();
+                    $tabs.find('a').removeClass('current').eq(idx).addClass("current").click();
                     $panel.show();
                 } else {
                     $panel.hide();
@@ -105,6 +107,8 @@ jQuery(document).ready(function($) {
     }
 
     var $buttonnavbar = $("button.navbar-toggle");
+    var $soer_tabs = $(".eea-tabs-soer"),
+        $soer_tabs_found = $soer_tabs.length;
     var $notransform = $(".eea-tabs-panels-arrows, .eea-tabs-panels-soer, #whatsnew-gallery");
     $(window).resize(_.debounce(function() {
         if ($buttonnavbar.css("display") !== "none") {
@@ -121,6 +125,10 @@ jQuery(document).ready(function($) {
             if (eea_tabs_with_arrows_found) {
                 make_tabs_into_accordions($eea_tabs_with_arrows, $(".eea-tabs-panels-arrows"));
             }
+            if ($soer_tabs_found) {
+                make_tabs_into_accordions($soer_tabs, $(".eea-tabs-panels-soer"));
+            }
+
         }
         else {
             make_accordions_into_tabs();
@@ -243,28 +251,6 @@ jQuery(document).ready(function($) {
         })();
     }
 
-
-    // make accordion-panels out of soer2015 tabs
-    var $soer_panel = $(".eea-tabs-panels-soer");
-    $soer_panel.attr("class", "eea-accordion-panels eea-accordion-panels-soer collapsed-by-default non-exclusive");
-    var $soer_panels = $soer_panel.find(".eea-tabs-panel");
-
-    var $soer_tabs = $(".eea-tabs-soer");
-    var $soer_tabs_items = $soer_tabs.find("li");
-    $soer_tabs_items.each(function(idx, el) {
-        var $panel = $soer_panels.eq(idx);
-        var $el = $(el);
-        var link = $el.find("a")[0];
-        $panel.attr("class", "eea-accordion-panel");
-        $panel.wrapInner("<div class='pane' />");
-        var $result = $("<h2 />", {
-            class: "eea-icon-right-container",
-            id: link.id,
-            html: link.innerHTML
-        });
-        $result.prependTo($panel);
-    });
-    $soer_tabs.remove();
 
     // #26378 hide and show eea-scrolling-toggle-visibility when scrolling up or down
     var lastScrollTop = 0;

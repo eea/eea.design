@@ -330,7 +330,7 @@
   #portal-column-content {
     float: none;
     left: 0;
-    margin: 0 1%;
+    margin: 0 1% !important;
     min-width: 98% !important;
     width: 98% !important; }
 
