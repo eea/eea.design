@@ -93,7 +93,8 @@ jQuery(document).ready(function($) {
 
             $tabs_accordions.each(function(idx, panel) {
                 var $panel = $(panel);
-                var $tabs =  $panel.parent().prev();
+                var $parent = $panel.closest(".eea-tabs-panels");
+                var $tabs = $parent.hasClass("eea-tabs-panels-soer") ? $(".eea-tabs-soer") : $panel.parent().prev() ;
                 $panel.attr("class", "eea-tabs-panel");
                 if ($("h2.current", $panel).length) {
                     $tabs.find('a').removeClass('current').eq(idx).addClass("current").click();
@@ -136,7 +137,6 @@ jQuery(document).ready(function($) {
     }, 500));
 
     $(window).trigger("resize");
-
 
     // insert the logo also on the navbar for the bootstrap menu
     // this ensures that switching from portrait to landscape is without any flash since

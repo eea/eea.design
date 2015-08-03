@@ -84,8 +84,11 @@ jQuery(document).ready(function($) {
     $(window).bind('hashchange', function (evt) {
         // #14564 trigger click only if hash contains tab and use find to avoid
         // js syntax error
+        var $tab_target = $("#content").find(window.location.hash);
         if (window.location.hash.indexOf('tab') !== -1) {
-            $("#content").find(window.location.hash).click();
+            if ($tab_target.length && !$tab_target.hasClass("current")) {
+               $tab_target.click();
+            }
         }
     });
 

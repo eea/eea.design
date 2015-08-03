@@ -120,7 +120,7 @@ jQuery(document).ready(function($) {
                     current: current_class,
                     onBeforeClick: function(ev, idx) {
                         // allows third party applications to hook into these 2 event handlers
-                        $(ev.target).trigger("eea-accordion-before-click", { event: ev, index: idx});
+                        $(ev.target).trigger("onBeforeClick", { event: ev, index: idx});
                     },
                     onClick: function(ev, idx) {
                         $(ev.target).trigger("eea-accordion-on-click", { event: ev, index: idx});
