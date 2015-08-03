@@ -28,7 +28,7 @@ IGNORE THIS WILL BE REPLACED BY SOER 2015
                                 <dl
                                     class="portlet slidePortlet" >
                                     <dt class="portletHeader" style="padding:5px;" i18n:translate="">Key messages</dt>
-                                     <dd class="portletItem" style="left: 650px;"  tal:repeat="item items">
+                                     <dd class="portletItem" tal:repeat="item items">
                                        <span>
                                           <a href="" title="Read more of the key fact"
                                              class="moreLink link-plain" style="font-size:100%;"

@@ -48,17 +48,16 @@
                 var next = current.next('.portletItem');
 
                 var currentIndex = portlet.find('.portletItem').index(current);
-                var nextIndex = portlet.find('.portletItem').index(next);
+                //var nextIndex = portlet.find('.portletItem').index(next);
 
                 // current.is(':last') did not work for some reason
-                if (currentIndex+1 == portlet.find('.portletItem').length) {
+                if (currentIndex+1 === portlet.find('.portletItem').length) {
                     return;
                 }
 
                 current.removeClass('selected');
                 next.addClass('selected');
-
-                current.animate({'left': -(portlet.width()+100)});
+                current.animate({'left': -(portlet.width()+300)});
                 next.animate({'left': 0});
             });
 
@@ -67,7 +66,7 @@
                 var next = current.prev('.portletItem');
 
                 var currentIndex = portlet.find('.portletItem').index(current);
-                var nextIndex = portlet.find('.portletItem').index(next);
+                //var nextIndex = portlet.find('.portletItem').index(next);
 
                 if (currentIndex === 0) {
                     return;
@@ -76,7 +75,7 @@
                 current.removeClass('selected');
                 next.addClass('selected');
 
-                var p = portlet.width() + 100;
+                var p = portlet.width() + 300;
                 current.animate({'left': p});
                 next.animate({'left': 0});
             });
