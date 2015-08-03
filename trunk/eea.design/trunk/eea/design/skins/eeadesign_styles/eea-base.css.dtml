@@ -188,7 +188,7 @@ dl.portlet a:visited {
     font-size: 100%;
     margin-bottom: 1em;
     color: #666;
-    text-align: right;
+    text-align: left;
     line-height: 2em;
 }
 

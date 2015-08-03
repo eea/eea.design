@@ -6,7 +6,7 @@
     font-size: 0.7em; }
 
   ul.social-buttons > li {
-    padding: 0 5px; }
+    padding: 0 3px; }
 
   #content .action-items ul {
     margin-left: 0; }
@@ -327,7 +327,7 @@
   #portal-columns {
     min-width: 100% !important; }
 
-  #portal-column-content {
+  #portal-column-content, #portal-column-two {
     float: none;
     left: 0;
     margin: 0 1% !important;

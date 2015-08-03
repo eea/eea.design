@@ -367,7 +367,7 @@ class figure-right or figure-left */
     font-weight: bold;
 }
 .figure-image {
-    text-align: center;
+    text-align: left;
     clear: both;
 }
 
@@ -486,8 +486,6 @@ span.figure-left {
     margin-bottom: 2em;
 }
 #keyfacts-slider img.keyfacts-bgimg {
-    min-width: 600px;
-    min-height: 348px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -518,6 +516,7 @@ span.figure-left {
     padding: 0;
     width: 100%;
     font-size: 115%;
+    left: -100%;
 }
 
 #keyfacts-slider .slidePortlet .portletItem span {
