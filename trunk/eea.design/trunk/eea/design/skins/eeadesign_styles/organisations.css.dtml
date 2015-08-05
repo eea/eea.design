@@ -5,10 +5,23 @@
     font-weight: bold;
     margin: 0 !important; /* because of print content dt margin values */
 }
+
 .org_container dd, .director_container dd {
-    margin: 0;
-    padding: 0;
+    margin:0 !important;
+    padding:0 !important;
 }
+
+#organisation-chart-container dl {
+    margin-bottom: 0 !important;
+}
+
+
+/* #27840 visual clear should be visible for organisation chart on print
+in order to preserve the same look found on screen media */
+#organisation-chart-container .visualClear {
+    display: block !important;
+}
+
 .director_container {
     margin: 0;
     padding: 0;
