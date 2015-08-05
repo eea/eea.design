@@ -3,6 +3,7 @@
 
 .org_container dt, .director_container dt {
     font-weight: bold;
+    margin: 0 !important; /* because of print content dt margin values */
 }
 .org_container dd, .director_container dd {
     margin: 0;
@@ -16,7 +17,7 @@
     background-color: #CCCCCC;
     border: 1px solid #888888;
     font: 10px &dtml-fontFamily;;
-    height: 150px;
+    height: 170px;
     margin: 0;
     padding: 10px;
     position: relative;
@@ -62,16 +63,17 @@
     background-color: #EFEFEF;
     border: 1px solid #888888;
     font: 9px &dtml-fontFamily;;
-    height: 128px;
+    height: 135px;
     margin: 10px 35px 0 26px;
     padding: 6px 3px 0;
     position: relative;
     text-align: left;
-    width: 85px;
+    width: 90px;
 }
 .org_staff_number {
     bottom: 0;
     position: absolute;
+    bottom:0;
     right: 0;
 }
 .org_staff_total {
@@ -119,7 +121,7 @@
 .org_child {
     border-left: 1px solid black;
     float: left;
-    height: 146px;
+    height: 145px;
     margin: 0 0 0 20px;
     padding: 0;
     width: 5px;

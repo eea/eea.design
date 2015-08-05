@@ -3,6 +3,8 @@ Changelog
 
 12.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed organisation styling after addition of bootstrap
+  [ichimdav refs #27840]
 * Bug fix: fixed some issues with soer and soer2015 found while testing the pdf
   export
   [ichimdav refs #27537]
