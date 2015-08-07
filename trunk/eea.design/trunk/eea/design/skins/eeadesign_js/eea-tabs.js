@@ -84,10 +84,17 @@ jQuery(document).ready(function($) {
     $(window).bind('hashchange', function (evt) {
         // #14564 trigger click only if hash contains tab and use find to avoid
         // js syntax error
-        var $tab_target = $("#content").find(window.location.hash);
+        var $tab_target;
         if (window.location.hash.indexOf('tab') !== -1) {
-            if ($tab_target.length && !$tab_target.hasClass("current")) {
-               $tab_target.click();
+            try {
+                $tab_target = $("#content").find(window.location.hash);
+                if ($tab_target.length && !$tab_target.hasClass("current")) {
+                    $tab_target.click();
+                }
+
+            } catch(e) {
+            // catch potential error that can occour if we have query parameter
+            // in location such as #tab?some=none
             }
         }
     });

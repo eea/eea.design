@@ -1,6 +1,11 @@
 jQuery(document).ready(function($) {
     // check if related_items isn't an select tag which is found in the edit
     // widget
+
+    //// #27537 do not make tabs from related content if we are printing
+    if (window.EEA.isPrintPdf) {
+        return;
+    }
     var $related_items = $("#relatedItems"),
         has_related_items = $related_items.length &&
                                          $related_items[0].tagName !== 'SELECT',

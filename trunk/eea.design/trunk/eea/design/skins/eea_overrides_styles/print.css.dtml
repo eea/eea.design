@@ -205,37 +205,30 @@ data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
 }
 
 /* Display related items in a simpler list way */
+#relatedItems h2 {
+    margin: 10pt 0;
+    padding: 0;
+}
 
-#relatedItems .eea-tabs-panel {
-    display: block !important;
+#relatedItems h3 {
+    margin: 1em 0 0 0;
+    padding: 0;
 }
 
 #relatedItems .photoAlbumEntry {
     clear: both;
     margin: 0;
     padding: 5px 0;
+    height: auto !important;
 }
 
-#relatedItems .photoAlbumEntryWrapper {
-  display: none;
-}
-
-#relatedItems .photoAlbumEntryDescription {
+#relatedItems .photoAlbumEntryWrapper,
+#relatedItems .photoAlbumEntryDescription{
   display: none;
 }
 
 #relatedItems a:link:after,#relatedItems a:visited:after {
   content:" [" attr(href) "] ";
-}
-
-#relatedItems h2 {
-  margin: 50pt 0 10pt 0;
-  padding: 0;
-}
-
-#relatedItems h3 {
-    margin: 1em 0 0 0;
-    padding: 0;
 }
 
 
@@ -358,14 +351,5 @@ dl.captioned {
     vertical-align: middle;
 }
 
-#relatedItems .pane{ display: block !important; }
-#relatedItems .photoAlbumEntry{ height: auto !important; }
-#relatedItems .eea-tabs-panel,
-#relatedItems .eea-tabs-panels,
-#relatedItems .eea-accordion-panels { border: none; background-color: transparent; padding: 0; }
-#relatedItems .eea-accordion-panels h2{ border: none; margin: 0; background-color: transparent; }
-#relatedItems .eea-accordion-panels h2 a { color: #000 !important; }
-#relatedItems .eea-accordion-panels h2 a:link:after{ content: ""; }
-#relatedItems .eea-accordion-panels h2 span.eea-icon{ display: none; }
 
 /* </dtml-with> */

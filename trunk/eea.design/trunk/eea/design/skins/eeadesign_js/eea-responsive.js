@@ -1,5 +1,11 @@
 /* global jQuery, window, _, document */
 jQuery(document).ready(function($) {
+
+    if (!window.EEA) {
+        window.EEA = {};
+    }
+    window.EEA.isPrintPdf = $("body").hasClass("body-print");
+
     var doc = document.documentElement;
     // #16878 move last two links of globalnav to a secondary container
     // #23500 we now have an extra list item (europe)
