@@ -144,13 +144,34 @@ body {
     page-break-inside:avoid !important;
 }
 
-.indicator-figure-plus-container {
-    page-break-inside:avoid !important;
+
+/**** 27537 style tweaks for
+data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
+****/
+#definition-and-units h2,
+.policy_question
+{
+    margin: 0.5em 0;
 }
 
-.indicator-figure-plus .figure-title {
-    clear:both !important;
+#definition-and-units h3 {
+    margin-bottom: 0;
+    margin-top: 0.4em;
 }
+#definition-and-units p,
+#definition-and-units ul,
+{
+    margin: 0;
+}
+
+.googlechart_dashboard .googlechart-notes {
+    font: 10px Verdana, Arial, Helvetica, sans-serif !important;
+}
+
+.figure-chart-live {
+    margin-bottom: 0;
+}
+/* /27537 */
 
 
 /* ichimdav added from sunburst's print.css */
@@ -183,8 +204,9 @@ body {
 }
 
 #relatedItems .photoAlbumEntry {
-  clear: both;
-  margin: 0;
+    clear: both;
+    margin: 0;
+    padding: 5px 0;
 }
 
 #relatedItems .photoAlbumEntryWrapper {
@@ -200,13 +222,13 @@ body {
 }
 
 #relatedItems h2 {
-  margin: 50pt 0 20pt 0;
+  margin: 50pt 0 10pt 0;
   padding: 0;
 }
 
 #relatedItems h3 {
-  margin: 0;
-  padding: 0;
+    margin: 1em 0 0 0;
+    padding: 0;
 }
 
 
@@ -333,7 +355,7 @@ dl.captioned {
 #relatedItems .photoAlbumEntry{ height: auto !important; }
 #relatedItems .eea-tabs-panel,
 #relatedItems .eea-tabs-panels,
-#relatedItems .eea-accordion-panels { border: none; background-color: transparent; }
+#relatedItems .eea-accordion-panels { border: none; background-color: transparent; padding: 0; }
 #relatedItems .eea-accordion-panels h2{ border: none; margin: 0; background-color: transparent; }
 #relatedItems .eea-accordion-panels h2 a { color: #000 !important; }
 #relatedItems .eea-accordion-panels h2 a:link:after{ content: ""; }
