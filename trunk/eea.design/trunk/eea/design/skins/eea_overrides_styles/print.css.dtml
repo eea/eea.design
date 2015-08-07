@@ -171,6 +171,13 @@ data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
 .figure-chart-live {
     margin-bottom: 0;
 }
+
+#frequency_of_updates {
+    font-size: 100%;
+    text-align: left;
+    padding: 0.5em 1em;
+}
+
 /* /27537 */
 
 
