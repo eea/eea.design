@@ -12,6 +12,17 @@ jQuery(document).ready(function($) {
       ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
     }
 
+    /* 27537; insert a link for iframes that contain video since whkthmltopdf doesn't support
+    * the video tag and there is no image placeholder */
+    var $video_iframe = $("iframe").filter('[src*="video"]'), $video_iframe_src;
+    if ($video_iframe) {
+        $video_iframe_src = $video_iframe.attr('src');
+        $("<a />", {
+            'class': 'video_iframe_for_print visible-print',
+            href: $video_iframe_src,
+            html: "Video link: [" + $video_iframe_src + "]"
+        }).insertBefore($video_iframe);
+    }
 
     // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
     $('.eea-tabs').find('li:last-child').addClass('last-child');
