@@ -60,6 +60,16 @@ div.warning,
     font-size: 150%;
 }
 
+/* portal-admin-msg is a portalMessage which uses an eea-icon instead of using
+   a portalMessage class to have a different icon, as such we need to tweak the
+   margin set in previous rule */
+#portal-admin-msg .eea-icon {
+    display: block;
+}
+#portal-admin-msg .eea-icon::before {
+    margin-left: 0;
+}
+
 /* #23500 portal-column-two has less space for the icon to fit the portalMessage area */
 #portal-column-two .portalMessage .eea-icon:before {
     margin-left: -1.3em;
