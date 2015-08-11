@@ -204,8 +204,19 @@ data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
     margin:0.5em 0 1.31em;
 }
 
+
+/* 27537 hide iframes with video found within src since wkhtmltopdf
+ can't display the video tag and the iframe provided no thumbnail as fallback */
 iframe[src*="video"] {
     display: none;
+}
+
+/* 27883 set page with and size dimensions of page used by the Google Chrome print
+ engine, this allows us to have with the print preview an aproximation of the output
+ done with the wkhtmltopdf */
+@page {
+    size: 810px 1000px;
+    margin: 40pt 50pt;
 }
 
 /* Display related items in a simpler list way */
@@ -355,6 +366,8 @@ dl.captioned {
     max-width: 100%;
     vertical-align: middle;
 }
+
+
 
 
 /* </dtml-with> */
