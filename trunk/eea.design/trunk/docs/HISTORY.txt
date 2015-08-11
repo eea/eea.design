@@ -3,6 +3,9 @@ Changelog
 
 12.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: hide iframes which have video links since wkhtmltopdf can't display
+  the video tag
+  [ichimdav refs #27537]
 * Bug fix: fixed organisation styling after addition of bootstrap
   [ichimdav refs #27840]
 * Bug fix: fixed some issues with soer and soer2015 found while testing the pdf
