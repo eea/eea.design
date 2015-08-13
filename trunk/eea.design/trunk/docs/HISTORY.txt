@@ -3,6 +3,8 @@ Changelog
 
 12.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed frontpage and theme pages styles when printing
+  [ichimdav refs #27958]
 * Bug fix: fixed portal-admin-msg eea-icon placement seen on
   global-status-message
   [ichimdav]

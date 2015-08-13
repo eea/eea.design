@@ -317,10 +317,23 @@ input.context,
 #login_form,
 #login-forgotten-password,
 .cookieMessage,
-#enable_cookies_message + .informationMessage
+#enable_cookies_message + .informationMessage,
+#topic-selector,
+.filter-topic,
+.gallery-layout-selection
 {
     /* Hides all the elements irrelevant for printing */
     display: none !important;
+}
+
+
+/* #27958 frontpage and themes print fixes */
+.gallery-ajax.visualClear {
+    display: block !important;
+}
+#gallery-content-outer,
+#promo-gallery-content, #promo-gallery-content-sm {
+    height: 367px !important;
 }
 
 
@@ -366,8 +379,5 @@ dl.captioned {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
-
 
 /* </dtml-with> */
