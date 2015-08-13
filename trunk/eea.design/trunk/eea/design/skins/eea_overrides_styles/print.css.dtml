@@ -283,6 +283,7 @@ div.documentActions,
 body.frontpage .portlet-promotions,
 .moreLink,
 .skipnav,
+.portletNavigationTree,
 .visualNoPrint,
 .visualClear,
 .progressbar-viewlet,
@@ -327,13 +328,25 @@ input.context,
 }
 
 
+
 /* #27958 frontpage and themes print fixes */
 .gallery-ajax.visualClear {
     display: block !important;
 }
 #gallery-content-outer,
+#gallery-content-outer-sm,
 #promo-gallery-content, #promo-gallery-content-sm {
     height: 367px !important;
+    float: none !important;
+    page-break-inside: avoid;
+}
+#promo-gallery-content-sm li img,
+#promo-gallery-content li img {
+    width: 100%;
+}
+.right-column-area, .column-area {
+    width: 100% !important;
+    margin-top: 1em;
 }
 
 
