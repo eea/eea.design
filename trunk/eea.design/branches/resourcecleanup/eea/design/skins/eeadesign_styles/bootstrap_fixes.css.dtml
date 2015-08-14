@@ -1,0 +1,121 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    line-height: normal;
+}
+
+sup, sub {
+    font-size: smaller;
+    top: inherit;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+#printLogo {
+    height: 71px;
+}
+
+#portaltab-europe {
+    width: 212px;
+}
+
+dl {
+    margin-bottom: 0;
+}
+
+dt, dd {
+    line-height: inherit;
+}
+
+/* #13825 remove margin-left from our styles set by twitter bootstrap */
+div.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* #27501 needed because bootstrap navbar has an z-index of 1030 which hides the jquery ui dialog
+   for related items.
+   #27889 changed from ui-dialog to ui-draggable since ui-dialog is used by slickgrid
+   and it messes up it's z-index order */
+.ui-draggable {
+    z-index: 1031;
+}
+
+/* ==== eea_base.css ==== */
+/* compensate for padding from eea_soer.css */
+#relatedItems .photoAlbumEntry,
+#faceted-results .photoAlbumEntry
+{
+    height: 155px;
+}
+
+/* ==== Frontpage.css ==== */
+
+/* ==== promo_gallery.css ==== */
+.controls, .controls-sm {
+    height: 40px;
+}
+
+/* ==== presentational_styles.css ==== */
+blockquote {
+    width: 78%;
+}
+
+/* ++resource++eea.faceted-navigation-edit.css */
+.faceted-widget .ui-widget-header {
+    margin: -5px -5px 1em -5px;
+}
+
+/* ==== ploneCustom.css ==== */
+#visual-portal-wrapper .eea-tabs.two-rows > li > a {
+  height: 50px;
+}
+
+
+/* jquery.fancybox.css */
+#fancybox-content, #fancybox-wrap,
+/* ploneCustom.css */
+.eea-tooltip-markup-top, .eea-tooltip-markup-bottom, .eea-tooltip-markup-left, .eea-tooltip-markup-right,
+/* presentational_styles.css */
+.portalMessage,
+/* ++resource++eea.faceted-navigation-edit.css */
+.faceted-add-button .ui-icon,
+/* ++resource++jquery.slickgrid.css */
+.slick-header-column.ui-state-default, .slick-cell {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* ++resource++archetypes.querywidget.querywidget.css */
+input.removecriteria {
+    margin-left: 0.5em;
+}
+.ArchetypesQueryWidget .multipleSelectionWidget dt {
+    height: 2.6em;
+}
+
+/* uberlisting.css */
+#uber-view-switch a {
+    height: 55px;
+}
+
+/* community.css */
+#col1 .mainsearchboxinputtext,
+#col1 #statusinputtextarea {
+    height: inherit;
+}
+#sidenavigationlogoholder a {
+    width: 198px !important;
+}
+#languageselectorcombo {
+  height: 25px !important;
+}
+/* </dtml-with> */
