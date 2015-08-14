@@ -35,8 +35,7 @@
                    i18n:translate="">Legal notice</a>
             </span>
              <img tal:attributes="src string:${portal_url}/eu-flag.gif"
-                  alt="EU flag" 
-                  title="European Union Flag"
+                  width="50" height="37" alt="EU flag" title="European Union Flag"
                   i18n:attributes="alt;title" />
             <br />  
         </div>
@@ -62,6 +61,7 @@
                     <img alt="Creative Commons Attribution License"
                         i18n:attributes="alt"
                         style="border-width: 0pt;"
+                        width="80" height="15"
                         tal:attributes="src string:${portal_url}/creativecommons-by-2.5-dk-80x15.png"/>
                     </a>
 

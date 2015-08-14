@@ -884,7 +884,7 @@ dt.portletItem a, #content dt.portletItem a {
    border: none;
    width: 30px;
    height: 19px;
-   margin: 0 8px 0 2px;
+   margin: 0 2px 0 2px;
    padding: 0;
    cursor:pointer;
 }
