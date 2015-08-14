@@ -352,8 +352,5 @@ a.active-list, a.list-layout:hover {
     width: 83%;
     padding-top: 6px;
 }
-.filter-topic span {
-    font-weight: bold;
-}
 /* </dtml-with> */
 
