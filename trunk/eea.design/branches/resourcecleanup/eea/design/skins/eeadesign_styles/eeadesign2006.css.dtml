@@ -25,25 +25,6 @@
     vertical-align: middle;
 }
 
-/* Subsite, subsection identification */
-
-#portal-subsite {
-    position:absolute;
-    margin-top:-35px;
-}
-
-
-#portal-subsite a {
-    color: &dtml-linkColor;;
-    text-decoration: none;
-    font-size:85%;
-}
-
-#portal-subsite a:hover {
-    color: &dtml-linkColor;
-}
-
-
 /* Accessibility and visual enhancement elements */
 
 .hiddenStructure {
