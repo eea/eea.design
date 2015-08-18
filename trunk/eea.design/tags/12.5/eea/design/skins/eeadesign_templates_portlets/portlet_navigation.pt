@@ -1,0 +1,23 @@
+<metal:header define-macro="header"
+     i18n:domain="eea"
+     tal:define="view context/@@navigationHeader;
+                 displayLogo view/shouldDisplayLogo;
+                 title context/@@plone_context_state/object_title;">
+
+    <a href="#" class="tile"
+       tal:condition="python: not displayLogo and not title"
+       tal:attributes="href string:${root/absolute_url}/sitemap"
+       i18n:translate="">Navigation</a>
+    <a href="#" class="tile"
+       tal:condition="python: title and not displayLogo"
+       tal:attributes="href root/getUrl|root/absolute_url"
+       tal:content="title">Themes</a>
+    <a href="#" class="tile"
+       tal:condition="displayLogo"
+       tal:attributes="href view/logoLinkUrl">
+        <img src="" id="subsite-logo"
+           tal:attributes="src view/logoUrl;
+                           title view/title|nothing;
+                           alt view/title|string:subsite logo" />
+    </a>
+</metal:header>
