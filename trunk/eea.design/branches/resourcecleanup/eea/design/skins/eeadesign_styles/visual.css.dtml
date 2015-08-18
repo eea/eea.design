@@ -71,23 +71,6 @@ sup, sub {
     background: url(&dtml-portal_url;/draft.png);
 }
 
-
-/*
-** Breadcrumb trail
-** Adopted from Eionet
-*/
-
-.breadcrumbitem, .breadcrumbitemlast {
-    padding-right:0px;
-    padding-left:11px;
-}
-.breadcrumbitemlast {
-    font-weight:bold;
-}
-a.breadcrumbitem {
-    color:&dtml-linkColor;;
-}
-
 /*
 ** Collapsible areas classes.
 ** further info in javascript
@@ -97,7 +80,7 @@ a.breadcrumbitem {
 .collapsibleHeader {
     cursor: pointer;
     background: transparent url(<dtml-var portal_url>/p_/pl) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
+    padding: 1px 0 1px 20px;
 }
 
 .expandedBlockCollapsible .collapsibleContent {
@@ -145,7 +128,7 @@ th a, th a:link, th a:visited {
 }
 
 /* Data tables */
-table.datatable {
+.datatable {
     border: 1px solid #b6b6b6;
     border-collapse: collapse;
     color: #666666;
@@ -155,13 +138,8 @@ table.datatable {
     text-align: center;
     background-color: #f6f6f6;
     font-weight: bold;
-    /* border-top:    1px solid white;
-    border-bottom: 1px solid white;*/
 }
 .datatable th.scope-row { /* IE6 doesn't understand [scope="row"] */
-    text-align: right;
-}
-.datatable th[scope="row"] {
     text-align: right;
 }
 
@@ -175,10 +153,6 @@ table.datatable {
 .datatable td, .datatable th  {
     padding: 0.3em;
     vertical-align: top;
-}
-.datatable tr {
-    /* border-top:    1px solid #f6f6f6;
-    border-bottom: 1px solid #f6f6f6;*/
 }
 .datatable tr.zebraeven {
     background-color: #f6f6f6;
@@ -201,16 +175,13 @@ table.datatable {
     line-height:normal;
 }
 
-.sortable tbody tr {
-}
-
 .sortable td, .listing td {
     padding: 0.2em;
     border-bottom: 1px dotted #b6b6b6;
 }
 .sortable th, .listing th {
     background: #f1efe5;
-    border: 2px outset #adc095; /* #495b6b;*/
+    border: 2px outset #adc095;
     margin: 0;
     padding: 0;
     white-space: nowrap;
@@ -243,56 +214,18 @@ table.datatable {
 
 /* CSS3 Zebra effect for certain tables */
 .listing tr:nth-child(odd) td,
-.sortable tr:nth-child(odd) td
+.sortable tr:nth-child(odd) td,
 .datatable tr:nth-child(odd) td {
     background-color: #ececec;
-}
-
-/* Tables for arranging formulars */
-
-.formtable {
-    border-collapse: collapse;
-}
-
-.formtable th {
-    vertical-align: top;
-    text-align: right;
-    border: none;
-    background: transparent;
-}
-
-.formtable th.scope-col { /* IE6 doesn't understand [scope="col"] */
-    text-align: left;
-}
-
-.formtable th[scope="col"] {
-    text-align: left;
-}
-
-.formtable td  {
-    vertical-align: top;
 }
 
 
 /* Styles which apply only in central content area */
 
-#content blockquote.quote-right {
-    float: right;
-    width: 15em;
-}
-
-#content blockquote.quote-left {
-    float: left;
-    width: 19em;
-    margin:2em 2em 0.4em 0em;
-}
-
 #content blockquote p {
     font-weight:bold;
-    background: url(&dtml-portal_url;/close_quote.gif);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    padding: 0em 2.25em 1em 0em;
+    background: url(&dtml-portal_url;/close_quote.gif) no-repeat bottom right;
+    padding: 0 2.25em 1em 0;
 }
 
 #content blockquote p.source {
@@ -301,7 +234,7 @@ table.datatable {
     font-style: normal;
     font-weight:normal;
     font-size: x-small;
-    padding: 0em 1em 0em 0em;
+    padding: 0 1em 0 0;
 }
 
 /* Link styles in content headers */
@@ -317,32 +250,15 @@ table.datatable {
 }
 
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
-#content div#multicolumn {
+.multicolumn {
+    -webkit-column-width: 150px;
+    -webkit-column-gap: 20px;
     -moz-column-width: 150px;
     -moz-column-gap: 20px;
     column-width: 150px;
     column-gap: 20px;
 }
 
-/* Styles which can be used on any area */
-
-.boxShadowedDownRight {
-    -webkit-box-shadow: 2px 2px 1px #888;
-    -moz-box-shadow: 2px 2px 1px #888;
-    -ms-box-shadow: 2px 2px 1px #888;
-    -o-box-shadow: 2px 2px 1px #888;
-    box-shadow: 2px 2px 1px #888;
-}
-
-
-.greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools, #portal-personaltools dd,
-#faceted-form .widget-fieldset legend {
-    background-color: &dtml-corporateGreen;;
-}
-
-.greenGradientBackgroundDown, #contentActionMenus {
-    background-color: &dtml-corporateGreen;;
-}
 
 /* standard figure, used for articles and pages.
 can be floated left or right with additional
@@ -385,7 +301,6 @@ class figure-right or figure-left */
     border: 1px solid #a9a9a9;
     margin: -6px 0 0 -6px;
     padding: 4px;
-    /*position: relative;*/
     zoom: 1;
 }
 
@@ -396,26 +311,19 @@ class figure-right or figure-left */
     padding: 4px;
 }
 
-/* */
 .figure-right .figure,
 .figure-right .figure-plus-container {
     float: right;
     margin-left: 1em;
 }
 
-.shadowed, .thumbnail-right img {
+.thumbnail-right img {
     display: block;
     background-color: #fff;
-    margin: -6px 0px 0px -6px;
+    margin: -6px 0 0 -6px;
     border: 1px solid #a9a9a9;
     padding: 4px;
 }
-
-.related-in-content-area .figure-plus-container {
-    margin-left: 3em;
-}
-
-/* floating left or right */
 
 .figure-left .figure,
 .figure-left .figure-plus-container {
@@ -425,59 +333,6 @@ class figure-right or figure-left */
 
 span.figure-left {
     display: block;
-}
-
-/* available scaled sizes to be used in  combination of .figure-plus-container
-        sizes= {'large'   : (768, 768),
-                'preview' : (400, 400),
-                'mini'    : (180,135),
-                'thumb'   : (128, 128),
-                'tile'    :  (64, 64),
-                'icon'    :  (32, 32),
-                'listing' :  (16, 16),
-               },
-
-*/
-
-.figure-container-imagelarge,
-.figure-container-imagelarge .figure-image,
-.figure-container-imagelarge p {
-    width:768px;
-}
-
-
-.figure-container-imagepreview,
-.figure-container-imagepreview .figure-image,
-.figure-container-imagepreview p {
-    width:400px;
-}
-.figure-container-imagemini,
-.figure-container-imagemini .figure-image,
-.figure-container-imagemini p {
-    width:180px;
-}
-.figure-container-imagethumb,
-.figure-container-imagethumb .figure-image,
-.figure-container-imagethumb p {
-    width:128px;
-}
-
-.figure-container-imagetile,
-.figure-container-imagetile .figure-image,
-.figure-container-imagetile p {
-    width:64px;
-}
-
-.figure-container-imageicon,
-.figure-container-imageicon .figure-image,
-.figure-container-imageicon p {
-    width:32px;
-}
-
-.figure-container-imagelisting,
-.figure-container-imagelisting .figure-image,
-.figure-container-imagelisting p {
-    width:16px;
 }
 
 /* style for keyfacts slider */
