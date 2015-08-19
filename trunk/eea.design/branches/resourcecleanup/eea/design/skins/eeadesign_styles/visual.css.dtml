@@ -94,19 +94,13 @@ table {
     font-size: 0.9em;
 }
 
-td {
-    line-height: normal;
-    text-decoration: none;
-}
-
 th {
     font-weight: bold;
     line-height: normal;
     padding: 0.1em 0.5em;
-    text-decoration: none;
 }
 th a, th a:link, th a:visited {
-    color: #000 !important;
+    color: #000;
 }
 
 
@@ -117,6 +111,10 @@ th a, th a:link, th a:visited {
     display: block;
     content: " ";
     height: 16px;
+}
+
+.listing th a, .listing th a:visited {
+    color: #FFF !important;
 }
 
 /* Data tables */
@@ -131,15 +129,9 @@ th a, th a:link, th a:visited {
     background-color: #f6f6f6;
     font-weight: bold;
 }
-.datatable th.scope-row { /* IE6 doesn't understand [scope="row"] */
+.number,
+.scope-row { /* IE6 doesn't understand [scope="row"] */
     text-align: right;
-}
-
-.datatable .number {
-    text-align: right;
-}
-.datatable .sum {
-    font-weight: bold;
 }
 
 .datatable td, .datatable th  {
@@ -158,6 +150,10 @@ th a, th a:link, th a:visited {
     font-weight: normal;
     border-bottom: 1px solid #DDD;
     cursor: pointer;
+}
+
+.sum {
+    font-weight: bold;
 }
 
 /* Sortable table columns */
@@ -193,13 +189,10 @@ th a, th a:link, th a:visited {
     padding:1px 0.5em;
 }
 
-.listing th .listingBar a{
-    display: inline;
-}
-
 .sortable thead th a:hover,
 .listing thead th a:hover,
-.listing thead th:hover {
+.listing thead th:hover,
+.listing tfoot th:hover {
     background: &dtml-corporateOrange;;
     color: #fff;
 }
@@ -229,18 +222,6 @@ th a, th a:link, th a:visited {
     padding: 0 1em 0 0;
 }
 
-/* Link styles in content headers */
-#content h1 a,
-#content h2 a,
-#content h3 a,
-#content h4 a,
-#content h5 a,
-#content h6 a {
-    text-decoration: none;
-    /*  padding-right: 0.9em !important; 23407 removed padding right from header links */
-    border: none;
-}
-
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
 .multicolumn {
     -webkit-column-width: 150px;
@@ -258,8 +239,7 @@ class figure-right or figure-left */
 
 .figure p,
 .figure-plus p,
-.figure-container p,
-.figure-standalone p {
+.figure-container p {
     margin-bottom: 0;
 }
 
@@ -268,9 +248,6 @@ class figure-right or figure-left */
     margin-bottom: 1em;
 }
 
-.figure, .figure-plus {
-    text-indent: 0;
-}
 .figure-title, .figure-nr {
     font-weight: bold;
 }
@@ -296,19 +273,11 @@ class figure-right or figure-left */
     zoom: 1;
 }
 
-.figure-standalone {
-    background-color: #fff;
-    border: 1px solid #a9a9a9;
-    margin: 0 0 0 0;
-    padding: 4px;
-}
-
 .figure-right .figure,
 .figure-right .figure-plus-container {
     float: right;
     margin-left: 1em;
 }
-
 
 .figure-left .figure,
 .figure-left .figure-plus-container {
@@ -399,7 +368,7 @@ span.figure-left {
     padding-left: 0;
     text-decoration: underline;
     color: white !important;
-    cursor: pointer;
+    font-size: 100%;
 }
 
 #keyfacts-slider .slidePortlet a.moreLink:hover {
@@ -407,11 +376,17 @@ span.figure-left {
 }
 
 #keyfacts-slider .slidePortlet .portletHeader {
-    padding-left: 25px !important;
-    background: &dtml-corporateBlueTwo;;
-    color: #FFFFFF !important;
+  margin: 8px 0 0 25px;
+  background-color: transparent;
+  color: #FFF;
+  padding: 0;
 }
 
+#keyfacts-slider a,
+#keyfacts-slider a:hover,
+#keyfacts-slider a:visited {
+    color: #FFF !important; /* important because of content a:hover */
+}
 #keyfacts-slider .keyfactsImgContainer {
     overflow: hidden;
     text-align: center;

@@ -27,17 +27,17 @@ IGNORE THIS WILL BE REPLACED BY SOER 2015
                                 <!-- all key facts and messages -->
                                 <dl
                                     class="portlet slidePortlet" >
-                                    <dt class="portletHeader" style="padding:5px;" i18n:translate="">Key messages</dt>
+                                    <dt class="portletHeader" i18n:translate="">Key messages</dt>
                                      <dd class="portletItem" tal:repeat="item items">
                                        <span>
                                           <a href="" title="Read more of the key fact"
-                                             class="moreLink link-plain" style="font-size:100%;"
+                                             class="moreLink link-plain"
                                                   tal:attributes="href item/parent_url;title item/parent_title;"
                                                   i18n:attributes="title"
                                                   i18n:translate="" tal:content="item/parent_title">more</a>:&nbsp;
                                           <span tal:replace="structure item/text"></span>
                                           <a href="" title="Read more of the key fact"
-                                             class="moreLink link-plain" style="font-size:100%;"
+                                             class="moreLink link-plain"
                                                   tal:attributes="href item/parent_url;title item/parent_title;"
                                                   i18n:attributes="title"
                                                   i18n:translate="">more</a>
