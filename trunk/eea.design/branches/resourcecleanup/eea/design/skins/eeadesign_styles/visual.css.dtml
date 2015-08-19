@@ -1,11 +1,3 @@
-/*
-** EEA Design 2006 style sheet - Public-facing Elements
-**
-**
-** Documentation http://webservices.eea.eu.int/templates/
-**
-*/
-
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
@@ -317,13 +309,6 @@ class figure-right or figure-left */
     margin-left: 1em;
 }
 
-.thumbnail-right img {
-    display: block;
-    background-color: #fff;
-    margin: -6px 0 0 -6px;
-    border: 1px solid #a9a9a9;
-    padding: 4px;
-}
 
 .figure-left .figure,
 .figure-left .figure-plus-container {
@@ -434,51 +419,24 @@ span.figure-left {
     height: 280px;
 }
 
-.pull-left {
-    float: left;
-}
-
-.pull-right {
-    float: right;
-}
-
-.clearfix:before,
-.clearfix:after {
-    display: table;
-    content: " ";
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.slidePortlet .corner-date {
-    font-size: 11px;
-    line-height: 1.6;
-}
 
 /* standard elements with shadow background */
-.dropshadow, .thumbnail-right {
+.thumbnail-right {
     display: block;
-    margin: 10px 0px 2px 6px;
+    margin: 10px 0 2px 6px;
 }
 
 /* standard elements which are shadowed and therefore moved up*/
-.shadowed, .thumbnail-right img {
+.thumbnail-right img {
     display: block;
-    margin: -6px 0px 0px -6px;
+    margin: -6px 0 0 -6px;
     padding: 5px;
+    border: 1px solid #a9a9a9;
 }
-
 
 /* hover effect for images inside links */
-.dropshadow img a:hover, .figure img a:hover, .thumbnail-right img a:hover {
+.thumbnail-right a:hover {
     background-color: &dtml-mediumBackgroundColor;;
-    border: 1px solid &dtml-linkActiveColor;;
-}
-
-img.scaled {
-    width: 100%;
 }
 
 /* highlights frontpage cleaned structure */
@@ -491,78 +449,10 @@ img.scaled {
 }
 
 /* rounded boxes default css */
-
-dl.wizard dt {
-    background: &dtml-mediumBackgroundColor;;
-    padding: 10px;
-    color: white;
-    float: left;
-    font-size: 3em;
-}
-
-dl.wizard dd {
-    font-size: 1.5em;
-    float: left;
-    width: 5em;
-    padding: 0 0.5em;
-    margin: 0 1em 0 0;
-}
-
-dl.wizard dt.currentStep {
-    background: &dtml-darkBackgroundColor;;
-}
-
 .roundedBox {
-    display:block;
-    background: &dtml-mediumBackgroundColor;;/* standard background color */
+    padding: 1em;
+    border-radius: 5px;
 }
-
-
-.portlet-subscribtion {
-    display:block;
-    color: black;
-}
-
-.roundedBox h1,
-.roundedBox h2,
-.roundedBox h3,
-.roundedBox h4,
-.roundedBox h5,
-.roundedBox h6 {
-    color: &dtml-fontColor;;
-    text-decoration: none;
-    padding: 0em 1em;
-}
-
-.roundedBox p,
-#portlet-login p,
-.roundedBox dt,
-#portlet-login dt,
-.roundedBox dd,
-#portlet-login dd,
-.roundedBox form
-{
-    padding: 0 1em;
-}
-
-#portlet-login dt.portletHeader {
-    padding: 0.7em 0.7em 0em 0.7em;
-}
-
-
-/* smaller login in content area */
-#content #portlet-login {
-    width: 20em;
-    margin: 1em;
-}
-
-/* no underline for links in portlet login */
-#portlet-login a, #portlet-login a:visited, #portlet-login a:active, #portlet-login a:hover,
-.photoAlbumEntry a:hover {
-    text-decoration: none;
-    border-bottom: 0px;
-}
-
 
 /* general background colors usable in combination with roundedBox */
 .lightBGC {
@@ -577,90 +467,21 @@ dl.wizard dt.currentStep {
     background-color:&dtml-darkBackgroundColor;;
 }
 
-/* info icon */
-.link-info {
-    background: transparent url(<dtml-var portal_url>/info_icon.gif) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
-}
-/* user icon */
-.link-user {
-    background: transparent url(<dtml-var portal_url>/user.gif) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
-}
-
-/* double arrow icon */
-.link-arrow {
-    background: transparent url(<dtml-var portal_url>/arrow-normal.png) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
-}
-
-/* arrow left */
-#portal-breadcrumbs .link-arrow-left {
-    background: transparent url(<dtml-var portal_url>/arrowLeft.gif) 0% 50% no-repeat;
-    padding: 0px 0px 0px 0.5em;
-    margin-left:0.5em;
-    margin-right:0.5em;
-    text-decoration: none;
-}
-
-/* arrow right */
-#portal-breadcrumbs .link-arrow-right {
-    background: transparent url(<dtml-var portal_url>/arrowRight.gif) 0% 50% no-repeat;
-    padding: 0px 0px 0px 0.5em;
-    margin-left:0.5em;
-    margin-right:0.5em;
-    text-decoration: none;
-}
-
-div span span#languageCodes {
-    padding: 0 0.25em;
-}
-
+/* languageCodes */
 #languageCodes {
-    padding: 0.25em 0 0.25em 0;
-}
-#languageCodes li {
-    display: inline-block;
-}
-
-form.manylanguages {
-    margin: 0;
-    padding: 0;
-    display: inline;
-}
-
-form.manylanguages select {
-    background: &dtml-darkBackgroundColor;;
-    color: white;
-    text-decoration: none;
-}
-
-#languageCodes li a.noTranslation {
-    background: transparent;
-    color: &dtml-linkColor;;
-}
-
-.highlights ul.relatedLinks li,
-#relatedItems legend,
-#relatedItems fieldset,
-.relatedLinks ul,
-.relatedLinks, ul#languageCodes  {
     border: 0;
     padding: 0;
     margin: 0;
 }
 
-.highlights ul.relatedLinks,
-#relatedItems,
-.relatedLinks {
-    margin: 1em 0 0 1px;
-    color: &dtml-fontColor;;
-
+#languageCodes li {
+    display: inline-block;
 }
 
-.relatedLinks li {
-    display: inline;
-    font-size: 0.8em;
+/* relatedLinks */
+#relatedItems {
+    margin: 1em 0 0 1px;
+    color: &dtml-fontColor;;
 }
 
 .awardNotice {
@@ -669,30 +490,4 @@ form.manylanguages select {
     margin-bottom: 1em;
 }
 
-#portlet-login {
-
-    color: #000;
-}
-
-
-form#translationfeedback input#url {
-    display: none;
-}
-
-/* styles only for frontpage*/
-
-body.frontpage .documentActions ul {
-    display: none;
-}
-
-body.frontpage .documentActions ul#languageCodes {
-    display: block;
-}
-
-/* SOER 2015 quick fixes */
-h4.figureHeading {
-    margin: 0;
-}
-
 /* </dtml-with> */
-

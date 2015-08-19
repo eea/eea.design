@@ -1926,11 +1926,6 @@ option.hiddenStructure {
     text-decoration: none;
 }
 
-.link-user {
-    background: transparent url(&dtml-portal_url;/user.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
 .link-external {
     background: transparent url(&dtml-portal_url;/link_icon.gif) 3px 1px no-repeat;
     padding: 1px 0 1px 19px;
@@ -2778,6 +2773,10 @@ div#original_chart_div {
 }
 
 
+/* SOER 2015 quick fixes */
+h4.figureHeading {
+    margin: 0;
+}
 
 /* </dtml-with> */
 
