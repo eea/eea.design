@@ -465,4 +465,32 @@ span.figure-left {
     margin-bottom: 1em;
 }
 
+
+/* reusable components */
+.link-without-style {
+    /* plz add more link style elimination */
+    text-decoration: none;
+}
+
+.eea-template {
+    display: none;
+}
+
+.eea-rounded-corners {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.eea-horizontal-list li {
+    float: left;
+    margin: 0 0.5em 0 0;
+}
+
+.eea-no-list-style {
+    list-style: none none;
+    margin: 1em 0;
+}
+
 /* </dtml-with> */

@@ -811,9 +811,8 @@ dt.portletItem a, #content dt.portletItem a {
 }
 
 #chooselang {
-    list-style: none none;
     margin: 0;
-   padding: 0;
+    padding: 0;
 }
 
 

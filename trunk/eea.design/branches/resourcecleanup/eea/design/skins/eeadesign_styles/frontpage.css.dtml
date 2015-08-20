@@ -23,12 +23,6 @@ html {
     padding: 0;
 }
 
-body.frontpage ul {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-}
-
 #main-content {
     margin-top: 5px;
 }

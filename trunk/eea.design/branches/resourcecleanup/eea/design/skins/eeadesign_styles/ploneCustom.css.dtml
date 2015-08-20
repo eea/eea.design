@@ -231,7 +231,9 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 
 /* standard search button inside any of the portal columns*/
 
-#portal-columns input[type="submit"], .standardButton, .qq-upload-button,
+#portal-columns input[type="submit"],
+.standardButton,
+.qq-upload-button,
 .searchButton,
 input.plonebutton,
 input.context,
@@ -249,7 +251,8 @@ input.standalone {
 }
 
 
-#portal-columns input[type="submit"]:hover, .standardButton:hover,
+#portal-columns input[type="submit"]:hover,
+.standardButton:hover,
 #content a.standardButton:hover,
 .qq-upload-button:hover,
 .searchButton:hover,
@@ -267,24 +270,6 @@ input.standalone:hover {
     color: #FFFFFF !important;
 }
 
-#faceted-text-search input[type="text"] {
-    -webkit-transition: box-shadow 0.218s ease 0s;
-    -moz-transition: box-shadow 0.218s ease 0s;
-    -ms-transition: box-shadow 0.218s ease 0s;
-    -o-transition: box-shadow 0.218s ease 0s;
-    transition: box-shadow 0.218s ease 0s;
-    background: none repeat scroll 0 0 #FFFFFF;
-    font-size: 16px;
-    padding: 5px;
-    width: 68%;
-}
-
-/*portlet subscription*/
-.section-publications #c10_widget.faceted-widget,
-.section-publications #c10_widget fieldset {
-    background-color: transparent;
-    padding:0 !important;
-}
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label,
@@ -308,19 +293,8 @@ input.standalone:hover {
 
 /* specific SOER2010 design */
 
-#soer-search-area {
-    margin:20px 0 50px 0;
-    clear: both;
-}
-#soerSearchBox strong {
-    display: block;
-    margin: 5px 0;
-}
-
 /* #5175 soer search portlet fix */
 #soerSearchBox .portletHeader {
-    margin-bottom: 10px;
-    padding: 5px;
     float: left;
 }
 #soerSearchBox .moreLink {
@@ -336,96 +310,14 @@ input.standalone:hover {
     float: right;
     width: 308px;
 }
-#soer-search-area #topic-search select {
-    font-size:16px;
-    height:34px;
-    padding:5px;
-    margin-bottom:10px;
-    width: 244px;
-}
-#soerSearchBox dd, #video-portlet dd{
-    margin: 0;
-    padding: 0;
-}
-
-#geo1_widget li {
-    text-transform: uppercase;
-}
-
-.section-soer .slidePortlet a.moreLink,
-.section-soer-draft .slidePortlet a.moreLink {
-    display: inline;
-}
 
 .section-soer #boxes .portlet,
 .section-soer-draft #boxes .portlet {
-    height: 181px;
+    overflow: hidden;
 }
 
-.section-soer #search-url,
-.section-soer-draft #search-url {
+.section-signals #nonfolderish-subfolder-view-items {
     display: none;
-}
-
-.section-soer #video-portlet img,
-.section-soer-draft #video-portlet img {
-    width: 100%;
-}
-
-.section-soer #free-text-space,
-.section-soer-draft #free-text-space {
-    min-height: 150px;
-}
-
-.link-without-style {
-    /* plz add more link style elimination */
-    text-decoration: none;
-}
-
-.eea-template {
-    display: none;
-}
-
-body.section-signals #nonfolderish-subfolder-view-items {
-    display: none;
-}
-
-#belowContent .portletHeader {
-    font-size: 130%;
-    margin: 0.83em 0;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
-    padding-bottom: 0.25em;
-    color: #2D749C;
-    background: transparent;
-}
-
-#belowContent .portlet {
-    float: none;
-    width: 100%;
-    padding: 0;
-}
-
-.eea-rounded-corners {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-
-.eea-horizontal-list li {
-    float: left;
-    margin: 0 0.5em 0 0;
-}
-
-.eea-no-list-style {
-    list-style: none none;
-    margin: 1em 0;
-}
-
-.subfolder .moreLink {
-    float: left;
-    margin: 1em 0 2em 1em;
-    font-weight: bold;
 }
 
 /* folder_tabs_view and folder_accordion_view styling
@@ -504,7 +396,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 0 1em;
 }
 
-.highlights .portalMessage,
 .eea-tabs-panel .portalMessage {
     margin-top: 0;
     position: relative;
@@ -526,6 +417,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
 }
 
+/* TODO fix padding differences */
 #relatedItems .eea-tabs-panels {
     padding: 1px;
 }
@@ -701,48 +593,10 @@ body.section-signals #nonfolderish-subfolder-view-items {
 #content-core {
     clear:both;
 }
-#translation-disclaimer .note {
-    background:transparent url(http://glossary.eea.europa.eu/misc_/EEAGlossary/note_ico.gif) no-repeat scroll 0.3em 50%;
-    padding:0.2em 0.3em 0.3em 22px;
-    color:#8F8F8F;
-    font-size:1em;
-}
-#translation-disclaimer {
-    margin: 0 1em 0 1em;
-    display: inline-block;
-}
-
 /* related styles amd flowplayer videos style */
 
 .media-player {
     text-align:center;
-}
-
-.media-player .embeddedvideo {
-    width: 100%;
-}
-
-.media-player #embeddedvideo.sixteen-nine {
-    height: 338px;
-}
-
-.media-player #embeddedvideo.four-three {
-    height: 450px;
-}
-
-.mediacaption {
-    color: #76797C;
-    text-align:center;
-    font-size: 11px;
-    display: block;
-    padding:3px;
-    margin: auto;
-}
-
-#objmetadata_pbwidgets_wrapper{
-    width: 100%;
-    border-right: 0;
-    background-color: transparent;
 }
 
 .related-in-content-area .portlet {
@@ -754,12 +608,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     float: none;
 }
 
-#related-portlets {
-    float: right;
-    margin-left: 2em;
-    clear: right;
-}
-
 #auto-related .portletItem {
     padding-bottom:0.5em;
     clear: both;
@@ -768,15 +616,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
 /* #5157 */
 #auto-related .embeddedMedia {
     clear: none !important;
-}
-
-#related-portlets #auto-related,
-#related-portlets #related-multimedia,
-#related-portlets #related-pages,
-#related-portlets #themes-object {
-    float: none;
-    clear: none;
-    margin-left: 2em;
 }
 
 #auto-related h2,
@@ -799,52 +638,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding-left: 0;
 }
 
-#related-multimedia-top dd.embeddedMedia,
-#related-multimedia dd.embeddedMedia,
-.portlet dd.embeddedMedia {
-    background-color: #FFFFFF;
-    border: 1px solid #DFDFDF;
-    -webkit-box-shadow: 1px 1px 2px #BFBFBF;
-    -moz-box-shadow: 1px 1px 2px #BFBFBF;
-    -ms-box-shadow: 1px 1px 2px #BFBFBF;
-    -o-box-shadow: 1px 1px 2px #BFBFBF;
-    box-shadow: 1px 1px 2px #BFBFBF;
-    padding: 0 0 15px 0  !important;
-    margin: 0 15px 15px 0 !important;
-    text-align: center;
-    float: left;
-    width: 165px;
-    min-height: 210px;
-}
-
-.portlet dd.embeddedMedia .tileImage {
-    border: none !important;
-    margin: 15px auto !important;
-}
-
-#related-multimedia-top dd.embeddedMedia {
-    float: left;
-    margin: 0.5em 0 0.5em 0.25em;
-}
-
-.portlet dd.embeddedMedia {
-    margin-bottom: 1em;
-}
-
-#related-multimedia-top {
-    border:none;
-    margin:0;
-    padding:0;
-}
-
-dd.embeddedMedia .magnify {
-    float: right;
-}
-
-#media-content-spacer {
-    clear: left;
-    padding-top: 1em;
-}
 
 /* Links with differently colored link underlines - only for content */
 #content span.link-external  {
@@ -917,6 +710,10 @@ a.moreLink {
     margin: 0 0 1em 0;
 }
 
+.field .field {
+    margin: 1em 0 0 0;
+}
+
 /* bootstrap also has a label class which is white while plone uses black */
 .label {
     padding: 0;
@@ -926,27 +723,12 @@ a.moreLink {
     white-space: inherit;
 }
 
-.field .field {
-    margin: 1em 0 0 0;
-}
-
 .fieldRequired {
     background: url(&dtml-portal_url;/required.gif) center left no-repeat;
     padding: 0 0 0 8px;
     color: &dtml-backgroundColor;;
 }
 
-
-.fieldUploadFile {
-    text-align: right;
-    margin-right: 0.75em;
-    display: none;
-}
-
-.fieldTextFormat {
-    text-align: right;
-    margin-right: 0.75em;
-}
 
 .formHelp {
     font-size: 90%;
@@ -959,48 +741,8 @@ a.moreLink {
     color: &dtml-fontColor;;
     cursor: default;
 }
-
-div.formControls {
-    margin: 1em 0;
-}
-form[name="edit_form"] div.formControls {
-    margin: 1em 1em 1em 0;
-}
-
-.error {
-    /* Class for error indication in forms */
-    background-color: &dtml-notifyBackgroundColor;;
-    padding: 1em;
-    margin: 0 0 1em 0;
-}
-
-.error .fieldRequired {
-    color: &dtml-notifyBackgroundColor;;
-}
-
-/* portlet for translation feedback */
-#translationfeedback textarea, #translationfeedback input#sender_from_address {
-    width:97%;
-    margin-bottom:0.1em;
-}
-
-#portlet-translationfeedback {
-    margin-left:0.25em;
-    margin-right:0.25em;
-}
-#translationfeedback input.standalone {
-    float:right;
-}
-
-/* Code to work around IE's lacking support of sub-elements of the input element */
-.noborder,
-.documentEditable * .noborder {
-    border: none;
-    margin: 0;
-    background: transparent none;
-}
-
 /* End edit form elements */
+
 /* #23500 allow the control panel widget to be placed outside of their context
     by having overflow visible for screen with size larger than 1024px
 */
@@ -1014,6 +756,36 @@ form[name="edit_form"] div.formControls {
 }
 
 /* Logo properties */
+#header-holder {
+    width: 100%;
+    clear: both;
+    display: block;
+    position: relative;
+}
+#header-holder .navbar {
+    box-shadow: 0 1px 10px #005078;
+    border: 0;
+}
+
+#portal-top {
+    background-color: #FFFFFF;
+}
+
+#cross-site-top {
+    background-color: &dtml-corporateBlue;;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#portal-header {
+    display: block;
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 90px;
+}
 
 #printLogo {
     padding: 0.9em 0 0 0.5em;
@@ -1040,53 +812,6 @@ form[name="edit_form"] div.formControls {
     cursor: pointer;
 }
 
-.portal-logo a:hover {
-    /* no background highlight on logo */
-    background-color: transparent;
-}
-
-h3.site-description {
-    border: medium none;
-    color: #FFFFFF;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: italic;
-    margin: 30px 0;
-    position: relative;
-    text-decoration: none;
-    text-shadow: none;
-    width: 240px;
-    max-height: 30px;
-}
-
-#header-holder {
-    width: 100%;
-    clear: both;
-    display: block;
-    position: relative;
-}
-
-#portal-top {
-    background-color: #FFFFFF;
-}
-
-#portal-header {
-    display: block;
-    clear: both;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 90px;
-}
-
-.header-holder #portal-top .cell {
-    float: none;
-}
-#header-holder .navbar {
-    box-shadow: 0px 1px 10px #005078;
-    border: 0;
-}
 
 .is-eea-hidden {
     -moz-transition: all 1s;
@@ -1094,13 +819,6 @@ h3.site-description {
     -webkit-transition: all 1s;
     transition: all 1s;
     display: none !important;
-}
-
-#cross-site-top {
-    background-color: &dtml-corporateBlue;;
-    margin: 0;
-    padding: 0;
-    width: 100%;
 }
 
 .shadow {
@@ -1119,7 +837,7 @@ h3.site-description {
     border: 0;
 }
 
-.panel-top, #tip-article-language .panel-top {
+.panel-top {
     margin: auto auto;
     background: transparent url(&dtml-portal_url;/panel_arrow.png);
     width: 50px;
@@ -1131,27 +849,16 @@ h3.site-description {
 .panel .portletFooter {
     margin-top: 1em;
 }
-.panel-content, #tip-article-language .panel-content {
+.panel-content {
     background: white;
     color: black;
+    clear: both;
     padding: 10px;
     border: 1px solid #BABBB8;
 }
 
-#tip-article-language{
-    width: 400px;
-    position: absolute;
-    right: 15px;
-    top: 55px;
-    z-index: 602;
-}
 #tip-article-language .panel-top {
-    right: 0;
     float: right;
-    clear: both;
-}
-#tip-article-language .panel-content{
-    clear: both;
 }
 
 @media screen {
@@ -1159,10 +866,6 @@ h3.site-description {
         padding-top: 1em;
         min-width: 1024px;
     }
-}
-
-#portal-column-one .portlet-subscribtion {
-    margin-top:20px;
 }
 
 #cross-site-top .panel .portlet-subscribtion {
@@ -1178,12 +881,8 @@ h3.site-description {
     background: transparent;
 }
 
-#tip-externalsites-etcssites li,
-.externalsites li,
 #tip-siteaction-chooselang li {
-    padding-left: 1em;
-    background: url("bullet.gif") no-repeat scroll left center transparent;
-    display: block;
+    display: list-item;
 }
 
 #tip-siteaction-contactus {
@@ -1192,28 +891,11 @@ h3.site-description {
 
 #tip-externalsites-networks, #tip-externalsites-etcssites {
     width: 400px;
-    position:absolute;
     left: 0 !important;
-}
-#tip-externalsites-etcssites{
-    width: 270px;
-}
-
-#tip-siteaction-chooselang li a {
-    font-size: 11px;
-    display: block;
 }
 
 .networkSites dt {
     background: none !important;
-}
-
-
-/* The skin switcher at the top, only shows up if you have multiple skins available */
-
-#portal-skinswitcher a {
-    display: block;
-    float: left;
 }
 
 /* Searchbox style and positioning */
@@ -1225,47 +907,23 @@ h3.site-description {
 #portal-searchbox {
     float: right;
     clear: right;
-    background-color: transparent;
     margin: 25px 0 0 0;
-    padding: 0 0 0 0;
     text-align: right;
-    text-transform: &dtml-textTransform;;
-    white-space: nowrap;
-    z-index: 2;
     font-size: 1.2em;
-}
-#portal-searchbox form {
-    background-color: #FFF;
-}
-
-#portal-column-content #portal-searchbox {
-    float: none;
-    padding: 14px 0;
-    margin: 0;
-    background-color: #b9e148;
-    text-align: center;
 }
 
 #portal-searchbox a {
-    text-transform: none;
     color: &dtml-linkColor;;
     border: none;
     font-size: 85%;
-    margin: 0 5px 0 0;
 }
 
 #portal-searchbox .searchButton {
     background: &dtml-corporateBlue; none;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: &dtml-fontFamily;;
     font-size: 12px;
     font-style: normal;
-    height: 30px;
-    left: 0;
-    letter-spacing: 0;
-    margin: 0;
-    padding: 0;
     position: relative;
     width: 80px;
     margin-left: -5px;
@@ -1299,7 +957,6 @@ h3.site-description {
 .searchField:focus {
     font-style: normal;
     color: #000000;
-    background-position: 0 -114px;
     background-color: transparent;
     outline-color: transparent;
 }
@@ -1308,21 +965,7 @@ h3.site-description {
     background-color: &dtml-corporateOrange;;
 }
 
-.searchforms input {
-    font-family: &dtml-fontFamily;;
-    font-style: italic;
-    color: #777777;
-    font-size: 0.8em;
-}
-
-.searchforms input:focus {
-    color: #000000;
-}
-
-#portal-header h3.site-description {
-    width: 240px;
-    margin-left: 5px;
-    float: left;
+.site-description {
     /* hide until decided on right tagline */
     display: none;
 }
@@ -1336,33 +979,7 @@ h3.site-description {
     text-decoration: none;
 }
 
-#search_glossary_link {
-    float: right;
-}
-
-#search_advanced_link {
-    float: left;
-}
-
-#portal-searchbox label {
-    font-size: 11px;
-    color: &dtml-linkColor;;
-    vertical-align: middle;
-}
-
-#portal-advanced-search {
-    margin-top: 0.2em;
-    clear: both;
-}
-
-#portal-advanced-search a {
-    color: &dtml-discreetColor;;
-    text-decoration: none;
-    text-transform: &dtml-textTransform;;
-}
-
 /* Site-wide action menu - font size, contact, index, sitemap etc */
-
 #portal-externalsites,
 #portal-siteactions {
     white-space: nowrap;
