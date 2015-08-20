@@ -1,20 +1,3 @@
-/*
-** KEEP IN CUSTOM UNTIL original_chart_div fix is commited
-
-** Plone style sheet - Public-facing Elements
-**
-** Style sheet documentation can be found at http://plone.org/documentation
-**
-** You should preferrably use ploneCustom.css to add your own CSS classes and to
-** customize your portal, as these are the base fundamentals of Plone, and will
-** change and be refined in newer versions. Keeping your changes in
-** ploneCustom.css will make it easier to upgrade.
-**
-** Feel free to use whole or parts of this for your own designs, but give credit
-** where credit is due.
-**
-*/
-
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
@@ -134,20 +117,6 @@ div.position-3\3a 4 {margin-left: -36.5%;}
     font-size: 11px;
     font-weight: normal;
 }
-
-/*#right-area, #left-area {*/
-    /*width: 215px !important;*/
-/*}*/
-
-/*#faceted-form .left-area-js {*/
-    /*margin-left: 220px !important;*/
-    /*min-width: 535px;*/
-/*}*/
-
-/*#faceted-form .right-area-js {*/
-    /*margin-right: 220px !important;*/
-    /*min-width: 520px;*/
-/*}*/
 
 #faceted-form .tags-cloud li {
     color: &dtml-linkColor; !important;
@@ -408,18 +377,6 @@ input.standalone:hover {
     min-height: 150px;
 }
 
-/* disabled because of #5157 */
-/* .section-soer #auto-related,
-.section-soer #related-multimedia,
-.section-soer #related-pages,
-.section-soer-draft #auto-related,
-.section-soer-draft #related-multimedia,
-.section-soer-draft #related-pages {
-    width: 200px;
-    margin-left: 10px;
-    padding: 0;
-} */
-
 .link-without-style {
     /* plz add more link style elimination */
     text-decoration: none;
@@ -447,7 +404,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     width: 100%;
     padding: 0;
 }
-
 
 .eea-rounded-corners {
     border-radius: 3px;
@@ -734,8 +690,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     text-align:justify;
 }
 
-/* */
-
 #print-warning {
     display: none;
 }
@@ -752,7 +706,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding:0.2em 0.3em 0.3em 22px;
     color:#8F8F8F;
     font-size:1em;
-    /* border: 1px solid #efefef; */
 }
 #translation-disclaimer {
     margin: 0 1em 0 1em;
@@ -1301,14 +1254,6 @@ h3.site-description {
     margin: 0 5px 0 0;
 }
 
-/*#searchbox_terminology input,*/
-/*#searchbox_terminology input:focus,*/
-/*#portal-searchbox input.searchButton,*/
-/*#portal-searchbox input.searchButton:hover,*/
-/*.searchField {*/
-    /*background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;*/
-/*}*/
-
 #portal-searchbox .searchButton {
     background: &dtml-corporateBlue; none;
     color: #FFFFFF;
@@ -1343,10 +1288,6 @@ h3.site-description {
     margin: 0;
     font-size: 0.8em;
 }
-/* TODO: check why this was added with important */
-/*.searchField {*/
-    /*width: 258px !important;*/
-/*}*/
 
 #searchbox_terminology input[type="text"],
 .searchField {
@@ -1930,9 +1871,6 @@ option.hiddenStructure {
     background: transparent url(&dtml-portal_url;/link_icon.gif) 3px 1px no-repeat;
     padding: 1px 0 1px 19px;
 }
-/** html .link-external {
-    background-position: top left;
-}*/
 
 .link-https {
     background: transparent url(&dtml-portal_url;/lock_icon.gif) 0 1px no-repeat;
@@ -2772,11 +2710,9 @@ div#original_chart_div {
     padding: 0;
 }
 
-
 /* SOER 2015 quick fixes */
 h4.figureHeading {
     margin: 0;
 }
 
 /* </dtml-with> */
-
