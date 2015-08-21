@@ -857,6 +857,9 @@ a.moreLink {
     border: 1px solid #BABBB8;
 }
 
+#tip-article-language {
+    width: 400px;
+}
 #tip-article-language .panel-top {
     float: right;
 }
@@ -929,12 +932,12 @@ a.moreLink {
     margin-left: -5px;
 }
 
-#portal-searchbox input.searchButton:hover {
+#portal-searchbox .searchButton:hover {
     background-position: -385px -115px !important;
 }
 
 #portal-searchbox input, .searchField,
-#content input.searchField
+#content .searchField
 {
     height: 30px;
     padding: 0;
@@ -982,25 +985,13 @@ a.moreLink {
 /* Site-wide action menu - font size, contact, index, sitemap etc */
 #portal-externalsites,
 #portal-siteactions {
-    white-space: nowrap;
-    list-style: none none;
     margin: 4px 0 4px 0;
-    height: auto;
-    line-height: normal;
     float: right;
     padding: 0 10px 0 0;
     clear: none;
 }
 
-#siteaction-subscriptions a,
-#siteaction-formobile a,
-#siteaction-contactus a {
-    display: inline-block;
-    line-height: 1.4;
-}
-
 /* use font awesome unicode icons */
-
 /* daviz -edit sets eea-icon color to #000 */
 #portal-siteactions #siteaction-chooselang .eea-icon {
     color: #FFF;
@@ -1025,17 +1016,9 @@ a.moreLink {
     padding: 0 5px;
 }
 
-#portal-externalsites li:last-child,
-#portal-siteactions li:last-child {
-    border: none;
-}
-
 #portal-externalsites li a,
 #portal-siteactions li a {
     color: #FFF;
-    height: auto;
-    text-decoration: none;
-    text-transform: none;
     font-size: 11px;
 }
 
@@ -1043,142 +1026,35 @@ a.moreLink {
     font-weight: bold;
 }
 
-.visualCaseSensitive {
-    text-transform: none;
-}
-
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    border: none;
     line-height: 1.4;
     margin: 3px 0 0 0;
     position: relative;
     clear: both;
 }
 
-#region-content #portal-breadcrumbs {
-    /* The path bar, including breadcrumbs and add to favorites */
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-}
-
-#region-content {
-    border: none;
-    position: relative;
-}
-
-#portal-breadcrumbs a {
-    text-decoration: none;
-}
-
 .breadcrumbSeparator {
     font-size: 120%;
 }
 
-.addFavorite {
-    vertical-align: bottom;
-}
-
-#content-news h1 {
-    margin-bottom: 1em;
-}
-
-
-/* Only h5/h6 headlines in the content area should have the discreet color */
-
-#content h5,
-#content h6 {
-    color: &dtml-fontColor;;
-}
-
-.newsItem {
-    margin-bottom: 1em;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-}
-
-.newsImage {
-    border: 1px solid black;
-}
-
-.newsImageContainer {
-    float:right;
-    margin: 0 0 0.5em 1em;
-    width: 202px;
-}
-
-.newsContent {
-    padding: 0 1em 1em 1em;
-}
-
-.newsContent ul,
-.newsContent li {
-    display: block;
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
-}
-
-.newsAbout {
-    display: block;
-    color: &dtml-discreetColor;;
-    font-size: &dtml-fontSmallSize;;
-    padding: 0;
-    margin-top: 0;
-    list-style: none;
-    list-style-image: none;
-    float: right;
-    text-align: right;
-}
-
-.newsAbout li {
-    display: inline;
-}
-
-.newsFooter li {
-    display: inline;
-    margin: 0 1em 0 0;
-}
-
-.documentActions {
+#region-content {
     position: relative;
-}
-
-.documentActions ul {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
 }
 
 .documentActions li, .languageCodes li {
     display: inline-block !important;
-    list-style: none;
-    list-style-image: none;
+    list-style: none none;
     margin: 0;
     padding: 0;
 }
 
-.documentActions a {
-    border: none !important;
-    text-decoration: none;
-}
-
-/* TODO: see about hiding logic for document actions */
-/* Top documentActions should show languageCodes */
-/*.documentActions ul {*/
-/*display: none;*/
-/*}*/
 .languageCodes {
     display: block;
 }
 
 #languageCodes {
     max-width: 80%;
-}
-
-#themes-tags span span span.languageCodes {
-    display: none;
 }
 
 #article-language {
