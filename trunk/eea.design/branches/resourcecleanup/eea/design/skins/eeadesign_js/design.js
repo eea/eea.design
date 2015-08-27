@@ -12,6 +12,16 @@ jQuery(document).ready(function($) {
       ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
     }
 
+    /* #28278 TODO: temporary place for indicators print fix until
+     * I find a better place to add this since no indicators.js files are loaded right now */
+    $(".policy_question").each(function(idx, el) {
+        var $el = $(el);
+        var $next_el = $el.next();
+        if ($next_el.hasClass('indicator-figure-plus-container')) {
+            $next_el.find('.figure-title').addClass('no-page-break-before');
+        }
+    });
+
     /* 27537; insert a link for iframes that contain video since whkthmltopdf doesn't support
     * the video tag and there is no image placeholder */
     var $video_iframe = $("iframe").filter('[src*="video"]'), $video_iframe_src;
