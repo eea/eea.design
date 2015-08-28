@@ -12,12 +12,15 @@ jQuery(document).ready(function($) {
       ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
     }
 
-    /* #28278 TODO: temporary place for indicators print fix until
-     * I find a better place to add this since no indicators.js files are loaded right now */
+    /* #28278 prevent figures from printing charts without the figure title on the same line
+     * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
+     * data-and-maps/indicators/direct-losses-from-weather-disasters-2/assessment/pdf.body
+     * */
     $(".policy_question").each(function(idx, el) {
         var $el = $(el);
         var $next_el = $el.next();
         if ($next_el.hasClass('indicator-figure-plus-container')) {
+            $el.addClass("page-break-before");
             $next_el.find('.figure-title').addClass('no-page-break-before');
         }
     });
