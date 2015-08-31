@@ -1095,14 +1095,8 @@ a.moreLink {
     content: '';
 }
 
-.discussion {
-    margin-top: 1em;
-}
-
-
 
 /* Batch selector */
-
 .listingBar {
     background-color: &dtml-globalBackgroundColor;;
     padding: 0.5em 1em;
@@ -1130,21 +1124,10 @@ a.moreLink {
     min-width: 100px;
 }
 
-
-.listingBar img {
-    vertical-align: middle;
-}
-
-.listingBar a {
-    font-size: 11px;
-    text-decoration: none;
-}
-
-
+/* tileItem used in related and eea-tabs listings */
 .tileItem {
     border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
     padding-top: 0.5em;
-    margin-top: 0.5em;
 }
 
 .tileHeadline {
@@ -1161,14 +1144,6 @@ a.moreLink {
     margin: 0.6em 0;
 }
 
-.tileHeadline a {
-    text-decoration: none;
-}
-
-.tileBody {
-    margin-bottom: 0.5em;
-}
-
 .tileContent {
     display: table-cell;
 }
@@ -1179,44 +1154,23 @@ a.moreLink {
     border: 1px solid &dtml-globalBorderColor;;
 }
 
-/* related video thumbnails don't need a float left */
-#content .portlet a.tileImage {
-    float: none !important;
-}
-
-.tileImage:hover {
-    border: 1px solid &dtml-globalBorderColor;;
-}
-
-.highlights .tileItem, .eea-tabs-panel .tileItem {
-    margin-top: 0 !important;
-}
-
-#news-highlights .tileItem:last-child,
-#articles-highlights .tileItem:last-child,
-#publications-highlights .tileItem:last-child,
-#multimedia-highlights .tileItem:last-child,
-#datamaps-highlights .tileItem:last-child {
+.gallery-listing .tileItem:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
 
 .tileFooter {
-    float: left;
     clear: both;
     display: block;
 }
 
+
+/* relatedItems */
 #relatedItems  {
     margin-bottom: 2em;
     clear: both;
     overflow: hidden;
 }
-
-#relatedItems .visualClear {
-    padding-bottom: 1.5em;
-}
-
 /* #19315 fix floating issues */
 #relatedItems  h3 {
     clear: both;
@@ -1225,24 +1179,11 @@ a.moreLink {
 /* Useful deviations from regular style on elements */
 
 /* List classes without markers */
-
 ul.visualNoMarker,
 ol.visualNoMarker {
     list-style: none none;
     margin: 0.5em 0 0 0;
     line-height: 1em;
-}
-
-textarea.proportional {
-    font: 100% &dtml-fontFamily;;
-}
-
-.productCredits {
-    text-align: right;
-    font-size: &dtml-fontSmallSize;;
-    clear: both;
-    font-weight: normal;
-    color: &dtml-discreetColor;;
 }
 
 .feedButton {
@@ -1251,56 +1192,17 @@ textarea.proportional {
     margin-top: 1px;
 }
 
-.poweredBy {
-    display: block;
-    clear: both;
-    font-size: &dtml-fontSmallSize;;
-    font-weight: normal;
-    color: &dtml-discreetColor;;
-    text-align: right;
-}
-
 /* Sitemap styles */
-
 #portal-sitemap {
-    list-style: none;
-    list-style-image: none;
     margin: 0;
     font-size: 90%;
-    border: none;
-}
-
-#portal-sitemap a,
-#portal-sitemap .portletNavigationTree ,
-#portal-sitemap .portletNavigationTree  li.navTreeItem {
-    border: 0;
-}
-
-#portal-sitemap > li > a {
-    font-size: 1.4em;
-    font-weight: bold;
 }
 
 #portal-sitemap > li {
     border: 0;
-    margin-left: 1em;
-    padding-bottom: 2em;
-}
-
-#portal-sitemap .navTreeLevel1 {
-    padding-left: 1em;
-    border: 0.5em solid &dtml-globalBorderColor;;
-    margin: 0 0 0 0.5em;
-}
-
-#portal-sitemap .navTreeLevel2 {
-    padding-left: 1em;
-    border-left: 0.5em solid &dtml-globalBackgroundColor;;
-    margin: 0 0 0 0.6em;
 }
 
 /* Accessibility and visual enhancement elements */
-
 .hiddenStructure {
     display: block !important;    /*  prefix with important since many times specificity will override this display setting */
     background: transparent none; /* safari bug */
@@ -1325,21 +1227,9 @@ option.hiddenStructure {
     clear: both;
 }
 
-.hiddenLabel {
-    display: block;
-    background: transparent none; /* safari bug */
-    border: none;
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    margin: -1px 0 0 -1px;
-    width: 1px;
-}
-
 .inline-block {
     display: inline-block;
 }
-
 #content .inline-block li {
     display: inline-block;
     margin-right: 1em;
@@ -1365,42 +1255,7 @@ option.hiddenStructure {
     padding: 1px 0 1px 19px;
 }
 
-.link-https {
-    background: transparent url(&dtml-portal_url;/lock_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-mailto {
-    background: transparent url(&dtml-portal_url;/mail_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-news {
-    background: transparent url(&dtml-portal_url;/topic_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-ftp {
-    background: transparent url(&dtml-portal_url;/file_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-irc {
-    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-callto {
-    background: transparent url(&dtml-portal_url;/phone_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-webcal {
-    background: transparent url(&dtml-portal_url;/event_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-feed, .link-rss, .link-rdf, .link-xml{
+.link-feed {
     background: transparent url(&dtml-portal_url;/rss.gif) 0 1px no-repeat;
     padding: 1px 0 1px 18px;
 }
@@ -1421,77 +1276,6 @@ option.hiddenStructure {
     background: transparent url(&dtml-portal_url;/pdf.png) 0 50% no-repeat;
     padding: 2px 0 2px 16px;
 }
-.link-doc, .link-dot, .link-wiz {
-    background: transparent url(&dtml-portal_url;/doc.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-
-.link-aif, .link-aifc, .link-aiff {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-
-.link-gif, .link-jpe, .link-jpeg, .link-jpg, .link-png {
-    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-m4a, .link-mp2, .link-mp3, .link-mpega, .link-mpga {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-m3u {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-m1v, .link-mpa, .link-mpe, .link-mpeg, .link-mpg {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-mp4 {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-asf, .link-asx {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-avi {
-    background: transparent url(&dtml-portal_url;/avi.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-xlb, .link-xls, .link-xlt, .link-csv, .link-tsv {
-    background: transparent url(&dtml-portal_url;/xls.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-ppa, .link-pps, .link-ppt, .link-pwz {
-    background: transparent url(&dtml-portal_url;/ppt.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-wmv, .link-wmf {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-mov, .link-qt {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-rgb {
-    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-ram, .link-rm {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-ai, .link-eps, .link-ps {
-    background: transparent url(&dtml-portal_url;/ps.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-swf, .link-swfl {
-    background: transparent url(&dtml-portal_url;/application.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-tif, .link-tiff {
-    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-wav {
-    background: transparent url(&dtml-portal_url;/wav.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-zip {
-    background: transparent url(&dtml-portal_url;/zip.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-mdb, .link-dbf {
-    background: transparent url(&dtml-portal_url;/application.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-rar {
-    background: transparent url(&dtml-portal_url;/rar.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-txt {
-    background: transparent url(&dtml-portal_url;/txt.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
 .link-json {
     background: transparent url(&dtml-portal_url;/script_code.png) 0 50% no-repeat;
     padding: 2px 0 2px 20px;}
@@ -1502,15 +1286,7 @@ option.hiddenStructure {
     background: transparent url(&dtml-portal_url;/table.png) 0 50% no-repeat;
     padding: 2px 0 2px 20px;}
 
-/* For ghosted elements */
-.visualGhosted {
-    opacity: 0.2;
-    -moz-opacity: 0.2;
-    -khtml-opacity: 0.2;
-}
-
-/* Kupu image alignment classes */
-
+/* TinyMCE image alignment classes */
 .image-left {
     float: left;
     clear: both;
@@ -1529,20 +1305,15 @@ option.hiddenStructure {
     border: 0;
 }
 
-.linkbox {
-    margin-top: 2em;
-    border: 1px dashed;
-}
-
+/* media/audiovisuals/coping-in-a-crisis-europes-civil-protection-strategy/file_view
+   old video files, consider to remove these styles as most videos now have youtube altenatives */
 .media-single-item {
     margin: 1em 0;
 }
-
 .media-single-item dt {
     float: left;
     padding-right: 0.5em;
 }
-
 .media-single-item dd,
 .media-single-item dt {
     color: #9a9a99;
@@ -1550,13 +1321,12 @@ option.hiddenStructure {
     line-height: 1.1;
     margin: 0 0 0.2em;
 }
-
 .richDocumentDescription {
     margin-top: 1em;
     width: 65%;
 }
 
-
+/* portal-column styles */
 #portal-column-content  {
     min-width: 600px;
 }
@@ -1564,18 +1334,6 @@ option.hiddenStructure {
 .visualPadding {
     padding: 0 1em 1em 1em;
 }
-#portal-column-one .visualPadding {
-    padding: 0;
-    background: transparent;
-}
-
-#slide-menu {
-    float: left;
-    width: 220px;
-    border: 1px solid &dtml-mediumBackgroundColor;;
-    background-color: #FFFFFF;
-}
-
 #portal-column-two .visualPadding {
     padding: 0 1em 1em 0;
 }
@@ -1585,18 +1343,7 @@ option.hiddenStructure {
     min-width: 350px;
 }
 
-/* visual */
-#content img.tileImage, #content div.newsImageContainer {
-    float: left;
-}
-
-/* Plone center FAQ custom css*/
-
-.faqSection {
-    padding-left: 1em;
-}
-
-
+/* TinyMCE Fixes */
 /* Fix for TinyMCE width being larger than content area */
 .ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr,
 .ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *,
@@ -1626,7 +1373,6 @@ body .ploneSkin .mce_formatPreview a {
 /* #18086: Improvements to the tinymce fullscreen mode
 **  center editor since we have a fixed width layout
 */
-
 .mceEditor.mceFullScreen {
     background-color: #ececec !important; /* in order to override ui.css */
     width: 100% !important;
@@ -1656,7 +1402,7 @@ input[disabled], #plonebrowser input[disabled] {
     left:5px;
     height:100%;
     width:100%;
-    background:#FFF
+    background:#FFF;
 }
 
 .ploneSkin .mceButton.mce_fullscreen {
@@ -1678,7 +1424,6 @@ input[disabled], #plonebrowser input[disabled] {
 .ploneSkin table.mceListBox .mceText {
     min-width: 207px;
 }
-
 
 .mceContentBody .presentationBreak, .mceContentBody .pageBreak {
     background-color: &dtml-corporateBlueBackgroundColor;;
@@ -1727,6 +1472,7 @@ tinyMCE editor or the presentation_view */
     display: block;
 }
 
+/* Editing Form fixes */
 /* #5267 display form fields for translated items */
 form[name="edit_form"] > table > tbody > tr {
     display: table-row;
@@ -1740,13 +1486,14 @@ form[name="edit_form"] > table > tbody > tr > td {
 form[name="edit_form"] table {
     display: table !important;
 }
-/* IE8: keeps livesearch from falling behind content area,
-   and display menu from falling behind footer
-   Keeping float for IE7, so the portlets don't fall */
-.ie6 div.cell {
-    float: none;
+
+/* #5454; we have required spans where we don't need the background image */
+.no-bg:after {
+    background-image: none !important;
+    content: "" !important;
 }
 
+/* outdated and cookie policy objects */
 /* #4669 display outdated browser message */
 #outdated_wrap, .message_wrap {
     background-color: #F3F3F3;
@@ -1824,11 +1571,6 @@ form[name="edit_form"] table {
     list-style-type: none;
 }
 
-/* #5454; we have required spans where we don't need the background image */
-.no-bg:after {
-    background-image: none !important;
-    content: "" !important;
-}
 
 /* #5533 new style collection style tweaks */
 .queryindex, .addIndex, .queryoperator, .addOperator {
@@ -1980,8 +1722,7 @@ body.template-login_form #content,
 }
 
 #login_form,
-#login-forgotten-password
-{
+#login-forgotten-password {
     margin-left: 6.5em;
 }
 #popup_login_form #login-form input {
@@ -2093,7 +1834,7 @@ body.template-login_form #content,
     display: none;
 }
 
-
+/* download.pdf extra clicking prevention styles */
 a.downloading {
     background: transparent url(&dtml-portal_url;/icon-downloading.gif) no-repeat center center;
 }
@@ -2112,19 +1853,20 @@ a.downloading img {
     z-index: 9999;
 }
 
+/* eeareadabilitychecker stats */
 #stats td {
     padding-right: 1em;
 }
 
+/* eea.googlecharts chart.js uses this */
 div#original_chart_div {
     overflow: hidden;
 }
 
+/* download.pdf download.epub export actions */
 #region-content .documentExportActions {
     float:right;
 }
-
-
 #region-content .documentExportActions ul, .documentExportActions ul {
     list-style: none;
     padding: 0px;
@@ -2195,7 +1937,6 @@ div#original_chart_div {
     z-index: 100;
     padding: 0.9em;
     box-sizing: border-box;
-
 }
 #tlspu_cookiepolicy_form, .cookieMessage, #tlspu_cookiepolicy_message {
     margin: 0 auto;

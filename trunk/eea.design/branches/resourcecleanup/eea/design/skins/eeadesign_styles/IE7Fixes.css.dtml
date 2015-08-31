@@ -37,20 +37,6 @@
     padding-top: 2px;
 }
 
-*:first-child+html .link-pdf, .link-doc,
- .link-dot, .link-wiz, .link-aif, .link-aifc, .link-aiff,
- .link-gif, .link-jpe, .link-jpeg, .link-jpg, .link-png,
- .link-m4a, .link-mp2, .link-mp3, .link-mpega, .link-mpga,
- .link-m3u, .link-m1v, .link-mpa, .link-mpe, .link-mpeg, .link-mpg,
- .link-mp4, .link-asf, .link-asx, .link-avi, .link-xlb, .link-xls,
- .link-xlt, .link-csv, .link-ppa, .link-pps, .link-ppt, .link-pwz,
- .link-wmv, .link-wmf, .link-mov, .link-qt, .link-rgb, .link-ram,
- .link-rm, .link-ai, .link-eps, .link-ps, .link-swf, .link-swfl,
- .link-tif, .link-tiff, .link-wav, .link-zip, .link-mdb, .link-dbf,
- .link-rar, .link-txt, .link-external {
-    zoom: 1;
-}
-
 *:first-child+html .portlet-rss .portletFooter a.feedButton img {
     margin: -12px 0 0 0;
 }
@@ -212,9 +198,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 }
 
 * html .link-external,
-* html .link-external a,
-* html .link-mailto a,
-* html .link-mailto {
+* html .link-external a {
      height: 1%;
 } 
 

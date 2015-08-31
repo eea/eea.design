@@ -111,9 +111,7 @@ body { /* These work in IE only, changes the look of the scrollbar + textareas *
 }
 
 * html .link-external,
-* html .link-external a,
-* html .link-mailto a,
-* html .link-mailto {
+* html .link-external a {
      height: 1%;
 } 
 
