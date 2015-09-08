@@ -3,6 +3,8 @@ Changelog
 
 12.6.dev0 - (unreleased)
 ------------------------
+* Bug fix: rendering of plone.portaltop in eea.cross_site_top fails: __getslice__ 
+  [lucas refs #28286]
 
 12.5 - (2015-08-18)
 -------------------
