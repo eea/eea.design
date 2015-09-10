@@ -151,7 +151,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     clear: both;
     font-size:11px;
     line-height:1em;
-    border: 1px none $dtml-lightGreyDivisionColor;;
+    border: 1px none &dtml-lightGreyDivisionColor;;
     border-top-style: dotted;
     margin:0;
     padding:1em 1em;
