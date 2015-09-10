@@ -1,8 +1,8 @@
 Changelog
 =========
 
-12.6.dev0 - (unreleased)
-------------------------
+12.6 - (2015-09-10)
+-------------------
 * Change: increased the refresh interval for async queue overview
   from 5sec to 30sec
   [chiridra refs #28222]
