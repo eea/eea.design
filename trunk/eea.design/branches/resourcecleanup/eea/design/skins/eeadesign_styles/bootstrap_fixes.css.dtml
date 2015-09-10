@@ -89,7 +89,11 @@ blockquote {
 /* ++resource++eea.faceted-navigation-edit.css */
 .faceted-add-button .ui-icon,
 /* ++resource++jquery.slickgrid.css */
-.slick-header-column.ui-state-default, .slick-cell {
+.slick-header-column.ui-state-default, .slick-cell,
+/* ++resource++eea.daviz.tutorials.css */
+.daviz-tutorials-main-playlist-title, .daviz-tutorials-main-playlist-title-label,
+.daviz-tutorials .daviz-tutorials-videos .daviz-tutorials-videoitem
+{
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
