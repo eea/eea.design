@@ -1,0 +1,23 @@
+
+<dtml-with base_properties> 
+<dtml-call "REQUEST.set('portal_url', portal_url())"> 
+
+<dtml-comment> 
+Mime registry icons. 
+Mimetypes with no extension 
+or no registered icon
+are excluded. New icons are entered 
+via the plone mime regisry.
+The css picks them up dynamically. 
+</dtml-comment> 
+
+<dtml-in "mimetypes_registry.mimetypes()" sort=id>
+<dtml-let thetype=sequence-item>
+<dtml-if "thetype.extensions and thetype.icon_path!='unknown.png' and thetype.icon_path!='html.png'"> 
+<dtml-in "thetype.extensions" sort=id>.link-<dtml-var sequence-item><dtml-unless sequence-end>, </dtml-unless></dtml-in> {
+    background: transparent url(<dtml-var portal_url>/<dtml-var "thetype.icon_path">) 0% 50% no-repeat;
+    padding: 2px 0px 2px 20px;}
+</dtml-if>    
+</dtml-let>
+</dtml-in>
+</dtml-with>

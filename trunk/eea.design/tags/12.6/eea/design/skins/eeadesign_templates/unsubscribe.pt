@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      i18n:domain="eea"
+      metal:use-macro="here/main_template/macros/master">
+  <head>
+  </head>
+  <body>
+
+  <div metal:fill-slot="main"
+       tal:define="email python:request.get('email', 'Enter email');
+                   msg python:request.get('msg', '')">
+    <h1 i18n:translate="">Unsubscribe from EEA notification service</h1>
+      <form action="subscriber_account"
+            name="subscription"
+            method="post"
+            tal:attributes="action string:$portal_url/unsubscribe_notification">
+        <div class="field">
+          <label for="email" i18n:translate="">To unsubscribe from EEA notification service please enter your email. You will receive an email in order to confirm your unsubscription.</label>
+          <br /><br />
+
+        <div tal:attributes="class python:test(msg, 'error', '')">
+          <span tal:condition="msg" 
+                tal:replace="structure string:$msg &lt;br /&gt;" />
+          <input type="text"
+                 name="email"
+                 id="email"
+                 alt="Email"
+                 value="Enter email"
+                 size="20"
+                 tal:attributes="value email"
+                 i18n:attributes="value; alt" />
+          <input class="standalone"
+                 type="submit"
+                 name="submit"
+                 value="Unsubscribe"
+                 alt="Unsubscribe"
+                 i18n:attributes="value; alt" />
+        </div>
+
+        </div>
+      </form>
+  </div>
+
+  </body>
+</html>
