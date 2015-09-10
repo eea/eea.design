@@ -16,7 +16,8 @@ jQuery(function($) {
     }
 
     $.fn.render = function(data) {
-      var rows = ['<caption style="width:100%;"><div class="portalMessage informationMessage">'];
+      var rows = ['<caption style="width:100%%;">'];
+      rows.push('<div class="portalMessage informationMessage">');
       rows.push('The list is refreshed every %(seconds)s seconds.');
       rows.push('</div></caption>');
       rows.push('<tr><th>Job</th><th>Status</th></tr>');
