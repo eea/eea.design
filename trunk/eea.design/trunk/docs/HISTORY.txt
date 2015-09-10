@@ -3,6 +3,9 @@ Changelog
 
 12.6.dev0 - (unreleased)
 ------------------------
+* Change: increased the refresh interval for async queue overview
+  from 5sec to 30sec
+  [chiridra refs #28222]
 * Bug fix: rendering of plone.portaltop in eea.cross_site_top fails: __getslice__ 
   [lucas refs #28286]
 

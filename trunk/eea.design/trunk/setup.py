@@ -48,6 +48,7 @@ setup(name=name,
           #'gocept.selenium[plone]',
 
           # -*- Extra requirements: -*-
+          'plone.app.async'
       ],
       entry_points="""
       # -*- Entry points: -*-

@@ -28,6 +28,19 @@
           />
     </configure>
 
+    <!-- #28222 override manage-job-queue to have a bigger timeout
+         on refresh -->
+     <configure package="plone.app.async">
+        <browser:page
+            for="Products.CMFCore.interfaces.ISiteRoot"
+            name="manage-job-queue"
+            class="eea.design.browser.queue.JobsView"
+            layer="eea.design.browser.interfaces.IEEADesignCMS"
+            permission="plone.app.async.ManageJobQueue"
+            template="browser/queue.pt"
+        />
+    </configure>
+
     <!-- #13816 override _data to include QuickEvent for Events portlet catalog
          search -->
     <plone:portletRenderer
