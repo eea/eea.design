@@ -25,6 +25,22 @@ jQuery(document).ready(function($) {
         }
     });
 
+    /* 27220 moved showing and hiding of the older versions from eea.versions to design.js
+    *  this is an eea specific design decision
+    *  eg: http://eea.europa.eu/data-and-maps/daviz/real-price-indices-of-passenger-transport-1
+    *  */
+    (function($el){
+        if (!$el.length) {
+            return;
+        }
+        var $previous_versions = $("#previous-versions");
+        $previous_versions.css('display', 'none');
+        $el.click(function(e) {
+            $previous_versions.slideToggle();
+            e.preventDefault();
+        });
+    }($(".showOlderVersions")));
+
     /* 27537; insert a link for iframes that contain video since whkthmltopdf doesn't support
     * the video tag and there is no image placeholder */
     var $video_iframe = $("iframe").filter('[src*="video"]'), $video_iframe_src;
