@@ -3,13 +3,15 @@ Changelog
 
 12.7.dev0 - (unreleased)
 ------------------------
+* Bug fix: Fixed Unauthorized exception on getObjSize script
+  [voineali refs #28731]
 
 12.6 - (2015-09-10)
 -------------------
 * Change: increased the refresh interval for async queue overview
   from 5sec to 30sec
   [chiridra refs #28222]
-* Bug fix: rendering of plone.portaltop in eea.cross_site_top fails: __getslice__ 
+* Bug fix: rendering of plone.portaltop in eea.cross_site_top fails: __getslice__
   [lucas refs #28286]
 
 12.5 - (2015-08-18)
