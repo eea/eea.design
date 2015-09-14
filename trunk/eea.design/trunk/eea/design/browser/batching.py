@@ -6,17 +6,6 @@ from ZODB.POSException import ConflictError
 from AccessControl import Unauthorized
 
 
-class Batching(BrowserView):
-    """ Batching
-    """
-
-    batch = None
-
-    def __call__(self, batch):
-        self.batch = batch
-        return self.index()
-
-
 class FormatCatalogMetadata(BrowserView):
     """ Determine whether the input is a DateTime or ISO date and localize
     it if so, also convert lists and dicts into reasonable strings.

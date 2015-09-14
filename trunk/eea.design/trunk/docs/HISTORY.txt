@@ -3,6 +3,10 @@ Changelog
 
 12.7.dev0 - (unreleased)
 ------------------------
+* Change: removed override of Batch template and browserView which fails with
+  newer versions of Plone that uses plone.batching
+  [ichimdav refs #28747]
+
 * Bug fix: Fixed Unauthorized exception on getObjSize script
   [voineali refs #28731]
 
