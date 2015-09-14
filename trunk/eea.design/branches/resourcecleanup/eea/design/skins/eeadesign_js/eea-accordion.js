@@ -1,3 +1,10 @@
+/* EXTERNAL DEPENDENCIES: ++resource++plone.app.jquerytools.js tabs */
+
+/* javascript accordions
+ * eg: http://www.eea.europa.eu/code/design-elements#toc-14
+ * used in mobile view instead of tabs
+ * */
+
 jQuery(document).ready(function($) {
     // NOTE: this file is overriding the one found in
     // Products.NavigationManager

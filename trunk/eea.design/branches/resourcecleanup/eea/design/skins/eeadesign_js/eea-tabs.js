@@ -1,3 +1,11 @@
+/* EXTERNAL DEPENDENCIES: ++resource++plone.app.jquerytools.js tabs */
+
+/* javascript tabs
+ * eg: http://www.eea.europa.eu/code/design-elements#tab-first-tab
+ * used in relatedItems tabs
+ * http://www.eea.europa.eu/publications/eu-2010-biodiversity-baseline
+ * */
+
 jQuery(document).ready(function($) {
 
     $(window).bind('eea.tags.loaded', function (evt, tab) {
@@ -100,7 +108,6 @@ jQuery(document).ready(function($) {
     });
 
     $(window).trigger('eea.tags.loaded', $('#whatsnew-gallery').find('.eea-tabs'));
-    $(window).trigger('eea.tags.loaded', $('#multimedia-tabs'));
 
     if (window.location.hash) {
         $(window).trigger('hashchange');

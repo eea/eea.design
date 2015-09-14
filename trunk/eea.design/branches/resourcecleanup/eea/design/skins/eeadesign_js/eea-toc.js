@@ -4,8 +4,6 @@
  * - The script works with headers with nested <a> tags
  */
 function build_toc(toc) {
-    var tocID = toc.attr('id');
-
     // add collapsabl-portlet class to get the arrows to minimize the panel
     if (!toc.hasClass('collapsable-portlet')){
         toc.addClass('collapsable-portlet');
