@@ -143,13 +143,10 @@ th a, th a:link, th a:visited {
 }
 
 .even {
-    background: #ececec;
-    color: #346f83;
     margin: 0;
     padding: 15px 15px 10px 15px;
     font-weight: normal;
     border-bottom: 1px solid #DDD;
-    cursor: pointer;
 }
 
 .sum {
@@ -168,10 +165,12 @@ th a, th a:link, th a:visited {
     border-bottom: 1px dotted #b6b6b6;
 }
 .sortable th, .listing th {
-    background: #f1efe5;
-    border: 2px outset #adc095;
+    color: #fff;
+    background: &dtml-corporateBlueTwo;;
+    border: 0.1em solid #e7e7e7;
+    border-style: solid solid none;
     margin: 0;
-    padding: 0;
+    padding: 0.5em 1em;
     white-space: nowrap;
     vertical-align: top;
     text-transform: none;
@@ -463,6 +462,13 @@ span.figure-left {
     padding: 20px;
     font-size: 160%;
     margin-bottom: 1em;
+}
+
+/* eea.geotags View macro */
+.eea-location-listing {
+    text-align: left;
+    color: #666;
+    line-height: 2em;
 }
 
 

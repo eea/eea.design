@@ -3,14 +3,6 @@ jQuery(document).ready(function($) {
     'use strict';
     var url_path_name = window.location.pathname;
     var $body = $("body");
-    var ie;
-    if ($.browser) {
-      ie = $.browser.msie && parseInt($.browser.version, 10);
-    } else {
-      var nav = navigator.userAgent;
-      ie = nav.indexOf('MSIE');
-      ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
-    }
 
     /* #28278 prevent figures from printing charts without the figure title on the same line
      * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body

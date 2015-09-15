@@ -74,6 +74,13 @@ blockquote {
     padding: 0 1em 1em;
 }
 
+/* faceted count widget with long terms fall below the inputs
+* with display: inline block set from bootstrap
+*/
+.widget-fieldset ul li label {
+    display: inline;
+}
+
 /* ==== ploneCustom.css ==== */
 #visual-portal-wrapper .eea-tabs.two-rows > li > a {
   height: 50px;

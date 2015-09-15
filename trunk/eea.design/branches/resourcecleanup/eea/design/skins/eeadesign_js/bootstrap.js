@@ -56,7 +56,9 @@ if (typeof jQuery === 'undefined') {
     }
 
     Carousel.prototype.keydown = function (e) {
-        if (/input|textarea/i.test(e.target.tagName)) return
+        if (/input|textarea/i.test(e.target.tagName)) {
+            return;
+        }
         switch (e.which) {
             case 37: this.prev(); break
             case 39: this.next(); break
@@ -87,7 +89,9 @@ if (typeof jQuery === 'undefined') {
         var activeIndex = this.getItemIndex(active)
         var willWrap = (direction == 'prev' && activeIndex === 0)
             || (direction == 'next' && activeIndex == (this.$items.length - 1))
-        if (willWrap && !this.options.wrap) return active
+        if (willWrap && !this.options.wrap) {
+            return active;
+        }
         var delta = direction == 'prev' ? -1 : 1
         var itemIndex = (activeIndex + delta) % this.$items.length
         return this.$items.eq(itemIndex)
@@ -97,10 +101,16 @@ if (typeof jQuery === 'undefined') {
         var that        = this
         var activeIndex = this.getItemIndex(this.$active = this.$element.find('.item.active'))
 
-        if (pos > (this.$items.length - 1) || pos < 0) return
+        if (pos > (this.$items.length - 1) || pos < 0) {
+            return;
+        }
 
-        if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) }) // yes, "slid"
-        if (activeIndex == pos) return this.pause().cycle()
+        if (this.sliding) {
+            return this.$element.one('slid.bs.carousel', function () { that.to(pos) });
+        } // yes, "slid"
+        if (activeIndex == pos) {
+            return this.pause().cycle();
+        }
 
         return this.slide(pos > activeIndex ? 'next' : 'prev', this.$items.eq(pos))
     }
@@ -119,12 +129,16 @@ if (typeof jQuery === 'undefined') {
     }
 
     Carousel.prototype.next = function () {
-        if (this.sliding) return
+        if (this.sliding) {
+            return;
+        }
         return this.slide('next')
     }
 
     Carousel.prototype.prev = function () {
-        if (this.sliding) return
+        if (this.sliding) {
+            return;
+        }
         return this.slide('prev')
     }
 
@@ -135,7 +149,9 @@ if (typeof jQuery === 'undefined') {
         var direction = type == 'next' ? 'left' : 'right'
         var that      = this
 
-        if ($next.hasClass('active')) return (this.sliding = false)
+        if ($next.hasClass('active')) {
+            return (this.sliding = false);
+        }
 
         var relatedTarget = $next[0]
         var slideEvent = $.Event('slide.bs.carousel', {
@@ -143,7 +159,9 @@ if (typeof jQuery === 'undefined') {
             direction: direction
         })
         this.$element.trigger(slideEvent)
-        if (slideEvent.isDefaultPrevented()) return
+        if (slideEvent.isDefaultPrevented()) {
+            return;
+        }
 
         this.sliding = true
 
@@ -194,10 +212,16 @@ if (typeof jQuery === 'undefined') {
             var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
             var action  = typeof option == 'string' ? option : options.slide
 
-            if (!data) $this.data('bs.carousel', (data = new Carousel(this, options)))
-            if (typeof option == 'number') data.to(option)
-            else if (action) data[action]()
-            else if (options.interval) data.pause().cycle()
+            if (!data) {
+                $this.data('bs.carousel', (data = new Carousel(this, options)));
+            }
+            if (typeof option == 'number') {
+                data.to(option);
+            } else if (action) {
+                data[action]();
+            } else if (options.interval) {
+                data.pause().cycle();
+            }
         })
     }
 
@@ -223,10 +247,14 @@ if (typeof jQuery === 'undefined') {
         var href
         var $this   = $(this)
         var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
-        if (!$target.hasClass('carousel')) return
+        if (!$target.hasClass('carousel')) {
+            return;
+        }
         var options = $.extend({}, $target.data(), $this.data())
         var slideIndex = $this.attr('data-slide-to')
-        if (slideIndex) options.interval = false
+        if (slideIndex) {
+            options.interval = false;
+        }
 
         Plugin.call($target, options)
 
@@ -283,7 +311,9 @@ if (typeof jQuery === 'undefined') {
             selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
         }
 
-        if ($this.parent('li').hasClass('active')) return
+        if ($this.parent('li').hasClass('active')) {
+            return;
+        }
 
         var $previous = $ul.find('.active:last a')
         var hideEvent = $.Event('hide.bs.tab', {
@@ -296,7 +326,9 @@ if (typeof jQuery === 'undefined') {
         $previous.trigger(hideEvent)
         $this.trigger(showEvent)
 
-        if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) return
+        if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
+            return;
+        }
 
         var $target = $(selector)
 
@@ -370,8 +402,12 @@ if (typeof jQuery === 'undefined') {
             var $this = $(this)
             var data  = $this.data('bs.tab')
 
-            if (!data) $this.data('bs.tab', (data = new Tab(this)))
-            if (typeof option == 'string') data[option]()
+            if (!data) {
+                $this.data('bs.tab', (data = new Tab(this)));
+            }
+            if (typeof option == 'string') {
+                data[option]();
+            }
         })
     }
 
@@ -432,7 +468,9 @@ if (typeof jQuery === 'undefined') {
             this.addAriaAndCollapsedClass(this.$element, this.$trigger)
         }
 
-        if (this.options.toggle) this.toggle()
+        if (this.options.toggle) {
+            this.toggle();
+        }
     }
 
     Collapse.VERSION  = '3.3.4'
@@ -449,19 +487,25 @@ if (typeof jQuery === 'undefined') {
     }
 
     Collapse.prototype.show = function () {
-        if (this.transitioning || this.$element.hasClass('in')) return
+        if (this.transitioning || this.$element.hasClass('in')) {
+            return;
+        }
 
         var activesData
         var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
 
         if (actives && actives.length) {
             activesData = actives.data('bs.collapse')
-            if (activesData && activesData.transitioning) return
+            if (activesData && activesData.transitioning) {
+                return;
+            }
         }
 
         var startEvent = $.Event('show.bs.collapse')
         this.$element.trigger(startEvent)
-        if (startEvent.isDefaultPrevented()) return
+        if (startEvent.isDefaultPrevented()) {
+            return;
+        }
 
         if (actives && actives.length) {
             Plugin.call(actives, 'hide')
@@ -490,7 +534,9 @@ if (typeof jQuery === 'undefined') {
                 .trigger('shown.bs.collapse')
         }
 
-        if (!$.support.transition) return complete.call(this)
+        if (!$.support.transition) {
+            return complete.call(this);
+        }
 
         var scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
@@ -500,11 +546,15 @@ if (typeof jQuery === 'undefined') {
     }
 
     Collapse.prototype.hide = function () {
-        if (this.transitioning || !this.$element.hasClass('in')) return
+        if (this.transitioning || !this.$element.hasClass('in')) {
+            return;
+        }
 
         var startEvent = $.Event('hide.bs.collapse')
         this.$element.trigger(startEvent)
-        if (startEvent.isDefaultPrevented()) return
+        if (startEvent.isDefaultPrevented()) {
+            return;
+        }
 
         var dimension = this.dimension()
 
@@ -529,7 +579,9 @@ if (typeof jQuery === 'undefined') {
                 .trigger('hidden.bs.collapse')
         }
 
-        if (!$.support.transition) return complete.call(this)
+        if (!$.support.transition) {
+            return complete.call(this);
+        }
 
         this.$element
             [dimension](0)
@@ -578,9 +630,15 @@ if (typeof jQuery === 'undefined') {
             var data    = $this.data('bs.collapse')
             var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
-            if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
-            if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
-            if (typeof option == 'string') data[option]()
+            if (!data && options.toggle && /show|hide/.test(option)) {
+                options.toggle = false;
+            }
+            if (!data) {
+                $this.data('bs.collapse', (data = new Collapse(this, options)));
+            }
+            if (typeof option == 'string') {
+                data[option]();
+            }
         })
     }
 
@@ -605,7 +663,9 @@ if (typeof jQuery === 'undefined') {
     $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
         var $this   = $(this)
 
-        if (!$this.attr('data-target')) e.preventDefault()
+        if (!$this.attr('data-target')) {
+            e.preventDefault();
+        }
 
         var $target = getTargetFromTrigger($this)
         var data    = $target.data('bs.collapse')
@@ -655,7 +715,9 @@ if (typeof jQuery === 'undefined') {
         var called = false
         var $el = this
         $(this).one('bsTransitionEnd', function () { called = true })
-        var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+        var callback = function () { if (!called) {
+            $($el).trigger($.support.transition.end) ;
+        }}
         setTimeout(callback, duration)
         return this
     }
@@ -663,13 +725,17 @@ if (typeof jQuery === 'undefined') {
     $(function () {
         $.support.transition = transitionEnd()
 
-        if (!$.support.transition) return
+        if (!$.support.transition) {
+            return;
+        }
 
         $.event.special.bsTransitionEnd = {
             bindType: $.support.transition.end,
             delegateType: $.support.transition.end,
             handle: function (e) {
-                if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+                if ($(e.target).is(this)) {
+                    return e.handleObj.handler.apply(this, arguments);
+                }
             }
         }
     })
