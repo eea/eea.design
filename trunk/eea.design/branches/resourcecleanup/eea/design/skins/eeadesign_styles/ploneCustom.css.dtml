@@ -57,6 +57,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 }
 
 #faceted-form .widget-fieldset legend {
+    background-color: &dtml-corporateGreen;;
     color: #ffffff;
     padding: 5px 10px;
     font-size: 14px;
