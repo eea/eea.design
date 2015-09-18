@@ -12,9 +12,10 @@
                    i18n:attributes="value label_search" />
     </form>
       <a id="search_advanced_link" href="/help/advanced-search"
+         class="pull-left"
        i18n:translate="" tal:attributes="href string:${local_site}/help/advanced-search" 
                >Advanced search</a>
-      <a id="search_glossary_link" href="http://glossary.eea.europa.eu/"
+      <a id="search_glossary_link" class="pull-right" href="http://glossary.eea.europa.eu/"
          i18n:translate=""
          tal:attributes="href python:'http://glossary.%s.eea.europa.eu'%request.get('LANGUAGE', 'en')"
          >A-Z Glossary</a>

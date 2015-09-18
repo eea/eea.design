@@ -3,14 +3,35 @@ jQuery(document).ready(function($) {
     'use strict';
     var url_path_name = window.location.pathname;
     var $body = $("body");
-    var ie;
-    if ($.browser) {
-      ie = $.browser.msie && parseInt($.browser.version, 10);
-    } else {
-      var nav = navigator.userAgent;
-      ie = nav.indexOf('MSIE');
-      ie < 0 ? ie = false : ie = parseInt(nav.substring(ie+5, ie+7));
-    }
+
+    /* #28278 prevent figures from printing charts without the figure title on the same line
+     * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
+     * data-and-maps/indicators/direct-losses-from-weather-disasters-2/assessment/pdf.body
+     * */
+    $(".policy_question").each(function(idx, el) {
+        var $el = $(el);
+        var $next_el = $el.next();
+        if ($next_el.hasClass('indicator-figure-plus-container')) {
+            $el.addClass("page-break-before");
+            $next_el.find('.figure-title').addClass('no-page-break-before');
+        }
+    });
+
+    /* 27220 moved showing and hiding of the older versions from eea.versions to design.js
+    *  this is an eea specific design decision
+    *  eg: http://eea.europa.eu/data-and-maps/daviz/real-price-indices-of-passenger-transport-1
+    *  */
+    (function($el){
+        if (!$el.length) {
+            return;
+        }
+        var $previous_versions = $("#previous-versions");
+        $previous_versions.css('display', 'none');
+        $el.click(function(e) {
+            $previous_versions.slideToggle();
+            e.preventDefault();
+        });
+    }($(".showOlderVersions")));
 
     /* 27537; insert a link for iframes that contain video since whkthmltopdf doesn't support
     * the video tag and there is no image placeholder */

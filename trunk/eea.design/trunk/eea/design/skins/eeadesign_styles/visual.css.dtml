@@ -1,11 +1,3 @@
-/*
-** EEA Design 2006 style sheet - Public-facing Elements
-**
-**
-** Documentation http://webservices.eea.eu.int/templates/
-**
-*/
-
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
@@ -71,23 +63,6 @@ sup, sub {
     background: url(&dtml-portal_url;/draft.png);
 }
 
-
-/*
-** Breadcrumb trail
-** Adopted from Eionet
-*/
-
-.breadcrumbitem, .breadcrumbitemlast {
-    padding-right:0px;
-    padding-left:11px;
-}
-.breadcrumbitemlast {
-    font-weight:bold;
-}
-a.breadcrumbitem {
-    color:&dtml-linkColor;;
-}
-
 /*
 ** Collapsible areas classes.
 ** further info in javascript
@@ -97,7 +72,7 @@ a.breadcrumbitem {
 .collapsibleHeader {
     cursor: pointer;
     background: transparent url(<dtml-var portal_url>/p_/pl) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
+    padding: 1px 0 1px 20px;
 }
 
 .expandedBlockCollapsible .collapsibleContent {
@@ -119,19 +94,13 @@ table {
     font-size: 0.9em;
 }
 
-td {
-    line-height: normal;
-    text-decoration: none;
-}
-
 th {
     font-weight: bold;
     line-height: normal;
     padding: 0.1em 0.5em;
-    text-decoration: none;
 }
 th a, th a:link, th a:visited {
-    color: #000 !important;
+    color: #000;
 }
 
 
@@ -144,8 +113,12 @@ th a, th a:link, th a:visited {
     height: 16px;
 }
 
+.listing th a, .listing th a:visited {
+    color: #FFF !important;
+}
+
 /* Data tables */
-table.datatable {
+.datatable {
     border: 1px solid #b6b6b6;
     border-collapse: collapse;
     color: #666666;
@@ -155,43 +128,29 @@ table.datatable {
     text-align: center;
     background-color: #f6f6f6;
     font-weight: bold;
-    /* border-top:    1px solid white;
-    border-bottom: 1px solid white;*/
 }
-.datatable th.scope-row { /* IE6 doesn't understand [scope="row"] */
+.number,
+.scope-row { /* IE6 doesn't understand [scope="row"] */
     text-align: right;
-}
-.datatable th[scope="row"] {
-    text-align: right;
-}
-
-.datatable .number {
-    text-align: right;
-}
-.datatable .sum {
-    font-weight: bold;
 }
 
 .datatable td, .datatable th  {
     padding: 0.3em;
     vertical-align: top;
 }
-.datatable tr {
-    /* border-top:    1px solid #f6f6f6;
-    border-bottom: 1px solid #f6f6f6;*/
-}
 .datatable tr.zebraeven {
     background-color: #f6f6f6;
 }
 
 .even {
-    background: #ececec;
-    color: #346f83;
     margin: 0;
     padding: 15px 15px 10px 15px;
     font-weight: normal;
     border-bottom: 1px solid #DDD;
-    cursor: pointer;
+}
+
+.sum {
+    font-weight: bold;
 }
 
 /* Sortable table columns */
@@ -201,18 +160,17 @@ table.datatable {
     line-height:normal;
 }
 
-.sortable tbody tr {
-}
-
 .sortable td, .listing td {
     padding: 0.2em;
     border-bottom: 1px dotted #b6b6b6;
 }
 .sortable th, .listing th {
-    background: #f1efe5;
-    border: 2px outset #adc095; /* #495b6b;*/
+    color: #fff;
+    background: &dtml-corporateBlueTwo;;
+    border: 0.1em solid #e7e7e7;
+    border-style: solid solid none;
     margin: 0;
-    padding: 0;
+    padding: 0.5em 1em;
     white-space: nowrap;
     vertical-align: top;
     text-transform: none;
@@ -230,69 +188,28 @@ table.datatable {
     padding:1px 0.5em;
 }
 
-.listing th .listingBar a{
-    display: inline;
-}
-
 .sortable thead th a:hover,
 .listing thead th a:hover,
-.listing thead th:hover {
+.listing thead th:hover,
+.listing tfoot th:hover {
     background: &dtml-corporateOrange;;
     color: #fff;
 }
 
 /* CSS3 Zebra effect for certain tables */
 .listing tr:nth-child(odd) td,
-.sortable tr:nth-child(odd) td
+.sortable tr:nth-child(odd) td,
 .datatable tr:nth-child(odd) td {
     background-color: #ececec;
-}
-
-/* Tables for arranging formulars */
-
-.formtable {
-    border-collapse: collapse;
-}
-
-.formtable th {
-    vertical-align: top;
-    text-align: right;
-    border: none;
-    background: transparent;
-}
-
-.formtable th.scope-col { /* IE6 doesn't understand [scope="col"] */
-    text-align: left;
-}
-
-.formtable th[scope="col"] {
-    text-align: left;
-}
-
-.formtable td  {
-    vertical-align: top;
 }
 
 
 /* Styles which apply only in central content area */
 
-#content blockquote.quote-right {
-    float: right;
-    width: 15em;
-}
-
-#content blockquote.quote-left {
-    float: left;
-    width: 19em;
-    margin:2em 2em 0.4em 0em;
-}
-
 #content blockquote p {
     font-weight:bold;
-    background: url(&dtml-portal_url;/close_quote.gif);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    padding: 0em 2.25em 1em 0em;
+    background: url(&dtml-portal_url;/close_quote.gif) no-repeat bottom right;
+    padding: 0 2.25em 1em 0;
 }
 
 #content blockquote p.source {
@@ -301,48 +218,19 @@ table.datatable {
     font-style: normal;
     font-weight:normal;
     font-size: x-small;
-    padding: 0em 1em 0em 0em;
-}
-
-/* Link styles in content headers */
-#content h1 a,
-#content h2 a,
-#content h3 a,
-#content h4 a,
-#content h5 a,
-#content h6 a {
-    text-decoration: none;
-    /*  padding-right: 0.9em !important; 23407 removed padding right from header links */
-    border: none;
+    padding: 0 1em 0 0;
 }
 
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
-#content div#multicolumn {
+.multicolumn {
+    -webkit-column-width: 150px;
+    -webkit-column-gap: 20px;
     -moz-column-width: 150px;
     -moz-column-gap: 20px;
     column-width: 150px;
     column-gap: 20px;
 }
 
-/* Styles which can be used on any area */
-
-.boxShadowedDownRight {
-    -webkit-box-shadow: 2px 2px 1px #888;
-    -moz-box-shadow: 2px 2px 1px #888;
-    -ms-box-shadow: 2px 2px 1px #888;
-    -o-box-shadow: 2px 2px 1px #888;
-    box-shadow: 2px 2px 1px #888;
-}
-
-
-.greenGradientBackgroundUp, #edit-bar, .actionMenuContent, #portal-personaltools, #portal-personaltools dd,
-#faceted-form .widget-fieldset legend {
-    background-color: &dtml-corporateGreen;;
-}
-
-.greenGradientBackgroundDown, #contentActionMenus {
-    background-color: &dtml-corporateGreen;;
-}
 
 /* standard figure, used for articles and pages.
 can be floated left or right with additional
@@ -350,8 +238,7 @@ class figure-right or figure-left */
 
 .figure p,
 .figure-plus p,
-.figure-container p,
-.figure-standalone p {
+.figure-container p {
     margin-bottom: 0;
 }
 
@@ -360,9 +247,6 @@ class figure-right or figure-left */
     margin-bottom: 1em;
 }
 
-.figure, .figure-plus {
-    text-indent: 0;
-}
 .figure-title, .figure-nr {
     font-weight: bold;
 }
@@ -385,37 +269,14 @@ class figure-right or figure-left */
     border: 1px solid #a9a9a9;
     margin: -6px 0 0 -6px;
     padding: 4px;
-    /*position: relative;*/
     zoom: 1;
 }
 
-.figure-standalone {
-    background-color: #fff;
-    border: 1px solid #a9a9a9;
-    margin: 0 0 0 0;
-    padding: 4px;
-}
-
-/* */
 .figure-right .figure,
 .figure-right .figure-plus-container {
     float: right;
     margin-left: 1em;
 }
-
-.shadowed, .thumbnail-right img {
-    display: block;
-    background-color: #fff;
-    margin: -6px 0px 0px -6px;
-    border: 1px solid #a9a9a9;
-    padding: 4px;
-}
-
-.related-in-content-area .figure-plus-container {
-    margin-left: 3em;
-}
-
-/* floating left or right */
 
 .figure-left .figure,
 .figure-left .figure-plus-container {
@@ -425,59 +286,6 @@ class figure-right or figure-left */
 
 span.figure-left {
     display: block;
-}
-
-/* available scaled sizes to be used in  combination of .figure-plus-container
-        sizes= {'large'   : (768, 768),
-                'preview' : (400, 400),
-                'mini'    : (180,135),
-                'thumb'   : (128, 128),
-                'tile'    :  (64, 64),
-                'icon'    :  (32, 32),
-                'listing' :  (16, 16),
-               },
-
-*/
-
-.figure-container-imagelarge,
-.figure-container-imagelarge .figure-image,
-.figure-container-imagelarge p {
-    width:768px;
-}
-
-
-.figure-container-imagepreview,
-.figure-container-imagepreview .figure-image,
-.figure-container-imagepreview p {
-    width:400px;
-}
-.figure-container-imagemini,
-.figure-container-imagemini .figure-image,
-.figure-container-imagemini p {
-    width:180px;
-}
-.figure-container-imagethumb,
-.figure-container-imagethumb .figure-image,
-.figure-container-imagethumb p {
-    width:128px;
-}
-
-.figure-container-imagetile,
-.figure-container-imagetile .figure-image,
-.figure-container-imagetile p {
-    width:64px;
-}
-
-.figure-container-imageicon,
-.figure-container-imageicon .figure-image,
-.figure-container-imageicon p {
-    width:32px;
-}
-
-.figure-container-imagelisting,
-.figure-container-imagelisting .figure-image,
-.figure-container-imagelisting p {
-    width:16px;
 }
 
 /* style for keyfacts slider */
@@ -559,7 +367,7 @@ span.figure-left {
     padding-left: 0;
     text-decoration: underline;
     color: white !important;
-    cursor: pointer;
+    font-size: 100%;
 }
 
 #keyfacts-slider .slidePortlet a.moreLink:hover {
@@ -567,11 +375,17 @@ span.figure-left {
 }
 
 #keyfacts-slider .slidePortlet .portletHeader {
-    padding-left: 25px !important;
-    background: &dtml-corporateBlueTwo;;
-    color: #FFFFFF !important;
+  margin: 8px 0 0 25px;
+  background-color: transparent;
+  color: #FFF;
+  padding: 0;
 }
 
+#keyfacts-slider a,
+#keyfacts-slider a:hover,
+#keyfacts-slider a:visited {
+    color: #FFF !important; /* important because of content a:hover */
+}
 #keyfacts-slider .keyfactsImgContainer {
     overflow: hidden;
     text-align: center;
@@ -579,51 +393,24 @@ span.figure-left {
     height: 280px;
 }
 
-.pull-left {
-    float: left;
-}
-
-.pull-right {
-    float: right;
-}
-
-.clearfix:before,
-.clearfix:after {
-    display: table;
-    content: " ";
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.slidePortlet .corner-date {
-    font-size: 11px;
-    line-height: 1.6;
-}
 
 /* standard elements with shadow background */
-.dropshadow, .thumbnail-right {
+.thumbnail-right {
     display: block;
-    margin: 10px 0px 2px 6px;
+    margin: 10px 0 2px 6px;
 }
 
 /* standard elements which are shadowed and therefore moved up*/
-.shadowed, .thumbnail-right img {
+.thumbnail-right img {
     display: block;
-    margin: -6px 0px 0px -6px;
+    margin: -6px 0 0 -6px;
     padding: 5px;
+    border: 1px solid #a9a9a9;
 }
-
 
 /* hover effect for images inside links */
-.dropshadow img a:hover, .figure img a:hover, .thumbnail-right img a:hover {
+.thumbnail-right a:hover {
     background-color: &dtml-mediumBackgroundColor;;
-    border: 1px solid &dtml-linkActiveColor;;
-}
-
-img.scaled {
-    width: 100%;
 }
 
 /* highlights frontpage cleaned structure */
@@ -636,78 +423,10 @@ img.scaled {
 }
 
 /* rounded boxes default css */
-
-dl.wizard dt {
-    background: &dtml-mediumBackgroundColor;;
-    padding: 10px;
-    color: white;
-    float: left;
-    font-size: 3em;
-}
-
-dl.wizard dd {
-    font-size: 1.5em;
-    float: left;
-    width: 5em;
-    padding: 0 0.5em;
-    margin: 0 1em 0 0;
-}
-
-dl.wizard dt.currentStep {
-    background: &dtml-darkBackgroundColor;;
-}
-
 .roundedBox {
-    display:block;
-    background: &dtml-mediumBackgroundColor;;/* standard background color */
+    padding: 1em;
+    border-radius: 5px;
 }
-
-
-.portlet-subscribtion {
-    display:block;
-    color: black;
-}
-
-.roundedBox h1,
-.roundedBox h2,
-.roundedBox h3,
-.roundedBox h4,
-.roundedBox h5,
-.roundedBox h6 {
-    color: &dtml-fontColor;;
-    text-decoration: none;
-    padding: 0em 1em;
-}
-
-.roundedBox p,
-#portlet-login p,
-.roundedBox dt,
-#portlet-login dt,
-.roundedBox dd,
-#portlet-login dd,
-.roundedBox form
-{
-    padding: 0 1em;
-}
-
-#portlet-login dt.portletHeader {
-    padding: 0.7em 0.7em 0em 0.7em;
-}
-
-
-/* smaller login in content area */
-#content #portlet-login {
-    width: 20em;
-    margin: 1em;
-}
-
-/* no underline for links in portlet login */
-#portlet-login a, #portlet-login a:visited, #portlet-login a:active, #portlet-login a:hover,
-.photoAlbumEntry a:hover {
-    text-decoration: none;
-    border-bottom: 0px;
-}
-
 
 /* general background colors usable in combination with roundedBox */
 .lightBGC {
@@ -722,90 +441,21 @@ dl.wizard dt.currentStep {
     background-color:&dtml-darkBackgroundColor;;
 }
 
-/* info icon */
-.link-info {
-    background: transparent url(<dtml-var portal_url>/info_icon.gif) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
-}
-/* user icon */
-.link-user {
-    background: transparent url(<dtml-var portal_url>/user.gif) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
-}
-
-/* double arrow icon */
-.link-arrow {
-    background: transparent url(<dtml-var portal_url>/arrow-normal.png) 0% 50% no-repeat;
-    padding: 1px 0px 1px 20px;
-}
-
-/* arrow left */
-#portal-breadcrumbs .link-arrow-left {
-    background: transparent url(<dtml-var portal_url>/arrowLeft.gif) 0% 50% no-repeat;
-    padding: 0px 0px 0px 0.5em;
-    margin-left:0.5em;
-    margin-right:0.5em;
-    text-decoration: none;
-}
-
-/* arrow right */
-#portal-breadcrumbs .link-arrow-right {
-    background: transparent url(<dtml-var portal_url>/arrowRight.gif) 0% 50% no-repeat;
-    padding: 0px 0px 0px 0.5em;
-    margin-left:0.5em;
-    margin-right:0.5em;
-    text-decoration: none;
-}
-
-div span span#languageCodes {
-    padding: 0 0.25em;
-}
-
+/* languageCodes */
 #languageCodes {
-    padding: 0.25em 0 0.25em 0;
-}
-#languageCodes li {
-    display: inline-block;
-}
-
-form.manylanguages {
-    margin: 0;
-    padding: 0;
-    display: inline;
-}
-
-form.manylanguages select {
-    background: &dtml-darkBackgroundColor;;
-    color: white;
-    text-decoration: none;
-}
-
-#languageCodes li a.noTranslation {
-    background: transparent;
-    color: &dtml-linkColor;;
-}
-
-.highlights ul.relatedLinks li,
-#relatedItems legend,
-#relatedItems fieldset,
-.relatedLinks ul,
-.relatedLinks, ul#languageCodes  {
     border: 0;
     padding: 0;
     margin: 0;
 }
 
-.highlights ul.relatedLinks,
-#relatedItems,
-.relatedLinks {
-    margin: 1em 0 0 1px;
-    color: &dtml-fontColor;;
-
+#languageCodes li {
+    display: inline-block;
 }
 
-.relatedLinks li {
-    display: inline;
-    font-size: 0.8em;
+/* relatedLinks */
+#relatedItems {
+    margin: 1em 0 0 1px;
+    color: &dtml-fontColor;;
 }
 
 .awardNotice {
@@ -814,30 +464,39 @@ form.manylanguages select {
     margin-bottom: 1em;
 }
 
-#portlet-login {
-
-    color: #000;
+/* eea.geotags View macro */
+.eea-location-listing {
+    text-align: left;
+    color: #666;
+    line-height: 2em;
 }
 
 
-form#translationfeedback input#url {
+/* reusable components */
+.link-without-style {
+    /* plz add more link style elimination */
+    text-decoration: none;
+}
+
+.eea-template {
     display: none;
 }
 
-/* styles only for frontpage*/
-
-body.frontpage .documentActions ul {
-    display: none;
+.eea-rounded-corners {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
-body.frontpage .documentActions ul#languageCodes {
-    display: block;
+.eea-horizontal-list li {
+    float: left;
+    margin: 0 0.5em 0 0;
 }
 
-/* SOER 2015 quick fixes */
-h4.figureHeading {
-    margin: 0;
+.eea-no-list-style {
+    list-style: none none;
+    margin: 1em 0;
 }
 
 /* </dtml-with> */
-

@@ -69,8 +69,16 @@ blockquote {
 }
 
 /* ++resource++eea.faceted-navigation-edit.css */
-.faceted-widget .ui-widget-header {
-    margin: -5px -5px 1em -5px;
+.faceted-portlet-widget fieldset {
+    margin: 1em 0;
+    padding: 0 1em 1em;
+}
+
+/* faceted count widget with long terms fall below the inputs
+* with display: inline block set from bootstrap
+*/
+.widget-fieldset ul li label {
+    display: inline;
 }
 
 /* ==== ploneCustom.css ==== */
@@ -88,7 +96,11 @@ blockquote {
 /* ++resource++eea.faceted-navigation-edit.css */
 .faceted-add-button .ui-icon,
 /* ++resource++jquery.slickgrid.css */
-.slick-header-column.ui-state-default, .slick-cell {
+.slick-header-column.ui-state-default, .slick-cell,
+/* ++resource++eea.daviz.tutorials.css */
+.daviz-tutorials-main-playlist-title, .daviz-tutorials-main-playlist-title-label,
+.daviz-tutorials .daviz-tutorials-videos .daviz-tutorials-videoitem
+{
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;

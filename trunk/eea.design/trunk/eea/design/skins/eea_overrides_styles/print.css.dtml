@@ -188,7 +188,9 @@ data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
     page-break-before: always;
 }
 
-.noPageBreak {
+.noPageBreak,
+.featured
+{
   page-break-inside: avoid;
 }
 
@@ -347,6 +349,7 @@ input.context,
 .right-column-area, .column-area {
     width: 100% !important;
     margin-top: 1em;
+    padding: 0;
 }
 
 

@@ -10,7 +10,7 @@
 }
 
 #bg-wrapper {
-    padding: 0px;
+    padding: 0;
     margin: 0;
 }
 
@@ -22,10 +22,6 @@
     text-align: left;
     font-size: 12px;
     color: white;
-}
-
-#portal-footer .image-right {
-   margin-top: 1em;
 }
 
 #portal-footer a {
@@ -47,31 +43,10 @@
 
 #portal-colophon {
     float: none;
-    margin: 0em 0em 2em 0em;
+    margin: 0 0 2em 0;
     padding: 0.5em 1em 1em 1em;
     text-align: center;
     clear:both;
-}
-
-#portal-colophon ul,
-#portal-colophon ul li,
-#portal-colophon ul li a {
-    list-style-image: none;
-    list-style-type: none;
-    display: inline;
-    text-decoration: none;
-    color: &dtml-fontColor;;
-}
-
-#portal-colophon ul {
-    list-style-type: none;
-}
-
-#portal-colophon ul li {
-    display: inline;
-    font-size: 11px;
-    margin: 0 0.25em;
-    padding: 0.1em 0.2em;
 }
 
 #portal-colophon .colophonWrapper {
@@ -117,14 +92,4 @@
     cursor: pointer;
     text-decoration: none !important;
 }
-
-.colophon-full {
-    display: block;
-    clear: both;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    width: 760px;
-}
-
 /* </dtml-with> */

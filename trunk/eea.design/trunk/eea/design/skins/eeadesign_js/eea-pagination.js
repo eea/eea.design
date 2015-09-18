@@ -1,3 +1,10 @@
+/* EXTERNAL DEPENDENCIES: eea.tabs.js */
+
+/* client side pagination
+* eg: http://www.eea.europa.eu/code/design-elements#toc-66
+* used in relatedItems tabs
+* http://www.eea.europa.eu/publications/eu-2010-biodiversity-baseline
+* */
 jQuery(document).ready(function($) {
     // check if related_items isn't an select tag which is found in the edit
     // widget

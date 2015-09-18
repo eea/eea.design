@@ -1,3 +1,13 @@
+/* EXTERNAL DEPENDENCIES:
+ * - jquery-ui.js dialog,
+ * - ++resource++jquery.remember-state.js
+ * - ++resource++jquery.tokeninput.js - for subject and temporalField
+ * BROWSER FEATURES: JSON, localStorage */
+
+/*
+ * Gives you the possibility to reapply the form data that you've attempted to submit when
+ * you've received a 500 page error on page edit
+ * */
 jQuery(document).ready(function($) {
     'use strict';
 //    #20302; save state on submit attempt and remove it on success
@@ -84,8 +94,8 @@ jQuery(document).ready(function($) {
                             saved_form_obj_name = saved_form_obj.name;
                             // we skip location entry check since the keys are not ordered in the same plus
                             // the saved entries are escaped
-                            if (saved_form_obj_name === "location" || saved_form_obj_name === "last_referer"
-                                || saved_form_obj_name === "saveDate")    {
+                            if (saved_form_obj_name === "location" || saved_form_obj_name === "last_referer" ||
+                                saved_form_obj_name === "saveDate") {
                                 continue;
                             }
                             if (saved_form_obj.value !== current_form_obj.value) {
@@ -97,7 +107,7 @@ jQuery(document).ready(function($) {
                             return;
                         }
                         $.get(url_path_name + '/restore_form_values')
-                            .done(function( data ) {
+                            .done(function(data) {
                                 var portlet_restore = $(data);
                                 portlet_restore.dialog({
                                     open: function(event) {
@@ -124,8 +134,8 @@ jQuery(document).ready(function($) {
                                             var cleaned_themes = false;
                                             var $themes_options = $("#themes_options");
                                             var $themes_buttons = $('.context');
-                                            var $themes_insert_btn = $themes_buttons.filter(function(idx, el) { return el.value === ">>"});
-                                            var $themes_remove_btn = $themes_buttons.filter(function(idx, el) { return el.value === "<<"});
+                                            var $themes_insert_btn = $themes_buttons.filter(function(idx, el) { return el.value === ">>"; });
+                                            var $themes_remove_btn = $themes_buttons.filter(function(idx, el) { return el.value === "<<"; });
                                             var restoreCallback = function($el, data){
                                                 var name = $el.attr('name');
                                                 if (name === "subject_keywords:lines" || name === "temporalCoverage:lines") {

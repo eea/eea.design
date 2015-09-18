@@ -23,12 +23,6 @@ html {
     padding: 0;
 }
 
-body.frontpage ul {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-}
-
 #main-content {
     margin-top: 5px;
 }
@@ -351,9 +345,6 @@ a.active-list, a.list-layout:hover {
     text-align: left;
     width: 83%;
     padding-top: 6px;
-}
-.filter-topic span {
-    font-weight: bold;
 }
 /* </dtml-with> */
 

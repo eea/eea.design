@@ -3,6 +3,9 @@ Changelog
 
 12.7.dev0 - (unreleased)
 ------------------------
+* Change: removed leftover css and javascript while documenting use and
+  dependencies of existing javascripts from eea.design
+  [ichimdav refs #27220]
 * Change: removed override of Batch template and browserView which fails with
   newer versions of Plone that uses plone.batching
   [ichimdav refs #28747]

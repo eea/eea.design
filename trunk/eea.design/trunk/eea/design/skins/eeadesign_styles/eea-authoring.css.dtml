@@ -86,6 +86,10 @@
     background: &dtml-corporateGreen;;
     padding: 0.1em 0.24em 0 0 !important;
 }
+
+#edit-bar, .actionMenuContent, #portal-personaltools, #portal-personaltools dd {
+    background-color: &dtml-corporateGreen;;
+}
 /* @end group Pulldown menus @parent Editing */
 
 /* @end group Editing */

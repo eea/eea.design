@@ -1,4 +1,10 @@
 /* global jQuery, window, _, document */
+
+/* EXTERNAL DEPENDENCIES eea-accordion.js
+* responsive design transforms done to tabs and global header
+* and footer
+* eg:http://www.eea.europa.eu/code/design-elements#tab-first-tab
+* */
 jQuery(document).ready(function($) {
 
     if (!window.EEA) {

@@ -1,20 +1,3 @@
-/*
-** KEEP IN CUSTOM UNTIL original_chart_div fix is commited
-
-** Plone style sheet - Public-facing Elements
-**
-** Style sheet documentation can be found at http://plone.org/documentation
-**
-** You should preferrably use ploneCustom.css to add your own CSS classes and to
-** customize your portal, as these are the base fundamentals of Plone, and will
-** change and be refined in newer versions. Keeping your changes in
-** ploneCustom.css will make it easier to upgrade.
-**
-** Feel free to use whole or parts of this for your own designs, but give credit
-** where credit is due.
-**
-*/
-
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
@@ -74,6 +57,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 }
 
 #faceted-form .widget-fieldset legend {
+    background-color: &dtml-corporateGreen;;
     color: #ffffff;
     padding: 5px 10px;
     font-size: 14px;
@@ -134,20 +118,6 @@ div.position-3\3a 4 {margin-left: -36.5%;}
     font-size: 11px;
     font-weight: normal;
 }
-
-/*#right-area, #left-area {*/
-    /*width: 215px !important;*/
-/*}*/
-
-/*#faceted-form .left-area-js {*/
-    /*margin-left: 220px !important;*/
-    /*min-width: 535px;*/
-/*}*/
-
-/*#faceted-form .right-area-js {*/
-    /*margin-right: 220px !important;*/
-    /*min-width: 520px;*/
-/*}*/
 
 #faceted-form .tags-cloud li {
     color: &dtml-linkColor; !important;
@@ -262,7 +232,9 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 
 /* standard search button inside any of the portal columns*/
 
-#portal-columns input[type="submit"], .standardButton, .qq-upload-button,
+#portal-columns input[type="submit"],
+.standardButton,
+.qq-upload-button,
 .searchButton,
 input.plonebutton,
 input.context,
@@ -280,7 +252,8 @@ input.standalone {
 }
 
 
-#portal-columns input[type="submit"]:hover, .standardButton:hover,
+#portal-columns input[type="submit"]:hover,
+.standardButton:hover,
 #content a.standardButton:hover,
 .qq-upload-button:hover,
 .searchButton:hover,
@@ -298,24 +271,6 @@ input.standalone:hover {
     color: #FFFFFF !important;
 }
 
-#faceted-text-search input[type="text"] {
-    -webkit-transition: box-shadow 0.218s ease 0s;
-    -moz-transition: box-shadow 0.218s ease 0s;
-    -ms-transition: box-shadow 0.218s ease 0s;
-    -o-transition: box-shadow 0.218s ease 0s;
-    transition: box-shadow 0.218s ease 0s;
-    background: none repeat scroll 0 0 #FFFFFF;
-    font-size: 16px;
-    padding: 5px;
-    width: 68%;
-}
-
-/*portlet subscription*/
-.section-publications #c10_widget.faceted-widget,
-.section-publications #c10_widget fieldset {
-    background-color: transparent;
-    padding:0 !important;
-}
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label,
@@ -339,19 +294,8 @@ input.standalone:hover {
 
 /* specific SOER2010 design */
 
-#soer-search-area {
-    margin:20px 0 50px 0;
-    clear: both;
-}
-#soerSearchBox strong {
-    display: block;
-    margin: 5px 0;
-}
-
 /* #5175 soer search portlet fix */
 #soerSearchBox .portletHeader {
-    margin-bottom: 10px;
-    padding: 5px;
     float: left;
 }
 #soerSearchBox .moreLink {
@@ -367,109 +311,14 @@ input.standalone:hover {
     float: right;
     width: 308px;
 }
-#soer-search-area #topic-search select {
-    font-size:16px;
-    height:34px;
-    padding:5px;
-    margin-bottom:10px;
-    width: 244px;
-}
-#soerSearchBox dd, #video-portlet dd{
-    margin: 0;
-    padding: 0;
-}
-
-#geo1_widget li {
-    text-transform: uppercase;
-}
-
-.section-soer .slidePortlet a.moreLink,
-.section-soer-draft .slidePortlet a.moreLink {
-    display: inline;
-}
 
 .section-soer #boxes .portlet,
 .section-soer-draft #boxes .portlet {
-    height: 181px;
+    overflow: hidden;
 }
 
-.section-soer #search-url,
-.section-soer-draft #search-url {
+.section-signals #nonfolderish-subfolder-view-items {
     display: none;
-}
-
-.section-soer #video-portlet img,
-.section-soer-draft #video-portlet img {
-    width: 100%;
-}
-
-.section-soer #free-text-space,
-.section-soer-draft #free-text-space {
-    min-height: 150px;
-}
-
-/* disabled because of #5157 */
-/* .section-soer #auto-related,
-.section-soer #related-multimedia,
-.section-soer #related-pages,
-.section-soer-draft #auto-related,
-.section-soer-draft #related-multimedia,
-.section-soer-draft #related-pages {
-    width: 200px;
-    margin-left: 10px;
-    padding: 0;
-} */
-
-.link-without-style {
-    /* plz add more link style elimination */
-    text-decoration: none;
-}
-
-.eea-template {
-    display: none;
-}
-
-body.section-signals #nonfolderish-subfolder-view-items {
-    display: none;
-}
-
-#belowContent .portletHeader {
-    font-size: 130%;
-    margin: 0.83em 0;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
-    padding-bottom: 0.25em;
-    color: #2D749C;
-    background: transparent;
-}
-
-#belowContent .portlet {
-    float: none;
-    width: 100%;
-    padding: 0;
-}
-
-
-.eea-rounded-corners {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-
-.eea-horizontal-list li {
-    float: left;
-    margin: 0 0.5em 0 0;
-}
-
-.eea-no-list-style {
-    list-style: none none;
-    margin: 1em 0;
-}
-
-.subfolder .moreLink {
-    float: left;
-    margin: 1em 0 2em 1em;
-    font-weight: bold;
 }
 
 /* folder_tabs_view and folder_accordion_view styling
@@ -548,7 +397,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 0 1em;
 }
 
-.highlights .portalMessage,
 .eea-tabs-panel .portalMessage {
     margin-top: 0;
     position: relative;
@@ -570,6 +418,7 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding: 10px;
 }
 
+/* TODO fix padding differences */
 #relatedItems .eea-tabs-panels {
     padding: 1px;
 }
@@ -734,8 +583,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     text-align:justify;
 }
 
-/* */
-
 #print-warning {
     display: none;
 }
@@ -747,49 +594,10 @@ body.section-signals #nonfolderish-subfolder-view-items {
 #content-core {
     clear:both;
 }
-#translation-disclaimer .note {
-    background:transparent url(http://glossary.eea.europa.eu/misc_/EEAGlossary/note_ico.gif) no-repeat scroll 0.3em 50%;
-    padding:0.2em 0.3em 0.3em 22px;
-    color:#8F8F8F;
-    font-size:1em;
-    /* border: 1px solid #efefef; */
-}
-#translation-disclaimer {
-    margin: 0 1em 0 1em;
-    display: inline-block;
-}
-
 /* related styles amd flowplayer videos style */
 
 .media-player {
     text-align:center;
-}
-
-.media-player .embeddedvideo {
-    width: 100%;
-}
-
-.media-player #embeddedvideo.sixteen-nine {
-    height: 338px;
-}
-
-.media-player #embeddedvideo.four-three {
-    height: 450px;
-}
-
-.mediacaption {
-    color: #76797C;
-    text-align:center;
-    font-size: 11px;
-    display: block;
-    padding:3px;
-    margin: auto;
-}
-
-#objmetadata_pbwidgets_wrapper{
-    width: 100%;
-    border-right: 0;
-    background-color: transparent;
 }
 
 .related-in-content-area .portlet {
@@ -801,12 +609,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     float: none;
 }
 
-#related-portlets {
-    float: right;
-    margin-left: 2em;
-    clear: right;
-}
-
 #auto-related .portletItem {
     padding-bottom:0.5em;
     clear: both;
@@ -815,15 +617,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
 /* #5157 */
 #auto-related .embeddedMedia {
     clear: none !important;
-}
-
-#related-portlets #auto-related,
-#related-portlets #related-multimedia,
-#related-portlets #related-pages,
-#related-portlets #themes-object {
-    float: none;
-    clear: none;
-    margin-left: 2em;
 }
 
 #auto-related h2,
@@ -846,52 +639,6 @@ body.section-signals #nonfolderish-subfolder-view-items {
     padding-left: 0;
 }
 
-#related-multimedia-top dd.embeddedMedia,
-#related-multimedia dd.embeddedMedia,
-.portlet dd.embeddedMedia {
-    background-color: #FFFFFF;
-    border: 1px solid #DFDFDF;
-    -webkit-box-shadow: 1px 1px 2px #BFBFBF;
-    -moz-box-shadow: 1px 1px 2px #BFBFBF;
-    -ms-box-shadow: 1px 1px 2px #BFBFBF;
-    -o-box-shadow: 1px 1px 2px #BFBFBF;
-    box-shadow: 1px 1px 2px #BFBFBF;
-    padding: 0 0 15px 0  !important;
-    margin: 0 15px 15px 0 !important;
-    text-align: center;
-    float: left;
-    width: 165px;
-    min-height: 210px;
-}
-
-.portlet dd.embeddedMedia .tileImage {
-    border: none !important;
-    margin: 15px auto !important;
-}
-
-#related-multimedia-top dd.embeddedMedia {
-    float: left;
-    margin: 0.5em 0 0.5em 0.25em;
-}
-
-.portlet dd.embeddedMedia {
-    margin-bottom: 1em;
-}
-
-#related-multimedia-top {
-    border:none;
-    margin:0;
-    padding:0;
-}
-
-dd.embeddedMedia .magnify {
-    float: right;
-}
-
-#media-content-spacer {
-    clear: left;
-    padding-top: 1em;
-}
 
 /* Links with differently colored link underlines - only for content */
 #content span.link-external  {
@@ -947,7 +694,7 @@ dl a:hover, dd a:hover, dt a:hover {
 }
 a.moreLink {
     border: 0 !important;
-    background: transparent url("sprite-eeaimages.png") no-repeat scroll -441px -9px;
+    background: transparent url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll -441px -9px;
     display: inline-block;
     padding-left: 25px;
     height: 18px;
@@ -964,6 +711,10 @@ a.moreLink {
     margin: 0 0 1em 0;
 }
 
+.field .field {
+    margin: 1em 0 0 0;
+}
+
 /* bootstrap also has a label class which is white while plone uses black */
 .label {
     padding: 0;
@@ -973,27 +724,12 @@ a.moreLink {
     white-space: inherit;
 }
 
-.field .field {
-    margin: 1em 0 0 0;
-}
-
 .fieldRequired {
     background: url(&dtml-portal_url;/required.gif) center left no-repeat;
     padding: 0 0 0 8px;
     color: &dtml-backgroundColor;;
 }
 
-
-.fieldUploadFile {
-    text-align: right;
-    margin-right: 0.75em;
-    display: none;
-}
-
-.fieldTextFormat {
-    text-align: right;
-    margin-right: 0.75em;
-}
 
 .formHelp {
     font-size: 90%;
@@ -1006,48 +742,8 @@ a.moreLink {
     color: &dtml-fontColor;;
     cursor: default;
 }
-
-div.formControls {
-    margin: 1em 0;
-}
-form[name="edit_form"] div.formControls {
-    margin: 1em 1em 1em 0;
-}
-
-.error {
-    /* Class for error indication in forms */
-    background-color: &dtml-notifyBackgroundColor;;
-    padding: 1em;
-    margin: 0 0 1em 0;
-}
-
-.error .fieldRequired {
-    color: &dtml-notifyBackgroundColor;;
-}
-
-/* portlet for translation feedback */
-#translationfeedback textarea, #translationfeedback input#sender_from_address {
-    width:97%;
-    margin-bottom:0.1em;
-}
-
-#portlet-translationfeedback {
-    margin-left:0.25em;
-    margin-right:0.25em;
-}
-#translationfeedback input.standalone {
-    float:right;
-}
-
-/* Code to work around IE's lacking support of sub-elements of the input element */
-.noborder,
-.documentEditable * .noborder {
-    border: none;
-    margin: 0;
-    background: transparent none;
-}
-
 /* End edit form elements */
+
 /* #23500 allow the control panel widget to be placed outside of their context
     by having overflow visible for screen with size larger than 1024px
 */
@@ -1061,6 +757,36 @@ form[name="edit_form"] div.formControls {
 }
 
 /* Logo properties */
+#header-holder {
+    width: 100%;
+    clear: both;
+    display: block;
+    position: relative;
+}
+#header-holder .navbar {
+    box-shadow: 0 1px 10px #005078;
+    border: 0;
+}
+
+#portal-top {
+    background-color: #FFFFFF;
+}
+
+#cross-site-top {
+    background-color: &dtml-corporateBlue;;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#portal-header {
+    display: block;
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 90px;
+}
 
 #printLogo {
     padding: 0.9em 0 0 0.5em;
@@ -1087,53 +813,6 @@ form[name="edit_form"] div.formControls {
     cursor: pointer;
 }
 
-.portal-logo a:hover {
-    /* no background highlight on logo */
-    background-color: transparent;
-}
-
-h3.site-description {
-    border: medium none;
-    color: #FFFFFF;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: italic;
-    margin: 30px 0;
-    position: relative;
-    text-decoration: none;
-    text-shadow: none;
-    width: 240px;
-    max-height: 30px;
-}
-
-#header-holder {
-    width: 100%;
-    clear: both;
-    display: block;
-    position: relative;
-}
-
-#portal-top {
-    background-color: #FFFFFF;
-}
-
-#portal-header {
-    display: block;
-    clear: both;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 90px;
-}
-
-.header-holder #portal-top .cell {
-    float: none;
-}
-#header-holder .navbar {
-    box-shadow: 0px 1px 10px #005078;
-    border: 0;
-}
 
 .is-eea-hidden {
     -moz-transition: all 1s;
@@ -1141,13 +820,6 @@ h3.site-description {
     -webkit-transition: all 1s;
     transition: all 1s;
     display: none !important;
-}
-
-#cross-site-top {
-    background-color: &dtml-corporateBlue;;
-    margin: 0;
-    padding: 0;
-    width: 100%;
 }
 
 .shadow {
@@ -1166,7 +838,7 @@ h3.site-description {
     border: 0;
 }
 
-.panel-top, #tip-article-language .panel-top {
+.panel-top {
     margin: auto auto;
     background: transparent url(&dtml-portal_url;/panel_arrow.png);
     width: 50px;
@@ -1178,27 +850,19 @@ h3.site-description {
 .panel .portletFooter {
     margin-top: 1em;
 }
-.panel-content, #tip-article-language .panel-content {
+.panel-content {
     background: white;
     color: black;
+    clear: both;
     padding: 10px;
     border: 1px solid #BABBB8;
 }
 
-#tip-article-language{
+#tip-article-language {
     width: 400px;
-    position: absolute;
-    right: 15px;
-    top: 55px;
-    z-index: 602;
 }
 #tip-article-language .panel-top {
-    right: 0;
     float: right;
-    clear: both;
-}
-#tip-article-language .panel-content{
-    clear: both;
 }
 
 @media screen {
@@ -1206,10 +870,6 @@ h3.site-description {
         padding-top: 1em;
         min-width: 1024px;
     }
-}
-
-#portal-column-one .portlet-subscribtion {
-    margin-top:20px;
 }
 
 #cross-site-top .panel .portlet-subscribtion {
@@ -1225,12 +885,8 @@ h3.site-description {
     background: transparent;
 }
 
-#tip-externalsites-etcssites li,
-.externalsites li,
 #tip-siteaction-chooselang li {
-    padding-left: 1em;
-    background: url("bullet.gif") no-repeat scroll left center transparent;
-    display: block;
+    display: list-item;
 }
 
 #tip-siteaction-contactus {
@@ -1239,28 +895,11 @@ h3.site-description {
 
 #tip-externalsites-networks, #tip-externalsites-etcssites {
     width: 400px;
-    position:absolute;
     left: 0 !important;
-}
-#tip-externalsites-etcssites{
-    width: 270px;
-}
-
-#tip-siteaction-chooselang li a {
-    font-size: 11px;
-    display: block;
 }
 
 .networkSites dt {
     background: none !important;
-}
-
-
-/* The skin switcher at the top, only shows up if you have multiple skins available */
-
-#portal-skinswitcher a {
-    display: block;
-    float: left;
 }
 
 /* Searchbox style and positioning */
@@ -1272,66 +911,34 @@ h3.site-description {
 #portal-searchbox {
     float: right;
     clear: right;
-    background-color: transparent;
     margin: 25px 0 0 0;
-    padding: 0 0 0 0;
     text-align: right;
-    text-transform: &dtml-textTransform;;
-    white-space: nowrap;
-    z-index: 2;
     font-size: 1.2em;
-}
-#portal-searchbox form {
-    background-color: #FFF;
-}
-
-#portal-column-content #portal-searchbox {
-    float: none;
-    padding: 14px 0;
-    margin: 0;
-    background-color: #b9e148;
-    text-align: center;
 }
 
 #portal-searchbox a {
-    text-transform: none;
     color: &dtml-linkColor;;
     border: none;
     font-size: 85%;
-    margin: 0 5px 0 0;
 }
-
-/*#searchbox_terminology input,*/
-/*#searchbox_terminology input:focus,*/
-/*#portal-searchbox input.searchButton,*/
-/*#portal-searchbox input.searchButton:hover,*/
-/*.searchField {*/
-    /*background: transparent url("sprite-eeaimages.png") no-repeat scroll left center;*/
-/*}*/
 
 #portal-searchbox .searchButton {
     background: &dtml-corporateBlue; none;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: &dtml-fontFamily;;
     font-size: 12px;
     font-style: normal;
-    height: 30px;
-    left: 0;
-    letter-spacing: 0;
-    margin: 0;
-    padding: 0;
     position: relative;
     width: 80px;
     margin-left: -5px;
 }
 
-#portal-searchbox input.searchButton:hover {
+#portal-searchbox .searchButton:hover {
     background-position: -385px -115px !important;
 }
 
 #portal-searchbox input, .searchField,
-#content input.searchField
+#content .searchField
 {
     height: 30px;
     padding: 0;
@@ -1343,10 +950,6 @@ h3.site-description {
     margin: 0;
     font-size: 0.8em;
 }
-/* TODO: check why this was added with important */
-/*.searchField {*/
-    /*width: 258px !important;*/
-/*}*/
 
 #searchbox_terminology input[type="text"],
 .searchField {
@@ -1358,7 +961,6 @@ h3.site-description {
 .searchField:focus {
     font-style: normal;
     color: #000000;
-    background-position: 0 -114px;
     background-color: transparent;
     outline-color: transparent;
 }
@@ -1367,21 +969,7 @@ h3.site-description {
     background-color: &dtml-corporateOrange;;
 }
 
-.searchforms input {
-    font-family: &dtml-fontFamily;;
-    font-style: italic;
-    color: #777777;
-    font-size: 0.8em;
-}
-
-.searchforms input:focus {
-    color: #000000;
-}
-
-#portal-header h3.site-description {
-    width: 240px;
-    margin-left: 5px;
-    float: left;
+.site-description {
     /* hide until decided on right tagline */
     display: none;
 }
@@ -1395,54 +983,16 @@ h3.site-description {
     text-decoration: none;
 }
 
-#search_glossary_link {
-    float: right;
-}
-
-#search_advanced_link {
-    float: left;
-}
-
-#portal-searchbox label {
-    font-size: 11px;
-    color: &dtml-linkColor;;
-    vertical-align: middle;
-}
-
-#portal-advanced-search {
-    margin-top: 0.2em;
-    clear: both;
-}
-
-#portal-advanced-search a {
-    color: &dtml-discreetColor;;
-    text-decoration: none;
-    text-transform: &dtml-textTransform;;
-}
-
 /* Site-wide action menu - font size, contact, index, sitemap etc */
-
 #portal-externalsites,
 #portal-siteactions {
-    white-space: nowrap;
-    list-style: none none;
     margin: 4px 0 4px 0;
-    height: auto;
-    line-height: normal;
     float: right;
     padding: 0 10px 0 0;
     clear: none;
 }
 
-#siteaction-subscriptions a,
-#siteaction-formobile a,
-#siteaction-contactus a {
-    display: inline-block;
-    line-height: 1.4;
-}
-
 /* use font awesome unicode icons */
-
 /* daviz -edit sets eea-icon color to #000 */
 #portal-siteactions #siteaction-chooselang .eea-icon {
     color: #FFF;
@@ -1467,17 +1017,9 @@ h3.site-description {
     padding: 0 5px;
 }
 
-#portal-externalsites li:last-child,
-#portal-siteactions li:last-child {
-    border: none;
-}
-
 #portal-externalsites li a,
 #portal-siteactions li a {
     color: #FFF;
-    height: auto;
-    text-decoration: none;
-    text-transform: none;
     font-size: 11px;
 }
 
@@ -1485,132 +1027,29 @@ h3.site-description {
     font-weight: bold;
 }
 
-.visualCaseSensitive {
-    text-transform: none;
-}
-
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    border: none;
     line-height: 1.4;
     margin: 3px 0 0 0;
     position: relative;
     clear: both;
 }
 
-#region-content #portal-breadcrumbs {
-    /* The path bar, including breadcrumbs and add to favorites */
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-}
-
-#region-content {
-    border: none;
-    position: relative;
-}
-
-#portal-breadcrumbs a {
-    text-decoration: none;
-}
-
 .breadcrumbSeparator {
     font-size: 120%;
 }
 
-.addFavorite {
-    vertical-align: bottom;
-}
-
-#content-news h1 {
-    margin-bottom: 1em;
-}
-
-
-/* Only h5/h6 headlines in the content area should have the discreet color */
-
-#content h5,
-#content h6 {
-    color: &dtml-fontColor;;
-}
-
-.newsItem {
-    margin-bottom: 1em;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-}
-
-.newsImage {
-    border: 1px solid black;
-}
-
-.newsImageContainer {
-    float:right;
-    margin: 0 0 0.5em 1em;
-    width: 202px;
-}
-
-.newsContent {
-    padding: 0 1em 1em 1em;
-}
-
-.newsContent ul,
-.newsContent li {
-    display: block;
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
-}
-
-.newsAbout {
-    display: block;
-    color: &dtml-discreetColor;;
-    font-size: &dtml-fontSmallSize;;
-    padding: 0;
-    margin-top: 0;
-    list-style: none;
-    list-style-image: none;
-    float: right;
-    text-align: right;
-}
-
-.newsAbout li {
-    display: inline;
-}
-
-.newsFooter li {
-    display: inline;
-    margin: 0 1em 0 0;
-}
-
-.documentActions {
+#region-content {
     position: relative;
-}
-
-.documentActions ul {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
 }
 
 .documentActions li, .languageCodes li {
     display: inline-block !important;
-    list-style: none;
-    list-style-image: none;
+    list-style: none none;
     margin: 0;
     padding: 0;
 }
 
-.documentActions a {
-    border: none !important;
-    text-decoration: none;
-}
-
-/* TODO: see about hiding logic for document actions */
-/* Top documentActions should show languageCodes */
-/*.documentActions ul {*/
-/*display: none;*/
-/*}*/
 .languageCodes {
     display: block;
 }
@@ -1619,13 +1058,9 @@ h3.site-description {
     max-width: 80%;
 }
 
-#themes-tags span span span.languageCodes {
-    display: none;
-}
-
 #article-language {
     margin-top: -40px;
-    background: url("sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
+    background: url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
     padding-left: 35px;
     position: absolute;
     right: 0;
@@ -1661,14 +1096,8 @@ h3.site-description {
     content: '';
 }
 
-.discussion {
-    margin-top: 1em;
-}
-
-
 
 /* Batch selector */
-
 .listingBar {
     background-color: &dtml-globalBackgroundColor;;
     padding: 0.5em 1em;
@@ -1696,21 +1125,10 @@ h3.site-description {
     min-width: 100px;
 }
 
-
-.listingBar img {
-    vertical-align: middle;
-}
-
-.listingBar a {
-    font-size: 11px;
-    text-decoration: none;
-}
-
-
+/* tileItem used in related and eea-tabs listings */
 .tileItem {
     border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
     padding-top: 0.5em;
-    margin-top: 0.5em;
 }
 
 .tileHeadline {
@@ -1727,14 +1145,6 @@ h3.site-description {
     margin: 0.6em 0;
 }
 
-.tileHeadline a {
-    text-decoration: none;
-}
-
-.tileBody {
-    margin-bottom: 0.5em;
-}
-
 .tileContent {
     display: table-cell;
 }
@@ -1745,44 +1155,23 @@ h3.site-description {
     border: 1px solid &dtml-globalBorderColor;;
 }
 
-/* related video thumbnails don't need a float left */
-#content .portlet a.tileImage {
-    float: none !important;
-}
-
-.tileImage:hover {
-    border: 1px solid &dtml-globalBorderColor;;
-}
-
-.highlights .tileItem, .eea-tabs-panel .tileItem {
-    margin-top: 0 !important;
-}
-
-#news-highlights .tileItem:last-child,
-#articles-highlights .tileItem:last-child,
-#publications-highlights .tileItem:last-child,
-#multimedia-highlights .tileItem:last-child,
-#datamaps-highlights .tileItem:last-child {
+.gallery-listing .tileItem:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
 
 .tileFooter {
-    float: left;
     clear: both;
     display: block;
 }
 
+
+/* relatedItems */
 #relatedItems  {
     margin-bottom: 2em;
     clear: both;
     overflow: hidden;
 }
-
-#relatedItems .visualClear {
-    padding-bottom: 1.5em;
-}
-
 /* #19315 fix floating issues */
 #relatedItems  h3 {
     clear: both;
@@ -1791,24 +1180,11 @@ h3.site-description {
 /* Useful deviations from regular style on elements */
 
 /* List classes without markers */
-
 ul.visualNoMarker,
 ol.visualNoMarker {
     list-style: none none;
     margin: 0.5em 0 0 0;
     line-height: 1em;
-}
-
-textarea.proportional {
-    font: 100% &dtml-fontFamily;;
-}
-
-.productCredits {
-    text-align: right;
-    font-size: &dtml-fontSmallSize;;
-    clear: both;
-    font-weight: normal;
-    color: &dtml-discreetColor;;
 }
 
 .feedButton {
@@ -1817,56 +1193,17 @@ textarea.proportional {
     margin-top: 1px;
 }
 
-.poweredBy {
-    display: block;
-    clear: both;
-    font-size: &dtml-fontSmallSize;;
-    font-weight: normal;
-    color: &dtml-discreetColor;;
-    text-align: right;
-}
-
 /* Sitemap styles */
-
 #portal-sitemap {
-    list-style: none;
-    list-style-image: none;
     margin: 0;
     font-size: 90%;
-    border: none;
-}
-
-#portal-sitemap a,
-#portal-sitemap .portletNavigationTree ,
-#portal-sitemap .portletNavigationTree  li.navTreeItem {
-    border: 0;
-}
-
-#portal-sitemap > li > a {
-    font-size: 1.4em;
-    font-weight: bold;
 }
 
 #portal-sitemap > li {
     border: 0;
-    margin-left: 1em;
-    padding-bottom: 2em;
-}
-
-#portal-sitemap .navTreeLevel1 {
-    padding-left: 1em;
-    border: 0.5em solid &dtml-globalBorderColor;;
-    margin: 0 0 0 0.5em;
-}
-
-#portal-sitemap .navTreeLevel2 {
-    padding-left: 1em;
-    border-left: 0.5em solid &dtml-globalBackgroundColor;;
-    margin: 0 0 0 0.6em;
 }
 
 /* Accessibility and visual enhancement elements */
-
 .hiddenStructure {
     display: block !important;    /*  prefix with important since many times specificity will override this display setting */
     background: transparent none; /* safari bug */
@@ -1891,21 +1228,9 @@ option.hiddenStructure {
     clear: both;
 }
 
-.hiddenLabel {
-    display: block;
-    background: transparent none; /* safari bug */
-    border: none;
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    margin: -1px 0 0 -1px;
-    width: 1px;
-}
-
 .inline-block {
     display: inline-block;
 }
-
 #content .inline-block li {
     display: inline-block;
     margin-right: 1em;
@@ -1926,55 +1251,12 @@ option.hiddenStructure {
     text-decoration: none;
 }
 
-.link-user {
-    background: transparent url(&dtml-portal_url;/user.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
 .link-external {
     background: transparent url(&dtml-portal_url;/link_icon.gif) 3px 1px no-repeat;
     padding: 1px 0 1px 19px;
 }
-/** html .link-external {
-    background-position: top left;
-}*/
 
-.link-https {
-    background: transparent url(&dtml-portal_url;/lock_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-mailto {
-    background: transparent url(&dtml-portal_url;/mail_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-news {
-    background: transparent url(&dtml-portal_url;/topic_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-ftp {
-    background: transparent url(&dtml-portal_url;/file_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-irc {
-    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-callto {
-    background: transparent url(&dtml-portal_url;/phone_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-webcal {
-    background: transparent url(&dtml-portal_url;/event_icon.gif) 0 1px no-repeat;
-    padding: 1px 0 1px 16px;
-}
-
-.link-feed, .link-rss, .link-rdf, .link-xml{
+.link-feed {
     background: transparent url(&dtml-portal_url;/rss.gif) 0 1px no-repeat;
     padding: 1px 0 1px 18px;
 }
@@ -1995,77 +1277,6 @@ option.hiddenStructure {
     background: transparent url(&dtml-portal_url;/pdf.png) 0 50% no-repeat;
     padding: 2px 0 2px 16px;
 }
-.link-doc, .link-dot, .link-wiz {
-    background: transparent url(&dtml-portal_url;/doc.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-
-.link-aif, .link-aifc, .link-aiff {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-
-.link-gif, .link-jpe, .link-jpeg, .link-jpg, .link-png {
-    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-m4a, .link-mp2, .link-mp3, .link-mpega, .link-mpga {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-m3u {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-m1v, .link-mpa, .link-mpe, .link-mpeg, .link-mpg {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-mp4 {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-asf, .link-asx {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-avi {
-    background: transparent url(&dtml-portal_url;/avi.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-xlb, .link-xls, .link-xlt, .link-csv, .link-tsv {
-    background: transparent url(&dtml-portal_url;/xls.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-ppa, .link-pps, .link-ppt, .link-pwz {
-    background: transparent url(&dtml-portal_url;/ppt.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-wmv, .link-wmf {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-mov, .link-qt {
-    background: transparent url(&dtml-portal_url;/video.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-rgb {
-    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-ram, .link-rm {
-    background: transparent url(&dtml-portal_url;/audio.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-ai, .link-eps, .link-ps {
-    background: transparent url(&dtml-portal_url;/ps.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-swf, .link-swfl {
-    background: transparent url(&dtml-portal_url;/application.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-tif, .link-tiff {
-    background: transparent url(&dtml-portal_url;/image.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-wav {
-    background: transparent url(&dtml-portal_url;/wav.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-zip {
-    background: transparent url(&dtml-portal_url;/zip.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-mdb, .link-dbf {
-    background: transparent url(&dtml-portal_url;/application.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-rar {
-    background: transparent url(&dtml-portal_url;/rar.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
-.link-txt {
-    background: transparent url(&dtml-portal_url;/txt.png) 0 50% no-repeat;
-    padding: 2px 0 2px 20px;}
 .link-json {
     background: transparent url(&dtml-portal_url;/script_code.png) 0 50% no-repeat;
     padding: 2px 0 2px 20px;}
@@ -2076,15 +1287,7 @@ option.hiddenStructure {
     background: transparent url(&dtml-portal_url;/table.png) 0 50% no-repeat;
     padding: 2px 0 2px 20px;}
 
-/* For ghosted elements */
-.visualGhosted {
-    opacity: 0.2;
-    -moz-opacity: 0.2;
-    -khtml-opacity: 0.2;
-}
-
-/* Kupu image alignment classes */
-
+/* TinyMCE image alignment classes */
 .image-left {
     float: left;
     clear: both;
@@ -2103,20 +1306,15 @@ option.hiddenStructure {
     border: 0;
 }
 
-.linkbox {
-    margin-top: 2em;
-    border: 1px dashed;
-}
-
+/* media/audiovisuals/coping-in-a-crisis-europes-civil-protection-strategy/file_view
+   old video files, consider to remove these styles as most videos now have youtube altenatives */
 .media-single-item {
     margin: 1em 0;
 }
-
 .media-single-item dt {
     float: left;
     padding-right: 0.5em;
 }
-
 .media-single-item dd,
 .media-single-item dt {
     color: #9a9a99;
@@ -2124,13 +1322,12 @@ option.hiddenStructure {
     line-height: 1.1;
     margin: 0 0 0.2em;
 }
-
 .richDocumentDescription {
     margin-top: 1em;
     width: 65%;
 }
 
-
+/* portal-column styles */
 #portal-column-content  {
     min-width: 600px;
 }
@@ -2138,18 +1335,6 @@ option.hiddenStructure {
 .visualPadding {
     padding: 0 1em 1em 1em;
 }
-#portal-column-one .visualPadding {
-    padding: 0;
-    background: transparent;
-}
-
-#slide-menu {
-    float: left;
-    width: 220px;
-    border: 1px solid &dtml-mediumBackgroundColor;;
-    background-color: #FFFFFF;
-}
-
 #portal-column-two .visualPadding {
     padding: 0 1em 1em 0;
 }
@@ -2159,18 +1344,7 @@ option.hiddenStructure {
     min-width: 350px;
 }
 
-/* visual */
-#content img.tileImage, #content div.newsImageContainer {
-    float: left;
-}
-
-/* Plone center FAQ custom css*/
-
-.faqSection {
-    padding-left: 1em;
-}
-
-
+/* TinyMCE Fixes */
 /* Fix for TinyMCE width being larger than content area */
 .ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr,
 .ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *,
@@ -2200,7 +1374,6 @@ body .ploneSkin .mce_formatPreview a {
 /* #18086: Improvements to the tinymce fullscreen mode
 **  center editor since we have a fixed width layout
 */
-
 .mceEditor.mceFullScreen {
     background-color: #ececec !important; /* in order to override ui.css */
     width: 100% !important;
@@ -2230,7 +1403,7 @@ input[disabled], #plonebrowser input[disabled] {
     left:5px;
     height:100%;
     width:100%;
-    background:#FFF
+    background:#FFF;
 }
 
 .ploneSkin .mceButton.mce_fullscreen {
@@ -2252,7 +1425,6 @@ input[disabled], #plonebrowser input[disabled] {
 .ploneSkin table.mceListBox .mceText {
     min-width: 207px;
 }
-
 
 .mceContentBody .presentationBreak, .mceContentBody .pageBreak {
     background-color: &dtml-corporateBlueBackgroundColor;;
@@ -2301,6 +1473,7 @@ tinyMCE editor or the presentation_view */
     display: block;
 }
 
+/* Editing Form fixes */
 /* #5267 display form fields for translated items */
 form[name="edit_form"] > table > tbody > tr {
     display: table-row;
@@ -2314,13 +1487,14 @@ form[name="edit_form"] > table > tbody > tr > td {
 form[name="edit_form"] table {
     display: table !important;
 }
-/* IE8: keeps livesearch from falling behind content area,
-   and display menu from falling behind footer
-   Keeping float for IE7, so the portlets don't fall */
-.ie6 div.cell {
-    float: none;
+
+/* #5454; we have required spans where we don't need the background image */
+.no-bg:after {
+    background-image: none !important;
+    content: "" !important;
 }
 
+/* outdated and cookie policy objects */
 /* #4669 display outdated browser message */
 #outdated_wrap, .message_wrap {
     background-color: #F3F3F3;
@@ -2398,11 +1572,6 @@ form[name="edit_form"] table {
     list-style-type: none;
 }
 
-/* #5454; we have required spans where we don't need the background image */
-.no-bg:after {
-    background-image: none !important;
-    content: "" !important;
-}
 
 /* #5533 new style collection style tweaks */
 .queryindex, .addIndex, .queryoperator, .addOperator {
@@ -2441,6 +1610,7 @@ input.queryvalue {
     margin-left: 5px;
     float: left;
 }
+
 
 .ArchetypesQueryWidget .criteria {
     margin: 0 0 0.5em 0 !important;
@@ -2554,8 +1724,7 @@ body.template-login_form #content,
 }
 
 #login_form,
-#login-forgotten-password
-{
+#login-forgotten-password {
     margin-left: 6.5em;
 }
 #popup_login_form #login-form input {
@@ -2667,7 +1836,7 @@ body.template-login_form #content,
     display: none;
 }
 
-
+/* download.pdf extra clicking prevention styles */
 a.downloading {
     background: transparent url(&dtml-portal_url;/icon-downloading.gif) no-repeat center center;
 }
@@ -2686,19 +1855,20 @@ a.downloading img {
     z-index: 9999;
 }
 
+/* eeareadabilitychecker stats */
 #stats td {
     padding-right: 1em;
 }
 
+/* eea.googlecharts chart.js uses this */
 div#original_chart_div {
     overflow: hidden;
 }
 
+/* download.pdf download.epub export actions */
 #region-content .documentExportActions {
     float:right;
 }
-
-
 #region-content .documentExportActions ul, .documentExportActions ul {
     list-style: none;
     padding: 0px;
@@ -2769,7 +1939,6 @@ div#original_chart_div {
     z-index: 100;
     padding: 0.9em;
     box-sizing: border-box;
-
 }
 #tlspu_cookiepolicy_form, .cookieMessage, #tlspu_cookiepolicy_message {
     margin: 0 auto;
@@ -2777,7 +1946,9 @@ div#original_chart_div {
     padding: 0;
 }
 
-
+/* SOER 2015 quick fixes */
+h4.figureHeading {
+    margin: 0;
+}
 
 /* </dtml-with> */
-
