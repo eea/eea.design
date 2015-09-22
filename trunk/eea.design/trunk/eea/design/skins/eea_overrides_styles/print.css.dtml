@@ -64,6 +64,9 @@ pre {
     padding: 1em 0;
 }
 
+#content table {
+    width: 100% !important; /* 28694 prevent tables from being larger than 100% */
+}
 table.listing,
 table.listing td {
     border-collapse: collapse;
