@@ -162,7 +162,7 @@ data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
     margin-top: 0.4em;
 }
 #definition-and-units p,
-#definition-and-units ul,
+#definition-and-units ul
 {
     margin: 0;
 }
