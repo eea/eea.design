@@ -1,6 +1,9 @@
 Changelog
 =========
 
+12.8.dev0 - (unreleased)
+------------------------
+
 12.7 - (2015-10-05)
 -------------------
 * Change: removed leftover css and javascript while documenting use and
