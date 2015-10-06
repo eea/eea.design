@@ -3,6 +3,8 @@ Changelog
 
 12.8.dev0 - (unreleased)
 ------------------------
+* Bug fix: fix hiding of elements that used visualHidden class
+  [ichimdav refs #29372]
 * Bug Fix: Fix error on atct_topic_view
   [lucas refs #29348]
 
