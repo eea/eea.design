@@ -15,7 +15,7 @@
 
          <div tal:replace="structure provider:plone.documentactions" />
         <metal:listingmacro define-macro="listing">
-        <tal:topiccontents define="b_size request/b_size;
+        <tal:topiccontents define="b_size request/b_size|nothing;
                                    b_size python: b_size if b_size else 100;
                                    is_a_topic python: context.portal_type=='Topic';
                                    folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, b_size=int(b_size)) or context.queryCatalog();
