@@ -3,6 +3,8 @@ Changelog
 
 12.8.dev0 - (unreleased)
 ------------------------
+* Bug fix: fix whatsnew_gallery tab switching
+  [ichimdav refs #29401]
 * Upgrade step: Re-apply uprade step of eea.design 12.4 from portal_setup
   [ichimdav refs #28729]
 * Bug fix: fix hiding of elements that used visualHidden class

@@ -12,7 +12,6 @@ jQuery(document).ready(function($) {
         var $tab = $(tab);
         $tab.find('a').bind('click', function(ev){
             window.location.hash = this.id;
-            ev.preventDefault();
         });
     });
 
