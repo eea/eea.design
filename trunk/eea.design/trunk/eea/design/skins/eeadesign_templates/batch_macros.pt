@@ -1,0 +1,7 @@
+<tal:comment condition="nothing">
+ DO NOT REMOVE THIS TEMPLATE AS YOU WILL BREAK FACETED-NAVIGATION on Topics WITH atct_album_view - See #29349
+</tal:comment>
+
+<metal:macro metal:define-macro="navigation" tal:define="batch batch|nothing; batchformkeys batchformkeys|nothing;">
+  <tal:batchnavigation define="batchnavigation nocall:context/@@batchnavigation" replace="structure python:batchnavigation(batch, batchformkeys)" />
+</metal:macro>

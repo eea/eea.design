@@ -3,6 +3,8 @@ Changelog
 
 12.8.dev0 - (unreleased)
 ------------------------
+* Bug fix: Fix batch_macros for Topic faceted navigable with atct_album_view
+  [voineali refs #29349]
 * Bug fix: fix whatsnew_gallery tab switching
   [ichimdav refs #29401]
 * Upgrade step: Re-apply uprade step of eea.design 12.4 from portal_setup
