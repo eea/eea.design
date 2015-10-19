@@ -362,7 +362,7 @@ dl.toc dd {
     background-image: none;
     float: left;
     height: 125px;
-    width: 129px;
+    width: 128px;
     margin: 0 3px 7px 3px;
     padding: 0px;
     box-shadow: 0px 1px 2px #CCCCCC;
@@ -372,11 +372,6 @@ dl.toc dd {
 .photoAlbumEntry img {
     max-height: 71px;
     border: 0;
-}
-
-/* #13639 don't limit height of figure album entries */
-.figuresPhotoAlbumEntry .photoAlbumEntryWrapper {
-    max-height: 100%;
 }
 
 .photoAlbumEntryWrapper {
