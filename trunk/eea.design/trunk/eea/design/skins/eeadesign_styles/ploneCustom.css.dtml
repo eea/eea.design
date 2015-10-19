@@ -390,6 +390,7 @@ input.standalone:hover {
 .eea-tabs-panel {
     padding: 20px;
     background-color: &dtml-greyBackgroundColor;;
+    overflow: auto;
 }
 
 .eea-tabs-panel .listingBar {
