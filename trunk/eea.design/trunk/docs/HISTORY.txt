@@ -3,6 +3,9 @@ Changelog
 
 12.8.dev0 - (unreleased)
 ------------------------
+* Bug fix: add fix for jquery-annotator erratum-quote max-height being too
+  small within bootstrap_fixes.css
+  [ichimdav]
 * Bug fix: Fix eea-tabs-panel spilling over the content area
   [ichimdav refs #28967]
 * Bug fix: Fix batch_macros for Topic faceted navigable with atct_album_view

@@ -130,4 +130,9 @@ input.removecriteria {
 #languageselectorcombo {
   height: 25px !important;
 }
+
+/* ++resource++jquery.annotator.css  */
+.erratum-quote {
+    max-height: 3em; /* annotator tool inline-comments right column panel clips text as original value is 12px */
+}
 /* </dtml-with> */
