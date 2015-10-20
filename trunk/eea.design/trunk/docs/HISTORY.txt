@@ -3,6 +3,9 @@ Changelog
 
 12.8.dev0 - (unreleased)
 ------------------------
+* Bug fix: add tabs styles from authoring.css to eea-base in order to avoid
+  missing styles for indicators tables and charts tabs
+  [ichimdav refs #29898]
 * Bug fix: add fix for jquery-annotator erratum-quote max-height being too
   small within bootstrap_fixes.css
   [ichimdav]

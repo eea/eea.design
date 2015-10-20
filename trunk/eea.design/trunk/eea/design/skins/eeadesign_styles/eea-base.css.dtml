@@ -1,6 +1,61 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+/* @group Tabs #29898 minimum css needed for formTabs on indicators figure plus daviz
+   retrieved from authoring.css */
+
+/* Color differences between the two tab types */
+.formTabs {
+    background-color: #ddd;
+    border: 0.3em solid #ddd;
+}
+/* Shared CSS between the two tab types */
+.formTabs {
+    display: block;
+    border-style: solid solid none solid;
+    margin-left: 0;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+#content .formTab {
+    display: inline;
+    margin-right:0.25em;
+}
+#content .formTab a {
+    display: inline-block;
+    line-height: 26px;
+    padding: 0 0.75em;
+    text-decoration: none;
+    border: none;
+    margin: 0;
+}
+.formTab a.selected,
+.formTab a.selected {
+    font-weight: bold;
+}
+#content .formTab a.selected,
+#content .formTab a:hover {
+    background: White;
+    color: Black;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+
+.formTabs {
+    border-style: none;
+    padding-top:0.2em;
+}
+/* @end */
+
+
 /* #5392 disabled clearing of headings in order for them to wrap on floated
  * content, if heading needs to be cleared add a "clear floats" style with tinymce
 #content-core h2, #content-core h3 {
