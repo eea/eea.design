@@ -1,6 +1,9 @@
 Changelog
 =========
 
+12.9.dev0 - (unreleased)
+------------------------
+
 12.8 - (2015-10-22)
 -------------------
 * Bug fix: add tabs styles from authoring.css to eea-base in order to avoid
