@@ -3,6 +3,9 @@ Changelog
 
 12.9.dev0 - (unreleased)
 ------------------------
+* Change: indicators-figure images now have a max height in order to fit
+  EEAFigure images and sources as such as possible on a single page
+  [ichimdav refs #29335]
 
 12.8 - (2015-10-22)
 -------------------

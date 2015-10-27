@@ -147,6 +147,14 @@ body {
     page-break-inside:avoid !important;
 }
 
+/**** 29335 style tweaks for
+data-and-maps/indicators/exposure-of-ecosystems-to-acidification-3/assessment/pdf.body
+****/
+.indicator-figure-plus img {
+    max-height: 670px;
+    width: inherit;
+    float: none;
+}
 
 /**** 27537 style tweaks for
 data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
