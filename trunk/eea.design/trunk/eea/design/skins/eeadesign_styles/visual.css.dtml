@@ -41,29 +41,29 @@ sup, sub {
 ** for content that is not published
 */
 
-#content.wf-state-visible,
-#content.wf-state-published_eionet,
-#content.wf-state-new,
-#content.wf-state-closed,    /* Due to #20490 */
-#content.wf-state-content_pending,
-#content.wf-state-draft,
-#content.wf-state-in-progress,
-#content.wf-state-private,
-#content.wf-state-rejected,
-#content.wf-state-retracted,
-#content.wf-state-submitted,
-#content.wf-state-marked_for_deletion,
-#content.wf-state-published_internally,
-#content.wf-state-webqa_pending,
-#content.wf-state-redraft_and_web_integration,
-#content.wf-state-final_revision,
-#content.wf-state-proofreading,
-#content.wf-state-ready_for_eionet_review,
-#content.wf-state-web_editing,
-#content.wf-state-web_integration,
-#content.wf-state-in-progress,
-#content.wf-state-obsolete,
-#content.wf-state-pending {
+.wf-state-visible,
+.wf-state-published_eionet,
+.wf-state-new,
+.wf-state-closed,    /* Due to #20490 */
+.wf-state-content_pending,
+.wf-state-draft,
+.wf-state-in-progress,
+.wf-state-private,
+.wf-state-rejected,
+.wf-state-retracted,
+.wf-state-submitted,
+.wf-state-marked_for_deletion,
+.wf-state-published_internally,
+.wf-state-webqa_pending,
+.wf-state-redraft_and_web_integration,
+.wf-state-final_revision,
+.wf-state-proofreading,
+.wf-state-ready_for_eionet_review,
+.wf-state-web_editing,
+.wf-state-web_integration,
+.wf-state-in-progress,
+.wf-state-obsolete,
+.wf-state-pending {
     background: url(&dtml-portal_url;/draft.png);
 }
 

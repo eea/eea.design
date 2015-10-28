@@ -3,6 +3,9 @@ Changelog
 
 12.9.dev0 - (unreleased)
 ------------------------
+* Feature: added jquery.mobile with swipe effect for faceted navigation
+  widgets panel
+  [ichimdav refs #29865]
 * Bug fix: add rules in ploneCustom.css to display link icons in sparql view
   [danielm refs #29992]
 * Change: indicators-figure images now have a max height in order to fit

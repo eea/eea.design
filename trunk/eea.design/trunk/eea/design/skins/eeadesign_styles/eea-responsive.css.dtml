@@ -311,7 +311,12 @@
 
   .eea-right-section-slider-active {
     right: 93%;
-    z-index: 1000; }
+    z-index: 1000;
+    height: 100%;
+    top: 5%;
+    background-color: black;
+    opacity: 0.5;
+    width: 7%; }
 
   /*** END SECTION FACETED NAVIGATION ****/
   #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {

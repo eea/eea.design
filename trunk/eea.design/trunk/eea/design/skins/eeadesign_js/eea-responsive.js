@@ -206,6 +206,24 @@ jQuery(document).ready(function($) {
     $right_area.prev().click();
   });
 
+  // 29865 open faceted menus when sliding left and right or when clicking on gray area
+  function swipeHandler(ev) {
+    var left_direction = ev.swipestart.coords[0] > ev.swipestop.coords[0];
+    var $faceted_slider = $(".eea-right-section-slider"),
+        faceted_slider_is_active = $faceted_slider.hasClass("eea-right-section-slider-active"),
+        slider_length = $faceted_slider.length;
+    if (slider_length) {
+      if (left_direction && faceted_slider_is_active ||
+          !left_direction && !faceted_slider_is_active) {
+        return;
+      }
+      $faceted_slider.find('.eea-icon').click();
+    }
+  }
+
+  $(window).on("swipe", swipeHandler);
+
+
   /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
   var mobile_desktop = false;
   var window_height = window.outerHeight || window.innerHeight;

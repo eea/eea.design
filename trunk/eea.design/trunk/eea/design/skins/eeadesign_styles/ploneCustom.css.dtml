@@ -589,7 +589,6 @@ input.standalone:hover {
 }
 
 .documentContent {
-    background: &dtml-backgroundColor;;
     padding: 0 0 2em 0;
 }
 #content-core {
