@@ -3,6 +3,9 @@ Changelog
 
 12.9.dev0 - (unreleased)
 ------------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [ichimdav refs #29865]
 * Feature: added jquery.mobile with swipe effect for faceted navigation
   widgets panel
   [ichimdav refs #29865]
