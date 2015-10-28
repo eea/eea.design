@@ -190,6 +190,7 @@
     height: auto; }
 
   #portal-searchbox {
+    background-color: #FFF;
     margin-top: 0;
     text-align: left; }
     #portal-searchbox input[type="text"] {
