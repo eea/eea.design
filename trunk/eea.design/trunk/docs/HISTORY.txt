@@ -3,6 +3,8 @@ Changelog
 
 12.9.dev0 - (unreleased)
 ------------------------
+* Bug fix: add rules in ploneCustom.css to display link icons in sparql view
+  [danielm refs #29992]
 * Change: indicators-figure images now have a max height in order to fit
   EEAFigure images and sources as such as possible on a single page
   [ichimdav refs #29335]

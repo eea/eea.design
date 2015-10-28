@@ -1257,7 +1257,7 @@ option.hiddenStructure {
     padding: 1px 0 1px 19px;
 }
 
-.link-feed {
+.link-feed, .link-rss, .link-rdf, .link-xml {
     background: transparent url(&dtml-portal_url;/rss.gif) 0 1px no-repeat;
     padding: 1px 0 1px 18px;
 }
@@ -1278,6 +1278,9 @@ option.hiddenStructure {
     background: transparent url(&dtml-portal_url;/pdf.png) 0 50% no-repeat;
     padding: 2px 0 2px 16px;
 }
+.link-xlb, .link-xls, .link-xlt, .link-csv, .link-tsv {
+    background: transparent url(&dtml-portal_url;/xls.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
 .link-json {
     background: transparent url(&dtml-portal_url;/script_code.png) 0 50% no-repeat;
     padding: 2px 0 2px 20px;}
