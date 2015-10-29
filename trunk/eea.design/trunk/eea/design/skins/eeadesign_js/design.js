@@ -280,12 +280,27 @@ jQuery(document).ready(function($) {
                 // to keep the needed markup as small as possible
                 var $el = $(el), $right_section_slider = $el.prev();
                  if (!$right_section_slider.hasClass('eea-right-section-slider')) {
-                    $right_section_slider = $('<div class="eea-section eea-right-section-slider eea-scrolling-toggle-visibility"><span class="eea-icon eea-icon-4x eea-icon-caret-left eea-icon-anim-horizontal animated"></span></div>');
+                    $right_section_slider = $('<div class="eea-section eea-right-section-slider eea-scrolling-toggle-visibility"><span class="eea-icon eea-icon-5x eea-icon-caret-left eea-icon-anim-horizontal animated"></span></div>');
                      $right_section_slider.insertBefore($el);
                  }
                 $right_section_slider.click(function(){
-                    $(this).toggleClass("eea-right-section-slider-active")
+                    var $this = $(this);
+                    $this.toggleClass("eea-right-section-slider-active")
                         .next().toggleClass("eea-right-section-active eea-scrolling-keep-visible");
+
+                    if ($this.hasClass("eea-right-section-slider-active")) {
+                        // set overflow hidden when object is in view in order to
+                        // avoid scrolling of body
+                        document.body.style.overflow='hidden';
+                        document.body.style.position='fixed';
+                    }
+                    else {
+                        if (document.body.style.overflow === "hidden") {
+                            document.body.style.overflow='auto';
+                            document.body.style.position='relative';
+                        }
+                    }
+
                 });
 
             });

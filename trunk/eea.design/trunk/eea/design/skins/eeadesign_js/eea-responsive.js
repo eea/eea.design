@@ -218,6 +218,7 @@ jQuery(document).ready(function($) {
         return;
       }
 
+      $faceted_slider.removeClass("is-eea-hidden");
       // initiate a scroll event in order to display the navbar and
       // eea-right-section-slider if they are hidden and we are swiping
       // to show the filter menus
@@ -227,8 +228,8 @@ jQuery(document).ready(function($) {
     }
   }
 
-  $(window).on("swipe", swipeHandler);
 
+  $(window).on("swipe", swipeHandler);
 
   /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
   var mobile_desktop = false;

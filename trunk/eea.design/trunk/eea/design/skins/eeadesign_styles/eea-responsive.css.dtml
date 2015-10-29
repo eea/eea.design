@@ -141,7 +141,7 @@
 
   #chooselang li {
     display: list-item;
-    list-style: square inside url("/www/bullet.gif"); }
+    list-style: square inside url("&dtml-portal_url;/bullet.gif"); }
 
   #portal-externalsites a, #portal-siteactions a {
     display: block;
@@ -270,6 +270,8 @@
     -webkit-transition: all .25s ease-out;
     -o-transition: all .25s ease-out;
     transition: all .25s ease-out;
+    -webkit-overflow-scrolling: touch;
+    /* nice webkit native scroll */
     left: 100%;
     right: inherit; }
     .eea-section .eea-accordion-panels {
@@ -287,10 +289,10 @@
       background-color: #0077b3; }
 
   .eea-right-section-active {
-    left: 7% !important; }
+    left: 10% !important; }
 
   .eea-right-section {
-    width: 93% !important;
+    width: 90% !important;
     position: fixed;
     right: 100%;
     top: 0;
@@ -311,13 +313,15 @@
       color: #006699; }
 
   .eea-right-section-slider-active {
-    right: 93%;
+    right: 90%;
     z-index: 1000;
     height: 100%;
     top: 5%;
     background-color: black;
     opacity: 0.5;
-    width: 7%; }
+    width: 10%; }
+    .eea-right-section-slider-active .eea-icon {
+      display: none; }
 
   /*** END SECTION FACETED NAVIGATION ****/
   #whatsnew-gallery .tileBody, #whatsnew-gallery .tileFooter {
