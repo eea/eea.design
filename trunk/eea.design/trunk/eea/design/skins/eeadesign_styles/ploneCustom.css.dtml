@@ -1114,7 +1114,6 @@ a.moreLink {
     text-align: left;
     float: left;
     margin-right: 1em;
-    min-width: 110px;
 }
 
 .listingBar .next,
@@ -1122,7 +1121,6 @@ a.moreLink {
     text-align: right;
     float: right;
     margin-left: 1em;
-    min-width: 100px;
 }
 
 /* tileItem used in related and eea-tabs listings */

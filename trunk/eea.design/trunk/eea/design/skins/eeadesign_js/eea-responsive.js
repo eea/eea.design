@@ -217,6 +217,12 @@ jQuery(document).ready(function($) {
           !left_direction && !faceted_slider_is_active) {
         return;
       }
+
+      // initiate a scroll event in order to display the navbar and
+      // eea-right-section-slider if they are hidden and we are swiping
+      // to show the filter menus
+      $(window).scroll();
+
       $faceted_slider.find('.eea-icon').click();
     }
   }
