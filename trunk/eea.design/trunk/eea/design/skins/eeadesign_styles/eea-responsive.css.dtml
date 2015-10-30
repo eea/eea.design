@@ -347,6 +347,14 @@
   .navbar-collapse {
     width: 100%; }
 
+  .userrole-anonymous .documentFirstHeading {
+    padding-right: 0; }
+
+  #article-language {
+    margin-top: 0;
+    margin-bottom: 7px;
+    position: relative; }
+
   #portal-colophon .colophonWrapper, .colophon-middle {
     text-align: center; }
 

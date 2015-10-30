@@ -30,10 +30,6 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="visualClear">
-                <!-- -->
-            </div>
         </tal:anonLanguageCodes>
 
         <tal:admin tal:condition="not: isAnon">
