@@ -191,7 +191,7 @@ div.position-3\3a 4 {margin-left: -36.5%;}
 .faceted-center-widgets .faceted-widget .faceted-textwidget-place-current {
     display: inline-block;
     float: left;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton,
