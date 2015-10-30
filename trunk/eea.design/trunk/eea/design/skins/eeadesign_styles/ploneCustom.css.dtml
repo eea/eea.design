@@ -56,6 +56,10 @@ div.position-3\3a 4 {margin-left: -36.5%;}
     overflow: hidden;
 }
 
+.faceted-text-widget div {
+    margin-top: 1em;
+}
+
 #faceted-form .widget-fieldset legend {
     background-color: &dtml-corporateGreen;;
     color: #ffffff;

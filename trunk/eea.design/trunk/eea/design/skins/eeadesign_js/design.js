@@ -288,6 +288,8 @@ jQuery(document).ready(function($) {
                     $this.toggleClass("eea-right-section-slider-active")
                         .next().toggleClass("eea-right-section-active eea-scrolling-keep-visible");
 
+                    $this.removeClass("is-eea-hidden");
+
                     if ($this.hasClass("eea-right-section-slider-active")) {
                         // set overflow hidden when object is in view in order to
                         // avoid scrolling of body

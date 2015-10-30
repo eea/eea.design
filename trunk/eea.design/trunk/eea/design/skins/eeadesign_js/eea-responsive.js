@@ -200,7 +200,8 @@ jQuery(document).ready(function($) {
 
   var $right_area = $('#right-area').addClass('eea-section eea-right-section');
 
-  $('<a href=\'#\' class=\'pull-right eea-faceted-filter\'>Filter »</a>').appendTo('.faceted-text-widget');
+  var $faceted_text_widget = $(".faceted-text-widget");
+  $("<div class='faceted-textwidget-place-all'><a href='#' class='eea-faceted-filter'>Filter »</a></div>").appendTo($faceted_text_widget.find("form"));
   $('.eea-faceted-filter').click(function(e) {
     e.preventDefault();
     $right_area.prev().click();

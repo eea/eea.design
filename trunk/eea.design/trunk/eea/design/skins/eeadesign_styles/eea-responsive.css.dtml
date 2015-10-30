@@ -263,9 +263,6 @@
   #faceted-form legend {
     display: none; }
 
-  .eea-faceted-filter {
-    margin-right: 4em; }
-
   .eea-section {
     -webkit-transition: all .25s ease-out;
     -o-transition: all .25s ease-out;
