@@ -219,6 +219,13 @@ jQuery(document).ready(function($) {
         return;
       }
 
+      // if swipe takes longer than 75msec than it can be categorized as a
+      // swipe to see content if you are zoomed in
+      var time =  ev.swipestop.time - ev.swipestart.time;
+      if (time > 75) {
+        return;
+      }
+
       $faceted_slider.removeClass("is-eea-hidden");
       // initiate a scroll event in order to display the navbar and
       // eea-right-section-slider if they are hidden and we are swiping
