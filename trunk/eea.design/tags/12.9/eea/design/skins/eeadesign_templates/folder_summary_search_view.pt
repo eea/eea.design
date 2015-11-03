@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="eea">
+
+<body>
+    <div metal:fill-slot="main">
+    <metal:main-macro define-macro="main"
+tal:define="template_id template/getId; object_title context/@@plone_context_state/object_title;">
+
+        <h1  tal:content="object_title" class="documentFirstHeading">
+            Title or id
+        </h1>
+        <p class="documentDescription"
+           tal:content="here/Description"
+           tal:condition="here/Description">
+            Description
+        </p>
+
+<script type="text/javascript">
+function addSearchterm() {
+      var ob_search = document.getElementById('SearchableText');
+      var ob_searchterm = document.getElementById('searchterm');
+      ob_searchterm.value = ob_search.value;
+      }
+</script>
+
+<style>
+  .searchContainer {
+    padding: 0 1em 0.5em 1em;
+    margin: 0.1em auto;
+    display: block;
+    width: 280px;
+    text-align: left;
+    background-color: rgb(236, 243, 208);
+  }
+</style>
+
+<div class="searchContainer">
+  <h4 i18n:translate="">Search this listing</h4>
+  <form name="publicationSearch" method="get" action="" onsubmit="addSearchterm()">
+    <div class="formHelp" i18n:translate="">Enter one or more keywords for a search.</div>
+    <input type="text" value="" id="SearchableText" name="SearchableText" tal:attributes="value python:request.get('SearchableText', '')" />
+    <input type="hidden" id="searchterm" name="searchterm"/>
+    <input type="submit" value="Search" i18n:attributes="value"/>
+  </form>
+</div>
+
+
+        <a href=""
+           class="link-parent"
+           tal:define="parent_url python:here.navigationParent(here, template_id)"
+           tal:condition="parent_url"
+           tal:attributes="href parent_url"
+           i18n:translate="">
+        Up one level
+        </a>
+
+
+
+       <div metal:use-macro="here/folder_summary_view/macros/listing" />
+       <metal:subtopics use-macro="context/atct_topic_view/macros/folderlisting_macro" /> 
+
+    </metal:main-macro>
+    </div>
+
+</body>
+</html>
