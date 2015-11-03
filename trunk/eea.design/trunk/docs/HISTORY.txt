@@ -1,8 +1,8 @@
 Changelog
 =========
 
-12.9.dev0 - (unreleased)
-------------------------
+12.9 - (2015-11-03)
+-------------------
 * Bug fix: on mobile devices, the language selector is positioned below the main
   title; the title takes the full screen width
   [danielm refs #30080]
