@@ -3,6 +3,10 @@ Changelog
 
 13.0.dev0 - (unreleased)
 ------------------------
+* Bug fix: removed condition to not load slide.js functionality on mobile view
+  since the script is used by the language selection while anonymous and there
+  is no alternative selection of language currently
+  [ichimdav refs #30080]
 
 12.9 - (2015-11-03)
 -------------------

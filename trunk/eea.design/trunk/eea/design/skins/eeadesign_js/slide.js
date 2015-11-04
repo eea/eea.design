@@ -10,9 +10,6 @@
     }
 
     $(document).ready(function() {
-        if (window.innerWidth < 768 && !window.mobile_desktop_browser_resolution) {
-            return;
-        }
         function panel() {
             var a = $(this);
             var buttonID = a.parent().attr('id');
