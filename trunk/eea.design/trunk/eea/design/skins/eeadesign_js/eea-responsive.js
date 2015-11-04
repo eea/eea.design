@@ -222,9 +222,6 @@ jQuery(document).ready(function($) {
       // if swipe takes longer than 75msec than it can be categorized as a
       // swipe to see content if you are zoomed in
       var time =  ev.swipestop.time - ev.swipestart.time;
-      if (time > 75) {
-        return;
-      }
 
       $faceted_slider.removeClass("is-eea-hidden");
       // initiate a scroll event in order to display the navbar and
@@ -232,10 +229,21 @@ jQuery(document).ready(function($) {
       // to show the filter menus
       $(window).scroll();
 
+      // swipe timing happens a lot faster on Iphone then on Android
+      // as such we need to check for different maximum timings
+      if (window.navigator.userAgent.indexOf('iPhone') !== -1) {
+        if (time > 60) {
+          return;
+        }
+      } else {
+        if (time > 150) {
+          return;
+        }
+      }
+
       $faceted_slider.find('.eea-icon').click();
     }
   }
-
 
   $(window).on("swipe", swipeHandler);
 
@@ -323,10 +331,32 @@ jQuery(document).ready(function($) {
   var $header_holder = $('#header-holder');
   var $navbar = $header_holder.find('.navbar');
   $navbar.addClass('eea-scrolling-toggle-visibility');
-
+  var multiple_touch = false;
   var navbar_content = $header_holder.find('.navbar-collapse')[0];
 
-  function navScroll() {
+
+  function TouchMove(ev) {
+    var e = ev.originalEvent;
+    multiple_touch = e.touches.length > 1;
+  }
+  var lazyTouchMove = _.throttle(TouchMove, 90);
+  $(window).on("touchmove", lazyTouchMove);
+
+  var $document = $(document);
+  var win_height = window.innerHeight;
+  var body = document.body;
+  function navScroll(ev) {
+    // prevent scroll hiding or showing when reaching bottom
+    var doc_height = $document.height();
+    if(window.scrollY + win_height >= doc_height) {
+      return;
+    }
+    // prevent scroll hiding or showing when reaching top
+    var targetScrollY = ev.currentTarget.scrollY;
+    if (multiple_touch || (targetScrollY <= 0 || targetScrollY >= doc_height)) {
+      return;
+    }
+
     // faceted loading trigger a window scroll as such we need to
     // wait for it to finish before checking for the scroll event
     var faceted = document.querySelectorAll('.faceted-results')[0];
@@ -362,7 +392,7 @@ jQuery(document).ready(function($) {
     lastScrollTop = st;
   }
 
-  var lazyNavScroll = _.throttle(navScroll, 10);
+  var lazyNavScroll = _.throttle(navScroll, 100);
   $(window).scroll(lazyNavScroll);
 
 });
