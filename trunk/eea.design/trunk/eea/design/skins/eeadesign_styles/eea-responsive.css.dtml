@@ -42,7 +42,11 @@
     display: none; }
 
   #content ul.gallery-layout-selection {
-    display: none; } }
+    display: none; }
+
+  /* #30333 soer2015 frontpage keyfacts are clipped when using an iphone in portrait */
+  #keyfacts-slider dl {
+    min-height: 250px; } }
 @media screen and (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
