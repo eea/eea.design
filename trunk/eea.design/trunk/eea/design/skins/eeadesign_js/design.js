@@ -314,10 +314,7 @@ jQuery(document).ready(function($) {
     /* Anchors */
     anchors.options.visible = 'hover';
     anchors.options.placement = 'left';
-    anchors.add('h1');
-    anchors.add('h2');
-    anchors.add('h3');
-    anchors.add('h4');
+    anchors.add('h1, h2, h3, h4');
 
 });
 
