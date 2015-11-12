@@ -3,6 +3,12 @@ Changelog
 
 13.0.dev0 - (unreleased)
 ------------------------
+* Bug fix: fix clipping of keyFactsMessages within soer2015 frontpage
+  [ichimdav refs #30333]
+* Bug fix: fix soer2015 Fiche portal-column-content position
+  [ichimdav refs #30333]
+* Bug fix: show two rows of photoAlbumEntry on IPhone portrait
+  [ichimdav refs #30333]
 * Feature: Automatically add anchor to headings via anchor.js
   [lucas refs #30396]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
