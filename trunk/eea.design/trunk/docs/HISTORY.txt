@@ -3,6 +3,8 @@ Changelog
 
 13.0.dev0 - (unreleased)
 ------------------------
+* Change: Upgrade Google analytics to Universal Analytics
+  [chiridra refs #18653]
 * Bug fix: fix clipping of keyFactsMessages within soer2015 frontpage
   [ichimdav refs #30333]
 * Bug fix: fix soer2015 Fiche portal-column-content position

@@ -258,9 +258,10 @@ jQuery(document).ready(function($) {
         el.onclick = function() {
             var text = el.textContent || el.innerText;
             var ftype = extract_file_type(el.href, text);
-            var _gaq = window._gaq || [];
             var link = el.href;
-            _gaq.push(['_trackEvent', 'Downloads', link, ftype]);
+            if (ga) {
+                ga('send', 'event', 'Downloads', link, ftype);
+            }
         };
         return el;
     }
