@@ -3,6 +3,11 @@ Changelog
 
 13.0.dev0 - (unreleased)
 ------------------------
+* Feature: Automatically add anchor to headings via anchor.js
+  [lucas refs #30396]
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [lucas refs #30396]
 * Bug fix: removed condition to not load slide.js functionality on mobile view
   since the script is used by the language selection while anonymous and there
   is no alternative selection of language currently
