@@ -266,11 +266,14 @@
   .eea-section {
     -webkit-transition: all .25s ease-out;
     -o-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
     transition: all .25s ease-out;
     -webkit-overflow-scrolling: touch;
     /* nice webkit native scroll */
     left: 100%;
-    right: inherit; }
+    right: inherit;
+    will-change: transform;
+    -webkit-transform: translate3d(0, 0, 0); }
     .eea-section .eea-accordion-panels {
       margin-top: 65px;
       overflow: auto;
@@ -340,9 +343,6 @@
     margin: 0 1% !important;
     min-width: 98% !important;
     width: 98% !important; }
-
-  .template-fiche_view #portal-column-content {
-    left: 100%; }
 
   .navbar-collapse {
     width: 100%; }
