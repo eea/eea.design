@@ -313,7 +313,7 @@ jQuery(document).ready(function($) {
 
     /* Anchors */
     anchors.options.visible = 'hover';
-    anchors.options.placement = 'left';
+    anchors.options.placement = 'right';
     anchors.add('h1, h2, h3, h4');
 
 });
