@@ -1,8 +1,8 @@
 Changelog
 =========
 
-13.0.dev0 - (unreleased)
-------------------------
+13.0 - (2015-11-16)
+-------------------
 * Change: Upgrade Google analytics to Universal Analytics
   [chiridra refs #18653]
 * Bug fix: fix clipping of keyFactsMessages within soer2015 frontpage
