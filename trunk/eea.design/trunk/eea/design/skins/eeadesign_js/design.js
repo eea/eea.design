@@ -1,4 +1,4 @@
-/* global jQuery window */
+/*global jQuery window anchors document ga setTimeout*/
 jQuery(document).ready(function($) {
     'use strict';
     var url_path_name = window.location.pathname;

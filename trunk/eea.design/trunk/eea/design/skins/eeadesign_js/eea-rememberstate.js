@@ -1,3 +1,4 @@
+/*global jQuery window anchors document ga setTimeout*/
 /* EXTERNAL DEPENDENCIES:
  * - jquery-ui.js dialog,
  * - ++resource++jquery.remember-state.js

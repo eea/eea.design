@@ -1,3 +1,4 @@
+/*global window anchors document ga setTimeout*/
 /**
  * AnchorJS - v2.0.0 - 2015-10-31
  * https://github.com/bryanbraun/anchorjs
@@ -9,7 +10,62 @@ function AnchorJS(options) {
   var that = this;
 
   this.options = options || {};
+  
+  /**
+   * _addBaselineStyles
+   * Adds baseline styles to the page, used by all AnchorJS links irregardless of configuration.
+   */
+  function _addBaselineStyles() {
+    // We don't want to add global baseline styles if they've been added before.
+    if (document.head.querySelector('style.anchorjs') !== null) {
+      return;
+    }
 
+    var style = document.createElement('style'),
+        linkRule =
+        ' .anchorjs-link {'                       +
+        '   opacity: 0;'                          +
+        '   text-decoration: none;'               +
+        '   -webkit-font-smoothing: antialiased;' +
+        '   -moz-osx-font-smoothing: grayscale;'  +
+        ' }',
+        hoverRule =
+        ' *:hover > .anchorjs-link,'              +
+        ' .anchorjs-link:focus  {'                +
+        '   opacity: 1;'                          +
+        ' }',
+        anchorjsLinkFontFace =
+        ' @font-face {'                           +
+        '   font-family: "anchorjs-icons";'       +
+        '   font-style: normal;'                  +
+        '   font-weight: normal;'                 + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
+        '   src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBTUAAAC8AAAAYGNtYXAWi9QdAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zgq29TcAAAF4AAABNGhlYWQEZM3pAAACrAAAADZoaGVhBhUDxgAAAuQAAAAkaG10eASAADEAAAMIAAAAFGxvY2EAKACuAAADHAAAAAxtYXhwAAgAVwAAAygAAAAgbmFtZQ5yJ3cAAANIAAAB2nBvc3QAAwAAAAAFJAAAACAAAwJAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpywPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6cv//f//AAAAAAAg6cv//f//AAH/4xY5AAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAACADEARAJTAsAAKwBUAAABIiYnJjQ/AT4BMzIWFxYUDwEGIicmND8BNjQnLgEjIgYPAQYUFxYUBw4BIwciJicmND8BNjIXFhQPAQYUFx4BMzI2PwE2NCcmNDc2MhcWFA8BDgEjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAEAAAABAACiToc1Xw889QALBAAAAAAA0XnFFgAAAADRecUWAAAAAAJTAsAAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAAlMAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAACAAAAAoAAMQAAAAAACgAUAB4AmgABAAAABQBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIABwCfAAEAAAAAAAMADgBLAAEAAAAAAAQADgC0AAEAAAAAAAUACwAqAAEAAAAAAAYADgB1AAEAAAAAAAoAGgDeAAMAAQQJAAEAHAAOAAMAAQQJAAIADgCmAAMAAQQJAAMAHABZAAMAAQQJAAQAHADCAAMAAQQJAAUAFgA1AAMAAQQJAAYAHACDAAMAAQQJAAoANAD4YW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzVmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzUmVndWxhcgBSAGUAZwB1AGwAYQByYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzRm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format("truetype");' +
+        ' }',
+        pseudoElContent =
+        ' [data-anchorjs-icon]::after {'          +
+        '   content: attr(data-anchorjs-icon);'   +
+        ' }',
+        firstStyleEl;
+
+    style.className = 'anchorjs';
+    style.appendChild(document.createTextNode('')); // Necessary for Webkit.
+
+    // We place it in the head with the other style tags, if possible, so as to
+    // not look out of place. We insert before the others so these styles can be
+    // overridden if necessary.
+    firstStyleEl = document.head.querySelector('[rel="stylesheet"], style');
+    if (firstStyleEl === undefined) {
+      document.head.appendChild(style);
+    } else {
+      document.head.insertBefore(style, firstStyleEl);
+    }
+
+    style.sheet.insertRule(linkRule, style.sheet.cssRules.length);
+    style.sheet.insertRule(hoverRule, style.sheet.cssRules.length);
+    style.sheet.insertRule(pseudoElContent, style.sheet.cssRules.length);
+    style.sheet.insertRule(anchorjsLinkFontFace, style.sheet.cssRules.length);
+  }
+  
   /**
    * Assigns options to the internal options object, and provides defaults.
    * @param {Object} opts - Options object
@@ -190,60 +246,6 @@ function AnchorJS(options) {
     return urlText;
   };
 
-  /**
-   * _addBaselineStyles
-   * Adds baseline styles to the page, used by all AnchorJS links irregardless of configuration.
-   */
-  function _addBaselineStyles() {
-    // We don't want to add global baseline styles if they've been added before.
-    if (document.head.querySelector('style.anchorjs') !== null) {
-      return;
-    }
-
-    var style = document.createElement('style'),
-        linkRule =
-        ' .anchorjs-link {'                       +
-        '   opacity: 0;'                          +
-        '   text-decoration: none;'               +
-        '   -webkit-font-smoothing: antialiased;' +
-        '   -moz-osx-font-smoothing: grayscale;'  +
-        ' }',
-        hoverRule =
-        ' *:hover > .anchorjs-link,'              +
-        ' .anchorjs-link:focus  {'                +
-        '   opacity: 1;'                          +
-        ' }',
-        anchorjsLinkFontFace =
-        ' @font-face {'                           +
-        '   font-family: "anchorjs-icons";'       +
-        '   font-style: normal;'                  +
-        '   font-weight: normal;'                 + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
-        '   src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBTUAAAC8AAAAYGNtYXAWi9QdAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zgq29TcAAAF4AAABNGhlYWQEZM3pAAACrAAAADZoaGVhBhUDxgAAAuQAAAAkaG10eASAADEAAAMIAAAAFGxvY2EAKACuAAADHAAAAAxtYXhwAAgAVwAAAygAAAAgbmFtZQ5yJ3cAAANIAAAB2nBvc3QAAwAAAAAFJAAAACAAAwJAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpywPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6cv//f//AAAAAAAg6cv//f//AAH/4xY5AAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAACADEARAJTAsAAKwBUAAABIiYnJjQ/AT4BMzIWFxYUDwEGIicmND8BNjQnLgEjIgYPAQYUFxYUBw4BIwciJicmND8BNjIXFhQPAQYUFx4BMzI2PwE2NCcmNDc2MhcWFA8BDgEjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAEAAAABAACiToc1Xw889QALBAAAAAAA0XnFFgAAAADRecUWAAAAAAJTAsAAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAAlMAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAACAAAAAoAAMQAAAAAACgAUAB4AmgABAAAABQBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIABwCfAAEAAAAAAAMADgBLAAEAAAAAAAQADgC0AAEAAAAAAAUACwAqAAEAAAAAAAYADgB1AAEAAAAAAAoAGgDeAAMAAQQJAAEAHAAOAAMAAQQJAAIADgCmAAMAAQQJAAMAHABZAAMAAQQJAAQAHADCAAMAAQQJAAUAFgA1AAMAAQQJAAYAHACDAAMAAQQJAAoANAD4YW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzVmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzUmVndWxhcgBSAGUAZwB1AGwAYQByYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzRm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format("truetype");' +
-        ' }',
-        pseudoElContent =
-        ' [data-anchorjs-icon]::after {'          +
-        '   content: attr(data-anchorjs-icon);'   +
-        ' }',
-        firstStyleEl;
-
-    style.className = 'anchorjs';
-    style.appendChild(document.createTextNode('')); // Necessary for Webkit.
-
-    // We place it in the head with the other style tags, if possible, so as to
-    // not look out of place. We insert before the others so these styles can be
-    // overridden if necessary.
-    firstStyleEl = document.head.querySelector('[rel="stylesheet"], style');
-    if (firstStyleEl === undefined) {
-      document.head.appendChild(style);
-    } else {
-      document.head.insertBefore(style, firstStyleEl);
-    }
-
-    style.sheet.insertRule(linkRule, style.sheet.cssRules.length);
-    style.sheet.insertRule(hoverRule, style.sheet.cssRules.length);
-    style.sheet.insertRule(pseudoElContent, style.sheet.cssRules.length);
-    style.sheet.insertRule(anchorjsLinkFontFace, style.sheet.cssRules.length);
-  }
 }
 
 var anchors = new AnchorJS();
