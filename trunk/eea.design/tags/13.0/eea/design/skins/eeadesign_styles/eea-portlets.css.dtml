@@ -1,0 +1,594 @@
+/*
+** Plone style sheet - Portlets
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* The new portlet CSS - these will be switched to non-qualified classes
+   (ie. .portlet, not dl.portlet) once the old portlet layout is removed in
+   Plone 2.5. ~limi */
+
+/* Generic portlet style */
+
+/* @group Portlets */
+
+dl.portlet {
+    margin: 0 0 1em;
+    font-size: 100%;
+}
+
+dl.portlet dt,
+div.portletAssignments div.portletHeader {
+    background: &dtml-lightBackgroundColor;;
+}
+
+/* #16720; shrink the font-size of portlet headers */
+.portletAssignments .portletHeader,
+.portletAssignments .portlet_visible .portletHeader,
+.portletAssignments .portlet_hidden .portletHeader {
+    font-size: 140%;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover {
+    display: inline; /* ichimdav rule for calendar */
+}
+
+dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter,
+dl.portletError dd {
+    padding: 0em;
+}
+
+div.managePortletsLink,
+a.managePortletsFallback {
+    font-size: 90%;
+}
+/* @end @group Portlets */
+
+/* @group Navigation portlet */
+dl.portlet ul.navTree li a {
+    margin: 0;
+    padding: 10px;
+    border-top: 1px dotted #BABBB8;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+dl.portlet ul.navTreeLevel0 > li:first-child > a {
+  border-top: 0; /* no top border on the first link of the navigation menu */
+}
+
+dl.portlet ul.navTree li a:hover, #content dl.portlet ul.navTree li a:hover {
+    background-color:&dtml-corporateOrange;;
+    -webkit-transition: background-color .3s, color .3s, background .3s;
+    -moz-transition: background-color .3s, color .3s, background .3s;
+    -o-transition: background-color .3s, color .3s, background .3s;
+    transition: background-color .3s, color .3s, background .3s;
+    color: #FFFFFF !important;
+}
+
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+    padding: 0;
+    border-bottom: 0;
+}
+
+dl.portlet ul.navTree .navTreeCurrentItem {
+    color: #FFFFFF !important;
+    background-color: &dtml-corporateOrange;;
+    margin: 0;
+    border-left: 0;
+}
+
+.navTreeItemInPath > ul.navTreeLevel0 li > a {
+    padding-left: 10px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel1 li > a {
+    padding-left: 25px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel2 li > a {
+    padding-left: 35px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel3 li > a {
+    padding-left: 45px !important;
+}
+
+.navTreeItemInPath > ul.navTreeLevel4 li > a {
+    padding-left: 55px !important;
+}
+/* @end @group Navigation portlet */
+
+
+
+/* portlets.css pre Plone 4.3 */
+#document-toc {
+    width: 95%;
+    margin-top: 0.5em;
+    clear: both;
+    color: #333;
+    padding: 0.5em 1em 1em 1em;
+}
+
+.collapsable-portlet .portletHeader {
+    cursor: pointer;
+    padding: 0 20px 0 0;
+}
+
+.collapsable-portlet.collapsed .portletItem {
+    display: none;
+}
+
+.portlet {
+    margin: 1px 0 1em 0;
+    padding: 0.3em;
+}
+
+.portletItem {
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.portletHeader, dl.portlet dt.portletHeader {
+    font-weight:normal !important;
+    font: normal 160% &dtml-fontFamily;;
+    color: black;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 0 0.5em 0;
+}
+
+#firstHeader {
+   margin-top: 0;
+   line-height: 1.2;
+   font-size: 1.6em;
+}
+
+.portletFooter {
+    clear: both;
+    font-size:11px;
+    line-height:1em;
+    border: 1px none &dtml-lightGreyDivisionColor;;
+    border-top-style: dotted;
+    margin:0;
+    padding:1em 1em;
+    text-align:right;
+}
+
+.portletItemDetails {
+    text-align: right;
+    display: block;
+}
+
+
+/* link style in portlets */
+.portletItem a {
+    display: block;
+}
+dd.portletItem a,
+dd.portletFooter a {
+    border-bottom: none;
+}
+.portlet a, dl.portlet a {
+    text-decoration: none;
+}
+
+.portlet a:visited, #content .portlet a{
+    color:&dtml-linkColor;;
+}
+
+dd.portletItem a:visited,
+dd.portletFooter a:visited {
+    color: &dtml-linkColor;;
+}
+
+#portal-column-two .portletHeader a,
+#portal-column-two .portletHeader a:link,
+#portal-column-two .portletHeader a:visited,
+#portal-column-two .portletHeader a:active,
+#portal-column-two .portletHeader a:hover,
+#portal-column-one .portletHeader a,
+#portal-column-one .portletHeader a:link,
+#portal-column-one .portletHeader a:visited,
+#portal-column-one .portletHeader a:active,
+#portal-column-one .portletHeader a:hover  {
+    color: &dtml-linkHeadingColor;;
+    text-decoration: none;
+}
+
+#content img {
+    vertical-align: middle;
+    /* don't allow images to be bigger than
+     * content width #5054
+     * disabled in 27701 and enabled again in 37794
+     * for #23150
+     */
+    max-width: 100%;
+}
+
+/* New navtree styles */
+
+.portletNavigationTree {
+    margin: 0;
+    padding: 1em;
+    list-style: none none;
+    line-height: 1em;
+    background: #FFFFFF;
+}
+
+.navTree {
+    list-style: none none;
+}
+
+.navTree li {
+    margin-bottom: 0 !important;
+}
+
+.navTreeItem {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navTreeItem a,
+dd.portletItem .navTreeItem a {
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navTreeItem a:hover,
+dd.portletItem .navTreeItem a:hover {
+}
+
+li.navTreeCurrentItem {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+li.navTreeCurrentItem a,
+li.navTreeCurrentItem a:hover {
+    display: block;
+    min-height: 1.6em;
+    line-height: 1.6em;
+    height: auto;
+    font-weight: bold;
+}
+.navTreeLevel3 a.navItemLevel2,
+.navTreeLevel3 a.navItemLevel2:hover {
+    margin-left: 1.5em;
+}
+.navTreeLevel4 a.navItemLevel3,
+.navTreeLevel5 a.navItemLevel4,
+.navTreeLevel4 a.navItemLevel3:hover,
+.navTreeLevel5 a.navItemLevel4:hover {
+    margin-left: 3em;
+    font-size: 0.8em;
+}
+#portlet-navigation-tree .promo-nav-portlet a.portletHeader {
+    padding-left: 0;
+}
+#portlet-navigation-tree .portletHeader,
+#portlet-navigation-tree .portletSubMenuHeader,
+.portlet-navigation-tree .portletHeader {
+    font-size: 1.2em;
+    padding:0.5em 0.2em 0.5em 0.5em;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+
+#portlet-navigation-tree .portletSubMenuHeader {
+    background: &dtml-mediumBackgroundColor;;
+}
+
+dl#portlet-navigation-tree,
+dl.portlet-navigation-tree {
+    border: none;
+}
+
+#portlet-navigation-tree li {
+    background: transparent;
+    display: block;
+}
+
+#portlet-navigation-tree .portletItem {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+#portlet-navigation-tree li a,
+.portlet-navigation-tree li a {
+    color: #495b6b;
+    border: none;
+    padding-left: 2em;
+    background: transparent url(&dtml-portal_url;/mal.png) 1em no-repeat;
+}
+
+#portlet-navigation-tree a:hover {
+    color: &dtml-linkHoverColor;;
+    background-color: &dtml-linkHoverBGColor;;
+}
+
+#portlet-navigation-tree .portletHeader a:hover {
+    background-color: transparent;
+}
+
+#portlet-navigation-tree .navTreeCurrentItem {
+    color: &dtml-linkHoverColor;;
+    background-color: &dtml-corporateOrange;;
+}
+
+.navTreeLevel0 { margin: 0; }
+.navTreeLevel1 { }
+.navTreeLevel2 { }
+.navTreeLevel0,
+.navTreeLevel3 { background: transparent; }
+.navTreeLevel4 { background: transparent; }
+.navTreeLevel5 { background: transparent; }
+/* .navTreeLevel5 { margin-left: 0.75em; } */
+
+
+/* EEA specific portlet classes */
+.portlet .link,
+.portlet .thumbnail-right {
+   float: right;
+   margin: 6px 0 0 8px;
+   font-size: x-small;
+   clear: right;
+}
+.portlet .thumbnail-right a {
+   border: none;
+}
+
+.portlet .date, #content .portlet .date {
+   font-weight: bold;
+   font-size: x-small;
+   margin: 0px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   box-shadow: none;
+   border: none;
+   text-align: left;
+}
+
+.portlet dt.portletItem {
+   clear: both;
+   padding: 0px;
+   background: none repeat scroll 0 0 transparent;
+}
+.portlet dt.portletItem a:link{
+    color: &dtml-linkColor;;
+}
+
+.portlet dd.portletSeparator {
+   clear: both;
+   border-bottom: 1px dotted &dtml-globalBorderColor;;
+   margin:0;
+   padding:0;
+}
+.portlet a.portletHeader {
+   font-size: 1em;
+   padding-bottom: 0.4em;
+}
+
+dt.portletItem a, #content dt.portletItem a {
+   font-weight: normal;
+}
+
+#portlet-chooselang {
+   background: transparent;
+   color:black;
+   margin: 0 13px 0 0;
+   padding: 0.5em 0;
+   float: right;
+   clear: right;
+   border: 0;
+   font-size: 100%;
+}
+
+#portlet-chooselang dt {
+   display: none;
+}
+
+.portlet-subscribtion dt {
+   margin-bottom: 5px;
+}
+
+#portlet-chooselang select {
+   font-size: 110%;
+}
+
+#chooselang {
+    margin: 0;
+    padding: 0;
+}
+
+
+#portal-column-two .portletTabHead,
+#portal-column-two .portletTabHead_current {
+   float: left;
+   border: 1px solid #bebebe;
+   width: 9.7em;
+   *width: 10.7em; /* targets IE6 and 7 */
+   height: 23px;
+   *height: 17px; /* targets IE6 and 7 */
+   display: block;
+   padding: 2px 2px 1px 2px;
+   margin-top: -27px;
+   margin-left: 0.2em;
+   text-align: center;
+   font: bold 0.8em &dtml-fontFamily;;
+   color: &dtml-fontColor;;
+   line-height: 20px;
+   white-space: nowrap;
+}
+#portal-column-two .portletTabHead {
+   background: #e9efcd;
+   cursor: pointer;
+}
+#portal-column-two .portletTabHead_current {
+   background: #fff;
+   border-bottom: 1px solid #fff;
+}
+#portal-column-two .portlet {
+   margin: 0 0 1em 0;
+   padding: 2em;
+}
+#portal-column-two dl dd dl.portlet {
+   margin: 0;
+   padding: 0.4em;
+   border: 1px solid #bebebe;
+   border-top:none;
+}
+#portal-column-two #portlet-chooselang dl dd,
+#portal-column-two .portlet-rss dd {
+   margin: 0 0 0 0;
+}
+#portal-column-two dl.portlet-rss {
+   margin: 0 0 0.6em 0;
+   padding: 0;
+   background: url(&dtml-portal_url;/tabhead-bg.gif) repeat-x left top;
+   border: none;
+}
+#portal-column-two dl.portlet-rss-dbl {
+   margin: 0 0 0.6em 0;
+    padding: 28px 0 0;
+    background: url(&dtml-portal_url;/tabhead-bg.gif) repeat-x left top;
+   border: none;
+}
+.portletFooter .feedButton {
+   margin: -12px 0 0 0;
+   background: none;
+   float: left;
+}
+
+.portlet-subscribtion dd {
+    margin-bottom: 0.5em;
+}
+
+.portlet-subscribtion input.subscriptionButton {
+   background: url(&dtml-portal_url;/search_btn_small.png) no-repeat top left;
+   border: none;
+   width: 30px;
+   height: 19px;
+   margin: 0 2px 0 2px;
+   padding: 0;
+   cursor:pointer;
+}
+
+dl.portletNavigationTree dt.portletHeader {
+  padding: 0;
+  font-size: 16px;
+  margin: 5px 10px;
+  background-color: transparent;
+  font-weight: bold !important;
+}
+
+dl.portletNavigationTree dt.portletSubMenuHeader {
+   background-color: &dtml-lightBackgroundColor;;
+   font-size: 12px;
+   padding: 10px;
+   margin: 0;
+   cursor: pointer;
+   border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+}
+
+dl.portletNavigationTree dt.portletSubMenuHeader:hover {
+   background-color: &dtml-mediumBackgroundColor;;
+}
+
+dl.portletNavigationTree dt.portletSubMenuHeader:last-child {
+   border-bottom: none;
+}
+
+dl.portletNavigationTree dt.portletSubMenuHeader span.title {
+  cursor: pointer;
+  margin: 0;
+  display: block;
+}
+
+.portletNavigationTree .eea-icon-right:after,
+.portletHeader .eea-icon-right:after
+{
+    font-size: 1.2em;
+    color: #9cb43c;
+}
+
+.portletHeader .eea-icon-right:after {
+    font-size: 75%;
+}
+
+.portletNavigationTree .eea-icon-right:after,
+.collapsed .portletHeader .eea-icon-right:after
+{
+    content: "&dtml-eea-icon-chevron-left;";
+}
+
+.portletNavigationTree .current .eea-icon-right:after,
+.portletHeader .eea-icon-right:after
+ {
+    content: "&dtml-eea-icon-chevron-down;";
+}
+
+dl.portletNavigationTree li.navTreeItem .navTreeCurrentItem {
+  color: #FFFFFF !important;
+  background-color: &dtml-corporateOrange;;
+}
+
+#portal-column-one .portlet {
+    padding: 0;
+    margin: 0;
+}
+
+
+.navTreeItem .contenttype-document,
+.navTreeItem .contenttype-event,
+.navTreeItem .contenttype-folder,
+.navTreeItem .contenttype-link,
+.navTreeItem .contenttype-news-item,
+.navTreeItem .contenttype-plone-site,
+.navTreeItem .contenttype-topic,
+.navTreeItem .contenttype-file,
+.navTreeItem .contenttype-image {
+   background: none;
+}
+
+/* ichimdav added styles from sunburst's portlets.css */
+.managedPortlet {
+    margin: 0.8em 0;
+}
+
+.blockedPortlet .portletHeader {
+    border: 1px dashed #ddd;
+    margin: -1px;
+    background: none !important;
+}
+
+.blockedPortlet .portletHeader a {
+    color: #666;
+}
+
+.blockedPortlet .portletBlockedMessage {
+    color: white;
+    display: inline;
+}
+
+.portletItemDetails {
+    font-size: 85%;
+    padding-top: .5em;
+    line-height: 1.5em;
+    margin-left: 1em;
+    display: block;
+}
+
+/* </dtml-with>
+** YOUR CSS RULES STOP HERE
+*/
