@@ -3,6 +3,8 @@ Changelog
 
 13.1.dev0 - (unreleased)
 ------------------------
+* BugFix: remove compression from anchor.js to resolve error in production
+  [lucas refs #30396]
 
 13.0 - (2015-11-16)
 -------------------

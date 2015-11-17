@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts">
 
-    <javascript cacheable="True" compression="safe" cookable="True"
+    <javascript cacheable="True" compression="none" cookable="True"
         enabled="True" inline="False" expression=""
         insert-before="design.js"
         bundle="default" id="anchor.js" />
