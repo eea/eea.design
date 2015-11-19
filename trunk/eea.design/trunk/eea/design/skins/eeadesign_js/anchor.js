@@ -10,7 +10,7 @@ function AnchorJS(options) {
   var that = this;
 
   this.options = options || {};
-  
+
   /**
    * _addBaselineStyles
    * Adds baseline styles to the page, used by all AnchorJS links irregardless of configuration.
@@ -65,7 +65,7 @@ function AnchorJS(options) {
     style.sheet.insertRule(pseudoElContent, style.sheet.cssRules.length);
     style.sheet.insertRule(anchorjsLinkFontFace, style.sheet.cssRules.length);
   }
-  
+
   /**
    * Assigns options to the internal options object, and provides defaults.
    * @param {Object} opts - Options object
@@ -235,13 +235,13 @@ function AnchorJS(options) {
     }
 
     // Note: we trim hyphens after truncating because truncating can cause dangling hyphens.
-    // Example string:                                  // " ⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
-    urlText = text.replace(/\'/gi, '')                  // " ⚡ Dont forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
-                  .replace(nonsafeChars, '-')           // "-⚡-Dont-forget--URL-fragments-should-be-i18n-friendly--hyphenated--short--and-clean-"
-                  .replace(/-{2,}/g, '-')               // "-⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-short-and-clean-"
-                  .substring(0, this.options.truncate)  // "-⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-"
-                  .replace(/^-+|-+$/gm, '')             // "⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated"
-                  .toLowerCase();                       // "⚡-dont-forget-url-fragments-should-be-i18n-friendly-hyphenated"
+    // Example string: // " ⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
+    urlText = text.replace(/\'/gi, '')
+                  .replace(nonsafeChars, '-')
+                  .replace(/-{2,}/g, '-')
+                  .substring(0, this.options.truncate)
+                  .replace(/^-+|-+$/gm, '')
+                  .toLowerCase();
 
     return urlText;
   };

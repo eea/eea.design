@@ -3,6 +3,13 @@ Changelog
 
 13.1.dev0 - (unreleased)
 ------------------------
+* Bugfix: restore compression of anchor.js - last comments removed
+  [lucas refs #30824]
+* Bugfix: added jq.applyanchor.js and move it to bottom of plone_javascripts
+  [lucas refs #30824]
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [lucas refs #30824]
 * BugFix: remove compression from anchor.js to resolve error in production
   [lucas refs #30396]
 
