@@ -1,8 +1,8 @@
 Changelog
 =========
 
-13.1.dev0 - (unreleased)
-------------------------
+13.1 - (2015-12-07)
+-------------------
 * Bugfix: restore compression of anchor.js - last comments removed
   [lucas refs #30824]
 * Bugfix: added jq.applyanchor.js and move it to bottom of plone_javascripts
