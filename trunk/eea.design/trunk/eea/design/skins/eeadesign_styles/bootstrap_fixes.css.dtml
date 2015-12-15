@@ -34,6 +34,14 @@ dt, dd {
     line-height: inherit;
 }
 
+/* #31065 fix label and inputs for edit form */
+input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+label {
+    display: inline;
+}
+
 /* #13825 remove margin-left from our styles set by twitter bootstrap */
 div.row {
     margin-left: 0;
