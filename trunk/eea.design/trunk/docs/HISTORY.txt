@@ -1,8 +1,8 @@
 Changelog
 =========
 
-13.2.dev0 - (unreleased)
-------------------------
+13.2 - (2016-01-04)
+-------------------
 * Bugfix: fix labels turned into display inline-block by boostrap as it messes
   positioning of inputs plus labels within edit forms
   [ichimdav refs #31065]
