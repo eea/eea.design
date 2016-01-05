@@ -168,7 +168,9 @@ th a, th a:link, th a:visited {
     padding: 0.2em;
     border-bottom: 1px dotted #b6b6b6;
 }
-.sortable th, .listing th {
+.sortable th, .listing th,
+.google-visualization-table-th.gradient
+{
     color: #fff;
     background: &dtml-corporateBlueTwo;;
     border: 0.1em solid #e7e7e7;
