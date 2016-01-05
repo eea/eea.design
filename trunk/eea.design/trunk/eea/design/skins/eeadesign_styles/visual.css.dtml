@@ -170,9 +170,10 @@ th a, th a:link, th a:visited {
 }
 
 .sortable th, .listing th,
-.google-visualization-table-th.gradient {
+.google-visualization-table .gradient {
     color: #fff;
-    background: &dtml-corporateBlueTwo;;
+    /* #30473 important because of google visualization table override */
+    background: none &dtml-corporateBlueTwo; !important;
 }
 
 .sortable th, .listing th {
