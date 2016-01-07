@@ -3,6 +3,11 @@ Changelog
 
 13.3.dev0 - (unreleased)
 ------------------------
+* Change: add border top and bottom on indicators-figure-plus figure titles
+  as seen on manually made pdfs
+  [ichimdav refs #30473]
+* Change: avoid page breaking within listing and googlecharts td
+  [ichimdav refs #30473]
 
 13.2 - (2016-01-04)
 -------------------

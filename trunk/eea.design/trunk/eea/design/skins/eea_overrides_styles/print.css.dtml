@@ -68,8 +68,10 @@ pre {
     width: 100% !important; /* 28694 prevent tables from being larger than 100% */
 }
 table.listing,
-table.listing td {
+table.listing td,
+.google-visualization-table-td {
     border-collapse: collapse;
+    page-break-inside:  avoid;
 }
 
 td a img {
@@ -141,6 +143,7 @@ body {
 
 #box-classification {
     float:none !important;
+    page-break-inside: avoid;
 }
 
 .keyMessage {
@@ -154,6 +157,15 @@ data-and-maps/indicators/exposure-of-ecosystems-to-acidification-3/assessment/pd
     max-height: 670px;
     width: inherit;
     float: none;
+}
+
+
+/**** 30473 style tweaks for
+data-and-maps/indicators/exposure-of-ecosystems-to-acidification-3/assessment/pdf.body
+****/
+.indicator-figure-plus .figure-title {
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
 }
 
 /**** 27537 style tweaks for
