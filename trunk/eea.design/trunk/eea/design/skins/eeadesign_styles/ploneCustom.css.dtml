@@ -682,6 +682,12 @@ dl a:hover, dd a:hover, dt a:hover {
     padding: 25px 20px 35px 80px;
     text-align: left;
 }
+#faceted-text-search input[type="text"] {
+    font-size: 16px;
+    padding: 5px;
+    min-width: 70%;
+    max-width: 77%;
+}
 /* /used by datamaps_view set on SITE/data-and-maps */
 
 /* used by dc_view and portlet_datacenter_overview */
