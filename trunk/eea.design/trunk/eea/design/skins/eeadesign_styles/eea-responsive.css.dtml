@@ -486,6 +486,48 @@
   .template-dc_view #visual-portal-wrapper,
   .template-facetednavigation_view #visual-portal-wrapper {
     overflow: hidden; } }
+
+/* #31309 - Improve DaViz Filter design/display */
+#content-core {
+    position: relative;
+}
+.google_buttons_bar {
+    margin-top:0!important;
+    position: absolute;
+    right: 40px;
+    text-align: right;
+}
+@media screen and (min-width: 768px) {
+    .google_buttons_bar {top: -50px;}
+    .google_buttons_bar_ex {top: -112px!important;}
+}
+@media screen and (max-width: 479px) {
+    .google_buttons_bar {
+        top: -86px;}
+    .google_buttons_bar_ex {
+        top: -153px!important;}
+    #languageCodes {max-width:40%!important;height:68px!important;overflow:hidden!important;margin-left:0!important;}
+    #plone-document-byline {max-width:40%!important;height:54px!important;overflow:hidden!important;}
+    #themes-tags {max-width:40%!important;height:28px!important;overflow:hidden!important;}
+}
+@media screen and (min-width: 480px) and (max-width: 627px) {
+    .google_buttons_bar {
+        top: -86px;}
+    .google_buttons_bar_ex {
+        top: -153px!important;}
+    #languageCodes {max-width:50%!important;height:68px!important;overflow:hidden!important;margin-left:0!important;}
+    #plone-document-byline {max-width:50%!important;height:54px!important;overflow:hidden!important;}
+    #themes-tags {max-width:50%!important;height:28px!important;overflow:hidden!important;}
+}
+@media screen and (min-width: 628px) and (max-width: 767px) {
+    .google_buttons_bar {
+        top: -67px;}
+    .google_buttons_bar_ex {
+        top: -115px!important;}
+    #languageCodes {max-width:60%!important;}
+    #plone-document-byline {max-width:60%!important;height:36px;}
+    #themes-tags {max-width:60%!important;}
+}
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */

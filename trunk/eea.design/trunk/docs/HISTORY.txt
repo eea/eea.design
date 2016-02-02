@@ -6,6 +6,8 @@ Changelog
 * Bug fix: fix the size of the search input box (make it bigger) on the "Data
   and maps" main page
   [danielm refs #50515]
+* Task: Improve DaViz Filter design/display
+  [chiridra refs #31309]
 
 13.3 - (2016-01-07)
 -------------------
