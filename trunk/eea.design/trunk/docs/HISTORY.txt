@@ -1,8 +1,8 @@
 Changelog
 =========
 
-13.4.dev0 - (unreleased)
-------------------------
+13.4 - (2016-02-03)
+-------------------
 * Bug fix: fix the size of the search input box (make it bigger) on the "Data
   and maps" main page
   [danielm refs #50515]
