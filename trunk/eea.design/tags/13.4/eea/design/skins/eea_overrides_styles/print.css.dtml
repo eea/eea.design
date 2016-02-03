@@ -1,0 +1,423 @@
+/*
+** Plone Print style sheet for CSS2-capable browsers.
+** Copyright Plone Foundation, et al
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** You should preferrably use ploneCustom.css to add your own CSS classes and to
+** customize your portal, as these are the base fundamentals of Plone, and will
+** change and be refined in newer versions. Keeping your changes in
+** ploneCustom.css will make it easier to upgrade.
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+body {
+    font-family: &dtml-fontFamily;;
+    font-size: 9pt;
+    min-width: 10cm;
+    width: auto;
+}
+
+#portal-visual-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border: none;
+    font-family: &dtml-headingFontFamily;;
+    width: auto;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+
+}
+
+/* #19880 set 100% width for column-content instead of width auto with important */
+#portal-column-content {
+    width: 100%;
+}
+
+ul, ol, dl {
+    padding-right: 0.5em;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.documentDescription {
+    font-weight: bold;
+}
+
+pre {
+    border: 1pt dotted black;
+    white-space: pre;
+    font-size: 8pt;
+    overflow: auto;
+    padding: 1em 0;
+}
+
+#content table {
+    width: 100% !important; /* 28694 prevent tables from being larger than 100% */
+}
+table.listing,
+table.listing td,
+.google-visualization-table-td {
+    border-collapse: collapse;
+    page-break-inside:  avoid;
+}
+
+td a img {
+    display: none;
+}
+
+a {
+    color: Black !important;
+    text-decoration: none !important;
+}
+
+/* #27511 temporary set important to the tabs link colors until we can get rid of the important from the link colors */
+#visual-portal-wrapper .eea-tabs > li > a {
+    color: #fff !important;
+}
+#visual-portal-wrapper .eea-tabs > li > .current, #visual-portal-wrapper .eea-tabs > li > .current:hover {
+    color: #005e7d !important;
+}
+
+a:link, a:visited {
+    color: #520;
+    background: transparent;
+}
+
+a img {
+    border: none;
+}
+
+#content {
+    white-space: normal;
+}
+
+#content a.noPrint:link:after,
+#content a.noPrint:visited:after {
+    content: '';
+}
+
+#printLogo {
+    display: block !important;
+    float: right;
+    width: 7.5cm;
+}
+
+h2.highlight {
+    padding-top: 1em;
+}
+
+#print-warning {
+    display: none;
+}
+
+.portlet-rss * {
+    clear: both;
+}
+
+
+/* indicators styles */
+.documentEditable .documentContent {
+    border:none !important;
+}
+
+#portal-column-content {
+    margin:0 !important;
+}
+
+body {
+    background-image:none !important;
+}
+
+#box-classification {
+    float:none !important;
+    page-break-inside: avoid;
+}
+
+.keyMessage {
+    page-break-inside:avoid !important;
+}
+
+/**** 29335 style tweaks for
+data-and-maps/indicators/exposure-of-ecosystems-to-acidification-3/assessment/pdf.body
+****/
+.indicator-figure-plus img {
+    max-height: 670px;
+    width: inherit;
+    float: none;
+}
+
+
+/**** 30473 style tweaks for
+data-and-maps/indicators/exposure-of-ecosystems-to-acidification-3/assessment/pdf.body
+****/
+.indicator-figure-plus .figure-title {
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+
+/**** 27537 style tweaks for
+data-and-maps/indicators/emissions-of-ozone-precursors-version-2/assessment-4
+****/
+#definition-and-units h2,
+.policy_question
+{
+    margin: 0.5em 0;
+}
+
+#definition-and-units h3 {
+    margin-bottom: 0;
+    margin-top: 0.4em;
+}
+#definition-and-units p,
+#definition-and-units ul
+{
+    margin: 0;
+}
+
+.googlechart_dashboard .googlechart-notes {
+    font: 10px Verdana, Arial, Helvetica, sans-serif !important;
+}
+
+.figure-chart-live {
+    margin-bottom: 0;
+}
+
+#frequency_of_updates {
+    font-size: 100%;
+    text-align: left;
+    padding: 0.5em 1em;
+}
+
+/* /27537 */
+
+
+/* ichimdav added from sunburst's print.css */
+
+/* Page break class for use when printing */
+.pageBreak {
+    page-break-before: always;
+    height: 1px;
+}
+
+.noPageBreak,
+.featured
+{
+  page-break-inside: avoid;
+}
+
+/* Basic styles for listing and document views */
+#content dt {
+    margin:1em 0 0.625em;
+}
+#content p, #content table {
+    margin-bottom:0.625em;
+    margin-top:0.625em;
+}
+#content .documentDescription, #content #description {
+    margin:0.5em 0 1.31em;
+}
+
+
+/* 27537 hide iframes with video found within src since wkhtmltopdf
+ can't display the video tag and the iframe provided no thumbnail as fallback */
+iframe[src*="video"] {
+    display: none;
+}
+
+/* 27883 set page with and size dimensions of page used by the Google Chrome print
+ engine, this allows us to have with the print preview an aproximation of the output
+ done with the wkhtmltopdf */
+@page {
+    size: 810px 1000px;
+    margin: 40pt 50pt;
+}
+
+/* Display related items in a simpler list way */
+#relatedItems h2 {
+    margin: 10pt 0;
+    padding: 0;
+}
+
+#relatedItems h3 {
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+#relatedItems .photoAlbumEntry {
+    clear: both;
+    margin: 0;
+    padding: 5px 0;
+    height: auto !important;
+}
+
+#relatedItems .photoAlbumEntryWrapper,
+#relatedItems .photoAlbumEntryDescription{
+  display: none;
+}
+
+#relatedItems a:link:after,#relatedItems a:visited:after {
+  content:" [" attr(href) "] ";
+}
+
+
+/* Hide all the elements that are irrelevant for printing */
+#content-core ul.formTabs,
+.standardButton,
+.googlechart_filters,
+#auto-related,
+#related-multimedia,
+.languageCodes,
+#themes-object,
+#header-holder .navbar,
+#cross-site-top,
+#portal-footer img,
+#portal-siteactions,
+.hiddenStructure,
+.hiddenElem,
+#portal-searchbox,
+#portal-globalnav .plain,
+#portal-globalnav .selected,
+#portal-globalnav,
+#portal-personaltools,
+#portal-breadcrumbs,
+#edit-bar,
+#portal-column-one,
+#portal-column-two,
+#portal-languageselector,
+.contentViews,
+.contentActions,
+.help,
+.legend,
+div.portalWarningMessage,
+div.portalStopMessage,
+div.documentActions,
+.documentByLine,
+#multimedia-highlights,
+body.frontpage .portlet-promotions,
+.moreLink,
+.skipnav,
+.portletNavigationTree,
+.visualNoPrint,
+.visualClear,
+.progressbar-viewlet,
+.eea-progressbar,
+#languageCodes,
+#commenting,
+#viewlet-below-content,
+#relatedItems .eea-tabs,
+.managePortletsLink,
+#portal-colophon,
+#kss-spinner,
+#review-history,
+#content-history,
+.listingBar,
+.link-presentation,
+input.standalone,
+.overlay,
+.managePortletsFallback,
+.close,
+.link-parent,
+.draggingHook,
+#foldercontents-order-column,
+input.context,
+.site-description,
+.table-definition-map,
+.documentExportActions,
+.sorter_ctl,
+.message_wrap,
+#viewlet-cookiepolicy,
+#popup_login_form,
+.portal-logo a,
+#login_form,
+#login-forgotten-password,
+.cookieMessage,
+#enable_cookies_message + .informationMessage,
+#topic-selector,
+.filter-topic,
+.gallery-layout-selection
+{
+    /* Hides all the elements irrelevant for printing */
+    display: none !important;
+}
+
+
+
+/* #27958 frontpage and themes print fixes */
+.gallery-ajax.visualClear {
+    display: block !important;
+}
+#gallery-content-outer,
+#gallery-content-outer-sm,
+#promo-gallery-content, #promo-gallery-content-sm {
+    height: 367px !important;
+    float: none !important;
+    page-break-inside: avoid;
+}
+#promo-gallery-content-sm li img,
+#promo-gallery-content li img {
+    width: 100%;
+}
+.right-column-area, .column-area {
+    width: 100% !important;
+    margin-top: 1em;
+    padding: 0;
+}
+
+
+/* Image alignment classes */
+.image-left {
+    float: left;
+    clear: both;
+    margin: 0.5em 1em 0.5em 0;
+    border: 0.4pt solid Black;
+}
+.image-inline {
+    float: none;
+}
+.image-right {
+    float: right;
+    clear: both;
+    margin: 0.5em;
+    border: 0.4pt solid Black;
+}
+
+dd.image-caption {
+    text-align:left;
+    padding: 0;
+    margin:0;
+}
+
+dl.captioned {
+    padding: 0.8em;
+}
+
+.newsImageContainer {
+    float:right;
+    margin: 0 0 0.5em 1em;
+    width: 16em;
+}
+
+.qrbox {
+    display: none;
+    page-break-inside: avoid;
+}
+
+.cover-image img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* </dtml-with> */

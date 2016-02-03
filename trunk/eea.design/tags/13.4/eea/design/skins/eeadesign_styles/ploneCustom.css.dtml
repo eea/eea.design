@@ -1,0 +1,1965 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* TODO HACK demarant removed description from promo-gallery for the launch of soer2015 */
+.frontpage .promo-item-desc {
+  display: none;
+}
+
+/* columns.css slider-definitions modification */
+
+div.width-3\3a 4 { width:    58.5%;  }
+div.position-1\3a 4 {margin-left:    -79.875%;}
+div.width-1\3a 4 { width: 36%;    } /* .width-1:4 */
+
+/* #16661 fallback to original width value for tinymce popups */
+#plonebrowser .width-1\3a 4 { width:    22.75%; } /* .width-1:4 */
+div.width-1\3a 2 { width:    52.25%; } /* .width-1:2 */
+
+div.position-3\3a 4 {margin-left: -36.5%;}
+/* @end columns.css slider-definitions modification */
+
+/* remove borders on image gallery from eea.jquery */
+
+#galleryView {
+    border: none;
+}
+
+/*
+** demarant: Specific faceted navigation style for certain site sections
+*/
+
+.ui-widget {
+    font-family: &dtml-fontFamily;;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-size: 12px;
+    padding: 3px;
+}
+
+#faceted-form .faceted-widget {
+    margin: 0 0 1em 0;
+    padding-bottom: 0.5em;
+}
+
+#faceted-form #center-content-area {
+    padding: 0 0.5em 0 0.5em;
+}
+
+#faceted-form .faceted-widget fieldset {
+    border-style: none !important;
+}
+
+#faceted-form .faceted-widget {
+    background-color: &dtml-lightBackgroundColor;;
+    overflow: hidden;
+}
+
+.faceted-text-widget div {
+    margin-top: 1em;
+}
+
+#faceted-form .widget-fieldset legend {
+    background-color: &dtml-corporateGreen;;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px #555555;
+}
+
+#faceted-form .widget-fieldset form,
+#faceted-form .faceted-criteria-hide-show,
+#faceted-form .faceted-criteria-reset {
+    padding-top: 1em;
+}
+
+.widget-fieldset ul li input {
+    vertical-align: middle;
+    margin-top: 2px;
+}
+
+.widget-fieldset ul li label {
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.widget-fieldset ul li span {
+    padding-left: 3px;
+    color: &dtml-tabBackgroundColor;;
+}
+
+.faceted-checkboxes-widget fieldset form ul,
+.faceted-radio-widget fieldset form ul {
+    margin: 0 0 0 5px !important;
+}
+
+#tag-cloud {
+    background-color: &dtml-lightBackgroundColor;;
+}
+
+#tag-cloud .portletFooter {
+    margin: 0 1em 1em 0;
+}
+
+.tags-cloud {
+    padding: 0.5em 1em !important;
+}
+
+/* Style for faceted used in section-publications */
+
+.faceted_letter_selected {
+    background: transparent !important;
+    font-weight: bold;
+}
+
+.faceted_letter,
+.faceted_letter:hover {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#faceted-form .tags-cloud li {
+    color: &dtml-linkColor; !important;
+}
+
+#faceted-form .tags-cloud li:hover {
+    background-color: &dtml-corporateOrange; !important;
+    color: white !important;
+}
+
+.ui-accordion .ui-state-default,
+.ui-accordion .ui-state-active {
+    margin: 0 !important;
+    background-color:  &dtml-corporateOrange;;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 0 !important;
+}
+
+#center-and-left-area {
+    clear: both !important;
+}
+
+/* c13 = the search box */
+
+.faceted-tagscloud-widget,
+.faceted-tagscloud-widget .widget-fieldset,
+.faceted-criteria-widget,
+.faceted-criteria-widget .widget-fieldset {
+    height: auto !important;
+}
+
+#faceted-top-column fieldset {
+    width: 50%;
+}
+
+.faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"],
+.faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]{
+    min-width: 70%;
+    max-width: 77%;
+    font-size: 16px;
+    padding: 5px;
+    background: #FFFFFF;
+    display: inline-block;
+}
+
+.faceted-top-widgets .faceted-widget .widget-fieldset form input[type="text"]:focus,
+.faceted-center-widgets .faceted-widget .widget-fieldset form input[type="text"]:focus {
+    -webkit-box-shadow: 1px 1px 3px #DFDFDF;
+    -moz-box-shadow: 1px 1px 3px #DFDFDF;
+    -ms-box-shadow: 1px 1px 3px #DFDFDF;
+    -o-box-shadow: 1px 1px 3px #DFDFDF;
+    box-shadow: 1px 1px 3px #DFDFDF;
+    border-color: &dtml-corporateGreen;;
+}
+
+.faceted-top-widgets .faceted-widget,
+.faceted-center-widgets .faceted-widget {
+    background-color: &dtml-lightBackgroundColor;;
+    min-height: 110px;
+}
+
+.faceted-top-widgets .faceted-widget .faceted-textwidget-place-all,
+.faceted-top-widgets .faceted-widget .faceted-textwidget-place-current,
+.faceted-center-widgets .faceted-widget .faceted-textwidget-place-all,
+.faceted-center-widgets .faceted-widget .faceted-textwidget-place-current {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+}
+
+.faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton {
+    color:#fff;
+    background-color: &dtml-corporateBlue;;
+    font: bold 12px &dtml-fontFamily;;
+    padding: 7px 11px;
+    display: inline-block;
+    border: 1px solid #DCDCDC;
+    margin-left: -4px;
+}
+.faceted-top-widgets .faceted-widget .widget-fieldset form .searchButton:hover,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .searchButton:hover {
+    background-color:&dtml-corporateOrange;;
+    color: #FFFFFF;
+    cursor:pointer;
+    border-color: #999999;
+    text-shadow: none;
+}
+
+.faceted-resultsperpage-widget select {
+    padding: 3px;
+    width: 50px;
+}
+
+.faceted-criteria dd {
+    margin-left: 22px !important;
+}
+
+.faceted-criteria-toggle-button,
+.faceted-criteria-count-holder {
+    position: relative;
+    top: -10px;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.faceted-criteria-count-holder {
+    display: none;
+}
+
+/* standard search button inside any of the portal columns*/
+
+#portal-columns input[type="submit"],
+.standardButton,
+.qq-upload-button,
+.searchButton,
+input.plonebutton,
+input.context,
+input.destructive,
+input.standalone {
+    color:#fff !important;
+    background-color: &dtml-corporateBlue;;
+    background-image: none;
+    font: bold 12px &dtml-fontFamily;;
+    padding: 7px 11px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 1px 1px #000;
+    border: 1px solid #346F83;
+}
+
+
+#portal-columns input[type="submit"]:hover,
+.standardButton:hover,
+#content a.standardButton:hover,
+.qq-upload-button:hover,
+.searchButton:hover,
+input.context:hover,
+input.destructive:hover,
+input.standalone:hover {
+    background-color:&dtml-corporateOrange;;
+    color: #FFFFFF !important;
+    cursor:pointer;
+    border-color: #999999;
+    text-shadow: none;
+}
+
+.standardButton a, .standardButton a:hover, .standardButton a:visited {
+    color: #FFFFFF !important;
+}
+
+
+.faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
+.faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
+.faceted-center-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label{
+    display: inline;
+    float: none;
+    font-size: 11px;
+    line-height: 13px;
+    padding-bottom: 0;
+    width: 120px;
+}
+
+.faceted-results {
+    padding: 0;
+}
+
+/* end of specific faceted navigation style */
+
+/* ichimdav: these styles were previously in public.css */
+
+/* specific SOER2010 design */
+
+/* #5175 soer search portlet fix */
+#soerSearchBox .portletHeader {
+    float: left;
+}
+#soerSearchBox .moreLink {
+    float: right;
+    margin-top: 1em;
+}
+
+#soer-search-area #faceted-text-search {
+    float: left;
+    margin-right: 1em;
+}
+#soer-search-area #topic-search {
+    float: right;
+    width: 308px;
+}
+
+.section-soer #boxes .portlet,
+.section-soer-draft #boxes .portlet {
+    overflow: hidden;
+}
+
+.section-signals #nonfolderish-subfolder-view-items {
+    display: none;
+}
+
+/* folder_tabs_view and folder_accordion_view styling
+ * as well as generic tabs and accordion styling */
+#visual-portal-wrapper .eea-tabs {
+    padding: 0 10px 0 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: normal!important;
+    list-style: none none;
+    background-color: &dtml-corporateBlue;;
+}
+
+#whatsnew-gallery {
+    position: relative;
+}
+
+#topic-selector {
+    position: absolute;
+    margin-top: 2em;
+    left: 0;
+    margin-left: 8em;
+}
+
+#visual-portal-wrapper .eea-tabs > li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#visual-portal-wrapper .eea-tabs > li > a {
+    display: block;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 8px 8px;
+}
+#visual-portal-wrapper .eea-tabs.two-rows > li > a {
+    height: 40px;
+    white-space: normal;
+    max-width: 195px;
+}
+
+#visual-portal-wrapper .eea-tabs > li > a:hover {
+    color: &dtml-corporateBlueTwo;;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    background-color: &dtml-greyBackgroundColor;;
+}
+#visual-portal-wrapper .eea-tabs > li > .current,
+#visual-portal-wrapper .eea-tabs > li > .current:hover {
+    cursor: default;
+    color: &dtml-corporateBlueTwo;;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    background-color: &dtml-greyBackgroundColor;;
+}
+
+/* Clear floated elements */
+#visual-portal-wrapper .eea-tabs:before,
+#visual-portal-wrapper .eea-tabs:after {
+    display: table;
+    content: " ";
+}
+#visual-portal-wrapper .eea-tabs:after {
+    clear: both;
+}
+
+.eea-tabs-panel {
+    padding: 20px;
+    background-color: &dtml-greyBackgroundColor;;
+    overflow: auto;
+}
+
+.eea-tabs-panel .listingBar {
+    margin: 0 0 1em 0;
+    padding: 0 1em;
+}
+
+.eea-tabs-panel .portalMessage {
+    margin-top: 0;
+    position: relative;
+    top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.eea-tabs-panels {
+    border: 1px solid #DDD;
+    border-top: 0;
+    background-color: &dtml-greyBackgroundColor;;
+    padding: 10px;
+}
+
+.eea-accordion-panels {
+    border: 1px solid #DDD;
+    border-top: 0;
+    padding: 10px;
+}
+
+/* TODO fix padding differences */
+#relatedItems .eea-tabs-panels {
+    padding: 1px;
+}
+
+/* eea accordion styles */
+.eea-accordion-panels {
+    padding: 0;
+}
+
+.eea-accordion-panel .pane {
+    padding: 10px;
+    overflow: hidden;
+}
+.eea-accordion-title, .eea-accordion-panel > h2 {
+    background: #E2E2E2 none;
+    border: 1px solid #E0E0E0;
+    margin: 0;
+    font-size: 115%;
+    color: #00446A;
+    line-height: 3em;
+    padding: 0 0.5em;
+    font-weight: bold;
+}
+.eea-accordion-title-manual-icons {
+    text-shadow: none;
+    padding: 0 1em;
+    margin: 2px 0 0 0; /* #19875; 2px is needed because of a visual bug where the floated icons are not moved to the margin */
+    line-height: 3em;
+    cursor: pointer;
+}
+
+.eea-accordion-panel > h2 .eea-icon-right:before,
+.eea-accordion-title > .eea-icon-right:before {
+    content: "&dtml-eea-icon-chevron-left;";
+}
+
+.eea-accordion-panel h2:hover > .eea-icon-right:before,
+.eea-accordion-panel .current > .eea-icon-right:before {
+    content: "&dtml-eea-icon-chevron-down;";
+}
+
+.eea-accordion-title:hover, .eea-accordion-panel > h2:hover {
+    cursor: pointer;
+    background-color: #F0F0F0;
+}
+
+.eea-accordion-title.current,
+.eea-accordion-panel > h2.current {
+    background-color: #F0F0F0;
+}
+
+.eea-accordion-title a,
+.eea-accordion-panel > h2 a {
+    color: #00446A !important;
+}
+
+/* Override jquery.ui style */
+.ui-widget-content a {
+    color: &dtml-linkColor;;
+}
+
+/* Inflexible tooltips */
+
+.eea-tooltip-markup-top,
+.eea-tooltip-markup-bottom,
+.eea-tooltip-markup-left,
+.eea-tooltip-markup-right {
+    display: none;
+    font-size: 12px;
+    height: 70px;
+    width: 160px;
+    padding: 25px;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+}
+.eea-tooltip-markup-top {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_top.png);
+}
+.eea-tooltip-markup-bottom {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_bottom.png);
+    margin-top: 15px;
+}
+.eea-tooltip-markup-left {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_left.png);
+    padding-right: 45px;
+}
+.eea-tooltip-markup-right {
+    background: transparent url(&dtml-portal_url;/++resource++tools/green_arrow_right.png);
+    padding-left: 45px;
+}
+
+/* Flexible tooltips */
+
+.eea-tooltip-markup {
+    display: none;
+    z-index: 100;
+}
+
+.eea-tooltip-markup .tooltip-box-br {
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-bottom-right.png) no-repeat right bottom;
+    position:relative;
+    max-height:1000px;
+    min-height:50px;
+    min-width:100px;
+    width:250px;
+    padding-bottom:3px;
+}
+
+.eea-tooltip-markup .tooltip-box-tl {
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-top-left.png) no-repeat left top;
+    position:relative;
+    left:-30px;
+    top:-20px;
+    margin-right:-19px;
+    max-height:1000px;
+    min-height:50px;
+    min-width:100px;
+    width: 269px;
+}
+
+.eea-tooltip-markup .tooltip-box-rcontent {
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-left.png) no-repeat left center;
+    position: relative;
+    top: 11px;
+    padding:2em 1em 2em 3em;
+    text-align:justify;
+    font-size: 12px;
+    color:#ffffff;
+}
+
+.eea-tooltip-markup .tooltip-box-lcontent {
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-right.png) no-repeat right center;
+    position: relative;
+    top: 11px;
+    right: -31px;
+    padding:2em 3.5em 2em 1em;
+    text-align:justify;
+    font-size: 12px;
+    color:#ffffff;
+}
+
+.eea-tooltip-markup .tooltip-box-bcontent {
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-top.png) no-repeat center top;
+    color:#FFFFFF;
+    font-size:12px;
+    left:10px;
+    padding:2.5em 1.5em 1em 2.5em;
+    position:relative;
+    text-align:justify;
+    top:-2px;
+}
+
+.eea-tooltip-markup .tooltip-box-tcontent {
+    background: transparent url(&dtml-portal_url;/++resource++tools/x-green-arrow-bottom.png) no-repeat center bottom;
+    bottom:-22px;
+    color:#FFFFFF;
+    font-size:12px;
+    left:10px;
+    padding:0.5em 1.5em 2.5em 2.5em;
+    position:relative;
+    text-align:justify;
+}
+
+#print-warning {
+    display: none;
+}
+
+.documentContent {
+    padding: 0 0 2em 0;
+}
+#content-core {
+    clear:both;
+}
+/* related styles amd flowplayer videos style */
+
+.media-player {
+    text-align:center;
+}
+
+.related-in-content-area .portlet {
+    margin-left: 2em;
+}
+
+#auto-related .tileImage,
+#related-multimedia .tileImage {
+    float: none;
+}
+
+#auto-related .portletItem {
+    padding-bottom:0.5em;
+    clear: both;
+}
+
+/* #5157 */
+#auto-related .embeddedMedia {
+    clear: none !important;
+}
+
+#auto-related h2,
+#related-multimedia h2,
+#related-pages h2 {
+    margin-top: 0;
+}
+
+#auto-related dd {
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+
+#auto-related dd.portletFooter {
+    padding:1em;
+}
+
+#auto-related dt {
+    background-color:transparent;
+    padding-left: 0;
+}
+
+
+/* Links with differently colored link underlines - only for content */
+#content span.link-external  {
+    background: none;
+    padding: 0;
+}
+
+.flowplayer a,
+.documentContent ul li a,
+.documentContent td a {
+    display: inline;
+    text-decoration: none !important;
+}
+
+/* 5455 fix publicationMessage link color */
+#content dl.publicationMessage a {
+    border: 0;
+    color: &dtml-linkColor;;
+}
+dl a:hover, dd a:hover, dt a:hover {
+    color: &dtml-linkUnderlineHoverColor; !important;
+}
+
+/* used by datamaps_view set on SITE/data-and-maps */
+.shortcut-light {
+    background: transparent;
+    margin-bottom: 1em;
+    text-align: center;
+}
+#organisations-content {
+    background: url("&dtml-portal_url;/portal_depiction/organisation/image_thumb") no-repeat 12px 10px &dtml-lightBackgroundColor;;
+    padding: 25px 20px 50px 90px;
+    text-align: left;
+}
+#semantic-content {
+    background: url("&dtml-portal_url;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
+    padding: 25px 20px 35px 80px;
+    text-align: left;
+}
+#faceted-text-search input[type="text"] {
+    font-size: 16px;
+    padding: 5px;
+    min-width: 70%;
+    max-width: 77%;
+}
+/* /used by datamaps_view set on SITE/data-and-maps */
+
+/* used by dc_view and portlet_datacenter_overview */
+#theme-datacentre {
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat;
+    padding: 25px 0px 25px 66px;
+    height: 56px;
+    background-position: -401px -469px;
+}
+/* /used by dc_view and portlet_datacenter_overview */
+
+#content .featured p:last-child {
+    margin-bottom: 0;
+}
+a.moreLink {
+    border: 0 !important;
+    background: transparent url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll -441px -9px;
+    display: inline-block;
+    padding-left: 25px;
+    height: 18px;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* End links */
+
+/* The edit form elements */
+.field {
+    top: 0;
+    left: 0;
+    margin: 0 0 1em 0;
+}
+
+.field .field {
+    margin: 1em 0 0 0;
+}
+
+/* bootstrap also has a label class which is white while plone uses black */
+.label {
+    padding: 0;
+    font-size: inherit;
+    color: #000;
+    text-align: left;
+    white-space: inherit;
+}
+
+.fieldRequired {
+    background: url(&dtml-portal_url;/required.gif) center left no-repeat;
+    padding: 0 0 0 8px;
+    color: &dtml-backgroundColor;;
+}
+
+
+.formHelp {
+    font-size: 90%;
+    color: &dtml-discreetColor;;
+    margin: 0 0 0.2em 0;
+    display: block;
+}
+
+.formHelp:hover {
+    color: &dtml-fontColor;;
+    cursor: default;
+}
+/* End edit form elements */
+
+/* #23500 allow the control panel widget to be placed outside of their context
+    by having overflow visible for screen with size larger than 1024px
+*/
+#visual-portal-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    clear: both;
+    position: relative;
+    overflow: visible;
+}
+
+/* Logo properties */
+#header-holder {
+    width: 100%;
+    clear: both;
+    display: block;
+    position: relative;
+}
+#header-holder .navbar {
+    box-shadow: 0 1px 10px #005078;
+    border: 0;
+}
+
+#portal-top {
+    background-color: #FFFFFF;
+}
+
+#cross-site-top {
+    background-color: &dtml-corporateBlue;;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#portal-header {
+    display: block;
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 90px;
+}
+
+#printLogo {
+    padding: 0.9em 0 0 0.5em;
+    display: block;
+    width: auto;
+    height: 55px;
+}
+.portal-logo {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+
+}
+
+.portal-logo a {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.is-eea-hidden {
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    display: none !important;
+}
+
+.shadow {
+    -webkit-box-shadow: 1px 1px 5px #afafaf;
+    -moz-box-shadow: 1px 1px 5px #afafaf;
+    -ms-box-shadow: 1px 1px 5px #afafaf;
+    -o-box-shadow: 1px 1px 5px #afafaf;
+    box-shadow: 1px 1px 5px #afafaf;
+}
+
+/* drop down panels for portal siteactions */
+.panel {
+    display: none;
+    z-index: 600;
+    background: transparent;
+    border: 0;
+}
+
+.panel-top {
+    margin: auto auto;
+    background: transparent url(&dtml-portal_url;/panel_arrow.png);
+    width: 50px;
+    height: 25px;
+    position: relative;
+    top: 2px;
+}
+
+.panel .portletFooter {
+    margin-top: 1em;
+}
+.panel-content {
+    background: white;
+    color: black;
+    clear: both;
+    padding: 10px;
+    border: 1px solid #BABBB8;
+}
+
+#tip-article-language {
+    width: 400px;
+}
+#tip-article-language .panel-top {
+    float: right;
+}
+
+@media screen {
+    #portal-columns {
+        padding-top: 1em;
+        min-width: 1024px;
+    }
+}
+
+#cross-site-top .panel .portlet-subscribtion {
+    margin: 0;
+}
+
+#cross-site-top .panel .portlet-subscribtion .portletFooter {
+    margin-bottom: 0;
+}
+
+#cross-site-top .panel .portlet,
+#cross-site-top .panel .portletHeader {
+    background: transparent;
+}
+
+#tip-siteaction-chooselang li {
+    display: list-item;
+}
+
+#tip-siteaction-contactus {
+    font-size: 125%;
+}
+
+#tip-externalsites-networks, #tip-externalsites-etcssites {
+    width: 400px;
+    left: 0 !important;
+}
+
+.networkSites dt {
+    background: none !important;
+}
+
+/* Searchbox style and positioning */
+.searchSection {
+    left: -5px;
+    position: relative;
+}
+
+#portal-searchbox {
+    float: right;
+    clear: right;
+    margin: 25px 0 0 0;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+#portal-searchbox a {
+    color: &dtml-linkColor;;
+    border: none;
+    font-size: 85%;
+}
+
+#portal-searchbox .searchButton {
+    background: &dtml-corporateBlue; none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    font-style: normal;
+    position: relative;
+    width: 80px;
+    margin-left: -5px;
+}
+
+#portal-searchbox .searchButton:hover {
+    background-position: -385px -115px !important;
+}
+
+#portal-searchbox input, .searchField,
+#content .searchField
+{
+    height: 30px;
+    padding: 0;
+    background-position: 0 -82px;
+    font-family: &dtml-fontFamily;;
+    font-style: italic;
+    color: #777777;
+    border: none;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+#searchbox_terminology input[type="text"],
+.searchField {
+    width: 286px;
+}
+
+#searchbox_terminology input:focus,
+#portal-searchbox input:focus,
+.searchField:focus {
+    font-style: normal;
+    color: #000000;
+    background-color: transparent;
+    outline-color: transparent;
+}
+
+#portal-searchbox .searchButton:focus {
+    background-color: &dtml-corporateOrange;;
+}
+
+.site-description {
+    /* hide until decided on right tagline */
+    display: none;
+}
+
+#search_glossary_link, #search_advanced_link {
+    text-decoration: underline;
+    font-size: 11px;
+}
+
+#search_glossary_link:hover, #search_advanced_link:hover {
+    text-decoration: none;
+}
+
+/* Site-wide action menu - font size, contact, index, sitemap etc */
+#portal-externalsites,
+#portal-siteactions {
+    margin: 4px 0 4px 0;
+    float: right;
+    padding: 0 10px 0 0;
+    clear: none;
+}
+
+/* use font awesome unicode icons */
+/* daviz -edit sets eea-icon color to #000 */
+#portal-siteactions #siteaction-chooselang .eea-icon {
+    color: #FFF;
+}
+/* big specificity because we remove icon within mobile view */
+#portal-siteactions #siteaction-chooselang .eea-icon:before {
+    content: "&dtml-eea-icon-flag-o;";
+}
+
+#siteaction-login .eea-icon:before {
+    content: "&dtml-eea-icon-sign-in;";
+}
+
+#portal-externalsites {
+    float: left;
+    margin-left: 0.5em;
+}
+
+#portal-externalsites li,
+#portal-siteactions li {
+    display: inline;
+    padding: 0 5px;
+}
+
+#portal-externalsites li a,
+#portal-siteactions li a {
+    color: #FFF;
+    font-size: 11px;
+}
+
+#siteaction-contactus {
+    font-weight: bold;
+}
+
+#portal-breadcrumbs {
+    /* The path bar, including breadcrumbs and add to favorites */
+    line-height: 1.4;
+    margin: 3px 0 0 0;
+    position: relative;
+    clear: both;
+}
+
+.breadcrumbSeparator {
+    font-size: 120%;
+}
+
+#region-content {
+    position: relative;
+}
+
+.documentActions li, .languageCodes li {
+    display: inline-block !important;
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+.languageCodes {
+    display: block;
+}
+
+#languageCodes {
+    max-width: 80%;
+}
+
+#article-language {
+    margin-top: -40px;
+    background: url("&dtml-portal_url;/sprite-eeaimages.png") no-repeat scroll -430px -35px transparent;
+    padding-left: 35px;
+    position: absolute;
+    right: 0;
+}
+
+.width-full #article-language {
+    min-width: 180px;
+}
+
+.documentByLine {
+    font-size: &dtml-fontSmallSize;;
+    font-weight: normal;
+    color: &dtml-discreetColor;;
+    margin: 0 0 0.5em 0;
+
+}
+
+.documentByLine .portalType, .listHead {
+    font-weight: bold;
+}
+
+.documentByLine .docDate {
+    padding-right: 0.5em;
+}
+
+.documentByLineAuthor:nth-child(2) span:after,
+.documentByLineAuthor a:after, .documentByLineContributor a:after {
+    content: ',';
+}
+
+.documentByLineAuthor:nth-child(2) a:after,
+.documentByLineAuthor:last-child a:after, .documentByLineContributor:last-child a:after {
+    content: '';
+}
+
+
+/* Batch selector */
+.listingBar {
+    background-color: &dtml-globalBackgroundColor;;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-transform: &dtml-textTransform;;
+    vertical-align: top;
+    margin: 1em 0;
+    font-size: 11px !important;
+    clear: both;
+}
+
+.listingBar .previous,
+.listingPrevious {
+    text-align: left;
+    float: left;
+    margin-right: 1em;
+}
+
+.listingBar .next,
+.listingNext {
+    text-align: right;
+    float: right;
+    margin-left: 1em;
+}
+
+/* tileItem used in related and eea-tabs listings */
+.tileItem {
+    border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
+    padding-top: 0.5em;
+}
+
+.tileHeadline {
+    border: none;
+    font-size: 110%;
+    font-weight: bold;
+    background: none;
+    margin:0;
+    padding-left:0;
+}
+
+#relatedItems .tileHeadline {
+    font-size: 130%;
+    margin: 0.6em 0;
+}
+
+.tileContent {
+    display: table-cell;
+}
+
+.tileImage, #content a.tileImage {
+    float: left;
+    margin: 1em 1em 1em 0;
+    border: 1px solid &dtml-globalBorderColor;;
+}
+
+.gallery-listing .tileItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.tileFooter {
+    clear: both;
+    display: block;
+}
+
+
+/* relatedItems */
+#relatedItems  {
+    margin-bottom: 2em;
+    clear: both;
+    overflow: hidden;
+}
+/* #19315 fix floating issues */
+#relatedItems  h3 {
+    clear: both;
+}
+
+/* Useful deviations from regular style on elements */
+
+/* List classes without markers */
+ul.visualNoMarker,
+ol.visualNoMarker {
+    list-style: none none;
+    margin: 0.5em 0 0 0;
+    line-height: 1em;
+}
+
+.feedButton {
+    display: block;
+    float: right;
+    margin-top: 1px;
+}
+
+/* Sitemap styles */
+#portal-sitemap {
+    margin: 0;
+    font-size: 90%;
+}
+
+#portal-sitemap > li {
+    border: 0;
+}
+
+/* Accessibility and visual enhancement elements */
+.hiddenStructure {
+    display: block !important;    /*  prefix with important since many times specificity will override this display setting */
+    background: transparent none; /* safari bug */
+    border: none;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px 0 0 -1px;
+    width: 1px;
+}
+
+option.hiddenStructure {
+    display: none;
+}
+.contentViews .hiddenStructure,
+.contentActions .hiddenStructure {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+}
+.contentActions {
+    clear: both;
+}
+
+.inline-block {
+    display: inline-block;
+}
+#content .inline-block li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+/* Link types */
+
+.link-plain {
+    background-image: none;
+    padding: 0;
+}
+
+.link-parent {
+    display: block;
+    background: transparent url(&dtml-portal_url;/arrowUp.gif) 4px 5px no-repeat;
+    padding: 1px 0 10px 16px;
+    font-size: &dtml-fontSmallSize;;
+    text-decoration: none;
+}
+
+.link-external {
+    background: transparent url(&dtml-portal_url;/link_icon.gif) 3px 1px no-repeat;
+    padding: 1px 0 1px 19px;
+}
+
+.link-feed, .link-rss, .link-rdf, .link-xml {
+    background: transparent url(&dtml-portal_url;/rss.gif) 0 1px no-repeat;
+    padding: 1px 0 1px 18px;
+}
+
+.link-comment {
+    background: transparent url(&dtml-portal_url;/discussionitem_icon.gif) center left no-repeat;
+    padding: 1px 0 1px 16px !important; /* value:  */
+}
+
+.link-anchor {
+    color: &dtml-discreetColor;;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* Common file types icon */
+.link-pdf {
+    background: transparent url(&dtml-portal_url;/pdf.png) 0 50% no-repeat;
+    padding: 2px 0 2px 16px;
+}
+.link-xlb, .link-xls, .link-xlt, .link-csv, .link-tsv {
+    background: transparent url(&dtml-portal_url;/xls.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
+.link-json {
+    background: transparent url(&dtml-portal_url;/script_code.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
+.link-exhibit {
+    background: transparent url(&dtml-portal_url;/script_code_red.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
+.link-table {
+    background: transparent url(&dtml-portal_url;/table.png) 0 50% no-repeat;
+    padding: 2px 0 2px 20px;}
+
+/* TinyMCE image alignment classes */
+.image-left {
+    float: left;
+    clear: both;
+    margin:  2em 1em 0.5em 0;
+    border: 0;
+}
+
+.image-inline {
+    float: none;
+}
+
+.image-right {
+    float: right;
+    clear: both;
+    margin: 0.5em;
+    border: 0;
+}
+
+/* media/audiovisuals/coping-in-a-crisis-europes-civil-protection-strategy/file_view
+   old video files, consider to remove these styles as most videos now have youtube altenatives */
+.media-single-item {
+    margin: 1em 0;
+}
+.media-single-item dt {
+    float: left;
+    padding-right: 0.5em;
+}
+.media-single-item dd,
+.media-single-item dt {
+    color: #9a9a99;
+    font-size: 90%;
+    line-height: 1.1;
+    margin: 0 0 0.2em;
+}
+.richDocumentDescription {
+    margin-top: 1em;
+    width: 65%;
+}
+
+/* portal-column styles */
+#portal-column-content  {
+    min-width: 600px;
+}
+
+.visualPadding {
+    padding: 0 1em 1em 1em;
+}
+#portal-column-two .visualPadding {
+    padding: 0 1em 1em 0;
+}
+
+#portal-column-two {
+    margin-top: 75px;
+    min-width: 350px;
+}
+
+/* TinyMCE Fixes */
+/* Fix for TinyMCE width being larger than content area */
+.ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr,
+.ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *,
+.ploneSkin .mceText {
+    white-space: normal !important;
+}
+/* #14814 enlarged mceListBox style links */
+body .ploneSkin .mce_formatPreview a {
+    font-size: 115%;
+}
+.mceContentBody  {
+    font-size: 80% !important;
+}
+
+/* #16661; override px based width from ui.css of tinymce */
+/* #18189 override inline style that gets applied when resizing browser window */
+.mceLayout,
+.ploneSkin iframe {
+    width: 100% !important;
+    min-height: 400px;
+}
+
+.ploneSkin table.mceLayout td.mceToolbar {
+    height: 85px;
+}
+
+/* #18086: Improvements to the tinymce fullscreen mode
+**  center editor since we have a fixed width layout
+*/
+.mceEditor.mceFullScreen {
+    background-color: #ececec !important; /* in order to override ui.css */
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mceLayout.mceFullScreen {
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+/* #16661; fix text color for disabled tinymce inputs */
+input[disabled], #plonebrowser input[disabled] {
+    color: #6D6D6D !important;
+    text-shadow: none !important;
+}
+
+/* #18352 remove after fix is applied within Products.TinyMCE
+   fixes Chrome popup dialog zoom issue by setting a width to 100% */
+.plonepopup .mceMiddle span {
+    top:29px;
+    left:5px;
+    height:100%;
+    width:100%;
+    background:#FFF;
+}
+
+.ploneSkin .mceButton.mce_fullscreen {
+    width: 170px !important; /* 20461; enlarge fullscreen button since it contains description text */
+}
+.mce_fullscreen > .mceVoiceLabel {
+    position: relative;
+    top: -18px;
+    display: block !important;
+    font-size: 12px;
+    left: 21px;
+}
+
+/* #9499 give the style selector popup a minimum width */
+.ploneSkin .mceMenu {
+    min-width: 220px;
+}
+/* #18785 increased the site of the list box */
+.ploneSkin table.mceListBox .mceText {
+    min-width: 207px;
+}
+
+.mceContentBody .presentationBreak, .mceContentBody .pageBreak {
+    background-color: &dtml-corporateBlueBackgroundColor;;
+    border-bottom: 3px solid #000;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/* #16879,#20255 highlight class only on TinyMCE edit */
+.mceContentBody .markPresentationalText,
+.mceContentBody .pageBreak,
+.mceContentBody .excludeFromPDF {
+    background-color: #ffb;
+}
+
+.mceContentBody .presentationBreak:before {
+    content: "Presentational Break for splitting a slide while keeping the same header";
+}
+
+.mceContentBody .pageBreak:before {
+    content: "Print Page Break used for breaking a page when printing";
+}
+
+.mceContentBody .excludeFromPDF:before,
+.mceContentBody .noPageBreak:before {
+    margin-right: .3em;
+    padding: .3em;
+    background-color: &dtml-corporateBlueBackgroundColor;;
+    font-family: 'FontAwesome';
+    content: "Excluded from PDF \f0a4";
+}
+
+.mceContentBody .noPageBreak {
+    background-color: &dtml-corporateBlueBackgroundColor;;
+}
+.mceContentBody .noPageBreak:before {
+    content: "No page break \f0a4";
+}
+
+/* #16916; hide the background images on view pages as they should only appear within the
+tinyMCE editor or the presentation_view */
+.presentation-images {
+    display: none;
+}
+.mceContentBody .presentation-images {
+    display: block;
+}
+
+/* Editing Form fixes */
+/* #5267 display form fields for translated items */
+form[name="edit_form"] > table > tbody > tr {
+    display: table-row;
+    margin-left: 1em;
+}
+form[name="edit_form"] > table > tbody > tr > td {
+    display : inline-block;
+    margin-left : 1em;
+    width: 48.6% !important;
+}
+form[name="edit_form"] table {
+    display: table !important;
+}
+
+/* #5454; we have required spans where we don't need the background image */
+.no-bg:after {
+    background-image: none !important;
+    content: "" !important;
+}
+
+/* outdated and cookie policy objects */
+/* #4669 display outdated browser message */
+#outdated_wrap, .message_wrap {
+    background-color: #F3F3F3;
+    width: 100%;
+    border-top: solid 1px #778899;
+    border-bottom: solid 1px #778899;
+    text-align: center;
+    padding:5px 0 5px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+}
+
+.message_wrap {
+    text-align: left;
+}
+.message_wrap p {
+    margin-bottom: 0.2em;
+}
+
+#outdated, .message_body {
+    width: 960px;
+    margin: 0 auto;
+}
+.message_images .eea-icon {
+    font-size: 1.7em;
+    color: &dtml-headingColor;;
+}
+
+#outdated h3,  .message_wrap h3 {
+    border: 0;
+    margin: 0;
+}
+
+#outdated li {
+    float: left;
+    background: url('&dtml-portal_url;/browsers.png') no-repeat;
+    width: 50px;
+    height: 71px;
+    overflow: hidden;
+    margin-left: 25px;
+}
+
+#outdated li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 45px;
+}
+
+#outdated_text {
+    width: 30%;
+    float: left;
+    border-right: 1px dotted lightGrey;
+    padding-right: 3em;
+}
+
+#outdated_ff {
+    background-position: -200px 0 !important;
+}
+#outdated_ie {
+    background-position: -50px 0 !important;
+}
+
+#outdated_chrome {
+    background-position: -150px 0 !important;
+}
+
+#outdated_safari {
+    background-position: -100px 0 !important;
+}
+
+#cms-browsers-links ul li {
+    display: list-item;
+    list-style-type: none;
+}
+
+
+/* #5533 new style collection style tweaks */
+.queryindex, .addIndex, .queryoperator, .addOperator {
+    width: 105px !important;
+    padding: 5px;
+}
+.queryindex, .addIndex {
+    width: 150px !important;
+}
+.queryresults {
+    float: none !important;
+}
+
+input.queryvalue {
+    width: 200px !important;
+    padding: 6px 0;
+}
+
+.multipleSelectionWidget dd {
+    width: 620px !important;
+    height: 350px;
+    left: 0;
+    z-index: 600;
+    position: absolute;
+    -webkit-column-count: 3;
+    column-count: 3;
+}
+
+.multipleSelectionWidget dt {
+    display: block !important;
+    padding: 6px 2px;
+}
+
+.multipleSelectionWidget label {
+    width: 195px;
+    margin-left: 5px;
+    float: left;
+}
+
+
+.ArchetypesQueryWidget .criteria {
+    margin: 0 0 0.5em 0 !important;
+}
+
+/* #5455 subfolder navigation styling */
+#subfolders_listing {
+    font-weight: bold;
+    margin: -1em 0 0 -0.5em !important;
+    padding: 0;
+    min-height: 37px;
+    height: 3.5em;
+}
+#subfolders_listing > li {
+    float: left;
+    padding: 0.5em 0;
+    position: relative;
+    margin: 5px 0;
+    min-width: 60px;
+}
+#subfolders_listing a {
+    padding: 0.8em;
+}
+#subfolders_listing a:hover {
+    color: #8e004d;
+    text-decoration: underline;
+}
+a#subfolders_more_a, .more_dropdown_a {
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% transparent;
+    padding-right: 2.5em;
+}
+
+#subfolders_listing #subfolders_more_a:hover, #subfolders_listing .moreHover, .more_dropdown_a .moreHover {
+    background: url("&dtml-portal_url;/accordion_down.png") no-repeat scroll 95% 50% #FFF !important;
+    position: relative;
+    z-index: 1010;
+}
+
+#subfolders_listing .moreHover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border: 1px solid #666666;
+    border-bottom: medium none;
+}
+
+#subfolders_listing ul a {
+    min-width: 140px;
+    display: block;
+}
+
+#subfolders_listing ul {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #666;
+    margin: 8px 0;
+    padding: 0;
+    z-index: 1005;
+    left: -3000px;
+    list-style: none;
+}
+
+#subfolders_listing > li:hover ul {
+    left: 0;
+}
+
+.arrowUp {
+    width: 0;
+    height: 0;
+    border-left: 10px solid rgba(255, 255, 255, 0);
+    border-right: 10px solid rgba(255, 255, 255, 0);
+    border-bottom: 10px solid #FFF;
+    display: block;
+    position: relative;
+    top: -5px;
+    left: 50%;
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.hiddenElem {
+    display: none !important;
+}
+
+/* 9485 login popup */
+#popup_login_form {
+    position: absolute;
+    right: 0;
+    background-color: #FFF;
+    z-index: 500;
+    padding: 1em;
+    -webkit-box-shadow: 0px 2px 2px #333;
+    -moz-box-shadow: 0px 2px 2px #333;
+    -ms-box-shadow: 0px 2px 2px #333;
+    -o-box-shadow: 0px 2px 2px #333;
+    box-shadow: 0px 2px 2px #333;
+}
+
+/* customize form.css rule in order to remove center alignment */
+body.template-login_form #content,
+.pb-ajax #login-form  {
+    text-align: left;
+}
+#fieldset-openid-login label, #login-form label {
+    width: 6em; /* was 10em on stock plone */
+}
+
+#login_form,
+#login-forgotten-password {
+    margin-left: 6.5em;
+}
+#popup_login_form #login-form input {
+    font-size: 100%;
+}
+#popup_login_form #login-forgotten-password {
+    margin-left: 6.5em;
+}
+
+/* #10182 pagination style */
+.pagination .current:before {
+    content: "[";
+}
+.pagination .current:after {
+    content: "]";
+}
+.page:before,
+.page:after {
+    display: table;
+    content: " ";
+}
+.page:after {
+    clear: both;
+}
+
+.spinner {
+    text-align: center;
+}
+
+/* #17702 Make diff tool look more familiar to users */
+.fieldDiff .delete, #diff-table .diff_sub {
+    color: red;
+    text-decoration: line-through;
+    background-color: transparent;
+}
+
+.fieldDiff .insert, #diff-table .diff_add {
+    color: green;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.tagInsert, .tagDelete {
+    display: none;
+}
+
+/* EUNIS navigation proposal, see #16978 */
+
+@media screen {
+    .tabbedmenu ul {
+        padding: 0 10px 0 0!important;
+        margin: 0!important;
+        font-size: 12px;
+        line-height: normal!important;
+        list-style-image: none!important;
+        list-style-type: none!important;
+        background-color: &dtml-corporateBlue;;
+    }
+    .tabbedmenu ul > li {
+        float: left;
+        margin: 0!important;
+        padding: 0!important;
+    }
+    /* Clear floated elements */
+    .tabbedmenu ul:before,
+    .tabbedmenu ul:after {
+        display: table;
+        content: " ";
+    }
+    .tabbedmenu ul:after {
+        clear: both;
+    }
+    .tabbedmenu ul > li > a {
+        display: block;
+        color: #fff!important;
+        text-shadow: 1px 1px 1px #000000;
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 8px 8px;
+    }
+    .tabbedmenu.two-rows ul > li > a {
+        height: 40px;
+        white-space: normal;
+        max-width: 150px;
+    }
+    .tabbedmenu ul > li > a:hover {
+        color: &dtml-corporateBlueTwo;!important;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px #FFFFFF;
+        background-color: &dtml-greyBackgroundColor;;
+    }
+    .tabbedmenu ul > li > a.current,
+    .tabbedmenu ul > li > a.current:hover {
+        cursor: default;
+        color: &dtml-corporateBlueTwo;!important;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px #FFFFFF;
+        background-color: &dtml-greyBackgroundColor;;
+    }
+    .border-tabbedmenu,
+    .tabbedmenu-panel {
+        border: 1px solid #DDD;
+        border-top: 0;
+        padding: 10px;
+    }
+}
+
+.qrbox {
+    display: none;
+}
+
+/* download.pdf extra clicking prevention styles */
+a.downloading {
+    background: transparent url(&dtml-portal_url;/icon-downloading.gif) no-repeat center center;
+}
+
+a.downloading img {
+    visibility: hidden;
+}
+
+.downloading-lock::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+}
+
+/* eeareadabilitychecker stats */
+#stats td {
+    padding-right: 1em;
+}
+
+/* eea.googlecharts chart.js uses this */
+div#original_chart_div {
+    overflow: hidden;
+}
+
+/* download.pdf download.epub export actions */
+#region-content .documentExportActions {
+    float:right;
+}
+#region-content .documentExportActions ul, .documentExportActions ul {
+    list-style: none;
+    padding: 0px;
+    margin: 1em -0.15em 0px 0px;
+}
+
+#region-content .documentExportActions li, .documentExportActions li {
+    display: inline;
+}
+
+.eea-footer-right .link-pdf,
+.eea-footer-right .link-epub,
+#region-content .documentExportActions .link-pdf,
+#region-content .documentExportActions .link-epub,
+.documentExportActions .link-pdf,
+.documentExportActions .link-epub {
+    background: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#content .eea-footer-right a.download-pdf,
+#content .eea-footer-right a.download-epub {
+    border-bottom: none !important;
+}
+
+#content .documentExportActions a {
+    border-bottom: none !important;
+    text-align: center;
+}
+
+.documentExportActions .export-action-title {
+    display: block;
+}
+
+.documentExportActions .eea-icon::before {
+    margin: 0px 0.15em;
+}
+
+#content .documentByLine {
+    max-width: 80%;
+    text-align: left;
+}
+
+.portaltype-fiche .link-presentation {
+    display: none;
+}
+
+.eea-epub-download,
+.eea-pdf-download {
+    font-size: 150%;
+}
+
+/* do not show copyright info on soer briefings */
+.fiche-copyright {
+    display: none;
+}
+
+/* #20319 cookie policy viewlet styling */
+#viewlet-cookiepolicy {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom:0;
+    z-index: 100;
+    padding: 0.9em;
+    box-sizing: border-box;
+}
+#tlspu_cookiepolicy_form, .cookieMessage, #tlspu_cookiepolicy_message {
+    margin: 0 auto;
+    max-width: 970px;
+    padding: 0;
+}
+
+/* SOER 2015 quick fixes */
+h4.figureHeading {
+    margin: 0;
+}
+
+/* </dtml-with> */
