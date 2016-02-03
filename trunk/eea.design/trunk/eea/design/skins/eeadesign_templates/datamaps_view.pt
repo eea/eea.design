@@ -85,11 +85,11 @@
 
                     <!-- data and maps global search -->
                     <a href="find/global"
-                       class="archives advanced-search-link"
+                       class="archives advanced-search-link visualNoPrint"
                        title="Go to advanced search"
                        i18n:attributes="title">
                     <span i18n:translate="">Advanced</span></a>
-                    <div class="featured">
+                    <div class="featured visualNoPrint">
                        <h2 i18n:translate="">Search data products</h2>
                        <form tal:attributes="action string:${here/absolute_url}/find/global"  method="get" id="faceted-text-search" class="searchforms 
 faceted-external-search">
