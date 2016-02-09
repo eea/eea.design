@@ -3,6 +3,8 @@ Changelog
 
 13.5.dev0 - (unreleased)
 ------------------------
+* Feature: Sparql history diff now defaults to code diff
+  [ichimdav refs #17334]
 * Bug fix: do not show the search box when printing the "Data and maps" main
   page; use 'em' for font size, instead of 'px'
   [danielm refs #50515]

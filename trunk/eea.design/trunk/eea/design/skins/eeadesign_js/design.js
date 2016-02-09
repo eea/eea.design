@@ -3,6 +3,10 @@ jQuery(document).ready(function($) {
     'use strict';
     var url_path_name = window.location.pathname;
     var $body = $("body");
+    var $code_diff = $("#diffstylecode");
+    if ($body.hasClass("portaltype-sparql") && $code_diff) {
+        $code_diff.click();
+    }
 
     /* #28278 prevent figures from printing charts without the figure title on the same line
      * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
