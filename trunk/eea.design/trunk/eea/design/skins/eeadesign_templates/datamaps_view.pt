@@ -24,8 +24,8 @@
                           <div metal:use-macro="here/portlet_dataviewers/macros/portlet" />
                         </div>-->
                         <div metal:use-macro="here/portlet_maindatasets/macros/portlet" />
-			
-			<tal:featured_item
+
+                        <tal:featured_item
                              tal:define="featured_class datamaps_view;
                                          highlights featured_class/getLatestInteractiveData;
                                          nr_items python:1;
@@ -36,20 +36,20 @@
                                           </div>
                         </tal:featured_item>
 
-			<div id="organisations-links" class="shortcut-light">
-			   <div id="organisations-content">
-			   <a id="organisations-link" href="/data-and-maps/data-providers-and-partners">
-			     <h2 i18n:translate="">Browse by organisation</h2>
-			   </a>
-			   </div>
-                        </div>			
-			
-			<div id="semantic-ds-links" class="shortcut-light">
-			   <div id="semantic-content">
-			   <a id="semantic-link" href="http://semantic.eea.europa.eu">
-    			   <h2 i18n:translate="">Semantic Data Service</h2>
-    			   <span i18n:translate="">Access our data via semantic APIs</span></a>
-			   </div>
+                        <div id="organisations-links" class="shortcut-light">
+                           <div id="organisations-content">
+                           <a id="organisations-link" href="/data-and-maps/data-providers-and-partners">
+                             <h2 i18n:translate="">Browse by organisation</h2>
+                           </a>
+                           </div>
+                        </div>
+
+                        <div id="semantic-ds-links" class="shortcut-light">
+                           <div id="semantic-content">
+                           <a id="semantic-link" href="http://semantic.eea.europa.eu">
+                           <h2 i18n:translate="">Semantic Data Service</h2>
+                           <span i18n:translate="">Access our data via semantic APIs</span></a>
+                           </div>
                         </div>
 
                         <!-- community  divs -->
@@ -71,12 +71,12 @@
                     </div>
 
                     <div id="highlights-area" class="column-area">
-		    <!-- h2 i18n:translate="">Highlights</h2 -->
+                    <!-- h2 i18n:translate="">Highlights</h2 -->
                     <!-- promotions_gallery_slideshow-->
                     <!-- metal:promotions
                         tal:define="frontpage python: True;
                                     promo_view datamaps_view;
-				    show_description python:False;">
+                                    show_description python:False;">
                             <div metal:use-macro="here/portlet_promo_gallery/macros/portlet">
                                 promoted item
                             </div>
@@ -105,8 +105,8 @@ faceted-external-search">
 
                         <!-- tabs -->
                         <div metal:define-macro="whatsnew-gallery" 
-			                  tal:define="more_hrefs  more_hrefs|python: ['find', 'data', 'find#c1=Map', 'explore-interactive-maps', 'indicators', 'find#c1=Graph' ];
-			                              datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
+                                          tal:define="more_hrefs  more_hrefs|python: ['find', 'data', 'find#c1=Map', 'explore-interactive-maps', 'indicators', 'find#c1=Graph' ];
+                                                      datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
                             <ul class="eea-tabs two-rows"
                                 tal:define="tabnames  python: ['All data products', 'Datasets', 'Maps', 'Interactive maps','Indicators', 'Graphs' ];">
                                 <li tal:repeat="tab tabnames">
@@ -120,21 +120,21 @@ faceted-external-search">
                             </div>
 
                             <tal:tab define="more_href python:more_hrefs[0]">
-			      <div metal:use-macro="here/datamaps_macros/macros/alldataproducts" />
-			    </tal:tab>
-			    <tal:tab define="more_href python:more_hrefs[1]">
+                              <div metal:use-macro="here/datamaps_macros/macros/alldataproducts" />
+                            </tal:tab>
+                            <tal:tab define="more_href python:more_hrefs[1]">
                               <div metal:use-macro="here/datamaps_macros/macros/datasets" />
                             </tal:tab>
-			    <tal:tab define="more_href python:more_hrefs[2]">
+                            <tal:tab define="more_href python:more_hrefs[2]">
                               <div metal:use-macro="here/datamaps_macros/macros/maps" />
                             </tal:tab>
-			    <tal:tab define="more_href python:more_hrefs[3]">
+                            <tal:tab define="more_href python:more_hrefs[3]">
                               <div metal:use-macro="here/datamaps_macros/macros/interactivemaps" />
                             </tal:tab>
                            <tal:tab define="more_href python:more_hrefs[4]">
                               <div metal:use-macro="here/datamaps_macros/macros/indicators" />
                             </tal:tab>
-			    <tal:tab define="more_href python:more_hrefs[5]">
+                            <tal:tab define="more_href python:more_hrefs[5]">
                               <div metal:use-macro="here/datamaps_macros/macros/graphs" />
                             </tal:tab>
 

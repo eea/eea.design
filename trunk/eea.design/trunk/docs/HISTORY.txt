@@ -8,6 +8,8 @@ Changelog
 * Bug fix: do not show the search box when printing the "Data and maps" main
   page; use 'em' for font size, instead of 'px'
   [danielm refs #50515]
+* Change: cleanup tabs from source code
+  [ghicaale refs #50515]
 
 13.4 - (2016-02-03)
 -------------------
