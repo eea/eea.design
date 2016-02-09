@@ -29,15 +29,15 @@ Changelog
 
 13.2 - (2016-01-04)
 -------------------
-* Bugfix: fix labels turned into display inline-block by boostrap as it messes
+* Bug fix: fix labels turned into display inline-block by boostrap as it messes
   positioning of inputs plus labels within edit forms
   [ichimdav refs #31065]
 
 13.1 - (2015-12-07)
 -------------------
-* Bugfix: restore compression of anchor.js - last comments removed
+* Bug fix: restore compression of anchor.js - last comments removed
   [lucas refs #30824]
-* Bugfix: added jq.applyanchor.js and move it to bottom of plone_javascripts
+* Bug fix: added jq.applyanchor.js and move it to bottom of plone_javascripts
   [lucas refs #30824]
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
@@ -669,7 +669,7 @@ Changelog
   [demarant fixes #19091]
 * Bug fix: Allow titles within PDF cover export longer than 65 chars (one line)
   [voineali refs #18953]
-* Bugfix: Removed eea_vpip.js as it is obsolete and was in conflict with
+* Bug fix: Removed eea_vpip.js as it is obsolete and was in conflict with
   googlechart filters
   [szabozo0 refs #19174]
 * Feature: Use high resolution SVG for daviz charts embed within PDF export
@@ -1084,7 +1084,7 @@ Changelog
 * Change: removed negative margin from video-fancybox since the thumbnails  are
   no longer customized by eea.depiction
   [ichimdav refs #15234]
-* Bugfix: Display the  embedded visualizations in plone pages after saving the page
+* Bug fix: Display the  embedded visualizations in plone pages after saving the page
   [szabozo0 refs #15231]
 * Change: improved the portal messages style.
   [demarant refs #14910]
@@ -1211,13 +1211,13 @@ Changelog
   [ichimdav refs #13830]
 * Bug fix: fix redirection to previous page when logging in from the login popup
   [tiberich #14085]
-* Bugfix: fix a potential issue with subfolder logic which gave an error when
+* Bug fix: fix a potential issue with subfolder logic which gave an error when
   no results were found
   [ichimdav]
-* Bugfix: override data attribute of Events portlet in order to also display
+* Bug fix: override data attribute of Events portlet in order to also display
   QuickEvents
   [ichimdav refs #13816]
-* Bugfix: properly display filter menu dropdown when no results are found
+* Bug fix: properly display filter menu dropdown when no results are found
   [ichimdav #14229]
 * Cleanup: remove search.js override as we upgraded to Plone 4.2.5
   (plone.app.search 1.0.8)
@@ -1986,7 +1986,7 @@ Changelog
 
 4.2 - (2011-11-21)
 ------------------
-* Bugfix: fixed links for enquiries
+* Bug fix: fixed links for enquiries
   [szabozo0 #4735]
 
 4.1 - (2011-11-18)
@@ -1996,9 +1996,9 @@ Changelog
 
 4.0 - (2011-11-18)
 ------------------
-* Bugfix: Fixed header panels to hide on click
+* Bug fix: Fixed header panels to hide on click
   [szabozo0 #4711]
-* Bugfix: Fixed redirects for broken links
+* Bug fix: Fixed redirects for broken links
   [szabozo0 #4702]
 * Change: Improve readability of promo gallery on frontpage and disable description.
   [demarant]
@@ -2008,23 +2008,23 @@ Changelog
   [tiberich #4689]
 * Feature: Added a viewlet eea.js_belowbodytag for adding inline js just after the body tag.
   [demarant]
-* Bugfix: Fixed transparency in ie8 on Environmental topics page for the main topics
+* Bug fix: Fixed transparency in ie8 on Environmental topics page for the main topics
   [szabozo0 #4697]
 * Change: Migrated showurl from custom
   [szabozo0 #4161]
-* Bugfix: Fixed quality of the images for IE8
+* Bug fix: Fixed quality of the images for IE8
   [szabozo0 #4673]
 * Change: Migrated portlet_toc, portlet_reports from custom
   [szabozo0 #4161]
-* Bugfix: some templates where still using fill-slot="main", changed to content-core
+* Bug fix: some templates where still using fill-slot="main", changed to content-core
   [demarant]
 * Feature: Added context_url and parent_url javascript variables to maintemplate
   [szabozo0 #4612]
-* Bugfix: get rid of onFrontpage check in main_template, allows proper display of left and right portal columns
+* Bug fix: get rid of onFrontpage check in main_template, allows proper display of left and right portal columns
   [tiberich #4624]
-* Bugfix: Fixed login_form when using not existing user/password
+* Bug fix: Fixed login_form when using not existing user/password
   [szabozo0 #4596]
-* Bugfix: Added tiny_mce.js version 3.4.5 for IE 9 compatibility
+* Bug fix: Added tiny_mce.js version 3.4.5 for IE 9 compatibility
   [szabozo0 #4542]
 * Feature: extended the features of dates in document by line to also include
   creation date. each of the dates can be switched on/off by metatype.
@@ -2034,9 +2034,9 @@ Changelog
   [demarant]
 * Change: Updated CSS for calendar
   [szabozo0 #4501]
-* Bugfix: Fixed JS error when portal_javascripts are not in development mode
+* Bug fix: Fixed JS error when portal_javascripts are not in development mode
   [szabozo0 #4542]
-* Bugfix: Fixed IE JS errors, fixed code that uses jQuery to avoid conflicts
+* Bug fix: Fixed IE JS errors, fixed code that uses jQuery to avoid conflicts
   with other JS frameworks
   [szabozo0 #4542]
 * Change: no more red CMS banner when logged in. was creating issues, no need for
@@ -2055,16 +2055,16 @@ Changelog
   [demarant].
 * Feature: Added first version of "all products" in the whatsnew section. it remains to resort the list by effective date.
   [demarant]
-* Bugfix: Fixed widgets on soer frontpage, Enabled external link icons, Added styling for wise portlets
+* Bug fix: Fixed widgets on soer frontpage, Enabled external link icons, Added styling for wise portlets
   [szabozo0 #4446]
 * Change: updated the variable of colors to match the new update color scheme. now we can start using these dtml variables in our css to be
   consistent.
   [demarant #4458]
-* Bugfix: Fixed file type on album view for EEAFigure, CSS for issue on "Latest added" portlet
+* Bug fix: Fixed file type on album view for EEAFigure, CSS for issue on "Latest added" portlet
   [szabozo0 #4446]
-* Bugfix: Replaced slide effect with fade. Slide is not available directly in jquerytools only via custom plugin
+* Bug fix: Replaced slide effect with fade. Slide is not available directly in jquerytools only via custom plugin
   [szabozo0 #4446]
-* Bugfix: Enabled eea-smartview.js, fixed double /view on folder listing, fixed padding for tinymce
+* Bug fix: Enabled eea-smartview.js, fixed double /view on folder listing, fixed padding for tinymce
   [szabozo0 #4446]
 * Feature: Added spotlight functionality
   [szabozo0 #4425]
