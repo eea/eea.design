@@ -29,15 +29,14 @@
   /* #30333 photoalbum entry can only fit 1 album when viewing it on IPhone 4-5 portrait */
   .photoAlbumEntry {
     width: 120px; }
-  .photoAlbumEntry a {
-    height: 100%;
-    width: 100%;
-    padding: 5px; }
+    .photoAlbumEntry a {
+      height: 100%;
+      width: 100%;
+      padding: 5px; }
+
   .photoAlbumEntryTitle {
     height: 5em;
     width: 100%; } }
-
-
 @media screen and (max-width: 360px) {
   .filter-topic {
     width: 69%; }
@@ -50,6 +49,10 @@
 
   #faceted-text-search input[type="text"] {
     width: 77%; } }
+@media screen and (max-width: 479px) {
+  #languageCodes {
+    max-width: 40% !important;
+    margin-left: 0 !important; } }
 @media screen and (max-width: 480px) {
   #whatsnew-gallery .tileImage {
     display: none; }
@@ -79,6 +82,17 @@
 
   .faceted-widget .searchButton {
     margin-right: 5em; } }
+/* #31309 - Improve DaViz Filter design/display */
+#content-core {
+  position: relative; }
+
+@media screen and (min-width: 480px) and (max-width: 627px) {
+  #languageCodes {
+    max-width: 50% !important;
+    margin-left: 0 !important; } }
+@media screen and (min-width: 628px) and (max-width: 767px) {
+  #languageCodes {
+    max-width: 60% !important; } }
 @media screen and (max-width: 767px) {
   #portal-personaltools-wrapper,
   .portal-logo,
@@ -486,48 +500,6 @@
   .template-dc_view #visual-portal-wrapper,
   .template-facetednavigation_view #visual-portal-wrapper {
     overflow: hidden; } }
-
-/* #31309 - Improve DaViz Filter design/display */
-#content-core {
-    position: relative;
-}
-.google_buttons_bar {
-    margin-top:0!important;
-    position: absolute;
-    right: 40px;
-    text-align: right;
-}
-@media screen and (min-width: 768px) {
-    .google_buttons_bar {top: -50px;}
-    .google_buttons_bar_ex {top: -112px!important;}
-}
-@media screen and (max-width: 479px) {
-    .google_buttons_bar {
-        top: -86px;}
-    .google_buttons_bar_ex {
-        top: -153px!important;}
-    #languageCodes {max-width:40%!important;height:68px!important;overflow:hidden!important;margin-left:0!important;}
-    #plone-document-byline {max-width:40%!important;height:54px!important;overflow:hidden!important;}
-    #themes-tags {max-width:40%!important;height:28px!important;overflow:hidden!important;}
-}
-@media screen and (min-width: 480px) and (max-width: 627px) {
-    .google_buttons_bar {
-        top: -86px;}
-    .google_buttons_bar_ex {
-        top: -153px!important;}
-    #languageCodes {max-width:50%!important;height:68px!important;overflow:hidden!important;margin-left:0!important;}
-    #plone-document-byline {max-width:50%!important;height:54px!important;overflow:hidden!important;}
-    #themes-tags {max-width:50%!important;height:28px!important;overflow:hidden!important;}
-}
-@media screen and (min-width: 628px) and (max-width: 767px) {
-    .google_buttons_bar {
-        top: -67px;}
-    .google_buttons_bar_ex {
-        top: -115px!important;}
-    #languageCodes {max-width:60%!important;}
-    #plone-document-byline {max-width:60%!important;height:36px;}
-    #themes-tags {max-width:60%!important;}
-}
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */

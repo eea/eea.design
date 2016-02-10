@@ -8,6 +8,17 @@ jQuery(document).ready(function($) {
         $code_diff.click();
     }
 
+    // #69065 move google chart button within externalActions
+    var $charts_buttons = $(".google_buttons_bar").find('a');
+    var $document_actions = $(".documentExportActions");
+    var $document_actions_ul = $document_actions.find('ul');
+    if ($document_actions_ul.length) {
+        $charts_buttons.each(function(idx, el) {
+            var $el = $(el);
+            var $wrapped = $el.addClass('pull-left').wrap('<li />').parent();
+            $wrapped.appendTo($document_actions_ul);
+        });
+    }
     /* #28278 prevent figures from printing charts without the figure title on the same line
      * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
      * data-and-maps/indicators/direct-losses-from-weather-disasters-2/assessment/pdf.body
@@ -198,7 +209,7 @@ jQuery(document).ready(function($) {
     };
 
     $('.documentActions .action-items').avoidMultipleClicks();
-    $('.documentExportActions').avoidMultipleClicks({
+    $document_actions.avoidMultipleClicks({
       linkSelector: '.eea-icon',
       linkCSS: 'eea-icon eea-icon-3x eea-icon-download eea-icon-anim-burst animated'
     });

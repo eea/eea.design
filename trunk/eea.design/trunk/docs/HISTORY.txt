@@ -3,6 +3,9 @@ Changelog
 
 13.5.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed position of google_buttons_bar by moving them to the
+  documentExternalActions
+  [ichimdav refs #69065]
 * Feature: Sparql history diff now defaults to code diff
   [ichimdav refs #17334]
 * Bug fix: do not show the search box when printing the "Data and maps" main
