@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
         $charts_buttons.each(function(idx, el) {
             var $el = $(el);
             var $wrapped = $el.addClass('pull-left').wrap('<li />').parent();
-            $wrapped.appendTo($document_actions_ul);
+            $wrapped.prependTo($document_actions_ul);
         });
     }
     /* #28278 prevent figures from printing charts without the figure title on the same line
