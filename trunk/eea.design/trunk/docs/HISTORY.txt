@@ -3,6 +3,9 @@ Changelog
 
 13.5.dev0 - (unreleased)
 ------------------------
+* Change: modified tabbmenu styling in order to take into consideration
+  that the tab links can be wrapped with spans because of mark_special_links.js
+  [ichimdav]
 * Bug fix: fixed position of google_buttons_bar by moving them to the
   documentExternalActions
   [ichimdav refs #69065]

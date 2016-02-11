@@ -683,7 +683,7 @@ dl a:hover, dd a:hover, dt a:hover {
     text-align: left;
 }
 #faceted-text-search input[type="text"] {
-    font-size: 1.3em;
+    font-size: 16px;
     padding: 5px;
     min-width: 70%;
     max-width: 77%;
@@ -1808,7 +1808,7 @@ body.template-login_form #content,
     .tabbedmenu ul:after {
         clear: both;
     }
-    .tabbedmenu ul > li > a {
+    .tabbedmenu ul > li a {
         display: block;
         color: #fff!important;
         text-shadow: 1px 1px 1px #000000;
@@ -1816,19 +1816,19 @@ body.template-login_form #content,
         white-space: nowrap;
         padding: 8px 8px;
     }
-    .tabbedmenu.two-rows ul > li > a {
+    .tabbedmenu.two-rows ul > li a {
         height: 40px;
         white-space: normal;
         max-width: 150px;
     }
-    .tabbedmenu ul > li > a:hover {
+    .tabbedmenu ul > li a:hover {
         color: &dtml-corporateBlueTwo;!important;
         text-decoration: none;
         text-shadow: 1px 1px 1px #FFFFFF;
         background-color: &dtml-greyBackgroundColor;;
     }
-    .tabbedmenu ul > li > a.current,
-    .tabbedmenu ul > li > a.current:hover {
+    .tabbedmenu ul > li a.current,
+    .tabbedmenu ul > li a.current:hover {
         cursor: default;
         color: &dtml-corporateBlueTwo;!important;
         text-decoration: none;
@@ -1917,6 +1917,13 @@ div#original_chart_div {
 
 .documentExportActions .eea-icon::before {
     margin: 0px 0.15em;
+}
+
+/* 69065 clear content that follows .documentExportActions */
+.eea-available-version,
+#plone-document-byline + .portalMessage,
+#plone-document-byline + div {
+    clear: both;
 }
 
 #content .documentByLine {

@@ -87,12 +87,12 @@
   position: relative; }
 
 @media screen and (min-width: 480px) and (max-width: 627px) {
-  #languageCodes {
-    max-width: 50% !important;
-    margin-left: 0 !important; } }
+  #content #languageCodes {
+    max-width: 50%;
+    margin-left: 0; } }
 @media screen and (min-width: 628px) and (max-width: 767px) {
-  #languageCodes {
-    max-width: 60% !important; } }
+  #content #languageCodes {
+    max-width: 60%; } }
 @media screen and (max-width: 767px) {
   #portal-personaltools-wrapper,
   .portal-logo,
