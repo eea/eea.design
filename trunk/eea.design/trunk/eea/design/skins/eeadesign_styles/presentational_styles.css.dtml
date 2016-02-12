@@ -14,7 +14,8 @@ dl.system-message dt {
 div.attention, div.caution,
 div.danger, div.error, div.hint,
 div.important, div.note, div.tip,
-div.warning,
+dl.warning,
+dl.error,
 #error-handling,
 .portalMessage,
 .system-message {
@@ -78,7 +79,8 @@ div.warning,
 div.attention:before, div.caution:before,
 div.danger:before, div.error:before, div.hint:before,
 div.important:before, div.note:before, div.tip:before,
-div.warning:before {
+dl.error:before,
+dl.warning:before {
     float: left;
     display: block;
     margin-right: .3em;
@@ -95,9 +97,9 @@ div.hint, div.tip, div.note,
     background-color: &dtml-corporateBlueBackgroundColor;;
 }
 
-div.attention, div.caution,
-div.danger, div.error, div.important,
-div.warning,
+.attention, .caution,
+.danger, dl.error, .important,
+dl.warning,
 #error-handling,
 .errorMessage,
 .warningMessage {
@@ -106,7 +108,7 @@ div.warning,
 
 div.attention:before, div.caution:before,
 div.danger:before, div.important:before,
-div.warning:before,
+dl.warning:before,
 .attentionMessage:before {
     content: "&dtml-eea-icon-flash;";
     vertical-align: baseline;
@@ -123,6 +125,8 @@ div.warning:before,
 }
 
 div.error,
+dl.error,
+dl.error dt,
 .errorMessage {
     color: red;
 }
@@ -168,7 +172,7 @@ div.error,
 
 div.error:before,
 .errorMessage:before,
-.error:before,
+dl.error:before,
 .warningMessage:before
 {
     content: "&dtml-eea-icon-exclamation-triangle;";

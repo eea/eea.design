@@ -3,6 +3,9 @@ Changelog
 
 13.5.dev0 - (unreleased)
 ------------------------
+* Change: Plone error and warning classes is now styled like the warningMessage
+  and errorMessage class from presentational_styles.css
+  [ichimdav refs #17334]
 * Change: modified tabbmenu styling in order to take into consideration
   that the tab links can be wrapped with spans because of mark_special_links.js
   [ichimdav]

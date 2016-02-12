@@ -318,15 +318,9 @@ dl.portalMessage {
     background-color: &dtml-lightBackgroundColor;;
 }
 
-dl.portalMessage dt {
-    background-color: transparent;
-}
-
-dl.warning {
-    border-color: &dtml-globalBorderColor;;
-}
+dl.portalMessage dt,
 dl.warning dt {
-    background-color: &dtml-lightBackgroundColor;;
+    background-color: transparent;
 }
 
 dl.error dt {
