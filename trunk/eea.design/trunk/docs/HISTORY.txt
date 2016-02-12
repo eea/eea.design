@@ -19,6 +19,8 @@ Changelog
   [danielm refs #50515]
 * Change: cleanup tabs from source code
   [ghicaale refs #50515]
+* Bug fix: added padding to entire custom tooltip on DaViz
+  [lucas refs #68200]
 
 13.4 - (2016-02-03)
 -------------------

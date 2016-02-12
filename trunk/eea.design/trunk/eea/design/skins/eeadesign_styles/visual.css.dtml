@@ -509,4 +509,7 @@ span.figure-left {
     margin: 1em 0;
 }
 
+/* padding to daviz tooltip */
+.google-visualization-tooltip{ padding: 5px !important; }
+
 /* </dtml-with> */
