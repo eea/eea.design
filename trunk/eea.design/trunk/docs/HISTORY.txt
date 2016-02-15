@@ -1,8 +1,8 @@
 Changelog
 =========
 
-13.5.dev0 - (unreleased)
-------------------------
+13.5 - (2016-02-15)
+-------------------
 * Change: Plone error and warning classes is now styled like the warningMessage
   and errorMessage class from presentational_styles.css
   [ichimdav refs #17334]
