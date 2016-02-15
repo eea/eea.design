@@ -3,6 +3,8 @@ Changelog
 
 13.6.dev0 - (unreleased)
 ------------------------
+* Change: removed tags cloud from data and maps
+  [demarant refs #50515]
 
 13.5 - (2016-02-15)
 -------------------
