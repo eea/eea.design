@@ -479,8 +479,8 @@
     margin: 25px 0.5em 0 0; } }
 @media screen and (min-width: 961px) {
   #visual-portal-wrapper, #portal-header {
-    min-width: 995px !important;
-    max-width: 1024px !important; } }
+    min-width: 995px;
+    max-width: 1024px; } }
 @media screen and (max-width: 1024px) {
   .frontpage #portal-columns,
   .frontpage #portal-column-content,
@@ -500,6 +500,14 @@
   .template-dc_view #visual-portal-wrapper,
   .template-facetednavigation_view #visual-portal-wrapper {
     overflow: hidden; } }
+.portaltype-gis-application #portal-globalnav,
+.portaltype-gis-application #portal-header,
+.portaltype-gis-application #visual-portal-wrapper {
+  max-width: 100%; }
+.portaltype-gis-application #portal-header,
+.portaltype-gis-application #secondary-portaltabs {
+  padding-right: 1em; }
+
 /* </dtml-with> */
 
 /*# sourceMappingURL=eea-responsive.css.dtml.map */
