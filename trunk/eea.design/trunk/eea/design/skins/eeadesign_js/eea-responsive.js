@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
     window.EEA = {};
   }
   window.EEA.isPrintPdf = $('body').hasClass('body-print');
+  var underscore = window._;
 
   var doc = document.documentElement;
   // #16878 move last two links of globalnav to a secondary container
@@ -123,34 +124,35 @@ jQuery(document).ready(function($) {
   var $soer_tabs = $('.eea-tabs-soer'),
       $soer_tabs_found = $soer_tabs.length;
   var $notransform = $('.eea-tabs-panels-arrows, .eea-tabs-panels-soer, #whatsnew-gallery');
-  $(window).resize(_.debounce(function() {
-    var $tabs_panel = $('.eea-tabs-panels').not($notransform);
-    if ($buttonnavbar.css('display') !== 'none') {
-      if ($tabs_panel.length) {
-        $tabs_panel.each(function(idx, tab_panel) {
-          var $tab_panel = $(tab_panel);
-          make_tabs_into_accordions($tab_panel.prev('.eea-tabs'), $tab_panel);
-        });
-      }
-      if (tabbed_menu_found) {
-        make_tabs_into_accordions($tabbed_menu.find('ul'), $('.tabbedmenu-panel'));
-      }
-      if (eea_tabs_with_arrows_found) {
-        make_tabs_into_accordions($eea_tabs_with_arrows, $('.eea-tabs-panels-arrows'));
-      }
-      if ($soer_tabs_found) {
-        make_tabs_into_accordions($soer_tabs, $('.eea-tabs-panels-soer'));
-      }
+  if (underscore) {
+    $(window).resize(_.debounce(function() {
+      var $tabs_panel = $('.eea-tabs-panels').not($notransform);
+      if ($buttonnavbar.css('display') !== 'none') {
+        if ($tabs_panel.length) {
+          $tabs_panel.each(function(idx, tab_panel) {
+            var $tab_panel = $(tab_panel);
+            make_tabs_into_accordions($tab_panel.prev('.eea-tabs'), $tab_panel);
+          });
+        }
+        if (tabbed_menu_found) {
+          make_tabs_into_accordions($tabbed_menu.find('ul'), $('.tabbedmenu-panel'));
+        }
+        if (eea_tabs_with_arrows_found) {
+          make_tabs_into_accordions($eea_tabs_with_arrows, $('.eea-tabs-panels-arrows'));
+        }
+        if ($soer_tabs_found) {
+          make_tabs_into_accordions($soer_tabs, $('.eea-tabs-panels-soer'));
+        }
 
-    } else {
-      if ($tabs_panel.length) {
-        // turn tabs into accordions if tabs span over two rows
-        $tabs_panel.each(function(idx, tab_panel) {
-          var $tab_panel = $(tab_panel);
-          var $tabs = $tab_panel.prev('.eea-tabs');
-          var tabs_multiple_lines = false;
-          var tabs_first_offset = 0;
-          $tabs.find('li').each(function(idx, el) {
+      } else {
+        if ($tabs_panel.length) {
+          // turn tabs into accordions if tabs span over two rows
+          $tabs_panel.each(function(idx, tab_panel) {
+            var $tab_panel = $(tab_panel);
+            var $tabs = $tab_panel.prev('.eea-tabs');
+            var tabs_multiple_lines = false;
+            var tabs_first_offset = 0;
+            $tabs.find('li').each(function(idx, el) {
               if (idx === 0) {
                 tabs_first_offset = el.offsetTop;
               }
@@ -158,17 +160,18 @@ jQuery(document).ready(function($) {
                 tabs_multiple_lines = true;
                 return false;
               }
+            });
+            if (tabs_multiple_lines) {
+              make_tabs_into_accordions($tabs, $tab_panel);
+            }
           });
-          if (tabs_multiple_lines) {
-            make_tabs_into_accordions($tabs, $tab_panel);
-          }
-        });
+        }
+        else {
+          make_accordions_into_tabs();
+        }
       }
-      else {
-        make_accordions_into_tabs();
-      }
-    }
-  }, 500));
+    }, 500));
+  }
 
   $(window).trigger('resize');
 
@@ -223,6 +226,7 @@ jQuery(document).ready(function($) {
       // swipe to see content if you are zoomed in
       var time =  ev.swipestop.time - ev.swipestart.time;
 
+      //$faceted_slider.next().find(".eea-accordion-title").eq(0).text(time);
       $faceted_slider.removeClass("is-eea-hidden");
       // initiate a scroll event in order to display the navbar and
       // eea-right-section-slider if they are hidden and we are swiping
@@ -339,8 +343,11 @@ jQuery(document).ready(function($) {
     var e = ev.originalEvent;
     multiple_touch = e.touches.length > 1;
   }
-  var lazyTouchMove = _.throttle(TouchMove, 90);
-  $(window).on("touchmove", lazyTouchMove);
+
+  if (underscore) {
+    var lazyTouchMove = _.throttle(TouchMove, 90);
+    $(window).on("touchmove", lazyTouchMove);
+  }
 
   var $document = $(document);
   var win_height = window.innerHeight;
@@ -392,8 +399,10 @@ jQuery(document).ready(function($) {
     lastScrollTop = st;
   }
 
-  var lazyNavScroll = _.throttle(navScroll, 100);
-  $(window).scroll(lazyNavScroll);
+  if (underscore) {
+    var lazyNavScroll = _.throttle(navScroll, 100);
+    $(window).scroll(lazyNavScroll);
+  }
 
 });
 

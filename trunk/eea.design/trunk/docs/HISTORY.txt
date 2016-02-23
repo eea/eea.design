@@ -3,6 +3,9 @@ Changelog
 
 13.6.dev0 - (unreleased)
 ------------------------
+* Change: check if underscore is found within eea-responsive.js as we might
+  not load it when served by Products.EEATemplateService
+  [ichimdav]
 * Change: removed tags cloud from data and maps
   [demarant refs #50515]
 
