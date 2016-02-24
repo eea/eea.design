@@ -4,6 +4,10 @@ from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 from Acquisition import aq_base, aq_inner, aq_parent
 from Products.CMFPlone import utils as putils
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
+from eea.cache import cache as eeacache
+
 
 class Main(BrowserView):
     """ Main View
@@ -26,3 +30,29 @@ class Main(BrowserView):
         portal_url = getToolByName(self.context, 'portal_url')
         portal = portal_url.getPortalObject()
         return root != aq_base(portal)
+
+
+class FullWidthContentTypes(BrowserView):
+    """ Fullwidth body class content-types
+    """
+
+    def __init__(self, context, request):
+        """ init
+        """
+        super(FullWidthContentTypes, self).__init__(context, request)
+        self.context = context
+        self.request = request
+
+    def __call__(self):
+        """ boolean if fullwidth class should be enabled for given content-type
+        """
+        fullwidth_ctypes = self.get_registry() or []
+        return self.context.portal_type in fullwidth_ctypes
+
+    @eeacache(lambda method, self: method.__name__, dependencies=['eea.design'])
+    def get_registry(self):
+        """ content registry cache
+        """
+        registry = getUtility(IRegistry)
+        return registry.get('Products.EEAContentTypes.browser.interfaces.'
+                            'IEEAContentTypesSettings.fullwidthFor')

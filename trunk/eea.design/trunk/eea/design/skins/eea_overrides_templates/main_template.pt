@@ -108,6 +108,7 @@
                   sr python:plone_view.have_portlets('plone.rightcolumn', view) and not request.get('disable_plone.rightcolumn');
                   body_class python:plone_view.bodyClass(template, view);
                   body_class python: body_class + ' body-print' if isPrint else body_class;
+                  body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() else body_class;
                   frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
       tal:attributes="class python:body_class + ' ' + language + frontpage;

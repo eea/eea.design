@@ -500,12 +500,12 @@
   .template-dc_view #visual-portal-wrapper,
   .template-facetednavigation_view #visual-portal-wrapper {
     overflow: hidden; } }
-.portaltype-gis-application #portal-globalnav,
-.portaltype-gis-application #portal-header,
-.portaltype-gis-application #visual-portal-wrapper {
+.fullwidth #portal-globalnav,
+.fullwidth #portal-header,
+.fullwidth #visual-portal-wrapper {
   max-width: 100%; }
-.portaltype-gis-application #portal-header,
-.portaltype-gis-application #secondary-portaltabs {
+.fullwidth #portal-header,
+.fullwidth #secondary-portaltabs {
   padding-right: 1em; }
 
 /* </dtml-with> */
