@@ -507,6 +507,8 @@
 .fullwidth #portal-header,
 .fullwidth #secondary-portaltabs {
   padding-right: 1em; }
+.fullwidth #portal-columns {
+  min-width: 100%; }
 
 /* </dtml-with> */
 
