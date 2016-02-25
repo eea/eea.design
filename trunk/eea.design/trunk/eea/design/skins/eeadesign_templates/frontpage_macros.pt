@@ -6,7 +6,9 @@
      id="news-highlights"
      class="eea-tabs-panel"
      tal:define="frontpage_view context/@@frontpage_highlights;
-                 folderContents frontpage_view/getNews;
+                 language context/@@plone_portal_state/language;
+                 folderContents python: frontpage_view.getNewsAndArticles() if language != 'en'
+                                        else frontpage_view.getNews();
                  plone_view nocall:plone_view|context/@@plone;
                  hide_listing python: False;
                  hide_album python: True;

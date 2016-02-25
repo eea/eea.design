@@ -64,6 +64,15 @@ class Frontpage(BrowserView):
                 portaltypes=portaltypes, noOfItems=self.noOfArticles,
                 language=language)
 
+    def getNewsAndArticles(self, language=None):
+        """ retrieves latest news and articles by date and by topic """
+        news = self.getNews(language=language)
+        articles = self.getArticles(language=None)
+        news.extend(articles)
+        sorted_news = sorted(news, key=lambda obj: (obj.effective, obj.Title),
+                             reverse=True)
+        return sorted_news
+
     def getPublications(self, portaltypes="Report", language=None):
         """ retrieves latest publications by date and by topic """
         return _getItems(self, portaltypes=portaltypes,
