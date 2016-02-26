@@ -271,6 +271,20 @@ def _getHighArticles(self, noOfItems=1):
     return _getItems(self, visibilityLevel=visibilityLevel,
                         portaltypes='Article', noOfItems=noOfItems)
 
+
+def queryLastYearRange(self, query):
+    """ Modify query in order to list items no longer than 1 year ago
+    """
+    date_range = {
+        'query': (
+            self.now - 365,
+            self.now,
+        ),
+        'range': 'min:max',
+    }
+    query['effective'] = date_range
+    return query
+
 def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
                             interfaces=None, topic=None, noOfItems=None,
                             language=None):
@@ -297,6 +311,7 @@ def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
         query['object_provides'] = interfaces
     if topic:
         query['getThemes'] = topic
+    query = queryLastYearRange(self, query)
     res = self.catalog.searchResults(query)
     filtered_res = filterLatestVersion(self, brains=res,
                                                 noOfItems=noOfItems)
@@ -324,6 +339,7 @@ def _getTopics(self, topic=None, portaltypes=None, object_provides=None,
         query['getThemes'] = topic
     if tags:
         query['Subject'] = tags
+    query = queryLastYearRange(self, query)
     res = self.catalog(query)
     filtered_res = filterLatestVersion(self, brains=res,
                                                      noOfItems=noOfItems)
