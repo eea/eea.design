@@ -26,9 +26,6 @@ jQuery(document).ready(function($) {
                     album.hide().fadeIn("slow");
                 }
             }
-            if (el.find('.js-other-languages').length) {
-                $(window).trigger( "eea.whatsnew.getResultsInAllLanguages", el);
-            }
 
         });
     };
@@ -53,15 +50,6 @@ jQuery(document).ready(function($) {
         params = tag_title ? "tags" +  "=" + sel_value : params;
         eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
     };
-
-    $(window).bind( "eea.whatsnew.getResultsInAllLanguages", function(ev, data) {
-        var $data = $(data);
-        $data.find("a").click(function(ev) {
-            var params =  "Language=" + ev.target.innerHTML;
-            eea_gal.gallery_load($data, eea_gal.current_tab_addr, params);
-            ev.preventDefault();
-        });
-    });
 
     $("#whatsnew-gallery").find(".eea-tabs").tabs("> .eea-tabs-panel", function(event, index) {
         var cur_tab = this.getTabs()[index],

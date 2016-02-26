@@ -209,14 +209,6 @@ class Frontpage(BrowserView):
 
         return result
 
-    def getResultsInAllLanguages(self, method=None):
-        """
-        :return: results of given method in any of the context translated
-            languages
-        """
-        return _getResultsInAllLanguages(self, method)
-
-
 ## Utility functions
 
 def _getPromotions(self, noOfItems=6):
@@ -426,21 +418,6 @@ def _getImageUrl(brain):
             url = parent.absolute_url()
     return url
 
-
-def _getResultsInAllLanguages(self, method=None):
-    """
-    :return: results of given method in any of the context translated
-        languages
-    """
-    translations = self.context.getTranslationLanguages()
-    search = getattr(self, method, None)
-    if search:
-        results = {}
-        for translation in translations:
-            res = search(language=translation)
-            if res:
-                results[translation] = res
-        return results
 
 def filterLatestVersion(self, brains, noOfItems=6):
     """ Take a list of catalog brains
