@@ -126,7 +126,11 @@
      tal:define="hide_listing python: False;
                  hide_album python: True;
                  more_href string:publications;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+    <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
+    <div class="gallery-ajax visualClear">
+        <div metal:use-macro="here/publications_gallery_macro/macros/publications" />
+    </div>
+    <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 <div metal:define-macro="articles"
@@ -135,7 +139,11 @@
      tal:define="hide_listing python: False;
                  hide_album python: True;
                  more_href string:articles;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+    <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
+    <div class="gallery-ajax visualClear">
+        <div metal:use-macro="here/articles_gallery_macro/macros/articles" />
+    </div>
+    <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 <div metal:define-macro="multimedia"
@@ -144,7 +152,11 @@
      tal:define="hide_album python: False;
                  hide_listing python: True;
                  more_href string:multimedia;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+    <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
+    <div class="gallery-ajax visualClear">
+        <div metal:use-macro="here/multimedia_gallery_macro/macros/multimedia" />
+    </div>
+    <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 <div metal:define-macro="allproducts"
@@ -152,7 +164,11 @@
      id="allproducts-highlights"
      tal:define="hide_album python: False;
                  hide_listing python: True;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+    <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
+    <div class="gallery-ajax visualClear">
+        <div metal:use-macro="here/allproducts_gallery_macro/macros/allproducts" />
+    </div>
+    <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 
@@ -162,7 +178,11 @@
      tal:define="hide_album python: False;
                  hide_listing python: True;
                  more_href string:${portal_url}/data-and-maps;">
-        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+    <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
+    <div class="gallery-ajax visualClear">
+        <div metal:use-macro="here/datamaps_gallery_macro/macros/datamaps" />
+    </div>
+    <div metal:use-macro="here/frontpage_macros/macros/more-link" />
 </div>
 
 <div metal:define-macro="more-link" class="portletFooter"
@@ -204,15 +224,16 @@
             </div>
 </metal:ajax-items>
 
-    <metal:filter_topic metal:define-macro="filter-topic">
-        <p class="filter-topic" i18n:translate="">Filtered by</p>
-        <ul class="gallery-layout-selection"
-            tal:define="active_list python:' active-list' if not hide_listing else '';
-                     active_album python:' active-album' if not hide_album else '';">
-            <li><a href="#" tal:attributes="class string:list-layout${active_list}"></a></li>
-            <li><a href="#" tal:attributes="class string:album-layout${active_album}"></a></li>
-        </ul>
-    </metal:filter_topic>
+<metal:filter_topic metal:define-macro="filter-topic">
+    <p class="filter-topic" i18n:translate="">Filtered by</p>
+    <ul class="gallery-layout-selection"
+        tal:define="active_list python:' active-list' if not hide_listing else '';
+                 active_album python:' active-album' if not hide_album else '';">
+        <li><a href="#" tal:attributes="class string:list-layout${active_list}"></a></li>
+        <li><a href="#" tal:attributes="class string:album-layout${active_album}"></a></li>
+    </ul>
+</metal:filter_topic>
+
 <metal:gallery-layout-selection metal:define-macro="gallery-layout-selection">
         <metal:filter use-macro="context/frontpage_macros/macros/filter-topic" />
         <div metal:use-macro="here/frontpage_macros/macros/gallery-items" />

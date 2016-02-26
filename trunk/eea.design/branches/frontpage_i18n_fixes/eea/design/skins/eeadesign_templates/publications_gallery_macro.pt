@@ -1,19 +1,17 @@
-<tal:defines tal:define="frontpage_view context/@@frontpage_highlights;">
+<tal:publications metal:define-macro="publications"
+                  tal:define="frontpage_view context/@@frontpage_highlights;
+                              language python:request.get('Language');
+                              folderContents python: frontpage_view.getPublications() if not language else frontpage_view.getPublications(language=language);
+                              plone_view nocall:plone_view|context/@@plone;
+                              ajax python:True">
 
-        <tal:publications metal:define-macro="publications"
-                          tal:define="language python:request.get('Language');
-                                      folderContents python: frontpage_view.getPublications() if not language else frontpage_view.getPublications(language=language);
-                                      plone_view nocall:plone_view|context/@@plone;
-                                      ajax python:True">
+    <tal:folderContents condition="folderContents">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
+    </tal:folderContents>
 
-            <tal:folderContents condition="folderContents">
-                <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
-            </tal:folderContents>
+    <metal:languages tal:condition="not:folderContents">
+            <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
+    </metal:languages>
 
-            <metal:languages tal:condition="not:folderContents">
-                    <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
-            </metal:languages>
+</tal:publications>
 
-        </tal:publications>
-
-</tal:defines>

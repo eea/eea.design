@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
     $("#whatsnew-gallery").find(".eea-tabs").tabs("> .eea-tabs-panel", function(event, index) {
         var cur_tab = this.getTabs()[index],
             cur_tab_val = cur_tab.id.substr(4);
-        cur_tab.theme = cur_tab.theme || "none";
+        cur_tab.theme = cur_tab.theme || "";
         var opt_item,
             sel_value,
             sel_text,
@@ -75,9 +75,7 @@ jQuery(document).ready(function($) {
 
         var album = highlight.find(".gallery-album");
         var album_length = album.length !== 0 ? album.children().length : 0;
-        var notopics = highlight.find(".portalMessage"),
-            notopics_length = notopics.length !== 0 ? 1 : 0;
-        if (cur_tab.theme === sel_value && notopics_length !== 0) {
+        if (cur_tab.theme === sel_value) {
             return;
         }
 
