@@ -1,0 +1,104 @@
+<metal:promos metal:define-macro="portlet"
+                tal:define="
+                promo_view promo_view|context/@@frontpage_highlights;
+                get_img_url  nocall:promo_view/getImageUrl;
+                highlights view/get_promotions|promo_view/getPromotions|nothing;
+                plone_view nocall:plone_view|context/@@plone;
+                show_description show_description|python:True;
+                frontpage_gallery frontpage|nothing;
+                small_factor python: '' if frontpage_gallery else '-sm';
+                image_scale python: 'image_thumb' if frontpage_gallery else 'image_tile';"
+                tal:condition="highlights"
+       i18n:domain="eea">
+
+<div id="promo-gallery-wrapper">
+<div tal:attributes="id string:gallery-content-outer${small_factor};">
+  <ul tal:attributes="id string:promo-gallery-content${small_factor}">
+      <metal:pritems
+                    tal:repeat="hl highlights">
+                        <li tal:define="
+                            obj hl/getObject;
+                            getUrl obj/getUrl|nothing;
+                            getURL obj/getURL|nothing;
+                            absolute_url obj/absolute_url|nothing;
+                            is_video python:'eea.mediacentre.interfaces.IVideo' in hl.object_provides;
+                            portal_type obj/portal_type;
+                            figure_link python:getUrl or getURL or absolute_url;
+                            figure_link python: figure_link + '/view' if is_video else figure_link;
+                            image_link obj/getURL|obj/absolute_url;
+                            parent_image_url python:get_img_url(hl);
+                            image_link python:parent_image_url if parent_image_url else image_link;
+                            hltitle obj/Title;
+                            ">
+
+                            <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
+                                <metal:fill metal:fill-slot="body">
+                                    <tal:image tal:define="figure obj/getImage|nothing;
+                                                           figure_title figure/title|obj/Title|nothing;">
+                                        <tal:Link tal:condition="figure_link">
+                                            <a href="" title=""
+                                               tal:attributes="href figure_link; class python:cloud or video or animation;
+                                                               title figure_title;">
+                                                <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
+                                            </a>
+                                        </tal:Link>
+                                        <tal:noLink tal:condition="not: figure_link">
+                                            <img alt="" tal:attributes="src string:${image_link}/image_preview; title figure_title; alt figure_title" />
+                                        </tal:noLink>
+                                    </tal:image>
+                                    <div tal:attributes="class string:promo-item-desc${small_factor};">
+                                        <h3><a href="#"
+                                               tal:attributes="href figure_link; class python:video or animation;"
+                                               tal:content="python:plone_view.cropText(hltitle,80)">
+                                            Highlight Title</a></h3>
+                                        <tal:desc tal:condition="python:frontpage_gallery and show_description">
+                                            <span tal:define="description obj/Description|string: Description goes here" tal:content="python:plone_view.cropText(description,122)" />
+                                        </tal:desc>
+                                    </div>
+                                </metal:fill>
+                            </metal:isVideo>
+                        </li>
+        </metal:pritems>
+    </ul>
+    </div>
+
+<!-- navigation outer -->
+
+<div tal:attributes="id string:navigator-outer${small_factor}" tal:condition="python:small_factor">
+    <ul tal:attributes="id string:promo-navigator${small_factor}">
+  <metal:items tal:repeat="hl highlights">
+                    <li>
+                        <div>
+                        <tal:image tal:define="figure hl/getImage|nothing;
+                        figure_title figure/title|hl/Title|nothing;
+                        url hl/getURL|hl/absolute_url;
+                        parent_image_url python:get_img_url(hl);
+                        url python:parent_image_url if parent_image_url else url;
+                        ">
+                        <img alt="" tal:attributes="src string:${url}/${image_scale}; title figure_title; alt figure_title" />
+                        </tal:image>
+
+                        <tal:title tal:condition="frontpage_gallery" tal:define="hltitle hl/Title">
+                            <h3 tal:content="python:plone_view.cropText(hltitle,38)">Highlight Title</h3>
+                        </tal:title>
+                    </div>
+                    </li>
+  </metal:items>
+        </ul>
+    </div>
+    <div tal:attributes="class string:controls${small_factor}">
+        <a  href="#" id="prev-promo"></a>
+        <a  href="#" id="next-promo"></a>
+        <a  href="#"
+            id="play-pause"
+            title="Pause/Play slideshow"
+            i18n:attributes="title"
+            class="promo-gallery-pause"
+            aria-pressed="true"
+            role="button"
+            ></a>
+    </div>
+
+</div>
+ <!--end promotion_gallery macro -->
+</metal:promos>

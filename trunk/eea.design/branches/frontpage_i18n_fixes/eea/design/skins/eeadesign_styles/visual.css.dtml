@@ -1,0 +1,515 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* sub/sup must not alter the line-height #20996 */
+
+sub {
+    top: 0.5ex;
+}
+
+sup {
+    bottom: 1ex;
+}
+
+sup, sub {
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    position: relative;
+}
+
+/*
+** Info styles
+**
+*/
+
+.visualHidden {
+    display: none;
+}
+
+.visualHighlight {
+    background-color: &dtml-evenRowBackgroundColor;;
+}
+
+.discreet {
+    color: &dtml-discreetColor;;
+    font-size: &dtml-fontSmallSize;;
+    font-weight: normal;
+}
+/*
+** Watermark style
+** for content that is not published
+*/
+
+.wf-state-visible,
+.wf-state-published_eionet,
+.wf-state-new,
+.wf-state-closed,    /* Due to #20490 */
+.wf-state-content_pending,
+.wf-state-draft,
+.wf-state-in-progress,
+.wf-state-private,
+.wf-state-rejected,
+.wf-state-retracted,
+.wf-state-submitted,
+.wf-state-marked_for_deletion,
+.wf-state-published_internally,
+.wf-state-webqa_pending,
+.wf-state-redraft_and_web_integration,
+.wf-state-final_revision,
+.wf-state-proofreading,
+.wf-state-ready_for_eionet_review,
+.wf-state-web_editing,
+.wf-state-web_integration,
+.wf-state-in-progress,
+.wf-state-obsolete,
+.wf-state-pending {
+    background: url(&dtml-portal_url;/draft.png);
+}
+
+/*
+** Collapsible areas classes.
+** further info in javascript
+** and style reference
+*/
+
+.collapsibleHeader {
+    cursor: pointer;
+    background: transparent url(<dtml-var portal_url>/p_/pl) 0% 50% no-repeat;
+    padding: 1px 0 1px 20px;
+}
+
+.expandedBlockCollapsible .collapsibleContent {
+    display: block;
+}
+
+.collapsedBlockCollapsible .collapsibleContent {
+    display: none;
+}
+
+/*
+** Tables
+** Adopted from Eionet
+*/
+
+/* Default are layout tables. We can not really style those. It would have too many side effects */
+table {
+    empty-cells: show;
+    font-size: 0.9em;
+}
+
+th {
+    font-weight: bold;
+    line-height: normal;
+    padding: 0.1em 0.5em;
+}
+th a, th a:link, th a:visited {
+    color: #000;
+}
+
+
+/* #23408; give height to empty anchor links in order for
+*  url navigation to point to the correct element
+*/
+.listing th > a:after {
+    display: block;
+    content: " ";
+    height: 16px;
+}
+
+.listing th a, .listing th a:visited {
+    color: #FFF !important;
+}
+
+/* Data tables */
+.datatable {
+    border: 1px solid #b6b6b6;
+    border-collapse: collapse;
+    color: #666666;
+    margin: 1em 0.5em;
+}
+.datatable th {
+    text-align: center;
+    background-color: #f6f6f6;
+    font-weight: bold;
+}
+.number,
+.scope-row { /* IE6 doesn't understand [scope="row"] */
+    text-align: right;
+}
+
+.datatable td, .datatable th  {
+    padding: 0.3em;
+    vertical-align: top;
+}
+.datatable tr.zebraeven {
+    background-color: #f6f6f6;
+}
+
+.even {
+    margin: 0;
+    padding: 15px 15px 10px 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #DDD;
+}
+
+.sum {
+    font-weight: bold;
+}
+
+/* Sortable table columns */
+.sortable, .listing {
+    border: 1px solid #b6b6b6;
+    color: #666666;
+    line-height:normal;
+}
+
+.sortable td, .listing td {
+    padding: 0.2em;
+    border-bottom: 1px dotted #b6b6b6;
+}
+
+.sortable th, .listing th,
+.google-visualization-table .gradient {
+    color: #fff;
+    /* #30473 important because of google visualization table override */
+    background: none &dtml-corporateBlueTwo; !important;
+}
+
+.sortable th, .listing th {
+    border: 0.1em solid #e7e7e7;
+    border-style: solid solid none;
+    margin: 0;
+    padding: 0.5em 1em;
+    white-space: nowrap;
+    vertical-align: top;
+    text-transform: none;
+}
+
+.sortable th a:link,
+.listing th a:link,
+.sortable th a:visited,
+.listing th a:visited,
+.sortable th span,
+.listing th a:visited {
+    display:block;
+    text-decoration: none;
+    font-weight: bold;
+    padding:1px 0.5em;
+}
+
+.sortable thead th a:hover,
+.listing thead th a:hover,
+.listing thead th:hover,
+.listing tfoot th:hover {
+    background: &dtml-corporateOrange;;
+    color: #fff;
+}
+
+/* CSS3 Zebra effect for certain tables */
+.listing tr:nth-child(odd) td,
+.sortable tr:nth-child(odd) td,
+.datatable tr:nth-child(odd) td {
+    background-color: #ececec;
+}
+
+
+/* Styles which apply only in central content area */
+
+#content blockquote p {
+    font-weight:bold;
+    background: url(&dtml-portal_url;/close_quote.gif) no-repeat bottom right;
+    padding: 0 2.25em 1em 0;
+}
+
+#content blockquote p.source {
+    text-align:right;
+    background: none;
+    font-style: normal;
+    font-weight:normal;
+    font-size: x-small;
+    padding: 0 1em 0 0;
+}
+
+/* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
+.multicolumn {
+    -webkit-column-width: 150px;
+    -webkit-column-gap: 20px;
+    -moz-column-width: 150px;
+    -moz-column-gap: 20px;
+    column-width: 150px;
+    column-gap: 20px;
+}
+
+
+/* standard figure, used for articles and pages.
+can be floated left or right with additional
+class figure-right or figure-left */
+
+.figure p,
+.figure-plus p,
+.figure-container p {
+    margin-bottom: 0;
+}
+
+.figure img {
+    border: 1px solid darkGray;
+    margin-bottom: 1em;
+}
+
+.figure-title, .figure-nr {
+    font-weight: bold;
+}
+.figure-image {
+    text-align: left;
+    clear: both;
+}
+
+.figure-note {
+    font-weight: normal;
+}
+.figure-source-copyright {
+    text-align: right;
+}
+.figure-plus-container {
+    margin:0.8em 0 0.5em 0.5em;
+}
+.figure-plus {
+    background-color: #fff;
+    border: 1px solid #a9a9a9;
+    margin: -6px 0 0 -6px;
+    padding: 4px;
+    zoom: 1;
+}
+
+.figure-right .figure,
+.figure-right .figure-plus-container {
+    float: right;
+    margin-left: 1em;
+}
+
+.figure-left .figure,
+.figure-left .figure-plus-container {
+    float: left;
+    margin-right: 0.5em;
+}
+
+span.figure-left {
+    display: block;
+}
+
+/* style for keyfacts slider */
+#keyfacts-slider {
+    position: relative;
+    margin-bottom: 2em;
+}
+#keyfacts-slider img.keyfacts-bgimg {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+#keyfacts-slider dl {
+    width: 100%;
+    min-height: 140px;
+    position: relative;
+    opacity: 0.8;
+}
+
+#keyfacts-slider .slidePortlet {
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    background: &dtml-corporateBlueTwo;;
+    color: #FFFFFF;
+    bottom: 0;
+    margin: 0;
+}
+
+#keyfacts-slider .slidePortlet .portletItem {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 115%;
+    left: -100%;
+}
+
+#keyfacts-slider .slidePortlet .portletItem span {
+    display: block;
+    padding: 10px 25px;
+}
+
+#keyfacts-slider .slidePortlet .slideButton {
+    position: absolute;
+    top: 40%;
+    margin: 4px;
+    padding: 10px 2px;
+    width: 17px;
+    height: 17px;
+    background: transparent url(&dtml-portal_url;/accordion_left.png) no-repeat scroll center center;
+    cursor: pointer;
+}
+
+#keyfacts-slider .slidePortlet .slideButton.next {
+    right: 0;
+    background: transparent url(&dtml-portal_url;/accordion_right.png) no-repeat scroll center center;
+}
+
+#keyfacts-slider .slidePortlet .slideButton.play {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 0;
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll -446px -216px;
+}
+
+#keyfacts-slider .slidePortlet .slideButton.play.pause {
+    background: transparent url('&dtml-portal_url;/sprite-eeaimages.png') no-repeat scroll -454px -191px;
+}
+
+#keyfacts-slider .slidePortlet a.moreLink {
+    background: none;
+    padding-left: 0;
+    text-decoration: underline;
+    color: white !important;
+    font-size: 100%;
+}
+
+#keyfacts-slider .slidePortlet a.moreLink:hover {
+    text-decoration: none;
+}
+
+#keyfacts-slider .slidePortlet .portletHeader {
+  margin: 8px 0 0 25px;
+  background-color: transparent;
+  color: #FFF;
+  padding: 0;
+}
+
+#keyfacts-slider a,
+#keyfacts-slider a:hover,
+#keyfacts-slider a:visited {
+    color: #FFF !important; /* important because of content a:hover */
+}
+#keyfacts-slider .keyfactsImgContainer {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    height: 280px;
+}
+
+
+/* standard elements with shadow background */
+.thumbnail-right {
+    display: block;
+    margin: 10px 0 2px 6px;
+}
+
+/* standard elements which are shadowed and therefore moved up*/
+.thumbnail-right img {
+    display: block;
+    margin: -6px 0 0 -6px;
+    padding: 5px;
+    border: 1px solid #a9a9a9;
+}
+
+/* hover effect for images inside links */
+.thumbnail-right a:hover {
+    background-color: &dtml-mediumBackgroundColor;;
+}
+
+/* highlights frontpage cleaned structure */
+.figure-container {
+    float: left;
+    background-color: #fff;
+    border: 1px solid #a9a9a9;
+    margin: 0 10px 3px 0;
+    padding: 5px;
+}
+
+/* rounded boxes default css */
+.roundedBox {
+    padding: 1em;
+    border-radius: 5px;
+}
+
+/* general background colors usable in combination with roundedBox */
+.lightBGC {
+    background-color:&dtml-lightBackgroundColor;;
+}
+
+.mediumBGC {
+    background-color:&dtml-mediumBackgroundColor;;
+}
+
+.darkBGC {
+    background-color:&dtml-darkBackgroundColor;;
+}
+
+/* languageCodes */
+#languageCodes {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#languageCodes li {
+    display: inline-block;
+}
+
+/* relatedLinks */
+#relatedItems {
+    margin: 1em 0 0 1px;
+    color: &dtml-fontColor;;
+}
+
+.awardNotice {
+    padding: 20px;
+    font-size: 160%;
+    margin-bottom: 1em;
+}
+
+/* eea.geotags View macro */
+.eea-location-listing {
+    text-align: left;
+    color: #666;
+    line-height: 2em;
+}
+
+
+/* reusable components */
+.link-without-style {
+    /* plz add more link style elimination */
+    text-decoration: none;
+}
+
+.eea-template {
+    display: none;
+}
+
+.eea-rounded-corners {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.eea-horizontal-list li {
+    float: left;
+    margin: 0 0.5em 0 0;
+}
+
+.eea-no-list-style {
+    list-style: none none;
+    margin: 1em 0;
+}
+
+/* padding to daviz tooltip */
+.google-visualization-tooltip{ padding: 5px !important; }
+
+/* </dtml-with> */

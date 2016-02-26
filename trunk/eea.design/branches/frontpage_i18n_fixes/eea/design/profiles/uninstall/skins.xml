@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- the default skin is set back to the plone default skin -->
+<object name="portal_skins" default_skin="Sunburst Theme">
+
+    <!-- Remove the skin layers -->
+
+   <!-- Remove the skin path -->
+   <skin-path name="EEADesign2006"  remove="True" />
+   <skin-path name="EEADesignCMS"  remove="True" />
+</object>
