@@ -1,8 +1,10 @@
 <tal:articles metal:define-macro="articles"
         tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
-                    language python:request.get('Language');
+                    language python:request.get('LANGUAGE');
                     folderContents folderContents|python: frontpage_view.getArticles() if not language else frontpage_view.getArticles(language=language);
-                    ajax python:True">
+                    hide_listing hide_listing|python: False;
+                    hide_album hide_album|python: True;
+                    ajax ajax|python:True">
 
     <tal:folderContents condition="folderContents">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />

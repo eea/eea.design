@@ -1,10 +1,10 @@
-<tal:allproducts metal:define-macro="allproducts"
+<tal:news metal:define-macro="news"
         tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
-        language python:request.get('LANGUAGE');
-        folderContents folderContents|python: frontpage_view.getAllProducts() if not language else frontpage_view.getAllProducts(language=language);
+        language language|python:request.get('LANGUAGE');
+        folderContents folderContents|python:frontpage_view.getNewsAndArticles() if language != 'en' else frontpage_view.getNews();
         plone_view nocall:plone_view|context/@@plone;
-        hide_listing hide_listing|python: True;
-        hide_album hide_album|python: False;
+        hide_listing hide_listing|python: False;
+        hide_album hide_album|python: True;
         ajax ajax|python:True">
 
     <tal:folderContents condition="folderContents">
@@ -15,5 +15,4 @@
         <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
     </metal:languages>
 
-</tal:allproducts>
-
+</tal:news>
