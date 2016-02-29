@@ -1,8 +1,8 @@
 
 <tal:news metal:define-macro="news"
-        tal:define="frontpage_view context/@@frontpage_highlights;
+        tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
         language python:request.get('Language');
-        folderContents python: frontpage_view.getNews() if not language else frontpage_view.getNews(language=language);
+        folderContents folderContents;
         ajax python:True">
 
     <tal:folderContents condition="folderContents">

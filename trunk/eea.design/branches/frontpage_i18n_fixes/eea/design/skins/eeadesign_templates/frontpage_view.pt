@@ -13,7 +13,8 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
 
             <h1 class="hiddenStructure" tal:content="context/Title">EEA Home page</h1>
             <tal:main-macro metal:define-macro="main">
-            <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;">
+            <div id="highlights-block" tal:define="global frontpage_view context/@@frontpage_highlights;
+                   global datamaps_view context/@@data_and_maps_logic">
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="highlights-area" class="column-area">
@@ -35,14 +36,27 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                         <!-- end select_topics -->
 
                         <!-- tabs -->
-                        <div metal:define-macro="whatsnew-gallery" tal:define="datapage datapage|string:frontpage;" tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
+                        <div metal:define-macro="whatsnew-gallery"
+                                tal:define="datapage datapage|string:frontpage;
+                                plone_view context/@@plone;
+                                language portal_state/language;
+                                news_folderContents python: frontpage_view.getNews() if not language else frontpage_view.getNews(language=language);
+                                newsandarticles_folderContents python: frontpage_view.getNewsAndArticles() if language and language != 'en' else None;
+                                articles_folderContents python: frontpage_view.getArticles() if not language else frontpage_view.getArticles(language=language);
+                                publications_folderContents python: frontpage_view.getPublications() if not language else frontpage_view.getPublications(language=language);
+                                multimedia_folderContents python: frontpage_view.getMultimedia() if not language else frontpage_view.getMultimedia(language=language);
+                                datamaps_folderContents python: datamaps_view.getAllProducts() if not language else datamaps_view.getAllProducts(language=language);
+                                allproducts_folderContents python: frontpage_view.getAllProducts() if not language else frontpage_view.getAllProducts(language=language);
+                                folderContent python: {'News': news_folderContents, 'Articles': articles_folderContents, 'News and articles': newsandarticles_folderContents, 'Publications': publications_folderContents, 'Multimedia': multimedia_folderContents, 'Data and maps': datamaps_folderContents, 'All products': allproducts_folderContents};"
+                                tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
                             <ul class="eea-tabs two-rows"
                                 tal:define="main_site python: True if language == 'en' else False;
-                                            tabnames_en  python: ['News', 'Articles'];
+                                            tabnames_en python: ['News', 'Articles'];
                                             tabnames_translation python: ['News and articles'];
                                             tabnames_others python:['Publications', 'Multimedia', 'Data and maps', 'All products'];
-                                            tabnames python: tabnames_en + tabnames_others if main_site else tabnames_translation + tabnames_others">
-                                <li tal:repeat="tab tabnames">
+                                            tabnames python: tabnames_en + tabnames_others if main_site else tabnames_translation + tabnames_others;
+                                            global tabs python: [tab for tab in tabnames if folderContent.get(tab)]">
+                                <li tal:repeat="tab tabs">
                                     <a href="#"  i18n:translate=""
                                        tal:content="python:context.translate(tab, domain='eea')" class="block"
                                        tal:attributes="id python: 'tab-datamaps' if tab == 'Data and maps' else 'tab-' + tab.replace(' ', '').lower()">Tabs</a>
@@ -60,22 +74,22 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                                 </tal:items>
                             </select>
 
-                            <div metal:use-macro="here/frontpage_macros/macros/news">
+                            <div metal:use-macro="here/frontpage_macros/macros/news" tal:condition="python: 'News' in tabs or 'News and articles' in tabs">
                                 News highlights
                             </div>
-                            <div metal:use-macro="here/frontpage_macros/macros/articles">
+                            <div metal:use-macro="here/frontpage_macros/macros/articles" tal:condition="python: 'Articles' in tabs">
                                 Articles Highlights
                             </div>
-                            <div metal:use-macro="here/frontpage_macros/macros/publications">
+                            <div metal:use-macro="here/frontpage_macros/macros/publications" tal:condition="python: 'Publications' in tabs">
                                 Publications Highlights
                             </div>
-                            <div metal:use-macro="here/frontpage_macros/macros/multimedia">
+                            <div metal:use-macro="here/frontpage_macros/macros/multimedia" tal:condition="python: 'Multimedia' in tabs">
                                 Multimedia Highlights
                             </div>
-                            <div metal:use-macro="here/frontpage_macros/macros/datamaps">
+                            <div metal:use-macro="here/frontpage_macros/macros/datamaps" tal:condition="python: 'Data and maps' in tabs">
                                 Data and maps Highlights
                             </div>
-                            <div metal:use-macro="here/frontpage_macros/macros/allproducts">
+                            <div metal:use-macro="here/frontpage_macros/macros/allproducts" tal:condition="python: 'All products' in tabs">
                                 All products Highlights
                             </div>
                         </div>
@@ -87,8 +101,7 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                         <!-- featured and spotlight areas -->
 
                         <tal:featured_article metal:define-macro="featured_article"
-                        tal:define="featured_class context/@@frontpage_highlights;
-                        highlights featured_class/getHighArticles;
+                        tal:define="highlights frontpage_view/getHighArticles;
                         archive_url python:here.Language() == 'en' and 'articles' or str(here.Language() + '/articles');
                         archive_href string:${context/@@plone_portal_state/portal_url}/$archive_url;">
                         <div metal:use-macro="here/frontpage_macros/macros/featured-item">
@@ -97,9 +110,8 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                         </div>
                         </tal:featured_article>
 
-                        <tal:spotlight 
-                        tal:define="featured_class frontpage_view;
-                        highlights featured_class/getSpotlight;">
+                        <tal:spotlight
+                        tal:define="highlights frontpage_view/getSpotlight;">
                         <div metal:use-macro="here/frontpage_macros/macros/featured-item">
                             <span metal:fill-slot="box_title" i18n:translate="">Topic in the spotlight</span>
                         </div>

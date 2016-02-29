@@ -1,7 +1,7 @@
 <tal:alldata metal:define-macro="datamaps"
         tal:define="datamaps_view context/@@data_and_maps_logic;
         language python:request.get('Language');
-        folderContents python: datamaps_view.getAllProducts() if not language else datamaps_view.getAllProducts(language=language);
+        folderContents folderContents|python: datamaps_view.getAllProducts() if not language else datamaps_view.getAllProducts(language=language);
         plone_view nocall:plone_view|context/@@plone;
         ajax python:True">
 

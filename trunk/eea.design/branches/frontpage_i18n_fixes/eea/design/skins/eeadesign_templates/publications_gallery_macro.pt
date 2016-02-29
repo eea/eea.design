@@ -1,7 +1,7 @@
 <tal:publications metal:define-macro="publications"
-                  tal:define="frontpage_view context/@@frontpage_highlights;
+                  tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
                               language python:request.get('Language');
-                              folderContents python: frontpage_view.getPublications() if not language else frontpage_view.getPublications(language=language);
+                              folderContents folderContents|python: frontpage_view.getPublications() if not language else frontpage_view.getPublications(language=language);
                               plone_view nocall:plone_view|context/@@plone;
                               ajax python:True">
 
