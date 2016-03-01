@@ -47,6 +47,8 @@ class Frontpage(BrowserView):
                                                           'noOfEachProduct', 3)
         self.noOfLatestDefault = frontpage_properties.getProperty(
                                                         'noOfLatestDefault', 6)
+        self.effectiveDateMonthsAgo = frontpage_properties.getProperty(
+                                                'effectiveDateMonthsAgo', 6)
         self.now = DateTime()
 
 
@@ -264,12 +266,12 @@ def _getHighArticles(self, noOfItems=1):
                         portaltypes='Article', noOfItems=noOfItems)
 
 
-def queryLastYearRange(self, query):
+def queryEffectiveRange(self, query):
     """ Modify query in order to list items no longer than 1 year ago
     """
     date_range = {
         'query': (
-            self.now - 365,
+            self.now - (self.effectiveDateMonthsAgo * 30),
             self.now,
         ),
         'range': 'min:max',
@@ -303,7 +305,7 @@ def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
         query['object_provides'] = interfaces
     if topic:
         query['getThemes'] = topic
-    query = queryLastYearRange(self, query)
+    query = queryEffectiveRange(self, query)
     res = self.catalog.searchResults(query)
     filtered_res = filterLatestVersion(self, brains=res,
                                                 noOfItems=noOfItems)
@@ -331,7 +333,7 @@ def _getTopics(self, topic=None, portaltypes=None, object_provides=None,
         query['getThemes'] = topic
     if tags:
         query['Subject'] = tags
-    query = queryLastYearRange(self, query)
+    query = queryEffectiveRange(self, query)
     res = self.catalog(query)
     filtered_res = filterLatestVersion(self, brains=res,
                                                      noOfItems=noOfItems)
