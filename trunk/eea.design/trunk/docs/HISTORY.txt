@@ -1,8 +1,8 @@
 Changelog
 =========
 
-13.6.dev0 - (unreleased)
-------------------------
+13.6 - (2016-03-01)
+-------------------
 * Change: GisApplication now span the entire screen width
   [ichimdav refs #68250]
 * Change: check if underscore is found within eea-responsive.js as we might
