@@ -267,7 +267,7 @@ jQuery(document).ready(function($) {
       gis_iframe_resize = function() {
         var window_height = $(window).height();
         if ($gis_iframe.height() !== window_height) {
-          $gis_iframe.css('height', window_height);
+          $gis_iframe.css('height', window_height - 50);
         }
       };
       gis_iframe_resize();
