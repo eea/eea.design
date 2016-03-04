@@ -18,6 +18,15 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                 <div id="main-content">
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="highlights-area" class="column-area">
+
+                        <!--? message disclaimer -->
+                        <div class="portalMessage message_disclaimer">
+                            <span class="eea-icon eea-icon-flag"></span>
+                            <strong i18n:translate="">Welcome to the European Environment Agency.</strong>
+                            <p i18n:translate="">This site presents the content we have available in your language.</p>
+                            <p i18n:translate="">To explore all our outputs and complete knowledge base, please visit <a href="http://www.eea.europa.eu" i18n:name="site_url">our main website</a> in English.</p>
+                        </div>
+
                         <!-- promotions_gallery_slideshow-->
                         <metal:promotions 
                         tal:define="frontpage python: True; 
@@ -35,12 +44,6 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                         </div>
                         <!-- end select_topics -->
 
-                        <div class="portalMessage message_disclaimer">
-                           <span class="eea-icon eea-icon-flag"></span>
-                            <strong i18n:translate="">Welcome to the European Environment Agency.</strong>
-                            <p i18n:translate="">This site presents the content we have available in your language.</p>
-                            <p i18n:translate="">To explore all our outputs and complete knowledge base, please visit <a href="http://www.eea.europa.eu" i18n:name="site_url">our main website</a> in English.</p>
-                        </div>
                         <!-- tabs -->
                         <div metal:define-macro="whatsnew-gallery"
                                 tal:define="datapage datapage|string:frontpage;

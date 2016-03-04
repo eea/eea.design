@@ -79,10 +79,10 @@
                      tal:define="visible_album python: 'hiddenStructure' if hide_album else '';
                                  visible_listing python: 'hiddenStructure' if hide_listing else '';">
         <div class="gallery-ajax visualClear">
-            <div tal:attributes="class string: gallery-listing ${visible_listing}">
+            <div tal:attributes="class string: gallery-listing ${visible_listing}; " tal:define="item_description python: False;">
                 <div metal:use-macro="here/folder_summary_view/macros/listing"></div>
             </div>
-            <tal:enabled tal:define="enabled python: True">
+            <tal:enabled tal:define="enabled python: True; item_description python: False;">
                 <div tal:attributes="class string: gallery-album ${visible_album}">
                     <div metal:use-macro="here/atct_album_view/macros/listing-nobatch"></div>
                 </div>
@@ -187,7 +187,6 @@
                 parent_image_url python:get_img_url(highlight);
                 image_url python:parent_image_url if parent_image_url else image_url;
                 title highlight/Title|highlight/getNewsTitle;
-                description highlight/Description|highlight/getTeaser;
                 portal_type highlight/portal_type;
                 is_video python:'eea.mediacentre.interfaces.IVideo' in highlight.object_provides;">
             <div class="featured">
@@ -225,7 +224,6 @@
                                 </metal:fill>
                             </metal:isVideo>
                         </h3>
-                        <p tal:content="python:plone_view.cropText(description,descr_max_length)">description</p>
                         <p><a href="#" class="moreLink"
                                 tal:attributes="href string:${url}/view" i18n:translate="">Read more</a></p>
                     </tal:cond>
@@ -239,7 +237,6 @@
                                     Highlight Title</a></h3>
                         </div>
                         <div class="featured-highlight-description">
-                            <p tal:content="python:plone_view.cropText(description,descr_max_length)">description</p>
                             <p><a href="#" class="moreLink"
                                     tal:attributes="href url;" i18n:translate="">Read more</a></p>
                         </div>
