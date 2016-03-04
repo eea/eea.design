@@ -2,45 +2,6 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       i18n:domain="eea" tal:omit-tag="">
 
-<div metal:define-macro="news"
-     id="news-highlights"
-     class="eea-tabs-panel"
-     tal:define="hide_listing python: False;
-                 hide_album python: True;
-                 ajax python: False;
-                 more_href string:highlights;">
-    <div metal:use-macro="here/news_gallery_macro/macros/news" />
-</div>
-
-<div metal:define-macro="articles"
-        class="eea-tabs-panel"
-        id="articles-highlights"
-            tal:define="hide_listing python: False;
-                        hide_album python: True;
-                        ajax python: False;
-                        more_href string:articles;">
-        <div metal:use-macro="here/articles_gallery_macro/macros/articles" />
-</div>
-
-<div metal:define-macro="publications"
-     id="publications-highlights"
-     class="eea-tabs-panel"
-     tal:define="hide_listing python: False;
-                 hide_album python: True;
-                 ajax python: False;
-                 more_href string:publications;">
-        <div metal:use-macro="here/publications_gallery_macro/macros/publications" />
-</div>
-
-<div metal:define-macro="multimedia"
-     class="eea-tabs-panel"
-     id="multimedia-highlights"
-     tal:define="hide_album python: False;
-                 hide_listing python: True;
-                 ajax python: False;
-                 more_href string:multimedia;">
-        <div metal:use-macro="here/multimedia_gallery_macro/macros/multimedia" />
-</div>
 
 <div metal:define-macro="datamaps"
      class="eea-tabs-panel"
@@ -63,16 +24,16 @@
 
 
 <div metal:define-macro="more-link" class="portletFooter"
-    tal:define="more_href more_href|string:/;
-                more_title more_title|string:All Items">
-                <p>
-		   <a title="archive" class="standardButton" i18n:attributes="title"
-                       tal:attributes="href more_href;" >
-				<span i18n:translate=""
-                                      tal:omit-tag="">
-                                    <tal:block tal:content="more_title">All Items</tal:block></span>
-                    </a>
-                </p>
+        tal:define="more_href more_href|string:/;
+        more_title more_title|string:All Products">
+    <p>
+        <a title="archive" class="standardButton" i18n:attributes="title"
+                tal:attributes="href more_href;">
+                        <span i18n:translate=""
+                tal:omit-tag="">
+            <tal:block tal:content="more_title">All Products</tal:block></span>
+        </a>
+    </p>
 </div>
 
 <metal:gallery-items define-macro="gallery-items"
