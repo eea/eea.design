@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
         // the first so we redefine news to the first found match if
         // index is 0
         news = index === 0 ? gal.first() : news;
-        news = news[0] !== undefined ? news[0] : news;
+        news = news[0] !== undefined ? news[0] :news;
 
         var gallery_ajax = $(".gallery-ajax", news);
         var layout_selection = $('.gallery-layout-selection li a', news)[0];
@@ -50,6 +50,52 @@ jQuery(document).ready(function($) {
         params = tag_title ? "tags" +  "=" + sel_value : params;
         eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
     };
+
+    $("#whatsnew-gallery").find(".eea-tabs").tabs("> .eea-tabs-panel", function(event, index) {
+        var cur_tab = this.getTabs()[index],
+            cur_tab_val = cur_tab.id.substr(4);
+        cur_tab.theme = cur_tab.theme || "";
+        var opt_item,
+            sel_value,
+            sel_text,
+            tag_title;
+
+        var highlight = $("#" + cur_tab_val + "-highlights");
+
+        var ajax_loader_img = '<div style="text-align: center;"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
+
+        opt_item = $("#topic-selector").find(":selected");
+        if (opt_item.length) {
+            sel_value = opt_item.val();
+            sel_text = opt_item.text();
+        }
+        else {
+            $(".filter-topic").hide();
+        }
+
+        var album = highlight.find(".gallery-album");
+        var album_length = album.length !== 0 ? album.children().length : 0;
+        if (cur_tab.theme === sel_value) {
+            return;
+        }
+
+        // check if highlight doesn't contain a portalMessage since getting results
+        // in other languages doesn't introduce gallery-album div and in that case
+        // we don't want to reload the gallery macro
+        if (sel_text && sel_text.indexOf("All") !== -1 ||
+            album_length === 0 && !highlight.find(".portalMessage").length) {
+            album.html(ajax_loader_img);
+            eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
+        }
+        if (sel_value) {
+            if (cur_tab.theme !== sel_value) {
+                album.html(ajax_loader_img);
+                cur_tab.theme = sel_value;
+                eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
+            }
+        }
+    });
+
 
     var $topic_selector = $("#topic-selector");
     $topic_selector.find('[value="default"]').remove();
@@ -63,8 +109,9 @@ jQuery(document).ready(function($) {
                 y = this.options;
             var topic_value = y[x].value,
                 topic_text = y[x].innerHTML;
+            var tab_val = $("#whatsnew-gallery").find(".eea-tabs a.current")[0].id.substr(4);
 
-            eea_gal.whatsnew_func('allproducts', topic_text, topic_value);
+            eea_gal.whatsnew_func(tab_val, topic_text, topic_value);
         });
 
     // selection of folder_summary_view or atct_album_view

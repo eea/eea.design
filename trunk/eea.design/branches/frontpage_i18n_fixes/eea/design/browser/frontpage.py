@@ -10,7 +10,6 @@ from eea.themecentre.themecentre import getTheme
 from plone.app.blob.interfaces import IBlobWrapper
 from zope.component import queryMultiAdapter
 from eea.versions.interfaces import IGetVersions
-from itertools import chain
 import logging
 
 logger = logging.getLogger("eea.design.browser.frontpage")
@@ -82,34 +81,18 @@ class Frontpage(BrowserView):
                                noOfItems=self.noOfPublications,
                                language=language)
 
-    def getInfographics(self, portaltypes="Infographic", language=None):
-        """ retrieves latest Infographics by date and by topic """
-        return _getItems(self,
-                         portaltypes=portaltypes, noOfItems=self.noOfMedium,
-                         language=language)
-
     def getAllProducts(self, no_sort=False, language=None):
         """ retrieves all latest published products for frontpage """
-        # portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
-        #                             'Assessment', 'Data', 'EEAFigure')
-        datamaps_view = self.context.restrictedTraverse('data_and_maps_logic')
-        news = self.getNews(language=language)
-        articles = self.getArticles(language=language)
-        publications = self.getPublications(language=language)
-        multimedia = self.getMultimedia(language=language)
-        datamaps = datamaps_view.getAllProducts(language=language)
-        infographics = self.getInfographics(language=language)
+        portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
+                                    'Assessment', 'Data', 'EEAFigure')
         result = []
-        result.extend(chain(news, articles, publications, multimedia, datamaps,
-                            infographics))
-
-        # for mytype in portaltypes:
-        #     res1 = _getItems(self, portaltypes=mytype,
-        #                      noOfItems=self.noOfEachProduct,
-        #                      language=language)
-        #     result.extend(res1)
-        # multimedia = self.getMultimedia(language=language)
-        # result.extend(multimedia[:self.noOfEachProduct])
+        for mytype in portaltypes:
+            res1 = _getItems(self, portaltypes=mytype,
+                             noOfItems=self.noOfEachProduct,
+                             language=language)
+            result.extend(res1)
+        multimedia = self.getMultimedia(language=language)
+        result.extend(multimedia[:self.noOfEachProduct])
 
         # resort based on effective date
         if not no_sort:

@@ -101,7 +101,7 @@
 
                                    item_id item/getId|item/id;
                                    item_title_or_id item/pretty_title_or_id;
-                                   item_description item_description|item/Description;
+                                   item_description item/Description;
                                    item_type item/portal_type;
                                    item_type_title item/Type;
                                    item_modified item/ModificationDate;
