@@ -108,7 +108,7 @@
 
                     </div>
 
-                    <p class="tileBody" tal:condition="item_description">
+                    <p class="tileBody" tal:condition="item_description_visible">
                         <span class="description" tal:content="item_description">
                             description
                         </span>

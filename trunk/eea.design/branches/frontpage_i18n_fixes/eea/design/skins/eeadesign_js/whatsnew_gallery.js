@@ -109,7 +109,8 @@ jQuery(document).ready(function($) {
                 y = this.options;
             var topic_value = y[x].value,
                 topic_text = y[x].innerHTML;
-            var tab_val = $("#whatsnew-gallery").find(".eea-tabs a.current")[0].id.substr(4);
+            var $tab = $("#whatsnew-gallery").find(".eea-tabs a.current");
+            var tab_val = $tab.length ? $tab[0].id.substr(4) : 'allproducts';
 
             eea_gal.whatsnew_func(tab_val, topic_text, topic_value);
         });

@@ -11,6 +11,8 @@ from plone.app.blob.interfaces import IBlobWrapper
 from zope.component import queryMultiAdapter
 from eea.versions.interfaces import IGetVersions
 import logging
+from itertools import chain
+
 
 logger = logging.getLogger("eea.design.browser.frontpage")
 
@@ -81,25 +83,59 @@ class Frontpage(BrowserView):
                                noOfItems=self.noOfPublications,
                                language=language)
 
+    def getInfographics(self, portaltypes="Infographic", language=None):
+        """ retrieves latest Infographics by date and by topic """
+        return _getItems(self,
+                         portaltypes=portaltypes, noOfItems=self.noOfMedium,
+                         language=language)
+
     def getAllProducts(self, no_sort=False, language=None):
         """ retrieves all latest published products for frontpage """
-        portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
-                                    'Assessment', 'Data', 'EEAFigure')
-        result = []
-        for mytype in portaltypes:
-            res1 = _getItems(self, portaltypes=mytype,
-                             noOfItems=self.noOfEachProduct,
-                             language=language)
-            result.extend(res1)
-        multimedia = self.getMultimedia(language=language)
-        result.extend(multimedia[:self.noOfEachProduct])
 
+        if language and language != 'en':
+            return self.getAllProductsForTranslations(no_sort=no_sort,
+                                                      language=language)
+        else:
+            portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
+                                        'Assessment', 'Data', 'EEAFigure')
+            result = []
+            for mytype in portaltypes:
+                res1 = _getItems(self, portaltypes=mytype,
+                                 noOfItems=self.noOfEachProduct,
+                                 language=language)
+                result.extend(res1)
+            multimedia = self.getMultimedia(language=language)
+            result.extend(multimedia[:self.noOfEachProduct])
+
+            # resort based on effective date
+            if not no_sort:
+                result.sort(key=lambda x: x.effective)
+                result.reverse()
+
+            return result
+
+    def getAllProductsForTranslations(self, no_sort=False, language=None):
+        """ retrieves all latest published products for frontpage of
+            translations
+        """
+        datamaps_view = self.context.restrictedTraverse('data_and_maps_logic')
+        news = self.getNews(language=language)
+        articles = self.getArticles(language=language)
+        publications = self.getPublications(language=language)
+        multimedia = self.getMultimedia(language=language)
+        datamaps = datamaps_view.getAllProducts(language=language)
+        infographics = self.getInfographics(language=language)
+        result = []
+        result.extend(chain(news, articles, publications, multimedia, datamaps,
+                            infographics))
         # resort based on effective date
         if not no_sort:
             result.sort(key=lambda x: x.effective)
             result.reverse()
 
         return result
+
+
 
     def getHighArticles(self):
         """ return a defined number of high visibility articles items """
