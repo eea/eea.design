@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
         });
     };
 
-    eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index, tag_title) {
+    eea_gal.whatsnew_func = function(cur_tab_val, sel_text, sel_value, index) {
         var address = eea_gal.site_address + cur_tab_val + "_gallery_macro";
         eea_gal.current_tab_addr = address;
         var gal = eea_gal.gallery.find(".eea-tabs-panel");
@@ -47,7 +47,6 @@ jQuery(document).ready(function($) {
         var gallery_ajax = $(".gallery-ajax", news);
         var layout_selection = $('.gallery-layout-selection li a', news)[0];
         var params = sel_value ? "topic" +  "=" + sel_value : undefined;
-        params = tag_title ? "tags" +  "=" + sel_value : params;
         eea_gal.gallery_load(gallery_ajax, address, params, layout_selection);
     };
 
@@ -57,8 +56,7 @@ jQuery(document).ready(function($) {
         cur_tab.theme = cur_tab.theme || "";
         var opt_item,
             sel_value,
-            sel_text,
-            tag_title;
+            sel_text;
 
         var highlight = $("#" + cur_tab_val + "-highlights");
 
@@ -80,7 +78,6 @@ jQuery(document).ready(function($) {
         if (cur_tab.theme === sel_value && notopics_length !== 0) {
             return;
         }
-
         // check if highlight doesn't contain a portalMessage since getting results
         // in other languages doesn't introduce gallery-album div and in that case
         // we don't want to reload the gallery macro
@@ -88,17 +85,18 @@ jQuery(document).ready(function($) {
             album_length === 0 && !highlight.find(".portalMessage").length) {
             // #68663 avoid page reload if we have results and the topic
             // selector is hidden such as in the case of dc pages
-            if (album_length && opt_item.parent().is(':hidden')) {
+            if (album_length && cur_tab.theme === sel_value) {
                 return;
             }
             album.html(ajax_loader_img);
-            eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
+            cur_tab.theme = sel_value;
+            eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index);
         }
         if (sel_value) {
             if (cur_tab.theme !== sel_value) {
                 album.html(ajax_loader_img);
                 cur_tab.theme = sel_value;
-                eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
+                eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index);
             }
         }
     });
@@ -117,7 +115,11 @@ jQuery(document).ready(function($) {
             var topic_value = y[x].value,
                 topic_text = y[x].innerHTML;
             var $tab = $("#whatsnew-gallery").find(".eea-tabs a.current");
-            var tab_val = $tab.length ? $tab[0].id.substr(4) : 'allproducts';
+            var $has_tab = $tab.length;
+            if ($has_tab) {
+                $tab[0].theme = topic_value;
+            }
+            var tab_val = $has_tab ? $tab[0].id.substr(4) : 'allproducts';
 
             eea_gal.whatsnew_func(tab_val, topic_text, topic_value);
         });
