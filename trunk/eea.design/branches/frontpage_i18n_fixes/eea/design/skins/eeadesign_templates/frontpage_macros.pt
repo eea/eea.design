@@ -19,7 +19,7 @@
                         hide_album python: True;
                         ajax python: False;
                         more_href string:articles;">
-        <div metal:use-macro="here/articles_gallery_macro/macros/articles" />
+    <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="publications"
@@ -29,7 +29,8 @@
                  hide_album python: True;
                  ajax python: False;
                  more_href string:publications;">
-        <div metal:use-macro="here/publications_gallery_macro/macros/publications" />
+    <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+
 </div>
 
 <div metal:define-macro="multimedia"
@@ -39,7 +40,7 @@
                  hide_listing python: True;
                  ajax python: False;
                  more_href string:multimedia;">
-        <div metal:use-macro="here/multimedia_gallery_macro/macros/multimedia" />
+    <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="datamaps"
@@ -49,7 +50,7 @@
                  hide_listing python: True;
                  ajax python: False;
                  more_href string:${portal_url}/data-and-maps;">
-    <div metal:use-macro="here/datamaps_gallery_macro/macros/datamaps" />
+    <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 <div metal:define-macro="allproducts"
@@ -58,7 +59,7 @@
         tal:define="hide_album python: False;
                     hide_listing python: True;
                     ajax python: False;">
-    <div metal:use-macro="here/allproducts_gallery_macro/macros/allproducts" />
+    <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
 </div>
 
 
