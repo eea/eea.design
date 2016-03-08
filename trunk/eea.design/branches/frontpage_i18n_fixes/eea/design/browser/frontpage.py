@@ -50,7 +50,7 @@ class Frontpage(BrowserView):
         self.noOfLatestDefault = frontpage_properties.getProperty(
                                                         'noOfLatestDefault', 6)
         self.effectiveDateMonthsAgo = frontpage_properties.getProperty(
-                                                'effectiveDateMonthsAgo', 6)
+                                                'effectiveDateMonthsAgo', 18)
         self.now = DateTime()
 
 
@@ -119,12 +119,15 @@ class Frontpage(BrowserView):
             translations
         """
         datamaps_view = self.context.restrictedTraverse('data_and_maps_logic')
-        news = self.getNews(language=language)
-        articles = self.getArticles(language=language)
-        publications = self.getPublications(language=language)
-        multimedia = self.getMultimedia(language=language)
-        datamaps = datamaps_view.getAllProducts(language=language)
-        infographics = self.getInfographics(language=language)
+        news = self.getNews(language=language)[:self.noOfEachProduct]
+        articles = self.getArticles(language=language)[:self.noOfEachProduct]
+        publications = self.getPublications(
+            language=language)[:self.noOfEachProduct]
+        multimedia = self.getMultimedia(
+            language=language)[:self.noOfEachProduct]
+        datamaps = datamaps_view.getAllProducts(
+            language=language)
+        infographics = self.getInfographics(language=language)[:self.noOfEachProduct]
         result = []
         result.extend(chain(news, articles, publications, multimedia, datamaps,
                             infographics))

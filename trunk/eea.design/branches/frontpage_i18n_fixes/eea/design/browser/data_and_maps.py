@@ -36,7 +36,7 @@ class DataMaps(BrowserView):
             'noOfEachProduct', 3)
         self.now = DateTime()
         self.effectiveDateMonthsAgo = frontpage_properties.getProperty(
-            'effectiveDateMonthsAgo', 6)
+            'effectiveDateMonthsAgo', 18)
 
     def getLatestDatasets(self, language=None):
         """ Get latest published datasets. Number configurable via
