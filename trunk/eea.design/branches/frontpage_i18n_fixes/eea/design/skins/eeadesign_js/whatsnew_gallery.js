@@ -75,7 +75,9 @@ jQuery(document).ready(function($) {
 
         var album = highlight.find(".gallery-album");
         var album_length = album.length !== 0 ? album.children().length : 0;
-        if (cur_tab.theme === sel_value) {
+        var notopics = highlight.find(".portalMessage"),
+            notopics_length = notopics.length !== 0 ? 1 : 0;
+        if (cur_tab.theme === sel_value && notopics_length !== 0) {
             return;
         }
 
@@ -84,6 +86,11 @@ jQuery(document).ready(function($) {
         // we don't want to reload the gallery macro
         if (sel_text && sel_text.indexOf("All") !== -1 ||
             album_length === 0 && !highlight.find(".portalMessage").length) {
+            // #68663 avoid page reload if we have results and the topic
+            // selector is hidden such as in the case of dc pages
+            if (album_length && opt_item.parent().is(':hidden')) {
+                return;
+            }
             album.html(ajax_loader_img);
             eea_gal.whatsnew_func(cur_tab_val, sel_text, sel_value, index, tag_title);
         }
