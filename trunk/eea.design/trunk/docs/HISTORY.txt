@@ -3,6 +3,10 @@ Changelog
 
 13.7.dev0 - (unreleased)
 ------------------------
+* Bug fix: removed filter added on frontpage results regarding the return of
+  objects that are no older than 1 year. This work is still being finalized
+  in a branch.
+  [ichimdav]
 
 13.6 - (2016-03-01)
 -------------------
