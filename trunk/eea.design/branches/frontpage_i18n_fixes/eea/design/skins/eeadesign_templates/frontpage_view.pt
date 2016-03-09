@@ -45,9 +45,10 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                         </div>
                         <!-- tabs -->
                         <div metal:define-macro="whatsnew-gallery"
-                                tal:define="datapage datapage|string:frontpage;"
+                                tal:define="datapage datapage|string:frontpage;
+                                            main_site main_site|python: True if language == 'en' else False;"
                                 tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
-                            <tal:tabs tal:condition="python: main_site">
+                            <tal:tabs tal:condition="main_site">
                                 <ul class="eea-tabs two-rows"
                                     tal:define="tabnames python:['News', 'Articles', 'Publications', 'Multimedia', 'Data and maps', 'All products'];">
                                     <li tal:repeat="tab tabnames">
