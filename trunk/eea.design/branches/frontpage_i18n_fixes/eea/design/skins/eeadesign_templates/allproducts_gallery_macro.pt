@@ -6,6 +6,7 @@
         hide_listing hide_listing|python: True;
         hide_album hide_album|python: False;
         more_href more_href|string:${context/@@plone_portal_state/portal_url}/$language/help/advanced-search;
+        item_type_title_display python: True;
         ajax ajax|python:True">
 
     <tal:folderContents condition="folderContents">
