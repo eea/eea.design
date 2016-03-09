@@ -91,7 +91,6 @@ class Frontpage(BrowserView):
 
     def getAllProducts(self, no_sort=False, language=None):
         """ retrieves all latest published products for frontpage """
-
         if language and language != 'en':
             return self.getAllProductsForTranslations(no_sort=no_sort,
                                                       language=language)
@@ -119,15 +118,15 @@ class Frontpage(BrowserView):
             translations
         """
         datamaps_view = self.context.restrictedTraverse('data_and_maps_logic')
-        news = self.getNews(language=language)[:self.noOfEachProduct]
-        articles = self.getArticles(language=language)[:self.noOfEachProduct]
+        news = self.getNews(language=language)[:self.noOfMedium]
+        articles = self.getArticles(language=language)[:self.noOfMedium]
         publications = self.getPublications(
-            language=language)[:self.noOfEachProduct]
+            language=language)[:self.noOfMedium]
         multimedia = self.getMultimedia(
-            language=language)[:self.noOfEachProduct]
+            language=language)[:self.noOfMedium]
         datamaps = datamaps_view.getAllProducts(
             language=language)
-        infographics = self.getInfographics(language=language)[:self.noOfEachProduct]
+        infographics = self.getInfographics(language=language)[:self.noOfMedium]
         result = []
         result.extend(chain(news, articles, publications, multimedia, datamaps,
                             infographics))

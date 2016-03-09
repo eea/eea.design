@@ -59,12 +59,18 @@
         tal:define="hide_album python: False;
                     hide_listing python: True;
                     ajax python: False;">
-    <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+    <tal:main_site tal:condition="main_site">
+        <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />
+    </tal:main_site>
+
+    <tal:main_site tal:condition="not:main_site">
+        <div metal:use-macro="here/allproducts_gallery_macro/macros/allproducts" />
+    </tal:main_site>
 </div>
 
 
 <div metal:define-macro="more-link" class="portletFooter"
-    tal:define="more_href more_href|string:/;
+    tal:define="more_href more_href|string:help/advanced-search;
                 more_title more_title|string:All Items">
                 <p>
 		   <a title="archive" class="standardButton" i18n:attributes="title"
