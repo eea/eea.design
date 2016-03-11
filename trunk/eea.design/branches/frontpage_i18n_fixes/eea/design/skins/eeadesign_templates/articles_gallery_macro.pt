@@ -13,8 +13,7 @@
     <tal:notFolderContents condition="not:folderContents"
             metal:define-macro="noresults">
             <div class='portalMessage informationMessage'>
-                <p i18n:translate="">No
-                    results are available for this topic</p>
+                <p i18n:translate="">No recent content is available for this topic.</p>
             </div>
     </tal:notFolderContents>
 

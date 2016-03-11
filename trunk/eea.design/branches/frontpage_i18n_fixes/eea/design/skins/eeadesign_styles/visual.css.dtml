@@ -36,6 +36,10 @@ sup, sub {
     font-size: &dtml-fontSmallSize;;
     font-weight: normal;
 }
+
+.visualNoMargins {
+    margin: 0 !important;
+}
 /*
 ** Watermark style
 ** for content that is not published

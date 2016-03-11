@@ -56,8 +56,9 @@
 <div metal:define-macro="allproducts"
         class="eea-tabs-panel"
         id="allproducts-highlights"
-        tal:define="hide_album python: False;
-                    hide_listing python: True;
+        tal:define="hide_album python: True if not main_site else False;
+                    hide_listing python: False if not main_site else True;
+                    more_title python: context.translate('Archive');
                     ajax python: False;">
     <tal:main_site tal:condition="main_site">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-empty" />

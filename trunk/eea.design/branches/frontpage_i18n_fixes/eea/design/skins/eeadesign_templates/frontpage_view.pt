@@ -21,11 +21,10 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                     <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="highlights-area" class="column-area">
 
-                        <div class="portalMessage message_disclaimer" tal:condition="not: main_site">
-                            <span class="eea-icon eea-icon-flag"></span>
-                            <strong i18n:translate="">Welcome to the European Environment Agency.</strong>
-                            <p i18n:translate="">This site presents the content we have available in your language.</p>
-                            <p i18n:translate="">To explore all our outputs and complete knowledge base, please visit <a href="http://www.eea.europa.eu" i18n:name="site_url">our main website</a> in English.</p>
+                        <div class="portalMessage message_disclaimer visualNoMargins" tal:condition="not: main_site">
+                            <span class="eea-icon eea-icon-flag"></span><strong i18n:translate="">Welcome to the European Environment Agency</strong><br />
+                            <span i18n:translate="">This site presents the content we have available in your language.</span>
+                            <span i18n:translate="">To explore all our outputs and complete knowledge base, please visit <a href="http://www.eea.europa.eu" i18n:name="site_url" class="link-plain">our main website</a> in English.</span>
                         </div>
 
                         <!-- promotions_gallery_slideshow-->
