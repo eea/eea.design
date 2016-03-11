@@ -3,6 +3,17 @@ Changelog
 
 13.7.dev0 - (unreleased)
 ------------------------
+* Feature: added ability to restrict frontpage query results based on
+  a date range, default being 18 months ago
+  [ichimdav refs #68663]
+* Feature: translation pages of frontpage now show also Infographics
+  [ichimdav refs #68663]
+* Feature: folder_listing and folder_summary_view can now show or hide
+  description and item type
+  [ichimdav refs #68663]
+* Change: removed tab logic of frontpage when visiting it's translations,
+  now we load all products directly given low number of content
+  [ichimdav refs #68663]
 * Bug fix: removed filter added on frontpage results regarding the return of
   objects that are no older than 1 year. This work is still being finalized
   in a branch.
@@ -10,6 +21,9 @@ Changelog
 
 13.6 - (2016-03-01)
 -------------------
+* Bug fix: fixed loading of relation tabs when we have a whatsnewgallery
+  such as in the case of themes
+  [ichimdav refs #70069]
 * Change: GisApplication now span the entire screen width
   [ichimdav refs #68250]
 * Change: check if underscore is found within eea-responsive.js as we might

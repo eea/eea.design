@@ -301,7 +301,7 @@
         permission="zope.Public"
         allowed_interface=".interfaces.IFrontPageHighlights"
         allowed_attributes="getArticles getPublications
-                            getNews getNewsAndArticles getAllProducts"
+                            getNews getAllProducts"
         />
 
     <browser:page
