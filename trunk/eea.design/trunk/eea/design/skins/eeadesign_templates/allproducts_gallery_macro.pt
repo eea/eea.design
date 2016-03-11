@@ -1,21 +1,23 @@
-<tal:defines tal:define="frontpage_view context/@@frontpage_highlights;">
-
-    <tal:allproducts metal:define-macro="news"
-              tal:define="language python:request.get('Language');
-                                      folderContents python: frontpage_view.getAllProducts() if not language else frontpage_view.getAllProducts(language=language);
-                    ajax python:True">
+<tal:allproducts metal:define-macro="allproducts"
+        tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
+        language python:request.get('LANGUAGE');
+        main_site main_site|python: language == 'en';
+        folderContents folderContents|python: frontpage_view.getAllProducts() if not language else frontpage_view.getAllProducts(language=language);
+        plone_view nocall:plone_view|context/@@plone;
+        hide_listing hide_listing|python: True if main_site else False;
+        hide_album hide_album|python: False if main_site else True;
+        more_href more_href|string:${context/@@plone_portal_state/portal_url}/$language/help/advanced-search;
+        item_type_title_display python: True;
+        item_description_visible python: False if not main_site else True;
+        ajax ajax|python:True">
 
     <tal:folderContents condition="folderContents">
         <div metal:use-macro="here/frontpage_macros/macros/gallery-condition" />
     </tal:folderContents>
 
     <metal:languages tal:condition="not:folderContents">
-        <tal:defines
-                tal:define="languages python:frontpage_view.getResultsInAllLanguages('getAllProducts')">
-            <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
-        </tal:defines>
+        <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
     </metal:languages>
 
-    </tal:allproducts>
+</tal:allproducts>
 
-</tal:defines>

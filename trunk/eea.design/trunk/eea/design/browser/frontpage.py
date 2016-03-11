@@ -11,6 +11,8 @@ from plone.app.blob.interfaces import IBlobWrapper
 from zope.component import queryMultiAdapter
 from eea.versions.interfaces import IGetVersions
 import logging
+from itertools import chain
+
 
 logger = logging.getLogger("eea.design.browser.frontpage")
 
@@ -47,6 +49,8 @@ class Frontpage(BrowserView):
                                                           'noOfEachProduct', 3)
         self.noOfLatestDefault = frontpage_properties.getProperty(
                                                         'noOfLatestDefault', 6)
+        self.effectiveDateMonthsAgo = frontpage_properties.getProperty(
+                                                'effectiveDateMonthsAgo', 18)
         self.now = DateTime()
 
 
@@ -79,25 +83,61 @@ class Frontpage(BrowserView):
                                noOfItems=self.noOfPublications,
                                language=language)
 
+    def getInfographics(self, portaltypes="Infographic", language=None):
+        """ retrieves latest Infographics by date and by topic """
+        return _getItems(self,
+                         portaltypes=portaltypes, noOfItems=self.noOfMedium,
+                         language=language)
+
     def getAllProducts(self, no_sort=False, language=None):
         """ retrieves all latest published products for frontpage """
-        portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
-                                    'Assessment', 'Data', 'EEAFigure')
-        result = []
-        for mytype in portaltypes:
-            res1 = _getItems(self, portaltypes=mytype,
-                             noOfItems=self.noOfEachProduct,
-                             language=language)
-            result.extend(res1)
-        multimedia = self.getMultimedia(language=language)
-        result.extend(multimedia[:self.noOfEachProduct])
+        if language and language != 'en':
+            return self.getAllProductsForTranslations(no_sort=no_sort,
+                                                      language=language)
+        else:
+            portaltypes = ('Report', 'Article', 'Highlight', 'PressRelease',
+                                        'Assessment', 'Data', 'EEAFigure')
+            result = []
+            for mytype in portaltypes:
+                res1 = _getItems(self, portaltypes=mytype,
+                                 noOfItems=self.noOfEachProduct,
+                                 language=language)
+                result.extend(res1)
+            multimedia = self.getMultimedia(language=language)
+            result.extend(multimedia[:self.noOfEachProduct])
 
+            # resort based on effective date
+            if not no_sort:
+                result.sort(key=lambda x: x.effective)
+                result.reverse()
+
+            return result
+
+    def getAllProductsForTranslations(self, no_sort=False, language=None):
+        """ retrieves all latest published products for frontpage of
+            translations
+        """
+        datamaps_view = self.context.restrictedTraverse('data_and_maps_logic')
+        news = self.getNews(language=language)[:self.noOfMedium]
+        articles = self.getArticles(language=language)[:self.noOfMedium]
+        publications = self.getPublications(
+            language=language)[:self.noOfMedium]
+        multimedia = self.getMultimedia(
+            language=language)[:self.noOfMedium]
+        datamaps = datamaps_view.getAllProducts(
+            language=language)
+        infographics = self.getInfographics(language=language)[:self.noOfMedium]
+        result = []
+        result.extend(chain(news, articles, publications, multimedia, datamaps,
+                            infographics))
         # resort based on effective date
         if not no_sort:
             result.sort(key=lambda x: x.effective)
             result.reverse()
 
         return result
+
+
 
     def getHighArticles(self):
         """ return a defined number of high visibility articles items """
@@ -209,14 +249,6 @@ class Frontpage(BrowserView):
 
         return result
 
-    def getResultsInAllLanguages(self, method=None):
-        """
-        :return: results of given method in any of the context translated
-            languages
-        """
-        return _getResultsInAllLanguages(self, method)
-
-
 ## Utility functions
 
 def _getPromotions(self, noOfItems=6):
@@ -271,6 +303,20 @@ def _getHighArticles(self, noOfItems=1):
     return _getItems(self, visibilityLevel=visibilityLevel,
                         portaltypes='Article', noOfItems=noOfItems)
 
+
+def queryEffectiveRange(self, query):
+    """ Modify query in order to list items no longer than 1 year ago
+    """
+    date_range = {
+        'query': (
+            self.now - (self.effectiveDateMonthsAgo * 30),
+            self.now,
+        ),
+        'range': 'min:max',
+    }
+    query['effective'] = date_range
+    return query
+
 def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
                             interfaces=None, topic=None, noOfItems=None,
                             language=None):
@@ -297,6 +343,7 @@ def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
         query['object_provides'] = interfaces
     if topic:
         query['getThemes'] = topic
+    query = queryEffectiveRange(self, query)
     res = self.catalog.searchResults(query)
     filtered_res = filterLatestVersion(self, brains=res,
                                                 noOfItems=noOfItems)
@@ -324,6 +371,7 @@ def _getTopics(self, topic=None, portaltypes=None, object_provides=None,
         query['getThemes'] = topic
     if tags:
         query['Subject'] = tags
+    query = queryEffectiveRange(self, query)
     res = self.catalog(query)
     filtered_res = filterLatestVersion(self, brains=res,
                                                      noOfItems=noOfItems)
@@ -410,21 +458,6 @@ def _getImageUrl(brain):
             url = parent.absolute_url()
     return url
 
-
-def _getResultsInAllLanguages(self, method=None):
-    """
-    :return: results of given method in any of the context translated
-        languages
-    """
-    translations = self.context.getTranslationLanguages()
-    search = getattr(self, method, None)
-    if search:
-        results = {}
-        for translation in translations:
-            res = search(language=translation)
-            if res:
-                results[translation] = res
-        return results
 
 def filterLatestVersion(self, brains, noOfItems=6):
     """ Take a list of catalog brains

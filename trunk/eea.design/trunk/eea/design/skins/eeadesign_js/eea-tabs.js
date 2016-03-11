@@ -16,9 +16,6 @@ jQuery(document).ready(function($) {
     });
 
     var eea_tabs = function(){
-        if($("#whatsnew-gallery").length) {
-            return;
-        }
         var $eea_tabs = $(".eea-tabs"), eea_tabs_length = $eea_tabs.length,
             $eea_tabs_panels = $(".eea-tabs-panels"), i = 0;
         var $eea_tab, $eea_tab_parent, $eea_tabs_panel, $eea_panels, $eea_tab_children;
@@ -26,6 +23,11 @@ jQuery(document).ready(function($) {
             for (i; i < eea_tabs_length; i += 1) {
                 $eea_tab = $eea_tabs.eq(i);
                 $eea_tab_parent = $eea_tab.parent();
+                // #70069 break out early if whatsnewgallery tabs if found as they
+                // are constructed with another logic
+                if ($eea_tab_parent.attr('id') === 'whatsnew-gallery') {
+                    continue;
+                }
                 // don't run tab logic if tab already contains tab data
                 if ($eea_tab.data('tabs')) {
                     $(window).trigger('eea.tags.loaded', $eea_tab);
@@ -34,6 +36,12 @@ jQuery(document).ready(function($) {
                 // hide tab while dom manipulation is performed for better performance
                 $eea_tab.hide();
                 $eea_tabs_panel = $eea_tabs_panels.eq(i);
+                // #70069 take into consideration that you might have more eea-tabs
+                // classes and yet less panels such as the case where there is the
+                // relatedContent tabs and a whatsnewgallery found on the themes dc page
+                if (!$eea_tabs_panel.length) {
+                    $eea_tabs_panel = $eea_tabs_panels.eq(i - 1);
+                }
 
                 $eea_panels = $eea_tabs_panel.children();
                 // append eea-tabs-title elements if found in eea-tabs-panel

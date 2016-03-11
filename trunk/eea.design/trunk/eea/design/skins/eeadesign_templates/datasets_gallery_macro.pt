@@ -11,10 +11,7 @@
         </tal:folderContents>
 
         <metal:languages tal:condition="not:folderContents">
-            <tal:defines
-                    tal:define="languages python:datamaps_view.getResultsInAllLanguages('getLatestDatasets')">
-                <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
-            </tal:defines>
+            <metal:results use-macro="here/articles_gallery_macro/macros/noresults" />
         </metal:languages>
     </tal:datasets>
 

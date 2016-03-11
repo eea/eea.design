@@ -101,9 +101,11 @@
 
                                    item_id item/getId|item/id;
                                    item_title_or_id item/pretty_title_or_id;
-                                   item_description item/Description;
+                                   item_description item_description|item/Description;
+                                   item_description_visible item_description_visible|python:True;
                                    item_type item/portal_type;
                                    item_type_title item/Type;
+                                   item_type_title_display item_type_title_display|python:False;
                                    item_modified item/ModificationDate;
                                    item_published item/EffectiveDate|item/getEffectiveDate;
                                    item_created item/CreationDate;
@@ -231,7 +233,7 @@
 
                 </dt>
 
-                <dd tal:condition="item_description">
+                <dd tal:condition="item_description_visible">
                     <span class="description"
                            tal:content="item_description" tal:omit-tag="">
                         description

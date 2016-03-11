@@ -16,10 +16,9 @@
                 <metal:block use-macro="context/folder_listing/macros/entries">
                     <metal:entry fill-slot="entry">
                 <div class="tileItem visualIEFloatFix"
-                     tal:define=" 
-                                       item_type_class python: 'visualIcon contenttype-' + normalizeString(item_type);
-                                       item_css_class urlview/css_class;
-                                       ">
+                     tal:define="item_type_class python: 'visualIcon contenttype-' + normalizeString(item_type);
+                                 item_type_title_display item_type_title_display|python: False;
+                                 item_css_class urlview/css_class;">
                     <a class="tileImage"
                        tal:attributes="href item_url;
                                        title item_title_or_id;
@@ -42,7 +41,7 @@
                             </a>
 
                         </h2>
-
+                        <span tal:condition="item_type_title_display" tal:content="item_type_title"></span>
                         <span class="date"
                               tal:condition="python:item_published != 'None' and  item_type not in ('Event', 'QuickEvent', 'Promotion', 'Rich Topic','Smart Folder',)">
                             <span tal:replace="python:toLocalizedTime(item_published)">
@@ -108,7 +107,7 @@
 
                     </div>
 
-                    <p class="tileBody" tal:condition="item_description">
+                    <p class="tileBody" tal:condition="item_description_visible">
                         <span class="description" tal:content="item_description">
                             description
                         </span>

@@ -251,6 +251,32 @@ jQuery(document).ready(function($) {
 
   $(window).on("swipe", swipeHandler);
 
+  var mqOrientation = window.matchMedia && window.matchMedia('(orientation: portrait)');
+  // The Listener will fire whenever this either matches or ceases to match
+  if (!mqOrientation) {
+    return;
+  }
+
+  // 68250 make Interactive Maps iframe span full screen height on load and when changing
+  // orientation
+  var $gis_application = $(".portaltype-gis-application");
+  var $gis_iframe, gis_iframe_resize;
+  if ($gis_application) {
+    $gis_iframe = $gis_application.find("iframe");
+    if ($gis_iframe) {
+      gis_iframe_resize = function() {
+        var window_height = $(window).height();
+        if ($gis_iframe.height() !== window_height) {
+          $gis_iframe.css('height', window_height - 50);
+        }
+      };
+      gis_iframe_resize();
+      mqOrientation.addListener(function() {
+        gis_iframe_resize();
+      });
+    }
+  }
+
   /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
   var mobile_desktop = false;
   var window_height = window.outerHeight || window.innerHeight;
@@ -284,11 +310,6 @@ jQuery(document).ready(function($) {
     }
   }
 
-  var mqOrientation = window.matchMedia && window.matchMedia('(orientation: portrait)');
-  // The Listener will fire whenever this either matches or ceases to match
-  if (!mqOrientation) {
-    return;
-  }
   mqOrientation.addListener(function() {
     setMaxHeight(height());
   });

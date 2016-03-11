@@ -7,7 +7,6 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 
 from eea.design.browser.frontpage import _getItems, _getImageUrl
-from eea.design.browser.frontpage import _getResultsInAllLanguages
 from eea.promotion.interfaces import IPromotion
 
 class DataMaps(BrowserView):
@@ -36,6 +35,8 @@ class DataMaps(BrowserView):
         self.noOfEachProduct = frontpage_properties.getProperty(
             'noOfEachProduct', 3)
         self.now = DateTime()
+        self.effectiveDateMonthsAgo = frontpage_properties.getProperty(
+            'effectiveDateMonthsAgo', 18)
 
     def getLatestDatasets(self, language=None):
         """ Get latest published datasets. Number configurable via
@@ -166,8 +167,3 @@ class DataMaps(BrowserView):
         """ Public method for data-and-maps calling _getImageUrl """
         return _getImageUrl(brain)
 
-    def getResultsInAllLanguages(self, method=None):
-        """ Public method for data-and-maps calling
-            _getResultsInAllLanguages
-        """
-        return _getResultsInAllLanguages(self, method)
