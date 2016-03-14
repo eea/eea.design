@@ -1,8 +1,8 @@
 Changelog
 =========
 
-13.7.dev0 - (unreleased)
-------------------------
+13.7 - (2016-03-14)
+-------------------
 * Feature: added ability to restrict frontpage query results based on
   a date range, default being 18 months ago
   [ichimdav refs #68663]
