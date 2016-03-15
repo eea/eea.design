@@ -1,0 +1,14 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      tal:omit-tag=""
+      i18n:domain="eea">
+
+ <div metal:define-macro="portlet"
+      tal:condition="context/@@plone_context_state/is_view_template">
+       <div metal:use-macro="here/portlet_social_links/macros/portlet">
+           Social links
+       </div>
+</div>
+
+
+</html>
