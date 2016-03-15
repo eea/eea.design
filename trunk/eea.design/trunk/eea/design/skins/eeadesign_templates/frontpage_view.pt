@@ -106,7 +106,8 @@ bar python:request.set('disable_plone.rightcolumn', 1);"/>
                         <!-- featured and spotlight areas -->
 
                         <tal:featured_article metal:define-macro="featured_article"
-                        tal:define="highlights frontpage_view/getHighArticles;
+                        tal:define="frontpage_view frontpage_view|context/@@frontpage_highlights;
+                                highlights frontpage_view/getHighArticles;
                         archive_url python:here.Language() == 'en' and 'articles' or str(here.Language() + '/articles');
                         archive_href string:${context/@@plone_portal_state/portal_url}/$archive_url;">
                         <div metal:use-macro="here/frontpage_macros/macros/featured-item">
