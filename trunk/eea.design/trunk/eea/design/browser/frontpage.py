@@ -298,9 +298,10 @@ def _getHighArticles(self, noOfItems=1):
 def queryEffectiveRange(self, query):
     """ Modify query in order to list items no longer than 1 year ago
     """
+    effective_months = getattr(self, 'effectiveDateMonthsAgo', 18)
     date_range = {
         'query': (
-            self.now - (self.effectiveDateMonthsAgo * 30),
+            self.now - (effective_months * 30),
             self.now,
         ),
         'range': 'min:max',

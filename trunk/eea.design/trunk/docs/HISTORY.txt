@@ -3,6 +3,10 @@ Changelog
 
 13.8.dev0 - (unreleased)
 ------------------------
+* Bug fix: queryEffectiveRange now takes into consideration that we might
+  not have the effectiveDateMonthsAgo attribute set on the context such
+  as when called from the featured article porlet
+  [ichimdav refs #70430]
 
 13.7 - (2016-03-14)
 -------------------
