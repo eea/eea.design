@@ -1,11 +1,14 @@
 Changelog
 =========
 
-14.6.dev0 - (unreleased)
+14.7.dev0 - (unreleased)
 ------------------------
+
+14.6 - (2016-08-03)
+-------------------
 * Change: added code from custom along with responsive design fixes for megatopics
   [ichim-david refs #72171]
-* FIX: screen media added to content-core object
+* Bug fix: screen media added to content-core object
   [lucas refs #73106]
 
 14.5 - (2016-07-07)
