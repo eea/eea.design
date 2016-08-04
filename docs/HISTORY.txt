@@ -3,6 +3,10 @@ Changelog
 
 14.7.dev0 - (unreleased)
 ------------------------
+* Bug fix: close the popup login when you click outside; when it opens the focus is
+  now on the "Login Name"; when you are on the login page, if you click on the 
+  "Login Name" the focus will be there
+  [catalin]
 
 14.6 - (2016-08-03)
 -------------------
