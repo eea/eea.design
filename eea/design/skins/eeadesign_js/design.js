@@ -36,6 +36,21 @@ jQuery(document).ready(function($) {
             $wrapped.prependTo($document_actions_ul);
         });
     }
+
+    $("[for=__ac_name]").click(function(evt) {
+        evt.preventDefault();
+        var input = $(this).parent().find("#__ac_name");
+        input.focus();
+    });
+
+    $("[for=__ac_password]").click(function(evt) {
+        evt.preventDefault();
+        var input = $(this).parent().find("#__ac_password");
+        input.focus();
+    });
+
+    $('body').click(function(){$('#popup_login_form').slideUp()});
+
     /* #28278 prevent figures from printing charts without the figure title on the same line
      * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
      * data-and-maps/indicators/direct-losses-from-weather-disasters-2/assessment/pdf.body
@@ -81,10 +96,13 @@ jQuery(document).ready(function($) {
     $('.eea-tabs').find('li:last-child').addClass('last-child');
 
     // #9485; login form as popup
-    var $popup_login = $("#popup_login_form");
+    var $popup_login = $("#popup_login_form").click(function(e){e.stopPropagation();});
     $("#anon-personalbar, #siteaction-login").click(function(e) {
-        $popup_login.slideToggle();
+        $popup_login.slideToggle("slow", function() {
+            $('#__ac_name').focus();
+        });
         e.preventDefault();
+        e.stopPropagation();
     });
 
     // #19536; hide navigation submenus if there are less than 2 of them
