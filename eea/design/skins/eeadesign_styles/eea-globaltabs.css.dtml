@@ -65,13 +65,13 @@
 #secondary-portaltabs-container {
     display: none;
 }
+.mini-header #portal-globalnav #secondary-portaltabs-container {
+    display: flex;
+}
 
 #secondary-portaltabs {
     display: flex;
     margin-left: 0;
-}
-.mini-header #secondary-portaltabs-container {
-    display: flex;
 }
 
 #secondary-portaltabs li a {
@@ -172,10 +172,6 @@
     line-height: 1.1;
     padding-left: 35px;
     background: url("&dtml-xurl;/globalnav-logo.png") no-repeat 10% 60%;
-}
-
-#portal-globalnav #portaltab-eeahome {
-    text-align: left;
 }
 
 #secondary-portaltabs #portaltab-europe a {

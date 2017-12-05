@@ -20,16 +20,21 @@
         <dt i18n:translate="">Follow us</dt>
         <dd>
           <div>
-            <img tal:attributes="src string:$portal_url/twitter16x16.png" alt="Twitter icon" height="16" width="16" i18n:attributes="alt"/> <a href="http://twitter.com/euenvironment" tal:content="string:Twitter"></a>
+              <span class="eea-icon eea-icon-twitter-square eea-icon-lg">&nbsp;</span>
+              <a href="http://twitter.com/euenvironment" tal:content="string:Twitter"></a>
           </div>
           <div>
-            <img tal:attributes="src string:$portal_url/facebook-icon.png" alt="Facebook icon" height="16" width="16" i18n:attributes="alt"/> <a href="http://www.facebook.com/pages/European-Environment-Agency/113006845445297" tal:content="string:Facebook"></a>
+
+              <span class="eea-icon eea-icon-facebook-square eea-icon-lg">&nbsp;</span>
+              <a href="http://www.facebook.com/pages/European-Environment-Agency/113006845445297" tal:content="string:Facebook"></a>
           </div>
           <div>
-            <img tal:attributes="src string:$portal_url/youtube16x16.png" alt="YouTube icon" height="16" width="16" i18n:attributes="alt"/> <a href="http://www.youtube.com/user/EEAvideos" i18n:translate="">YouTube channel</a>
+              <span class="eea-icon eea-icon-youtube-square eea-icon-lg">&nbsp;</span>
+              <a href="http://www.youtube.com/user/EEAvideos" i18n:translate="">YouTube channel</a>
           </div>
           <div>
-            <img tal:attributes="src string:$portal_url/rss.gif" alt="RSS logo" height="14" width="14" i18n:attributes="alt"/> <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds/">
+              <span class="eea-icon eea-icon-rss-square eea-icon-lg">&nbsp;</span>
+              <a href="#" tal:attributes="href string:$portal_url/subscription/news-feeds/">
             <span i18n:translate="">RSS Feeds</span></a>
           </div>
           <div class="portletFooter" style="padding-bottom: 0.5em">

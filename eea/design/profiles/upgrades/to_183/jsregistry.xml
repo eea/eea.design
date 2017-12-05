@@ -17,4 +17,12 @@
         enabled="True" inline="False" expression="context/@@sentry_dsn"
         bundle="default" id="sentry.js" insert-after="boostrap.js" />
 
+    <!-- Prepare eea.facetednavigation 10.0+ upgrade -->
+    <javascript id="++resource++eea.faceted-navigation.js" bundle="faceted-view"
+        insert-after="++resource++jquery.select2uislider.js" />
+
+    <javascript id="++resource++eea.faceted-navigation-edit.js" bundle="faceted-edit"
+        expression="python:'configure_faceted.html' in request.URL0"
+        insert-after="++resource++jquery.ajaxfileupload.js" />
+
 </object>

@@ -3,6 +3,13 @@ Changelog
 
 18.3.dev0 - (unreleased)
 ------------------------
+* Change: use pdflogo-web.png if we are on english website when we reference
+  the eea logo used for the portal logo as performance tools were complaining
+  about the original image being too large
+  [ichim-david refs #88482]
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design (BEFORE eea.facetednavigation upgrade)
+  [avoinea refs #89955]
 * Change: experiment with the loading position of raven (sentry)
   to reduce error noise
   [dumitval refs #88817]
@@ -12,7 +19,7 @@ Changelog
 * Change: remove css transform on 1024px and less for network menu as it
   clips text on IOS devices
   [ichim-david refs #89889]
-* Bug fix: fixed JS error on IE11 / Windows 7 affecting the reply button 
+* Bug fix: fixed JS error on IE11 / Windows 7 affecting the reply button
   on Community portal
   [alecghica refs #90112]
 * Change: Implemented jquery lazy image loading + upgrade step for adding the

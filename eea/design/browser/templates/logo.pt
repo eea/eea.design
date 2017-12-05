@@ -11,8 +11,9 @@
        tal:attributes="href local_site|portal_url; title string:${portal_title}"
        accesskey="1" id="portal-logo-link">
         <img src="" alt="" id="printLogo"
-                tal:define="lang  context/@@plone_portal_state/language;
-                logo python:'++resource++eea.translations.images/pdflogo-%s.png' % lang"
+                tal:define="lang context/@@plone_portal_state/language;
+                            lang python: lang if lang != 'en' else 'web';
+                            logo python:'++resource++eea.translations.images/pdflogo-%s.png' % lang"
                 tal:attributes="alt portal_properties/title;
                         src string:${portal_url}/${logo}" />
     </a>

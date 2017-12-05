@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_css">
+
+ <!-- Prepare eea.facetednavigation 10.0+ upgrade -->
+ <stylesheet id="++resource++eea.faceted-navigation.css" bundle="faceted-view"
+             insert-after="frontpage.css" />
+ <stylesheet id="++resource++eea.faceted-navigation-edit.css" bundle="faceted-edit"
+             expression="python:'configure_faceted.html' in request.URL0"
+             insert-after="++resource++jquery.select2uislider.css" />
+
+</object>
