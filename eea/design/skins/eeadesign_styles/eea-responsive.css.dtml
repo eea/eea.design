@@ -113,8 +113,12 @@
   #content #languageCodes {
     max-width: 60%; } }
 @media screen and (max-width: 767px) {
-  #eea-above-columns #portal-breadcrumbs {
-    display: none; }
+  #eea-above-columns #portal-breadcrumbs.plone-breadcrumb {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+  #eea-above-columns #portal-breadcrumbs.plone-breadcrumb ol {
+    line-height: 2.5em; }
 
   #portal-personaltools-wrapper,
   .portal-logo,
