@@ -2304,8 +2304,27 @@ html[dir='rtl'] .pdfjs #documentPropertiesOverlay .row>* {
         display: inherit
     }
 }
-@media screen and (max-width: 767px) {
-    .pdfjs { 
+@media all and (max-width: 700px) {
+    .pdfjs #outerContainer .hiddenMediumView {
+        display: none
+    }
+    .pdfjs #outerContainer .visibleMediumView {
+        display: inherit
+    }
+}
+@media all and (max-width: 640px) {
+    .pdfjs .hiddenSmallView {
+        display: none
+    }
+    .pdfjs .visibleSmallView {
+        display: inherit
+    }
+    .pdfjs .toolbarButtonSpacer {
+        width: 0
+    }
+}
+@media all and (max-width: 535px) {
+    .pdfjs #scaleSelectContainer {
         display: none
     }
 }
