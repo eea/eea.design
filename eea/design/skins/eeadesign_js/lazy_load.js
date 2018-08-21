@@ -160,25 +160,26 @@ jQuery(document).ready(function($) {
         forceImageLoad(lazyElements);
     };
 
-
-    if (isIe()) {
-        window.onbeforeprint = beforePrintCaller(lazyElements); // Internet Explorer
-    }
-
-    $(document).keydown(function(allBrowsers) { // Track printing using Ctrl/Cmd+P.
-        if (allBrowsers.keyCode === 80 && (allBrowsers.ctrlKey || allBrowsers.metaKey)) {
-            beforePrintCaller(lazyElements);
+    if (typeof lazyElements !== 'undefined') {
+        if (isIe()) {
+            window.onbeforeprint = beforePrintCaller(lazyElements || []); // Internet Explorer
         }
-    });
 
-    if (window.matchMedia) { // Track printing from browsers using the Webkit engine
-        var mediaQueryList = window.matchMedia('print');
-        mediaQueryList.addListener(function(mql) {
-            if (mql.matches) {
-                beforePrintCaller(lazyElements);
+        $(document).keydown(function(allBrowsers) { // Track printing using Ctrl/Cmd+P.
+            if (allBrowsers.keyCode === 80 && (allBrowsers.ctrlKey || allBrowsers.metaKey)) {
+                beforePrintCaller(lazyElements || []);
             }
         });
+
+        if (window.matchMedia) { // Track printing from browsers using the Webkit engine
+            var mediaQueryList = window.matchMedia('print');
+            mediaQueryList.addListener(function(mql) {
+                if (mql.matches) {
+                    beforePrintCaller(lazyElements || []);
+                }
+            });
+        }
     }
-   var $window = $(window);
-   $window.on('click', function(ev) { $window.scroll();});
+    var $window = $(window);
+    $window.on('click', function(ev) { $window.scroll();});
 });

@@ -1,6 +1,11 @@
 Changelog
 =========
 
+21.9 - (unreleased)
+-------------------
+* Bug fix: Don't try to load lazy images when it is disabled
+  [szabozo0 refs #97516]
+
 21.8 - (2018-08-17)
 ---------------------
 * Change: fixed the usage of BeautifulSoup
