@@ -27,7 +27,7 @@
         template="../skins/eea_overrides_templates/main_template.pt"
         layer=".interfaces.IEEACommonLayer"
         permission="zope.Public" />
-
+        
     <browser:page
         for="*"
         name="test_skin"
@@ -294,6 +294,12 @@
         />
 
     <!-- Browser pages -->
+    
+    <browser:page
+        for="zope.interface.Interface"
+        name="eeaqrcode"
+        class=".eeaqrcode.QRCode"
+        permission="zope.Public" />
 
     <browser:page
         name="manage-portlets-footer"

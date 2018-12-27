@@ -12,5 +12,6 @@
       </span>
     </p>
 </div>
-<img class="qr" alt="Google QR" i18n:attributes="alt" width="70" height="70"
-  tal:attributes="src string:https://chart.apis.google.com/chart?cht=qr&amp;chld=H%7C0&amp;chs=70x70&amp;chl=${context/absolute_url}" />
+
+<img class="qr" alt="EEA Page URL QR" title="EEA Page URL QR" i18n:attributes="alt;title"
+  tal:attributes="src string:${context/absolute_url}/@@eeaqrcode" />

@@ -54,6 +54,7 @@ setup(name=name,
 
           'setuptools',
           'valentine.linguaflow',
+          'qrcode',
 
 
           # -*- Extra requirements: -*-

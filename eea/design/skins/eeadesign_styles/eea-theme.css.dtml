@@ -606,6 +606,11 @@ div#original_chart_div {
     display: none;
 }
 
+.qrbox img {
+    width: 100%;
+    height: 100%;
+}
+
 /* 5455 fix publicationMessage link color
 * older version portlet https://www.eea.europa.eu//publications/term-report-2016
 */
