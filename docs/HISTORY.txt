@@ -1,6 +1,9 @@
 Changelog
 =========
 
+23.3-dev0 - (unreleased)
+---------------------
+
 23.2 - (2018-12-24)
 ---------------------
 * Feature: added qrcode generation using PIL qrcode library
