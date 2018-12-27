@@ -13,5 +13,5 @@
     </p>
 </div>
 
-<img class="qr" alt="EEA Page URL QR" i18n:attributes="alt" width="70" height="70"
+<img class="qr" alt="EEA Page URL QR" title="EEA Page URL QR" i18n:attributes="alt;title"
   tal:attributes="src string:${context/absolute_url}/@@eeaqrcode" />

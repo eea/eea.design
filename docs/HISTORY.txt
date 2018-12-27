@@ -3,8 +3,9 @@ Changelog
 
 23.2 - (2018-12-24)
 ---------------------
-Feature: added qrcode generation using PIL qrcode library instead of google charts
- [ichim-david refs #100875]
+* Feature: added qrcode generation using PIL qrcode library
+  instead of Google charts
+  [ichim-david refs #100875]
 
 23.1 - (2018-12-17)
 ---------------------
