@@ -1,6 +1,11 @@
 Changelog
 =========
 
+23.3 - (2018-12-28)
+---------------------
+* Feature: removed Google Analytics tracking code
+  [alecghica refs #100969]
+
 23.2 - (2018-12-24)
 ---------------------
 * Feature: added qrcode generation using PIL qrcode library
