@@ -1,7 +1,7 @@
 Changelog
 =========
 
-23.3-dev0 - (unreleased)
+23.3 - (2018-12-28)
 ---------------------
 * Feature: removed Google Analytics tracking code
   [alecghica refs #100969]
