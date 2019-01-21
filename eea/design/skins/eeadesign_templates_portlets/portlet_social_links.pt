@@ -29,6 +29,12 @@
                 <span class="eea-icon eea-icon-marginless eea-icon-facebook-square eea-icon-3x">&nbsp;</span></a>
         </dd>
         <dd>
+            <a id="linkedin-link" class="link-plain" title="Follow us on Linked In"
+               href="https://www.linkedin.com/company/european-environment-agency"
+               i18n:attributes="title">
+                <span class="eea-icon eea-icon-marginless eea-icon-linkedin-square eea-icon-3x">&nbsp;</span></a>
+        </dd>
+        <dd>
             <a id="youtube-link" class="link-plain" title="Follow us on YouTube"
                href="http://www.youtube.com/user/EEAvideos"
                i18n:attributes="title">

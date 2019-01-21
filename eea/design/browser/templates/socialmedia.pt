@@ -21,36 +21,36 @@
                                  pageTitle python:url_quote(context.Title());
                                  pageSummary python:url_quote(context.Description())">
                     <ul class="social-buttons">
-                    <li>
-                    <a tal:attributes="href python:'https://www.blogger.com/blog-this.g?u=' + pageUrl + '&n=' + pageTitle + '&t=' + pageSummary"
-                       rel="noopener" target="_blank" title="Share on Blogger" i18n:attributes="title">
-                            <span class="eea-icon eea-icon-bold"><!-- --></span></a>
-                    </li>
-                    <li>
-                    <a tal:attributes="href python:'https://facebook.com/sharer.php?u=' + pageUrl"
-                       rel="noopener" target="_blank" title="Share on Facebook" i18n:attributes="title">
-                            <span class="eea-icon eea-icon-facebook-square"><!-- --></span></a>
-                    </li>
-                    <li>
-                    <a tal:attributes="href python:'http://www.linkedin.com/shareArticle?mini=true&url=' + pageUrl + '&title=' + pageTitle + '&summary=' + pageSummary"
-                       rel="noopener" target="_blank" title="Share on LinkedIn" i18n:attributes="title">
-                            <span class="eea-icon eea-icon-linkedin-square"><!-- --></span></a>
-                    </li>
-                    <li>
-                    <a tal:attributes="href python:'https://reddit.com/submit?url=' + pageUrl + '&title=' + pageTitle"
-                       rel="noopener" target="_blank" title="Share on reddit" i18n:attributes="title">
-                            <span class="eea-icon eea-icon-reddit-square"><!-- --></span></a>
-                    </li>
-                    <li>
-                    <a tal:attributes="href python:'http://www.stumbleupon.com/submit?url=' + pageUrl"
-                       rel="noopener" target="_blank" title="Share on StumbleUpon" i18n:attributes="title">
-                            <span class="eea-icon eea-icon-stumbleupon-circle"><!-- --></span></a>
-                    </li>
-                    <li>
-                    <a tal:attributes="href python:'https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle + '&via=EUEnvironment'"
-                       rel="noopener" target="_blank" title="Share on Twitter" i18n:attributes="title">
-                            <span class="eea-icon eea-icon-twitter-square"><!-- --></span></a>
-                    </li>
+                        <li>
+                        <a tal:attributes="href python:'https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle + '&via=EUEnvironment'"
+                           rel="noopener" target="_blank" title="Share on Twitter" i18n:attributes="title">
+                                <span class="eea-icon eea-icon-twitter-square"><!-- --></span></a>
+                        </li>
+                        <li>
+                        <a tal:attributes="href python:'https://facebook.com/sharer.php?u=' + pageUrl"
+                           rel="noopener" target="_blank" title="Share on Facebook" i18n:attributes="title">
+                                <span class="eea-icon eea-icon-facebook-square"><!-- --></span></a>
+                        </li>
+                        <li>
+                        <a tal:attributes="href python:'http://www.linkedin.com/shareArticle?mini=true&url=' + pageUrl + '&title=' + pageTitle + '&summary=' + pageSummary"
+                           rel="noopener" target="_blank" title="Share on LinkedIn" i18n:attributes="title">
+                                <span class="eea-icon eea-icon-linkedin-square"><!-- --></span></a>
+                        </li>
+                        <li>
+                        <a tal:attributes="href python:'https://www.blogger.com/blog-this.g?u=' + pageUrl + '&n=' + pageTitle + '&t=' + pageSummary"
+                           rel="noopener" target="_blank" title="Share on Blogger" i18n:attributes="title">
+                                <span class="eea-icon eea-icon-bold"><!-- --></span></a>
+                        </li>
+                        <li>
+                        <a tal:attributes="href python:'https://reddit.com/submit?url=' + pageUrl + '&title=' + pageTitle"
+                           rel="noopener" target="_blank" title="Share on reddit" i18n:attributes="title">
+                                <span class="eea-icon eea-icon-reddit-square"><!-- --></span></a>
+                        </li>
+                        <li>
+                        <a tal:attributes="href python:'http://www.stumbleupon.com/submit?url=' + pageUrl"
+                           rel="noopener" target="_blank" title="Share on StumbleUpon" i18n:attributes="title">
+                                <span class="eea-icon eea-icon-stumbleupon-circle"><!-- --></span></a>
+                        </li>
                     </ul>
                 </div>
                             </td>

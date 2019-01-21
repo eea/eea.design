@@ -3,6 +3,10 @@ Changelog
 
 23.5-dev0 - (unreleased)
 ---------------------
+* Feature: added a "Linked In follow us" button on the "Follow us" portlet on the homepage
+  [alecghica refs #100041]
+* Change: changed the order of the buttons on the "Share with others".
+  [alecghica refs #100041]
 
 23.4 - (2019-01-11)
 ---------------------

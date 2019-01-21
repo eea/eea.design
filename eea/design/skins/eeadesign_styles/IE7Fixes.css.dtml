@@ -420,7 +420,7 @@ dd.portletFooter {
     right: 100px;
 }
 
-#twitter-link, #facebook-link, #youtube-link, #rss-link, #email-link {
+#twitter-link, #facebook-link, #linkedin-link, #youtube-link, #rss-link, #email-link {
     display: block;
     float: left;
     margin: 0;

@@ -202,24 +202,6 @@
 }
 
 /* style for shortcuts buttons */
-
-/*#facebook,*/
-/*#youtube,*/
-/*#twitter,*/
-/*#twitter-link,*/
-/*#facebook-link,*/
-/*#youtube-link,*/
-/*#rss-link,*/
-/*#email-link,*/
-/*a.active-list,*/
-/*a.list-layout,*/
-/*a.album-layout,*/
-/*a.active-album,*/
-/*a.list-layout:hover,*/
-/*a.album-layout:hover {*/
-  /*background: transparent url('&dtml-xurl;/sprite-eeaimages.png') no-repeat scroll top right;*/
-/*}*/
-
 #portlet-followus dd {
   display: inline-block;
   width: 44px;
