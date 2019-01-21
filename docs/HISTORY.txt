@@ -3,6 +3,8 @@ Changelog
 
 23.5 - (2019-01-21)
 ---------------------
+* Cleanup: removed unused CSS files regarding IE fixes.
+  [alecghica refs #100041]
 * Feature: added a "Linked In follow us" button on the "Follow us" portlet on the homepage
   [alecghica refs #100041]
 * Change: changed the order of the buttons on the "Share with others".

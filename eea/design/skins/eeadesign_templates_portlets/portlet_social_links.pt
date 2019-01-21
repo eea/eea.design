@@ -17,39 +17,37 @@
       <dl class="portlet" id="portlet-followus">
         <dt class="portletHeader" i18n:translate="">Follow us</dt>
         <dd>
-            <a id="twitter-link" class="link-plain" title="Follow us on Twitter"
+            <a class="link-plain" title="Follow us on Twitter"
                href="http://twitter.com/euenvironment"
                i18n:attributes="title">
                 <span class="eea-icon eea-icon-marginless eea-icon-twitter-square eea-icon-3x">&nbsp;</span></a>
         </dd>
         <dd>
-            <a id="facebook-link" class="link-plain" title="Follow us on Facebook"
+            <a class="link-plain" title="Follow us on Facebook"
                href="http://www.facebook.com/European.Environment.Agency"
                i18n:attributes="title">
                 <span class="eea-icon eea-icon-marginless eea-icon-facebook-square eea-icon-3x">&nbsp;</span></a>
         </dd>
         <dd>
-            <a id="linkedin-link" class="link-plain" title="Follow us on Linked In"
+            <a class="link-plain" title="Follow us on Linked In"
                href="https://www.linkedin.com/company/european-environment-agency"
                i18n:attributes="title">
                 <span class="eea-icon eea-icon-marginless eea-icon-linkedin-square eea-icon-3x">&nbsp;</span></a>
         </dd>
         <dd>
-            <a id="youtube-link" class="link-plain" title="Follow us on YouTube"
+            <a class="link-plain" title="Follow us on YouTube"
                href="http://www.youtube.com/user/EEAvideos"
                i18n:attributes="title">
                 <span class="eea-icon eea-icon-marginless eea-icon-youtube-square eea-icon-3x">&nbsp;</span></a>
         </dd>
         <dd>
-            <a id="rss-link" class="link-plain" title="Subscribe to RSS Feed"
+            <a class="link-plain" title="Subscribe to RSS Feed"
                tal:attributes="href string:$portal_url/subscription/news-feeds"
                i18n:attributes="title" class="link-plain">
             <span class="eea-icon eea-icon-marginless eea-icon-rss-square eea-icon-3x">&nbsp;</span></a>
         </dd>
         <dd>
-            <a id="email-link"
-               title="Subscribe by email"
-               class="link-plain"
+            <a class="link-plain" title="Subscribe by email"
                tal:attributes="href string:$portal_url/subscription/targeted-subscription"
                i18n:attributes="title">
             <span class="eea-icon eea-icon-marginless eea-icon-marginless eea-icon-envelope eea-icon-3x">&nbsp;</span></a>
