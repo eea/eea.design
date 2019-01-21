@@ -1,7 +1,7 @@
 Changelog
 =========
 
-23.5-dev0 - (unreleased)
+23.5 - (2019-01-21)
 ---------------------
 * Feature: added a "Linked In follow us" button on the "Follow us" portlet on the homepage
   [alecghica refs #100041]
