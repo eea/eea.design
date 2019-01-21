@@ -5,7 +5,7 @@ Changelog
 ---------------------
 * Cleanup: removed unused CSS files regarding IE fixes.
   [alecghica refs #100041]
-* Feature: added a "Linked In follow us" button on the "Follow us" portlet on the homepage
+* Feature: added a "Follow us on Linked In" button on the "Follow us" portlet on the homepage
   [alecghica refs #100041]
 * Change: changed the order of the buttons on the "Share with others".
   [alecghica refs #100041]
