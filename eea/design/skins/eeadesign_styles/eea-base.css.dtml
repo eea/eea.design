@@ -259,6 +259,17 @@ dd#tempCoverage, dd.geotags, dd.category{
     overflow: auto;
 }
 
+/* #101427 we need equal length table cells when comparing canonical to translation field value */
+#content .translation_edit table {
+    display: table;
+    width: 100%;
+}
+.translation_field td {
+    width: 50%;
+    vertical-align: top;
+}
+
+
 #content .documentDescription,
 #content #description {
     font-weight: bold;
