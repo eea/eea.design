@@ -3,6 +3,8 @@ Changelog
 
 23.6-dev0 - (unreleased)
 ---------------------
+* Change: added translate_edit class along with css fixes for translation edit
+  [ichim-david refs #101427]
 
 23.5 - (2019-01-21)
 ---------------------
