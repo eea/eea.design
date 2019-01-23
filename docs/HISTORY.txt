@@ -1,6 +1,9 @@
 Changelog
 =========
 
+23.6-dev0 - (unreleased)
+---------------------
+
 23.5 - (2019-01-21)
 ---------------------
 * Cleanup: removed unused CSS files regarding IE fixes.
