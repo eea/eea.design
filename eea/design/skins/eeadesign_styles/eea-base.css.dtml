@@ -259,6 +259,17 @@ dd#tempCoverage, dd.geotags, dd.category{
     overflow: auto;
 }
 
+/* #101427 we need equal length table cells when comparing canonical to translation field value */
+#content .translation_edit table {
+    display: table;
+    width: 100%;
+}
+.translation_field td {
+    width: 50%;
+    vertical-align: top;
+}
+
+
 #content .documentDescription,
 #content #description {
     font-weight: bold;
@@ -533,7 +544,8 @@ div.overlay a:hover {
     padding-left: 10px !important;
 }
 
-.documentEditable .mceLayout {
+.documentEditable .mceLayout,
+.documentEditable .translation_edit .mceLayout {
     /* fixes width of edit forms because tinymce has hardcoded width */
     width:100% !important;
     /* fixes edit without visual editor placement because it has an inline
