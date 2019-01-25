@@ -1,6 +1,9 @@
 Changelog
 =========
 
+23.7-dev0 - (unreleased)
+---------------------
+
 23.6 - (2019-01-23)
 ---------------------
 * Change: added translate_edit class along with css fixes for translation edit
