@@ -1,7 +1,7 @@
 Changelog
 =========
 
-23.8-dev0 - (unreleased)
+23.8 - (2019-02-01)
 ---------------------
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
