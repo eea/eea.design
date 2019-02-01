@@ -1,7 +1,15 @@
 Changelog
 =========
 
-23.6-dev0 - (unreleased)
+23.8-dev0 - (unreleased)
+---------------------
+
+23.7 - (2019-01-28)
+---------------------
+* Jenkins: Add sonarqube step
+  [avoinea refs #101552]
+
+23.6 - (2019-01-23)
 ---------------------
 * Change: added translate_edit class along with css fixes for translation edit
   [ichim-david refs #101427]
