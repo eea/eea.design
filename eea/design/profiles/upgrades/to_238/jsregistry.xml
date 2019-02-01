@@ -3,7 +3,7 @@
 
   <javascript id="++resource++plone.app.jquerytools.overlayhelpers.js" remove="True" />
 
-  <javascript cacheable="False" compression="none" cookable="False"
+  <javascript cacheable="True" compression="none" cookable="True"
     enabled="True" inline="False" expression=""
     bundle="default" id="overlayhelpers.js" insert-after="++resource++plone.app.jquerytools.form.js" />
 
