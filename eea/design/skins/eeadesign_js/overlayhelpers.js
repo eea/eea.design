@@ -1,3 +1,4 @@
+/* jslint:disable */
 /*****************
 
  jQuery Tools overlay helpers.
