@@ -123,7 +123,7 @@ jQuery(function ($) {
                 pb.remove_overlay(o);
 
                 // save options on trigger element
-                o.data('pbo', pbo);
+                jQuery(o).data('pbo', pbo);
 
                 // mark the source with a rel attribute so we can find
                 // the overlay, and a special class for styling
@@ -163,7 +163,8 @@ jQuery(function ($) {
      trigger object
      ******/
     pb.remove_overlay = function (o) {
-        var old_data = o.data('pbo');
+        var old_data = jQuery(o).data('pbo');
+
         if (old_data) {
             switch (old_data.subtype) {
                 case 'image':
@@ -211,7 +212,7 @@ jQuery(function ($) {
             close_message +
             '</a></div></div>');
 
-        content.data('pbo', pbo);
+        jQuery(content).data('pbo', pbo);
 
         // if a width option is specified, set it on the overlay div,
         // computing against the window width if a % was specified.
@@ -238,7 +239,7 @@ jQuery(function ($) {
         var ethis, content, api, img, el, pbo;
 
         ethis = $(this);
-        pbo = ethis.data('pbo');
+        pbo = jQuery(ethis).data('pbo');
 
         // find target container
         content = $(ethis.attr('rel'));
@@ -319,7 +320,7 @@ jQuery(function ($) {
     pb.prep_ajax_form = function (form) {
         var ajax_parent = form.closest('.pb-ajax'),
             data_parent = ajax_parent.closest('.overlay-ajax'),
-            pbo = data_parent.data('pbo'),
+            pbo = jQuery(data_parent).data('pbo'),
             formtarget = pbo.formselector,
             closeselector = pbo.closeselector,
             beforepost = pbo.beforepost,
@@ -376,7 +377,7 @@ jQuery(function ($) {
                 ajax_parent.empty().append(el);
 
                 // execute inline scripts
-                $.buildFragment([responseText], [document], scripts);
+                $.buildFragment([responseText], document, scripts);
                 if (scripts.length) {
                     $.each(scripts, function() {
                         $.globalEval( this.text || this.textContent || this.innerHTML || "" );
@@ -412,13 +413,14 @@ jQuery(function ($) {
                     noform = statusText;
                 }
 
-
                 switch (noform) {
                     case 'close':
                         api.close();
                         break;
                     case 'reload':
-                        api.close();
+                        // 101692 when saving dialog within portal_registry
+                        // api points to form div instead of the overlay api
+                        api.close ? api.close() : form.closest('.overlay-ajax').overlay().close();
                         pb.spinner.show();
                         // location.reload results in a repost
                         // dialog in some browsers; very unlikely to
@@ -436,6 +438,14 @@ jQuery(function ($) {
                         location.replace(target);
                         break;
                     default:
+                        // 101692 when saving a rule edit reload the manage-rules
+                        // page
+                        if (success) {
+                            api.close();
+                            pb.spinner.show();
+                            location.reload();
+                            break;
+                        }
                         if (el.children()) {
                             // show what we've got
                             ajax_parent.empty().append(el);
@@ -479,8 +489,7 @@ jQuery(function ($) {
         e.type = "beforeAjaxClickHandled";
         $(document).trigger(e, [this, event]);
         if (e.isDefaultPrevented()) { return false; }
-
-        pbo = ethis.data('pbo');
+        pbo = jQuery(ethis).data('pbo');
 
         content = pb.create_content_div(pbo, ethis);
         // pbo.config.top = $(window).height() * 0.1 - ethis.offsetParent().offset().top;
@@ -550,7 +559,7 @@ jQuery(function ($) {
             }
 
             // execute inline scripts
-            $.buildFragment([responseText], [document], scripts);
+            $.buildFragment([responseText], document, scripts);
             if (scripts.length) {
                 $.each(scripts, function() {
                     $.globalEval( this.text || this.textContent || this.innerHTML || "" );
@@ -601,7 +610,7 @@ jQuery(function ($) {
         pb.spinner.show();
 
         content = this.getOverlay();
-        pbo = this.getTrigger().data('pbo');
+        pbo = jQuery(this.getTrigger()).data('pbo');
 
         if (content.find('iframe').length === 0 && pbo.src) {
             content.append(
