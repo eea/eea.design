@@ -3,6 +3,8 @@ Changelog
 
 23.8-dev0 - (unreleased)
 ---------------------
+* Bug fix: fixed control panel pages overlay actions
+  [ichim-david refs #101692]
 
 23.7 - (2019-01-28)
 ---------------------

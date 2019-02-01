@@ -249,4 +249,11 @@
         description='EEA Design upgrade profile for v21.6'
         provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+  <genericsetup:registerProfile
+    name="upgrade238"
+    title="EEA Design upgrade profile for v23.8"
+    directory="profiles/upgrades/to_238"
+    description='EEA Design upgrade profile for v23.8'
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 </configure>
