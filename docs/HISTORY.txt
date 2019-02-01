@@ -3,6 +3,9 @@ Changelog
 
 23.8-dev0 - (unreleased)
 ---------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [ichim-david refs #101692]
 * Bug fix: fixed control panel pages overlay actions
   [ichim-david refs #101692]
 
