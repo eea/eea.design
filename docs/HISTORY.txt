@@ -1,6 +1,14 @@
 Changelog
 =========
 
+23.8 - (2019-02-01)
+---------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [ichim-david refs #101692]
+* Bug fix: fixed control panel pages overlay actions
+  [ichim-david refs #101692]
+
 23.7 - (2019-01-28)
 ---------------------
 * Jenkins: Add sonarqube step

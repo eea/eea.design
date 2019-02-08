@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+
+  <javascript id="++resource++plone.app.jquerytools.overlayhelpers.js" remove="True" />
+
+  <javascript cacheable="True" compression="none" cookable="True"
+    enabled="True" inline="False" expression=""
+    bundle="default" id="overlayhelpers.js" insert-after="++resource++plone.app.jquerytools.form.js" />
+
+</object>
