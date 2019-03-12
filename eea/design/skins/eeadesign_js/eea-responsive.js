@@ -300,20 +300,57 @@ jQuery(document).ready(function($) {
         }
     }
 
-    // #72862 remove extra markup not needed when we are on mobile
-    var $mini_header = $(".mini-header");
-    if ($mini_header.length) {
-        (function () {
-            "use strict";
-            var $globalnav_tips = $("<div id='secondary-globalnav-tips' />");
-                $globalnav_tips.appendTo($secondary_portaltabs);
-            $secondary_portaltabs.addClass('eea-slide-tooltips');
-            $portal_siteactions.find('li').each(function(idx, el) {
-                var $old_panel = $('#tip-' + el.id);
-                $old_panel.clone().attr('id', 'tip-' + el.id + '-menu').appendTo($globalnav_tips);
+    // add any cross_site_top panels as siteaction panels
+    var $parent = $("#js-siteaction-panels");
+    var make_siteaction_panel = function($content, $parent, panel_id, use_only_children) {
+        var $panel = $("<div class='panel' id='" + panel_id + "'>" +
+            "<div class='panel-top'></div>" +
+            "<div class='panel-content shadow'>" +
+            "</div>");
+        var $clone = $content.clone();
+        if (use_only_children) {
+            $clone = $clone.children();
+        }
+        $clone.appendTo($panel.find('.panel-content'));
+        $panel.appendTo($parent);
+    };
+    make_siteaction_panel($("#portal-personaltools"), $parent, 'tip-siteaction-user-menu', true);
 
+    // make accordion panels out of cross-site-top content
+    var $holder = $('<div class=\'eea-accordion-panels collapsed-by-default non-exclusive\' />');
+
+    function turn_cross_panels_into_accordions($el, $holder) {
+        var lists = $el.find('> li');
+        lists.each(function(idx, el) {
+            var $acordion_panel = $('<div  />',
+                {id: 'eap-' + el.id, 'class': 'eea-accordion-panel'});
+            var $el = $(el);
+            var $old_panel = $('#tip-' + el.id);
+            var $panel = $('<div />', {
+                'class': 'pane',
+                html: $old_panel.find('.panel-content').html()
             });
-        }());
+            var $result = $('<h2 />', {
+                'class': 'eea-icon-right-container',
+                html: $el.find('a').attr('title')
+            });
+            $result.appendTo($acordion_panel);
+            $panel.appendTo($acordion_panel);
+            $acordion_panel.appendTo($holder);
+        });
+    }
+    var $secondary_portaltabs_modified = $('#secondary-portaltabs');
+
+
+    if (!$secondary_portaltabs_modified.find('.eea-accordion-panels').length) {
+        $holder.prependTo($secondary_portaltabs_modified);
+        (function() {
+            var $cross_site_top_panels = $($secondary_portaltabs_modified);
+            $cross_site_top_panels.each(function(idx, el) {
+                var $el = $(el);
+                turn_cross_panels_into_accordions($el, $holder);
+            });
+        })();
     }
 
     /* #27280 return only if we don't have a mobile resolution as well as a larger resolution */
@@ -355,48 +392,6 @@ jQuery(document).ready(function($) {
     });
 
 
-    // make accordion panels out of cross-site-top content
-    var $holder = $('<div class=\'eea-accordion-panels collapsed-by-default non-exclusive\' />');
-
-    function turn_cross_panels_into_accordions($el, $holder) {
-        var lists = $el.find('li');
-        lists.each(function(idx, el) {
-            var $acordion_panel = $('<div  />',
-                {id: el.id, 'class': 'eea-accordion-panel'});
-            var $el = $(el);
-            var $old_panel = $('#tip-' + el.id);
-            var $panel = $('<div />', {
-                'class': 'pane',
-                html: $old_panel.find('.panel-content').html()
-            });
-            var $result = $('<h2 />', {
-                'class': 'eea-icon-right-container',
-                html: $el.find('a').text()
-            });
-            $result.appendTo($acordion_panel);
-            $panel.appendTo($acordion_panel);
-            $acordion_panel.appendTo($holder);
-        });
-    }
-    var $secondary_portaltabs_modified = $('#secondary-portaltabs');
-
-    if ($mini_header.length) {
-        (function () {
-            var $global_search = $portal_siteactions.find("#siteaction-search").detach();
-            var $global_network = $portal_siteactions.find("#siteaction-networks").detach();
-        }());
-    }
-
-    if (!$secondary_portaltabs_modified.find('.eea-accordion-panels').length) {
-        $holder.prependTo($secondary_portaltabs_modified);
-        (function() {
-            var $cross_site_top_panels = $('#portal-externalsites, #portal-siteactions');
-            $cross_site_top_panels.each(function(idx, el) {
-                var $el = $(el);
-                turn_cross_panels_into_accordions($el, $holder);
-            });
-        })();
-    }
 
 
     // #26378 hide and show eea-scrolling-toggle-visibility when scrolling up or down

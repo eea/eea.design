@@ -62,59 +62,6 @@ jQuery(document).ready(function($) {
         e.stopPropagation();
     });
 
-    // // 72862 mini header
-    var $mini_header = $(".mini-header");
-    if ($mini_header.length) {
-        (function() {
-            var $portal_header = $("#portal-header");
-            var $cross_site_top = $("#cross-site-top");
-            var $ptools = $("#portal-personaltools-wrapper");
-            var $search = $("#portal-searchbox");
-            var $parent = $("#secondary-globalnav-tips");
-
-            $body.on('eea-miniheader-toggled', function() {
-                // hide globalnav current triangle when we have the
-                // network section open
-                $(".eea-nav-current").toggleClass('eea-nav-inactive');
-            });
-            // add any cross_site_top panels as siteaction panels
-            var make_siteaction_panel = function($content, $parent, panel_id, use_only_children) {
-                var $panel = $("<div class='panel' id='" + panel_id + "'>" +
-                    "<div class='panel-top'></div>" +
-                    "<div class='panel-content shadow'>" +
-                    "</div>");
-                var $clone = $content.clone();
-                if (use_only_children) {
-                    $clone = $clone.children();
-                }
-                $clone.appendTo($panel.find('.panel-content'));
-                $panel.appendTo($parent);
-            };
-            make_siteaction_panel($search, $parent, 'tip-siteaction-search-menu');
-            make_siteaction_panel($popup_login, $parent, 'tip-siteaction-login-menu', true);
-            make_siteaction_panel($("#portal-personaltools"), $parent, 'tip-siteaction-user-menu', true);
-
-            $portal_header.addClass("eea-miniheader-element");
-            $ptools.addClass("eea-miniheader-element");
-            $("#portaltab-europe").css('display', 'none');
-            $("#secondary-portaltabs").find('> li > a').click(function(ev) {
-                $('.eea-navsiteactions-active').removeClass('eea-navsiteactions-active');
-                $(ev.target).closest('li').addClass('eea-navsiteactions-active');
-                ev.preventDefault();
-            });
-            $body.on('eea-miniheader-hide', function() {
-                $cross_site_top.hide();
-                $(".portal-logo").hide();
-                $search.hide();
-                $ptools.hide();
-                if (!$portal_header.find('.networkSites').length) {
-                    $(".networkSites").eq(0).clone().prependTo($portal_header);
-                }
-            });
-            $("#siteaction-networks-menu").find("a").addClass("mini-header-expander");
-        }());
-    }
-
     // custom requirement to swap placement of the table and fiche-summary
     // for briefings found within the airs section
     var air_fiches = $(".portaltype-fiche.section-airs");
