@@ -595,24 +595,6 @@ span.figure-left {
 /* padding to daviz tooltip */
 .google-visualization-tooltip{ padding: 5px !important; }
 
-.mini-header-expander {
-    height: 30px;
-    position: relative;
-    z-index: 1;
-    color: #346f83 !important;
-    margin: 0 2em;
-}
-.mini-header-expander:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background: #FFF;
-    border-radius: 0 0 10px 10px;
-}
 
 /* css3 ribbon effect #79026 */
 .ribbon-wrapper {

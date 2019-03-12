@@ -55,7 +55,11 @@
     width: 74%; }
 
   #faceted-text-search input[type="text"] {
-    width: 77%; } }
+    width: 77%; }
+
+  .media-box {
+    margin-top: 1em;
+    margin-bottom: 1em; } }
 @media screen and (max-width: 479px) {
   #languageCodes {
     max-width: 40% !important;
@@ -82,7 +86,12 @@
   .portlet-megatopic {
     display: block;
     flex: none;
-    width: 100%; } }
+    width: 100%; }
+
+  .europe-agency-text {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em; } }
 @media screen and (max-height: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
@@ -113,13 +122,16 @@
 @media screen and (min-width: 628px) and (max-width: 767px) {
   #content #languageCodes {
     max-width: 60%; } }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   #eea-above-columns .plone-breadcrumb {
     margin-top: 0;
     margin-bottom: 0; }
 
   #eea-above-columns .plone-breadcrumb ol {
     line-height: 2.5em; }
+
+  .europe-agency-text {
+    margin: 0.8em 0 0 0; }
 
   #portal-personaltools-wrapper,
   .portal-logo,
@@ -157,18 +169,6 @@
       padding-bottom: 0;
       padding-top: 0;
       font-weight: normal; }
-
-  .mini-header #portal-header {
-    display: block !important; }
-
-  .mini-header #portal-header > .networkSites {
-    display: none; }
-
-  .networkSites,
-  .networkSites .portletFooter,
-  .networkSites > .col-md-6,
-  .networkSites > .col-sm-6 {
-    padding: 0; }
 
   #portal-globalnav {
     display: flex;
@@ -272,7 +272,8 @@
 
   #portal-header {
     height: 100%;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    display: block; }
 
   #portal-logo-link {
     display: none; }
@@ -327,9 +328,6 @@
   #globalnav-holder, #portal-globalnav {
     height: inherit; }
 
-  .mini-header #globalnav-holder {
-    border: 0; }
-
   #portal-globalnav > li > a {
     padding: 0.5em 0;
     line-height: 2em;
@@ -337,13 +335,6 @@
 
   .portal-globalnav li a {
     border-bottom: 1px solid gray; }
-
-  #portal-globalnav a:hover:after, #portal-globalnav .eea-nav-current a:after, .mini-header #portal-globalnav .eea-nav-current a:hover:after {
-    top: 14px;
-    left: -1%;
-    border-left-color: #FFF;
-    border-top-color: transparent;
-    margin-left: -11px; }
 
   #portal-column-content {
     margin-top: 60px; }
@@ -483,6 +474,9 @@
   #visual-portal-wrapper {
     overflow: auto; }
 
+  .navbar-toggle {
+    display: block; }
+
   #portal-columns {
     min-width: 100% !important; }
 
@@ -556,22 +550,26 @@
   .template-soer2015_frontpage .eea-icon:before {
     margin: 0 .2em; }
   .template-soer2015_frontpage #portlet-followus {
-    margin: 2em; } }
+    margin: 2em; }
+
+  #eap-siteaction-search-menu,
+  #eap-siteaction-europe-menu {
+    display: none; }
+
+  .actionMenuContent {
+    background-color: transparent; }
+
+  #header-holder .navbar.hideShadow {
+    box-shadow: none;
+    border: 0; } }
 @media screen and (width: 768px) {
   .right-column-area {
     width: 41%;
-    flex-basis: 41%; } }
+    flex-basis: 41%; }
+
+  #portal-globalnav > li > a {
+    font-size: 13px; } }
 @media screen and (min-width: 768px) {
-  #secondary-portaltabs .eea-accordion-panels,
-  #portal-logo-link-header {
-    display: none; }
-
-  .mini-header #portal-searchbox .searchSection {
-    display: none; }
-
-  .navbar-toggle {
-    display: none; }
-
   .eea-right-section-slider {
     display: none; }
 
@@ -597,20 +595,20 @@
   .eea-tabs-panel .pane {
     display: block !important; }
 
-  #header-holder .navbar.hideShadow {
-    box-shadow: none;
-    border: 0; }
-
   .template-dc_view .content-header {
     width: 58.5%; }
-
-  #portal-globalnav #siteaction-networks-menu {
-    min-width: 125px; }
 
   .template-dc_view .right-column-area {
     position: absolute;
     right: 0;
     top: 0; } }
+@media screen and (min-width: 769px) {
+  #secondary-portaltabs .eea-accordion-panels,
+  #portal-logo-link-header {
+    display: none; }
+
+  .navbar-toggle {
+    display: none; } }
 @media screen and (min-width: 768px) and (max-width: 800px) {
   .col-sm-6.bordered-left:before {
     left: -1%; }
@@ -640,19 +638,21 @@
   .photoAlbumEntry {
     width: 127px; } }
 @media screen and (min-width: 768px) and (max-width: 910px) {
-  #portaltab-europe {
-    padding-right: 95px;
-    width: 200px; }
+  .portal-logo {
+    display: none; }
 
-  .mini-header #portal-globalnav {
-    font-size: 90%; }
+  .portal-logo {
+    display: none; }
 
-  .mini-header #portal-header {
-    height: 100%;
-    margin: 2em auto; }
+  #portal-header {
+    background-color: #069;
+    color: white; }
+
+  #secondary-portaltabs {
+    color: inherit; }
 
   #portal-globalnav > li > a {
-    padding: 1em 0.5em; }
+    padding: 1em 0.4em; }
 
   #globalnav-holder #portal-globalnav {
     padding-right: 0 !important; }
@@ -663,29 +663,14 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #portal-searchbox {
     margin: 25px 0.5em 0 0; } }
-@media screen and (min-width: 768px) {
-  .mini-header #secondary-portaltabs > li > a {
-    padding: 0 1em; }
-
-  .mini-header .siteaction-title {
-    display: none; }
-
-  #siteaction-networks-menu .siteaction-title {
-    display: inline-block; } }
 @media screen and (min-width: 961px) {
-  #visual-portal-wrapper, #portal-header {
+  #visual-portal-wrapper {
     min-width: 995px;
-    max-width: 1024px; }
-
-  #portal-header.eea-miniheader-element {
-    height: 100%;
-    font-size: 115%;
-    margin: 2em auto;
-    clear: none; } }
+    max-width: 1024px; } }
 @media screen and (max-width: 1023px) {
-  .mini-header #tip-externalsites-networks .networkSites,
-  .mini-header #portal-globalnav #portaltab-eeahome {
-    display: none; } }
+  .colophon-links {
+    width: 100%;
+    text-align: center; } }
 @media screen and (max-width: 1024px) {
   .frontpage #portal-columns,
   .frontpage #portal-column-content,
@@ -716,9 +701,6 @@
   min-width: 100%; }
 
 @media screen and (min-width: 1024px) {
-  .mini-header #visual-portal-wrapper {
-    overflow: hidden; }
-
   #portal-globaltab {
     font-size: 120%; } }
 @media screen and (width: 1024px) {
@@ -730,13 +712,16 @@
 @media screen and (min-width: 1025px) {
   .fullwidth #portal-header,
   .fullwidth #secondary-portaltabs {
-    padding-right: 1em; }
+    padding-right: 1em; } }
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+  #portal-globalnav > li > a {
+    font-size: 12px; }
 
-  .mini-header-expander:before {
-    -webkit-transform: perspective(1px) rotateX(-1deg);
-    -ms-transform: perspective(1px) rotateX(-1deg);
-    -o-transform: perspective(1px) rotateX(-1deg);
-    transform: perspective(1px) rotateX(-1deg); } }
+  #secondary-portaltabs > li {
+    padding: 1em 0.1em; } }
+@media screen and (min-width: 1280px) {
+  .eea-software-info {
+    justify-content: space-evenly; } }
 /* </dtml-let> */
 /* </dtml-with> */
 

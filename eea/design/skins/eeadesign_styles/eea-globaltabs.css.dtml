@@ -4,9 +4,6 @@
 
 
 /* @group Navigation/search customizes public.css */
-.mini-header #globalnav-holder {
-    border-top: 5px solid #FFF;
-}
 
 #portal-globalnav li a  {
     position: relative;
@@ -16,16 +13,14 @@
 #secondary-portaltabs-container {
     display: none;
 }
-.mini-header #portal-globalnav #secondary-portaltabs-container {
-    display: flex;
-}
 
 #secondary-portaltabs {
     display: flex;
     margin-left: 0;
+    position: relative;
 }
 
-#secondary-portaltabs li a {
+#secondary-portaltabs > li {
     padding: 1em 0.45em;
 }
 
@@ -39,12 +34,6 @@
     z-index: 601;
 }
 
- #siteaction-networks-menu .mini-header-expander {
-     background-color: transparent !important;
- }
-#siteaction-networks-menu a:hover:after {
-    border-left-color: transparent;
-}
 
 #secondary-globalnav-tips li a {
     padding: 0.3em 0;
@@ -59,10 +48,6 @@
     font-weight: normal;
 }
 
-/*#chooselang li a,*/
-/*#chooselang li a:hover {*/
-/*}*/
-
 /* 72862 tweak placement of globalnav panels */
 #secondary-globalnav-tips .panel {
     top: 46px !important;
@@ -73,6 +58,7 @@
 
 #tip-article-language {
     width: 400px;
+    left: initial !important;
 }
 #tip-article-language .panel-top {
     float: right;
@@ -91,43 +77,14 @@
     height: 15px;
 }
 
-#portal-globalnav #portaltab-more,
-#portal-globalnav #portaltab-eeahome {
-    display: none;
-}
-.mini-header #portal-globalnav #portaltab-more,
-.mini-header #portal-globalnav #portaltab-eeahome {
-    display: flex;
-}
-
-#portal-globalnav .mini-header-expander {
-    margin: 0 0.5em;
-    padding: 0.5em 0.8em !important;
-    display: block;
-    align-items: normal;
-    overflow: visible;
-}
-
-#secondary-portaltabs .eea-icon:before {
-    margin: 0;
-}
-
-
 #portaltab-europe a {
     font-weight: normal !important;
 }
 
-.mini-header #portaltab-europe {
+#portaltab-europe {
     display: none;
 }
 
-#portaltab-eeahome  {
-    width: 110px;
-    font-size: 70%;
-    line-height: 1.1;
-    padding-left: 35px;
-    background: url("&dtml-xurl;/globalnav-logo.png") no-repeat 10% 60%;
-}
 
 #secondary-portaltabs #portaltab-europe a {
     font-weight: normal;
@@ -144,34 +101,19 @@
     height: 0;
 }
 
-/* 72862_mini_header hide eea-nav-current navigation arrow
-*  when we have the mini header as we have the expanding
-*  network panel
-*/
-.mini-header #portal-globalnav .eea-nav-inactive a:after {
-    display: none;
-}
 #portal-globalnav a:hover:after,
-#portal-globalnav .eea-nav-current a:after,
-.mini-header #portal-globalnav .eea-nav-current a:hover:after {
+#portal-globalnav .eea-nav-current a:after {
     top: 0;
-    left: 50%;
     content: " ";
     height: 0;
-    width: 0;
+    width: 100%;
     position: absolute;
     pointer-events: none;
-    border: 10px solid transparent;
-    border-top-color: #fff;
+    border-top: 3px solid &dtml-corporateGreen;;
     margin-left: -10px;
     display: block;
 }
 
-#portaltab-eeahome a:hover:after,
-#secondary-portaltabs .mini-header-expander a:hover:after,
-#portaltab-europe a:hover:after {
-    border: none;
-}
 /* </dtml-let> */
 /* </dtml-with> */
 

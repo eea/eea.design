@@ -34,9 +34,6 @@
 #portal-personaltools li a, #portal-personaltools a:hover {
     color: #FFFFFF;
 }
-.mini-header #portal-personaltools-wrapper {
-    visibility: hidden;
-}
 
 #portal-personaltools #user-name {
     background: transparent url(&dtml-xurl;/user.gif) center left no-repeat;

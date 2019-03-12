@@ -108,9 +108,6 @@ hr {
 }
 /* @end subscription cross_site_top panel content icons */
 
-.mini-header #portal-header {
-    height: 100%;
-}
 
 /* Searchbox style and positioning */
 #portal-searchbox .gsc-clear-button {
@@ -230,7 +227,8 @@ td.gsc-search-button {
 /* #23500 allow the control panel widget to be placed outside of their context
     by having overflow visible for screen with size larger than 1024px
 */
-#region-content {
+#region-content,
+.content-header {
     position: relative;
 }
 #content-core {

@@ -170,11 +170,12 @@ div.managePortletsLink, a.managePortletsFallback {
 /* on fullwidth the breadcrumb should align to the left of the browserwindow not center align */
 .fullwidth .plone-breadcrumb .container {
     margin: 0;
+    min-width: 100%;
 }
 .plone-breadcrumb ol > li + li:after {
     content: "";
     position: absolute;
-    color: #e6e4e4;
+    color: #FFF;
     border-left: 5px solid;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;

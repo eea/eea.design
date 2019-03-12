@@ -28,6 +28,7 @@ backgroundColor:string=#e8f0fb
 
 #general divisions colors
 lightGreyDivisionColor:string=#cccccc
+lightGreyColor:string=#666
 
 #general bgc for boxes and portlets
 whiteBackgroundColor:string=#ffffff
