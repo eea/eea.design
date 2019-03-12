@@ -1,4 +1,4 @@
-<h2 id="translated-logo"
+<div id="translated-logo"
     class="portal-logo"
     tal:define="portal_url context/@@plone_portal_state/portal_url;
                 local_site context/@@plone_portal_state/local_site;
@@ -17,7 +17,7 @@
                 tal:attributes="alt portal_properties/title;
                         src string:${portal_url}/${logo}" />
     </a>
-</h2>
+</div>
 
 <h3 class="site-description" i18n:translate="" tal:replace="nothing">
     Sound and independent information<br /> on the environment

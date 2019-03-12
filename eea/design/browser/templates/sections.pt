@@ -40,17 +40,19 @@
                   </tal:block>
             </tal:tabs>
 
-            <li id="secondary-portaltabs-container">
-              <ul id="secondary-portaltabs" class="plain">
-                <tal:defines tal:condition="python:context.restrictedTraverse('@@miniheader_content_types')()">
-                    <tal:defines tal:define="idPostfix python:'-menu';">
-                        <div metal:use-macro="context/@@cross_site_top/siteactions" >
-                            Eionet, EW ..
-                        </div>
-                    </tal:defines>
-                </tal:defines>
-              </ul>
-            </li>
         </ul>
     </div>
+
+    <ul id="secondary-portaltabs" class="plain">
+        <tal:defines tal:define="idPostfix python:'-menu';">
+            <div metal:use-macro="context/@@cross_site_top/siteactions" >
+                Eionet, EW ..
+            </div>
+        </tal:defines>
+        <div id="secondary-globalnav-tips">
+            <div metal:use-macro="here/cross_site_panels/macros/main">
+                dropdown for ETCs ..
+            </div>
+        </div>
+    </ul>
 </tal:sections>

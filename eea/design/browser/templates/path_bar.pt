@@ -16,7 +16,7 @@
     <ol aria-labelledby="breadcrumbs-you-are-here">
       <li id="breadcrumbs-home">
         <a tal:attributes="href view/navigation_root_url" title="Home" i18n:attributes="title">
-            <em class="eea-icon eea-icon-home"></em>
+            <em class="eea-icon eea-icon-lg eea-icon-home"></em>
         </a>
       </li>
       <li tal:repeat="crumb breadcrumbs"
@@ -38,5 +38,6 @@
         </tal:item>
       </li>
     </ol>
+      <span class="europe-agency-text pull-right" i18n:translate="">The EEA is an agency of the European Union</span>
   </div>
 </nav>

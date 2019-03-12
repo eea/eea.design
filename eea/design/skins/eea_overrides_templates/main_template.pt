@@ -36,7 +36,7 @@
                         ifacetool context/portal_interface;
                         isPrint python:1 if 'pdf.' in request['URL0'] else 0;
                         wf_state context_state/workflow_state|string:;
-                        mini_header python:' mini-header' if context.restrictedTraverse('@@miniheader_content_types')() else False;">
+                        ">
 
 <tal:notContentCoreOnly tal:condition="python: not content_core_only">
 <tal:comment replace="nothing">xssDisable was added in order to fix the chrome issue from ticket #15231</tal:comment>
@@ -120,7 +120,6 @@
                   body_class python: body_class + ' body-print' if isPrint else body_class;
                   body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() or request.get('body.fullwidth') else body_class;
                   body_class python: body_class + ' scroll-analytics' if context.restrictedTraverse('@@scroll_analytics_content_types')() else body_class;
-                  body_class python: body_class + mini_header if mini_header else body_class;
                   body_class python: body_class + ' expired-content' if is_expired else body_class;
                   frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
                   sunburst_view python:context.restrictedTraverse('@@sunburstview');
