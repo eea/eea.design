@@ -106,7 +106,7 @@ legend {
     display: none !important;
 }
 
-html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#portal-header,#visual-portal-wrapper{max-width:1024px}#visual-portal-wrapper{margin:0 auto;padding:0;clear:both;overflow:visible}#portal-column-content{padding:0 1.5em 1.5em;min-width: 635px;}#footer-wrapper{background-color:#069;margin:2em 0 0 0;padding:2em 1em;clear:both;border-top:8px solid #FFF;}
+html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#portal-header,#visual-portal-wrapper{max-width:1024px}#visual-portal-wrapper{margin:0 auto;padding:0;clear:both;overflow:visible}#portal-column-content{padding:0 1.5em 1.5em;min-width: 635px;}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 1em;clear:both;border-top:8px solid #FFF;}
 
 .pull-right {
     float: right !important;

@@ -1,0 +1,123 @@
+<metal:portlets metal:define-macro="portlet">
+
+    <!--? eionet -->
+    <div class="colophon-section section-dark section-top">
+        <div class="section-centered section-evenly">
+    <h2><span class="eea-icon eea-icon-users"></span><span  i18n:translate="">European environment information and observation network (Eionet)</span></h2>
+        </div>
+    </div>
+     <!--? end eionet section -->
+
+
+    <!--? managed sites -->
+    <div class="colophon-section section-dark section-bordered">
+        <div class="section-centered section-evenly">
+
+            <h2><span class="eea-icon eea-icon-sitemap"></span><span  i18n:translate="">Other EEA managed sites</span></h2>
+
+            <table class="left-table">
+                <tr><td class="link-title">BISE</td> <td class="link-description" i18n:translate="">Biodiversity Information System for Europe</td>
+                </tr>
+                <tr><td class="link-title">Climate-ADAPT</td> <td class="link-description" i18n:translate="">Climate Adaptation Platform</td>
+                </tr>
+                <tr><td class="link-title">Copernicus In Situ </td><td class="link-description" i18n:translate="">Copernicus In situ component portal</td>
+                </tr>
+                <tr> <td class="link-title">Copernicus Land </td><td class="link-description" i18n:translate="">Copernicus land monitoring portal</td>
+                </tr>
+            </table>
+
+            <table class="right-table">
+                <tr>
+                    <td class="link-description" i18n:translate="">European Pollutant Release and Transfer Register
+                    </td>
+                    <td class="link-title">E-PRTR</td>
+                </tr>
+                <tr>
+                    <td class="link-description" i18n:translate="">Forest Information System for Europe</td>
+                    <td class="link-title">FISE</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">Information Platform for Chemical Monitoring data</td><td class="link-title">IpCHeM</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">Marine Water Information System for Europe</td><td class="link-title">WISE-Marine</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">Fresh Water Information System for Europe</td><td class="link-title">WISE-FreshWater</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+<!--?  end managed sites -->
+
+     <!--? follow us -->
+    <div class="colophon-section section-dark section-bordered">
+
+        <h2 i18n:translate="">Follow us</h2>
+
+        <div class="section-centered">
+
+            <a class="link-plain media" title="Follow us on Twitter" href="https://twitter.com/euenvironment" i18n:attributes="title">
+                <span class="eea-icon  eea-icon-twitter-square eea-icon-3x"></span></a>
+            <a class="link-plain media" title="Follow us on Facebook" href="https://www.facebook.com/European.Environment.Agency" i18n:attributes="title">
+                <span class="eea-icon  eea-icon-facebook-square eea-icon-3x"></span></a>
+            <a class="link-plain media" title="Follow us on Linked In" href="https://www.linkedin.com/company/european-environment-agency" i18n:attributes="title">
+                <span class="eea-icon  eea-icon-linkedin-square eea-icon-3x"></span></a>
+            <a class="link-plain media" title="Follow us on YouTube" href="https://www.youtube.com/user/EEAvideos" i18n:attributes="title">
+                <span class="eea-icon eea-icon-youtube-square eea-icon-3x"></span></a>
+            <a class="link-plain media" title="Subscribe to RSS Feed" href="/subscription/news-feeds" i18n:attributes="title">
+                <span class="eea-icon eea-icon-rss-square eea-icon-3x"></span></a>
+
+            <div class="media media--discreet">
+                <a class="link-plain media-link" title="Subscribe by email" href="/subscription/targeted-subscription" i18n:attributes="title">
+                    <span class="eea-icon eea-icon-3x eea-icon-newspaper-o"></span>
+                    <div class="media-body">
+                        <span i18n:translate="">Sign up to receive our reports</span>
+                        <br>
+                        <span i18n:translate="">(print and/or electronic) and</span>
+                        <br>
+                        <span i18n:translate="">quarterly e-newsletter</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!--? end follow us -->
+
+    <!--? contact us section -->
+    <div class="colophon-section section-dark section-bordered">
+        <div class="section-centered">
+
+            <h2 i18n:translate="">Contact us</h2>
+            <div class="media my-2">
+                <span class="eea-icon eea-icon-3x eea-icon-map-marker"></span>
+                <div class="media-body" i18n:translate="">
+                    Kongens Nytorv 6
+                    <br>
+                    1050 Copenhagen K
+                </div>
+            </div>
+
+            <div class="media my-2">
+                <span class="eea-icon eea-icon-3x eea-icon-phone"></span>
+                <div class="media-body">
+                    <span i18n:translate="">Phone number:</span>
+                    <br>
+                    <span>(+45) 33 36 71 00</span>
+                </div>
+            </div>
+
+            <div class="media my-2">
+                <span class="eea-icon eea-icon-3x eea-icon-comment"></span>
+                <div class="media-body">
+                    <span i18n:translate="">Ask your question via the EEA Forum</span>
+                    <br>
+                    <span i18n:translate="">Media enquiries</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--? end contact us section -->
+
+</metal:portlets>
