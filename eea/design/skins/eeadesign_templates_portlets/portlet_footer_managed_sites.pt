@@ -1,0 +1,44 @@
+<metal:portlets metal:define-macro="portlet">
+
+    <div class="colophon-section section-dark section-top">
+        <div class="section-centered section-evenly">
+
+            <h2 i18n:translate="">EEA managed sites</h2>
+
+            <table class="left-table">
+                <tr><td class="link-title">BISE</td> <td class="link-description" i18n:translate="">Biodiversity Information System for Europe</td>
+                </tr>
+                <tr><td class="link-title">Climate-ADAPT</td> <td class="link-description" i18n:translate="">Climate Adaptation Platform</td>
+                </tr>
+                <tr><td class="link-title">Copernicus In Situ </td><td class="link-description" i18n:translate="">Copernicus In situ component portal</td>
+                </tr>
+                <tr> <td class="link-title">Copernicus Land </td><td class="link-description" i18n:translate="">Copernicus land monitoring portal</td>
+                </tr>
+                <tr><td class="link-title">E-UnionRep</td> <td class="link-description" i18n:translate="">Energy Union E-reporting platform</td>
+                </tr>
+                <tr><td class="link-title">E-PRTR</td> <td class="link-description" i18n:translate="">European Pollutant Release and Transfer Register</td>
+                </tr>
+                <tr><td class="link-title">FISE</td> <td class="link-description" i18n:translate="">Forest Information System for Europe</td>
+                </tr>
+            </table>
+
+            <table class="right-table">
+                <tr><td class="link-description" i18n:translate="">Information Platform for Chemical Monitoring data</td><td class="link-title">IpCHeM</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">Marine Water Information System for Europe</td><td class="link-title">WISE-Marine</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">Fresh Water Information System for Europe</td><td class="link-title">WISE-FreshWater</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">The European environment information and observation network</td><td class="link-title">Eionet</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">European Topic Centres</td><td class="link-title">ETCs</td>
+                </tr>
+                <tr><td class="link-description" i18n:translate="">Environment Protection Agencies network</td><td class="link-title">EPA Network</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+    
+</metal:portlets>

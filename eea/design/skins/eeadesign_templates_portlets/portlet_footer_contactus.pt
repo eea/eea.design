@@ -1,0 +1,36 @@
+<metal:portlets metal:define-macro="portlet">
+    <div class="colophon-section section-dark section-bordered">
+        <div class="section-centered">
+
+            <h2 i18n:translate="">Contact us</h2>
+            <div class="media my-2">
+                <span class="eea-icon eea-icon-3x eea-icon-map-marker"></span>
+                <div class="media-body" i18n:translate="">
+                    Kongens Nytorv 6
+                    <br>
+                    1050 Copenhagen K
+                </div>
+            </div>
+
+            <div class="media my-2">
+                <span class="eea-icon eea-icon-3x eea-icon-phone"></span>
+                <div class="media-body">
+                    <span i18n:translate="">Phone number:</span>
+                    <br>
+                    <span>(+45) 33 36 71 00</span>
+                </div>
+            </div>
+
+            <div class="media my-2">
+                <span class="eea-icon eea-icon-3x eea-icon-comment"></span>
+                <div class="media-body">
+                    <span i18n:translate="">Ask your question via the EEA Forum</span>
+                    <br>
+                    <span i18n:translate="">Media enquiries</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</metal:portlets>
