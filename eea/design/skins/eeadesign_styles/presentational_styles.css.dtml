@@ -278,13 +278,13 @@ pre {
 #globalstatusmessage .eea-icon::before {
     font-size: 3em;
     padding-left: 1.3em;
-    color: #006699;
+    color: &dtml-corporateBlue;;
     line-height: inherit;
     margin-right: 0;
 }
 
 #globalstatusmessage dt {
-    color: #006699;
+    color: &dtml-corporateBlue;;
     font-size: 150%;
 }
 

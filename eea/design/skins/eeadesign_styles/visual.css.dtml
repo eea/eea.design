@@ -774,7 +774,7 @@ span.figure-left {
     position: absolute;
     pointer-events: none;
     border: 13px solid transparent;
-    border-top-color: #006699;
+    border-top-color: &dtml-corporateBlue;;
     margin-left: -10px;
 }
 #visual-portal-wrapper .eea-tabs > li > a:hover,

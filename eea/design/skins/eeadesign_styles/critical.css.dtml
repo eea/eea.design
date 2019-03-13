@@ -138,7 +138,7 @@ a:visited {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #006699;
+    color: &dtml-corporateBlue;;
     font-weight: bold;
     font-family: 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -808,7 +808,7 @@ select {
 }
 
 .section-dark {
-    background-color: #006699;
+    background-color: &dtml-corporateBlue;;
 }
 .section-bordered {
     border-top: 2px solid #7BA9C5;
@@ -952,7 +952,7 @@ select {
         min-height: 50px;
     }
     .navbar-collapse {
-        background-color: #006699;
+        background-color: &dtml-corporateBlue;;
         padding: 0 15px;
     }
     .navbar-toggle .icon-bar + .icon-bar {

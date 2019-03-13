@@ -150,8 +150,8 @@ hr {
 }
 
 .gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
-    border-color: #006699;
-    background-color: #006699;
+    border-color: &dtml-corporateBlue;;
+    background-color: &dtml-corporateBlue;;
     background-image: none;
     filter: none;
     border: none;
