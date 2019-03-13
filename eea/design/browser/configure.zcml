@@ -281,13 +281,6 @@
         permission="plone.app.portlets.ManagePortlets"
         />
 
-    <browser:page
-        name="global_externalsites"
-        for="*"
-        template="templates/global_externalsites.pt"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        />
 
     <browser:page
         name="cross_site_panels"

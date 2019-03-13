@@ -16,50 +16,13 @@ hr {
 }
 
 /* portal-header area */
-/* siteactions cross_site_top */
-/* use font awesome unicode icons */
-/* daviz -edit sets eea-icon color to #000 */
-#portal-siteactions #siteaction-chooselang .eea-icon {
-    color: #FFF;
-}
-
-#siteaction-contactus {
-    font-weight: bold;
-}
-
-/* @end siteactions cross_site_top */
-#cross-site-top .panel .portlet-subscribtion {
-    margin: 0;
-}
-#cross-site-top .panel .portlet-subscribtion .portletFooter {
-    margin-bottom: 0;
-}
-#cross-site-top .panel .portlet,
-#cross-site-top .panel .portletHeader {
-    background: transparent;
-}
-#tip-siteaction-chooselang,
 #tip-siteaction-chooselang-menu {
     width: 145px;
 }
-#tip-siteaction-chooselang li,
 #tip-siteaction-chooselang-menu li {
     display: list-item;
     margin: 0;
     text-align: left;
-}
-#tip-siteaction-subscriptions,
-#tip-siteaction-subscriptions-menu {
-    width: 240px;
-}
-#tip-siteaction-contactus,
-#tip-siteaction-contactus-menu {
-    font-size: 125%;
-    width: 420px;
-}
-#tip-externalsites-networks, #tip-externalsites-etcssites {
-    width: 400px;
-    left: 0 !important;
 }
 /* Networks panel EU partners links */
 .moreLink {
@@ -83,10 +46,6 @@ hr {
 }
 /* End links */
 
-/* Site-wide action menu - font size, contact, index, sitemap etc */
-#portal-siteactions > #siteaction-networks, #portal-siteactions > #siteaction-search {
-    display: none;
-}
 
 /* subscription cross_site_top panel content icons */
 .portlet-subscription .eea-icon-lg {
@@ -139,9 +98,6 @@ hr {
     border: 1px solid #BBB;
 }
 
-#portal-searchbox .searchButton:focus {
-    background-color: &dtml-corporateOrange;;
-}
 
 #portal-searchbox .gsc-cursor-current-page {
     color: #FFF;

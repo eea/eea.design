@@ -238,17 +238,16 @@
     display: list-item;
     list-style: square inside url("&dtml-xurl;/bullet.gif"); }
 
-  #portal-externalsites a, #portal-siteactions a {
+  #portal-siteactions a {
     display: block;
     padding: 0.5em 0; }
 
-  #portal-externalsites, #portal-siteactions,
+  #portal-siteactions,
   #secondary-portaltabs,
-  #portal-searchbox,
-  .LSBox {
+  #portal-searchbox {
     float: none; }
 
-  #portal-externalsites li, #portal-siteactions li {
+  #portal-siteactions li {
     display: block;
     text-align: left; }
 
@@ -291,21 +290,10 @@
     #portal-searchbox a, #portal-searchbox label {
       color: #FFF;
       margin: 0; }
-    #portal-searchbox .searchButton {
-      display: none; }
-
-  .LSBox {
-    padding-right: 0; }
-    .LSBox .searchSection {
-      left: 0;
-      background-color: #006699; }
 
   #portal-searchbox {
     display: block !important;
     width: 100%; }
-
-  #portal-searchbox input.searchButton {
-    margin-left: 0; }
 
   #globalnav-holder, #portal-globalnav {
     height: inherit; }
@@ -592,9 +580,6 @@
   .navbar-toggle {
     display: none; } }
 @media screen and (min-width: 768px) and (max-width: 800px) {
-  .col-sm-6.bordered-left:before {
-    left: -1%; }
-
   .template-soer2015_frontpage .column-area {
     padding-left: 0;
     width: 61%;
@@ -665,8 +650,11 @@
     left: -5%; } }
 .fullwidth #portal-globalnav,
 .fullwidth #portal-header,
+.fullwidth .flex-container,
 .fullwidth #visual-portal-wrapper {
   max-width: 100%; }
+.fullwidth #visual-portal-wrapper {
+  overflow: hidden; }
 .fullwidth #portal-columns {
   min-width: 100%; }
 
@@ -675,8 +663,8 @@
     font-size: 120%; } }
 @media screen and (min-width: 1025px) {
   .fullwidth #portal-header,
-  .fullwidth #secondary-portaltabs {
-    padding-right: 1em; } }
+  .fullwidth .plone-breadcrumb {
+    padding: 1em; } }
 @media screen and (min-width: 768px) and (max-width: 1050px) {
   #portal-globalnav > li > a {
     font-size: 12px; }

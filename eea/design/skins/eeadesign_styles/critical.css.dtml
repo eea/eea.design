@@ -127,12 +127,6 @@ html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Aria
     margin: 0 auto;
     padding: 0 15px;
 }
-.col-md-5, .col-md-6, .col-sm-6 {
-    float: left;
-    position: relative;
-    padding: 0 15px;
-}
-
 
 a { color: &dtml-linkColor;;
     cursor: pointer}
@@ -163,7 +157,6 @@ ul {
     list-style: none none;
 }
 
-
 select {
     border: 1px solid #cccccc;
     color: #333333;
@@ -177,28 +170,6 @@ select {
 .list-items > li {
     display: list-item;
 }
-
-/* disable for now as there are font-size issues
-.content-core li::before,
-.list-items li::before {
-    content: "\25AA";
-    color: #346f83;
-    font-size: 75%;
-    padding-right: 0.75em;
-    vertical-align: top;
-}
-.content-core .gallery li::before,
-.content-core ol li::before,
-.tabbedmenu li::before,
-.eea-tabs li::before,
-.chart-tabs li::before,
-.formTabs li::before,
-.faceted-form li::before
- {
-    content: "";
-    display: none;
-}
-*/
 
 
 .contentViews li {
@@ -277,12 +248,9 @@ select {
     display: none;
 }
 
-#portal-externalsites, #portal-siteactions {
+ #portal-siteactions {
     margin: 4px 0 4px 0;
     padding: 0 10px 0 0;
-}
-#portal-externalsites {
-    margin-left: 0.5em;
 }
 #cross-site-top {
     display: none;
@@ -306,7 +274,7 @@ select {
 #portal-siteactions {
     margin-left: auto;
 }
-#portal-siteactions, #portal-externalsites {
+#portal-siteactions {
     display: block;
 
 }
@@ -572,14 +540,6 @@ select {
     margin: 1.5em;
     padding: 0;
   }
-/*#visual-portal-wrapper {*/
-    /*margin: 0 auto;*/
-    /*padding: 0;*/
-    /*display: block;*/
-    /*clear: both;*/
-    /*position: relative;*/
-    /*overflow: visible;*/
-/*}*/
 #portal-columns {
     padding-top: 1em;
 }
@@ -1023,24 +983,6 @@ select {
         width: 70px;
         border-radius: 0;
         font: bold 12px 'Open Sans';
-    }
-}
-
-@media (min-width: 768px) {
-    .col-sm-6 {
-        width: 50%;
-    }
-}
-
-@media (min-width: 992px) {
-    .col-md-4 {
-        width: 33.33333333%;
-    }
-    .col-md-5 {
-        width: 41.66666667%;
-    }
-    .col-md-8 {
-        width: 66.66666667%;
     }
 }
 
