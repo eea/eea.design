@@ -12,7 +12,7 @@
 
                <li tal:repeat="saction site_actions"
                        tal:attributes="id string:siteaction-${saction/id}${idPostfix}" class="eea-siteaction">
-                   <a href=""
+                   <a href="" target="_blank"
                         tal:define="title saction/title;
                                     id saction/id;
                                     description saction/description;

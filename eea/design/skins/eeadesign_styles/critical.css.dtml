@@ -111,6 +111,18 @@ html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Aria
 .pull-right {
     float: right !important;
 }
+.space-between {
+    justify-content: space-between;
+}
+.flex-container {
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 15px;
@@ -461,12 +473,7 @@ select {
     border-width: 1px 0;
     border-style:solid;
     border-color: lightgrey;
-}
-.plone-breadcrumb .container {
-    max-width: 1024px;
-    width: 100%;
-    margin: auto;
-    padding: 0;
+    padding: 0.5em;
 }
 .plone-breadcrumb  li {
     font-weight: 400;
@@ -517,16 +524,6 @@ select {
     color: inherit;
     padding: 1em 0.7em;
     font-size: 15px;
-}
-#portaltab-europe {
-    width: 212px;
-    font-size: 75%;
-    vertical-align: top;
-    padding-right: 92px;
-    background: url("&dtml-xurl;/eu-flag.png") no-repeat 122px -3px;
-}
-#portaltab-europe a {
-    font-weight: normal !important;
 }
 
 .icon-siteaction-europe-flag {

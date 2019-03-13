@@ -174,9 +174,6 @@
     display: flex;
     flex-direction: column; }
 
-  #portaltab-europe {
-    order: 1; }
-
   #portaltab-media {
     margin: 0; }
 
@@ -221,21 +218,6 @@
   #siteaction-user,
   #siteaction-search {
     display: none; }
-
-  #portaltab-europe {
-    margin-top: 1em;
-    padding-bottom: 2em;
-    width: 100%;
-    padding-right: 90px;
-    background: url("&dtml-xurl;/eu-flag.png") no-repeat right -5px; }
-    #portaltab-europe a {
-      text-align: left;
-      margin-top: 1em; }
-
-  #portaltab-europe a {
-    padding: 0.5em 0 2em 0;
-    border-bottom: 0;
-    text-align: left; }
 
   .panel {
     max-width: 335px;
@@ -613,14 +595,6 @@
   .col-sm-6.bordered-left:before {
     left: -1%; }
 
-  #portaltab-europe {
-    padding-right: 95px;
-    width: 195px;
-    background: url("&dtml-xurl;/eu-flag.png") no-repeat right -5px; }
-    #portaltab-europe a {
-      margin-top: 7px;
-      padding: 1.3em 0 !important; }
-
   .template-soer2015_frontpage .column-area {
     padding-left: 0;
     width: 61%;
@@ -655,11 +629,7 @@
     padding: 1em 0.4em; }
 
   #globalnav-holder #portal-globalnav {
-    padding-right: 0 !important; }
-
-  #portaltab-europe a {
-    margin-top: 3px !important;
-    padding: 1.3em 0 !important; } }
+    padding-right: 0 !important; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #portal-searchbox {
     margin: 25px 0.5em 0 0; } }
@@ -703,12 +673,6 @@
 @media screen and (min-width: 1024px) {
   #portal-globaltab {
     font-size: 120%; } }
-@media screen and (width: 1024px) {
-  #portaltab-europe a {
-    padding: 1.1em 0; }
-
-  #portaltab-europe {
-    font-size: 70%; } }
 @media screen and (min-width: 1025px) {
   .fullwidth #portal-header,
   .fullwidth #secondary-portaltabs {

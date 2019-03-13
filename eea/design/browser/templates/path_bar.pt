@@ -10,7 +10,7 @@
                      cropcurrent site_properties/breadcrumbs_current_length|python: 100;
                      "
           tal:condition="breadcrumbs">
-  <div class="container">
+  <div class="flex-container space-between breadcrumbs-container">
     <span id="breadcrumbs-you-are-here" class="hiddenStructure"
             i18n:translate="you_are_here">You are here:</span>
     <ol aria-labelledby="breadcrumbs-you-are-here">
@@ -38,6 +38,6 @@
         </tal:item>
       </li>
     </ol>
-      <span class="europe-agency-text pull-right" i18n:translate="">The EEA is an agency of the European Union</span>
+      <span class="europe-agency-text" i18n:translate="">The EEA is an agency of the European Union</span>
   </div>
 </nav>

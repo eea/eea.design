@@ -77,21 +77,6 @@
     height: 15px;
 }
 
-#portaltab-europe a {
-    font-weight: normal !important;
-}
-
-#portaltab-europe {
-    display: none;
-}
-
-
-#secondary-portaltabs #portaltab-europe a {
-    font-weight: normal;
-    text-align: right;
-    padding: 1em 0;
-}
-
 #portal-globalnav .en_icon {
     background: url(&dtml-xurl;/en_icon.png) no-repeat scroll right -1px transparent;
 }
