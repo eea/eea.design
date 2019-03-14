@@ -18,10 +18,6 @@ jQuery(document).ready(function($) {
     var $body = $('body');
     window.EEA.isPrintPdf = $body.hasClass('body-print');
     var underscore = window._;
-    var $portal_siteactions = $("#portal-siteactions");
-
-    var doc = document.documentElement;
-    var $secondary_portaltabs = $("#secondary-portaltabs");
 
     var throttle = window.underscore ? window.underscore.throttle : function (t, e) {
         var n;
@@ -365,34 +361,6 @@ jQuery(document).ready(function($) {
         return;
     }
     window.eea_mobile_resolution = true;
-
-
-    // adjust navigation height when switching between orientation modes
-    var $nav_collapse = $('#bs-example-navbar-collapse-1');
-    var client_height = doc.clientHeight;
-
-    function setMaxHeight(client_height) {
-        $nav_collapse.css('max-height', client_height - 60);
-    }
-
-    setMaxHeight(client_height);
-
-    function height() {
-        // iPhone clientHeight matches better the document height while other
-        // devices give better results when using outerHeight
-        if (window.navigator.userAgent.indexOf('iPhone') !== -1) {
-            return doc.clientHeight;
-        }    else {
-            return window.outerHeight;
-        }
-    }
-
-    mqOrientation.addListener(function() {
-        setMaxHeight(height());
-    });
-
-
-
 
     // #26378 hide and show eea-scrolling-toggle-visibility when scrolling up or down
     var lastScrollTop = 0;

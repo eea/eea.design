@@ -93,10 +93,6 @@
     width: 100%;
     margin-bottom: 0.5em; } }
 @media screen and (max-height: 480px) and (orientation: landscape) {
-  .navbar-fixed-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse {
-    max-height: 300px; }
-
   .filter-topic {
     width: 80%; }
 
@@ -123,112 +119,6 @@
   #content #languageCodes {
     max-width: 60%; } }
 @media screen and (max-width: 768px) {
-  #eea-above-columns .plone-breadcrumb {
-    margin-top: 0;
-    margin-bottom: 0; }
-
-  #eea-above-columns .plone-breadcrumb ol {
-    line-height: 2.5em; }
-
-  .europe-agency-text {
-    margin: 0.8em 0 0 0; }
-
-  #portal-personaltools-wrapper,
-  .portal-logo,
-  #siteaction-login {
-    display: none !important; }
-
-  #header-holder .navbar-default {
-    will-change: transform; }
-  #header-holder .navbar-collapse {
-    background-color: #004B87; }
-  #header-holder .navbar-toggle {
-    margin-top: 1em; }
-
-  #cross-site-top {
-    display: none; }
-
-  #portal-top {
-    margin-top: 1.3em;
-    background-color: transparent; }
-    #portal-top .eea-accordion-panels {
-      width: 100%;
-      border: 0; }
-      #portal-top .eea-accordion-panels table {
-        width: 100%; }
-    #portal-top .eea-accordion-title, #portal-top .eea-accordion-panel > h2 {
-      font-size: 100%;
-      background-color: #004B87;
-      color: #FFF;
-      border: 0;
-      padding: 0;
-      border-bottom: 1px solid gray; }
-    #portal-top .eea-accordion-panel a {
-      color: #346f83;
-      border-bottom: 0;
-      padding-bottom: 0;
-      padding-top: 0;
-      font-weight: normal; }
-
-  #portal-globalnav {
-    display: flex;
-    flex-direction: column; }
-
-  #portaltab-media {
-    margin: 0; }
-
-  #portal-globalnav .current a {
-    padding-left: 20px; }
-
-  #portal-globalnav .current a:after {
-    top: 50% !important;
-    left: 0 !important;
-    border-left-color: #fff;
-    border-top-color: transparent !important;
-    margin-left: 0 !important;
-    margin-top: -10px !important; }
-
-  #secondary-portaltabs {
-    margin: 0;
-    width: 100%; }
-
-  #portal-globalnav .current a {
-    padding-left: 20px; }
-
-  #portal-globalnav .current a:after {
-    top: 50% !important;
-    left: 0 !important;
-    border-left-color: #fff;
-    border-top-color: transparent !important;
-    margin-left: 0 !important;
-    margin-top: -10px !important; }
-
-  #secondary-portaltabs .portlet {
-    margin-bottom: 0;
-    padding: 0; }
-    #secondary-portaltabs .portlet dt, #secondary-portaltabs .portlet ul {
-      margin: 0;
-      padding: 0; }
-  #secondary-portaltabs .pane, #secondary-portaltabs .portlet {
-    background-color: #FFF; }
-
-  #secondary-portaltabs .eea-siteaction {
-    display: none !important; }
-
-  #siteaction-user,
-  #siteaction-search {
-    display: none; }
-
-  .panel {
-    max-width: 335px;
-    left: 20px !important; }
-
-  .panel-top {
-    left: 0 !important; }
-
-  .panel-content {
-    min-width: 320px; }
-
   #chooselang {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -237,27 +127,6 @@
   #chooselang li {
     display: list-item;
     list-style: square inside url("&dtml-xurl;/bullet.gif"); }
-
-  #portal-siteactions a {
-    display: block;
-    padding: 0.5em 0; }
-
-  #portal-siteactions,
-  #secondary-portaltabs,
-  #portal-searchbox {
-    float: none; }
-
-  #portal-siteactions li {
-    display: block;
-    text-align: left; }
-
-  #portal-header {
-    height: 100%;
-    margin-bottom: 1em;
-    display: block; }
-
-  #portal-logo-link {
-    display: none; }
 
   /* site logo height differences set for each language in order to fit the bootstrap navbar */
   .site-cs #printLogo,
@@ -274,40 +143,6 @@
   .site-pl #printLogo,
   .site-ru #printLogo {
     max-height: 55px; }
-
-  #printLogo {
-    max-height: 60px;
-    max-width: 70%;
-    float: left;
-    padding: 0.5em;
-    height: auto; }
-
-  #portal-searchbox {
-    margin-top: 0;
-    text-align: left; }
-    #portal-searchbox input[type="text"] {
-      width: 100%; }
-    #portal-searchbox a, #portal-searchbox label {
-      color: #FFF;
-      margin: 0; }
-
-  #portal-searchbox {
-    display: block !important;
-    width: 100%; }
-
-  #globalnav-holder, #portal-globalnav {
-    height: inherit; }
-
-  #portal-globalnav > li > a {
-    padding: 0.5em 0;
-    line-height: 2em;
-    width: 100%; }
-
-  .portal-globalnav li a {
-    border-bottom: 1px solid gray; }
-
-  #portal-column-content {
-    margin-top: 60px; }
 
   .frontpage #content {
     margin-bottom: 0; }
@@ -417,10 +252,7 @@
     display: none; }
 
   #viewlet-below-content .standalone {
-    white-space: pre-wrap; }
-
-  #eea-above-columns {
-    margin-top: 70px; } }
+    white-space: pre-wrap; } }
 @media screen and (min-width: 481px) and (max-width: 860px) {
   #megatopics-area {
     display: block;
@@ -465,9 +297,6 @@
   #portal-column-two {
     margin-top: 1em; }
 
-  .navbar-collapse {
-    width: 100%; }
-
   .userrole-anonymous .documentFirstHeading {
     padding-right: 0; }
 
@@ -486,7 +315,6 @@
 
   /* START #89398 GIS Map Applications get a slimmer mobile view */
   .template-gis_view .content-header,
-  .template-gis_view .plone-breadcrumb,
   .template-gis_view .documentFirstHeading,
   .template-gis_view .documentByLine,
   .template-gis_view .documentDescription {
@@ -522,23 +350,13 @@
   .template-soer2015_frontpage #portlet-followus {
     margin: 2em; }
 
-  #eap-siteaction-search-menu,
-  #eap-siteaction-europe-menu {
-    display: none; }
-
-  .actionMenuContent {
-    background-color: transparent; }
-
   #header-holder .navbar.hideShadow {
     box-shadow: none;
     border: 0; } }
 @media screen and (width: 768px) {
   .right-column-area {
     width: 41%;
-    flex-basis: 41%; }
-
-  #portal-globalnav > li > a {
-    font-size: 13px; } }
+    flex-basis: 41%; } }
 @media screen and (min-width: 768px) {
   .eea-right-section-slider {
     display: none; }
@@ -572,13 +390,188 @@
     position: absolute;
     right: 0;
     top: 0; } }
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 1000px) {
+  #eea-above-columns {
+    margin-top: 70px; }
+
+  #eea-above-columns .plone-breadcrumb {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+  .breadcrumbs-container .europe-agency-text {
+    display: none; }
+
+  #portal-personaltools-wrapper,
+  .portal-logo,
+  #siteaction-login {
+    display: none !important; }
+
+  #portal-header {
+    height: 100%;
+    margin-bottom: 1em;
+    display: block; }
+
+  #portal-logo-link {
+    display: none; }
+
+  #portal-searchbox {
+    margin-top: 0;
+    text-align: left; }
+    #portal-searchbox input[type="text"] {
+      width: 100%; }
+    #portal-searchbox a, #portal-searchbox label {
+      color: #FFF;
+      margin: 0; }
+
+  #portal-searchbox {
+    display: block !important;
+    width: 100%; }
+
+  #globalnav-holder, #portal-globalnav {
+    height: inherit; }
+
+  #portal-globalnav > li > a {
+    padding: 0.5em 0;
+    line-height: 2em;
+    width: 100%; }
+
+  .portal-globalnav li a {
+    border-bottom: 1px solid gray; }
+
+  #eap-siteaction-search-menu,
+  #eap-siteaction-europe-menu {
+    display: none; }
+
+  .actionMenuContent {
+    background-color: transparent; }
+
+  #header-holder .navbar-default {
+    will-change: transform; }
+  #header-holder .navbar-collapse {
+    background-color: #004B87;
+    padding: 0 15px;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: fixed;
+    width: 300px;
+    right: 0;
+    top: 60px;
+    z-index: 100;
+    height: 95vh;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: hidden; }
+  #header-holder .collapse.in {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    visibility: visible;
+    -webkit-overflow-scrolling: touch; }
+  #header-holder .navbar-toggle {
+    margin-top: 1em; }
+
+  #portal-top {
+    margin-top: 1.3em;
+    background-color: transparent; }
+    #portal-top .eea-accordion-panels {
+      width: 100%;
+      border: 0; }
+      #portal-top .eea-accordion-panels table {
+        width: 100%; }
+    #portal-top .eea-accordion-title, #portal-top .eea-accordion-panel > h2 {
+      font-size: 100%;
+      background-color: #004B87;
+      color: #FFF;
+      border: 0;
+      padding: 0;
+      border-bottom: 1px solid gray; }
+    #portal-top .eea-accordion-panel a {
+      color: #346f83;
+      border-bottom: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+      font-weight: normal; }
+
+  #printLogo {
+    max-height: 60px;
+    max-width: 70%;
+    float: left;
+    padding: 0.5em;
+    height: auto; }
+
+  #portal-globalnav {
+    display: flex;
+    flex-direction: column; }
+
+  #portal-globalnav a:hover:after,
+  #portal-globalnav .eea-nav-current a:after {
+    top: 14px;
+    left: -1%;
+    border: 10px solid transparent;
+    border-left-color: #FFF;
+    border-top-color: transparent;
+    margin-left: -11px; }
+
+  #portal-globalnav .current a {
+    padding-left: 20px; }
+
+  #portal-globalnav .current a:after {
+    top: 50% !important;
+    left: 0 !important;
+    border-left-color: #fff;
+    border-top-color: transparent !important;
+    margin-left: 0 !important;
+    margin-top: -10px !important; }
+
+  #secondary-portaltabs {
+    margin: 0;
+    width: 100%; }
+
+  #portal-globalnav .current a {
+    padding-left: 20px; }
+
+  #portal-globalnav .current a:after {
+    top: 50% !important;
+    left: 0 !important;
+    border-left-color: #fff;
+    border-top-color: transparent !important;
+    margin-left: 0 !important;
+    margin-top: -10px !important; }
+
+  #secondary-portaltabs .portlet {
+    margin-bottom: 0;
+    padding: 0; }
+    #secondary-portaltabs .portlet dt, #secondary-portaltabs .portlet ul {
+      margin: 0;
+      padding: 0; }
+  #secondary-portaltabs .pane, #secondary-portaltabs .portlet {
+    background-color: #FFF; }
+
+  #secondary-portaltabs .eea-siteaction {
+    display: none; }
+
+  .panel {
+    max-width: 335px;
+    left: 20px !important; }
+
+  .panel-top {
+    left: 0 !important; }
+
+  .panel-content {
+    min-width: 320px; } }
+@media screen and (min-width: 1001px) {
   #secondary-portaltabs .eea-accordion-panels,
   #portal-logo-link-header {
     display: none; }
 
   .navbar-toggle {
-    display: none; } }
+    display: none; }
+
+  .plone-breadcrumb {
+    padding: 0 0.5em; } }
 @media screen and (min-width: 768px) and (max-width: 800px) {
   .template-soer2015_frontpage .column-area {
     padding-left: 0;
@@ -596,25 +589,6 @@
 
   .photoAlbumEntry {
     width: 127px; } }
-@media screen and (min-width: 768px) and (max-width: 910px) {
-  .portal-logo {
-    display: none; }
-
-  .portal-logo {
-    display: none; }
-
-  #portal-header {
-    background-color: #004B87;
-    color: white; }
-
-  #secondary-portaltabs {
-    color: inherit; }
-
-  #portal-globalnav > li > a {
-    padding: 1em 0.4em; }
-
-  #globalnav-holder #portal-globalnav {
-    padding-right: 0 !important; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #portal-searchbox {
     margin: 25px 0.5em 0 0; } }
@@ -665,9 +639,10 @@
   .fullwidth #portal-header,
   .fullwidth .plone-breadcrumb {
     padding: 1em; } }
-@media screen and (min-width: 768px) and (max-width: 1050px) {
+@media screen and (min-width: 1001px) and (max-width: 1171px) {
   #portal-globalnav > li > a {
-    font-size: 12px; }
+    font-size: 13px;
+    padding: 1em 0.4em; }
 
   #secondary-portaltabs > li {
     padding: 1em 0.1em; } }

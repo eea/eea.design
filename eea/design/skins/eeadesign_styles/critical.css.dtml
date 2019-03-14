@@ -248,22 +248,6 @@ select {
     display: none;
 }
 
- #portal-siteactions {
-    margin: 4px 0 4px 0;
-    padding: 0 10px 0 0;
-}
-#cross-site-top {
-    display: none;
-}
-#cross-site-top .eea-siteaction {
-    display: inline;
-    padding: 0 5px;
-    margin-right: 0.5em;
-}
-#cross-site-top .eea-siteaction {
-    font-size: 11px;
-}
-
 .eea-siteaction > a,
 .eea-siteaction > a:hover,
 .eea-siteaction .eea-icon
@@ -271,26 +255,16 @@ select {
     color: inherit;
     cursor: pointer;
 }
-#portal-siteactions {
-    margin-left: auto;
-}
-#portal-siteactions {
-    display: block;
 
-}
 .siteaction-title {
     display: none;
 }
-#siteaction-chooselang-menu .siteaction-title {
+/* show title of language and search icon */
+#siteaction-chooselang-menu .siteaction-title,
+#siteaction-search-menu .siteaction-title {
     display: inline-block;
 }
 
-.navbar-collapse {
-    overflow-x: visible;
-    overflow-y: auto;
-    width: 100%;
-    max-height: 325px;
-}
 
 .navbar-toggle {
     position: relative;
@@ -441,7 +415,6 @@ select {
     border-width: 1px 0;
     border-style:solid;
     border-color: lightgrey;
-    padding: 0.5em;
 }
 .plone-breadcrumb  li {
     font-weight: 400;
@@ -918,12 +891,12 @@ select {
     width: 50px;
 }
 
-@media screen and (max-width: 768px) {
+.navbar-collapse {
+    visibility: hidden;
+}
+@media screen and (max-width: 1000px) {
     #portal-logo-link-header, .navbar-toggle {
         display: block;
-    }
-    .collapse {
-        display: none;
     }
     .sr-only {
         position: absolute;
@@ -951,29 +924,23 @@ select {
         z-index: 1030;
         min-height: 50px;
     }
-    .navbar-collapse {
-        background-color: &dtml-corporateBlue;;
-        padding: 0 15px;
-    }
     .navbar-toggle .icon-bar + .icon-bar {
         margin-top: 4px;
-    }
-    .collapse.in {
-        display: block;
     }
     #portal-globalnav > li > a {
         color: white;
         font-weight: bold;
     }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1001px) {
     #header-holder .container-fluid {
         padding: 0;
     }
     .navbar-collapse {
-        display: block !important;
-        height: auto !important;
-        overflow: visible !important;
+        display: block;
+        height: auto;
+        overflow: visible;
+        visibility: visible;
     }
 
     #portal-searchbox .gsc-search-button {

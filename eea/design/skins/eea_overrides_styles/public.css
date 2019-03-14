@@ -78,21 +78,6 @@ sub {
 
 /* @end */
 
-
-/* @group Site actions */
-
-#portal-siteactions {
-    font-size: 85%;
-    text-align: center;
-}
-
-#portal-siteactions li a:hover {
-    color: #75ad0a
-}
-
-/* @end */
-
-
 /* @group Listings */
 
 a.link-parent {

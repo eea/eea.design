@@ -42,7 +42,7 @@
     </div>
     <div class="eea-search-links">
         <a href="http://search.apps.eea.europa.eu" class="pull-left search_advanced_link">
-            <span i18n:translate="">Search the catalogue</span>
+            <span i18n:translate="">Advanced search</span>
         </a>
         <a class="pull-right search_glossary_link"
            href="/help/glossary" i18n:translate="">A-Z Glossary</a>
