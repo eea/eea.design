@@ -72,6 +72,17 @@
    </property>
    <property name="visible">True</property>
   </object>
+
+
+   <object name="networks" meta_type="CMF Action" i18n:domain="plone" remove="True">
+   </object>
+   <object name="contactus" meta_type="CMF Action" i18n:domain="plone" remove="True">
+   </object>
+   <object name="sitemap" meta_type="CMF Action" i18n:domain="plone" remove="True">
+   </object>
+   <object name="subscriptions" meta_type="CMF Action" i18n:domain="plone" remove="True">
+   </object>
+
  </object>
  <object name="externalsite_actions" meta_type="CMF Action Category" remove="True">
  </object>
