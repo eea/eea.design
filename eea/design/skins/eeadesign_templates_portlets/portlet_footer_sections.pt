@@ -3,7 +3,7 @@
     <!--? eionet -->
     <div class="colophon-section section-dark section-top">
         <div class="section-centered section-evenly">
-    <h2><span class="eea-icon eea-icon-users"></span><span  i18n:translate="">European environment information and observation network (Eionet)</span></h2>
+    <h2><span class="eea-icon eea-icon-users"></span><a href="https://www.eionet.europa.eu/" i18n:translate="">European environment information and observation network (Eionet)</a></h2>
         </div>
     </div>
      <!--? end eionet section -->
@@ -16,13 +16,26 @@
             <h2><span class="eea-icon eea-icon-sitemap"></span><span  i18n:translate="">Other EEA managed sites</span></h2>
 
             <table class="left-table">
-                <tr><td class="link-title">BISE</td> <td class="link-description" i18n:translate="">Biodiversity Information System for Europe</td>
+                <tr><td class="link-title"><a href="https://biodiversity.europa.eu/" target="_blank">BISE</a></td> <td class="link-description" i18n:translate="">Biodiversity Information System for Europe</td>
                 </tr>
-                <tr><td class="link-title">Climate-ADAPT</td> <td class="link-description" i18n:translate="">Climate Adaptation Platform</td>
+                <tr>
+                    <td class="link-title">
+                        <a href="https://climate-adapt.eea.europa.eu/" target="_blank">Climate-ADAP</a>
+                    </td>
+                    <td class="link-description" i18n:translate="">Climate Adaptation Platform</td>
                 </tr>
-                <tr><td class="link-title">Copernicus In Situ </td><td class="link-description" i18n:translate="">Copernicus In situ component portal</td>
+
+                <tr>
+                    <td class="link-title">
+                        <a href="https://insitu.copernicus.eu/" target="_blank">Copernicus In Situ</a>
+                    </td>
+                    <td class="link-description" i18n:translate="">Copernicus In situ component portal</td>
                 </tr>
-                <tr> <td class="link-title">Copernicus Land </td><td class="link-description" i18n:translate="">Copernicus land monitoring portal</td>
+                <tr>
+                    <td class="link-title">
+                        <a href="https://land.copernicus.eu/" target="_blank">Copernicus Land</a>
+                    </td>
+                    <td class="link-description" i18n:translate="">Copernicus land monitoring portal</td>
                 </tr>
             </table>
 
@@ -30,17 +43,35 @@
                 <tr>
                     <td class="link-description" i18n:translate="">European Pollutant Release and Transfer Register
                     </td>
-                    <td class="link-title">E-PRTR</td>
+                    <td class="link-title">
+                        <a href="https://prtr.eea.europa.eu/" target="_blank">E-PRTR</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="link-description" i18n:translate="">Forest Information System for Europe</td>
-                    <td class="link-title">FISE</td>
+                    <td class="link-description" i18n:translate="">
+                        Forest Information System for Europe
+                    </td>
+                    <td class="link-title">
+                        <a href="https://forests.eea.europa.eu" target="_blank">FISE</a>
+                    </td>
                 </tr>
-                <tr><td class="link-description" i18n:translate="">Information Platform for Chemical Monitoring data</td><td class="link-title">IpCHeM</td>
+                <tr>
+                    <td class="link-description" i18n:translate="">Information Platform for Chemical Monitoring data</td>
+                    <td class="link-title">
+                        <a href="https://ipchem.jrc.ec.europa.eu/RDSIdiscovery/ipchem/index.html" target="_blank">IpCHeM</a>
+                    </td>
                 </tr>
-                <tr><td class="link-description" i18n:translate="">Marine Water Information System for Europe</td><td class="link-title">WISE-Marine</td>
+
+                <tr>
+                    <td class="link-description" i18n:translate="">Marine Water Information System for Europe</td>
+                    <td class="link-title">
+                        <a href="https://water.europa.eu/marine" target="_blank">WISE-Marine</a>
+                    </td>
                 </tr>
-                <tr><td class="link-description" i18n:translate="">Fresh Water Information System for Europe</td><td class="link-title">WISE-FreshWater</td>
+                <tr><td class="link-description" i18n:translate="">Fresh Water Information System for Europe</td>
+                    <td class="link-title">
+                        <a href="https://water.europa.eu/freshwater" target="_blank">WISE-FreshWater</a>
+                    </td>
                 </tr>
             </table>
 
