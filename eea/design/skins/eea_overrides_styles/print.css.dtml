@@ -324,7 +324,6 @@ iframe[src*="video"] {
 #portal-globalnav .plain,
 #portal-globalnav .selected,
 #portal-globalnav,
-#portal-personaltools,
 #portal-breadcrumbs,
 #edit-bar,
 #portal-column-one,

@@ -49,14 +49,6 @@ sub {
 
 /* @end */
 
-
-/* @group Navigation/search */
-#portal-personaltools a:hover {
-    color: white;
-}
-
-
-
 /* Collapsible elements in search_form */
 
 .collapsible .collapser.collapsed {

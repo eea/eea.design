@@ -401,7 +401,6 @@
   .breadcrumbs-container .europe-agency-text {
     display: none; }
 
-  #portal-personaltools-wrapper,
   .portal-logo,
   #siteaction-login {
     display: none !important; }
@@ -562,6 +561,14 @@
   .panel-content {
     min-width: 320px; } }
 @media screen and (min-width: 1001px) {
+  #portal-searchbox .gsc-search-button {
+    cursor: pointer;
+    height: 32px;
+    margin: 0;
+    width: 70px;
+    border-radius: 0;
+    font: bold 12px 'Open Sans'; }
+
   #secondary-portaltabs .eea-accordion-panels,
   #portal-logo-link-header {
     display: none; }

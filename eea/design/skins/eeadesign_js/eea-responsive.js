@@ -306,6 +306,7 @@ jQuery(document).ready(function($) {
         var $clone = $content.clone();
         if (use_only_children) {
             $clone = $clone.children();
+            $content.remove();
         }
         $clone.appendTo($panel.find('.panel-content'));
         $panel.appendTo($parent);

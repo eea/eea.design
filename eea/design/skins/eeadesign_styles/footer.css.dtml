@@ -16,13 +16,28 @@
     color: white;
 }
 
-
 #portal-footer a:visited {
     color: white;
 }
 
+#portal-colophon {
+    margin: 0;
+    text-align: center;
+    clear: both;
+}
 
+.colophonWrapper {
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.colophon-links {
+    display: inline-block;
+    margin: 0 1em 0.75em;
+}
 .colophon-links a, .colophon-links a:visited {
     display: inline;
     font-size: 11px !important;
@@ -33,5 +48,91 @@
 .colophon-links a:hover {
     cursor: pointer;
     text-decoration: none !important;
+}
+
+.colophon-section {
+    width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+.section-centered {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+
+.section-dark {
+    background-color: &dtml-corporateBlue;;
+}
+.section-bordered {
+    border-top: 2px solid #7BA9C5;
+}
+
+.link-title {
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.left-table .link-description,
+.right-table .link-description {
+    text-align: left;
+    margin-left: 1em;
+    display: block;
+}
+
+.right-table .link-description {
+    text-align: right;
+    margin: 0 1em 0 0;
+}
+
+.left-table .link-title {
+    text-align: right;
+}
+
+.right-table .link-title {
+    text-align: left;
+}
+
+.section-dark a, .section-dark .eea-icon, .section-dark h2, .colophon-section table {
+    color: #FFF;
+}
+.section-dark h2 {
+    text-decoration: none;
+    border: 0;
+    margin: 0 0 0.83em 0;
+}
+
+.section-top {
+    padding-top: 0;
+}
+
+.section-centered > h2 {
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.colophon-left {
+    width: 215px;
+}
+.colophon-middle {
+    text-align: center;
+    flex: 1;
+}
+.colophon-right {
+    width: 215px;
+}
+.colophon-right span {
+    float: left;
+    width: 155px;
+}
+.colophon-right img {
+    float: right;
+    width: 50px;
 }
 /* </dtml-with> */

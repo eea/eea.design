@@ -73,12 +73,25 @@ hr {
     display: none;
 }
 
+#portal-searchbox {
+    font-size: 1.2em;
+    text-align: left;
+    display: none;
+}
+
 .panel #portal-searchbox {
+    display: block;
     float: none;
     clear: both;
     margin: 1em;
     width: 400px;
     overflow: inherit;
+}
+
+#portal-searchbox form {
+    padding: 0;
+    white-space: nowrap;
+    margin-bottom: 0;
 }
 
 #portal-searchbox a {
@@ -87,8 +100,19 @@ hr {
     font-size: 85%;
 }
 
-#portal-searchbox .gsc-input-query {
-    padding: 0 0.5em;
+#portal-searchbox .gsc-control-cse {
+    background-color: transparent;
+    padding: 1px 0 0 0;
+    border: 0;
+}
+#portal-searchbox input.gsc-input-query {
+    border: none;
+    background: #fff;
+    padding: 3px 6px;
+    height: 30px !important;
+    width: 100%;
+    vertical-align: top;
+    font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
 }
 #portal-searchbox .gsc-input-query:focus {
     background: #FFF none !important;
@@ -110,12 +134,30 @@ hr {
     left: 5%;
 }
 
+#portal-searchbox .gsib_b {
+    display: none;
+}
+#portal-searchbox .gsc-input-box {
+    height: 100%;
+    position: relative;
+}
 #portal-searchbox .gsc-search-box {
     border-style: none;
     border-width: 0;
     border-spacing: 0 0;
     width: 100%;
     margin-bottom: 2px;
+}
+.gsc-search-box td {
+    padding: 0;
+}
+
+#portal-searchbox .gsc-tabsArea > div {
+    overflow: visible;
+}
+
+#portal-searchbox .gsc-cursor-current-page {
+    padding: 5px;
 }
 
 #portal-searchbox .autocomplete-items {

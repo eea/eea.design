@@ -1086,11 +1086,42 @@ ul.action-buttons > li {
     display: block;
     list-style: none;
     padding: 0;
-    margin: 0px;
+    margin: 0;
 }
 
 ul.social-buttons { 
-    margin-left: 0px;
+    margin-left: 0;
+}
+
+/* media object similar to bootstrap media object however this uses flex*/
+
+.media {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+.media-box {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.media--discreet  {
+    line-height: 1;
+    font-size: 90%;
+}
+.media-link {
+    display: flex;
+}
+/* utilities */
+.my-2 {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
 }
 
 /* </dtml-let> */
