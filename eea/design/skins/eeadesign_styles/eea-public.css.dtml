@@ -116,7 +116,7 @@ fieldset,
 
 span.languageCodes a.translated,
 #content span.link-external a.translated {
-    background: none repeat scroll 0 0 #ECECEC;
+    background: none repeat scroll 0 0 &dtml-mediumBackgroundColor;;
     color: black;
     display: inline-block;
     font-size: 10px;

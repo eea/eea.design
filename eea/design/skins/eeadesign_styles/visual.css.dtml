@@ -252,7 +252,7 @@ th a, th a:link, th a:visited {
 .listing tr:nth-child(odd) td,
 .sortable tr:nth-child(odd) td,
 .datatable tr:nth-child(odd) td {
-    background-color: #ececec;
+    background-color: &dtml-mediumBackgroundColor;;
 }
 
 

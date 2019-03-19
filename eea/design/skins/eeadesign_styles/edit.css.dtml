@@ -119,7 +119,7 @@ body .ploneSkin .mce_formatPreview a {
 **  center editor since we have a fixed width layout
 */
 .mceEditor.mceFullScreen {
-    background-color: #ececec !important; /* in order to override ui.css */
+    background-color: &dtml-mediumBackgroundColor; !important; /* in order to override ui.css */
     width: 100% !important;
     height: 100% !important;
     z-index: 10;
