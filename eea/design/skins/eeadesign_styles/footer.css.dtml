@@ -66,7 +66,6 @@
     max-width: 1500px;
 }
 
-
 .section-dark {
     background-color: &dtml-corporateBlue;;
 }
@@ -74,29 +73,8 @@
     border-top: 2px solid #7BA9C5;
 }
 
-.link-title {
+.table-link-title {
     font-weight: bold;
-    margin-left: 1em;
-}
-
-.left-table .link-description,
-.right-table .link-description {
-    text-align: left;
-    margin-left: 1em;
-    display: block;
-}
-
-.right-table .link-description {
-    text-align: right;
-    margin: 0 1em 0 0;
-}
-
-.left-table .link-title {
-    text-align: right;
-}
-
-.right-table .link-title {
-    text-align: left;
 }
 
 .section-dark a, .section-dark .eea-icon, .section-dark h2, .colophon-section table {
@@ -117,22 +95,4 @@
     flex-basis: 100%;
 }
 
-.colophon-left {
-    width: 215px;
-}
-.colophon-middle {
-    text-align: center;
-    flex: 1;
-}
-.colophon-right {
-    width: 215px;
-}
-.colophon-right span {
-    float: left;
-    width: 155px;
-}
-.colophon-right img {
-    float: right;
-    width: 50px;
-}
 /* </dtml-with> */
