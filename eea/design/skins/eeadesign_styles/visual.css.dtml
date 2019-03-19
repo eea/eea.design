@@ -1124,5 +1124,9 @@ ul.social-buttons {
     justify-content: space-evenly;
 }
 
+.space-around {
+    justify-content: space-around;
+}
+
 /* </dtml-let> */
 /* </dtml-with> */

@@ -2,7 +2,7 @@
 
     <!--? eionet -->
     <div class="colophon-section section-dark section-top">
-        <div class="section-centered space-evenly">
+        <div class="section-centered">
     <h2><span class="eea-icon eea-icon-users"></span><a href="https://www.eionet.europa.eu/" i18n:translate="">European environment information and observation network (Eionet)</a></h2>
         </div>
     </div>
@@ -11,7 +11,7 @@
 
     <!--? managed sites -->
     <div class="colophon-section section-dark section-bordered">
-        <div class="section-centered space-evenly">
+        <div class="section-centered space-around">
 
             <h2><span class="eea-icon eea-icon-sitemap"></span><span  i18n:translate="">Other EEA managed sites</span></h2>
 
