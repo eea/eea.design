@@ -134,16 +134,16 @@
                 <div class="media-body">
                     <span i18n:translate="">Phone number:</span>
                     <br>
-                    <span>(+45) 33 36 71 00</span>
+                    <a href="tel:+4533367100">(+45) 33 36 71 00</a>
                 </div>
             </div>
 
             <div class="media my-2">
                 <span class="eea-icon eea-icon-3x eea-icon-comment"></span>
                 <div class="media-body">
-                    <span i18n:translate="">Ask your question via the EEA Forum</span>
+                    <a href="//community.eea.europa.eu/" i18n:translate="" class="block">Ask your question via the EEA Forum</a>
                     <br>
-                    <span i18n:translate="">Media enquiries</span>
+                    <a href="https://www.eea.europa.eu/media/" i18n:translate="">Media enquiries</a>
                 </div>
             </div>
 

@@ -1,6 +1,6 @@
 (function($) {
     $(function() {
-        var search_forms = $("#portal-searchbox, #visual-column-wrapper").find(".searchforms");
+        var search_forms = $(".portal-searchbox, #visual-column-wrapper").find(".searchforms");
         var text_inputs = search_forms.find("input:text");
         text_inputs.each( function() {
                 var search_label = this.title + "...";

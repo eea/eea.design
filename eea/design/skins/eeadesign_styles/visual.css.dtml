@@ -1102,6 +1102,7 @@ ul.social-buttons {
     margin-bottom: 1em;
 }
 
+
 .media-box {
     margin-left: 2em;
     margin-right: 2em;
@@ -1115,6 +1116,9 @@ ul.social-buttons {
     display: flex;
 }
 /* utilities */
+.block {
+    display: block;
+}
 .my-2 {
     margin-left: 2em;
     margin-right: 2em;
