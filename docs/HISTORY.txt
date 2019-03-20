@@ -3,6 +3,9 @@ Changelog
 
 24.0-dev0 - (unreleased)
 ---------------------
+* Bugfix: When using the global search from the header, don't display the
+  expired results
+  [szabozo0 refs #103858]
 
 23.9 - (2019-02-21)
 ---------------------
