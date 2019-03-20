@@ -263,9 +263,6 @@ td.gsc-search-button {
     line-height: 0.75em;
     color: #888;
 }
-.width-full #article-language {
-    min-width: 180px;
-}
 /* @end Language viewlet */
 
 /* download.pdf download.epub export actions */

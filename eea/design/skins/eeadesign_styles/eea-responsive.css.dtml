@@ -136,7 +136,12 @@
     flex-wrap: wrap; }
 
   .right-table .table-link-description {
-    order: 1; } }
+    order: 1; } 
+  
+  .media-body:last-child {
+    max-width: 100px;
+  }
+}
 @media screen and (max-width: 768px) {
   #chooselang {
     -webkit-column-count: 2;
@@ -681,8 +686,8 @@
     padding: 1em; } }
 @media screen and (min-width: 1001px) and (max-width: 1171px) {
   #portal-globalnav > li > a {
-    font-size: 13px;
-    padding: 1em 0.4em; }
+    font-size: 12px;
+    padding: 1em 0.5em; }
 
   #secondary-portaltabs > li {
     padding: 1em 0.1em; } }

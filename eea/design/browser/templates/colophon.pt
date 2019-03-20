@@ -62,7 +62,7 @@
                    title="Creative Commons Attribution License"
                          i18n:attributes="title">
                     <span class="eea-icons eea-icons-creative-commons"></span>
-                    Creative commons license
+                    <span i18n:translate="">Creative commons license</span>
                 </a>
 
                 <a href="/login_form"

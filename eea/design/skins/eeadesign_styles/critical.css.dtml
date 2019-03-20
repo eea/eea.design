@@ -290,7 +290,7 @@ ul {
 
 .portal-globalnav > li > a {
     color: inherit;
-    padding: 1em 0.7em;
+    padding: 1em 0.6em;
     font-size: 15px;
 }
 #portal-personaltools-wrapper {
@@ -581,7 +581,7 @@ ul {
 }
 
 .eea-tabs-panels {
-    background-color: &dtml-lightBackgroundColor;;
+    border: 1px solid &dtml-mediumBackgroundColor;;
     padding: &dtml-padding-base;;
     clear: both;
 }
