@@ -106,7 +106,7 @@ legend {
     display: none !important;
 }
 
-html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px}#visual-portal-wrapper{margin:0 auto;padding:0;clear:both;overflow:visible}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 1em;clear:both;}
+html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px}#visual-portal-wrapper{margin:0 auto;padding:0;clear:both;overflow:hidden}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 1em;clear:both;}
 
 
 a { color: &dtml-linkColor;;
@@ -276,6 +276,11 @@ ul {
 
 #secondary-portaltabs {
     color: &dtml-lightGreyColor;;
+}
+
+#secondary-globalnav-tips {
+    width: 0;
+    padding: 0 !important;
 }
 .portal-globalnav > li, #secondary-portaltabs > li {
     margin-bottom: 0;

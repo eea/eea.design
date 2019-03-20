@@ -452,16 +452,16 @@
   #portal-logo-link {
     display: none; }
 
-  #portal-searchbox {
+  .portal-searchbox {
     margin-top: 0;
     text-align: left; }
-    #portal-searchbox input[type="text"] {
+    .portal-searchbox input[type="text"] {
       width: 100%; }
-    #portal-searchbox a, #portal-searchbox label {
+    .portal-searchbox a, .portal-searchbox label {
       color: #FFF;
       margin: 0; }
 
-  #portal-searchbox {
+  .portal-searchbox {
     display: block !important;
     width: 100%; }
 
@@ -600,7 +600,7 @@
   .panel-content {
     min-width: 320px; } }
 @media screen and (min-width: 1001px) {
-  #portal-searchbox .gsc-search-button {
+  .portal-searchbox .gsc-search-button {
     cursor: pointer;
     height: 32px;
     margin: 0;
@@ -635,7 +635,7 @@
   .photoAlbumEntry {
     width: 127px; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  #portal-searchbox {
+  .portal-searchbox {
     margin: 25px 0.5em 0 0; } }
 @media screen and (min-width: 961px) {
   #visual-portal-wrapper {

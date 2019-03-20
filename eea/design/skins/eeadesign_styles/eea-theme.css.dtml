@@ -69,17 +69,17 @@ hr {
 
 
 /* Searchbox style and positioning */
-#portal-searchbox .gsc-clear-button {
+.portal-searchbox .gsc-clear-button {
     display: none;
 }
 
-#portal-searchbox {
+.portal-searchbox {
     font-size: 1.2em;
     text-align: left;
     display: none;
 }
 
-.panel #portal-searchbox {
+.panel .portal-searchbox {
     display: block;
     float: none;
     clear: both;
@@ -88,24 +88,24 @@ hr {
     overflow: inherit;
 }
 
-#portal-searchbox form {
+.portal-searchbox form {
     padding: 0;
     white-space: nowrap;
     margin-bottom: 0;
 }
 
-#portal-searchbox a {
+.portal-searchbox a {
     color: &dtml-linkColor;;
     border: none;
     font-size: 85%;
 }
 
-#portal-searchbox .gsc-control-cse {
+.portal-searchbox .gsc-control-cse {
     background-color: transparent;
     padding: 1px 0 0 0;
     border: 0;
 }
-#portal-searchbox input.gsc-input-query {
+.portal-searchbox input.gsc-input-query {
     border: none;
     background: #fff;
     padding: 3px 6px;
@@ -114,34 +114,34 @@ hr {
     vertical-align: top;
     font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
 }
-#portal-searchbox .gsc-input-query:focus {
+.portal-searchbox .gsc-input-query:focus {
     background: #FFF none !important;
 }
-#portal-searchbox .gsc-input {
+.portal-searchbox .gsc-input {
     padding: 0;
     border: 1px solid #BBB;
 }
 
 
-#portal-searchbox .gsc-cursor-current-page {
+.portal-searchbox .gsc-cursor-current-page {
     color: #FFF;
 }
 
-#portal-searchbox .gsc-results-wrapper-overlay {
+.portal-searchbox .gsc-results-wrapper-overlay {
     height: 96%;
     top: 2%;
     width: 90%;
     left: 5%;
 }
 
-#portal-searchbox .gsib_b {
+.portal-searchbox .gsib_b {
     display: none;
 }
-#portal-searchbox .gsc-input-box {
+.portal-searchbox .gsc-input-box {
     height: 100%;
     position: relative;
 }
-#portal-searchbox .gsc-search-box {
+.portal-searchbox .gsc-search-box {
     border-style: none;
     border-width: 0;
     border-spacing: 0 0;
@@ -152,15 +152,15 @@ hr {
     padding: 0;
 }
 
-#portal-searchbox .gsc-tabsArea > div {
+.portal-searchbox .gsc-tabsArea > div {
     overflow: visible;
 }
 
-#portal-searchbox .gsc-cursor-current-page {
+.portal-searchbox .gsc-cursor-current-page {
     padding: 5px;
 }
 
-#portal-searchbox .autocomplete-items {
+.portal-searchbox .autocomplete-items {
     position: absolute;
     border: 1px solid #d4d4d4;
     border-bottom: none;
@@ -171,7 +171,7 @@ hr {
     right: 0;
 }
 
-#portal-searchbox .autocomplete-item {
+.portal-searchbox .autocomplete-item {
    padding: 10px;
    cursor: pointer;
    background-color: #fff;
@@ -179,11 +179,11 @@ hr {
    overflow: hidden;
 }
 
-#portal-searchbox .autocomplete-active {
+.portal-searchbox .autocomplete-active {
   background-color: #e9e9e9 !important;
 }
 
-#portal-searchbox .gsc-input-box {
+.portal-searchbox .gsc-input-box {
   position: relative;
 }
 

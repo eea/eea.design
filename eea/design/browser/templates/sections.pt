@@ -49,10 +49,10 @@
                 Eionet, EW ..
             </div>
         </tal:defines>
-        <div id="secondary-globalnav-tips">
+        <li id="secondary-globalnav-tips">
             <div metal:use-macro="here/cross_site_panels/macros/main">
                 dropdown for ETCs ..
             </div>
-        </div>
+        </li>
     </ul>
 </tal:sections>

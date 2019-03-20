@@ -31,8 +31,8 @@
                     <!-- -->
                 </div>
                 <div class="panel-content shadow">
-                    <div id="portal-searchbox">
-                        <metal:macro metal:use-macro="context/eea_searchbox/macros/quick_search" />
+                    <div class="portal-searchbox">
+                        <metal:macro metal:use-macro="context/eea_searchbox/macros/quick_search_form" />
                     </div>
                 </div>
             </div>
