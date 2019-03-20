@@ -56,16 +56,15 @@ developers, UX/UI experts.
         You need to enter an image scale after the image src otherwise the gallery
         will load the full-resolution images which could dramatically slow the page
     </p>
-    <ul id="galleryView" class="galleryView">
+    <ul id="galleryView">
         <li>
             <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
-            <img src="monkey-with-makeup/image_large" />
+            <img class="skip_lazy" src="monkey-with-makeup/image_large" />
         </li>
-        <li><img src="mr-monkey/image_large" /></li>
+        <li><img class="skip_lazy" src="mr-monkey/image_large" /></li>
     </ul>
     <pre tal:content="string:
         &lt;ul id=&quot;galleryView&quot;&gt;
-            &lt;li&gt; class=&quot;galleryView;&gt;
             &lt;li&gt;
                 &lt;span class=&quot;panel-overlay&quot;&gt;Overlay text goes here&lt;/span&gt;
                 &lt;img src=&quot;mr-monkey/image_large&quot; /&gt;
@@ -92,9 +91,9 @@ developers, UX/UI experts.
         <ul id="galleryView2" class="galleryView js-noFilmstrip">
             <li>
                 <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
-                <img src="monkey-with-makeup/image_large" />
+                <img class="skip_lazy" src="monkey-with-makeup/image_large" />
             </li>
-            <li><img src="mr-monkey/image_large" /></li>
+            <li><img class="skip_lazy" src="mr-monkey/image_large" /></li>
         </ul>
         <pre tal:content="string:
         &lt;ul id=&quot;galleryView2&quot; class=&quot;galleryView js-noFilmstrip&quot;&gt;

@@ -10,10 +10,12 @@
 
     <div class="colophonWrapper">
         <div class="colophon-section  section-bordered">
-            <img tal:attributes="src string:${portal_url}/eu-flag.png"
-                    width="90" height="53" alt="EU flag" title="European Union Flag"
+            <a href="https://europa.eu/european-union/about-eu_en">
+                <img tal:attributes="src string:${portal_url}/eu-flag.png"
+                     width="90" height="53" alt="EU flag" title="European Union Flag"
                      i18n:attributes="alt;title" />
                 <span class="europe-agency-text" i18n:translate="">The EEA is an agency of the European Union</span>
+            </a>
         </div>
 
         <div class="colophon-section section-bordered">

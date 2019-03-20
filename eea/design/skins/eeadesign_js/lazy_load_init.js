@@ -15,18 +15,22 @@ function isElementInViewport (el) {
 function enableLazy(element) {
     var source = element.src;
     var classes = element.className.length ? element.className + ' ' : '';
-    element.setAttribute('data-src', source);
     if (classes.indexOf('skip_lazy') === -1) {
         element.className =  classes + 'lazy';
+        element.setAttribute('data-src', source);
         element.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=';
+        return false;
     }
+    return true
+    
 }
 
 window.lazyElements = [];
 var imgs = document.querySelectorAll('img');
 Array.prototype.forEach.call(imgs, function(el){
         if (isElementInViewport(el) === false) {
-            enableLazy(el);
-            window.lazyElements.push(el);
+            if (enableLazy(el)) {
+                window.lazyElements.push(el);
+            }
         }
 });
