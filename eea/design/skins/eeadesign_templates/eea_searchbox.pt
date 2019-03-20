@@ -22,7 +22,7 @@
         tags string:${context/portal_url}/eea-custom-search.tags">
         <div class="gsc-control-cse gsc-control-cse-en gsc-control-wrapper-cse">
             <form method="get" class="gsc-search-box gsc-search-box-tools" tal:attributes="action action" autocomplete="off">
-                <table class="gsc-search-box" cellspacing="0" cellpadding="0">
+                <table class="gsc-search-box">
                     <tr>
                         <td class="gsc-input">
                             <div class="gsc-input-box">
