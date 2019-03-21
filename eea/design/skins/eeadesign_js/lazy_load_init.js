@@ -21,8 +21,7 @@ function enableLazy(element) {
         element.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=';
         return false;
     }
-    return true
-    
+    return true;
 }
 
 window.lazyElements = [];
