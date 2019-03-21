@@ -329,6 +329,7 @@ ul {
 
 #eea-above-columns {
     margin-top: -17px;
+    background-color: &dtml-lightBackgroundColor;;
 }
 
 .plone-breadcrumb {

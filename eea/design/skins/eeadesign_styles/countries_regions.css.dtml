@@ -149,9 +149,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-    #visual-portal-wrapper, #portal-header {
-        max-width: 80% !important;
-    }
     #content {
         min-height: 400px;
     }
