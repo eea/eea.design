@@ -136,12 +136,10 @@
     flex-wrap: wrap; }
 
   .right-table .table-link-description {
-    order: 1; } 
-  
+    order: 1; }
+
   .media-body:last-child {
-    max-width: 100px;
-  }
-}
+    max-width: 100px; } }
 @media screen and (max-width: 768px) {
   #chooselang {
     -webkit-column-count: 2;
@@ -431,7 +429,7 @@
     text-align: right; } }
 @media screen and (max-width: 1000px) {
   #eea-above-columns {
-    margin-top: 70px; }
+    margin-top: 68px; }
 
   #eea-above-columns .plone-breadcrumb {
     margin-top: 0;
@@ -637,7 +635,7 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .portal-searchbox {
     margin: 25px 0.5em 0 0; } }
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 1024px) {
   #visual-portal-wrapper {
     min-width: 995px;
     max-width: 1024px; } }
