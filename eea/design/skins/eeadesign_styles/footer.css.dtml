@@ -95,4 +95,11 @@
     flex-basis: 100%;
 }
 
+.europe-agency-text {
+    font-size: 15px;
+    color: #999;
+    margin: 0.25em 0 0 0;
+}
+
+
 /* </dtml-with> */

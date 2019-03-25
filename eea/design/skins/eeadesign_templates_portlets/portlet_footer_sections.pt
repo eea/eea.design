@@ -3,7 +3,7 @@
     <!--? eionet -->
     <div class="colophon-section section-dark section-top">
         <div class="section-centered">
-    <h2><span class="eea-icon eea-icon-users"></span><a href="https://www.eionet.europa.eu/" i18n:translate="">European environment information and observation network (Eionet)</a></h2>
+    <h2 class="mb-0"><a href="https://www.eionet.europa.eu/" i18n:translate="">European Environment Information and Observation Network (Eionet)</a></h2>
         </div>
     </div>
      <!--? end eionet section -->
@@ -13,7 +13,7 @@
     <div class="colophon-section section-dark section-bordered">
         <div class="section-centered space-around">
 
-            <h2><span class="eea-icon eea-icon-sitemap"></span><span  i18n:translate="">Other EEA managed sites</span></h2>
+            <h2><span i18n:translate="">Other EEA managed sites</span></h2>
 
             <table class="left-table">
                 <tr><td class="table-link-title"><a href="https://biodiversity.europa.eu/" target="_blank" i18n:translate="">BISE</a></td> <td class="table-link-description" i18n:translate="">Biodiversity Information System for Europe</td>
@@ -29,13 +29,13 @@
                     <td class="table-link-title">
                         <a href="https://insitu.copernicus.eu/" target="_blank" i18n:translate="">Copernicus In Situ</a>
                     </td>
-                    <td class="table-link-description" i18n:translate="">Copernicus In situ component portal</td>
+                    <td class="table-link-description" i18n:translate="">Copernicus In situ component</td>
                 </tr>
                 <tr>
                     <td class="table-link-title">
                         <a href="https://land.copernicus.eu/" target="_blank" i18n:translate="">Copernicus Land</a>
                     </td>
-                    <td class="table-link-description" i18n:translate="">Copernicus land monitoring portal</td>
+                    <td class="table-link-description" i18n:translate="">Copernicus land monitoring</td>
                 </tr>
             </table>
 
@@ -48,15 +48,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="table-link-description" i18n:translate="">
-                        Forest Information System for Europe
-                    </td>
-                    <td class="table-link-title">
-                        <a href="https://forests.eea.europa.eu" target="_blank" i18n:translate="">FISE</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="table-link-description" i18n:translate="">Information Platform for Chemical Monitoring data</td>
+                    <td class="table-link-description" i18n:translate="">Information Platform for Chemical Monitoring</td>
                     <td class="table-link-title">
                         <a href="https://ipchem.jrc.ec.europa.eu/RDSIdiscovery/ipchem/index.html" target="_blank" i18n:translate="">IpCHeM</a>
                     </td>
@@ -98,14 +90,12 @@
                 <span class="eea-icon eea-icon-rss-square eea-icon-3x"></span></a>
 
             <div class="media media--discreet">
-                <a class="link-plain media-link" title="Subscribe by email" href="/subscription/targeted-subscription" i18n:attributes="title">
+                <a class="link-plain media-link align-center" title="Subscribe by email" href="/subscription/targeted-subscription" i18n:attributes="title">
                     <span class="eea-icon eea-icon-3x eea-icon-newspaper-o"></span>
                     <div class="media-body">
-                        <span i18n:translate="">Sign up to receive our reports</span>
+                        <span i18n:translate="">Sign up to receive our news notifications</span>
                         <br>
-                        <span i18n:translate="">(print and/or electronic) and</span>
-                        <br>
-                        <span i18n:translate="">quarterly e-newsletter</span>
+                        <span i18n:translate="">and our quarterly e-newsletter</span>
                     </div>
                 </a>
             </div>
@@ -142,7 +132,6 @@
                 <span class="eea-icon eea-icon-3x eea-icon-comment"></span>
                 <div class="media-body">
                     <a href="//community.eea.europa.eu/" i18n:translate="" class="block">Ask your question via the EEA Forum</a>
-                    <br>
                     <a href="https://www.eea.europa.eu/media/" i18n:translate="">Media enquiries</a>
                 </div>
             </div>

@@ -295,7 +295,7 @@ ul {
 
 .portal-globalnav > li > a {
     color: inherit;
-    padding: 1em 0.6em;
+    padding: 1em 0.7em;
     font-size: 15px;
 }
 #portal-personaltools-wrapper {
@@ -312,6 +312,7 @@ ul {
 
 .siteaction-title {
     display: none;
+    margin-left: 0.2em;
 }
 /* show title of language and search icon */
 #siteaction-chooselang-menu .siteaction-title,
@@ -352,13 +353,6 @@ ul {
     list-style: none;
     margin: 0;
 }
-.europe-agency-text {
-    font-size: 15px;
-    font-style: italic;
-    color: #999;
-    margin: 0.25em 0 0 0;
-}
-
 
 /* @group Content Area */
 .portalMessage {
@@ -668,6 +662,10 @@ ul {
         height: auto;
         overflow: visible;
         visibility: visible;
+    }
+    #portal-header {
+        height: 120px;
+        border-top: 5px solid &dtml-corporateGreen;;
     }
 }
 

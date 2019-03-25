@@ -38,6 +38,5 @@
         </tal:item>
       </li>
     </ol>
-      <span class="europe-agency-text" i18n:translate="">The EEA is an agency of the European Union</span>
   </div>
 </nav>

@@ -1098,7 +1098,6 @@ ul.social-buttons {
 .media {
     display: flex;
     align-items: center;
-    line-height: 1;
     margin-bottom: 1em;
 }
 
@@ -1109,7 +1108,7 @@ ul.social-buttons {
 }
 
 .media--discreet  {
-    line-height: 1;
+    line-height: 1.5;
     font-size: 90%;
 }
 .media-link {
@@ -1124,12 +1123,20 @@ ul.social-buttons {
     margin-right: 2em;
 }
 
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
 .space-evenly {
     justify-content: space-evenly;
 }
 
 .space-around {
     justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;    
 }
 
 /* </dtml-let> */
