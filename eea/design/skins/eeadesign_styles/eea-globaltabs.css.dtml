@@ -14,14 +14,14 @@
     display: none;
 }
 
-#secondary-portaltabs {
+.secondary-portaltabs {
     display: flex;
     margin-left: 0;
     position: relative;
 }
 
-#secondary-portaltabs > li {
-    padding: 1em 0.45em;
+.secondary-portaltabs > li {
+    padding: 1em 0 1em 0.45em;
 }
 
 #secondary-globalnav-tips li a {

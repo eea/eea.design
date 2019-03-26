@@ -12,11 +12,6 @@
     background-image: none;
 }
 
-.plone-breadcrumb .flex-container {
-    max-width: 100%;
-    width: 80%;
-}
-
 #viewlet-below-content {
     display: none;
 }

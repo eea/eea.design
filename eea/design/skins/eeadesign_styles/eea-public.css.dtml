@@ -180,7 +180,7 @@ div.managePortletsLink, a.managePortletsFallback {
 .plone-breadcrumb ol > li + li:before {
     content: "";
     position: absolute;
-    color: #cccccc;
+    color: &dtml-mediumBackgroundColor;;
     border-left: 5px solid;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;

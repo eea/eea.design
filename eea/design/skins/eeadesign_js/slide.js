@@ -82,13 +82,13 @@
             }
         }
 
-        $("#portal-columns, #portal-header").click(function(e) {
+        $("body").click(function(e) {
             var target = $(e.target);
             target = target[0].tagName === "A" ? target : target.parent();
             var parents = $('.navbar-header, #content'),
                 panels = parents.find('.panel');
 
-            if (!target.is('#portal-globalnav > a, #secondary-portaltabs a, #cross-site-top .panel, #article-language a') && !target.parents('.panel').length) {
+            if (!target.is('#portal-globalnav > a, .secondary-portaltabs a, .panel, #article-language a') && !target.parents('.panel').length) {
                 panels.fadeOut('fast');
                 $(".eea-navsiteactions-active").removeClass("eea-navsiteactions-active");
             }

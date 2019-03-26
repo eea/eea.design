@@ -43,7 +43,7 @@
         </ul>
     </div>
 
-    <ul id="secondary-portaltabs" class="plain">
+    <ul id="secondary-portaltabs" class="plain secondary-portaltabs">
         <tal:defines tal:define="idPostfix python:'-menu';">
             <div metal:use-macro="context/@@cross_site_top/siteactions" >
                 Eionet, EW ..

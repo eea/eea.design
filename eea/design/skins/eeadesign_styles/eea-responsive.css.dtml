@@ -41,6 +41,7 @@
   .photoAlbumEntryTitle {
     height: 5em;
     width: 100%; } }
+     
 @media screen and (width: 360px) {
   ul.social-buttons > li {
     padding: 0 8px; } }
@@ -50,6 +51,12 @@
 
   .eea-list-columns {
     padding: 0 1em 0 0.5em; } }
+    
+@media screen and (max-width: 411px)   
+    .media-body-enquiries {
+      max-width: 100px; } 
+}
+
 @media screen and (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%; }
@@ -138,8 +145,7 @@
   .right-table .table-link-description {
     order: 1; }
 
-  .media-body:last-child {
-    max-width: 100px; } }
+  }
 @media screen and (max-width: 768px) {
   #chooselang {
     -webkit-column-count: 2;
@@ -370,11 +376,7 @@
   .template-soer2015_frontpage .eea-icon:before {
     margin: 0 .2em; }
   .template-soer2015_frontpage #portlet-followus {
-    margin: 2em; }
-
-  #header-holder .navbar.hideShadow {
-    box-shadow: none;
-    border: 0; } }
+    margin: 2em; } }
 @media screen and (width: 768px) {
   .right-column-area {
     width: 41%;
@@ -435,9 +437,6 @@
     margin-top: 0;
     margin-bottom: 0; }
 
-  .breadcrumbs-container .europe-agency-text {
-    display: none; }
-
   .portal-logo,
   #siteaction-login {
     display: none !important; }
@@ -469,6 +468,7 @@
   #portal-globalnav > li > a {
     padding: 0.5em 0;
     line-height: 2em;
+     font-size: 13px;
     width: 100%; }
 
   .portal-globalnav li a {
@@ -489,7 +489,7 @@
     overflow-x: auto;
     overflow-y: auto;
     position: fixed;
-    width: 300px;
+    width: 305px;
     right: 0;
     top: 60px;
     z-index: 100;
@@ -518,8 +518,8 @@
       #portal-top .eea-accordion-panels table {
         width: 100%; }
     #portal-top .eea-accordion-title, #portal-top .eea-accordion-panel > h2 {
-      font-size: 100%;
       background-color: #004B87;
+      font-size: 13px;
       color: #FFF;
       border: 0;
       padding: 0;
@@ -534,7 +534,7 @@
   #printLogo {
     max-width: 70%;
     float: left;
-    padding: 0.5em;
+    margin: 10px 15px;
     height: auto; }
 
   #portal-globalnav {
@@ -683,12 +683,12 @@
   .fullwidth .plone-breadcrumb {
     padding: 1em; } }
 @media screen and (min-width: 1001px) and (max-width: 1171px) {
+  #printLogo {
+    height: 45px;
+  }
   #portal-globalnav > li > a {
     font-size: 12px;
-    padding: 1em 0.5em; }
-
-  #secondary-portaltabs > li {
-    padding: 1em 0.1em; } }
+    padding: 1em 0.65em; } }
 @media screen and (min-width: 1280px) {
   .eea-software-info {
     justify-content: space-around; } }
