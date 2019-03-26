@@ -1,6 +1,9 @@
 Changelog
 =========
 
+24.1-dev0 - (unreleased)
+---------------------
+
 24.0 - (2019-03-20)
 ---------------------
 * Bugfix: When using the global search from the header, don't display the
