@@ -66,11 +66,33 @@ EEA.CustomSearch = function (context) {
             },
             'must': {
               'bool': {
-                'must': [{
-                  'query_string': {
-                    'query': ""
+                'must': [
+                  {
+                    'query_string': {
+                      'query': ""
+                    }
+                  },
+
+                  {
+                   "constant_score":{
+                      "filter":{
+                         "bool":{
+                            "should":[
+                               {
+                                "bool":{
+                                   "must_not":{
+                                      "exists":{
+                                         "field":"expires"
+                                        }
+                                     }
+                                  }
+                               }
+                            ]
+                         }
+                      }
+                    }
                   }
-                }]
+                ]
               }
             }
           }
