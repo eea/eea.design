@@ -655,9 +655,6 @@ ul {
         color: white;
         font-weight: bold;
     }
-    #header-holder .container-fluid {
-        padding: 0 15px;
-    }
 }
 @media screen and (min-width: 1024px) {
     #header-holder {
