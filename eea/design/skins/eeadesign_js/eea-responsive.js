@@ -317,7 +317,7 @@ jQuery(document).ready(function($) {
     var $holder = $('<div class=\'eea-accordion-panels collapsed-by-default non-exclusive\' />');
 
     function turn_cross_panels_into_accordions($el, $holder) {
-        var lists = $el.find('> li');
+        var lists = $el.find('.eea-siteaction');
         lists.each(function(idx, el) {
             var $acordion_panel = $('<div  />',
                 {id: 'eap-' + el.id, 'class': 'eea-accordion-panel'});

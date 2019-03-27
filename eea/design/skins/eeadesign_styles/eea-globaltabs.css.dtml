@@ -84,7 +84,7 @@
     position: absolute;
     pointer-events: none;
     border-top: 3px solid &dtml-corporateGreen;;
-    margin-left: -10px;
+    left: 0;
     display: block;
 }
 
