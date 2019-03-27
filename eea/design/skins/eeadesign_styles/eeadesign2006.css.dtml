@@ -25,21 +25,6 @@
     vertical-align: middle;
 }
 
-/* Accessibility and visual enhancement elements */
-
-.hiddenStructure {
-    display: block;
-    background: transparent;
-    background-image: none; /* safari bug */
-    border: none;
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    margin: -1px 0 0 -1px;
-    width: 1px;
-}
-
-
 
 /* YOUR CSS RULES STOP HERE */
 

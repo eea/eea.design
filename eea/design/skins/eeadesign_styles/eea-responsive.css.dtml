@@ -688,14 +688,16 @@
     
 @media screen and (min-width: 1024px) and (max-width: 1050px) {
   #portal-globalnav > li > a {
-    padding: 1em 0.45em; }
-  }
-  
-}
+    padding: 1em 0.45em; } }
+
 @media screen and (min-width: 1280px) and (max-width: 1359px) {
   .portal-globalnav > li > a,
   .secondary-portaltabs {
-    font-size: 14px; } }
+    font-size: 14px; } 
+  .portal-globalnav > li > a {
+    padding: 1em 0.65em;
+  }
+}
 @media screen and (min-width: 1280px) {
   .eea-software-info {
     justify-content: space-around; } }

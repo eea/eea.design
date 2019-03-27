@@ -677,5 +677,13 @@ ul {
         margin: 0 -1.5em;
     }
 }
+
+/* 102564 IE11 hack as the hiddenStructure without display will count 
+* for justify-content: space-between since it doesn't support clip-path */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+ .hiddenStructure {
+     display: none;
+     
+ }
 /* </dtml-let> */
 /* </dtml-with> */
