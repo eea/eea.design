@@ -295,8 +295,7 @@ ul {
 
 .portal-globalnav > li > a {
     color: inherit;
-    padding: 1em 0.75em;
-    font-size: 15px;
+    padding: 1em 0.60em;
 }
 #portal-personaltools-wrapper {
     display: none;
@@ -619,7 +618,7 @@ ul {
     border: 1px solid &dtml-mediumBackgroundColor;;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1023px) {
     #portal-logo-link-header, .navbar-toggle {
         display: block;
     }
@@ -656,13 +655,13 @@ ul {
         color: white;
         font-weight: bold;
     }
-}
-@media screen and (min-width: 1001px) {
-    #header-holder {
-        border-top: 7px solid &dtml-corporateGreen;;
-    }
     #header-holder .container-fluid {
         padding: 0 15px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    #header-holder {
+        border-top: 7px solid &dtml-corporateGreen;;
     }
     .navbar-collapse {
         display: block;

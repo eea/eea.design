@@ -10,7 +10,7 @@
    <property name="url_expr">string:$portal_url/chooselang/</property>
    <property name="link_target"></property>
    <property
-      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-globe</property>
+      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-globe eea-icon-marginless</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
@@ -51,7 +51,7 @@
       name="url_expr">string:$portal_url/help/advanced-search</property>
    <property name="link_target"></property>
    <property
-      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-search </property>
+      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-search eea-icon-marginless</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>

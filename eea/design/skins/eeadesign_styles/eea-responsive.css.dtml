@@ -41,7 +41,6 @@
   .photoAlbumEntryTitle {
     height: 5em;
     width: 100%; } }
-     
 @media screen and (width: 360px) {
   ul.social-buttons > li {
     padding: 0 8px; } }
@@ -51,12 +50,9 @@
 
   .eea-list-columns {
     padding: 0 1em 0 0.5em; } }
-    
-@media screen and (max-width: 411px)   
-    .media-body-enquiries {
-      max-width: 100px; } 
-}
-
+@media screen and (max-width: 397px) {
+  .media-body-enquiries {
+    max-width: 100px; } }
 @media screen and (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%; }
@@ -143,9 +139,7 @@
     flex-wrap: wrap; }
 
   .right-table .table-link-description {
-    order: 1; }
-
-  }
+    order: 1; } }
 @media screen and (max-width: 768px) {
   #chooselang {
     -webkit-column-count: 2;
@@ -429,7 +423,7 @@
 
   .left-table .table-link-title {
     text-align: right; } }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1023px) {
   #eea-above-columns {
     margin-top: 68px; }
 
@@ -468,7 +462,7 @@
   #portal-globalnav > li > a {
     padding: 0.5em 0;
     line-height: 2em;
-     font-size: 13px;
+    font-size: 13px;
     width: 100%; }
 
   .portal-globalnav li a {
@@ -534,8 +528,7 @@
   #printLogo {
     max-width: 70%;
     float: left;
-    margin: 10px 15px;
-    height: auto; }
+    margin: 10px 15px; }
 
   #portal-globalnav {
     display: flex;
@@ -597,7 +590,7 @@
 
   .panel-content {
     min-width: 320px; } }
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1024px) {
   .portal-searchbox .gsc-search-button {
     cursor: pointer;
     height: 32px;
@@ -682,16 +675,27 @@
   .fullwidth #portal-header,
   .fullwidth .plone-breadcrumb {
     padding: 1em; } }
-@media screen and (min-width: 1001px) and (max-width: 1171px) {
-  #printLogo {
-    height: 45px;
-  }
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   #portal-globalnav > li > a {
     font-size: 12px;
-    padding: 1em 0.65em; } }
+    padding: 1em 0.5em; }
+
+  #printLogo {
+    height: 40px; }
+
+  .eea-siteaction .eea-icon {
+    font-size: 1.33em; } }
+@media screen and (min-width: 1280px) and (max-width: 1359px) {
+  .portal-globalnav > li > a,
+  .secondary-portaltabs {
+    font-size: 14px; } }
 @media screen and (min-width: 1280px) {
   .eea-software-info {
     justify-content: space-around; } }
+@media screen and (min-width: 1280px) {
+  .portal-globalnav > li > a,
+  .secondary-portaltabs {
+    font-size: 15px; } }
 /* </dtml-let> */
 /* </dtml-with> */
 
