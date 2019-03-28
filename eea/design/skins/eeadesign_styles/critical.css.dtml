@@ -54,7 +54,15 @@ ul,ol { list-style:none; }
 
 h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
 a img,:link img,:visited img { border:none }
-a { outline: none; }
+a { color: &dtml-linkColor;;
+    outline: none;
+    cursor: pointer}
+a:hover {
+    color: &dtml-linkHoverColor;;
+}
+a:visited {
+    color: &dtml-linkVisitedColor;;
+}
 table { border-spacing: 0; }
 img { vertical-align: text-bottom; }
 iframe {
@@ -106,17 +114,9 @@ legend {
     display: none !important;
 }
 
-html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px}#visual-portal-wrapper{margin:0 auto;padding:0;clear:both;overflow:hidden}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 0;clear:both;}
+html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:0 auto;padding:0;clear:both;overflow:hidden}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 0;clear:both;}
 
 
-a { color: &dtml-linkColor;;
-    cursor: pointer}
-a:hover {
-    color: &dtml-linkHoverColor;;
-}
-a:visited {
-    color: &dtml-linkVisitedColor;;
-}
 
 h1, h2, h3, h4, h5, h6 {
     color: &dtml-corporateBlue;;
@@ -430,10 +430,6 @@ ul {
     font-weight: bold;
     margin-bottom: 0;
 }
-.portlet, .featured {
-    background: #ffffff;
-    border: 1px solid &dtml-mediumBackgroundColor;;
-}
 .portletHeader, .portlet .portletHeader {
     font-weight: normal;
     margin-bottom: 1em;
@@ -476,12 +472,11 @@ ul {
     padding: 1.5em;
 }
 
-.featured {
-    background: #ffffff;
-}
 .featured, .portlet {
     margin-bottom: 1em;
     padding: 1.5em;
+    background: #ffffff;
+    border: 1px solid &dtml-mediumBackgroundColor;;
 }
 .figure-left {
     float: left;
@@ -680,10 +675,11 @@ ul {
 
 /* 102564 IE11 hack as the hiddenStructure without display will count 
 * for justify-content: space-between since it doesn't support clip-path */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
- .hiddenStructure {
-     display: none;
-     
- }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .hiddenStructure {
+        display: none;
+
+    }
+}
 /* </dtml-let> */
 /* </dtml-with> */
