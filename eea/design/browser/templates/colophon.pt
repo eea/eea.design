@@ -22,6 +22,7 @@
 
             <div class="section-centered eea-software-info">
             <p class="colophon-links">
+                <span class="eea-icon eea-icon-tasks"></span>
                 <tal:comments i18n:translate="">Engineered by:</tal:comments>
                 <a href="https://www.eea.europa.eu/help/contact-info"
                          i18n:translate=""
@@ -63,19 +64,26 @@
                    href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
                    title="Creative Commons Attribution License"
                          i18n:attributes="title">
-                    <span class="eea-icons eea-icons-creative-commons"></span>
+                    <span class="eea-icon eea-icon-creative-commons"></span>
                     <span i18n:translate="">Creative commons license</span>
                 </a>
+            </p>
 
+            <p class="colophon-links">
                 <a href="/login_form"
                          tal:attributes="href string:${portal_url}/login_form"
                    title="CMS login"
                          i18n:attributes="title">
                     <strong i18n:translate="">CMS login</strong></a>
+            </p>
+            <p class="colophon-links">
                 <a href="https://github.com/eea/eea.docker.kgs/releases"
                    title="Software updates history"
                          i18n:attributes="title"
                          i18n:translate="">Software updates history</a>
+            </p>
+
+            <p class="colophon-links">
                 <a href="@@cache.invalidate.footer" rel="nofollow"
                    title="Refresh this page" i18n:attributes="title"
                          tal:attributes="href string:${page_url}/cache.settings?redirect=${current_base_url}"

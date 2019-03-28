@@ -26,6 +26,10 @@
     clear: both;
 }
 
+.eea-software-info {
+    color: &dtml-corporateBlue;;
+}
+
 .colophonWrapper {
     text-align: left;
     margin: 0 auto;
@@ -39,10 +43,9 @@
     margin: 0 1em 0.75em;
 }
 .colophon-links a, .colophon-links a:visited {
-    display: inline;
-    font-size: 11px !important;
-    color: #346f83 !important;
-    text-decoration: underline !important;
+    display: inline-block;
+    color: inherit;
+    font-weight: bold;
 }
 
 .colophon-links a:hover {
