@@ -1,6 +1,11 @@
 Changelog
 =========
 
+24.1 - (2019-03-29)
+---------------------
+* Bugfix: added overlay and popupform code needed for manage rules pages
+  [ichim-david refs #102965]
+
 24.0 - (2019-03-20)
 ---------------------
 * Bugfix: When using the global search from the header, don't display the
