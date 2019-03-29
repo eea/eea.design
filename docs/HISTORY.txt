@@ -1,6 +1,9 @@
 Changelog
 =========
 
+24.2-dev0 - (unreleased)
+---------------------
+
 24.1 - (2019-03-29)
 ---------------------
 * Bugfix: added overlay and popupform code needed for manage rules pages
