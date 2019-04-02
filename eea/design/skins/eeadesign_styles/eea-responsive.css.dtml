@@ -3,6 +3,12 @@
 /* <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 @media screen and (max-width: 320px) {
+  .plone-breadcrumb-list > li {
+    padding: 0 0 0 15px; }
+  #breadcrumbs-home {
+    padding: 0; }
+  .plone-breadcrumb-list > li + li:after {
+    left: 2px; }
   .eea-accordion-panels table {
     font-size: 0.7em; }
   ul.social-buttons > li {
@@ -454,9 +460,9 @@
       padding-top: 0;
       font-weight: normal; }
   #printLogo {
-    max-width: 70%;
+    max-width: 77%;
     float: left;
-    margin: 10px 15px; }
+    margin: 10px 0; }
   #portal-globalnav {
     display: flex;
     flex-direction: column; }
@@ -519,9 +525,7 @@
   #portal-logo-link-header {
     display: none; }
   .navbar-toggle {
-    display: none; }
-  .plone-breadcrumb {
-    padding: 0 0.5em; } }
+    display: none; } }
 
 @media screen and (min-width: 768px) and (max-width: 800px) {
   .template-soer2015_frontpage .column-area {
@@ -597,15 +601,13 @@
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   #portal-globalnav > li > a {
     font-size: 12px; }
-  #printLogo {
-    height: 40px; }
   .eea-siteaction .eea-icon {
     font-size: 1.33em; } }
 
 @media screen and (min-width: 1280px) and (max-width: 1359px) {
   .portal-globalnav > li > a,
   .secondary-portaltabs {
-    font-size: 14px; }
+    font-size: 13px; }
   .portal-globalnav > li > a {
     padding: 1em 0.65em; } }
 

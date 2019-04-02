@@ -83,10 +83,11 @@ legend {
     color: #333333;
 }
 
-.clearfix::after, .container::after, .container-fluid::after, .row::after, .form-horizontal .form-group::after, .nav::after, .navbar::after, .navbar-header::after, .navbar-collapse::after {
+.clearfix::after, .eea-container::after,  .row::after, .form-horizontal .form-group::after, .nav::after, .navbar::after, .navbar-header::after, .navbar-collapse::after {
     clear: both;
 }
-.clearfix::before, .clearfix::after, .container::before, .container::after, .container-fluid::before, .container-fluid::after, .row::before, .row::after, .form-horizontal .form-group::before, .form-horizontal .form-group::after, .nav::before, .nav::after, .navbar::before, .navbar::after, .navbar-header::before, .navbar-header::after, .navbar-collapse::before, .navbar-collapse::after {
+.clearfix::before, .clearfix::after, .eea-container::before, .eea-container::after,   .row::before, .row::after, .form-horizontal .form-group::before, .form-horizontal .form-group::after, .nav::before, .nav::after, .navbar::before, .navbar::after, .navbar-header::before, .navbar-header::after, .navbar-collapse::before, .navbar-collapse::after {
+    
     content: " ";
     display: table;
 }
@@ -146,10 +147,12 @@ ul {
     flex-wrap: wrap;
 }
 
-.container {
+.eea-container {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 &dtml-padding-base;;
+    max-width: 1400px;
 }
+
 .pull-left {
     float: left !important;
 }
@@ -225,7 +228,6 @@ ul {
 .navbar-toggle {
     position: relative;
     float: right;
-    margin-right: 15px;
     padding: 9px 10px;
     margin-top: 1em;
     margin-bottom: 8px;
@@ -254,13 +256,12 @@ ul {
     min-height: 60px;
     z-index: initial;
     width: 100%;
-    max-width: 1400px;
 }
 
 #printLogo {
     display: block;
     width: auto;
-    height: 45px;
+    height: 40px;
 }
 
 #portal-globalnav {
@@ -343,16 +344,17 @@ ul {
     border-style:solid;
     border-color: &dtml-mediumBackgroundColor;;
 }
-.plone-breadcrumb  li {
+.plone-breadcrumb-list >  li {
     font-weight: 400;
     display: inline-block;
-    line-height: 0;
     position: relative;
     padding: 0 25px 0 0;
+    margin: 0;
+    line-height: 1;
 }
-.plone-breadcrumb ol {
+.plone-breadcrumb-list {
     display: inline-block;
-    padding: 4px 5px;
+    padding: &dtml-padding-half; 0;
     list-style: none;
     margin: 0;
 }
@@ -667,11 +669,6 @@ ul {
     }
 }
 
-@media screen and (min-width: 1200px) {
-    .container-fluid {
-        padding: 0 &dtml-padding-base;;
-    }
-}
 
 /* 102564 IE11 hack as the hiddenStructure without display will count 
 * for justify-content: space-between since it doesn't support clip-path */

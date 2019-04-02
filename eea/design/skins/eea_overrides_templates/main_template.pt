@@ -142,7 +142,7 @@
 
     <div id="header-holder">
                                <div class="navbar navbar-default navbar-fixed-top">
-                               <div class="container-fluid">
+                               <div class="eea-container">
                                <div class="navbar-header">
                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                <span class="sr-only" i18n:translate="">Toggle navigation</span>

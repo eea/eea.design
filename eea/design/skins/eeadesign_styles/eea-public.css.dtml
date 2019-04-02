@@ -166,27 +166,15 @@ div.managePortletsLink, a.managePortletsFallback {
     margin: 0;
     min-width: 100%;
 }
-.plone-breadcrumb ol > li + li:after {
-    content: "";
+
+.plone-breadcrumb-list > li + li:after {
+    content: "\f054";
     position: absolute;
-    color: #FFF;
-    border-left: 5px solid;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    left: -21px;
-    top: -15px;
+    color: &dtml-globalBorderColor;;
     padding: 0;
-}
-.plone-breadcrumb ol > li + li:before {
-    content: "";
-    position: absolute;
-    color: &dtml-mediumBackgroundColor;;
-    border-left: 5px solid;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    left: -20px;
-    top: -15px;
-    padding: 0;
+    font-family: "FontAwesome";
+    top: 0;
+    left: -18px;
 }
 .plone-breadcrumb a {
     color: #086ca3;
