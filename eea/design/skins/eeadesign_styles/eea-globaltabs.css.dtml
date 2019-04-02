@@ -77,7 +77,7 @@
 
 #portal-globalnav a:hover:after,
 #portal-globalnav .eea-nav-current a:after {
-    top: 0;
+    top: 105%;
     content: " ";
     height: 0;
     width: 100%;
