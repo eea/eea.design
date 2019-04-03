@@ -6,12 +6,6 @@
 
 /* @group Tabs @parent Editing */
 
-#edit-bar {
-    font-size: 100%;
-    margin: 1em 0;
-    border: 0;
-}
-
 #content-views {
     background-color: transparent;
     margin:0px !important;

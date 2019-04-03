@@ -382,7 +382,6 @@ jQuery(document).ready(function($) {
 
     var $document = $(document);
     var win_height = window.innerHeight;
-    var body = document.body;
     function navScroll(ev) {
         // prevent scroll hiding or showing when reaching bottom
         var doc_height = $document.height();

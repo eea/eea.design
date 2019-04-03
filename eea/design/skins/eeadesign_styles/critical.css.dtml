@@ -115,7 +115,7 @@ legend {
     display: none !important;
 }
 
-html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:0 auto;padding:0;clear:both;overflow:hidden}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 0;clear:both;}
+html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:30px auto 0 auto;padding:0;clear:both;overflow:hidden}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 0;clear:both;}
 
 
 
@@ -194,15 +194,15 @@ ul {
       float: left;
       left: 100%;
   }
-  .width-3\3A 4 {
+  .width-3\:4 {
       width: 58.5%;
   }
 }
 
-.position-3\3a 4 {
+.position-3\:4 {
     margin-left: -35.5%;
 }
-.width-1\3A 4 {
+.width-1\:4 {
     width: 35.5%;
 }
 .panel {
@@ -222,7 +222,6 @@ ul {
 
 #header-holder .navbar {
     background-color: #FFF;
-    margin-bottom: 15px;
     border-bottom: 1px solid &dtml-mediumBackgroundColor;;
 }
 .navbar-toggle {
@@ -296,7 +295,7 @@ ul {
 
 .portal-globalnav > li > a {
     color: inherit;
-    padding: 1em 0.60em;
+    padding: 1em 0.75em;
 }
 #portal-personaltools-wrapper {
     display: none;
@@ -333,14 +332,14 @@ ul {
 /* end header area */
 
 #eea-above-columns {
-    margin-top: -17px;
     background-color: &dtml-lightBackgroundColor;;
+    min-height: 1px;
 }
 
 .plone-breadcrumb {
     font-size: 100%;
     margin-bottom: .5em;
-    border-width: 1px 0;
+    border-width: 0 0 1px 0;
     border-style:solid;
     border-color: &dtml-mediumBackgroundColor;;
 }
@@ -358,6 +357,9 @@ ul {
     list-style: none;
     margin: 0;
 }
+ .plone-breadcrumb-list .eea-icon {
+     vertical-align: 0;
+ }
 
 /* @group Content Area */
 .portalMessage {
@@ -366,8 +368,7 @@ ul {
     clear:both;
 }
 #region-content {
-    padding: 1.5em;
-    background-color: &dtml-lightBackgroundColor;;
+    padding: 0 1.5em;
 }
 
 .template-datamaps_view #region-content,

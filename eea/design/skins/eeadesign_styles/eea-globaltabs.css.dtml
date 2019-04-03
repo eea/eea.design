@@ -54,12 +54,6 @@
 }
 /* @end 72862 tweak placement of globalnav panels */
 
-#portal-globalnav a:hover,
-#portal-globalnav .selected a {
-    background: transparent;
-    cursor: pointer;
-}
-
 #portal-globalnav .selected a {
     background-color: white;
     position: relative;
