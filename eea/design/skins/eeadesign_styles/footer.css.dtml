@@ -26,9 +26,6 @@
     clear: both;
 }
 
-.eea-software-info {
-    color: &dtml-corporateBlue;;
-}
 
 .colophonWrapper {
     text-align: left;
@@ -45,7 +42,7 @@
 }
 .colophon-links a, .colophon-links a:visited {
     display: inline-block;
-    color: inherit;
+    color: &dtml-corporateBlue;;
     font-weight: bold;
 }
 
