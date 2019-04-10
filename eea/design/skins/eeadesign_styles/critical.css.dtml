@@ -118,7 +118,7 @@ legend {
     display: none !important;
 }
 
-html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:30px auto 0 auto;padding:0;clear:both;overflow:hidden}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 0;clear:both;}
+html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:&dtml-corporateBlue;;margin:2em 0 0 0;padding:2em 0;clear:both;}
 
 
 
@@ -179,23 +179,23 @@ ul {
 }
 
 @media screen {
-  .position-0 {
-      margin-left: -100%;
-  }
+  /*.position-0 {*/
+  /*    margin-left: -100%;*/
+  /*}*/
 
   .width-full {
       width: 100%;
   }
   .row {
-      float: left;
+      /*float: left;*/
       width: 100%;
       display: block;
       position: relative;
   }
   .cell {
       position: relative;
-      float: left;
-      left: 100%;
+      /*float: left;*/
+      /*left: 100%;*/
   }
   .width-3\:4 {
       width: 58.5%;
@@ -241,6 +241,7 @@ ul {
 
 .navbar-collapse {
     visibility: hidden;
+    display: none;
 }
 
 #portal-top {
@@ -647,6 +648,7 @@ ul {
         top: 0;
         z-index: 1030;
         min-height: 60px;
+        width: 100vw;
     }
     .navbar-toggle .icon-bar + .icon-bar {
         margin-top: 4px;
