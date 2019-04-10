@@ -1200,7 +1200,7 @@ ul.social-buttons {
     /* 16:9 ratio */
     padding-top: 5.25%;
 }
-.eea-tileThumb img {
+.eea-tileThumbImg {
     -webkit-transition: all 0.3s linear 0s;
     -moz-transition: all 0.3s linear 0s;
     -ms-transition: all 0.3s linear 0s;
@@ -1208,6 +1208,7 @@ ul.social-buttons {
     transition: all 0.3s linear 0s;
     height: 100%;
     width: auto;
+    min-height: 225px;
 }
 
 .eea-tileHovered {
@@ -1267,12 +1268,12 @@ ul.social-buttons {
 }
 
 .eea-tileTitle {
-    margin: 0;
+    margin: 0 0 1em 0;
     line-height: 1.25;
     font-size: 1em;
-    font-weight: normal;
+    font-weight: bold;
     border: 0;
-    color: #00446A;
+    color: &dtml-fontColor;;
     word-wrap: break-word;
 }
 .eea-tileInner:hover .eea-tileTitle,
@@ -1292,6 +1293,7 @@ ul.social-buttons {
 
 .eea-tileIssued {
     color: gray;
+    text-align: right;
     margin-top: auto;
 }
 
@@ -1305,7 +1307,8 @@ ul.social-buttons {
     text-overflow: ellipsis;
     height: 120px;
     overflow: hidden;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    color: &dtml-fontColor;;
 }
 
 .eea-tileMetadata {
@@ -1332,7 +1335,7 @@ ul.social-buttons {
     .eea-tile {
         padding: 10px 1px;
     }
-    .eea-tileThumb > img {
+    .eea-tileThumbImg {
         height: auto;
         width: 100%;
     }
@@ -1409,6 +1412,7 @@ ul.social-buttons {
         font-size: 1.4em;
     }
 }
+
 /* end eea tile design */
 
 
