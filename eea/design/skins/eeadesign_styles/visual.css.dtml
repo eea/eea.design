@@ -1193,12 +1193,6 @@ ul.social-buttons {
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
 }
-.eea-tileDescription::after {
-    content: '';
-    display: block;
-    /* 16:9 ratio */
-    padding-top: 5.25%;
-}
 .eea-tileThumbImg {
     -webkit-transition: all 0.3s linear 0s;
     -moz-transition: all 0.3s linear 0s;
@@ -1308,6 +1302,19 @@ ul.social-buttons {
     overflow: hidden;
     margin-bottom: 1em;
     color: &dtml-fontColor;;
+    position: relative;
+}
+.eea-tileDescription::after {
+    content: '';
+    display: block;
+    /* 16:9 ratio */
+    padding-top: 5.25%;
+    position: absolute;
+    top: 93%;
+    left: 0;
+    right: 0;
+    height: .75em;
+    background-image: linear-gradient(rgba(255,255,255, .5), #fff);
 }
 
 .eea-tileMetadata {
