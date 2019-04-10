@@ -1131,7 +1131,6 @@ ul.social-buttons {
 }
 
 .eea-tile {
-    overflow: hidden;
     display: flex;
     flex: 1;
     padding: 10px 10px 10px 1px;
@@ -1206,9 +1205,9 @@ ul.social-buttons {
     -ms-transition: all 0.3s linear 0s;
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
-    height: 100%;
-    width: auto;
-    min-height: 225px;
+    height: auto;
+    width: 100%;
+    max-height: 225px;
 }
 
 .eea-tileHovered {
@@ -1396,16 +1395,6 @@ ul.social-buttons {
         max-height: 100%;
     }
 
-    .eea-tile:hover .eea-tileMetadata::after {
-        content: '';
-        position: absolute;
-        top: -7px;
-        left: 0;
-        right: 0;
-        height: .75em;
-        background-image: linear-gradient(rgba(255,255,255, .5), #fff);
-        display: block;
-    }
 }
 @media (min-width: 768px) {
     .eea-tileTitle {
