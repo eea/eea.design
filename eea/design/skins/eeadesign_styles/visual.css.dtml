@@ -1170,6 +1170,7 @@ ul.social-buttons {
     -ms-transition: all 0.3s linear 0s;
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
+    width: 100%;
 }
 
 .eea-tileInner:hover,
@@ -1202,6 +1203,22 @@ ul.social-buttons {
     height: auto;
     width: 100%;
     max-height: 225px;
+}
+
+/* ie11 tileImage fix */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .eea-tileThumbImg {
+        height: 180px;
+    }
+
+    .eea-tileLink {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .eea-tileTitle {
+        overflow: visible !important;
+    }
 }
 
 .eea-tileHovered {
@@ -1271,7 +1288,7 @@ ul.social-buttons {
 }
 .eea-tileInner:hover .eea-tileTitle,
 .eea-tileInner:focus .eea-tileTitle {
-    color: #0044dd;
+    color: &dtml-linkColor;;
 }
 
 .eea-tileTopic,

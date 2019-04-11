@@ -14,7 +14,6 @@ h1 {
     font-size: 180%;
     line-height: 1.4;
     margin: 0.67em 0;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     padding-bottom: 0.25em;
 }
 h2 {
@@ -53,6 +52,13 @@ h2 a, h3 a, h4 a {
 /*a:hover { color: &dtml-linkHoverColor;; }*/
 /*a:active { color: &dtml-linkActiveColor;; }*/
 
+.documentFirstHeading {
+    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
+}
+
+.txt-primary {
+    color: &dtml-fontColor;;
+}
 /* @end Basics */
 
 /* @group Navigation/search */
