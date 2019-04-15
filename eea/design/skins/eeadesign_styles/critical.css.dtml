@@ -654,6 +654,10 @@ ul {
     .navbar-toggle .icon-bar + .icon-bar {
         margin-top: 4px;
     }
+
+    #visual-portal-wrapper {
+        overflow: hidden;
+    }
     #portal-globalnav > li > a {
         color: white;
         font-weight: bold;

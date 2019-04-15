@@ -86,6 +86,7 @@ columnTwoWidth:string=16em
 
 # boostrap inspired variables
 padding-base:string=15px
+padding-double:string=30px
 padding-half:string=8px
 
 # 15235 font icon names and values

@@ -551,8 +551,8 @@ span.figure-left {
 }
 
 .eea-no-list-style {
-    list-style: none none;
-    margin: 1em 0;
+    list-style: none none !important;
+    margin: 1em 0 !important;
 }
 .eea-no-list-style > li {
     display: list-item;
