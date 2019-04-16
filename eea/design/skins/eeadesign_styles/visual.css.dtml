@@ -558,6 +558,7 @@ span.figure-left {
     display: list-item;
 }
 
+
 .bordered-left {
     position: relative;
 }

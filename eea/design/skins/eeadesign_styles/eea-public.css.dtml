@@ -19,15 +19,14 @@ h1 {
 h2 {
     font-size: 150%;
     margin: 0.83em 0;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     padding-bottom: 0.25em;
 }
 h3 {
     font-size: 125%;
     line-height: 1.5;
-    border-bottom: 1px solid &dtml-mediumBackgroundColor;;
     margin: 1em 0;
 }
+
 h4 {
     font-size: 110%;
     margin: 1.33em 0;
