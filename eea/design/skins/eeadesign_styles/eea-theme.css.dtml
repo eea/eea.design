@@ -69,7 +69,7 @@ hr {
 
 
 /* Searchbox style and positioning */
-.portal-searchbox .gsc-clear-button {
+.gsc-clear-button {
     display: none;
 }
 
@@ -100,12 +100,12 @@ hr {
     font-size: 85%;
 }
 
-.portal-searchbox .gsc-control-cse {
+.gsc-control-cse {
     background-color: transparent;
     padding: 1px 0 0 0;
     border: 0;
 }
-.portal-searchbox input.gsc-input-query {
+.gsc-input-query {
     border: none;
     background: #fff;
     padding: 3px 6px;
@@ -114,34 +114,34 @@ hr {
     vertical-align: top;
     font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
 }
-.portal-searchbox .gsc-input-query:focus {
+.gsc-input-query:focus {
     background: #FFF none !important;
 }
-.portal-searchbox .gsc-input {
+.gsc-input {
     padding: 0;
     border: 1px solid #BBB;
 }
 
 
-.portal-searchbox .gsc-cursor-current-page {
+.gsc-cursor-current-page {
     color: #FFF;
 }
 
-.portal-searchbox .gsc-results-wrapper-overlay {
+.gsc-results-wrapper-overlay {
     height: 96%;
     top: 2%;
     width: 90%;
     left: 5%;
 }
 
-.portal-searchbox .gsib_b {
+.gsib_b {
     display: none;
 }
-.portal-searchbox .gsc-input-box {
+.gsc-input-box {
     height: 100%;
     position: relative;
 }
-.portal-searchbox .gsc-search-box {
+.gsc-search-box {
     border-style: none;
     border-width: 0;
     border-spacing: 0 0;
@@ -152,11 +152,11 @@ hr {
     padding: 0;
 }
 
-.portal-searchbox .gsc-tabsArea > div {
+.gsc-tabsArea > div {
     overflow: visible;
 }
 
-.portal-searchbox .gsc-cursor-current-page {
+.gsc-cursor-current-page {
     padding: 5px;
 }
 
@@ -183,7 +183,7 @@ hr {
   background-color: #e9e9e9 !important;
 }
 
-.portal-searchbox .gsc-input-box {
+.gsc-input-box {
   position: relative;
 }
 
