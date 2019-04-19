@@ -142,6 +142,12 @@ jQuery(document).ready(function($) {
         $('#popup_login_form').slideUp();
     });
 
+    $("#themes-megatopics-area").find('.promoHeader').click(function(ev){
+        if (window.innerWidth > 480) {
+            ev.stopImmediatePropagation();
+        }
+    });
+
     /* #28278 prevent figures from printing charts without the figure title on the same line
      * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
      * data-and-maps/indicators/direct-losses-from-weather-disasters-2/assessment/pdf.body
