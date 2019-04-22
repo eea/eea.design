@@ -204,6 +204,7 @@ hr {
 
 td.gsc-search-button {
     width: 1%;
+    vertical-align: bottom;
 }
 
 .search_glossary_link, .search_advanced_link {
