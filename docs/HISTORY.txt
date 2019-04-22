@@ -3,6 +3,9 @@ Changelog
 
 24.2-dev0 - (unreleased)
 ---------------------
+* Change: added fixes from custom for galleryview and
+  lazy loading of gallery images
+  [ichim-david refs #104101]
 
 24.1 - (2019-03-29)
 ---------------------
