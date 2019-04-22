@@ -374,17 +374,17 @@ ul {
     padding: 1em;
     clear:both;
 }
-#region-content {
-    padding: 0 1.5em;
-}
+/*#region-content {*/
+/*    padding: 0 1.5em;*/
+/*}*/
 
-.template-datamaps_view #region-content,
-.template-dc_view #region-content,
-.frontpage .width-full,
-.frontpage #region-content {
-    background-color: transparent;
-    padding: 0;
-}
+/*.template-datamaps_view #region-content,*/
+/*.template-dc_view #region-content,*/
+/*.frontpage .width-full,*/
+/*.frontpage #region-content {*/
+/*    background-color: transparent;*/
+/*    padding: 0;*/
+/*}*/
 
 /* megatopic frontarea */
 #megatopics-area {
@@ -452,7 +452,7 @@ ul {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#portal-column-content{padding:0 1.5em 1.5em;min-width: 635px;}
+#portal-column-content{min-width: 635px; padding: 0 &dtml-padding-base;;}
 #portal-column-two {
     min-width: 350px;
 }
@@ -460,8 +460,8 @@ ul {
     margin: 0 0 1em 0;
 }
 .column-area, .right-column-area {
-    width: 58.5%;
-    flex-basis: 58.5%;
+    width: 59.5%;
+    flex-basis: 59.5%;
     margin: 0 0;
     padding: 0;
 }
@@ -477,10 +477,10 @@ ul {
     overflow: hidden;
 }
 
-#highlights-area {
-    background-color: #ffffff;
-    padding: 1.5em;
-}
+/*#highlights-area {*/
+/*    background-color: #ffffff;*/
+/*    padding: 1.5em;*/
+/*}*/
 
 .featured, .portlet {
     margin-bottom: 1em;
@@ -676,11 +676,11 @@ ul {
 
 }
 
-@media screen and (min-width: 1024px) {
-    #region-content {
-        margin: 0 -1.5em;
-    }
-}
+/*@media screen and (min-width: 1024px) {*/
+/*    #region-content {*/
+/*        margin: 0 -1.5em;*/
+/*    }*/
+/*}*/
 
 
 /* 102564 IE11 hack as the hiddenStructure without display will count 

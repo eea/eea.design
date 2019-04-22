@@ -83,10 +83,10 @@
 /* Frontpage main content
 ******************************************************************************/
 
-#highlights-area {
-    background-color: &dtml-lightBackgroundColor;;
-    padding: &dtml-padding-base;;
-}
+/*#highlights-area {*/
+/*    background-color: &dtml-lightBackgroundColor;;*/
+/*    padding: &dtml-padding-base;;*/
+/*}*/
 
 #articles-area h2 {
     padding-top: 0;
@@ -193,10 +193,14 @@
 }
 
 /* style for shortcuts buttons */
-#portlet-followus dd {
+#portlet-followus > dd {
   display: inline-block;
-  width: 44px;
+  width: 40px;
   margin: 0 0 2px 0;
+}
+
+#portlet-followus > dd:last-child {
+    margin: 0;
 }
 
 .shortcut-default {
