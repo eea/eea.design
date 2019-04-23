@@ -1115,6 +1115,12 @@ ul.social-buttons {
     border-color: &dtml-mediumBackgroundColor;;
 }
 
+.eea-btn-light:hover {
+    color: &dtml-lightBackgroundColor;;;
+    border-color: &dtml-corporateGreen;;
+    background-color: &dtml-corporateGreen;;
+}
+
 /* eea tile design */
 /* http://eea.europa.eu/themes card tiles design */
 
@@ -1176,7 +1182,7 @@ ul.social-buttons {
 
 .eea-tileInner:hover,
 .eea-tileInner:focus {
-    box-shadow: 0 0 3px 1px rgb(55, 146, 218);
+    box-shadow: 0 0 3px 1px &dtml-corporateGreen;;
 }
 
 .eea-tileHead {
