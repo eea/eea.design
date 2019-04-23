@@ -1135,12 +1135,13 @@ ul.social-buttons {
 .eea-tiles {
     display: flex;
     clear: both;
+    margin: 0 -10px;
 }
 
 .eea-tile {
     display: flex;
     flex: 1;
-    padding: 10px 10px 10px 1px;
+    padding: 10px;
 }
 .eea-list-tiles .eea-tileUrl,
 .eea-tile .eea-tileUrl{
@@ -1372,9 +1373,6 @@ ul.social-buttons {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .eea-tile:nth-child(even) {
-        padding-right: 1px;
-    }
     .eea-tile {
         flex-basis: 50%;
         max-width: 50%;
@@ -1394,21 +1392,9 @@ ul.social-buttons {
     }
 }
 
-@media (min-width: 768px) {
-    .eea-tile:nth-of-type(3n) {
-        padding-right: 1px;
-    }
-    .eea-tile:nth-of-type(3n + 1) {
-        padding-left: 1px;
-    }
-}
+/*@media (min-width: 768px) {*/
+/*}*/
 @media (min-width: 1281px) {
-    .eea-tile:nth-of-type(4n) {
-        padding-right: 1px;
-    }
-    .eea-tile:nth-of-type(4n + 1) {
-        padding-left: 1px;
-    }
     #content .eea-section-trigger {
         display: none;
     }
@@ -1417,7 +1403,7 @@ ul.social-buttons {
 @media (min-width: 320px) {
     .eea-tileTitle {
         min-height: 2.5em;
-        max-height: 4em;
+        max-height: 3.5em;
         overflow: hidden;
         position: relative;
     }
