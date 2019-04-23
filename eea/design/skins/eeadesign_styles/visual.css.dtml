@@ -819,20 +819,17 @@ span.figure-left {
 }
 
 
-.eea-accordion-panels {
-    border: 1px solid #DDD;
-    border-top: 0;
-    padding: 10px;
-}
 
 /* eea accordion styles */
 .eea-accordion-panels {
     padding: 0;
 }
 
+
 .eea-accordion-panel .pane {
     padding: 10px;
     overflow: hidden;
+    border: 1px solid #DDD;
 }
 .eea-accordion-title, .eea-accordion-panel > h2 {
     background: #E2E2E2 none;
@@ -844,6 +841,7 @@ span.figure-left {
     padding: 0 0.5em;
     font-weight: bold;
 }
+
 .eea-accordion-title-manual-icons {
     text-shadow: none;
     padding: 0 1em;
@@ -1352,19 +1350,13 @@ ul.social-buttons {
 }
 
 /* MEDIA Queries, place normal css above this section */
-@media (max-width: 375px) {
-    .eea-tile {
-        width: 100%;
-        padding: 10px 0;
-    }
-}
 
 @media (max-width: 480px) {
     .eea-tiles {
         flex-direction: column;
     }
     .eea-tile {
-        padding: 10px 1px;
+        width: 100%;
     }
     .eea-tileThumbImg {
         height: auto;
