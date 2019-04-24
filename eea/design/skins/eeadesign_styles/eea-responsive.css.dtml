@@ -307,9 +307,6 @@
     flex: none;
     width: 50%; } }
 @media screen and (max-width: 768px) {
-  #visual-portal-wrapper {
-    overflow: auto; }
-
   .navbar-toggle {
     display: block; }
 
