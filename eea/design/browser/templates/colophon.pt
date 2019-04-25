@@ -11,8 +11,8 @@
     <div class="colophonWrapper">
         <div class="colophon-section  section-bordered">
             <a href="https://europa.eu/european-union/about-eu_en">
-                <img tal:attributes="src string:${portal_url}/eu-flag.png"
-                     width="90" height="53" alt="EU flag" title="European Union Flag"
+                <img tal:attributes="src string:${portal_url}/europe-flag.svg"
+                     width="60" height="38" alt="EU flag" title="European Union Flag"
                      i18n:attributes="alt;title" />
                 <span class="europe-agency-text" i18n:translate="">The EEA is an agency of the European Union</span>
             </a>
@@ -28,7 +28,16 @@
                          i18n:translate=""
                          tal:attributes="href string:${local_site}/help/contact-info">EEA Web Team</a>
             </p>
-
+                
+                <p class="colophon-links">
+                    <tal:uptime i18n:translate="" tal:condition="not:view/external">Software updated on</tal:uptime>
+                    <tal:uptime i18n:translate="" tal:condition="view/external">Template updated on</tal:uptime>
+                    <em tal:content="view/uptime">Uptime</em>
+                    <tal:previous tal:condition="view/previous" i18n:translate="">
+                        from version
+                        <em i18n:name="previous" tal:content="view/previous">previous version</em>
+                    </tal:previous>
+                </p>
             <p class="colophon-links">
                 <tal:version i18n:translate="" tal:condition="not:view/external">Software version:</tal:version>
                 <tal:version i18n:translate="" tal:condition="view/external">Template version:</tal:version>
@@ -44,13 +53,11 @@
             </p>
 
             <p class="colophon-links">
-                <tal:uptime i18n:translate="" tal:condition="not:view/external">Software updated on</tal:uptime>
-                <tal:uptime i18n:translate="" tal:condition="view/external">Template updated on</tal:uptime>
-                <strong tal:content="view/uptime">Uptime</strong>
-                <tal:previous tal:condition="view/previous" i18n:translate="">
-                    from version
-                    <strong i18n:name="previous" tal:content="view/previous">previous version</strong>
-                </tal:previous>
+                <a href="/status"
+                         tal:attributes="href string:${portal_state/portal_url}/status"
+                   title="Status page"
+                         i18n:attributes="title"
+                         i18n:translate="">Status</a>
             </p>
 
             <p class="colophon-links">
@@ -75,12 +82,6 @@
                    title="CMS login"
                          i18n:attributes="title">
                     <strong i18n:translate="">CMS login</strong></a>
-            </p>
-            <p class="colophon-links">
-                <a href="https://github.com/eea/eea.docker.kgs/releases"
-                   title="Software updates history"
-                         i18n:attributes="title"
-                         i18n:translate="">Software updates history</a>
             </p>
 
             <p class="colophon-links">

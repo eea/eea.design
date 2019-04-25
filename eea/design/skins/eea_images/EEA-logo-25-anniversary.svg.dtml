@@ -6,8 +6,8 @@
 	.st0{fill:#0061A1;}
 	.st1{fill:#00888A;}
 	.st2{fill:#FFFFFF;}
-	.st3{font-family:'OpenSans-Light';}
-	.st4{font-size:8px;}
+	.st3{font-family:'Open Sans'; font-size: 7px;}
+	.st4{font-size:7px;}
 </style>
 <path class="st0" d="M129.97,13.27c0-1.58-0.58-3.06-1.63-4.18c-0.21-0.22-0.43-0.42-0.66-0.6l-0.87,1.55
 	c0.91,0.77,1.56,1.89,1.56,3.23c0,2.33-1.77,4.21-3.96,4.21c-0.51,0-1-0.11-1.45-0.29l-0.8,1.48c0.7,0.33,1.46,0.51,2.25,0.51

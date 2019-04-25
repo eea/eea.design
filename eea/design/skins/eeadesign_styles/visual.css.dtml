@@ -1430,7 +1430,6 @@ ul.social-buttons {
 
 .media--discreet  {
     line-height: 1.5;
-    font-size: 90%;
 }
 .media-link {
     display: flex;

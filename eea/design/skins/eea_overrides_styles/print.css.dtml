@@ -356,6 +356,7 @@ body.frontpage .portlet-promotions,
 #kss-spinner,
 #review-history,
 #content-history,
+#eea-versions-portlet,
 .listingBar,
 .link-presentation,
 input.standalone,
@@ -391,7 +392,8 @@ input.context,
 
 
 /* #27958 frontpage and themes print fixes */
-.gallery-ajax.visualClear {
+.gallery-ajax.visualClear,
+.eea-accordion-panel .pane {
     display: block !important;
 }
 #gallery-content-outer,

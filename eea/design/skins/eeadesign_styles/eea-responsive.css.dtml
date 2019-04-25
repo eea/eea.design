@@ -63,8 +63,8 @@
   .section-dark .eea-icon-4x {
     font-size: 3.5em; } }
 @media screen and (max-width: 442px) {
-  .media-body-enquiries {
-    max-width: 100px; } }
+  .section-contact-us .media-body {
+    width: 115px; } }
 @media screen and (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%; }

@@ -86,6 +86,9 @@
 .section-dark a, .section-dark .eea-icon, .section-dark .section-header, .colophon-section table {
     color: #FFF;
 }
+.colophon-section table {
+    font-size: 1em;
+}
 .section-header {
     text-decoration: none;
     border: 0;
@@ -104,7 +107,7 @@
 .europe-agency-text {
     font-size: 15px;
     color: #999;
-    margin: 0.25em 0 0 0;
+    margin: 0.5em 0 0 0.5em;
 }
 
 

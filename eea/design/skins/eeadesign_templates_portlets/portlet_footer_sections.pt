@@ -3,7 +3,8 @@
     <!--? eionet -->
     <div class="colophon-section section-dark section-top">
         <div class="section-centered">
-    <h2 class="mb-0 section-header h1"><a href="https://www.eionet.europa.eu/" i18n:translate="">European Environment Information and Observation Network (Eionet)</a></h2>
+        <h2 class="mb-0 section-header h1">Eionet</h2>
+        <a href="https://www.eionet.europa.eu/" i18n:translate="">European Environment Information and Observation Network (Eionet)</a>
         </div>
     </div>
      <!--? end eionet section -->
@@ -13,7 +14,7 @@
     <div class="colophon-section section-dark section-bordered">
         <div class="section-centered space-around">
 
-            <h2 class="section-header h1"><span i18n:translate="">Other EEA managed sites</span></h2>
+            <h2 class="section-header h1"><span i18n:translate="">The EEA also contributes to</span></h2>
 
             <table class="left-table">
                 <tr><td class="table-link-title"><a href="https://biodiversity.europa.eu/" target="_blank" i18n:translate="">BISE</a></td> <td class="table-link-description" i18n:translate="">Biodiversity Information System for Europe</td>
@@ -29,7 +30,7 @@
                     <td class="table-link-title">
                         <a href="https://insitu.copernicus.eu/" target="_blank" i18n:translate="">Copernicus In Situ</a>
                     </td>
-                    <td class="table-link-description" i18n:translate="">Copernicus In situ component</td>
+                    <td class="table-link-description" i18n:translate="">Copernicus in situ component</td>
                 </tr>
                 <tr>
                     <td class="table-link-title">
@@ -50,7 +51,7 @@
                 <tr>
                     <td class="table-link-description" i18n:translate="">Information Platform for Chemical Monitoring</td>
                     <td class="table-link-title">
-                        <a href="https://ipchem.jrc.ec.europa.eu/RDSIdiscovery/ipchem/index.html" target="_blank" i18n:translate="">IpCHeM</a>
+                        <a href="https://ipchem.jrc.ec.europa.eu/RDSIdiscovery/ipchem/index.html" target="_blank" i18n:translate="">IPCHEM</a>
                     </td>
                 </tr>
 
@@ -74,7 +75,7 @@
      <!--? follow us -->
     <div class="colophon-section section-dark section-bordered">
 
-        <h2 class="section-header" i18n:translate="">Follow us</h2>
+        <h2 class="section-header h1" i18n:translate="">Follow us</h2>
 
         <div class="section-centered">
 
@@ -106,7 +107,7 @@
     <!--? end follow us -->
 
     <!--? contact us section -->
-    <div class="colophon-section section-dark section-bordered">
+    <div class="colophon-section section-dark section-bordered section-contact-us">
         <div class="section-centered">
 
             <h2 class="section-header h1" i18n:translate="">Contact us</h2>
@@ -139,5 +140,6 @@
         </div>
     </div>
     <!--? end contact us section -->
+
 
 </metal:portlets>

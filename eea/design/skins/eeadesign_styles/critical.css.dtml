@@ -332,10 +332,12 @@ ul {
 }
 
 .icon-siteaction-europe-flag {
-    background: url("&dtml-xurl;/eu-flag-siteactions.png") no-repeat top left;
+    background: url("&dtml-xurl;/europe-flag.svg") no-repeat top left;
     display: block;
     width: 60px;
     height: 38px;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
 /* end header area */
 

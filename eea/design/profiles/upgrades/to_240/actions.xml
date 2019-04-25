@@ -10,7 +10,7 @@
    <property name="url_expr">string:$portal_url/chooselang/</property>
    <property name="link_target"></property>
    <property
-      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-globe eea-icon-marginless</property>
+      name="icon_expr">string:eea-icon eea-icon-lg eea-icon-globe eea-icon-marginless</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
@@ -18,13 +18,13 @@
    <property name="visible">True</property>
   </object>
   <object name="login" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">Log in</property>
+   <property name="title" i18n:translate="">CMS login</property>
    <property name="description" i18n:translate=""></property>
    <property
       name="url_expr">string:${globals_view/navigationRootUrl}/login/</property>
    <property name="link_target"></property>
    <property
-      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-sign-in</property>
+      name="icon_expr">string:eea-icon eea-icon-lg eea-icon-sign-in</property>
    <property name="available_expr">not: member</property>
    <property name="permissions">
     <element value="View"/>
@@ -37,7 +37,7 @@
    <property name="url_expr"></property>
    <property name="link_target"></property>
    <property
-      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-user</property>
+      name="icon_expr">string:eea-icon eea-icon-lg eea-icon-user</property>
    <property name="available_expr">member</property>
    <property name="permissions">
     <element value="View"/>
@@ -51,7 +51,7 @@
       name="url_expr">string:$portal_url/help/advanced-search</property>
    <property name="link_target"></property>
    <property
-      name="icon_expr">string:eea-icon eea-icon-2x eea-icon-search eea-icon-marginless</property>
+      name="icon_expr">string:eea-icon eea-icon-lg eea-icon-search eea-icon-marginless</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
