@@ -111,4 +111,76 @@
 }
 
 
+@media screen and (max-width: 360px) {
+    .section-dark .eea-icon-4x {
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .europe-agency-text {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .table-link-title {
+        line-height: 1;
+    }
+    .table-link-description {
+        margin-bottom: 1em;
+    }
+    .table-link-title,
+    .table-link-description {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .right-table > tbody > tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .right-table .table-link-description {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .colophonWrapper {
+        display: block;
+        text-align: center;
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .table-link-title {
+        margin-left: 1em;
+    }
+
+    .table-link-description {
+        text-align: left;
+        margin-left: 1em;
+        display: block;
+    }
+
+    .right-table .table-link-description {
+        text-align: right;
+        margin: 0 1em 0 0;
+    }
+
+    .left-table .table-link-title {
+        text-align: right;
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+/* 72171 hide header elements on phones and portrait tablet resolutions */
+    .colophon-links {
+        width: 100%;
+        text-align: center;
+    }
+}
 /* </dtml-with> */
