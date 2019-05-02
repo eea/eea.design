@@ -83,7 +83,7 @@
                 <span class="eea-icon  eea-icon-twitter-square eea-icon-4x"><!-- --></span></a>
             <a class="link-plain media" title="Follow us on Facebook" href="https://www.facebook.com/European.Environment.Agency" i18n:attributes="title">
                 <span class="eea-icon  eea-icon-facebook-square eea-icon-4x"><!-- --></span></a>
-            <a class="link-plain media" title="Follow us on Linked In" href="https://www.linkedin.com/company/european-environment-agency" i18n:attributes="title">
+            <a class="link-plain media" title="Follow us on LinkedIn" href="https://www.linkedin.com/company/european-environment-agency" i18n:attributes="title">
                 <span class="eea-icon  eea-icon-linkedin-square eea-icon-4x"><!-- --></span></a>
             <a class="link-plain media" title="Follow us on YouTube" href="https://www.youtube.com/user/EEAvideos" i18n:attributes="title">
                 <span class="eea-icon eea-icon-youtube-square eea-icon-4x"><!-- --></span></a>

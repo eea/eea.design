@@ -79,7 +79,7 @@
             <p class="colophon-links">
                 <a href="/login_form"
                          tal:attributes="href string:${portal_url}/login_form"
-                   title="CMS login"
+                   title="Log in to CMS"
                          i18n:attributes="title">
                     <strong i18n:translate="">CMS login</strong></a>
             </p>
