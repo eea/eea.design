@@ -80,19 +80,19 @@
         <div class="section-centered">
 
             <a class="link-plain media" title="Follow us on Twitter" href="https://twitter.com/euenvironment" i18n:attributes="title">
-                <span class="eea-icon  eea-icon-twitter-square eea-icon-4x"></span></a>
+                <span class="eea-icon  eea-icon-twitter-square eea-icon-4x"><!-- --></span></a>
             <a class="link-plain media" title="Follow us on Facebook" href="https://www.facebook.com/European.Environment.Agency" i18n:attributes="title">
-                <span class="eea-icon  eea-icon-facebook-square eea-icon-4x"></span></a>
+                <span class="eea-icon  eea-icon-facebook-square eea-icon-4x"><!-- --></span></a>
             <a class="link-plain media" title="Follow us on Linked In" href="https://www.linkedin.com/company/european-environment-agency" i18n:attributes="title">
-                <span class="eea-icon  eea-icon-linkedin-square eea-icon-4x"></span></a>
+                <span class="eea-icon  eea-icon-linkedin-square eea-icon-4x"><!-- --></span></a>
             <a class="link-plain media" title="Follow us on YouTube" href="https://www.youtube.com/user/EEAvideos" i18n:attributes="title">
-                <span class="eea-icon eea-icon-youtube-square eea-icon-4x"></span></a>
+                <span class="eea-icon eea-icon-youtube-square eea-icon-4x"><!-- --></span></a>
             <a class="link-plain media" title="Subscribe to RSS Feed" href="/subscription/news-feeds" i18n:attributes="title">
-                <span class="eea-icon eea-icon-rss-square eea-icon-4x"></span></a>
+                <span class="eea-icon eea-icon-rss-square eea-icon-4x"><!-- --></span></a>
 
             <div class="media media--discreet">
                 <a class="link-plain media-link align-center" title="Subscribe by email" href="/subscription/targeted-subscription" i18n:attributes="title">
-                    <span class="eea-icon eea-icon-4x eea-icon-newspaper-o"></span>
+                    <span class="eea-icon eea-icon-4x eea-icon-newspaper-o"><!-- --></span>
                     <div class="media-body">
                         <span i18n:translate="">Sign up to receive our news notifications</span>
                         <br>
@@ -112,7 +112,7 @@
 
             <h2 class="section-header h1" i18n:translate="">Contact us</h2>
             <div class="media my-2">
-                <span class="eea-icon eea-icon-4x eea-icon-map-marker"></span>
+                <span class="eea-icon eea-icon-4x eea-icon-map-marker"><!-- --></span>
                 <div class="media-body" i18n:translate="">
                     Kongens Nytorv 6
                     <br>
@@ -121,7 +121,7 @@
             </div>
 
             <div class="media my-2">
-                <span class="eea-icon eea-icon-4x eea-icon-phone"></span>
+                <span class="eea-icon eea-icon-4x eea-icon-phone"><!-- --></span>
                 <div class="media-body">
                     <span i18n:translate="">Phone number:</span>
                     <br>
@@ -130,7 +130,7 @@
             </div>
 
             <div class="media my-2">
-                <span class="eea-icon eea-icon-4x eea-icon-comment"></span>
+                <span class="eea-icon eea-icon-4x eea-icon-comment"><!-- --></span>
                 <div class="media-body media-body-enquiries">
                     <a href="//community.eea.europa.eu/" i18n:translate="" class="block">Ask your question via the EEA Forum</a>
                     <a href="https://www.eea.europa.eu/media/" i18n:translate="">Media enquiries</a>
