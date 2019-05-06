@@ -16,7 +16,7 @@
 
 .secondary-portaltabs {
     display: flex;
-    margin-left: 0;
+    margin: 0;
     position: relative;
 }
 

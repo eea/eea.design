@@ -294,6 +294,7 @@ ul {
     margin-bottom: 0;
     height: 50px;
     display: flex;
+    line-height: normal;
 }
 
 .portal-globalnav > li > a, .eea-siteaction > a {
@@ -691,6 +692,11 @@ ul {
     .hiddenStructure {
         display: none;
 
+    }
+    /* globalmenu isn't centered without a specific width the logo link is 80px */
+    #portal-logo-link {
+        width: 213px;
+        display: block;
     }
 }
 /* </dtml-let> */
