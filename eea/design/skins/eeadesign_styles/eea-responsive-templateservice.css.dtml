@@ -138,9 +138,17 @@
     display: flex;
     flex-direction: column; }
 
+  #globalnav-holder, #portal-globalnav {
+    height: inherit; }
+
   #portal-globalnav > li > a {
     color: white;
-    font-weight: bold; }
+    font-weight: bold;
+    padding: 0.5em 0;
+    line-height: 2em;
+    font-size: 13px;
+    width: 100%;
+    border-bottom: 1px solid gray; }
 
   #portal-globalnav a:hover:after,
   #portal-globalnav .eea-nav-current a:after {
@@ -184,7 +192,14 @@
     left: 0 !important; }
 
   .panel-content {
-    min-width: 320px; } }
+    min-width: 320px; }
+
+  #eea-above-columns {
+    margin-top: 60px; }
+
+  #eea-above-columns .plone-breadcrumb {
+    margin-top: 0;
+    margin-bottom: 0; } }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .eea-siteaction .eea-icon {
     font-size: 1.33em; } }

@@ -144,6 +144,9 @@ ul {
 .space-between {
     justify-content: space-between;
 }
+.flex {
+    display: flex;
+}
 .flex-container {
     max-width: 1024px;
     width: 100%;
@@ -340,6 +343,16 @@ ul {
     -webkit-background-size: contain;
     background-size: contain;
 }
+
+.fullwidth #portal-globalnav,
+.fullwidth #portal-header,
+.fullwidth .flex-container,
+.fullwidth #visual-portal-wrapper {
+    max-width: 100%; }
+.fullwidth #visual-portal-wrapper {
+    overflow: hidden; }
+.fullwidth #portal-columns {
+    min-width: 100%; }
 /* end header area */
 
 #eea-above-content {
@@ -626,49 +639,6 @@ ul {
     border: 1px solid &dtml-mediumBackgroundColor;;
 }
 
-@media screen and (max-width: 1199px) {
-    #portal-logo-link-header, .navbar-toggle {
-        display: block;
-    }
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    }
-
-    .navbar-toggle .icon-bar {
-        display: block;
-        width: 22px;
-        height: 2px;
-        border-radius: 1px;
-        background: #888;
-    }
-    .navbar-fixed-top{
-        position: fixed;
-        right: 0;
-        left: 0;
-        top: 0;
-        z-index: 1030;
-        min-height: 60px;
-        width: 100vw;
-    }
-    .navbar-toggle .icon-bar + .icon-bar {
-        margin-top: 4px;
-    }
-
-    #visual-portal-wrapper {
-        overflow: hidden;
-    }
-    #portal-globalnav > li > a {
-        color: white;
-        font-weight: bold;
-    }
-}
 @media screen and (min-width: 1200px) {
     .navbar-collapse {
         display: block;
