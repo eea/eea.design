@@ -89,6 +89,7 @@
 .table-link-title,
 .table-link-description {
     padding: 0;
+    border: 0;
 }
 
 .section-dark a, .section-dark .eea-icon, .section-dark .section-header, .colophon-section table {
