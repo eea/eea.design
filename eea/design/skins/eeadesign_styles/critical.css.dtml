@@ -384,6 +384,32 @@ ul {
      vertical-align: 0;	
 }
 
+/* refs #71260 - portal-breadcrumbs refactory */
+
+/* on fullwidth the breadcrumb should align to the left of the browserwindow not center align */
+.fullwidth .plone-breadcrumb .container {
+    margin: 0;
+    min-width: 100%;
+}
+
+.plone-breadcrumb-list > li + li:after {
+    content: "\f054";
+    position: absolute;
+    color: &dtml-globalBorderColor;;
+    padding: 0;
+    font-family: "FontAwesome";
+    top: 0;
+    left: -18px;
+}
+.plone-breadcrumb a {
+    color: #086ca3;
+}
+.plone-breadcrumb .breadcrumbSeparator,
+.plone-breadcrumb #breadcrumbs-you-are-here{
+    display: none;
+}
+
+
 /* @group Content Area */
 .portalMessage {
     background-color: #f3f3f3;

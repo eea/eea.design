@@ -1414,58 +1414,6 @@ ul.social-buttons {
 /* end eea tile design */
 
 
-/* media object similar to bootstrap media object however this uses flex*/
-
-.media {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-}
-
-
-.media-box {
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
-.media--discreet  {
-    line-height: 1.5;
-}
-.media-link {
-    display: flex;
-}
-/* utilities */
-.block {
-    display: block;
-}
-.my-2 {
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
-.mb-0 {
-    margin-bottom: 0 !important;
-}
-
-.mt-0 {
-    margin-top: 0 !important;
-}
-
-.ma-0 {
-    margin: 0 !important;
-}
-
-.space-evenly {
-    justify-content: space-evenly;
-}
-
-.space-around {
-    justify-content: space-around;
-}
-
-.align-center {
-    align-items: center;    
-}
 
 /* </dtml-let> */
 /* </dtml-with> */
