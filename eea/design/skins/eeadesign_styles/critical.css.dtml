@@ -337,7 +337,7 @@ ul {
 
 .icon-siteaction-europe-flag {
     background: url("&dtml-xurl;/europe-flag.svg") no-repeat top left;
-    display: block;
+    display: inline-block;
     width: 60px;
     height: 38px;
     -webkit-background-size: contain;
