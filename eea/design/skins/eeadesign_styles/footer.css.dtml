@@ -178,6 +178,10 @@
     }
 }
 
+@media screen and (max-width: 442px) {
+    .section-contact-us .media-body {
+        width: 115px; }
+}
 @media screen and (max-width: 480px) {
     .europe-agency-text {
         display: block;
@@ -237,10 +241,6 @@
 
 }
 
-@media screen and (max-width: 442px) {
-    .section-contact-us .media-body {
-        width: 115px; }
-}
 @media screen and (max-width: 1023px) {
 /* 72171 hide header elements on phones and portrait tablet resolutions */
     .colophon-links {
