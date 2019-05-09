@@ -126,6 +126,10 @@
     }
 }
 
+@media screen and (max-width: 442px) {
+    .section-contact-us .media-body {
+        width: 115px; }
+}
 @media screen and (max-width: 480px) {
     .europe-agency-text {
         display: block;

@@ -9,8 +9,8 @@
                isViewTemplate context/@@plone_context_state/is_view_template">
 
     <div class="colophonWrapper">
-        <div class="colophon-section  section-bordered">
-            <a href="https://europa.eu/european-union/about-eu_en">
+        <div class="colophon-section section-centered section-bordered">
+            <a href="https://europa.eu/european-union/about-eu_en" class="flex">
                 <span class="icon-siteaction-europe-flag" alt="EU flag" title="European Union Flag"
                      i18n:attributes="alt;title"><!--? --></span>
                 <span class="europe-agency-text" i18n:translate="">The EEA is an agency of the European Union</span>
