@@ -228,6 +228,7 @@
 td.gsc-search-button {
     width: 1%;
     vertical-align: bottom;
+    border: 0;
 }
 
 .search_glossary_link, .search_advanced_link {

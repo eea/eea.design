@@ -341,14 +341,5 @@
   .bordered-left:before {
     left: -5%; } }
 
-@media screen and (max-width: 1199px) {
-  input[type="text"] {
-    width: 100%; }
-  a, label {
-    color: #FFF;
-    margin: 0; }
-  .actionMenuContent {
-    background-color: transparent; } }
-
 /* </dtml-let> */
 /* </dtml-with> */

@@ -1,6 +1,24 @@
+div#portal-header {
+    padding-right: 0 !important;
+}
 #siteaction-login-menu {
     display: none;
 }
-div#portal-header {
-    padding-right: 0 !important;
+
+#eea-above-columns {
+    background-color: #FFF;
+}
+
+.eea-accordion-panels {
+    border-top-width: 0;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+
+@media screen and (max-width: 1199px) {
+    #header-holder .navbar-collapse {
+        height: 95vh !important; /* bootstrap.js adds height auto */
+    }
 }
