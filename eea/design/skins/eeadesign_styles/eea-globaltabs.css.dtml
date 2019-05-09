@@ -45,6 +45,15 @@
     display: none;
 }
 
+#tip-siteaction-chooselang-menu {
+    width: 145px;
+}
+#tip-siteaction-chooselang-menu li {
+    display: list-item;
+    margin: 0;
+    text-align: left;
+}
+
 #tip-article-language {
     width: 400px;
     left: initial !important;
@@ -82,6 +91,153 @@
     display: block;
 }
 
+/* Searchbox style and positioning */
+.gsc-clear-button {
+    display: none;
+}
+
+.portal-searchbox {
+    font-size: 1.2em;
+    text-align: left;
+    display: none;
+}
+
+.panel .portal-searchbox {
+    display: block;
+    float: none;
+    clear: both;
+    margin: 1em;
+    width: 400px;
+    overflow: inherit;
+}
+
+.portal-searchbox form {
+    padding: 0;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.portal-searchbox a {
+    color: &dtml-linkColor;;
+    border: none;
+    font-size: 85%;
+}
+
+.gsc-control-cse {
+    background-color: transparent;
+    padding: 1px 0 0 0;
+    border: 0;
+}
+.gsc-input-query {
+    border: none;
+    background: #fff;
+    padding: 3px 6px;
+    height: 30px !important;
+    width: 100%;
+    vertical-align: top;
+    font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
+}
+.gsc-input-query:focus {
+    background: #FFF none !important;
+}
+.gsc-input {
+    padding: 0;
+    border: 1px solid #BBB;
+}
+
+
+.gsc-cursor-current-page {
+    color: #FFF;
+}
+
+.gsc-results-wrapper-overlay {
+    height: 96%;
+    top: 2%;
+    width: 90%;
+    left: 5%;
+}
+
+.gsib_b {
+    display: none;
+}
+.gsc-input-box {
+    height: 100%;
+    position: relative;
+}
+.gsc-search-box {
+    border-style: none;
+    border-width: 0;
+    border-spacing: 0 0;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.gsc-search-box td {
+    padding: 0;
+}
+
+.gsc-tabsArea > div {
+    overflow: visible;
+}
+
+.gsc-cursor-current-page {
+    padding: 5px;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-item {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    overflow: hidden;
+}
+
+.autocomplete-active {
+    background-color: #e9e9e9 !important;
+}
+
+.gsc-input-box {
+    position: relative;
+}
+
+#portal-header {
+    overflow: inherit;
+}
+
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+    border-color: &dtml-corporateBlue;;
+    background-color: &dtml-corporateBlue;;
+    background-image: none;
+    filter: none;
+    border: none;
+    padding: 6px 27px;
+    text-align: center;
+    color: #fff;
+}
+
+td.gsc-search-button {
+    width: 1%;
+    vertical-align: bottom;
+}
+
+.search_glossary_link, .search_advanced_link {
+    font-size: 11px;
+}
+
+.search_glossary_link:hover, .search_advanced_link:hover {
+    text-decoration: none;
+}
+/* @end Searchbox style and positioning */
 /* </dtml-let> */
 /* </dtml-with> */
 
