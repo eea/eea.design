@@ -49,13 +49,7 @@
     width: 69%; }
 
   .eea-list-columns {
-    padding: 0 1em 0 0.5em; }
-
-  .section-dark .eea-icon-4x {
-    font-size: 3.5em; } }
-@media screen and (max-width: 442px) {
-  .section-contact-us .media-body {
-    width: 115px; } }
+    padding: 0 1em 0 0.5em; } }
 @media screen and (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%; }
@@ -92,12 +86,7 @@
   .portlet-megatopic {
     display: block;
     flex: none;
-    width: 100%; }
-
-  .europe-agency-text {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.5em; } }
+    width: 100%; } }
 @media screen and (max-height: 480px) and (orientation: landscape) {
   .filter-topic {
     width: 80%; }
@@ -313,26 +302,6 @@
     display: none; }
 
   /* END #89398 GIS Map Applications get a slimmer mobile view */
-  #portal-colophon .colophonWrapper, .colophon-middle {
-    text-align: center; }
-
-  .colophon-left, .colophon-right, .colophon-right span {
-    width: 100%;
-    float: none; }
-
-  .colophon-right img {
-    float: none; }
-
-  .colophon-right {
-    margin-top: 1em; }
-
-  .colophonWrapper {
-    display: block; }
-
-  .colophon-middle {
-    display: block;
-    margin: 1em; }
-
   .template-soer2015_frontpage .eea-row {
     margin-left: 0; }
   .template-soer2015_frontpage .eea-accordion-panels.eea-accordion-panels-soer .pane {
@@ -377,47 +346,7 @@
   .template-dc_view .right-column-area {
     position: absolute;
     right: 0;
-    top: 0; }
-
-  .table-link-title {
-    margin-left: 1em; }
-
-  .table-link-description {
-    text-align: left;
-    margin-left: 1em;
-    display: block; }
-
-  .right-table .table-link-description {
-    text-align: right;
-    margin: 0 1em 0 0; }
-
-  .left-table .table-link-title {
-    text-align: right; } }
-@media screen and (max-width: 1199px) {
-  input[type="text"] {
-    width: 100%; }
-
-  a, label {
-    color: #FFF;
-    margin: 0; }
-
-  .actionMenuContent {
-    background-color: transparent; } }
-@media screen and (min-width: 1200px) {
-  .portal-searchbox .gsc-search-button {
-    cursor: pointer;
-    height: 32px;
-    margin: 0;
-    width: 70px;
-    border-radius: 0;
-    font: bold 12px 'Open Sans', Sans-serif; }
-
-  #secondary-portaltabs .eea-accordion-panels,
-  #portal-logo-link-header {
-    display: none; }
-
-  .navbar-toggle {
-    display: none; } }
+    top: 0; } }
 @media screen and (min-width: 768px) and (max-width: 800px) {
   .template-soer2015_frontpage .column-area {
     padding-left: 0;
@@ -457,6 +386,32 @@
 
   .bordered-left:before {
     left: -5%; } }
+@media screen and (max-width: 1199px) {
+  input[type="text"] {
+    width: 100%; }
+
+  a, label {
+    color: #FFF;
+    margin: 0; }
+
+  .actionMenuContent {
+    background-color: transparent; } }
+@media screen and (min-width: 1200px) {
+  .portal-searchbox .gsc-search-button {
+    cursor: pointer;
+    height: 32px;
+    margin: 0;
+    width: 70px;
+    border-radius: 0;
+    font: bold 12px 'Open Sans', Sans-serif; }
+
+  #secondary-portaltabs .eea-accordion-panels,
+  #portal-logo-link-header {
+    display: none; }
+
+  .navbar-toggle {
+    display: none; } }
 /* </dtml-let> */
 /* </dtml-with> */
 
+/*# sourceMappingURL=eea-responsive.css.dtml.map */
