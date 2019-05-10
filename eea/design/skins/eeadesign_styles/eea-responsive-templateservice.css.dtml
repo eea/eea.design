@@ -74,7 +74,7 @@
     top: 0;
     z-index: 1030;
     min-height: 60px;
-    width: 100vw; }
+    width: 100%; }
   .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px; }
   #portal-top {
