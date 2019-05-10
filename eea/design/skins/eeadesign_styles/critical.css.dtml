@@ -53,10 +53,10 @@
 ul,ol { list-style:none; }
 
 h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
-.h1 {
+h1, .h1 {
     font-size: 180%;
 }
-.h2 {
+h2, .h2 {
     font-size: 150%;
 }
 a img,:link img,:visited img { border:none }
