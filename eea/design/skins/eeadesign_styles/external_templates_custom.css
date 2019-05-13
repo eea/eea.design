@@ -4,6 +4,11 @@ h3 {
     margin: 1em 0;
     font-weight: bold;
 }
+
+#header-holder, #footer-wrapper, #portal-colophon {
+   font-family: 'Open Sans', Verdana, sans-serif;
+}
+
 div#portal-header {
     padding-right: 0 !important;
 }
