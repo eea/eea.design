@@ -19,7 +19,7 @@
         use_search_links use_search_links|python:True;
         search_google string:https://cse.google.com/cse;
         search_apps string:${context/portal_url}/eea-custom-search;
-        search_input_class search_input_class|string:gsc-input-query;
+        search_input_class search_input_class|string:gsc-input-query js-gsc-input-query;
             search_input_placeholder_text search_input_placeholder_text|python:'Search' if is_en else 'Google Custom Search';
         search_button_class search_button_class|string:gsc-search-button gsc-search-button-v2;
         action python:search_apps if is_en else search_google;
