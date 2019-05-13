@@ -1,11 +1,26 @@
 Changelog
 =========
 
-24.0-dev0 - (unreleased)
+24.2-dev0 - (unreleased)
 ---------------------
 * Change: load raven from skin folder instead of browserview directory making
   it easier to bundle for template service
   [ichim-david refs #105453]
+* Change: added fixes from custom for galleryview and
+  lazy loading of gallery images
+  [ichim-david refs #104101]
+
+24.1 - (2019-03-29)
+---------------------
+* Bugfix: added overlay and popupform code needed for manage rules pages
+  [ichim-david refs #102965]
+
+24.0 - (2019-03-20)
+---------------------
+* Bugfix: When using the global search from the header, don't display the
+  expired results
+  [szabozo0 refs #103858]
+>>>>>>> develop
 
 23.9 - (2019-02-21)
 ---------------------
