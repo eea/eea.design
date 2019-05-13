@@ -23,6 +23,9 @@ div#portal-header {
 }
 
 
+.portal-globalnav > li > a, .eea-siteaction > a {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
 @media screen and (max-width: 1199px) {
     #header-holder .navbar-collapse {
         height: 95vh !important; /* bootstrap.js adds height auto */

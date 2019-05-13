@@ -394,6 +394,7 @@ jQuery(document).ready(function($) {
 
     // 91577 show and hide mobile menu
     $(".navbar-toggle").click(function(ev) {
+        ev.stopImmediatePropagation();
         $(ev.target).toggleClass('collapsed');
         $(".navbar-collapse").toggleClass('in');
     });
