@@ -41,6 +41,7 @@
     display: inline-block;
     margin: 0 1em 0.75em;
     font-size: 11px;
+    line-height: 1.5em;
 }
 .colophon-links a, .colophon-links a:visited,
 .colophon-links a:hover {
@@ -98,11 +99,13 @@
 }
 .colophon-section table {
     font-size: 1em;
+    margin: 0;
 }
 .section-header {
     text-decoration: none;
     border: 0;
     margin: 0 0 0.83em 0;
+    line-height: 1.5em;
 }
 
 .section-top {

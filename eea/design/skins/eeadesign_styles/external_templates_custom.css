@@ -9,6 +9,10 @@ h3 {
    font-family: 'Open Sans', Verdana, sans-serif;
 }
 
+#portal-top {
+    color: #333;
+}
+
 div#portal-header {
     padding-right: 0 !important;
 }
@@ -30,6 +34,10 @@ div#portal-header {
 
 .portal-globalnav > li > a, .eea-siteaction > a {
     font-family: "Open Sans", Verdana, sans-serif;
+}
+
+#portal-colophon {
+    color: #333;
 }
 @media screen and (max-width: 1199px) {
     #header-holder .navbar-collapse {
