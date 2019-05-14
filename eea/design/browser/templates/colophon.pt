@@ -90,11 +90,11 @@
                     <strong i18n:translate="">CMS login</strong></a>
             </p>
 
-            <p class="colophon-links">
+            <p class="colophon-links" tal:condition="not:isAnon">
+
                 <a href="@@cache.invalidate.footer" rel="nofollow"
                    title="Refresh this page" i18n:attributes="title"
                          tal:attributes="href string:${page_url}/cache.settings?redirect=${current_base_url}"
-                         tal:condition="not:isAnon"
                          i18n:translate="">Refresh this page</a>
             </p>
             </div>
