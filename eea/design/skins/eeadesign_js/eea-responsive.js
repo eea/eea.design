@@ -331,6 +331,7 @@ jQuery(document).ready(function($) {
                 'class': 'eea-icon-right-container',
                 html: $el.find('a').attr('title')
             });
+            $result.append('<span class="eea-icon eea-icon-right"></span>');
             $result.appendTo($acordion_panel);
             $panel.appendTo($acordion_panel);
             $acordion_panel.appendTo($holder);
