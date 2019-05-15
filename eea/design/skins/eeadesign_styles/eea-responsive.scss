@@ -180,17 +180,6 @@ $input-color: #f3f3f3;
 }
 
 @media screen and (max-width: 768px) {
-
-  #chooselang {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-  }
-  #chooselang li {
-    display: list-item;
-    list-style: square inside url("&dtml-xurl;/bullet.gif");
-  }
-
   /* site logo height differences set for each language in order to fit the bootstrap navbar */
   .site-cs #printLogo,
   .site-fr #printLogo,

@@ -48,9 +48,10 @@
 #tip-siteaction-chooselang-menu {
     width: 145px;
 }
-#tip-siteaction-chooselang-menu li {
+#tip-siteaction-chooselang-menu li,
+#chooselang li {
     display: list-item;
-    margin: 0;
+    margin: 0 0 0.5em 0;
     text-align: left;
     line-height: normal;
 }
