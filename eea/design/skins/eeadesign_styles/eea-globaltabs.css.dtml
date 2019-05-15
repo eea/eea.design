@@ -52,6 +52,11 @@
     display: list-item;
     margin: 0;
     text-align: left;
+    line-height: normal;
+}
+#chooselang  {
+    margin: 0;
+    list-style: square inside url("&dtml-portal-url/bullet.gif");
 }
 
 #tip-article-language {
@@ -128,6 +133,7 @@
 }
 .gsc-input-query {
     border: none !important;
+    border-radius: 0 !important;
     background: #fff;
     padding: 3px 6px;
     height: 30px !important;
@@ -140,7 +146,6 @@
 }
 .gsc-input {
     padding: 0;
-    border: 1px solid #BBB;
 }
 
 
@@ -161,6 +166,7 @@
 .gsc-input-box {
     height: 100%;
     position: relative;
+    border: 1px solid #BBB;
 }
 .gsc-search-box {
     border-style: none;
