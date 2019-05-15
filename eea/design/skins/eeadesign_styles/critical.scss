@@ -715,8 +715,7 @@ ul {
 * for justify-content: space-between since it doesn't support clip-path */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .hiddenStructure {
-    display: none;
-
+    display: none !important;
     }
   /* globalmenu isn't centered without a specific width the logo link is 80px */
   #portal-logo-link {
