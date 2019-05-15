@@ -56,7 +56,7 @@
 }
 #chooselang  {
     margin: 0;
-    list-style: square inside url("&dtml-portal-url/bullet.gif");
+    list-style: square inside url("&dtml-portal_url;/bullet.gif");
 }
 
 #tip-article-language {
@@ -177,6 +177,7 @@
 }
 .gsc-search-box td {
     padding: 0;
+    border: 0;
 }
 
 .gsc-tabsArea > div {
@@ -233,6 +234,7 @@ td.gsc-search-button {
     width: 1%;
     vertical-align: bottom;
     border: 0;
+    font: bold 12px 'Open Sans', Sans-serif;
 }
 
 .search_glossary_link, .search_advanced_link {

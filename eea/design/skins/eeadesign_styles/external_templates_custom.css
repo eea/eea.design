@@ -9,6 +9,11 @@ h3 {
    font-family: 'Open Sans', Verdana, sans-serif;
 }
 
+/* normalize size of search input */
+.gsc-search-button-v2 {
+    height: 30px;
+    font-size: 12px;
+}
 #portal-top {
     color: #333;
 }
