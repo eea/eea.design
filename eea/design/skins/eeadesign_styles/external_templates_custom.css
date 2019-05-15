@@ -21,7 +21,9 @@ h3 {
 div#portal-header {
     padding-right: 0 !important;
 }
-#siteaction-login-menu {
+#siteaction-login-menu,
+#eap-siteaction-search-menu,
+#eap-siteaction-chooselang-menu .pane {
     display: none;
 }
 
