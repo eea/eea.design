@@ -167,6 +167,9 @@
 .gsc-input-box {
     height: 100%;
     position: relative;
+}
+
+.portal-searchbox .gsc-input-box {
     border: 1px solid #BBB;
 }
 .gsc-search-box {
