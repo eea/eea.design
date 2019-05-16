@@ -468,29 +468,6 @@ $input-color: #f3f3f3;
 }
 
 @media screen and (min-width: 768px) {
-  .eea-right-section-slider {
-    display: none;
-  }
-  .right-area-js {
-    padding: 0 1.5em 0 0; /* add padding from center area to the right area*/
-  }
-  .left-area-js {
-    padding: 0 0.5em; /* add padding from center area to the left area*/
-  }
-
-  #faceted-form {
-    .eea-accordion-title, .eea-faceted-filter {
-      display: none;
-    }
-    .eea-accordion-panels {
-      border: 0;
-      overflow: auto;
-    }
-    .pane {
-      display: block !important;
-    }
-  }
-
   .eea-tabs-panel {
     .eea-accordion-title {
     display: none;
@@ -512,6 +489,33 @@ $input-color: #f3f3f3;
   }
 
 }
+
+@media screen and (min-width: 769px) {
+  .eea-right-section-slider {
+    display: none;
+    }
+  .right-area-js {
+    padding: 0 1.5em 0 0; /* add padding from center area to the right area*/
+    }
+  .left-area-js {
+    padding: 0 0.5em; /* add padding from center area to the left area*/
+    }
+
+  #faceted-form {
+    .eea-accordion-title, .eea-faceted-filter {
+      display: none;
+      }
+    .eea-accordion-panels {
+      border: 0;
+      overflow: auto;
+      }
+    .pane {
+      display: block !important;
+      }
+    }
+
+}
+
 @media screen and (min-width: 768px) and (max-width: 800px) {
 
   .template-soer2015_frontpage {
