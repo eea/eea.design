@@ -10,9 +10,9 @@ fontColor:string=#333333
 fontSmallSize:string=85%
 
 #corporate main colors
-corporateGreen:string=#009966
+corporateGreen:string=#008675
 corporateGreenTwo:string=#777c1f
-corporateBlue:string=#006699
+corporateBlue:string=#004B87
 corporateBlueTwo:string=#006699
 
 
@@ -28,6 +28,7 @@ backgroundColor:string=#e8f0fb
 
 #general divisions colors
 lightGreyDivisionColor:string=#cccccc
+lightGreyColor:string=#666
 
 #general bgc for boxes and portlets
 whiteBackgroundColor:string=#ffffff
@@ -84,8 +85,9 @@ columnOneWidth:string=16em
 columnTwoWidth:string=16em
 
 # boostrap inspired variables
-padding-base:string=1.5em
-padding-half:string=0.75em
+padding-base:string=15px
+padding-double:string=30px
+padding-half:string=8px
 
 # 15235 font icon names and values
 # always add any new icons here for easier readability and maintainability

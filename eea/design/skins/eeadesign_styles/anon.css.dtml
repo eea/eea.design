@@ -26,7 +26,7 @@ body.template-login_form #content,
 
 .login_form,
 .login-forgotten-password {
-    margin-left: 6.5em;
+    text-align: center;
 }
 #popup_login_form .login-form input {
     font-size: 100%;

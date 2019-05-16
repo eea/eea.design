@@ -14,7 +14,6 @@
             <div id="highlights-block" 
                  tal:define="global datamaps_view context/@@data_and_maps_logic;">
                 <div id="main-content">
-                    <div class="visualClear"><!-- &nbsp; --></div>
                     <div id="articles-area" class="right-column-area">
 
                         <!-- featured content -->
@@ -113,7 +112,6 @@
 
                         </tal:whatsnew>
                     </div>
-                    <div class="visualClear"><!-- &nbsp; --></div>
                 </div>
             </div>
 

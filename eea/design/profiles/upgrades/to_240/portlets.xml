@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<portlets remove="False">
+  <assignment name="portlet_footer_sections" category="context" key="/"
+    manager="plone.footer" type="portlets.Classic" visible="True">
+    <property name="macro">portlet</property>
+    <property name="template">portlet_footer_sections</property>
+  </assignment>
+</portlets>

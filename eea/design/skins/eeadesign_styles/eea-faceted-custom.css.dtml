@@ -46,6 +46,7 @@
     color: #FFF;
     margin-top: -35px;
     margin-right: 1em;
+    padding-bottom: 1em;
 }
 
 #content .faceted-operator a {

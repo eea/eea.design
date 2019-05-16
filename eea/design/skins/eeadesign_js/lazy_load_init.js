@@ -5,7 +5,7 @@ function isElementInViewport(el) {
     // Detect if element is in viewport
     var rect = el.getBoundingClientRect();
     return (
-    rect.top > 0 && rect.left > 0 && rect.bottom <= w_inner_height && rect.right <= w_inner_width);
+        rect.top > 0 && rect.left > 0 && rect.bottom <= w_inner_height && rect.right <= w_inner_width);
 }
 
 function enableLazy(element) {

@@ -3,6 +3,9 @@ Changelog
 
 24.2-dev0 - (unreleased)
 ---------------------
+* Change: load raven from skin folder instead of browserview directory making
+  it easier to bundle for template service
+  [ichim-david refs #105453]
 * Change: added fixes from custom for galleryview and
   lazy loading of gallery images
   [ichim-david refs #104101]

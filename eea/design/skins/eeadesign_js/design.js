@@ -62,59 +62,6 @@ jQuery(document).ready(function($) {
         e.stopPropagation();
     });
 
-    // // 72862 mini header
-    var $mini_header = $(".mini-header");
-    if ($mini_header.length) {
-        (function() {
-            var $portal_header = $("#portal-header");
-            var $cross_site_top = $("#cross-site-top");
-            var $ptools = $("#portal-personaltools-wrapper");
-            var $search = $("#portal-searchbox");
-            var $parent = $("#secondary-globalnav-tips");
-
-            $body.on('eea-miniheader-toggled', function() {
-                // hide globalnav current triangle when we have the
-                // network section open
-                $(".eea-nav-current").toggleClass('eea-nav-inactive');
-            });
-            // add any cross_site_top panels as siteaction panels
-            var make_siteaction_panel = function($content, $parent, panel_id, use_only_children) {
-                var $panel = $("<div class='panel' id='" + panel_id + "'>" +
-                    "<div class='panel-top'></div>" +
-                    "<div class='panel-content shadow'>" +
-                    "</div>");
-                var $clone = $content.clone();
-                if (use_only_children) {
-                    $clone = $clone.children();
-                }
-                $clone.appendTo($panel.find('.panel-content'));
-                $panel.appendTo($parent);
-            };
-            make_siteaction_panel($search, $parent, 'tip-siteaction-search-menu');
-            make_siteaction_panel($popup_login, $parent, 'tip-siteaction-login-menu', true);
-            make_siteaction_panel($("#portal-personaltools"), $parent, 'tip-siteaction-user-menu', true);
-
-            $portal_header.addClass("eea-miniheader-element");
-            $ptools.addClass("eea-miniheader-element");
-            $("#portaltab-europe").css('display', 'none');
-            $("#secondary-portaltabs").find('> li > a').click(function(ev) {
-                $('.eea-navsiteactions-active').removeClass('eea-navsiteactions-active');
-                $(ev.target).closest('li').addClass('eea-navsiteactions-active');
-                ev.preventDefault();
-            });
-            $body.on('eea-miniheader-hide', function() {
-                $cross_site_top.hide();
-                $(".portal-logo").hide();
-                $search.hide();
-                $ptools.hide();
-                if (!$portal_header.find('.networkSites').length) {
-                    $(".networkSites").eq(0).clone().prependTo($portal_header);
-                }
-            });
-            $("#siteaction-networks-menu").find("a").addClass("mini-header-expander");
-        }());
-    }
-
     // custom requirement to swap placement of the table and fiche-summary
     // for briefings found within the airs section
     var air_fiches = $(".portaltype-fiche.section-airs");
@@ -193,6 +140,12 @@ jQuery(document).ready(function($) {
 
     $body.click(function() {
         $('#popup_login_form').slideUp();
+    });
+
+    $("#themes-megatopics-area").find('.promoHeader').click(function(ev){
+        if (window.innerWidth > 480) {
+            ev.stopImmediatePropagation();
+        }
     });
 
     /* #28278 prevent figures from printing charts without the figure title on the same line
@@ -447,53 +400,6 @@ jQuery(document).ready(function($) {
         window.createCookie('survey_message', 'never', 365);
     }
 
-    /* #27214 generic panel slider functionality */
-    var $right_section_container = $(".eea-right-section");
-    if ($right_section_container.length) {
-        (function insert_section() {
-            $right_section_container.each(function(idx, el) {
-                // insert the slider button in case we are missing it if we want
-                // to keep the needed markup as small as possible
-                var $el = $(el), $right_section_slider = $el.prev();
-                if (!$right_section_slider.hasClass('eea-right-section-slider')) {
-                    $right_section_slider = $('<div class="eea-section eea-right-section-slider eea-scrolling-toggle-visibility"><span class="eea-icon eea-icon-5x eea-icon-caret-left eea-icon-anim-horizontal animated"></span></div>');
-                    $right_section_slider.insertBefore($el);
-                }
-                $right_section_slider.click(function() {
-                    var $this = $(this);
-                    $this.toggleClass("eea-right-section-slider-active")
-                        .next().toggleClass("eea-right-section-active eea-scrolling-keep-visible");
-
-                    $this.removeClass("is-eea-hidden");
-
-                    if ($this.hasClass("eea-right-section-slider-active")) {
-                        // set overflow hidden when object is in view in order to
-                        // avoid scrolling of body
-                        document.body.style.overflow = 'hidden';
-                        document.body.style.position = 'fixed';
-                    }
-                    else {
-                        if (document.body.style.overflow === "hidden") {
-                            document.body.style.overflow = 'auto';
-                            document.body.style.position = 'relative';
-                        }
-                    }
-
-                });
-
-            });
-        })();
-
-    }
-    if ($('#eea-above-columns').find('#portal-breadcrumbs').length) {
-        $('#header-holder').find('.navbar').addClass('hideShadow');
-    }
-
-    // 91577 show and hide mobile menu
-    $(".navbar-toggle").click(function(ev) {
-        $(ev.target).toggleClass('collapsed');
-        $(".navbar-collapse").toggleClass('in');
-    });
 
     $('#globalstatusmessage').each(function(idx, el) {
         $(el).find("dl:not([class*='eea-icon'])").addClass("eea-icon eea-icon-magic");

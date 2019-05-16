@@ -1,7 +1,4 @@
 <div id="cross-site-top">
-   <div metal:use-macro="context/@@global_externalsites/external_sites">
-       Eionet, EW ..
-   </div>
        <ul id="portal-siteactions"
                i18n:domain="eea" >
            <tal:siteactions     tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};
@@ -15,16 +12,17 @@
 
                <li tal:repeat="saction site_actions"
                        tal:attributes="id string:siteaction-${saction/id}${idPostfix}" class="eea-siteaction">
-                   <a href=""
-                           tal:define="title saction/title;
-                                   id saction/id;
-                                           icon python:getIconFor('site_actions', saction['id'], 'eea-icon eea-icon-lg');
-                                                   accesskey python: accesskeys.get(id, '');"
+                   <a href="" target="_blank"
+                        tal:define="title saction/title;
+                                    id saction/id;
+                                    description saction/description;
+                                    icon python:getIconFor('site_actions', saction['id'], 'eea-icon eea-icon-lg');
+                                    accesskey python: accesskeys.get(id, '');"
                            tal:attributes="href saction/url;
                                    title title;
                                    accesskey accesskey;">
                                    <span tal:attributes="class icon"><!-- --></span>
-                       <span class="siteaction-title" tal:content="title"></span>
+                       <span class="siteaction-title" tal:content="python:title if id != 'chooselang' else description"></span>
                    </a>
                </li>
            </tal:siteactions>

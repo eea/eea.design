@@ -124,16 +124,8 @@
     <browser:viewlet
         name="eea.js_belowbodytag"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        insert-before="eea.cross_site_top"
+        insert-before="*"
         class=".viewlets.JSBelowBodyViewlet"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="eea.cross_site_top"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        template="templates/cross_site_top.pt"
         layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
         />
@@ -164,34 +156,6 @@
         permission="zope2.View"
         />
 
-    <browser:viewlet
-        name="plone.global_sections"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".viewlets.GlobalSectionsViewlet"
-        template="templates/sections.pt"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        />
-
-    <!-- The personal bar
-    <browser:viewlet
-        name="plone.personal_bar"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
-        template="templates/personal_bar.pt"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        />
-    -->
-
-    <!-- use plone standard personal bar and move it to the top -->
-    <browser:viewlet
-        name="plone.personal_bar"
-        layer=".interfaces.IEEACommonLayer"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
-        permission="zope2.View"
-        />
 
     <browser:viewlet
         name="plone.htmlhead.title"
@@ -309,13 +273,6 @@
         permission="plone.app.portlets.ManagePortlets"
         />
 
-    <browser:page
-        name="global_externalsites"
-        for="*"
-        template="templates/global_externalsites.pt"
-        layer=".interfaces.IEEACommonLayer"
-        permission="zope2.View"
-        />
 
     <browser:page
         name="cross_site_panels"

@@ -98,23 +98,6 @@ div.field span.required:after {
 /* @group Pulldown menus */
 
 /* @group Personal tools pulldown */
-#portal-personaltools dl {
-}
-#portal-personaltools dt {
-    font-weight: normal;
-}
-#portal-personaltools dt.actionMenuHeader a:after {
-    content: " ▼";
-}
-#portal-personaltools dd {
-    right: 0;
-    padding-top: 0.5em;
-}
-#portal-personaltools dd a {
-    line-height: 2em;
-    padding: 0 0.75em;
-}
-
 /* @end */
 
 /* @group Content pulldowns */

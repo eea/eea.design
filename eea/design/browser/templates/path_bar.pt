@@ -10,13 +10,13 @@
                      cropcurrent site_properties/breadcrumbs_current_length|python: 100;
                      "
           tal:condition="breadcrumbs">
-  <div class="container">
+  <div class="eea-container breadcrumbs-container">
     <span id="breadcrumbs-you-are-here" class="hiddenStructure"
             i18n:translate="you_are_here">You are here:</span>
-    <ol aria-labelledby="breadcrumbs-you-are-here">
+    <ol aria-labelledby="breadcrumbs-you-are-here" class="plone-breadcrumb-list">
       <li id="breadcrumbs-home">
         <a tal:attributes="href view/navigation_root_url" title="Home" i18n:attributes="title">
-            <em class="eea-icon eea-icon-home"></em>
+            <em class="eea-icon eea-icon-lg eea-icon-home eea-icon-marginless"></em>
         </a>
       </li>
       <li tal:repeat="crumb breadcrumbs"

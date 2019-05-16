@@ -15,11 +15,6 @@ a:hover, a:focus {
     outline: 0;
 }
 
-#printLogo {
-    height: 71px;
-}
-
-
 dl {
     margin-bottom: 0;
 }

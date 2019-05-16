@@ -1,0 +1,69 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* display utilities */
+.inline-block {
+    display: inline-block !important;
+}
+.block {
+    display: block !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.visualHidden {
+    display: none !important;
+}
+.hiddenElem {
+    display: none !important;
+}
+
+.is-eea-hidden {
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    display: none !important;
+}
+
+/* overflow utilities */
+.overflow_hidden {
+    overflow: hidden !important;
+}
+
+/* spacing utilities */
+.my-2 {
+    margin-left: 2em !important;
+    margin-right: 2em !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.ma-0 {
+    margin: 0 !important;
+}
+
+/* flex utilities */
+.space-evenly {
+    justify-content: space-evenly !important;
+}
+
+.space-around {
+    justify-content: space-around !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+/* </dtml-let> */
+/* </dtml-with> */

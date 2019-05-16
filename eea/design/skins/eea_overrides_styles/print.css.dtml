@@ -317,16 +317,13 @@ iframe[src*="video"] {
 .languageCodes,
 #themes-object,
 #header-holder .navbar,
-#cross-site-top,
 #portal-footer img,
-#portal-siteactions,
 .hiddenStructure,
 .hiddenElem,
 #portal-searchbox,
 #portal-globalnav .plain,
 #portal-globalnav .selected,
 #portal-globalnav,
-#portal-personaltools,
 #portal-breadcrumbs,
 #edit-bar,
 #portal-column-one,
@@ -359,6 +356,7 @@ body.frontpage .portlet-promotions,
 #kss-spinner,
 #review-history,
 #content-history,
+#eea-versions-portlet,
 .listingBar,
 .link-presentation,
 input.standalone,
@@ -394,7 +392,8 @@ input.context,
 
 
 /* #27958 frontpage and themes print fixes */
-.gallery-ajax.visualClear {
+.gallery-ajax.visualClear,
+.eea-accordion-panel .pane {
     display: block !important;
 }
 #gallery-content-outer,

@@ -4,9 +4,6 @@
 
 
 /* @group Navigation/search customizes public.css */
-.mini-header #globalnav-holder {
-    border-top: 5px solid #FFF;
-}
 
 #portal-globalnav li a  {
     position: relative;
@@ -16,34 +13,15 @@
 #secondary-portaltabs-container {
     display: none;
 }
-.mini-header #portal-globalnav #secondary-portaltabs-container {
+
+.secondary-portaltabs {
     display: flex;
-}
-
-#secondary-portaltabs {
-    display: flex;
-    margin-left: 0;
-}
-
-#secondary-portaltabs li a {
-    padding: 1em 0.45em;
-}
-
-/* needed for mini header siteaction icons */
-.eea-navsiteactions-active > a,
-.eea-navsiteactions-active .eea-icon
-{
-    color: &dtml-linkColor; !important;
-    background-color: white !important;
+    margin: 0;
     position: relative;
-    z-index: 601;
 }
 
- #siteaction-networks-menu .mini-header-expander {
-     background-color: transparent !important;
- }
-#siteaction-networks-menu a:hover:after {
-    border-left-color: transparent;
+.secondary-portaltabs > li {
+    padding: 1em 0 1em 0.45em;
 }
 
 #secondary-globalnav-tips li a {
@@ -59,10 +37,6 @@
     font-weight: normal;
 }
 
-/*#chooselang li a,*/
-/*#chooselang li a:hover {*/
-/*}*/
-
 /* 72862 tweak placement of globalnav panels */
 #secondary-globalnav-tips .panel {
     top: 46px !important;
@@ -71,68 +45,34 @@
     display: none;
 }
 
+#tip-siteaction-chooselang-menu {
+    width: 145px;
+}
+#tip-siteaction-chooselang-menu li,
+#chooselang li {
+    display: list-item;
+    margin: 0 0 0.5em 0;
+    text-align: left;
+    line-height: normal;
+}
+#chooselang  {
+    margin: 0;
+    list-style: square inside url("&dtml-portal_url;/bullet.gif");
+}
+
 #tip-article-language {
     width: 400px;
+    left: initial !important;
 }
 #tip-article-language .panel-top {
     float: right;
 }
 /* @end 72862 tweak placement of globalnav panels */
 
-#portal-globalnav a:hover,
-#portal-globalnav .selected a {
-    background: transparent;
-    cursor: pointer;
-}
-
 #portal-globalnav .selected a {
     background-color: white;
     position: relative;
     height: 15px;
-}
-
-#portal-globalnav #portaltab-more,
-#portal-globalnav #portaltab-eeahome {
-    display: none;
-}
-.mini-header #portal-globalnav #portaltab-more,
-.mini-header #portal-globalnav #portaltab-eeahome {
-    display: flex;
-}
-
-#portal-globalnav .mini-header-expander {
-    margin: 0 0.5em;
-    padding: 0.5em 0.8em !important;
-    display: block;
-    align-items: normal;
-    overflow: visible;
-}
-
-#secondary-portaltabs .eea-icon:before {
-    margin: 0;
-}
-
-
-#portaltab-europe a {
-    font-weight: normal !important;
-}
-
-.mini-header #portaltab-europe {
-    display: none;
-}
-
-#portaltab-eeahome  {
-    width: 110px;
-    font-size: 70%;
-    line-height: 1.1;
-    padding-left: 35px;
-    background: url("&dtml-xurl;/globalnav-logo.png") no-repeat 10% 60%;
-}
-
-#secondary-portaltabs #portaltab-europe a {
-    font-weight: normal;
-    text-align: right;
-    padding: 1em 0;
 }
 
 #portal-globalnav .en_icon {
@@ -144,34 +84,171 @@
     height: 0;
 }
 
-/* 72862_mini_header hide eea-nav-current navigation arrow
-*  when we have the mini header as we have the expanding
-*  network panel
-*/
-.mini-header #portal-globalnav .eea-nav-inactive a:after {
-    display: none;
-}
 #portal-globalnav a:hover:after,
-#portal-globalnav .eea-nav-current a:after,
-.mini-header #portal-globalnav .eea-nav-current a:hover:after {
-    top: 0;
-    left: 50%;
+#portal-globalnav .eea-nav-current a:after {
+    top: 105%;
     content: " ";
     height: 0;
-    width: 0;
+    width: 100%;
     position: absolute;
     pointer-events: none;
-    border: 10px solid transparent;
-    border-top-color: #fff;
-    margin-left: -10px;
+    border-top: 3px solid &dtml-corporateGreen;;
+    left: 0;
     display: block;
 }
 
-#portaltab-eeahome a:hover:after,
-#secondary-portaltabs .mini-header-expander a:hover:after,
-#portaltab-europe a:hover:after {
+/* Searchbox style and positioning */
+.gsc-clear-button {
+    display: none;
+}
+
+.portal-searchbox {
+    text-align: left;
+    display: none;
+}
+
+.panel .portal-searchbox {
+    display: block;
+    float: none;
+    clear: both;
+    margin: 1em;
+    width: 400px;
+    overflow: inherit;
+}
+
+.portal-searchbox form {
+    padding: 0;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.portal-searchbox a {
+    color: &dtml-linkColor;;
     border: none;
 }
+
+.gsc-control-cse {
+    background-color: transparent;
+    padding: 1px 0 0 0;
+    border: 0;
+}
+.gsc-input-query {
+    border: none !important;
+    border-radius: 0 !important;
+    background: #fff;
+    padding: 3px 6px;
+    height: 30px !important;
+    width: 100%;
+    vertical-align: top;
+    font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
+}
+.gsc-input-query:focus {
+    background: #FFF none !important;
+}
+.gsc-input {
+    padding: 0;
+}
+
+
+.gsc-cursor-current-page {
+    color: #FFF;
+}
+
+.gsc-results-wrapper-overlay {
+    height: 96%;
+    top: 2%;
+    width: 90%;
+    left: 5%;
+}
+
+.gsib_b {
+    display: none;
+}
+.gsc-input-box {
+    height: 100%;
+    position: relative;
+}
+
+.portal-searchbox .gsc-input-box {
+    border: 1px solid #BBB;
+}
+.gsc-search-box {
+    border-style: none;
+    border-width: 0;
+    border-spacing: 0 0;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.gsc-search-box td {
+    padding: 0;
+    border: 0;
+}
+
+.gsc-tabsArea > div {
+    overflow: visible;
+}
+
+.gsc-cursor-current-page {
+    padding: 5px;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-item {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    overflow: hidden;
+}
+
+.autocomplete-active {
+    background-color: #e9e9e9 !important;
+}
+
+.gsc-input-box {
+    position: relative;
+}
+
+#portal-header {
+    overflow: inherit;
+}
+
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+    border-color: &dtml-corporateBlue;;
+    background-color: &dtml-corporateBlue;;
+    background-image: none;
+    filter: none;
+    border: none;
+    padding: 6px 27px;
+    text-align: center;
+    color: #fff;
+}
+
+td.gsc-search-button {
+    width: 1%;
+    vertical-align: bottom;
+    border: 0;
+    font: bold 12px 'Open Sans', Sans-serif;
+}
+
+.search_glossary_link, .search_advanced_link {
+    font-size: 11px;
+}
+
+.search_glossary_link:hover, .search_advanced_link:hover {
+    text-decoration: none;
+}
+/* @end Searchbox style and positioning */
 /* </dtml-let> */
 /* </dtml-with> */
 
