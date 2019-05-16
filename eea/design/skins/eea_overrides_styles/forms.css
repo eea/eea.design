@@ -183,10 +183,6 @@ body.template-login_form #content,
     text-align: center;
 }
 
-#fieldset-openid-login input, .login-form input {
-    font-size: 150%;
-}
-
 
 body.template-register #content input,
 body.template-new-user #content input {

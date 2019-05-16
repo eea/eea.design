@@ -260,6 +260,12 @@ $input-color: #f3f3f3;
     min-width: 320px;
     }
 
+  .login_form,
+  .login-forgotten-password {
+    text-align: left;
+    margin-left: 6.5em;
+  }
+
   #eea-above-columns {
     margin-top: 60px;
     }
@@ -299,8 +305,12 @@ $input-color: #f3f3f3;
   }
 @media screen and (min-width: 1200px) and (max-width: 1359px) {
   .portal-globalnav > li > a,
-  .secondary-portaltabs {
+  .secondary-portaltabs > li {
     font-size: 13px;
+    }
+  
+    #secondary-globalnav-tips {
+      font-size: 12px;
     }
   }
 
