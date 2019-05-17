@@ -82,6 +82,13 @@
    </object>
    <object name="subscriptions" meta_type="CMF Action" i18n:domain="plone" remove="True">
    </object>
+   <object name="formobile" meta_type="CMF Action" i18n:domain="plone" remove="True">
+   </object>
+   <object name="contact" meta_type="CMF Action" i18n:domain="plone" remove="True">
+   </object>
+   <object name="accessibility" meta_type="CMF Action" i18n:domain="plone" remove="True">
+   </object>
+
 
  </object>
  <object name="externalsite_actions" meta_type="CMF Action Category" remove="True">
