@@ -174,6 +174,7 @@ jQuery(document).ready(function($) {
 
     // #9485; login form as popup
     $("#anon-personalbar, #siteaction-login").click(function(e) {
+        var $popup_login;
         $popup_login.slideToggle("slow", function() {
             $(this).find('[name="__ac_name"]').focus();
         });

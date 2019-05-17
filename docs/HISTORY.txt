@@ -9,6 +9,8 @@ Changelog
 * Change: added fixes from custom for galleryview and
   lazy loading of gallery images
   [ichim-david refs #104101]
+* Change: jslint fixes
+  [alecghica refs #105453]
 
 24.1 - (2019-03-29)
 ---------------------
