@@ -41,6 +41,9 @@
 #secondary-globalnav-tips .panel {
     top: 46px !important;
 }
+#tip-siteaction-login-menu {
+    width: 490px;
+}
 #secondary-globalnav-tips .panel-top {
     display: none;
 }
