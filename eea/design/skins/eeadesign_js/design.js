@@ -58,10 +58,6 @@ jQuery(document).ready(function($) {
         $code_diff.click();
     }
 
-    var $popup_login = $("#popup_login_form").click(function(e) {
-        e.stopPropagation();
-    });
-
     // custom requirement to swap placement of the table and fiche-summary
     // for briefings found within the airs section
     var air_fiches = $(".portaltype-fiche.section-airs");

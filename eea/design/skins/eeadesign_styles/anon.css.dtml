@@ -2,19 +2,6 @@
 /* <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-/* 9485 login popup */
-#popup_login_form {
-    position: absolute;
-    right: 0;
-    background-color: #FFF;
-    z-index: 500;
-    padding: 1em;
-    -webkit-box-shadow: 0px 2px 2px #333;
-    -moz-box-shadow: 0px 2px 2px #333;
-    -ms-box-shadow: 0px 2px 2px #333;
-    -o-box-shadow: 0px 2px 2px #333;
-    box-shadow: 0px 2px 2px #333;
-}
 /* customize form.css rule in order to remove center alignment */
 body.template-login_form #content,
 .pb-ajax .login-form  {
@@ -24,15 +11,10 @@ body.template-login_form #content,
     width: 6em; /* was 10em on stock plone */
 }
 
+/* 9485 login popup */
 .login_form,
 .login-forgotten-password {
     text-align: left;
-    margin-left: 6.5em;
-}
-#popup_login_form .login-form input {
-    font-size: 100%;
-}
-#popup_login_form .login-forgotten-password {
     margin-left: 6.5em;
 }
 /* @end 9485 login popup */
