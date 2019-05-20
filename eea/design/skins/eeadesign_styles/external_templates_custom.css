@@ -1,0 +1,54 @@
+h3 {
+    font-size: 125%;
+    line-height: 1.5;
+    margin: 1em 0;
+    font-weight: bold;
+}
+
+#header-holder, #footer-wrapper, #portal-colophon {
+   font-family: 'Open Sans', Verdana, sans-serif;
+}
+
+/* normalize size of search input */
+.gsc-search-button-v2 {
+    height: 30px;
+    font-size: 12px;
+}
+#portal-top {
+    color: #333;
+}
+
+div#portal-header {
+    padding-right: 0 !important;
+}
+#siteaction-login-menu,
+#eap-siteaction-login-menu,
+#eap-siteaction-search-menu,
+#eap-siteaction-chooselang-menu .pane {
+    display: none;
+}
+
+#eea-above-columns {
+    background-color: #FFF;
+}
+
+.eea-accordion-panels {
+    border-top-width: 0;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+
+.portal-globalnav > li > a, .eea-siteaction > a {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+
+#portal-colophon {
+    color: #333;
+}
+@media screen and (max-width: 1199px) {
+    #header-holder .navbar-collapse {
+        height: 95vh !important; /* bootstrap.js adds height auto */
+    }
+}

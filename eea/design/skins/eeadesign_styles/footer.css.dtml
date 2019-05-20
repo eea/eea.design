@@ -1,14 +1,6 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-#footer-wrapper {
-    background-color: &dtml-corporateBlue;;
-    margin: 2em 0 2em 0;
-    padding: 2em 1em;
-    clear: both;
-    border-top: 8px solid #FFF;
-}
-
 #bg-wrapper {
     padding: 0;
     margin: 0;
@@ -24,33 +16,189 @@
     color: white;
 }
 
-#portal-footer a {
-    text-transform: none;
-    color: white;
-    border: none;
-    text-decoration: underline;
-}
-
-#portal-footer a:visited {
-    color: white;
-}
-
+#portal-footer a:visited,
 #portal-footer a:hover {
-    color: &dtml-linkHoverColor;;
-    background-color: transparent;
-    text-decoration: underline;
+    color: &dtml-lightBackgroundColor;;
+}
+
+#portal-colophon {
+    margin: 0;
+    text-align: center;
+    clear: both;
 }
 
 
-.colophon-links a, .colophon-links a:visited {
-    display: inline;
-    font-size: 11px !important;
-    color: #346f83 !important;
-    text-decoration: underline !important;
+.colophonWrapper {
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: &dtml-lightBackgroundColor;;
+}
+
+.colophon-links {
+    display: inline-block;
+    margin: 0 1em 0.75em;
+    font-size: 11px;
+    line-height: 1.5em;
+}
+.colophon-links a, .colophon-links a:visited,
+.colophon-links a:hover {
+    display: inline-block;
+    color: &dtml-corporateBlue;;
+    font-weight: bold;
 }
 
 .colophon-links a:hover {
     cursor: pointer;
     text-decoration: none !important;
+}
+
+.colophon-section {
+    width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+.section-centered {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.section-dark {
+    background-color: &dtml-corporateBlue;;
+}
+.section-bordered {
+    border-top: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.section-bordered-inversed {
+    border-top: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+    
+.table-link-title {
+    font-weight: bold;
+}
+
+.table-link-title,
+.table-link-description {
+    padding: 0;
+    border: 0;
+    line-height: inherit;
+}
+
+.section-dark a, .section-dark .eea-icon, .section-dark .section-header, .colophon-section table {
+    color: #FFF;
+}
+.colophon-section table {
+    font-size: 1em;
+    margin: 0;
+}
+.section-header {
+    text-decoration: none;
+    border: 0;
+    margin: 0 0 0.83em 0;
+    line-height: 1.5em;
+    padding-bottom: 0.25em;
+}
+
+.section-top {
+    padding-top: 0;
+}
+
+.section-centered > .section-header {
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.europe-agency-text {
+    font-size: 12px;
+    color: #999;
+    margin: 0.5em 0 0 0.5em;
+}
+
+
+@media screen and (max-width: 360px) {
+    .section-dark .eea-icon-4x {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 442px) {
+    .section-contact-us .media-body {
+        width: 115px; }
+}
+@media screen and (max-width: 480px) {
+    .europe-agency-text {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .table-link-title {
+        line-height: 1;
+    }
+    .table-link-description {
+        margin-bottom: 1em;
+    }
+    .table-link-title,
+    .table-link-description {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .right-table > tbody > tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .right-table .table-link-description {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .colophonWrapper {
+        display: block;
+        text-align: center;
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .table-link-title {
+        margin-left: 1em;
+    }
+
+    .table-link-description {
+        text-align: left;
+        margin-left: 1em;
+        display: block;
+    }
+
+    .right-table .table-link-description {
+        text-align: right;
+        margin: 0 1em 0 0;
+    }
+
+    .left-table .table-link-title {
+        text-align: right;
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+/* 72171 hide header elements on phones and portrait tablet resolutions */
+    .colophon-links {
+        width: 100%;
+        text-align: center;
+    }
 }
 /* </dtml-with> */

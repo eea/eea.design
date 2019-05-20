@@ -11,10 +11,6 @@
 
 
 /* This div sneaks in a padding for IE it seems. */
-#main-content {
-    margin-top: 5px;
-}
-
 #highlights-block h1 a,
 #highlights-block h2 a,
 #highlights-block h3 a {
@@ -83,10 +79,10 @@
 /* Frontpage main content
 ******************************************************************************/
 
-#highlights-area {
-    background-color: &dtml-lightBackgroundColor;;
-    padding: &dtml-padding-base;;
-}
+/*#highlights-area {*/
+/*    background-color: &dtml-lightBackgroundColor;;*/
+/*    padding: &dtml-padding-base;;*/
+/*}*/
 
 #articles-area h2 {
     padding-top: 0;
@@ -121,7 +117,7 @@
 /* 72171 impact */
 #eea-intro-message {
     padding: 1em;
-    margin: 1.5em 0 0 0;
+    margin: 0 0 0;
 }
 
 #megatopics-area .portletHeader {
@@ -146,20 +142,11 @@
     padding-right: 1em;
 }
 
-#below-topics-area #news-header {
+#news-header {
     margin-bottom: 0;
 }
-#below-topics-area #topic-selector {
-    margin-top: 0.5em;
-}
-.site-SITE #below-topics-area #topic-selector {
+#topic-selector {
      margin-top: 2em;
-}
-#below-topics-area .eea-tabs-panels {
-    padding: 0 1.5em 1.5em 1.5em;
-}
-.site-SITE #below-topics-area .eea-tabs-panels {
-    padding: 1.5em;
 }
 
 /* style for featured boxes */
@@ -202,10 +189,14 @@
 }
 
 /* style for shortcuts buttons */
-#portlet-followus dd {
+#portlet-followus > dd {
   display: inline-block;
-  width: 44px;
+  width: 40px;
   margin: 0 0 2px 0;
+}
+
+#portlet-followus > dd:last-child {
+    margin: 0;
 }
 
 .shortcut-default {

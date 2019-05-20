@@ -1,0 +1,197 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+
+/* buttons */
+
+#portal-columns input[type="submit"],
+.standardButton,
+.qq-upload-button,
+.searchButton,
+.faceted-text-widget .searchButton,
+.plonebutton,
+.context,
+.destructive,
+.standalone {
+    color:#fff !important;
+    background: &dtml-corporateBlue; none;
+    font: bold 12px &dtml-fontFamily;;
+    padding: 7px 11px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 1px 1px #000;
+    border: 1px solid #346F83;
+}
+
+#portal-columns input[type="submit"]:hover,
+.standardButton:hover,
+.qq-upload-button:hover,
+.searchButton:hover,
+.context:hover,
+.destructive:hover,
+.standalone:hover {
+    background-color:&dtml-corporateOrange;;
+    color: #FFFFFF !important;
+    cursor:pointer;
+    border-color: #999999;
+    text-shadow: none;
+}
+.standardButton a, .standardButton a:hover, .standardButton a:visited {
+    color: #FFFFFF !important;
+}
+/* @end buttons */
+
+
+/* drop down panels for portal siteactions */
+.panel-top {
+    margin: auto auto;
+    background: transparent url(&dtml-xurl;/panel_arrow.png);
+    width: 50px;
+    height: 25px;
+    position: relative;
+    top: 2px;
+}
+
+.panel-content {
+    background: white;
+    color: black;
+    clear: both;
+    padding: 10px;
+}
+
+.panel .portletFooter {
+    margin-top: 1em;
+}
+
+.shadow {
+    -webkit-box-shadow: 1px 1px 5px #afafaf;
+    -moz-box-shadow: 1px 1px 5px #afafaf;
+    -ms-box-shadow: 1px 1px 5px #afafaf;
+    -o-box-shadow: 1px 1px 5px #afafaf;
+    box-shadow: 1px 1px 5px #afafaf;
+}
+/* @end drop down panels for portal siteactions */
+
+/* css3 ribbon effect #79026 */
+.ribbon-wrapper {
+    width: 85px;
+    height: 88px;
+    overflow: hidden;
+    position: absolute;
+    top: -6px;
+    right: -23px;
+}
+
+.ribbon {
+    font: bold 8px Sans-Serif;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform:    rotate(45deg);
+    -ms-transform:     rotate(45deg);
+    -o-transform:      rotate(45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -20px;
+    top: 15px;
+    width: 120px;
+}
+
+.expired .ribbon{
+    color: #002c56;
+    background-color: #efdc1e;
+}
+
+.recent .ribbon{
+    font-size: 12px;
+    color: #ac003e;
+    background-color: #efdc1e;
+}
+.snippet, .ribbon-example {
+    overflow: hidden;
+}
+/* @end css3 ribbon effect */
+
+/* eea accordion styles */
+.eea-accordion-panels {
+    padding: 0;
+}
+
+.eea-accordion-panel .pane {
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid #DDD;
+}
+.eea-accordion-title, .eea-accordion-panel > h2 {
+    background: #E2E2E2 none;
+    border: 1px solid #E0E0E0;
+    margin: 0;
+    font-size: 115%;
+    color: #00446A;
+    line-height: 3em;
+    padding: 0 0.5em;
+    font-weight: bold;
+}
+
+.eea-accordion-title-manual-icons {
+    text-shadow: none;
+    padding: 0 1em;
+    margin: 2px 0 0 0; /* #19875; 2px is needed because of a visual bug where the floated icons are not moved to the margin */
+    line-height: 3em;
+    cursor: pointer;
+}
+
+.eea-accordion-panel > h2 .eea-icon-right:before,
+.eea-accordion-title > .eea-icon-right:before {
+    content: "&dtml-eea-icon-chevron-left;";
+}
+
+.eea-accordion-panel h2:hover > .eea-icon-right:before,
+.eea-accordion-panel .current > .eea-icon-right:before {
+    content: "&dtml-eea-icon-chevron-down;";
+}
+
+.eea-accordion-title:hover, .eea-accordion-panel > h2:hover {
+    cursor: pointer;
+    background-color: #F0F0F0;
+}
+
+.eea-accordion-title.current,
+.eea-accordion-panel > h2.current {
+    background-color: #F0F0F0;
+}
+
+.eea-accordion-title a,
+.eea-accordion-panel > h2 a {
+    color: #00446A !important;
+}
+/* #77943 avoid having the text too large that the accordion icon
+ * goes below next title */
+.eea-accordion-panel > h2 a {
+    max-width: 92%;
+    display: inline-block;
+    line-height: 1.5;
+}
+/* @end eea accordion styles */
+
+/* media object similar to bootstrap media object however this uses flex*/
+.media {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.media-box {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.media--discreet  {
+    line-height: 1.5;
+}
+.media-link {
+    display: flex;
+}
+/* @end media object */
+/* </dtml-let> */
+/* </dtml-with> */

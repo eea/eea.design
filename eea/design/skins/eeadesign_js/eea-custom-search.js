@@ -285,7 +285,7 @@ EEA.CustomSearch.prototype = {
 };
 
 window.addEventListener("load", function(event) {
-  var i, gsc_cs, gsc_inputs = document.getElementsByClassName('gsc-input-query');
+  var i, gsc_cs, gsc_inputs = document.getElementsByClassName('js-gsc-input-query');
   for(i=0; i < gsc_inputs.length; i++) {
     gsc_cs = new EEA.CustomSearch(gsc_inputs[i]);
   }

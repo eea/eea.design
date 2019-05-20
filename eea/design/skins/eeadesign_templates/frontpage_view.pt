@@ -104,7 +104,7 @@
 
                 <div id="highlights-area" class="column-area">
 
-                    <div class="portalMessage message_disclaimer visualNoMargins" tal:condition="not: main_site">
+                    <div class="portalMessage message_disclaimer ma-0" tal:condition="not: main_site">
                         <span class="eea-icon eea-icon-flag"></span><strong i18n:translate="">Welcome to the European Environment Agency</strong><br />
                         <span i18n:translate="">This site presents the content we have available in your language.</span>
                         <span i18n:translate="">To explore all our outputs and complete knowledge base, please visit <a tal:attributes="href string:$portal_url" i18n:name="site_url" class="link-plain"><span tal:omit-tag="" i18n:translate="">our main website</span></a> in English.</span>

@@ -62,4 +62,24 @@
         permission="zope2.View"
         />
 
+  <browser:viewlet
+    name="plone.global_sections"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    class=".viewlets.GlobalSectionsViewlet"
+    template="templates/sections.pt"
+    layer=".interfaces.IEEACommonLayer"
+    permission="zope2.View"
+  />
+
+  <!-- The personal bar
+  <browser:viewlet
+      name="plone.personal_bar"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+      template="templates/personal_bar.pt"
+      layer=".interfaces.IEEACommonLayer"
+      permission="zope2.View"
+      />
+  -->
+
 </configure>

@@ -4,119 +4,8 @@
          tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
 
         <div id="js-siteaction-panels">
-            <div class="panel" id="tip-siteaction-subscriptions">
-                <div class="panel-top">
-                    <!-- -->
-                </div>
-                <div class="panel-content shadow"
-                    tal:define="includeSocialMedia python:True">
-                    <tal:block condition="exists:context/portlet_subscribe">
-                      <metal:portlet use-macro="context/portlet_subscribe/macros/portlet" />
-                    </tal:block>
-                </div>
-            </div>
-          <div id="tip-siteaction-formobile" class="panel">
-              <div class="panel-top">
-                  <!--? -->
-              </div>
-              <div class="panel-content shadow">
-                  <a href="/www/mobile" title="Mobile apps" i18n:translate="" i18n:attributes="title">Mobile apps</a>
-              </div>
-            </div>
 
-            <div class="panel" id="tip-siteaction-contactus">
-                <div class="panel-top">
-                    <!-- -->
-                </div>
-                <div class="panel-content shadow">
-                    <table>
-                        <tr>
-                            <td style="width: 45%;">
-                                <h2>
-                                    <span class="eea-icon eea-icon-lg eea-icon-envelope">&nbsp;</span>
-                                    <tal:block i18n:translate="">Write to us</tal:block>
-                                </h2>
-                                <p>
-                                    <strong i18n:translate="">For the public:</strong>
-                                </p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <p>
-                                            <a target="_self"
-                                                tal:attributes="href string:http://community.eea.europa.eu/"
-                                                i18n:translate="">
-                                                Ask your question
-                                                <br/>
-                                            </a>
-                                        </p>
-                                    </li>
-                                </ul>
-                                <br/>
-                                <strong style="white-space: nowrap" i18n:translate="">
-                                    For media and journalists:
-                                </strong>
-                                <br/>
-                                <ul class="list-inline">
-                                    <li>
-                                        <p>
-                                            <a target="_self"
-                                                tal:attributes="href string:$portal_url/media/"
-                                                i18n:translate="">
-                                                Press room
-                                                <br/>
-                                            </a>
-                                        </p>
-                                    </li>
-                                </ul>
-                                <br/>
-                                <a tal:attributes="href string:$portal_url/help/contact-info"
-                                    class="internal-link">
-                                    <strong i18n:translate="">Contact the web team</strong>
-                                </a>
-                                <br/>
-                                <a tal:attributes="href string:http://community.eea.europa.eu/"
-                                    class="internal-link">
-                                    <strong i18n:translate="">FAQ</strong>
-                                </a>
-                                <br/>
-                            </td>
-                            <td style="vertical-align: top;">
-                                <br/>
-                            </td>
-                            <td style="vertical-align: top;">
-                                <h2>
-                                    <span class="eea-icon eea-icon-lg eea-icon-phone">&nbsp;</span>
-                                    <tal:block i18n:translate="">Call us</tal:block>
-                                </h2>
-                                <strong i18n:translate="">Reception:</strong>
-                                    <br/>
-                                    <br/>
-                                <strong i18n:translate="">Phone:</strong>
-                                (+45) 33 36 71 00
-                                <br/>
-                                <strong i18n:translate="">Fax:</strong>
-                                (+45) 33 36 71 99
-                                <br/>
-                                <br/>
-                                <strong>
-                                    <a target="_self"
-                                        tal:attributes="href string:$portal_url/help/infocentre/index_html">
-                                        <br/>
-                                    </a>
-                                </strong>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="portletFooter">
-                        <a class="moreLink"
-                            tal:attributes="href string:$portal_url/contact-us/">
-                            <span i18n:translate="">More contact details</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel" id="tip-siteaction-chooselang">
+            <div class="panel" id="tip-siteaction-chooselang-menu">
                 <div class="panel-top">
                     <!-- -->
                 </div>
@@ -137,7 +26,34 @@
                 </div>
             </div>
 
+            <div class="panel" id="tip-siteaction-search-menu">
+                <div class="panel-top">
+                    <!-- -->
+                </div>
+                <div class="panel-content shadow">
+                    <div class="portal-searchbox">
+                        <metal:macro metal:use-macro="context/eea_searchbox/macros/quick_search_form" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel" id="tip-siteaction-login-menu">
+                <div class="panel-top">
+                    <!-- -->
+                </div>
+                <div class="panel-content shadow">
+                    <tal:login_form tal:define="portal_state context/@@plone_portal_state;
+                                                qs request/QUERY_STRING;
+                                                came_from python:request['URL'] + (qs and '?' or '') + qs"
+                                                tal:condition="portal_state/anonymous" tal:on-error="string:">
+                        <metal:login_form use-macro="context/login_form/macros/login" />
+                    </tal:login_form>
+                </div>
+            </div>
+
         </div>
+
+
         </tal:main-macro>
     </div>
 </div>

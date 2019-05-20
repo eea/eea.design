@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+
+  <javascript cacheable="True" compression="safe"  cookable="True"
+    enabled="True"  inline="False"
+    id="++resource++eea.facetednavigation.widgets.multiselect.view.js"
+    insert-after="++resource++eea.facetednavigation.widgets.path.tree.js"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or  'edit' in request.URL0"
+    bundle="faceted-view" />
+
+</object>

@@ -12,11 +12,6 @@
     background-image: none;
 }
 
-.plone-breadcrumb .container {
-    max-width: 100%;
-    width: 80%;
-}
-
 #viewlet-below-content {
     display: none;
 }
@@ -149,9 +144,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-    #visual-portal-wrapper, #portal-header, #portal-globalnav {
-        max-width: 80% !important;
-    }
     #content {
         min-height: 400px;
     }

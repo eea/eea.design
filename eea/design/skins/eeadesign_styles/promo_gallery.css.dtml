@@ -62,7 +62,7 @@
     position: relative;
     overflow: hidden;
     background: &dtml-lightBackgroundColor;;
-    border: 0px solid #F7F7F7;
+    border: 1px solid &dtml-mediumBackgroundColor;;
     margin-bottom: 1em;
 }
 
@@ -78,7 +78,7 @@
 #promo-gallery-content, #promo-gallery-content-sm {
 	overflow:hidden;
 	background:transparent  scroll 50% 50%;
-	padding:0px;
+	padding:0;
 	margin:0;
 	height:320px;
 	width:100%;
@@ -154,7 +154,7 @@
 
 #navigator-outer {
 	right:0;
-	top:0px;
+	top:0;
 	z-index:4;
 	height:330px;
 	overflow:hidden;

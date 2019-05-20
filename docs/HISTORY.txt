@@ -1,6 +1,17 @@
 Changelog
 =========
 
+24.2 - (2019-05-20)
+---------------------
+* Change: load raven from skin folder instead of browserview directory making
+  it easier to bundle for template service
+  [ichim-david refs #105453]
+* Change: added fixes from custom for galleryview and
+  lazy loading of gallery images
+  [ichim-david refs #104101]
+* Change: jslint fixes
+  [alecghica refs #105453]
+
 24.1 - (2019-03-29)
 ---------------------
 * Bugfix: added overlay and popupform code needed for manage rules pages

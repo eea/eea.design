@@ -15,52 +15,6 @@ hr {
     margin: 1em 1em 1em 0;
 }
 
-/* portal-header area */
-/* siteactions cross_site_top */
-/* use font awesome unicode icons */
-/* daviz -edit sets eea-icon color to #000 */
-#portal-siteactions #siteaction-chooselang .eea-icon {
-    color: #FFF;
-}
-
-#siteaction-contactus {
-    font-weight: bold;
-}
-
-/* @end siteactions cross_site_top */
-#cross-site-top .panel .portlet-subscribtion {
-    margin: 0;
-}
-#cross-site-top .panel .portlet-subscribtion .portletFooter {
-    margin-bottom: 0;
-}
-#cross-site-top .panel .portlet,
-#cross-site-top .panel .portletHeader {
-    background: transparent;
-}
-#tip-siteaction-chooselang,
-#tip-siteaction-chooselang-menu {
-    width: 145px;
-}
-#tip-siteaction-chooselang li,
-#tip-siteaction-chooselang-menu li {
-    display: list-item;
-    margin: 0;
-    text-align: left;
-}
-#tip-siteaction-subscriptions,
-#tip-siteaction-subscriptions-menu {
-    width: 240px;
-}
-#tip-siteaction-contactus,
-#tip-siteaction-contactus-menu {
-    font-size: 125%;
-    width: 420px;
-}
-#tip-externalsites-networks, #tip-externalsites-etcssites {
-    width: 400px;
-    left: 0 !important;
-}
 /* Networks panel EU partners links */
 .moreLink {
     border: 0 !important;
@@ -83,11 +37,6 @@ hr {
 }
 /* End links */
 
-/* Site-wide action menu - font size, contact, index, sitemap etc */
-#portal-siteactions > #siteaction-networks, #portal-siteactions > #siteaction-search {
-    display: none;
-}
-
 /* subscription cross_site_top panel content icons */
 .portlet-subscription .eea-icon-lg {
     line-height: 0.75em;
@@ -108,117 +57,7 @@ hr {
 }
 /* @end subscription cross_site_top panel content icons */
 
-.mini-header #portal-header {
-    height: 100%;
-}
 
-/* Searchbox style and positioning */
-#portal-searchbox .gsc-clear-button {
-    display: none;
-}
-
-.panel #portal-searchbox {
-    float: none;
-    clear: both;
-    margin: 1em;
-    width: 400px;
-    overflow: inherit;
-}
-
-#portal-searchbox a {
-    color: &dtml-linkColor;;
-    border: none;
-    font-size: 85%;
-}
-
-#portal-searchbox .gsc-input-query {
-    padding: 0 0.5em;
-}
-#portal-searchbox .gsc-input-query:focus {
-    background: #FFF none !important;
-}
-#portal-searchbox .gsc-input {
-    padding: 0;
-    border: 1px solid #BBB;
-}
-
-#portal-searchbox .searchButton:focus {
-    background-color: &dtml-corporateOrange;;
-}
-
-#portal-searchbox .gsc-cursor-current-page {
-    color: #FFF;
-}
-
-#portal-searchbox .gsc-results-wrapper-overlay {
-    height: 96%;
-    top: 2%;
-    width: 90%;
-    left: 5%;
-}
-
-#portal-searchbox .gsc-search-box {
-    border-style: none;
-    border-width: 0;
-    border-spacing: 0 0;
-    width: 100%;
-    margin-bottom: 2px;
-}
-
-#portal-searchbox .autocomplete-items {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    border-top: none;
-    z-index: 9999;
-    top: 100%;
-    left: 0;
-    right: 0;
-}
-
-#portal-searchbox .autocomplete-item {
-   padding: 10px;
-   cursor: pointer;
-   background-color: #fff;
-   border-bottom: 1px solid #d4d4d4;
-   overflow: hidden;
-}
-
-#portal-searchbox .autocomplete-active {
-  background-color: #e9e9e9 !important;
-}
-
-#portal-searchbox .gsc-input-box {
-  position: relative;
-}
-
-#portal-header {
-  overflow: inherit;
-}
-
-.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
-    border-color: #006699;
-    background-color: #006699;
-    background-image: none;
-    filter: none;
-    border: none;
-    padding: 6px 27px;
-    text-align: center;
-    color: #fff;
-}
-
-td.gsc-search-button {
-    width: 1%;
-}
-
-.search_glossary_link, .search_advanced_link {
-    font-size: 11px;
-}
-
-.search_glossary_link:hover, .search_advanced_link:hover {
-    text-decoration: none;
-}
-/* @end Searchbox style and positioning */
 /* @end portal-header area */
 
 /* breadcrumbs found below global-nav*/
@@ -230,7 +69,8 @@ td.gsc-search-button {
 /* #23500 allow the control panel widget to be placed outside of their context
     by having overflow visible for screen with size larger than 1024px
 */
-#region-content {
+#region-content,
+.content-header {
     position: relative;
 }
 #content-core {
@@ -267,9 +107,6 @@ td.gsc-search-button {
     line-height: 0.75em;
     color: #888;
 }
-.width-full #article-language {
-    min-width: 180px;
-}
 /* @end Language viewlet */
 
 /* download.pdf download.epub export actions */
@@ -299,8 +136,7 @@ a.downloading img {
     margin: 1em -0.15em 0 0;
 }
 
-#region-content ul,
-#chooselang {
+#region-content ul {
     list-style: square inside url(//www.eea.europa.eu/bullet.gif);
 }
 

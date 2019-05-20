@@ -127,7 +127,9 @@ function AnchorJS(options) {
     });
 
     for (i = 0; i < elements.length; i++) {
-
+      if (elements[i].hasAttribute('class') && elements[i].className.indexOf('no-anchor') !== -1) {
+        continue;
+      }
       if (elements[i].hasAttribute('id')) {
         elementID = elements[i].getAttribute('id');
       } else {
