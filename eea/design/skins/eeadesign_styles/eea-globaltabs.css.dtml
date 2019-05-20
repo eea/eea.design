@@ -144,9 +144,11 @@
     width: 100%;
     vertical-align: top;
     font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
+    color: #777 !important;
 }
 .gsc-input-query:focus {
     background: #FFF none !important;
+    color: #333 !important;
 }
 .gsc-input {
     padding: 0;

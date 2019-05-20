@@ -8,7 +8,7 @@ body.template-login_form #content,
     text-align: left;
 }
 #fieldset-openid-login label, .login-form label {
-    width: 6em; /* was 10em on stock plone */
+    width: 7em; /* was 10em on stock plone */
 }
 
 /* 9485 login popup */
