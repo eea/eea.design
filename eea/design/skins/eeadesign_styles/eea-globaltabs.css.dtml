@@ -139,7 +139,7 @@
     border: none !important;
     border-radius: 0 !important;
     background: #fff;
-    padding: 3px 6px;
+    padding: 3px 6px !important;
     height: 30px !important;
     width: 100%;
     vertical-align: top;

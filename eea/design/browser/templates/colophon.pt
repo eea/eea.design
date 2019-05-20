@@ -14,7 +14,7 @@
                 <a href="https://europa.eu/european-union/about-eu_en">
                     <div class="media mb-0">
                     <span class="icon-siteaction-europe-flag" alt="EU flag" title="European Union Flag"
-                             i18n:attributes="alt;title"><!--? --></span>
+                             i18n:attributes="alt;title"><!-- empty --></span>
                         <span class="europe-agency-text" i18n:translate="">The EEA is an agency of the European Union</span>
                     </div>
                 </a>
@@ -25,7 +25,7 @@
 
             <div class="section-centered eea-software-info">
             <p class="colophon-links">
-                <span class="eea-icon eea-icon-tasks"><!--?--></span>
+                <span class="eea-icon eea-icon-tasks"><!-- empty --></span>
                 <tal:comments i18n:translate="">Engineered by:</tal:comments>
                 <a href="https://www.eea.europa.eu/help/contact-info"
                          i18n:translate=""
@@ -77,7 +77,7 @@
                    href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
                    title="Creative Commons Attribution License"
                          i18n:attributes="title">
-                    <span class="eea-icon eea-icon-creative-commons"><!--?--></span>
+                    <span class="eea-icon eea-icon-creative-commons"><!-- empty --></span>
                     <span i18n:translate="">Creative commons license</span>
                 </a>
             </p>

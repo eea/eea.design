@@ -39,11 +39,11 @@
                         </td>
                         <td class="gsc-search-button">
                             <button tal:attributes="class search_button_class">
-                                <span class="eea-icon eea-icon-search"></span>
+                                <span class="eea-icon eea-icon-search"><!-- empty --></span>
                             </button>
                         </td>
                         <td class="gsc-clear-button">
-                            <div class="gsc-clear-button"></div>
+                            <div class="gsc-clear-button"><!-- empty --></div>
                         </td>
                     </tr>
                 </table>
