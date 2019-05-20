@@ -1,7 +1,7 @@
 Changelog
 =========
 
-24.2-dev0 - (unreleased)
+24.2 - (2019-05-20)
 ---------------------
 * Change: load raven from skin folder instead of browserview directory making
   it easier to bundle for template service
