@@ -92,6 +92,10 @@ option.hiddenStructure {
 ** and style reference
 */
 
+.eea-collapsible {
+    display: none;
+}
+
 .collapsibleHeader {
     cursor: pointer;
     background: transparent url(<dtml-var xurl>/p_/pl) 0% 50% no-repeat;
@@ -897,14 +901,15 @@ ul.social-buttons {
 }
 
 .eea-btn {
-    padding: 2px 5px;
-    margin: 2px 0;
-    word-break: keep-all;
-    display: inline-block;
-    line-height: inherit;
-    font-size: 10px;
     -webkit-border-radius: 0.5em;
     border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 10px;
+    line-height: inherit;
+    margin: 2px 0;
+    padding: 2px 5px;
+    word-break: keep-all;
 }
 .eea-btn-secondary {
     color: white;
