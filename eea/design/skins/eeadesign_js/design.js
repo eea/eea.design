@@ -180,7 +180,10 @@ jQuery(document).ready(function($) {
     // #104468 /themes - slide toggle the target given from data-target
     $('.js-eea-toggle').click(function(ev) {
         ev.preventDefault();
-        $(ev.target.getAttribute('data-target')).slideToggle(function(){
+        var el = ev.target.tagName === "A" ? ev.target : ev.target.parentNode;
+        var $el = $(el);
+        $el.find('.js-hidden-toggle').toggleClass('is-eea-hidden');
+        $(el.getAttribute('data-target')).slideToggle(function(){
             var display = this.getAttribute('data-display');
             if(display && $(this).is(':visible')){
                 this.style.display = display;
