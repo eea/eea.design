@@ -183,10 +183,11 @@ jQuery(document).ready(function($) {
         var el = ev.target.tagName === "A" ? ev.target : ev.target.parentNode;
         var $el = $(el);
         $el.find('.js-hidden-toggle').toggleClass('is-eea-hidden');
-        $(el.getAttribute('data-target')).slideToggle(function(){
-            var display = this.getAttribute('data-display');
-            if(display && $(this).is(':visible')){
-                this.style.display = display;
+        $(el.getAttribute('data-target')).slideToggle({duration: 300,
+            easing: "easeOutQuad",
+            start: function() {
+                var display = this.getAttribute('data-display') || 'block';
+                jQuery(this).css('display', display);
             }
         });
     });
