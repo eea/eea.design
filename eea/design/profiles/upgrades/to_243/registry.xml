@@ -1,0 +1,22 @@
+<registry>
+  <record name="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings.resourceBundlesForThemes" interface="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings" field="resourceBundlesForThemes">
+    <value>
+      <element key="EEADesign2006">
+        <element>jquery</element>
+        <element>sentry</element>
+        <element>default</element>
+        <element>jqueryui</element>
+        <element>faceted-view</element>
+        <element>faceted-edit</element>
+      </element>
+      <element key="EEADesignCMS">
+        <element>jquery</element>
+        <element>sentry</element>
+        <element>default</element>
+        <element>jqueryui</element>
+        <element>faceted-view</element>
+        <element>faceted-edit</element>
+      </element>
+    </value>
+  </record>
+</registry>
