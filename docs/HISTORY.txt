@@ -3,6 +3,11 @@ Changelog
 
 24.3 - (2019-05-29)
 ---------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [avoinea refs #104872]
+* Change: Move Sentry JS integration to dedicated eea.sentry package
+  [avoinea refs #104872]
 * Change: wording on CaR view.
   [alecghica refs #98680]
 

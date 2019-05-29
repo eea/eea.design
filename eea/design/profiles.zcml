@@ -262,4 +262,12 @@
     directory="profiles/upgrades/to_240"
     description='EEA Design upgrade profile for v24.0'
     provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:registerProfile
+    name="upgrade243"
+    title="EEA Design upgrade profile for v24.3"
+    directory="profiles/upgrades/to_243"
+    description='EEA Design upgrade profile for v24.3'
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 </configure>
