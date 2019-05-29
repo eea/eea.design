@@ -1,7 +1,7 @@
 Changelog
 =========
 
-24.3-dev0 - (unreleased)
+24.3 - (2019-05-29)
 ---------------------
 * Change: wording on CaR view.
   [alecghica refs #98680]
