@@ -991,7 +991,7 @@ ul.social-buttons {
 
 .eea-tileInner:hover,
 .eea-tileInner:focus {
-    box-shadow: 0 0 3px 1px &dtml-corporateGreen;;
+    box-shadow: 0 0 7px 1px #757575;
 }
 
 .eea-tileHead {
@@ -1047,6 +1047,7 @@ ul.social-buttons {
     padding: 10px;
     background-color: #FFF;
     border-top: 1px solid #ddd;
+    border-radius: 0 0 6px 6px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1194,8 +1195,6 @@ ul.social-buttons {
     }
 }
 
-/*@media (min-width: 768px) {*/
-/*}*/
 @media (min-width: 1281px) {
     #content .eea-section-trigger {
         display: none;
@@ -1208,10 +1207,6 @@ ul.social-buttons {
         max-height: 3.5em;
         overflow: hidden;
         position: relative;
-    }
-
-    .eea-tile:hover .eea-tileTitle {
-        max-height: 100%;
     }
 
 }
