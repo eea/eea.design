@@ -170,7 +170,7 @@ legend {
   display: none !important;
   }
 
-html{font-size:16px !important;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:2em 0;clear:both;}
+html{font-size:16px !important;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;font-weight: 400;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:2em 0;clear:both;}
 
 
 
@@ -513,9 +513,6 @@ ul {
 
 /* end megatopic frontarea */
 
-#portal-columns {
-  padding-top: 1em;
-  }
 
 .content-core p,
 .content-core li {
