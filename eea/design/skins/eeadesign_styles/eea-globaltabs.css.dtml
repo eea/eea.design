@@ -65,7 +65,7 @@
 
 #tip-article-language {
     width: 400px;
-    left: initial !important;
+    left: inherit !important;
 }
 #tip-article-language .panel-top {
     float: right;
