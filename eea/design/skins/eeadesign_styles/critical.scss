@@ -91,10 +91,20 @@
   }
 
 ::-webkit-input-placeholder,
-:-ms-input-placeholder,
+::-ms-input-placeholder,
+::-moz-placeholder,
 ::placeholder {
   color: #777;
+  opacity: 1;
 }
+
+/* https://css-tricks.com/almanac/selectors/p/placeholder/
+   FF is the only one who recognizes placeholder-shown and setting color to
+   black is the equivalent of #777 on other browsers where we've set ::placeholder */
+input[type=text]:placeholder-shown  {
+  color: black;
+  opacity: 1;
+  }
 
 :link,:visited { text-decoration:none }
 ul,ol { list-style:none; }
