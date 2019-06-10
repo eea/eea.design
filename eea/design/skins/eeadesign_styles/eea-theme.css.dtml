@@ -100,7 +100,10 @@ hr {
 .languageCodes {
     display: block;
 }
-#languageCodes {
+
+/* for anonymous the language codes are inside panel-content so only for auth
+*  we restrict the max-width of languageCodes */
+.userrole-authenticated  #languageCodes {
     max-width: 80%;
 }
 #article-language .eea-icon {

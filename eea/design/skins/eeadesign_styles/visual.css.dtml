@@ -950,7 +950,7 @@ ul.social-buttons {
     display: flex;
     flex: 1;
     padding: 10px;
-    max-width: 350px;
+    max-width: 400px;
 }
 .eea-list-tiles .eea-tileUrl,
 .eea-tile .eea-tileUrl{

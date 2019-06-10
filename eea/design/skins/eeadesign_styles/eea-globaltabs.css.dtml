@@ -237,7 +237,7 @@
 
 td.gsc-search-button {
     width: 1%;
-    vertical-align: bottom;
+    vertical-align: middle;
     border: 0;
     font: bold 12px 'Open Sans', Sans-serif;
 }
