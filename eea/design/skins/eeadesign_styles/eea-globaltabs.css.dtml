@@ -64,7 +64,7 @@
 }
 
 #tip-article-language {
-    width: 400px;
+    max-width: 400px;
     left: inherit !important;
 }
 #tip-article-language .panel-top {

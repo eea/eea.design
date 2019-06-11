@@ -178,8 +178,10 @@ $input-color: #f3f3f3;
 
 @media screen and (max-width: 767px) {
   #tip-article-language {
-    width: inherit;
     left: 0 !important;
+  }
+  #tip-article-language  #languageCodes {
+    max-width: 400px;
   }
 }
 
