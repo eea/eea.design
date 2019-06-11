@@ -38,7 +38,7 @@ class Glossary(BrowserView):
 class Tags(BrowserView):
     """ Get search auto-complete tags
     """
-    @cache(lambda *args, **kwargs: kwargs.get('q', ''), lifetime=86400)
+    @cache(lambda *args, **kwargs: kwargs.get('q', ''), lifetime=3600)
     def tags(self, q=''):
         """ Get autocompletion tags
         """

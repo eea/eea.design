@@ -92,6 +92,10 @@ option.hiddenStructure {
 ** and style reference
 */
 
+.eea-collapsible {
+    display: none;
+}
+
 .collapsibleHeader {
     cursor: pointer;
     background: transparent url(<dtml-var xurl>/p_/pl) 0% 50% no-repeat;
@@ -897,14 +901,15 @@ ul.social-buttons {
 }
 
 .eea-btn {
-    padding: 2px 5px;
-    margin: 2px 0;
-    word-break: keep-all;
-    display: inline-block;
-    line-height: inherit;
-    font-size: 10px;
-    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
     border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 10px;
+    line-height: inherit;
+    margin: 2px 0;
+    padding: 2px 5px;
+    word-break: keep-all;
 }
 .eea-btn-secondary {
     color: white;
@@ -915,6 +920,7 @@ ul.social-buttons {
 .eea-btn-light {
     color: &dtml-lightGreyColor;;;
     border-color: &dtml-mediumBackgroundColor;;
+    background-color: &dtml-lightBackgroundColor;;;
 }
 
 .eea-btn-light:hover {
@@ -944,6 +950,7 @@ ul.social-buttons {
     display: flex;
     flex: 1;
     padding: 10px;
+    max-width: 400px;
 }
 .eea-list-tiles .eea-tileUrl,
 .eea-tile .eea-tileUrl{
@@ -985,7 +992,7 @@ ul.social-buttons {
 
 .eea-tileInner:hover,
 .eea-tileInner:focus {
-    box-shadow: 0 0 3px 1px &dtml-corporateGreen;;
+    box-shadow: 0 0 7px 1px #757575;
 }
 
 .eea-tileHead {
@@ -1041,6 +1048,7 @@ ul.social-buttons {
     padding: 10px;
     background-color: #FFF;
     border-top: 1px solid #ddd;
+    border-radius: 0 0 6px 6px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1188,8 +1196,6 @@ ul.social-buttons {
     }
 }
 
-/*@media (min-width: 768px) {*/
-/*}*/
 @media (min-width: 1281px) {
     #content .eea-section-trigger {
         display: none;
@@ -1202,10 +1208,6 @@ ul.social-buttons {
         max-height: 3.5em;
         overflow: hidden;
         position: relative;
-    }
-
-    .eea-tile:hover .eea-tileTitle {
-        max-height: 100%;
     }
 
 }

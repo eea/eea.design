@@ -134,10 +134,6 @@ jQuery(document).ready(function($) {
         input.focus();
     });
 
-    $body.click(function() {
-        $('#popup_login_form').slideUp();
-    });
-
     $("#themes-megatopics-area").find('.promoHeader').click(function(ev){
         if (window.innerWidth > 480) {
             ev.stopImmediatePropagation();
@@ -173,15 +169,28 @@ jQuery(document).ready(function($) {
     $('.eea-tabs').find('li:last-child').addClass('last-child');
 
     // #9485; login form as popup
-    $("#anon-personalbar, #siteaction-login").click(function(e) {
-        var $popup_login;
-        $popup_login.slideToggle("slow", function() {
-            $(this).find('[name="__ac_name"]').focus();
-        });
-        e.preventDefault();
-        e.stopPropagation();
-    });
+    // var $popup_login = $("#tip-siteaction-login-menu");
+    // $("#siteaction-login-menu").click(function(e) {
+    //     $popup_login.slideToggle("slow", function() {
+    //         $popup_login.find('[name="__ac_name"]').focus();
+    //     });
+    //     e.preventDefault();
+    // });
 
+    // #104468 /themes - slide toggle the target given from data-target
+    $('.js-eea-toggle').click(function(ev) {
+        ev.preventDefault();
+        var el = ev.target.tagName === "A" ? ev.target : ev.target.parentNode;
+        var $el = $(el);
+        $el.find('.js-hidden-toggle').toggleClass('is-eea-hidden');
+        $(el.getAttribute('data-target')).slideToggle({duration: 300,
+            easing: "easeOutQuad",
+            start: function() {
+                var display = this.getAttribute('data-display') || 'block';
+                jQuery(this).css('display', display);
+            }
+        });
+    });
 
     // #19536; hide navigation submenus if there are less than 2 of them
     var $navigation_submenus = $(".portletSubMenuHeader");

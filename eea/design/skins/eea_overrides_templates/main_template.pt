@@ -122,15 +122,11 @@
                   body_class python: body_class + ' scroll-analytics' if context.restrictedTraverse('@@scroll_analytics_content_types')() else body_class;
                   body_class python: body_class + ' expired-content' if is_expired else body_class;
                   frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
-                  sunburst_view python:context.restrictedTraverse('@@sunburstview');
-                  sentry_dsn nocall:context/@@sentry_dsn|nothing;"
+                  sunburst_view python:context.restrictedTraverse('@@sunburstview');"
       tal:attributes="class python:body_class + ' ' + language + frontpage;
                       dir python:isRTL and 'rtl' or 'ltr';
                       data-portal-url portal_url;
-                      data-base-url context/absolute_url;
-                      data-sentry-env python:sentry_dsn.environment() if sentry_dsn else '';
-                      data-sentry-ver python:sentry_dsn.version() if sentry_dsn else '';
-                      data-sentry-dsn python:sentry_dsn.dsn() if sentry_dsn else ''">
+                      data-base-url context/absolute_url;">
 
     <div id="print-warning" i18n:domain="eea">
         <p i18n:translate="">

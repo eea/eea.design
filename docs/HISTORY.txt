@@ -1,6 +1,19 @@
 Changelog
 =========
 
+24.3 - (2019-05-29)
+---------------------
+* Change: modified search auto tags to cache only for 1h from 24h as requested
+  in ticket feedback
+  [ichim-david refs #104467]
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [avoinea refs #104872]
+* Change: Move Sentry JS integration to dedicated eea.sentry package
+  [avoinea refs #104872]
+* Change: wording on CaR view.
+  [alecghica refs #98680]
+
 24.2 - (2019-05-20)
 ---------------------
 * Change: load raven from skin folder instead of browserview directory making

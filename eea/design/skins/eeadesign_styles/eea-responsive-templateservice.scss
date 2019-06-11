@@ -249,15 +249,8 @@ $input-color: #f3f3f3;
     display: none;
     }
 
-  .panel {
-    max-width: 335px;
-    left: 20px !important;
-    }
   .panel-top {
     left: 0 !important;
-    }
-  .panel-content {
-    min-width: 320px;
     }
 
   .login_form,
@@ -275,9 +268,9 @@ $input-color: #f3f3f3;
     margin-bottom: 0;
     }
 
-  #visual-portal-wrapper {
-    overflow: hidden;
-    }
+  //#visual-portal-wrapper {
+  //  overflow: hidden;
+  //  }
   }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {

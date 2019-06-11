@@ -65,7 +65,7 @@
 
 #tip-article-language {
     width: 400px;
-    left: initial !important;
+    left: inherit !important;
 }
 #tip-article-language .panel-top {
     float: right;
@@ -220,10 +220,6 @@
     background-color: #e9e9e9 !important;
 }
 
-.gsc-input-box {
-    position: relative;
-}
-
 #portal-header {
     overflow: inherit;
 }
@@ -241,7 +237,7 @@
 
 td.gsc-search-button {
     width: 1%;
-    vertical-align: bottom;
+    vertical-align: middle;
     border: 0;
     font: bold 12px 'Open Sans', Sans-serif;
 }

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+ <javascript id="sentry.js" remove="True" />
+</object>

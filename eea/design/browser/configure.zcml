@@ -27,7 +27,7 @@
         template="../skins/eea_overrides_templates/main_template.pt"
         layer=".interfaces.IEEACommonLayer"
         permission="zope.Public" />
-        
+
     <browser:page
         for="*"
         name="test_skin"
@@ -258,7 +258,7 @@
         />
 
     <!-- Browser pages -->
-    
+
     <browser:page
         for="zope.interface.Interface"
         name="eeaqrcode"
@@ -374,14 +374,6 @@
         class=".presentation.EEAPresentationView"
         layer=".interfaces.IEEACommonLayer"
         template="templates/presentation.pt"
-        permission="zope2.View"
-        />
-
-    <browser:page
-        name="sentry_dsn"
-        for="zope.interface.Interface"
-        class=".sentry.SentryDSN"
-        allowed_attributes="environment version dsn"
         permission="zope2.View"
         />
 
