@@ -184,7 +184,6 @@ jQuery(document).ready(function($) {
         var $el = $(el);
         $el.find('.js-hidden-toggle').toggleClass('is-eea-hidden');
         $(el.getAttribute('data-target')).slideToggle({duration: 300,
-            easing: "easeOutQuad",
             start: function() {
                 var display = this.getAttribute('data-display') || 'block';
                 jQuery(this).css('display', display);
