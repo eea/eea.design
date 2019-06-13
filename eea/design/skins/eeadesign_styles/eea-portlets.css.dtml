@@ -454,7 +454,7 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 }
 
 .navTreeLevel1 .navTreeCurrentItem:after {
-    left: -43px;
+    left: -40px;
 }
 .navTreeLevel2 .navTreeCurrentItem:after {
     left: -66px;
