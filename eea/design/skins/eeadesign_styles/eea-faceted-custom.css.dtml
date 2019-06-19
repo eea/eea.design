@@ -15,7 +15,7 @@
 }
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-    font-size: 12px;
+    font-size: 14px;
     padding: 3px;
 }
 #faceted-portal-status-message {
@@ -91,7 +91,7 @@
 
 .widget-fieldset ul li label {
     font-weight: normal;
-    font-size: 11px;
+    font-size: &dtml-fontSmallSize;;
     line-height: 15px;
     padding-left: 5px;
     padding-bottom: 5px;
@@ -125,7 +125,7 @@
 
 .faceted_letter,
 .faceted_letter:hover {
-    font-size: 11px;
+    font-size: &dtml-fontSmallSize;;
     font-weight: normal;
 }
 
@@ -217,7 +217,7 @@
 .faceted-center-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label{
     display: inline;
     float: none;
-    font-size: 11px;
+    font-size: &dtml-fontSmallSize;;
     line-height: 13px;
     padding-bottom: 0;
     width: 120px;

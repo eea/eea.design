@@ -182,7 +182,7 @@ legend {
   display: none !important;
   }
 
-html{font-size:16px !important;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;font-weight: 400;}body{font:75% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1024px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:2em 0;clear:both;}
+html{font-size:16px !important;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;font-weight: 400;}body{font:87.5% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1215px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:2em 0;clear:both;}
 
 
 
@@ -430,6 +430,7 @@ ul {
   border-width: 0 0 1px 0;
   border-style:solid;
   border-color: unquote("&dtml-mediumBackgroundColor;");
+  font-size: unquote("&dtml-fontSmallSize;");
   }
 .plone-breadcrumb-list >  li {
   font-weight: 400;
@@ -528,7 +529,7 @@ ul {
 
 .content-core p,
 .content-core li {
-  font-size: 115%;
+  font-size: 1rem;
   }
 .content-core li, .portlet li, .portletStaticText li {
   margin-bottom: 0.25em;
@@ -728,7 +729,7 @@ ul {
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
   }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .navbar-collapse {
     display: block;
     height: auto;

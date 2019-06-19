@@ -118,7 +118,6 @@ option.hiddenStructure {
 /* Default are layout tables. We can not really style those. It would have too many side effects */
 table {
     empty-cells: show;
-    font-size: 0.9em;
 }
 
 /* #81310 table should be visible overriding bootstrap invisible class */
@@ -839,7 +838,7 @@ span.figure-left {
     text-transform: &dtml-textTransform;;
     vertical-align: top;
     margin: 1em 0;
-    font-size: 11px !important;
+    font-size: &dtml-fontSmallSize; !important;
     clear: both;
 }
 

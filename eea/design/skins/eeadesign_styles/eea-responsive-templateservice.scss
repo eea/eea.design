@@ -4,6 +4,7 @@
 $bg-color: #004B87;
 $faceted-color: #008675;
 $input-color: #f3f3f3;
+$font-size: 14px;
 
 @media screen and (max-width: 320px) {
   .plone-breadcrumb-list > li {
@@ -45,7 +46,7 @@ $input-color: #f3f3f3;
     }
   }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1249px) {
   #portal-logo-link-header, .navbar-toggle {
     display: block;
     }
@@ -127,7 +128,7 @@ $input-color: #f3f3f3;
       }
     .eea-accordion-title, .eea-accordion-panel > h2 {
       background-color: $bg-color;
-      font-size: 13px;
+      font-size: $font-size;
       color: #FFF;
       border: 0;
       padding: 0;
@@ -208,7 +209,7 @@ $input-color: #f3f3f3;
     font-weight: bold;
     padding: 0.5em 0;
     line-height: 2em;
-    font-size: 13px;
+    font-size: $font-size;
     width: 100%;
     border-bottom: 1px solid gray;
     }
@@ -279,7 +280,7 @@ $input-color: #f3f3f3;
     }
   }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .portal-searchbox .gsc-search-button {
     cursor: pointer;
     height: 32px;
@@ -296,14 +297,14 @@ $input-color: #f3f3f3;
     display: none;
     }
   }
-@media screen and (min-width: 1200px) and (max-width: 1359px) {
+@media screen and (min-width: 1250px) and (max-width: 1359px) {
   .portal-globalnav > li > a,
   .secondary-portaltabs > li {
-    font-size: 13px;
+    font-size: $font-size;
     }
   
     #secondary-globalnav-tips {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 

@@ -229,7 +229,7 @@ dd#tempCoverage, dd.geotags, dd.category{
     display: inline-block;
     line-height: inherit;
     background: &dtml-mediumBackgroundColor;;
-    font-size: 10px;
+    font-size: &dtml-fontSmallSize;;
     -webkit-border-radius: 0.5em;
 }
 
@@ -412,7 +412,7 @@ a.video-fancybox .photoAlbumEntryWrapper {
 
 .photoAlbumEntryTitle {
     overflow: hidden;
-    height: 3.2em;
+    height: 4em;
     margin-top: 0.4em;
     width: 100%;
     padding: 0 5px;

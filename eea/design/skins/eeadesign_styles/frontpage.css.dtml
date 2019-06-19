@@ -186,12 +186,13 @@
 .featured h2, .featured h3 {
     clear: none !important;
     margin: 0 0 1em 0;
+    word-break: break-word;
 }
 
 /* style for shortcuts buttons */
 #portlet-followus > dd {
   display: inline-block;
-  width: 40px;
+  width: 37px;
   margin: 0 0 2px 0;
 }
 

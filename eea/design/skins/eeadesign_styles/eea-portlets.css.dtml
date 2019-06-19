@@ -123,7 +123,7 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 
 .portletFooter {
     clear: both;
-    font-size:11px;
+    font-size: &dtml-fontSmallSize;;
     line-height:1em;
     border: 1px none &dtml-lightGreyDivisionColor;;
     border-top-style: dotted;
@@ -386,7 +386,7 @@ dt.portletItem a, #content dt.portletItem a {
 
 dl.portletNavigationTree dt.portletSubMenuHeader {
    background-color: &dtml-lightBackgroundColor;;
-   font-size: 12px;
+   font-size: 14px;
    padding: 10px;
    margin: 0;
    cursor: pointer;
