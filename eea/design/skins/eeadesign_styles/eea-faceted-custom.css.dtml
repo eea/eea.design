@@ -47,6 +47,7 @@
     margin-top: -35px;
     margin-right: 1em;
     padding-bottom: 1em;
+    font-size: &dtml-fontSmallSize;;
 }
 
 #content .faceted-operator a {
@@ -87,6 +88,10 @@
 .widget-fieldset input {
     vertical-align: middle;
     margin-top: 2px;
+}
+
+.faceted-noborder {
+    float: none !important; /* #106884 avoid float for faceted inputs before labels */
 }
 
 .widget-fieldset ul li label {

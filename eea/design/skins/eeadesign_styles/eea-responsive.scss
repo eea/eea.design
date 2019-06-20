@@ -59,6 +59,11 @@ $input-color: #f3f3f3;
 }
 
 @media screen and (max-width: 359px) {
+  #portlet-followus > dd {
+    width: 37px;
+    margin: 0 0 2px 0;
+  }
+
   #socialmedia-list {
       font-size: 1.5em;
     }
@@ -515,18 +520,22 @@ $input-color: #f3f3f3;
     padding: 0 0.5em; /* add padding from center area to the left area*/
     }
 
-  #faceted-form {
-    .eea-accordion-title, .eea-faceted-filter {
-      display: none;
-      }
-    .eea-accordion-panels {
-      border: 0;
-      overflow: auto;
-      }
-    .pane {
-      display: block !important;
-      }
-    }
+  // #106884 disable code that shows accordion panels as tabs
+  .eea-faceted-filter {
+    display: none;
+  }
+  //#faceted-form {
+  //  .eea-accordion-title {
+  //    display: none;
+  //    }
+  //  .eea-accordion-panels {
+  //    border: 0;
+  //    overflow: auto;
+  //    }
+  //  .pane {
+  //    display: block !important;
+  //    }
+  //  }
 
 }
 
@@ -624,14 +633,12 @@ $input-color: #f3f3f3;
 //    padding: 1em 0.45em; } }
 
 
-//@media screen and (max-width: 1199px) {
-//
-//  // david
-//  //#portal-column-content {
-//  //  margin-top: 60px;
-//  //}
-//
-//}
+@media screen and (max-width: 1249px) {
+  #faceted-form .faceted-widget {
+    padding: 0;
+    margin: 0;
+  }
+}
 
 //@media screen and (min-width: 1280px) {
 //}

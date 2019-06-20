@@ -751,7 +751,7 @@ span.figure-left {
 
 .tileImage, #content a.tileImage {
     float: left;
-    margin: 1em 1em 1em 0;
+    margin: 0.4em 1em 1em 0;
     border: 1px solid &dtml-globalBorderColor;;
 }
 
@@ -884,8 +884,8 @@ ul.action-buttons > li {
     margin-bottom: 2em;
 }
 
-#socialmedia-list {
-    font-size: 2.4em;
+#socialmedia-list .eea-icon {
+    font-size: 2em;
 }
 
 .social-buttons {
@@ -904,7 +904,7 @@ ul.social-buttons {
     border: 1px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-size: 10px;
+    font-size: &dtml-fontSmallSize;;
     line-height: inherit;
     margin: 2px 0;
     padding: 2px 5px;

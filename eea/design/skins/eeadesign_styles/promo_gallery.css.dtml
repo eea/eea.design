@@ -107,6 +107,7 @@
 #promo-gallery-content-sm li img  {
     min-width: 65%;
     max-width: 101%;
+    width: 100%;
 }
 
 #promo-gallery-content li a.video-fancybox.cloudvideo {

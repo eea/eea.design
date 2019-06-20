@@ -192,8 +192,8 @@
 /* style for shortcuts buttons */
 #portlet-followus > dd {
   display: inline-block;
-  width: 37px;
-  margin: 0 0 2px 0;
+    width: 40px;
+    margin: 0 5px 2px 0;
 }
 
 #portlet-followus > dd:last-child {

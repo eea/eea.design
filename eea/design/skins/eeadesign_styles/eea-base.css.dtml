@@ -400,7 +400,7 @@ a.video-fancybox .photoAlbumEntryWrapper {
 }
 .photoAlbumEntry a {
     font-size: &dtml-fontSmallSize;;
-    height: 128px;
+    height: 140px;
     width: 100%;
     margin: 10px 0;
     overflow: hidden;
@@ -412,7 +412,7 @@ a.video-fancybox .photoAlbumEntryWrapper {
 
 .photoAlbumEntryTitle {
     overflow: hidden;
-    height: 4em;
+    height: 6em;
     margin-top: 0.4em;
     width: 100%;
     padding: 0 5px;
