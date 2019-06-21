@@ -58,16 +58,6 @@ $input-color: #f3f3f3;
   //}
 }
 
-@media screen and (max-width: 359px) {
-  #portlet-followus > dd {
-    width: 37px;
-    margin: 0 0 2px 0;
-  }
-
-  #socialmedia-list {
-      font-size: 1.5em;
-    }
-}
 
 @media screen and (max-width: 360px) {
   .filter-topic {
@@ -79,11 +69,19 @@ $input-color: #f3f3f3;
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 425px) {
-  #socialmedia-list {
-    font-size: 2em;
+@media screen and (max-width: 379px) {
+  #portlet-followus > dd {
+    width: 37px;
+    margin: 0 0 2px 0;
+    }
+
+  #socialmedia-list .eea-icon {
+    font-size: 1.45em;
+    }
   }
-}
+
+//@media screen and (min-width: 360px) and (max-width: 425px) {
+//}
 
 @media screen and (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
@@ -437,6 +435,11 @@ $input-color: #f3f3f3;
     position: relative;
     right: 0;
   }
+  #tip-article-language {
+    left: inherit !important;
+    right: inherit !important;
+    top: 60px !important;
+  }
 
 
   /* START #89398 GIS Map Applications get a slimmer mobile view */
@@ -524,18 +527,18 @@ $input-color: #f3f3f3;
   .eea-faceted-filter {
     display: none;
   }
-  //#faceted-form {
-  //  .eea-accordion-title {
-  //    display: none;
-  //    }
-  //  .eea-accordion-panels {
-  //    border: 0;
-  //    overflow: auto;
-  //    }
-  //  .pane {
-  //    display: block !important;
-  //    }
-  //  }
+  .faceted-widget {
+    .eea-accordion-title {
+      display: none;
+      }
+    .eea-accordion-panels {
+      border: 0;
+      overflow: auto;
+      }
+    .pane {
+      display: block !important;
+      }
+    }
 
 }
 

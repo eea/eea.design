@@ -25,7 +25,6 @@ dl.portlet {
 }
 
 dl.portlet dd.portletItem,
-dl.portlet dd.portletFooter,
 dl.portletError dd {
     padding: 0;
 }
@@ -128,7 +127,7 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
     border: 1px none &dtml-lightGreyDivisionColor;;
     border-top-style: dotted;
     margin:0;
-    padding:1em 1em;
+    padding: 0;
     text-align:right;
 }
 
