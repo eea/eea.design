@@ -166,6 +166,10 @@
     .right-table .table-link-description {
         order: 1;
     }
+    
+    .colophon-section {
+        line-height: 1.5;
+    }
 }
 
 @media screen and (max-width: 768px) {
