@@ -392,11 +392,6 @@ ol.visualNoMarker {
     display: none;
 }
 
-.progressbar-viewlet {
-    /* #106884 avoid progresstrail making body area larger than browser area */
-    overflow: hidden;
-}
-
 /* custom css fix for hiding warning message for anonymous users when  visualization is not published */
 .userrole-anonymous .metadata ~ .warningMessage {
     display: none;
