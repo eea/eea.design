@@ -59,7 +59,7 @@
     width: 100%;
     flex-basis: 100%;
     text-align: center;
-    padding: 1.5em 0;
+    padding: 1.125rem 0;
 }
 
 .section-centered {
@@ -73,6 +73,9 @@
 
 .section-dark {
     background-color: &dtml-corporateBlue;;
+}
+.section-dark:last-child {
+    padding-bottom: 0;
 }
 .section-bordered {
     border-top: 1px solid rgba(255, 255, 255, 0.23);
@@ -105,8 +108,8 @@
     text-decoration: none;
     border: 0;
     margin: 0 0 0.83em 0;
-    line-height: 1.5em;
-    padding-bottom: 0.25em;
+    line-height: 1.2;
+    padding-bottom: 0;
 }
 
 .section-top {
