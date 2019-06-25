@@ -132,7 +132,7 @@
 
 .gsc-control-cse {
     background-color: transparent;
-    padding: 1px 0 0 0;
+    padding: 0;
     border: 0;
 }
 .gsc-input-query {
@@ -140,7 +140,7 @@
     border-radius: 0 !important;
     background: #fff;
     padding: 3px 6px !important;
-    height: 30px !important;
+    height: 31px !important;
     width: 100%;
     vertical-align: top;
     font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
