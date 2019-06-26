@@ -130,10 +130,12 @@
     color: #888;
     font-weight: bold !important;
     line-height: 1.2;
+    font-size: 130%;
 }
 
 .portlet-megatopic img {
     height: 150px;
+    width: 100%;
 }
 
 /* Frontpage news and articles

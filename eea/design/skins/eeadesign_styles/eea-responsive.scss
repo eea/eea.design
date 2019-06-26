@@ -119,21 +119,6 @@ $input-color: #f3f3f3;
     min-height: 250px;
   }
 
-  #megatopics-area {
-    display: block;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-
-  .portlet-megatopic img {
-    width: 100%;
-  }
-
-  .portlet-megatopic {
-    display: block;
-    flex: none;
-    width: 100%; }
-
 }
 
 @media screen and (max-height: 480px) and (orientation: landscape) {
@@ -182,6 +167,25 @@ $input-color: #f3f3f3;
 @media screen and (min-width: 480px) and (max-width: 627px) {
   #content #languageCodes {max-width:50%; margin-left:0;}
 }
+
+@media screen and (max-width: 580px) {
+  #megatopics-area {
+    display: block;
+    flex-wrap: nowrap;
+    width: 100%;
+    }
+
+  .portlet-megatopic img {
+    width: 100%;
+    }
+
+  .portlet-megatopic {
+    display: block;
+    flex: none;
+    width: 100%;
+    }
+  }
+
 @media screen and (min-width: 628px) and (max-width: 767px) {
   #content #languageCodes {max-width:60%;}
 }
@@ -365,12 +369,12 @@ $input-color: #f3f3f3;
 
 }
 
-@media screen and (min-width:481px) and (max-width: 860px) {
-  #megatopics-area {
-    display: block;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
+@media screen and (min-width:581px) and (max-width: 860px) {
+  //#megatopics-area {
+  //  display: block;
+  //  flex-wrap: nowrap;
+  //  width: 100%;
+  //}
 
   .portlet-megatopic img {
     width: 100%;
@@ -382,11 +386,14 @@ $input-color: #f3f3f3;
   }
 
   .portlet-megatopic {
-    display: block;
-    float: left;
+    //display: block;
+    //float: left;
     padding-right: 2px;
-    flex: none;
-    width: 50%; }
+    flex: auto;
+    width: 50%;
+    flex-direction: column;
+    white-space: normal;
+    }
 }
 
 @media screen and (max-width: 768px) {
