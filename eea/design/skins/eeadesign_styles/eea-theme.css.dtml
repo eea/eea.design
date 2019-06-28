@@ -184,7 +184,7 @@ a.downloading img {
 }
 
 #content .documentByLine {
-    max-width: 80%;
+    max-width: 87%;
     text-align: left;
     font-size: 0.75rem;
 }

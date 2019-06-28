@@ -833,7 +833,7 @@ span.figure-left {
 /* Batch selector */
 .listingBar {
     background-color: &dtml-globalBackgroundColor;;
-    padding: 0.5em 1em;
+    padding: 0.7em;
     text-align: center;
     text-transform: &dtml-textTransform;;
     vertical-align: top;

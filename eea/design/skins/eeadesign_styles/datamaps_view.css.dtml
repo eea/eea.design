@@ -21,7 +21,7 @@
 }
 #faceted-text-search input[type="text"] {
     font-size: 14pt;
-    padding: 3px;
+    padding: 5px;
     min-width: 70%;
     max-width: 77%;
 }

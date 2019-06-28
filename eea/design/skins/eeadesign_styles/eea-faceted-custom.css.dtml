@@ -172,9 +172,9 @@
 
 .faceted-widget input[type="text"] {
     min-width: 70%;
-    max-width: 76%;
+    max-width: 75.5%;
     font-size: 16px;
-    padding: 6px;
+    padding: 5px;
     background: &dtml-greyBackgroundColor;;
     display: inline-block;
 }
@@ -182,7 +182,8 @@
 .faceted-text-widget input[type="text"],
 .faceted-text-widget .searchButton {
     display: block;
-    float: left;
+    float: left !important;
+   /* data-and-maps/data right column btn brought next to submit */
 }
 .faceted-textwidget-place-all {
     clear: left;
