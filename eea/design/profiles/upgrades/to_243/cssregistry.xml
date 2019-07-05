@@ -30,4 +30,10 @@
     conditionalcomment="" media=""
     expression="python: 'car_index' in request.URL0" insert-after="pdf.print.css" />
 
+  <stylesheet
+    id="themecentre.css" rel="stylesheet" rendering="link"
+    cacheable="true" compression="safe" cookable="true"
+    conditionalcomment="" media=""
+    expression="python: '/themes' in request.URL0" insert-after="organisations.css" />
+
 </object>
