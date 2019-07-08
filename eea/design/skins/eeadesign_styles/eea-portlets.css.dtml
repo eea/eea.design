@@ -127,7 +127,7 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
     border: 1px none &dtml-lightGreyDivisionColor;;
     border-top-style: dotted;
     margin:0;
-    padding: 0;
+    padding: 5px 0 0 0;
     text-align:right;
 }
 
@@ -453,7 +453,7 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 }
 
 .navTreeLevel1 .navTreeCurrentItem:after {
-    left: -40px;
+    left: -43px;
 }
 .navTreeLevel2 .navTreeCurrentItem:after {
     left: -66px;

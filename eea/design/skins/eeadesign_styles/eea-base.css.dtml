@@ -80,10 +80,6 @@ ol {
     list-style: decimal none;
 }
 
-#content-core ul {
-    margin-bottom: 1.5em;
-}
-
 li {
     margin-bottom: 0.5em;
 }

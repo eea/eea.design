@@ -746,7 +746,7 @@ span.figure-left {
 }
 
 .tileContent {
-    display: table-cell;
+    margin-bottom: .5em;
 }
 
 .tileImage, #content a.tileImage {
