@@ -461,13 +461,13 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     left: -43px;
 }
 .navTreeLevel2 .navTreeCurrentItem:after {
-    left: -66px;
+    left: -71px;
 }
 .navTreeLevel3 .navTreeCurrentItem:after {
-    left: -91px;
+    left: -92px;
 }
 .navTreeLevel4 .navTreeCurrentItem:after {
-    left: -115px;
+    left: -114px;
 }
 .navTreeLevel5 .navTreeCurrentItem:after {
     left: -138px;

@@ -412,6 +412,11 @@ table.invisible {
     margin: 0 0 1.5em 0;
 }
 
+/* #106884 increase google chart iframe now that notes are 12px instead of 10 */
+.figureHeading + p > iframe {
+    min-height: 560px;
+}
+
 .portaltype-assessment #parent-fieldname-description {
     display: none;
 }
