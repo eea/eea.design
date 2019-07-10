@@ -226,6 +226,7 @@ div.eea-pdf-overlay {
 
 #viewlet-below-content {
     clear: both;
+    margin-top: 1em;
 }
 /* relatedItems */
 #relatedItems  {
