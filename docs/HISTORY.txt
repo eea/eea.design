@@ -1,7 +1,7 @@
 Changelog
 =========
 
-24.4-dev0 - (unreleased)
+24.4 - (2019-07-16)
 ---------------------
 * Change: Updated czechia country name
   [iulianpetchesi refs #106742]
