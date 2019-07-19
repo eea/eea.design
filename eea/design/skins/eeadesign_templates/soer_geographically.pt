@@ -37,7 +37,7 @@
 		<li><a href="countries/bg/" title="Bulgaria" i18n:attributes="title" i18n:translate="">Bulgaria</a></li>
 		<li><a href="countries/hr/" title="Croatia" i18n:attributes="title" i18n:translate="">Croatia</a></li>
 		<li><a href="countries/cy/" title="Cyprus" i18n:attributes="title" i18n:translate="">Cyprus</a></li>
-		<li><a href="countries/cz/" title="Czech Republic" i18n:attributes="title" i18n:translate="">Czech Republic</a></li>
+		<li><a href="countries/cz/" title="Czechia" i18n:attributes="title" i18n:translate="">Czechia</a></li>
 		<li><a href="countries/dk/" title="Denmark" i18n:attributes="title" i18n:translate="">Denmark</a></li>
 		<li><a href="countries/ee/" title="Estonia" i18n:attributes="title" i18n:translate="">Estonia</a></li>
 		<li><a href="countries/fi/" title="Finland" i18n:attributes="title" i18n:translate="">Finland</a></li>
