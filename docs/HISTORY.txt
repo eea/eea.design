@@ -3,6 +3,8 @@ Changelog
 
 24.4 - (2019-07-16)
 ---------------------
+* Change: Updated czechia country name
+  [iulianpetchesi refs #106742]
 * Change: Updated macedonia country name
   [iulianpetchesi refs #106742]
 
