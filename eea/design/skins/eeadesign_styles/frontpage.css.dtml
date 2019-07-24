@@ -109,10 +109,6 @@
     display: table-cell;
 }
 
-.featured-highlight-description  {
-    clear: both;
-}
-
 
 /* 72171 impact */
 #eea-intro-message {
@@ -130,10 +126,12 @@
     color: #888;
     font-weight: bold !important;
     line-height: 1.2;
+    font-size: 130%;
 }
 
 .portlet-megatopic img {
     height: 150px;
+    width: 100%;
 }
 
 /* Frontpage news and articles
@@ -171,6 +169,7 @@
 
 .featured-highlights {
     min-height: 120px;
+    overflow: hidden;
 }
 
 /* #16673 provide a max-width in order to avoid floated text from spilling below image */
@@ -178,7 +177,7 @@
     padding: 0 5px 5px 0;
 /*    width: 100%;*/
     width: 130px;
-    height: 75px;
+    height: auto;
     max-width: 150px !important;
 }
 
@@ -186,13 +185,14 @@
 .featured h2, .featured h3 {
     clear: none !important;
     margin: 0 0 1em 0;
+    word-break: break-word;
 }
 
 /* style for shortcuts buttons */
 #portlet-followus > dd {
   display: inline-block;
-  width: 40px;
-  margin: 0 0 2px 0;
+    width: 40px;
+    margin: 0 5px 2px 0;
 }
 
 #portlet-followus > dd:last-child {

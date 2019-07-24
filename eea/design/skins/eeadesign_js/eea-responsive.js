@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
                 return;
             }
             var $result = $('<h2 />', {
-                'class': (link && link.className.indexOf('current') !== -1) ? 'eea-accordion-title current' : 'eea-accordion-title',
+                'class': (link && link.className.indexOf('current') !== -1) ? 'eea-accordion-title current no-anchor' : 'eea-accordion-title no-anchor',
                 id: link ? link.id : '',
                 html: link.innerHTML || el.innerHTML
             });
@@ -210,7 +210,7 @@ jQuery(document).ready(function($) {
         $el.addClass('eea-accordion-panel');
         var $children = $el.wrapInner('<div class=\'pane\' />');
         var $legend = $children.find('legend');
-        var $h2 = $('<h2 />', {'html': $legend.text(), 'class': 'eea-accordion-title eea-icon-right-container'});
+        var $h2 = $('<h2 />', {'html': $legend.text(), 'class': 'eea-accordion-title eea-icon-right-container no-anchor'});
         $h2.prependTo($el);
     });
 
@@ -328,7 +328,7 @@ jQuery(document).ready(function($) {
                 html: $old_panel.find('.panel-content').html()
             });
             var $result = $('<h2 />', {
-                'class': 'eea-icon-right-container',
+                'class': 'eea-icon-right-container no-anchor',
                 html: $el.find('a').attr('title')
             });
             $result.append('<span class="eea-icon eea-icon-right"></span>');
