@@ -45,7 +45,7 @@ label {
 #relatedItems .photoAlbumEntry,
 #faceted-results .photoAlbumEntry
 {
-    height: 155px;
+    height: 185px;
 }
 
 /* ==== Frontpage.css ==== */

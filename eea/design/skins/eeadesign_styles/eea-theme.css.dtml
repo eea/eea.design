@@ -15,6 +15,10 @@ hr {
     margin: 1em 1em 1em 0;
 }
 
+.anchorjs-link {
+    display: inline-block !important;
+}
+
 /* Networks panel EU partners links */
 .moreLink {
     border: 0 !important;

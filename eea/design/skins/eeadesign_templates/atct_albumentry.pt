@@ -14,7 +14,7 @@
                         <span class="photoAlbumEntryWrapper">
                             <img tal:attributes="title desc_or_title;
                                                  alt obj/pretty_title_or_id;
-                                                 src string:${obj/absolute_url}/image_thumb"/>
+                                                 src string:${obj/absolute_url}/image_mini"/>
                         </span>
                         <span tal:attributes="class python: 'photoAlbumEntryTitle state-' + wf_state if show_workflow_state else 'photoAlbumEntryTitle';"
                                 tal:content="obj/pretty_title_or_id" />

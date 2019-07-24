@@ -630,8 +630,8 @@ dl.toc dd ol {
     border: 0px;
     background: transparent none;
     float: left;
-    height: 125px;
-    width: 125px;
+    height: 185px;
+    width: 175px;
     margin: 0 3px 7px 3px;
     padding: 0;
     box-shadow: 0 1px 2px #CCCCCC;
@@ -647,21 +647,10 @@ dl.toc dd ol {
 .photoAlbumEntryWrapper {
     display: block;
     background: white;
-    max-height: 71px;
+    max-height: 100px;
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
-.photoAlbumEntry a {
-    display: block;
-    font-size: 85%;
-    height: 128px;
-    width: 100%;
-    margin: 10px 0;
-}
-.photoAlbumFolder {
-    background-image: url('polaroid-multi.png');
-    background-repeat: no-repeat;
 }
 .photoAlbumEntryTitle {
     color: #76797c;

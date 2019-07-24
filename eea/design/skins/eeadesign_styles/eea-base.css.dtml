@@ -380,29 +380,26 @@ dl.toc dd {
 /* @group Album view classes */
 
 .photoAlbumEntry img {
-    max-height: 71px;
+    min-height: 100px;
 }
 
 
 a.video-fancybox .photoAlbumEntryWrapper {
     position: relative;
-    background: url(&dtml-xurl;/play-button-cloud.png) no-repeat 2px center;
+    background: url(&dtml-xurl;/play-button-cloud.png) no-repeat center center;
 }
 .photoAlbumEntry a {
     font-size: &dtml-fontSmallSize;;
-    height: 140px;
+    height: 175px;
     width: 100%;
     margin: 10px 0;
     overflow: hidden;
-}
-
-.photoAlbumFolder {
-    background: transparent;
+    display: block;
 }
 
 .photoAlbumEntryTitle {
     overflow: hidden;
-    height: 6em;
+    height: 5em;
     margin-top: 0.4em;
     width: 100%;
     padding: 0 5px;
@@ -415,13 +412,6 @@ a.video-fancybox .photoAlbumEntryWrapper {
     box-shadow: 0 2px 3px #ACACAC;
 }
 
-#whatsnew-gallery .photoAlbumEntry,
-#whatsnew-gallery .photoAlbumEntry:hover{
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    z-index: 3;
-}
 
 .photoAlbumEntry a.video-fancybox img {
     position: relative;
