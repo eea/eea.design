@@ -68,7 +68,7 @@
                                 <img title="Sustainability and well-being" alt="Sustainability and well-being"
                                   width="254" height="150" i18n:attributes="title alt"
                                   tal:attributes="src string:$portal_url/themes/human/theme_image/image_mini" />
-                                <div class="portletHeader" i18n:translate="">
+                                <div class="portletHeader" style="font-size:142%;" i18n:translate="">
                                     Sustainability and well-being
                                 </div>
                                 <ul class="list-items">

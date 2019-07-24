@@ -31,7 +31,7 @@ fieldset,
 
 
 div.formControls {
-    margin: 1em 0;
+    margin: 1em;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,

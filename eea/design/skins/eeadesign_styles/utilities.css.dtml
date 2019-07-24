@@ -40,9 +40,6 @@
     margin-right: 2em !important;
 }
 
-.mb-half {
-    margin-bottom: 0.5em !important;
-}
 .mb-0 {
     margin-bottom: 0 !important;
 }

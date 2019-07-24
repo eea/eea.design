@@ -74,10 +74,20 @@ img {
     vertical-align: middle;
 }
 
+
+#content-core h3 {
+    padding-bottom: 5px;
+}
+
+
 ol {
     line-height: 1.5em;
     margin: 0.5em 0 0 2.5em;
     list-style: decimal none;
+}
+
+#content-core ul {
+    margin-bottom: 1.5em;
 }
 
 li {
@@ -180,7 +190,7 @@ select {
 
 #content span.link-external a {
     background: transparent url(&dtml-xurl;/link_icon.gif) 0px 1px no-repeat;
-    padding: 2px 0 1px 16px;
+    padding: 2px 0px 1px 16px;
 }
 
 #content pre {
@@ -219,7 +229,7 @@ dd#tempCoverage, dd.geotags, dd.category{
     display: inline-block;
     line-height: inherit;
     background: &dtml-mediumBackgroundColor;;
-    font-size: &dtml-fontSmallSize;;
+    font-size: 10px;
     -webkit-border-radius: 0.5em;
 }
 
@@ -390,7 +400,7 @@ a.video-fancybox .photoAlbumEntryWrapper {
 }
 .photoAlbumEntry a {
     font-size: &dtml-fontSmallSize;;
-    height: 140px;
+    height: 128px;
     width: 100%;
     margin: 10px 0;
     overflow: hidden;
@@ -402,7 +412,7 @@ a.video-fancybox .photoAlbumEntryWrapper {
 
 .photoAlbumEntryTitle {
     overflow: hidden;
-    height: 6em;
+    height: 3.2em;
     margin-top: 0.4em;
     width: 100%;
     padding: 0 5px;
@@ -412,14 +422,14 @@ a.video-fancybox .photoAlbumEntryWrapper {
 /* our additional photoAlbumEntry styles */
 .photoAlbumEntry:hover {
     background: transparent;
-    box-shadow: 0 2px 3px #ACACAC;
+    box-shadow: 0px 2px 3px #ACACAC;
 }
 
 #whatsnew-gallery .photoAlbumEntry,
 #whatsnew-gallery .photoAlbumEntry:hover{
     background: transparent;
     box-shadow: none;
-    padding: 0;
+    padding: 0px;
     z-index: 3;
 }
 
@@ -521,12 +531,12 @@ div.overlay a:hover {
     line-height: 2em;
     display: inline-block;
     *display: block;
-    padding-left: 20px;
+    padding-left: 20px !important;
 }
 
 /* our customizations */
 #portal-column-content .contenttype-folder {
-    padding-left: 0 !important;
+    padding-left: 0px !important;
 }
 
 /* #5243 wrongly indented folder icon */

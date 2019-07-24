@@ -64,7 +64,7 @@
 }
 
 #tip-article-language {
-    max-width: 400px;
+    width: 400px;
     left: inherit !important;
 }
 #tip-article-language .panel-top {
@@ -132,7 +132,7 @@
 
 .gsc-control-cse {
     background-color: transparent;
-    padding: 0;
+    padding: 1px 0 0 0;
     border: 0;
 }
 .gsc-input-query {
@@ -140,7 +140,7 @@
     border-radius: 0 !important;
     background: #fff;
     padding: 3px 6px !important;
-    height: 31px !important;
+    height: 30px !important;
     width: 100%;
     vertical-align: top;
     font: italic 16px 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
@@ -243,7 +243,7 @@ td.gsc-search-button {
 }
 
 .search_glossary_link, .search_advanced_link {
-    font-size: &dtml-fontSmallSize;;
+    font-size: 11px;
 }
 
 .search_glossary_link:hover, .search_advanced_link:hover {

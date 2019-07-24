@@ -130,12 +130,10 @@
     color: #888;
     font-weight: bold !important;
     line-height: 1.2;
-    font-size: 130%;
 }
 
 .portlet-megatopic img {
     height: 150px;
-    width: 100%;
 }
 
 /* Frontpage news and articles
@@ -188,14 +186,13 @@
 .featured h2, .featured h3 {
     clear: none !important;
     margin: 0 0 1em 0;
-    word-break: break-word;
 }
 
 /* style for shortcuts buttons */
 #portlet-followus > dd {
   display: inline-block;
-    width: 40px;
-    margin: 0 5px 2px 0;
+  width: 40px;
+  margin: 0 0 2px 0;
 }
 
 #portlet-followus > dd:last-child {

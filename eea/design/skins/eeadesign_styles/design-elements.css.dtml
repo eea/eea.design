@@ -178,6 +178,7 @@
 .media {
     display: flex;
     align-items: center;
+    margin-bottom: 1em;
 }
 
 .media-box {

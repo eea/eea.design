@@ -14,10 +14,12 @@ h1 {
     font-size: 180%;
     line-height: 1.4;
     margin: 0.67em 0;
+    padding-bottom: 0.25em;
 }
 h2 {
     font-size: 150%;
     margin: 0.83em 0;
+    padding-bottom: 0.25em;
 }
 h3 {
     font-size: 125%;

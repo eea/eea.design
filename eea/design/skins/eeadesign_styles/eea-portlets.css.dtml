@@ -25,6 +25,7 @@ dl.portlet {
 }
 
 dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter,
 dl.portletError dd {
     padding: 0;
 }
@@ -99,11 +100,6 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
     padding: 0.3em;
 }
 
-.portletCollection .even,
-.portletCollection .odd {
-    border: 0;
-}
-
 .portletItem {
     margin: 0;
     padding: 0 0 0 0;
@@ -127,12 +123,12 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 
 .portletFooter {
     clear: both;
-    font-size: &dtml-fontSmallSize;;
+    font-size:11px;
     line-height:1em;
     border: 1px none &dtml-lightGreyDivisionColor;;
     border-top-style: dotted;
-    margin:  1em 0 0 0;
-    padding: &dtml-padding-half; 0 0 0;
+    margin:0;
+    padding:1em 1em;
     text-align:right;
 }
 
@@ -390,7 +386,7 @@ dt.portletItem a, #content dt.portletItem a {
 
 dl.portletNavigationTree dt.portletSubMenuHeader {
    background-color: &dtml-lightBackgroundColor;;
-   font-size: 14px;
+   font-size: 12px;
    padding: 10px;
    margin: 0;
    cursor: pointer;
@@ -450,11 +446,11 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 }
 
 .navTreeLevel0 .navTreeCurrentItem:after {
-    left: -16px;
+    left: -18px;
 }
 /* dc_view navigation has bigger first level padding */
 .template-dc_view .navTreeLevel0 .navTreeCurrentItem:after {
-    left: -43px;
+    left: -60px;
 }
 
 .navTreeLevel1 .navTreeCurrentItem:after {

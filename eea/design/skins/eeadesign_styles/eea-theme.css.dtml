@@ -21,7 +21,7 @@ hr {
     display: inline-block;
     padding-left: 20px;
     height: 18px;
-    font-size: &dtml-fontSmallSize;;
+    font-size: 11px;
     line-height: 1.6;
     position: relative;
 }
@@ -184,9 +184,8 @@ a.downloading img {
 }
 
 #content .documentByLine {
-    max-width: 87%;
+    max-width: 80%;
     text-align: left;
-    font-size: 0.75rem;
 }
 
 .portaltype-fiche .link-presentation {
@@ -226,7 +225,6 @@ div.eea-pdf-overlay {
 
 #viewlet-below-content {
     clear: both;
-    margin-top: 1em;
 }
 /* relatedItems */
 #relatedItems  {

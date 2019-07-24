@@ -15,7 +15,7 @@
 }
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-    font-size: 14px;
+    font-size: 12px;
     padding: 3px;
 }
 #faceted-portal-status-message {
@@ -47,7 +47,6 @@
     margin-top: -35px;
     margin-right: 1em;
     padding-bottom: 1em;
-    font-size: &dtml-fontSmallSize;;
 }
 
 #content .faceted-operator a {
@@ -90,13 +89,9 @@
     margin-top: 2px;
 }
 
-.faceted-noborder {
-    float: none !important; /* #106884 avoid float for faceted inputs before labels */
-}
-
 .widget-fieldset ul li label {
     font-weight: normal;
-    font-size: &dtml-fontSmallSize;;
+    font-size: 11px;
     line-height: 15px;
     padding-left: 5px;
     padding-bottom: 5px;
@@ -130,7 +125,7 @@
 
 .faceted_letter,
 .faceted_letter:hover {
-    font-size: &dtml-fontSmallSize;;
+    font-size: 11px;
     font-weight: normal;
 }
 
@@ -172,9 +167,9 @@
 
 .faceted-widget input[type="text"] {
     min-width: 70%;
-    max-width: 75.5%;
+    max-width: 76%;
     font-size: 16px;
-    padding: 5px;
+    padding: 6px;
     background: &dtml-greyBackgroundColor;;
     display: inline-block;
 }
@@ -182,8 +177,7 @@
 .faceted-text-widget input[type="text"],
 .faceted-text-widget .searchButton {
     display: block;
-    float: left !important;
-   /* data-and-maps/data right column btn brought next to submit */
+    float: left;
 }
 .faceted-textwidget-place-all {
     clear: left;
@@ -223,7 +217,7 @@
 .faceted-center-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label{
     display: inline;
     float: none;
-    font-size: &dtml-fontSmallSize;;
+    font-size: 11px;
     line-height: 13px;
     padding-bottom: 0;
     width: 120px;

@@ -118,6 +118,7 @@ option.hiddenStructure {
 /* Default are layout tables. We can not really style those. It would have too many side effects */
 table {
     empty-cells: show;
+    font-size: 0.9em;
 }
 
 /* #81310 table should be visible overriding bootstrap invisible class */
@@ -746,12 +747,12 @@ span.figure-left {
 }
 
 .tileContent {
-    margin-bottom: .5em;
+    display: table-cell;
 }
 
 .tileImage, #content a.tileImage {
     float: left;
-    margin: 0.4em 1em 1em 0;
+    margin: 1em 1em 1em 0;
     border: 1px solid &dtml-globalBorderColor;;
 }
 
@@ -833,12 +834,12 @@ span.figure-left {
 /* Batch selector */
 .listingBar {
     background-color: &dtml-globalBackgroundColor;;
-    padding: 0.7em;
+    padding: 0.5em 1em;
     text-align: center;
     text-transform: &dtml-textTransform;;
     vertical-align: top;
     margin: 1em 0;
-    font-size: &dtml-fontSmallSize; !important;
+    font-size: 11px !important;
     clear: both;
 }
 
@@ -884,8 +885,8 @@ ul.action-buttons > li {
     margin-bottom: 2em;
 }
 
-#socialmedia-list .eea-icon {
-    font-size: 2em;
+#socialmedia-list {
+    font-size: 2.4em;
 }
 
 .social-buttons {
@@ -904,7 +905,7 @@ ul.social-buttons {
     border: 1px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-size: &dtml-fontSmallSize;;
+    font-size: 10px;
     line-height: inherit;
     margin: 2px 0;
     padding: 2px 5px;
@@ -1168,7 +1169,6 @@ ul.social-buttons {
     }
     .eea-tile {
         width: 100%;
-        max-width: 100%;
     }
     .eea-tileThumbImg {
         height: auto;
