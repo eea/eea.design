@@ -412,7 +412,6 @@ table.invisible {
     margin: 0 0 1.5em 0;
 }
 
-
 .portaltype-assessment #parent-fieldname-description {
     display: none;
 }

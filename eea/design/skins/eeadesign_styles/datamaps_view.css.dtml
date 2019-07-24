@@ -15,8 +15,8 @@
     text-align: left;
 }
 #semantic-content {
-    background: url("&dtml-xurl;/molecule.png") no-repeat 20px 22px transparent; /* TODO: to sprite */
-    padding: 25px 20px 35px 80px;
+    background: url("&dtml-xurl;/molecule.png") no-repeat -5px 11px transparent; /* TODO: to sprite */
+    padding: 25px 20px 35px 110px;
     text-align: left;
 }
 #faceted-text-search input[type="text"] {

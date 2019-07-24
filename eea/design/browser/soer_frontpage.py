@@ -165,7 +165,7 @@ class SoerFrontpage(BrowserView):
                 'tags': 'country name',
             },
             {
-                'label': 'North Macedonia',
+                'label': 'Former Yugoslav Republic of Macedonia',
                 'tags': 'macedonia',
             },
             {

@@ -109,6 +109,10 @@
     display: table-cell;
 }
 
+.featured-highlight-description  {
+    clear: both;
+}
+
 
 /* 72171 impact */
 #eea-intro-message {
@@ -169,7 +173,6 @@
 
 .featured-highlights {
     min-height: 120px;
-    overflow: hidden;
 }
 
 /* #16673 provide a max-width in order to avoid floated text from spilling below image */
@@ -177,7 +180,7 @@
     padding: 0 5px 5px 0;
 /*    width: 100%;*/
     width: 130px;
-    height: auto;
+    height: 75px;
     max-width: 150px !important;
 }
 

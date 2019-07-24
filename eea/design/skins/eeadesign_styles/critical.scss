@@ -182,7 +182,7 @@ legend {
   display: none !important;
   }
 
-html{font-size:16px !important;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;font-weight: 400;}body{font:87.5% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1400px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:1.125rem 0;clear:both;}
+html{font-size:16px !important;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;font-weight: 400;}body{font:87.5% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1215px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:1.125rem 0;clear:both;}
 
 
 
@@ -425,6 +425,7 @@ ul {
   background-color: #FFF;
   }
 .plone-breadcrumb {
+  font-size: 100%;
   margin-bottom: .5em;
   border-width: 0 0 1px 0;
   border-style:solid;
@@ -655,6 +656,7 @@ ul {
 #visual-portal-wrapper .eea-tabs {
   padding: 0 10px 0 0;
   margin: 0;
+  font-size: 12px;
   list-style: none none;
   background-color: unquote("&dtml-corporateBlue;");
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
