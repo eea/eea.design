@@ -243,10 +243,18 @@ dd#tempCoverage, dd.geotags, dd.category{
     display: none;
 }
 
-#content table {
+
+/* #106884 span tables 100% width while also making the overflow when area is
+ * too small for the table data to fit
+ */
+table {
     max-width: 100%;
     display: block;
     overflow: auto;
+}
+tbody {
+    display: table;
+    width: 100%;
 }
 
 /* #101427 we need equal length table cells when comparing canonical to translation field value */
@@ -379,10 +387,6 @@ dl.toc dd {
 
 /* @group Album view classes */
 
-.gallery-album {
-    display: flex;
-    flex-wrap: wrap;
-}
 .photoAlbumEntry img {
     min-height: 100px;
 }

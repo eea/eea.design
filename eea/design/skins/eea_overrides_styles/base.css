@@ -627,13 +627,13 @@ dl.toc dd ol {
 
 /* @group Album view classes */
 .photoAlbumEntry {
-    border: 0px;
+    border: 0;
     background: transparent none;
     float: left;
     height: 185px;
-    flex: 1;
+    width: 32%;
     min-width: 160px;
-    max-width: 190px;
+    max-width: 189px;
     margin: 0 3px 7px 3px;
     padding: 0;
     box-shadow: 0 1px 2px #CCCCCC;
