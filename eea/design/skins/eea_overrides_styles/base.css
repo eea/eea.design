@@ -631,7 +631,9 @@ dl.toc dd ol {
     background: transparent none;
     float: left;
     height: 185px;
-    width: 175px;
+    flex: 1;
+    min-width: 160px;
+    max-width: 190px;
     margin: 0 3px 7px 3px;
     padding: 0;
     box-shadow: 0 1px 2px #CCCCCC;

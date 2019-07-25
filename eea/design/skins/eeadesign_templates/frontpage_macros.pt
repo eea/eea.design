@@ -210,7 +210,7 @@
                                 </metal:fill>
                             </metal:isVideo>
                         </h3>
-                        <p tal:content="python:plone_view.cropText(description,descr_max_length)">description</p>
+                        <p tal:content="text" tal:define="text python:plone_view.cropText(description,descr_max_length)" tal:condition="text">description</p>
                         <p><a href="#" class="moreLink"
                                 tal:attributes="href string:${url}/view" i18n:translate="">Read more</a></p>
                     </tal:cond>
@@ -224,7 +224,7 @@
                                     Highlight Title</a></h3>
                         </div>
                         <div class="featured-highlight-description">
-                            <p tal:content="python:plone_view.cropText(description,descr_max_length)">description</p>
+                            <p tal:content="text" tal:define="text python:plone_view.cropText(description,descr_max_length)" tal:condition="text">description</p>
                             <p><a href="#" class="moreLink"
                                     tal:attributes="href url;" i18n:translate="">Read more</a></p>
                         </div>

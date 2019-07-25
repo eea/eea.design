@@ -379,6 +379,10 @@ dl.toc dd {
 
 /* @group Album view classes */
 
+.gallery-album {
+    display: flex;
+    flex-wrap: wrap;
+}
 .photoAlbumEntry img {
     min-height: 100px;
 }
