@@ -3,12 +3,14 @@ Changelog
 
 24.5-dev0 - (unreleased)
 ---------------------
+* Change: update Czechia country name under "Countries" section
+  [alecghica refs #106742]
 
 24.4 - (2019-07-16)
 ---------------------
-* Change: Updated czechia country name
+* Change: Updated Czechia country name
   [iulianpetchesi refs #106742]
-* Change: Updated macedonia country name
+* Change: Updated North Macedonia country name
   [iulianpetchesi refs #106742]
 
 24.3 - (2019-05-29)
