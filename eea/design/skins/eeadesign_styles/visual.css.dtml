@@ -731,10 +731,11 @@ span.figure-left {
 .tileItem {
     border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
     padding-top: 0.5em;
+    overflow: hidden;
 }
 .tileHeadline {
     border: none;
-    font-size: 110%;
+    font-size: 115%;
     font-weight: bold;
     background: none;
     margin:0;
@@ -1161,6 +1162,15 @@ ul.social-buttons {
 }
 
 /* MEDIA Queries, place normal css above this section */
+@media (min-width: 320px) {
+    .eea-tileTitle {
+        min-height: 2.5em;
+        max-height: 3.5em;
+        overflow: hidden;
+        position: relative;
+    }
+
+}
 
 @media (max-width: 480px) {
     .eea-tiles {
@@ -1196,21 +1206,6 @@ ul.social-buttons {
     }
 }
 
-@media (min-width: 1281px) {
-    #content .eea-section-trigger {
-        display: none;
-    }
-}
-
-@media (min-width: 320px) {
-    .eea-tileTitle {
-        min-height: 2.5em;
-        max-height: 3.5em;
-        overflow: hidden;
-        position: relative;
-    }
-
-}
 @media (min-width: 768px) {
     .eea-tileTitle {
         font-size: 1.4em;

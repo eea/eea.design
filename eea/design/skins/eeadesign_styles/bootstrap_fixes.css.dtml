@@ -40,13 +40,6 @@ label {
     z-index: 1031;
 }
 
-/* ==== eea_base.css ==== */
-/* compensate for padding from eea_soer.css */
-#relatedItems .photoAlbumEntry,
-#faceted-results .photoAlbumEntry
-{
-    height: 185px;
-}
 
 /* ==== Frontpage.css ==== */
 

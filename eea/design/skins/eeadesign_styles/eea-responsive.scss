@@ -103,7 +103,14 @@ $input-color: #f3f3f3;
 //}
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 410px) {
+  .photoAlbumEntry {
+    width: 100%;
+    margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
   #whatsnew-gallery  {
     .tileImage {
       display: none;
@@ -147,12 +154,29 @@ $input-color: #f3f3f3;
   //  min-height: 365px;
   //}
 }
+@media screen and (min-width: 410px) and (max-width: 549px) {
+  .photoAlbumEntry {
+    width: 49%;
+    }
+}
 
-//@media (min-width: 481px) and (max-width: 568px) {
-//  #promo-gallery-content {
-//    min-height: 310px;
-//  }
-//}
+@media screen and (min-width: 410px) and (max-width: 959px) {
+  .photoAlbumEntry:nth-of-type(2n) {
+    margin-right: 0;
+    }
+  }
+@media screen and (min-width: 550px) and (max-width: 634px) {
+  .photoAlbumEntry {
+    width: 49.3%;
+    }
+}
+
+@media screen and (min-width: 635px) and (max-width: 767px) {
+  .photoAlbumEntry {
+    width: 49.4%;
+    }
+  }
+
 
 /* #31309 - Improve DaViz Filter design/display */
 @media screen {
@@ -571,35 +595,25 @@ $input-color: #f3f3f3;
     }
   }
 
-  .photoAlbumEntry {
-    width: 127px;
-  }
 }
-// 102564
-//@media screen and (min-width: 768px) and (max-width: 940px) {
-//
-//  #secondary-portaltabs {
-//    color: inherit;
-//  }
-//
-//  #portal-globalnav > li > a {
-//    padding: 1em 0.4em;
-//  }
-//  #globalnav-holder #portal-globalnav {
-//    padding-right: 0 !important;
-//  }
-//}
 
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .photoAlbumEntry {
+    width: 49.1%;
+    }
+  }
 
+@media screen and (min-width: 960px) {
+  .photoAlbumEntry:nth-of-type(3n) {
+    margin-right: 0;
+    }
+}
 
-//@media screen and (min-width: 1024px) {
-//  #visual-portal-wrapper {
-//    min-width: 995px;
-//    max-width: 1024px;
-//  }
-//
-//}
-
+@media screen and (min-width: 960px) and (max-width: 1116px) {
+  .photoAlbumEntry {
+    width: 32.4%;
+    }
+  }
 
 @media screen and (max-width: 1024px) {
   .frontpage #portal-columns,
@@ -631,17 +645,16 @@ $input-color: #f3f3f3;
   }
 }
 
-
-//@media screen and (width: 1024px) {
-//}
-
-//@media screen and (min-width: 1025px) {
-//}
-
-//@media screen and (min-width: 1024px) and (max-width: 1050px) {
-//  #portal-globalnav > li > a {
-//    padding: 1em 0.45em; } }
-
+@media screen and (min-width: 1117px) and (max-width: 1219px) {
+  .photoAlbumEntry {
+    width: 32.5%;
+    }
+  }
+@media screen and (min-width: 1220px) {
+  .photoAlbumEntry {
+    width: 32.6%;
+    }
+  }
 
 @media screen and (max-width: 1249px) {
   #faceted-form .faceted-widget {
@@ -650,31 +663,10 @@ $input-color: #f3f3f3;
   }
 }
 
-//@media screen and (min-width: 1280px) {
-//}
-
-
-
-//@media screen and (min-width: 768px) and (max-width: 1439px) {
-//}
-//
-//#footer-wrapper {
-//  min-width: 995px;
-//}
-//
-////#portal-footer,
-////#portal-colophon .colophonWrapper {
-////  min-width: 995px;
-////}
-
-//.frontpage #visual-portal-wrapper,
-//.template-datamaps_view #visual-portal-wrapper,
-////.template-themecentre_view #visual-portal-wrapper,
-//.template-soer2015_frontpage #visual-portal-wrapper,
-//.template-dc_view #visual-portal-wrapper {
-//  min-width: inherit;
-//  max-width: inherit;
-//}
-
+@media screen and (min-width: 1335px) {
+  .photoAlbumEntry {
+    width: 32.7%;
+    }
+  }
 /*! </dtml-let> */
 /*! </dtml-with> */
