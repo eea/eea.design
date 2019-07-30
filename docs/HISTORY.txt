@@ -3,7 +3,7 @@ Changelog
 
 24.5-dev0 - (unreleased)
 ---------------------
-* Change: update Czechia country name under "Countries" section
+* Change: updated Czechia country name under "Countries" section
   [alecghica refs #106742]
 
 24.4 - (2019-07-16)
