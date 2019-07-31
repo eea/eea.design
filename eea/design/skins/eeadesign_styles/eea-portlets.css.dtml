@@ -45,7 +45,7 @@ dl.portlet ul.navTree li a {
     padding: 10px;
     border-top: 1px dotted #BABBB8;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
