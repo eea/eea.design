@@ -25,12 +25,11 @@
 }
 
 #highlights-block h3 {
-    margin: 0 0 0.5em 0;
     font-weight: normal;
     border-bottom: 0;
 }
 
-#whats-new, .featured h2, .featured dt.portletHeader {
+.featured h2, .featured dt.portletHeader {
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4em;
@@ -39,6 +38,9 @@
     clear: left;
     margin: 0;
     background: none;
+}
+.featured .column-title {
+    line-height: 1;
 }
 
 #highlights-block .date, #content .date {
@@ -78,19 +80,6 @@
 
 /* Frontpage main content
 ******************************************************************************/
-
-/*#highlights-area {*/
-/*    background-color: &dtml-lightBackgroundColor;;*/
-/*    padding: &dtml-padding-base;;*/
-/*}*/
-
-#articles-area h2 {
-    padding-top: 0;
-    line-height: 1em;
-    border-bottom: 0;
-    font-weight:normal;
-}
-
 #browse-by-organisation {
     margin-top: 0.83em;
 }
@@ -107,6 +96,9 @@
 
 .featured-highlight-title {
     display: table-cell;
+}
+.featured-highlight-description {
+    font-size: 1rem;
 }
 
 
@@ -174,18 +166,20 @@
 
 /* #16673 provide a max-width in order to avoid floated text from spilling below image */
 .featured img {
-    padding: 0 5px 5px 0;
-/*    width: 100%;*/
-    width: 130px;
+    padding: 0 1em 5px 0;
+    width: 100%;
     height: auto;
-    max-width: 150px !important;
 }
 
 /* in featured boxes we do want floating for links and images */
 .featured h2, .featured h3 {
+    font-weight: normal;
     clear: none !important;
     margin: 0 0 1em 0;
     word-break: break-word;
+}
+.featured h3 {
+    margin: 0;
 }
 
 /* style for shortcuts buttons */

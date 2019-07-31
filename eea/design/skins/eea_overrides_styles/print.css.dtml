@@ -469,4 +469,9 @@ dl.captioned {
     width: 100%;
 }
 
+/* #106884 keep discreet font size at same size as before the body font increase */
+.discreet {
+    font-size: 10px;
+}
+
 /* </dtml-with> */

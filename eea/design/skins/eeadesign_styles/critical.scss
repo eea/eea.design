@@ -622,12 +622,10 @@ ul {
   padding: 0;
   }
 #articles-area h2 {
-  padding-top: 0;
-  margin-top: 0;
   line-height: 1em;
   border-bottom: 0;
-  font-weight: normal;
-  }
+  margin: 0 0 0.5em 0;
+}
 #semantic-data-service {
   margin-top: 0;
   }
@@ -671,7 +669,7 @@ ul {
   float: left;
   }
 #visual-portal-wrapper .eea-tabs.two-rows > li > a {
-  line-height: 2.5;
+  line-height: 2.2;
   }
 .eea-tabs > li {
   margin: 0;
@@ -679,12 +677,13 @@ ul {
   display: inline-block;
   }
 .eea-tabs > li > a {
-  max-width: 195px;
-  position: relative;
-  display: block;
   color: #fff;
-  text-shadow: 1px 1px 1px #000000;
+  display: block;
+  font-size: 1rem;
+  max-width: 195px;
   padding: 8px;
+  position: relative;
+  text-shadow: 1px 1px 1px #000000;
   }
 
 .eea-tabs.two-rows > li > a {
