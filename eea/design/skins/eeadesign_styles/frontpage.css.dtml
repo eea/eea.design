@@ -130,7 +130,7 @@
 }
 
 .portlet-megatopic img {
-    height: 150px;
+    height: 100%;
     width: 100%;
 }
 
