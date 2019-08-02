@@ -185,15 +185,15 @@
 
                             <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
                                 <metal:fill metal:fill-slot="body">
-                                    <a href="#" class="noPrint"
-                                            tal:attributes="href url; class python:cloud or video or animation">
+                                    <a href="#"
+                                            tal:attributes="href url; class python:cloud + ' figure-image-block' or video + ' figure-image-block' or animation + 'figure-image-block'">
                                         <img alt="" tal:attributes="src string:${url}/${image_scale}; title title; alt title" />
                                     </a>
                                 </metal:fill>
                             </metal:isVideo>
                         </tal:cond>
                         <tal:notcond tal:condition="not:is_video">
-                            <a href="#" tal:attributes="href url;">
+                            <a href="#" tal:attributes="href url;" class="figure-image-block">
                                     <img alt="" width="125" height="70" tal:attributes="src string:${image_url}/${image_scale}; title title; alt title" />
                             </a>
                         </tal:notcond>
@@ -203,7 +203,7 @@
                         <h3 class="highlight">
                             <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
                                 <metal:fill metal:fill-slot="body">
-                                    <a href="#" class="noPrint"
+                                    <a href="#"
                                             tal:attributes="href url; class python:cloud or video or animation"
                                             tal:content="title">
                                         Highlight Title</a>

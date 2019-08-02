@@ -54,15 +54,18 @@
 
 .frontpage .tileHeadline {
   padding-left: 0 !important;
-  padding-top: 0.4em !important;
 }
 
 /**
  * Reset margin between tabs and content from highlights
 */
 .figure-left {
-    /* clear: left; */
     float: left;
+}
+
+.figure-image-block {
+    display: block;
+    margin: 0.4em 1em 0 0;
 }
 
 .archives {
@@ -166,7 +169,6 @@
 
 /* #16673 provide a max-width in order to avoid floated text from spilling below image */
 .featured img {
-    padding: 0 1em 5px 0;
     width: 100%;
     height: auto;
 }

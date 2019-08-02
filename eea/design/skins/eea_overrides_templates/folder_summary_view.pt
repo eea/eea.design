@@ -33,7 +33,7 @@
                                        title item_title_or_id;
                                        class string:tileImage ${item_css_class}">
                         <img class="lazy"
-                             tal:attributes="src string:${item_absolute_url}/image_thumb;
+                             tal:attributes="src string:${item_absolute_url}/image_mini;
                                              title item_title_or_id;
                                              alt item_title_or_id" />
                     </a>

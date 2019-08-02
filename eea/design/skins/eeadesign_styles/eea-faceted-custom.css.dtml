@@ -238,9 +238,6 @@
     padding: 0 1em 1em;
     margin-bottom: 0;
 }
-.faceted-results .photoAlbumEntry {
-    width: 123px;
-}
 /* @end of specific faceted navigation style */
 
 /* </dtml-let> */

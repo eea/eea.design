@@ -31,6 +31,7 @@
 
   <tal:folderContents condition="folderContents" tal:define="batch folderContents">
     <div metal:use-macro="here/batch_macros/macros/navigation" />
+      <div class="entries">
     <tal:images tal:repeat="brain folderContents">
       <tal:entry tal:define="
         obj brain/getObject;
@@ -44,6 +45,7 @@
         <metal:entry use-macro="entry_macro" />
       </tal:entry>
     </tal:images>
+      </div>
     <div class="visualClear"></div>
     <div metal:use-macro="here/batch_macros/macros/navigation" />
   </tal:folderContents>
