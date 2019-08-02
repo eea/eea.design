@@ -34,6 +34,10 @@
     overflow: hidden !important;
 }
 
+.overflow_auto {
+    overflow: auto !important;
+}
+
 /* spacing utilities */
 .my-2 {
     margin-left: 2em !important;

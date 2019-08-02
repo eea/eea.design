@@ -132,6 +132,7 @@ table { border-spacing: 0; }
 img { vertical-align: text-bottom; }
 iframe {
   border: 0 none;
+  min-width: 100%;
   }
 input, button, select, textarea {
   font-family: inherit;
