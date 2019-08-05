@@ -38,8 +38,15 @@
         />
     </configure>
 
-    <!-- #13816 override _data to include QuickEvent for Events portlet catalog
-         search -->
+    <browser:page
+      for="*"
+      name="faceted-preview-item"
+      template="templates/preview-item-override.pt"
+      permission="zope2.View"
+    />
+
+  <!-- #13816 override _data to include QuickEvent for Events portlet catalog
+       search -->
     <plone:portletRenderer
         portlet="plone.app.portlets.portlets.events.IEventsPortlet"
         class=".overrides.EEAEventsRenderer"

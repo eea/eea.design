@@ -642,6 +642,9 @@ dl.toc dd ol {
     overflow: hidden;
     text-align: center;
 }
+.width-full .photoAlbumEntry {
+    max-width: 331px;
+}
 
 .photoAlbumEntryWrapper {
     display: block;

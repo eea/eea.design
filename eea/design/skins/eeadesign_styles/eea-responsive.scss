@@ -660,6 +660,14 @@ $input-color: #f3f3f3;
   }
 }
 
+@media screen and (min-width: 1320px) {
+  .width-full .photoAlbumEntry:nth-of-type(3n) {
+    margin-right: 7px;
+    }
+  .width-full .photoAlbumEntry:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
 @media screen and (min-width: 1335px) {
   .photoAlbumEntry {
     width: 32.7%;
