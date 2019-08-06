@@ -12,7 +12,7 @@
                                        title obj/pretty_title_or_id;
                                        class python:cloud or video or animation">
                         <span class="photoAlbumEntryWrapper" >
-                            <span class="photoAlbumEntryWrapperImg" tal:attributes="style string:background-image:url('${obj/absolute_url}/image_mini')"><!--?--></span>
+                            <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${obj/absolute_url}/image_mini"><!--?--></span>
                         </span>
                         <span tal:attributes="class python: 'photoAlbumEntryTitle state-' + wf_state if show_workflow_state else 'photoAlbumEntryTitle';"
                                 tal:content="obj/pretty_title_or_id" />
