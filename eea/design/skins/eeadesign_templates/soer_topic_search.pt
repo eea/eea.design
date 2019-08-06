@@ -21,13 +21,15 @@
 	    <tal:synthesis define="result view/getSynthesisReport"
 			   condition="result">
             <h2 i18n:translate="">Synthesis</h2>
-            <div class="photoAlbumEntry" tal:repeat="item result">
-                <a tal:attributes="href item/url; title item/description">
-                    <span class="photoAlbumEntryWrapper">
-                        <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${item/url}/image_mini"><!--?--></span>
-                    </span>
-                    <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
-                </a>
+            <div class="entries overflow_hidden">
+                <div class="photoAlbumEntry" tal:repeat="item result">
+                    <a tal:attributes="href item/url; title item/description">
+                        <span class="photoAlbumEntryWrapper">
+                            <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src python: item['url'] + '/image_mini'"><!--?--></span>
+                        </span>
+                        <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
+                    </a>
+                </div>
             </div>
             <div class="visualClear"></div>
 	    </tal:synthesis>
@@ -35,15 +37,16 @@
 	    <tal:europe define="result view/getThematicAssesments"
 			condition="result">
             <h2 i18n:translate="">Europe's environment: thematic assessments</h2>
-            <div class="photoAlbumEntry" tal:repeat="item result">
-                <a tal:attributes="href item/url; title item/description">
-                    <span class="photoAlbumEntryWrapper">
-                        <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${item/url}/image_mini"><!--?--></span>
-                    </span>
-                    <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
-                </a>
+            <div class="entries overflow_hidden">
+                <div class="photoAlbumEntry" tal:repeat="item result">
+                    <a tal:attributes="href item/url; title item/description">
+                        <span class="photoAlbumEntryWrapper">
+                            <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src python: item['url'] + '/image_mini'"><!--?--></span>
+                        </span>
+                        <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
+                    </a>
+                </div>
             </div>
-            <div class="visualClear"></div>
 	    </tal:europe>
 
 	    <tal:globaltrends define="result view/getGlobalMegatrends"
@@ -63,15 +66,16 @@
 	    <tal:partc define="result view/getCountryEnvironment"
 		       condition="result">
             <h2 i18n:translate="">Country environment</h2>
-            <div class="photoAlbumEntry" tal:repeat="item result">
-                <a tal:attributes="href item/url; title item/description">
-                    <span class="photoAlbumEntryWrapper">
-                        <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${item/url}/image_mini"><!--?--></span>
-                    </span>
-                    <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
-                </a>
+            <div class="entries overflow_hidden">
+                <div class="photoAlbumEntry" tal:repeat="item result">
+                    <a tal:attributes="href item/url; title item/description">
+                        <span class="photoAlbumEntryWrapper">
+                            <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src python: item['image'] + '/image_mini'"><!--?--></span>
+                        </span>
+                        <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
+                    </a>
+                </div>
             </div>
-            <div class="visualClear"></div>
             </tal:partc>
         </metal:main-macro>
     </div>

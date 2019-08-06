@@ -36,7 +36,6 @@
                                         <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${url}"
                                         tal:define="url python: item['portal_type'] == 'FeedItem' and item['image'] or '%s/image_mini' % item['url']"><!--?--></span>
 
-                                        <img tal:attributes="src "/>
                                     </span>
                                     <span class="photoAlbumEntryTitle" tal:content="item/title"></span>
                                 </a>
