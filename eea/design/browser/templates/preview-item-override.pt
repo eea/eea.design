@@ -29,7 +29,7 @@
 
         <tal:block tal:condition="not:is_namedimage">
     <span class="photoAlbumEntryWrapper" tal:condition="image_scale">
-        <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${obj/absolute_url}/image_mini"><!--?--></span>
+        <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${url}/image_mini"><!--?--></span>
     </span>
 
             <span class="photoAlbumEntryWrapper" tal:condition="python:not image_scale and image_tag">
