@@ -256,6 +256,10 @@ tbody {
     display: table;
     width: 100%;
 }
+/* #106884 SITE/soer/folder_contents tbody will not span 100% without this override */
+.listing tbody {
+    display: table-row-group;
+}
 
 /* #101427 we need equal length table cells when comparing canonical to translation field value */
 #content .translation_edit table {
