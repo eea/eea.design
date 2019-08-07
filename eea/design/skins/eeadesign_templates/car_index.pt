@@ -1,13 +1,8 @@
-<!-- in eea.design version 18.3 -->
-
 <tal:block tal:define="foo python:request.set('disable_plone.leftcolumn', 1);
-        bar python:request.set('disable_plone.rightcolumn', 1);" />
-<!--?fullwidth python:request.set('body.fullwidth', 1);" />-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      lang="en"
-         metal:use-macro="here/main_template/macros/master"
-         i18n:domain="eea">
+                       bar python:request.set('disable_plone.rightcolumn', 1);" />
 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en" metal:use-macro="here/main_template/macros/master" i18n:domain="eea">
 <head>
 </head>
 
@@ -221,20 +216,20 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="/countries-and-regions/montenegro">
+                                        <span>Montenegro</span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="/countries-and-regions/north-macedonia">
                                         <span>North Macedonia</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/countries-and-regions/montenegro">
-                                        <span>Montenegro</span>
+                                    <a href="/countries-and-regions/serbia">
+                                        <span>Serbia</span>
                                     </a>
                                 </li>
-                            <li>
-                                <a href="/countries-and-regions/serbia">
-                                    <span>Serbia</span>
-                                </a>
-                            </li>
                             </ul>
 
                         </div>
