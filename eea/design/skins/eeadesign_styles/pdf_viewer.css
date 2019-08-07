@@ -371,7 +371,7 @@ canvas {
 
 .pdfjs .sidebarOpen .outlineItem>a,
 .pdfjs .sidebarOpen .attachmentsItem>button {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 #content .pdfjs #outerContainer.sidebarOpen>#mainContainer {

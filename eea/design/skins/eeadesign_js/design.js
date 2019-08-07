@@ -155,7 +155,8 @@ jQuery(document).ready(function($) {
 
     /* 27537; insert a link for iframes that contain video since whkthmltopdf doesn't support
      * the video tag and there is no image placeholder */
-    var $video_iframe = $("iframe").filter('[src*="video"]'), $video_iframe_src;
+    var $iframes = $("iframe");
+    var $video_iframe = $iframes.filter('[src*="video"]'), $video_iframe_src;
     if ($video_iframe) {
         $video_iframe_src = $video_iframe.attr('src');
         $("<a />", {
@@ -164,6 +165,11 @@ jQuery(document).ready(function($) {
             html: "Video link: [" + $video_iframe_src + "]"
         }).insertBefore($video_iframe);
     }
+
+    // 106884 scroll embedded iframes in order for them to avoid enlarging body
+    $iframes.each(function(idx, el){
+       $(el).parent().addClass('overflow_auto');
+    });
 
     // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
     $('.eea-tabs').find('li:last-child').addClass('last-child');
@@ -184,7 +190,6 @@ jQuery(document).ready(function($) {
         var $el = $(el);
         $el.find('.js-hidden-toggle').toggleClass('is-eea-hidden');
         $(el.getAttribute('data-target')).slideToggle({duration: 300,
-            easing: "easeOutQuad",
             start: function() {
                 var display = this.getAttribute('data-display') || 'block';
                 jQuery(this).css('display', display);

@@ -58,10 +58,6 @@ $input-color: #f3f3f3;
   //}
 }
 
-@media screen and (width: 360px) {
-  ul.social-buttons > li {
-    padding: 0 8px; }
-}
 
 @media screen and (max-width: 360px) {
   .filter-topic {
@@ -72,6 +68,21 @@ $input-color: #f3f3f3;
     padding: 0 1em 0 0.5em;
   }
 }
+
+@media screen and (max-width: 379px) {
+  #portlet-followus > dd {
+    width: 37px;
+    margin: 0 0 2px 0;
+    }
+
+  #socialmedia-list .eea-icon {
+    font-size: 1.45em;
+    }
+  }
+
+//@media screen and (min-width: 360px) and (max-width: 425px) {
+//}
+
 @media screen and (min-width: 361px) and (max-width: 479px) {
   .filter-topic {
     width: 74%;
@@ -92,7 +103,14 @@ $input-color: #f3f3f3;
 //}
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 410px) {
+  .photoAlbumEntry {
+    width: 100%;
+    margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
   #whatsnew-gallery  {
     .tileImage {
       display: none;
@@ -107,21 +125,6 @@ $input-color: #f3f3f3;
   #keyfacts-slider dl {
     min-height: 250px;
   }
-
-  #megatopics-area {
-    display: block;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-
-  .portlet-megatopic img {
-    width: 100%;
-  }
-
-  .portlet-megatopic {
-    display: block;
-    flex: none;
-    width: 100%; }
 
 }
 
@@ -140,9 +143,6 @@ $input-color: #f3f3f3;
     width: 45%;
   }
 
-  .featured img {
-    max-width: 130px !important;
-  }
   //.faceted-widget .searchButton {
   //  margin-right: 5em;
   //}
@@ -151,12 +151,29 @@ $input-color: #f3f3f3;
   //  min-height: 365px;
   //}
 }
+@media screen and (min-width: 410px) and (max-width: 549px) {
+  .photoAlbumEntry {
+    width: 49%;
+    }
+}
 
-//@media (min-width: 481px) and (max-width: 568px) {
-//  #promo-gallery-content {
-//    min-height: 310px;
-//  }
-//}
+@media screen and (min-width: 410px) and (max-width: 959px) {
+  .photoAlbumEntry:nth-of-type(2n) {
+    margin-right: 0;
+    }
+  }
+@media screen and (min-width: 550px) and (max-width: 634px) {
+  .photoAlbumEntry {
+    width: 49.3%;
+    }
+}
+
+@media screen and (min-width: 635px) and (max-width: 767px) {
+  .photoAlbumEntry {
+    width: 49.4%;
+    }
+  }
+
 
 /* #31309 - Improve DaViz Filter design/display */
 @media screen {
@@ -171,6 +188,25 @@ $input-color: #f3f3f3;
 @media screen and (min-width: 480px) and (max-width: 627px) {
   #content #languageCodes {max-width:50%; margin-left:0;}
 }
+
+@media screen and (max-width: 580px) {
+  #megatopics-area {
+    display: block;
+    flex-wrap: nowrap;
+    width: 100%;
+    }
+
+  .portlet-megatopic img {
+    width: 100%;
+    }
+
+  .portlet-megatopic {
+    display: block;
+    flex: none;
+    width: 100%;
+    }
+  }
+
 @media screen and (min-width: 628px) and (max-width: 767px) {
   #content #languageCodes {max-width:60%;}
 }
@@ -178,8 +214,10 @@ $input-color: #f3f3f3;
 
 @media screen and (max-width: 767px) {
   #tip-article-language {
-    width: inherit;
     left: 0 !important;
+  }
+  #tip-article-language  #languageCodes {
+    max-width: 400px;
   }
 }
 
@@ -352,12 +390,12 @@ $input-color: #f3f3f3;
 
 }
 
-@media screen and (min-width:481px) and (max-width: 860px) {
-  #megatopics-area {
-    display: block;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
+@media screen and (min-width:581px) and (max-width: 860px) {
+  //#megatopics-area {
+  //  display: block;
+  //  flex-wrap: nowrap;
+  //  width: 100%;
+  //}
 
   .portlet-megatopic img {
     width: 100%;
@@ -369,11 +407,14 @@ $input-color: #f3f3f3;
   }
 
   .portlet-megatopic {
-    display: block;
-    float: left;
+    //display: block;
+    //float: left;
     padding-right: 2px;
-    flex: none;
-    width: 50%; }
+    flex: auto;
+    width: 50%;
+    flex-direction: column;
+    white-space: normal;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -421,6 +462,11 @@ $input-color: #f3f3f3;
     margin-bottom: 7px;
     position: relative;
     right: 0;
+  }
+  #tip-article-language {
+    left: inherit !important;
+    right: inherit !important;
+    top: 60px !important;
   }
 
 
@@ -505,8 +551,12 @@ $input-color: #f3f3f3;
     padding: 0 0.5em; /* add padding from center area to the left area*/
     }
 
-  #faceted-form {
-    .eea-accordion-title, .eea-faceted-filter {
+  // #106884 disable code that shows accordion panels as tabs
+  .eea-faceted-filter {
+    display: none;
+  }
+  .faceted-widget {
+    .eea-accordion-title {
       display: none;
       }
     .eea-accordion-panels {
@@ -542,35 +592,25 @@ $input-color: #f3f3f3;
     }
   }
 
-  .photoAlbumEntry {
-    width: 127px;
-  }
 }
-// 102564
-//@media screen and (min-width: 768px) and (max-width: 940px) {
-//
-//  #secondary-portaltabs {
-//    color: inherit;
-//  }
-//
-//  #portal-globalnav > li > a {
-//    padding: 1em 0.4em;
-//  }
-//  #globalnav-holder #portal-globalnav {
-//    padding-right: 0 !important;
-//  }
-//}
 
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .photoAlbumEntry {
+    width: 49.1%;
+    }
+  }
 
+@media screen and (min-width: 960px) {
+  .photoAlbumEntry:nth-of-type(3n) {
+    margin-right: 0;
+    }
+}
 
-//@media screen and (min-width: 1024px) {
-//  #visual-portal-wrapper {
-//    min-width: 995px;
-//    max-width: 1024px;
-//  }
-//
-//}
-
+@media screen and (min-width: 960px) and (max-width: 1116px) {
+  .photoAlbumEntry {
+    width: 32.4%;
+    }
+  }
 
 @media screen and (max-width: 1024px) {
   .frontpage #portal-columns,
@@ -602,52 +642,43 @@ $input-color: #f3f3f3;
   }
 }
 
+@media screen and (min-width: 1117px) and (max-width: 1219px) {
+  .photoAlbumEntry {
+    width: 32.5%;
+    }
+  }
+@media screen and (min-width: 1220px) {
+  .photoAlbumEntry {
+    width: 32.6%;
+    }
+  .template-atct_edit .photoAlbumEntry {
+    width: 32%;
+    }
+  }
 
-//@media screen and (width: 1024px) {
-//}
+@media screen and (max-width: 1249px) {
+  #faceted-form .faceted-widget {
+    padding: 0;
+    margin: 0;
+  }
+}
 
-//@media screen and (min-width: 1025px) {
-//}
+@media screen and (min-width: 1320px) {
+  .template-thumbnail_view .width-full .photoAlbumEntry:nth-of-type(3n) {
+    margin-right: 7px;
+    }
+  .template-thumbnail_view .width-full .photoAlbumEntry:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+@media screen and (min-width: 1335px) {
+  .photoAlbumEntry {
+    width: 32.7%;
+    }
 
-//@media screen and (min-width: 1024px) and (max-width: 1050px) {
-//  #portal-globalnav > li > a {
-//    padding: 1em 0.45em; } }
-
-
-//@media screen and (max-width: 1199px) {
-//
-//  // david
-//  //#portal-column-content {
-//  //  margin-top: 60px;
-//  //}
-//
-//}
-
-//@media screen and (min-width: 1280px) {
-//}
-
-
-
-//@media screen and (min-width: 768px) and (max-width: 1439px) {
-//}
-//
-//#footer-wrapper {
-//  min-width: 995px;
-//}
-//
-////#portal-footer,
-////#portal-colophon .colophonWrapper {
-////  min-width: 995px;
-////}
-
-//.frontpage #visual-portal-wrapper,
-//.template-datamaps_view #visual-portal-wrapper,
-////.template-themecentre_view #visual-portal-wrapper,
-//.template-soer2015_frontpage #visual-portal-wrapper,
-//.template-dc_view #visual-portal-wrapper {
-//  min-width: inherit;
-//  max-width: inherit;
-//}
-
+  .template-atct_edit .photoAlbumEntry {
+    width: 32%;
+    }
+  }
 /*! </dtml-let> */
 /*! </dtml-with> */

@@ -13,7 +13,6 @@ dl.portlet dt.hiddenStructure {
 }
 
 dl.portlet dd.portletItem,
-dl.portlet dd.portletFooter,
 dl.portletError dd {
     padding: 1em;
 }

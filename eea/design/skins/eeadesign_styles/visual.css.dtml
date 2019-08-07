@@ -118,7 +118,6 @@ option.hiddenStructure {
 /* Default are layout tables. We can not really style those. It would have too many side effects */
 table {
     empty-cells: show;
-    font-size: 0.9em;
 }
 
 /* #81310 table should be visible overriding bootstrap invisible class */
@@ -732,10 +731,11 @@ span.figure-left {
 .tileItem {
     border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
     padding-top: 0.5em;
+    overflow: hidden;
 }
 .tileHeadline {
     border: none;
-    font-size: 110%;
+    font-size: 115%;
     font-weight: bold;
     background: none;
     margin:0;
@@ -746,14 +746,14 @@ span.figure-left {
     margin: 0.6em 0;
 }
 
-.tileContent {
-    display: table-cell;
-}
-
 .tileImage, #content a.tileImage {
     float: left;
-    margin: 1em 1em 1em 0;
+    margin: 0.4em 1em 0 0;
     border: 1px solid &dtml-globalBorderColor;;
+}
+
+.tileContent {
+    margin-bottom: 0.4em;
 }
 
 .gallery-listing .tileItem:last-child {
@@ -834,12 +834,12 @@ span.figure-left {
 /* Batch selector */
 .listingBar {
     background-color: &dtml-globalBackgroundColor;;
-    padding: 0.5em 1em;
+    padding: 0.7em;
     text-align: center;
     text-transform: &dtml-textTransform;;
     vertical-align: top;
     margin: 1em 0;
-    font-size: 11px !important;
+    font-size: &dtml-fontSmallSize; !important;
     clear: both;
 }
 
@@ -885,8 +885,8 @@ ul.action-buttons > li {
     margin-bottom: 2em;
 }
 
-#socialmedia-list {
-    font-size: 2.4em;
+#socialmedia-list .eea-icon {
+    font-size: 2em;
 }
 
 .social-buttons {
@@ -905,7 +905,7 @@ ul.social-buttons {
     border: 1px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-size: 10px;
+    font-size: &dtml-fontSmallSize;;
     line-height: inherit;
     margin: 2px 0;
     padding: 2px 5px;
@@ -1162,6 +1162,15 @@ ul.social-buttons {
 }
 
 /* MEDIA Queries, place normal css above this section */
+@media (min-width: 320px) {
+    .eea-tileTitle {
+        min-height: 2.5em;
+        max-height: 3.5em;
+        overflow: hidden;
+        position: relative;
+    }
+
+}
 
 @media (max-width: 480px) {
     .eea-tiles {
@@ -1169,6 +1178,7 @@ ul.social-buttons {
     }
     .eea-tile {
         width: 100%;
+        max-width: 100%;
     }
     .eea-tileThumbImg {
         height: auto;
@@ -1196,21 +1206,6 @@ ul.social-buttons {
     }
 }
 
-@media (min-width: 1281px) {
-    #content .eea-section-trigger {
-        display: none;
-    }
-}
-
-@media (min-width: 320px) {
-    .eea-tileTitle {
-        min-height: 2.5em;
-        max-height: 3.5em;
-        overflow: hidden;
-        position: relative;
-    }
-
-}
 @media (min-width: 768px) {
     .eea-tileTitle {
         font-size: 1.4em;

@@ -15,13 +15,17 @@ hr {
     margin: 1em 1em 1em 0;
 }
 
+.anchorjs-link {
+    display: inline-block !important;
+}
+
 /* Networks panel EU partners links */
 .moreLink {
     border: 0 !important;
     display: inline-block;
     padding-left: 20px;
     height: 18px;
-    font-size: 11px;
+    font-size: &dtml-fontSmallSize;;
     line-height: 1.6;
     position: relative;
 }
@@ -184,8 +188,9 @@ a.downloading img {
 }
 
 #content .documentByLine {
-    max-width: 80%;
+    max-width: 87%;
     text-align: left;
+    font-size: 0.75rem;
 }
 
 .portaltype-fiche .link-presentation {
@@ -225,6 +230,7 @@ div.eea-pdf-overlay {
 
 #viewlet-below-content {
     clear: both;
+    margin-top: 1em;
 }
 /* relatedItems */
 #relatedItems  {
@@ -409,6 +415,7 @@ table.invisible {
 .template-collection-pdf-body h4.figureHeading {
     margin: 0 0 1.5em 0;
 }
+
 
 .portaltype-assessment #parent-fieldname-description {
     display: none;

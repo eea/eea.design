@@ -25,12 +25,11 @@
 }
 
 #highlights-block h3 {
-    margin: 0 0 0.5em 0;
     font-weight: normal;
     border-bottom: 0;
 }
 
-#whats-new, .featured h2, .featured dt.portletHeader {
+.featured h2, .featured dt.portletHeader {
     font-size: 160%;
     font-weight: normal;
     line-height: 1.4em;
@@ -39,6 +38,9 @@
     clear: left;
     margin: 0;
     background: none;
+}
+.featured .column-title {
+    line-height: 1;
 }
 
 #highlights-block .date, #content .date {
@@ -52,15 +54,18 @@
 
 .frontpage .tileHeadline {
   padding-left: 0 !important;
-  padding-top: 0.4em !important;
 }
 
 /**
  * Reset margin between tabs and content from highlights
 */
 .figure-left {
-    /* clear: left; */
     float: left;
+}
+
+.figure-image-block {
+    display: block;
+    margin: 0.4em 1em 0 0;
 }
 
 .archives {
@@ -78,19 +83,6 @@
 
 /* Frontpage main content
 ******************************************************************************/
-
-/*#highlights-area {*/
-/*    background-color: &dtml-lightBackgroundColor;;*/
-/*    padding: &dtml-padding-base;;*/
-/*}*/
-
-#articles-area h2 {
-    padding-top: 0;
-    line-height: 1em;
-    border-bottom: 0;
-    font-weight:normal;
-}
-
 #browse-by-organisation {
     margin-top: 0.83em;
 }
@@ -108,9 +100,8 @@
 .featured-highlight-title {
     display: table-cell;
 }
-
-.featured-highlight-description  {
-    clear: both;
+.featured-highlight-description {
+    font-size: 1rem;
 }
 
 
@@ -130,10 +121,12 @@
     color: #888;
     font-weight: bold !important;
     line-height: 1.2;
+    font-size: 130%;
 }
 
 .portlet-megatopic img {
-    height: 150px;
+    height: 100%;
+    width: 100%;
 }
 
 /* Frontpage news and articles
@@ -171,28 +164,31 @@
 
 .featured-highlights {
     min-height: 120px;
+    overflow: hidden;
 }
 
 /* #16673 provide a max-width in order to avoid floated text from spilling below image */
 .featured img {
-    padding: 0 5px 5px 0;
-/*    width: 100%;*/
-    width: 130px;
-    height: 75px;
-    max-width: 150px !important;
+    width: 100%;
+    height: auto;
 }
 
 /* in featured boxes we do want floating for links and images */
 .featured h2, .featured h3 {
+    font-weight: normal;
     clear: none !important;
     margin: 0 0 1em 0;
+    word-break: break-word;
+}
+.featured h3 {
+    margin: 0;
 }
 
 /* style for shortcuts buttons */
 #portlet-followus > dd {
   display: inline-block;
-  width: 40px;
-  margin: 0 0 2px 0;
+    width: 40px;
+    margin: 0 5px 2px 0;
 }
 
 #portlet-followus > dd:last-child {

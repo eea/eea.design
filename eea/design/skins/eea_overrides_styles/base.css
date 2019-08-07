@@ -627,12 +627,14 @@ dl.toc dd ol {
 
 /* @group Album view classes */
 .photoAlbumEntry {
-    border: 0px;
+    border: 1px solid lightgray;
     background: transparent none;
     float: left;
-    height: 125px;
-    width: 125px;
-    margin: 0 3px 7px 3px;
+    height: 285px;
+    width: 32%;
+    max-width: 318px;
+    margin: 3px 7px 7px 0;
+    display: inline-block;
     padding: 0;
     box-shadow: 0 1px 2px #CCCCCC;
     z-index: 3;
@@ -640,34 +642,25 @@ dl.toc dd ol {
     overflow: hidden;
     text-align: center;
 }
-.photoAlbumEntry img {
-    display: block;
-    margin: 0 auto;
+.width-full .photoAlbumEntry {
+    max-width: 331px;
 }
+
 .photoAlbumEntryWrapper {
     display: block;
-    background: white;
-    max-height: 71px;
+    height: 200px;
+}
+.photoAlbumEntryWrapperImg {
     height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-.photoAlbumEntry a {
+    background: no-repeat center;
+    background-size: contain;
+    position: relative;
+    z-index: -1;
     display: block;
-    font-size: 85%;
-    height: 128px;
-    width: 100%;
-    margin: 10px 0;
-}
-.photoAlbumFolder {
-    background-image: url('polaroid-multi.png');
-    background-repeat: no-repeat;
 }
 .photoAlbumEntryTitle {
     color: #76797c;
     display: block;
-    width: 128px;
-    height: 3.6em;
 }
 
 /* @end */

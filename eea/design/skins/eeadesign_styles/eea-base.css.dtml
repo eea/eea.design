@@ -74,20 +74,10 @@ img {
     vertical-align: middle;
 }
 
-
-#content-core h3 {
-    padding-bottom: 5px;
-}
-
-
 ol {
     line-height: 1.5em;
     margin: 0.5em 0 0 2.5em;
     list-style: decimal none;
-}
-
-#content-core ul {
-    margin-bottom: 1.5em;
 }
 
 li {
@@ -190,7 +180,7 @@ select {
 
 #content span.link-external a {
     background: transparent url(&dtml-xurl;/link_icon.gif) 0px 1px no-repeat;
-    padding: 2px 0px 1px 16px;
+    padding: 2px 0 1px 16px;
 }
 
 #content pre {
@@ -229,7 +219,7 @@ dd#tempCoverage, dd.geotags, dd.category{
     display: inline-block;
     line-height: inherit;
     background: &dtml-mediumBackgroundColor;;
-    font-size: 10px;
+    font-size: &dtml-fontSmallSize;;
     -webkit-border-radius: 0.5em;
 }
 
@@ -253,10 +243,22 @@ dd#tempCoverage, dd.geotags, dd.category{
     display: none;
 }
 
-#content table {
+
+/* #106884 span tables 100% width while also making the overflow when area is
+ * too small for the table data to fit
+ */
+table {
     max-width: 100%;
     display: block;
     overflow: auto;
+}
+tbody {
+    display: table;
+    width: 100%;
+}
+/* #106884 SITE/soer/folder_contents tbody will not span 100% without this override */
+.listing tbody {
+    display: table-row-group;
 }
 
 /* #101427 we need equal length table cells when comparing canonical to translation field value */
@@ -389,57 +391,41 @@ dl.toc dd {
 
 /* @group Album view classes */
 
-.photoAlbumEntry img {
-    max-height: 71px;
-}
 
 
-a.video-fancybox .photoAlbumEntryWrapper {
+.video-fancybox .photoAlbumEntryWrapper {
     position: relative;
-    background: url(&dtml-xurl;/play-button-cloud.png) no-repeat 2px center;
+    background: url(&dtml-xurl;/play-button-cloud.png) no-repeat center center;
 }
 .photoAlbumEntry a {
-    font-size: &dtml-fontSmallSize;;
-    height: 128px;
     width: 100%;
-    margin: 10px 0;
+    margin: 0;
     overflow: hidden;
-}
-
-.photoAlbumFolder {
-    background: transparent;
+    display: block;
+    height: 99%;
 }
 
 .photoAlbumEntryTitle {
     overflow: hidden;
-    height: 3.2em;
+    height: 4em;
     margin-top: 0.4em;
     width: 100%;
-    padding: 0 5px;
+    padding: 0 5px 0.5em 5px;
     font-weight: bold;
     text-align: center;
+    font-size: 1rem;
 }
 /* our additional photoAlbumEntry styles */
 .photoAlbumEntry:hover {
     background: transparent;
-    box-shadow: 0px 2px 3px #ACACAC;
+    box-shadow: 0 2px 3px #ACACAC;
 }
 
-#whatsnew-gallery .photoAlbumEntry,
-#whatsnew-gallery .photoAlbumEntry:hover{
-    background: transparent;
-    box-shadow: none;
-    padding: 0px;
-    z-index: 3;
-}
 
-.photoAlbumEntry a.video-fancybox img {
+.photoAlbumEntry .video-fancybox img {
     position: relative;
     z-index: -1;
     margin-top: 0;
-}
-.photoAlbumEntry a.video-fancybox img, .photoAlbumEntry a.animation-fancybox img {
-    max-height: 128px;
 }
 
 .photoAlbumEntryPreview,
@@ -531,12 +517,12 @@ div.overlay a:hover {
     line-height: 2em;
     display: inline-block;
     *display: block;
-    padding-left: 20px !important;
+    padding-left: 20px;
 }
 
 /* our customizations */
 #portal-column-content .contenttype-folder {
-    padding-left: 0px !important;
+    padding-left: 0 !important;
 }
 
 /* #5243 wrongly indented folder icon */
