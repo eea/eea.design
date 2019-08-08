@@ -988,18 +988,24 @@ ul.social-buttons {
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
     width: 100%;
+    min-height: 530px;
 }
 
 .eea-tileInner:hover,
 .eea-tileInner:focus {
     box-shadow: 0 0 7px 1px #757575;
 }
-
-.eea-tileHead {
+.eea-tileHeadLink {
+    display: block;
     overflow: hidden;
+    height: 76%;
+}
+.eea-tileHead {
+    height: 100%;
 }
 
 .eea-tileThumb {
+    height: 100%;
     overflow: hidden;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -1059,6 +1065,14 @@ ul.social-buttons {
     -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
     -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
     transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+}
+
+.eea-tileLinkBody {
+    margin-bottom: 1em;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    min-height: 190px;
 }
 
 .eea-tileHeadMetadata {
@@ -1133,9 +1147,7 @@ ul.social-buttons {
 
 .eea-tileDescription {
     text-overflow: ellipsis;
-    height: 120px;
     overflow: hidden;
-    margin-bottom: 1em;
     color: &dtml-fontColor;;
     position: relative;
 }
@@ -1165,7 +1177,7 @@ ul.social-buttons {
 @media (min-width: 320px) {
     .eea-tileTitle {
         min-height: 2.5em;
-        max-height: 3.5em;
+        max-height: 4em;
         overflow: hidden;
         position: relative;
     }
