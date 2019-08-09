@@ -2,7 +2,9 @@ Changelog
 =========
 
 24.6-dev0 - (unreleased)
----------------------
+------------------------
+* Bug fix: Fixed @@historyview memory leak via getUserInfo
+  [avoinea refs #108173]
 
 24.5 - (2019-07-30)
 ---------------------
