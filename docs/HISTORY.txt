@@ -1,7 +1,7 @@
 Changelog
 =========
 
-24.6-dev0 - (unreleased)
+24.6 - (2019-08-09)
 ------------------------
 * Bug fix: Optimized @@historyview workflowHistory userInfo access
   [avoinea refs #108173]
