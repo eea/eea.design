@@ -6,10 +6,26 @@ from Products.CMFPlone import PloneMessageFactory as _
 from Products.CMFCore.utils import _checkPermission
 from Products.CMFCore.utils import getToolByName
 from plone.app.layout.viewlets.content import ContentHistoryView
+from plone.memoize.instance import memoize
 
 class HistoryView(ContentHistoryView):
     """ Patch ContentHistoryView in order to speed it up
     """
+    @memoize
+    def getUserInfo(self, userid):
+        mt = getToolByName(self.context, 'portal_membership')
+        info=mt.getMemberInfo(userid)
+        if info is None:
+            return dict(actor_home="",
+                        actor=dict(fullname=userid))
+
+        if not info.get("fullname", None):
+            info["fullname"]=userid
+
+        return dict(actor=info,
+                    actor_home="%s/author/%s" % (self.site_url, userid))
+
+
     def revisionHistory(self):
         """ Patched revision history
         """
