@@ -3,7 +3,7 @@ Changelog
 
 24.6-dev0 - (unreleased)
 ------------------------
-* Bug fix: Optimize @@historyview workflowHistory userInfo access
+* Bug fix: Optimized @@historyview workflowHistory userInfo access
   [avoinea refs #108173]
 * Bug fix: Fixed @@historyview memory leak via getUserInfo
   [avoinea refs #108173]
