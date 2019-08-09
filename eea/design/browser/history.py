@@ -1,10 +1,13 @@
 """ Speedup history viewlet
 """
+import logging
 from Acquisition import aq_inner
 from Products.CMFEditions.Permissions import AccessPreviousVersions
 from Products.CMFPlone import PloneMessageFactory as _
 from Products.CMFCore.utils import _checkPermission
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.utils import log
+from Products.CMFCore.WorkflowCore import WorkflowException
 from plone.app.layout.viewlets.content import ContentHistoryView
 from eea.cache import cache as ramcache
 
@@ -38,8 +41,6 @@ class HistoryView(ContentHistoryView):
             return []
 
         workflow = getToolByName(context, 'portal_workflow')
-        membership = getToolByName(context, 'portal_membership')
-
         review_history = []
 
         try:
@@ -68,13 +69,7 @@ class HistoryView(ContentHistoryView):
                     r['actor'] = {'username': anon, 'fullname': anon}
                     r['actor_home'] = ''
                 else:
-                    r['actor'] = membership.getMemberInfo(actorid)
-                    if r['actor'] is not None:
-                        r['actor_home'] = self.navigation_root_url + '/author/' + actorid
-                    else:
-                        # member info is not available
-                        # the user was probably deleted
-                        r['actor_home'] = ''
+                    r.update(self.getUserInfo(actorid))
             review_history.reverse()
 
         except WorkflowException:
