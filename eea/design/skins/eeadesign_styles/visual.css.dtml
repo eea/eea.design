@@ -1068,11 +1068,11 @@ ul.social-buttons {
 }
 
 .eea-tileLinkBody {
-    margin-bottom: 1em;
     display: flex;
-    overflow: hidden;
     flex-direction: column;
-    min-height: 190px;
+    margin-bottom: 1em;
+    min-height: 195px;
+    overflow: hidden;
 }
 
 .eea-tileHeadMetadata {
@@ -1146,6 +1146,7 @@ ul.social-buttons {
 }
 
 .eea-tileDescription {
+    height: 100px;
     text-overflow: ellipsis;
     overflow: hidden;
     color: &dtml-fontColor;;
@@ -1177,7 +1178,7 @@ ul.social-buttons {
 @media (min-width: 320px) {
     .eea-tileTitle {
         min-height: 2.5em;
-        max-height: 4em;
+        max-height: 3.8em;
         overflow: hidden;
         position: relative;
     }
