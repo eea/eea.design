@@ -415,6 +415,11 @@ dl.toc dd {
     text-align: center;
     font-size: 1rem;
 }
+
+/* related faceted items need longer headers since the content area is smaller */
+.refbrowser-faceted-addable-item .photoAlbumEntryTitle {
+    height: 5em;
+}
 /* our additional photoAlbumEntry styles */
 .photoAlbumEntry:hover {
     background: transparent;

@@ -16,7 +16,6 @@ jQuery(document).ready(function($) {
             initialize: function () {
                 if(jQuery('#faceted-results').length) {
                     var loaded_once;
-                    jQuery(Faceted.Events).bind(Faceted.Events.LAZY_LOAD, function(evt, data){
                         var children = jQuery('#faceted-results').children();
                         if (children.length > 1) {
                             var lazy_elements = children.find('.lazy');
@@ -24,7 +23,7 @@ jQuery(document).ready(function($) {
 
                             lazy_elements.each(function(){
                                 var element = jQuery(this);
-                                var source = element.attr('src');
+                                var source = element.attr('src') || element.attr('data-src');
 
                                 if (source.indexOf('lazyload_loader') === -1) {
                                     element.attr('data-src', source);
@@ -38,7 +37,7 @@ jQuery(document).ready(function($) {
                             if (loaded_once) {
                                 lazy_elements_parents.css('text-align', 'center');
 
-                                var windowWidth = window_width;
+                                var windowWidth = window.width;
                                 if (windowWidth <= 767 || windowWidth > 930) {
                                     lazy_elements_parents.css('width', '15%');
                                 }
@@ -59,11 +58,14 @@ jQuery(document).ready(function($) {
                                 });
                             }
                         }
-                    });
                 }
             }
         };
-        cleanupFacetedLazy();
+        // cleanupFacetedLazy();
+
+        jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function() {
+            Faceted.LoadLazy.initialize();
+        });
     }
 
    /* $('#content').find('iframe').each(function() {
@@ -73,11 +75,6 @@ jQuery(document).ready(function($) {
         }
     }); */
 
-    if(jQuery('#faceted-results').length) {
-        jQuery('#faceted-results').bind('DOMSubtreeModified',function() {
-            Faceted.LoadLazy.initialize();
-        });
-    }
 
     $('.lazy').lazy({
         scrollDirection: 'both',
