@@ -291,6 +291,12 @@ class figure-right or figure-left */
     text-align: left;
     clear: both;
 }
+/* https://eea.europa.eu/themes/air/health-impacts-of-air-pollution
+ * stretch figure image to 100% width of content area
+ */
+.figure-image > img {
+    width: 100%;
+}
 
 .figure-note {
     font-weight: normal;
@@ -325,7 +331,7 @@ span.figure-left {
 }
 #keyfacts-slider img.keyfacts-bgimg {
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -988,7 +994,7 @@ ul.social-buttons {
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
     width: 100%;
-    min-height: 530px;
+    min-height: 540px;
 }
 
 .eea-tileInner:hover,
