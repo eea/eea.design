@@ -84,7 +84,8 @@
                 Up one level
             </a>
 
-            <tal:entry tal:repeat="item batch" metal:define-macro="entries">
+            <div class="entries" metal:define-macro="entries">
+            <tal:entry tal:repeat="item batch" >
             <tal:block
                        tal:define="
                                    item_object item/getObject|nocall:item;
@@ -235,6 +236,7 @@
             </metal:block>
             </tal:block>
             </tal:entry>
+            </div>
         </dl>
 
 

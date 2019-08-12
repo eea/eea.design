@@ -7,7 +7,7 @@ logoName:string=logo.gif
 fontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
 fontBaseSize:string=69%
 fontColor:string=#333333
-fontSmallSize:string=85%
+fontSmallSize:string=12px
 
 #corporate main colors
 corporateGreen:string=#008675

@@ -1,0 +1,44 @@
+<div class="photoAlbumEntry"
+         tal:define="portal_type context/portal_type;
+        useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings|python:[];
+        useView python:portal_type in useViewTypes;">
+    <a tal:define="
+            description context/Description|string:;
+            title context/pretty_title_or_id|string:;
+            desc_or_title python:description or title;
+            url context/absolute_url|string:#;
+            view_url python:(url and useView and url + '/view') or url;
+            is_namedimage python:getattr(getattr(context, 'image', None), 'getImageSize', None) is not None;
+            image_scale exists:context/image_mini;
+            image_tag python:getattr(context, 'tag', None)"
+             tal:attributes="href view_url;
+                    title description">
+
+        <tal:block tal:condition="is_namedimage">
+    <span class="photoAlbumEntryWrapper">
+       <img style="border: none" tal:attributes="
+               title desc_or_title;
+               alt title;
+               src string:$url/@@images/image/mini"/>
+    </span>
+
+            <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
+            <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
+
+        </tal:block>
+
+        <tal:block tal:condition="not:is_namedimage">
+    <span class="photoAlbumEntryWrapper" tal:condition="image_scale">
+        <span class="photoAlbumEntryWrapperImg lazy" tal:attributes="data-src string:${url}/image_mini"><!--?--></span>
+    </span>
+
+            <span class="photoAlbumEntryWrapper" tal:condition="python:not image_scale and image_tag">
+              <img tal:replace="structure python:image_tag(scale='mini', title=description)" />
+            </span>
+
+            <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
+            <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
+        </tal:block>
+
+    </a>
+</div>

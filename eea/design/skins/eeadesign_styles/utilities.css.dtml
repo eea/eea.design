@@ -34,12 +34,19 @@
     overflow: hidden !important;
 }
 
+.overflow_auto {
+    overflow: auto !important;
+}
+
 /* spacing utilities */
 .my-2 {
     margin-left: 2em !important;
     margin-right: 2em !important;
 }
 
+.mb-half {
+    margin-bottom: 0.5em !important;
+}
 .mb-0 {
     margin-bottom: 0 !important;
 }

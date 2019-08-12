@@ -55,17 +55,13 @@
                          i18n:translate="">Code for developers</a>
             </p>
 
-            <tal:comment tal:replace="nothing">
-                comment status link until service is ready to go live
-                <p class="colophon-links">
-                    <a href="/status"
-                             tal:attributes="href string:${portal_state/portal_url}/status"
-                       title="Status page"
+            <p class="colophon-links">
+                    <a href="https://status.eea.europa.eu"
+                       title="Systems Status"
                              i18n:attributes="title"
-                             i18n:translate="">Status</a>
-                </p>
-            </tal:comment>
-
+                             i18n:translate="">Systems Status</a>
+            </p>
+                 
             <p class="colophon-links">
                 <a href="https://www.eea.europa.eu/legal"
                          tal:attributes="href string:${local_site}/legal/"

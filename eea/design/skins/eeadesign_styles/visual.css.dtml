@@ -118,7 +118,6 @@ option.hiddenStructure {
 /* Default are layout tables. We can not really style those. It would have too many side effects */
 table {
     empty-cells: show;
-    font-size: 0.9em;
 }
 
 /* #81310 table should be visible overriding bootstrap invisible class */
@@ -292,6 +291,12 @@ class figure-right or figure-left */
     text-align: left;
     clear: both;
 }
+/* https://eea.europa.eu/themes/air/health-impacts-of-air-pollution
+ * stretch figure image to 100% width of content area
+ */
+.figure-image > img {
+    width: 100%;
+}
 
 .figure-note {
     font-weight: normal;
@@ -326,7 +331,7 @@ span.figure-left {
 }
 #keyfacts-slider img.keyfacts-bgimg {
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -732,10 +737,11 @@ span.figure-left {
 .tileItem {
     border-bottom: &dtml-borderWidth; dotted &dtml-globalBorderColor;;
     padding-top: 0.5em;
+    overflow: hidden;
 }
 .tileHeadline {
     border: none;
-    font-size: 110%;
+    font-size: 115%;
     font-weight: bold;
     background: none;
     margin:0;
@@ -746,14 +752,14 @@ span.figure-left {
     margin: 0.6em 0;
 }
 
-.tileContent {
-    display: table-cell;
-}
-
 .tileImage, #content a.tileImage {
     float: left;
-    margin: 1em 1em 1em 0;
+    margin: 0.4em 1em 0 0;
     border: 1px solid &dtml-globalBorderColor;;
+}
+
+.tileContent {
+    margin-bottom: 0.4em;
 }
 
 .gallery-listing .tileItem:last-child {
@@ -834,12 +840,12 @@ span.figure-left {
 /* Batch selector */
 .listingBar {
     background-color: &dtml-globalBackgroundColor;;
-    padding: 0.5em 1em;
+    padding: 0.7em;
     text-align: center;
     text-transform: &dtml-textTransform;;
     vertical-align: top;
     margin: 1em 0;
-    font-size: 11px !important;
+    font-size: &dtml-fontSmallSize; !important;
     clear: both;
 }
 
@@ -885,8 +891,8 @@ ul.action-buttons > li {
     margin-bottom: 2em;
 }
 
-#socialmedia-list {
-    font-size: 2.4em;
+#socialmedia-list .eea-icon {
+    font-size: 2em;
 }
 
 .social-buttons {
@@ -905,7 +911,7 @@ ul.social-buttons {
     border: 1px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-size: 10px;
+    font-size: &dtml-fontSmallSize;;
     line-height: inherit;
     margin: 2px 0;
     padding: 2px 5px;
@@ -988,18 +994,24 @@ ul.social-buttons {
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
     width: 100%;
+    min-height: 540px;
 }
 
 .eea-tileInner:hover,
 .eea-tileInner:focus {
     box-shadow: 0 0 7px 1px #757575;
 }
-
-.eea-tileHead {
+.eea-tileHeadLink {
+    display: block;
     overflow: hidden;
+    height: 76%;
+}
+.eea-tileHead {
+    height: 100%;
 }
 
 .eea-tileThumb {
+    height: 100%;
     overflow: hidden;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -1059,6 +1071,14 @@ ul.social-buttons {
     -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
     -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
     transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+}
+
+.eea-tileLinkBody {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    min-height: 195px;
+    overflow: hidden;
 }
 
 .eea-tileHeadMetadata {
@@ -1132,10 +1152,9 @@ ul.social-buttons {
 }
 
 .eea-tileDescription {
+    height: 100px;
     text-overflow: ellipsis;
-    height: 120px;
     overflow: hidden;
-    margin-bottom: 1em;
     color: &dtml-fontColor;;
     position: relative;
 }
@@ -1162,6 +1181,15 @@ ul.social-buttons {
 }
 
 /* MEDIA Queries, place normal css above this section */
+@media (min-width: 320px) {
+    .eea-tileTitle {
+        min-height: 2.5em;
+        max-height: 3.8em;
+        overflow: hidden;
+        position: relative;
+    }
+
+}
 
 @media (max-width: 480px) {
     .eea-tiles {
@@ -1169,6 +1197,7 @@ ul.social-buttons {
     }
     .eea-tile {
         width: 100%;
+        max-width: 100%;
     }
     .eea-tileThumbImg {
         height: auto;
@@ -1196,21 +1225,6 @@ ul.social-buttons {
     }
 }
 
-@media (min-width: 1281px) {
-    #content .eea-section-trigger {
-        display: none;
-    }
-}
-
-@media (min-width: 320px) {
-    .eea-tileTitle {
-        min-height: 2.5em;
-        max-height: 3.5em;
-        overflow: hidden;
-        position: relative;
-    }
-
-}
 @media (min-width: 768px) {
     .eea-tileTitle {
         font-size: 1.4em;

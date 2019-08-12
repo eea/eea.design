@@ -252,7 +252,7 @@
                                     </tal:comment>
                                 </metal:comment>
 
-                                <tal:block define="thumb_scale thumb_scale | string:image_tile; skip_relations skip_relations|python: False"
+                                <tal:block define="thumb_scale thumb_scale | string:image_mini; skip_relations skip_relations|python: False"
                                            tal:condition="python:not skip_relations">
                                     <tal:soer tal:condition="python:False if isPrint == 1 and '/soer-2015' in here_url else True">
                                         <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />

@@ -35,8 +35,8 @@
 }
 
 #promo-gallery-content-sm h3 {
-    font-size: 1.3em;
-    margin-top: 0.6em;
+    font-size: 1.2em;
+    margin-top: 0.3em;
     clear: none !important;
 }
 
@@ -107,6 +107,7 @@
 #promo-gallery-content-sm li img  {
     min-width: 65%;
     max-width: 101%;
+    width: 100%;
 }
 
 #promo-gallery-content li a.video-fancybox.cloudvideo {
@@ -235,7 +236,7 @@
 #promo-navigator-sm li img {
     padding: 6px 6px 0 8px;
     height: 38px;
-    width: 75%;
+    max-width: 95%;
 }
 
 #promo-navigator li.active h3, #promo-navigator-sm li.active h3 {
