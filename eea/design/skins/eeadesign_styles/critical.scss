@@ -733,7 +733,13 @@ ul {
     visibility: visible;
     }
 
+  // avoid big jump in size from lazy fallback to loaded
+  .photoAlbumEntryWrapper > .lazy, .tileImage > .lazy {
+    min-width: 141px;
+    min-height: 100px;
   }
+
+}
 
 /* 102564 IE11 hack as the hiddenStructure without display will count
 * for justify-content: space-between since it doesn't support clip-path */
