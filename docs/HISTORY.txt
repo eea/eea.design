@@ -3,6 +3,8 @@ Changelog
 
 24.7-dev0 - (unreleased)
 ---------------------------
+* Change: Added override for plone.app.workflowmanager and some style changes
+  [iulianpetchesi refs #103756]
 * Change: load lazy images when using faceted navigation and when printing
   [ichim-david refs #106884]
 

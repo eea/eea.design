@@ -1,6 +1,8 @@
 """ IEEACommonLayer specific overrides
 """
+from urllib import urlencode
 from plone.app.portlets.portlets.events import Renderer as EventsRenderer
+from plone.app.workflowmanager.browser.workflow import Assign
 from plone.memoize.instance import memoize
 from plone.memoize.compress import xhtml_compress
 from Acquisition import aq_inner
@@ -48,3 +50,19 @@ class EEAEventsRenderer(EventsRenderer):
         for item in location:
             l_list.append(item)
         return ', '.join(l_list)
+
+
+class EEAAssign(Assign):
+    """ Override for plone.app.workflowmanager workflow assign """
+
+    def __call__(self):
+        self.errors = {}
+
+        if self.request.get('form.actions.next', False):
+            self.authorize()
+            params = urlencode({'type_id': self.request.get('type_id'),
+                'new_workflow': self.selected_workflow.id})
+            return self.handle_response(load=self.context_state.portal_url() +
+                '/@@types-controlpanel?' + params)
+        else:
+            return self.handle_response(tmpl=self.template)
