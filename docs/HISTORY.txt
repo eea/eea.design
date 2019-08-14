@@ -3,6 +3,10 @@ Changelog
 
 24.8-dev0 - (unreleased)
 ---------------------------
+* Bug fix: frontpage megatopics, featured articles and whatsnewgallery responsive
+  design fixes
+  [ichim-david refs #106884]
+
 
 24.7 - (2019-08-14)
 ---------------------------
