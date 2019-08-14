@@ -56,6 +56,8 @@ setup(name=name,
           'valentine.linguaflow',
           'qrcode',
 
+          # Used in testing
+          'plone.app.workflowmanager',
 
           # -*- Extra requirements: -*-
           'plone.app.async'
