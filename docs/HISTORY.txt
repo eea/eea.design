@@ -1,6 +1,9 @@
 Changelog
 =========
 
+24.8-dev0 - (unreleased)
+---------------------------
+
 24.7 - (2019-08-14)
 ---------------------------
 * Change: Added override for plone.app.workflowmanager and some style changes
