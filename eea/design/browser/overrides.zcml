@@ -89,7 +89,7 @@
       />
   -->
 
-    <browser:page
+    <browser:page zcml:condition="installed plone.app.workflowmanager"
         for="*"
         name="workflowmanager-assign"
         class=".overrides.EEAAssign"
