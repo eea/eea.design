@@ -1,6 +1,13 @@
 Changelog
 =========
 
+24.7 - (2019-08-14)
+---------------------------
+* Change: Added override for plone.app.workflowmanager and some style changes
+  [iulianpetchesi refs #103756]
+* Change: load lazy images when using faceted navigation and when printing
+  [ichim-david refs #106884]
+
 24.6 - (2019-08-09)
 ------------------------
 * Bug fix: Optimized @@historyview workflowHistory userInfo access

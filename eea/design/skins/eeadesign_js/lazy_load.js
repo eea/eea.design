@@ -1,70 +1,74 @@
 /* jslint:disable */
 /*global jQuery, window, document, Faceted */
 
-function cleanupFacetedLazy() {
-    if (Faceted.Events.LAZY_LOAD && jQuery('#faceted-results').length === 0) {
-        jQuery(Faceted.Events).unbind(Faceted.Events.LAZY_LOAD);
-    }
-}
-
 jQuery(document).ready(function($) {
-    // Check if the faceted event needs to be cleaned up
-    // Faceted Lazy Load
     if (window.Faceted) {
-        Faceted.Events.LAZY_LOAD = 'FACETED-LAZY-LOAD';
         Faceted.LoadLazy = {
             initialize: function () {
-                if(jQuery('#faceted-results').length) {
+                var results = jQuery('#faceted-results');
+                if(results.length) {
                     var loaded_once;
-                        var children = jQuery('#faceted-results').children();
-                        if (children.length > 1) {
+                        var children = results.children();
+                        if (children.length) {
                             var lazy_elements = children.find('.lazy');
                             var lazy_elements_parents = lazy_elements.parent();
+
+                            lazy_elements.lazy({
+                                scrollDirection: 'both',
+                                effect: 'fadeIn',
+                                effectTime: 1000,
+                                threshold: 100,
+                                visibleOnly: true,
+                                onError: function(element) {
+                                    console.log('error loading ' + element.data('src'));
+                                }
+                            });
 
                             lazy_elements.each(function(){
                                 var element = jQuery(this);
                                 var source = element.attr('src') || element.attr('data-src');
 
-                                if (source.indexOf('lazyload_loader') === -1) {
+                                if (source.indexOf('ajax-loader') === -1) {
                                     element.attr('data-src', source);
-                                    element.attr('src', '/www/lazyload_loader.gif');
-                                    loaded_once = true;
-                                } else {
-                                    loaded_once = false;
+                                    if (this.tagName === "IMG") {
+                                        element.attr('src', '/www/++resource++faceted_images/ajax-loader.gif');
+                                    }
+                                    else {
+                                        element.css('background-image', 'url("/www/++resource++faceted_images/ajax-loader.gif")');
+                                    }
                                 }
                             });
-
-                            if (loaded_once) {
-                                lazy_elements_parents.css('text-align', 'center');
-
-                                var windowWidth = window.width;
-                                if (windowWidth <= 767 || windowWidth > 930) {
-                                    lazy_elements_parents.css('width', '15%');
+                            lazy_elements.lazy({
+                                scrollDirection: 'both',
+                                effect: 'fadeIn',
+                                effectTime: 1000,
+                                threshold: 100,
+                                visibleOnly: true,
+                                onError: function(element) {
+                                    console.log('error loading ' + element.data('src'));
                                 }
-
-                                if (windowWidth <= 480 || (windowWidth > 767 && windowWidth <= 930)) {
-                                    lazy_elements_parents.css('width', '20%');
-                                }
-
-                                lazy_elements.lazy({
-                                    scrollDirection: 'both',
-                                    effect: 'fadeIn',
-                                    effectTime: 1000,
-                                    threshold: 100,
-                                    visibleOnly: true,
-                                    onError: function(element) {
-                                        console.log('error loading ' + element.data('src'));
-                                    }
-                                });
-                            }
+                            });
+                            // 106884 force a click for faceted results
+                            // in order to get results to lazy load when
+                            // using the related dialog
+                            setTimeout(function(){
+                                results.click();
+                            }, 500);
                         }
                 }
             }
         };
-        // cleanupFacetedLazy();
-
-        jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function() {
-            Faceted.LoadLazy.initialize();
+        // bind lazy loading upon ajax query success
+        function faceted_lazy_init() {
+            jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function() {
+                Faceted.LoadLazy.initialize();
+            });
+        }
+        faceted_lazy_init();
+        // rebind lazy init upon CLEANUP_COMPLETED event needed when clicking on
+        // the related edit widget and it's category tabs
+        jQuery(Faceted.Events).bind(Faceted.Events.CLEANUP_COMPLETED, function() {
+            faceted_lazy_init();
         });
     }
 
@@ -75,8 +79,8 @@ jQuery(document).ready(function($) {
         }
     }); */
 
-
-    $('.lazy').lazy({
+    var lazyElements = $('.lazy');
+    lazyElements.lazy({
         scrollDirection: 'both',
         effect: 'fadeIn',
         effectTime: 1000,
@@ -114,21 +118,29 @@ jQuery(document).ready(function($) {
 
     var count = 0;
     var forceImageLoad = function(images) {
-        count++;
-        if (count > 1) {
-            $(images).each(function() {
-                var image = $(this);
-
-                if (!$(this).attr('data-src')) {
-                    var image_src = $(this).attr('src');
-                    $(this).attr('data-src', image_src);
+        $(images).each(function() {
+            var image = this;
+            var src = image.getAttribute('src');
+            var data = image.getAttribute('data-src');
+            var type = image.tagName;
+            // if type isn't img then we have a span with a bg image style
+            if (type !== "IMG" && data) {
+                src = image.getAttribute('style') || '';
+                if (src) {
+                    // split the url from background-image: url(url) string
+                    src = src.split('url("');
+                    if (src.length > 1) {
+                        src = src[1].split('")')[0];
+                    }
                 }
-
-                var image_source = image.attr('data-src');
-                image.attr('src', image_source);
-                // setTimeout(function(){}, 100);
-            });
-        }
+                if (!src || src !== data) {
+                    image.style.backgroundImage = "url(" + data + ")";
+                }
+            }
+            if ((src && data)  && src !== data) {
+               image.setAttribute('src', data);
+            }
+        });
     };
 
     var forceDavizLoad = function() {
@@ -164,7 +176,7 @@ jQuery(document).ready(function($) {
 
         $(document).keydown(function(allBrowsers) { // Track printing using Ctrl/Cmd+P.
             if (allBrowsers.keyCode === 80 && (allBrowsers.ctrlKey || allBrowsers.metaKey)) {
-                beforePrintCaller(lazyElements || []);
+                beforePrintCaller(lazyElements || $(".lazy"));
             }
         });
 
@@ -172,7 +184,7 @@ jQuery(document).ready(function($) {
             var mediaQueryList = window.matchMedia('print');
             mediaQueryList.addListener(function(mql) {
                 if (mql.matches) {
-                    beforePrintCaller(lazyElements || []);
+                    beforePrintCaller(lazyElements || $(".lazy"));
                 }
             });
         }

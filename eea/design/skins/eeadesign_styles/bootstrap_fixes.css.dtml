@@ -105,3 +105,43 @@ input.removecriteria {
     max-height: 3em; /* annotator tool inline-comments right column panel clips text as original value is 12px */
 }
 /* </dtml-with> */
+
+/* ++resource++workflow-graph.css  */
+
+.template-workflowmanager #visual-portal-wrapper {
+    margin: 0;
+}
+
+.template-workflowmanager .col-md-2,
+.template-workflowmanager .col-lg-2,
+.template-workflowmanager .col-md-10,
+.template-workflowmanager .col-lg-10,
+.template-workflowmanager .col-md-12,
+.template-workflowmanager .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.template-workflowmanager #plumb-canvas .plumb-label {
+    display: block;
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  .template-workflowmanager .col-lg-2,
+  .template-workflowmanager .col-lg-10,
+  .template-workflowmanager .col-lg-12 {
+    float: left;
+  }
+  .template-workflowmanager .col-lg-12 {
+    width: 100%;
+  }
+  .template-workflowmanager .col-lg-10 {
+    width: 83.33333333%;
+  }
+  .template-workflowmanager .col-lg-2 {
+    width: 16.66666667%;
+  }
+}

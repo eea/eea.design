@@ -89,4 +89,12 @@
       />
   -->
 
+    <browser:page zcml:condition="installed plone.app.workflowmanager"
+        for="*"
+        name="workflowmanager-assign"
+        class=".overrides.EEAAssign"
+        layer=".interfaces.IEEACommonLayer"
+        permission="plone.app.workflowmanager.ManageWorkflows"
+    />
+
 </configure>
