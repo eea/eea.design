@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
     var $content = $("#content");
     var $content_core = $("#content-core");
     var $column_area = $(".column-area");
+    var $portal_column_content = $("#portal-column-content");
     var $body = $("body");
     var is_anon = $body.hasClass('userrole-anonymous');
     // #71710 move related and socialmedia inside
@@ -28,6 +29,7 @@ jQuery(document).ready(function($) {
     appendTo($socialmedia, $column_area);
     if ($column_area.length) {
         appendTo($viewlet_below_content, $column_area);
+        $portal_column_content.removeClass('width-full');
     }
     else {
         appendTo($viewlet_below_content, $content);
@@ -220,7 +222,7 @@ jQuery(document).ready(function($) {
     // removed portal-column-two from @@usergroup-userprefs #4817
     if ($("#portlet-prefs").length) {
         $("#portal-column-two").remove();
-        $("#portal-column-content").removeClass('width-3:4').addClass('width-full');
+        $portal_column_content.removeClass('width-3:4').addClass('width-full');
     }
     // View in fullscreen for urls: /data-and-maps/figure and /data-and-maps/data
     var r = /data-and-maps\/(figures|data)\/?$/;

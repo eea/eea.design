@@ -631,8 +631,7 @@ dl.toc dd ol {
     background: transparent none;
     float: left;
     height: 285px;
-    width: 32%;
-    max-width: 318px;
+    max-width: 350px;
     margin: 3px 7px 7px 0;
     display: inline-block;
     padding: 0;
@@ -642,8 +641,11 @@ dl.toc dd ol {
     overflow: hidden;
     text-align: center;
 }
+
 .width-full .photoAlbumEntry {
-    max-width: 331px;
+    flex: 24%;
+    min-width: 24%;
+    max-width: 24.5%;
 }
 
 .photoAlbumEntryWrapper {
