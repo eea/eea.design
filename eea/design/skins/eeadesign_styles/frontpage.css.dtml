@@ -124,11 +124,6 @@
     font-size: 130%;
 }
 
-.portlet-megatopic img {
-    height: auto;
-    width: 100%;
-    min-height: 138px;
-}
 
 /* Frontpage news and articles
 ******************************************************************************/

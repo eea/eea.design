@@ -627,7 +627,6 @@ dl.toc dd ol {
 
 /* @group Album view classes */
 .photoAlbumEntry {
-    border: 1px solid lightgray;
     background: transparent none;
     float: left;
     height: 285px;
@@ -645,7 +644,7 @@ dl.toc dd ol {
 .width-full .photoAlbumEntry {
     flex: 24%;
     min-width: 24%;
-    max-width: 24.5%;
+    max-width: 24.4%;
 }
 
 .photoAlbumEntryWrapper {

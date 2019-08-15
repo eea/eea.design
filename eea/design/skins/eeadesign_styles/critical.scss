@@ -183,7 +183,7 @@ legend {
   display: none !important;
   }
 
-html{font-size:16px !important;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;font-weight: 400;}body{font:87.5% 'Open Sans',Verdana,Helvetica,Arial,sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1400px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:1.125rem 0;clear:both;}
+html{font-size:16px !important;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;font-weight: 400;}body{font:87.5% 'Open Sans',"Segoe UI", Tahoma, sans-serif;color:#333;margin:0;padding:0;}#globalnav-holder{display:block;}#visual-portal-wrapper{max-width:1400px;margin:30px auto 0 auto;padding:0;clear:both;}#footer-wrapper{background-color:unquote("&dtml-corporateBlue;");margin:2em 0 0 0;padding:1.125rem 0;clear:both;}
 
 
 
@@ -329,6 +329,7 @@ ul {
   margin: 0 auto;
   overflow: inherit;
   min-height: 60px;
+  height: 60px;
   z-index: initial;
   width: 100%;
   }
@@ -337,6 +338,7 @@ ul {
   display: block;
   width: auto;
   height: 40px;
+  min-width: 209px;
   }
 
 #portal-globalnav {
@@ -352,6 +354,9 @@ ul {
 
 .secondary-portaltabs {
   color: unquote("&dtml-lightGreyColor;");
+  display: flex;
+  margin: 0;
+  position: relative;
   }
 
 #secondary-globalnav-tips {
@@ -494,6 +499,9 @@ ul {
 /*    background-color: transparent;*/
 /*    padding: 0;*/
 /*}*/
+.frontpage .progressbar-viewlet {
+  display: none;
+  }
 
 /* megatopic frontarea */
 #megatopics-area {
@@ -518,6 +526,12 @@ ul {
   flex: 1;
   }
 
+.portlet-megatopic img {
+  height: auto;
+  width: 100%;
+  min-height: 138px;
+  max-height: 191px;
+  }
 .portlet-megatopic ul {
   height: auto;
   margin: 1.5em;
@@ -739,7 +753,19 @@ ul {
     min-height: 100px;
   }
 
+  .secondary-portaltabs .eea-accordion-panels,
+  #portal-logo-link-header {
+    display: none;
+    }
+
 }
+
+@media screen and (min-width: 1360px) {
+  .portal-globalnav > li > a,
+  .secondary-portaltabs > li {
+    font-size: 15px;
+    }
+  }
 
 /* 102564 IE11 hack as the hiddenStructure without display will count
 * for justify-content: space-between since it doesn't support clip-path */

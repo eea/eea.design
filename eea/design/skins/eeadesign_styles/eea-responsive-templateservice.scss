@@ -288,10 +288,6 @@ $font-size: 14px;
     width: 70px;
     border-radius: 0;
     }
-  #secondary-portaltabs .eea-accordion-panels,
-  #portal-logo-link-header {
-    display: none;
-    }
 
   .navbar-toggle {
     display: none;
@@ -308,11 +304,5 @@ $font-size: 14px;
     }
   }
 
-@media screen and (min-width: 1360px) {
-  .portal-globalnav > li > a,
-  .secondary-portaltabs > li {
-    font-size: 15px;
-    }
-  }
 /*! </dtml-let> */
 /*! </dtml-with> */

@@ -230,12 +230,8 @@
 }
 
 .faceted-results {
-    padding: 0;
-}
-
-.faceted-results {
     background-color: &dtml-lightBackgroundColor;;
-    padding: 0 1em 1em;
+    padding: 0;
     margin-bottom: 0;
 }
 /* @end of specific faceted navigation style */

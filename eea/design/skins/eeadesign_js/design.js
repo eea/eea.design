@@ -37,6 +37,10 @@ jQuery(document).ready(function($) {
     appendTo($related_items, $center_bottom_area);
     appendTo($socialmedia, $center_bottom_area);
 
+    if ($("#right-area").length) {
+        $portal_column_content.removeClass('width-full');
+    }
+
     // hide element if empty or has less than on equal to given
     // child length
     var hide_empty_container = function($el, child_count, $checked_el) {
