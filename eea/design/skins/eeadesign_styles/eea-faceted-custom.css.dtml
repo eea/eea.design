@@ -81,7 +81,6 @@
 #faceted-form .widget-fieldset form,
 #faceted-form .faceted-criteria-hide-show,
 #faceted-form .faceted-criteria-reset {
-    padding-top: 1em;
     overflow: hidden;
 }
 
@@ -216,6 +215,14 @@
     margin-left: 22px !important;
 }
 
+#faceted-right-column .pane {
+    padding: 0;
+}
+#faceted-right-column form,
+.faceted-checkbox-more,
+.widget-body {
+    margin: 1em;
+}
 
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-all label,
 .faceted-top-widgets .faceted-widget .widget-fieldset form .faceted-textwidget-place-current label,
