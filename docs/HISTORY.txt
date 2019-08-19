@@ -1,6 +1,9 @@
 Changelog
 =========
 
+24.9-dev0 - (unreleased)
+---------------------------
+
 24.8 - (2019-08-16)
 ---------------------------
 * Bug fix: frontpage megatopics, featured articles and whatsnewgallery responsive
