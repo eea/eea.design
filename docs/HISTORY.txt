@@ -1,6 +1,13 @@
 Changelog
 =========
 
+24.8 - (2019-08-16)
+---------------------------
+* Bug fix: frontpage megatopics, featured articles and whatsnewgallery responsive
+  design fixes
+  [ichim-david refs #106884]
+
+
 24.7 - (2019-08-14)
 ---------------------------
 * Change: Added override for plone.app.workflowmanager and some style changes
