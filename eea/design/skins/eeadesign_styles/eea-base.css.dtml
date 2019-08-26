@@ -257,12 +257,16 @@ tbody {
     width: 100%;
 }
 /* #106884 SITE/soer/folder_contents tbody will not span 100% without this override */
-.listing tbody {
+.listing tbody,
+.google-visualization-table-table > tbody
+{
     display: table-row-group;
 }
 
 /* #101427 we need equal length table cells when comparing canonical to translation field value */
-#content .translation_edit table {
+#content .translation_edit table,
+.google-visualization-table-table
+{
     display: table;
     width: 100%;
 }
