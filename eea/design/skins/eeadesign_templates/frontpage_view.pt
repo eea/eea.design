@@ -130,8 +130,8 @@
                             <tal:tabs tal:condition="python: main_site and getProducts">
                                 <ul class="eea-tabs two-rows"
                                         tal:define="datapage datapage|string:frontpage;
-                                        global folderContent frontpage_view/getProductCategoriesResults;
-                                        tabnames frontpage_view/getProductCategoriesNames;
+                                        global folderContent python:frontpage_view.getProductCategoriesResults(products_category=getProducts);
+                                        tabnames python:frontpage_view.getProductCategoriesNames(products_category=getProducts);
                                         global tabs python: [tab for tab in tabnames if folderContent.get(tab)]"
                                         tal:condition="tabs">
                                     <li tal:repeat="tab tabs">
@@ -157,7 +157,7 @@
                                     <tal:propertyProducts tal:condition="python: main_site and getProducts">
                                         <tal:products tal:repeat="tab tabs">
                                             <tal:defines tal:define="folderContents python:folderContent.get(tab);
-                                                    product python:frontpage_view.getProductConfiguration(tab);
+                                                    product python:frontpage_view.getProductConfiguration(tab, products_category=getProducts);
                                                             more_href python: more_hrefs.get(tab) or product[-1];">
                                                 <div metal:use-macro="here/frontpage_macros/macros/products">
                                                     Property Products Highlights
