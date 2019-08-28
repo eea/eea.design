@@ -79,7 +79,8 @@ class Frontpage(BrowserView):
             a category that retrieves all of the other categories
             ex: getProductsCategories(skip_value='getAllProducts')
         """
-        provided_products = products_category or self.getProducts
+        provided_products = self.fp.getProperty(products_category) \
+            if products_category else self.getProducts
         values = []
         for item in provided_products:
             if skip_value and skip_value in item:
