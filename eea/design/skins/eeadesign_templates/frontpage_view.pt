@@ -123,11 +123,10 @@
                                             more_hrefs more_hrefs|python:{};
                                             frontpage_view frontpage_view|context/@@frontpage_highlights;
                                             main_site main_site|python: True if language == 'en' else False;
-                                            frontpage_properties context/portal_properties/frontpage_properties;
                                             tabs tabs|nothing;
-                                            getProducts getProducts|frontpage_properties/getProducts|nothing;"
+                                            getProducts getProducts|nothing"
                                 tal:attributes="id string:whatsnew-gallery; data-page string:${datapage};">
-                            <tal:tabs tal:condition="python: main_site and getProducts">
+                            <tal:tabs tal:condition="python: main_site">
                                 <ul class="eea-tabs two-rows"
                                         tal:define="datapage datapage|string:frontpage;
                                         global folderContent python:frontpage_view.getProductCategoriesResults(products_category=getProducts);
@@ -154,7 +153,7 @@
                             </select>
                             <tal:panels>
                                 <div class="eea-tabs-panels">
-                                    <tal:propertyProducts tal:condition="python: main_site and getProducts">
+                                    <tal:propertyProducts tal:condition="python: main_site">
                                         <tal:products tal:repeat="tab tabs">
                                             <tal:defines tal:define="folderContents python:folderContent.get(tab);
                                                     product python:frontpage_view.getProductConfiguration(tab, products_category=getProducts);
