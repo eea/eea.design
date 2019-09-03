@@ -264,10 +264,6 @@ pre {
    width: 50%;
 }
 
-#globalstatusmessage {
-    margin: 0 -1.5em;
-}
-
 #globalstatusmessage dl {
     display: block;
     font-size: 80%;

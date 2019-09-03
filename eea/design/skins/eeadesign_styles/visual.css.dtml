@@ -47,8 +47,17 @@ option.hiddenStructure {
     left: -200px;
 }
 
-#content .inline-block li {
+.inline-block li {
     display: inline-block;
+    margin-right: 1em;
+}
+
+.inline-list-style {
+    overflow: hidden;
+}
+
+.inline-list-style > li {
+    float: left;
     margin-right: 1em;
 }
 /*
@@ -753,6 +762,8 @@ span.figure-left {
 }
 
 .tileImage, #content a.tileImage {
+    width: 180px; /* make portrait images same size as landscape */
+    text-align: center;
     float: left;
     margin: 0.4em 1em 0 0;
     border: 1px solid &dtml-globalBorderColor;;
@@ -907,7 +918,6 @@ ul.social-buttons {
 }
 
 .eea-btn {
-    border-radius: 0.5em;
     border: 1px solid transparent;
     cursor: pointer;
     display: inline-block;
@@ -916,6 +926,13 @@ ul.social-buttons {
     margin: 2px 0;
     padding: 2px 5px;
     word-break: keep-all;
+}
+
+.eea-btn-md {
+    padding: 7px 11px;
+}
+.eea-btn-radius {
+    border-radius: 0.5em;
 }
 .eea-btn-secondary {
     color: white;
@@ -932,6 +949,12 @@ ul.social-buttons {
 .eea-btn-light:hover {
     color: &dtml-lightBackgroundColor;;;
     border-color: &dtml-corporateGreen;;
+    background-color: &dtml-corporateGreen;;
+}
+
+.eea-btn-multimedia {
+    color: &dtml-lightBackgroundColor;;;
+    border: 0;
     background-color: &dtml-corporateGreen;;
 }
 
