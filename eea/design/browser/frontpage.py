@@ -2,6 +2,7 @@
 """
 
 import logging
+import random
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
@@ -310,6 +311,9 @@ def query_results(self, query, portaltypes=None, interfaces=None, noOfItems=6):
         res = self.catalog(query)
         filtered_res = filterLatestVersion(self, brains=res,
                                            noOfItems=noOfItems)
+
+    if len(filtered_res) > noOfItems:
+        filtered_res = random.sample(filtered_res, k=noOfItems)
     return filtered_res
 
 
