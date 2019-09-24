@@ -47,7 +47,7 @@ class Frontpage(BrowserView):
     def searchResults(self, name, searchtype="Article", language=None):
         """ Retrieve latest product filtered by date and by topic """
         effective_date_ago = 'get' + name + 'Ago'
-        noOfItems = self.fp.getProperty('noOf' + name) or self.noOfEachProduct
+        noOfItems = self.fp.getProperty('noOf' + name) or self.noOfLow
         language = language or getattr(self.context, 'getLanguage',
                                        lambda: '')()
         if language == 'en':
