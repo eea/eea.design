@@ -64,6 +64,10 @@
 }
 
 /* flex utilities */
+.direction-column {
+    flex-direction: column;
+}
+
 .space-evenly {
     justify-content: space-evenly !important;
 }
