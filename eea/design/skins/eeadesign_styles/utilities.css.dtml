@@ -58,6 +58,9 @@
 .mt-0 {
     margin-top: 0 !important;
 }
+.mt-a {
+    margin-top: auto !important;
+}
 
 .ma-0 {
     margin: 0 !important;
@@ -66,6 +69,7 @@
 /* flex utilities */
 .direction-column {
     flex-direction: column;
+    display: flex;
 }
 
 .space-evenly {

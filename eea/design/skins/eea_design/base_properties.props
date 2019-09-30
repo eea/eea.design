@@ -21,6 +21,8 @@ corporateBlueTwo:string=#006699
 #color used for	buttons / actions / special links (not for plain text)
 corporateOrange:string=#f6a800
 corporateDarkOrange:string=#ce5310
+themesDataColor:string=#539eb5
+themesMultimediaColor:string=#5a3092
 
 
 #different headings colors
