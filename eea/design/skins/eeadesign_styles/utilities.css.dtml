@@ -33,6 +33,11 @@
     display: none !important;
 }
 
+/* font utilities */
+.text-italic {
+    font-style: italic !important;
+}
+
 /* overflow utilities */
 .overflow_hidden {
     overflow: hidden !important;
@@ -88,6 +93,12 @@
 .light-color {
     color: #FFF !important;
 }
+.text-color {
+    color: &dtml-fontColor; !important;
+}
 
+.dark-color {
+    color: &dtml-fontDarkColor; !important;
+}
 /* </dtml-let> */
 /* </dtml-with> */

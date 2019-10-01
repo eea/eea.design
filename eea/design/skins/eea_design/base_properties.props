@@ -8,6 +8,7 @@ fontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
 fontBaseSize:string=69%
 fontColor:string=#333333
 fontSmallSize:string=12px
+fontDarkColor:string=#000
 
 #corporate main colors
 corporateGreen:string=#008675
