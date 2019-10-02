@@ -471,6 +471,19 @@ div#original_chart_div {
 }
 /* @end custom css fixes and overrides */
 
+.video_player_link {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100%;
+    min-height: 360px;
+}
 
+.video_player_image {
+    position: relative;
+    filter: contrast(80%);
+    margin: auto;
+}
 /* </dtml-let> */
 /* </dtml-with> */
