@@ -484,7 +484,7 @@ div#original_chart_div {
     position: relative;
     filter: contrast(80%);
     margin: auto;
-    max-height: 70px;
+    height: 70px;
 }
 /* </dtml-let> */
 /* </dtml-with> */
