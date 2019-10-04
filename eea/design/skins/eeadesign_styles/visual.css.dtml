@@ -60,6 +60,22 @@ option.hiddenStructure {
     float: left;
     margin-right: 1em;
 }
+
+.bullet-list {
+    list-style: none !important;
+}
+
+.bullet-list > li {
+    position: relative;
+    padding-left: 0.7em;
+}
+
+.bullet-list > li:before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: inherit;
+}
 /*
 ** Watermark style
 ** for content that is not published
