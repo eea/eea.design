@@ -170,7 +170,7 @@ select {
 /* @group Content Area */
 
 .userrole-anonymous .documentFirstHeading {
-    padding-right: 7em; /* to avoid overlapping with language switcher which appears only for anonymous users */
+    padding-right: 5em; /* to avoid overlapping with language switcher which appears only for anonymous users */
 }
 
 #content p a:link {
