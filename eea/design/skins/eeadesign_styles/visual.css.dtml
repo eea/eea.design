@@ -58,7 +58,7 @@ option.hiddenStructure {
 
 .inline-list-style > li {
     float: left;
-    margin-right: 1em;
+    margin-right: 1.5em;
 }
 
 .bullet-list {
@@ -947,6 +947,14 @@ ul.social-buttons {
 .eea-btn-md {
     padding: 7px 11px;
 }
+
+.eea-btn--moreLink {
+    color: #FFF;
+    padding: 0.6em 1em;
+    vertical-align: baseline;
+    display: inline-flex;
+}
+
 .eea-btn-radius {
     border-radius: 0.5em;
 }
