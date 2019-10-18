@@ -67,7 +67,7 @@ option.hiddenStructure {
 
 .bullet-list > li {
     position: relative;
-    padding-left: 0.7em;
+    padding-left: 1em;
 }
 
 .bullet-list > li:before {
@@ -75,6 +75,7 @@ option.hiddenStructure {
     position: absolute;
     left: 0;
     color: inherit;
+    font-size: 2em;
 }
 /*
 ** Watermark style
