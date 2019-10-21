@@ -946,7 +946,7 @@ ul.social-buttons {
 }
 
 .eea-btn-md {
-    padding: 7px 11px;
+    padding: 9px 11px;
 }
 
 .eea-btn--moreLink {
@@ -977,11 +977,11 @@ ul.social-buttons {
     background-color: &dtml-corporateGreen;;
 }
 
-.eea-btn-multimedia {
-    color: &dtml-lightBackgroundColor;;;
-    border: 0;
-    background-color: &dtml-corporateGreen;;
-}
+/*.eea-btn-multimedia {*/
+/*    color: &dtml-lightBackgroundColor;;;*/
+/*    border: 0;*/
+/*    background-color: &dtml-corporateGreen;;*/
+/*}*/
 
 /* eea tile design */
 /* http://eea.europa.eu/themes card tiles design */
@@ -1278,9 +1278,14 @@ ul.social-buttons {
         font-size: 1.4em;
     }
 }
-
 /* end eea tile design */
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .bullet-list > li {
+        overflow: hidden; /* needed for IE11 to work with columns css prop */
+        padding-left: 1.8em;
+    }
+}
 
 
 /* </dtml-let> */

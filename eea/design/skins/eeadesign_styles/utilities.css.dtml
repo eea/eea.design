@@ -41,6 +41,9 @@
 .text-italic {
     font-style: italic !important;
 }
+.text-bold {
+    font-weight: bold !important;
+}
 
 /* overflow utilities */
 .overflow_hidden {
