@@ -12,7 +12,7 @@
 jQuery(document).ready(function($) {
     'use strict';
 //    #20302; save state on submit attempt and remove it on success
-    var url_path_name = jQuery('body').data('base-url') || jQuery("base").attr('href') || "";
+    var url_path_name = jQuery("body").data("base-url") || "";
     var search_path = window.location.search;
     var saved_search_path = search_path.indexOf("Changes%20saved");
     var referrer = document.referrer;

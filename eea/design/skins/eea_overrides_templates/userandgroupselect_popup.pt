@@ -11,10 +11,7 @@
                   fieldId request/fieldId;
                   groupId request/selectgroup | python: '';">
 
-  <head>
-
-    <base href="" tal:attributes="href plone_view/renderBase" />
-
+<head>
     <tal:define define="language here/Language;
                         lang language | default_language;
                         charset site_properties/default_charset|string:utf-8">
@@ -78,7 +75,6 @@
         }
 ">
     </script>
-
 </head>
 
 <body id="userandgroupselect-popup-body">

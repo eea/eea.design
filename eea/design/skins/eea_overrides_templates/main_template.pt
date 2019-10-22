@@ -86,9 +86,6 @@
         <tal:anonymousNoBorder condition="isAnon|nothing">
             <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
         </tal:anonymousNoBorder>
-        <metal:baseslot define-slot="base">
-            <base tal:attributes="href plone_view/renderBase" /><!--[if lt IE 7]></base><![endif]-->
-        </metal:baseslot>
     </metal:headslot>
 
     <metal:styleslot define-slot="style_slot" />

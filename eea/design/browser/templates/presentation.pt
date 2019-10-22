@@ -37,13 +37,8 @@
         tal:attributes="href string:${context/portal_url}/presentational_styles.css" />
     <link rel="stylesheet" type="text/css" media="all"
         tal:attributes="href string:${context/portal_url}/++resource++eea.design.stylesheets/presentation.css" />
-
-
-    <metal:baseslot define-slot="base">
-      <base tal:attributes="href context/@@plone/renderBase" /><!--[if lt IE 7]></base><![endif]-->
-    </metal:baseslot>
-
 </head>
+
 <!--[if lte IE 7]> <body class="ie7"> <![endif]-->
 <!--[if IE 8]>     <body class="ie8"> <![endif]-->
 <!--[if IE 9]>     <body class="ie9"> <![endif]-->
