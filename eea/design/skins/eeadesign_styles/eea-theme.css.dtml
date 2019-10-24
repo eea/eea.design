@@ -485,7 +485,7 @@ div#original_chart_div {
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .video_player_link {
+    .video_player_image {
         position: absolute;
         top: 50%;
         left: 45%;
