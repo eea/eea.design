@@ -6,7 +6,7 @@ Changelog
 * Bug fix: googlecharts tables again act as table-rows instead of table in order
   for them to hit 100% width
   [ichim-david refs #108723]
-* Change: removed the <base> tag
+* Change: removed the <base> tag 
   [alecghica refs #106535]
 * Feature: updated auto-completion for top right input search to use the correct term
   [razvanMiu refs #109084]
