@@ -8,6 +8,8 @@ Changelog
   [ichim-david refs #108723]
 * Change: removed the <base> tag
   [alecghica refs #106535]
+* Feature: updated auto-completion for top right input search to use the correct term
+  [razvanMiu refs #109084]
 
 24.8 - (2019-08-16)
 ---------------------------
