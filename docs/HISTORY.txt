@@ -1,7 +1,7 @@
 Changelog
 =========
 
-24.9-dev0 - (unreleased)
+24.9 - (2019-10-30)
 ---------------------------
 * Bug fix: googlecharts tables again act as table-rows instead of table in order
   for them to hit 100% width
