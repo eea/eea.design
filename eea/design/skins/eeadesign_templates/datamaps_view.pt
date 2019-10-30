@@ -102,8 +102,7 @@
 
                         <!-- tabs -->
                         <tal:whatsnew metal:define-macro="whatsnew-gallery"
-                                tal:define="getProducts context/portal_properties/frontpage_properties/getDataProducts;
-                                            frontpage_view context/@@data_and_maps_logic;
+                                tal:define="frontpage_view context/@@data_and_maps_logic;
                                             more_hrefs more_hrefs|python:{};
                                             datapage string:datamaps;">
                             <div metal:use-macro="here/frontpage_view/macros/whatsnew-gallery">

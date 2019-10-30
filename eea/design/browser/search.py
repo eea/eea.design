@@ -2,6 +2,7 @@
 """
 import json
 import logging
+import copy 
 from urllib import urlencode
 from eventlet.green import urllib2
 from contextlib import closing
@@ -44,8 +45,57 @@ class Tags(BrowserView):
         """
         if not q:
             return []
+        
+        """ Get suggestions
+        """
+        terms = q.split(" ")
+        
+        suggest_query = {
+            "size": 0,
+            "suggest": {}
+        }
+        did_you_mean_template = {
+            "text": "*",
+            "phrase": {
+                "field": "did_you_mean"
+            }
+        }
+        
+        for term in range(len(terms)):
+            suggest_query["suggest"]["did_you_mean_" + str(term)] = copy.deepcopy(did_you_mean_template)
+            suggest_query["suggest"]["did_you_mean_" + str(term)]["text"] = terms[term]
 
-        query = {
+        suggest_url = "?".join((
+            AUTOCOMPLETE,
+            urlencode({"source": json.dumps(suggest_query)})
+        ))
+
+        try:
+            with closing(urllib2.urlopen(suggest_url, timeout=TIMEOUT)) as con:
+                res = json.loads(con.read())
+        except Exception as err:
+            logger.debug("%s - %s", suggest_url, err)
+            res = {}
+            
+        """ Reconstruct q
+        """
+        words = 0
+        suggested_terms = []
+        
+        while True:
+            key = "did_you_mean_" + str(words)
+            if res["suggest"].get(key):
+                if res["suggest"][key][0].get("options") and len(res["suggest"][key][0].get("options")) == 0:
+                    suggested_terms.append(res["suggest"][key][0]["text"])
+                elif res["suggest"][key][0].get("options") and res["suggest"][key][0]["options"][0].get("text"):
+                    suggested_terms.append(res["suggest"][key][0]["options"][0]["text"])
+                else:
+                    suggested_terms.append(terms[words])
+            else:
+                break
+            words += 1
+
+        autocomplete_query = {
             "size": 0,
             "aggs": {
                 "autocomplete_full": {
@@ -54,7 +104,7 @@ class Tags(BrowserView):
                         "order": {
                             "_count": "desc"
                         },
-                        "include": "%s.*" % q
+                        "include": "%s.*" % " ".join(suggested_terms)
                     }
                 },
                 "autocomplete_last": {
@@ -63,7 +113,7 @@ class Tags(BrowserView):
                         "order": {
                             "_count": "desc"
                         },
-                        "include": "%s.*" % q.split()[-1]
+                        "include": "%s.*" % " ".join(suggested_terms).split()[-1]
                     }
                 }
             }
@@ -71,7 +121,7 @@ class Tags(BrowserView):
 
         url = "?".join((
             AUTOCOMPLETE,
-            urlencode({"source": json.dumps(query)})
+            urlencode({"source": json.dumps(autocomplete_query)})
         ))
 
         try:

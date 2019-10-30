@@ -73,22 +73,19 @@
 <meta tal:condition="python: wf_state in ['visible']" name="robots" content="noarchive" />
 
 <tal:notajax tal:condition="python:not ajax_load or ajax_include_head">
+    <metal:topslot define-slot="top_slot" />
     <div tal:replace="structure provider:plone.htmlhead" />
 
     <tal:comment replace="nothing">
         Various slots where you can insert elements in the header from a template.
     </tal:comment>
 
-    <metal:topslot define-slot="top_slot" />
 
     <metal:headslot define-slot="head_slot"
         tal:define="charset site_properties/default_charset|string:utf-8">
         <tal:anonymousNoBorder condition="isAnon|nothing">
             <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
         </tal:anonymousNoBorder>
-        <metal:baseslot define-slot="base">
-            <base tal:attributes="href plone_view/renderBase" /><!--[if lt IE 7]></base><![endif]-->
-        </metal:baseslot>
     </metal:headslot>
 
     <metal:styleslot define-slot="style_slot" />

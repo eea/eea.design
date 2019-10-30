@@ -8,16 +8,23 @@ fontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
 fontBaseSize:string=69%
 fontColor:string=#333333
 fontSmallSize:string=12px
+fontDarkColor:string=#000
 
 #corporate main colors
 corporateGreen:string=#008675
+corporateDarkGreen:string=#007C88
 corporateGreenTwo:string=#777c1f
 corporateBlue:string=#004B87
+corporateDarkBlue:string=#01445e
 corporateBlueTwo:string=#006699
 
 
 #color used for	buttons / actions / special links (not for plain text)
 corporateOrange:string=#f6a800
+corporateDarkOrange:string=#ce5310
+themesDataColor:string=#539eb5
+themesMultimediaColor:string=#5a3092
+
 
 #different headings colors
 linkHeadingColor:string=#346f83

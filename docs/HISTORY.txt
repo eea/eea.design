@@ -1,12 +1,21 @@
 Changelog
 =========
 
+24.9 - (2019-10-30)
+---------------------------
+* Bug fix: googlecharts tables again act as table-rows instead of table in order
+  for them to hit 100% width
+  [ichim-david refs #108723]
+* Change: removed the <base> tag
+  [alecghica refs #106535]
+* Feature: updated auto-completion for top right input search to use the correct term
+  [razvanMiu refs #109084]
+
 24.8 - (2019-08-16)
 ---------------------------
 * Bug fix: frontpage megatopics, featured articles and whatsnewgallery responsive
   design fixes
   [ichim-david refs #106884]
-
 
 24.7 - (2019-08-14)
 ---------------------------

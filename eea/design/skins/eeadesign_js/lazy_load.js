@@ -72,14 +72,18 @@ jQuery(document).ready(function($) {
         });
     }
 
-   /* $('#content').find('iframe').each(function() {
-        if (isElementInViewport(this) === false) {
-            enableLazy(this);
-            lazyElements.push(this);
-        }
-    }); */
 
     var lazyElements = $('.lazy');
+
+    // 94351 disable iframe lazy loading due to unexpected side effects of
+    // google charts iframes.
+    // instead lazy load only iframes that have a data-src attribute
+    $('#content').find('iframe').each(function() {
+        if (isElementInViewport(this) === false || this.getAttribute('data-src')) {
+            lazyElements.push(this);
+        }
+    });
+
     lazyElements.lazy({
         scrollDirection: 'both',
         effect: 'fadeIn',

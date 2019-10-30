@@ -2,6 +2,7 @@
 """
 
 import logging
+import random
 from Acquisition import aq_inner
 from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
@@ -46,7 +47,7 @@ class Frontpage(BrowserView):
     def searchResults(self, name, searchtype="Article", language=None):
         """ Retrieve latest product filtered by date and by topic """
         effective_date_ago = 'get' + name + 'Ago'
-        noOfItems = self.fp.getProperty('noOf' + name) or self.noOfEachProduct
+        noOfItems = self.fp.getProperty('noOf' + name) or self.noOfLow
         language = language or getattr(self.context, 'getLanguage',
                                        lambda: '')()
         if language == 'en':
@@ -61,6 +62,8 @@ class Frontpage(BrowserView):
             searchtype = searchtype.split(' ')[1:-1]
             if '.' in searchtype[0]:
                 query['interfaces'] = searchtype
+            elif '*' in searchtype[0]:
+                query['portaltypes'] = searchtype[0].split('*')
             else:
                 query['portaltypes'] = searchtype
             return _getItems(self, **query)
@@ -71,43 +74,46 @@ class Frontpage(BrowserView):
             query['portaltypes'] = searchtype
         return _getItems(self, **query)
 
-    def getProductCategories(self, skip_value=None):
+    def getProductCategories(self, skip_value=None, products_category=None):
         """ Get all product categories defined in frontpage_properties.
             With ability to skip a value for cases where we have
             a category that retrieves all of the other categories
             ex: getProductsCategories(skip_value='getAllProducts')
         """
-        products = self.getProducts
+        provided_products = self.fp.getProperty(products_category) \
+            if products_category else self.getProducts
         values = []
-        for item in products:
+        for item in provided_products:
             if skip_value and skip_value in item:
                 continue
             values.append(item.split(','))
         return values
 
-    def getLatest(self, name, language=None):
+    def getLatest(self, name, language=None, products_category=None):
         """ Retrieve the latest brains for given category name
             ex: getLatest('datasets')
         """
         if not language:
             language = self.context.getLanguage()
-        product = self.getProductConfiguration(name)
+        product = self.getProductConfiguration(name, products_category)
         return self.getProductContent(product, language=language) if product \
             else None
 
-    def getProductConfiguration(self, name):
+    def getProductConfiguration(self, name, products_category=None):
         """ Retrieve configuration of Product used for checking which listing
             to hide and where the more link should point to
         """
-        products = self.getProductCategories()
+        products = self.getProductCategories(
+            products_category=products_category)
         for product in products:
             if name in product:
                 return product
         return None
 
-    def getProductCategoriesResults(self, skip_value=None):
+    def getProductCategoriesResults(self, skip_value=None,
+                                    products_category=None):
         """ Get Catalog results of going over each Product """
-        values = self.getProductCategories(skip_value)
+        values = self.getProductCategories(skip_value, products_category)
         results = {}
         for item in values:
             results[item[1]] = self.getProductContent(item)
@@ -121,10 +127,10 @@ class Frontpage(BrowserView):
             return getattr(self, search_type)()
         return self.searchResults(item[1], item[2], language=language)
 
-    def getProductCategoriesNames(self):
+    def getProductCategoriesNames(self, products_category=None):
         """ Get the names of Product categories defined in frontpage_properties
         """
-        values = self.getProductCategories()
+        values = self.getProductCategories(products_category=products_category)
         names = [i[1] for i in values]
         return names
 
@@ -195,8 +201,8 @@ class Frontpage(BrowserView):
         """ public method for frontpage calling _getImageUrl """
         return _getImageUrl(brain)
 
-## Utility functions
 
+# Utility functions
 def _getPromotions(self, noOfItems=6):
     """ utility function to retrieve external and internal promotions """
     query = {
@@ -241,6 +247,7 @@ def _getPromotions(self, noOfItems=6):
             break
     return cPromos
 
+
 def _getHighArticles(self, noOfItems=1):
     """ utility function to return a defined number of high visibility
     articles items
@@ -263,6 +270,7 @@ def queryEffectiveRange(self, query):
     }
     query['effective'] = date_range
     return query
+
 
 def query_results(self, query, portaltypes=None, interfaces=None, noOfItems=6):
     """ Expand results when we have more than one portal type or interface """
@@ -303,7 +311,11 @@ def query_results(self, query, portaltypes=None, interfaces=None, noOfItems=6):
         res = self.catalog(query)
         filtered_res = filterLatestVersion(self, brains=res,
                                            noOfItems=noOfItems)
+
+    if len(filtered_res) > noOfItems:
+        filtered_res = random.sample(filtered_res, k=noOfItems)
     return filtered_res
+
 
 def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
                             interfaces=None, topic=None, noOfItems=None,
@@ -332,6 +344,7 @@ def _getItemsWithVisibility(self, visibilityLevel=None, portaltypes=None,
     filtered_res = query_results(self, query, portaltypes=portaltypes,
                                  interfaces=interfaces, noOfItems=noOfItems)
     return filtered_res
+
 
 def _getTopics(self, topic=None, portaltypes=None, object_provides=None,
                tags=None, noOfItems=None, language=None):

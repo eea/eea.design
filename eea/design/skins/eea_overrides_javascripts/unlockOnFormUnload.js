@@ -18,7 +18,7 @@ plone.UnlockHandler = {
     init: function() {
         // set up the handler, if there are any forms
         if ($('form.enableUnlockProtection').length) {
-            $(window).unload(plone.UnlockHandler.execute);
+            $(window).on( "unload", plone.UnlockHandler.execute);
             plone.UnlockHandler._refresher = setInterval(plone.UnlockHandler.refresh, 300000);
         }
     },
