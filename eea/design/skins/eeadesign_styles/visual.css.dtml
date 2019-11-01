@@ -296,6 +296,21 @@ th a, th a:link, th a:visited {
 }
 
 
+/* fullwidth background image */
+.fullwidth-img-bg {
+    background-repeat: no-repeat;
+    height: 1000px;
+    position: absolute;
+    top: -30px;
+    z-index: -1;
+    width: 99.3vw;
+    max-width: none !important;
+    right: 0;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-size: cover
+}
 /* standard figure, used for articles and pages.
 can be floated left or right with additional
 class figure-right or figure-left */

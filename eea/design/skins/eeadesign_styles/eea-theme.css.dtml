@@ -503,6 +503,20 @@ div#original_chart_div {
     height: 70px;
 }
 
+/* highlight section */
+.template-highlight_view #portal-column-two {
+    display: none;
+}
+.template-highlight_view #portal-column-content {
+    float: none;
+    margin: 0 auto;
+}
+.template-highlight_view .content-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1em;
+    color: #FFF;
+}
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .video_player_image {
         position: absolute;
