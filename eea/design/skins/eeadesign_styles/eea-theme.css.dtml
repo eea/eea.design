@@ -515,7 +515,33 @@ div#original_chart_div {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1em;
     color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+.template-highlight_view #themes-tags {
+    order: 0;
+}
+.template-highlight_view .content-header > div,
+.template-highlight_view .documentFirstHeading,
+.template-highlight_view #languageCodes
+{
+    order: 1;
+}
+
+.template-highlight_view .documentFirstHeading,
+.template-highlight_view #themes-tags,
+.template-highlight_view .documentExportActions a
+{
+    color: #FFF;     
+}
+
+.template-highlight_view .documentByLine,
+.template-highlight_view .documentDescription,
+.template-highlight_view .documentByLine a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .video_player_image {

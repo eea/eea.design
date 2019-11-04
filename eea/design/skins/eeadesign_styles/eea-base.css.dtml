@@ -276,13 +276,12 @@ tbody {
 }
 
 
-#content .documentDescription,
-#content #description {
-    font-weight: bold;
+.documentDescription,
+#description {
     display: block;
-    margin: 0em 0em 0.5em 0em;
+    margin: 0 0 0.5em 0;
     line-height: 1.5em;
-    font-family: &dtml-fontFamily;;
+    font: bold 1.25em &dtml-fontFamily;;
     color: #333;
 }
 /* @end @group Content Area */

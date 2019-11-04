@@ -184,13 +184,6 @@ dl.portlet {
     border-spacing: 0px;
 }
 
-#content .documentDescription,
-#content #description {
-    color: #666;
-    margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
-}
-
 #content div.newsImageContainer a {
     border-bottom: none;
 }

@@ -299,7 +299,7 @@ th a, th a:link, th a:visited {
 /* fullwidth background image */
 .fullwidth-img-bg {
     background-repeat: no-repeat;
-    height: 1000px;
+    height: 500px;
     position: absolute;
     top: -30px;
     z-index: -1;
