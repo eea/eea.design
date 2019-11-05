@@ -205,13 +205,13 @@ dd#tempCoverage, dd.geotags, dd.category{
     margin-left: 0 !important;
 }
 
-#category a.link-category,
-.category a.link-category,
-#themes-tags a.link-category,
-#geotags a.link-category,
-.geotags a.link-category,
-#tempCoverage a.link-category,
-#languageCodes a.translated, #languageCodes li.selected, span.selectedTag {
+#category .link-category,
+.category .link-category,
+#themes-tags .link-category,
+#geotags .link-category,
+.geotags .link-category,
+#tempCoverage .link-category,
+#languageCodes .translated, #languageCodes li.selected, span.selectedTag {
     color: black;
     padding: 2px 5px;
     margin: 2px 0;
@@ -223,13 +223,13 @@ dd#tempCoverage, dd.geotags, dd.category{
     -webkit-border-radius: 0.5em;
 }
 
-#category a.link-category:hover,
-.category a.link-category:hover,
-#themes-tags a.link-category:hover,
-#geotags a.link-category:hover,
-.geotags a.link-category:hover,
-#tempCoverage a.link-category:hover,
-#languageCodes a.translated:hover, #languageCodes li.selected {
+#category .link-category:hover,
+.category .link-category:hover,
+#themes-tags .link-category:hover,
+#geotags .link-category:hover,
+.geotags .link-category:hover,
+#tempCoverage .link-category:hover,
+#languageCodes .translated:hover, #languageCodes li.selected {
     background: &dtml-corporateOrange;;
     color: White;
     border-color: #205c90;
