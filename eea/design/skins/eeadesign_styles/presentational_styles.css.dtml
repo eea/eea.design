@@ -217,12 +217,73 @@ blockquote {
     font-size: 1.6em;
     letter-spacing: -0.08em !important;
 }
+.n-pullquote {
+    font-weight: bold;
+    position: relative;
+    font-style: italic;
+    background-color: #f3f3f3;
+    padding: 2em;
+}
+.n-pullquote:before, .n-pullquote:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: .2;
+  position: absolute;
+}
+
+.n-pullquote:before {
+  content: '\201C';
+  margin-right: 4px;
+  margin-left: -8px;
+  top: 5px;
+  left: 10px;
+}
+
+.n-pullquote:after {
+  content: '\201D';
+  margin-left: 4px;
+  margin-right: -8px;
+  right: 8%;
+  bottom: 0;
+}
+
+.pullquoteFull.n-pullquote:after {
+    right: 4%;
+}
+
+.pullquoteLeft {
+    float: left;
+    width: 50%;
+    margin: 2em 2em 2em -10%;
+    padding: 2em 3em;
+}
+
+.calloutRight,
+.pullquoteRight {
+    float: right;
+    width: 50%;
+    margin: 2em -10% 2em 2em;
+    padding: 2em 3em;
+}
+.pullquoteFull {
+    text-align: center;
+    padding: 2em 5em;
+}
 
 .callout {
     background: #eee;
     padding: 1em;
     border-left: 1em solid #ccc;
     clear: both;
+}
+.n-callout {
+    background: &dtml-corporateBlue;;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.25em;
 }
 
 .keyFact {

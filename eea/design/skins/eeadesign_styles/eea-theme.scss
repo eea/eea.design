@@ -21,7 +21,7 @@ hr {
 
 /* Networks panel EU partners links */
 .moreLink,
-.template-highlight_view .link-category
+.link-category
 {
   border: 0 !important;
   display: inline-block;
@@ -30,7 +30,7 @@ hr {
   }
 
 .moreLink:before,
-.template-highlight_view .link-category:before
+.link-category:before
 {
   content: "\f138";
   font-family: FontAwesome;
@@ -522,6 +522,9 @@ div#original_chart_div {
     }
   #content {
     padding-top: 8em;
+  }
+  div[id^="parent-fieldname-text"] {
+    margin-top: 4em;
   }
 
   .keyFact,
