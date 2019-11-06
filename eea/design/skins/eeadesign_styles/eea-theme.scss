@@ -510,7 +510,9 @@ div#original_chart_div {
   }
 
 /* highlight section */
-.template-highlight_view {
+.template-highlight_view,
+.template-fiche_view
+{
   #portal-column-two {
     display: none;
     }
@@ -518,6 +520,11 @@ div#original_chart_div {
     float: none;
     margin: 0 auto;
     }
+  #content {
+    padding-top: 8em;
+  }
+
+  .keyFact,
   .content-header {
     padding: 1em;
     color: #FFF;
@@ -526,11 +533,13 @@ div#original_chart_div {
     justify-content: space-between;
     position: relative;
     z-index: 0;
+    //margin-bottom: 3em;
     }
   .documentFirstHeading .anchorjs-link {
     display: none !important;
   }
 
+  .keyFact:before,
   .content-header:before {
     width: 130%;
     content: " ";
@@ -541,10 +550,27 @@ div#original_chart_div {
     left: -15%;
     top: 0;
     }
+
+  .keyFact {
+    padding: 3em;
+    background-color: transparent;
+    }
+  #content .keyFact .discreet,
+  .keyFact{
+    color: #FFF;
+    border: 0;
+    }
+  .keyFact:before {
+    background-color: rgba(00,86,75, 0.9);
+    }
   #themes-tags {
     order: 0;
+    margin-left: 1.2em;
+    margin-bottom: 3em;
     }
-
+  .documentDescription {
+    margin-bottom: 3em;
+    }
   .documentFirstHeading,
   .content-header .documentDescription
   {
@@ -576,6 +602,10 @@ div#original_chart_div {
     }
   #themes-tags .listHead {
     display: none;
+    }
+
+  h2, h3 {
+    color: #000;
     }
 }
 
