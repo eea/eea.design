@@ -613,6 +613,15 @@ div#original_chart_div {
     }
 }
 
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+.tile {
+  min-width: 33.4%;
+}
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .video_player_image {
