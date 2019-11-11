@@ -257,7 +257,7 @@ blockquote {
 .pullquoteLeft {
     float: left;
     width: 50%;
-    margin: 2em 2em 2em -10%;
+    margin: 2em 2em 2em 0;
     padding: 2em 3em;
 }
 
@@ -265,12 +265,43 @@ blockquote {
 .pullquoteRight {
     float: right;
     width: 50%;
-    margin: 2em -10% 2em 2em;
+    margin: 2em 0 2em 2em;
     padding: 2em 3em;
+    word-break: break-word;
 }
 .pullquoteFull {
     text-align: center;
     padding: 2em 5em;
+}
+
+@media (max-width: 767px) {
+    .calloutRight, .pullquoteRight, .pullquoteLeft,
+    .pullquoteFull
+    {
+        padding: 2em 1em;
+    }
+    .calloutRight,
+    .pullquoteRight {
+        margin: 1em 0 1em 1em;
+    }
+    .pullquoteLeft {
+        margin: 1em 1em 1em 0;
+    }
+    .n-pullquote:after {
+        right: 12%;
+    }
+    .pullquoteFull.n-pullquote:after {
+        right: 7%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pullquoteLeft {
+        margin-left: -10%;
+    }
+    .pullquoteRight {
+        margin-right: -10%;
+    }
 }
 
 .callout {
