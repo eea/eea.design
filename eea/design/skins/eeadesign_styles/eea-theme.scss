@@ -447,6 +447,10 @@ table.invisible {
   visibility: visible;
   }
 
+table.plain {
+  background-color: #FFF;
+  }
+
 .template-collection-pdf-body h4.figureHeading {
   margin: 0 0 1.5em 0;
   }
@@ -521,6 +525,9 @@ div#original_chart_div {
 .template-highlight_view,
 .template-fiche_view
 {
+  .annotator-wrapper {
+    position: inherit;
+    }
   #portal-column-two {
     display: none;
     }
@@ -528,9 +535,6 @@ div#original_chart_div {
     float: none;
     margin: 0 auto;
     }
-  #content {
-    padding-top: 8em;
-  }
   div[id^="parent-fieldname-text"] {
     margin-top: 4em;
   }
@@ -548,6 +552,7 @@ div#original_chart_div {
     }
   .documentFirstHeading {
     padding-right: 0;
+    width: 100%;
     }
   .documentFirstHeading .anchorjs-link {
     display: none !important;
@@ -622,6 +627,11 @@ div#original_chart_div {
     color: #000;
     }
 }
+
+.userrole-anonymous.template-highlight_view #content,
+.userrole-anonymous.template-fiche_view #content {
+  padding-top: 8em;
+  }
 
 .tiles {
   display: flex;
