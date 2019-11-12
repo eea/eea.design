@@ -596,11 +596,19 @@ div#original_chart_div {
     order: 1;
   }
   
-  .content-header > div,
-  #languageCodes
+  #languageCodes,
+  .content-header .documentByLine
   {
     order: 2;
     }
+
+  .content-header .documentExportActions {
+    order: 3;
+  }
+
+  .content-header > div {
+    order: 4;
+  }
 
   .documentFirstHeading,
   #themes-tags,
