@@ -95,6 +95,8 @@ hr {
 .template-highlight_view #content-core,
 .template-fiche_view #content-core {
   margin-bottom: 2em;
+  background-color: #FFF;
+  padding: 1em;
   }
 
 /* portal-column styles */
@@ -550,9 +552,16 @@ div#original_chart_div {
     z-index: 0;
     //margin-bottom: 3em;
     }
+  .keyFact li {
+    font-size: 1rem;
+  }
+  .keyFact h2, .keyFact h3 {
+    color: #FFF;
+  }
   .documentFirstHeading {
     padding-right: 0;
     min-width: 85%;
+    margin-bottom: 0.67em;
     }
   .documentFirstHeading .anchorjs-link {
     display: none !important;
@@ -584,7 +593,7 @@ div#original_chart_div {
     }
   #themes-tags {
     order: 0;
-    margin-left: 1.2em;
+    margin-left: 0;
     margin-bottom: 3em;
     }
   .documentDescription {
