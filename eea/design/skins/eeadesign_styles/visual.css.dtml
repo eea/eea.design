@@ -315,6 +315,7 @@ th a, th a:link, th a:visited {
     position: relative;
     padding: 3em 0;
     margin: 3em 0;
+    z-index: 1;
 }
 .fullwidth-bg:before {
     position: absolute;
