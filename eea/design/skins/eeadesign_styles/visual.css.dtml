@@ -342,6 +342,7 @@ th a, th a:link, th a:visited {
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
+    clear: both;
 }
 
 .absolute-centered {
@@ -353,9 +354,14 @@ th a, th a:link, th a:visited {
 
 .emphasis-area {
     background-color: rgba(0,0,0, 0.9);
-    padding: 3em;
+    padding: 2em;
     font-size: 1.6rem;
     color: #FFF;
+}
+@media (max-width: 767px) {
+    .emphasis-area {
+        width: 90%;
+    }
 }
 
 /* standard figure, used for articles and pages.
