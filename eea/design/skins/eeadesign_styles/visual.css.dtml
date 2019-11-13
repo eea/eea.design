@@ -344,12 +344,15 @@ th a, th a:link, th a:visited {
     align-items: center;
     flex-direction: column;
     clear: both;
+    max-height: 600px;
+    overflow: hidden;
 }
 
 .absolute-centered {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    max-width: 860px;
     /*width: 63.5%;*/
 }
 

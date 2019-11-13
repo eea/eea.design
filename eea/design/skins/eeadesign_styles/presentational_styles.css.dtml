@@ -270,6 +270,8 @@ blockquote {
     padding: 2em 3em;
     word-break: break-word;
 }
+
+.calloutFull,
 .pullquoteFull {
     text-align: center;
     padding: 2em 5em;
@@ -316,8 +318,6 @@ blockquote {
     color: #FFF;
     font-weight: bold;
     font-size: 1.25em;
-    padding: 2em 3em;
-    margin: 2em 0;
 }
 
 .keyFact {
