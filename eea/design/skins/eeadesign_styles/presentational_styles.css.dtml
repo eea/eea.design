@@ -278,23 +278,26 @@ blockquote {
 }
 
 @media (max-width: 767px) {
-    .calloutRight, .pullquoteRight, .pullquoteLeft,
-    .pullquoteFull
+    .n-callout, .n-pullquote
     {
-        padding: 2em 1em;
+        padding: 2em 1.3em;
     }
     .calloutRight,
     .pullquoteRight {
         margin: 1em 0 1em 1em;
     }
+    .calloutLeft,
     .pullquoteLeft {
         margin: 1em 1em 1em 0;
     }
-    .n-pullquote:after {
-        right: 12%;
+
+    .n-pullquote:before {
+        top: 0;
+        left: 3px;
     }
-    .pullquoteFull.n-pullquote:after {
-        right: 7%;
+    .n-pullquote:after {
+        right: 10px !important;
+        margin: 0;
     }
 }
 

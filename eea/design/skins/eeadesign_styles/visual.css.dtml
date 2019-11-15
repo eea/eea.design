@@ -357,7 +357,7 @@ th a, th a:link, th a:visited {
 }
 
 .emphasis-area {
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0,0,0, 0.7);
     padding: 2em;
     font-size: 1rem;
     color: #FFF;
