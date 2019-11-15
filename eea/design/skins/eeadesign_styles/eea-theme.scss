@@ -21,7 +21,8 @@ hr {
 
 /* Networks panel EU partners links */
 .moreLink,
-#themes-tags .link-category
+.template-fiche_view #themes-tags .link-category,
+.template-highlight_view #themes-tags .link-category
 {
   border: 0 !important;
   display: inline-block;
@@ -30,7 +31,8 @@ hr {
   }
 
 .moreLink:before,
-#themes-tags .link-category:before
+.template-fiche_view #themes-tags .link-category:before,
+.template-highlight_view #themes-tags .link-category:before
 {
   content: "\f138";
   font-family: FontAwesome;
@@ -95,8 +97,12 @@ hr {
 .template-highlight_view #content-core,
 .template-fiche_view #content-core {
   margin-bottom: 2em;
-  background-color: #FFF;
   }
+
+.template-highlight_view .wf-state-published #content-core,
+.template-fiche_view .wf-state-published #content-core {
+  background-color: #FFF;
+}
 
 /* portal-column styles */
 
@@ -542,7 +548,7 @@ div#original_chart_div {
 
   .keyFact,
   .content-header {
-    padding: 1em;
+    padding: 1em 0;
     color: #FFF;
     display: flex;
     flex-wrap: wrap;
