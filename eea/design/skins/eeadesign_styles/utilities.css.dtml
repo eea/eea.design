@@ -111,5 +111,9 @@
 .dark-color {
     color: &dtml-fontDarkColor; !important;
 }
+
+.bg-grey {
+    background-color: &dtml-greyBackgroundColor;;
+}
 /* </dtml-let> */
 /* </dtml-with> */

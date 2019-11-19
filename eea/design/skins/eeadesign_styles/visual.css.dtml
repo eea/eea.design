@@ -61,15 +61,18 @@ option.hiddenStructure {
     margin-right: 1.5em;
 }
 
+.keyFact ul,
 .bullet-list {
     list-style: none !important;
 }
 
+.keyFact li,
 .bullet-list > li {
     position: relative;
     padding-left: 1em;
 }
 
+.keyFact li:before,
 .bullet-list > li:before {
     content: '\2022';
     position: absolute;
@@ -269,20 +272,13 @@ th a, th a:link, th a:visited {
 
 
 /* Styles which apply only in central content area */
-
-#content blockquote p {
-    font-weight:bold;
-    background: url(&dtml-xurl;/close_quote.gif) no-repeat bottom right;
-    padding: 0 2.25em 1em 0;
-}
-
-#content blockquote p.source {
+.source {
     text-align:right;
     background: none;
     font-style: normal;
     font-weight:normal;
     font-size: x-small;
-    padding: 0 1em 0 0;
+    padding: 0 1em 1em 1em;
 }
 
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */

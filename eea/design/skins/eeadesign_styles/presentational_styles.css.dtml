@@ -196,10 +196,10 @@ dl.error:before,
 
 /* Styles moved from visual.css */
 blockquote {
-    width: 70%;
+    width: 100%;
     margin: 1.0em auto;
-    padding: 1.5em 1em 1em 3em;
-    background: &dtml-lightBackgroundColor; url(&dtml-xurl;/open_quote.gif) 0.5em 0.75em no-repeat;
+    /*padding: 1.5em 1em 1em 3em;*/
+    /*background: &dtml-lightBackgroundColor; url(&dtml-xurl;/open_quote.gif) 0.5em 0.75em no-repeat;*/
     color: #000000;
     clear:both;
 }
@@ -220,7 +220,6 @@ blockquote {
 .n-pullquote {
     font-weight: bold;
     position: relative;
-    font-style: italic;
     background-color: #f3f3f3;
     padding: 2em;
 }
@@ -236,23 +235,19 @@ blockquote {
 
 .n-pullquote:before {
   content: '\201C';
-  margin-right: 4px;
-  margin-left: -8px;
   top: 5px;
-  left: 10px;
+  left: 1%;
 }
 
 .n-pullquote:after {
-  content: '\201D';
-  margin-left: 4px;
-  margin-right: -8px;
-  right: 8%;
-  bottom: 0;
+    content: '\201D';
+    right: 1%;
+    bottom: 0;
 }
 
-.pullquoteFull.n-pullquote:after {
-    right: 4%;
-}
+/*.pullquoteFull.n-pullquote:after {*/
+/*    right: 4%;*/
+/*}*/
 
 .calloutLeft,
 .pullquoteLeft {
@@ -301,10 +296,12 @@ blockquote {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
+    .calloutLeft,
     .pullquoteLeft {
         margin-left: -10%;
     }
+    .calloutRight,
     .pullquoteRight {
         margin-right: -10%;
     }

@@ -99,8 +99,8 @@ hr {
   margin-bottom: 2em;
   }
 
-.template-highlight_view .wf-state-published #content-core,
-.template-fiche_view .wf-state-published #content-core {
+.template-highlight_view:not(.expired-content) .wf-state-published #content-core,
+.template-fiche_view:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
 }
 
@@ -214,6 +214,7 @@ a.downloading img {
   max-width: 87%;
   text-align: left;
   font-size: 0.75rem;
+  flex-basis: 100%;
   }
 
 .portaltype-fiche .link-presentation {
@@ -232,9 +233,9 @@ div.eea-pdf-overlay {
 
 /* documentByLine */
 .documentByLine {
-  font-size: &dtml-fontSmallSize;;
+  font-size: unquote("&dtml-fontSmallSize;");
   font-weight: normal;
-  color: &dtml-discreetColor;;
+  color: unquote("&dtml-discreetColor;");
   margin: 0 0 0.5em 0;
   }
 .documentByLine .portalType, .listHead {
@@ -575,13 +576,14 @@ div#original_chart_div {
   .keyFact:before,
   .content-header:before {
     content: " ";
-    width: 100%;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100.8%;
+    left: -1.1em;
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     height: 100%;
     z-index: -1;
     top: 0;
+    padding: 0 1em;
     }
 
   .keyFact {
@@ -594,7 +596,7 @@ div#original_chart_div {
     border: 0;
     }
   .keyFact:before {
-    background-color: rgba(00,86,75, 0.9);
+    background-color: rgba(0,75,135,0.94);
     }
   #themes-tags {
     order: 0;
@@ -650,9 +652,32 @@ div#original_chart_div {
     }
 }
 
-.userrole-anonymous.template-highlight_view #content,
-.userrole-anonymous.template-fiche_view #content {
-  padding-top: 8em;
+//@media screen and (min-width: 420px) {
+//  .template-highlight_view,
+//  .template-fiche_view
+//  {
+//    .documentExportActions {
+//      height: 0;
+//      }
+//    }
+//
+//  }
+
+.userrole-anonymous.template-highlight_view,
+.userrole-anonymous.template-fiche_view  {
+  #article-language {
+    margin-top: 5px;
+    margin-bottom: 7px;
+    position: absolute;
+    right: 8px;
+    order: 0;
+    }
+    #article-language a {
+    color: #FFF;
+    }
+  #region-content {
+    padding-top: 8em;
+    }
   }
 
 .tiles {
@@ -704,9 +729,16 @@ div#original_chart_div {
     .content-header:before {
       width: 130%;
       left: -15%;
+      padding: 0;
     }
   }
 }
+
+.template-fiche_view {
+  .fiche-body {
+    margin-top: 1em;
+    }
+  }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .video_player_image {
