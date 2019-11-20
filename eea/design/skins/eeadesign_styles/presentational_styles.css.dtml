@@ -206,24 +206,18 @@ blockquote {
 
 
 /* Styles copied from base.css */
+blockquote,
 .pullquote {
-    margin: 0 1em 0.5em 0.5em;
-    font-weight: bold;
-    line-height: 1.25em;
-    float: right;
-    width: 35%;
-    clear: right;
-    color: #444;
-    font-size: 1.6em;
-    letter-spacing: -0.08em !important;
-}
-.n-pullquote {
-    font-weight: bold;
+    line-height: 1.4;
     position: relative;
     background-color: #f3f3f3;
-    padding: 2em;
+    padding: 2em 3em;
+    font-size: 1rem;
 }
-.n-pullquote:before, .n-pullquote:after {
+
+blockquote:before,
+blockquote:after,
+.pullquote:before, .pullquote:after {
   display: inline-block;
   vertical-align: top;
   height: 30px;
@@ -233,32 +227,31 @@ blockquote {
   position: absolute;
 }
 
-.n-pullquote:before {
+blockquote:before,
+.pullquote:before {
   content: '\201C';
   top: 5px;
   left: 1%;
 }
 
-.n-pullquote:after {
+blockquote:after,
+.pullquote:after {
     content: '\201D';
     right: 1%;
     bottom: 0;
 }
 
-/*.pullquoteFull.n-pullquote:after {*/
-/*    right: 4%;*/
-/*}*/
-
-.calloutLeft,
-.pullquoteLeft {
+.box--left,
+.pullquote--left {
     float: left;
     width: 50%;
     margin: 2em 2em 2em 0;
     padding: 2em 3em;
 }
 
-.calloutRight,
-.pullquoteRight {
+.box--right,
+blockquote.pullquote,
+.pullquote--right {
     float: right;
     width: 50%;
     margin: 2em 0 2em 2em;
@@ -266,43 +259,46 @@ blockquote {
     word-break: break-word;
 }
 
-.calloutFull,
-.pullquoteFull {
-    text-align: center;
-    padding: 2em 5em;
+.box--full,
+.pullquote--full {
+    /*text-align: center;*/
+    padding: 2em 3em;
 }
 
 @media (max-width: 767px) {
-    .n-callout, .n-pullquote
+    .box,
+    blockquote.pullquote,
+    .pullquote
     {
         padding: 2em 1.3em;
     }
-    .calloutRight,
-    .pullquoteRight {
+    .box--right,
+    .pullquote--right {
         margin: 1em 0 1em 1em;
     }
-    .calloutLeft,
-    .pullquoteLeft {
+    .box--left,
+    .pullquote--left {
         margin: 1em 1em 1em 0;
     }
 
-    .n-pullquote:before {
+    .pullquote:before {
         top: 0;
         left: 3px;
     }
-    .n-pullquote:after {
+    .pullquote:after {
         right: 10px !important;
         margin: 0;
     }
 }
 
 @media (min-width: 769px) {
-    .calloutLeft,
-    .pullquoteLeft {
+    .box--left,
+    .pullquote--left {
         margin-left: -10%;
     }
-    .calloutRight,
-    .pullquoteRight {
+    .box--right,
+    blockquote.pullquote,
+    .pullquote--right {
         margin-right: -10%;
     }
 }
@@ -313,11 +309,10 @@ blockquote {
     border-left: 1em solid #ccc;
     clear: both;
 }
-.n-callout {
-    background: &dtml-corporateBlue;;
+.box {
     color: #FFF;
-    font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 .keyFact {

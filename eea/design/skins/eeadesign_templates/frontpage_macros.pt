@@ -154,7 +154,7 @@
         plone_view nocall:plone_view|context/@@plone;
         descr_max_length descr_max_length|python:200;
         archive_href archive_href|nothing;
-        image_scale image_scale|string:image_mini;"
+        image_scale image_scale|string:image_preview;"
         tal:condition="highlights"
         i18n:domain="eea">
 
