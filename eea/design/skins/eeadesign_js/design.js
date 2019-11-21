@@ -70,7 +70,6 @@ jQuery(document).ready(function($) {
     if (air_fiches.length) {
         (function() {
             var $fiche_body = $(".fiche-body");
-            var $table = $fiche_body.find('table').eq(0);
             var $fiche_summary = $(".fiche-summary");
 
             if (!$body.hasClass('section-airs subsection-2016')) {
@@ -78,8 +77,6 @@ jQuery(document).ready(function($) {
                 if (!$fiche_summary.find('.keyFact').find('div').text().trim()) {
                     $fiche_summary.addClass('hidden');
                 }
-            } else if ($table.length) {
-                $table.insertBefore($fiche_summary);
             }
 
             // hide googlecharts bottom images

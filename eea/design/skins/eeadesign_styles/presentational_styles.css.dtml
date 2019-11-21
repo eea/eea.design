@@ -310,11 +310,24 @@ blockquote.pullquote,
     clear: both;
 }
 .box {
-    color: #FFF;
     font-size: 1rem;
     line-height: 1.4;
 }
 
+.keyFact,
+.bg-blue,
+.bg-green,
+.keyFact a,
+.bg-blue a,
+.bg-green a {
+    color: #FFF !important;
+}
+
+.keyFact a,
+.bg-blue a,
+.bg-green a {
+    border-bottom: 1px solid #FFF !important;
+}
 .keyFact {
     background: &dtml-corporateBlueBackgroundColor;;
     padding: 1.5em;

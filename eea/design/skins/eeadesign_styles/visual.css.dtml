@@ -312,10 +312,11 @@ th a, th a:link, th a:visited {
     padding: 3em 0;
     margin: 3em 0;
     z-index: 1;
+    font-size:  1rem;
 }
 .fullwidth-bg:before {
     position: absolute;
-    background-color: #f3f3f3;
+    background-color: inherit;
     content: ' ';
     top: 0;
     z-index: -1;
