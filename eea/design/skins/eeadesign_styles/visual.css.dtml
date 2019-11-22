@@ -1350,9 +1350,12 @@ ul.social-buttons {
 /* end eea tile design */
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .bullet-list > li:before {
+        font-size: 1.5em;
+    }
     .bullet-list > li {
         overflow: hidden; /* needed for IE11 to work with columns css prop */
-        padding-left: 1.8em;
+        padding-left: 1.5em;
     }
 }
 
