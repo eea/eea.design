@@ -97,22 +97,6 @@ jQuery(document).ready(function($) {
         }());
     }
 
-    // same requirement as above but for every fiche found within a collection pdf template
-    var collection_air_fiches = $(".template-collection-pdf-body.section-airs");
-    if (collection_air_fiches.length) {
-        (function() {
-            var $fiche_bodies = $(".fiche-body");
-            $fiche_bodies.each(function(idx, el) {
-                var $el = $(el);
-                var $table = $el.find('table').eq(0);
-                var $fiche_summary = $el.find(".fiche-summary");
-                if ($table.length) {
-                    $table.insertBefore($fiche_summary);
-                }
-            });
-        }());
-    }
-
     // #69065 move google chart button within externalActions
     var $charts_buttons = $(".google_buttons_bar").find('a');
     var $document_actions = $(".documentExportActions");

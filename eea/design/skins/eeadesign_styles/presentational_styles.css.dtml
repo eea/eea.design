@@ -211,7 +211,7 @@ blockquote,
     line-height: 1.4;
     position: relative;
     background-color: #f3f3f3;
-    padding: 2em 3em;
+    /*padding: 2em 3em;*/
     font-size: 1rem;
 }
 
@@ -242,7 +242,7 @@ blockquote:after,
 }
 
 .box--left,
-.pullquote--left {
+.pullquote-left {
     float: left;
     width: 50%;
     margin: 2em 2em 2em 0;
@@ -251,7 +251,7 @@ blockquote:after,
 
 .box--right,
 blockquote.pullquote,
-.pullquote--right {
+.pullquote-right {
     float: right;
     width: 50%;
     margin: 2em 0 2em 2em;
@@ -260,7 +260,7 @@ blockquote.pullquote,
 }
 
 .box--full,
-.pullquote--full {
+.pullquote-full {
     /*text-align: center;*/
     padding: 2em 3em;
 }
@@ -273,11 +273,11 @@ blockquote.pullquote,
         padding: 2em 1.3em;
     }
     .box--right,
-    .pullquote--right {
+    .pullquote-right {
         margin: 1em 0 1em 1em;
     }
     .box--left,
-    .pullquote--left {
+    .pullquote-left {
         margin: 1em 1em 1em 0;
     }
 
@@ -293,13 +293,13 @@ blockquote.pullquote,
 
 @media (min-width: 769px) {
     .box--left,
-    .pullquote--left {
-        margin-left: -10%;
+    .pullquote-left {
+        margin-left: -3em;
     }
     .box--right,
     blockquote.pullquote,
-    .pullquote--right {
-        margin-right: -10%;
+    .pullquote-right {
+        margin-right: -3em;
     }
 }
 

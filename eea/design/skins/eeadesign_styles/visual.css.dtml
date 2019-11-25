@@ -277,7 +277,7 @@ th a, th a:link, th a:visited {
     background: none;
     font-style: normal;
     font-weight:normal;
-    font-size: x-small;
+    font-size: small !important;
     padding: 0 1em 1em 1em;
 }
 

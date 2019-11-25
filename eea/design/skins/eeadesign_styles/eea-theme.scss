@@ -542,6 +542,7 @@ div#original_chart_div {
   #portal-column-content {
     float: none;
     margin: 0 auto;
+    min-width: 90%;
     }
   div[id^="parent-fieldname-text"] {
     margin-top: 4em;
@@ -673,6 +674,8 @@ div#original_chart_div {
     right: 8px;
     order: 0;
     }
+
+    #article-language .eea-icon:before,
     #article-language a {
     color: #FFF;
     }
@@ -700,7 +703,6 @@ div#original_chart_div {
     }
   }
 
-.tile:nth-child(3n),
 .tile:nth-child(4n)
 {
   margin-bottom: 0;
@@ -712,6 +714,7 @@ div#original_chart_div {
   color: unquote("&dtml-corporateGreen;") !important;
   }
 
+
 .tile-item-body {
   font-size: 150% !important;
   color: gray;
@@ -719,6 +722,9 @@ div#original_chart_div {
   margin: 0 auto;
   }
 
+.tiles--3 .tile-item-body {
+  max-width: 100%;
+  }
 
 
 
@@ -726,6 +732,9 @@ div#original_chart_div {
 
   .template-highlight_view,
   .template-fiche_view {
+    #portal-column-content {
+      min-width: 870px;
+      }
     .keyFact:before,
     .content-header:before {
       width: 130%;
@@ -733,6 +742,15 @@ div#original_chart_div {
       padding: 0;
     }
   }
+
+  .tiles--3 {
+    flex-wrap: nowrap;
+    width: 120%;
+    margin-left: -10%;
+    }
+  .tiles--3 .tile-item-body {
+      max-width: 100%;
+    }
 }
 
 .template-fiche_view {
