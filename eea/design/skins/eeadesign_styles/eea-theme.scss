@@ -19,33 +19,6 @@ hr {
   display: inline-block !important;
   }
 
-/* Networks panel EU partners links */
-.moreLink,
-.mini-header #themes-tags .link-category {
-  border: 0 !important;
-  display: inline-block;
-  padding-left: 20px;
-  position: relative;
-  }
-
-.moreLink:before,
-.mini-header #themes-tags .link-category:before {
-  content: "\f138";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: gray;
-  position: absolute;
-  margin-left: -18px;
-  top: -3px;
-  }
-
-
-.mini-header #themes-tags .link-category:before,
-.eea-btn.moreLink:before {
-  color: inherit;
-  top: auto;
-  }
-/* End links */
 
 /* subscription cross_site_top panel content icons */
 .portlet-subscription .eea-icon-lg {
@@ -93,9 +66,6 @@ hr {
   margin-bottom: 2em;
   }
 
-.mini-header:not(.expired-content) .wf-state-published #content-core {
-  background-color: #FFF;
-}
 
 /* portal-column styles */
 
@@ -522,146 +492,6 @@ div#original_chart_div {
   height: 70px;
   }
 
-/* highlight section */
-.mini-header {
-  .annotator-wrapper {
-    position: inherit;
-    }
-  #portal-column-two {
-    display: none;
-    }
-  #portal-column-content {
-    float: none;
-    margin: 0 auto;
-    min-width: 90%;
-    }
-  div[id^="parent-fieldname-text"] {
-    margin-top: 4em;
-  }
-
-  .keyFact,
-  .content-header {
-    padding: 1rem 0;
-    color: #FFF;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-    z-index: 0;
-    //margin-bottom: 3em;
-    }
-  .keyFact li {
-    font-size: 1rem;
-  }
-  .keyFact h2, .keyFact h3 {
-    color: #FFF;
-  }
-  .documentFirstHeading {
-    padding-right: 0;
-    min-width: 85%;
-    margin-bottom: 0.67em;
-    }
-  .documentFirstHeading .anchorjs-link {
-    display: none !important;
-  }
-
-  .keyFact:before,
-  .content-header:before {
-    content: " ";
-    width: 99.8%;
-    left: -1rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-    top: 0;
-    padding: 0 1rem;
-    }
-
-  .keyFact {
-    padding: 3rem 0;
-    background-color: transparent;
-    font-size: 1rem;
-    }
-  #content .keyFact .discreet,
-  .keyFact{
-    color: #FFF;
-    border: 0;
-    }
-  .keyFact:before {
-    background-color: rgba(0,75,135,0.94);
-    }
-  #themes-tags {
-    order: 0;
-    margin-left: 0;
-    margin-bottom: 3em;
-    }
-  .documentDescription {
-    margin-bottom: 3em;
-    }
-  .documentFirstHeading,
-  .content-header .documentDescription
-  {
-    order: 1;
-  }
-  
-  #languageCodes,
-  .content-header .documentByLine
-  {
-    order: 2;
-    }
-
-  .content-header .documentExportActions {
-    order: 3;
-  }
-
-  .content-header > div {
-    order: 4;
-  }
-
-  .documentFirstHeading,
-  #themes-tags,
-  .documentExportActions a
-  {
-    color: #FFF;
-    }
-
-  .documentByLine,
-  .documentDescription,
-  .documentByLine a {
-    color: rgba(255, 255, 255, 0.9);
-    }
-  #themes-tags .link-category {
-    background: transparent;
-    color: #FFF;
-    margin-right: 2em;
-    }
-  #themes-tags .listHead {
-    display: none;
-    }
-
-  h2, h3 {
-    color: #000;
-    }
-}
-
-.userrole-anonymous.mini-header {
-  #article-language {
-    margin-top: 5px;
-    margin-bottom: 7px;
-    position: absolute;
-    right: 8px;
-    order: 0;
-    }
-
-    #article-language .eea-icon:before,
-    #article-language a {
-    color: #FFF;
-    }
-  #region-content {
-    padding-top: 8em;
-    }
-  }
 
 .tiles {
   display: flex;
@@ -704,19 +534,6 @@ div#original_chart_div {
 
 
 @media (min-width: 1024px) {
-
-  .mini-header {
-    #portal-column-content {
-      min-width: 870px;
-      }
-    .keyFact:before,
-    .content-header:before {
-      width: 122%;
-      left: -11%;
-      padding: 0;
-    }
-  }
-
   .tiles--3 {
     flex-wrap: nowrap;
     width: 120%;
@@ -726,12 +543,6 @@ div#original_chart_div {
       max-width: 100%;
     }
 }
-
-.template-fiche_view {
-  .fiche-body {
-    margin-top: 1em;
-    }
-  }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .video_player_image {
