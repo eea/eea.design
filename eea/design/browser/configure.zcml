@@ -57,15 +57,7 @@
       permission="zope.Public"
     />
 
-    <browser:page
-        class=".main.MiniHeaderContentTypes"
-        for="*"
-        name="miniheader_content_types"
-        permission="zope.Public"
-    />
-
     <browser:view
-        for="*"
         name="contenthistory"
         class=".history.HistoryView"
         permission="zope2.View"
