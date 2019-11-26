@@ -278,7 +278,8 @@ th a, th a:link, th a:visited {
     font-style: normal;
     font-weight:normal;
     font-size: small !important;
-    padding: 0 1em 1em 1em;
+    padding: 1em 1em 0 1em;
+    margin-bottom: 0 !important;
 }
 
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */

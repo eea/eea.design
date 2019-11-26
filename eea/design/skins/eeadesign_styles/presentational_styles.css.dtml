@@ -198,8 +198,7 @@ dl.error:before,
 blockquote {
     width: 100%;
     margin: 1.0em auto;
-    /*padding: 1.5em 1em 1em 3em;*/
-    /*background: &dtml-lightBackgroundColor; url(&dtml-xurl;/open_quote.gif) 0.5em 0.75em no-repeat;*/
+    padding: 1.5em 2em;
     color: #000000;
     clear:both;
 }
@@ -211,13 +210,17 @@ blockquote,
     line-height: 1.4;
     position: relative;
     background-color: #f3f3f3;
-    /*padding: 2em 3em;*/
+    padding: 2em;
     font-size: 1rem;
 }
+blockquote > p:first-of-type {
+    position: relative;
+    padding: 0 0.5em;
+    margin-bottom: 0 !important;
+}
 
-blockquote:before,
-blockquote:after,
-.pullquote:before, .pullquote:after {
+blockquote > p:first-of-type:before,
+blockquote > p:first-of-type:after {
   display: inline-block;
   vertical-align: top;
   height: 30px;
@@ -227,18 +230,20 @@ blockquote:after,
   position: absolute;
 }
 
-blockquote:before,
-.pullquote:before {
+blockquote > p:first-of-type:before {
   content: '\201C';
-  top: 5px;
-  left: 1%;
+  top: -20px;
+  left: -20px;
 }
 
-blockquote:after,
-.pullquote:after {
+blockquote > p:first-of-type:after {
     content: '\201D';
-    right: 1%;
-    bottom: 0;
+    right: -20px;
+    bottom: -20px;
+}
+
+.box {
+    padding: 2em;
 }
 
 .box--left,
@@ -246,7 +251,6 @@ blockquote:after,
     float: left;
     width: 50%;
     margin: 2em 2em 2em 0;
-    padding: 2em 3em;
 }
 
 .box--right,
@@ -255,22 +259,21 @@ blockquote.pullquote,
     float: right;
     width: 50%;
     margin: 2em 0 2em 2em;
-    padding: 2em 3em;
     word-break: break-word;
-}
-
-.box--full,
-.pullquote-full {
-    /*text-align: center;*/
-    padding: 2em 3em;
 }
 
 @media (max-width: 767px) {
     .box,
-    blockquote.pullquote,
-    .pullquote
-    {
+    blockquote,
+    .pullquote {
         padding: 2em 1.3em;
+    }
+
+    blockquote > p:first-of-type:before {
+        left: -15px;
+    }
+    blockquote > p:first-of-type:after {
+        right: -15px;
     }
     .box--right,
     .pullquote-right {
@@ -281,14 +284,6 @@ blockquote.pullquote,
         margin: 1em 1em 1em 0;
     }
 
-    .pullquote:before {
-        top: 0;
-        left: 3px;
-    }
-    .pullquote:after {
-        right: 10px !important;
-        margin: 0;
-    }
 }
 
 @media (min-width: 769px) {
@@ -329,9 +324,8 @@ blockquote.pullquote,
     border-bottom: 1px solid #FFF !important;
 }
 .keyFact {
-    background: &dtml-corporateBlueBackgroundColor;;
+    background: &dtml-corporateBlue;;
     padding: 1.5em;
-    border-left: 1em solid #346F83;
     clear: both;
 }
 

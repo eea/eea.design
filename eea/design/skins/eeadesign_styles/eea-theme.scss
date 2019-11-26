@@ -550,7 +550,7 @@ div#original_chart_div {
 
   .keyFact,
   .content-header {
-    padding: 1em 0;
+    padding: 1rem 0;
     color: #FFF;
     display: flex;
     flex-wrap: wrap;
@@ -577,18 +577,18 @@ div#original_chart_div {
   .keyFact:before,
   .content-header:before {
     content: " ";
-    width: 100.8%;
-    left: -1.1em;
+    width: 99.8%;
+    left: -1rem;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     height: 100%;
     z-index: -1;
     top: 0;
-    padding: 0 1em;
+    padding: 0 1rem;
     }
 
   .keyFact {
-    padding: 3em;
+    padding: 3rem 0;
     background-color: transparent;
     font-size: 1rem;
     }
@@ -690,22 +690,18 @@ div#original_chart_div {
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
+  margin: 1rem 0 0 0;
 }
 
 .tile {
   flex: 1 1 34%;
-  margin-bottom: 2em;
+  margin-bottom: 1rem;
   }
 
 @media (max-width: 480px) {
   .tile {
       flex-basis: 100%;
     }
-  }
-
-.tile:nth-child(4n)
-{
-  margin-bottom: 0;
   }
 
 .tile-item-header {
@@ -737,8 +733,8 @@ div#original_chart_div {
       }
     .keyFact:before,
     .content-header:before {
-      width: 130%;
-      left: -15%;
+      width: 122%;
+      left: -11%;
       padding: 0;
     }
   }
