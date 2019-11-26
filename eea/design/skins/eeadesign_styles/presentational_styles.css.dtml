@@ -196,26 +196,106 @@ dl.error:before,
 
 /* Styles moved from visual.css */
 blockquote {
-    width: 70%;
+    width: 100%;
     margin: 1.0em auto;
-    padding: 1.5em 1em 1em 3em;
-    background: &dtml-lightBackgroundColor; url(&dtml-xurl;/open_quote.gif) 0.5em 0.75em no-repeat;
+    padding: 1.5em 2em;
     color: #000000;
     clear:both;
 }
 
 
 /* Styles copied from base.css */
+blockquote,
 .pullquote {
-    margin: 0 1em 0.5em 0.5em;
-    font-weight: bold;
-    line-height: 1.25em;
+    line-height: 1.4;
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 2em;
+    font-size: 1rem;
+}
+blockquote > p:first-of-type {
+    position: relative;
+    padding: 0 0.5em;
+    margin-bottom: 0 !important;
+}
+
+blockquote > p:first-of-type:before,
+blockquote > p:first-of-type:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: .2;
+  position: absolute;
+}
+
+blockquote > p:first-of-type:before {
+  content: '\201C';
+  top: -20px;
+  left: -20px;
+}
+
+blockquote > p:first-of-type:after {
+    content: '\201D';
+    right: -20px;
+    bottom: -20px;
+}
+
+.box {
+    padding: 2em;
+}
+
+.box--left,
+.pullquote-left {
+    float: left;
+    width: 50%;
+    margin: 2em 2em 2em 0;
+}
+
+.box--right,
+blockquote.pullquote,
+.pullquote-right {
     float: right;
-    width: 35%;
-    clear: right;
-    color: #444;
-    font-size: 1.6em;
-    letter-spacing: -0.08em !important;
+    width: 50%;
+    margin: 2em 0 2em 2em;
+    word-break: break-word;
+}
+
+@media (max-width: 767px) {
+    .box,
+    blockquote,
+    .pullquote {
+        padding: 2em 1.3em;
+    }
+
+    blockquote > p:first-of-type:before {
+        left: -15px;
+    }
+    blockquote > p:first-of-type:after {
+        right: -15px;
+    }
+    .box--right,
+    .pullquote-right {
+        margin: 1em 0 1em 1em;
+    }
+    .box--left,
+    .pullquote-left {
+        margin: 1em 1em 1em 0;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .box--left,
+    .pullquote-left {
+        margin-left: -3em;
+    }
+    .box--right,
+    blockquote.pullquote,
+    .pullquote-right {
+        margin-right: -3em;
+    }
 }
 
 .callout {
@@ -224,11 +304,28 @@ blockquote {
     border-left: 1em solid #ccc;
     clear: both;
 }
+.box {
+    font-size: 1rem;
+    line-height: 1.4;
+}
 
+.keyFact,
+.bg-blue,
+.bg-green,
+.keyFact a,
+.bg-blue a,
+.bg-green a {
+    color: #FFF !important;
+}
+
+.keyFact a,
+.bg-blue a,
+.bg-green a {
+    border-bottom: 1px solid #FFF !important;
+}
 .keyFact {
-    background: &dtml-corporateBlueBackgroundColor;;
+    background: &dtml-corporateBlue;;
     padding: 1.5em;
-    border-left: 1em solid #346F83;
     clear: both;
 }
 

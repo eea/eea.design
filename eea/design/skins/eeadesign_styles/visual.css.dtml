@@ -61,15 +61,18 @@ option.hiddenStructure {
     margin-right: 1.5em;
 }
 
+.keyFact ul,
 .bullet-list {
     list-style: none !important;
 }
 
+.keyFact li,
 .bullet-list > li {
     position: relative;
     padding-left: 1em;
 }
 
+.keyFact li:before,
 .bullet-list > li:before {
     content: '\2022';
     position: absolute;
@@ -124,7 +127,7 @@ option.hiddenStructure {
 
 .collapsibleHeader {
     cursor: pointer;
-    background: transparent url(<dtml-var xurl>/p_/pl) 0% 50% no-repeat;
+    /*background: transparent url(<dtml-var xurl>/p_/pl) 0% 50% no-repeat;*/
     padding: 1px 0 1px 20px;
 }
 
@@ -269,20 +272,14 @@ th a, th a:link, th a:visited {
 
 
 /* Styles which apply only in central content area */
-
-#content blockquote p {
-    font-weight:bold;
-    background: url(&dtml-xurl;/close_quote.gif) no-repeat bottom right;
-    padding: 0 2.25em 1em 0;
-}
-
-#content blockquote p.source {
+.source {
     text-align:right;
     background: none;
     font-style: normal;
     font-weight:normal;
-    font-size: x-small;
-    padding: 0 1em 0 0;
+    font-size: small !important;
+    padding: 1em 1em 0 1em;
+    margin-bottom: 0 !important;
 }
 
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
@@ -295,6 +292,79 @@ th a, th a:link, th a:visited {
     column-gap: 20px;
 }
 
+
+/* fullwidth background image */
+.fullwidth-img-bg {
+    background-repeat: no-repeat;
+    height: 500px;
+    position: absolute;
+    top: -30px;
+    z-index: -1;
+    width: 99.3vw;
+    max-width: none !important;
+    right: 0;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-size: cover
+}
+.fullwidth-bg {
+    position: relative;
+    padding: 3em 0;
+    margin: 3em 0;
+    z-index: 1;
+    font-size:  1rem;
+}
+.fullwidth-bg:before {
+    position: absolute;
+    background-color: inherit;
+    content: ' ';
+    top: 0;
+    z-index: -1;
+    width: 99.3vw;
+    height: 100%;
+    right: 0;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.fullwidth-container-centered {
+    position: relative;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 49.3vw);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    clear: both;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.absolute-centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 860px;
+    /*width: 63.5%;*/
+}
+
+.emphasis-area {
+    background-color: rgba(0,0,0, 0.7);
+    padding: 2em;
+    font-size: 1rem;
+    color: #FFF;
+}
+@media (max-width: 767px) {
+    .emphasis-area {
+        width: 90%;
+    }
+}
 
 /* standard figure, used for articles and pages.
 can be floated left or right with additional
@@ -1281,9 +1351,12 @@ ul.social-buttons {
 /* end eea tile design */
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .bullet-list > li:before {
+        font-size: 1.5em;
+    }
     .bullet-list > li {
         overflow: hidden; /* needed for IE11 to work with columns css prop */
-        padding-left: 1.8em;
+        padding-left: 1.5em;
     }
 }
 

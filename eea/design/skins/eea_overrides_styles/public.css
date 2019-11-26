@@ -113,7 +113,7 @@ body#content {
 #content dl,
 dl.portlet p,
 dl.portlet {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 
@@ -182,13 +182,6 @@ dl.portlet {
     text-align: left;
     border-collapse: collapse;
     border-spacing: 0px;
-}
-
-#content .documentDescription,
-#content #description {
-    color: #666;
-    margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
 }
 
 #content div.newsImageContainer a {

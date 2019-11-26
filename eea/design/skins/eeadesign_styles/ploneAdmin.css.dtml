@@ -76,6 +76,28 @@ div.managePortletsLink:hover {
     width: auto;
 }
 
+/* 110784 tinymce image plugin fixes */
+.dialog-wrapper .cell,
+.dialog-wrapper .row {
+    float: left;
+
+}
+
+.dialog-wrapper .cell {
+    left: 100%;
+}
+.dialog-wrapper .position-0 {
+    margin-left: -98.875%;
+}
+.dialog-wrapper .width-1\:4 {
+    width: 22.75%;
+}
+
+.dialog-wrapper .thumbnail:hover {
+    position: relative;
+}
+
+
 #edit-bar .languageCodes {
     display:none;
 }
