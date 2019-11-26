@@ -1,6 +1,17 @@
 Changelog
 =========
 
+25.0 - (2019-11-26)
+---------------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design 
+  [ichim-david refs #110784]
+* Change: added eea-theme-critical.css with critical styling for new header
+  [ichim-david refs #110784]
+* Change: re-added mini header logic which will be used for the fiche and highlight
+  newdesign
+  [ichim-david refs #110784]
+
 24.9 - (2019-10-30)
 ---------------------------
 * Bug fix: googlecharts tables again act as table-rows instead of table in order

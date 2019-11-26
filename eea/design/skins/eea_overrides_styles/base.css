@@ -14,29 +14,8 @@
     background-color: #ffb;
 }
 
-#content .pullquote,
-.portletStaticText .pullquote {
-    margin: 0 1em 0.5em 0.5em;
-    font-weight: bold;
-    line-height: 1.25em;
-    float: right;
-    width: 35%;
-    clear: right;
-    color: #444;
-    font-size: 1.6em;
-    letter-spacing: -0.08em !important;
-}
-#content .callout,
-.portletStaticText .callout {
-    background: #eee;
-    padding: 1em;
-    border-left: 1em solid #ccc;
-    clear: both;
-}
-
 /* Content layout styles */
-#content .documentByLine {
-    font-size: 85%;
+.documentByLine {
     display: block;
     color: #666;
 }

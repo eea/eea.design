@@ -89,6 +89,9 @@ div.field.error {
 .ploneSkin .mceText {
     white-space: normal !important;
 }
+.ploneSkin tbody {
+    display: table-row-group;
+}
 /* #14814 enlarged mceListBox style links */
 body .ploneSkin .mce_formatPreview a {
     font-size: 115%;

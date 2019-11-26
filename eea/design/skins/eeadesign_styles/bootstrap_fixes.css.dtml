@@ -48,11 +48,6 @@ label {
     height: 40px;
 }
 
-/* ==== presentational_styles.css ==== */
-blockquote {
-    width: 78%;
-}
-
 /* ++resource++eea.faceted-navigation-edit.css */
 .faceted-portlet-widget fieldset {
     margin: 1em 0;

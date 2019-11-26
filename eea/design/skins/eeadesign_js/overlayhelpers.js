@@ -51,6 +51,7 @@ jQuery.tools.overlay.conf.oneInstance = false;
 
 jQuery(function ($) {
 
+     // buildfragment needed
     /******
      $.fn.prepOverlay jQuery plugin to inject overlay target into DOM and
      annotate it with the data we'll need in order to display it.
