@@ -3,6 +3,9 @@ Changelog
 
 25.0-dev0 - (unreleased)
 ---------------------------
+* Change: re-added mini header logic which will be used for the fiche and highlight
+  newdesign
+  [ichim-david refs #110784]
 
 24.9 - (2019-10-30)
 ---------------------------

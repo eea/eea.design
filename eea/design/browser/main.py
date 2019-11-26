@@ -114,3 +114,4 @@ class ScrollAnalyticsContentTypes(BrowserView):
         registry = getUtility(IRegistry)
         return registry.get('Products.EEAContentTypes.browser.interfaces.'
                             'IEEAContentTypesSettings.scrollAnalyticsFor')
+
