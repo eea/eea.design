@@ -3,6 +3,9 @@ Changelog
 
 25.1-dev0 - (unreleased)
 ---------------------------
+* Bug fix: fixed button and tinymce table issues after latest round
+  of design changes
+  [ichim-david refs #110041]
 
 25.0 - (2019-11-26)
 ---------------------------
