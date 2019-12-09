@@ -8,7 +8,7 @@ body.mceContentBody {
 
 #portal-column-one .visualPadding,
 #portal-column-two .visualPadding {
-   padding: 0.5em;
+    padding: 0.5em;
 }
 
 .navTreeItem a, dd.portletItem .navTreeItem a {
@@ -34,17 +34,17 @@ body.section-SITE .documentActions {
 /******* Manage portlets links *******/
 div.managePortletsLink {
     -webkit-transition: background .3s;
-       -moz-transition: background .3s;
-         -o-transition: background .3s;
-            transition: background .3s;
+    -moz-transition: background .3s;
+    -o-transition: background .3s;
+    transition: background .3s;
     background: &dtml-lightBackgroundColor;;
 }
 
 div.managePortletsLink:hover {
     -webkit-transition: background .3s;
-       -moz-transition: background .3s;
-         -o-transition: background .3s;
-            transition: background .3s;
+    -moz-transition: background .3s;
+    -o-transition: background .3s;
+    transition: background .3s;
     background: orange;
 }
 
@@ -75,6 +75,31 @@ div.managePortletsLink:hover {
     vertical-align: baseline;
     width: auto;
 }
+
+/* #110041 tinymce button and table fixes */
+.ploneSkin .mceMenu {
+    min-width: 400px !important;
+    min-height: 400px !important;
+}
+.mceMenu  table > tbody {
+    display: table !important;
+    width: 100% !important;
+}
+#footer #action-button {
+    margin-bottom: 0 !important;
+}
+
+.plonebutton,
+.ploneButton,
+.mceActionPanel input {
+    background-color: #004B87 !important;
+    color: #FFF !important;
+}
+#content .translation_edit table {
+    width: auto !important;
+}
+/* @end #110041 tinymce button and table fixes */
+
 
 /* 110784 tinymce image plugin fixes */
 .dialog-wrapper .cell,
@@ -150,3 +175,4 @@ dl.actionMenu #assessmentpart {
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE
 */
+
