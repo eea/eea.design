@@ -3,6 +3,8 @@ Changelog
 
 25.1-dev0 - (unreleased)
 ---------------------------
+* Bug fix: Register custom ICalendarPortlet only if plone.app.event not present
+  [avoinea]
 * Bug fix: fixed button and tinymce table issues after latest round
   of design changes
   [ichim-david refs #110041]
@@ -10,7 +12,7 @@ Changelog
 25.0 - (2019-11-26)
 ---------------------------
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
-  available for eea.design 
+  available for eea.design
   [ichim-david refs #110784]
 * Change: added eea-theme-critical.css with critical styling for new header
   [ichim-david refs #110784]
