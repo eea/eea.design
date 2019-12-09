@@ -1,7 +1,7 @@
 Changelog
 =========
 
-25.1-dev0 - (unreleased)
+25.1 - (2019-12-09)
 ---------------------------
 * Bug fix: Register custom ICalendarPortlet only if plone.app.event not present
   [avoinea]
