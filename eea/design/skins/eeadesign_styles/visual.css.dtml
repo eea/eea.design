@@ -342,15 +342,19 @@ th a, th a:link, th a:visited {
     align-items: center;
     flex-direction: column;
     clear: both;
-    max-height: 600px;
+    min-height: 600px;
     overflow: hidden;
+    justify-content: center;
+}
+
+.fullwidth-container-centered .fullwidth {
+    position: absolute;
 }
 
 .absolute-centered {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     max-width: 860px;
+    position: relative;
+    z-index: 10;
     /*width: 63.5%;*/
 }
 
@@ -359,8 +363,9 @@ th a, th a:link, th a:visited {
     padding: 2em;
     font-size: 1rem;
     color: #FFF;
+    margin: 2em 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .emphasis-area {
         width: 90%;
     }
@@ -1341,6 +1346,7 @@ ul.social-buttons {
         padding: 3em;
         margin-top: 3em;
     }
+
 }
 
 @media (min-width: 768px) {
