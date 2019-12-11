@@ -62,16 +62,19 @@ option.hiddenStructure {
 }
 
 .keyFact ul,
+.box ul,
 .bullet-list {
     list-style: none !important;
 }
 
+.box li,
 .keyFact li,
 .bullet-list > li {
     position: relative;
     padding-left: 1em;
 }
 
+.box li,
 .keyFact li:before,
 .bullet-list > li:before {
     content: '\2022';
@@ -1355,6 +1358,34 @@ ul.social-buttons {
     }
 }
 /* end eea tile design */
+
+
+@media print {
+    /* 111964 content header pdf fixes */
+    blockquote {
+        page-break-inside: avoid;
+    }
+
+    .temporal-coverage-title,
+    #tempCoverage {
+        display: none;
+    }
+    .fullwidth-img-bg {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .mini-header .keyfact, .mini-header .content-header {
+        padding: 1em;
+
+    }
+    .mini-header .keyfact::before, .mini-header .content-header::before {
+        width: 100%;
+        left: 0;
+    }
+    /* end 111964 content header pdf fixes */
+}
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .bullet-list > li:before {
