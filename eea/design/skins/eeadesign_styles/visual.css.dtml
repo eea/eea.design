@@ -82,6 +82,7 @@ option.hiddenStructure {
     left: 0;
     color: inherit;
     font-size: 2em;
+    line-height: 0.8;
 }
 /*
 ** Watermark style
@@ -1364,6 +1365,20 @@ ul.social-buttons {
     /* 111964 content header pdf fixes */
     blockquote {
         page-break-inside: avoid;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        margin-bottom: .5em;
+    }
+
+    .box li,
+    .keyFact li,
+    .bullet-list > li {
+        padding-left: 1.5em;
     }
 
     .temporal-coverage-title,
