@@ -150,5 +150,15 @@
                 Copyleft NiceCorp Inc.
             </div>
         </div>
+
+
+      <div tal:define="image_copyright here/getImageCopyright|nothing;"
+          class="documentByLineImageCopyright" tal:condition="python: image_copyright">
+        <span i18n:translate="">Image copyright:</span>
+        <div tal:replace="image_copyright">
+          Copyleft NiceCorp Inc.
+        </div>
+      </div>
+
     </div>
 </tal:block>

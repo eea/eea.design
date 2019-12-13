@@ -62,16 +62,19 @@ option.hiddenStructure {
 }
 
 .keyFact ul,
+.box ul,
 .bullet-list {
     list-style: none !important;
 }
 
+.box ul li,
 .keyFact li,
 .bullet-list > li {
     position: relative;
     padding-left: 1em;
 }
 
+.box ul li:before,
 .keyFact li:before,
 .bullet-list > li:before {
     content: '\2022';
@@ -79,6 +82,7 @@ option.hiddenStructure {
     left: 0;
     color: inherit;
     font-size: 2em;
+    line-height: 0.8;
 }
 /*
 ** Watermark style
@@ -342,15 +346,19 @@ th a, th a:link, th a:visited {
     align-items: center;
     flex-direction: column;
     clear: both;
-    max-height: 600px;
+    min-height: 600px;
     overflow: hidden;
+    justify-content: center;
+}
+
+.fullwidth-container-centered .fullwidth {
+    position: absolute;
 }
 
 .absolute-centered {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     max-width: 860px;
+    position: relative;
+    z-index: 10;
     /*width: 63.5%;*/
 }
 
@@ -359,8 +367,9 @@ th a, th a:link, th a:visited {
     padding: 2em;
     font-size: 1rem;
     color: #FFF;
+    margin: 2em 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .emphasis-area {
         width: 90%;
     }
@@ -1341,6 +1350,7 @@ ul.social-buttons {
         padding: 3em;
         margin-top: 3em;
     }
+
 }
 
 @media (min-width: 768px) {
@@ -1349,6 +1359,48 @@ ul.social-buttons {
     }
 }
 /* end eea tile design */
+
+
+@media print {
+    /* 111964 content header pdf fixes */
+    blockquote {
+        page-break-inside: avoid;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        margin-bottom: .5em;
+    }
+
+    .box li,
+    .keyFact li,
+    .bullet-list > li {
+        padding-left: 1.5em;
+    }
+
+    .temporal-coverage-title,
+    #tempCoverage {
+        display: none;
+    }
+    .fullwidth-img-bg {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .mini-header .keyfact, .mini-header .content-header {
+        padding: 1em;
+
+    }
+    .mini-header .keyfact::before, .mini-header .content-header::before {
+        width: 100%;
+        left: 0;
+    }
+    /* end 111964 content header pdf fixes */
+}
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .bullet-list > li:before {
