@@ -1,6 +1,9 @@
 Changelog
 =========
 
+25.3-dev0 - (unreleased)
+---------------------------
+
 25.2 - (2019-12-13)
 ---------------------------
 * Bug fix: fixed text overflow of fullwidth content area for mobile
