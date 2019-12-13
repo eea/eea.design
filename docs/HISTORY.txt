@@ -3,6 +3,12 @@ Changelog
 
 25.2-dev0 - (unreleased)
 ---------------------------
+* Bug fix: fixed text overflow of fullwidth content area for mobile
+  [ichim-david refs #111964]
+* Bug fix: fixed cover image for pdf rendering
+  [ichim-david refs #111964]
+* Feature: added image copyright to document byline
+  [ichim-david refs #111964]
 
 25.1 - (2019-12-09)
 ---------------------------
