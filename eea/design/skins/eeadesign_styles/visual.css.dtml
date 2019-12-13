@@ -67,14 +67,14 @@ option.hiddenStructure {
     list-style: none !important;
 }
 
-.box li,
+.box ul li,
 .keyFact li,
 .bullet-list > li {
     position: relative;
     padding-left: 1em;
 }
 
-.box li,
+.box ul li:before,
 .keyFact li:before,
 .bullet-list > li:before {
     content: '\2022';
