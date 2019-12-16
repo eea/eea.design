@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
                 var $tabs = $parent.hasClass('eea-tabs-panels-soer') ? $('.eea-tabs-soer') : $panel.parent().prev() ;
                 $panel.attr('class', 'eea-tabs-panel');
                 if ($('h2.current', $panel).length) {
-                    $tabs.find('a').removeClass('current').eq(idx).addClass('current').click();
+                    $tabs.find('a').removeClass('current').eq(idx).addClass('current');
                     $panel.show();
                 } else {
                     $panel.hide();
