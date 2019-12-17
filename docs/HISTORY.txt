@@ -3,9 +3,6 @@ Changelog
 
 25.3-dev0 - (unreleased)
 ---------------------------
-*Change: improve storytelling image positioning when landscape&portrait are
-  side-by-side
-  [ichim-david refs #111967]
 * Change: use again original eea logo within portal-logo
   [ichim-david refs #111967]
 * Bug fix: avoid adding hashchange when transforming tabs to accordion
