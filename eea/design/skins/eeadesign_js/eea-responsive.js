@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
             }
             var $result = $('<h2 />', {
                 'class': (link && link.className.indexOf('current') !== -1) ? 'eea-accordion-title current no-anchor' : 'eea-accordion-title no-anchor',
-                id: link ? link.id : '',
+                id: link ? link.id  + '-accordion' : '',
                 html: link.innerHTML || el.innerHTML
             });
             $result.append('<span class="eea-icon eea-icon-right"></span>');
@@ -221,13 +221,13 @@ jQuery(document).ready(function($) {
   // add eea-right-section to the right area
   $('#right-area').addClass('eea-section eea-right-section');
 
-    var $faceted_text_widget = $(".faceted-text-widget");
+  var $faceted_text_widget = $(".faceted-text-widget");
   $("<div class='faceted-textwidget-place-current'><a href='#' class='eea-faceted-filter eea-section-trigger eea-section-trigger-right'>Filter »</a></div>").appendTo($faceted_text_widget.find("form"));
   $('.eea-section-trigger').click(function(e) {
-        e.preventDefault();
-    var section = e.target.className.indexOf('trigger-right') ? '.eea-right-section' : '.eea-left-section';
-    $(section).prev().click();
-    });
+      e.preventDefault();
+      var section = e.target.className.indexOf('trigger-right') ? '.eea-right-section' : '.eea-left-section';
+      $(section).prev().click();
+  });
 
     // 29865 open faceted menus when sliding left and right or when clicking on gray area
     function swipeHandler(ev) {

@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $(window).trigger('eea.tags.loaded', $('#whatsnew-gallery').find('.eea-tabs'));
+    $(window).trigger('eea.tags.loaded', $('.eea-tabs'));
 
     if (window.location.hash) {
         $(window).trigger('hashchange');
