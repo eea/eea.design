@@ -108,7 +108,7 @@ jQuery(document).ready(function($) {
                 }
 
             } catch(e) {
-            // catch potential error that can occour if we have query parameter
+            // catch potential error that can occur if we have query parameter
             // in location such as #tab?some=none
             }
         }

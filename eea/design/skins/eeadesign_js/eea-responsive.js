@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
 
     var $buttonnavbar = $('button.navbar-toggle');
     var $soer_tabs = $('.eea-tabs-soer'),
-        $soer_tabs_found = $soer_tabs.length;
+        soer_tabs_found = $soer_tabs.length;
     var $notransform = $('.eea-tabs-arrows, .eea-tabs-soer');
     if (underscore && underscore.debounce) {
         $(window).resize(_.debounce(function() {
@@ -153,14 +153,12 @@ jQuery(document).ready(function($) {
                 if (eea_tabs_with_arrows_found) {
                     make_tabs_into_accordions($eea_tabs_with_arrows, $('.eea-tabs-panels-arrows'));
                 }
-                if ($soer_tabs_found) {
+                if (soer_tabs_found) {
                     make_tabs_into_accordions($soer_tabs, $('.eea-tabs-panels-soer'));
                 }
 
             } else {
-                if ($soer_tabs || $eea_tabs_with_arrows) {
-                    make_accordions_into_tabs();
-                }
+                make_accordions_into_tabs();
                 // turn tabs into accordions if tabs span over two rows
                 $tabs.each(function(idx, tab) {
                     var $tab = $(tab);
