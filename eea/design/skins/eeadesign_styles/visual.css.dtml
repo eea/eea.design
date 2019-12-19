@@ -63,12 +63,14 @@ option.hiddenStructure {
 
 .keyFact ul,
 .box ul,
+.eea-card-body-text ul,
 .bullet-list {
     list-style: none !important;
 }
 
 .box ul li,
 .keyFact li,
+.eea-card-body-text li,
 .bullet-list > li {
     position: relative;
     padding-left: 1em;
@@ -76,6 +78,7 @@ option.hiddenStructure {
 
 .box ul li:before,
 .keyFact li:before,
+.eea-card-body-text li:before,
 .bullet-list > li:before {
     content: '\2022';
     position: absolute;
