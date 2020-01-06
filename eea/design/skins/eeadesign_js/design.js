@@ -3,31 +3,6 @@
 // Matomo support
 var _paq = _paq || [];
 
-(function(){
-    var $story_landscape_cards =  $(".eea-card--double.direction-column.eea-card--landscape");
-    var $portrait_image = $story_landscape_cards.find(".eea-card-image--portrait");
-    var portrait_image_height;
-    if ($portrait_image.length !== 1) {
-        return;
-    }
-
-    $(window).resize(_.debounce(function() {
-        var window_width = $(window).width();
-        var $landscape_image = $story_landscape_cards.find('img').not('.eea-card-image--portrait');
-        if (window_width > 1023) {
-            $portrait_image.height($landscape_image.height());
-        }
-        else {
-            portrait_image_height = $portrait_image.css('height');
-            if (portrait_image_height !== 'initial') {
-                $portrait_image.css('height', 'initial');
-            }
-        }
-    }));
-
-    $(window).trigger('resize');
-})();
-
 jQuery(document).ready(function($) {
     'use strict';
     var $viewlet_below_content = $("#viewlet-below-content");
