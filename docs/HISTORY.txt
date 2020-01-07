@@ -1,7 +1,7 @@
 Changelog
 =========
 
-25.3-dev0 - (unreleased)
+25.3 - (2020-01-07)
 ---------------------------
 * Change: use again original eea logo within portal-logo
   [ichim-david refs #111967]
