@@ -61,11 +61,13 @@ option.hiddenStructure {
     margin-right: 1.5em;
 }
 
+blockquote ul,
 .keyFact ul,
 .box ul,
 .eea-card-body-text ul,
 .bullet-list {
     list-style: none !important;
+    margin-left: 0;
 }
 
 .box ul li,
@@ -374,7 +376,8 @@ th a, th a:link, th a:visited {
 }
 @media (max-width: 1023px) {
     .emphasis-area {
-        width: 90%;
+        width: 100%;
+        padding: 1.5em;
     }
 }
 
@@ -1407,7 +1410,8 @@ ul.social-buttons {
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .bullet-list > li:before {
-        font-size: 1.5em;
+        font-size: 0.6em;
+        line-height: 0.6;
     }
     .bullet-list > li {
         overflow: hidden; /* needed for IE11 to work with columns css prop */
