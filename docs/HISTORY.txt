@@ -1,6 +1,11 @@
 Changelog
 =========
 
+25.4-dev0 - (unreleased)
+---------------------------
+* Change: updated countries-and-regions template to point at Czechia
+  [alecghica refs #112524]
+
 25.3 - (2020-01-07)
 ---------------------------
 * Change: use again original eea logo within portal-logo
