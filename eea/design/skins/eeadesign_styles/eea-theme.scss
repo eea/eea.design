@@ -523,7 +523,6 @@ div#original_chart_div {
 .tile-item-body {
   font-size: 150% !important;
   color: gray;
-  max-width: 80%;
   margin: 0 auto;
   }
 
@@ -533,6 +532,11 @@ div#original_chart_div {
 
 
 
+@media (min-width: 420px) {
+  .tile-item-body {
+    max-width: 80%;
+    }
+  }
 @media (min-width: 1024px) {
   .tiles--3 {
     flex-wrap: nowrap;
