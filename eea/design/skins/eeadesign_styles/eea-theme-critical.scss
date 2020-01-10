@@ -2,33 +2,6 @@
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-/* Networks panel EU partners links */
-.moreLink,
-.mini-header #themes-tags .link-category {
-  border: 0 !important;
-  display: inline-block;
-  padding-left: 20px;
-  position: relative;
-  }
-
-.moreLink:before,
-.mini-header #themes-tags .link-category:before {
-  content: "\f138";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: gray;
-  position: absolute;
-  margin-left: -18px;
-  top: -3px;
-  }
-
-
-.mini-header #themes-tags .link-category:before,
-.eea-btn.moreLink:before {
-  color: inherit;
-  top: auto;
-  }
-/* End links */
 
 .mini-header:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
