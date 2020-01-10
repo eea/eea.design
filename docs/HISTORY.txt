@@ -1,7 +1,7 @@
 Changelog
 =========
 
-25.4-dev0 - (unreleased)
+25.4 - (2020-01-10)
 ---------------------------
 * Change: added moreLink css back to critical.css since it's used in many places
   [ichim-david refs #111967]
