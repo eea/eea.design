@@ -1,9 +1,7 @@
 <!-- THE SEARCHBOX DEFINITION -->
-<metal:search metal:define-macro="quick_search" tal:define="
-        lang here/Language|string:en;
-        is_en python:lang in ('en', '');"
+<metal:search metal:define-macro="quick_search"
         i18n:domain="eea">
-    <script tal:condition="is_en" tal:content="string:(function() {
+    <script tal:content="string:(function() {
             var gcse = document.createElement('script');
             gcse.type = 'text/javascript';
             gcse.async = true;
@@ -14,15 +12,12 @@
     </script>
     <tal:searchform metal:define-macro="quick_search_form"
     tal:define="
-        lang lang|here/Language|string:en;
-        is_en python:lang in ('en', '');
         use_search_links use_search_links|python:True;
-        search_google string:https://cse.google.com/cse;
         search_apps string:${context/portal_url}/eea-custom-search;
         search_input_class search_input_class|string:gsc-input-query js-gsc-input-query;
-            search_input_placeholder_text search_input_placeholder_text|python:'Search' if is_en else 'Google Custom Search';
+            search_input_placeholder_text search_input_placeholder_text|python:context.translate('Search');
         search_button_class search_button_class|string:gsc-search-button gsc-search-button-v2;
-        action python:search_apps if is_en else search_google;
+        action python:search_apps;
         tags string:${context/portal_url}/eea-custom-search.tags">
         <div class="gsc-control-cse gsc-control-cse-en gsc-control-wrapper-cse">
             <form method="get" class="gsc-search-box gsc-search-box-tools" tal:attributes="action action" autocomplete="off">
@@ -34,7 +29,6 @@
                                         class search_input_class;
                                         placeholder search_input_placeholder_text;
                                         data-tags-url tags" />
-                                <input type="hidden" name="cx" value="010617083146134556574:ymkqzb7sibw" tal:condition="not:is_en"/>
                             </div>
                         </td>
                         <td class="gsc-search-button">
@@ -50,9 +44,6 @@
             </form>
         </div>
         <div class="eea-search-links" tal:condition="use_search_links">
-            <a href="http://search.apps.eea.europa.eu" class="pull-left search_advanced_link">
-                <span i18n:translate="">Advanced search</span>
-            </a>
             <a class="pull-right search_glossary_link"
                href="/help/glossary" i18n:translate="">A-Z Glossary</a>
         </div>
