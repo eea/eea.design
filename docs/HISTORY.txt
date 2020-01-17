@@ -3,6 +3,8 @@ Changelog
 
 25.5-dev0 - (unreleased)
 ---------------------------
+* Change: removed google search also for non english queries
+  [ichim-david Refs #111371]
 
 25.4 - (2020-01-10)
 ---------------------------
