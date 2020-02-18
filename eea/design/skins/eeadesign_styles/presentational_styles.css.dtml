@@ -310,6 +310,10 @@ blockquote.pullquote,
 }
 
 .keyFact,
+.keyFact .discreet,
+.keyFact h1,
+.keyFact h2,
+.keyFact h3,
 .bg-blue,
 .bg-green,
 .keyFact a,

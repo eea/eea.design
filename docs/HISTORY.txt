@@ -1,8 +1,49 @@
 Changelog
 =========
 
-25.1-dev0 - (unreleased)
+25.6-dev0 - (unreleased)
 ---------------------------
+* Change: removed the Google Plus reference
+  [alecghica]
+
+25.5 - (2020-01-17)
+---------------------------
+* Change: removed google search also for non english queries
+  [ichim-david Refs #111371]
+
+25.4 - (2020-01-10)
+---------------------------
+* Change: added moreLink css back to critical.css since it's used in many places
+  [ichim-david refs #111967]
+
+25.4 - (2020-01-08)
+---------------------------
+* Change: updated countries-and-regions template to point at Czechia
+  [alecghica refs #112524]
+
+25.3 - (2020-01-07)
+---------------------------
+* Change: use again original eea logo within portal-logo
+  [ichim-david refs #111967]
+* Bug fix: avoid adding hashchange when transforming tabs to accordion
+  [ichim-david refs #111967]
+* Change: improve storytelling image positioning when landscape&portrait are
+  side-by-side
+  [ichim-david refs #111967]
+
+25.2 - (2019-12-13)
+---------------------------
+* Bug fix: fixed text overflow of fullwidth content area for mobile
+  [ichim-david refs #111964]
+* Bug fix: fixed cover image for pdf rendering
+  [ichim-david refs #111964]
+* Feature: added image copyright to document byline
+  [ichim-david refs #111964]
+
+25.1 - (2019-12-09)
+---------------------------
+* Bug fix: Register custom ICalendarPortlet only if plone.app.event not present
+  [avoinea]
 * Bug fix: fixed button and tinymce table issues after latest round
   of design changes
   [ichim-david refs #110041]
@@ -10,7 +51,7 @@ Changelog
 25.0 - (2019-11-26)
 ---------------------------
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
-  available for eea.design 
+  available for eea.design
   [ichim-david refs #110784]
 * Change: added eea-theme-critical.css with critical styling for new header
   [ichim-david refs #110784]

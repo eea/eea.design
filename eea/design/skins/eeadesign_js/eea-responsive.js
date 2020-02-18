@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
             }
             var $result = $('<h2 />', {
                 'class': (link && link.className.indexOf('current') !== -1) ? 'eea-accordion-title current no-anchor' : 'eea-accordion-title no-anchor',
-                id: link ? link.id : '',
+                id: link ? link.id  + '-accordion' : '',
                 html: link.innerHTML || el.innerHTML
             });
             $result.append('<span class="eea-icon eea-icon-right"></span>');
@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
                 var $tabs = $parent.hasClass('eea-tabs-panels-soer') ? $('.eea-tabs-soer') : $panel.parent().prev() ;
                 $panel.attr('class', 'eea-tabs-panel');
                 if ($('h2.current', $panel).length) {
-                    $tabs.find('a').removeClass('current').eq(idx).addClass('current').click();
+                    $tabs.find('a').removeClass('current').eq(idx).addClass('current');
                     $panel.show();
                 } else {
                     $panel.hide();
@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
 
     var $buttonnavbar = $('button.navbar-toggle');
     var $soer_tabs = $('.eea-tabs-soer'),
-        $soer_tabs_found = $soer_tabs.length;
+        soer_tabs_found = $soer_tabs.length;
     var $notransform = $('.eea-tabs-arrows, .eea-tabs-soer');
     if (underscore && underscore.debounce) {
         $(window).resize(_.debounce(function() {
@@ -153,14 +153,12 @@ jQuery(document).ready(function($) {
                 if (eea_tabs_with_arrows_found) {
                     make_tabs_into_accordions($eea_tabs_with_arrows, $('.eea-tabs-panels-arrows'));
                 }
-                if ($soer_tabs_found) {
+                if (soer_tabs_found) {
                     make_tabs_into_accordions($soer_tabs, $('.eea-tabs-panels-soer'));
                 }
 
             } else {
-                if ($soer_tabs || $eea_tabs_with_arrows) {
-                    make_accordions_into_tabs();
-                }
+                make_accordions_into_tabs();
                 // turn tabs into accordions if tabs span over two rows
                 $tabs.each(function(idx, tab) {
                     var $tab = $(tab);
@@ -221,13 +219,13 @@ jQuery(document).ready(function($) {
   // add eea-right-section to the right area
   $('#right-area').addClass('eea-section eea-right-section');
 
-    var $faceted_text_widget = $(".faceted-text-widget");
+  var $faceted_text_widget = $(".faceted-text-widget");
   $("<div class='faceted-textwidget-place-current'><a href='#' class='eea-faceted-filter eea-section-trigger eea-section-trigger-right'>Filter »</a></div>").appendTo($faceted_text_widget.find("form"));
   $('.eea-section-trigger').click(function(e) {
-        e.preventDefault();
-    var section = e.target.className.indexOf('trigger-right') ? '.eea-right-section' : '.eea-left-section';
-    $(section).prev().click();
-    });
+      e.preventDefault();
+      var section = e.target.className.indexOf('trigger-right') ? '.eea-right-section' : '.eea-left-section';
+      $(section).prev().click();
+  });
 
     // 29865 open faceted menus when sliding left and right or when clicking on gray area
     function swipeHandler(ev) {

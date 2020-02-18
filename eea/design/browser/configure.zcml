@@ -377,7 +377,10 @@
         />
 
     <!-- Customized portlets -->
+
+    <!-- XXX Handle plone.app.event installed -->
     <plone:portletRenderer
+        zcml:condition="not-installed plone.app.event"
         portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"
         template="templates/calendar.pt"
         layer=".interfaces.IEEACommonLayer"

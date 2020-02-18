@@ -440,5 +440,8 @@ jQuery(document).ready(function($) {
     if (scroll_analytics_enabled) {
         $content_core.screentimeAnalytics();
     }
+
+
+
 });
 
