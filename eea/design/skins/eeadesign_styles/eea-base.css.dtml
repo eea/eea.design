@@ -395,10 +395,18 @@ dl.toc dd {
 /* @group Album view classes */
 
 
-
+.video-fancybox {
+    position: relative;
+    z-index: 3;
+}
 .video-fancybox .photoAlbumEntryWrapper {
     position: relative;
     background: url(&dtml-xurl;/play-button-cloud.png) no-repeat center center;
+}
+
+.video-fancybox .eea-tileThumb {
+    position: relative;
+    z-index: -1;
 }
 .photoAlbumEntry a {
     width: 100%;
