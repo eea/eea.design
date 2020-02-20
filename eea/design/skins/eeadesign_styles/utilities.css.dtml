@@ -54,6 +54,10 @@
     overflow: auto !important;
 }
 
+.w100 {
+    width: 100%;
+}
+
 /* spacing utilities */
 .my-2 {
     margin-left: 2em !important;

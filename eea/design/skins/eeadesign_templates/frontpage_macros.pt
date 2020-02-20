@@ -186,8 +186,12 @@
                             <metal:isVideo metal:use-macro="context/frontpage_macros/macros/is-video">
                                 <metal:fill metal:fill-slot="body">
                                     <a href="#"
-                                            tal:attributes="href url; class python:cloud + ' figure-image-block' or video + ' figure-image-block' or animation + 'figure-image-block'">
-                                        <img alt="" tal:attributes="src string:${url}/${image_scale}; title title; alt title" />
+                                            tal:attributes="href url; class python:cloud + ' figure-image-block' or video + ' figure-image-block' or animation + 'figure-image-block'; title title">
+                                      <div class="photoAlbumEntryWrapper">
+                                        <span class="photoAlbumEntryWrapperImg"
+                                            tal:attributes="style python:'background-image:url(' + url + '/' + image_scale + ')'">
+                                        </span>
+                                      </div>
                                     </a>
                                 </metal:fill>
                             </metal:isVideo>

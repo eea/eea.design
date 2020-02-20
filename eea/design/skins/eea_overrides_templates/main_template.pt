@@ -64,7 +64,6 @@
     <meta name="description" content="Information on the environment for those
       involved in developing, adopting, implementing and evaluating environmental
       policy, and also the general public" />
-    <link href="https://plus.google.com/104345627234408209119" rel="publisher" />
     <link tal:attributes="href python:portal_url + '/googlefonts-opensans.css'" href="" rel="stylesheet" type="text/css" tal:condition="isPrint" />
 
 <tal:comment replace="nothing">
