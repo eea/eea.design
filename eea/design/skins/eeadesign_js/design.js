@@ -155,7 +155,7 @@ jQuery(document).ready(function($) {
 
     // register resizable directly on jQuery if not found directly on jQuery namespace
     if (jQuery.fn.resizable && !jQuery.resizable) {
-        jQuery['resizable'] = jQuery.fn.resizable;
+        jQuery.resizable = jQuery.fn.resizable;
     }
 
     // 106884 scroll embedded iframes in order for them to avoid enlarging body
