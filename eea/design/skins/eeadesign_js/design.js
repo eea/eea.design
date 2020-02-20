@@ -153,9 +153,14 @@ jQuery(document).ready(function($) {
         }).insertBefore($video_iframe);
     }
 
+    // register resizable directly on jQuery if not found directly on jQuery namespace
+    if (jQuery.fn.resizable && !jQuery.resizable) {
+        jQuery.resizable = jQuery.fn.resizable;
+    }
+
     // 106884 scroll embedded iframes in order for them to avoid enlarging body
     $iframes.each(function(idx, el){
-       $(el).parent().addClass('overflow_auto');
+       $(el).parent().addClass('overflow_auto w100');
     });
 
     // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
