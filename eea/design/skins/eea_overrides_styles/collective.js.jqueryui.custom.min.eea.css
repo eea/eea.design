@@ -38,7 +38,7 @@ dl.portlet .ui-state-highlight a, dl.portlet .ui-widget-content .ui-state-highli
 .ui-widget-content a {
     color: #346f83;
 }
-.ui-dialog-titlebar-close {
+.ui-button-icon-only {
     text-indent: -4000px;
 }
 
