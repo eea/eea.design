@@ -54,6 +54,8 @@ dl.portlet .ui-state-highlight a, dl.portlet .ui-widget-content .ui-state-highli
     color: #fff;
 }
 .ui-widget .ui-button {
-    /*padding: .4em 1em;*/
     font-family: 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
+}
+.ui-dialog-buttonset .ui-button {
+    padding: .4em 1em;
 }
