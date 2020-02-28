@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+
+
+  <javascript cacheable="True" compression="none"  cookable="True"
+    enabled="True"  inline="False"
+    id="jquery.js"
+    insert-after="++resource++plone.app.jquery.js"
+    expression=""
+    bundle="jquery" />
+
+
+  <javascript cacheable="True" compression="none"  cookable="True"
+    enabled="True"  inline="False"
+    id="jquery-migrate.js"
+    insert-after="++resource++jquery-migrate.js"
+    expression=""
+    bundle="jquery" />
+
+  <javascript id="++resource++plone.app.jquery.js" remove="True" />
+  <javascript id="++resource++jquery-migrate.js" remove="True" />
+
+</object>
+
