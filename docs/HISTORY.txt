@@ -1,7 +1,10 @@
 Changelog
 =========
 
-25.6-dev0 - (unreleased)
+25.7-dev0 - (unreleased)
+---------------------------
+
+25.6 - (2020-02-20)
 ---------------------------
 * Change: briefing new style background image now goes over content header
   [ichim-david refs #111968]
