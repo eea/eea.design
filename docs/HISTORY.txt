@@ -1,6 +1,14 @@
 Changelog
 =========
 
+25.7 - (2020-03-03)
+---------------------------
+* Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [ichim-david refs #105112]
+* Change: added jquery.js with version 3.4.1 and jquery migrate 3.1
+  [ichim-david refs #105112]
+
 25.6 - (2020-02-20)
 ---------------------------
 * Change: briefing new style background image now goes over content header
