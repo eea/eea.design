@@ -1,6 +1,9 @@
 Changelog
 =========
 
+25.8-dev0 - (unreleased)
+---------------------------
+
 25.7 - (2020-03-03)
 ---------------------------
 * Upgrade step: within "Plone > Site setup > Add-ons" click on upgrade button
