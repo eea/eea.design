@@ -373,29 +373,6 @@ ol.visualNoMarker {
   padding-right: 1em;
   }
 
-/* Override jquery.ui style */
-.ui-widget-content a {
-  color: &dtml-linkColor;;
-  }
-.ui-dialog-titlebar-close {
-  text-indent: -4000px;
-  }
-
-.ui-state-default .ui-icon,
-.ui-widget-header .ui-icon
-{
-  background-image: url(/++resource++jquery-ui-themes/sunburst/images/ui-icons_ffffff_256x240.png);
-  }
-.ui-button {
-  border: 1px solid #ccc;
-  background: #205c90 url(/++resource++jquery-ui-themes/sunburst/images/ui-bg_flat_45_205c90_40x100.png) 50% 50% repeat-x;
-  font-weight: normal;
-  color: #fff;
-  }
-.ui-widget .ui-button {
-  padding: .4em 1em;
-  font-family: 'Open Sans', Verdana, Helvetica, Arial, sans-serif;
-  }
 
 .frontpage .progressbar-viewlet,
 .template-datamaps_view .progressbar-viewlet
