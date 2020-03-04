@@ -3,6 +3,8 @@ Changelog
 
 25.7-dev0 - (unreleased)
 ---------------------------
+* Change: use search apps site instead of search_form for rel search link
+  [ichim-david]
 
 25.6 - (2020-02-20)
 ---------------------------

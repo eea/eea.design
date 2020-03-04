@@ -4,5 +4,5 @@
           href=""
           title="Search this site"
           i18n:attributes="title"
-          tal:attributes="href string:${navigation_root_url}/search_form" />
+          tal:attributes="href string:http://search.apps.eea.europa.eu" />
 </tal:search>
