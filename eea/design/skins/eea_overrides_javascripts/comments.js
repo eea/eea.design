@@ -77,8 +77,8 @@
     $.clearForm = function (form_div) {
         form_div.find(".error").removeClass("error");
         form_div.find(".fieldErrorBox").remove();
-        form_div.find("input[type='text']").attr("value", "");
-        form_div.find("textarea").attr("value", "");
+        form_div.find("input[type='text']").prop("value", "");
+        form_div.find("textarea").prop("value", "");
         /* XXX: Clean all additional form extender fields. */
     };
 
