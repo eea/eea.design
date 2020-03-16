@@ -3,6 +3,8 @@ Changelog
 
 25.8-dev0 - (unreleased)
 ---------------------------
+* Change: removed mark_special_link functionality from our codebase
+  [ichim-david refs #115646]
 * Change: use search apps site instead of search_form for rel search link
   [ichim-david]
 
