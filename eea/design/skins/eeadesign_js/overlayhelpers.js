@@ -50,25 +50,27 @@ jQuery.tools.overlay.conf.oneInstance = false;
 
 
 jQuery(function ($) {
-    $.buildFragment = function ( elems, context, scripts, selection, ignored ) {
-        if ((!scripts.push) || selection || ignored) {
-            throw "Not a script"
-        }
+    if(!$.buildFragment) {
+        $.buildFragment = function ( elems, context, scripts, selection, ignored ) {
+            // if ((!scripts.push) || selection || ignored) {
+            //     throw "Not a script"
+            // }
 
-        $.each(elems, function() {
-            var parsed = $.parseHTML(elems[0], document, true);
+            $.each(elems, function() {
+                var parsed = $.parseHTML(elems[0], document, true);
 
-            var $root = $('<div/>');
+                var $root = $('<div/>');
 
-            $.each(parsed, function() {
-                $root.append($(this));
+                $.each(parsed, function() {
+                    $root.append($(this));
+                });
+
+                $root.find('script').each(function() {
+                    scripts.push(this);
+                })
             });
-
-            $root.find('script').each(function() {
-                scripts.push(this);
-            })
-        });
-    };
+        };
+    }
 
      // buildfragment needed
     /******
