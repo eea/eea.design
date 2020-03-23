@@ -1,6 +1,9 @@
 Changelog
 =========
 
+25.9-dev0 - (unreleased)
+---------------------------
+
 25.8 - (2020-03-16)
 ---------------------------
 * Change: removed mark_special_link functionality from our codebase
