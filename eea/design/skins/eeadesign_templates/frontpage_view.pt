@@ -26,7 +26,7 @@
                 </div>
 
                 <!-- mega_topics -->
-                <div id="megatopics-area" tal:condition="main_site">
+                <div id="megatopics-area" tal:condition="main_site" class="megatopics-area">
                     <div class="portlet-megatopic">
                         <div class="portlet promo-nav-portlet" id="air-and-climate-megatopic">
                             <div>

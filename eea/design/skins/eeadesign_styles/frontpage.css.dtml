@@ -120,7 +120,7 @@
     margin: 0 0 0;
 }
 
-#megatopics-area .portletHeader {
+.megatopics-area .portletHeader {
     background: none repeat scroll 0 0 white;
     height: 30px;
     opacity: 0.8;
