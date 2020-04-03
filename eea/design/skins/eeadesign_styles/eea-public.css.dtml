@@ -38,8 +38,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-#content h2:not(:first-child),
-#content h3:not(:first-child) {
+.content-core h2:not(:first-child),
+.content-core h3:not(:first-child) {
    margin-top: 1em;
 }
 h2 a, h3 a, h4 a {
