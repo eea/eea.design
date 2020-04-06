@@ -28,75 +28,104 @@
                 <!-- mega_topics -->
                 <div id="megatopics-area" tal:condition="main_site" class="megatopics-area">
                     <div class="portlet-megatopic">
-                        <div class="portlet promo-nav-portlet" id="air-and-climate-megatopic">
-                            <div>
-                                <img title="Air and climate" alt="Air and climate"
-                                  width="391" height="191" i18n:attributes="title alt"
-                                  tal:attributes="src string:$portal_url/themes/air/theme_image/image_preview" />
-                                <div class="portletHeader" i18n:translate="">
+                              <div class="portlet promo-nav-portlet" id="air-and-climate-megatopic">
+                                <div class="portlet-megatopic-header"
+                                     tal:define="burl string:$portal_url/themes/air/theme_image/image_preview"
+                                     tal:attributes="style python:'background-image:url(' + burl + ')'">
+                                  <div class="portletHeader notoc">
                                     Air and climate
+                                  </div>
                                 </div>
-                                <ul class="list-items">
-                                    <li><a href="/themes/air" i18n:translate="">Air pollution</a></li>
-                                    <li><a href="/themes/climate-change-adaptation" i18n:translate="">Climate change adaptation</a></li>
-                                    <li><a href="themes/climate" i18n:translate="">Climate change mitigation</a></li>
-                                </ul>
-                            </div>
+                                <div class="portlet-megatopic-body">
+                                  <ul class="list-items">
+                                    <li><a href="/themes/air" i18n:translate="">Air
+                                      pollution</a></li>
+                                    <li><a
+                                        href="/themes/climate-change-adaptation" i18n:translate="">Climate
+                                      change adaptation</a></li>
+                                    <li><a
+                                        href="themes/climate" i18n:translate="">Climate
+                                      change mitigation</a></li>
+                                  </ul>
+                                </div>
                         </div>
                     </div>
                     <div class="portlet-megatopic">
                         <div class="portlet promo-nav-portlet" id="nature-megatopic">
-                            <div>
-                                <img title="Nature" alt="Visit our biodiversity website"
-                                  width="391" height="191" i18n:attributes="title alt"
-                                  tal:attributes="src string:$portal_url/themes/biodiversity/theme_image/image_preview" />
-                                <div class="portletHeader" i18n:translate="">
+                              <div class="portlet promo-nav-portlet" id="air-and-climate-megatopic">
+                                <div class="portlet-megatopic-header"
+                                     title="Visit our biodiversity website"
+                                     i18n:attributes="title"
+                                     tal:define="burl string:$portal_url/themes/biodiversity/theme_image/image_preview"
+                                     tal:attributes="style python:'background-image:url(' + burl + ')'">
+                                  <div class="portletHeader notoc" i18n:translate="">
                                     Nature
+                                  </div>
                                 </div>
-                                <ul class="list-items">
-                                    <li><a href="/themes/biodiversity" i18n:translate="">Biodiversity — Ecosystems</a></li>
-                                    <li><a href="/themes/landuse" i18n:translate="">Land use</a></li>
-                                    <li><a href="/themes/soil" i18n:translate="">Soil</a></li>
-                                    <li><a href="/themes/water" i18n:translate="">Water and marine environment</a></li>
-                                </ul>
+                                <div class="portlet-megatopic-body">
+                                  <ul class="list-items">
+                                    <li><a
+                                        href="/themes/biodiversity" i18n:translate="">Biodiversity
+                                      — Ecosystems</a></li>
+                                    <li><a
+                                        href="/themes/landuse" i18n:translate="">Land
+                                      use</a></li>
+                                    <li><a
+                                        href="/themes/soil" i18n:translate="">Soil</a>
+                                    </li>
+                                    <li><a
+                                        href="/themes/water" i18n:translate="">Water
+                                      and marine environment</a></li>
+                                  </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="portlet-megatopic">
                         <div class="portlet promo-nav-portlet" id="sustainability-megatopic">
-                            <div>
-                                <img title="Sustainability and well-being" alt="Sustainability and well-being"
-                                  width="391" height="191" i18n:attributes="title alt"
-                                  tal:attributes="src string:$portal_url/themes/human/theme_image/image_preview" />
-                                <div class="portletHeader" i18n:translate="">
-                                    Sustainability and well-being
+                              <div class="portlet-megatopic-header"
+                                   title="Sustainability and well-being"
+                                   i18n:attributes="title"
+                                   tal:define="burl string:$portal_url/themes/human/theme_image/image_preview"
+                                   tal:attributes="style python:'background-image:url(' + burl + ')'">
+                                <div class="portletHeader notoc" i18n:translate="">
+                                  Sustainability and well-being
                                 </div>
-                                <ul class="list-items">
-                                    <li><a href="/themes/human" i18n:translate="">Environment and health</a></li>
-                                    <li><a href="/themes/policy" i18n:translate="">Policy instruments</a></li>
-                                    <li><a href="/themes/waste" i18n:translate="">Resource efficiency and waste</a></li>
-                                    <li><a href="/themes/sustainability-transitions" i18n:translate="">Sustainability transitions</a></li>
-                                </ul>
-                            </div>
+                              </div>
+                          <div class="portlet-megatopic-body">
+                            <ul class="list-items">
+                              <li><a href="/themes/human" i18n:translate="">Environment and health</a></li>
+                              <li><a href="/themes/policy" i18n:translate="">Policy instruments</a></li>
+                              <li><a href="/themes/waste" i18n:translate="">Resource efficiency and waste</a></li>
+                              <li><a href="/themes/sustainability-transitions" i18n:translate="">Sustainability transitions</a></li>
+                            </ul>
+                          </div>
                         </div>
                     </div>
                     <div class="portlet-megatopic">
-                        <div class="portlet promo-nav-portlet" id="economic-sectors-megatopic">
-                            <div>
-                                <img title="Economic sectors" alt="Economic sectors"
-                                  width="391" height="191" i18n:attributes="title alt"
-                                  tal:attributes="src string:$portal_url/themes/energy/theme_image/image_preview" />
-                                <div class="portletHeader" i18n:translate="">
-                                    Economic sectors
-                                </div>
-                                <ul class="list-items">
-                                    <li><a href="/themes/agriculture" i18n:translate="">Agriculture</a></li>
-                                    <li><a href="/themes/energy" i18n:translate="">Energy</a></li>
-                                    <li><a href="/themes/industry" i18n:translate="">Industry</a></li>
-                                    <li><a href="/themes/transport" i18n:translate="">Transport</a></li>
-                                </ul>
-                            </div>
+                      <div class="portlet promo-nav-portlet" id="economic-sectors-megatopic">
+                        <div class="portlet-megatopic-header"
+                             title="Economic sectors"
+                             i18n:attributes="title"
+                             tal:define="burl string:$portal_url/themes/energy/theme_image/image_preview"
+                             tal:attributes="style python:'background-image:url(' + burl + ')'">
+                          <div class="portletHeader notoc" i18n:translate="">
+                            Economic sectors
+                          </div>
                         </div>
+                        <div class="portlet-megatopic-body">
+                          <ul class="list-items">
+                            <li><a href="/themes/agriculture" i18n:translate="">Agriculture</a>
+                            </li>
+                            <li><a href="/themes/energy" i18n:translate="">Energy</a>
+                            </li>
+                            <li><a href="/themes/industry" i18n:translate="">Industry</a>
+                            </li>
+                            <li><a href="/themes/transport" i18n:translate="">Transport</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                    
                 </div>
