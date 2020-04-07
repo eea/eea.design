@@ -3,6 +3,8 @@ Changelog
 
 25.9-dev0 - (unreleased)
 ---------------------------
+* Change: frontpage megatopics consolidation with themes_view markup
+  [ichim-david refs #116016]
 
 25.8 - (2020-03-16)
 ---------------------------
