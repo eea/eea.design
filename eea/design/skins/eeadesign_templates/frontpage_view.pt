@@ -32,7 +32,7 @@
                                 <div class="portlet-megatopic-header"
                                      tal:define="burl string:$portal_url/themes/air/theme_image/image_preview"
                                      tal:attributes="style python:'background-image:url(' + burl + ')'">
-                                  <div class="portletHeader notoc">
+                                  <div class="portletHeader notoc" i18n:translate="">
                                     Air and climate
                                   </div>
                                 </div>
