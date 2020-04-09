@@ -559,7 +559,7 @@ ul {
 
 .portlet-megatopic-header {
   position: relative;
-  height: 230px;
+  height: 170px;
   background-size: cover;
 }
 
@@ -575,14 +575,14 @@ ul {
   text-align: left;
   font-weight: bold !important;
   line-height: 1.2;
-  font-size: 130%;
+  font-size: 1rem;
 }
 
 .portlet-megatopic-body {
-  padding: 1.5em;
+  padding: 1rem;
 }
 .portlet-megatopic .list-items {
-  margin: 0;
+  margin: 0 0 0 1rem;
 }
 
 /* end megatopic frontarea */
