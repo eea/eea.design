@@ -13,34 +13,11 @@ jQuery(document).ready(function($) {
     'use strict';
 //    #20302; save state on submit attempt and remove it on success
     var url_path_name = jQuery("body").data("base-url") || "";
-    var search_path = window.location.search;
-    var saved_search_path = search_path.indexOf("Changes%20saved");
-    var referrer = document.referrer;
     window.EEA = window.EEA || {};
-    window.EEA.storage_utils = {};
-    var storage_utils = window.EEA.storage_utils;
-    var local_storage = window.localStorage;
-
-    storage_utils.getLocalStorageEntry = function(key) {
-        return local_storage.getItem(key);
-    };
-
-    storage_utils.delLocalStorageEntry = function(key) {
-        return local_storage.removeItem(key);
-    };
-
-    storage_utils.getLocalStorageEntryValue = function(storage, value) {
-        var values = JSON.parse(storage);
-        var match, current, i, length;
-        for (i = 0, length = values.length; i < length; i += 1) {
-            current = values[i];
-            if (current.name === value) {
-                match = current.value;
-                break;
-            }
-        }
-        return match;
-    };
+    var storage_utils = window.EEA.RememberState;
+    if (!storage_utils) {
+        return;
+    }
 
     var edit_form = $("form[name='edit_form']");
     var edit_form_found = edit_form.length;
@@ -192,18 +169,11 @@ jQuery(document).ready(function($) {
         }());
     }
 
-    // remove form state on successful form submission
-    if (saved_search_path !== -1) {
-        if (referrer.indexOf('portal_factory') !== -1) {
-            (function() {
-               var edit_ref = referrer.substring(0, referrer.length - 5);
-               var atct_edit_ref = referrer.substring(0, referrer.length - 10);
-                storage_utils.delLocalStorageEntry(edit_ref);
-                storage_utils.delLocalStorageEntry(atct_edit_ref);
-            }());
-        }
-        else {
-            storage_utils.delLocalStorageEntry(url_path_name);
-        }
-    }
 });
+
+// var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
+// var portlet_restore = $("#js-portletRestoreForm");
+// if (edit_form_data) {
+//     portlet_restore.find('.portletRestoreForm-entry').html(storage_utils.getLocalStorageEntryValue(edit_form_data, 'saveDate'))
+//         .end().removeClass('visualHidden');
+// }
