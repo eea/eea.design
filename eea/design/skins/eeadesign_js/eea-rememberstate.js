@@ -1,4 +1,5 @@
-/*global jQuery window anchors document ga setTimeout*/
+"use strict";
+/*global jQuery  */
 /* EXTERNAL DEPENDENCIES:
  * - jquery-ui.js dialog,
  * - ++resource++jquery.remember-state.js
@@ -6,11 +7,10 @@
  * BROWSER FEATURES: JSON, localStorage */
 
 /*
- * Gives you the possibility to reapply the form data that you've attempted to submit when
- * you've received a 500 page error on page edit
+ * Gives you the possibility to reapply the form data that you've attempted to
+ * submit when you've received a 500 page error on page edit
  * */
 jQuery(document).ready(function ($) {
-  "use strict";
   //    #20302; save state on submit attempt and remove it on success
   var url_path_name = jQuery("body").data("base-url") || "";
   window.EEA = window.EEA || {};
@@ -21,213 +21,236 @@ jQuery(document).ready(function ($) {
 
   var edit_form = $("form[name='edit_form']");
   var edit_form_found = edit_form.length;
-  if (edit_form_found) {
-    (function () {
-
-      var skip_field_names = [
-        // "location",
-        "last_referer",
-        // "saveDate",
-        "cmfeditions_version_comment"
-      ];
-      var cleanup_form = function (form) {
-        var values = form.serializeArray();
-        return values.filter(function (value) {
-          return skip_field_names.indexOf(value.name) === -1;
-        });
-      };
-
-      var save_btn = $(".context").filter("[name='form.button.save']");
-      save_btn.click(function () {
-        // if (edit_form.rememberState) {
-        //   edit_form.rememberState(options);
-        // }
-        var filtered_form_values = cleanup_form(edit_form);
-        filtered_form_values.push({
-          name: "saveDate",
-          value: new Date().toString()
-        });
-        storage_utils.setLocalStorageEntry(
-          url_path_name,
-          JSON.stringify(filtered_form_values)
-        );
+  if (!edit_form_found) {
+    return;
+  }
+  (function () {
+    var skip_field_names = [
+      // "location",
+      "id",
+      "last_referer",
+      // "saveDate",
+      "cmfeditions_version_comment",
+    ];
+    var cleanup_form = function (form) {
+      var values = form.serializeArray();
+      return values.filter(function (value) {
+        return skip_field_names.indexOf(value.name) === -1;
       });
+    };
 
-      var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
-      if (edit_form_data) {
-        if (edit_form && edit_form_data) {
-          (function () {
-            if (
-              $(".error").length ||
-              $("#davizvisualization-base-edit").length
-            ) {
-              return;
-            }
-            var saved_form_objs = JSON.parse(edit_form_data);
-            var current_form_objs = cleanup_form(edit_form);
-            var same_values = true;
-            // remove date object before checking length
-            saved_form_objs.pop();
-            var saved_form_objs_length = saved_form_objs.length;
-            var current_form_objs_length = current_form_objs.length;
-            var i,
-              length,
-              saved_form_obj,
-              current_form_obj,
-              saved_form_obj_name;
-            // saved form contains one extra entry which is the saved date
-            // therefore if there are more that one extra items saved
-            // as appose to the number of items currently in the form than
-            // we can continue with the restore dialog procedure
-            if (saved_form_objs_length - current_form_objs_length > 1) {
-              length = 0;
-              same_values = false;
-            } else {
-              length = saved_form_objs_length;
-            }
+    var save_btn = $(".context").filter("[name='form.button.save']");
+    save_btn.click(function (e) {
+      e.preventDefault();
+      // if (edit_form.rememberState) {
+      //   edit_form.rememberState(options);
+      // }
+      var filtered_form_values = cleanup_form(edit_form);
+      filtered_form_values.push({
+        name: "saveDate",
+        value: new Date().toString(),
+      });
+      storage_utils.setLocalStorageEntry(
+        url_path_name,
+        JSON.stringify(filtered_form_values)
+      );
+      edit_form.submit();
+    });
 
-            for (i = 0; i < length; i++) {
-              saved_form_obj = saved_form_objs[i];
-              current_form_obj = current_form_objs[i];
-              saved_form_obj_name = saved_form_obj.name;
-              // we skip location entry check since the keys are not ordered in the same plus
-              // the saved entries are escaped
-              if (skip_field_names.indexOf(saved_form_obj_name) !== -1) {
-                continue;
-              }
-              if (saved_form_obj.value !== current_form_obj.value) {
-                if (saved_form_obj_name === "location") {
-                    continue;
-                }
-                else {
-                  same_values = false;
-                  break;
-                }
-              }
-            }
-            if (same_values) {
-              return;
-            }
-            $.get(url_path_name + "/restore_form_values").done(function (data) {
-              var portlet_restore = $(data);
-              portlet_restore.dialog({
-                open: function (event) {
-                  var entries = storage_utils.getLocalStorageEntry(
-                    url_path_name
-                  );
-                  var entry, value, save_date, modified_date;
-                  if (entries) {
-                    entries = JSON.parse(entries);
-                    entry = entries[entries.length - 1];
-                    if (entry.name === "saveDate") {
-                      value = new Date(entry.value);
-                      $(event.target)
-                        .find("#js-restore-save-timestamp")
-                        .html(
-                          "(" +
-                            value.toDateString() +
-                            " " +
-                            value.toLocaleTimeString() +
-                            ")"
-                        );
-                      save_date = new Date(value);
-                      modified_date = new Date(
-                        $("#js-restore-object-modification-timestamp").text()
-                      );
-                      if (save_date - modified_date < 0) {
-                        $(this).dialog("close");
-                      }
-                    }
-                  }
-                },
-                buttons: {
-                  "Restore & Resubmit": function () {
-                    var cleaned_select = false;
-                    var cleaned_themes = false;
-                    var $themes_options = $("#themes_options");
-                    var $themes_buttons = $(".context");
-                    var $themes_insert_btn = $themes_buttons.filter(function (
-                      idx,
-                      el
-                    ) {
-                      return el.value === ">>";
-                    });
-                    var $themes_remove_btn = $themes_buttons.filter(function (
-                      idx,
-                      el
-                    ) {
-                      return el.value === "<<";
-                    });
-                    var restoreCallback = function ($el, data) {
-                      var name = $el.attr("name");
-                      if (
-                        name === "subject_keywords:lines" ||
-                        name === "temporalCoverage:lines"
-                      ) {
-                        (function () {
-                          $el.tokenInput("clear");
-                          var data_value = data.value;
-                          var values = data_value.split("\r");
-                          var i, length, value;
+    var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
+    if (!edit_form_data) {
+      return;
+    }
+    (function () {
+      if ($(".error").length || $("#davizvisualization-base-edit").length) {
+        return;
+      }
+      var saved_form_objs = JSON.parse(edit_form_data);
+      var current_form_objs = cleanup_form(edit_form);
+      var same_values = true;
+      // remove date object before checking length
+      saved_form_objs.pop();
+      var saved_form_objs_length = saved_form_objs.length;
+      var current_form_objs_length = current_form_objs.length;
+      var i, length, saved_form_obj, current_form_obj, saved_form_obj_name;
+      // saved form contains one extra entry which is the saved date
+      // therefore if there are more that one extra items saved
+      // as appose to the number of items currently in the form than
+      // we can continue with the restore dialog procedure
+      if (saved_form_objs_length - current_form_objs_length > 1) {
+        length = 0;
+        same_values = false;
+      } else {
+        length = saved_form_objs_length;
+      }
 
-                          for (
-                            i = 0, length = values.length;
-                            i < length;
-                            i += 1
-                          ) {
-                            value = values[i].trim();
-                            $el.tokenInput("add", { name: value, id: value });
-                          }
-                        })();
-                      }
-                    };
-                    var selectCallback = function ($el, data) {
-                      var name = $el.attr("name");
-                      var value = data.value;
-                      if (name === "relatedItems:list") {
-                        if (!cleaned_select) {
-                          cleaned_select = true;
-                          $el.empty();
-                        }
-                        $("<option>", { value: value, selected: true })
-                          .text(value)
-                          .appendTo($el);
-                      }
-
-                      if (name === "themes:list") {
-                        if (!cleaned_themes) {
-                          cleaned_themes = true;
-                          $themes_remove_btn.click();
-                        }
-                        $themes_options
-                          .find("[value='" + value + "']")
-                          .attr("selected", true);
-                        $themes_insert_btn.click();
-                      }
-                    };
-                    edit_form.data("rememberState", {
-                      objName: url_path_name,
-                      $el: edit_form,
-                      onRestoreCallback: restoreCallback,
-                      onSelectTagCallback: selectCallback,
-                    });
-                    edit_form.rememberState("restoreState");
-
-                    $(this).dialog("close");
-                    edit_form.submit();
-                  },
-                  "No & Remove data": function () {
-                    $(this).dialog("close");
-                    storage_utils.delLocalStorageEntry(url_path_name);
-                  },
-                },
-              });
-            });
-          })();
+      for (i = 0; i < length; i++) {
+        saved_form_obj = saved_form_objs[i];
+        current_form_obj = current_form_objs[i];
+        saved_form_obj_name = saved_form_obj.name;
+        // we skip location entry check since the keys are not ordered in the
+        // same plus the saved entries are escaped
+        if (skip_field_names.indexOf(saved_form_obj_name) !== -1) {
+          continue;
+        }
+        if (saved_form_obj.value !== current_form_obj.value) {
+          same_values = false;
+          break;
+          // if (saved_form_obj_name !== "location") {
+          //   same_values = false;
+          //   break;
+          // }
         }
       }
+      if (same_values) {
+        return;
+      }
+      $.get(url_path_name + "/restore_form_values").done(function (data) {
+        var restoreState = function (opts) {
+          var data = JSON.parse(localStorage.getItem(opts.objName)),
+            $f = opts.$el,
+            $e,
+            $select_option;
+          for (var i in data) {
+            $e = $f.find('[name="' + data[i].name + '"]');
+            if ($e.is(":radio")) {
+              $e.filter('[value="' + data[i].value + '"]').prop(
+                "checked",
+                true
+              );
+            } else if ($e.is(":checkbox") && data[i].value) {
+              $e.prop("checked", true);
+            } else if ($e.is("select")) {
+              if (opts.onSelectTagCallback) {
+                opts.onSelectTagCallback($e, data[i]);
+              } else {
+                $select_option = $e.find('[value="' + data[i].value + '"]');
+                if ($select_option.length) {
+                  $select_option.prop("selected", true);
+                } else {
+                  $("<option>", { value: data[i].value, selected: true })
+                    .text(data[i].value)
+                    .appendTo($e);
+                }
+              }
+            } else {
+              $e.val(data[i].value);
+            }
+            $e && opts.onRestoreCallback && opts.onRestoreCallback($e, data[i]);
+            $e.change();
+          }
+        };
+
+        var portlet_restore = $(data);
+        portlet_restore.dialog({
+          open: function (event) {
+            var entries = storage_utils.getLocalStorageEntry(url_path_name);
+            var entry, value, save_date, modified_date;
+            if (entries) {
+              entries = JSON.parse(entries);
+              entry = entries[entries.length - 1];
+              if (entry.name === "saveDate") {
+                value = new Date(entry.value);
+                $(event.target)
+                  .find("#js-restore-save-timestamp")
+                  .html(
+                    "(" +
+                      value.toDateString() +
+                      " " +
+                      value.toLocaleTimeString() +
+                      ")"
+                  );
+                save_date = new Date(value);
+                modified_date = new Date(
+                  $("#js-restore-object-modification-timestamp").text()
+                );
+                if (save_date - modified_date < 0) {
+                  $(this).dialog("close");
+                }
+              }
+            }
+          },
+          buttons: {
+            "Restore & Resubmit": function () {
+              var cleaned_select;
+              var cleaned_themes;
+              var $themes_options = $("#themes_options");
+              var $themes_buttons = $(".context");
+              var $themes_insert_btn = $themes_buttons.filter(function (
+                idx,
+                el
+              ) {
+                return el.value === ">>";
+              });
+              var $themes_remove_btn = $themes_buttons.filter(function (
+                idx,
+                el
+              ) {
+                return el.value === "<<";
+              });
+              var restoreCallback = function ($el, data) {
+                var name = $el.attr("name");
+                if (
+                  name === "subject_keywords:lines" ||
+                  name === "temporalCoverage:lines"
+                ) {
+                  (function () {
+                    $el.tokenInput("clear");
+                    var data_value = data.value;
+                    var values = data_value.split("\r");
+                    var i, length, value;
+
+                    for (i = 0, length = values.length; i < length; i += 1) {
+                      value = values[i].trim();
+                      $el.tokenInput("add", { name: value, id: value });
+                    }
+                  })();
+                }
+              };
+              var selectCallback = function ($el, data) {
+                var name = $el.attr("name");
+                var value = data.value;
+                if (name === "relatedItems:list") {
+                  if (!cleaned_select) {
+                    cleaned_select = true;
+                    $el.empty();
+                  }
+                  $("<option>", { value: value, selected: true })
+                    .text(value)
+                    .appendTo($el);
+                }
+
+                if (name === "themes:list") {
+                  if (!cleaned_themes) {
+                    cleaned_themes = true;
+                    $themes_remove_btn.click();
+                  }
+                  $themes_options
+                    .find("[value='" + value + "']")
+                    .attr("selected", true);
+                  $themes_insert_btn.click();
+                }
+              };
+              restoreState({
+                objName: url_path_name,
+                $el: edit_form,
+                onRestoreCallback: restoreCallback,
+                onSelectTagCallback: selectCallback,
+              });
+              // edit_form.rememberState("restoreState");
+
+              $(this).dialog("close");
+              edit_form.submit();
+            },
+            "No & Remove data": function () {
+              $(this).dialog("close");
+              storage_utils.delLocalStorageEntry(url_path_name);
+            },
+          },
+        });
+      });
     })();
-  }
+  })();
 });
 
 // var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
