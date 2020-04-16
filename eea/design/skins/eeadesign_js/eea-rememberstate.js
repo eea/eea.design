@@ -94,12 +94,10 @@ jQuery(document).ready(function ($) {
           continue;
         }
         if (saved_form_obj.value !== current_form_obj.value) {
-          same_values = false;
-          break;
-          // if (saved_form_obj_name !== "location") {
-          //   same_values = false;
-          //   break;
-          // }
+          if (saved_form_obj_name !== "location") {
+            same_values = false;
+            break;
+          }
         }
       }
       if (same_values) {
@@ -121,9 +119,12 @@ jQuery(document).ready(function ($) {
             } else if ($e.is(":checkbox") && data[i].value) {
               $e.prop("checked", true);
             } else if ($e.is("select")) {
-              if (opts.onSelectTagCallback) {
-                opts.onSelectTagCallback($e, data[i]);
-              } else {
+              if ($e.attr("name").indexOf(":") !== -1) {
+                  if (!$e.data('cleaned')) {
+                    $e.empty();
+                    $e.data('cleaned', true);
+                  }
+              }
                 $select_option = $e.find('[value="' + data[i].value + '"]');
                 if ($select_option.length) {
                   $select_option.prop("selected", true);
@@ -132,7 +133,10 @@ jQuery(document).ready(function ($) {
                     .text(data[i].value)
                     .appendTo($e);
                 }
-              }
+              // }
+              // if (opts.onSelectTagCallback) {
+              //   opts.onSelectTagCallback($e, data[i]);
+              // }
             } else {
               $e.val(data[i].value);
             }
@@ -164,30 +168,21 @@ jQuery(document).ready(function ($) {
                 modified_date = new Date(
                   $("#js-restore-object-modification-timestamp").text()
                 );
-                if (save_date - modified_date < 0) {
-                  $(this).dialog("close");
-                }
+                // if (save_date - modified_date < 0) {
+                //   $(this).dialog("close");
+                // }
               }
             }
           },
           buttons: {
             "Restore & Resubmit": function () {
               var cleaned_select;
-              var cleaned_themes;
-              var $themes_options = $("#themes_options");
-              var $themes_buttons = $(".context");
-              var $themes_insert_btn = $themes_buttons.filter(function (
-                idx,
-                el
-              ) {
-                return el.value === ">>";
-              });
-              var $themes_remove_btn = $themes_buttons.filter(function (
-                idx,
-                el
-              ) {
-                return el.value === "<<";
-              });
+              // var $themes_options = $("#themes_options");
+              // var $themes_buttons = $("#archetypes-fieldname-themes").find(
+              //   ".context"
+              // );
+              // var $themes_insert_btn = $themes_buttons.eq(0);
+              // var $themes_remove_btn = $themes_buttons.eq(1);
               var restoreCallback = function ($el, data) {
                 var name = $el.attr("name");
                 if (
@@ -218,17 +213,21 @@ jQuery(document).ready(function ($) {
                   $("<option>", { value: value, selected: true })
                     .text(value)
                     .appendTo($el);
-                }
-
-                if (name === "themes:list") {
-                  if (!cleaned_themes) {
-                    cleaned_themes = true;
-                    $themes_remove_btn.click();
-                  }
-                  $themes_options
-                    .find("[value='" + value + "']")
-                    .attr("selected", true);
-                  $themes_insert_btn.click();
+                } else if (name.indexOf(":list") !== -1) {
+                  (function () {
+                    var $options = $el;
+                    var $buttons = $el.parent().prev().find(".context");
+                    var $insert_btn = $buttons.eq(0);
+                    var $remove_btn = $buttons.eq(1);
+                    if (!$el.data("cleaned")) {
+                      $el.data("cleaned", true);
+                      $remove_btn.click();
+                    }
+                    $options
+                      .find("[value='" + value + "']")
+                      .prop("selected", true);
+                    $insert_btn.click();
+                  })();
                 }
               };
               restoreState({
@@ -237,7 +236,6 @@ jQuery(document).ready(function ($) {
                 onRestoreCallback: restoreCallback,
                 onSelectTagCallback: selectCallback,
               });
-              // edit_form.rememberState("restoreState");
 
               $(this).dialog("close");
               edit_form.submit();
