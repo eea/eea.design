@@ -202,14 +202,17 @@ $input-color: #f3f3f3;
   #content #languageCodes {max-width:50%; margin-left:0;}
 }
 
+@media screen and (min-width: 530px) and (max-width: 1265px) {
+  .portlet-megatopic {
+    width: 48%;
+    flex: auto;
+  }
+}
+
 @media screen and (max-width: 580px) {
   #megatopics-area {
     display: block;
     flex-wrap: nowrap;
-    width: 100%;
-    }
-
-  .portlet-megatopic img {
     width: 100%;
     }
 
@@ -401,28 +404,6 @@ $input-color: #f3f3f3;
     white-space: pre-wrap;
   }
 
-}
-
-@media screen and (min-width:581px) and (max-width: 899px) {
-  //#megatopics-area {
-  //  display: block;
-  //  flex-wrap: nowrap;
-  //  width: 100%;
-  //}
-
-  .portlet-megatopic ul {
-    height: auto;
-  }
-
-  .portlet-megatopic {
-    //display: block;
-    //float: left;
-    padding-right: 2px;
-    flex: auto;
-    width: 50%;
-    flex-direction: column;
-    white-space: normal;
-    }
 }
 
 @media screen and (max-width: 768px) {

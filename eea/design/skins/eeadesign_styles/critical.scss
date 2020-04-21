@@ -55,7 +55,6 @@
   src: local('Open Sans Regular'), local('OpenSans-Regular'), url("&dtml-portal_url;/GoogleFonts-OpenSans-Regular1-v15.woff2") format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
   }
-/* */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -64,7 +63,6 @@
   src: local('Open Sans Regular'), local('OpenSans-Regular'), url("&dtml-portal_url;/GoogleFonts-OpenSans-Regular2-v15.woff2") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
-/* */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -73,7 +71,6 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url("&dtml-portal_url;/GoogleFonts-OpenSans-Bold1-v15.woff2") format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
   }
-/* */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -533,40 +530,62 @@ ul {
   }
 
 /* megatopic frontarea */
-#megatopics-area {
-  font-size: 0.9em;
-  margin-bottom: 1.5em;
+.megatopics-area {
   display: flex;
   flex-wrap: wrap;
   -ms-flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+}
 
+#megatopics-area {
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+  width: 100%;
   }
-#megatopics-area .portlet, #megatopics-area dd {
+
+.megatopics-area .portlet {
   margin: 0;
   padding: 0;
   min-height: 286px;
   height: 100%;
+  border: 0;
   }
 
 .portlet-megatopic {
-  white-space: nowrap;
   flex: 1;
-  }
+}
+#megatopics-area .portlet-megatopic {
+  margin: 0 1px;
+  border: 1px solid #ececec;
+}
 
-.portlet-megatopic img {
+.portlet-megatopic-header {
+  position: relative;
+  height: 170px;
+  background-size: cover;
+}
+
+.megatopics-area .portletHeader {
+  background-color: rgba(0,0,0, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
   height: auto;
+  padding: 1em;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  min-height: 138px;
-  max-height: 181px;
-  }
-.portlet-megatopic ul {
-  height: auto;
-  margin: 1.5em;
-  padding: 0;
-  white-space: normal;
-  }
+  text-align: left;
+  font-weight: bold !important;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+.portlet-megatopic-body {
+  padding: 1rem;
+}
+.portlet-megatopic .list-items {
+  margin: 0 0 0 1rem;
+}
 
 /* end megatopic frontarea */
 
@@ -587,7 +606,7 @@ ul {
   font-weight: bold;
   margin-bottom: 0;
   }
-.portletHeader, .portlet .portletHeader {
+.portletHeader {
   font-weight: normal;
   margin-bottom: 1em;
   }

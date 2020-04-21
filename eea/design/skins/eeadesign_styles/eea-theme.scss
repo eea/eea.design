@@ -129,11 +129,11 @@ a.downloading img {
   margin: 1em -0.15em 0 0;
   }
 
-#region-content ul {
-  list-style: square inside url(//www.eea.europa.eu/bullet.gif);
+.content-core ul {
+  list-style: square outside url(//www.eea.europa.eu/bullet.gif);
   }
 
-#region-content .documentExportActions li, .documentExportActions li {
+.documentExportActions li {
   display: inline;
   }
 
