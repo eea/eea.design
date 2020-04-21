@@ -29,6 +29,7 @@ jQuery(document).ready(function ($) {
       // "location",
       "id",
       "last_referer",
+      "image_delete",
       // "saveDate",
       "cmfeditions_version_comment",
     ];
@@ -108,37 +109,44 @@ jQuery(document).ready(function ($) {
           var data = JSON.parse(localStorage.getItem(opts.objName)),
             $f = opts.$el,
             $e,
+            val,
+            name,
+            previous_el,
             $select_option;
           for (var i in data) {
-            $e = $f.find('[name="' + data[i].name + '"]');
+            name = data[i].name;
+            val = data[i].value;
+            $e = $f.find('[name="' + name + '"]');
             if ($e.is(":radio")) {
-              $e.filter('[value="' + data[i].value + '"]').prop(
-                "checked",
-                true
-              );
-            } else if ($e.is(":checkbox") && data[i].value) {
-              $e.prop("checked", true);
+              $e.filter('[value="' + name + '"]').prop("checked", true);
+            } else if ($e.is(":checkbox")) {
+              $e.prop("checked", val === "on");
+            } else if ($e.is(":hidden") && name.indexOf(":default") !== -1) {
+              previous_el = data[i - 1];
+              if (previous_el.name + ":default" !== name) {
+                $e.prev().prop("checked", false);
+              }
             } else if ($e.is("select")) {
               if ($e.attr("name").indexOf(":") !== -1) {
-                  if (!$e.data('cleaned')) {
-                    $e.empty();
-                    $e.data('cleaned', true);
-                  }
-              }
-                $select_option = $e.find('[value="' + data[i].value + '"]');
-                if ($select_option.length) {
-                  $select_option.prop("selected", true);
-                } else {
-                  $("<option>", { value: data[i].value, selected: true })
-                    .text(data[i].value)
-                    .appendTo($e);
+                if (!$e.data("cleaned")) {
+                  $e.empty();
+                  $e.data("cleaned", true);
                 }
+              }
+              $select_option = $e.find('[value="' + val + '"]');
+              if ($select_option.length) {
+                $select_option.prop("selected", true);
+              } else {
+                $("<option>", { value: val, selected: true })
+                  .text(val)
+                  .appendTo($e);
+              }
               // }
               // if (opts.onSelectTagCallback) {
               //   opts.onSelectTagCallback($e, data[i]);
               // }
             } else {
-              $e.val(data[i].value);
+              $e.val(val);
             }
             $e && opts.onRestoreCallback && opts.onRestoreCallback($e, data[i]);
             $e.change();
