@@ -1,6 +1,9 @@
 Changelog
 =========
 
+26.0-dev0 - (unreleased)
+---------------------------
+
 25.9 - (2020-04-07)
 ---------------------------
 * Change: frontpage megatopics consolidation with themes_view markup
