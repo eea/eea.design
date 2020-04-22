@@ -64,19 +64,6 @@ if (window.EEA === undefined) {
       return this.local_storage.removeItem(key);
     },
 
-    getLocalStorageEntryValue: function (storage, value) {
-      var values = JSON.parse(storage);
-      var match, current, i, length;
-      for (i = 0, length = values.length; i < length; i += 1) {
-        current = values[i];
-        if (current.name === value) {
-          match = current.value;
-          break;
-        }
-      }
-      return match;
-    },
-
     cleanup: function () {
       var search_path = window.location.search;
       var saved_search_path = search_path.indexOf("Changes%20saved");
@@ -98,5 +85,5 @@ if (window.EEA === undefined) {
     },
   };
 
-  // $(EEA.RememberState.cleanup);
+  $(EEA.RememberState.cleanup);
 })(jQuery);
