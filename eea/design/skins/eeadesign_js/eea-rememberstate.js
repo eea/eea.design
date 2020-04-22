@@ -195,29 +195,9 @@ jQuery(document).ready(function ($) {
           },
           buttons: {
             "Restore & Resubmit": function () {
-              var restoreCallback = function ($el, data) {
-                var name = $el.attr("name");
-                if (
-                  name === "subject_keywords:lines" ||
-                  name === "temporalCoverage:lines"
-                ) {
-                  (function () {
-                    $el.tokenInput("clear");
-                    var data_value = data.value;
-                    var values = data_value.split("\r");
-                    var i, length, value;
-
-                    for (i = 0, length = values.length; i < length; i += 1) {
-                      value = values[i].trim();
-                      $el.tokenInput("add", { name: value, id: value });
-                    }
-                  })();
-                }
-              };
               restoreState({
                 objName: url_path_name,
-                $el: edit_form,
-                onRestoreCallback: restoreCallback
+                $el: edit_form
               });
 
               $(this).dialog("close");
