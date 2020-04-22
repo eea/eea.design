@@ -42,9 +42,9 @@ if (window.EEA === undefined) {
       }
       $.ajax({
         url: baseUrl + "/@@plone_lock_operations/create_lock",
-        async: false,
+        async: false
       });
-    },
+    }
   };
 
   $(EEA.LockHandler.init);
@@ -82,7 +82,7 @@ if (window.EEA === undefined) {
           EEA.RememberState.delLocalStorageEntry(baseUrl);
         }
       }
-    },
+    }
   };
 
   $(EEA.RememberState.cleanup);
