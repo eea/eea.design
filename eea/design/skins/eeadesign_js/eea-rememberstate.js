@@ -1,5 +1,5 @@
 "use strict";
-/*global jQuery  */
+/*global jQuery, document, window  */
 /* EXTERNAL DEPENDENCIES:
  * - jquery-ui.js dialog,
  * BROWSER FEATURES: JSON, localStorage */
@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
       "id",
       "last_referer",
       "image_delete",
-      "cmfeditions_version_comment",
+      "cmfeditions_version_comment"
     ];
     var cleanup_form = function (form) {
       var values = form.serializeArray();
@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
       var filtered_form_values = cleanup_form(edit_form);
       filtered_form_values.push({
         name: "saveDate",
-        value: new Date().toString(),
+        value: new Date().toString()
       });
       storage_utils.setLocalStorageEntry(
         url_path_name,
@@ -122,7 +122,7 @@ jQuery(document).ready(function ($) {
       }
       $.get(url_path_name + "/restore_form_values").done(function (data) {
         var restoreState = function (opts) {
-          var data = JSON.parse(localStorage.getItem(opts.objName)),
+          var data = JSON.parse(window.localStorage.getItem(opts.objName)),
             $f = opts.$el,
             $e,
             entry,
@@ -131,41 +131,43 @@ jQuery(document).ready(function ($) {
             previous_el,
             $select_option;
           for (var i in data) {
-            entry = data[i];
-            name = entry.name;
-            val = entry.value;
-            $e = $f.find('[name="' + name + '"]');
-            if ($e.is(":radio")) {
-              $e.filter('[value="' + val + '"]').prop("checked", true);
-            } else if ($e.is(":checkbox")) {
-              $e.prop("checked", val === "on");
-            } else if ($e.is(":hidden") && name.indexOf(":default") !== -1) {
-              // this code is needed for checkboxes that need to be disabled
-              // in case there is a checkbox to enable than the previous data
-              // entry will be the current name plus :default
-              previous_el = data[i - 1];
-              if (previous_el.name + ":default" !== name) {
-                $e.prev().prop("checked", false);
-              }
-            } else if ($e.is("select")) {
-              if ($e.attr("name").indexOf(":") !== -1) {
-                if (!$e.data("cleaned")) {
-                  $e.empty();
-                  $e.data("cleaned", true);
+            if (data.hasOwnProperty(i)) {
+              entry = data[i];
+              name = entry.name;
+              val = entry.value;
+              $e = $f.find('[name="' + name + '"]');
+              if ($e.is(":radio")) {
+                $e.filter('[value="' + val + '"]').prop("checked", true);
+              } else if ($e.is(":checkbox")) {
+                $e.prop("checked", val === "on");
+              } else if ($e.is(":hidden") && name.indexOf(":default") !== -1) {
+                // this code is needed for checkboxes that need to be disabled
+                // in case there is a checkbox to enable than the previous data
+                // entry will be the current name plus :default
+                previous_el = data[i - 1];
+                if (previous_el.name + ":default" !== name) {
+                  $e.prev().prop("checked", false);
                 }
-              }
-              $select_option = $e.find('[value="' + val + '"]');
-              if ($select_option.length) {
-                $select_option.prop("selected", true);
+              } else if ($e.is("select")) {
+                if ($e.attr("name").indexOf(":") !== -1) {
+                  if (!$e.data("cleaned")) {
+                    $e.empty();
+                    $e.data("cleaned", true);
+                  }
+                }
+                $select_option = $e.find('[value="' + val + '"]');
+                if ($select_option.length) {
+                  $select_option.prop("selected", true);
+                } else {
+                  $("<option>", { value: val, selected: true })
+                    .text(val)
+                    .appendTo($e);
+                }
               } else {
-                $("<option>", { value: val, selected: true })
-                  .text(val)
-                  .appendTo($e);
+                $e.val(val);
               }
-            } else {
-              $e.val(val);
+              $e.change();
             }
-            $e.change();
           }
         };
 
@@ -215,7 +217,7 @@ jQuery(document).ready(function ($) {
               restoreState({
                 objName: url_path_name,
                 $el: edit_form,
-                onRestoreCallback: restoreCallback,
+                onRestoreCallback: restoreCallback
               });
 
               $(this).dialog("close");
@@ -224,8 +226,8 @@ jQuery(document).ready(function ($) {
             "No & Remove data": function () {
               $(this).dialog("close");
               storage_utils.delLocalStorageEntry(url_path_name);
-            },
-          },
+            }
+          }
         });
       });
     })();
