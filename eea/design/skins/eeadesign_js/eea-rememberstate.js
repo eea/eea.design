@@ -2,8 +2,6 @@
 /*global jQuery  */
 /* EXTERNAL DEPENDENCIES:
  * - jquery-ui.js dialog,
- * - ++resource++jquery.remember-state.js
- * - ++resource++jquery.tokeninput.js - for subject and temporalField
  * BROWSER FEATURES: JSON, localStorage */
 
 /*
@@ -26,11 +24,9 @@ jQuery(document).ready(function ($) {
   }
   (function () {
     var skip_field_names = [
-      // "location",
       "id",
       "last_referer",
       "image_delete",
-      // "saveDate",
       "cmfeditions_version_comment",
     ];
     var cleanup_form = function (form) {
@@ -43,9 +39,6 @@ jQuery(document).ready(function ($) {
     var save_btn = $(".context").filter("[name='form.button.save']");
     save_btn.click(function (e) {
       e.preventDefault();
-      // if (edit_form.rememberState) {
-      //   edit_form.rememberState(options);
-      // }
       var filtered_form_values = cleanup_form(edit_form);
       filtered_form_values.push({
         name: "saveDate",
@@ -84,17 +77,40 @@ jQuery(document).ready(function ($) {
       } else {
         length = saved_form_objs_length;
       }
+      function check_temporal_values(sval, cval) {
+        var values = sval.split("-");
+        var value = values[0] + "-" + values[values.length - 1];
+        return value === cval;
+      }
 
       for (i = 0; i < length; i++) {
         saved_form_obj = saved_form_objs[i];
         current_form_obj = current_form_objs[i];
         saved_form_obj_name = saved_form_obj.name;
-        // we skip location entry check since the keys are not ordered in the
-        // same plus the saved entries are escaped
+        // skip checking fields that will not be the same within current form
         if (skip_field_names.indexOf(saved_form_obj_name) !== -1) {
           continue;
         }
+
+        // handle temporal Coverage for cases where we have a transform
+        // of values from 1990-2000 2001-2010 to 1990-2010 on current form
+        if (saved_form_obj_name === "temporalCoverage:lines") {
+          if (saved_form_obj.value !== current_form_obj.value) {
+            same_values = check_temporal_values(
+              saved_form_obj.value,
+              current_form_obj.value
+            );
+            if (same_values) {
+              continue;
+            } else {
+              same_values = false;
+              break;
+            }
+          }
+        }
         if (saved_form_obj.value !== current_form_obj.value) {
+          // we skip location entry check since the keys are not ordered in the
+          // same plus the saved entries are escaped
           if (saved_form_obj_name !== "location") {
             same_values = false;
             break;
@@ -109,19 +125,24 @@ jQuery(document).ready(function ($) {
           var data = JSON.parse(localStorage.getItem(opts.objName)),
             $f = opts.$el,
             $e,
+            entry,
             val,
             name,
             previous_el,
             $select_option;
           for (var i in data) {
-            name = data[i].name;
-            val = data[i].value;
+            entry = data[i];
+            name = entry.name;
+            val = entry.value;
             $e = $f.find('[name="' + name + '"]');
             if ($e.is(":radio")) {
-              $e.filter('[value="' + name + '"]').prop("checked", true);
+              $e.filter('[value="' + val + '"]').prop("checked", true);
             } else if ($e.is(":checkbox")) {
               $e.prop("checked", val === "on");
             } else if ($e.is(":hidden") && name.indexOf(":default") !== -1) {
+              // this code is needed for checkboxes that need to be disabled
+              // in case there is a checkbox to enable than the previous data
+              // entry will be the current name plus :default
               previous_el = data[i - 1];
               if (previous_el.name + ":default" !== name) {
                 $e.prev().prop("checked", false);
@@ -141,14 +162,9 @@ jQuery(document).ready(function ($) {
                   .text(val)
                   .appendTo($e);
               }
-              // }
-              // if (opts.onSelectTagCallback) {
-              //   opts.onSelectTagCallback($e, data[i]);
-              // }
             } else {
               $e.val(val);
             }
-            $e && opts.onRestoreCallback && opts.onRestoreCallback($e, data[i]);
             $e.change();
           }
         };
@@ -157,7 +173,7 @@ jQuery(document).ready(function ($) {
         portlet_restore.dialog({
           open: function (event) {
             var entries = storage_utils.getLocalStorageEntry(url_path_name);
-            var entry, value, save_date, modified_date;
+            var entry, value;
             if (entries) {
               entries = JSON.parse(entries);
               entry = entries[entries.length - 1];
@@ -172,25 +188,11 @@ jQuery(document).ready(function ($) {
                       value.toLocaleTimeString() +
                       ")"
                   );
-                save_date = new Date(value);
-                modified_date = new Date(
-                  $("#js-restore-object-modification-timestamp").text()
-                );
-                // if (save_date - modified_date < 0) {
-                //   $(this).dialog("close");
-                // }
               }
             }
           },
           buttons: {
             "Restore & Resubmit": function () {
-              var cleaned_select;
-              // var $themes_options = $("#themes_options");
-              // var $themes_buttons = $("#archetypes-fieldname-themes").find(
-              //   ".context"
-              // );
-              // var $themes_insert_btn = $themes_buttons.eq(0);
-              // var $themes_remove_btn = $themes_buttons.eq(1);
               var restoreCallback = function ($el, data) {
                 var name = $el.attr("name");
                 if (
@@ -210,39 +212,10 @@ jQuery(document).ready(function ($) {
                   })();
                 }
               };
-              var selectCallback = function ($el, data) {
-                var name = $el.attr("name");
-                var value = data.value;
-                if (name === "relatedItems:list") {
-                  if (!cleaned_select) {
-                    cleaned_select = true;
-                    $el.empty();
-                  }
-                  $("<option>", { value: value, selected: true })
-                    .text(value)
-                    .appendTo($el);
-                } else if (name.indexOf(":list") !== -1) {
-                  (function () {
-                    var $options = $el;
-                    var $buttons = $el.parent().prev().find(".context");
-                    var $insert_btn = $buttons.eq(0);
-                    var $remove_btn = $buttons.eq(1);
-                    if (!$el.data("cleaned")) {
-                      $el.data("cleaned", true);
-                      $remove_btn.click();
-                    }
-                    $options
-                      .find("[value='" + value + "']")
-                      .prop("selected", true);
-                    $insert_btn.click();
-                  })();
-                }
-              };
               restoreState({
                 objName: url_path_name,
                 $el: edit_form,
                 onRestoreCallback: restoreCallback,
-                onSelectTagCallback: selectCallback,
               });
 
               $(this).dialog("close");
@@ -258,10 +231,3 @@ jQuery(document).ready(function ($) {
     })();
   })();
 });
-
-// var edit_form_data = storage_utils.getLocalStorageEntry(url_path_name);
-// var portlet_restore = $("#js-portletRestoreForm");
-// if (edit_form_data) {
-//     portlet_restore.find('.portletRestoreForm-entry').html(storage_utils.getLocalStorageEntryValue(edit_form_data, 'saveDate'))
-//         .end().removeClass('visualHidden');
-// }
