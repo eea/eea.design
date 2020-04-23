@@ -1,7 +1,7 @@
 Changelog
 =========
 
-26.1-dev0 - (unreleased)
+26.1 - (2020-04-23)
 ---------------------------
 * Bugfix: calendar_formfield.js update hidden input now sets date as given by
   plone datefield widget instead of using iso date format
