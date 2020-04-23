@@ -1,6 +1,11 @@
 Changelog
 =========
 
+26.0 - (2020-04-23)
+---------------------------
+* Change: Develop #106898
+  [alecghica]
+
 25.9 - (2020-04-07)
 ---------------------------
 * Change: frontpage megatopics consolidation with themes_view markup
