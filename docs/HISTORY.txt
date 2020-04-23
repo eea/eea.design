@@ -1,6 +1,9 @@
 Changelog
 =========
 
+26.2-dev0 - (unreleased)
+---------------------------
+
 26.1 - (2020-04-23)
 ---------------------------
 * Bugfix: calendar_formfield.js update hidden input now sets date as given by
