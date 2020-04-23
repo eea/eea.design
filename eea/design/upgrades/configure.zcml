@@ -4,6 +4,18 @@
         i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="25.7"
+    destination="26.0"
+    profile="eea.design:default">
+
+    <genericsetup:upgradeDepends
+      title="Import all steps from eea.design profile upgrade 26.0"
+      description="Removed jquery.remember-state.js"
+      import_profile="eea.design:upgrade260"
+    />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="25.0"
     destination="25.7"
     profile="eea.design:default">
