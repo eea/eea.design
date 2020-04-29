@@ -17,6 +17,11 @@
   #portal-column-two {
     display: none;
   }
+
+  #languageCodes,
+  #themes-tags {
+    display: none;
+  }
   #portal-column-content {
     float: none;
     margin: 0 auto;
@@ -55,7 +60,10 @@
   .documentFirstHeading {
     padding-right: 0;
     min-width: 85%;
-    margin-bottom: 0.67em;
+    margin: 1.25rem 0 3.75rem 0;
+    letter-spacing: -1px;
+    font-size: 2.5rem;
+
   }
   .documentFirstHeading .anchorjs-link {
     display: none !important;
@@ -106,6 +114,9 @@
   }
   .documentDescription {
     margin-bottom: 3em;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.5rem;
   }
   .documentFirstHeading,
   .content-header .documentDescription
@@ -175,7 +186,7 @@
 @media (min-width: 1024px) {
   .mini-header {
     #portal-column-content {
-      min-width: 870px;
+      min-width: 830px;
     }
 
     .keyFact:before,
