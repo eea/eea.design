@@ -94,7 +94,8 @@ class Frontpage(BrowserView):
             ex: getLatest('datasets')
         """
         if not language:
-            language = self.context.getLanguage()
+            language = getattr(self.context, 'getLanguage',
+                                       lambda: '')()
         product = self.getProductConfiguration(name, products_category)
         return self.getProductContent(product, language=language) if product \
             else None

@@ -215,6 +215,7 @@
                                             Generic KSS Title. Is rendered with class="documentFirstHeading".
                                         </h1>
                                     </metal:title>
+                                  <div class="content-header-body">
                                     <tal:not4AjaxLoad  tal:condition="not:ajax_load">
                                         <tal:not4Print tal:condition="python:not isPrint">
                                             <div tal:replace="structure provider:plone.belowcontenttitle" />
@@ -234,6 +235,7 @@
                                     </metal:description>
 
                                     <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
+                                    </div>
                                 </div>
 
                                 <div id="content-core" class="content-core">

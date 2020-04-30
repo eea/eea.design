@@ -18,9 +18,43 @@
     display: none;
   }
 
-  #languageCodes,
+  .content-header-body {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content-header-body:before {
+    width: 100vw;
+    content: " ";
+    background-color: white;
+    position: absolute;
+    height: 110%;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 49.3vw);
+    top: -15px;
+    z-index: -2;
+  }
+
+  .documentByLine .portalType,
+  .publishDate .byline-separator,
+  .documentByLineAuthors,
   #themes-tags {
     display: none;
+  }
+
+  .documentExportActions {
+    margin-top: -1em;
+  }
+  .documentExportActions .export-action-title {
+    display: inline;
+  }
+
+  .documentByLineModified {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .eea-icon-file-pdf-o {
+    font-size: 1.5rem;
   }
   #portal-column-content {
     float: none;
@@ -50,6 +84,11 @@
     position: relative;
     z-index: 0;
     //margin-bottom: 3em;
+  }
+
+  .content-header {
+    padding-bottom: 0;
+    margin-top: 200px;
   }
   .keyFact li {
     font-size: 1rem;
@@ -164,13 +203,14 @@
   }
 }
 
-.userrole-anonymous.mini-header {
+.mini-header {
   #article-language {
     margin-top: 5px;
     margin-bottom: 7px;
     position: absolute;
     right: 8px;
     order: 0;
+    display: none;
   }
 
   #article-language .eea-icon:before,
