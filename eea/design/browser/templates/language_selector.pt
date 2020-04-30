@@ -9,7 +9,7 @@
     translations python:len(context.portal_languages.getSupportedLanguages()) &gt; 1"
     tal:condition="python:(context.getId() != 'portal_languages') and context.plone_utils.isTranslatable(context)">
 
-        <tal:anonLanguageCodes tal:condition="python:data and isAnon">
+        <tal:LanguageCodes tal:condition="python:data">
             <div id="article-language">
                 <span class="eea-icon eea-icon-globe eea-icon-lg"></span>
                 <a href="#" i18n:translate="">Change language</a>
@@ -19,7 +19,9 @@
                 <div class="panel-top"><!-- --></div>
                 <div class="panel-content shadow">
                     <ul id="languageCodes">
-                        <tal:anonymous tal:repeat="lang data">
+                        <tal:language tal:repeat="lang data">
+                          <tal:defines
+                             tal:define="available lang/available">
                             <li tal:attributes="class python: lang['current'] and 'selected' or None"
                             tal:condition="lang/available">
                                 <a href="" class="translated"
@@ -27,38 +29,20 @@
                                 title lang/alt"
                                 tal:omit-tag="lang/current"> <tal:langtitle tal:content="lang/Title"></tal:langtitle> <tal:langcode  tal:content="string:(${lang/Language})"></tal:langcode> </a>
                             </li>
-                        </tal:anonymous>
+                            <tal:auth tal:condition="python: not isAnon">
+                              <li tal:condition="not:available">
+                              <span
+                                   tal:attributes="title lang/alt;
+                                      class string:noTranslation"
+                                   tal:content="string:${lang/Language}"> Language code</span>
+                              </li>
+                            </tal:auth>
+                          </tal:defines>
+                        </tal:language>
                     </ul>
                 </div>
             </div>
-        </tal:anonLanguageCodes>
+        </tal:LanguageCodes>
 
-        <tal:admin tal:condition="not: isAnon">
-            <ul id="languageCodes">
-                <tal:cms tal:repeat="lang data">
-                    <li tal:attributes="class python: lang['current'] and 'selected' or None"
-                    tal:define="available lang/available">
-                        <span tal:condition="not:available"
-                        tal:attributes="title lang/alt;
-                        class string:noTranslation"
-                        tal:content="string:${lang/Language}"> Language code</span>
-
-                        <a href=""
-                        tal:attributes="href lang/change_url;
-                        title lang/alt;
-                        class string:translated"
-                        tal:omit-tag="lang/current" tal:condition="available">
-                        <tal:langcode tal:content="string:${lang/Language}" i18n:translate="">
-                            Language code
-                        </tal:langcode>
-                        <img src="" 
-                             tal:attributes="src string:${portal_url}/error_icon.gif" 
-                             alt="Invalid translation"
-                             i18n:attributes="alt" 
-                             tal:condition="lang/invalid" /></a>
-                    </li>
-                </tal:cms>
-            </ul>
-        </tal:admin>
     </tal:languages>
 </metal:language>
