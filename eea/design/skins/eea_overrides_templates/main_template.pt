@@ -203,6 +203,7 @@
 
                             <metal:bodytext define-slot="main">
                                 <div class="content-header">
+                                  <p class="mini-portal-type" tal:define="friendly_type context/Type|nothing;" tal:content="friendly_type" tal:condition="mini_header"></p>
                                     <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
                                     <metal:title define-slot="content-title">
                                         <metal:comment tal:content="nothing">
