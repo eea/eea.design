@@ -33,6 +33,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .content-header-body:before {
     width: 100vw;
@@ -52,6 +53,14 @@
   #themes-tags {
     display: none;
   }
+
+  #plone-document-byline {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: initial;
+  }
   #plone-document-byline::before {
     position: absolute;
     width: 122%;
@@ -64,30 +73,33 @@
 
   .documentExportActions {
     margin: -1em 0 0.5em 1em;
+    order: 5;
   }
   .documentExportActions .export-action-title {
     display: inline;
   }
 
+  .documentByLineImageCopyright,
   .documentByLineModified {
     display: inline-block;
-    margin-left: 1em;
   }
+  .documentByLineReadingStats {
+    margin-right: 0.75em;
+  }
+
   .eea-icon-file-pdf-o {
     font-size: 1rem;
   }
   #portal-column-content {
     float: none;
     margin: 0 auto;
-    min-width: 90%;
+    min-width: initial;
+    max-width: 830px;
+    width: 100%;
   }
 
   .fullwidth-img-container {
     padding-bottom: 100px;
-  }
-
-  .fiche-body .fullwidth-img-container {
-    padding-bottom: 0;
   }
 
   .fiche-summary {
@@ -228,15 +240,15 @@
   #tip-article-language {
     top: initial !important;
     bottom: -100px;
-    right: 13% !important;
+    right: 6.5% !important;
   }
   #article-language {
-    margin-top: 5px;
-    margin-bottom: 7px;
-    position: absolute;
-    order: 0;
-    bottom: 0;
-    right: 13%;
+    margin-top: 0;
+    position: relative;
+    order: 4;
+  }
+  .documentExportActions + #article-language {
+    margin-left: 0.75em;
   }
 
   #article-language .eea-icon:before,
@@ -276,27 +288,44 @@
 
 @media (max-width: 660px) {
    .mini-header {
+
+     .content-header-body {
+       justify-content: flex-start;
+     }
      #content .documentByLine {
        max-width: 100%;
      }
 
      #article-language {
-       left: 60px;
+       margin-left: 1em;
      }
      .documentExportActions {
        display: flex;
        justify-content: flex-start;
-       flex-basis: 100%;
        margin-left: 0;
      }
    }
 
+}
+
+@media (min-width: 661px) {
+  .mini-header {
+
+    #content .documentByLine {
+      max-width: initial;
+      flex-basis: 0;
+    }
+  }
 }
 @media (min-width: 1024px) {
   .mini-header {
     #portal-column-content {
       min-width: 830px;
     }
+
+      #content .documentByLine {
+        max-width: initial;
+      }
 
     .keyFact:before,
     .content-header:before {
