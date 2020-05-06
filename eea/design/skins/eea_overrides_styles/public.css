@@ -108,7 +108,7 @@ body#content {
     margin: 1em;
 }
 
-#content p,
+.documentContent p,
 #content table,
 #content dl,
 dl.portlet p,

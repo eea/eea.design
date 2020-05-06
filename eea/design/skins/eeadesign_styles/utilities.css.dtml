@@ -121,7 +121,7 @@
 }
 
 .bg-blue {
-    background-color: &dtml-corporateBlue;;
+    background-color: &dtml-corporateDarkBlue;;
 }
 
 .bg-green {

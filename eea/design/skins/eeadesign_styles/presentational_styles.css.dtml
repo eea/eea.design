@@ -199,7 +199,7 @@ blockquote {
     width: 100%;
     margin: 1.0em auto;
     padding: 1.5em 2em;
-    color: #000000;
+    color: #333;
     clear:both;
 }
 
@@ -209,36 +209,37 @@ blockquote,
 .pullquote {
     line-height: 1.4;
     position: relative;
-    background-color: #f3f3f3;
+    background-color: #FFF;
     padding: 2em;
     font-size: 1rem;
 }
 blockquote > p:first-of-type {
     position: relative;
-    padding: 0 0.5em;
+    padding: 0;
     margin-bottom: 0 !important;
 }
 
 blockquote > p:first-of-type:before,
 blockquote > p:first-of-type:after {
-  display: inline-block;
-  vertical-align: top;
-  height: 30px;
-  line-height: 48px;
-  font-size: 50px;
-  opacity: .2;
-  position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    height: 30px;
+    line-height: 20px;
+    font-size: 25px;
+    position: absolute;
+    font-family: FontAwesome;
+    font-weight: bold;
 }
 
 blockquote > p:first-of-type:before {
-  content: '\201C';
+  content: "\f10d";
   top: -20px;
-  left: -20px;
+  left: -15px;
 }
 
 blockquote > p:first-of-type:after {
-    content: '\201D';
-    right: -20px;
+    content: "\f10e";
+    right: -15px;
     bottom: -20px;
 }
 
@@ -286,18 +287,6 @@ blockquote.pullquote,
 
 }
 
-@media (min-width: 769px) {
-    .box--left,
-    .pullquote-left {
-        margin-left: -3em;
-    }
-    .box--right,
-    blockquote.pullquote,
-    .pullquote-right {
-        margin-right: -3em;
-    }
-}
-
 .callout {
     background: #eee;
     padding: 1em;
@@ -309,17 +298,40 @@ blockquote.pullquote,
     line-height: 1.4;
 }
 
-.keyFact,
-.keyFact .discreet,
+.bg-blue,
+.bg-blue a
+{
+    color: #e6e6e6 !important;
+}
+
+.box--full.bg-green,
+.box--left.bg-green,
+.box--right.bg-green
+{
+    background-color: &dtml-greyBackgroundColor;;
+    border-top: &dtml-corporateGreen; solid 0.25rem;
+    padding: 45px 30px 45px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.box--full.bg-green p:last-child,
+.box--left.bg-green p:last-child,
+.box--right.bg-green p:last-child {
+    margin-bottom: 0;
+}
+
+.box--full.bg-green h2,
+.box--left.bg-green h2,
+.box--right.bg-green h2 {
+    color: &dtml-corporateGreen;;
+    font-weight: normal;
+}
+
 .keyFact h1,
 .keyFact h2,
-.keyFact h3,
-.bg-blue,
-.bg-green,
-.keyFact a,
-.bg-blue a,
-.bg-green a {
-    color: #FFF !important;
+.keyFact h3 {
+    color: &dtml-corporateGreen;;
 }
 
 .keyFact a,
@@ -328,9 +340,10 @@ blockquote.pullquote,
     border-bottom: 1px solid #FFF !important;
 }
 .keyFact {
-    background: &dtml-corporateBlue;;
+    background: &dtml-greyBackgroundColor;;
     padding: 1.5em;
     clear: both;
+    color: #000;
 }
 
 /* pre is the tag used when selecting the literal style */
