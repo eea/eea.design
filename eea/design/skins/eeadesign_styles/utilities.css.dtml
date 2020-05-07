@@ -116,15 +116,15 @@
     color: &dtml-fontDarkColor; !important;
 }
 
-.bg-grey {
+.bg-secondary {
     background-color: &dtml-greyBackgroundColor;;
 }
 
-.bg-blue {
+.bg-primary {
     background-color: &dtml-corporateDarkBlue;;
 }
 
-.bg-green {
+.bg-tertiary {
     background-color: &dtml-corporateGreen;;
 }
 /* </dtml-let> */

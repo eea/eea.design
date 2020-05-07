@@ -286,9 +286,11 @@ th a, th a:link, th a:visited {
     background: none;
     font-style: normal;
     font-weight:normal;
-    font-size: small !important;
+    font-size: 0.9375rem !important;
     padding: 1em 1em 0 1em;
     margin-bottom: 0 !important;
+    position: relative;
+
 }
 
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
@@ -370,11 +372,14 @@ th a, th a:link, th a:visited {
 
 .emphasis-area {
     background-color: rgba(0,0,0, 0.7);
-    padding: 2em;
-    font-size: 1rem;
-    color: #FFF;
-    margin: 2em 0;
+    padding: 1.875rem;
+    font-size: 1.875rem;
+    color: #e6e6e6;
+    margin: 1.875rem 0;
+    font-weight: 300;
+    line-height: 1.16;
 }
+
 @media (max-width: 1023px) {
     .emphasis-area {
         width: 100%;

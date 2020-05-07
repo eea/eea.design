@@ -152,6 +152,10 @@ dl.actionMenu #assessmentpart {
 .frontpage .progressbar-viewlet {
     margin-bottom: 1em;
 }
+.mini-header .progressbar-viewlet {
+    margin-bottom: 4em; /* add larger bottom margin in order to avoid portalType
+     overlap */
+}
 /* @end progressbar-viewlet */
 
 /* #17702 Make diff tool look more familiar to users */
