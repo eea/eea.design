@@ -1,6 +1,17 @@
 /*! <dtml-with base_properties> (do not remove this :) */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+
+/* latin & latin-ext light */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url("&dtml-portal_url;/GoogleFonts-OpenSans-v17-latin-ext_latin-300.woff2") format('woff2'),
+  url('&dtml-portal_url;/GoogleFonts-OpenSans-v17-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Open Sans';
