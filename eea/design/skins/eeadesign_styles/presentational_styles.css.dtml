@@ -209,7 +209,6 @@ blockquote,
 .pullquote {
     line-height: 1.4;
     position: relative;
-    background-color: #FFF;
     padding: 2em;
     font-size: 1rem;
 }
@@ -239,7 +238,7 @@ blockquote > p:first-of-type:before {
 
 blockquote > p:last-child:after {
     content: "\f10e";
-    right: -25px;
+    right: -18px;
     bottom: -18px;
 }
 
@@ -298,10 +297,14 @@ blockquote.pullquote,
     line-height: 1.4;
 }
 
+.bg-blue,
+.bg-blue a,
 .bg-primary,
 .bg-primary a,
 .fullwidth-bg.bg-tertiary,
-.fullwidth-bg.bg-tertiary a
+.fullwidth-bg.bg-tertiary a,
+.fullwidth-bg.bg-green,
+.fullwidth-bg.bg-green a
 {
     color: #e6e6e6 !important;
 }

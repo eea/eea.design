@@ -379,6 +379,12 @@ th a, th a:link, th a:visited {
     font-weight: 300;
     line-height: 1.16;
 }
+/* normalize blockquote in case we add it inside emphasis area */
+.emphasis-area blockquote {
+    font-size: inherit;
+    color: inherit;
+    padding: 0 1rem;
+}
 
 @media (max-width: 1023px) {
     .emphasis-area {

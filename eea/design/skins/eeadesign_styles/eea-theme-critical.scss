@@ -24,16 +24,16 @@ $corporateBlue: #004b87;
 
   h2 {
     font-size: 1.9rem;
-    line-height: 2.2rem;
+    line-height: 1.1666;
     color: #000;
     letter-spacing: -1px;
-    margin-bottom: 2.5rem;
+    //margin-bottom: 2.5rem;
   }
 
   .content-core {
     p {
       font-size: 1.25rem;
-      line-height: 2rem;
+      line-height: 1.6;
       //margin-bottom: 2.5rem;
     }
     li {
@@ -60,15 +60,15 @@ $corporateBlue: #004b87;
     font-size: 1rem;
   }
   .figureHeading {
-    margin-top: 50px;
-    margin-bottom: 40px;
-    font-size: 18px;
-    line-height: 30px;
+    //margin-top: 50px;
+    //margin-bottom: 40px;
+    font-size: 1.125rem;
+    line-height: 1.666;
     color: #000;
   }
-  iframe, img {
-    margin-bottom: 3.75rem;
-  }
+  //iframe, img {
+  //  margin-bottom: 3.75rem;
+  //}
 
 
   .mini-portal-type {
@@ -167,7 +167,7 @@ $corporateBlue: #004b87;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    z-index: 0;
+    z-index: 1;
   }
 
   .content-header {
@@ -233,7 +233,7 @@ $corporateBlue: #004b87;
   //  border: 0;
   //}
   .keyFact:before {
-    background-color: $corporateGrey;
+    background-color: inherit;
   }
   #themes-tags {
     order: 0;
@@ -244,7 +244,7 @@ $corporateBlue: #004b87;
     margin-bottom: 3em;
     font-size: 1.125rem;
     font-weight: normal;
-    line-height: 1.5rem;
+    line-height: 1.333;
   }
   .documentFirstHeading,
   .content-header .documentDescription
@@ -294,8 +294,7 @@ $corporateBlue: #004b87;
 
 .mini-header {
   #tip-article-language {
-    top: initial !important;
-    bottom: -100px;
+    top: 90% !important;
     right: 6.5% !important;
   }
   #article-language {

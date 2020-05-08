@@ -116,14 +116,24 @@
     color: &dtml-fontDarkColor; !important;
 }
 
+.bg-grey, /* LEGACY use bg-secondary instead */
 .bg-secondary {
     background-color: &dtml-greyBackgroundColor;;
 }
 
+/* debug css */
+/*.bg-grey,*/
+/*.bg-blue,*/
+/*.bg-green {*/
+/*    border: 2px solid red;*/
+/*}*/
+
+.bg-blue, /* LEGACY use bg-primary instead */
 .bg-primary {
     background-color: &dtml-corporateDarkBlue;;
 }
 
+.bg-green, /* LEGACY use bg-tertiary instead */
 .bg-tertiary {
     background-color: &dtml-corporateGreen;;
 }

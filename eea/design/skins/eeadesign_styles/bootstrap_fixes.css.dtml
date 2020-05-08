@@ -103,6 +103,20 @@ input.removecriteria {
 
 /* ++resource++workflow-graph.css  */
 
+
+/* presentational_styles.css */
+/* template blockquote and pullquote now needs to be white instead of grey */
+.bg-grey blockquote,
+.bg-grey .pullquote {
+    background-color: #FFF;
+    margin: 0;
+}
+.bg-grey {
+    margin-bottom: 1rem;
+}
+/* end blockquote fix */
+
+
 .template-workflowmanager #visual-portal-wrapper {
     margin: 0;
 }
