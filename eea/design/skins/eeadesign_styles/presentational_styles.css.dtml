@@ -301,23 +301,33 @@ blockquote.pullquote,
 .bg-blue a,
 .bg-primary,
 .bg-primary a,
+.bg-blue h2,
+.bg-blue h3,
+.bg-blue h4,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
 .fullwidth-bg.bg-tertiary,
 .fullwidth-bg.bg-tertiary a,
 .fullwidth-bg.bg-green,
-.fullwidth-bg.bg-green a
+.fullwidth-bg.bg-green a,
+.fullwidth-bg.bg-green h2
 {
-    color: #e6e6e6 !important;
+    color: #FFF !important;
 }
 
 .box--full.bg-tertiary,
 .box--left.bg-tertiary,
-.box--right.bg-tertiary
+.box--right.bg-tertiary,
+.box--full.bg-green,
+.box--left.bg-green,
+.box--right.bg-green
 {
     background-color: &dtml-greyBackgroundColor;;
     border-top: &dtml-corporateGreen; solid 0.25rem;
     padding: 45px 30px 45px;
     font-size: 1.25rem;
-    line-height: 2rem;
+    line-height: 1.6;
 }
 
 .box--full.bg-tertiary p:last-child,
@@ -360,7 +370,7 @@ pre {
     overflow-x: auto;
     font-size: 90%;
     margin-bottom: 1em;
-    line-height: 1.25em;
+    line-height: 1.25;
 }
 
 /* 21882 added figure container class */

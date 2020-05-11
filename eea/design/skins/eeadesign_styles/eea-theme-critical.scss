@@ -25,11 +25,13 @@ $corporateBlue: #004b87;
   h2 {
     font-size: 1.9rem;
     line-height: 1.1666;
-    color: #000;
     letter-spacing: -1px;
     //margin-bottom: 2.5rem;
   }
 
+  h2, h3, h4 {
+    color: #000;
+  }
   .content-core {
     p {
       font-size: 1.25rem;
@@ -287,9 +289,6 @@ $corporateBlue: #004b87;
     display: none;
   }
 
-  h2, h3 {
-    color: #000;
-  }
 }
 
 .mini-header {
