@@ -2,10 +2,7 @@
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-$corporateGreen: #008675;
-$corporateGrey: #f3f3f3;
-$corporateBlue: #004b87;
-
+@import "mixins";
 
 .mini-header:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
@@ -23,24 +20,21 @@ $corporateBlue: #004b87;
   }
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.9em;
     line-height: 1.1666;
-    letter-spacing: -1px;
     //margin-bottom: 2.5rem;
   }
 
-  h2, h3, h4 {
-    color: #000;
+  p {
+    font-size: 1.25em;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    color: inherit;
   }
   .content-core {
-    p {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      //margin-bottom: 2.5rem;
-    }
-    li {
-      font-size: 1.25rem;
-    }
+    font-size: 1rem;
 
     //li p {
     //  margin-bottom: 2.5rem;
@@ -49,22 +43,19 @@ $corporateBlue: #004b87;
       margin-bottom: 0;
     }
 
-    a {
-      color: $corporateBlue;
-    }
   }
   blockquote p, .pullquote p, .pullquote-full p {
-    font-size: 1.875rem;
+    font-size: 1.875em;
     line-height: 1.1666;
     font-weight: 300;
   }
   .source {
-    font-size: 1rem;
+    font-size: 1em;
   }
   .figureHeading {
     //margin-top: 50px;
     //margin-bottom: 40px;
-    font-size: 1.125rem;
+    font-size: 1.125em;
     line-height: 1.666;
     color: #000;
   }

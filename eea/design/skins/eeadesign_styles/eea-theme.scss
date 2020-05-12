@@ -18,6 +18,8 @@ hr {
 
 .anchorjs-link {
   display: inline-block !important;
+  position: absolute;
+  color: inherit;
   }
 
 
@@ -498,7 +500,10 @@ div#original_chart_div {
   border-width: 1px 0;
   border-style: solid;
   border-color: #ccc;
-  padding: 30px;
+  padding: 1.875rem;
+}
+.eea-block > .eea-block .tile-item {
+  border-width: 0;
 }
 
 
@@ -510,8 +515,9 @@ div#original_chart_div {
   }
 
 .tile-item-header {
-  font-size: 3.75rem;
-  margin-bottom: 1.3rem;
+  font-size: 3.75em;
+  margin-bottom: 0.3em;
+  line-height: 1;
   color: unquote("&dtml-corporateGreen;") !important;
   text-shadow: 2px 0 0 currentColor;
   }

@@ -210,7 +210,8 @@ blockquote,
     line-height: 1.4;
     position: relative;
     padding: 2em;
-    font-size: 1rem;
+    font-size: inherit;
+    color: inherit;
 }
 blockquote > p:first-of-type {
     position: relative;
@@ -301,19 +302,12 @@ blockquote.pullquote,
 .bg-blue a,
 .bg-primary,
 .bg-primary a,
-.bg-blue h2,
-.bg-blue h3,
-.bg-blue h4,
-.bg-primary h2,
-.bg-primary h3,
-.bg-primary h4,
 .fullwidth-bg.bg-tertiary,
 .fullwidth-bg.bg-tertiary a,
 .fullwidth-bg.bg-green,
-.fullwidth-bg.bg-green a,
-.fullwidth-bg.bg-green h2
+.fullwidth-bg.bg-green a
 {
-    color: #FFF !important;
+    color: #e6e6e6;
 }
 
 .box--full.bg-tertiary,

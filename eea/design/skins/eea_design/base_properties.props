@@ -27,7 +27,7 @@ themesMultimediaColor:string=#5a3092
 
 
 #different headings colors
-linkHeadingColor:string=#346f83
+linkHeadingColor:string=#004B87
 headingColor:string=#006699
 headingFontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
 
@@ -51,7 +51,7 @@ corporateBlueBackgroundColor:string=#C7E0E9
 tabBackgroundColor:string=#2c8da2
 
 #link colors
-linkColor:string=#346f83
+linkColor:string=#004B87
 linkActiveColor:string=#f5821f
 linkVisitedColor:string=#8e004d
 linkHoverColor:string=#8e004d

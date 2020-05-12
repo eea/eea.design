@@ -323,11 +323,11 @@ th a, th a:link, th a:visited {
 }
 
 .fullwidth-bg {
-    @include fullwidth-bg;
+    @include fullwidth-bg-mixin;
 }
 
 .fullwidth-bg:before {
-    @include fullwidth-bg-before;
+    @include fullwidth-bg-before-mixin;
 }
 
 .fullwidth {
@@ -362,7 +362,7 @@ th a, th a:link, th a:visited {
 .emphasis-area {
     background-color: rgba(0,0,0, 0.7);
     padding: 1.875rem;
-    font-size: 1.875rem;
+    //font-size: 1.875rem;
     color: #e6e6e6;
     margin: 1.875rem 0;
     font-weight: 300;
@@ -370,9 +370,11 @@ th a, th a:link, th a:visited {
 }
 /* normalize blockquote in case we add it inside emphasis area */
 .emphasis-area blockquote {
-    font-size: inherit;
-    color: inherit;
     padding: 0 1rem;
+}
+.emphasis-area a {
+    color: currentColor;
+    border-bottom: 1px solid inherit;
 }
 
 @media (max-width: 1023px) {
