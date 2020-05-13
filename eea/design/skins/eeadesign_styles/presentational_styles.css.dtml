@@ -298,16 +298,21 @@ blockquote.pullquote,
     line-height: 1.4;
 }
 
-.bg-blue,
-.bg-blue a,
-.bg-primary,
-.bg-primary a,
 .fullwidth-bg.bg-tertiary,
 .fullwidth-bg.bg-tertiary a,
 .fullwidth-bg.bg-green,
-.fullwidth-bg.bg-green a
-{
+.fullwidth-bg.bg-green a {
+    color: #FFF;
+}
+
+.bg-blue,
+.bg-primary {
     color: #e6e6e6;
+}
+.bg-primary a,
+.bg-blue a {
+   color: inherit;
+    border-bottom: 1px solid currentColor;
 }
 
 .box--full.bg-tertiary,
