@@ -320,8 +320,7 @@ blockquote.pullquote,
 .box--right.bg-tertiary,
 .box--full.bg-green,
 .box--left.bg-green,
-.box--right.bg-green
-{
+.box--right.bg-green {
     background-color: &dtml-greyBackgroundColor;;
     border-top: &dtml-corporateGreen; solid 0.25rem;
     padding: 45px 30px 45px;
@@ -329,17 +328,19 @@ blockquote.pullquote,
     line-height: 1.6;
 }
 
-.box--full.bg-tertiary p:last-child,
-.box--left.bg-tertiary p:last-child,
-.box--right.bg-tertiary p:last-child {
+.box p:last-child {
     margin-bottom: 0;
 }
 
-.box--full.bg-tertiary h2,
-.box--left.bg-tertiary h2,
-.box--right.bg-tertiary h2 {
+.box.bg-green h2,
+.box.bg-tertiary h2 {
     color: &dtml-corporateGreen;;
     font-weight: normal;
+}
+
+.fullwidth-bg.bg-green h2,
+.fullwidth-bg.bg-tertiary h2 {
+    color: currentColor;
 }
 
 .keyFact h1,

@@ -497,10 +497,12 @@ div#original_chart_div {
 }
 .tile-item {
   margin-bottom: 1rem;
+  padding: 1.875rem;
+}
+.bordered {
   border-width: 1px 0;
   border-style: solid;
   border-color: #ccc;
-  padding: 1.875rem;
 }
 .eea-block > .eea-block .tile-item {
   border-width: 0;

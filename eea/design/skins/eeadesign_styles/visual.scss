@@ -72,7 +72,6 @@ blockquote ul,
 }
 
 .box ul li,
-.keyFact li,
 .eea-card-body-text li,
 .bullet-list > li {
     position: relative;
@@ -80,7 +79,6 @@ blockquote ul,
 }
 
 .box ul li:before,
-.keyFact li:before,
 .eea-card-body-text li:before,
 .bullet-list > li:before {
     content: '\2022';
@@ -89,6 +87,20 @@ blockquote ul,
     color: inherit;
     font-size: 2em;
     line-height: 0.8;
+}
+
+.keyFact li {
+    position: relative;
+    padding-left: 1.5em;
+}
+.keyFact li:before {
+    content: "\f0a9";
+    position: absolute;
+    left: 0;
+    font-size: 125%;
+    line-height: 1.3;
+    color: unquote("&dtml-corporateGreen;");
+    font-family: FontAwesome;
 }
 /*
 ** Watermark style
@@ -360,12 +372,10 @@ th a, th a:link, th a:visited {
 }
 
 .emphasis-area {
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0,0,0, 0.85);
     padding: 1.875rem;
-    //font-size: 1.875rem;
     color: #e6e6e6;
     margin: 1.875rem 0;
-    font-weight: 300;
     line-height: 1.16;
 }
 /* normalize blockquote in case we add it inside emphasis area */
