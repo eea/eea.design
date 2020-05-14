@@ -368,6 +368,11 @@ ol.visualNoMarker {
 .mceContentBody .showOnPrint {
   display: block;
   }
+
+.mceContentBody a {
+  color: inherit !important;
+}
+
 /* @end tinymce class to hide or show content when printing */
 
 /* custom css fixes and overrides give links or detailed fix information */
@@ -517,7 +522,7 @@ div#original_chart_div {
   }
 
 .tile-item-header {
-  font-size: 3.75em;
+  font-size: 2.3125rem;
   margin-bottom: 0.3em;
   line-height: 1;
   color: unquote("&dtml-corporateGreen;") !important;

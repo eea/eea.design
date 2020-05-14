@@ -364,6 +364,14 @@ th a, th a:link, th a:visited {
     position: absolute;
 }
 
+.fullwidth-container-centered > img,
+.fullwidth-container-centered > iframe {
+    min-width: initial;
+    max-width: 1400px;
+    width: 100%;
+}
+
+
 .absolute-centered {
     max-width: 860px;
     position: relative;
