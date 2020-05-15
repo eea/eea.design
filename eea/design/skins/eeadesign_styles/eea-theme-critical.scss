@@ -22,7 +22,6 @@
   h2 {
     font-size: 1.9em;
     line-height: 1.1666;
-    //margin-bottom: 2.5rem;
   }
 
   p {
@@ -32,7 +31,15 @@
 
   h1, h2, h3, h4 {
     color: inherit;
+    margin-bottom: 1rem;
   }
+  /* attempt to add large bottom margin only to paragraphs without any classes
+    applied and within a text fieldname
+   */
+  div[id*="parent-fieldname-text"] > p:not([class]) {
+    margin-bottom: 50px;
+  }
+
   .content-core {
     font-size: 1rem;
 
@@ -42,6 +49,7 @@
 
     li {
       font-size: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     p:last-child {
@@ -67,7 +75,6 @@
   //iframe, img {
   //  margin-bottom: 3.75rem;
   //}
-
 
   .mini-portal-type {
     position: absolute;
