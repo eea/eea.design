@@ -116,6 +116,17 @@
     color: &dtml-fontDarkColor; !important;
 }
 
+.text-primary {
+    color: &dtml-corporateBlue; !important;
+}
+.text-secondary {
+    color: &dtml-lightGreyColor; !important;
+}
+
+.text-tertiary {
+    color: &dtml-corporateGreen; !important;
+}
+
 .bg-grey, /* LEGACY use bg-secondary instead */
 .bg-secondary {
     background-color: &dtml-greyBackgroundColor;;

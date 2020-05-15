@@ -23,6 +23,8 @@ body.section-SITE .documentActions {
 }
 
 
+
+
 .portletNavigationTree {
     line-height: 1.5em;
 }
@@ -77,13 +79,65 @@ div.managePortletsLink:hover {
 }
 
 /* #110041 tinymce button and table fixes */
-.ploneSkin .mceMenu {
-    min-width: 400px !important;
-    min-height: 400px !important;
+
+/* disable yellow bg when editor is focused */
+.ploneSkin .mceEditorFocus .mceIframeContainer {
+    background: transparent !important;
 }
-.mceMenu  table > tbody {
-    display: table !important;
+
+
+/* avoid links being set to black by tinymce styling */
+.mceContentBody a {
+    color: inherit !important;
+}
+
+/*.ploneSkin enlargement to fit plonestyles popup */
+.mceMenu {
+    min-width: 400px !important;
+    min-height: 420px !important;
+    width: 830px !important;
+}
+.mceMenu table {
+    display: block;
+    width: 830px !important;
+    height: 100%;
+}
+.mceMenu table > tbody {
+    columns: 3;
+    display: block !important;
+    height: 100%;
+}
+.mceMenu td {
+    display: block;
+    height: 100% !important;
+}
+.mceMenuItem {
+    display: inline-block !important;
     width: 100% !important;
+}
+.mceMenuItem tr {
+    display: inline-block !important;
+    width: 100%;
+}
+/* @end .ploneSkin enlargement to fit plonestyles popup */
+
+/* hide styles title from the styles dropdown as it's redundant */
+.mceMenuItem.mceFirst {
+    display: none !important;
+}
+
+/* style dropdown header tags with colors */
+.mceText[title*="Primary"],
+.mceText[title*="Blue"] {
+    color: &dtml-corporateBlue; !important;
+}
+.mceText[title*="Grey"],
+.mceText[title*="Secondary"] {
+    color: &dtml-lightGreyColor; !important;
+}
+.mceText[title*="Green"],
+.mceText[title*="Tertiary"] {
+    color: &dtml-corporateGreen; !important;
 }
 #footer #action-button {
     margin-bottom: 0 !important;
