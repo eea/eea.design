@@ -37,7 +37,7 @@
     applied and within a text fieldname
    */
   div[id*="parent-fieldname-text"] > p:not([class]) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .content-core {
@@ -52,6 +52,7 @@
       margin-bottom: 1rem;
     }
 
+    li:last-child,
     p:last-child {
       margin-bottom: 0;
     }

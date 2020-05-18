@@ -94,7 +94,7 @@ div.managePortletsLink:hover {
 /*.ploneSkin enlargement to fit plonestyles popup */
 .mceMenu {
     min-width: 400px !important;
-    min-height: 420px !important;
+    min-height: 450px !important;
     width: 830px !important;
 }
 .mceMenu table {
@@ -104,6 +104,8 @@ div.managePortletsLink:hover {
 }
 .mceMenu table > tbody {
     columns: 3;
+    column-gap: 0;
+    column-fill: auto;
     display: block !important;
     height: 100%;
 }

@@ -338,6 +338,10 @@ th a, th a:link, th a:visited {
     @include fullwidth-bg-mixin;
 }
 
+video {
+    max-width: 100%;
+}
+
 .fullwidth-bg:before {
     @include fullwidth-bg-before-mixin;
 }
@@ -348,8 +352,6 @@ th a, th a:link, th a:visited {
 
 .fullwidth-container-centered {
     position: relative;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 49.3vw);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -358,6 +360,7 @@ th a, th a:link, th a:visited {
     min-height: 600px;
     overflow: hidden;
     justify-content: center;
+    margin: 2.5rem calc(50% - 49.3vw) 2.5rem calc(50% - 50vw);
 }
 
 .fullwidth-container-centered .fullwidth {
@@ -367,7 +370,7 @@ th a, th a:link, th a:visited {
 .fullwidth-container-centered > img,
 .fullwidth-container-centered > iframe {
     min-width: initial;
-    max-width: 1400px;
+    //max-width: 1400px !important;
     width: 100%;
 }
 
