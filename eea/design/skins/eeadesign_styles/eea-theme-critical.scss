@@ -2,7 +2,8 @@
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-@import "mixins";
+@import "scss-theme/variables";
+@import "scss-theme/mixins";
 
 .mini-header:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
@@ -49,7 +50,7 @@
 
     li {
       font-size: 1.25rem;
-      margin-bottom: 1rem;
+      margin-bottom: $spacer-half;
     }
 
     li:last-child,

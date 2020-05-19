@@ -1,0 +1,74 @@
+
+blockquote,
+.pullquote {
+  line-height: 1.4;
+  position: relative;
+  padding: 2em;
+  font-size: inherit;
+  color: inherit;
+}
+blockquote > p:first-of-type {
+  position: relative;
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+
+blockquote > p:first-of-type:before,
+blockquote > p:last-child:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 20px;
+  font-size: 25px;
+  position: absolute;
+  font-family: FontAwesome;
+  font-weight: bold;
+}
+
+blockquote > p:first-of-type:before {
+  content: "\f10d";
+  top: -20px;
+  left: -15px;
+}
+
+blockquote > p:last-child:after {
+  content: "\f10e";
+  right: -18px;
+  bottom: -18px;
+}
+
+.pullquote-left {
+  float: left;
+  width: 47%;
+  margin: 0 $box-spacer $box-spacer 0;
+}
+
+blockquote.pullquote,
+.pullquote-right {
+  float: right;
+  width: 47%;
+  margin: 0 0 $box-spacer $box-spacer;
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  blockquote,
+  .pullquote {
+    padding: 2em 1.3em;
+  }
+
+  blockquote > p:first-of-type:before {
+    left: -15px;
+  }
+  blockquote > p:first-of-type:after {
+    right: -15px;
+  }
+
+  .pullquote-right {
+    margin: $spacer 0 $spacer $spacer;
+  }
+
+  .pullquote-left {
+    margin: $spacer $spacer $spacer 0;
+  }
+}

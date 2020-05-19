@@ -205,6 +205,8 @@ blockquote {
 
 
 /* Styles copied from base.css */
+
+/* moved into blockquote */
 blockquote,
 .pullquote {
     line-height: 1.4;
@@ -243,8 +245,14 @@ blockquote > p:last-child:after {
     bottom: -18px;
 }
 
+/* @end moved into blockquote */
+
+
+/* moved into boxes */
 .box {
     padding: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
 }
 
 .box--left,
@@ -261,6 +269,29 @@ blockquote.pullquote,
     width: 47%;
     margin: 0 0 1.5rem 1.5rem;
     word-break: break-word;
+}
+
+.box--full.bg-tertiary,
+.box--left.bg-tertiary,
+.box--right.bg-tertiary,
+.box--full.bg-green,
+.box--left.bg-green,
+.box--right.bg-green {
+    background-color: &dtml-greyBackgroundColor;;
+    border-top: &dtml-corporateGreen; solid 0.25rem;
+    padding: 45px 30px 45px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.box p:last-child {
+    margin-bottom: 0;
+}
+
+.box.bg-green h2,
+.box.bg-tertiary h2 {
+    color: &dtml-corporateGreen;;
+    font-weight: normal;
 }
 
 @media (max-width: 767px) {
@@ -286,16 +317,13 @@ blockquote.pullquote,
     }
 
 }
+/* @end moved into boxes */
 
 .callout {
     background: #eee;
     padding: 1em;
     border-left: 1em solid #ccc;
     clear: both;
-}
-.box {
-    font-size: 1.25rem;
-    line-height: 1.4;
 }
 
 .fullwidth-bg.bg-tertiary,
@@ -315,28 +343,6 @@ blockquote.pullquote,
     border-bottom: 1px solid currentColor;
 }
 
-.box--full.bg-tertiary,
-.box--left.bg-tertiary,
-.box--right.bg-tertiary,
-.box--full.bg-green,
-.box--left.bg-green,
-.box--right.bg-green {
-    background-color: &dtml-greyBackgroundColor;;
-    border-top: &dtml-corporateGreen; solid 0.25rem;
-    padding: 45px 30px 45px;
-    font-size: 1.25rem;
-    line-height: 1.6;
-}
-
-.box p:last-child {
-    margin-bottom: 0;
-}
-
-.box.bg-green h2,
-.box.bg-tertiary h2 {
-    color: &dtml-corporateGreen;;
-    font-weight: normal;
-}
 
 .fullwidth-bg.bg-green h2,
 .fullwidth-bg.bg-tertiary h2 {

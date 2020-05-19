@@ -1,0 +1,66 @@
+
+// Color system
+$corporateGreen: #008675;
+$corporateGrey: #f3f3f3;
+$corporateBlue: #004b87;
+$bg-grey: $corporateGrey;
+
+
+// Spacing
+$spacer: 1rem !default;
+$spacer-half: $spacer / 2;
+$spacer-0: ($spacer * 3.75); // 60px -- max
+$spacer-1: ($spacer * 2.5); // 40px
+$spacer-2: ($spacer * 2); // 32px
+$spacer-3: ($spacer * 1.75); // 28px
+$spacer-4: ($spacer * 1.5); // 24px
+$spacer-5: ($spacer * 1.25); // 20px
+$spacer-6: ($spacer * 1); // 16px
+$spacer-7: ($spacer * .75); // 12px
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: ($spacer * 3.75), // 60 -- max
+    1: ($spacer * 2.5), // 40
+    2: ($spacer * 2), // 32
+    3: ($spacer * 1.75), // 28
+    4: ($spacer * 1.5), // 24
+    5: ($spacer * 1.25), // 20
+    6: ($spacer * 1), // 16
+    7: ($spacer * .75) // 12
+  ),
+  $spacers
+);
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+$font-weight-normal:          400;
+
+$h0-font-size:                $font-size-base * 3.75 !default; // 60
+$h1-font-size:                $font-size-base * 2.5 !default; // 40
+$h2-font-size:                $font-size-base * 2 !default; // 32
+$h3-font-size:                $font-size-base * 1.75 !default; // 28
+$h4-font-size:                $font-size-base * 1.5 !default; // 24
+$h5-font-size:                $font-size-base * 1.25 !default; // 20
+$h6-font-size:                $font-size-base !default; // 16
+
+$headings-margin-bottom:      $spacer / 2 !default;
+$headings-font-family:        null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+$p-font-size:              $font-size-base * 1.25 !default;
+
+$small-font-size:             80% !default;
+
+
+
+
+// boxes
+$box-font-size: $p-font-size;
+$box-spacer-x: $spacer-4;
+$box-spacer-y: $spacer-4;
+$box-spacer:   $spacer-4;

@@ -116,7 +116,7 @@ a.downloading img {
   }
 
 .downloading-lock::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -210,11 +210,11 @@ div.eea-pdf-overlay {
   }
 .documentByLineAuthor:nth-child(2) span:after,
 .documentByLineAuthor a:after, .documentByLineContributor a:after {
-  content: ',';
+  content: ",";
   }
 .documentByLineAuthor:nth-child(2) a:after,
 .documentByLineAuthor:last-child a:after, .documentByLineContributor:last-child a:after {
-  content: '';
+  content: "";
   }
 
 /* @end documentByLine */
@@ -473,11 +473,10 @@ div#original_chart_div {
   height: 70px;
   }
 
+/* moved into tiles */
 .tiles-container {
   @include fullwidth-bg-mixin;
 }
-
-
 .tiles {
   display: flex;
   flex-wrap: wrap;
@@ -497,9 +496,10 @@ div#original_chart_div {
 }
 .tile-item {
   margin-bottom: 1rem;
-  padding: 1.875rem;
 }
-.bordered {
+/* @end move into tiles */
+
+.bordered-y {
   border-width: 1px 0;
   border-style: solid;
   border-color: #ccc;
@@ -510,6 +510,7 @@ div#original_chart_div {
 
 
 
+/* move into tiles */
 @media (max-width: 480px) {
   .tile {
       flex-basis: 100%;
@@ -518,11 +519,16 @@ div#original_chart_div {
 
 .tile-item-header {
   font-size: 2.3125rem;
-  margin-bottom: 0.3em;
+  //margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
   line-height: 1;
   color: unquote("&dtml-corporateGreen;") !important;
   text-shadow: 2px 0 0 currentColor;
   }
+
+.mini-header .tile-item-header {
+  font-size: 3.75rem;
+}
 
 .tile-item-body {
   font-size: 150% !important;
@@ -549,6 +555,7 @@ div#original_chart_div {
  .tiles--4 .tile
  {
     max-width: 46%;
+   //max-width: 30%; would work for video
  }
 }
 @media (min-width: 1024px) {
@@ -561,6 +568,7 @@ div#original_chart_div {
       max-width: 100%;
     }
 }
+/* @end move into tiles */
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .video_player_image {

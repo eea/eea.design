@@ -3,7 +3,8 @@
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 /* sub/sup must not alter the line-height #20996 */
-@import "mixins";
+@import "scss-theme/variables";
+@import "scss-theme/mixins";
 
 sub {
     top: 0.5ex;
@@ -384,9 +385,9 @@ video {
 
 .emphasis-area {
     background-color: rgba(0,0,0, 0.85);
-    padding: 1.875rem;
+    padding: $spacer-2;
     color: #e6e6e6;
-    margin: 1.875rem 0;
+    margin: $spacer-2 0;
     line-height: 1.16;
 }
 /* normalize blockquote in case we add it inside emphasis area */
