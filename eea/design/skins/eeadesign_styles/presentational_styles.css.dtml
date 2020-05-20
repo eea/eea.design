@@ -292,6 +292,8 @@ blockquote.pullquote,
 .box.bg-tertiary h2 {
     color: &dtml-corporateGreen;;
     font-weight: normal;
+    line-height: 1;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {

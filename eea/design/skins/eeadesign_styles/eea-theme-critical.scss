@@ -23,6 +23,8 @@
   h2 {
     font-size: 1.9em;
     line-height: 1.1666;
+    letter-spacing: -0.02rem;
+    margin-bottom: 40px;
   }
 
   p {
@@ -68,15 +70,15 @@
     font-size: 1em;
   }
   .figureHeading {
-    //margin-top: 50px;
-    //margin-bottom: 40px;
-    font-size: 1.125em;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 1.125rem;
     line-height: 1.666;
     color: #000;
   }
-  //iframe, img {
-  //  margin-bottom: 3.75rem;
-  //}
+  iframe, img {
+    margin-bottom: 40px;
+  }
 
   .mini-portal-type {
     position: absolute;
@@ -226,6 +228,11 @@
     line-height: 1.474;
     position: relative;
     margin: 3.75rem 0;
+  }
+
+  .keyFact li {
+    margin-bottom: 1.5rem;
+    padding-left: 2.1875rem;
   }
 
   //#content .keyFact .discreet,
