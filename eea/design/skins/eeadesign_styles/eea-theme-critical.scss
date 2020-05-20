@@ -34,7 +34,7 @@
 
   h1, h2, h3, h4 {
     color: inherit;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   /* attempt to add large bottom margin only to paragraphs without any classes
     applied and within a text fieldname
@@ -59,7 +59,22 @@
     p:last-child {
       margin-bottom: 0;
     }
+    ul, ol {
+      margin: 0 0 1.5rem 0;
+    }
 
+    ul > li {
+      position: relative;
+      padding-left: 2rem;
+    }
+    ul > li:before {
+      content: '\2022';
+      position: absolute;
+      left: 0;
+      color: inherit;
+      font-size: 1.5em;
+      line-height: 1;
+    }
   }
   blockquote p, .pullquote p, .pullquote-full p {
     font-size: 1.875rem;

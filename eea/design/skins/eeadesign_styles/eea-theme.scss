@@ -2,7 +2,7 @@
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-@import "mixins";
+@import "scss-theme/mixins";
 
 /* no horisontal lines allowed, only used as spacer, separation is done with headings or bg colors */
 hr {
@@ -495,6 +495,7 @@ div#original_chart_div {
   margin: 0 auto 1rem auto;
 }
 .tile-item {
+  padding: 1.5rem;
   margin-bottom: 1rem;
 }
 /* @end move into tiles */
@@ -531,10 +532,10 @@ div#original_chart_div {
 }
 
 .tile-item-body {
-  font-size: 150% !important;
+  font-size: 1.5rem !important;
   color: gray;
   margin: 0 auto;
-  line-height: 1.3 !important;
+  line-height: 1.2 !important;
   }
 
 .tiles--3 .tile-item-body {
@@ -545,7 +546,7 @@ div#original_chart_div {
 
 @media (min-width: 420px) {
   .tile-item-body {
-    max-width: 80%;
+    max-width: 85%;
     }
   }
 
