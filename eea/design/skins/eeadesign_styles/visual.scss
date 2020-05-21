@@ -69,7 +69,7 @@ blockquote ul,
 .eea-card-body-text ul,
 .bullet-list {
     list-style: none !important;
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 .box ul li,
@@ -94,7 +94,7 @@ blockquote ul,
     position: relative;
     padding-left: 1.5em;
 }
-.keyFact li:before {
+.content-core .keyFact li:before {
     content: "\f0a9";
     position: absolute;
     left: 0;
@@ -300,11 +300,10 @@ th a, th a:link, th a:visited {
     background: none;
     font-style: normal;
     font-weight:normal;
-    font-size: 0.9375rem !important;
+    font-size: 1rem !important;
     padding: 1em 1em 0 1em;
     margin-bottom: 0 !important;
     position: relative;
-
 }
 
 /* css 3 feature - Multicolumn - Firefox 1.5, not IE 6 */
@@ -336,7 +335,7 @@ th a, th a:link, th a:visited {
 }
 
 .fullwidth-bg {
-    @include fullwidth-bg-mixin;
+    @include fullwidth-bg;
 }
 
 video {
@@ -344,7 +343,7 @@ video {
 }
 
 .fullwidth-bg:before {
-    @include fullwidth-bg-before-mixin;
+    @include fullwidth-bg-before;
 }
 
 .fullwidth {

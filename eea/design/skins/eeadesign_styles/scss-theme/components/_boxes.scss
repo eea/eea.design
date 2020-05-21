@@ -1,13 +1,13 @@
 .box {
-  padding: $spacer;
+  padding: $box-spacer-mobile;
   font-size: $box-font-size;
   line-height: inherit;
   word-break: break-word;
-  margin-bottom: $spacer;
+  margin-bottom: $box-spacer-mobile;
 }
 .box.bg-blue,
 .box.bg-blue a {
-  color: #e6e6e6;
+  color: $text-gray-light;
 }
 
 .box--full.bg-tertiary,
@@ -20,7 +20,7 @@
   border-top: $corporateGreen solid 0.25rem;
   padding: 45px 30px 45px;
   font-size: $box-font-size;
-  line-height: 1.6;
+  line-height: $p-line-height;
 }
 
 
@@ -49,7 +49,7 @@
 }
 @media (min-width: 576px) {
   .box {
-    padding: $spacer-4;
+    padding: $box-spacer;
   }
 }
 

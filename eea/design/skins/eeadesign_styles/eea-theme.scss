@@ -475,7 +475,7 @@ div#original_chart_div {
 
 /* moved into tiles */
 .tiles-container {
-  @include fullwidth-bg-mixin;
+  @include fullwidth-bg;
 }
 .tiles {
   display: flex;

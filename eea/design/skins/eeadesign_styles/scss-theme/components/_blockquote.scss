@@ -7,6 +7,17 @@ blockquote,
   font-size: inherit;
   color: inherit;
 }
+
+blockquote p, .pullquote p, .pullquote-full p {
+  font-size: 1.875rem;
+  line-height: 1.1666;
+  font-weight: 300;
+}
+
+.source {
+  font-size: 1em;
+}
+
 blockquote > p:first-of-type {
   position: relative;
   padding: 0;

@@ -23,7 +23,9 @@ h6, .h6 { font-size: $h6-font-size; }
 
 p {
   margin-top: 0;
-  margin-bottom: $spacer;
+  font-size: $p-font-size;
+  margin-bottom: $spacer-4;
+  line-height: $p-line-height;
 }
 
 p:last-child {
@@ -33,6 +35,9 @@ p:last-child {
 //  @include font-size($lead-font-size);
 //  font-weight: $lead-font-weight;
 //}
+.figureHeading {
+  font-size: $p-font-size;
+}
 
 // Type display classes
 //.display-1 {
@@ -58,7 +63,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: $spacer;
+  margin-bottom: $spacer-4;
 }
 
 //.list-unstyled {

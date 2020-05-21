@@ -1,3 +1,35 @@
-//.content-core {
-//
-//}
+.content-core {
+  font-size: $font-size-base;
+
+  h2:not(:first-child),
+  h3:not(:first-child),
+  h4:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  li {
+    font-size: $p-font-size;
+    margin-bottom: $spacer-half;
+  }
+
+  li:last-child,
+  p:last-child {
+    margin-bottom: 0;
+  }
+  ul, ol {
+    margin: 0 0 $spacer-4 $spacer-4;
+  }
+
+  ul > li {
+    position: relative;
+    padding-left: $spacer-2;
+  }
+  ul > li:before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: inherit;
+    font-size: 1.5em;
+    line-height: 1;
+  }
+}

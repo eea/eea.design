@@ -1,5 +1,5 @@
 
-@mixin fullwidth-bg-mixin {
+@mixin fullwidth-bg {
   position: relative;
   margin: 3rem 0 !important;
   z-index: 1;
@@ -8,14 +8,18 @@
   line-height: 1.4;
 }
 
-@mixin fullwidth-bg-before-mixin {
+@mixin pseudo-bg-boilerplate {
   position: absolute;
-  background-color: inherit;
-  content: ' ';
+  content: " ";
   top: 0;
   z-index: -1;
-  width: 99.3vw;
   height: 100%;
+}
+
+@mixin fullwidth-bg-before {
+  @include pseudo-bg-boilerplate();
+  background-color: inherit;
+  width: 99.3vw;
   right: 0;
   left: 50%;
   margin-left: -50vw;

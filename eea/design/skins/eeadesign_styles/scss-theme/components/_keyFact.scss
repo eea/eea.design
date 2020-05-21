@@ -1,0 +1,37 @@
+.keyFact {
+  padding: 3.75rem 0;
+  //background-color: transparent;
+  color: #000;
+  font-size: 1.2rem;
+  line-height: 1.474;
+  position: relative;
+  margin: 3.75rem 0;
+}
+
+.keyFact:before {
+  background-color: inherit;
+}
+
+.keyFact h1,
+.keyFact h2,
+.keyFact h3 {
+  color: $corporateGreen;
+}
+
+.keyFact h2 {
+  font-size: $h1-font-size;
+}
+
+.keyFact li {
+  margin-bottom: 1.5rem;
+  padding-left: 2.1875rem;
+}
+
+@media (min-width: 1024px) {
+    .keyFact:before {
+      width: 122%;
+      left: -11%;
+      padding: 0;
+      @include pseudo-bg-boilerplate();
+    }
+}
