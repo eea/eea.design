@@ -167,7 +167,7 @@
   .documentFirstHeading {
     padding-right: 0;
     min-width: 85%;
-    margin: 1.25rem 0 3.75rem 0;
+    margin: 1.25rem 0 $spacer-0 0;
     letter-spacing: -1px;
     font-size: 2.5rem;
     line-height: 1.15;
@@ -214,7 +214,7 @@
   }
 
   .documentDescription {
-    margin-bottom: 3em;
+    margin-bottom: $spacer-4;
     font-size: 1.125rem;
     font-weight: normal;
     line-height: 1.333;
@@ -340,6 +340,24 @@
       max-width: initial;
       flex-basis: 0;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:768px) and (max-width: 1023px) {
+  html {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  html {
+    font-size: 1rem;
   }
 }
 

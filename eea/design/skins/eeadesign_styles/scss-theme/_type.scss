@@ -22,7 +22,6 @@ h6, .h6 { font-size: $h6-font-size; }
 
 
 p {
-  margin-top: 0;
   font-size: $p-font-size;
   margin-bottom: $spacer-4;
   line-height: $p-line-height;
@@ -50,9 +49,10 @@ p:last-child {
 // Emphasis
 //
 
+.discreet,
 small,
 .small {
-  font-size: $small-font-size;
+  font-size: $small-font-size !important;
   font-weight: $font-weight-normal;
 }
 

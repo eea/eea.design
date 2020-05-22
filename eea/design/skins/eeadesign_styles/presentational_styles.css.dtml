@@ -195,131 +195,16 @@ dl.error:before,
 
 
 /* Styles moved from visual.css */
-blockquote {
-    width: 100%;
-    margin: 1.0em auto;
-    padding: 1.5em 2em;
-    color: #333;
-    clear:both;
-}
+/*blockquote {*/
+/*    width: 100%;*/
+/*    margin: 1.0em auto;*/
+/*    padding: 1.5em 2em;*/
+/*    color: #333;*/
+/*    clear:both;*/
+/*}*/
 
 
 /* Styles copied from base.css */
-
-/* moved into blockquote */
-blockquote,
-.pullquote {
-    line-height: 1.4;
-    position: relative;
-    padding: 2em;
-    font-size: inherit;
-    color: inherit;
-}
-blockquote > p:first-of-type {
-    position: relative;
-    padding: 0;
-    margin-bottom: 0 !important;
-}
-
-blockquote > p:first-of-type:before,
-blockquote > p:last-child:after {
-    display: inline-block;
-    vertical-align: top;
-    height: 30px;
-    line-height: 20px;
-    font-size: 25px;
-    position: absolute;
-    font-family: FontAwesome;
-    font-weight: bold;
-}
-
-blockquote > p:first-of-type:before {
-  content: "\f10d";
-  top: -20px;
-  left: -15px;
-}
-
-blockquote > p:last-child:after {
-    content: "\f10e";
-    right: -18px;
-    bottom: -18px;
-}
-
-/* @end moved into blockquote */
-
-
-/* moved into boxes */
-.box {
-    padding: 1.5rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-}
-
-.box--left,
-.pullquote-left {
-    float: left;
-    width: 47%;
-    margin: 0 1.5rem 1.5rem 0;
-}
-
-.box--right,
-blockquote.pullquote,
-.pullquote-right {
-    float: right;
-    width: 47%;
-    margin: 0 0 1.5rem 1.5rem;
-    word-break: break-word;
-}
-
-.box--full.bg-tertiary,
-.box--left.bg-tertiary,
-.box--right.bg-tertiary,
-.box--full.bg-green,
-.box--left.bg-green,
-.box--right.bg-green {
-    background-color: &dtml-greyBackgroundColor;;
-    border-top: &dtml-corporateGreen; solid 0.25rem;
-    padding: 45px 30px 45px;
-    font-size: 1.25rem;
-    line-height: 1.6;
-}
-
-.box p:last-child {
-    margin-bottom: 0;
-}
-
-.box.bg-green h2,
-.box.bg-tertiary h2 {
-    color: &dtml-corporateGreen;;
-    font-weight: normal;
-    line-height: 1;
-    margin-bottom: 40px;
-}
-
-@media (max-width: 767px) {
-    .box,
-    blockquote,
-    .pullquote {
-        padding: 2em 1.3em;
-    }
-
-    blockquote > p:first-of-type:before {
-        left: -15px;
-    }
-    blockquote > p:first-of-type:after {
-        right: -15px;
-    }
-    .box--right,
-    .pullquote-right {
-        margin: 1em 0 1em 1em;
-    }
-    .box--left,
-    .pullquote-left {
-        margin: 1em 1em 1em 0;
-    }
-
-}
-/* @end moved into boxes */
 
 .callout {
     background: #eee;
@@ -351,22 +236,10 @@ blockquote.pullquote,
     color: currentColor;
 }
 
-.keyFact h1,
-.keyFact h2,
-.keyFact h3 {
-    color: &dtml-corporateGreen;;
-}
 
-.keyFact a,
 .bg-primary a,
 .bg-tertiary a {
     border-bottom: 1px solid #FFF !important;
-}
-.keyFact {
-    background: &dtml-greyBackgroundColor;;
-    padding: 1.5em;
-    clear: both;
-    color: #000;
 }
 
 /* pre is the tag used when selecting the literal style */

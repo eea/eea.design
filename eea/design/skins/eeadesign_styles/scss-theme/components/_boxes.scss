@@ -1,5 +1,5 @@
 .box {
-  padding: $box-spacer-mobile;
+  padding: $box-spacer;
   font-size: $box-font-size;
   line-height: inherit;
   word-break: break-word;
@@ -8,6 +8,24 @@
 .box.bg-blue,
 .box.bg-blue a {
   color: $text-gray-light;
+}
+
+.box :last-child {
+  margin-bottom: 0;
+}
+
+.content-core {
+  .box ul {
+    @include list-unstyled();
+  }
+
+}
+
+.box ul li {
+  @include list-bullet();
+}
+.box ul li:before {
+  @include list-bullet-before();
 }
 
 .box--full.bg-tertiary,
@@ -47,9 +65,15 @@
     margin: 0 0 $box-spacer $box-spacer;
   }
 }
-@media (min-width: 576px) {
-  .box {
-    padding: $box-spacer;
+//@media (min-width: 576px) {
+//  .box {
+//    padding: $box-spacer;
+//  }
+//}
+
+@media print {
+  .box li {
+    padding-left: 1.5em;
   }
 }
 

@@ -64,45 +64,23 @@ option.hiddenStructure {
 }
 
 blockquote ul,
-.keyFact ul,
-.box ul,
 .eea-card-body-text ul,
 .bullet-list {
     list-style: none !important;
     margin-left: 0 !important;
 }
 
-.box ul li,
 .eea-card-body-text li,
 .bullet-list > li {
     position: relative;
     padding-left: 1em;
 }
 
-.box ul li:before,
 .eea-card-body-text li:before,
 .bullet-list > li:before {
-    content: '\2022';
-    position: absolute;
-    left: 0;
-    color: inherit;
-    font-size: 2em;
-    line-height: 0.8;
+  @include list-bullet-before();
 }
 
-.keyFact li {
-    position: relative;
-    padding-left: 1.5em;
-}
-.content-core .keyFact li:before {
-    content: "\f0a9";
-    position: absolute;
-    left: 0;
-    font-size: 125%;
-    line-height: 1.3;
-    color: unquote("&dtml-corporateGreen;");
-    font-family: FontAwesome;
-}
 /*
 ** Watermark style
 ** for content that is not published
@@ -391,7 +369,7 @@ video {
 }
 /* normalize blockquote in case we add it inside emphasis area */
 .emphasis-area blockquote {
-    padding: 0 1rem;
+    padding: $spacer-4;
 }
 .emphasis-area a {
     color: currentColor;
@@ -401,7 +379,7 @@ video {
 @media (max-width: 1023px) {
     .emphasis-area {
         width: 100%;
-        padding: 1.5em;
+        padding: 1.5rem;
     }
 }
 
@@ -1405,8 +1383,6 @@ ul.social-buttons {
         margin-bottom: .5em;
     }
 
-    .box li,
-    .keyFact li,
     .bullet-list > li {
         padding-left: 1.5em;
     }

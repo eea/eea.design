@@ -1,11 +1,11 @@
 
 blockquote,
 .pullquote {
-  line-height: 1.4;
   position: relative;
-  padding: 2em;
+  padding: 2rem;
   font-size: inherit;
   color: inherit;
+  word-break: break-word;
 }
 
 blockquote p, .pullquote p, .pullquote-full p {
@@ -14,8 +14,14 @@ blockquote p, .pullquote p, .pullquote-full p {
   font-weight: 300;
 }
 
+.content-core  {
+  blockquote p, .pullquote p, .pullquote-full p {
+    font-size: 1.875rem;
+  }
+}
+
 .source {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 blockquote > p:first-of-type {
@@ -49,23 +55,31 @@ blockquote > p:last-child:after {
 }
 
 .pullquote-left {
-  float: left;
-  width: 47%;
   margin: 0 $box-spacer $box-spacer 0;
 }
 
 blockquote.pullquote,
 .pullquote-right {
-  float: right;
-  width: 47%;
   margin: 0 0 $box-spacer $box-spacer;
-  word-break: break-word;
+}
+
+@media (min-width: 490px) {
+  blockquote.pullquote,
+  .pullquote-right {
+    float: right;
+    width: 47%;
+  }
+
+  .pullquote-left {
+    float: left;
+    width: 47%;
+  }
 }
 
 @media (max-width: 767px) {
   blockquote,
   .pullquote {
-    padding: 2em 1.3em;
+    padding: 2rem 1.3rem;
   }
 
   blockquote > p:first-of-type:before {

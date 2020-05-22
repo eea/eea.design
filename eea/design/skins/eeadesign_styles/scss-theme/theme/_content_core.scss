@@ -8,8 +8,12 @@
     margin-top: 2rem;
   }
 
+  p {
+    font-size: $p-font-size;
+  }
   li {
     font-size: $p-font-size;
+    padding-left: $spacer;
     margin-bottom: $spacer-half;
   }
 
@@ -20,17 +24,8 @@
   ul, ol {
     margin: 0 0 $spacer-4 $spacer-4;
   }
+  ul {
+    list-style: disc outside url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-1 -1 2 2'><circle r='0.5' /></svg>")
+  }
 
-  ul > li {
-    position: relative;
-    padding-left: $spacer-2;
-  }
-  ul > li:before {
-    content: '\2022';
-    position: absolute;
-    left: 0;
-    color: inherit;
-    font-size: 1.5em;
-    line-height: 1;
-  }
 }

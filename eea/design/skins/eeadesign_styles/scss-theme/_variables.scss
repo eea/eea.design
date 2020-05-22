@@ -1,6 +1,6 @@
 
 // Color system
-$corporateGreen: #008675;
+$corporateGreen: #00888A;
 $corporateGrey: #f3f3f3;
 $corporateBlue: #004b87;
 $bg-grey: $corporateGrey;
@@ -46,6 +46,9 @@ $p-line-height:            1.6;
 
 $small-font-size:             80% !default;
 
+// breakpoints
+$breakpoint-sm: 576px;
+
 
 // boxes
 $box-font-size: $p-font-size;
@@ -58,7 +61,14 @@ $box-spacer-mobile: $spacer;
 // tiles
 $tiles-spacer:   $spacer-4;
 $tiles-header-size: $h0-font-size;
+$tiles-body-line-height: $headings-line-height;
 
 // blockquote
+
+// keyFact
+$keyfact-bg: $corporateGrey;
+$keyfact-spacer:   $spacer-4;
+$keyfact-list-spacer: 2.1875rem;
+
 
 
