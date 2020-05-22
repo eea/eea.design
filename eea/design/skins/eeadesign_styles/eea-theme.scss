@@ -4,7 +4,7 @@
 
 @import "scss-theme/mixins";
 
-/* no horisontal lines allowed, only used as spacer, separation is done with headings or bg colors */
+/* no horizontal lines allowed, only used as spacer, separation is done with headings or bg colors */
 hr {
   border: none 0;
   border-top: 1px solid white;/*invisible border*/
@@ -64,11 +64,6 @@ hr {
 #content-core {
   clear:both;
   }
-
-.mini-header #content-core {
-  margin-bottom: 2em;
-  }
-
 
 /* portal-column styles */
 
@@ -473,103 +468,9 @@ div#original_chart_div {
   height: 70px;
   }
 
-/* moved into tiles */
-.tiles-container {
-  @include fullwidth-bg;
-}
-.tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  margin: 1rem 0 0 0;
-}
-
-.tile {
-  flex: 1 1 34%;
-  margin-bottom: 1rem;
-  }
-
-.tiles--3 .tile {
-  margin: 0 auto 1rem auto;
-}
-.tile-item {
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-}
-/* @end move into tiles */
-
-.bordered-y {
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: #ccc;
-}
 .eea-block > .eea-block .tile-item {
   border-width: 0;
 }
-
-
-
-/* move into tiles */
-@media (max-width: 480px) {
-  .tile {
-      flex-basis: 100%;
-    }
-  }
-
-.tile-item-header {
-  font-size: 2.3125rem;
-  //margin-bottom: 0.3em;
-  margin-bottom: 0.5em;
-  line-height: 1;
-  color: unquote("&dtml-corporateGreen;") !important;
-  text-shadow: 2px 0 0 currentColor;
-  }
-
-.mini-header .tile-item-header {
-  font-size: 3.75rem;
-}
-
-.tile-item-body {
-  font-size: 1.5rem !important;
-  color: gray;
-  margin: 0 auto;
-  line-height: 1.2 !important;
-  }
-
-.tiles--3 .tile-item-body {
-  max-width: 100%;
-  }
-
-
-
-@media (min-width: 420px) {
-  .tile-item-body {
-    max-width: 85%;
-    }
-  }
-
-@media (min-width: 481px) {
- .tiles--2 .tile,
- .tiles--3 .tile,
- .tiles--4 .tile
- {
-    max-width: 46%;
-   //max-width: 30%; would work for video
- }
-}
-@media (min-width: 1024px) {
-  .tiles--3 {
-    flex-wrap: nowrap;
-    width: 120%;
-    margin-left: -10%;
-    }
-  .tiles--3 .tile-item-body {
-      max-width: 100%;
-    }
-}
-/* @end move into tiles */
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .video_player_image {

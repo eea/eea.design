@@ -12,6 +12,7 @@
 /* highlight section */
 .mini-header {
   overflow-x: hidden;
+
   .annotator-wrapper {
     position: inherit;
   }
@@ -259,9 +260,6 @@
     display: none;
   }
 
-}
-
-.mini-header {
   #tip-article-language {
     top: 90% !important;
     right: 6.5% !important;
@@ -285,6 +283,7 @@
   #region-content {
     padding-top: 8em;
   }
+
 }
 
 @media (max-width: 415px) {
@@ -314,7 +313,6 @@
 
 @media (max-width: 660px) {
   .mini-header {
-
     .content-header-body {
       justify-content: flex-start;
     }
@@ -338,7 +336,6 @@
 
 @media (min-width: 661px) {
   .mini-header {
-
     #content .documentByLine {
       max-width: initial;
       flex-basis: 0;

@@ -148,5 +148,12 @@
 .bg-tertiary {
     background-color: &dtml-corporateGreen;;
 }
+
+/* border utilities */
+.bordered-y {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #ccc;
+}
 /* </dtml-let> */
 /* </dtml-with> */

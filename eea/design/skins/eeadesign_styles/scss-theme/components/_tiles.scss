@@ -9,19 +9,19 @@
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  margin: 1rem 0 0 0;
+  margin: $spacer 0 0 0;
 }
 
 .tile {
   flex: 1 1 34%;
-  margin-bottom: 1rem;
+  margin-bottom: $spacer;
 }
 
 .tiles--3 .tile {
-  margin: 0 auto 1rem auto;
+  margin: 0 auto $spacer auto;
 }
 .tile-item {
-  margin-bottom: 1rem;
+  margin-bottom: $spacer;
 }
 
 @media (max-width: 480px) {
@@ -31,17 +31,13 @@
 }
 
 .tile-item-header {
-  font-size: 2.3125rem;
-  //margin-bottom: 0.3em;
-  margin-bottom: 0.5em;
+  font-size: $tiles-header-size;
+  margin-bottom: $tiles-spacer;
   line-height: 1;
-  color: $corporateGreen !important;
+  color: $corporateGreen;
   text-shadow: 2px 0 0 currentColor;
 }
 
-.mini-header .tile-item-header {
-  font-size: 3.75rem;
-}
 
 .tile-item-body {
   font-size: 150% !important;
@@ -63,8 +59,7 @@
 @media (min-width: 481px) {
   .tiles--2 .tile,
   .tiles--3 .tile,
-  .tiles--4 .tile
-  {
+  .tiles--4 .tile {
     max-width: 46%;
     //max-width: 30%; would work for video
   }
