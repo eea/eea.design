@@ -1,0 +1,19 @@
+@mixin list-unstyled() {
+  margin-left: 0;
+  list-style: none;
+}
+
+
+@mixin list-bullet() {
+  position: relative;
+  padding-left: 1em;
+}
+
+@mixin list-bullet-before() {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: inherit;
+  font-size: 2em;
+  line-height: 0.8;
+}
