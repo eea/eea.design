@@ -52,22 +52,32 @@
                     if (article_lang) {
                         $("#tip-article-language").css({
                             position: 'absolute',
-                            top: '48px',
                             display: 'block',
-                            right: '0px',
-                            left: ''
+                            top: 'auto'
                         });
+                        var pos_left = window.Math.floor($this.offset().left);
+                        if (pos_left > 200) {
+                            tooltip.style.right = '0px';
+                        }
+                        else {
+                            // article language link is on the left side of
+                            // the screen probably mobile
+                            tooltip.style.right = 'auto';
+                        }
                     }
-
-                    // attempt to position the tooltip bottom right from target on mini_header
+                    else {
+                        // attempt to position the tooltip bottom right from target on mini_header
                         var gnav_pos_left = window.Math.floor($("#secondary-portaltabs").offset().left);
                         var pos_left = window.Math.floor($this.offset().left);
                         var eWidth = $this.outerWidth();
                         var tWidth = $tooltip.outerWidth();
                         var left = pos_left + eWidth - gnav_pos_left - tWidth + "px";
+
                         if (tooltip.style.left !== left) {
                             tooltip.style.left = left;
                         }
+                    }
+
                     $tooltip.fadeIn('fast');
                 });
             }

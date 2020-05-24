@@ -52,18 +52,6 @@ hr {
   }
 /* @end breadcrumbs */
 
-/* #23500 allow the control panel widget to be placed outside of their context
-    by having overflow visible for screen with size larger than 1024px
-*/
-#region-content,
-.content-header {
-  position: relative;
-  }
-
-
-#content-core {
-  clear:both;
-  }
 
 /* portal-column styles */
 
@@ -89,11 +77,6 @@ hr {
   display: block;
   }
 
-/* for anonymous the language codes are inside panel-content so only for auth
-*  we restrict the max-width of languageCodes */
-.userrole-authenticated  #languageCodes {
-  max-width: 80%;
-  }
 #article-language .eea-icon {
   line-height: 0.75em;
   color: #888;
@@ -124,12 +107,11 @@ a.downloading img {
 #region-content .documentExportActions ul, .documentExportActions ul {
   list-style: none;
   padding: 0;
-  margin: 1em -0.15em 0 0;
+  margin: 0;
   }
 
 .content-core ul {
   list-style: square inside url(//www.eea.europa.eu/bullet.gif);
-  //margin-bottom: 1.5rem;
   }
 
 .documentExportActions li {
@@ -173,10 +155,9 @@ a.downloading img {
   }
 
 #content .documentByLine {
-  max-width: 87%;
   text-align: left;
   font-size: 0.75rem;
-  flex-basis: 100%;
+  margin-right: 0.5rem;
   }
 
 .portaltype-fiche .link-presentation {

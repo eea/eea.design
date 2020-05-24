@@ -13,35 +13,36 @@
             <div id="article-language">
                 <span class="eea-icon eea-icon-globe eea-icon-lg"></span>
                 <a href="#" i18n:translate="">Change language</a>
-            </div>
 
-            <div id="tip-article-language" class="panel">
+              <div id="tip-article-language" class="panel">
                 <div class="panel-top"><!-- --></div>
                 <div class="panel-content shadow">
-                    <ul id="languageCodes">
-                        <tal:language tal:repeat="lang data">
-                          <tal:defines
-                             tal:define="available lang/available">
-                            <li tal:attributes="class python: lang['current'] and 'selected' or None"
-                            tal:condition="lang/available">
-                                <a href="" class="translated"
-                                tal:attributes="href lang/change_url;
-                                title lang/alt"
-                                tal:omit-tag="lang/current"> <tal:langtitle tal:content="lang/Title"></tal:langtitle> <tal:langcode  tal:content="string:(${lang/Language})"></tal:langcode> </a>
-                            </li>
-                            <tal:auth tal:condition="python: not isAnon">
-                              <li tal:condition="not:available">
+                  <ul id="languageCodes">
+                    <tal:language tal:repeat="lang data">
+                      <tal:defines
+                           tal:define="available lang/available">
+                        <li tal:attributes="class python: lang['current'] and 'selected' or None"
+                             tal:condition="lang/available">
+                          <a href="" class="translated"
+                               tal:attributes="href lang/change_url;
+                              title lang/alt"
+                               tal:omit-tag="lang/current"> <tal:langtitle tal:content="lang/Title"></tal:langtitle> <tal:langcode  tal:content="string:(${lang/Language})"></tal:langcode> </a>
+                        </li>
+                        <tal:auth tal:condition="python: not isAnon">
+                          <li tal:condition="not:available">
                               <span
                                    tal:attributes="title lang/alt;
                                       class string:noTranslation"
                                    tal:content="string:${lang/Language}"> Language code</span>
-                              </li>
-                            </tal:auth>
-                          </tal:defines>
-                        </tal:language>
-                    </ul>
+                          </li>
+                        </tal:auth>
+                      </tal:defines>
+                    </tal:language>
+                  </ul>
                 </div>
+              </div>
             </div>
+
         </tal:LanguageCodes>
 
     </tal:languages>
