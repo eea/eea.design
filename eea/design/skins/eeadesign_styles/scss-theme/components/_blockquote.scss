@@ -1,27 +1,25 @@
-
 blockquote,
 .pullquote {
   position: relative;
-  padding: 2rem;
+  padding: $spacer-2 $spacer-4;
   font-size: inherit;
   color: inherit;
   word-break: break-word;
 }
 
 blockquote p, .pullquote p, .pullquote-full p {
-  font-size: 1.875rem;
+  font-size: $blockquote-font-size;
   line-height: 1.1666;
   font-weight: 300;
 }
-
-.content-core  {
+.content-core {
   blockquote p, .pullquote p, .pullquote-full p {
-    font-size: 1.875rem;
+    font-size: $blockquote-font-size;
   }
 }
 
 .source {
-  font-size: 1rem;
+  font-size: $h6-font-size;
 }
 
 blockquote > p:first-of-type {
@@ -34,9 +32,9 @@ blockquote > p:first-of-type:before,
 blockquote > p:last-child:after {
   display: inline-block;
   vertical-align: top;
-  height: 30px;
-  line-height: 20px;
-  font-size: 25px;
+  height: $spacer-2;
+  line-height: 1.2;
+  font-size: $h4-font-size;
   position: absolute;
   font-family: FontAwesome;
   font-weight: bold;
@@ -44,56 +42,45 @@ blockquote > p:last-child:after {
 
 blockquote > p:first-of-type:before {
   content: "\f10d";
-  top: -20px;
-  left: -15px;
+  top: -$spacer-5;
+  left: -$grid-gutter-width;
 }
 
 blockquote > p:last-child:after {
   content: "\f10e";
-  right: -18px;
-  bottom: -18px;
-}
-
-.pullquote-left {
-  margin: 0 $box-spacer $box-spacer 0;
+  right: -$spacer-5;
+  bottom: -$spacer-5;
+  //bottom: -18px;
 }
 
 blockquote.pullquote,
+.pullquote-left,
 .pullquote-right {
-  margin: 0 0 $box-spacer $box-spacer;
+  margin: $spacer 0;
 }
 
-@media (min-width: 490px) {
+@media (min-width: $breakpoint-sm) {
   blockquote.pullquote,
+  .pullquote-left,
+  .pullquote-right {
+    width: calc(50% - 1.5rem);
+  }
+
   .pullquote-right {
     float: right;
-    width: 47%;
+    margin: 0 0 $box-spacer $box-spacer;
   }
 
   .pullquote-left {
     float: left;
-    width: 47%;
+    margin: 0 $box-spacer $box-spacer 0;
   }
+
 }
 
-@media (max-width: 767px) {
+@media (min-width: $breakpoint-md) {
   blockquote,
   .pullquote {
-    padding: 2rem 1.3rem;
-  }
-
-  blockquote > p:first-of-type:before {
-    left: -15px;
-  }
-  blockquote > p:first-of-type:after {
-    right: -15px;
-  }
-
-  .pullquote-right {
-    margin: $spacer 0 $spacer $spacer;
-  }
-
-  .pullquote-left {
-    margin: $spacer $spacer $spacer 0;
+    padding: $spacer-2;
   }
 }

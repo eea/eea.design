@@ -22,17 +22,12 @@
   margin: 0 auto $spacer auto;
 }
 .tile-item {
+  padding: $h4-font-size;
   margin-bottom: $spacer;
 }
 
-@media (max-width: 480px) {
-  .tile {
-    flex-basis: 100%;
-  }
-}
-
 .tile-item-header {
-  font-size: $tiles-header-size;
+  font-size: $h1-font-size;
   margin-bottom: $tiles-spacer;
   line-height: 1;
   font-weight: bold;
@@ -61,15 +56,27 @@
   }
 }
 
-@media (min-width: 481px) {
+@media (max-width: $breakpoint-sm) {
+  .tile {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: $breakpoint-sm + 1) {
   .tiles--2 .tile,
   .tiles--3 .tile,
   .tiles--4 .tile {
-    max-width: 46%;
+    max-width: calc(50% - 1.5rem);
     //max-width: 30%; would work for video
   }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: $breakpoint-md) {
+  .tile-item-header {
+    font-size: $tiles-header-size;
+  }
+}
+@media (min-width: $breakpoint-lg) {
   .tiles--3 {
     flex-wrap: nowrap;
     width: 120%;

@@ -1,7 +1,9 @@
 .keyFact {
   padding: $spacer-4;
   position: relative;
-  margin: $spacer-0 0;
+  margin: $spacer-0;
+  margin-left: -$grid-gutter-width;
+  margin-right: -$grid-gutter-width;
   background-color: $keyfact-bg;
 }
 .keyFact:before {
@@ -48,7 +50,13 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-sm) {
+  .keyFact {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: $breakpoint-lg) {
   .keyFact {
     padding: $spacer-0 0;
   }

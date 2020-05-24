@@ -1,9 +1,11 @@
 .box {
-  padding: $box-spacer;
+  padding: $box-spacer $box-spacer-mobile;
   font-size: $box-font-size;
   line-height: inherit;
   word-break: break-word;
   margin-bottom: $box-spacer-mobile;
+  margin-left: -$grid-gutter-width;
+  margin-right: -$grid-gutter-width;
 }
 .box.bg-blue,
 .box.bg-blue a {
@@ -36,11 +38,8 @@
 .box--right.bg-green {
   background-color: $corporateGrey;
   border-top: $corporateGreen solid 0.25rem;
-  padding: 45px 30px 45px;
-  font-size: $box-font-size;
   line-height: $p-line-height;
 }
-
 
 .box.bg-green h2,
 .box.bg-tertiary h2 {
@@ -49,10 +48,15 @@
 }
 
 
-@media (min-width: 490px) {
+@media (min-width: $breakpoint-sm) {
+  .box {
+    padding: $box-spacer;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .box--right,
   .box--left {
-    width: 46.5%;
+    width: calc(50% - 1.5rem); // scss variable doesn't compile with calc
   }
 
   .box--left {
@@ -65,11 +69,6 @@
     margin: 0 0 $box-spacer $box-spacer;
   }
 }
-//@media (min-width: 576px) {
-//  .box {
-//    padding: $box-spacer;
-//  }
-//}
 
 @media print {
   .box li {
@@ -77,8 +76,3 @@
   }
 }
 
-//@media (min-width: 768px) {
-//  .box {
-//    padding: $spacer-2 $spacer;
-//  }
-//}

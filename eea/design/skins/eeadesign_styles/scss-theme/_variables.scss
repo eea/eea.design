@@ -18,7 +18,7 @@ $spacer-4: ($spacer * 1.5); // 24px
 $spacer-5: ($spacer * 1.25); // 20px
 $spacer-6: ($spacer * 1); // 16px
 $spacer-7: ($spacer * .75); // 12px
-
+$grid-gutter-width: 15px;
 
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
@@ -47,7 +47,11 @@ $p-line-height:            1.6;
 $small-font-size:             80% !default;
 
 // breakpoints
-$breakpoint-sm: 576px;
+$breakpoint-sm: 490px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
 
 
 // boxes
@@ -64,6 +68,7 @@ $tiles-header-size: $h0-font-size;
 $tiles-body-line-height: $headings-line-height;
 
 // blockquote
+$blockquote-font-size: $h3-font-size;
 
 // keyFact
 $keyfact-bg: $corporateGrey;

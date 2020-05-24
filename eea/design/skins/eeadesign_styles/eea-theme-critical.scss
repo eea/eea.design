@@ -60,14 +60,14 @@
 
   .mini-portal-type {
     position: absolute;
-    padding: 0.5em 1em;
+    padding: ($spacer / 2)  $spacer-4;
     background-color: rgba(0, 0, 0, 0.8);
-    top: -2.2em;
+    top: -$spacer-1;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 18px;
+    font-size: $p-font-size;
     line-height: 1;
-    left: -1rem;
+    left: -$spacer;
   }
 
   .content-header-body {
@@ -343,25 +343,25 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $breakpoint-md - 1) {
   html {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width:768px) and (max-width: 1023px) {
+@media (min-width:$breakpoint-md) and (max-width: $breakpoint-lg - 1) {
   html {
     font-size: 0.9375rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width:$breakpoint-lg) {
   html {
     font-size: 1rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-lg) {
   .mini-header {
     #portal-column-content {
       min-width: 830px;
