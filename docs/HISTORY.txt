@@ -1,6 +1,11 @@
 Changelog
 =========
 
+26.2 - (2020-05-25)
+---------------------------
+* Change: re-added the "Advanced search" link under search pop-up.
+  [alecghica refs #118094]
+
 26.1 - (2020-04-23)
 ---------------------------
 * Bugfix: calendar_formfield.js update hidden input now sets date as given by
