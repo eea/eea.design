@@ -9,7 +9,7 @@ blockquote,
 
 blockquote p, .pullquote p, .pullquote-full p {
   font-size: $blockquote-font-size;
-  line-height: 1.1666;
+  line-height: $headings-line-height;
   font-weight: 300;
 }
 .content-core {
@@ -42,7 +42,7 @@ blockquote > p:last-child:after {
 
 blockquote > p:first-of-type:before {
   content: "\f10d";
-  top: -$spacer-5;
+  top: -$spacer-3;
   left: -$grid-gutter-width;
 }
 
@@ -50,7 +50,6 @@ blockquote > p:last-child:after {
   content: "\f10e";
   right: -$spacer-5;
   bottom: -$spacer-5;
-  //bottom: -18px;
 }
 
 blockquote.pullquote,
