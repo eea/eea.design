@@ -1,5 +1,3 @@
-//@import "../mixins/fullwidth_bg";
-
 .tiles-container {
   @include fullwidth-bg;
   font-size: $h4-font-size;
@@ -10,25 +8,26 @@
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  margin: $spacer 0 0 0;
+  margin: $tiles-margin 0;
 }
 
 .tile {
   flex: 1 1 34%;
-  margin-bottom: $spacer;
+  margin-bottom: $tiles-margin-mobile;
 }
 
 .tiles--3 .tile {
-  margin: 0 auto $spacer auto;
+  margin: 0 auto;
 }
 .tile-item {
-  padding: $h4-font-size;
-  margin-bottom: $spacer;
+  padding: $tiles-padding $tiles-padding-mobile;
+  margin-bottom: $tiles-margin-mobile;
 }
 
 .tile-item-header {
-  font-size: $h1-font-size;
-  margin-bottom: $tiles-spacer;
+  font-size: $tiles-header-size-mobile;
+  margin-top: 0 !important; /* avoid h tag top margin */
+  margin-bottom: $tiles-margin;
   line-height: 1;
   font-weight: bold;
   color: $corporateGreen;
@@ -36,14 +35,14 @@
 }
 
 
-.content-core .tile-item-body {
-  font-size: inherit;
-}
 .tile-item-body {
   font-size: inherit;
   color: gray;
   margin: 0 auto;
   line-height: $tiles-body-line-height;
+}
+.content-core .tile-item-body {
+  font-size: inherit;
 }
 
 .tiles--3 .tile-item-body {
@@ -72,6 +71,9 @@
 }
 
 @media (min-width: $breakpoint-md) {
+  .tiles {
+    margin: $tiles-margin-hero 0;
+  }
   .tile-item-header {
     font-size: $tiles-header-size;
   }

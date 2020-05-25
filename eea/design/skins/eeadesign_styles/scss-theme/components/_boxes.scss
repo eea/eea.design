@@ -1,9 +1,9 @@
 .box {
-  padding: $box-spacer $box-spacer-mobile;
+  padding: $box-padding-mobile $box-margin-mobile;
   font-size: $box-font-size;
   line-height: inherit;
   word-break: break-word;
-  margin-bottom: $box-spacer-mobile;
+  margin-bottom: $box-margin-mobile;
   margin-left: -$grid-gutter-width;
   margin-right: -$grid-gutter-width;
 }
@@ -50,7 +50,7 @@
 
 @media (min-width: $breakpoint-sm) {
   .box {
-    padding: $box-spacer;
+    padding: $box-padding;
     margin-left: 0;
     margin-right: 0;
   }
@@ -61,12 +61,12 @@
 
   .box--left {
     float: left;
-    margin: 0 $box-spacer $box-spacer 0;
+    margin: 0 $box-margin $box-margin 0;
   }
 
   .box--right {
     float: right;
-    margin: 0 0 $box-spacer $box-spacer;
+    margin: 0 0 $box-margin $box-margin;
   }
 }
 

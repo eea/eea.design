@@ -1,12 +1,12 @@
 
 @mixin fullwidth-bg {
   position: relative;
-  margin-top: 3rem !important;
-  margin-bottom: 3rem !important;
+  margin-top: $h0-font-size !important;
+  margin-bottom: $h0-font-size !important;
   z-index: 1;
-  font-size:  1.25rem;
-  padding: 1.5rem 0;
-  line-height: 1.4;
+  font-size:  $p-font-size;
+  padding: $spacer-2 0 !important;
+  line-height: $p-line-height;
 }
 
 @mixin pseudo-bg-boilerplate {

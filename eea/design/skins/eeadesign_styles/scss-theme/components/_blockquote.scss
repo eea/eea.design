@@ -1,7 +1,7 @@
 blockquote,
 .pullquote {
   position: relative;
-  padding: $spacer-2 $spacer-4;
+  padding: $blockquote-padding $blockquote-padding-mobile;
   font-size: inherit;
   color: inherit;
   word-break: break-word;
@@ -55,7 +55,7 @@ blockquote > p:last-child:after {
 blockquote.pullquote,
 .pullquote-left,
 .pullquote-right {
-  margin: $spacer 0;
+  margin: $blockquote-margin-mobile 0;
 }
 
 @media (min-width: $breakpoint-sm) {
@@ -67,12 +67,12 @@ blockquote.pullquote,
 
   .pullquote-right {
     float: right;
-    margin: 0 0 $box-spacer $box-spacer;
+    margin: 0 0 $blockquote-margin $blockquote-margin;
   }
 
   .pullquote-left {
     float: left;
-    margin: 0 $box-spacer $box-spacer 0;
+    margin: 0 $blockquote-margin $blockquote-margin 0;
   }
 
 }
@@ -80,6 +80,6 @@ blockquote.pullquote,
 @media (min-width: $breakpoint-md) {
   blockquote,
   .pullquote {
-    padding: $spacer-2;
+    padding: $blockquote-padding;
   }
 }

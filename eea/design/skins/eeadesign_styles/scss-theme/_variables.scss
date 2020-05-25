@@ -57,19 +57,28 @@ $breakpoint-xxl: 1400px;
 
 // boxes
 $box-font-size: $p-font-size;
-$box-spacer-x: $spacer-4;
-$box-spacer-y: $spacer-4;
-$box-spacer:   $spacer-4;
-$box-spacer-mobile: $spacer;
+$box-margin: $spacer-4;
+$box-margin-mobile: $spacer;
+$box-padding: $spacer-2;
+$box-padding-mobile: $spacer-4;
 
 
 // tiles
-$tiles-spacer:   $spacer-4;
+$tiles-margin: $box-margin;
+$tiles-margin-mobile: $spacer;
+$tiles-margin-hero: $spacer-0;
+$tiles-padding: $box-padding;
+$tiles-padding-mobile: $box-padding-mobile;
 $tiles-header-size: $h0-font-size;
+$tiles-header-size-mobile: $h1-font-size;
 $tiles-body-line-height: $headings-line-height;
 
 // blockquote
 $blockquote-font-size: $h3-font-size;
+$blockquote-margin: $box-margin;
+$blockquote-margin-mobile: $box-margin-mobile;
+$blockquote-padding: $box-padding;
+$blockquote-padding-mobile: $box-padding-mobile;
 
 // keyFact
 $keyfact-bg: $corporateGrey;
