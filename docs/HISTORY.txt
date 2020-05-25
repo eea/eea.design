@@ -1,6 +1,9 @@
 Changelog
 =========
 
+26.3-dev0 - (unreleased)
+---------------------------
+
 26.2 - (2020-05-25)
 ---------------------------
 * Change: re-added the "Advanced search" link under search pop-up.
