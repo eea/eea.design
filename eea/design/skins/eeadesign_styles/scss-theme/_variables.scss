@@ -10,6 +10,7 @@ $text-gray-light: #e6e6e6;
 // Spacing
 $spacer: 1rem !default;
 $spacer-half: $spacer / 2;
+$spacer-hero: ($spacer * 6.25); // 100px -- hero spacing
 $spacer-0: ($spacer * 3.75); // 60px -- max
 $spacer-1: ($spacer * 2.5); // 40px
 $spacer-2: ($spacer * 2); // 32px

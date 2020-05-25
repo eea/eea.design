@@ -315,13 +315,12 @@ th a, th a:link, th a:visited {
 .fullwidth-bg {
     @include fullwidth-bg;
 }
+.fullwidth-bg:before {
+    @include fullwidth-bg-before;
+}
 
 video {
     max-width: 100%;
-}
-
-.fullwidth-bg:before {
-    @include fullwidth-bg-before;
 }
 
 .fullwidth {
@@ -335,7 +334,6 @@ video {
     align-items: center;
     flex-direction: column;
     clear: both;
-    //min-height: 600px;
     overflow: hidden;
     justify-content: center;
     margin: 2.5rem calc(50% - 49.3vw) 2.5rem calc(50% - 50vw);
@@ -378,7 +376,13 @@ video {
 
 @media (min-width: $breakpoint-sm) {
     .emphasis-area {
-        padding: 1.5rem;
+        padding: $spacer-4;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .emphasis-area {
+        margin: $spacer-hero 0;
     }
 }
 
@@ -1075,7 +1079,7 @@ ul.social-buttons {
 .eea-tiles::after,
 .eea-tileDescription::after,
 .eea-tile::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
 }
@@ -1293,7 +1297,7 @@ ul.social-buttons {
     position: relative;
 }
 .eea-tileDescription::after {
-    content: '';
+    content: "";
     display: block;
     /* 16:9 ratio */
     padding-top: 5.25%;
