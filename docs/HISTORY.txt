@@ -3,6 +3,8 @@ Changelog
 
 26.2-dev0 - (unreleased)
 ---------------------------
+* Change: re-added the "Advanced search" link under search pop-up.
+  [alecghica refs #118094]
 
 26.1 - (2020-04-23)
 ---------------------------
