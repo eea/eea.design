@@ -9,8 +9,8 @@ blockquote,
 
 blockquote p, .pullquote p, .pullquote-full p {
   font-size: $blockquote-font-size;
-  line-height: $headings-line-height;
-  font-weight: 300;
+  line-height: $blockquote-line-height;
+  font-weight: $blockquote-font-weight;
 }
 .content-core {
   blockquote p, .pullquote p, .pullquote-full p {
@@ -19,7 +19,7 @@ blockquote p, .pullquote p, .pullquote-full p {
 }
 
 .source {
-  font-size: $h6-font-size;
+  font-size: $blockquote-source-font-size !important;
 }
 
 blockquote > p:first-of-type {
@@ -33,7 +33,7 @@ blockquote > p:last-child:after {
   display: inline-block;
   vertical-align: top;
   height: $spacer-2;
-  line-height: 1.2;
+  line-height: $blockquote-line-height;
   font-size: $h4-font-size;
   position: absolute;
   font-family: FontAwesome;

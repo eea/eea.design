@@ -75,6 +75,10 @@ $tiles-body-line-height: $headings-line-height;
 
 // blockquote
 $blockquote-font-size: $h3-font-size;
+$blockquote-font-weight: 300;
+$blockquote-source-font-size: $h6-font-size;
+$blockquote-font-size: $h3-font-size;
+$blockquote-line-height: $headings-line-height;
 $blockquote-margin: $box-margin;
 $blockquote-margin-mobile: $box-margin-mobile;
 $blockquote-padding: $box-padding;

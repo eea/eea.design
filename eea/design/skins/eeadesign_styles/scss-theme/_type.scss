@@ -13,13 +13,20 @@ h1, h2, h3, h4, h5, h6,
   color: $headings-color;
 }
 
-h1, .h1 { font-size: $h1-font-size; }
-h2, .h2 { font-size: $h2-font-size; }
-h3, .h3 { font-size: $h3-font-size; }
-h4, .h4 { font-size: $h4-font-size; }
-h5, .h5 { font-size: $h5-font-size; }
-h6, .h6 { font-size: $h6-font-size; }
-
+.h0 { font-size: $h0-font-size !important; }
+h1 { font-size: $h1-font-size;}
+.h1 { font-size: $h1-font-size !important; }
+h2 { font-size: $h2-font-size; }
+.h2 { font-size: $h2-font-size !important; }
+h3 { font-size: $h3-font-size; }
+.h3 { font-size: $h3-font-size !important; }
+h4 { font-size: $h4-font-size; }
+.h4 { font-size: $h4-font-size !important; }
+h5 { font-size: $h5-font-size; }
+.h5 { font-size: $h5-font-size !important; }
+h6 { font-size: $h6-font-size; }
+.h6 { font-size: $h6-font-size !important; }
+.h7 { font-size: $h7-font-size !important; }
 
 p {
   font-size: $p-font-size;
@@ -30,20 +37,10 @@ p {
 p:last-child {
   margin-bottom: 0;
 }
-//.lead {
-//  @include font-size($lead-font-size);
-//  font-weight: $lead-font-weight;
-//}
 .figureHeading {
   font-size: $p-font-size;
 }
 
-// Type display classes
-//.display-1 {
-//  font-size: $display1-size;
-//  font-weight: $display1-weight;
-//  line-height: $display-line-height;
-//}
 
 //
 // Emphasis
