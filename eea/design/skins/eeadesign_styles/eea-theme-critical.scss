@@ -98,7 +98,9 @@
   }
 
   .content-header .documentByLine {
+    position: relative;
     display: flex;
+    align-content: center;
     justify-content: flex-start;
     flex-wrap: wrap;
     flex: 1;
@@ -107,16 +109,16 @@
 
   .content-header .documentByLine::before {
     position: absolute;
-    width: 122%;
-    left: -11%;
+    width: 100vw;
+    left: -$grid-gutter-width;
     display: block;
     content: " ";
     border-top: 2px solid white;
-    margin-top: -1em;
+    top: -$spacer-half;
   }
 
   .documentExportActions {
-    margin: 0 0 0 1rem;
+    margin: 0 0 $spacer-half $spacer;
     order: 5;
   }
 
@@ -323,6 +325,9 @@
 @media (min-width:$breakpoint-lg) {
   html {
     font-size: 1rem;
+  }
+  .mini-header .content-header .documentByLine::before {
+    left: -13%;
   }
 }
 
