@@ -355,7 +355,7 @@ video {
 
 
 .absolute-centered {
-    max-width: 840px;
+    max-width: 848px;
     position: relative;
     z-index: 10;
 }
@@ -368,17 +368,24 @@ video {
     margin: $spacer-2 0;
 }
 /* normalize blockquote in case we add it inside emphasis area */
-//.emphasis-area blockquote {
-//    padding: $spacer-4;
-//}
+.emphasis-area blockquote {
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
 .emphasis-area a {
     color: currentColor;
     border-bottom: 1px solid inherit;
 }
 
-@media (min-width: $breakpoint-sm) {
+@media (min-width: $breakpoint-full) {
     .emphasis-area {
-        padding: $spacer-2 $spacer-4;
+        padding: $spacer-2;
+    }
+
+    .emphasis-area blockquote {
+        margin-left: -2px;
+        margin-right: -10px;
     }
 }
 

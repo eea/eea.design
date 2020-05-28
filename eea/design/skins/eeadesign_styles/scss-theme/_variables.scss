@@ -59,10 +59,12 @@ $breakpoint-xxl: 1400px;
 
 // boxes
 $box-font-size: $p-font-size;
+$box-line-height: $p-line-height;
 $box-margin: $spacer-4;
 $box-margin-mobile: $spacer;
 $box-padding: $spacer-2;
 $box-padding-mobile: $spacer-4;
+$box-border-size: 0.25rem;
 
 
 // tiles
@@ -76,11 +78,10 @@ $tiles-header-size-mobile: $h1-font-size;
 $tiles-body-line-height: $headings-line-height;
 
 // blockquote
-$blockquote-font-size: $h3-font-size;
+$blockquote-font-size: 1.625rem;
 $blockquote-font-weight: 300;
 $blockquote-source-font-size: $h6-font-size;
-$blockquote-font-size: $h3-font-size;
-$blockquote-line-height: $headings-line-height;
+$blockquote-line-height: 1.3;
 $blockquote-margin: $box-margin;
 $blockquote-margin-mobile: $box-margin-mobile;
 $blockquote-padding: $box-padding;

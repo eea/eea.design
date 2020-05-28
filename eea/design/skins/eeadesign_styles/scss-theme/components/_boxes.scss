@@ -1,7 +1,7 @@
 .box {
   padding: $box-padding-mobile $box-margin-mobile;
   font-size: $box-font-size;
-  line-height: inherit;
+  line-height: $box-line-height;
   word-break: break-word;
   margin-bottom: $box-margin-mobile;
   margin-left: -$grid-gutter-width;
@@ -21,12 +21,11 @@
   background-color: $corporateGreen;
 }
 
+.box.bg-blue,
+.box.bg-blue a,
 .box-primary,
 .box-primary a {
   color: $text-gray-light;
-}
-.box.bg-blue,
-.box.bg-blue a {
 }
 
 .box :last-child {
@@ -54,12 +53,19 @@
 .box--left.bg-green,
 .box--right.bg-green {
   background-color: $corporateGrey;
-  border-top: $corporateGreen solid 0.25rem;
+  border-top: $corporateGreen solid $box-border-size;
   line-height: $p-line-height;
 }
 
+.box--left.bg-green,
+.box--right.bg-green {
+  margin-top: -$box-border-size; /* align left and right boxes to content area */
+}
+
 .box.bg-green h2,
-.box.bg-tertiary h2 {
+.box.bg-green h3,
+.box-tertiary h2,
+.box-tertiary h3 {
   color: $corporateGreen;
   font-weight: normal;
 }
