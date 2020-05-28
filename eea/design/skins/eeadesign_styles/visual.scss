@@ -321,6 +321,9 @@ th a, th a:link, th a:visited {
 
 video {
     max-width: 100%;
+    min-height: 210px;
+    object-position: top;
+    //height: calc(100% + 2rem);
 }
 
 .fullwidth {
@@ -352,10 +355,9 @@ video {
 
 
 .absolute-centered {
-    max-width: 800px;
+    max-width: 840px;
     position: relative;
     z-index: 10;
-    /*width: 63.5%;*/
 }
 
 .emphasis-area {
@@ -366,9 +368,9 @@ video {
     margin: $spacer-2 0;
 }
 /* normalize blockquote in case we add it inside emphasis area */
-.emphasis-area blockquote {
-    padding: $spacer-4;
-}
+//.emphasis-area blockquote {
+//    padding: $spacer-4;
+//}
 .emphasis-area a {
     color: currentColor;
     border-bottom: 1px solid inherit;
@@ -376,13 +378,20 @@ video {
 
 @media (min-width: $breakpoint-sm) {
     .emphasis-area {
-        padding: $spacer-2;
+        padding: $spacer-2 $spacer-4;
     }
 }
 
 @media (min-width: $breakpoint-md) {
     .emphasis-area {
         margin: $spacer-hero 0;
+    }
+}
+
+@media (min-width: $breakpoint-full) {
+    .fullwidth-bg {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 

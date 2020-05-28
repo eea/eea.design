@@ -6,10 +6,27 @@
   margin-bottom: $box-margin-mobile;
   margin-left: -$grid-gutter-width;
   margin-right: -$grid-gutter-width;
+  width: 100vw;
+}
+.box-primary {
+  background-color: $corporateBlue;
+}
+//Box Title Green|div|box-header box-header-tertiary
+
+.box-secondary {
+  background-color: $corporateGrey;
+}
+
+.box-tertiary {
+  background-color: $corporateGreen;
+}
+
+.box-primary,
+.box-primary a {
+  color: $text-gray-light;
 }
 .box.bg-blue,
 .box.bg-blue a {
-  color: $text-gray-light;
 }
 
 .box :last-child {
@@ -53,6 +70,7 @@
     padding: $box-padding;
     margin-left: 0;
     margin-right: 0;
+    width: 100%;
   }
   .box--right,
   .box--left {

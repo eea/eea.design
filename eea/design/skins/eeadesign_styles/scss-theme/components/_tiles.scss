@@ -16,12 +16,14 @@
   margin-bottom: $tiles-margin-mobile;
 }
 
-.tiles--3 .tile {
-  margin: 0 auto;
+.tile--bordered {
+  @include bordered-y();
+  padding: $tiles-padding 0;
+  margin-top: -1px;
 }
-.tile-item {
-  padding: $tiles-padding $tiles-padding-mobile;
-  margin-bottom: $tiles-margin-mobile;
+
+.tiles--3 .tile {
+  margin: 0 auto $spacer auto;
 }
 
 .tile-item-header {
@@ -33,7 +35,6 @@
   color: $corporateGreen;
   text-shadow: 2px 0 0 currentColor;
 }
-
 
 .tile-item-body {
   font-size: inherit;
@@ -61,24 +62,42 @@
   }
 }
 
-@media (min-width: $breakpoint-sm + 1) {
+@media (min-width: $breakpoint-sm + 1) and (max-width: $breakpoint-lg - 1) {
   .tiles--2 .tile,
   .tiles--3 .tile,
   .tiles--4 .tile {
-    max-width: calc(50% - 1.5rem);
+    max-width: calc(45% - 1.5rem);
     //max-width: 30%; would work for video
   }
 }
 
 @media (min-width: $breakpoint-md) {
-  .tiles {
-    margin: $tiles-margin-hero 0;
-  }
+  //.tiles {
+  //  margin: $tiles-margin-hero 0;
+  //}
+
   .tile-item-header {
     font-size: $tiles-header-size;
   }
 }
+
+@media (max-width: $breakpoint-lg - 1) {
+  .tiles--3 .tile:last-child {
+    margin-bottom: 0;
+  }
+}
 @media (min-width: $breakpoint-lg) {
+  .tiles--4 .tile,
+  .tiles--2 .tile {
+    max-width: calc(50% - 1.5rem);
+  }
+  .tiles--3 .tile {
+    max-width: calc(34% - 1.5rem);
+  }
+
+  //.tiles--3 .tile--bordered {
+  //  max-width: calc(34% - 1.5rem);
+  //}
   .tiles--3 {
     flex-wrap: nowrap;
     width: 120%;

@@ -82,10 +82,10 @@
     content: " ";
     background-color: white;
     position: absolute;
-    height: 110%;
+    height: calc(100% + 3.75rem);
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 49.3vw);
-    top: -12px;
+    top: 0;
     z-index: -2;
     min-height: 100px;
   }
@@ -148,11 +148,7 @@
   }
 
   .fullwidth-img-container {
-    padding-bottom: 100px;
-  }
-
-  .fiche-summary {
-    margin-bottom: 3em;
+    margin-bottom: $spacer-0;
   }
 
   .content-header {

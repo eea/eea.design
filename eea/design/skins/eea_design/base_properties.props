@@ -17,6 +17,7 @@ corporateGreenTwo:string=#777c1f
 corporateBlue:string=#004B87
 corporateDarkBlue:string=#274357
 corporateBlueTwo:string=#006699
+corporateBorderColor:string=#b2b2b2
 
 
 #color used for	buttons / actions / special links (not for plain text)
