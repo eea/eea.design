@@ -58,12 +58,6 @@
 }
 
 @media (min-width: $breakpoint-sm) {
-  .box {
-    padding: $box-padding;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-  }
   .box--right,
   .box--left {
     width: calc(50% - 1.5rem); // scss variable doesn't compile with calc
@@ -77,6 +71,24 @@
   .box--right {
     float: right;
     margin: 0 0 $box-margin $box-margin;
+  }
+}
+
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-full - 1) {
+  .box--left {
+    margin-left: -$grid-gutter-width;
+  }
+  .box--right {
+    margin-right: -$grid-gutter-width;
+  }
+}
+
+@media (min-width: $breakpoint-full) {
+  .box {
+    padding: $box-padding;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
 }
 

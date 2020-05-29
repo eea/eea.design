@@ -1,5 +1,5 @@
 .keyFact {
-  padding: $spacer-4;
+  padding: $spacer-4 $spacer;
   position: relative;
   margin: $spacer-0;
   margin-left: -$grid-gutter-width;
@@ -50,10 +50,11 @@
   }
 }
 
-@media (min-width: $breakpoint-sm) {
+@media (min-width: $breakpoint-full) {
   .keyFact {
     margin-left: auto;
     margin-right: auto;
+    padding: $spacer-4;
   }
 }
 @media (min-width: $breakpoint-lg) {
