@@ -60,7 +60,7 @@
 @media (min-width: $breakpoint-sm) {
   .box--right,
   .box--left {
-    width: calc(50% - 1.5rem); // scss variable doesn't compile with calc
+    width: calc(50% - #{$box-margin});
   }
 
   .box--left {

@@ -70,7 +70,7 @@
   .tiles--2 .tile,
   .tiles--3 .tile,
   .tiles--4 .tile {
-    max-width: calc(50% - 1.5rem);
+    max-width: calc(50% - #{$tiles-width-reduction});
   }
 }
 
@@ -90,15 +90,15 @@
 @media (min-width: $breakpoint-lg) {
   .tiles--4 .tile,
   .tiles--2 .tile {
-    max-width: calc(50% - 1.5rem);
+    max-width: calc(50% - #{$tiles-width-reduction});
   }
   .tiles--3 .tile {
-    max-width: calc(34% - 1.5rem);
+    max-width: calc(34% - #{$tiles-width-reduction});
     margin-bottom: 0;
   }
 
   .tiles--3 .tile--bordered {
-    max-width: calc(36% - 1.5rem);
+    max-width: calc(36% - #{$tiles-width-reduction});
   }
   .tiles--3 {
     flex-wrap: nowrap;

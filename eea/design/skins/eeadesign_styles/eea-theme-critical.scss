@@ -82,7 +82,7 @@
     content: " ";
     background-color: white;
     position: absolute;
-    height: calc(100% + 3.75rem);
+    height: calc(100% + #{$spacer-0});
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 49.3vw);
     top: 0;
@@ -323,8 +323,19 @@
   html {
     font-size: 1rem;
   }
-  .mini-header .content-header .documentByLine::before {
-    left: -13.5%;
+  .mini-header {
+    .content-header .documentByLine::before {
+      left: -13.5%;
+    }
+
+    .content-header-body:before {
+      height: calc(100% + #{$spacer-hero});
+    }
+
+    //.content-core,
+    .fullwidth-img-container {
+      margin-bottom: $spacer-hero;
+    }
   }
 }
 

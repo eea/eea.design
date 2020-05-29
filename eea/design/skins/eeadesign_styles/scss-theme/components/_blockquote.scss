@@ -62,7 +62,7 @@ blockquote.pullquote,
   blockquote.pullquote,
   .pullquote-left,
   .pullquote-right {
-    width: calc(50% - 1.5rem);
+    width: calc(50% - #{$blockquote-margin});
   }
 
   .pullquote-right {
