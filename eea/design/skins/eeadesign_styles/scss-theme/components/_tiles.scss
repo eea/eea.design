@@ -13,7 +13,7 @@
 
 .tile {
   flex: 1 1 34%;
-  margin-bottom: $tiles-margin-mobile;
+  margin-bottom: $tiles-margin;
 }
 
 .tile--bordered {
@@ -23,7 +23,7 @@
 }
 
 .tiles--3 .tile {
-  margin: 0 auto $spacer auto;
+  margin: 0 auto $tiles-margin auto;
 }
 
 .tile-item-header {
@@ -93,11 +93,12 @@
   }
   .tiles--3 .tile {
     max-width: calc(34% - 1.5rem);
+    margin-bottom: 0;
   }
 
-  //.tiles--3 .tile--bordered {
-  //  max-width: calc(34% - 1.5rem);
-  //}
+  .tiles--3 .tile--bordered {
+    max-width: calc(36% - 1.5rem);
+  }
   .tiles--3 {
     flex-wrap: nowrap;
     width: 120%;

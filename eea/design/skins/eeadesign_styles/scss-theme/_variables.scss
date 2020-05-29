@@ -2,7 +2,7 @@
 // Color system
 $corporateGreen: #00888A;
 $corporateGrey: #f3f3f3;
-$corporateBlue: #004b87;
+$corporateBlue: #274357;
 $bg-grey: $corporateGrey;
 $text-gray-light: #e6e6e6;
 $border-primary: #b2b2b2;
@@ -68,12 +68,13 @@ $box-border-size: 0.25rem;
 
 
 // tiles
-$tiles-margin: $box-margin;
+$tiles-margin: $spacer-2;
 $tiles-margin-mobile: $spacer;
 $tiles-margin-hero: $spacer-0;
 $tiles-padding: $box-padding;
 $tiles-padding-mobile: $box-padding-mobile;
 $tiles-header-size: $h0-font-size;
+$tiles-header-margin: $headings-margin-bottom;
 $tiles-header-size-mobile: $h1-font-size;
 $tiles-body-line-height: $headings-line-height;
 
