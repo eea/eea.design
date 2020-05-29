@@ -32,6 +32,7 @@
   .keyFact ul {
     font-weight: 300;
     @include list-unstyled();
+    margin-bottom: 0;
   }
   .keyFact li {
     position: relative;

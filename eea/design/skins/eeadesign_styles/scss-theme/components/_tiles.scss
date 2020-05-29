@@ -16,20 +16,24 @@
   margin-bottom: $tiles-margin;
 }
 
+.tiles--3 .tile {
+  margin: 0 0 $tiles-margin 0;
+}
+
 .tile--bordered {
   @include bordered-y();
   padding: $tiles-padding 0;
   margin-top: -1px;
 }
-
-.tiles--3 .tile {
-  margin: 0 0 $tiles-margin 0;
+.tile--bordered .tile-item {
+    margin: 0 auto;
+    max-width: 75%;
 }
 
 .tile-item-header {
   font-size: $tiles-header-size-mobile;
   margin-top: 0 !important; /* avoid h tag top margin */
-  margin-bottom: $tiles-margin;
+  margin-bottom: $tiles-header-margin;
   line-height: 1;
   font-weight: bold;
   color: $corporateGreen;
@@ -67,15 +71,10 @@
   .tiles--3 .tile,
   .tiles--4 .tile {
     max-width: calc(50% - 1.5rem);
-    //max-width: 30%; would work for video
   }
 }
 
 @media (min-width: $breakpoint-md) {
-  //.tiles {
-  //  margin: $tiles-margin-hero 0;
-  //}
-
   .tile-item-header {
     font-size: $tiles-header-size;
   }
