@@ -8,11 +8,6 @@
     destination="26.3"
     profile="eea.design:default">
 
-    <genericsetup:upgradeStep
-      title="Upgrade design constructs for Article redesign"
-      handler=".evolve.update_design_elements"
-    />
-
     <genericsetup:upgradeDepends
       title="Import all steps from eea.design profile upgrade 26.3"
       description="Added new theme for Briefing, Article and News"

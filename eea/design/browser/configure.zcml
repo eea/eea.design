@@ -366,6 +366,18 @@
         permission="plone.app.controlpanel.Navigation"
         />
 
+    <browser:page for="*"
+      name="migrate-design-elements"
+      class=".migrate.MigrateDesignElements"
+      permission="cmf.ManagePortal" />
+
+
+    <browser:page for="*"
+      name="find-old-design-elements"
+      class=".migrate.FindOldDesignElements"
+      permission="cmf.ModifyPortalContent" />
+
+
     <!-- Presentation view override -->
     <browser:page
         name="presentation_view"

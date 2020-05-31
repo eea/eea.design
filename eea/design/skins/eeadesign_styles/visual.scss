@@ -366,6 +366,8 @@ video {
     padding: $spacer-4 $spacer;
     color: $text-gray-light;
     margin: $spacer-2 0;
+    font-size: $p-font-size;
+    line-height: $p-line-height;
 }
 /* normalize blockquote in case we add it inside emphasis area */
 .emphasis-area blockquote {
@@ -399,6 +401,12 @@ video {
     .fullwidth-bg {
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .fullwidth-container-centered {
+        min-height: 600px;
     }
 }
 
