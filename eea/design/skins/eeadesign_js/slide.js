@@ -69,7 +69,6 @@
             var gnav_pos_left = window.Math.floor(
               $("#secondary-portaltabs").offset().left
             );
-            var pos_left = window.Math.floor($this.offset().left);
             var eWidth = $this.outerWidth();
             var tWidth = $tooltip.outerWidth();
             var left = pos_left + eWidth - gnav_pos_left - tWidth + "px";

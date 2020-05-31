@@ -1,5 +1,6 @@
 """ Migrate view """
 from Products.Five.browser import BrowserView
+from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 from Products.CMFEditions.utilities import maybeSaveVersion
 from pprint import pprint
