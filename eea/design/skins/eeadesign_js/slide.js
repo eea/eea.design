@@ -48,13 +48,13 @@
             }
           });
 
+          var pos_left = window.Math.floor($this.offset().left);
           if (article_lang) {
             $("#tip-article-language").css({
               position: "absolute",
               display: "block",
               top: "auto"
             });
-            var pos_left = window.Math.floor($this.offset().left);
             if (pos_left > 200) {
               tooltip.style.right = "0px";
               tooltip.firstElementChild.style.float = "right";
