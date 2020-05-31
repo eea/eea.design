@@ -87,7 +87,8 @@ class MigrateDesignElements(BrowserView):
         print '%d objects were modified' % count
         modified.sort()
         pprint(modified)
-        return pprint(modified)
+        logger.info("%s", '\n'.join(modified))
+        return '\n'.join(modified)
 
 
 class FindOldDesignElements(BrowserView):
