@@ -329,17 +329,9 @@ video {
 .fullwidth {
     width: 100%;
 }
-
+.max-container-centered,
 .fullwidth-container-centered {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
-    clear: both;
-    overflow: hidden;
-    justify-content: center;
-    margin: 2.5rem calc(50% - 49.3vw) 2.5rem calc(50% - 50vw);
+  @include fullwidth-container-centered();
 }
 
 .fullwidth-container-centered .fullwidth {
@@ -347,11 +339,25 @@ video {
 }
 
 .fullwidth-container-centered > img,
+.max-container-centered  > img,
 .fullwidth-container-centered > iframe {
     min-width: initial;
-    //max-width: 1400px !important;
     width: 100%;
 }
+.fullwidth-container-centered .fullwidth {
+    padding: 0;
+}
+
+.fullwidth-container-centered > *,
+.max-container-centered > * {
+  width: 100%;
+  max-width: 800px;
+}
+.max-container-centered > iframe,
+.max-container-centered > img {
+    max-width: 1400px !important;
+}
+
 
 
 .absolute-centered {
@@ -397,11 +403,18 @@ video {
     }
 }
 
+@media (max-width: $breakpoint-full - 1) {
+    .fullwidth-container-centered > *,
+    .max-container-centered > * {
+        padding: $spacer;
+    }
+}
 @media (min-width: $breakpoint-full) {
     .fullwidth-bg {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
 }
 
 @media (min-width: $breakpoint-lg) {
