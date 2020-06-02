@@ -156,13 +156,20 @@ input[disabled], #plonebrowser input[disabled] {
 .ploneSkin .mceButton.mce_fullscreen {
     width: 170px !important; /* 20461; enlarge fullscreen button since it contains description text */
 }
-.mce_fullscreen > .mceVoiceLabel {
+
+.mceButton.mce_template {
+    width: 240px !important;
+}
+.mce_fullscreen > .mceVoiceLabel,
+.mce_template > .mceVoiceLabel
+{
     position: relative;
     top: -18px;
     display: block !important;
     font-size: 12px;
     left: 21px;
 }
+
 
 /* #9499 give the style selector popup a minimum width */
 .ploneSkin .mceMenu {

@@ -69,7 +69,7 @@ div.managePortletsLink:hover {
  * portal-content-column */
 .ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr, .ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *, .ploneSkin .mceText {
     background: transparent;
-    white-space: normal;
+    white-space: normal !important; /* normalize table width of tinymce on translated fields */
     text-decoration: none;
     font-weight: normal;
     cursor: default;
@@ -151,8 +151,15 @@ div.managePortletsLink:hover {
     background-color: #004B87 !important;
     color: #FFF !important;
 }
-#content .translation_edit table {
-    width: auto !important;
+/*#content .translation_edit table {*/
+/*    width: auto !important;*/
+/*}*/
+
+.translation_field > tbody > tr > td:first-child {
+    width: 40%;
+}
+.ArchetypesAddRemoveWidget .formHelp {
+    display: inline-block;
 }
 /* @end #110041 tinymce button and table fixes */
 
