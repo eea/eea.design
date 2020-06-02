@@ -110,9 +110,6 @@ body .ploneSkin .mce_formatPreview a {
 .ploneSkin table.mceLayout {
     width: 100% !important;
 }
-.ploneSkin table.mceLayout td.mceToolbar {
-    height: 85px;
-}
 
 #davizvisualization-base-edit table.mceLayout, #gis_application-base-edit table.mceLayout {
     width:100%!important;
