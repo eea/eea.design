@@ -13424,6 +13424,10 @@ var PDFViewerApplication = {
    self.downloadComplete = true;
    self.loadingBar.hide();
   });
+/* START due to #117683 */
+  self.downloadComplete = true;
+  self.loadingBar.hide();
+/* END due to #117683 */
   this.toolbar.setPagesCount(pdfDocument.numPages, false);
   this.secondaryToolbar.setPagesCount(pdfDocument.numPages);
   var id = this.documentFingerprint = pdfDocument.fingerprint;
