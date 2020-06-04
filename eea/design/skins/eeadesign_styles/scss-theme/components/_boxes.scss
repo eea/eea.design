@@ -98,5 +98,24 @@
   .box li {
     padding-left: 1.5em;
   }
+  .fullwidth-bg,
+  .keyFact,
+  .box {
+    padding: 2em !important;
+    page-break-inside: avoid !important;
+  }
+
+  .box-primary a,
+  .fullwidth-bg a {
+    color: #FFF !important;
+    border-bottom: 1px solid;
+  }
+
+  .fullwidth-bg.bg-secondary a,
+  .box-secondary a,
+  .box-tertiary a {
+    color: #000 !important;
+    border-bottom: 1px solid;
+  }
 }
 
