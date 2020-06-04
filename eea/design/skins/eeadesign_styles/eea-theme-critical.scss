@@ -363,5 +363,13 @@
   }
 }
 
+@media print {
+  .mini-header {
+    .mini-portal-type {
+      top: -$spacer-0;
+    }
+  }
+}
+
 /*! </dtml-let> */
 /*! </dtml-with> */
