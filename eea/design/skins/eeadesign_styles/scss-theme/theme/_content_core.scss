@@ -43,4 +43,9 @@
     margin-bottom: 0;
   }
 
+  @media print {
+    ol {
+      margin-left: 0;
+    }
+  }
 }
