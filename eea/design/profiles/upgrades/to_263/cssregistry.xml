@@ -2,9 +2,9 @@
 <object name="portal_css">
 
   <stylesheet
-    id="redesign-theme.css" rel="stylesheet" rendering="link"
+    id="redesign_theme.css" rel="stylesheet" rendering="link"
     cacheable="true" compression="safe" cookable="true"
     conditionalcomment="" media=""
-    expression="python: context.restrictedTraverse('@@miniheader_content_types')()" insert-before="ploneCustom.css" />
+    expression="python: context.restrictedTraverse('@@miniheader_content_types')()" insert-after="ploneCustom.css" />
 
 </object>
