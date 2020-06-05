@@ -1,6 +1,9 @@
 Changelog
 =========
 
+26.5-dev0 - (unreleased)
+---------------------------
+
 26.4 - (2020-06-05)
 ---------------------------
 * Feature: added redesign_theme.css enabled for mini_header portal_types which
