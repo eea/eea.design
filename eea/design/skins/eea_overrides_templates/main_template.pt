@@ -203,6 +203,7 @@
 
                             <metal:bodytext define-slot="main">
                                 <div class="content-header">
+                                  <p class="mini-portal-type" tal:define="friendly_type context/Type|nothing;" tal:content="friendly_type" tal:condition="mini_header"></p>
                                     <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
                                     <metal:title define-slot="content-title">
                                         <metal:comment tal:content="nothing">
@@ -215,6 +216,7 @@
                                             Generic KSS Title. Is rendered with class="documentFirstHeading".
                                         </h1>
                                     </metal:title>
+                                  <div class="content-header-body">
                                     <tal:not4AjaxLoad  tal:condition="not:ajax_load">
                                         <tal:not4Print tal:condition="python:not isPrint">
                                             <div tal:replace="structure provider:plone.belowcontenttitle" />
@@ -234,6 +236,7 @@
                                     </metal:description>
 
                                     <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
+                                    </div>
                                 </div>
 
                                 <div id="content-core" class="content-core">
@@ -281,6 +284,11 @@
             <tal:not4AjaxLoad  tal:condition="not:ajax_load">
                 <tal:not4Print tal:condition="python:not isPrint">
                     <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent"></div>
+                  <metal:themes_mini_header tal:condition="mini_header">
+                    <div id="mini-themes-tags">
+                      <h3 i18n:translate="">Topics</h3>
+                    </div>
+                  </metal:themes_mini_header>
                 </tal:not4Print>
             </tal:not4AjaxLoad>
         </div>

@@ -99,7 +99,7 @@ dl dt span.summary a {
 /* @group Content Area */
 
 #content {
-    line-height: 1.5em;
+    /*line-height: 1.5em; #117294 */
     clear: both;
 }
 
@@ -108,11 +108,10 @@ body#content {
     margin: 1em;
 }
 
-#content p,
-#content table,
-#content dl,
-dl.portlet p,
-dl.portlet {
+p,
+table,
+dl,
+.portlet {
     margin-bottom: 1rem;
 }
 

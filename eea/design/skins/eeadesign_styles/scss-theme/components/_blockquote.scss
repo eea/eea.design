@@ -1,0 +1,85 @@
+blockquote,
+.pullquote {
+  position: relative;
+  padding: $blockquote-padding $blockquote-padding-mobile;
+  font-size: inherit;
+  color: inherit;
+  word-break: break-word;
+}
+
+blockquote p, .pullquote p, .pullquote-full p {
+  font-size: $blockquote-font-size;
+  line-height: $blockquote-line-height;
+  font-weight: $blockquote-font-weight;
+}
+.content-core {
+  blockquote p, .pullquote p, .pullquote-full p {
+    font-size: $blockquote-font-size;
+  }
+}
+
+.source {
+  font-size: $blockquote-source-font-size !important;
+}
+
+blockquote > p:first-of-type {
+  position: relative;
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+
+blockquote > p:first-of-type:before,
+blockquote > p:last-child:after {
+  display: inline-block;
+  vertical-align: top;
+  height: $spacer-2;
+  line-height: $blockquote-line-height;
+  font-size: $h4-font-size;
+  position: absolute;
+  font-family: FontAwesome;
+  font-weight: bold;
+}
+
+blockquote > p:first-of-type:before {
+  content: "\f10d";
+  top: -$spacer-3;
+  left: -$grid-gutter-width;
+}
+
+blockquote > p:last-child:after {
+  content: "\f10e";
+  right: -$spacer-5;
+  bottom: -$spacer-5;
+}
+
+blockquote.pullquote,
+.pullquote-left,
+.pullquote-right {
+  margin: $blockquote-margin-mobile 0;
+}
+
+@media (min-width: $breakpoint-sm) {
+  blockquote.pullquote,
+  .pullquote-left,
+  .pullquote-right {
+    width: calc(50% - #{$blockquote-margin});
+  }
+
+  .pullquote-right {
+    float: right;
+    margin: 0 0 $blockquote-margin $blockquote-margin;
+  }
+
+  .pullquote-left {
+    float: left;
+    margin: 0 $blockquote-margin $blockquote-margin 0;
+  }
+
+}
+
+@media (min-width: $breakpoint-md) {
+  blockquote,
+  .pullquote {
+    padding: $blockquote-padding;
+  }
+}

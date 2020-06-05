@@ -1,0 +1,42 @@
+
+@mixin fullwidth-bg {
+  position: relative;
+  margin-top: $h0-font-size !important;
+  margin-bottom: $h0-font-size !important;
+  z-index: 1;
+  font-size:  $p-font-size;
+  padding: $spacer-2 0;
+  line-height: $p-line-height;
+}
+
+@mixin pseudo-bg-boilerplate {
+  position: absolute;
+  content: " ";
+  top: 0;
+  z-index: -1;
+  height: 100%;
+}
+
+@mixin fullwidth-bg-before {
+  @include pseudo-bg-boilerplate();
+  background-color: inherit;
+  width: 99.3vw;
+  right: 0;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+
+@mixin fullwidth-container-centered {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  clear: both;
+  overflow: hidden;
+  justify-content: center;
+  margin: 2.5rem calc(50% - 50vw) 2.5rem calc(50% - 50vw);
+}
+

@@ -15,8 +15,9 @@ corporateGreen:string=#008675
 corporateDarkGreen:string=#007C88
 corporateGreenTwo:string=#777c1f
 corporateBlue:string=#004B87
-corporateDarkBlue:string=#01445e
+corporateDarkBlue:string=#274357
 corporateBlueTwo:string=#006699
+corporateBorderColor:string=#b2b2b2
 
 
 #color used for	buttons / actions / special links (not for plain text)
@@ -27,7 +28,7 @@ themesMultimediaColor:string=#5a3092
 
 
 #different headings colors
-linkHeadingColor:string=#346f83
+linkHeadingColor:string=#004B87
 headingColor:string=#006699
 headingFontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
 
@@ -51,7 +52,7 @@ corporateBlueBackgroundColor:string=#C7E0E9
 tabBackgroundColor:string=#2c8da2
 
 #link colors
-linkColor:string=#346f83
+linkColor:string=#004B87
 linkActiveColor:string=#f5821f
 linkVisitedColor:string=#8e004d
 linkHoverColor:string=#8e004d

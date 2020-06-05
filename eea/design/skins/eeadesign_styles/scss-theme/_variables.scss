@@ -1,0 +1,98 @@
+
+// Color system
+$corporateGreen: #00888A;
+$corporateGrey: #f3f3f3;
+$corporateBlue: #274357;
+$bg-grey: $corporateGrey;
+$text-gray-light: #e6e6e6;
+$border-primary: #b2b2b2;
+
+
+// Spacing
+$spacer: 1rem !default;
+$spacer-half: $spacer / 2;
+$spacer-hero: ($spacer * 6.25); // 100px -- hero spacing
+$spacer-0: ($spacer * 3.75); // 60px -- max
+$spacer-1: ($spacer * 2.5); // 40px
+$spacer-2: ($spacer * 2); // 32px
+$spacer-3: ($spacer * 1.75); // 28px
+$spacer-4: ($spacer * 1.5); // 24px
+$spacer-5: ($spacer * 1.25); // 20px
+$spacer-6: ($spacer * 1); // 16px
+$spacer-7: ($spacer * .75); // 12px
+$grid-gutter-width: 15px;
+
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+$font-weight-normal:          400;
+
+$h0-font-size:                $font-size-base * 3.75 !default; // 60
+$h1-font-size:                $font-size-base * 2.5 !default; // 40
+$h2-font-size:                $font-size-base * 2 !default; // 32
+$h3-font-size:                $font-size-base * 1.75 !default; // 28
+$h4-font-size:                $font-size-base * 1.5 !default; // 24
+$h5-font-size:                $font-size-base * 1.25 !default; // 20
+$h6-font-size:                $font-size-base !default; // 16
+$h7-font-size:                $font-size-base * .75; // 12
+
+$headings-margin-bottom:      $spacer-4 !default;
+$headings-font-family:        null !default;
+$headings-font-weight:        600 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+$p-font-size:              $font-size-base * 1.25 !default;
+$p-line-height:            1.6;
+
+$small-font-size:             80% !default;
+
+// breakpoints
+$breakpoint-sm: 490px;
+$breakpoint-md: 768px;
+$breakpoint-full: 830px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+
+// boxes
+$box-font-size: $p-font-size;
+$box-line-height: $p-line-height;
+$box-margin: $spacer-4;
+$box-margin-mobile: $spacer;
+$box-padding: $spacer-2;
+$box-padding-mobile: $spacer-4;
+$box-border-size: 0.25rem;
+
+
+// tiles
+$tiles-margin: $spacer-2;
+$tiles-margin-mobile: $spacer;
+$tiles-margin-hero: $spacer-0;
+$tiles-padding: $box-padding;
+$tiles-padding-mobile: $box-padding-mobile;
+$tiles-header-size: $h0-font-size;
+$tiles-header-margin: $headings-margin-bottom;
+$tiles-header-size-mobile: $h1-font-size;
+$tiles-body-line-height: $headings-line-height;
+$tiles-width-reduction: $spacer-4;
+
+// blockquote
+$blockquote-font-size: 1.625rem;
+$blockquote-font-weight: 300;
+$blockquote-source-font-size: $h6-font-size;
+$blockquote-line-height: 1.3;
+$blockquote-margin: $box-margin;
+$blockquote-margin-mobile: $box-margin-mobile;
+$blockquote-padding: $box-padding;
+$blockquote-padding-mobile: $box-padding-mobile;
+
+// keyFact
+$keyfact-bg: $corporateGrey;
+$keyfact-spacer:   $spacer-4;
+$keyfact-list-spacer: 2.1875rem;
+
+
+

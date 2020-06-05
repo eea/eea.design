@@ -264,17 +264,12 @@ tbody {
 }
 
 /* #101427 we need equal length table cells when comparing canonical to translation field value */
-#content .translation_edit table,
+.translation_field,
 .google-visualization-table-table
 {
     display: table;
     width: 100%;
 }
-.translation_field td {
-    width: 50%;
-    vertical-align: top;
-}
-
 
 .documentDescription,
 #description {

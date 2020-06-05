@@ -1,0 +1,111 @@
+.tiles-container {
+  @include fullwidth-bg;
+  font-size: $h4-font-size;
+}
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: $tiles-margin 0;
+}
+
+.tile {
+  flex: 1 1 34%;
+  margin-bottom: $tiles-margin;
+}
+
+.tiles--3 .tile {
+  margin: 0 0 $tiles-margin 0;
+}
+
+.tile--bordered {
+  @include bordered-y();
+  padding: $tiles-padding 0;
+  margin-top: -1px;
+}
+.tile--bordered .tile-item {
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.tile-item-header {
+  font-size: $tiles-header-size-mobile;
+  margin-top: 0 !important; /* avoid h tag top margin */
+  margin-bottom: $tiles-header-margin;
+  line-height: 1;
+  font-weight: bold;
+  color: $corporateGreen;
+  text-shadow: 2px 0 0 currentColor;
+}
+
+.tile-item-body {
+  font-size: inherit;
+  color: gray;
+  margin: 0 auto;
+  line-height: $tiles-body-line-height;
+}
+.content-core .tile-item-body {
+  font-size: inherit;
+}
+
+.tiles--3 .tile-item-body {
+  max-width: 100%;
+}
+
+@media (min-width: 420px) {
+  .tile-item-body {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .tile {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: $breakpoint-sm + 1) and (max-width: $breakpoint-lg - 1) {
+  .tiles--2 .tile,
+  .tiles--3 .tile,
+  .tiles--4 .tile {
+    max-width: calc(50% - #{$tiles-width-reduction});
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .tile-item-header {
+    font-size: $tiles-header-size;
+  }
+}
+
+@media (max-width: $breakpoint-lg - 1) {
+  .tiles--3 .tile:last-child {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: $breakpoint-lg) {
+  .tiles--4 .tile,
+  .tiles--2 .tile {
+    max-width: calc(50% - #{$tiles-width-reduction});
+  }
+  .tiles--3 .tile {
+    max-width: calc(34% - #{$tiles-width-reduction});
+    margin-bottom: 0;
+  }
+
+  .tiles--3 .tile--bordered {
+    max-width: calc(36% - #{$tiles-width-reduction});
+  }
+  .tiles--3 {
+    flex-wrap: nowrap;
+    width: 120%;
+    margin-left: -10%;
+  }
+  .tiles--3 .tile-item-body {
+    max-width: 100%;
+  }
+}

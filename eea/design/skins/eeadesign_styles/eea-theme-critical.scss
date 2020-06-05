@@ -2,66 +2,177 @@
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+@import "scss-theme/variables";
+@import "scss-theme/mixins";
 
 .mini-header:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
 }
 
-
 /* highlight section */
 .mini-header {
   overflow-x: hidden;
+
   .annotator-wrapper {
     position: inherit;
   }
+
   #portal-column-two {
     display: none;
   }
+
+  //h2 {
+  //  font-size: 1.9em;
+  //  line-height: 1.1666;
+  //  letter-spacing: -0.02rem;
+  //  margin-bottom: 40px;
+  //}
+
+  //p {
+  //  font-size: 1.25rem;
+  //  line-height: 1.6;
+  //}
+
+  //h1, h2, h3, h4 {
+  //  color: inherit;
+  //  margin-bottom: 1.5rem;
+  //}
+
+  /* attempt to add large bottom margin only to paragraphs without any classes
+    applied and within a text fieldname
+   */
+  //div[id*="parent-fieldname-text"] > p:not([class]) {
+  //  margin-bottom: 40px;
+  //}
+
+  //@import "scss-theme/theme/content_core";
+
+  //.figureHeading {
+  //  margin-top: 50px;
+  //  margin-bottom: 40px;
+  //  font-size: 1.125rem;
+  //  line-height: 1.666;
+  //  color: #000;
+  //}
+  //iframe, img {
+  //  margin-bottom: 40px;
+  //}
+
+  .mini-portal-type {
+    position: absolute;
+    padding: ($spacer / 2)  $spacer-4;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: -$spacer-1;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: $p-font-size;
+    line-height: 1;
+    left: -$spacer;
+  }
+
+  .content-header-body {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .content-header-body:before {
+    width: 100vw;
+    content: " ";
+    background-color: white;
+    position: absolute;
+    height: calc(100% + #{$spacer-0});
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 49.3vw);
+    top: 0;
+    z-index: -2;
+    min-height: 100px;
+  }
+
+  .documentByLine .portalType,
+  .publishDate .byline-separator,
+  .documentByLineAuthors,
+  .content-header-body #themes-tags {
+    display: none;
+  }
+
+  .content-header .documentByLine {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: initial;
+  }
+
+  .content-header .documentByLine::before {
+    position: absolute;
+    width: 100vw;
+    left: -$grid-gutter-width;
+    display: block;
+    content: " ";
+    border-top: 2px solid white;
+    top: -$spacer-half;
+  }
+
+  .documentExportActions {
+    margin: 0 0 $spacer-half $spacer;
+    order: 5;
+  }
+
+  .documentExportActions .export-action-title {
+    display: inline;
+  }
+
+  .documentByLineImageCopyright,
+  .documentByLineModified {
+    display: inline-block;
+  }
+
+  .documentByLineReadingStats {
+    margin-right: 0.75em;
+  }
+
+  .eea-icon-file-pdf-o {
+    font-size: 1rem;
+  }
+
   #portal-column-content {
     float: none;
     margin: 0 auto;
-    min-width: 90%;
+    min-width: initial;
+    max-width: 830px;
+    width: 100%;
   }
 
   .fullwidth-img-container {
-    padding-bottom: 4em;
+    margin-bottom: $spacer-0;
+    padding-bottom: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
   }
 
-  .fiche-body .fullwidth-img-container {
-    padding-bottom: 0;
-  }
-
-  .fiche-summary {
-    margin-bottom: 3em;
-  }
-
-  .keyFact,
   .content-header {
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
     color: #FFF;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    z-index: 0;
-    //margin-bottom: 3em;
+    z-index: 1;
+    margin-top: 200px;
   }
-  .keyFact li {
-    font-size: 1rem;
-  }
-  .keyFact h2, .keyFact h3 {
-    color: #FFF;
-  }
+
   .documentFirstHeading {
     padding-right: 0;
     min-width: 85%;
-    margin-bottom: 0.67em;
-  }
-  .documentFirstHeading .anchorjs-link {
-    display: none !important;
+    margin: 1.25rem 0 $spacer-0 0;
+    letter-spacing: -1px;
+    font-size: 2.5rem;
+    line-height: 1.15;
+
   }
 
-  .keyFact:before,
   .content-header:before {
     content: " ";
     width: 99.8%;
@@ -85,42 +196,27 @@
     margin-right: calc(50% - 49.3vw);
   }
 
-  .keyFact {
-    padding: 3rem 0;
-    background-color: transparent;
-    font-size: 1rem;
+  .documentDescription {
+    margin-top: $grid-gutter-width;
+    margin-bottom: $spacer-4;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.333;
   }
 
-  #content .keyFact .discreet,
-  .keyFact{
-    color: #FFF;
-    border: 0;
-  }
-  .keyFact:before {
-    background-color: rgba(0,75,135,0.94);
-  }
-  #themes-tags {
-    order: 0;
-    margin-left: 0;
-    margin-bottom: 3em;
-  }
-  .documentDescription {
-    margin-bottom: 3em;
-  }
   .documentFirstHeading,
-  .content-header .documentDescription
-  {
+  .content-header .documentDescription {
     order: 1;
   }
 
   #languageCodes,
-  .content-header .documentByLine
-  {
+  .content-header .documentByLine {
     order: 2;
   }
 
   .content-header .documentExportActions {
     order: 3;
+    position: relative;
   }
 
   .content-header > div {
@@ -128,10 +224,8 @@
   }
 
   .documentFirstHeading,
-  #themes-tags,
-  .documentExportActions a
-  {
-    color: #FFF;
+  .documentExportActions a {
+    color: #FFF !important;
   }
 
   .documentByLine,
@@ -139,50 +233,122 @@
   .documentByLine a {
     color: rgba(255, 255, 255, 0.9);
   }
-  #themes-tags .link-category {
-    background: transparent;
-    color: #FFF;
-    margin-right: 2em;
-  }
+
   #themes-tags .listHead {
     display: none;
   }
 
-  h2, h3 {
-    color: #000;
-  }
-}
-
-.userrole-anonymous.mini-header {
   #article-language {
-    margin-top: 5px;
-    margin-bottom: 7px;
-    position: absolute;
-    right: 8px;
-    order: 0;
+    margin-top: 0;
+    position: relative;
+    order: 4;
+    align-self: auto;
+    min-width: auto;
+  }
+
+  .documentExportActions + #article-language {
+    margin-left: 0.75rem;
   }
 
   #article-language .eea-icon:before,
   #article-language a {
     color: #FFF;
   }
+
   #region-content {
     padding-top: 8em;
   }
+
 }
 
-
-@media (min-width: 1024px) {
+@media (max-width: 660px) {
   .mini-header {
-    #portal-column-content {
-      min-width: 870px;
+    .content-header-body {
+      justify-content: flex-start;
     }
 
-    .keyFact:before,
+    .content-header .documentByLine {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    .documentExportActions {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 0;
+    }
+  }
+
+}
+
+@media (min-width: 661px) {
+  .mini-header {
+    #content .documentByLine {
+      max-width: initial;
+      flex-basis: 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md - 1) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:$breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+  html {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width:$breakpoint-lg) {
+  html {
+    font-size: 1rem;
+  }
+  .mini-header {
+    .content-header .documentByLine::before {
+      left: -15.5%;
+      max-width: 977px;
+    }
+
+    .content-header-body:before {
+      height: calc(100% + #{$spacer-hero});
+    }
+
+    //.content-core,
+    .fullwidth-img-container {
+      margin-bottom: $spacer-hero;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .mini-header {
+    #portal-column-content {
+      min-width: 830px;
+    }
+
+    #content .documentByLine {
+      max-width: initial;
+    }
+
     .content-header:before {
       width: 122%;
       left: -11%;
       padding: 0;
+    }
+
+    .mini-portal-type {
+      left: -11%;
+    }
+  }
+}
+
+@media print {
+  .mini-header {
+    .mini-portal-type {
+      top: -$spacer-0;
     }
   }
 }
