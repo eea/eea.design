@@ -93,7 +93,7 @@
   .documentByLine .portalType,
   .publishDate .byline-separator,
   .documentByLineAuthors,
-  #themes-tags {
+  .content-header-body #themes-tags {
     display: none;
   }
 
@@ -196,17 +196,6 @@
     margin-right: calc(50% - 49.3vw);
   }
 
-  //#content .keyFact .discreet,
-  //.keyFact{
-  //  color: #000;
-  //  border: 0;
-  //}
-  #themes-tags {
-    order: 0;
-    margin-left: 0;
-    margin-bottom: 3em;
-  }
-
   .documentDescription {
     margin-top: $grid-gutter-width;
     margin-bottom: $spacer-4;
@@ -235,7 +224,6 @@
   }
 
   .documentFirstHeading,
-  #themes-tags,
   .documentExportActions a {
     color: #FFF !important;
   }
@@ -244,12 +232,6 @@
   .documentDescription,
   .documentByLine a {
     color: rgba(255, 255, 255, 0.9);
-  }
-
-  #themes-tags .link-category {
-    background: transparent;
-    color: #FFF;
-    margin-right: 2em;
   }
 
   #themes-tags .listHead {
