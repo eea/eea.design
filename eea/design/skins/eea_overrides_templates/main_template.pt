@@ -284,6 +284,11 @@
             <tal:not4AjaxLoad  tal:condition="not:ajax_load">
                 <tal:not4Print tal:condition="python:not isPrint">
                     <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent"></div>
+                  <metal:themes_mini_header tal:condition="mini_header">
+                    <div id="mini-themes-tags">
+                      <h3 i18n:translate="">Topics</h3>
+                    </div>
+                  </metal:themes_mini_header>
                 </tal:not4Print>
             </tal:not4AjaxLoad>
         </div>
