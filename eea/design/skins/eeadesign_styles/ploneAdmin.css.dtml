@@ -23,6 +23,8 @@ body.section-SITE .documentActions {
 }
 
 
+
+
 .portletNavigationTree {
     line-height: 1.5em;
 }
@@ -67,7 +69,7 @@ div.managePortletsLink:hover {
  * portal-content-column */
 .ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr, .ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *, .ploneSkin .mceText {
     background: transparent;
-    white-space: normal;
+    white-space: normal !important; /* normalize table width of tinymce on translated fields */
     text-decoration: none;
     font-weight: normal;
     cursor: default;
@@ -77,13 +79,67 @@ div.managePortletsLink:hover {
 }
 
 /* #110041 tinymce button and table fixes */
-.ploneSkin .mceMenu {
-    min-width: 400px !important;
-    min-height: 400px !important;
+
+/* disable yellow bg when editor is focused */
+.ploneSkin .mceEditorFocus .mceIframeContainer {
+    background: transparent !important;
 }
-.mceMenu  table > tbody {
-    display: table !important;
+
+
+/* avoid links being set to black by tinymce styling */
+.mceContentBody a {
+    color: inherit !important;
+}
+
+/*.ploneSkin enlargement to fit plonestyles popup */
+.mceMenu {
+    min-width: 400px !important;
+    min-height: 450px !important;
+    width: 830px !important;
+}
+.mceMenu table {
+    display: block;
+    width: 830px !important;
+    height: 100%;
+}
+.mceMenu table > tbody {
+    columns: 3;
+    column-gap: 0;
+    column-fill: auto;
+    display: block !important;
+    height: 100%;
+}
+.mceMenu td {
+    display: block;
+    height: 100% !important;
+}
+.mceMenuItem {
+    display: inline-block !important;
     width: 100% !important;
+}
+.mceMenuItem tr {
+    display: inline-block !important;
+    width: 100%;
+}
+/* @end .ploneSkin enlargement to fit plonestyles popup */
+
+/* hide styles title from the styles dropdown as it's redundant */
+.mceMenuItem.mceFirst {
+    display: none !important;
+}
+
+/* style dropdown header tags with colors */
+.mceText[title*="Primary"],
+.mceText[title*="Blue"] {
+    color: &dtml-corporateBlue; !important;
+}
+.mceText[title*="Grey"],
+.mceText[title*="Secondary"] {
+    color: &dtml-lightGreyColor; !important;
+}
+.mceText[title*="Green"],
+.mceText[title*="Tertiary"] {
+    color: &dtml-corporateGreen; !important;
 }
 #footer #action-button {
     margin-bottom: 0 !important;
@@ -95,8 +151,15 @@ div.managePortletsLink:hover {
     background-color: #004B87 !important;
     color: #FFF !important;
 }
-#content .translation_edit table {
-    width: auto !important;
+/*#content .translation_edit table {*/
+/*    width: auto !important;*/
+/*}*/
+
+.translation_field > tbody > tr > td:first-child {
+    width: 40%;
+}
+.ArchetypesAddRemoveWidget .formHelp {
+    display: inline-block;
 }
 /* @end #110041 tinymce button and table fixes */
 
@@ -151,6 +214,10 @@ dl.actionMenu #assessmentpart {
 }
 .frontpage .progressbar-viewlet {
     margin-bottom: 1em;
+}
+.mini-header .progressbar-viewlet {
+    margin-bottom: 4em; /* add larger bottom margin in order to avoid portalType
+     overlap */
 }
 /* @end progressbar-viewlet */
 

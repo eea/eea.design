@@ -213,7 +213,7 @@
                  <div id="articles-area" class="right-column-area">
 
 
-                            <div metal:use-macro="here/portlet_notice/macros/portlet">
+                            <div metal:use-macro="here/portlet_notice/macros/portlet" tal:on-error="nothing">
                                  current notice
                             </div>
 

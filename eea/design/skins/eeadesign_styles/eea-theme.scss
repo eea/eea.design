@@ -2,12 +2,13 @@
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+@import "scss-theme/mixins";
 
-/* no horisontal lines allowed, only used as spacer, separation is done with headings or bg colors */
+/* no horizontal lines allowed, only used as spacer, separation is done with headings or bg colors */
 hr {
   border: none 0;
   border-top: 1px solid white;/*invisible border*/
-  height: 0px;
+  height: 0;
   margin: 0.5em 0 1em 0;
   }
 
@@ -17,6 +18,8 @@ hr {
 
 .anchorjs-link {
   display: inline-block !important;
+  position: absolute;
+  color: inherit;
   }
 
 
@@ -49,23 +52,6 @@ hr {
   }
 /* @end breadcrumbs */
 
-/* #23500 allow the control panel widget to be placed outside of their context
-    by having overflow visible for screen with size larger than 1024px
-*/
-#region-content,
-.content-header {
-  position: relative;
-  }
-
-
-#content-core {
-  clear:both;
-  }
-
-.mini-header #content-core {
-  margin-bottom: 2em;
-  }
-
 
 /* portal-column styles */
 
@@ -91,11 +77,6 @@ hr {
   display: block;
   }
 
-/* for anonymous the language codes are inside panel-content so only for auth
-*  we restrict the max-width of languageCodes */
-.userrole-authenticated  #languageCodes {
-  max-width: 80%;
-  }
 #article-language .eea-icon {
   line-height: 0.75em;
   color: #888;
@@ -105,7 +86,7 @@ hr {
 /* download.pdf download.epub export actions */
 /* download.pdf extra clicking prevention styles */
 a.downloading {
-  background: transparent url(&dtml-xurl;/icon-downloading.gif) no-repeat center center;
+  background: transparent url(unquote("&dtml-xurl;/icon-downloading.gif")) no-repeat center center;
   }
 
 a.downloading img {
@@ -113,7 +94,7 @@ a.downloading img {
   }
 
 .downloading-lock::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -126,11 +107,11 @@ a.downloading img {
 #region-content .documentExportActions ul, .documentExportActions ul {
   list-style: none;
   padding: 0;
-  margin: 1em -0.15em 0 0;
+  margin: 0;
   }
 
 .content-core ul {
-  list-style: square outside url(//www.eea.europa.eu/bullet.gif);
+  list-style: square inside url(//www.eea.europa.eu/bullet.gif);
   }
 
 .documentExportActions li {
@@ -174,10 +155,9 @@ a.downloading img {
   }
 
 #content .documentByLine {
-  max-width: 87%;
   text-align: left;
   font-size: 0.75rem;
-  flex-basis: 100%;
+  margin-right: 0.5rem;
   }
 
 .portaltype-fiche .link-presentation {
@@ -206,11 +186,11 @@ div.eea-pdf-overlay {
   }
 .documentByLineAuthor:nth-child(2) span:after,
 .documentByLineAuthor a:after, .documentByLineContributor a:after {
-  content: ',';
+  content: ",";
   }
 .documentByLineAuthor:nth-child(2) a:after,
 .documentByLineAuthor:last-child a:after, .documentByLineContributor:last-child a:after {
-  content: '';
+  content: "";
   }
 
 /* @end documentByLine */
@@ -287,14 +267,14 @@ ol.visualNoMarker {
 
 .link-parent {
   display: block;
-  background: transparent url(&dtml-xurl;/arrowUp.gif) 4px 5px no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/arrowUp.gif")) 4px 5px no-repeat;
   padding: 1px 0 10px 16px;
-  font-size: &dtml-fontSmallSize;;
+  font-size: unquote("&dtml-fontSmallSize;");
   text-decoration: none;
   }
 
 .link-external {
-  background: transparent url(&dtml-xurl;/link_icon.gif) 3px 1px no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/link_icon.gif")) 3px 1px no-repeat;
   padding: 1px 0 1px 19px;
   }
 
@@ -305,36 +285,36 @@ ol.visualNoMarker {
   }
 
 .link-feed, .link-rss, .link-rdf, .link-xml {
-  background: transparent url(&dtml-xurl;/rss.gif) 0 1px no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/rss.gif")) 0 1px no-repeat;
   padding: 1px 0 1px 18px;
   }
 
 .link-comment {
-  background: transparent url(&dtml-xurl;/discussionitem_icon.gif) center left no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/discussionitem_icon.gif")) center left no-repeat;
   padding: 1px 0 1px 16px !important; /* value:  */
   }
 
 .link-anchor {
-  color: &dtml-discreetColor;;
+  color: unquote("&dtml-discreetColor;");
   text-decoration: none;
   font-weight: normal;
   }
 
 .link-pdf {
-  background: transparent url(&dtml-xurl;/pdf.png) 0 50% no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/pdf.png")) 0 50% no-repeat;
   padding: 2px 0 2px 16px;
   }
 .link-xlb, .link-xls, .link-xlt, .link-csv, .link-tsv {
-  background: transparent url(&dtml-xurl;/xls.png) 0 50% no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/xls.png")) 0 50% no-repeat;
   padding: 2px 0 2px 20px;}
 .link-json {
-  background: transparent url(&dtml-xurl;/script_code.png) 0 50% no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/script_code.png")) 0 50% no-repeat;
   padding: 2px 0 2px 20px;}
 .link-exhibit {
-  background: transparent url(&dtml-xurl;/script_code_red.png) 0 50% no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/script_code_red.png")) 0 50% no-repeat;
   padding: 2px 0 2px 20px;}
 .link-table {
-  background: transparent url(&dtml-xurl;/table.png) 0 50% no-repeat;
+  background: transparent url(unquote("&dtml-xurl;/table.png")) 0 50% no-repeat;
   padding: 2px 0 2px 20px;}
 
 /* @end Common file types icon */
@@ -366,8 +346,8 @@ ol.visualNoMarker {
   }
 /* @end tinymce class to hide or show content when printing */
 
-/* custom css fixes and overrides give links or detailed fix information */
 
+/* custom css fixes and overrides give links or detailed fix information */
 /* eeareadabilitychecker stats */
 #stats td {
   padding-right: 1em;
@@ -449,7 +429,7 @@ div#original_chart_div {
 */
 #content dl.publicationMessage a {
   border: 0;
-  color: &dtml-linkColor;;
+  color: unquote("&dtml-linkColor;");
   }
 /* @end custom css fixes and overrides */
 
@@ -469,60 +449,8 @@ div#original_chart_div {
   height: 70px;
   }
 
-
-.tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-  margin: 1rem 0 0 0;
-}
-
-.tile {
-  flex: 1 1 34%;
-  margin-bottom: 1rem;
-  }
-
-@media (max-width: 480px) {
-  .tile {
-      flex-basis: 100%;
-    }
-  }
-
-.tile-item-header {
-  font-size: 225%;
-  margin-bottom: 0;
-  color: unquote("&dtml-corporateGreen;") !important;
-  }
-
-
-.tile-item-body {
-  font-size: 150% !important;
-  color: gray;
-  margin: 0 auto;
-  }
-
-.tiles--3 .tile-item-body {
-  max-width: 100%;
-  }
-
-
-
-@media (min-width: 420px) {
-  .tile-item-body {
-    max-width: 80%;
-    }
-  }
-@media (min-width: 1024px) {
-  .tiles--3 {
-    flex-wrap: nowrap;
-    width: 120%;
-    margin-left: -10%;
-    }
-  .tiles--3 .tile-item-body {
-      max-width: 100%;
-    }
+.eea-block > .eea-block .tile-item {
+  border-width: 0;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

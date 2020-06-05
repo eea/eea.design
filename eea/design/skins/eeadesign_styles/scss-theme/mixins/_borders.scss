@@ -1,0 +1,5 @@
+@mixin bordered-y {
+  border-width: 1px 0;
+  border-style: solid none;
+  border-color: $border-primary;
+}

@@ -3,6 +3,16 @@ Changelog
 
 26.4-dev0 - (unreleased)
 ---------------------------
+* Feature: added redesign_theme.css enabled for mini_header portal_types which
+  right now are Highlights, Fiche and Article
+  [ichim-david refs #117294]
+* Change: moved new styling into scss files added as components
+  [ichim-david refs #117294]
+* Upgrade Step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [ichim-david refs #117294]
+* Upgrade Step: run /www/@@migrate-design-elements
+  [ichim-david refs #117294]
 
 26.3 - (2020-06-02)
 ---------------------------

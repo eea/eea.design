@@ -1,0 +1,51 @@
+.content-core {
+  font-size: $font-size-base;
+  margin-bottom: $spacer-2;
+
+  h2:not(:first-child),
+  h3:not(:first-child),
+  h4:not(:first-child) {
+    margin-top: $h1-font-size;
+  }
+
+  p {
+    font-size: $p-font-size;
+  }
+  li {
+    font-size: $p-font-size;
+    padding-left: $spacer;
+    margin-bottom: $spacer-half;
+  }
+
+  li:last-child,
+  p:last-child {
+    margin-bottom: 0;
+  }
+  ul, ol {
+    margin: 0 0 $spacer-4 $spacer-4;
+    line-height: $p-line-height;
+  }
+  // add svg bullet in order to be easily overriden and affected by
+  // margin and padding
+  ul {
+    //list-style: disc outside url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-1 -1 2 2'><circle r='0.5' /></svg>")
+    list-style: square outside url("//www.eea.europa.eu/bullet.gif");
+  }
+
+  // join adjacent callouts
+  .callout + .callout {
+    margin-top: -$h1-font-size;
+  }
+
+  /* remove top and bottom margin when we have a block within a block */
+  .eea-block > .eea-block {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media print {
+    ol {
+      margin-left: 0;
+    }
+  }
+}

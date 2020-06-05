@@ -1,0 +1,121 @@
+.box {
+  padding: $box-padding-mobile $box-margin-mobile;
+  font-size: $box-font-size;
+  line-height: $box-line-height;
+  word-break: break-word;
+  margin-bottom: $box-margin-mobile;
+  margin-left: -$grid-gutter-width;
+  margin-right: -$grid-gutter-width;
+  width: 100vw;
+}
+.box-primary {
+  background-color: $corporateBlue;
+  color: $text-gray-light;
+}
+
+.box.bg-blue,
+.box.bg-blue a,
+.box-primary a {
+  color: $text-gray-light;
+}
+//Box Title Green|div|box-header box-header-tertiary
+
+.box-secondary {
+  background-color: $corporateGrey;
+}
+
+.box-tertiary {
+  background-color: $corporateGrey;
+  border-top: $corporateGreen solid $box-border-size;
+  line-height: $p-line-height;
+}
+.box--right.box-tertiary,
+.box--left.box-tertiary {
+  margin-top: -$box-border-size; /* align left and right boxes to content area */
+}
+.box-tertiary h2,
+.box-tertiary h3 {
+  color: $corporateGreen;
+  font-weight: normal;
+}
+
+.box :last-child {
+  margin-bottom: 0;
+}
+
+.content-core {
+  .box ul {
+    @include list-unstyled();
+  }
+
+}
+
+.box ul li {
+  @include list-bullet();
+}
+.box ul li:before {
+  @include list-bullet-before();
+}
+
+@media (min-width: $breakpoint-sm) {
+  .box--right,
+  .box--left {
+    width: calc(50% - #{$box-margin});
+  }
+
+  .box--left {
+    float: left;
+    margin: 0 $box-margin $box-margin 0;
+  }
+
+  .box--right {
+    float: right;
+    margin: 0 0 $box-margin $box-margin;
+  }
+}
+
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-full - 1) {
+  .box--left {
+    margin-left: -$grid-gutter-width;
+  }
+  .box--right {
+    margin-right: -$grid-gutter-width;
+  }
+}
+
+@media (min-width: $breakpoint-full) {
+  .box {
+    padding: $box-padding;
+  }
+  .box--full {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media print {
+  .box li {
+    padding-left: 1.5em;
+  }
+  .fullwidth-bg,
+  .keyFact,
+  .box {
+    padding: 2em !important;
+    page-break-inside: avoid !important;
+  }
+
+  .box-primary a,
+  .fullwidth-bg a {
+    color: #FFF !important;
+    border-bottom: 1px solid;
+  }
+
+  .fullwidth-bg.bg-secondary a,
+  .box-secondary a,
+  .box-tertiary a {
+    color: #000 !important;
+    border-bottom: 1px solid;
+  }
+}
+

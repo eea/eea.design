@@ -116,16 +116,44 @@
     color: &dtml-fontDarkColor; !important;
 }
 
-.bg-grey {
+.text-primary {
+    color: &dtml-corporateBlue; !important;
+}
+.text-secondary {
+    color: &dtml-lightGreyColor; !important;
+}
+
+.text-tertiary {
+    color: &dtml-corporateGreen; !important;
+}
+
+.bg-grey, /* LEGACY use bg-secondary instead */
+.bg-secondary {
     background-color: &dtml-greyBackgroundColor;;
 }
 
-.bg-blue {
-    background-color: &dtml-corporateBlue;;
+/* debug css */
+/*.bg-grey,*/
+/*.bg-blue,*/
+/*.bg-green {*/
+/*    border: 2px solid red;*/
+/*}*/
+
+.bg-blue, /* LEGACY use bg-primary instead */
+.bg-primary {
+    background-color: &dtml-corporateDarkBlue;;
 }
 
-.bg-green {
+.bg-green, /* LEGACY use bg-tertiary instead */
+.bg-tertiary {
     background-color: &dtml-corporateGreen;;
+}
+
+/* border utilities */
+.bordered-y {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: &corporateBorderColor;;
 }
 /* </dtml-let> */
 /* </dtml-with> */
