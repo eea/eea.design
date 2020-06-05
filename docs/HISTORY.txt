@@ -1,8 +1,18 @@
 Changelog
 =========
 
-26.2-dev0 - (unreleased)
+26.4-dev0 - (unreleased)
 ---------------------------
+
+26.3 - (2020-06-02)
+---------------------------
+* Bug fix: fixed download filename for certain files.
+  [alecghica refs #117683]
+
+26.2 - (2020-05-25)
+---------------------------
+* Change: re-added the "Advanced search" link under search pop-up.
+  [alecghica refs #118094]
 
 26.1 - (2020-04-23)
 ---------------------------
