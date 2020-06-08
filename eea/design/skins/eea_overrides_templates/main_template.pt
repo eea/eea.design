@@ -1,4 +1,3 @@
-
 <metal:page define-macro="master"
             tal:define="portal_state context/@@plone_portal_state;
                         context_state context/@@plone_context_state;
@@ -255,7 +254,7 @@
 
                                 <tal:block define="thumb_scale thumb_scale | string:image_mini; skip_relations skip_relations|python: False"
                                            tal:condition="python:not skip_relations">
-                                    <tal:soer tal:condition="python:False if isPrint == 1 and '/soer-2015' in here_url else True">
+                                    <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
                                         <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
                                     </tal:soer>
                                 </tal:block>
@@ -306,7 +305,7 @@
             tal:attributes="class python:'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
 
-                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer-2015' in here_url else True">
+                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
                     <tal:block replace="structure provider:plone.rightcolumn" />
                 </tal:soer>
             </metal:portlets>
