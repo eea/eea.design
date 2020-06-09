@@ -3,6 +3,10 @@ Changelog
 
 26.5-dev0 - (unreleased)
 ---------------------------
+* Bug fix: pdf print fixes for lists and box title margins
+  [ichim-david refs #118582]
+* Bug fix: topics title should only appear on view template
+  [ichim-david refs #118582]
 * Bug fix: fixed language change popup selection
   [ichim-david refs #118582]
 

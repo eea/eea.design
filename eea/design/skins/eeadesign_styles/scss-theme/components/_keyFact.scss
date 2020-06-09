@@ -31,6 +31,7 @@
 .content-core {
   .keyFact ul {
     font-weight: 300;
+    color: $keyfact-ul-color;
     @include list-unstyled();
     margin-bottom: 0;
   }

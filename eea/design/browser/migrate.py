@@ -109,7 +109,7 @@ class FindOldDesignElements(BrowserView):
         match = form.get('text', 'bg-grey')
         form_field = form.get('field', 'text')
         ptype = form.get('ptype', 'Fiche')
-        brains = cat(portal_type=ptype, show_inactive=True)
+        brains = cat(portal_type=ptype, show_inactive=True, Language="all")
         modified = []
         for brain in brains:
             obj = brain.getObject()
