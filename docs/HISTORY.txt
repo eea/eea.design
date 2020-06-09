@@ -3,6 +3,9 @@ Changelog
 
 26.5-dev0 - (unreleased)
 ---------------------------
+* Bug fix: increase max-height of photoAlbumEntryTitle in order to avoid clipping
+  the title when it spans over 3 rows
+  [ichim-david refs #118582]
 * Bug fix: pdf print fixes for lists and box title margins
   [ichim-david refs #118582]
 * Bug fix: topics title should only appear on view template

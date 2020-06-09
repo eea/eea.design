@@ -413,7 +413,7 @@ dl.toc dd {
 
 .photoAlbumEntryTitle {
     overflow: hidden;
-    height: 4em;
+    height: 4.5em;
     margin-top: 0.4em;
     width: 100%;
     padding: 0 5px 0.5em 5px;
