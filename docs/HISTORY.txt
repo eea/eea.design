@@ -3,6 +3,8 @@ Changelog
 
 26.5-dev0 - (unreleased)
 ---------------------------
+* Bug fix: fixed language change popup selection
+  [ichim-david refs #118582]
 
 26.4 - (2020-06-05)
 ---------------------------

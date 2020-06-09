@@ -36,6 +36,11 @@
         // re add original title which can be set after the tooltip logic
         // a.attr('title', initial_title);
         $el.click(function (ev) {
+          // #118582 allow language selector links to resolve so we check if
+          // the target of the event is inside the panel-content area
+          if ($(ev.target).closest(".panel-content").length) {
+            return;
+          }
           ev.preventDefault();
           var $this = $(this),
             tooltip = $tooltip[0];
