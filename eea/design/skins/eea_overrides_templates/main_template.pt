@@ -261,17 +261,10 @@
 
                                 <tal:not4AjaxLoad  tal:condition="not:ajax_load">
 
-                                  <div class="mini-header-below-content eea-accordion-panels non-exclusive">
+                                  <div class="mini-header-below-content eea-accordion-panels
+                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />
 
-                                    <metal:themes_mini_header tal:condition="python: mini_header and context_state.is_view_template()">
-                                      <div class="eea-accordion-panel">
-                                        <h2 class="eea-icon-right-container" i18n:translate="">Topics</h2>
-                                        <div class="pane" id="mini-themes-tags">
-                                          <div tal:replace="structure context/@@viewlets/eea.themestags" />
-                                        </div>
-                                      </div>
-                                    </metal:themes_mini_header>
                                   </div>
                                 </tal:not4AjaxLoad>
 

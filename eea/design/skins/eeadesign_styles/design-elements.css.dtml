@@ -122,6 +122,11 @@
     overflow: hidden;
     border: 1px solid #DDD;
 }
+
+.eea-accordion-panels-plain .pane {
+    border: 0;
+}
+
 .eea-accordion-title, .eea-accordion-panel > h2 {
     background: #E2E2E2 none;
     border: 1px solid #E0E0E0;
@@ -131,6 +136,28 @@
     line-height: 3em;
     padding: 0 0.5em;
     font-weight: bold;
+}
+.eea-accordion-panels-bordered-primary {
+    border-top: 3px solid #000;
+}
+
+.eea-accordion-panels-bordered-secondary {
+    border-top: 5px solid &dtml-corporateGreen;;
+}
+.eea-accordion-panels-plain {
+    margin: 3.7rem 0;
+}
+.eea-accordion-panels-plain .eea-accordion-panel .pane {
+    padding: 10px 2rem;
+}
+.eea-accordion-panels-plain .eea-accordion-title,
+.eea-accordion-panels-plain .eea-accordion-title:hover {
+    background-color: transparent;
+    border-width: 1px 0;
+    margin-top: -1px;
+}
+.eea-accordion-panels-plain .eea-accordion-panel .current {
+    background-color: transparent;
 }
 
 .eea-accordion-title-manual-icons {

@@ -199,13 +199,23 @@
         permission="zope2.View"
         />
 
+
     <browser:viewlet
         name="eea.design.socialmedia"
         class=".viewlets.SocialMediaViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         layer=".interfaces.IEEACommonLayer"
         permission="zope2.View"
         />
+
+    <browser:viewlet
+        name="eea.design.mini_theme_tags"
+        class=".viewlets.MiniThemeTagsViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        layer=".interfaces.IEEACommonLayer"
+        permission="zope2.View"
+        insert-after="eea.temporal_coverage"
+    />
 
     <browser:viewlet
         name="plone.app.i18n.locales.languageselector"

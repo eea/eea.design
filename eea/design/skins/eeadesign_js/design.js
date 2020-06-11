@@ -43,9 +43,10 @@ jQuery(document).ready(function ($) {
 
   //117294 move theme tags to the bottom of the page
   if (is_mini_header) {
-    var $mini_themes_tags = $("#mini-themes-tags");
-    $("#themes-tags").appendTo($mini_themes_tags);
-    $mini_themes_tags.insertBefore($socialmedia);
+    //   var $mini_themes_tags = $("#mini-themes-tags");
+    //   $("#themes-tags").appendTo($mini_themes_tags);
+    //   $mini_themes_tags.insertBefore($socialmedia);
+    $(".disclaimer").insertBefore(".mini-header-below-content");
   }
 
   // hide element if empty or has less than on equal to given
@@ -166,7 +167,7 @@ jQuery(document).ready(function ($) {
   if ($video_iframe) {
     $video_iframe_src = $video_iframe.attr("src");
     $("<a />", {
-      'class': "video_iframe_for_print visible-print",
+      class: "video_iframe_for_print visible-print",
       href: $video_iframe_src,
       html: "Video link: [" + $video_iframe_src + "]"
     }).insertBefore($video_iframe);
@@ -373,7 +374,9 @@ jQuery(document).ready(function ($) {
       ptype = ptype.match("portaltype-[a-z-]*");
       ptype = ptype[0].split("-");
       ptype =
-        ptype.length === 2 ? capitalize(ptype[1]) : capitalize(ptype[1]) + " " + capitalize(ptype[2]);
+        ptype.length === 2
+          ? capitalize(ptype[1])
+          : capitalize(ptype[1]) + " " + capitalize(ptype[2]);
     } else {
       ptype = "Unknown";
     }
