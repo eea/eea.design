@@ -1,0 +1,48 @@
+
+.photoAlbumEntry {
+ width: 220px;
+ height: 330px;
+  margin-right: 70px;
+}
+.photoAlbumEntry a {
+ display: flex;
+ flex-direction: column;
+}
+
+.photoAlbumEntryTitle {
+ order: 0;
+ height: 6.3rem;
+ background-color: $corporateBlue;
+ color: #FFF;
+ font-weight: normal;
+ padding: 1rem 1.5rem;
+ text-align: left;
+}
+.photoAlbumEntryWrapper {
+ order: 1;
+}
+
+#relatedItems .page {
+ display: flex;
+ //justify-content: space-around;
+}
+
+@media (min-width: $breakpoint-xl) {
+ #relatedItems {
+   h2 {
+    font-size: 125%;
+   }
+  h2, .eea-tabs  {
+   position: absolute;
+   left: -200px;
+  }
+  .eea-tabs {
+   top: 60px;
+   background-color: transparent;
+  }
+  .eea-tabs > li {
+   display: block;
+  }
+ }
+
+}
