@@ -102,6 +102,7 @@ padding-half:string=8px
 eea-icon-check:string=\f00c
 eea-icon-chevron-down:string=\f078
 eea-icon-chevron-left:string=\f053
+eea-icon-chevron-right:string=\f054
 eea-icon-exclamation-circle:string=\f06a
 eea-icon-file-text:string=\f15c
 eea-icon-flash:string=\f0e7

@@ -141,21 +141,35 @@
     border-top: 3px solid #000;
 }
 
+.eea-accordion-panels-bordered-primary  .eea-accordion-title {
+    font-weight: normal;
+}
+
 .eea-accordion-panels-bordered-secondary {
     border-top: 5px solid &dtml-corporateGreen;;
 }
+.eea-accordion-panels-bordered-secondary  .eea-accordion-title {
+    font-weight: bold;
+    font-size: 20px;
+}
 .eea-accordion-panels-plain {
     margin: 3.7rem 0;
+    padding-top: 1px;
 }
 .eea-accordion-panels-plain .eea-accordion-panel .pane {
     padding: 10px 2rem;
 }
 .eea-accordion-panels-plain .eea-accordion-title,
 .eea-accordion-panels-plain .eea-accordion-title:hover {
+    color: #000;
     background-color: transparent;
     border-width: 1px 0;
     margin-top: -1px;
 }
+.eea-accordion-panels-plain .anchorjs-link {
+    line-height: 3 !important;
+}
+
 .eea-accordion-panels-plain .eea-accordion-panel .current {
     background-color: transparent;
 }
@@ -171,6 +185,10 @@
 .eea-accordion-panel > h2 .eea-icon-right:before,
 .eea-accordion-title > .eea-icon-right:before {
     content: "&dtml-eea-icon-chevron-left;";
+}
+
+.eea-accordion-title > .eea-icon-left:before {
+    content: "&dtml-eea-icon-chevron-right;";
 }
 
 .eea-accordion-panel h2:hover > .eea-icon-right:before,
