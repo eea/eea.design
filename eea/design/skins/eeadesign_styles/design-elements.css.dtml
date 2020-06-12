@@ -192,7 +192,8 @@
 }
 
 .eea-accordion-panel h2:hover > .eea-icon-right:before,
-.eea-accordion-panel .current > .eea-icon-right:before {
+.eea-accordion-panel .current > .eea-icon-right:before,
+.eea-accordion-panel .current > .eea-icon-left:before {
     content: "&dtml-eea-icon-chevron-down;";
 }
 
