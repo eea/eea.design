@@ -153,9 +153,9 @@ jQuery(document).ready(function ($) {
   var $buttonnavbar = $("button.navbar-toggle");
   var $soer_tabs = $(".eea-tabs-soer"),
     soer_tabs_found = $soer_tabs.length;
-  var $notransform = $(
+  var $notransform =
     ".eea-tabs-arrows, .eea-tabs-soer, .mini-header #relatedItems .eea-tabs"
-  );
+  ;
   if (underscore && underscore.debounce) {
     $(window).resize(
       _.debounce(function () {

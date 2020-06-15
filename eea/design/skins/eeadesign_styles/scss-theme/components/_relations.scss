@@ -11,26 +11,32 @@
 
 .photoAlbumEntryTitle {
  order: 0;
- height: 6.3rem;
+ height: 8.3rem;
  background-color: $corporateBlue;
  color: #FFF;
  font-weight: normal;
  padding: 1rem 1.5rem;
  text-align: left;
+ line-height: 1.2;
+}
+.photoAlbumEntryWrapperImg {
+ z-index: 0;
 }
 .photoAlbumEntryWrapper {
  order: 1;
+ height: 225px;
+ background-color: #FFF;
 }
 
-#relatedItems .page {
- display: flex;
- //justify-content: space-around;
-}
 
 @media (min-width: $breakpoint-xl) {
+ #relatedItems .page {
+  display: flex;
+  //justify-content: space-around;
+ }
  #relatedItems {
    h2 {
-    font-size: 125%;
+    font-size: 100%;
    }
   h2, .eea-tabs  {
    position: absolute;
@@ -42,7 +48,36 @@
   }
   .eea-tabs > li {
    display: block;
+   border-bottom: 1px solid #d3d3d3;
   }
+
+  .eea-tabs > li > a {
+   color: #004B87;
+   text-shadow: none;
+   font-weight: normal;
+  }
+
+  .eea-tabs > li > .current,
+  .eea-tabs > li > a:target,
+  .eea-tabs > li > a:hover {
+   color: #004B87 !important;
+   font-weight: bold;
+   background-color: transparent;
+  }
+  .eea-tabs > li > .current:before,
+   .eea-tabs > li > a:hover:before {
+    content: " ";
+    //width: 0;
+    border-left: 5px solid #004B87;
+    display: block;
+    position: absolute;
+    height: 100%;
+    margin-left: -15px;
+    top: 0;
+   }
+ }
+ .eea-tabs .current::after, .eea-tabs a:hover::after {
+   display: none;
  }
 
 }
