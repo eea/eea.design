@@ -1,23 +1,37 @@
-
-.photoAlbumEntry {
- width: 220px;
- height: 330px;
-  margin-right: 70px;
+#relatedItems .eea-tabs {
+ background-color: $corporateBlue;
+}
+#relatedItems .eea-tabs .current::after, #relatedItems .eea-tabs a:hover::after {
+ border-top-color: $corporateBlue;
+}
+#relatedItems  {
+ h2 {
+  font-size: 100%;
+ }
+  .eea-tabs-panels {
+   border: 0;
+  }
 }
 .photoAlbumEntry a {
  display: flex;
  flex-direction: column;
 }
 
+.photoAlbumEntryTitleWrapper {
+ height: 110px;
+ display: block;
+ overflow: hidden;
+ background-color: $corporateBlue;
+}
 .photoAlbumEntryTitle {
  order: 0;
- height: 8.3rem;
- background-color: $corporateBlue;
+ height: 6rem;
  color: #FFF;
  font-weight: normal;
- padding: 1rem 1.5rem;
  text-align: left;
  line-height: 1.2;
+ margin-top: 0;
+ padding: 1rem 1.5rem;
 }
 .photoAlbumEntryWrapperImg {
  z-index: 0;
@@ -33,11 +47,22 @@
  #relatedItems .page {
   display: flex;
   //justify-content: space-around;
+  align-items: center;
  }
  #relatedItems {
-   h2 {
-    font-size: 100%;
-   }
+  .photoAlbumEntry {
+   width: 220px;
+   height: 330px;
+   margin-right: 54px;
+  }
+ }
+
+ .eea-icon-pagination {
+  position: absolute;
+  right: -20%;
+ }
+
+ #relatedItems {
   h2, .eea-tabs  {
    position: absolute;
    left: -200px;
