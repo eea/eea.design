@@ -157,7 +157,7 @@
     padding-top: 1px;
 }
 .eea-accordion-panels-plain .eea-accordion-panel .pane {
-    padding: 10px 2rem;
+    padding: 1rem 2rem;
 }
 .eea-accordion-panels-plain .eea-accordion-title,
 .eea-accordion-panels-plain .eea-accordion-title:hover {

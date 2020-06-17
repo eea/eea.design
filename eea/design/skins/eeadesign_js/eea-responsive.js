@@ -86,8 +86,10 @@ jQuery(document).ready(function ($) {
       var $accordion_title = $panel.find(".eea-accordion-title");
       var link_is_current = link.className.indexOf("current") !== -1;
       if ($accordion_title.length) {
-        if (link_is_current && !$accordion_title.hasClass("current")) {
-          $tabs_panels.find(".pane").hide();
+        // if (link_is_current && !$accordion_title.hasClass("current")) {
+        $accordion_title.show();
+        if (link_is_current) {
+          // $tabs_panels.find(".pane").hide();
           $accordion_title.click();
         }
         return;
@@ -139,8 +141,8 @@ jQuery(document).ready(function ($) {
           ? $(".eea-tabs-soer")
           : $panel.parent().prev();
         $panel.attr("class", "eea-tabs-panel");
-        $panel.find('.eea-accordion-title').hide();
-        $panel.find('.pane').show();
+        $panel.find(".eea-accordion-title").hide();
+        $panel.find(".pane").show();
         if ($("h2.current", $panel).length) {
           $tabs.find("a").removeClass("current").eq(idx).addClass("current");
           $panel.show();
@@ -155,9 +157,7 @@ jQuery(document).ready(function ($) {
   var $buttonnavbar = $("button.navbar-toggle");
   var $soer_tabs = $(".eea-tabs-soer"),
     soer_tabs_found = $soer_tabs.length;
-  var $notransform =
-    ".eea-tabs-arrows, .eea-tabs-soer"
-  ;
+  var $notransform = ".eea-tabs-arrows, .eea-tabs-soer";
   if (underscore && underscore.debounce) {
     $(window).resize(
       _.debounce(function () {
@@ -171,8 +171,8 @@ jQuery(document).ready(function ($) {
               var $tab_panels = $tab.next(".eea-tabs-panels");
               var tabs_multiple_lines = false;
               $tab_panels = $tab_panels.length
-                  ? $tab_panels
-                  : $tab.parent().find(".eea-tabs-panels");
+                ? $tab_panels
+                : $tab.parent().find(".eea-tabs-panels");
               var tabs_first_offset = 0;
               if ($tab.hasClass("hidden")) {
                 $tab.removeClass("hidden");
@@ -189,8 +189,7 @@ jQuery(document).ready(function ($) {
               if (tabs_multiple_lines) {
                 $tab.addClass("hidden");
                 make_tabs_into_accordions($tab, $tab_panels);
-              }
-              else {
+              } else {
                 make_accordions_into_tabs();
               }
             });
@@ -235,15 +234,16 @@ jQuery(document).ready(function ($) {
             });
 
             if (tabs_multiple_lines) {
-              if ($tab.parent().attr('id') === "relatedItems" && window.innerWidth > 490) {
+              if (
+                $tab.parent().attr("id") === "relatedItems" &&
+                window.innerWidth > 490
+              ) {
                 make_accordions_into_tabs();
-              }
-              else {
+              } else {
                 $tab.addClass("hidden");
                 make_tabs_into_accordions($tab, $tab_panels);
               }
-            }
-            else {
+            } else {
               make_accordions_into_tabs();
             }
           });
