@@ -193,7 +193,7 @@ select {
     width: 100%;
 }
 
-.category, #themes-tags, #geotags, .geotags, #tempCoverage, .temporal-coverage {
+.category, #themes-tags {
     font-size: 100%;
     margin-bottom: 1em;
     color: #666;
@@ -201,16 +201,13 @@ select {
     line-height: 2em;
 }
 
-dd#tempCoverage, dd.geotags, dd.category{
+dd#tempCoverage, dd.category{
     margin-left: 0 !important;
 }
 
 #category .link-category,
 .category .link-category,
 #themes-tags .link-category,
-#geotags .link-category,
-.geotags .link-category,
-#tempCoverage .link-category,
 #languageCodes .translated, #languageCodes li.selected, span.selectedTag {
     color: black;
     padding: 2px 5px;
@@ -226,23 +223,35 @@ dd#tempCoverage, dd.geotags, dd.category{
 #category .link-category:hover,
 .category .link-category:hover,
 #themes-tags .link-category:hover,
-#geotags .link-category:hover,
-.geotags .link-category:hover,
-#tempCoverage .link-category:hover,
 #languageCodes .translated:hover, #languageCodes li.selected {
     background: &dtml-corporateOrange;;
     color: White;
     border-color: #205c90;
 }
 
-.category .separator,
-#themes-tags .separator,
-#geotags .separator,
-.geotags .separator,
-#tempCoverage  .separator {
-    display: none;
+.geotags {
+    columns: 2;
+}
+.geotags-category {
+    display: block;
 }
 
+@media (min-width: 400px) and (max-width: 499px){
+    .geotags {
+        columns: 3;
+    }
+}
+@media (min-width: 500px) and (max-width: 659px){
+    .geotags {
+        columns: 4;
+    }
+}
+
+@media (min-width: 660px) {
+    .geotags {
+        columns: 5;
+    }
+}
 
 /* #106884 span tables 100% width while also making the overflow when area is
  * too small for the table data to fit
