@@ -139,6 +139,8 @@ jQuery(document).ready(function ($) {
           ? $(".eea-tabs-soer")
           : $panel.parent().prev();
         $panel.attr("class", "eea-tabs-panel");
+        $panel.find('.eea-accordion-title').hide();
+        $panel.find('.pane').show();
         if ($("h2.current", $panel).length) {
           $tabs.find("a").removeClass("current").eq(idx).addClass("current");
           $panel.show();
@@ -154,7 +156,7 @@ jQuery(document).ready(function ($) {
   var $soer_tabs = $(".eea-tabs-soer"),
     soer_tabs_found = $soer_tabs.length;
   var $notransform =
-    ".eea-tabs-arrows, .eea-tabs-soer, .mini-header #relatedItems .eea-tabs"
+    ".eea-tabs-arrows, .eea-tabs-soer"
   ;
   if (underscore && underscore.debounce) {
     $(window).resize(
@@ -167,10 +169,30 @@ jQuery(document).ready(function ($) {
             $tabs.each(function (idx, tab) {
               var $tab = $(tab);
               var $tab_panels = $tab.next(".eea-tabs-panels");
+              var tabs_multiple_lines = false;
               $tab_panels = $tab_panels.length
-                ? $tab_panels
-                : $tab.parent().find(".eea-tabs-panels");
-              make_tabs_into_accordions($tab, $tab_panels);
+                  ? $tab_panels
+                  : $tab.parent().find(".eea-tabs-panels");
+              var tabs_first_offset = 0;
+              if ($tab.hasClass("hidden")) {
+                $tab.removeClass("hidden");
+              }
+              $tab.find("li").each(function (idx, el) {
+                if (idx === 0) {
+                  tabs_first_offset = el.offsetTop;
+                }
+                if (el.offsetTop !== tabs_first_offset) {
+                  tabs_multiple_lines = true;
+                  return false;
+                }
+              });
+              if (tabs_multiple_lines) {
+                $tab.addClass("hidden");
+                make_tabs_into_accordions($tab, $tab_panels);
+              }
+              else {
+                make_accordions_into_tabs();
+              }
             });
           }
           if (tabbed_menu_found) {
@@ -189,7 +211,7 @@ jQuery(document).ready(function ($) {
             make_tabs_into_accordions($soer_tabs, $(".eea-tabs-panels-soer"));
           }
         } else {
-          make_accordions_into_tabs();
+          // make_accordions_into_tabs();
           // turn tabs into accordions if tabs span over two rows
           $tabs.each(function (idx, tab) {
             var $tab = $(tab);
@@ -211,9 +233,18 @@ jQuery(document).ready(function ($) {
                 return false;
               }
             });
+
             if (tabs_multiple_lines) {
-              $tab.addClass("hidden");
-              make_tabs_into_accordions($tab, $tab_panels);
+              if ($tab.parent().attr('id') === "relatedItems" && window.innerWidth > 490) {
+                make_accordions_into_tabs();
+              }
+              else {
+                $tab.addClass("hidden");
+                make_tabs_into_accordions($tab, $tab_panels);
+              }
+            }
+            else {
+              make_accordions_into_tabs();
             }
           });
         }
