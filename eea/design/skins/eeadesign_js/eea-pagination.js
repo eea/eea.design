@@ -97,20 +97,20 @@ jQuery(document).ready(function ($) {
 
         $this.addClass("eea-tabs-panel").appendTo($eea_tabs_panels);
         if (orig_entries > pagination_count) {
-          var $pagination_icon = $(
-            "<span class='eea-icon eea-icon-pagination eea-icon-chevron-right eea-icon-5x'></span>"
-          );
+          // var $pagination_icon = $(
+          //   "<span class='eea-icon eea-icon-pagination eea-icon-chevron-right eea-icon-5x'></span>"
+          // );
           $this.addClass("eea-tabs-panel-paginated");
-          $pagination_icon.appendTo($this);
-          $pagination_icon.click(function () {
-            var $pagination = $(this).parent().find(".listingBar");
-            var $next = $pagination.find(".next");
-            if ($next.hasClass("current")) {
-              $pagination.trigger("setPage", [0]);
-            } else {
-              $pagination.trigger("nextPage");
-            }
-          });
+          // $pagination_icon.appendTo($this);
+          // $pagination_icon.click(function () {
+          //   var $pagination = $(this).parent().find(".listingBar");
+          //   var $next = $pagination.find(".next");
+          //   if ($next.hasClass("current")) {
+          //     $pagination.trigger("setPage", [0]);
+          //   } else {
+          //     $pagination.trigger("nextPage");
+          //   }
+          // });
           $("<div class='paginator listingBar' />")
             .prependTo($this)
             .pagination(orig_entries, {
