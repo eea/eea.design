@@ -3,6 +3,8 @@ Changelog
 
 26.5-dev0 - (unreleased)
 ---------------------------
+* Change: redesigned Footer metadata and related content
+  [ichim-david refs #117295]
 * Bug fix: increase max-height of photoAlbumEntryTitle in order to avoid clipping
   the title when it spans over 3 rows
   [ichim-david refs #118582]
