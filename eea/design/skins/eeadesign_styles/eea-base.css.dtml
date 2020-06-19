@@ -224,7 +224,7 @@ dd#tempCoverage {
 
 .link-category:hover,
 #languageCodes .translated:hover, #languageCodes li.selected {
-    background: &dtml-corporateOrange;;
+    background: &dtml-corporateGreen;;
     color: White;
     border-color: #205c90;
 }

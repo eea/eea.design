@@ -167,7 +167,7 @@ jQuery(document).ready(function ($) {
   if ($video_iframe) {
     $video_iframe_src = $video_iframe.attr("src");
     $("<a />", {
-      class: "video_iframe_for_print visible-print",
+      "class": "video_iframe_for_print visible-print",
       href: $video_iframe_src,
       html: "Video link: [" + $video_iframe_src + "]"
     }).insertBefore($video_iframe);
@@ -374,9 +374,7 @@ jQuery(document).ready(function ($) {
       ptype = ptype.match("portaltype-[a-z-]*");
       ptype = ptype[0].split("-");
       ptype =
-        ptype.length === 2
-          ? capitalize(ptype[1])
-          : capitalize(ptype[1]) + " " + capitalize(ptype[2]);
+        ptype.length === 2 ? capitalize(ptype[1]) : capitalize(ptype[1]) + " " + capitalize(ptype[2]);
     } else {
       ptype = "Unknown";
     }
