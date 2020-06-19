@@ -48,12 +48,8 @@ jQuery(document).ready(function ($) {
       if (this.tagName === "H3") {
         // insert eea-tabs divs if we have h3 elements and we don't
         // already have eea_tabs div inserted like in the case of paginate divs
-        $eea_tabs = !$eea_tabs.length
-          ? $("<ul class='eea-tabs two-rows' />").insertBefore($self)
-          : $eea_tabs;
-        $eea_tabs_panels = !$eea_tabs_panels.length
-          ? $("<div class='eea-tabs-panels' />").insertAfter($eea_tabs)
-          : $eea_tabs_panels;
+        $eea_tabs = !$eea_tabs.length ? $("<ul class='eea-tabs two-rows' />").insertBefore($self) : $eea_tabs;
+        $eea_tabs_panels = !$eea_tabs_panels.length ? $("<div class='eea-tabs-panels' />").insertAfter($eea_tabs) : $eea_tabs_panels;
         var tab_id = this.innerHTML.toLowerCase().replace(/\s/g, "-"),
           tab_href = "#tab-" + tab_id;
         $("<li />")
@@ -85,7 +81,7 @@ jQuery(document).ready(function ($) {
             num_entries > pagination_count ? pagination_count : num_entries
           );
           $("<div />", {
-            class: "page",
+            "class": "page",
             "data-count":
               num_entries > pagination_count ? pagination_count : num_entries
           })
