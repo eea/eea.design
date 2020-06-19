@@ -78,6 +78,14 @@
     permission="zope2.View"
   />
 
+  <browser:viewlet
+    name="plone.belowcontenttitle.keywords"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+    view="plone.app.layout.globals.interfaces.IViewView"
+    template="templates/keywords.pt"
+    permission="zope2.View"
+  />
+
   <!-- The personal bar
   <browser:viewlet
       name="plone.personal_bar"

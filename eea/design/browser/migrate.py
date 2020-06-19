@@ -24,9 +24,11 @@ class MigrateDesignElements(BrowserView):
         count = 0
         context = self.context
         cat = context.portal_catalog
-        match = 'bg-'
-        ptype = ['Fiche', 'Highlight', 'Article']
-        brains = cat(portal_type=ptype, show_inactive=True)
+        form = self.request.form
+        match = form.get('text', 'bg-grey')
+        form_field = form.get('field', 'text')
+        ptype = form.get('ptype', 'Fiche')
+        brains = cat(portal_type=ptype, show_inactive=True, Language="all")
         pat = [('class="bg-grey"', 'class="pullquote-container"'),
                ('box fullwidth-bg bg-blue',
                    'fullwidth-bg eea-block bg-primary'),
@@ -49,7 +51,7 @@ class MigrateDesignElements(BrowserView):
 
         for brain in brains:
             obj = brain.getObject()
-            text = obj.getText()
+            text = obj.getField(form_field).get(obj)
             if match in text:
                 review_state = wf.getInfoFor(obj, 'review_state', 'None')
                 url = brain.getURL()

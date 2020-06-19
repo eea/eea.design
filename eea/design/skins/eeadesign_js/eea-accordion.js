@@ -89,9 +89,9 @@ jQuery(document).ready(function($) {
             $folder_panels.each(function(idx, el) {
                 var $el = $(el);
 
-                // 27215 only initilize the accordion once
+                // 27215 only initialise the accordion once
                 // using an added class instead of $.data since
-                // reinjecting jquery will make the data attribute disappear
+                // re-injecting jquery will make the data attribute disappear
                 if ($el.hasClass("eea-accordion-initialized")) {
                     return;
                 }

@@ -340,6 +340,18 @@ class QRBox(common.ViewletBase):
         return True
 
 
+class MiniThemeTagsViewlet(common.ViewletBase):
+    """ Custom viewlet for mini mini theme tags
+    """
+    render = ViewPageTemplateFile('templates/mini_theme_tags_viewlet.pt')
+
+    # @property
+    # def available(self):
+    #     """ Available
+    #     """
+    #     return True
+
+
 class ExportActionsViewlet(common.ViewletBase):
     """ Custom viewlet for exporting actions
     """

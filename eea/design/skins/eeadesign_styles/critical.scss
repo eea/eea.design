@@ -435,8 +435,7 @@ ul {
 
 
 /* Networks panel EU partners links */
-.moreLink,
-.mini-header #themes-tags .link-category {
+.moreLink {
   border: 0 !important;
   display: inline-block;
   padding-left: 20px;
@@ -444,8 +443,7 @@ ul {
   }
 
 
-.moreLink:before,
-.mini-header #themes-tags .link-category:before {
+.moreLink:before {
   content: "\f138";
   font-family: FontAwesome;
   font-size: 16px;
@@ -456,7 +454,6 @@ ul {
   }
 
 
-.mini-header #themes-tags .link-category:before,
 .eea-btn.moreLink:before {
   color: inherit;
   top: auto;
