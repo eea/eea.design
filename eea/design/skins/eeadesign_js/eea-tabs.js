@@ -8,12 +8,12 @@
 
 jQuery(document).ready(function($) {
 
-    $(window).bind('eea.tags.loaded', function (evt, tab) {
-        var $tab = $(tab);
-        $tab.find('a').bind('click', function(ev){
-            window.location.hash = this.id;
-        });
-    });
+    // $(window).bind('eea.tags.loaded', function (evt, tab) {
+    //     var $tab = $(tab);
+    //     $tab.find('a').bind('click', function(ev){
+    //         window.location.hash = this.id;
+    //     });
+    // });
 
     var eea_tabs = function(){
         var $eea_tabs = $(".eea-tabs"), eea_tabs_length = $eea_tabs.length,

@@ -53,13 +53,13 @@ $breakpoint-sm: 490px;
 $breakpoint-md: 768px;
 $breakpoint-full: 830px;
 $breakpoint-lg: 1024px;
-$breakpoint-xl: 1200px;
+$breakpoint-xl: 1280px;
 $breakpoint-xxl: 1400px;
 
 
 // boxes
-$box-font-size: $p-font-size;
-$box-line-height: $p-line-height;
+$box-font-size: $p-font-size !default;
+$box-line-height: $p-line-height !default;
 $box-margin: $spacer-4;
 $box-margin-mobile: $spacer;
 $box-padding: $spacer-2;
@@ -91,6 +91,7 @@ $blockquote-padding-mobile: $box-padding-mobile;
 
 // keyFact
 $keyfact-bg: $corporateGrey;
+$keyfact-ul-color: #000;
 $keyfact-spacer:   $spacer-4;
 $keyfact-list-spacer: 2.1875rem;
 

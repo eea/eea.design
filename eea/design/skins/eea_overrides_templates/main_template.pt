@@ -1,4 +1,3 @@
-
 <metal:page define-macro="master"
             tal:define="portal_state context/@@plone_portal_state;
                         context_state context/@@plone_context_state;
@@ -98,6 +97,12 @@
 
 
     <meta name="generator" content="Plone - http://plone.org" />
+
+  <div class="eea-i18n-js hiddenElem" i18n:domain="eea">
+    <div id="eeaPaginationNext" i18n:translate="">next</div>
+    <div id="eeaPaginationPrev" i18n:translate="">previous</div>
+    <div id="eeaPaginationItems" i18n:translate="">items</div>
+  </div>
 
     <script type="text/javascript" tal:content="structure context/ready.min.js">
         </script>
@@ -255,13 +260,18 @@
 
                                 <tal:block define="thumb_scale thumb_scale | string:image_mini; skip_relations skip_relations|python: False"
                                            tal:condition="python:not skip_relations">
-                                    <tal:soer tal:condition="python:False if isPrint == 1 and '/soer-2015' in here_url else True">
+                                    <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
                                         <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
                                     </tal:soer>
                                 </tal:block>
 
                                 <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+
+                                  <div class="mini-header-below-content eea-accordion-panels
+                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />
+
+                                  </div>
                                 </tal:not4AjaxLoad>
 
                                 <div metal:use-macro="context/eea_dates/macros/pdfPublishDate" tal:condition="python:'pdf.body' in request['URL0']">
@@ -284,11 +294,6 @@
             <tal:not4AjaxLoad  tal:condition="not:ajax_load">
                 <tal:not4Print tal:condition="python:not isPrint">
                     <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent"></div>
-                  <metal:themes_mini_header tal:condition="mini_header">
-                    <div id="mini-themes-tags">
-                      <h3 i18n:translate="">Topics</h3>
-                    </div>
-                  </metal:themes_mini_header>
                 </tal:not4Print>
             </tal:not4AjaxLoad>
         </div>
@@ -306,7 +311,7 @@
             tal:attributes="class python:'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
 
-                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer-2015' in here_url else True">
+                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
                     <tal:block replace="structure provider:plone.rightcolumn" />
                 </tal:soer>
             </metal:portlets>

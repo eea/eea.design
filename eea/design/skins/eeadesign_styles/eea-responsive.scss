@@ -503,6 +503,10 @@ $input-color: #f3f3f3;
 
   }
 
+  #relatedItems .pane {
+    display: flex !important;
+  }
+
   .template-dc_view .content-header {
     width: 58.5%;
   }

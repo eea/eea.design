@@ -143,8 +143,10 @@
     float: none;
     margin: 0 auto;
     min-width: initial;
-    max-width: 830px;
     width: 100%;
+  }
+  .width-3\:4 {
+    max-width: 830px;
   }
 
   .fullwidth-img-container {
@@ -166,7 +168,7 @@
   .documentFirstHeading {
     padding-right: 0;
     min-width: 85%;
-    margin: 1.25rem 0 $spacer-0 0;
+    margin: 1.25rem 0 $spacer-1 0;
     letter-spacing: -1px;
     font-size: 2.5rem;
     line-height: 1.15;
@@ -251,12 +253,16 @@
   }
 
   #article-language .eea-icon:before,
-  #article-language a {
+  #article-language > a {
     color: #FFF;
   }
 
   #region-content {
     padding-top: 8em;
+  }
+
+  .fiche-endnotes {
+    margin-top: $spacer-3;
   }
 
 }
@@ -349,6 +355,12 @@
   .mini-header {
     .mini-portal-type {
       top: -$spacer-0;
+    }
+    h1,h2,h3 {
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
     }
   }
 }

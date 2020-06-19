@@ -1,6 +1,20 @@
 Changelog
 =========
 
+26.5 - (2020-06-19)
+---------------------------
+* Change: redesigned Footer metadata and related content
+  [ichim-david refs #117295]
+* Bug fix: increase max-height of photoAlbumEntryTitle in order to avoid clipping
+  the title when it spans over 3 rows
+  [ichim-david refs #118582]
+* Bug fix: pdf print fixes for lists and box title margins
+  [ichim-david refs #118582]
+* Bug fix: topics title should only appear on view template
+  [ichim-david refs #118582]
+* Bug fix: fixed language change popup selection
+  [ichim-david refs #118582]
+
 26.4 - (2020-06-05)
 ---------------------------
 * Feature: added redesign_theme.css enabled for mini_header portal_types which

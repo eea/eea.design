@@ -13,12 +13,9 @@
   color: $text-gray-light;
 }
 
-.box.bg-blue,
-.box.bg-blue a,
 .box-primary a {
   color: $text-gray-light;
 }
-//Box Title Green|div|box-header box-header-tertiary
 
 .box-secondary {
   background-color: $corporateGrey;
@@ -46,6 +43,7 @@
 .content-core {
   .box ul {
     @include list-unstyled();
+    margin-left: 0;
   }
 
 }
@@ -101,7 +99,7 @@
   .fullwidth-bg,
   .keyFact,
   .box {
-    padding: 2em !important;
+    padding: 1.5em 2em !important;
     page-break-inside: avoid !important;
   }
 
@@ -111,11 +109,10 @@
     border-bottom: 1px solid;
   }
 
-  .fullwidth-bg.bg-secondary a,
+  .box-tertiary a,
   .box-secondary a,
-  .box-tertiary a {
+  .fullwidth-bg.bg-secondary a {
     color: #000 !important;
     border-bottom: 1px solid;
   }
 }
-
