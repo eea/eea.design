@@ -166,6 +166,7 @@ span.next {
  #relatedItems .page {
    flex-basis: 100%;
  }
+  //#relatedItems
 
  .eea-icon-pagination {
   position: absolute;
@@ -182,11 +183,11 @@ span.next {
   h2 {
    left: -34%;
   }
- .eea-tabs-panel {
+ .eea-tabs-panels {
   padding: 0 15px;
  }
   .eea-tabs {
-   top: 60px;
+   top: 70px;
    background-color: transparent;
    border: 0;
     min-width: 220px;
@@ -194,6 +195,10 @@ span.next {
   .eea-tabs > li {
    display: block;
    border-bottom: 1px solid #d3d3d3;
+  }
+
+  .eea-tabs > li:first-of-type {
+   border-top: 1px solid #d3d3d3;
   }
 
   .eea-tabs > li > a {
@@ -209,8 +214,8 @@ span.next {
    font-weight: bold;
    background-color: transparent;
   }
-  .eea-tabs > li > .current:before,
-   .eea-tabs > li > a:hover:before {
+  .eea-tabs > li > .current:before
+    {
     content: " ";
     //width: 0;
     border-left: 5px solid #004B87;
