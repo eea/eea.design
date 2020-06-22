@@ -3,6 +3,13 @@ Changelog
 
 26.6-dev0 - (unreleased)
 ---------------------------
+* Bug fix: avoid clipping of content-header-body border and background color
+  when there is no description
+  [ichim-david refs #118767]
+* Change: links within boxes now have an underline
+  [ichim-david refs #118767]
+* Bug fix: show portal-column-two on non view pages for article redesign
+  [ichim-david refs #119040]
 * Change: ensure photoAlbumEntryTitle doesn't spill over expired wrapper
   [ichim-david refs #117295]
 
