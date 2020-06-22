@@ -17,7 +17,7 @@
     position: inherit;
   }
 
-  #portal-column-two {
+  &[class*="_view"] #portal-column-two {
     display: none;
   }
 
@@ -75,6 +75,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+    padding-top: 1rem;
   }
 
   .content-header-body:before {
@@ -140,10 +142,13 @@
   }
 
   #portal-column-content {
-    float: none;
     margin: 0 auto;
     min-width: initial;
     width: 100%;
+  }
+  &[class*="_view"] #portal-column-content {
+    float: none;
+    max-width: 830px;
   }
   .width-3\:4 {
     max-width: 830px;
@@ -199,7 +204,6 @@
   }
 
   .documentDescription {
-    margin-top: $grid-gutter-width;
     margin-bottom: $spacer-4;
     font-size: 1.125rem;
     font-weight: normal;
@@ -315,7 +319,7 @@
   .mini-header {
     .content-header .documentByLine::before {
       left: -15.5%;
-      max-width: 977px;
+      max-width: 1001px;
     }
 
     .content-header-body:before {

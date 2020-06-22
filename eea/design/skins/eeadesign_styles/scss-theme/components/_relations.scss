@@ -41,6 +41,12 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
  }
+ .expired .photoAlbumEntryTitle {
+    width: 93%;
+}
+ .expired .ribbon {
+  font-size: 10px;
+ }
  .photoAlbumEntryWrapperImg {
   z-index: 0;
  }

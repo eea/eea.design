@@ -366,12 +366,6 @@ video {
 }
 
 
-@media (max-width: $breakpoint-full - 1) {
-    .fullwidth-container-centered > *,
-    .max-container-centered > * {
-        padding: $spacer;
-    }
-}
 @media (min-width: $breakpoint-full) {
     .fullwidth-bg {
         padding-left: 0 !important;
@@ -386,6 +380,12 @@ video {
     }
 }
 
+@media (max-width: $breakpoint-xxl) {
+    .fullwidth-container-centered > *,
+    .max-container-centered > * {
+        padding: $spacer;
+    }
+}
 /* standard figure, used for articles and pages.
 can be floated left or right with additional
 class figure-right or figure-left */

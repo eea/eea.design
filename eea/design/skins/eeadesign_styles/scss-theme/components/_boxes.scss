@@ -13,12 +13,23 @@
   color: $text-gray-light;
 }
 
+
 .box-primary a {
   color: $text-gray-light;
+  border-bottom: 1px solid $text-gray-light;
+}
+
+.fullwidth-bg a {
+  border-bottom: 1px solid $text-gray-light;
 }
 
 .box-secondary {
   background-color: $corporateGrey;
+}
+
+.box-secondary a,
+.box-tertiary a {
+  border-bottom: 1px solid $border-primary;
 }
 
 .box-tertiary {
