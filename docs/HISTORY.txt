@@ -3,6 +3,8 @@ Changelog
 
 26.6-dev0 - (unreleased)
 ---------------------------
+* Change: ensure photoAlbumEntryTitle doesn't spill over expired wrapper
+  [ichim-david refs #117295]
 
 26.5 - (2020-06-19)
 ---------------------------
