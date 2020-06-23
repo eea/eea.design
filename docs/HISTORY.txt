@@ -1,6 +1,9 @@
 Changelog
 =========
 
+26.8-dev0 - (unreleased)
+---------------------------
+
 26.7 - (2020-06-23)
 ---------------------------
 * Bug fix: avoid clipping of content-header-body border and background color
