@@ -229,7 +229,10 @@ dd#tempCoverage {
     border-color: #205c90;
 }
 
-.geotags {
+.separator {
+    display: none;
+}
+div.geotags {
     columns: 2;
 }
 .geotags-category {
@@ -237,18 +240,18 @@ dd#tempCoverage {
 }
 
 @media (min-width: 400px) and (max-width: 499px){
-    .geotags {
+    div.geotags {
         columns: 3;
     }
 }
 @media (min-width: 500px) and (max-width: 659px){
-    .geotags {
+    div.geotags {
         columns: 4;
     }
 }
 
 @media (min-width: 660px) {
-    .geotags {
+    div.geotags {
         columns: 5;
     }
 }

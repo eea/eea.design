@@ -554,11 +554,12 @@ ul {
 .content-header-body {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .content-header .documentByLine {
   order: 0;
-  max-width: 86%;
-  flex-basis: 86%;
+  max-width: 100%;
+  flex-basis: 100%;
 }
 #themes-tags {
   order: 2;
@@ -578,10 +579,15 @@ ul {
   order: 2;
   min-width: 170px;
 }
+
 .documentExportActions {
-  margin: -1rem 0;
-  position: absolute;
+  margin: 0;
+  position: relative;
   right: 0;
+  order: 2;
+}
+.documentExportActions .eea-icon-file-pdf-o {
+  font-size: 1rem;
 }
 
 /* end content header section */
@@ -834,6 +840,15 @@ p,
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
   }
 
+@media screen and (min-width: 1200px) {
+  .content-header .documentByLine {
+    max-width: 80%;
+    flex-basis: 80%;
+  }
+ .documentExportActions {
+   margin: 0 0.5rem 0 auto
+ }
+}
 @media screen and (min-width: 1250px) {
   .navbar-collapse {
     display: block;
