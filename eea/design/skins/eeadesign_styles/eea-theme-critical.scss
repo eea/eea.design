@@ -322,6 +322,10 @@
       max-width: 1001px;
     }
 
+    .content-header #article-language + .documentByLine::before {
+      max-width: 977px;
+    }
+
     .content-header-body:before {
       height: calc(100% + #{$spacer-hero});
     }

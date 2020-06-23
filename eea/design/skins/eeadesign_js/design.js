@@ -339,7 +339,6 @@ jQuery(document).ready(function ($) {
     "xlsx",
     "table"
   ];
-
   function check_file_type(tokens) {
     var tokens_length = tokens.length;
     var rought_ext = tokens[tokens_length - 1];
@@ -370,11 +369,12 @@ jQuery(document).ready(function ($) {
 
   function extract_portal_type($body) {
     var ptype = $body.attr("class");
+    var c = capitalize;
     if (ptype && ptype.match("portaltype-[a-z-]*")) {
       ptype = ptype.match("portaltype-[a-z-]*");
       ptype = ptype[0].split("-");
       ptype =
-        ptype.length === 2 ? capitalize(ptype[1]) : capitalize(ptype[1]) + " " + capitalize(ptype[2]);
+        ptype.length === 2 ? c(ptype[1]) : c(ptype[1]) + " " + c(ptype[2]);
     } else {
       ptype = "Unknown";
     }

@@ -1,6 +1,15 @@
 Changelog
 =========
 
+26.7 - (2020-06-23)
+---------------------------
+* Bug fix: avoid clipping of content-header-body border and background color
+  when there is no description
+  [ichim-david refs #118767]
+* Bug fix: avoid pdf export overlap with language icon by making pdf small size
+  on entire website
+  [ichim-david refs #117295]
+
 26.6 - (2020-06-22)
 ---------------------------
 * Bug fix: avoid clipping of content-header-body border and background color
