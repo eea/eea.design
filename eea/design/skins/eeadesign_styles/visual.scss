@@ -808,12 +808,13 @@ span.figure-left {
     border-top-color: unquote("&dtml-corporateBlue;");
     margin-left: -10px;
 }
-#visual-portal-wrapper .eea-tabs > li > a:hover,
-#visual-portal-wrapper .eea-tabs > li > a:target {
+.eea-tabs > li > a:hover,
+.eea-tabs > li > a:target {
     text-decoration: none;
-    color: unquote("&dtml-lightBackgroundColor;") !important;
+    color: unquote("&dtml-lightBackgroundColor;");
     background-color: transparent;
 }
+//.eea-tabs > li > a:target,
 .eea-tabs > li > .current,
 .eea-tabs > li > .current:hover {
     cursor: default;
@@ -992,7 +993,7 @@ span.figure-left {
 
 .action-items {
     text-align: right;
-    vertical-align: top;
+    vertical-align: middle;
 }
 .action-buttons {
     margin-bottom: 0;

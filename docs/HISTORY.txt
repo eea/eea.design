@@ -3,6 +3,9 @@ Changelog
 
 26.8-dev0 - (unreleased)
 ---------------------------
+* Feature: Float related content besides content area links when that link has
+  the special style class applied 
+  [ichim-david refs #117296]
 
 26.7 - (2020-06-23)
 ---------------------------
