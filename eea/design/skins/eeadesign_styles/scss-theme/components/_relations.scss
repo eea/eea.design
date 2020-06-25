@@ -1,10 +1,19 @@
-#relatedItems .eea-tabs {
+.relatedItems .eea-tabs {
  background-color: $corporateBlue;
 }
-#relatedItems .eea-tabs .current::after, #relatedItems .eea-tabs a:hover::after {
+.relatedItems .eea-tabs .current::after, .relatedItems .eea-tabs a:hover::after {
  border-top-color: $corporateBlue;
 }
-#relatedItems  {
+
+.floated-photo-album-container {
+ position: relative;
+  
+}
+
+.floated-photo-album-container .photoAlbumEntry {
+  display: none;
+}
+.relatedItems  {
  h2 {
   font-size: 100%;
  }
@@ -19,13 +28,15 @@
  .photoAlbumEntry a {
   display: flex;
   flex-direction: column;
+   color: transparent;
  }
 
  .photoAlbumEntryTitleWrapper {
   height: 110px;
   display: block;
-  overflow: hidden;
+  //overflow: hidden;
   background-color: $corporateBlue;
+  position: relative;
  }
  .photoAlbumEntryTitle {
   order: 0;
@@ -92,7 +103,7 @@ span.next {
  visibility: hidden;
 }
 
-#relatedItems  .pane,
+.relatedItems  .pane,
 .eea-tabs-panel.eea-tabs-panel-paginated {
  display: flex;
  flex-wrap: wrap;
@@ -108,71 +119,71 @@ span.next {
 
 @media (min-width: 700px) and (max-width: 959px) {
 
- #relatedItems .photoAlbumEntry:nth-of-type(2n) {
+ .relatedItems .photoAlbumEntry:nth-of-type(2n) {
   margin-right: 7px;
  }
 
- #relatedItems .photoAlbumEntry:nth-of-type(3n) {
+ .relatedItems .photoAlbumEntry:nth-of-type(3n) {
   margin-right: 0;
  }
 }
-#relatedItems .page:before {
+.relatedItems .page:before {
  display: none;
 }
 
 @media (min-width: 501px) and (max-width: $breakpoint-md - 1) {
- #relatedItems .page[data-count="1"] .photoAlbumEntry {
+ .relatedItems .page[data-count="1"] .photoAlbumEntry {
   margin-right: auto;
  }
 }
 
-#relatedItems .listingBar a {
+.relatedItems .listingBar a {
  color: #004B87;
 }
 @media (max-width: $breakpoint-md - 1) {
- #relatedItems .page {
+ .relatedItems .page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
  }
 
- #relatedItems .listingBar a {
+ .relatedItems .listingBar a {
   padding: 0.25em;
  }
 
 }
 @media (min-width: $breakpoint-md) {
- #relatedItems .page {
+ .relatedItems .page {
    display: flex;
    justify-content: space-between;
    width: 100%;
   }
-  #relatedItems .photoAlbumEntry {
+  .relatedItems .photoAlbumEntry {
    margin: 0;
   }
- #relatedItems .photoAlbumEntry:nth-of-type(2n) {
+ .relatedItems .photoAlbumEntry:nth-of-type(2n) {
   margin-right: auto;
   margin-left: auto;
  }
 
- #relatedItems .page[data-count="2"] .photoAlbumEntry:nth-of-type(2n) {
+ .relatedItems .page[data-count="2"] .photoAlbumEntry:nth-of-type(2n) {
   margin-left: 6.1%;
  }
 
 }
 
 @media (min-width: 1140px) {
- #relatedItems .page[data-count="2"] .photoAlbumEntry:nth-of-type(2n) {
+ .relatedItems .page[data-count="2"] .photoAlbumEntry:nth-of-type(2n) {
   margin-left: 60px;
  }
 }
 
 @media (min-width: $breakpoint-xl) {
- #relatedItems .page {
+ .relatedItems .page {
    flex-basis: 100%;
  }
-  //#relatedItems
+  //.relatedItems
 
  .eea-icon-pagination {
   position: absolute;
@@ -181,7 +192,7 @@ span.next {
   display: block;
  }
 
- #relatedItems {
+ .relatedItems {
   h2, .eea-tabs  {
    position: absolute;
    left: -33%;
@@ -239,7 +250,7 @@ span.next {
 }
 
 @media (min-width: $breakpoint-xl) and (max-width: 1365px) {
- #relatedItems {
+ .relatedItems {
   .eea-tabs {
    left: -27.5%;
   }
@@ -250,12 +261,46 @@ span.next {
 }
 
 @media (min-width: 1600px){
- #relatedItems {
+ .relatedItems {
   .eea-tabs {
    left: -37%;
   }
    h2 {
     left: -38%;
    }
+ }
+
+ .floated-photo-album-container {
+  .photoAlbumEntry {
+   overflow: visible;
+   display: block;
+   position: absolute;
+   left: -23vw;
+   top: -40px;
+  }
+  .photoAlbumEntry:after {
+   top: 13%;
+   left: 100%;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border: 9px solid transparent;
+   border-left-color: $corporateBlue;
+   margin-left: -1px;
+   z-index: 4;
+  }
+
+  .photoAlbumEntryType {
+   font-size: 13px;
+   padding-left: 1.5rem;
+   color: #FFF;
+   text-transform: uppercase;
+   margin-bottom: -.6rem;
+   display: block;
+   margin-top: .5rem;
+   line-height: 1;
+  }
  }
 }

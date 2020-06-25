@@ -617,7 +617,6 @@ dl.toc dd ol {
     z-index: 3;
     position: relative;
     overflow: hidden;
-    text-align: center;
 }
 
 .width-full .photoAlbumEntry {

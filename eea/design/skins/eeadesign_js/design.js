@@ -498,4 +498,20 @@ jQuery(document).ready(function ($) {
   if (scroll_analytics_enabled) {
     $content_core.screentimeAnalytics();
   }
+
+  //#117296 add floated relations on 1600+ screen
+  var $floated_album_links = $(".floated-photo-album-container");
+  $floated_album_links.each(function () {
+    var $this = $(this);
+    var $link = $this.find("a");
+    var link_href = $link.attr("href");
+    var $album_entries = $related_items.find(".photoAlbumEntry");
+    var $album_entries_links = $album_entries.find("a");
+    var found = $album_entries_links.filter(function () {
+      return this.href === link_href;
+    });
+    if (found) {
+      found.parent().clone().appendTo($this);
+    }
+  });
 });

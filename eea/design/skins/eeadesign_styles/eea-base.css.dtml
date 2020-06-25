@@ -420,7 +420,7 @@ dl.toc dd {
     margin: 0;
     overflow: hidden;
     display: block;
-    height: 99%;
+    height: 100%;
 }
 
 .photoAlbumEntryTitle {
@@ -432,6 +432,10 @@ dl.toc dd {
     font-weight: bold;
     text-align: center;
     font-size: 1rem;
+}
+
+.photoAlbumEntryType {
+    display: none;
 }
 
 /* related faceted items need longer headers since the content area is smaller */

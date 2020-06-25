@@ -161,7 +161,6 @@
 }
 .eea-accordion-panels-plain .eea-accordion-title,
 .eea-accordion-panels-plain .eea-accordion-title:hover {
-    font-weight: normal;
     color: #000;
     background-color: transparent;
     border-width: 1px 0;
