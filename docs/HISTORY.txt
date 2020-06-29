@@ -3,6 +3,9 @@ Changelog
 
 26.9-dev0 - (unreleased)
 ---------------------------
+* Change: related items are now redesigned on entire site not just in the
+  redesign theme
+  [ichim-david refs #117296]
 
 26.8 - (2020-06-25)
 ---------------------------
