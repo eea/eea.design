@@ -619,11 +619,11 @@ dl.toc dd ol {
     overflow: hidden;
 }
 
-.width-full .photoAlbumEntry {
-    flex: 24%;
-    min-width: 24%;
-    max-width: 24.4%;
-}
+/*.width-full .photoAlbumEntry {*/
+/*    flex: 24%;*/
+/*    min-width: 24%;*/
+/*    max-width: 24.4%;*/
+/*}*/
 
 .photoAlbumEntryWrapper {
     display: block;

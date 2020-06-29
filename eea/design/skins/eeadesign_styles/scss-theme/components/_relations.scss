@@ -13,10 +13,15 @@
 .floated-photo-album-container .photoAlbumEntry {
   display: none;
 }
-.relatedItems  {
- h2 {
-  font-size: 100%;
+#relatedItems  {
+ .listingBar {
+  padding: 1rem 0;
+  order: 1;
+  margin: 2rem auto 0 auto;
+  background-color: transparent;
  }
+}
+.relatedItems  {
   .eea-tabs-panels {
    border: 0;
   }
@@ -67,11 +72,6 @@
   background-color: #FFF;
  }
 
- .listingBar {
-  padding: 1rem 0;
-  order: 1;
-  margin: 2rem auto 0 auto;
- }
  .listingBar .next,
  .listingBar .listingPrevious {
   position: relative;
@@ -192,13 +192,14 @@ span.next {
   display: block;
  }
 
- .relatedItems {
+ .mini-header .relatedItems {
   h2, .eea-tabs  {
    position: absolute;
    left: -33%;
   }
   h2 {
    left: -34%;
+   font-size: 100%;
   }
  .eea-tabs-panels {
   padding: 0 15px;
@@ -242,15 +243,16 @@ span.next {
     margin-left: -15px;
     top: 0;
    }
- }
- .eea-tabs .current::after, .eea-tabs a:hover::after {
+
+  .eea-tabs .current::after, .eea-tabs a:hover::after {
    display: none;
+  }
  }
 
 }
 
 @media (min-width: $breakpoint-xl) and (max-width: 1365px) {
- .relatedItems {
+ .mini-header .relatedItems {
   .eea-tabs {
    left: -27.5%;
   }
@@ -261,7 +263,7 @@ span.next {
 }
 
 @media (min-width: 1600px){
- .relatedItems {
+ .mini-header .relatedItems {
   .eea-tabs {
    left: -37%;
   }

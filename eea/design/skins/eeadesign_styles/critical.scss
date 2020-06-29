@@ -683,6 +683,9 @@ p,
   justify-content: space-between;
   }
 #portal-column-content{min-width: 635px; padding: 0 unquote("&dtml-padding-base;");}
+.width-3\:4 {
+  max-width: 830px;
+}
 #portal-column-two {
   min-width: 350px;
   }
@@ -771,7 +774,7 @@ p,
   padding: 0 10px 0 0;
   margin: 0;
   list-style: none none;
-  background-color: unquote("&dtml-corporateBlue;");
+  background-color: unquote("&dtml-corporateDarkBlue;");
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
   border-bottom: 0;
   }
