@@ -159,9 +159,9 @@ span.next {
    justify-content: space-between;
    width: 100%;
   }
-  .relatedItems .photoAlbumEntry {
-   margin: 0;
-  }
+  //.relatedItems .photoAlbumEntry {
+  // margin: 0;
+  //}
  .relatedItems .photoAlbumEntry:nth-of-type(2n) {
   margin-right: auto;
   margin-left: auto;
@@ -277,21 +277,38 @@ span.next {
    overflow: visible;
    display: block;
    position: absolute;
-   left: -23vw;
    top: -40px;
   }
   .photoAlbumEntry:after {
    top: 13%;
-   left: 100%;
    content: " ";
    height: 0;
    width: 0;
    position: absolute;
    pointer-events: none;
    border: 9px solid transparent;
-   border-left-color: $corporateBlue;
    margin-left: -1px;
    z-index: 4;
+  }
+ }
+
+ .floated-left {
+  .photoAlbumEntry {
+   left: -23vw;
+  }
+  .photoAlbumEntry:after {
+   border-left-color: $corporateBlue;
+   left: 100%;
+  }
+ }
+
+ .floated-right {
+  .photoAlbumEntry {
+   right: -25vw;
+  }
+  .photoAlbumEntry:after {
+   border-right-color: $corporateBlue;
+   left: -16px;
   }
 
   .photoAlbumEntryType {

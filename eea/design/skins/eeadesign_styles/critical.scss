@@ -683,7 +683,8 @@ p,
   justify-content: space-between;
   }
 #portal-column-content{min-width: 635px; padding: 0 unquote("&dtml-padding-base;");}
-.width-3\:4 {
+
+ body:not(.template-report_view) .width-3\:4 {
   max-width: 830px;
 }
 #portal-column-two {

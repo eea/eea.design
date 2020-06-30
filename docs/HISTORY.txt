@@ -3,6 +3,9 @@ Changelog
 
 26.9-dev0 - (unreleased)
 ---------------------------
+* Feature: added floated right class for the floating of related content on the
+  right side
+  [ichim-david refs #111968]
 * Change: related items are now redesigned on entire site not just in the
   redesign theme
   [ichim-david refs #117296]
