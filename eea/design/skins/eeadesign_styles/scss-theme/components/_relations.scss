@@ -103,12 +103,18 @@ span.next {
  visibility: hidden;
 }
 
-.relatedItems  .pane,
+.relatedItems .pane,
 .eea-tabs-panel.eea-tabs-panel-paginated {
  display: flex;
  flex-wrap: wrap;
  align-items: center;
  overflow: hidden;
+}
+
+// #111968 avoid panel width of related items from being too large when we
+// have relations within full width pages as flex will space the albums otherwise
+.relatedItems .eea-tabs-panel {
+ max-width: 770px;
 }
 
 
@@ -279,6 +285,17 @@ span.next {
    position: absolute;
    top: -40px;
   }
+
+  .photoAlbumEntryType {
+   font-size: 12px;
+   padding-left: 1.5rem;
+   color: #FFF;
+   text-transform: uppercase;
+   margin-bottom: -.6rem;
+   display: block;
+   margin-top: .5rem;
+   line-height: 1;
+  }
   .photoAlbumEntry:after {
    top: 13%;
    content: " ";
@@ -311,15 +328,5 @@ span.next {
    left: -16px;
   }
 
-  .photoAlbumEntryType {
-   font-size: 12px;
-   padding-left: 1.5rem;
-   color: #FFF;
-   text-transform: uppercase;
-   margin-bottom: -.6rem;
-   display: block;
-   margin-top: .5rem;
-   line-height: 1;
-  }
  }
 }
