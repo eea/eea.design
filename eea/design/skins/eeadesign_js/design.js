@@ -514,4 +514,21 @@ jQuery(document).ready(function ($) {
       found.parent().clone().appendTo($this);
     }
   });
+
+  // hide mini-header-below content in case we have only qrbox
+  // or qrbox and eea-pdf-viewlet such as the case for assessments
+  var $redesign_below_content = $(".mini-header-below-content");
+  var $below_content_children = $redesign_below_content.children();
+  var children_length = $below_content_children.length;
+  if (!children_length || children_length === 1) {
+    $redesign_below_content.hide();
+  }
+  if (children_length === 2) {
+    if (
+      $below_content_children[0].className.indexOf("qrbox") !== -1 &&
+      $below_content_children[1].className.indexOf("eea-pdf-viewlet") !== -1
+    ) {
+      $redesign_below_content.hide();
+    }
+  }
 });
