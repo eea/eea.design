@@ -205,7 +205,10 @@ dd#tempCoverage {
     margin-left: 0 !important;
 }
 
-#category {
+/* #119396 ensure that datatable edit select is visible by only hiding below-content
+  category
+ */
+#viewlet-below-content #category {
     display: none;
 }
 
