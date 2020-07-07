@@ -198,6 +198,16 @@ span.next {
   cursor: pointer;
   display: block;
  }
+  .relatedItems {
+   h2, .eea-tabs  {
+    position: absolute;
+    left: 1%;
+   }
+   .eea-tabs-panels {
+    position: relative;
+    left: 25%;
+   }
+  }
 
  .mini-header .relatedItems {
   h2, .eea-tabs  {
