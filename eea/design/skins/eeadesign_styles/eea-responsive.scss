@@ -108,9 +108,9 @@ $input-color: #f3f3f3;
     width: 100%;
     margin-right: 0;
     }
-  .width-full .photoAlbumEntry {
-    max-width: 100%;
-    }
+  //.width-full .photoAlbumEntry {
+  //  max-width: 100%;
+  //  }
   }
 
   @media screen and (max-width: 480px) {
@@ -158,9 +158,9 @@ $input-color: #f3f3f3;
   .photoAlbumEntry {
     width: 49%;
     }
-  .width-full .photoAlbumEntry {
-    max-width: 49%;
-  }
+  //.width-full .photoAlbumEntry {
+  //  max-width: 49%;
+  //}
 }
 
 @media screen and (min-width: 410px) and (max-width: 959px) {
@@ -173,18 +173,18 @@ $input-color: #f3f3f3;
     width: 49.3%;
     }
 
-  .width-full .photoAlbumEntry {
-    max-width: 49.3%;
-    }
+  //.width-full .photoAlbumEntry {
+  //  max-width: 49.3%;
+  //  }
 }
 
 @media screen and (min-width: 635px) and (max-width: 767px) {
   .photoAlbumEntry {
     width: 49.4%;
     }
-  .width-full .photoAlbumEntry {
-    max-width: 49.4%;
-    }
+  //.width-full .photoAlbumEntry {
+  //  max-width: 49.4%;
+  //  }
   }
 
 
@@ -578,25 +578,25 @@ $input-color: #f3f3f3;
     width: 49%;
     }
   }
-@media screen and (min-width: 750px) and (max-width: 799px) {
-  .width-full .photoAlbumEntry {
-    width: 24.2%;
-    }
-  }
+//@media screen and (min-width: 750px) and (max-width: 799px) {
+//  .width-full .photoAlbumEntry {
+//    width: 24.2%;
+//    }
+//  }
 
-@media screen and (min-width: 750px) and (max-width: 924px) {
-  .width-full .photoAlbumEntry:nth-of-type(2n) {
-    margin-right: 7px;
-  }
-  .width-full .photoAlbumEntry:nth-of-type(4n) {
-    margin-right: 0;
-    }
-  }
-@media screen and (min-width: 800px) and (max-width: 924px) {
-  .width-full .photoAlbumEntry {
-    width: 24.3%;
-    }
-  }
+//@media screen and (min-width: 750px) and (max-width: 924px) {
+//  .width-full .photoAlbumEntry:nth-of-type(2n) {
+//    margin-right: 7px;
+//  }
+//  .width-full .photoAlbumEntry:nth-of-type(4n) {
+//    margin-right: 0;
+//    }
+//  }
+//@media screen and (min-width: 800px) and (max-width: 924px) {
+//  .width-full .photoAlbumEntry {
+//    width: 24.3%;
+//    }
+//  }
 
 @media screen and (min-width: 768px) and (max-width: 1110px) {
   .featured-highlight-title {
@@ -611,23 +611,23 @@ $input-color: #f3f3f3;
     margin-right: 0;
     }
 
-  .width-full .photoAlbumEntry:nth-of-type(3n) {
-    margin-right: 7px;
-    }
+  //.width-full .photoAlbumEntry:nth-of-type(3n) {
+  //  margin-right: 7px;
+  //  }
 }
 
-@media screen and (min-width: 925px) and (max-width: 1099px) {
-  .width-full .photoAlbumEntry {
-    width: 24.4%;
-    }
-  .width-full .photoAlbumEntry:nth-of-type(2n) {
-    margin-right: 7px;
-    }
-
-  .width-full .photoAlbumEntry:nth-of-type(4n) {
-    margin-right: 0;
-    }
-  }
+//@media screen and (min-width: 925px) and (max-width: 1099px) {
+//  .width-full .photoAlbumEntry {
+//    width: 24.4%;
+//    }
+//  .width-full .photoAlbumEntry:nth-of-type(2n) {
+//    margin-right: 7px;
+//    }
+//
+//  .width-full .photoAlbumEntry:nth-of-type(4n) {
+//    margin-right: 0;
+//    }
+//  }
 
 @media screen and (min-width: 960px) and (max-width: 1116px) {
   .photoAlbumEntry {
@@ -664,14 +664,14 @@ $input-color: #f3f3f3;
     left: -5%;
   }
 }
-@media screen and (min-width: 1100px) {
-  .width-full .photoAlbumEntry:nth-of-type(3n) {
-    margin-right: 7px;
-  }
-  .width-full .photoAlbumEntry:nth-of-type(4n) {
-    margin-right: 0;
-  }
-}
+//@media screen and (min-width: 1100px) {
+//  .width-full .photoAlbumEntry:nth-of-type(3n) {
+//    margin-right: 7px;
+//  }
+//  .width-full .photoAlbumEntry:nth-of-type(4n) {
+//    margin-right: 0;
+//  }
+//}
 
 @media screen and (min-width: 1117px) and (max-width: 1219px) {
   .photoAlbumEntry {
@@ -694,14 +694,14 @@ $input-color: #f3f3f3;
   }
 }
 
-@media screen and (min-width: 1320px) {
-  .width-full .photoAlbumEntry:nth-of-type(3n) {
-    margin-right: 7px;
-    }
-  .width-full .photoAlbumEntry:nth-of-type(4n) {
-      margin-right: 0;
-    }
-  }
+//@media screen and (min-width: 1320px) {
+//  .width-full .photoAlbumEntry:nth-of-type(3n) {
+//    margin-right: 7px;
+//    }
+//  .width-full .photoAlbumEntry:nth-of-type(4n) {
+//      margin-right: 0;
+//    }
+//  }
 @media screen and (min-width: 1335px) {
   .photoAlbumEntry {
     width: 32.7%;

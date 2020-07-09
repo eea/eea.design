@@ -15,27 +15,27 @@ jQuery(document).ready(function ($) {
   var is_mini_header = $body.hasClass("mini-header");
   // #71710 move related and socialmedia inside
   // faceted center area
-  var $center_bottom_area = $("#center-bottom-area");
-  var $related_items = $("#relatedItems");
-  var $socialmedia = $("#socialmedia-viewlet");
-  $related_items.appendTo($column_area);
-  $socialmedia.appendTo($column_area);
+  // var $center_bottom_area = $("#center-bottom-area");
+  var $related_items = $(".related-wrapper");
+  // var $socialmedia = $("#socialmedia-viewlet");
+  // $related_items.appendTo($column_area);
+  // $socialmedia.appendTo($column_area);
   var appendTo = function (context, target) {
     if (context.length) {
       context.appendTo(target);
     }
   };
 
-  appendTo($related_items, $column_area);
-  appendTo($socialmedia, $column_area);
+  // appendTo($related_items, $column_area);
+  // appendTo($socialmedia, $column_area);
   if ($column_area.length) {
     appendTo($viewlet_below_content, $column_area);
     $portal_column_content.removeClass("cell width-full");
   } else {
     appendTo($viewlet_below_content, $content);
   }
-  appendTo($related_items, $center_bottom_area);
-  appendTo($socialmedia, $center_bottom_area);
+  // appendTo($related_items, $center_bottom_area);
+  // appendTo($socialmedia, $center_bottom_area);
 
   if ($("#right-area").length) {
     $portal_column_content.removeClass("cell width-full");

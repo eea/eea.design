@@ -301,8 +301,10 @@ span.next {
   }
  }
 
+  /* use static left position when we are not within mini-header
+    in case we have 1400px or higher content area 20% would push it too far */
  body:not(.mini-header) .relatedItems .eea-tabs-panels {
-  left: 22%;
+  left: 300px;
  }
 
  .floated-photo-album-container {
