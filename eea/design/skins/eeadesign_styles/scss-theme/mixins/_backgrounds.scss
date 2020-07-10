@@ -21,7 +21,7 @@
 @mixin fullwidth-bg-before {
   @include pseudo-bg-boilerplate();
   background-color: inherit;
-  width: 99.3vw;
+  width: 99.6vw;
   right: 0;
   left: 50%;
   margin-left: -50vw;
