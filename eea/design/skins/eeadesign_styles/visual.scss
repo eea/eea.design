@@ -837,6 +837,10 @@ span.figure-left {
 .eea-tabs-panel {
     overflow: auto;
 }
+/* show panel within pagination example of design-elements */
+p + .eea-tabs-panel-paginated {
+    display: block;
+}
 
 .eea-tabs-panel .listingBar {
     margin: 0 0 1em 0;
