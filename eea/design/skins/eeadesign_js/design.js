@@ -210,6 +210,32 @@ jQuery(document).ready(function ($) {
     });
   });
 
+  $(".js-eea-sliding-toggle").click(function (ev) {
+    ev.preventDefault();
+    var el =
+      ev.target.className.indexOf("js-eea-sliding-toggle") !== -1
+        ? ev.target
+        : ev.target.parentNode;
+    var $el = $(el);
+    $el.find(".js-hidden-toggle").toggleClass("hidden");
+    var $target = $(el.getAttribute("data-target"));
+    var toggle_overflow_initial = false;
+    if ($target.hasClass("eea-sliding-section--hidden-lg")) {
+      $target.toggleClass("eea-sliding-section--hidden-lg");
+      toggle_overflow_initial = true;
+    } else {
+      $target.toggleClass("overflow-initial");
+      toggle_overflow_initial = false;
+      $target.toggleClass("eea-sliding-section--hidden-lg");
+    }
+
+    window.setTimeout(function () {
+      if (toggle_overflow_initial) {
+        $target.toggleClass("overflow-initial");
+      }
+    }, 250);
+  });
+
   // #19536; hide navigation submenus if there are less than 2 of them
   var $navigation_submenus = $(".portletSubMenuHeader");
   if ($navigation_submenus && $navigation_submenus.length < 2) {

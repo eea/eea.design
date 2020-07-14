@@ -1077,6 +1077,16 @@ ul.social-buttons {
     background-color: unquote("&dtml-corporateGreen;");
 }
 
+.eea-btn--toggle {
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    right: -11%;
+    margin: 0;
+    padding: 5px;
+    line-height: 1;
+}
+
 /*.eea-btn-multimedia {*/
 /*    color: &dtml-lightBackgroundColor;;;*/
 /*    border: 0;*/

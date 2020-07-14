@@ -140,27 +140,27 @@
     <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title"></a>
 
     <div id="header-holder">
-                               <div class="navbar navbar-default navbar-fixed-top">
-                               <div class="eea-container">
-                               <div class="navbar-header">
-                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                               <span class="sr-only" i18n:translate="">Toggle navigation</span>
-                               <span class="icon-bar"></span>
-                               <span class="icon-bar"></span>
-                               <span class="icon-bar"></span>
-                               </button>
-                               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                               <div id="portal-top"
-                               tal:condition="python: not ajax_load">
-                               <tal:not4Print tal:condition="python:not isPrint">
-                               <div tal:replace="structure provider:plone.portaltop" />
-                               </tal:not4Print>
-                               </div>
-                               </div>
-                               </div>
-                               </div>
-                               </div>
-                               </div>
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="eea-container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only" i18n:translate="">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <div id="portal-top"
+                   tal:condition="python: not ajax_load">
+                <tal:not4Print tal:condition="python:not isPrint">
+                  <div tal:replace="structure provider:plone.portaltop" />
+                </tal:not4Print>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="eea-above-columns" tal:content="structure provider:eea.abovecolumns" />
 
@@ -244,6 +244,7 @@
                                     </div>
                                 </div>
 
+                              <div class="content-core-wrapper">
                                 <div id="content-core" class="content-core">
                                     <metal:text define-slot="content-core" tal:content="nothing">
                                         <tal:comment replace="nothing">
@@ -251,6 +252,35 @@
                                         </tal:comment>
                                     </metal:text>
                                 </div>
+
+
+                              <tal:notajax tal:condition="not:ajax_load">
+
+                                <div id="portal-column-one"
+                                     metal:define-slot="column_one_slot">
+                                </div>
+                                <button type="button" class="eea-btn bg-green eea-btn--toggle js-eea-sliding-toggle" data-toggle="collapse" data-target="#portal-column-two-wrapper" aria-expanded="false">
+                                  <span class="eea-btn--title" i18n:translate="">Menu</span>
+                                  <span class="eea-icon eea-icon-bars eea-icon-lg js-hidden-toggle"></span>
+                                  <span class="eea-icon eea-icon-close eea-icon-lg js-hidden-toggle hidden"></span>
+                                </button>
+                                <div id="portal-column-two-wrapper" class="eea-sliding-section eea-sliding-section--hidden-lg">
+                                  <div id="portal-column-two"
+                                       class="cell width-1:4 position-3:4"
+                                       metal:define-slot="column_two_slot"
+                                       tal:condition="sr"
+                                       tal:attributes="class python:'cell width-1:4 position-3:4'">
+                                    <metal:portlets define-slot="portlets_two_slot">
+
+                                      <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
+                                        <tal:block replace="structure provider:plone.rightcolumn" />
+                                      </tal:soer>
+                                    </metal:portlets>
+                                  </div>
+                                </div>
+                              </tal:notajax>
+                                </div>
+
 
                                 <metal:comment tal:content="nothing">
                                     <tal:comment replace="nothing">
@@ -298,25 +328,6 @@
             </tal:not4AjaxLoad>
         </div>
 
-        <tal:notajax tal:condition="not:ajax_load">
-
-        <div id="portal-column-one"
-            metal:define-slot="column_one_slot">
-        </div>
-
-        <div id="portal-column-two"
-            class="cell width-1:4 position-3:4"
-            metal:define-slot="column_two_slot"
-            tal:condition="sr"
-            tal:attributes="class python:'cell width-1:4 position-3:4'">
-            <metal:portlets define-slot="portlets_two_slot">
-
-                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
-                    <tal:block replace="structure provider:plone.rightcolumn" />
-                </tal:soer>
-            </metal:portlets>
-        </div>
-        </tal:notajax>
     </div>
     <div class="visualClear"><!-- --></div>
  </div>
