@@ -125,7 +125,12 @@ span.next {
   display: none;
 }
 
-
+@media (min-width: 360px) {
+/* increase size of listingBar in order to keep pagination arrows in the same place */
+ .relatedItems .listingBar {
+  min-width: 300px;
+ }
+}
 @media (min-width: 700px) and (max-width: 959px) {
 
  .relatedItems .photoAlbumEntry:nth-of-type(2n) {
