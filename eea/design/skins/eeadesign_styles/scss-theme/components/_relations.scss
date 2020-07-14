@@ -78,6 +78,7 @@
  .listingBar .listingPrevious {
   position: relative;
   color: $corporateGrey;
+  max-width: 55px; /* avoid arrow from going below pagination area within mobile*/
  }
  .listingPrevious:before,
  .next:before {
