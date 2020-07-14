@@ -3,6 +3,11 @@ Changelog
 
 26.9-dev0 - (unreleased)
 ---------------------------
+* Bug fix: show category selection within edit form hidden because it has
+  category id
+  [ichim-david refs #119396]
+* Bug fix: fix dashboard chart selection from form tabbing within Asessments
+  [ichim-david refs #119015]
 * Feature: added floated right class for the floating of related content on the
   right side
   [ichim-david refs #111968]
