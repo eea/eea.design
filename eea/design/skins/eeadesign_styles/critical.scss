@@ -545,6 +545,8 @@ ul {
   position: relative;
 }
 
+@import "scss-theme/theme/portal_column_two";
+
 .portalMessage {
   background-color: #f3f3f3;
   padding: 1em;
@@ -704,32 +706,6 @@ p,
   max-width: 830px;
 }
 
-#portal-column-two-wrapper {
-  top: 0;
-  position: absolute;
-  right: -11%;
-  background-color: #FFF;
-  //height: 81.5%;
-  width: 350px;
-  z-index: 1;
-  padding-bottom: 2em;
-}
-
-#portal-column-two {
-  overflow-y: auto;
-  //height: 100%;
-  min-width: 350px;
-}
-
-#portal-column-two-wrapper::before {
-  content: " ";
-  width: 2px;
-  height: 100%;
-  //border-left: 1px solid #ececec;
-  position: absolute;
-  //box-shadow: -3px 0px 7px #ccc;
-  left: 0;
-}
 #portal-column-two .portlet {
   margin: 0 0 1em 0;
   }
@@ -886,12 +862,6 @@ p,
   }
 
 
-@media screen and (min-width: 1024px) {
-  .eea-sliding-section--hidden-lg {
-    width: 0 !important;
-    min-width: 0 !important;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .content-header .documentByLine {
@@ -930,20 +900,6 @@ p,
     }
   }
 
-@media screen and (min-width: 1620px) {
-  //.mini-header {
-    #portal-column-two-wrapper {
-      right: -43%;
-      overflow: initial;
-    }
-    .eea-btn--toggle.js-eea-sliding-toggle {
-      display: none;
-    }
-    .eea-sliding-section--hidden-lg {
-      width: initial !important;
-    }
-  //}
-}
 
 /* 102564 IE11 hack as the hiddenStructure without display will count
 * for justify-content: space-between since it doesn't support clip-path */

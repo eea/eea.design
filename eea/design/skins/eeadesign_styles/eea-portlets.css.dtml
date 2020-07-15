@@ -40,10 +40,10 @@ a.managePortletsFallback {
 /* @end @group Portlets */
 
 /* @group Navigation portlet */
-dl.portlet ul.navTree li a {
+.portlet .navTree li a {
     margin: 0;
     padding: 10px;
-    border-top: 1px dotted #BABBB8;
+    border-top: 1px solid &dtml-corporateBlue;;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5;
@@ -61,9 +61,9 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
     padding-left: 25px !important;
 }
 
-.navTreeItemInPath > ul.navTreeLevel2 li > a {
-    padding-left: 35px !important;
-}
+/*.navTreeItemInPath > ul.navTreeLevel2 li > a {*/
+/*    padding-left: 35px !important;*/
+/*}*/
 
 .navTreeItemInPath > ul.navTreeLevel3 li > a {
     padding-left: 45px !important;
@@ -122,7 +122,7 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
    margin: 0 0 5px 0;
    line-height: 1.2;
    font-size: 1.6em;
-    font-weight: bold;
+   font-weight: bold;
 }
 
 .portletFooter {
@@ -188,12 +188,9 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 
 
 .navTreeItem a,
-dd.portletItem .navTreeItem a {
+.portletItem .navTreeItem a {
     display: block;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
-    font-weight: bold;
 }
 
 
@@ -438,15 +435,16 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 }
 
 .navTreeCurrentItem:after {
-    left: 0;
     content: " ";
-    height: 0;
-    width: 0;
+    border-left: 5px solid &dtml-corporateBlue;;
+    display: block;
     position: absolute;
-    pointer-events: none;
-    border: 13px solid transparent;
-    border-left-color: &dtml-backgroundColor;;
-    top: 25%;
+    height: 100%;
+    top: 0;
+}
+.navTree {
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
 .navTreeLevel0 .navTreeCurrentItem:after {
@@ -458,7 +456,7 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 }
 
 .navTreeLevel1 .navTreeCurrentItem:after {
-    left: -43px;
+    left: -16px;
 }
 .navTreeLevel2 .navTreeCurrentItem:after {
     left: -71px;
