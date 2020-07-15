@@ -147,6 +147,7 @@
 .bg-green, /* LEGACY use bg-tertiary instead */
 .bg-tertiary {
     background-color: &dtml-corporateGreen;;
+    color: #FFF;
 }
 
 /* border utilities */
