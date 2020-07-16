@@ -119,9 +119,9 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 }
 
 #firstHeader {
-   margin: 1.25rem 0 0.5rem 0;
+   margin: 1.25rem 0 1rem 0;
    line-height: 1.2;
-   font-size: 1.6em;
+   font-size: 1.25rem;
    font-weight: bold;
 }
 
@@ -387,7 +387,7 @@ dt.portletItem a, #content dt.portletItem a {
 
 dl.portletNavigationTree dt.portletSubMenuHeader {
    background-color: &dtml-lightBackgroundColor;;
-   font-size: 14px;
+   font-size: 1rem;
    padding: 10px;
    margin: 0;
    cursor: pointer;

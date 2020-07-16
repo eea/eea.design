@@ -258,7 +258,7 @@
                                 </div>
 
 
-                              <tal:notajax tal:condition="not:ajax_load">
+                              <tal:notajax tal:condition="python: not ajax_load and mini_header">
 
                                 <div id="portal-column-one"
                                      metal:define-slot="column_one_slot">
@@ -331,6 +331,25 @@
                 </tal:not4Print>
             </tal:not4AjaxLoad>
         </div>
+          <tal:notajax tal:condition="python: not ajax_load and not mini_header">
+
+        <div id="portal-column-one"
+            metal:define-slot="column_one_slot">
+        </div>
+
+        <div id="portal-column-two"
+            class="cell width-1:4 position-3:4"
+            metal:define-slot="column_two_slot"
+            tal:condition="sr"
+            tal:attributes="class python:'cell width-1:4 position-3:4'">
+            <metal:portlets define-slot="portlets_two_slot">
+
+                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
+                    <tal:block replace="structure provider:plone.rightcolumn" />
+                </tal:soer>
+            </metal:portlets>
+        </div>
+        </tal:notajax>
 
     </div>
     <div class="visualClear"><!-- --></div>

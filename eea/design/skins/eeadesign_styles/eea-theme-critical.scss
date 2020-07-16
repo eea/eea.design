@@ -156,6 +156,10 @@
     margin-top: $spacer-0;
     //padding-top: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
   }
+  .eea-btn.eea-btn--toggle,
+  #portal-column-two-wrapper {
+    margin-top: -$spacer-0;
+  }
 
   .content-header {
     padding: 1rem 0 0 0;
@@ -333,6 +337,10 @@
     .content-core-wrapper {
       margin-top: $spacer-hero;
     }
+    .eea-btn.eea-btn--toggle,
+    #portal-column-two-wrapper {
+      margin-top: -$spacer-hero;
+    }
   }
 }
 
@@ -354,6 +362,16 @@
 
     .mini-portal-type {
       left: -11%;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .mini-header {
+    .eea-btn--toggle.js-eea-sliding-toggle,
+    #portal-column-two-wrapper {
+      right: -25vw;
+      margin-top: 0;
     }
   }
 }

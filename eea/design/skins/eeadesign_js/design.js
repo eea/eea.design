@@ -235,6 +235,9 @@ jQuery(document).ready(function ($) {
       }
     }, 250);
   });
+  if (window.innerWidth >= 1920) {
+    $(".js-eea-sliding-toggle").click();
+  }
 
   // #19536; hide navigation submenus if there are less than 2 of them
   var $navigation_submenus = $(".portletSubMenuHeader");

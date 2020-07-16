@@ -2,7 +2,7 @@
   top: 0;
   position: absolute;
   right: -11%;
-  width: 275px;
+  width: 300px;
   z-index: 2;
   padding-bottom: 2em;
   background-color: #FFF;
@@ -10,7 +10,7 @@
 
 #portal-column-two {
   overflow-y: auto;
-  width: 275px;
+  width: 300px;
   .portlet {
     background-color: $corporateGrey;
   }
@@ -53,15 +53,3 @@
   }
 }
 
-@media screen and (min-width: 1920px) {
-  #portal-column-two-wrapper {
-    right: -25vw;
-    overflow: initial;
-  }
-  .eea-btn--toggle.js-eea-sliding-toggle {
-    display: none;
-  }
-  .eea-sliding-section--hidden-lg {
-    width: initial !important;
-  }
-}
