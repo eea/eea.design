@@ -152,9 +152,9 @@
     max-width: 830px;
   }
 
-  .fullwidth-img-container {
-    margin-bottom: $spacer-0;
-    padding-bottom: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
+  .content-core-wrapper {
+    margin-top: $spacer-0;
+    //padding-top: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
   }
 
   .content-header {
@@ -330,8 +330,8 @@
     }
 
     //.content-core,
-    .fullwidth-img-container {
-      margin-bottom: $spacer-hero;
+    .content-core-wrapper {
+      margin-top: $spacer-hero;
     }
   }
 }
