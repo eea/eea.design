@@ -3,8 +3,9 @@
   position: absolute;
   right: -11%;
   width: 275px;
-  z-index: 1;
+  z-index: 2;
   padding-bottom: 2em;
+  background-color: #FFF;
 }
 
 #portal-column-two {
@@ -26,7 +27,7 @@
 .eea-btn--toggle {
   top: 0;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   right: -11%;
   margin: 0;
   padding: 5px;
@@ -52,9 +53,9 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1920px) {
   #portal-column-two-wrapper {
-    right: -43%;
+    right: -25vw;
     overflow: initial;
   }
   .eea-btn--toggle.js-eea-sliding-toggle {

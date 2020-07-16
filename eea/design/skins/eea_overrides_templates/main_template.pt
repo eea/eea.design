@@ -259,7 +259,7 @@
                                 <div id="portal-column-one"
                                      metal:define-slot="column_one_slot">
                                 </div>
-                                <button type="button" class="eea-btn bg-green eea-btn--toggle js-eea-sliding-toggle" data-toggle="collapse" data-target="#portal-column-two-wrapper" aria-expanded="false">
+                                <button type="button" class="eea-btn bg-primary-light text-light-color  eea-btn--toggle js-eea-sliding-toggle" data-toggle="collapse" data-target="#portal-column-two-wrapper" aria-expanded="false">
                                   <span class="eea-btn--title" i18n:translate="">Page Menu</span>
                                   <span class="eea-icon eea-icon-bars eea-icon-lg js-hidden-toggle"></span>
                                   <span class="eea-icon eea-icon-close eea-icon-lg js-hidden-toggle hidden"></span>

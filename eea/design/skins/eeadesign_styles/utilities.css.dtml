@@ -105,7 +105,7 @@
 }
 
 /* color utilities */
-.light-color {
+.light-color, .text-light-color {
     color: #FFF !important;
 }
 .text-color {
@@ -142,6 +142,10 @@
 .bg-blue, /* LEGACY use bg-primary instead */
 .bg-primary {
     background-color: &dtml-corporateDarkBlue;;
+}
+.bg-primary-light {
+    background-color: &dtml-corporateBlue;;
+
 }
 
 .bg-green, /* LEGACY use bg-tertiary instead */
