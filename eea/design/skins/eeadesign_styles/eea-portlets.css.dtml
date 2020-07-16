@@ -119,7 +119,7 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 }
 
 #firstHeader {
-   margin: 0 0 5px 0;
+   margin: 1.25rem;
    line-height: 1.2;
    font-size: 1.6em;
    font-weight: bold;
@@ -408,25 +408,25 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
   display: block;
 }
 
-.portletNavigationTree .eea-icon-right:after,
-.portletHeader .eea-icon-right:after
+.portletNavigationTree .eea-icon-left:after,
+.portletHeader .eea-icon-left:after
 {
     font-size: 1.2em;
-    color: #9cb43c;
+    color: &dtml-corporateBlue;;
 }
 
-.portletHeader .eea-icon-right:after {
+.portletHeader .eea-icon-left:after {
     font-size: 75%;
 }
 
-.portletNavigationTree .eea-icon-right:after,
-.collapsed .portletHeader .eea-icon-right:after
+.portletNavigationTree .eea-icon-left:after,
+.collapsed .portletHeader .eea-icon-left:after
 {
-    content: "&dtml-eea-icon-chevron-left;";
+    content: "&dtml-eea-icon-chevron-right;";
 }
 
-.portletNavigationTree .current .eea-icon-right:after,
-.portletHeader .eea-icon-right:after
+.portletNavigationTree .current .eea-icon-left:after,
+.portletHeader .eea-icon-left:after
  {
     content: "&dtml-eea-icon-chevron-down;";
 }
@@ -458,9 +458,9 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 .navTreeLevel1 .navTreeCurrentItem:after {
     left: -16px;
 }
-.navTreeLevel2 .navTreeCurrentItem:after {
-    left: -71px;
-}
+/*.navTreeLevel2 .navTreeCurrentItem:after {*/
+/*    left: -71px;*/
+/*}*/
 .navTreeLevel3 .navTreeCurrentItem:after {
     left: -92px;
 }
