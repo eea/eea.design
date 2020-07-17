@@ -49,21 +49,49 @@ a.managePortletsFallback {
     line-height: 1.5;
 }
 
+.portlet .navTree li .navTreeCurrentItem,
+.portlet .navTree li a:hover {
+    font-weight: bold;
+    color: &dtml-corporateBlue;;
+    font-size: 15px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    line-height: 1.47;
+}
+}
+
 dl.portlet ul.navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
 
+a.navTreeItemInPath.navTreeFolderish {
+    padding-left: 5px !important;
+}
+
+/*a.navTreeItemInPath.navTreeFolderish::before {*/
+/*    content: " a";*/
+/*    position: absolute;*/
+/*    content: "\f068";*/
+/*    font-family: "FontAwesome";*/
+/*    font-size: 13px;*/
+/*    margin-left: -17px;*/
+/*    margin-top: 2px;*/
+/*}*/
 .navTreeItemInPath > ul.navTreeLevel0 li > a {
     padding-left: 10px !important;
 }
 
 .navTreeItemInPath > ul.navTreeLevel1 li > a {
-    padding-left: 25px !important;
+    padding-left: 20px !important;
 }
 
-/*.navTreeItemInPath > ul.navTreeLevel2 li > a {*/
-/*    padding-left: 35px !important;*/
-/*}*/
+.navTreeItemInPath > ul.navTreeLevel1 li > .navTreeFolderish {
+    padding-left: 35px !important;
+}
+
+.navTree ul.navTreeLevel2 li > a {
+    padding-left: 35px !important;
+}
 
 .navTreeItemInPath > ul.navTreeLevel3 li > a {
     padding-left: 45px !important;
