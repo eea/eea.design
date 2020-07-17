@@ -558,7 +558,8 @@ div.overlay a:hover {
 .visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
     padding-left: 20px;
 }
-.visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath)::before {
+.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
+.visualNoMarker a.navTreeFolderish::before {
     position: absolute;
     content: "\f067";
     font-family: "FontAwesome";
@@ -566,6 +567,16 @@ div.overlay a:hover {
     margin-left: -17px;
     margin-top: 2px;
 }
+
+.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
+    content: "\f068";
+}
+/* hide plus and minus icon for auth users since they have content icons */
+.userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
+.visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
+    display: none;
+}
+
 
 /* #5243 wrongly indented folder icon */
 /*#portal-column-content .portletNavigationTree .contenttype-folder {*/

@@ -210,7 +210,8 @@ jQuery(document).ready(function ($) {
     });
   });
 
-  $(".js-eea-sliding-toggle").click(function (ev) {
+  var $slide_toggle = $(".js-eea-sliding-toggle");
+  $slide_toggle.click(function (ev) {
     ev.preventDefault();
     var el =
       ev.target.className.indexOf("js-eea-sliding-toggle") !== -1
@@ -236,7 +237,11 @@ jQuery(document).ready(function ($) {
     }, 250);
   });
   if (window.innerWidth >= 1920) {
-    $(".js-eea-sliding-toggle").click();
+    $slide_toggle.click();
+  }
+  var $portal_column_two_wrapper = $("#portal-column-two-wrapper");
+  if ($portal_column_two_wrapper.children().length) {
+    $slide_toggle.removeClass("hidden");
   }
 
   // #19536; hide navigation submenus if there are less than 2 of them
