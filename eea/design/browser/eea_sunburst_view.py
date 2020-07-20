@@ -19,7 +19,12 @@ class EEASunburstView(SunburstView):
         sr = plone_view.have_portlets('plone.rightcolumn', view=view)
         portal_state = getMultiAdapter((context, self.request),
                                             name=u'plone_portal_state')
+        is_miniheader = getMultiAdapter((context, self.request),
+                                            name=u'miniheader_content_types')
 
+        if is_miniheader():
+            # check if miniheader, if true set width-3:4
+            return "width-3:4"
         if not sr:
             # we don't have columns, thus conten takes the whole width
             return "cell width-full position-0"

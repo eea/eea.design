@@ -10,7 +10,7 @@
 var warning_displayed = false;
 
 window.onbeforeprint = function() {
-    
+
     var warning_text = jQuery.trim(jQuery("#print-warning p").html());
     if (warning_displayed === false) {
         alert(warning_text);
