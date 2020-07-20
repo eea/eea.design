@@ -35,7 +35,9 @@
                         ifacetool context/portal_interface;
                         isPrint python:1 if 'pdf.' in request['URL0'] else 0;
                         wf_state context_state/workflow_state|string:;
-                        mini_header python:' mini-header' if context.restrictedTraverse('@@miniheader_content_types')() else False;
+                        mini_header_bv nocall: context/@@miniheader_content_types;
+                        mini_header python:' mini-header' if mini_header_bv() else False;
+                        mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() else False;
                         ">
 
 <tal:notContentCoreOnly tal:condition="python: not content_core_only">
@@ -268,12 +270,12 @@
                                   <span class="eea-icon eea-icon-bars eea-icon-lg js-hidden-toggle"></span>
                                   <span class="eea-icon eea-icon-close eea-icon-lg js-hidden-toggle hidden"></span>
                                 </button>
-                                <div id="portal-column-two-wrapper" class="eea-sliding-section eea-sliding-section--hidden-lg">
+                                <div id="portal-column-two-wrapper" class="eea-sliding-section eea-sliding-section--hidden-lg"
+                                     tal:condition="sr">
                                   <div id="portal-column-two"
                                        class="portal-column-two"
                                        metal:define-slot="column_two_slot"
-                                       tal:condition="sr"
-                                       >
+                                       tal:condition="python: sr if not mini_header else sr and mini_header_right_column">
                                     <metal:portlets define-slot="portlets_two_slot">
 
                                       <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">

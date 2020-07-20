@@ -70,10 +70,10 @@ class MiniHeaderContentTypes(BrowserView):
         self.request = request
 
     def __call__(self):
-        """ boolean if fullwidth class should be enabled for given content-type
+        """ boolean if miniheader class should be enabled for given content-type
         """
-        fullwidth_ctypes = self.get_mini_registry() or []
-        return self.context.portal_type in fullwidth_ctypes
+        mini_header_ctypes = self.get_mini_registry() or []
+        return self.context.portal_type in mini_header_ctypes
 
     @memoize
     def get_mini_registry(self):
@@ -82,6 +82,14 @@ class MiniHeaderContentTypes(BrowserView):
         registry = self.context.portal_properties.site_properties
         data = registry.getProperty('mini_header_for', None)
         return data
+
+    @memoize
+    def show_right_column(self):
+        """ content registry cache
+        """
+        registry = self.context.portal_properties.site_properties
+        ptypes = registry.getProperty('mini_header_right_column_for', [])
+        return self.context.portal_type in ptypes
 
 
 class ScrollAnalyticsContentTypes(BrowserView):

@@ -47,6 +47,7 @@
       class=".main.MiniHeaderContentTypes"
       for="*"
       name="miniheader_content_types"
+      allowed_attributes="show_right_column"
       permission="zope.Public"
     />
 

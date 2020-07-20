@@ -162,6 +162,17 @@ class IMiniHeaderForm(Interface):
         required=True
     )
 
+    mini_header_right_column_for = schema.List(
+        title=_(u'Portal types to enable mini header right column for'),
+        description=_(
+            u'Navigation is displayed for the following portal types'),
+        missing_value=tuple(),
+        value_type=schema.Choice(
+            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
+        ),
+        required=True
+    )
+
 
 class MiniHeaderForm(ControlPanelForm):
     """ Mini header form """
@@ -197,6 +208,21 @@ class MiniHeaderControlPanelAdapter(SchemaAdapterBase):
                                                type='lines')
         else:
             self.site_props.mini_header_for = tuple(types)
+
+    def get_mini_header_right_column_for(self):
+        """ get mini header right column  from site_props """
+        return self.site_props.getProperty('mini_header_right_column_for', ())
+
+    def set_mini_header_right_column_for(self, types):
+        """ set mini header right column to site_props """
+        if not self.get_mini_header_right_column_for():
+            self.site_props.manage_addProperty('mini_header_right_column_for',
+                                               types, type='lines')
+        else:
+            self.site_props.mini_header_right_column_for = tuple(types)
+
+    mini_header_right_column_for = property(
+        get_mini_header_right_column_for, set_mini_header_right_column_for)
 
     mini_header_for = property(
         get_mini_header_for, set_mini_header_for)
