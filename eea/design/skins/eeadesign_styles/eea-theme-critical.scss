@@ -221,7 +221,7 @@
 
     .documentFirstHeading,
     .documentExportActions a {
-      color: #FFF !important;
+      color: inherit !important;
     }
   }
 
@@ -243,7 +243,8 @@
   .documentByLine,
   .documentDescription,
   .documentByLine a {
-    color: rgba(255, 255, 255, 0.9);
+    //color: rgba(255, 255, 255, 0.9);
+    color: inherit;
   }
 
   #themes-tags .listHead {
@@ -264,7 +265,7 @@
 
   #article-language .eea-icon:before,
   #article-language > a {
-    color: #FFF;
+    color: inherit;
   }
 
   #region-content {
@@ -276,13 +277,17 @@
   }
 }
 
-.mini-header.mini-header-alt {
+.mini-header.mini-header-light {
   #region-content {
     padding-top: 1px;
   }
   .content-header {
     margin-top: 100px;
+    color: #000;
+  }
 
+  .content-header:before {
+    background-color: #FFF;
   }
   .mini-portal-type {
     display: none;
