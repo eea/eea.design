@@ -789,7 +789,7 @@ p,
   }
  .eea-tabs {
   padding: 0 10px 0 0;
-  margin: 0;
+  margin: 0 !important;
   list-style: none none;
   background-color: unquote("&dtml-corporateDarkBlue;");
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
@@ -808,7 +808,7 @@ p,
   line-height: 2.2;
   }
 .eea-tabs > li {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   display: inline-block;
   }

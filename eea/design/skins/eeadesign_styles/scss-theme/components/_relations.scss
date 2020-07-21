@@ -79,6 +79,7 @@
   position: relative;
   color: $corporateGrey;
   max-width: 55px; /* avoid arrow from going below pagination area within mobile*/
+  height: 64px /* avoid related items panel height difference when we have no link */
  }
  .listingPrevious:before,
  .next:before {
