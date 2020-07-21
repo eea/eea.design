@@ -274,7 +274,19 @@
   .fiche-endnotes {
     margin-top: $spacer-3;
   }
+}
 
+.mini-header.mini-header-alt {
+  #region-content {
+    padding-top: 1px;
+  }
+  .content-header {
+    margin-top: 100px;
+
+  }
+  .mini-portal-type {
+    display: none;
+  }
 }
 
 @media (max-width: 660px) {
