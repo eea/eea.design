@@ -38,7 +38,8 @@
                         mini_header_bv nocall: context/@@miniheader_content_types;
                         mini_header python:' mini-header' if mini_header_bv() else False;
                         mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() else False;
-                        mini_header_light python:' mini-header-light' if mini_header_right_column else False;
+                        mini_header_type python: True if mini_header and mini_header_bv.show_mini_type() else False;
+                        mini_header_light python:' mini-header-light' if mini_header and mini_header_bv.show_light_header() else False;
                         ">
 
 <tal:notContentCoreOnly tal:condition="python: not content_core_only">
@@ -216,7 +217,7 @@
                               </div>
 
                                 <div class="content-header">
-                                  <p class="mini-portal-type" tal:define="friendly_type context/Type|nothing;" tal:content="friendly_type" tal:condition="mini_header"></p>
+                                  <p class="mini-portal-type" tal:define="friendly_type context/Type|nothing;" tal:content="friendly_type" tal:condition="python:mini_header_type"></p>
                                     <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
                                     <metal:title define-slot="content-title">
                                         <metal:comment tal:content="nothing">

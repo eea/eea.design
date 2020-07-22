@@ -91,6 +91,22 @@ class MiniHeaderContentTypes(BrowserView):
         ptypes = registry.getProperty('mini_header_right_column_for', [])
         return self.context.portal_type in ptypes
 
+    @memoize
+    def show_light_header(self):
+        """ content registry cache
+        """
+        registry = self.context.portal_properties.site_properties
+        ptypes = registry.getProperty('mini_header_light_for', [])
+        return self.context.portal_type in ptypes
+
+    @memoize
+    def show_mini_type(self):
+        """ content registry cache
+        """
+        registry = self.context.portal_properties.site_properties
+        ptypes = registry.getProperty('mini_header_type_for', [])
+        return self.context.portal_type in ptypes
+
 
 class ScrollAnalyticsContentTypes(BrowserView):
     """ scrollAnalytics body class content-types
