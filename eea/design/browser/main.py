@@ -9,6 +9,7 @@ from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 
 
+
 class Main(BrowserView):
     """ Main View
     """
@@ -82,6 +83,18 @@ class MiniHeaderContentTypes(BrowserView):
         registry = self.context.portal_properties.site_properties
         data = registry.getProperty('mini_header_for', None)
         return data
+
+    @memoize
+    def get_light_header_image(self):
+        """ return header image path
+        """
+        portal_url = getToolByName(self.context, 'portal_url')
+        portal = portal_url.getPortalObject()
+        tool = getToolByName(portal, 'portal_depiction')
+        type_to_check = getattr(self.context, 'Type', lambda: "")().lower() + \
+                        '-header'
+        img = tool.get(type_to_check) or tool.get('generic-header')
+        return img.absolute_url()
 
     @memoize
     def show_right_column(self):

@@ -311,6 +311,9 @@ th a, th a:link, th a:visited {
     margin-right: -50vw;
     background-size: cover
 }
+.mini-header-light .fullwidth-img-bg {
+    max-height: 350px;
+}
 
 .fullwidth-bg {
     @include fullwidth-bg;

@@ -47,7 +47,7 @@
       class=".main.MiniHeaderContentTypes"
       for="*"
       name="miniheader_content_types"
-      allowed_attributes="show_right_column show_light_header show_mini_type"
+      allowed_attributes="show_right_column show_light_header show_mini_type get_light_header_image"
       permission="zope.Public"
     />
 

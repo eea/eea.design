@@ -213,7 +213,9 @@
 
                             <metal:bodytext define-slot="main">
                               <div class="fullwidth-img-container" tal:condition="mini_header">
-                                  <div class="fullwidth-img-bg" tal:attributes="style python:'background-image:url(' + here_url + '/image_panoramic' + ')'; title here/getImageCopyright|nothing;"></div>
+                                  <div class="fullwidth-img-bg"
+                                  tal:define="image_url python: here_url  if not mini_header_light else mini_header_bv.get_light_header_image()"
+                                  tal:attributes="style python:'background-image:url(' + image_url + '/image_panoramic' + ')'; title here/getImageCopyright|nothing;"></div>
                               </div>
 
                                 <div class="content-header">
