@@ -10,6 +10,9 @@
 
 #portal-column-two {
   overflow-y: auto;
+}
+
+.mini-header #portal-column-two {
   width: 300px;
   .portlet {
     background-color: $corporateGrey;
