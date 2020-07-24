@@ -517,6 +517,19 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     display: block;
 }
 
+@media (max-width: 767px) {
+    .portlet .navTree li .navTreeCurrentItem,
+    .portlet .navTree li a:hover {
+        font-size: 13px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .portlet .navTree li .navTreeCurrentItem,
+    .portlet .navTree li a:hover {
+        font-size: 14px;
+    }
+}
+
 /* </dtml-let> */
 /* </dtml-with>
 ** YOUR CSS RULES STOP HERE

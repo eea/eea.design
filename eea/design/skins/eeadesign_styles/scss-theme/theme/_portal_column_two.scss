@@ -2,18 +2,27 @@
   top: 0;
   position: absolute;
   right: -11%;
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   z-index: 2;
   padding-bottom: 2em;
   background-color: #FFF;
+  overflow-x: auto;
+  height: 100%;
+  scrollbar-width: thin;
+}
+@media (min-width: 1025px) {
+  #portal-column-two-wrapper::-webkit-scrollbar {
+    width: 7px;
+    background-color: $corporateGrey;
+  }
+  #portal-column-two-wrapper::-webkit-scrollbar-thumb {
+    background-color: #CCC;
+  }
 }
 
-#portal-column-two {
-  overflow-y: auto;
-}
 
 .mini-header #portal-column-two {
-  width: 300px;
   .portlet {
     background-color: $corporateGrey;
   }
