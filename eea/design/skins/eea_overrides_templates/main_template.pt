@@ -266,7 +266,7 @@
 
 
                               <tal:notajax tal:condition="python: not ajax_load and mini_header">
-
+                                <metal:right_column  tal:condition="python:sr and mini_header_right_column">
                                 <div id="portal-column-one"
                                      metal:define-slot="column_one_slot">
                                 </div>
@@ -280,7 +280,7 @@
                                   <div id="portal-column-two"
                                        class="portal-column-two"
                                        metal:define-slot="column_two_slot"
-                                       tal:condition="python: sr if not mini_header else sr and mini_header_right_column">
+                                       >
                                     <metal:portlets define-slot="portlets_two_slot">
 
                                       <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
@@ -289,6 +289,7 @@
                                     </metal:portlets>
                                   </div>
                                 </div>
+                                </metal:right_column>
                               </tal:notajax>
                                 </div>
 

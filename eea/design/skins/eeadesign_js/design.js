@@ -179,9 +179,9 @@ jQuery(document).ready(function ($) {
   }
 
   // 106884 scroll embedded iframes in order for them to avoid enlarging body
-  $iframes.each(function (idx, el) {
-    $(el).parent().addClass("overflow_auto iframe_container");
-  });
+  // $iframes.each(function (idx, el) {
+  //   $(el).parent().addClass("overflow_auto iframe_container");
+  // });
 
   // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
   $(".eea-tabs").find("li:last-child").addClass("last-child");
