@@ -47,18 +47,9 @@ a.managePortletsFallback {
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5;
+    position: relative;
 }
 
-.portlet .navTree li .navTreeCurrentItem,
-.portlet .navTree li a:hover {
-    font-weight: bold;
-    color: &dtml-corporateBlue;;
-    font-size: 15px;
-    padding-top: 12px;
-    padding-bottom: 10px;
-    line-height: 1.47;
-}
-}
 
 dl.portlet ul.navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
@@ -445,10 +436,8 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
  {
     content: "&dtml-eea-icon-chevron-down;";
 }
-.navTreeCurrentItem {
-    position: relative;
-}
 
+.navTree  a:hover:after,
 .navTreeCurrentItem:after {
     content: " ";
     border-left: 5px solid &dtml-corporateBlue;;
@@ -456,6 +445,19 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     position: absolute;
     height: 100%;
     top: 0;
+    left: -16px;
+}
+.navTree a:not(.navTreeCurrentItem):hover:after {
+    border-left: 5px solid &dtml-linkVisitedColor;;
+}
+.portlet .navTree li .navTreeCurrentItem {
+    font-weight: bold;
+}
+.navTree .navTreeCurrentItem:hover {
+    color: &dtml-corporateBlue; !important;
+}
+.navTree a:hover {
+    color: &dtml-linkVisitedColor; !important;
 }
 .navTree {
     margin-left: 0;
@@ -515,19 +517,6 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     line-height: 1.5em;
     margin-left: 1em;
     display: block;
-}
-
-@media (max-width: 767px) {
-    .portlet .navTree li .navTreeCurrentItem,
-    .portlet .navTree li a:hover {
-        font-size: 13px;
-    }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-    .portlet .navTree li .navTreeCurrentItem,
-    .portlet .navTree li a:hover {
-        font-size: 14px;
-    }
 }
 
 /* </dtml-let> */
