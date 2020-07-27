@@ -69,6 +69,9 @@
     line-height: 1;
     left: -$spacer;
   }
+  &.mini-header-light .mini-portal-type {
+    background-color: #FFF;
+  }
 
   .content-header-body {
     position: relative;
@@ -388,10 +391,10 @@
     .eea-btn--toggle.js-eea-sliding-toggle,
     #portal-column-two-wrapper {
       right: -25.4vw;
-      margin-top: 0;
     }
   }
 }
+
 
 @media print {
   .mini-header {
