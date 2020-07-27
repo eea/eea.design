@@ -356,8 +356,10 @@ video {
   width: 100%;
   max-width: 800px;
 }
-.max-container-centered > iframe,
-.max-container-centered > img {
+.max-container-centered iframe,
+.max-container-centered img,
+.max-container-centered .tableauPlaceholder
+{
     max-width: 1400px !important;
 }
 
