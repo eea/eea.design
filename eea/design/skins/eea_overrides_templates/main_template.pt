@@ -309,7 +309,7 @@
                                 <tal:not4AjaxLoad  tal:condition="not:ajax_load">
 
                                   <div class="mini-header-below-content eea-accordion-panels
-                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive">
+                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive collapsed-by-default">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />
 
                                   </div>
