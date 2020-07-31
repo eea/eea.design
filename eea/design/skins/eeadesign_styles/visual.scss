@@ -356,10 +356,7 @@ video {
   width: 100%;
   max-width: 800px;
 }
-.max-container-centered iframe,
-.max-container-centered img,
-.max-container-centered .tableauPlaceholder
-{
+.max-container-centered > * {
     max-width: 1400px !important;
 }
 
@@ -387,9 +384,9 @@ video {
 }
 
 @media (max-width: $breakpoint-xxl) {
-    .fullwidth-container-centered > *,
-    .max-container-centered > * {
-        padding: $spacer;
+    .fullwidth-container-centered,
+    .max-container-centered {
+        padding: 0 $spacer;
     }
 }
 /* standard figure, used for articles and pages.
