@@ -34,6 +34,7 @@
                         acl_users nocall: context/acl_users;
                         ifacetool context/portal_interface;
                         isPrint python:1 if 'pdf.' in request['URL0'] else 0;
+                        friendly_type context/Type|nothing;
                         wf_state context_state/workflow_state|string:;
                         mini_header_bv nocall: context/@@miniheader_content_types;
                         mini_header python:' mini-header' if mini_header_bv() else False;
@@ -219,7 +220,7 @@
                               </div>
 
                                 <div class="content-header">
-                                  <p class="mini-portal-type" tal:define="friendly_type context/Type|nothing;" tal:content="friendly_type" tal:condition="python:mini_header_type"></p>
+                                  <p class="mini-portal-type"  tal:content="friendly_type" tal:condition="python:mini_header_type"></p>
                                     <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
                                     <metal:title define-slot="content-title">
                                         <metal:comment tal:content="nothing">
@@ -307,12 +308,13 @@
                                 </tal:block>
 
                                 <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-
+                                   <div class="max-container-centered" tal:attributes="class python: 'mini-header-below-content-container' if 'Indicator Assessment' != friendly_type else 'max-container-centered'">
                                   <div class="mini-header-below-content eea-accordion-panels
                                   eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive collapsed-by-default">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />
 
                                   </div>
+                                     </div>
                                 </tal:not4AjaxLoad>
 
                                 <div metal:use-macro="context/eea_dates/macros/pdfPublishDate" tal:condition="python:'pdf.body' in request['URL0']">
