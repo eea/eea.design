@@ -45,18 +45,11 @@ jQuery(document).ready(function ($) {
       var $this = $(this);
       var keepData = true;
       var scripts = $this.find("script");
-      // workaround for jslint error Bad line breaking before from prettier reformat
-      // by making the variables smaller it fits in one line and tests pass again
-      var $et = $eea_tabs;
-      var $etp = $eea_tabs_panels;
-      var tpl;
       if (this.tagName === "H3") {
         // insert eea-tabs divs if we have h3 elements and we don't
         // already have eea_tabs div inserted like in the case of paginate divs
-        tpl = "<ul class='eea-tabs two-rows' />";
-        $et = !$et.length ? $(tpl).insertBefore($self) : $et;
-        tpl = "<div class='eea-tabs-panels' />";
-        $etp = !$etp.length ? $(tpl).insertAfter($et) : $etp;
+        $eea_tabs = !$eea_tabs.length ? $("<ul class='eea-tabs two-rows' />").insertBefore($self) : $eea_tabs;
+        $eea_tabs_panels = !$eea_tabs_panels.length ? $("<div class='eea-tabs-panels' />").insertAfter($eea_tabs) : $eea_tabs_panels;
         var tab_id = this.innerHTML.toLowerCase().replace(/\s/g, "-"),
           tab_href = "#tab-" + tab_id;
         $("<li />")
@@ -65,7 +58,7 @@ jQuery(document).ready(function ($) {
               .attr({ href: tab_href, id: "tab-" + tab_id })
               .html($this.detach().html())
           )
-          .appendTo($et);
+          .appendTo($eea_tabs);
       } else {
         $this.data($self.data());
         // #8523; remove any scripts that were already loaded but keep
@@ -98,7 +91,7 @@ jQuery(document).ready(function ($) {
           num_entries = $childes.length;
         }
 
-        $this.addClass("eea-tabs-panel").appendTo($etp);
+        $this.addClass("eea-tabs-panel").appendTo($eea_tabs_panels);
         if (orig_entries > pagination_count) {
           $this.addClass("eea-tabs-panel-paginated");
           $("<div class='paginator listingBar' />")
