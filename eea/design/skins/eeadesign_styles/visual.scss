@@ -332,8 +332,13 @@ video {
     width: 100%;
 }
 .max-container-centered,
+.fullwidth-container,
 .fullwidth-container-centered {
   @include fullwidth-container-centered();
+}
+
+.fullwidth-container {
+    padding: 0 15px;
 }
 
 .fullwidth-container-centered .fullwidth {

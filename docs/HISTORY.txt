@@ -3,6 +3,10 @@ Changelog
 
 26.9-dev0 - (unreleased)
 ---------------------------
+* Feature: added ability to specify what should be enabled for the new mini
+  header, for now we have option to show or hide the portal type, the navigation
+  and the white variant of the header
+  [ichim-david refs #111968]
 * Bug fix: show category selection within edit form hidden because it has
   category id
   [ichim-david refs #119396]
