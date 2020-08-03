@@ -258,7 +258,8 @@ div.geotags {
         columns: 5;
     }
     .max-container-centered .geotags {
-        columns: 3;
+        columns: 3; /* if we have 4 columns indicators geographical regions
+        will go over the right column eg: data-and-maps/indicators/status-of-marine-fish-stocks-4/assessment/view */
         column-gap: 3rem;
     }
 }

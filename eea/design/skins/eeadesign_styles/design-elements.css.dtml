@@ -121,6 +121,7 @@
     padding: 10px;
     overflow: hidden;
     border: 1px solid #DDD;
+    width: 100%;
 }
 
 .eea-accordion-panels-plain .pane {

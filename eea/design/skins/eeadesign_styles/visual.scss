@@ -359,8 +359,9 @@ video {
 .max-container-centered > * {
     max-width: 1400px !important;
 }
-
-
+.max-container-centered table {
+    width: auto;
+}
 
 .absolute-centered {
     max-width: 848px;
