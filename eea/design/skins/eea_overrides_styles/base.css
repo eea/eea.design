@@ -379,12 +379,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 /* @end */
 
-
-.reviewHistory,
-.contentHistory {
-    display: inline;
-    color: Black;
-}
 .spacer {
     margin: 1em;
 }

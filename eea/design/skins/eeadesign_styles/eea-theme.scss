@@ -79,7 +79,7 @@ hr {
 
 #article-language .eea-icon {
   line-height: 0.75em;
-  color: #888;
+  //color: #888;
   }
 /* @end Language viewlet */
 
@@ -381,11 +381,6 @@ table.plain {
 
 .template-collection-pdf-body h4.figureHeading {
   margin: 0 0 1.5em 0;
-  }
-
-
-.portaltype-assessment #parent-fieldname-description {
-  display: none;
   }
 
 /* eea.googlecharts chart.js uses this */

@@ -1,8 +1,8 @@
-<metal:themes_mini_header tal:define="mini_header python:context.restrictedTraverse('@@miniheader_content_types', lambda: False)(); context_state context/@@plone_context_state;" tal:condition="python: mini_header and context_state.is_view_template()">
-  <div class="eea-accordion-panel">
+<metal:themes_mini_header tal:define="mini_header python:context.restrictedTraverse('@@miniheader_content_types', lambda: False)(); context_state context/@@plone_context_state; viewlet_data context/@@viewlets/eea.themestags" tal:condition="python: mini_header and context_state.is_view_template() and viewlet_data">
+  <div class="eea-accordion-panel" tal:condition="python:viewlet_data.strip()">
     <h2 class="eea-icon-left-container eea-accordion-title" i18n:translate="">Topics</h2>
-    <div class="pane" id="mini-themes-tags">
-      <div tal:replace="structure context/@@viewlets/eea.themestags" />
+    <div class="pane" id="mini-themes-tags" >
+      <div tal:replace="structure viewlet_data" />
     </div>
   </div>
 </metal:themes_mini_header>

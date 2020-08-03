@@ -50,23 +50,9 @@ dl.portletError dd {
 
 /* @group Navigation portlet */
 
-dl.portlet ul.navTree li a {
-    border: none;
-    display: block;
-    zoom: 1;
-}
-
-dl.portlet ul.navTree li a:hover {
-
-}
 
 dl.portletNavigationTree dd.portletItem {
     padding: 0;
-}
-
-dl.portlet ul.navTreeLevel1 .navTreeItem {
-    padding-left: 0.5em;
-    line-height: 2em;
 }
 
 /* @end */

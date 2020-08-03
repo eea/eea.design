@@ -93,20 +93,7 @@ jQuery(document).ready(function ($) {
 
         $this.addClass("eea-tabs-panel").appendTo($eea_tabs_panels);
         if (orig_entries > pagination_count) {
-          // var $pagination_icon = $(
-          //   "<span class='eea-icon eea-icon-pagination eea-icon-chevron-right eea-icon-5x'></span>"
-          // );
           $this.addClass("eea-tabs-panel-paginated");
-          // $pagination_icon.appendTo($this);
-          // $pagination_icon.click(function () {
-          //   var $pagination = $(this).parent().find(".listingBar");
-          //   var $next = $pagination.find(".next");
-          //   if ($next.hasClass("current")) {
-          //     $pagination.trigger("setPage", [0]);
-          //   } else {
-          //     $pagination.trigger("nextPage");
-          //   }
-          // });
           $("<div class='paginator listingBar' />")
             .prependTo($this)
             .pagination(orig_entries, {
@@ -119,34 +106,8 @@ jQuery(document).ready(function ($) {
               callback: function (idx, el) {
                 var $parent = el.parent(),
                   $page = $parent.find(".page").hide().eq(idx);
-
-                //
-                //   page_count = $page.next().data("count"),
-                //   next_item = $parent.find(".next")[0],
-                //   $pagination = el.find(".pagination"),
-                //   $pagination_children = $pagination.children();
-                //
-                // if ($pagination_children[0].tagName === "SPAN") {
-                //   $('<a href="#" class="listingPrevious"> </a>').prependTo(
-                //     $pagination
-                //   );
-                // }
-                //
-                // if (
-                //   $pagination_children[$pagination_children.length - 1]
-                //     .tagName === "SPAN"
-                // ) {
-                //   $('<a href="#" class="next"> </a>').appendTo($pagination);
-                // }
-                //
-                // if (next_item) {
-                //   next_item.innerHTML = next_item.innerHTML.replace(
-                //     pagination_count,
-                //     page_count
-                //   );
-                // }
-
                 $page.show();
+                $(window).trigger("scroll");
                 return false;
               }
             });

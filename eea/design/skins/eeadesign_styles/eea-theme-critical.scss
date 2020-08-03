@@ -17,9 +17,9 @@
     position: inherit;
   }
 
-  &[class*="_view"] #portal-column-two {
-    display: none;
-  }
+  //&[class*="_view"] #portal-column-two {
+  //  display: none;
+  //}
 
   //h2 {
   //  font-size: 1.9em;
@@ -69,6 +69,9 @@
     line-height: 1;
     left: -$spacer;
   }
+  &.mini-header-light .mini-portal-type {
+    background-color: #FFF;
+  }
 
   .content-header-body {
     position: relative;
@@ -93,7 +96,6 @@
   }
 
   .documentByLine .portalType,
-  .publishDate .byline-separator,
   .documentByLineAuthors,
   .content-header-body #themes-tags {
     display: none;
@@ -152,9 +154,13 @@
     max-width: 830px;
   }
 
-  .fullwidth-img-container {
-    margin-bottom: $spacer-0;
-    padding-bottom: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
+  .content-core-wrapper {
+    margin-top: $spacer-0;
+    //padding-top: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
+  }
+  .eea-btn.eea-btn--toggle,
+  #portal-column-two-wrapper {
+    margin-top: -$spacer-0;
   }
 
   .content-header {
@@ -166,17 +172,18 @@
     position: relative;
     z-index: 1;
     margin-top: 200px;
+
+    .documentFirstHeading {
+      padding-right: 0;
+      min-width: 85%;
+      margin: 1.25rem 0 $spacer-1 0;
+      letter-spacing: -1px;
+      font-size: 2.5rem;
+      line-height: 1.15;
+
+    }
   }
 
-  .documentFirstHeading {
-    padding-right: 0;
-    min-width: 85%;
-    margin: 1.25rem 0 $spacer-1 0;
-    letter-spacing: -1px;
-    font-size: 2.5rem;
-    line-height: 1.15;
-
-  }
 
   .content-header:before {
     content: " ";
@@ -208,10 +215,16 @@
     line-height: 1.333;
     width: 100%;
   }
+  .content-header {
+    .documentFirstHeading,
+    .documentDescription {
+      order: 1;
+    }
 
-  .documentFirstHeading,
-  .content-header .documentDescription {
-    order: 1;
+    .documentFirstHeading,
+    .documentExportActions a {
+      color: inherit !important;
+    }
   }
 
   #languageCodes,
@@ -228,15 +241,12 @@
     order: 4;
   }
 
-  .documentFirstHeading,
-  .documentExportActions a {
-    color: #FFF !important;
-  }
 
   .documentByLine,
   .documentDescription,
   .documentByLine a {
-    color: rgba(255, 255, 255, 0.9);
+    //color: rgba(255, 255, 255, 0.9);
+    color: inherit;
   }
 
   #themes-tags .listHead {
@@ -257,7 +267,7 @@
 
   #article-language .eea-icon:before,
   #article-language > a {
-    color: #FFF;
+    color: inherit;
   }
 
   #region-content {
@@ -267,7 +277,20 @@
   .fiche-endnotes {
     margin-top: $spacer-3;
   }
+}
 
+.mini-header.mini-header-light {
+  #region-content {
+    padding-top: 1px;
+  }
+  .content-header {
+    margin-top: 100px;
+    color: #000;
+  }
+
+  .content-header:before {
+    background-color: #FFF;
+  }
 }
 
 @media (max-width: 660px) {
@@ -330,8 +353,12 @@
     }
 
     //.content-core,
-    .fullwidth-img-container {
-      margin-bottom: $spacer-hero;
+    .content-core-wrapper {
+      margin-top: $spacer-hero;
+    }
+    .eea-btn.eea-btn--toggle,
+    #portal-column-two-wrapper {
+      margin-top: -$spacer-hero;
     }
   }
 }
@@ -357,6 +384,16 @@
     }
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .mini-header {
+    .eea-btn--toggle.js-eea-sliding-toggle,
+    #portal-column-two-wrapper {
+      right: -25.4vw;
+    }
+  }
+}
+
 
 @media print {
   .mini-header {

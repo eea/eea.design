@@ -34,8 +34,13 @@
                         acl_users nocall: context/acl_users;
                         ifacetool context/portal_interface;
                         isPrint python:1 if 'pdf.' in request['URL0'] else 0;
+                        friendly_type context/Type|nothing;
                         wf_state context_state/workflow_state|string:;
-                        mini_header python:' mini-header' if context.restrictedTraverse('@@miniheader_content_types')() else False;
+                        mini_header_bv nocall: context/@@miniheader_content_types;
+                        mini_header python:' mini-header' if mini_header_bv() else False;
+                        mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() else False;
+                        mini_header_type python: True if mini_header and mini_header_bv.show_mini_type() else False;
+                        mini_header_light python:' mini-header-light' if mini_header and mini_header_bv.show_light_header() else False;
                         ">
 
 <tal:notContentCoreOnly tal:condition="python: not content_core_only">
@@ -122,6 +127,7 @@
                   body_class python: body_class + ' body-print' if isPrint else body_class;
                   body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() or request.get('body.fullwidth') else body_class;
                   body_class python: body_class + mini_header if mini_header else body_class;
+                  body_class python: body_class + mini_header_light if mini_header_light else body_class;
                   body_class python: body_class + ' scroll-analytics' if context.restrictedTraverse('@@scroll_analytics_content_types')() else body_class;
                   body_class python: body_class + ' expired-content' if is_expired else body_class;
                   frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
@@ -140,27 +146,27 @@
     <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title"></a>
 
     <div id="header-holder">
-                               <div class="navbar navbar-default navbar-fixed-top">
-                               <div class="eea-container">
-                               <div class="navbar-header">
-                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                               <span class="sr-only" i18n:translate="">Toggle navigation</span>
-                               <span class="icon-bar"></span>
-                               <span class="icon-bar"></span>
-                               <span class="icon-bar"></span>
-                               </button>
-                               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                               <div id="portal-top"
-                               tal:condition="python: not ajax_load">
-                               <tal:not4Print tal:condition="python:not isPrint">
-                               <div tal:replace="structure provider:plone.portaltop" />
-                               </tal:not4Print>
-                               </div>
-                               </div>
-                               </div>
-                               </div>
-                               </div>
-                               </div>
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="eea-container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only" i18n:translate="">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <div id="portal-top"
+                   tal:condition="python: not ajax_load">
+                <tal:not4Print tal:condition="python:not isPrint">
+                  <div tal:replace="structure provider:plone.portaltop" />
+                </tal:not4Print>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="eea-above-columns" tal:content="structure provider:eea.abovecolumns" />
 
@@ -207,8 +213,14 @@
                             </metal:header>
 
                             <metal:bodytext define-slot="main">
+                              <div class="fullwidth-img-container" tal:condition="mini_header" metal:define-slot="content-header-image">
+                                  <div class="fullwidth-img-bg"
+                                  tal:define="image_url python: here_url  if not mini_header_light else mini_header_bv.get_light_header_image()"
+                                  tal:attributes="style python:'background-image:url(' + image_url + '/image_panoramic' + ')'; title here/getImageCopyright|nothing;"></div>
+                              </div>
+
                                 <div class="content-header">
-                                  <p class="mini-portal-type" tal:define="friendly_type context/Type|nothing;" tal:content="friendly_type" tal:condition="mini_header"></p>
+                                  <p class="mini-portal-type"  tal:content="friendly_type" tal:condition="python:mini_header_type"></p>
                                     <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
                                     <metal:title define-slot="content-title">
                                         <metal:comment tal:content="nothing">
@@ -244,6 +256,7 @@
                                     </div>
                                 </div>
 
+                              <div class="content-core-wrapper">
                                 <div id="content-core" class="content-core">
                                     <metal:text define-slot="content-core" tal:content="nothing">
                                         <tal:comment replace="nothing">
@@ -251,6 +264,35 @@
                                         </tal:comment>
                                     </metal:text>
                                 </div>
+
+
+                              <tal:notajax tal:condition="python: not ajax_load and mini_header">
+                                <metal:right_column  tal:condition="python:sr and mini_header_right_column">
+                                <div id="portal-column-one"
+                                     metal:define-slot="column_one_slot">
+                                </div>
+                                <button type="button" class="eea-btn bg-primary-light text-light-color  eea-btn--toggle js-eea-sliding-toggle eea-sliding-section hidden" data-toggle="collapse" data-target="#portal-column-two-wrapper" aria-expanded="false">
+                                  <span class="eea-btn--title" i18n:translate="">Page Menu</span>
+                                  <span class="eea-icon eea-icon-bars eea-icon-lg js-hidden-toggle"></span>
+                                  <span class="eea-icon eea-icon-close eea-icon-lg js-hidden-toggle hidden"></span>
+                                </button>
+                                <div id="portal-column-two-wrapper" class="eea-sliding-section eea-sliding-section--hidden-lg"
+                                     tal:condition="sr">
+                                  <div id="portal-column-two"
+                                       class="portal-column-two"
+                                       metal:define-slot="column_two_slot"
+                                       >
+                                    <metal:portlets define-slot="portlets_two_slot">
+
+                                      <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
+                                        <tal:block replace="structure provider:plone.rightcolumn" />
+                                      </tal:soer>
+                                    </metal:portlets>
+                                  </div>
+                                </div>
+                                </metal:right_column>
+                              </tal:notajax>
+
 
                                 <metal:comment tal:content="nothing">
                                     <tal:comment replace="nothing">
@@ -266,17 +308,20 @@
                                 </tal:block>
 
                                 <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-
+                                   <div class="max-container-centered" tal:attributes="class python: 'mini-header-below-content-container' if 'Indicator Assessment' != friendly_type else 'max-container-centered'">
                                   <div class="mini-header-below-content eea-accordion-panels
-                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive">
+                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive collapsed-by-default">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />
 
                                   </div>
+                                     </div>
                                 </tal:not4AjaxLoad>
 
                                 <div metal:use-macro="context/eea_dates/macros/pdfPublishDate" tal:condition="python:'pdf.body' in request['URL0']">
                                     pdf publish date
                                 </div>
+
+                              </div>
                             </metal:bodytext>
                         </div>
                     </metal:slot>
@@ -297,8 +342,7 @@
                 </tal:not4Print>
             </tal:not4AjaxLoad>
         </div>
-
-        <tal:notajax tal:condition="not:ajax_load">
+          <tal:notajax tal:condition="python: not ajax_load and not mini_header">
 
         <div id="portal-column-one"
             metal:define-slot="column_one_slot">
@@ -310,13 +354,13 @@
             tal:condition="sr"
             tal:attributes="class python:'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
-
                 <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
                     <tal:block replace="structure provider:plone.rightcolumn" />
                 </tal:soer>
             </metal:portlets>
         </div>
         </tal:notajax>
+
     </div>
     <div class="visualClear"><!-- --></div>
  </div>

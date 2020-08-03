@@ -79,6 +79,7 @@
   position: relative;
   color: $corporateGrey;
   max-width: 55px; /* avoid arrow from going below pagination area within mobile*/
+  height: 64px /* avoid related items panel height difference when we have no link */
  }
  .listingPrevious:before,
  .next:before {
@@ -219,14 +220,16 @@ span.next {
    max-width: 770px;
  }
   .relatedItems {
-    h2 {
-     font-size: 100%;
-     color: inherit;
-    }
-   h2, .eea-tabs  {
+   h2 {
+    font-size: 100%;
+    color: inherit;
+   }
+
+   h2, .eea-tabs {
     position: absolute;
     left: 0.5%;
    }
+
    .eea-tabs-panels {
     position: relative;
     padding: 0;
@@ -238,6 +241,7 @@ span.next {
     border: 0;
     min-width: 220px;
    }
+
    .eea-tabs > li {
     display: block;
     border-bottom: 1px solid #d3d3d3;
@@ -255,13 +259,14 @@ span.next {
 
    .eea-tabs > li > .current,
    .eea-tabs > li > a:target,
-   .eea-tabs > li > a:hover {
+   {
     color: #004B87 !important;
     font-weight: bold;
     background-color: transparent;
    }
-   .eea-tabs > li > .current:before
-   {
+
+   .eea-tabs > li > a:hover:before,
+   .eea-tabs > li > .current:before {
     content: " ";
     //width: 0;
     border-left: 5px solid #004B87;
@@ -270,6 +275,12 @@ span.next {
     height: 100%;
     margin-left: -15px;
     top: 0;
+   }
+   .eea-tabs > li > a:not(.current):hover {
+    color: $text-visited;
+   }
+   .eea-tabs > li > a:not(.current):hover:before {
+    border-left-color: $text-visited;
    }
 
    .eea-tabs .current::after, .eea-tabs a:hover::after {

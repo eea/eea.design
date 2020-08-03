@@ -40,37 +40,43 @@ a.managePortletsFallback {
 /* @end @group Portlets */
 
 /* @group Navigation portlet */
-dl.portlet ul.navTree li a {
+.portlet .navTree li a {
     margin: 0;
     padding: 10px;
-    border-top: 1px dotted #BABBB8;
+    border-top: 1px solid &dtml-corporateBlue;;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5;
+    position: relative;
 }
+
 
 dl.portlet ul.navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
 
-.navTreeItemInPath > ul.navTreeLevel0 li > a {
+a.navTreeItemInPath.navTreeFolderish {
+    padding-left: 20px !important;
+}
+
+.navTree  ul.navTreeLevel0 li > a {
     padding-left: 10px !important;
 }
 
-.navTreeItemInPath > ul.navTreeLevel1 li > a {
-    padding-left: 25px !important;
-}
-
-.navTreeItemInPath > ul.navTreeLevel2 li > a {
+.navTree  ul.navTreeLevel1 li > a {
     padding-left: 35px !important;
 }
 
-.navTreeItemInPath > ul.navTreeLevel3 li > a {
+.navTree ul.navTreeLevel2 li > a {
     padding-left: 45px !important;
 }
 
-.navTreeItemInPath > ul.navTreeLevel4 li > a {
+.navTree ul.navTreeLevel3 li > a {
     padding-left: 55px !important;
+}
+
+.navTree ul.navTreeLevel4 li > a {
+    padding-left: 65px !important;
 }
 /* @end @group Navigation portlet */
 
@@ -119,10 +125,10 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 }
 
 #firstHeader {
-   margin: 0 0 5px 0;
+   margin: 1.25rem 0 1rem 0;
    line-height: 1.2;
-   font-size: 1.6em;
-    font-weight: bold;
+   font-size: 1.25rem;
+   font-weight: bold;
 }
 
 .portletFooter {
@@ -188,12 +194,9 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 
 
 .navTreeItem a,
-dd.portletItem .navTreeItem a {
+.portletItem .navTreeItem a {
     display: block;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
-    font-weight: bold;
 }
 
 
@@ -390,7 +393,7 @@ dt.portletItem a, #content dt.portletItem a {
 
 dl.portletNavigationTree dt.portletSubMenuHeader {
    background-color: &dtml-lightBackgroundColor;;
-   font-size: 14px;
+   font-size: 1rem;
    padding: 10px;
    margin: 0;
    cursor: pointer;
@@ -411,42 +414,54 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
   display: block;
 }
 
-.portletNavigationTree .eea-icon-right:after,
-.portletHeader .eea-icon-right:after
+.portletNavigationTree .eea-icon-left:after,
+.portletHeader .eea-icon-left:after
 {
     font-size: 1.2em;
-    color: #9cb43c;
+    color: &dtml-corporateBlue;;
 }
 
-.portletHeader .eea-icon-right:after {
+.portletHeader .eea-icon-left:after {
     font-size: 75%;
 }
 
-.portletNavigationTree .eea-icon-right:after,
-.collapsed .portletHeader .eea-icon-right:after
+.portletNavigationTree .eea-icon-left:after,
+.collapsed .portletHeader .eea-icon-left:after
 {
-    content: "&dtml-eea-icon-chevron-left;";
+    content: "&dtml-eea-icon-chevron-right;";
 }
 
-.portletNavigationTree .current .eea-icon-right:after,
-.portletHeader .eea-icon-right:after
+.portletNavigationTree .current .eea-icon-left:after,
+.portletHeader .eea-icon-left:after
  {
     content: "&dtml-eea-icon-chevron-down;";
 }
-.navTreeCurrentItem {
-    position: relative;
-}
 
+.navTree  a:hover:after,
 .navTreeCurrentItem:after {
-    left: 0;
     content: " ";
-    height: 0;
-    width: 0;
+    border-left: 5px solid &dtml-corporateBlue;;
+    display: block;
     position: absolute;
-    pointer-events: none;
-    border: 13px solid transparent;
-    border-left-color: &dtml-backgroundColor;;
-    top: 25%;
+    height: 100%;
+    top: 0;
+    left: -16px;
+}
+.navTree a:not(.navTreeCurrentItem):hover:after {
+    border-left: 5px solid &dtml-linkVisitedColor;;
+}
+.portlet .navTree li .navTreeCurrentItem {
+    font-weight: bold;
+}
+.navTree .navTreeCurrentItem:hover {
+    color: &dtml-corporateBlue; !important;
+}
+.navTree a:hover {
+    color: &dtml-linkVisitedColor; !important;
+}
+.navTree {
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
 .navTreeLevel0 .navTreeCurrentItem:after {
@@ -458,11 +473,11 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 }
 
 .navTreeLevel1 .navTreeCurrentItem:after {
-    left: -43px;
+    left: -16px;
 }
-.navTreeLevel2 .navTreeCurrentItem:after {
-    left: -71px;
-}
+/*.navTreeLevel2 .navTreeCurrentItem:after {*/
+/*    left: -71px;*/
+/*}*/
 .navTreeLevel3 .navTreeCurrentItem:after {
     left: -92px;
 }

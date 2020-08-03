@@ -311,6 +311,9 @@ th a, th a:link, th a:visited {
     margin-right: -50vw;
     background-size: cover
 }
+.mini-header-light .fullwidth-img-bg {
+    max-height: 350px;
+}
 
 .fullwidth-bg {
     @include fullwidth-bg;
@@ -329,8 +332,13 @@ video {
     width: 100%;
 }
 .max-container-centered,
+.fullwidth-container,
 .fullwidth-container-centered {
   @include fullwidth-container-centered();
+}
+
+.fullwidth-container {
+    padding: 0 15px;
 }
 
 .fullwidth-container-centered .fullwidth {
@@ -353,12 +361,12 @@ video {
   width: 100%;
   max-width: 800px;
 }
-.max-container-centered > iframe,
-.max-container-centered > img {
+.max-container-centered > * {
     max-width: 1400px !important;
 }
-
-
+.max-container-centered table {
+    width: auto;
+}
 
 .absolute-centered {
     max-width: 848px;
@@ -382,9 +390,9 @@ video {
 }
 
 @media (max-width: $breakpoint-xxl) {
-    .fullwidth-container-centered > *,
-    .max-container-centered > * {
-        padding: $spacer;
+    .fullwidth-container-centered,
+    .max-container-centered {
+        padding: 0 $spacer;
     }
 }
 /* standard figure, used for articles and pages.
@@ -1043,6 +1051,7 @@ ul.social-buttons {
     margin: 2px 0;
     padding: 2px 5px;
     word-break: keep-all;
+    outline: none;
 }
 
 .eea-btn-md {
@@ -1076,6 +1085,7 @@ ul.social-buttons {
     border-color: unquote("&dtml-corporateGreen;");
     background-color: unquote("&dtml-corporateGreen;");
 }
+
 
 /*.eea-btn-multimedia {*/
 /*    color: &dtml-lightBackgroundColor;;;*/

@@ -118,7 +118,7 @@ input[type=text]:placeholder-shown  {
   }
 
 :link,:visited { text-decoration:none }
-ul { list-style:none; }
+//ul { list-style:none; }
 
 h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
 h1, .h1 {
@@ -256,6 +256,19 @@ ul {
 .list-inline li::before {
   content: " ";
   }
+
+.eea-sliding-section {
+  -webkit-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  overflow: hidden;
+}
+.overflow-initial {
+  overflow: initial;
+}
 
 @media screen {
   /*.position-0 {*/
@@ -528,6 +541,11 @@ ul {
 #content-core {
   clear:both;
 }
+.content-core-wrapper {
+  position: relative;
+}
+
+@import "scss-theme/theme/portal_column_two";
 
 .portalMessage {
   background-color: #f3f3f3;
@@ -569,6 +587,7 @@ ul {
 
 .documentDescription {
   order: 3;
+  width: 100%;
 }
 
 #article-language {
@@ -687,9 +706,7 @@ p,
  body:not(.template-report_view) .width-3\:4 {
   max-width: 830px;
 }
-#portal-column-two {
-  min-width: 350px;
-  }
+
 #portal-column-two .portlet {
   margin: 0 0 1em 0;
   }
@@ -773,7 +790,7 @@ p,
   }
  .eea-tabs {
   padding: 0 10px 0 0;
-  margin: 0;
+  margin: 0 !important;
   list-style: none none;
   background-color: unquote("&dtml-corporateDarkBlue;");
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
@@ -792,7 +809,7 @@ p,
   line-height: 2.2;
   }
 .eea-tabs > li {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   display: inline-block;
   }
@@ -845,6 +862,8 @@ p,
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
   }
 
+
+
 @media screen and (min-width: 1200px) {
   .content-header .documentByLine {
     max-width: 80%;
@@ -881,6 +900,7 @@ p,
     font-size: 15px;
     }
   }
+
 
 /* 102564 IE11 hack as the hiddenStructure without display will count
 * for justify-content: space-between since it doesn't support clip-path */

@@ -9,6 +9,7 @@ from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 
 
+
 class Main(BrowserView):
     """ Main View
     """
@@ -70,10 +71,10 @@ class MiniHeaderContentTypes(BrowserView):
         self.request = request
 
     def __call__(self):
-        """ boolean if fullwidth class should be enabled for given content-type
+        """ boolean if miniheader class should be enabled for given content-type
         """
-        fullwidth_ctypes = self.get_mini_registry() or []
-        return self.context.portal_type in fullwidth_ctypes
+        mini_header_ctypes = self.get_mini_registry() or []
+        return self.context.portal_type in mini_header_ctypes
 
     @memoize
     def get_mini_registry(self):
@@ -82,6 +83,42 @@ class MiniHeaderContentTypes(BrowserView):
         registry = self.context.portal_properties.site_properties
         data = registry.getProperty('mini_header_for', None)
         return data
+
+    @memoize
+    def get_light_header_image(self):
+        """ return header image path
+        """
+        portal_url = getToolByName(self.context, 'portal_url')
+        portal = portal_url.getPortalObject()
+        tool = getToolByName(portal, 'portal_depiction')
+        type_to_check = getattr(self.context, 'Type', lambda: "")().lower() + \
+                        '-header'
+        img = tool.get(type_to_check) or tool.get('generic-header')
+        return img.absolute_url()
+
+    @memoize
+    def show_right_column(self):
+        """ content registry cache
+        """
+        registry = self.context.portal_properties.site_properties
+        ptypes = registry.getProperty('mini_header_right_column_for', [])
+        return self.context.portal_type in ptypes
+
+    @memoize
+    def show_light_header(self):
+        """ content registry cache
+        """
+        registry = self.context.portal_properties.site_properties
+        ptypes = registry.getProperty('mini_header_light_for', [])
+        return self.context.portal_type in ptypes
+
+    @memoize
+    def show_mini_type(self):
+        """ content registry cache
+        """
+        registry = self.context.portal_properties.site_properties
+        ptypes = registry.getProperty('mini_header_type_for', [])
+        return self.context.portal_type in ptypes
 
 
 class ScrollAnalyticsContentTypes(BrowserView):
