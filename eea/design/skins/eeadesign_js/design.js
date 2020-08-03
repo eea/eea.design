@@ -213,10 +213,9 @@ jQuery(document).ready(function ($) {
   var $slide_toggle = $(".js-eea-sliding-toggle");
   $slide_toggle.click(function (ev) {
     ev.preventDefault();
-    var el =
-      ev.target.className.indexOf("js-eea-sliding-toggle") !== -1
-        ? ev.target
-        : ev.target.parentNode;
+    var t = ev.target;
+    var cname = "js-eea-sliding-toggle";
+    var el = t.className.indexOf(cname) !== -1 ? t : t.parentNode;
     var $el = $(el);
     $el.find(".js-hidden-toggle").toggleClass("hidden");
     var $target = $(el.getAttribute("data-target"));
