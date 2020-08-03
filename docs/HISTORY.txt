@@ -1,7 +1,7 @@
 Changelog
 =========
 
-26.9-dev0 - (unreleased)
+26.9 - (2020-08-03)
 ---------------------------
 * Feature: added ability to specify what should be enabled for the new mini
   header, for now we have option to show or hide the portal type, the navigation
