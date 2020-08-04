@@ -560,11 +560,11 @@ div.overlay a:hover {
 /*    padding-left: 0 !important;*/
 /*}*/
 
-.visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
+.mini-header-navigation .visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
     padding-left: 20px;
 }
-.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
-.visualNoMarker a.navTreeFolderish::before {
+.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
+.mini-header-navigation .visualNoMarker a.navTreeFolderish::before {
     position: absolute;
     content: "\f067";
     font-family: "FontAwesome";
@@ -573,12 +573,12 @@ div.overlay a:hover {
     margin-top: 2px;
 }
 
-.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
+.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
     content: "\f068";
 }
 /* hide plus and minus icon for auth users since they have content icons */
-.userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
-.visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
+.mini-header-navigation .userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
+.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
     display: none;
 }
 

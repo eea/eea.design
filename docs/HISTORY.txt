@@ -3,6 +3,9 @@ Changelog
 
 27.0-dev0 - (unreleased)
 ---------------------------
+* Change: new style for navigation is enabled only if mini header navigation
+  is enabled
+  [ichim-david refs #111968]
 
 26.9 - (2020-08-03)
 ---------------------------

@@ -43,11 +43,14 @@ a.managePortletsFallback {
 .portlet .navTree li a {
     margin: 0;
     padding: 10px;
-    border-top: 1px solid &dtml-corporateBlue;;
+    border-top: 1px dotted #BABBB8;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5;
     position: relative;
+}
+.mini-header-navigation .portlet .navTree li a {
+    border-top: 1px solid & dtml-corporateBlue;;
 }
 
 
@@ -125,10 +128,14 @@ a.navTreeItemInPath.navTreeFolderish {
 }
 
 #firstHeader {
-   margin: 1.25rem 0 1rem 0;
+   margin: 0 0 5px 0;
    line-height: 1.2;
-   font-size: 1.25rem;
+    font-size: 1.4rem;
    font-weight: bold;
+}
+.mini-header-navigation #firstHeader {
+    margin: 1.25rem 0 1rem 0;
+    font-size: 1.25rem;
 }
 
 .portletFooter {
@@ -182,6 +189,9 @@ a.navTreeItemInPath.navTreeFolderish {
     background: #FFFFFF;
 }
 
+.navTree {
+    list-style: none none;
+}
 .navTree li {
     margin-bottom: 0 !important;
 }
@@ -425,20 +435,20 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     font-size: 75%;
 }
 
-.portletNavigationTree .eea-icon-left:after,
-.collapsed .portletHeader .eea-icon-left:after
+.mini-header-navigation .portletNavigationTree .eea-icon-left:after,
+.mini-header-navigation .collapsed .portletHeader .eea-icon-left:after
 {
     content: "&dtml-eea-icon-chevron-right;";
 }
 
-.portletNavigationTree .current .eea-icon-left:after,
-.portletHeader .eea-icon-left:after
+.mini-header-navigation .portletNavigationTree .current .eea-icon-left:after,
+.mini-header-navigation .portletHeader .eea-icon-left:after
  {
     content: "&dtml-eea-icon-chevron-down;";
 }
 
-.navTree  a:hover:after,
-.navTreeCurrentItem:after {
+.mini-header-navigation .navTree  a:hover:after,
+.mini-header-navigation .navTreeCurrentItem:after {
     content: " ";
     border-left: 5px solid &dtml-corporateBlue;;
     display: block;
@@ -447,9 +457,10 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     top: 0;
     left: -16px;
 }
-.navTree a:not(.navTreeCurrentItem):hover:after {
+.mini-header-navigation .navTree a:not(.navTreeCurrentItem):hover:after {
     border-left: 5px solid &dtml-linkVisitedColor;;
 }
+
 .portlet .navTree li .navTreeCurrentItem {
     font-weight: bold;
 }

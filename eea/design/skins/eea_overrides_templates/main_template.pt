@@ -39,6 +39,7 @@
                         mini_header_bv nocall: context/@@miniheader_content_types;
                         mini_header python:' mini-header' if mini_header_bv() else False;
                         mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() else False;
+                        mini_header_navigation python:' mini-header-navigation' if mini_header_right_column else False;
                         mini_header_type python: True if mini_header and mini_header_bv.show_mini_type() else False;
                         mini_header_light python:' mini-header-light' if mini_header and mini_header_bv.show_light_header() else False;
                         ">
@@ -128,6 +129,7 @@
                   body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() or request.get('body.fullwidth') else body_class;
                   body_class python: body_class + mini_header if mini_header else body_class;
                   body_class python: body_class + mini_header_light if mini_header_light else body_class;
+                  body_class python: body_class + mini_header_navigation if mini_header_right_column else body_class;
                   body_class python: body_class + ' scroll-analytics' if context.restrictedTraverse('@@scroll_analytics_content_types')() else body_class;
                   body_class python: body_class + ' expired-content' if is_expired else body_class;
                   frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
