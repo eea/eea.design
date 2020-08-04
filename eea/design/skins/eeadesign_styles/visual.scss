@@ -333,10 +333,12 @@ video {
 }
 .max-container-centered,
 .fullwidth-container,
+.widescreen-container,
 .fullwidth-container-centered {
   @include fullwidth-container-centered();
 }
 
+.widescreen-container,
 .fullwidth-container {
     padding: 0 15px;
 }
@@ -345,10 +347,8 @@ video {
     position: absolute;
 }
 
-.fullwidth-container-centered > img,
 .max-container-centered  > img,
-.max-container-centered  > iframe,
-.fullwidth-container-centered > iframe {
+.max-container-centered  > iframe {
     min-width: initial;
     width: 100%;
 }
@@ -356,12 +356,13 @@ video {
     padding: 0;
 }
 
-.fullwidth-container-centered > *,
-.max-container-centered > * {
+.fullwidth-container-centered > * {
   width: 100%;
   max-width: 800px;
 }
+.widescreen-container > *,
 .max-container-centered > * {
+    width: 100%;
     max-width: 1400px !important;
 }
 .max-container-centered table {
