@@ -60,19 +60,23 @@
 
 /* spacing utilities */
 .my-2 {
-    margin-left: 2em !important;
-    margin-right: 2em !important;
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
 }
 
 .mb-half {
-    margin-bottom: 0.5em !important;
+    margin-bottom: 0.5rem !important;
 }
 .mb-0 {
     margin-bottom: 0 !important;
 }
 
+.mb-1 {
+    margin-bottom: 1rem !important;
+}
+
 .mb-2 {
-    margin-bottom: 2em !important;
+    margin-bottom: 2rem !important;
 }
 
 .mt-0 {
@@ -105,7 +109,7 @@
 }
 
 /* color utilities */
-.light-color {
+.light-color, .text-light-color {
     color: #FFF !important;
 }
 .text-color {
@@ -143,10 +147,15 @@
 .bg-primary {
     background-color: &dtml-corporateDarkBlue;;
 }
+.bg-primary-light {
+    background-color: &dtml-corporateBlue;;
+
+}
 
 .bg-green, /* LEGACY use bg-tertiary instead */
 .bg-tertiary {
     background-color: &dtml-corporateGreen;;
+    color: #FFF;
 }
 
 /* border utilities */

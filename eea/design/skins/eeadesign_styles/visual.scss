@@ -311,6 +311,9 @@ th a, th a:link, th a:visited {
     margin-right: -50vw;
     background-size: cover
 }
+.mini-header-light .fullwidth-img-bg {
+    max-height: 350px;
+}
 
 .fullwidth-bg {
     @include fullwidth-bg;
@@ -329,8 +332,13 @@ video {
     width: 100%;
 }
 .max-container-centered,
+.fullwidth-container,
 .fullwidth-container-centered {
   @include fullwidth-container-centered();
+}
+
+.fullwidth-container {
+    padding: 0 15px;
 }
 
 .fullwidth-container-centered .fullwidth {
@@ -339,6 +347,7 @@ video {
 
 .fullwidth-container-centered > img,
 .max-container-centered  > img,
+.max-container-centered  > iframe,
 .fullwidth-container-centered > iframe {
     min-width: initial;
     width: 100%;
@@ -352,12 +361,12 @@ video {
   width: 100%;
   max-width: 800px;
 }
-.max-container-centered > iframe,
-.max-container-centered > img {
+.max-container-centered > * {
     max-width: 1400px !important;
 }
-
-
+.max-container-centered table {
+    width: auto;
+}
 
 .absolute-centered {
     max-width: 848px;
@@ -381,9 +390,9 @@ video {
 }
 
 @media (max-width: $breakpoint-xxl) {
-    .fullwidth-container-centered > *,
-    .max-container-centered > * {
-        padding: $spacer;
+    .fullwidth-container-centered,
+    .max-container-centered {
+        padding: 0 $spacer;
     }
 }
 /* standard figure, used for articles and pages.
@@ -611,6 +620,7 @@ span.figure-left {
     margin: 1em 0 0 1px;
     color: unquote("&dtml-fontColor;");
 }
+@import "scss-theme/components/relations";
 
 .awardNotice {
     padding: 20px;
@@ -805,7 +815,7 @@ span.figure-left {
     position: absolute;
     pointer-events: none;
     border: 13px solid transparent;
-    border-top-color: unquote("&dtml-corporateBlue;");
+    border-top-color: unquote("&dtml-corporateDarkBlue;");
     margin-left: -10px;
 }
 .eea-tabs > li > a:hover,
@@ -834,6 +844,10 @@ span.figure-left {
 
 .eea-tabs-panel {
     overflow: auto;
+}
+/* show panel within pagination example of design-elements */
+p + .eea-tabs-panel-paginated {
+    display: block;
 }
 
 .eea-tabs-panel .listingBar {
@@ -905,7 +919,7 @@ span.figure-left {
     line-height: normal!important;
     list-style-image: none!important;
     list-style-type: none!important;
-    background-color: unquote("&dtml-corporateBlue;");
+    background-color: unquote("&dtml-corporateDarkBlue;");
 }
 .tabbedmenu ul > li {
     float: left;
@@ -1037,6 +1051,7 @@ ul.social-buttons {
     margin: 2px 0;
     padding: 2px 5px;
     word-break: keep-all;
+    outline: none;
 }
 
 .eea-btn-md {
@@ -1070,6 +1085,7 @@ ul.social-buttons {
     border-color: unquote("&dtml-corporateGreen;");
     background-color: unquote("&dtml-corporateGreen;");
 }
+
 
 /*.eea-btn-multimedia {*/
 /*    color: &dtml-lightBackgroundColor;;;*/

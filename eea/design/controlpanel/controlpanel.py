@@ -152,15 +152,51 @@ class IMiniHeaderForm(Interface):
     """ Mini header form """
 
     mini_header_for = schema.List(
-        title=_(u'Portal types to enable mini header for'),
+        title=_(u'Portal types to enable mini header'),
         description=_(
-            u'header is displayed for the following portal types'),
+            u'Mini header is displayed for the following portal types'),
         missing_value=tuple(),
         value_type=schema.Choice(
             vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
         ),
         required=True
     )
+
+    mini_header_light_for = schema.List(
+        title=_(u'Portal types to enable light mini header'),
+        description=_(
+            u'Light header is displayed for the following portal types'),
+        missing_value=tuple(),
+        value_type=schema.Choice(
+            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
+        ),
+        required=True
+    )
+
+    mini_header_type_for = schema.List(
+        title=_(u'Portal types to enable mini header portal type info'),
+        description=_(
+            u'Type is displayed for the following portal types'),
+        missing_value=tuple(),
+        value_type=schema.Choice(
+            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
+        ),
+        required=True
+    )
+
+    mini_header_right_column_for = schema.List(
+        title=_(u'Portal types to enable right column'),
+        description=_(
+            u'Navigation is displayed for the following portal types'),
+        missing_value=tuple(),
+        value_type=schema.Choice(
+            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
+        ),
+        required=True
+    )
+
+
+
 
 
 class MiniHeaderForm(ControlPanelForm):
@@ -187,16 +223,61 @@ class MiniHeaderControlPanelAdapter(SchemaAdapterBase):
         self.context = context
 
     def get_mini_header_for(self):
-        """ get metatypes_showpubdate from site_props """
+        """ get mini header from site_props """
         return self.site_props.getProperty('mini_header_for', ())
 
     def set_mini_header_for(self, types):
-        """ set allowed_types to site_props """
+        """ set mini header to site_props """
         if not self.get_mini_header_for():
             self.site_props.manage_addProperty('mini_header_for', types,
                                                type='lines')
         else:
             self.site_props.mini_header_for = tuple(types)
+
+    def get_mini_header_type_for(self):
+        """ get mini header type from site_props """
+        return self.site_props.getProperty('mini_header_type_for', ())
+
+    def set_mini_header_type_for(self, types):
+        """ set mini header type to site_props """
+        if not self.get_mini_header_type_for():
+            self.site_props.manage_addProperty('mini_header_type_for', types,
+                                               type='lines')
+        else:
+            self.site_props.mini_header_type_for = tuple(types)
+
+    def get_mini_header_light_for(self):
+        """ get mini header light from site_props """
+        return self.site_props.getProperty('mini_header_light_for', ())
+
+    def set_mini_header_light_for(self, types):
+        """ set mini header light to site_props """
+        if not self.get_mini_header_light_for():
+            self.site_props.manage_addProperty('mini_header_light_for', types,
+                                               type='lines')
+        else:
+            self.site_props.mini_header_light_for = tuple(types)
+
+    def get_mini_header_right_column_for(self):
+        """ get mini header right column from site_props """
+        return self.site_props.getProperty('mini_header_right_column_for', ())
+
+    def set_mini_header_right_column_for(self, types):
+        """ set mini header right column to site_props """
+        if not self.get_mini_header_right_column_for():
+            self.site_props.manage_addProperty('mini_header_right_column_for',
+                                               types, type='lines')
+        else:
+            self.site_props.mini_header_right_column_for = tuple(types)
+
+    mini_header_right_column_for = property(
+        get_mini_header_right_column_for, set_mini_header_right_column_for)
+
+    mini_header_light_for = property(
+        get_mini_header_light_for, set_mini_header_light_for)
+
+    mini_header_type_for = property(
+        get_mini_header_type_for, set_mini_header_type_for)
 
     mini_header_for = property(
         get_mini_header_for, set_mini_header_for)

@@ -15,27 +15,27 @@ jQuery(document).ready(function ($) {
   var is_mini_header = $body.hasClass("mini-header");
   // #71710 move related and socialmedia inside
   // faceted center area
-  var $center_bottom_area = $("#center-bottom-area");
-  var $related_items = $("#relatedItems");
-  var $socialmedia = $("#socialmedia-viewlet");
-  $related_items.appendTo($column_area);
-  $socialmedia.appendTo($column_area);
+  // var $center_bottom_area = $("#center-bottom-area");
+  var $related_items = $(".related-wrapper");
+  // var $socialmedia = $("#socialmedia-viewlet");
+  // $related_items.appendTo($column_area);
+  // $socialmedia.appendTo($column_area);
   var appendTo = function (context, target) {
     if (context.length) {
       context.appendTo(target);
     }
   };
 
-  appendTo($related_items, $column_area);
-  appendTo($socialmedia, $column_area);
+  // appendTo($related_items, $column_area);
+  // appendTo($socialmedia, $column_area);
   if ($column_area.length) {
     appendTo($viewlet_below_content, $column_area);
     $portal_column_content.removeClass("cell width-full");
   } else {
     appendTo($viewlet_below_content, $content);
   }
-  appendTo($related_items, $center_bottom_area);
-  appendTo($socialmedia, $center_bottom_area);
+  // appendTo($related_items, $center_bottom_area);
+  // appendTo($socialmedia, $center_bottom_area);
 
   if ($("#right-area").length) {
     $portal_column_content.removeClass("cell width-full");
@@ -179,9 +179,9 @@ jQuery(document).ready(function ($) {
   }
 
   // 106884 scroll embedded iframes in order for them to avoid enlarging body
-  $iframes.each(function (idx, el) {
-    $(el).parent().addClass("overflow_auto iframe_container");
-  });
+  // $iframes.each(function (idx, el) {
+  //   $(el).parent().addClass("overflow_auto iframe_container");
+  // });
 
   // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
   $(".eea-tabs").find("li:last-child").addClass("last-child");
@@ -209,6 +209,39 @@ jQuery(document).ready(function ($) {
       }
     });
   });
+
+  var $slide_toggle = $(".js-eea-sliding-toggle");
+  $slide_toggle.click(function (ev) {
+    ev.preventDefault();
+    var t = ev.target;
+    var cname = "js-eea-sliding-toggle";
+    var el = t.className.indexOf(cname) !== -1 ? t : t.parentNode;
+    var $el = $(el);
+    $el.find(".js-hidden-toggle").toggleClass("hidden");
+    var $target = $(el.getAttribute("data-target"));
+    var toggle_overflow_initial = false;
+    if ($target.hasClass("eea-sliding-section--hidden-lg")) {
+      $target.toggleClass("eea-sliding-section--hidden-lg");
+      toggle_overflow_initial = true;
+    } else {
+      $target.toggleClass("overflow-initial");
+      toggle_overflow_initial = false;
+      $target.toggleClass("eea-sliding-section--hidden-lg");
+    }
+
+    window.setTimeout(function () {
+      if (toggle_overflow_initial) {
+        $target.toggleClass("overflow-initial");
+      }
+    }, 250);
+  });
+  if (window.innerWidth >= 1920) {
+    $slide_toggle.click();
+  }
+  var $portal_column_two_wrapper = $("#portal-column-two-wrapper");
+  if ($portal_column_two_wrapper.children().length) {
+    $slide_toggle.removeClass("hidden");
+  }
 
   // #19536; hide navigation submenus if there are less than 2 of them
   var $navigation_submenus = $(".portletSubMenuHeader");
@@ -514,4 +547,21 @@ jQuery(document).ready(function ($) {
       found.parent().clone().appendTo($this);
     }
   });
+
+  // hide mini-header-below content in case we have only qrbox
+  // or qrbox and eea-pdf-viewlet such as the case for assessments
+  var $redesign_below_content = $(".mini-header-below-content");
+  var $below_content_children = $redesign_below_content.children();
+  var children_length = $below_content_children.length;
+  if (!children_length || children_length === 1) {
+    $redesign_below_content.hide();
+  }
+  if (children_length === 2) {
+    if (
+      $below_content_children[0].className.indexOf("qrbox") !== -1 &&
+      $below_content_children[1].className.indexOf("eea-pdf-viewlet") !== -1
+    ) {
+      $redesign_below_content.hide();
+    }
+  }
 });

@@ -26,7 +26,6 @@
             <span class="portalType" tal:content="friendly_type" tal:condition="not:allow_labeling_blacklist"></span>
 
             <div class="inline-block" id="version-global-id" tal:condition="view/available">
-                <span class="byline-separator"></span>
                 <tal:id tal:define="version_id_name siteprops/version_id_name|string:Global ID:">
                     <strong tal:content="python: context.translate(version_id_name)"></strong>
                 </tal:id>
@@ -35,7 +34,7 @@
 
             <tal:indicator-codes tal:condition="exists:context/getCodes">
                 <div tal:define="codes context/getCodes; version_id view/available" class="inline-block" id="indicator-codes">
-                    <span class="byline-separator" tal:condition="not:version_id"></span>
+                    <span>&nbsp;</span>
                     <strong i18n:translate="" tal:condition="version_id">Also known as:</strong>
                     <strong i18n:translate="" tal:condition="not:version_id">Indicator codes:</strong>
                      <span tal:repeat="code codes">
@@ -52,7 +51,7 @@
                 </tal:published><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span>
             </span>
             <span class="docDate publishDate" tal:condition="python:allow_showpubdate and here.getEffectiveDate()">
-                <span class="byline-separator"></span>
+                <span class="byline-separator" tal:condition="allow_showcredate"></span>
                 <tal:published i18n:translate="">
                     Published
                 </tal:published><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>

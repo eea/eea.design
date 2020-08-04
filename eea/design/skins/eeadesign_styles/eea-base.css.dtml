@@ -205,7 +205,10 @@ dd#tempCoverage {
     margin-left: 0 !important;
 }
 
-#category {
+/* #119396 ensure that datatable edit select is visible by only hiding below-content
+  category
+ */
+#viewlet-below-content #category {
     display: none;
 }
 
@@ -253,6 +256,11 @@ div.geotags {
 @media (min-width: 660px) {
     div.geotags {
         columns: 5;
+    }
+    .max-container-centered .geotags {
+        columns: 3; /* if we have 4 columns indicators geographical regions
+        will go over the right column eg: data-and-maps/indicators/status-of-marine-fish-stocks-4/assessment/view */
+        column-gap: 3rem;
     }
 }
 
@@ -548,14 +556,37 @@ div.overlay a:hover {
 }
 
 /* our customizations */
-#portal-column-content .contenttype-folder {
-    padding-left: 0 !important;
+/*#portal-column-content .contenttype-folder {*/
+/*    padding-left: 0 !important;*/
+/*}*/
+
+.visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
+    padding-left: 20px;
+}
+.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
+.visualNoMarker a.navTreeFolderish::before {
+    position: absolute;
+    content: "\f067";
+    font-family: "FontAwesome";
+    font-size: 13px;
+    margin-left: -17px;
+    margin-top: 2px;
 }
 
-/* #5243 wrongly indented folder icon */
-#portal-column-content .portletNavigationTree .contenttype-folder {
-    padding-left: 10px !important;
+.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
+    content: "\f068";
 }
+/* hide plus and minus icon for auth users since they have content icons */
+.userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
+.visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
+    display: none;
+}
+
+
+/* #5243 wrongly indented folder icon */
+/*#portal-column-content .portletNavigationTree .contenttype-folder {*/
+/*    padding-left: 10px !important;*/
+/*}*/
 
 .documentEditable .mceLayout,
 .documentEditable .translation_edit .mceLayout {

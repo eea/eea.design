@@ -11,19 +11,12 @@ body.mceContentBody {
     padding: 0.5em;
 }
 
-.navTreeItem a, dd.portletItem .navTreeItem a {
-    border-color: white;
-}
-
 body.section-SITE .documentActions {
     float: right;
     margin: 0.4em 1em 0 0.5em;
     padding: 0;
     text-align: right;
 }
-
-
-
 
 .portletNavigationTree {
     line-height: 1.5em;
