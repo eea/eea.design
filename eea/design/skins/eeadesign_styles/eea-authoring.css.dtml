@@ -16,6 +16,7 @@
     border-style: none;
     padding-top:0.2em;
     margin-left: 0;
+    line-height: 2;
 }
 /* @end @group Tabs @parent Editing */
 

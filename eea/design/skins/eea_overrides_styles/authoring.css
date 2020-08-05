@@ -46,6 +46,7 @@
     text-decoration: none;
     border: none;
     margin: 0 ;
+    line-height: 2;
 }
 #content-views li.selected a,
 #content li.formTab a.selected,
