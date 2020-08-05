@@ -42,7 +42,6 @@
 #content-views a,
 #content li.formTab a,
 #content-core li.formTab a {
-    line-height: 26px;
     padding: 0 0.75em;
     text-decoration: none;
     border: none;

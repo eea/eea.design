@@ -360,6 +360,10 @@ video {
   width: 100%;
   max-width: 800px;
 }
+.widescreen-container {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .widescreen-container > *,
 .max-container-centered > * {
     width: 100%;

@@ -28,7 +28,6 @@
 }
 #content .formTab a {
     display: inline-block;
-    line-height: 26px;
     padding: 0 0.75em;
     text-decoration: none;
     border: none;
@@ -52,7 +51,10 @@
 
 .formTabs {
     border-style: none;
-    padding-top:0.2em;
+    margin-left: 0 !important;
+}
+select.formTabs {
+    padding: 0.25rem 0.5rem;
 }
 /* @end */
 
