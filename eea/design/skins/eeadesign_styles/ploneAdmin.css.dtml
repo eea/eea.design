@@ -141,7 +141,7 @@ div.managePortletsLink:hover {
 .plonebutton,
 .ploneButton,
 .mceActionPanel input {
-    background-color: #004B87 !important;
+    background-color: &dtml-corporateBlue; !important;
     color: #FFF !important;
 }
 /*#content .translation_edit table {*/

@@ -72,7 +72,7 @@
 }
 
 .section-dark {
-    background-color: &dtml-corporateBlue;;
+    background-color: transparent;
 }
 .section-dark:last-child {
     padding-bottom: 0;

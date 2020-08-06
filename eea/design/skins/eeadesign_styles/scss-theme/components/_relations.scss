@@ -153,7 +153,7 @@ span.next {
 }
 
 .relatedItems .listingBar a {
- color: #004B87;
+ color: $corporateBlue;
 }
 @media (max-width: $breakpoint-md - 1) {
  .relatedItems .page {
@@ -252,7 +252,7 @@ span.next {
    }
 
    .eea-tabs > li > a {
-    color: #004B87;
+    color: $corporateBlue;
     text-shadow: none;
     font-weight: normal;
    }
@@ -260,7 +260,7 @@ span.next {
    .eea-tabs > li > .current,
    .eea-tabs > li > a:target,
    {
-    color: #004B87 !important;
+    color: $corporateBlue !important;
     font-weight: bold;
     background-color: transparent;
    }
@@ -269,7 +269,7 @@ span.next {
    .eea-tabs > li > .current:before {
     content: " ";
     //width: 0;
-    border-left: 5px solid #004B87;
+    border-left: 5px solid $corporateBlue;
     display: block;
     position: absolute;
     height: 100%;
