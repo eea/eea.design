@@ -1,11 +1,15 @@
 .keyFact {
   padding: $spacer-4 $spacer;
   position: relative;
-  margin: $spacer-0;
+  margin: $spacer-2;
   margin-left: -$grid-gutter-width;
   margin-right: -$grid-gutter-width;
   background-color: $keyfact-bg;
 }
+.keyFact--enlarged {
+  margin: $spacer-0;
+}
+
 .keyFact:before {
   background-color: inherit;
 }
@@ -60,10 +64,10 @@
   }
 }
 @media (min-width: $breakpoint-lg) {
-  .keyFact {
+  .keyFact--enlarged {
     padding: $spacer-0 0;
   }
-    .keyFact:before {
+    .keyFact--enlarged:before {
       width: 122%;
       left: -11%;
       padding: 0;
