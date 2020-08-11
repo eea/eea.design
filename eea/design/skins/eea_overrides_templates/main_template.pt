@@ -372,7 +372,8 @@
 </div>
 
 <div class="go-top" style="display: block;">
-    <a class="back-to-top-link" href="#top" title="Back to Top" tal:attributes="href python:here_url + '#top';">
+    <a class="back-to-top-link" href="#top" i18n:attributes="title"
+       title="Back to Top" tal:attributes="href python:here_url + '#top';">
         <span aria-hidden="true" class="eea-icon eea-icon-arrow-up eea-icon-2x"></span>
     </a>
 </div>
