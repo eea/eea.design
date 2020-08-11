@@ -6,6 +6,8 @@ Changelog
 * Change: new style for navigation is enabled only if mini header navigation
   is enabled
   [ichim-david refs #111968]
+* Feature: added scroll to the top button
+  [madelaines refs #119305]
 
 26.9 - (2020-08-03)
 ---------------------------
