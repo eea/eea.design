@@ -6,6 +6,12 @@
   margin-right: -$grid-gutter-width;
   background-color: $keyfact-bg;
 }
+
+ul.keyFact {
+  list-style: none !important;
+}
+
+ul.keyFact,
 .keyFact--enlarged {
   margin: $spacer-0;
 }
@@ -62,15 +68,20 @@
     margin-right: auto;
     padding: $spacer-4;
   }
+
+  ul.keyFact {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 @media (min-width: $breakpoint-lg) {
   .keyFact--enlarged {
     padding: $spacer-0 0;
   }
-    .keyFact--enlarged:before {
-      width: 122%;
-      left: -11%;
-      padding: 0;
-      @include pseudo-bg-boilerplate();
-    }
+  .keyFact--enlarged:before {
+    width: 122%;
+    left: -11%;
+    padding: 0;
+    @include pseudo-bg-boilerplate();
+  }
 }
