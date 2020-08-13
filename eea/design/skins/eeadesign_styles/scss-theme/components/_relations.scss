@@ -29,7 +29,7 @@
  .photoAlbumEntry {
   width: 217px;
   height: 330px;
-  margin: 3px 0 7px 0;
+  margin: 3px 7px 7px 7px;
  }
  .photoAlbumEntry a {
   display: flex;
@@ -138,18 +138,9 @@ span.next {
   margin-right: 7px;
  }
 
- .relatedItems .photoAlbumEntry:nth-of-type(3n) {
-  margin-right: 0;
- }
 }
 .relatedItems .page:before {
  display: none;
-}
-
-@media (min-width: 501px) and (max-width: $breakpoint-md - 1) {
- .relatedItems .page[data-count="1"] .photoAlbumEntry {
-  margin-right: auto;
- }
 }
 
 .relatedItems .listingBar a {
@@ -159,8 +150,8 @@ span.next {
  .relatedItems .page {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
+  justify-content: center;
  }
 
  .relatedItems .listingBar a {
@@ -171,13 +162,15 @@ span.next {
 @media (min-width: $breakpoint-md) {
  .relatedItems .page {
    display: flex;
-   justify-content: space-between;
    width: 100%;
   }
  .relatedItems .photoAlbumEntry:nth-of-type(2n) {
   margin-right: auto;
   margin-left: auto;
  }
+  .relatedItems .page[data-count="3"] {
+   justify-content: space-between;
+  }
  .relatedItems .page[data-count="2"] .photoAlbumEntry:nth-of-type(2n) {
   margin-left: 6.1%;
  }
@@ -190,15 +183,21 @@ span.next {
  }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 800px) and (max-width: 829px) {
  .relatedItems .page[data-count="2"] .photoAlbumEntry:nth-of-type(2n) {
-  margin-left: 7.8%;
+  margin-left: 5.1%;
+ }
+}
+
+@media (min-width: 960px) {
+ .relatedItems .photoAlbumEntry:nth-of-type(3n) {
+  margin-right: 7px;
  }
 }
 
 @media (min-width: 1140px) {
  .relatedItems .page[data-count="2"] .photoAlbumEntry:nth-of-type(2n) {
-  margin-left: 60px;
+  margin-left: 45px;
  }
 }
 
@@ -206,7 +205,6 @@ span.next {
  .relatedItems .page {
    flex-basis: 100%;
  }
-  //.relatedItems
 
  .eea-icon-pagination {
   position: absolute;

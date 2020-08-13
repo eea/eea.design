@@ -223,6 +223,10 @@ div.eea-pdf-overlay {
   display: table;
   content: " ";
   }
+.relatedItems .page:before,
+.relatedItems .page:after {
+  display: none;
+}
 .page:after {
   clear: both;
   }
