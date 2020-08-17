@@ -281,7 +281,7 @@ position: relative;
 .back-to-top-link {
   position: fixed;
   position: sticky;
-  top: calc(100vh - 5rem);
+  top: calc(100vh - 6rem);
 }
 /* @end scroll to the top button */
 /* </dtml-let> */
