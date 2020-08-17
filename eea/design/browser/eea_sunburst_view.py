@@ -21,12 +21,13 @@ class EEASunburstView(SunburstView):
                                        name=u'plone_portal_state')
         is_miniheader = getMultiAdapter((context, self.request),
                                         name=u'miniheader_content_types')
-
-        if is_miniheader():
+        context_state = getMultiAdapter((self.context, self.request),
+                                name=u'plone_context_state')
+        if is_miniheader() and context_state.is_view_template():
             # check if miniheader, if true set width-3:4
             return "width-3:4"
         elif not sr:
-            # we don't have columns, thus conten takes the whole width
+            # we don't have columns, thus content takes the whole width
             return "cell width-full position-0"
         elif sr and (portal_state.is_rtl()):
             # We have right column and we are in RTL language

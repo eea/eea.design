@@ -346,9 +346,7 @@ dt.portletItem a, #content dt.portletItem a {
    float: left;
    border: 1px solid #bebebe;
    width: 9.7em;
-   *width: 10.7em; /* targets IE6 and 7 */
    height: 23px;
-   *height: 17px; /* targets IE6 and 7 */
    display: block;
    padding: 2px 2px 1px 2px;
    margin-top: -27px;
