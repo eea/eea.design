@@ -5,10 +5,6 @@
  border-top-color: $corporateBlue;
 }
 
-.floated-photo-album-container {
- position: relative;
-  
-}
 
 .floated-photo-album-container .photoAlbumEntry {
   display: none;
@@ -356,7 +352,7 @@ span.next {
 
  .floated-left {
   .photoAlbumEntry {
-   left: -23vw;
+   left: -350px;
   }
   .photoAlbumEntry:after {
    border-left-color: $corporateBlue;
@@ -366,7 +362,7 @@ span.next {
 
  .floated-right {
   .photoAlbumEntry {
-   right: -25vw;
+   right: -350px;
   }
   .photoAlbumEntry:after {
    border-right-color: $corporateBlue;
