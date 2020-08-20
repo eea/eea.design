@@ -243,45 +243,45 @@
 
 /* scroll to the top button */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body { 
-position: relative;
+    position: relative;
 }
 
 .go-top {
-   position: absolute;
+    position: absolute;
     bottom: 30px;
-    right: 30px;
+    right: 0;
     top: 100vh;
+    width: 90px;
     z-index: 600;
 }
 
-.go-top a, .go-top a:visited{
-  text-decoration: none;
-  border: 0 none;
-  display: block;
-  height: 60px;
-  width: 60px;
-  line-height: 60px;
-  text-align: center;
-  background-color: #027572;
-  color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.go-top a, .go-top a:visited {
+    border: 0 none;
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #027572;
+    color: rgba(255, 255, 255, 0.5) !important;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .go-top a:hover, .go-top a:focus{
-  color: #fff;
+    color: #fff !important;
 }
 
 .back-to-top-link {
-  position: fixed;
-  position: sticky;
-  top: calc(100vh - 6rem);
+    position: fixed;
+    position: sticky;
+    top: calc(100vh - 6rem);
+}
+
 }
 /* @end scroll to the top button */
 /* </dtml-let> */
