@@ -49,11 +49,6 @@
     line-height: 2;
 }
 #content-views li.selected a,
-#content li.formTab a.selected,
-#content-core li.formTab a.selected {
-    font-weight: bold;
-}
-#content-views li.selected a,
 #content-views li a:hover,
 #content li.formTab a.selected,
 #content li.formTab a:hover,
