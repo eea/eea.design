@@ -251,11 +251,10 @@ body {
 }
 
 .go-top {
-    position: absolute;
+    display: none;
+    position: fixed;
     bottom: 30px;
-    right: 0;
-    top: 100vh;
-    width: 90px;
+    right: 30px;
     z-index: 600;
 }
 
@@ -267,18 +266,14 @@ body {
     line-height: 60px;
     text-align: center;
     background-color: #027572;
-    color: rgba(255, 255, 255, 0.5) !important;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .go-top a:hover, .go-top a:focus{
-    color: #fff !important;
+    color: #fff;
 }
 
-.back-to-top-link {
-    position: fixed;
-    position: sticky;
+.back-to-top-link{
     top: calc(100vh - 6rem);
 }
 
