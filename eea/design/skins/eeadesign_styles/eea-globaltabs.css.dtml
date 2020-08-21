@@ -252,6 +252,13 @@ td.gsc-search-button {
 .search_glossary_link:hover, .search_advanced_link:hover {
     text-decoration: none;
 }
+@media (min-width: 1280px) {
+    /* 120397 on non mobile header search the search button should use the new blue */
+    .gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+        border-color: &dtml-corporateBlue;;
+        background-color: &dtml-corporateBlue;;
+    }
+}
 /* @end Searchbox style and positioning */
 /* </dtml-let> */
 /* </dtml-with> */
