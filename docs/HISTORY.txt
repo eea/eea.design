@@ -3,6 +3,8 @@ Changelog
 
 27.1-dev0 - (unreleased)
 ---------------------------
+* Feature: added scroll to the top button
+  [madelaines refs #119305]
 
 27.0 - (2020-08-11)
 ---------------------------

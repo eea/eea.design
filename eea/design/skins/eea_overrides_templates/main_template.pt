@@ -371,6 +371,13 @@
 
 </div>
 
+<div class="go-top">
+    <a class="back-to-top-link" i18n:attributes="title" title="Back to Top"
+       href="javascript:document.getElementsByTagName('body')[0].scrollIntoView()">
+        <span aria-hidden="true" class="eea-icon eea-icon-arrow-up eea-icon-2x"></span>
+    </a>
+</div>
+
 <metal:block i18n:domain="eea" tal:condition="python:not ajax_load">
     <tal:not4Print tal:condition="python:not isPrint">
         <div tal:replace="structure provider:plone.portalfooter" />
