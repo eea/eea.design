@@ -3,7 +3,7 @@
 /*! <dtml-with base_properties> (do not remove this :) */
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
-$bg-color: #004B87;
+$bg-color: #274357;
 $faceted-color: #008675;
 $input-color: #f3f3f3;
 @media screen and (max-width: 320px) {
@@ -363,7 +363,7 @@ $input-color: #f3f3f3;
   .eea-right-section-slider {
     position: fixed;
     //top: 70px;
-    top: 50%;
+    top: 45%;
     display: table;
     right: 0;
     left: inherit;

@@ -209,7 +209,7 @@ dl.error:before,
 .callout {
     background: #eee;
     padding: 1em;
-    border-left: 1em solid #ccc;
+    /*border-left: 1em solid #ccc;*/
     clear: both;
 }
 

@@ -222,7 +222,7 @@
 }
 /* @end eea accordion styles */
 
-/* media object similar to bootstrap media object however this uses flex*/
+/* media object similar to bootstrap media object however this uses flex */
 .media {
     display: flex;
     align-items: center;
@@ -240,5 +240,6 @@
     display: flex;
 }
 /* @end media object */
+
 /* </dtml-let> */
 /* </dtml-with> */

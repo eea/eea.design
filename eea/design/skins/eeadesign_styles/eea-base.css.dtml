@@ -28,15 +28,10 @@
 }
 #content .formTab a {
     display: inline-block;
-    line-height: 26px;
     padding: 0 0.75em;
     text-decoration: none;
     border: none;
     margin: 0;
-}
-.formTab a.selected,
-.formTab a.selected {
-    font-weight: bold;
 }
 #content .formTab a.selected,
 #content .formTab a:hover {
@@ -52,7 +47,10 @@
 
 .formTabs {
     border-style: none;
-    padding-top:0.2em;
+    margin-left: 0 !important;
+}
+select.formTabs {
+    padding: 0.25rem 0.5rem;
 }
 /* @end */
 
@@ -560,11 +558,11 @@ div.overlay a:hover {
 /*    padding-left: 0 !important;*/
 /*}*/
 
-.visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
+.mini-header-navigation .visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
     padding-left: 20px;
 }
-.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
-.visualNoMarker a.navTreeFolderish::before {
+.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
+.mini-header-navigation .visualNoMarker a.navTreeFolderish::before {
     position: absolute;
     content: "\f067";
     font-family: "FontAwesome";
@@ -573,12 +571,12 @@ div.overlay a:hover {
     margin-top: 2px;
 }
 
-.visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
+.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
     content: "\f068";
 }
 /* hide plus and minus icon for auth users since they have content icons */
-.userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
-.visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
+.mini-header-navigation .userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
+.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
     display: none;
 }
 

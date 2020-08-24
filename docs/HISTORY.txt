@@ -1,6 +1,12 @@
 Changelog
 =========
 
+27.0 - (2020-08-11)
+---------------------------
+* Change: new style for navigation is enabled only if mini header navigation
+  is enabled
+  [ichim-david refs #111968]
+
 26.9 - (2020-08-03)
 ---------------------------
 * Feature: added ability to specify what should be enabled for the new mini

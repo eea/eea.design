@@ -46,7 +46,7 @@ $font-size: 14px;
     }
   }
 
-@media screen and (max-width: 1249px) {
+@media screen and (max-width: 1279px) {
   #portal-logo-link-header, .navbar-toggle {
     display: block;
     }
@@ -71,7 +71,8 @@ $font-size: 14px;
       overflow-x: auto;
       overflow-y: auto;
       position: fixed;
-      width: 305px;
+      width: 100%;
+      max-width: 400px;
       right: 0;
       top: 60px;
       z-index: 100;
@@ -96,7 +97,24 @@ $font-size: 14px;
       margin-top: 1em;
       }
     }
-  .navbar-toggle .icon-bar {
+  .collapsed .icon-bar {
+    display: none;
+  }
+
+  .sr-only + .icon-bar {
+    display: block;
+  }
+  .navbar-toggle:not(.collapsed) .sr-only + .icon-bar:before {
+    display: block;
+    content: "X";
+    height: 14px;
+    width: 22px;
+    line-height: 0.8;
+    font-weight: bold;
+    font-size: 18px;
+    color: #888;
+  }
+  .collapsed .icon-bar {
     display: block;
     width: 22px;
     height: 2px;

@@ -1,11 +1,21 @@
 .keyFact {
   padding: $spacer-4 $spacer;
   position: relative;
-  margin: $spacer-0;
+  margin: $spacer-2;
   margin-left: -$grid-gutter-width;
   margin-right: -$grid-gutter-width;
   background-color: $keyfact-bg;
 }
+
+ul.keyFact {
+  list-style: none !important;
+}
+
+ul.keyFact,
+.keyFact--enlarged {
+  margin: $spacer-0;
+}
+
 .keyFact:before {
   background-color: inherit;
 }
@@ -58,15 +68,20 @@
     margin-right: auto;
     padding: $spacer-4;
   }
+
+  ul.keyFact {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 @media (min-width: $breakpoint-lg) {
-  .keyFact {
+  .keyFact--enlarged {
     padding: $spacer-0 0;
   }
-    .keyFact:before {
-      width: 122%;
-      left: -11%;
-      padding: 0;
-      @include pseudo-bg-boilerplate();
-    }
+  .keyFact--enlarged:before {
+    width: 122%;
+    left: -11%;
+    padding: 0;
+    @include pseudo-bg-boilerplate();
+  }
 }

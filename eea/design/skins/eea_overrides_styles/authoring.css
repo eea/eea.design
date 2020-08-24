@@ -42,16 +42,11 @@
 #content-views a,
 #content li.formTab a,
 #content-core li.formTab a {
-    line-height: 26px;
     padding: 0 0.75em;
     text-decoration: none;
     border: none;
     margin: 0 ;
-}
-#content-views li.selected a,
-#content li.formTab a.selected,
-#content-core li.formTab a.selected {
-    font-weight: bold;
+    line-height: 2;
 }
 #content-views li.selected a,
 #content-views li a:hover,

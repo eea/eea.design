@@ -543,8 +543,14 @@ jQuery(document).ready(function ($) {
     var found = $album_entries_links.filter(function () {
       return this.href === link_href;
     });
+    var $photo_album = found.parent().clone();
     if (found) {
-      found.parent().clone().appendTo($this);
+      window.setTimeout(function () {
+        $photo_album.css("top", $this.position().top - 40).appendTo($this);
+        if (window.forceImageLoad) {
+          window.forceImageLoad($photo_album.find(".lazy"));
+        }
+      }, 2000);
     }
   });
 
