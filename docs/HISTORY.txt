@@ -1,6 +1,9 @@
 Changelog
 =========
 
+27.1-dev0 - (unreleased)
+---------------------------
+
 27.0 - (2020-08-11)
 ---------------------------
 * Change: new style for navigation is enabled only if mini header navigation
