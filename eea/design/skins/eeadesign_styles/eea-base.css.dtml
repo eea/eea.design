@@ -561,24 +561,6 @@ div.overlay a:hover {
 .mini-header-navigation .visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
     padding-left: 20px;
 }
-.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
-.mini-header-navigation .visualNoMarker a.navTreeFolderish::before {
-    position: absolute;
-    content: "\f067";
-    font-family: "FontAwesome";
-    font-size: 13px;
-    margin-left: -17px;
-    margin-top: 2px;
-}
-
-.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
-    content: "\f068";
-}
-/* hide plus and minus icon for auth users since they have content icons */
-.mini-header-navigation .userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
-.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
-    display: none;
-}
 
 
 /* #5243 wrongly indented folder icon */

@@ -158,10 +158,6 @@
     margin-top: $spacer-0;
     //padding-top: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
   }
-  .eea-btn.eea-btn--toggle,
-  #portal-column-two-wrapper {
-    margin-top: -$spacer-0;
-  }
 
   .content-header {
     padding: 1rem 0 0 0;
@@ -293,6 +289,8 @@
   }
 }
 
+
+
 @media (max-width: 660px) {
   .mini-header {
     .content-header-body {
@@ -356,11 +354,8 @@
     .content-core-wrapper {
       margin-top: $spacer-hero;
     }
-    .eea-btn.eea-btn--toggle,
-    #portal-column-two-wrapper {
-      margin-top: -$spacer-hero;
-    }
   }
+
 }
 
 @media (min-width: $breakpoint-lg) {
@@ -385,11 +380,23 @@
   }
 }
 
-@media screen and (min-width: 1920px) {
-  .mini-header {
-    .eea-btn--toggle.js-eea-sliding-toggle,
-    #portal-column-two-wrapper {
-      right: -25.4vw;
+@media (min-width: $breakpoint-xl) {
+  .mini-header-navigation {
+    &[class*="_view"] #portal-column-content {
+      float: none;
+      max-width: 94%;
+    }
+    .content-header::before {
+      width: 108%;
+      left: -3%;
+    }
+
+    .content-header-body::before {
+      width: 3000px;
+    }
+    .content-header,
+    .content-core {
+      max-width: 830px;
     }
   }
 }
