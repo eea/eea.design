@@ -58,9 +58,6 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
 
-a.navTreeItemInPath.navTreeFolderish {
-    padding-left: 20px !important;
-}
 
 .navTree  ul.navTreeLevel0 li > a {
     padding-left: 10px !important;

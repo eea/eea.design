@@ -385,7 +385,7 @@ ul {
   }
 .portal-globalnav > li, .secondary-portaltabs > li {
   margin: 0;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   line-height: normal;
   }
@@ -890,6 +890,12 @@ p,
     display: none;
     }
 
+}
+
+@media (min-width: 1280px) {
+  .mobile-only {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 1360px) {

@@ -287,10 +287,6 @@
                                     </metal:text>
                                 </div>
 
-
->
-
-
                                 <metal:comment tal:content="nothing">
                                     <tal:comment replace="nothing">
                                         possible relation labels. can be made as viewlet.

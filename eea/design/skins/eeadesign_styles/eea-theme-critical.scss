@@ -380,23 +380,29 @@
   }
 }
 
-@media (min-width: $breakpoint-xl) {
+@media (min-width: $breakpoint-xl)  {
+  .mini-header-navigation {
+    .content-header::before {
+      width: 105%;
+      left: -3%;
+    }
+
+    .content-header,
+    .content-core {
+      max-width: 830px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: 1599px) {
   .mini-header-navigation {
     &[class*="_view"] #portal-column-content {
       float: none;
       max-width: 94%;
     }
-    .content-header::before {
-      width: 108%;
-      left: -3%;
-    }
 
     .content-header-body::before {
       width: 3000px;
-    }
-    .content-header,
-    .content-core {
-      max-width: 830px;
     }
   }
 }
