@@ -574,7 +574,7 @@ jQuery(document).ready(function ($) {
 
   // 120363 add breadcrumbs trail from right column nav to mobile nav
   var enable_nav_blend = $body.hasClass("mini-header-navigation");
-  var make_nav_blend = (function () {
+  var make_nav_blend = function () {
     if (!enable_nav_blend) {
       return;
     }
@@ -627,5 +627,31 @@ jQuery(document).ready(function ($) {
     } else {
       $(tpl).insertAfter($global_nav_root_li);
     }
-  })();
+  };
+  make_nav_blend();
+
+  var enlarge_content_area = function () {
+    if (!enable_nav_blend) {
+      return;
+    }
+    var window_width = $(window).width();
+    if (window_width < 1280) {
+      return;
+    }
+    var portal_column_two_height = $portal_column_two_wrapper.height();
+    if (portal_column_two_height > $content_core.height()) {
+      $content_core.css("height", portal_column_two_height);
+    }
+  };
+  enlarge_content_area();
+
+  var underscore = window._;
+
+  if (underscore && underscore.debounce && enable_nav_blend) {
+    $(window).resize(
+      underscore.debounce(function () {
+        enlarge_content_area();
+      }, 100)
+    );
+  }
 });
