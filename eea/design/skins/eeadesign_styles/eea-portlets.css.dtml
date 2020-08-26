@@ -50,7 +50,7 @@ a.managePortletsFallback {
     position: relative;
 }
 .mini-header-navigation .portlet .navTree li a {
-    border-top: 1px solid & dtml-corporateBlue;;
+    border-top: 1px solid &dtml-corporateBlue;;
 }
 
 

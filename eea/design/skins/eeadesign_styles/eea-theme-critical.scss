@@ -391,6 +391,10 @@
     .content-core {
       max-width: 830px;
     }
+
+    .mini-portal-type {
+      left: -3%;
+    }
   }
 }
 
@@ -406,6 +410,7 @@
     }
   }
 }
+
 
 @media (min-width: $breakpoint-xl) and (max-width: 1399px) {
   .mini-header-navigation {
