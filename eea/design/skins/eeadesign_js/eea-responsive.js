@@ -499,9 +499,13 @@ jQuery(document).ready(function ($) {
   }
 
   // 91577 show and hide mobile menu
-  $(".navbar-toggle").click(function (ev) {
+  $(".navbar-toggle, .icon-bar").click(function (ev) {
+    if (this.tagName === "SPAN") {
+      $(this).parent().toggleClass("collapsed");
+    } else {
+      $(this).toggleClass("collapsed");
+    }
     ev.stopImmediatePropagation();
-    $(this).toggleClass("collapsed");
     $(".navbar-collapse").toggleClass("in");
   });
 

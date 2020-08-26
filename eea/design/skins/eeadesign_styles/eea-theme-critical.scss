@@ -402,7 +402,24 @@
     }
 
     .content-header-body::before {
-      width: 3000px;
+      width: 1600px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: 1399px) {
+  .mini-header-navigation {
+    #visual-portal-wrapper {
+      margin-top: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .mini-header-navigation {
+    .content-header-body::before {
+      width: calc(100vw + 27.5%);
     }
   }
 }
