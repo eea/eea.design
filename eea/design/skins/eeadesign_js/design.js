@@ -602,7 +602,7 @@ jQuery(document).ready(function($) {
       return;
     }
     var $portlet_nav = $(".portletNavigationTree");
-    var values = new Map();
+    var values = new window.Map();
     var $nav_header = $portlet_nav.find("#firstHeader").find("a");
     var nav_header_text = $nav_header.text();
     var nav_header_href = $nav_header.attr("href");
