@@ -509,7 +509,7 @@ div.overlay a:hover {
     background: no-repeat transparent 0px -212px url(&dtml-xurl;/contenttypes-sprite.png);
 }
 .icons-on .contenttype-folder {
-    /* background: no-repeat transparent 0px -648px url(&dtml-xurl;/contenttypes-sprite.png); */
+    background: no-repeat transparent 0px -634px url(&dtml-xurl;/contenttypes-sprite.png);
     background: none;
 }
 .icons-on .contenttype-link {
@@ -522,7 +522,7 @@ div.overlay a:hover {
     background: no-repeat transparent 0px -1512px url(&dtml-xurl;/contenttypes-sprite.png);
 }
 .icons-on .contenttype-topic, .icons-on .contenttype-collection {
-    background: no-repeat transparent 0px -1728px url(&dtml-xurl;/contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1714px url(&dtml-xurl;/contenttypes-sprite.png);
 }
 
 /* avoid double icon for portal navigation collection link */

@@ -36,9 +36,10 @@
                         isPrint python:1 if 'pdf.' in request['URL0'] else 0;
                         friendly_type context/Type|nothing;
                         wf_state context_state/workflow_state|string:;
+                        sr python:plone_view.have_portlets('plone.rightcolumn', view);
                         mini_header_bv nocall: context/@@miniheader_content_types;
                         mini_header python:' mini-header' if mini_header_bv() else False;
-                        mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() else False;
+                        mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() and sr else False;
                         mini_header_navigation python:' mini-header-navigation' if mini_header_right_column else False;
                         mini_header_type python: True if mini_header and mini_header_bv.show_mini_type() else False;
                         mini_header_light python:' mini-header-light' if mini_header and mini_header_bv.show_light_header() else False;
@@ -123,7 +124,6 @@
                   wf_state context_state/workflow_state|string:;
                   is_expired context/isExpired|python:False;
                   is_editable context_state/is_editable|python:False;
-                  sr python:plone_view.have_portlets('plone.rightcolumn', view);
                   body_class python:plone_view.bodyClass(template, view);
                   body_class python: body_class + ' body-print' if isPrint else body_class;
                   body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() or request.get('body.fullwidth') else body_class;
@@ -207,8 +207,7 @@
 
                     <metal:slot define-slot="body">
                         <div id="content"  class="documentContent panels"
-                                            tal:define="content_class python:wf_state and ('documentContent panels wf-state-' + str(wf_state)) or 'documentContent panels';
-                                                    content_class python: content_class + ' archived-content' if is_expired else content_class;"
+                                            tal:define="content_class python: 'documentContent panels';"
                                             tal:attributes="class python:content_class">
 
                             <metal:header define-slot="header" tal:content="nothing">
@@ -279,7 +278,11 @@
                                 </div>
 
                               <div class="content-core-wrapper">
-                                <div id="content-core" class="content-core">
+                                <div id="content-core" class="content-core"
+                                     tal:define="content_class python: 'content-core';
+                                        content_class python: wf_state and ('content-core wf-state-' + str(wf_state)) or content_class;
+                                    content_class python: content_class + ' archived-content' if is_expired else content_class;"
+                                tal:attributes="class content_class">
                                     <metal:text define-slot="content-core" tal:content="nothing">
                                         <tal:comment replace="nothing">
                                             text body page
@@ -378,6 +381,11 @@
         due to products.resourceregistry bug with inline javascript where
         on anonymous there was a caching status AssertionError
     </tal:comment>
+
+  <script type="text/javascript"
+       tal:content="structure context/critical.js"
+       tal:condition="python:not isPrint">
+  </script>
     <script type="text/javascript"
             tal:content="structure context/lazy_load_init.js"
             tal:condition="python:not isPrint">

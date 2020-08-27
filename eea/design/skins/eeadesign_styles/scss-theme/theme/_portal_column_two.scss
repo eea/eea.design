@@ -6,10 +6,45 @@
   max-width: 300px;
   z-index: 2;
   padding-bottom: 2em;
-  background-color: #FFF;
   overflow-x: auto;
   scrollbar-width: thin;
 }
+
+.mini-header-navigation .portlet .navTree li a {
+  border-top: 1px solid $corporateBlue;
+}
+.portlet .navTreeLevel0 > li:first-child > a {
+  border-top: 0; /* no top border on the first link of the navigation menu */
+}
+.navTree {
+    list-style: none none;
+}
+.navTreeItem {
+  display: block !important;
+  padding: 0;
+  margin: 0;
+}
+
+.navTreeItem img {
+  width: 16px;
+  height: 16px;
+}
+.portlet .navTree li a {
+  margin: 0;
+  padding: 10px;
+  border-top: 1px dotted #BABBB8;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.navTreeItem a,
+.portletItem .navTreeItem a {
+  display: block;
+  text-decoration: none;
+}
+
 @media (min-width: 1025px) {
   #portal-column-two-wrapper::-webkit-scrollbar {
     width: 7px;

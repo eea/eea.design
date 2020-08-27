@@ -12,11 +12,6 @@
 
 /* @group Portlets */
 
-dl.portlet {
-    margin: 0 0 1em;
-    font-size: 100%;
-}
-
 /* #16720; shrink the font-size of portlet headers */
 .portletAssignments .portletHeader,
 .portletAssignments .portlet_visible .portletHeader,
@@ -40,23 +35,6 @@ a.managePortletsFallback {
 /* @end @group Portlets */
 
 /* @group Navigation portlet */
-.portlet .navTree li a {
-    margin: 0;
-    padding: 10px;
-    border-top: 1px dotted #BABBB8;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5;
-    position: relative;
-}
-.mini-header-navigation .portlet .navTree li a {
-    border-top: 1px solid &dtml-corporateBlue;;
-}
-
-
-dl.portlet ul.navTreeLevel0 > li:first-child > a {
-  border-top: 0; /* no top border on the first link of the navigation menu */
-}
 
 
 .navTree  ul.navTreeLevel0 li > a {
@@ -181,31 +159,12 @@ dl.portlet ul.navTreeLevel0 > li:first-child > a {
 .portletNavigationTree {
     margin: 0;
     padding: 1em;
-    list-style: none none;
-    line-height: 1em;
     background: #FFFFFF;
 }
 
-.navTree {
-    list-style: none none;
-}
 .navTree li {
     margin-bottom: 0 !important;
 }
-
-.navTreeItem {
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
-
-.navTreeItem a,
-.portletItem .navTreeItem a {
-    display: block;
-    text-decoration: none;
-}
-
 
 li.navTreeCurrentItem {
     display: block;
