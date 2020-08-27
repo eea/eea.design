@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
   if ($video_iframe) {
     $video_iframe_src = $video_iframe.attr("src");
     $("<a />", {
-      class: "video_iframe_for_print visible-print",
+      "class": "video_iframe_for_print visible-print",
       href: $video_iframe_src,
       html: "Video link: [" + $video_iframe_src + "]"
     }).insertBefore($video_iframe);
@@ -626,7 +626,7 @@ jQuery(document).ready(function($) {
       values.set(this.innerText, { href: this.href });
     });
     values.set($selected_nav_link.text(), {
-      class: "mobile-only eea-nav-current",
+      "class": "mobile-only eea-nav-current",
       href: $selected_nav_link.attr("href")
     });
 
@@ -637,7 +637,7 @@ jQuery(document).ready(function($) {
         "<li class='" +
         klass +
         "'><a href='" +
-        value["href"] +
+        value.href +
         "' class='pl-" +
         level +
         "'>" +
