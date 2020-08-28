@@ -595,66 +595,66 @@ jQuery(document).ready(function($) {
     }
   }
 
-  // 120363 add breadcrumbs trail from right column nav to mobile nav
-  var enable_nav_blend = $body.hasClass("mini-header-navigation");
-  var make_nav_blend = function() {
-    if (!enable_nav_blend) {
-      return;
-    }
-    var $portlet_nav = $(".portletNavigationTree");
-    var values = new window.Map();
-    var $nav_header = $portlet_nav.find("#firstHeader").find("a");
-    var nav_header_text = $nav_header.text();
-    var nav_header_href = $nav_header.attr("href");
-    var $global_nav = $("#portal-globalnav");
-    var $global_nav_root_link = $global_nav.find("a").filter(function() {
-      return nav_header_href.indexOf(this.href) !== -1;
-    });
-    var $global_nav_root_li;
-    var $selected_nav_link = $portlet_nav.find(".navTreeCurrentItem");
-    var level = 0;
-    var insert_last = false;
-    if (!$global_nav_root_link.length) {
-      insert_last = true;
-      values.set(nav_header_text, { href: $nav_header.attr("href") });
-    } else {
-      $global_nav_root_li = $global_nav_root_link.parent();
-      $global_nav_root_li.removeClass("eea-nav-current");
-      level += 1;
-      if ($global_nav_root_link.attr('href') !== nav_header_href) {
-        values.set(nav_header_text, { href: nav_header_href });
-      }
-    }
-    $portlet_nav.find("a.navTreeItemInPath").each(function(idx) {
-      values.set(this.innerText, { href: this.href });
-    });
-    values.set($selected_nav_link.text(), {
-      "class": "mobile-only eea-nav-current",
-      href: $selected_nav_link.attr("href")
-    });
-
-    var tpl = "";
-    values.forEach(function(value, key) {
-      var klass = value["class"] || "mobile-only";
-      tpl +=
-        "<li class='" +
-        klass +
-        "'><a href='" +
-        value.href +
-        "' class='pl-" +
-        level +
-        "'>" +
-        key +
-        "</a>";
-      level += 1;
-    });
-    if (insert_last) {
-      $(tpl).appendTo($global_nav);
-    } else {
-      $(tpl).insertAfter($global_nav_root_li);
-    }
-  };
-  make_nav_blend();
+  // // 120363 add breadcrumbs trail from right column nav to mobile nav
+  // var enable_nav_blend = $body.hasClass("mini-header-navigation");
+  // var make_nav_blend = function() {
+  //   if (!enable_nav_blend) {
+  //     return;
+  //   }
+  //   var $portlet_nav = $(".portletNavigationTree");
+  //   var values = new window.Map();
+  //   var $nav_header = $portlet_nav.find("#firstHeader").find("a");
+  //   var nav_header_text = $nav_header.text();
+  //   var nav_header_href = $nav_header.attr("href");
+  //   var $global_nav = $("#portal-globalnav");
+  //   var $global_nav_root_link = $global_nav.find("a").filter(function() {
+  //     return nav_header_href.indexOf(this.href) !== -1;
+  //   });
+  //   var $global_nav_root_li;
+  //   var $selected_nav_link = $portlet_nav.find(".navTreeCurrentItem");
+  //   var level = 0;
+  //   var insert_last = false;
+  //   if (!$global_nav_root_link.length) {
+  //     insert_last = true;
+  //     values.set(nav_header_text, { href: $nav_header.attr("href") });
+  //   } else {
+  //     $global_nav_root_li = $global_nav_root_link.parent();
+  //     $global_nav_root_li.removeClass("eea-nav-current");
+  //     level += 1;
+  //     if ($global_nav_root_link.attr('href') !== nav_header_href) {
+  //       values.set(nav_header_text, { href: nav_header_href });
+  //     }
+  //   }
+  //   $portlet_nav.find("a.navTreeItemInPath").each(function(idx) {
+  //     values.set(this.innerText, { href: this.href });
+  //   });
+  //   values.set($selected_nav_link.text(), {
+  //     "class": "mobile-only eea-nav-current",
+  //     href: $selected_nav_link.attr("href")
+  //   });
+  //
+  //   var tpl = "";
+  //   values.forEach(function(value, key) {
+  //     var klass = value["class"] || "mobile-only";
+  //     tpl +=
+  //       "<li class='" +
+  //       klass +
+  //       "'><a href='" +
+  //       value.href +
+  //       "' class='pl-" +
+  //       level +
+  //       "'>" +
+  //       key +
+  //       "</a>";
+  //     level += 1;
+  //   });
+  //   if (insert_last) {
+  //     $(tpl).appendTo($global_nav);
+  //   } else {
+  //     $(tpl).insertAfter($global_nav_root_li);
+  //   }
+  // };
+  // make_nav_blend();
 
   var underscore = window._;
 

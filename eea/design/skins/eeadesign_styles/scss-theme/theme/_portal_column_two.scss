@@ -16,6 +16,45 @@
 .portlet .navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
+
+.mobile-only  {
+  .portletNavigationTree {
+    background: transparent;
+    border: 0;
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  #firstHeader {
+    font-weight: normal;
+    font-size: 1.15rem;
+  }
+  .portletNavigationTree .portletSubMenuHeader,
+  .portletNavigationTree .portletSubMenuHeader:hover
+  {
+    background-color: transparent;
+    font-weight: normal;
+  }
+  .portletNavigationTree,
+  .portletNavigationTree .eea-icon-left:after,
+  .portletHeader .eea-icon-left:after,
+  .portletHeader > a,
+  .portlet .navTree li a
+  {
+    color: #FFF;
+  }
+  .navTree a:hover {
+    color: #FFF !important;
+  }
+  .navTree a:hover:after, .navTreeCurrentItem:after {
+    border-left-color: #FFF !important;
+  }
+  .portlet .navTree li a {
+    border-top-color: #FFF;
+  }
+  
+}
+
 .navTree {
     list-style: none none;
 }
