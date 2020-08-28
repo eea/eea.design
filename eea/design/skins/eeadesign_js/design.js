@@ -608,7 +608,7 @@ jQuery(document).ready(function($) {
     var nav_header_href = $nav_header.attr("href");
     var $global_nav = $("#portal-globalnav");
     var $global_nav_root_link = $global_nav.find("a").filter(function() {
-      return this.href === nav_header_href;
+      return nav_header_href.indexOf(this.href) !== -1;
     });
     var $global_nav_root_li;
     var $selected_nav_link = $portlet_nav.find(".navTreeCurrentItem");
@@ -621,6 +621,9 @@ jQuery(document).ready(function($) {
       $global_nav_root_li = $global_nav_root_link.parent();
       $global_nav_root_li.removeClass("eea-nav-current");
       level += 1;
+      if ($global_nav_root_link.attr('href') !== nav_header_href) {
+        values.set(nav_header_text, { href: nav_header_href });
+      }
     }
     $portlet_nav.find("a.navTreeItemInPath").each(function(idx) {
       values.set(this.innerText, { href: this.href });

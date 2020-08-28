@@ -17,4 +17,4 @@ window.enlarge_content_area = function() {
     content_core.style.height = portal_column_two_height + "px";
   }
 };
-enlarge_content_area();
+window.enlarge_content_area();
