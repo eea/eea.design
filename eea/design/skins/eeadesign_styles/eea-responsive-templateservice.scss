@@ -1,10 +1,13 @@
 /*! <dtml-with base_properties> (do not remove this :) */
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+@import "scss-theme/variables";
 $bg-color: #004B87;
 $faceted-color: #008675;
 $input-color: #f3f3f3;
-$font-size: 14px;
+$font-size: 16px;
+
 
 @media screen and (max-width: 320px) {
   .plone-breadcrumb-list > li {
@@ -152,7 +155,7 @@ $font-size: 14px;
       color: #FFF;
       border: 0;
       padding: 0;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid $border-light;
       }
     .eea-accordion-panel {
       a {
@@ -230,7 +233,7 @@ $font-size: 14px;
     line-height: 2em;
     font-size: $font-size;
     width: 100%;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $border-light;
     }
   #portal-globalnav a:hover:after,
   #portal-globalnav .eea-nav-current a:after {

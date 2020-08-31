@@ -554,15 +554,6 @@ div.overlay a:hover {
 }
 
 /* our customizations */
-/*#portal-column-content .contenttype-folder {*/
-/*    padding-left: 0 !important;*/
-/*}*/
-
-.mini-header-navigation .visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
-    padding-left: 20px;
-}
-
-
 /* #5243 wrongly indented folder icon */
 /*#portal-column-content .portletNavigationTree .contenttype-folder {*/
 /*    padding-left: 10px !important;*/

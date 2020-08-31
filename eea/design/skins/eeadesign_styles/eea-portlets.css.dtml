@@ -42,19 +42,23 @@ a.managePortletsFallback {
 }
 
 .navTree  ul.navTreeLevel1 li > a {
-    padding-left: 35px !important;
+    padding-left: 20px !important;
 }
 
 .navTree ul.navTreeLevel2 li > a {
-    padding-left: 45px !important;
+    padding-left: 30px !important;
 }
 
 .navTree ul.navTreeLevel3 li > a {
-    padding-left: 55px !important;
+    padding-left: 40px !important;
 }
 
 .navTree ul.navTreeLevel4 li > a {
-    padding-left: 65px !important;
+    padding-left: 50px !important;
+}
+
+.navTree ul.navTreeLevel5 li > a {
+    padding-left: 60px !important;
 }
 /* @end @group Navigation portlet */
 
@@ -356,12 +360,10 @@ dt.portletItem a, #content dt.portletItem a {
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader {
-   background-color: &dtml-lightBackgroundColor;;
    font-size: 1rem;
    padding: 10px;
    margin: 0;
    cursor: pointer;
-   border-bottom: 1px solid &dtml-mediumBackgroundColor;;
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader:hover {
@@ -373,9 +375,10 @@ dl.portletNavigationTree dt.portletSubMenuHeader:last-child {
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader span.title {
-  cursor: pointer;
-  margin: 0;
-  display: block;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .portletNavigationTree .eea-icon-left:after,

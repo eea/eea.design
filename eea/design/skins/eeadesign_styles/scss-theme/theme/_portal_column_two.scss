@@ -10,9 +10,6 @@
   scrollbar-width: thin;
 }
 
-.mini-header-navigation .portlet .navTree li a {
-  border-top: 1px solid $corporateBlue;
-}
 .portlet .navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
@@ -22,9 +19,13 @@
     background: transparent;
     border: 0;
     width: 100%;
-    padding: 0;
     margin-bottom: 0;
   }
+
+  .navTreeLevel0>li:first-child>a {
+    padding-top: 0;
+  }
+
   #firstHeader {
     font-weight: normal;
     font-size: 1.15rem;
@@ -49,10 +50,12 @@
   .navTree a:hover:after, .navTreeCurrentItem:after {
     border-left-color: #FFF !important;
   }
-  .portlet .navTree li a {
-    border-top-color: #FFF;
-  }
-  
+
+}
+
+#portal-globalnav .mobile-only + .mobile-only,
+#portal-globalnav .mobile-only:last-of-type {
+    border-bottom: 1px solid $border-light;
 }
 
 .navTree {
@@ -71,15 +74,17 @@
 .portlet .navTree li a {
   margin: 0;
   padding: 10px;
-  border-top: 1px dotted #BABBB8;
+  border-top: 1px solid $border-light;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.5;
   position: relative;
 }
 
+
 .navTreeItem a,
 .portletItem .navTreeItem a {
+  color: $corporateBlue;
   display: block;
   text-decoration: none;
 }
