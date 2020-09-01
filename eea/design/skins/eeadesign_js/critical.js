@@ -20,6 +20,11 @@ var make_nav_blend = function() {
   extra_nav_li.className = "mobile-only";
   extra_nav_li.appendChild(cloned_portlet_nav);
   var nav_header = cloned_portlet_nav.querySelector("#firstHeader");
+  var submenu_headers = cloned_portlet_nav.querySelectorAll(".portletSubMenuHeader");
+  if (submenu_headers.length < 2) {
+    submenu_headers[0].style.display = "none";
+    portlet_nav.querySelector(".portletSubMenuHeader").style.display = "none";
+  }
   var nav_header_link = nav_header.querySelector("a");
   var nav_header_href = nav_header_link.href;
   var nav_header_list = document.createElement("li");
