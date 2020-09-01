@@ -1,8 +1,5 @@
 /* @group Portlets */
 
-dl.portlet {
-    margin: 0 0 1em;
-}
 dl.portletError {
     background-color: #FFA500;
 }

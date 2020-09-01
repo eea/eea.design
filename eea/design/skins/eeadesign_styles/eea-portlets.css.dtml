@@ -82,11 +82,6 @@ a.managePortletsFallback {
     display: none;
 }
 
-.portlet {
-    margin: 1px 0 1em 0;
-    padding: 0.3em;
-}
-
 .portletCollection .even,
 .portletCollection .odd {
     border: 0;
@@ -106,16 +101,10 @@ a.managePortletsFallback {
     margin: 0 0 1em 0;
 }
 
-#firstHeader {
-   margin: 0 0 5px 0;
-   line-height: 1.2;
-    font-size: 1.4rem;
-   font-weight: bold;
-}
-.mini-header-navigation #firstHeader {
-    margin: 1.25rem 0 1rem 0;
-    font-size: 1.25rem;
-}
+/*.mini-header-navigation #firstHeader {*/
+/*    margin: 1.25rem 0 1rem 0;*/
+/*    font-size: 1.25rem;*/
+/*}*/
 
 .portletFooter {
     clear: both;
@@ -160,15 +149,15 @@ a.managePortletsFallback {
 
 /* New navtree styles */
 
-.portletNavigationTree {
-    margin: 0;
-    padding: 1em;
-    background: #FFFFFF;
-}
+/*.portletNavigationTree {*/
+/*    margin: 0;*/
+/*    padding: 1em;*/
+/*    background: #FFFFFF;*/
+/*}*/
 
-.navTree li {
-    margin-bottom: 0 !important;
-}
+/*.navTree li {*/
+/*    margin-bottom: 0 !important;*/
+/*}*/
 
 li.navTreeCurrentItem {
     display: block;
@@ -325,9 +314,6 @@ dt.portletItem a, #content dt.portletItem a {
    background: #fff;
    border-bottom: 1px solid #fff;
 }
-#portal-column-two .portlet {
-   margin: 0 0 1em 0;
-}
 #portal-column-two dl dd dl.portlet {
    margin: 0;
    padding: 0.4em;
@@ -426,10 +412,6 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 }
 .navTree a:hover {
     color: &dtml-linkVisitedColor; !important;
-}
-.navTree {
-    margin-left: 0;
-    margin-bottom: 0;
 }
 
 .navTreeLevel0 .navTreeCurrentItem:after {

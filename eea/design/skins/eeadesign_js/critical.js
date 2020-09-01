@@ -71,7 +71,7 @@ window.enlarge_content_area = function() {
   }
   var portal_column_two_height = portal_column_two_wrapper.clientHeight;
   if (portal_column_two_height > content_core.clientHeight) {
-    content_core.style.height = portal_column_two_height + "px";
+    content_core.style.minHeight = (portal_column_two_height  - 150) + "px";
   }
 };
 window.enlarge_content_area();

@@ -14,6 +14,46 @@
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
 
+#firstHeader {
+  margin: 0 0 5px 0;
+  line-height: 1.2;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navTree {
+  list-style: none none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.navTreeItem {
+  display: block !important;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.navTreeItem img {
+  width: 16px;
+  height: 16px;
+}
+.portlet .navTree li a {
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid $border-light;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+
+.navTreeItem a,
+.portletItem .navTreeItem a {
+  color: $corporateBlue;
+  display: block;
+  text-decoration: none;
+}
+
 .mobile-only  {
   .portletNavigationTree {
     background: transparent;
@@ -58,36 +98,6 @@
     border-bottom: 1px solid $border-light;
 }
 
-.navTree {
-    list-style: none none;
-}
-.navTreeItem {
-  display: block !important;
-  padding: 0;
-  margin: 0;
-}
-
-.navTreeItem img {
-  width: 16px;
-  height: 16px;
-}
-.portlet .navTree li a {
-  margin: 0;
-  padding: 10px;
-  border-top: 1px solid $border-light;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-  position: relative;
-}
-
-
-.navTreeItem a,
-.portletItem .navTreeItem a {
-  color: $corporateBlue;
-  display: block;
-  text-decoration: none;
-}
 
 @media (min-width: 1025px) {
   #portal-column-two-wrapper::-webkit-scrollbar {
