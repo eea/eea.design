@@ -1,0 +1,9 @@
+/* 119268 redmine widget styles */
+
+#helpdesk_widget.overflow_auto {
+    overflow: unset !important;
+}
+
+[name=helpdesk_widget_iframe] {
+    position: static !important;
+}
