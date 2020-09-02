@@ -192,9 +192,6 @@ $input-color: #f3f3f3;
 /* #31309 - Improve DaViz Filter design/display */
 @media screen {
   .template-dc_view #content-core {
-    position: static;
-  }
-  .template-dc_view #content {
     position: relative;
   }
 }
@@ -503,9 +500,6 @@ $input-color: #f3f3f3;
     display: flex !important;
   }
 
-  .template-dc_view .content-header {
-    width: 58.5%;
-  }
 
   .template-dc_view .right-column-area {
     position: absolute;

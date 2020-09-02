@@ -30,7 +30,6 @@ jQuery(document).ready(function($) {
   // appendTo($socialmedia, $column_area);
   if ($column_area.length) {
     appendTo($viewlet_below_content, $column_area);
-    $portal_column_content.removeClass("cell width-full");
   } else {
     appendTo($viewlet_below_content, $content);
   }
