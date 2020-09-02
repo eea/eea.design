@@ -150,6 +150,7 @@ jQuery(document).ready(function ($) {
           $panel.hide();
         }
       });
+      $(window).trigger("eea.tags.loaded", {obj: $item.prev()});
     });
     $(".js-eea-tabs-to-hide").removeClass("hidden");
   }
