@@ -403,8 +403,8 @@
 @media (min-width: $breakpoint-xl)  {
   .mini-header-navigation {
     .content-header::before {
-      width: 105%;
-      left: -2.5%;
+      width: 105% !important;
+      left: -2.5% !important;
     }
 
     .content-header,
