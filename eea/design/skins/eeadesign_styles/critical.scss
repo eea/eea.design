@@ -461,7 +461,7 @@ ul {
   color: gray;
   position: absolute;
   margin-left: -18px;
-  top: -3px;
+  top: 3px; /* signals/signals-2010 moreLink  */
   }
 
 
@@ -477,7 +477,6 @@ ul {
   background-color: #FFF;
   }
 .plone-breadcrumb {
-  margin-bottom: .5em;
   border-width: 0 0 1px 0;
   border-style:solid;
   border-color: unquote("&dtml-mediumBackgroundColor;");
