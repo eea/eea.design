@@ -62,9 +62,10 @@
 .figure-left {
     float: left;
 }
-.mini-header .figure-left {
-   float: none;
-}
+/* 120363 disable until it's more targeted for themes figure */
+/*.mini-header .figure-left {*/
+/*   float: none;*/
+/*}*/
 
 .featured-highlights .figure-left{
     position: relative;

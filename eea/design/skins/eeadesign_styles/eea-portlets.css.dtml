@@ -40,6 +40,32 @@ a.managePortletsFallback {
 .navTree  ul.navTreeLevel0 li > a {
     padding-left: 10px !important;
 }
+/* #120363 align accordion headers with the content as anon when we have no icons */
+.userrole-anonymous .portletNavigationTree .portletSubMenuHeader {
+    margin-left: -10px;
+}
+.userrole-anonymous .navTreeLevel0 > li > a {
+    padding-left: 20px !important;
+}
+.userrole-anonymous .navTreeLevel1 > li > a {
+    padding-left: 30px !important;
+}
+.userrole-anonymous .navTreeLevel2 > li > a {
+    padding-left: 40px !important;
+}
+.userrole-anonymous .navTreeLevel3 > li > a {
+    padding-left: 50px !important;
+}
+.userrole-anonymous .navTreeLevel4 > li > a {
+    padding-left: 60px !important;
+}
+.userrole-anonymous .navTreeLevel5 > li > a {
+    padding-left: 70px !important;
+}
+.userrole-anonymous .navTreeLevel6 > li > a {
+    padding-left: 80px !important;
+}
+
 
 .navTree  ul.navTreeLevel1 li > a {
     padding-left: 20px !important;
@@ -370,7 +396,7 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 .portletNavigationTree .eea-icon-left:after,
 .portletHeader .eea-icon-left:after
 {
-    font-size: 1.2em;
+    font-size: 1rem;
     color: &dtml-corporateBlue;;
 }
 
