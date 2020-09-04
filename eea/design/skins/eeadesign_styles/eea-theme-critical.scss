@@ -402,10 +402,6 @@
 
 @media (min-width: $breakpoint-xl)  {
   .mini-header-navigation {
-    .content-header::before {
-      width: 105% !important;
-      left: -2.5% !important;
-    }
 
     .content-header,
     .content-core {
@@ -425,10 +421,15 @@
       max-width: 94%;
     }
 
+    .content-header::before {
+      width: 105% !important;
+      left: -2.5% !important;
+    }
     .content-header-body::before {
       width: 1605px;
     }
   }
+
 }
 
 
