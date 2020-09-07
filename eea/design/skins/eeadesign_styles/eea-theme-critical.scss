@@ -111,15 +111,15 @@
     flex: 1;
     max-width: initial;
   }
-
-  .content-header .documentByLine::before {
-    position: absolute;
-    width: 100vw;
-    left: -$grid-gutter-width;
-    display: block;
-    content: " ";
-    border-top: 2px solid white;
-    top: -$spacer-half;
+   .content-header .documentByLine::before {
+     position: absolute;
+     width: 100vw;
+     left: -$grid-gutter-width;
+     display: block;
+     content: " ";
+     border-top: 2px solid white;
+     top: -$spacer-half;
+     max-width: $breakpoint-full;
   }
 
   .documentExportActions {
