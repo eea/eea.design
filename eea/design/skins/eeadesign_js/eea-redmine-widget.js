@@ -4,8 +4,8 @@ var widget = "<div id='helpdesk_widget'></div>";
 var captcha = "<div class='frc-captcha' data-sitekey='FCMR3DVP81RFD3ML'></div>";
 
 // insert widget and captcha dom elements
-jQuery('.content-core').append(widget);
-jQuery('.content-core').append(captcha);
+jQuery('.helpdesk-button').parent().append(widget);
+jQuery('.helpdesk-button').parent().append(captcha);
 
 // load widget + captcha js
 jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk_widget/widget.js"), jQuery.getScript("https://unpkg.com/friendly-challenge@0.5.1/widget.min.js")).done(function( data1, data2 ) {
@@ -67,7 +67,7 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
             //for IE8
             $('#helpdesk_ticket_container')[0].contentWindow.document.attachEvent('onkeyup', formatForm);
         }
-    
+
         function formatForm() {
             // remove onSubmit from form
             $('#helpdesk_ticket_container').contents().find('form').attr('onsubmit', '');
@@ -101,14 +101,14 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
                                 name: 'issue[custom_field_values][71]',
                                 value: 'tracasa-Habides -070202/2019/805189/SER/ENV.D.3'
                             });
-                            
+
                             // refresh captcha on submit
                             var el = "<div class='frc-captcha' data-sitekey='FCMR3DVP81RFD3ML'></div>";
                             var currentCaptcha = $('.frc-captcha');
                             $(el).insertAfter(currentCaptcha);
                             $(currentCaptcha).remove();
                             new friendlyChallenge.WidgetInstance($('.frc-captcha')[0]);
-                            
+
                             // create ticket
                             $.ajax({
                                    type: "POST",
@@ -119,10 +119,18 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
                                        console.log(data);
                                    }
                             });
+                            // added form submit message
+                            $('.widget-submit-message').remove();
+                            $('.captcha-invalid-message').remove();
+                            var message = "<div class='portalMessage info widget-submit-message' i18n:translate=''>"
+                                        + "Question submitted</div>";
+                            $(message).insertBefore("#helpdesk_ticket_container");
                         }
                         else {
                             // stop submit until captcha is verified
-                            var message = "<div class='portalMessage error' i18n:translate=''>"
+                            $('.widget-submit-message').remove();
+                            $('.captcha-invalid-message').remove();
+                            var message = "<div class='portalMessage error captcha-invalid-message' i18n:translate=''>"
                                         + "Captcha is invalid</div>";
                             $(message).insertBefore("#helpdesk_ticket_container");
                             return false;
@@ -132,6 +140,17 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
                 once = false;
             });
         }
+        $('#helpdesk_widget').hide();
+        $('#helpdesk_ticket_container').hide();
+        $('.frc-captcha').hide();
+
+        $('.helpdesk-button').click(function(event){
+            event.preventDefault();
+            $('.helpdesk-button').hide();
+            $('#helpdesk_widget').show();
+            $('#helpdesk_ticket_container').show();
+            $('.frc-captcha').show();
+        });
     });
 });
 
@@ -147,7 +166,7 @@ function verifyCaptcha() {
         'solution': solution,
         'sitekey': sitekey
     }
-    
+
     var result = jQuery.ajax({
         type: "POST",
         url: url,
