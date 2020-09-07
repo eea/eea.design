@@ -596,10 +596,6 @@ jQuery(document).ready(function($) {
 
   // #120363  resize related panels in case it smaller than tabs area
   // ex: themes/biodiversity/natura-2000
-  $(window).on('eea.tags.loaded', function(ev, data){
-    var tabs = data["obj"][0];
-    normalize_siblings_height(tabs);
-  });
   var normalize_siblings_height = function(el) {
     if (!el) {
       return;
@@ -611,6 +607,10 @@ jQuery(document).ready(function($) {
       panel.style.minHeight = (tabs_height + 50) + "px";
     }
   };
+  $(window).on('eea.tags.loaded', function(ev, data){
+    var tabs = data.obj ? data.obj[0] : undefined;
+    normalize_siblings_height(tabs);
+  });
 
   var underscore = window._;
 

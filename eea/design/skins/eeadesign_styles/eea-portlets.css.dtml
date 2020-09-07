@@ -454,21 +454,21 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 /*.navTreeLevel2 .navTreeCurrentItem:after {*/
 /*    left: -71px;*/
 /*}*/
-.navTreeLevel3 .navTreeCurrentItem:after {
-    left: -92px;
-}
-.navTreeLevel4 .navTreeCurrentItem:after {
-    left: -114px;
-}
-.navTreeLevel5 .navTreeCurrentItem:after {
-    left: -138px;
-}
-.navTreeLevel6 .navTreeCurrentItem:after {
-    left: -162px;
-}
-.navTreeLevel7 .navTreeCurrentItem:after {
-    left: -186px;
-}
+/*.navTreeLevel3 .navTreeCurrentItem:after {*/
+/*    left: -92px;*/
+/*}*/
+/*.navTreeLevel4 .navTreeCurrentItem:after {*/
+/*    left: -114px;*/
+/*}*/
+/*.navTreeLevel5 .navTreeCurrentItem:after {*/
+/*    left: -138px;*/
+/*}*/
+/*.navTreeLevel6 .navTreeCurrentItem:after {*/
+/*    left: -162px;*/
+/*}*/
+/*.navTreeLevel7 .navTreeCurrentItem:after {*/
+/*    left: -186px;*/
+/*}*/
 
 .navTreeItem .contenttype-document,
 .navTreeItem .contenttype-event,

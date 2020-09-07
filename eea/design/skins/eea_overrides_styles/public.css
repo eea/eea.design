@@ -151,9 +151,10 @@ dl,
     display: none;
 }
 
-#content-core dd {
-    margin: 0 0 1em 2em;
-}
+/* 120363 disable high specificity rule for dd used in navigation */
+/*#content-core dd {*/
+/*    margin: 0 0 1em 2em;*/
+/*}*/
 
 #content pre,
 .portletStaticText pre {

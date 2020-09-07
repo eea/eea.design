@@ -664,6 +664,11 @@ ul {
 .portlet-megatopic-body {
   padding: 1rem;
 }
+
+#megatopics-area .portlet-megatopic-body li {
+  padding-left: 0;
+  margin-bottom: 0;
+}
 .portlet-megatopic .list-items {
   margin: 0 0 0 1rem;
 }
