@@ -622,4 +622,41 @@ jQuery(document).ready(function($) {
       }, 100)
     );
   }
+
+// #119305 - scroll to the top button
+  var throttle = underscore
+      ? underscore.throttle
+      : function(t, e) {
+        var n;
+        return function() {
+          var i,
+              o = this,
+              r = arguments;
+          n ||
+          ((i = function() {
+            (n = null), t.apply(o, r);
+          }),
+              (n = window.setTimeout(i, e)));
+        };
+      };
+
+  function navScroll() {
+    var pxShow = 150, // height on which the button will show
+        pxHide = 100,
+        fadeInTime = 20, // how slow/fast you want the button to show
+        fadeOutTime = 20, // how slow/fast you want the button to hide
+        window_scroll_top = $(window).scrollTop(),
+        goTopButton = $(".go-top");
+
+    if (window_scroll_top >= pxShow) {
+      goTopButton.fadeIn(fadeInTime);
+      goTopButton.attr("style", "display: block;");
+    } else if (window_scroll_top <= pxHide) {
+      goTopButton.fadeOut(fadeOutTime);
+    }
+  }
+
+  var lazyNavScroll = throttle(navScroll, 500);
+  $(window).scroll(lazyNavScroll);
+
 });
