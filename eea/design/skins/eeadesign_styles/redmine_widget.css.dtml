@@ -6,7 +6,10 @@
 
 [name=helpdesk_widget_iframe] {
     position: relative !important;
-    min-height: 400px !important;
+    min-height: 600px !important;
+    min-width: 300px !important;
     top: 0 !important;
     left: 0 !important;
+    max-width: 100% !important;
+    width: 50%;
 }
