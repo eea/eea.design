@@ -11,7 +11,8 @@ fontSmallSize:string=12px
 fontDarkColor:string=#000
 
 #corporate main colors
-corporateGreen:string=#008675
+corporateGreen:string=#00888A
+corporateGreenOld:string=#008675
 corporateDarkGreen:string=#007C88
 corporateGreenTwo:string=#777c1f
 corporateBlue:string=#274357

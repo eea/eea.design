@@ -3,7 +3,7 @@
 // Matomo support
 var _paq = _paq || [];
 
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
   "use strict";
   var $viewlet_below_content = $("#viewlet-below-content");
   var $content = $("#content");
@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
   // var $socialmedia = $("#socialmedia-viewlet");
   // $related_items.appendTo($column_area);
   // $socialmedia.appendTo($column_area);
-  var appendTo = function (context, target) {
+  var appendTo = function(context, target) {
     if (context.length) {
       context.appendTo(target);
     }
@@ -30,7 +30,6 @@ jQuery(document).ready(function ($) {
   // appendTo($socialmedia, $column_area);
   if ($column_area.length) {
     appendTo($viewlet_below_content, $column_area);
-    $portal_column_content.removeClass("cell width-full");
   } else {
     appendTo($viewlet_below_content, $content);
   }
@@ -51,7 +50,7 @@ jQuery(document).ready(function ($) {
 
   // hide element if empty or has less than on equal to given
   // child length
-  var hide_empty_container = function ($el, child_count, $checked_el) {
+  var hide_empty_container = function($el, child_count, $checked_el) {
     var count = child_count || 0;
     var $elem = $checked_el || $el;
     var $children = $elem.children();
@@ -80,13 +79,19 @@ jQuery(document).ready(function ($) {
   // for briefings found within the airs section
   var air_fiches = $(".portaltype-fiche.section-airs");
   if (air_fiches.length) {
-    (function () {
+    (function() {
       var $fiche_body = $(".fiche-body");
       var $fiche_summary = $(".fiche-summary");
 
       if (!$body.hasClass("section-airs subsection-2016")) {
         // hide fiche-summary in case the contents of keyfact is empty
-        if (!$fiche_summary.find(".keyFact").find("div").text().trim()) {
+        if (
+          !$fiche_summary
+            .find(".keyFact")
+            .find("div")
+            .text()
+            .trim()
+        ) {
           $fiche_summary.addClass("hidden");
         }
       }
@@ -94,8 +99,8 @@ jQuery(document).ready(function ($) {
       // hide googlecharts bottom images
       if ($body.hasClass("body-print")) {
         var $iframes = $fiche_body.find("iframe");
-        $iframes.each(function (idx, el) {
-          $(el).load(function (idx) {
+        $iframes.each(function(idx, el) {
+          $(el).load(function(idx) {
             var el = idx.target;
             var src = el.src;
             if (
@@ -119,28 +124,35 @@ jQuery(document).ready(function ($) {
   var $document_actions = $(".documentExportActions");
   var $document_actions_ul = $document_actions.find("ul");
   if ($document_actions_ul.length) {
-    $charts_buttons.each(function (idx, el) {
+    $charts_buttons.each(function(idx, el) {
       var $el = $(el);
-      var $wrapped = $el.addClass("pull-left").wrap("<li />").parent();
+      var $wrapped = $el
+        .addClass("pull-left")
+        .wrap("<li />")
+        .parent();
       $wrapped.prependTo($document_actions_ul);
     });
   }
 
-  $("[rel=__ac_name]").click(function (evt) {
+  $("[rel=__ac_name]").click(function(evt) {
     evt.preventDefault();
-    var input = $(this).parent().find("[name='__ac_name']");
+    var input = $(this)
+      .parent()
+      .find("[name='__ac_name']");
     input.focus();
   });
 
-  $("[rel=__ac_password]").click(function (evt) {
+  $("[rel=__ac_password]").click(function(evt) {
     evt.preventDefault();
-    var input = $(this).parent().find("[name='__ac_password']");
+    var input = $(this)
+      .parent()
+      .find("[name='__ac_password']");
     input.focus();
   });
 
   $("#themes-megatopics-area")
     .find(".promoHeader")
-    .click(function (ev) {
+    .click(function(ev) {
       if (window.innerWidth > 480) {
         ev.stopImmediatePropagation();
       }
@@ -150,7 +162,7 @@ jQuery(document).ready(function ($) {
    * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
    * data-and-maps/indicators/direct-losses-from-weather-disasters-2/assessment/pdf.body
    * */
-  $(".policy_question").each(function (idx, el) {
+  $(".policy_question").each(function(idx, el) {
     var $el = $(el);
     var $next_el = $el.next();
     if ($next_el.hasClass("indicator-figure-plus-container")) {
@@ -184,7 +196,9 @@ jQuery(document).ready(function ($) {
   // });
 
   // 13830 add last-child class since ie < 9 doesn't know about this css3 selector
-  $(".eea-tabs").find("li:last-child").addClass("last-child");
+  $(".eea-tabs")
+    .find("li:last-child")
+    .addClass("last-child");
 
   // #9485; login form as popup
   // var $popup_login = $("#tip-siteaction-login-menu");
@@ -196,14 +210,14 @@ jQuery(document).ready(function ($) {
   // });
 
   // #104468 /themes - slide toggle the target given from data-target
-  $(".js-eea-toggle").click(function (ev) {
+  $(".js-eea-toggle").click(function(ev) {
     ev.preventDefault();
     var el = ev.target.tagName === "A" ? ev.target : ev.target.parentNode;
     var $el = $(el);
     $el.find(".js-hidden-toggle").toggleClass("is-eea-hidden");
     $(el.getAttribute("data-target")).slideToggle({
       duration: 300,
-      start: function () {
+      start: function() {
         var display = this.getAttribute("data-display") || "block";
         jQuery(this).css("display", display);
       }
@@ -211,7 +225,7 @@ jQuery(document).ready(function ($) {
   });
 
   var $slide_toggle = $(".js-eea-sliding-toggle");
-  $slide_toggle.click(function (ev) {
+  $slide_toggle.click(function(ev) {
     ev.preventDefault();
     var t = ev.target;
     var cname = "js-eea-sliding-toggle";
@@ -229,7 +243,7 @@ jQuery(document).ready(function ($) {
       $target.toggleClass("eea-sliding-section--hidden-lg");
     }
 
-    window.setTimeout(function () {
+    window.setTimeout(function() {
       if (toggle_overflow_initial) {
         $target.toggleClass("overflow-initial");
       }
@@ -250,7 +264,7 @@ jQuery(document).ready(function ($) {
   }
   // #19536; adopt height of given data target; keep declaration after the
   // hiding of the navigation submenu from above
-  $(".js-adoptHeight").each(function () {
+  $(".js-adoptHeight").each(function() {
     var $el = $(arguments[1]);
     var $target_el = $($el.data("target-element"));
     $el.css("height", $target_el.outerHeight());
@@ -272,7 +286,9 @@ jQuery(document).ready(function ($) {
   var r = /data-and-maps\/(figures|data)\/?$/;
   if (r.test(url_path_name)) {
     $body.addClass("fullscreen");
-    $("#icon-full_screen").parent().remove();
+    $("#icon-full_screen")
+      .parent()
+      .remove();
   }
 
   // #4157 move the non embedded links out of the enumeration of the embedded
@@ -282,10 +298,10 @@ jQuery(document).ready(function ($) {
     $dls = $auto_related.find("dl");
   if ($dls.length) {
     $auto_related.detach();
-    $dls.each(function (idx, item) {
+    $dls.each(function(idx, item) {
       var $item = $(item),
         $dt = $item.find("dt");
-      $item.find(".portletItem").each(function (idx, item) {
+      $item.find(".portletItem").each(function(idx, item) {
         if (item.className.indexOf("embedded") === -1) {
           $(item).insertAfter($dt);
         }
@@ -315,7 +331,7 @@ jQuery(document).ready(function ($) {
   /**
    * Function to avoid multiple clicks on document actions (Download as PDF, etc.)
    */
-  jQuery.fn.avoidMultipleClicks = function (options) {
+  jQuery.fn.avoidMultipleClicks = function(options) {
     var settings = {
       timeout: 3000,
       linkSelector: "a",
@@ -328,18 +344,21 @@ jQuery(document).ready(function ($) {
     }
 
     var self = this;
-    return this.each(function () {
-      self.find(settings.linkSelector).click(function () {
+    return this.each(function() {
+      self.find(settings.linkSelector).click(function() {
         var context = $(this);
         var oldCSS = context.attr("class") || "";
         settings.linkCSS =
-          oldCSS.split(" ").slice(0, 2).join(" ") + settings.linkCSS;
+          oldCSS
+            .split(" ")
+            .slice(0, 2)
+            .join(" ") + settings.linkCSS;
         context.removeClass();
         context.addClass(settings.linkCSS);
 
         self.addClass(settings.lockCSS);
 
-        setTimeout(function () {
+        setTimeout(function() {
           self.removeClass(settings.lockCSS);
           context.removeClass(settings.linkCSS);
           context.addClass(oldCSS);
@@ -372,6 +391,7 @@ jQuery(document).ready(function ($) {
     "xlsx",
     "table"
   ];
+
   function check_file_type(tokens) {
     var tokens_length = tokens.length;
     var rought_ext = tokens[tokens_length - 1];
@@ -388,7 +408,10 @@ jQuery(document).ready(function ($) {
     // landcoverflows_060701.pdf/at_download/file
     // check first the extension from the link text content and fallback to the url if we can't find
     // it in the text content otherwise return a generic file extension
-    var txt_tokens = txt_contents.trim().toLowerCase().split(".");
+    var txt_tokens = txt_contents
+      .trim()
+      .toLowerCase()
+      .split(".");
     var txt_tokes_outcome = check_file_type(txt_tokens);
     if (txt_tokes_outcome === "file") {
       return check_file_type(url_tokens);
@@ -447,7 +470,7 @@ jQuery(document).ready(function ($) {
   var downloads_list = match_download_links(links);
 
   function add_downloads_tracking_code(idx, el) {
-    el.onclick = function () {
+    el.onclick = function() {
       var text = el.textContent || el.innerText;
       var link = el.href || "download.pdf";
       var ftype = extract_file_type(link, text);
@@ -470,7 +493,7 @@ jQuery(document).ready(function ($) {
     window.createCookie("survey_message", "never", 365);
   }
 
-  $("#globalstatusmessage").each(function (idx, el) {
+  $("#globalstatusmessage").each(function(idx, el) {
     $(el)
       .find("dl:not([class*='eea-icon'])")
       .addClass("eea-icon eea-icon-magic");
@@ -489,9 +512,9 @@ jQuery(document).ready(function ($) {
   // track print attempt with google analytics
   // original code from https://www.savio.no/analytics/how-to-track-printed-pages-in-google-analytics
   if (is_anon) {
-    (function () {
+    (function() {
       var runOnce;
-      var afterPrint = function () {
+      var afterPrint = function() {
         if (!runOnce) {
           // Because of Chrome we can only allow the code to run once.
           runOnce = true;
@@ -508,7 +531,7 @@ jQuery(document).ready(function ($) {
         }
       };
       window.onafterprint = afterPrint; // Internet Explorer
-      $(document).keydown(function (allBrowsers) {
+      $(document).keydown(function(allBrowsers) {
         // Track printing using Ctrl/Cmd+P.
         if (
           allBrowsers.keyCode === 80 &&
@@ -520,7 +543,7 @@ jQuery(document).ready(function ($) {
       if (window.matchMedia) {
         // Track printing from browsers using the Webkit engine
         var mediaQueryList = window.matchMedia("print");
-        mediaQueryList.addListener(function (mql) {
+        mediaQueryList.addListener(function(mql) {
           if (mql.matches) {
             afterPrint();
           }
@@ -534,18 +557,18 @@ jQuery(document).ready(function ($) {
 
   //#117296 add floated relations on 1600+ screen
   var $floated_album_links = $(".floated-photo-album-container");
-  $floated_album_links.each(function () {
+  $floated_album_links.each(function() {
     var $this = $(this);
     var $link = $this.find("a");
     var link_href = $link.attr("href");
     var $album_entries = $related_items.find(".photoAlbumEntry");
     var $album_entries_links = $album_entries.find("a");
-    var found = $album_entries_links.filter(function () {
+    var found = $album_entries_links.filter(function() {
       return this.href === link_href;
     });
     var $photo_album = found.parent().clone();
     if (found) {
-      window.setTimeout(function () {
+      window.setTimeout(function() {
         $photo_album.css("top", $this.position().top - 40).appendTo($this);
         if (window.forceImageLoad) {
           window.forceImageLoad($photo_album.find(".lazy"));
@@ -569,5 +592,34 @@ jQuery(document).ready(function ($) {
     ) {
       $redesign_below_content.hide();
     }
+  }
+
+  // #120363  resize related panels in case it smaller than tabs area
+  // ex: themes/biodiversity/natura-2000
+  var normalize_siblings_height = function(el) {
+    if (!el) {
+      return;
+    }
+    var panel = el.nextSibling;
+    var tabs_height = el.clientHeight;
+    var panel_height = panel.clientHeight;
+    if (tabs_height > panel_height) {
+      panel.style.minHeight = (tabs_height + 50) + "px";
+    }
+  };
+  $(window).on('eea.tags.loaded', function(ev, data){
+    var tabs = data.obj ? data.obj[0] : undefined;
+    normalize_siblings_height(tabs);
+  });
+
+  var underscore = window._;
+
+  if (underscore && underscore.debounce) {
+    $(window).resize(
+      underscore.debounce(function() {
+        window.enlarge_content_area();
+        normalize_siblings_height(document.querySelector(".relatedItems .eea-tabs"));
+      }, 100)
+    );
   }
 });

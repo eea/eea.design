@@ -18,10 +18,6 @@ body.section-SITE .documentActions {
     text-align: right;
 }
 
-.portletNavigationTree {
-    line-height: 1.5em;
-}
-
 *:first-child+html .documentActions {
     padding-top: 1em;
 }

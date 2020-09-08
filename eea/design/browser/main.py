@@ -74,7 +74,11 @@ class MiniHeaderContentTypes(BrowserView):
         """ boolean if miniheader class should be enabled for given content-type
         """
         mini_header_ctypes = self.get_mini_registry() or []
-        return self.context.portal_type in mini_header_ctypes
+
+        mini_header_disabled_in_template = self.request.get(
+            'disable_eea.miniheader')
+        return self.context.portal_type in mini_header_ctypes and \
+               not mini_header_disabled_in_template
 
     @memoize
     def get_mini_registry(self):

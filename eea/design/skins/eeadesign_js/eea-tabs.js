@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
                 }
                 // don't run tab logic if tab already contains tab data
                 if ($eea_tab.data('tabs')) {
-                    $(window).trigger('eea.tags.loaded', $eea_tab);
+                    $(window).trigger('eea.tags.loaded', {obj: $eea_tab});
                     continue;
                 }
                 // hide tab while dom manipulation is performed for better performance
@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
 
                 $eea_tab.show();
 
-                $(window).trigger('eea.tags.loaded', $eea_tab);
+                $(window).trigger('eea.tags.loaded', {obj: $eea_tab});
             }
         }
 
@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $(window).trigger('eea.tags.loaded', $('.eea-tabs'));
+    $(window).trigger('eea.tags.loaded', {obj: $('.eea-tabs')});
 
     if (window.location.hash) {
         $(window).trigger('hashchange');

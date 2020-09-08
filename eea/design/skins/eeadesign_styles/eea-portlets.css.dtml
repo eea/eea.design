@@ -12,11 +12,6 @@
 
 /* @group Portlets */
 
-dl.portlet {
-    margin: 0 0 1em;
-    font-size: 100%;
-}
-
 /* #16720; shrink the font-size of portlet headers */
 .portletAssignments .portletHeader,
 .portletAssignments .portlet_visible .portletHeader,
@@ -40,46 +35,56 @@ a.managePortletsFallback {
 /* @end @group Portlets */
 
 /* @group Navigation portlet */
-.portlet .navTree li a {
-    margin: 0;
-    padding: 10px;
-    border-top: 1px dotted #BABBB8;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5;
-    position: relative;
-}
-.mini-header-navigation .portlet .navTree li a {
-    border-top: 1px solid & dtml-corporateBlue;;
-}
 
-
-dl.portlet ul.navTreeLevel0 > li:first-child > a {
-  border-top: 0; /* no top border on the first link of the navigation menu */
-}
-
-a.navTreeItemInPath.navTreeFolderish {
-    padding-left: 20px !important;
-}
 
 .navTree  ul.navTreeLevel0 li > a {
     padding-left: 10px !important;
 }
+/* #120363 align accordion headers with the content as anon when we have no icons */
+.userrole-anonymous .portletNavigationTree .portletSubMenuHeader {
+    margin-left: -10px;
+}
+.userrole-anonymous .navTreeLevel0 > li > a {
+    padding-left: 20px !important;
+}
+.userrole-anonymous .navTreeLevel1 > li > a {
+    padding-left: 30px !important;
+}
+.userrole-anonymous .navTreeLevel2 > li > a {
+    padding-left: 40px !important;
+}
+.userrole-anonymous .navTreeLevel3 > li > a {
+    padding-left: 50px !important;
+}
+.userrole-anonymous .navTreeLevel4 > li > a {
+    padding-left: 60px !important;
+}
+.userrole-anonymous .navTreeLevel5 > li > a {
+    padding-left: 70px !important;
+}
+.userrole-anonymous .navTreeLevel6 > li > a {
+    padding-left: 80px !important;
+}
+
 
 .navTree  ul.navTreeLevel1 li > a {
-    padding-left: 35px !important;
+    padding-left: 20px !important;
 }
 
 .navTree ul.navTreeLevel2 li > a {
-    padding-left: 45px !important;
+    padding-left: 30px !important;
 }
 
 .navTree ul.navTreeLevel3 li > a {
-    padding-left: 55px !important;
+    padding-left: 40px !important;
 }
 
 .navTree ul.navTreeLevel4 li > a {
-    padding-left: 65px !important;
+    padding-left: 50px !important;
+}
+
+.navTree ul.navTreeLevel5 li > a {
+    padding-left: 60px !important;
 }
 /* @end @group Navigation portlet */
 
@@ -103,11 +108,6 @@ a.navTreeItemInPath.navTreeFolderish {
     display: none;
 }
 
-.portlet {
-    margin: 1px 0 1em 0;
-    padding: 0.3em;
-}
-
 .portletCollection .even,
 .portletCollection .odd {
     border: 0;
@@ -127,16 +127,10 @@ a.navTreeItemInPath.navTreeFolderish {
     margin: 0 0 1em 0;
 }
 
-#firstHeader {
-   margin: 0 0 5px 0;
-   line-height: 1.2;
-    font-size: 1.4rem;
-   font-weight: bold;
-}
-.mini-header-navigation #firstHeader {
-    margin: 1.25rem 0 1rem 0;
-    font-size: 1.25rem;
-}
+/*.mini-header-navigation #firstHeader {*/
+/*    margin: 1.25rem 0 1rem 0;*/
+/*    font-size: 1.25rem;*/
+/*}*/
 
 .portletFooter {
     clear: both;
@@ -181,34 +175,15 @@ a.navTreeItemInPath.navTreeFolderish {
 
 /* New navtree styles */
 
-.portletNavigationTree {
-    margin: 0;
-    padding: 1em;
-    list-style: none none;
-    line-height: 1em;
-    background: #FFFFFF;
-}
+/*.portletNavigationTree {*/
+/*    margin: 0;*/
+/*    padding: 1em;*/
+/*    background: #FFFFFF;*/
+/*}*/
 
-.navTree {
-    list-style: none none;
-}
-.navTree li {
-    margin-bottom: 0 !important;
-}
-
-.navTreeItem {
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
-
-.navTreeItem a,
-.portletItem .navTreeItem a {
-    display: block;
-    text-decoration: none;
-}
-
+/*.navTree li {*/
+/*    margin-bottom: 0 !important;*/
+/*}*/
 
 li.navTreeCurrentItem {
     display: block;
@@ -365,9 +340,6 @@ dt.portletItem a, #content dt.portletItem a {
    background: #fff;
    border-bottom: 1px solid #fff;
 }
-#portal-column-two .portlet {
-   margin: 0 0 1em 0;
-}
 #portal-column-two dl dd dl.portlet {
    margin: 0;
    padding: 0.4em;
@@ -400,12 +372,10 @@ dt.portletItem a, #content dt.portletItem a {
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader {
-   background-color: &dtml-lightBackgroundColor;;
    font-size: 1rem;
    padding: 10px;
    margin: 0;
    cursor: pointer;
-   border-bottom: 1px solid &dtml-mediumBackgroundColor;;
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader:hover {
@@ -417,15 +387,16 @@ dl.portletNavigationTree dt.portletSubMenuHeader:last-child {
 }
 
 dl.portletNavigationTree dt.portletSubMenuHeader span.title {
-  cursor: pointer;
-  margin: 0;
-  display: block;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .portletNavigationTree .eea-icon-left:after,
 .portletHeader .eea-icon-left:after
 {
-    font-size: 1.2em;
+    font-size: 1rem;
     color: &dtml-corporateBlue;;
 }
 
@@ -468,10 +439,6 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 .navTree a:hover {
     color: &dtml-linkVisitedColor; !important;
 }
-.navTree {
-    margin-left: 0;
-    margin-bottom: 0;
-}
 
 .navTreeLevel0 .navTreeCurrentItem:after {
     left: -16px;
@@ -487,21 +454,21 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 /*.navTreeLevel2 .navTreeCurrentItem:after {*/
 /*    left: -71px;*/
 /*}*/
-.navTreeLevel3 .navTreeCurrentItem:after {
-    left: -92px;
-}
-.navTreeLevel4 .navTreeCurrentItem:after {
-    left: -114px;
-}
-.navTreeLevel5 .navTreeCurrentItem:after {
-    left: -138px;
-}
-.navTreeLevel6 .navTreeCurrentItem:after {
-    left: -162px;
-}
-.navTreeLevel7 .navTreeCurrentItem:after {
-    left: -186px;
-}
+/*.navTreeLevel3 .navTreeCurrentItem:after {*/
+/*    left: -92px;*/
+/*}*/
+/*.navTreeLevel4 .navTreeCurrentItem:after {*/
+/*    left: -114px;*/
+/*}*/
+/*.navTreeLevel5 .navTreeCurrentItem:after {*/
+/*    left: -138px;*/
+/*}*/
+/*.navTreeLevel6 .navTreeCurrentItem:after {*/
+/*    left: -162px;*/
+/*}*/
+/*.navTreeLevel7 .navTreeCurrentItem:after {*/
+/*    left: -186px;*/
+/*}*/
 
 .navTreeItem .contenttype-document,
 .navTreeItem .contenttype-event,
