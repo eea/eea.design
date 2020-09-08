@@ -21,18 +21,18 @@ jQuery(document).ready(function ($) {
   var throttle = window.underscore
     ? window.underscore.throttle
     : function (t, e) {
-        var n;
-        return function () {
-          var i,
-            o = this,
-            r = arguments;
-          n ||
-            ((i = function () {
-              (n = null), t.apply(o, r);
-            }),
-            (n = window.setTimeout(i, e)));
-        };
+      var n;
+      return function () {
+        var i,
+          o = this,
+          r = arguments;
+        n ||
+        ((i = function () {
+          (n = null), t.apply(o, r);
+        }),
+          (n = window.setTimeout(i, e)));
       };
+    };
 
   //var $tabbed_menu = $(".tabbedmenu");
   //var tabbed_menu_found = $tabbed_menu.length;
@@ -61,10 +61,10 @@ jQuery(document).ready(function ($) {
       css = replaceAll(css, "eea-tabs-panels", "eea-accordion-panels");
       css = tabbed_menu_found
         ? replaceAll(
-            css,
-            "tabbedmenu-panel",
-            "eea-accordion-panels tabbed-accordion-menu"
-          )
+          css,
+          "tabbedmenu-panel",
+          "eea-accordion-panels tabbed-accordion-menu"
+        )
         : css;
       $tabs_panel.attr("class", css);
     }
@@ -111,8 +111,8 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  function make_accordions_into_tabs() {
-    var $tabs_accordion = $(".eea-tabs-transformed");
+  function make_accordions_into_tabs($tab) {
+    var $tabs_accordion = $tab.parent().find(".eea-tabs-transformed");
     if (!$tabs_accordion.length) {
       return;
     }
@@ -122,10 +122,10 @@ jQuery(document).ready(function ($) {
       if (css) {
         css = tabbed_menu_found
           ? replaceAll(
-              css,
-              "eea-accordion-panels tabbed-accordion-menu",
-              "tabbedmenu-panel"
-            )
+            css,
+            "eea-accordion-panels tabbed-accordion-menu",
+            "tabbedmenu-panel"
+          )
           : css;
         css = replaceAll(css, "eea-accordion-panels", "eea-tabs-panels");
         $item.attr("class", css);
@@ -150,7 +150,6 @@ jQuery(document).ready(function ($) {
           $panel.hide();
         }
       });
-      $(window).trigger("eea.tags.loaded", {obj: $item.prev()});
     });
     $(".js-eea-tabs-to-hide").removeClass("hidden");
   }
@@ -191,7 +190,9 @@ jQuery(document).ready(function ($) {
                 $tab.addClass("hidden");
                 make_tabs_into_accordions($tab, $tab_panels);
               } else {
-                make_accordions_into_tabs();
+                if ($tab.hasClass('hidden')) {
+                  make_accordions_into_tabs($tab);
+                }
               }
             });
           }
@@ -239,13 +240,17 @@ jQuery(document).ready(function ($) {
                 $tab.parent().attr("id") === "relatedItems" &&
                 window.innerWidth > 490
               ) {
-                make_accordions_into_tabs();
+                make_accordions_into_tabs($tab);
               } else {
                 $tab.addClass("hidden");
-                make_tabs_into_accordions($tab, $tab_panels);
+                if (!$tab.parent().find(".eea-tabs-transformed").length) {
+                  make_tabs_into_accordions($tab, $tab_panels);
+                }
               }
             } else {
-              make_accordions_into_tabs();
+              if ($tab.hasClass('hidden')) {
+                make_accordions_into_tabs($tab);
+              }
             }
           });
         }
@@ -394,11 +399,11 @@ jQuery(document).ready(function ($) {
   ) {
     var $panel = $(
       "<div class='panel' id='" +
-        panel_id +
-        "'>" +
-        "<div class='panel-top'></div>" +
-        "<div class='panel-content shadow'>" +
-        "</div>"
+      panel_id +
+      "'>" +
+      "<div class='panel-top'></div>" +
+      "<div class='panel-content shadow'>" +
+      "</div>"
     );
     var $clone = $content.clone();
     if (use_only_children) {
@@ -500,13 +505,9 @@ jQuery(document).ready(function ($) {
   }
 
   // 91577 show and hide mobile menu
-  $(".navbar-toggle, .icon-bar").click(function (ev) {
-    if (this.tagName === "SPAN") {
-      $(this).parent().toggleClass("collapsed");
-    } else {
-      $(this).toggleClass("collapsed");
-    }
+  $(".navbar-toggle").click(function (ev) {
     ev.stopImmediatePropagation();
+    $(this).toggleClass("collapsed");
     $(".navbar-collapse").toggleClass("in");
   });
 
