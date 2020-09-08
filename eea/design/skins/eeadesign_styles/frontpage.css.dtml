@@ -62,6 +62,10 @@
 .figure-left {
     float: left;
 }
+/* 120363 disable until it's more targeted for themes figure */
+/*.mini-header .figure-left {*/
+/*   float: none;*/
+/*}*/
 
 .featured-highlights .figure-left{
     position: relative;
@@ -134,10 +138,6 @@
 }
 
 /* style for featured boxes */
-.featured, .portlet {
-    margin-bottom: 1em;
-    padding:&dtml-padding-base;;
-}
 
 .portlet,
 .portletWrapper .featured {

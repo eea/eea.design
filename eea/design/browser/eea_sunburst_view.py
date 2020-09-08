@@ -25,7 +25,9 @@ class EEASunburstView(SunburstView):
                                 name=u'plone_context_state')
         if is_miniheader() and context_state.is_view_template():
             # check if miniheader, if true set width-3:4
-            return "width-3:4"
+            mini_header_full_column = self.request.get(
+                'disable_eea.miniheader_small_content_column')
+            return "width-3:4" if not mini_header_full_column else 'width-full'
         elif not sr:
             # we don't have columns, thus content takes the whole width
             return "cell width-full position-0"

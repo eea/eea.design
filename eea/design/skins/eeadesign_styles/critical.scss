@@ -385,7 +385,7 @@ ul {
   }
 .portal-globalnav > li, .secondary-portaltabs > li {
   margin: 0;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   line-height: normal;
   }
@@ -461,7 +461,7 @@ ul {
   color: gray;
   position: absolute;
   margin-left: -18px;
-  top: -3px;
+  top: 3px; /* signals/signals-2010 moreLink  */
   }
 
 
@@ -477,7 +477,6 @@ ul {
   background-color: #FFF;
   }
 .plone-breadcrumb {
-  margin-bottom: .5em;
   border-width: 0 0 1px 0;
   border-style:solid;
   border-color: unquote("&dtml-mediumBackgroundColor;");
@@ -665,6 +664,11 @@ ul {
 .portlet-megatopic-body {
   padding: 1rem;
 }
+
+#megatopics-area .portlet-megatopic-body li {
+  padding-left: 0;
+  margin-bottom: 0;
+}
 .portlet-megatopic .list-items {
   margin: 0 0 0 1rem;
 }
@@ -732,7 +736,7 @@ p,
 /*}*/
 .featured, .portlet {
   margin-bottom: 1em;
-  padding: 1.5em;
+  padding: 15px;
   background: #ffffff;
   border: 1px solid unquote("&dtml-mediumBackgroundColor;");
   }
@@ -890,6 +894,12 @@ p,
     display: none;
     }
 
+}
+
+@media (min-width: 1280px) {
+  .mobile-only {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 1360px) {
