@@ -624,21 +624,9 @@ jQuery(document).ready(function($) {
   }
 
 // #119305 - scroll to the top button
-  var throttle = underscore
-      ? underscore.throttle
-      : function(t, e) {
-        var n;
-        return function() {
-          var i,
-              o = this,
-              r = arguments;
-          n ||
-          ((i = function() {
-            (n = null), t.apply(o, r);
-          }),
-              (n = window.setTimeout(i, e)));
-        };
-      };
+  var throttle = underscore ? underscore.throttle : function(el) {
+    return el;
+  };
 
   function navScroll() {
     var pxShow = 150, // height on which the button will show
