@@ -81,6 +81,7 @@ jQuery(document).ready(function ($) {
       if (!$panel.find(".pane").length) {
         $panel.wrapInner("<div class='pane' />");
       }
+      var $pane = $panel.find('.pane');
       $panel.find(".filter-topic").hide();
       $panel.show();
       var $accordion_title = $panel.find(".eea-accordion-title");
@@ -91,6 +92,10 @@ jQuery(document).ready(function ($) {
         if (link_is_current) {
           // $tabs_panels.find(".pane").hide();
           $accordion_title.click();
+          $pane.show();
+        }
+        else {
+          $pane.hide();
         }
         return;
       }
@@ -187,12 +192,16 @@ jQuery(document).ready(function ($) {
                 }
               });
               if (tabs_multiple_lines) {
-                $tab.addClass("hidden");
-                make_tabs_into_accordions($tab, $tab_panels);
-              } else {
-                if ($tab.hasClass('hidden')) {
-                  make_accordions_into_tabs($tab);
+                if (!$tab.parent().find(".eea-tabs-transformed").length) {
+                  make_tabs_into_accordions($tab, $tab_panels);
                 }
+                else {
+                  $tab.addClass("hidden");
+                }
+              } else {
+                  if ($tab.parent().find(".eea-tabs-transformed").length) {
+                    make_accordions_into_tabs($tab);
+                  }
               }
             });
           }
