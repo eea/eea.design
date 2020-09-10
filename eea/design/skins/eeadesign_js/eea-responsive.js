@@ -246,7 +246,7 @@ jQuery(document).ready(function ($) {
 
             if (tabs_multiple_lines) {
                if ($tab.parent().attr("id") === "relatedItems" &&
-                window.innerWidth > 1279) {
+                window.innerWidth > 1279 && $body.hasClass('mini-header')) {
                  if ($tab.parent().find(".eea-tabs-transformed").length) {
                    make_accordions_into_tabs($tab);
                  }
