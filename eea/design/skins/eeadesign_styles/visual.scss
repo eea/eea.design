@@ -230,7 +230,7 @@ th a, th a:link, th a:visited {
 .google-visualization-table .gradient {
     color: #fff;
     /* #30473 important because of google visualization table override */
-    background: none unquote("&dtml-corporateBlueTwo;") !important;
+    background: none unquote("&dtml-corporateBlue;") !important;
 }
 
 .sortable th, .listing th {
@@ -483,7 +483,7 @@ span.figure-left {
     position: absolute;
     overflow: hidden;
     padding: 0;
-    background: unquote("&dtml-corporateBlueTwo;");
+    background: unquote("&dtml-corporateBlue;");
     color: #FFFFFF;
     bottom: 0;
     margin: 0;
@@ -958,7 +958,7 @@ p + .eea-tabs-panel-paginated {
     max-width: 150px;
 }
 .tabbedmenu ul > li a:hover {
-    color: unquote("&dtml-corporateBlueTwo;") !important;
+    color: unquote("&dtml-corporateBlue;") !important;
     text-decoration: none;
     text-shadow: 1px 1px 1px #FFFFFF;
     background-color: unquote("&dtml-greyBackgroundColor;");
@@ -966,7 +966,7 @@ p + .eea-tabs-panel-paginated {
 .tabbedmenu ul > li a.current,
 .tabbedmenu ul > li a.current:hover {
     cursor: default;
-    color: unquote("&dtml-corporateBlueTwo;") !important;
+    color: unquote("&dtml-corporateBlue;") !important;
     text-decoration: none;
     text-shadow: 1px 1px 1px #FFFFFF;
     background-color: unquote("&dtml-greyBackgroundColor;");

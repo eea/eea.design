@@ -245,19 +245,20 @@ jQuery(document).ready(function ($) {
             });
 
             if (tabs_multiple_lines) {
-              if (
-                $tab.parent().attr("id") === "relatedItems" &&
-                window.innerWidth > 490
-              ) {
-                make_accordions_into_tabs($tab);
-              } else {
-                $tab.addClass("hidden");
-                if (!$tab.parent().find(".eea-tabs-transformed").length) {
-                  make_tabs_into_accordions($tab, $tab_panels);
-                }
-              }
+               if ($tab.parent().attr("id") === "relatedItems" &&
+                window.innerWidth > 1279) {
+                 if ($tab.parent().find(".eea-tabs-transformed").length) {
+                   make_accordions_into_tabs($tab);
+                 }
+               }
+               else {
+                 $tab.addClass("hidden");
+                 if (!$tab.parent().find(".eea-tabs-transformed").length) {
+                   make_tabs_into_accordions($tab, $tab_panels);
+                 }
+               }
             } else {
-              if ($tab.hasClass('hidden')) {
+              if ($tab.parent().find(".eea-tabs-transformed").length) {
                 make_accordions_into_tabs($tab);
               }
             }

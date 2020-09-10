@@ -311,7 +311,7 @@ table.listing {
 
 table.listing th {
     color: #fff;
-    background: &dtml-corporateBlueTwo;;
+    background: &dtml-corporateBlue;;
 }
 
 div.listingBar a:hover {

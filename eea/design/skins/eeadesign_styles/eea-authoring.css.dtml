@@ -8,7 +8,7 @@
 
 #content-views {
     background-color: transparent;
-    margin:0px !important;
+    margin:0 !important;
 }
 
 #edit-bar,
@@ -44,7 +44,7 @@
 }
 
 #edit-bar, .actionMenuContent  {
-    background-color: &dtml-corporateGreen;;
+    background-color: &dtml-corporateGreenOld;;
 }
 
 .panel .actionMenuContent {
