@@ -44,7 +44,7 @@
 }
 
 #edit-bar, .actionMenuContent  {
-    background-color: &dtml-corporateGreenOld;;
+    background-color: &dtml-corporateGreen;;
 }
 
 .panel .actionMenuContent {

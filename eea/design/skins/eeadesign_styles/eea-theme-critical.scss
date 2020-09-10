@@ -6,6 +6,7 @@
 @import "scss-theme/mixins";
 @import "scss-theme/type";
 
+.indicator-figure-plus-container .warningMessage {display:none;}
 .mini-header:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
 }
@@ -408,8 +409,17 @@
       max-width: 830px;
     }
 
-    .mini-portal-type {
-      left: -2.5%;
+  }
+  .mini-header:not(.mini-header-navigation) {
+    &.portaltype-folder,
+    &.portaltype-topic {
+      .relatedItems h2, .relatedItems .eea-tabs {
+        left: 0 !important;
+      }
+
+      .relatedItems .eea-tabs-panels {
+        margin-left: 260px;
+      }
     }
   }
 }
@@ -419,6 +429,16 @@
     &[class*="_view"] #portal-column-content {
       float: none;
       max-width: 94%;
+    }
+    .relatedItems h2, .relatedItems .eea-tabs {
+      left: 0 !important;
+    }
+    .relatedItems .eea-tabs-panels {
+      margin-left: 260px;
+    }
+
+    .mini-portal-type {
+      left: -2.5%;
     }
 
     .content-header::before {
