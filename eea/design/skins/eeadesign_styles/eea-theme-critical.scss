@@ -249,6 +249,11 @@
     //color: rgba(255, 255, 255, 0.9);
     color: inherit;
   }
+  &.mini-header-light .documentDescription {
+    color: $text-gray-primary;
+    line-height: 1.6;
+    font-size: $p-font-size;
+  }
 
   #themes-tags .listHead {
     display: none;
