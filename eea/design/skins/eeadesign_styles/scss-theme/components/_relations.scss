@@ -289,11 +289,21 @@ span.next {
    left: -32.5%;
   }
  }
+//.mini-header-navigation .relatedItems,
+ .width-full .relatedItems,
+ {
+  h2, .eea-tabs {
+   left: 0 !important;
+  }
+  .eea-tabs-panels {
+   margin-left: 265px !important;
+  }
+ }
 
 }
 
 @media (min-width: $breakpoint-xl) and (max-width: 1365px) {
- .mini-header .relatedItems {
+ .mini-header:not(.mini-header-navigation) .width-3\:4 .relatedItems {
   h2,
   .eea-tabs {
    left: -27%;
@@ -306,7 +316,7 @@ span.next {
 }
 
 @media (min-width: 1600px){
- .mini-header .relatedItems {
+ .width-3\:4 .relatedItems {
    h2,
   .eea-tabs {
    left: -37%;

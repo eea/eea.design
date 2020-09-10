@@ -1,10 +1,13 @@
 /*! <dtml-with base_properties> (do not remove this :) */
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+@import "scss-theme/variables";
 $bg-color: #004B87;
 $faceted-color: #008675;
 $input-color: #f3f3f3;
-$font-size: 14px;
+$font-size: 16px;
+
 
 @media screen and (max-width: 320px) {
   .plone-breadcrumb-list > li {
@@ -147,10 +150,12 @@ $font-size: 14px;
     .eea-accordion-title, .eea-accordion-panel > h2 {
       background-color: $bg-color;
       font-size: $font-size;
+      font-weight: normal;
+      cursor: pointer;
       color: #FFF;
       border: 0;
       padding: 0;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid $border-light;
       }
     .eea-accordion-panel {
       a {
@@ -224,31 +229,24 @@ $font-size: 14px;
 
   #portal-globalnav > li > a {
     color: white;
-    font-weight: bold;
     padding: 0.5em 0;
     line-height: 2em;
     font-size: $font-size;
     width: 100%;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $border-light;
     }
   #portal-globalnav a:hover:after,
   #portal-globalnav .eea-nav-current a:after {
-    top: 14px;
-    left: -1%;
-    border: 10px solid transparent;border-left-color: #FFF;
-    margin-left: -11px;
-    }
-  #portal-globalnav .current a {
-    padding-left: 20px; }
-
-  #portal-globalnav .current a:after {
-    top: 50% !important;
-    left: 0 !important;
-    border-left-color: #fff;
-    border-top-color: transparent !important;
-    margin-left: 0 !important;
-    margin-top: -10px !important;
-    }
+    top: 0;
+    left: 0;
+    margin-left: -16px;
+    border-left: 5px solid white;
+    height: 100%;
+    border-top: 0;
+  }
+  #portal-globalnav .eea-nav-current a {
+    font-weight: bold;
+  }
   #secondary-portaltabs {
     margin: 0;
     width: 100%;
@@ -307,10 +305,13 @@ $font-size: 14px;
     border-radius: 0;
     }
 
+  }
+
+@media screen and (min-width: 1280px) {
   .navbar-toggle {
     display: none;
-    }
   }
+}
 @media screen and (min-width: 1250px) and (max-width: 1359px) {
   .portal-globalnav > li > a,
   .secondary-portaltabs > li {

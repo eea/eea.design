@@ -5,13 +5,13 @@
 
   <genericsetup:upgradeSteps
     source="26.3"
-    destination="27.1"
+    destination="27.2"
     profile="eea.design:default">
 
     <genericsetup:upgradeDepends
-      title="Import all steps from eea.design profile upgrade 27.1"
+      title="Import all steps from eea.design profile upgrade 27.2"
       description="Added new js/css file for helpdesk widget"
-      import_profile="eea.design:upgrade271"
+      import_profile="eea.design:upgrade272"
     />
   </genericsetup:upgradeSteps>
 

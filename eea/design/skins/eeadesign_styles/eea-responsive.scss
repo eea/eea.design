@@ -3,6 +3,7 @@
 /*! <dtml-with base_properties> (do not remove this :) */
 /*! <dtml-let xurl="portal_url().replace('https://', 'http://').replace('http://', '//')"> */
 /*! <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+@import "scss-theme/variables";
 $bg-color: #274357;
 $faceted-color: #008675;
 $input-color: #f3f3f3;
@@ -191,9 +192,6 @@ $input-color: #f3f3f3;
 /* #31309 - Improve DaViz Filter design/display */
 @media screen {
   .template-dc_view #content-core {
-    position: static;
-  }
-  .template-dc_view #content {
     position: relative;
   }
 }
@@ -502,9 +500,6 @@ $input-color: #f3f3f3;
     display: flex !important;
   }
 
-  .template-dc_view .content-header {
-    width: 58.5%;
-  }
 
   .template-dc_view .right-column-area {
     position: absolute;

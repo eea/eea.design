@@ -509,7 +509,7 @@ div.overlay a:hover {
     background: no-repeat transparent 0px -212px url(&dtml-xurl;/contenttypes-sprite.png);
 }
 .icons-on .contenttype-folder {
-    /* background: no-repeat transparent 0px -648px url(&dtml-xurl;/contenttypes-sprite.png); */
+    background: no-repeat transparent 0px -634px url(&dtml-xurl;/contenttypes-sprite.png);
     background: none;
 }
 .icons-on .contenttype-link {
@@ -522,7 +522,7 @@ div.overlay a:hover {
     background: no-repeat transparent 0px -1512px url(&dtml-xurl;/contenttypes-sprite.png);
 }
 .icons-on .contenttype-topic, .icons-on .contenttype-collection {
-    background: no-repeat transparent 0px -1728px url(&dtml-xurl;/contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1714px url(&dtml-xurl;/contenttypes-sprite.png);
 }
 
 /* avoid double icon for portal navigation collection link */
@@ -554,33 +554,6 @@ div.overlay a:hover {
 }
 
 /* our customizations */
-/*#portal-column-content .contenttype-folder {*/
-/*    padding-left: 0 !important;*/
-/*}*/
-
-.mini-header-navigation .visualNoMarker a.navTreeFolderish:not(.navTreeItemInPath) {
-    padding-left: 20px;
-}
-.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before,
-.mini-header-navigation .visualNoMarker a.navTreeFolderish::before {
-    position: absolute;
-    content: "\f067";
-    font-family: "FontAwesome";
-    font-size: 13px;
-    margin-left: -17px;
-    margin-top: 2px;
-}
-
-.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeItemInPath::before {
-    content: "\f068";
-}
-/* hide plus and minus icon for auth users since they have content icons */
-.mini-header-navigation .userrole-authenticated .visualNoMarker a.navTreeFolderish::before,
-.mini-header-navigation .visualNoMarker a.navTreeFolderish.navTreeCurrentNode::before {
-    display: none;
-}
-
-
 /* #5243 wrongly indented folder icon */
 /*#portal-column-content .portletNavigationTree .contenttype-folder {*/
 /*    padding-left: 10px !important;*/

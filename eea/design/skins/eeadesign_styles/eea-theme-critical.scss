@@ -4,6 +4,7 @@
 
 @import "scss-theme/variables";
 @import "scss-theme/mixins";
+@import "scss-theme/type";
 
 .mini-header:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
@@ -110,15 +111,15 @@
     flex: 1;
     max-width: initial;
   }
-
-  .content-header .documentByLine::before {
-    position: absolute;
-    width: 100vw;
-    left: -$grid-gutter-width;
-    display: block;
-    content: " ";
-    border-top: 2px solid white;
-    top: -$spacer-half;
+   .content-header .documentByLine::before {
+     position: absolute;
+     width: 100vw;
+     left: -$grid-gutter-width;
+     display: block;
+     content: " ";
+     border-top: 2px solid white;
+     top: -$spacer-half;
+     max-width: $breakpoint-full;
   }
 
   .documentExportActions {
@@ -149,18 +150,17 @@
     width: 100%;
     float: none;
   }
-  &[class*="_view"] #portal-column-content {
+  &[class*="_view"] .width-3\:4 {
     float: none;
     max-width: 830px;
+  }
+  &[class*="_view"] .width-full {
+    max-width: 100%;
   }
 
   .content-core-wrapper {
     margin-top: $spacer-0;
     //padding-top: 1px; /* ensure margin is preserved /highlights/air-pollution-goes-down-as */
-  }
-  .eea-btn.eea-btn--toggle,
-  #portal-column-two-wrapper {
-    margin-top: -$spacer-0;
   }
 
   .content-header {
@@ -187,7 +187,7 @@
 
   .content-header:before {
     content: " ";
-    width: 99.8%;
+    width: 100%;
     left: -1rem;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -293,6 +293,8 @@
   }
 }
 
+
+
 @media (max-width: 660px) {
   .mini-header {
     .content-header-body {
@@ -356,11 +358,8 @@
     .content-core-wrapper {
       margin-top: $spacer-hero;
     }
-    .eea-btn.eea-btn--toggle,
-    #portal-column-two-wrapper {
-      margin-top: -$spacer-hero;
-    }
   }
+
 }
 
 @media (min-width: $breakpoint-lg) {
@@ -373,7 +372,7 @@
       max-width: initial;
     }
 
-    .content-header:before {
+    .width-3\:4 .content-header:before {
       width: 122%;
       left: -11%;
       padding: 0;
@@ -383,13 +382,70 @@
       left: -11%;
     }
   }
+
+  .mini-header:not(.mini-header-navigation) {
+    &.portaltype-folder,
+    &.portaltype-topic {
+      .content-header:before {
+        width: 105%;
+        left: -2.5%;
+      }
+      .mini-portal-type {
+        left: -2.5%;
+      }
+      #portal-column-content {
+        max-width: 100%;
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 1920px) {
-  .mini-header {
-    .eea-btn--toggle.js-eea-sliding-toggle,
-    #portal-column-two-wrapper {
-      right: -25.4vw;
+@media (min-width: $breakpoint-xl)  {
+  .mini-header-navigation {
+
+    .content-header,
+    .content-core {
+      max-width: 830px;
+    }
+
+    .mini-portal-type {
+      left: -2.5%;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: 1599px) {
+  .mini-header-navigation {
+    &[class*="_view"] #portal-column-content {
+      float: none;
+      max-width: 94%;
+    }
+
+    .content-header::before {
+      width: 105% !important;
+      left: -2.5% !important;
+    }
+    .content-header-body::before {
+      width: 1605px;
+    }
+  }
+
+}
+
+
+@media (min-width: $breakpoint-xl) and (max-width: 1399px) {
+  .mini-header-navigation {
+    #visual-portal-wrapper {
+      margin-top: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .mini-header-navigation {
+    .content-header-body::before {
+      width: calc(100vw + 27.5%);
     }
   }
 }
