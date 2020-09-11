@@ -1,6 +1,12 @@
 Changelog
 =========
 
+27.2 - (2020-09-11)
+---------------------------
+* Feature: Added redmine helpdesk widget + upgrade step to add 1 js/css file
+  for the widget
+  [iulianpetchesi refs #119268]
+
 27.1 - (2020-08-24)
 ---------------------------
 * Feature: added **disable_eea.miniheader_small_content_column** request

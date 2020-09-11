@@ -290,7 +290,7 @@ span.next {
   }
  }
 //.mini-header-navigation .relatedItems,
- .width-full .relatedItems,
+ .mini-header .width-full .relatedItems,
  {
   h2, .eea-tabs {
    left: 0 !important;
@@ -306,10 +306,7 @@ span.next {
  .mini-header:not(.mini-header-navigation) .width-3\:4 .relatedItems {
   h2,
   .eea-tabs {
-   left: -27%;
-  }
-  .eea-tabs-panel {
-   margin-left: auto;
+   left: -28.5%;
   }
  }
 

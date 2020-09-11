@@ -67,24 +67,24 @@ a.managePortletsFallback {
 }
 
 
-.navTree  ul.navTreeLevel1 li > a {
-    padding-left: 20px !important;
+.navTree  .navTreeLevel1 li > a {
+    padding-left: 20px;
 }
 
-.navTree ul.navTreeLevel2 li > a {
-    padding-left: 30px !important;
+.navTree .navTreeLevel2 li > a {
+    padding-left: 30px;
 }
 
-.navTree ul.navTreeLevel3 li > a {
-    padding-left: 40px !important;
+.navTree .navTreeLevel3 li > a {
+    padding-left: 40px;
 }
 
-.navTree ul.navTreeLevel4 li > a {
-    padding-left: 50px !important;
+.navTree .navTreeLevel4 li > a {
+    padding-left: 50px;
 }
 
-.navTree ul.navTreeLevel5 li > a {
-    padding-left: 60px !important;
+.navTree .navTreeLevel5 li > a {
+    padding-left: 60px;
 }
 /* @end @group Navigation portlet */
 

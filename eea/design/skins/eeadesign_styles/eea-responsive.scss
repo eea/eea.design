@@ -486,20 +486,6 @@ $input-color: #f3f3f3;
 }
 
 @media screen and (min-width: 768px) {
-  .eea-tabs-panel {
-    .eea-accordion-title {
-    display: none;
-    }
-    .pane {
-      display: block !important;
-    }
-
-  }
-
-  #relatedItems .pane {
-    display: flex !important;
-  }
-
 
   .template-dc_view .right-column-area {
     position: absolute;
