@@ -1,6 +1,9 @@
 Changelog
 =========
 
+27.3-dev0 - (unreleased)
+---------------------------
+
 27.2 - (2020-09-11)
 ---------------------------
 * Feature: Added redmine helpdesk widget + upgrade step to add 1 js/css file
