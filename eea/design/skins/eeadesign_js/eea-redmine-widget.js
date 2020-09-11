@@ -166,12 +166,12 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
 
             $('#helpdesk_ticket_container').contents().find('.close-button').hide();
 
-            var message = "<span class='discreet note'><strong>Note</strong>:"
+            var message = "<span class='discreet note'><strong>Note</strong>: "
             + "Our expected response time is 15 working days. However, we are committed "
-            + "to replying to your enquiries thoroughly and in the briefest time "
-            + "possible. Note that the EEA working language is English and that"
-            + "most of our information and content is in English. Nevertheless, you"
-            + "may address us in one of the 24 EU official languages. Kindly note that"
+            + "to replying to your enquiry thoroughly and in the briefest time "
+            + "possible. Note that the EEA working language is English and that "
+            + "most of our information and content is in English. Nevertheless, you "
+            + "may address us in one of the 24 EU official languages. Kindly note that "
             + "the time to process your enquiry might be slightly longer.</span>";
 
             var policy = $('#helpdesk_ticket_container').contents().find('#privacy_policy_fields')[0];
@@ -208,11 +208,11 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
             $('#helpdesk_ticket_container').contents()[0].head.appendChild(styleSheet);
 
             // Type of Enquirier custom field
-            var enquiry_field = '<p class="custom_field" data-error-key="Type of Enquirier List" data-require="false">'
-                             + '<label for="issue_custom_field_values_80">'
-                             + '<span>Type of Enquirier List</span></label>'
-                             + '<select name="issue[custom_field_values][80]" id="issue_custom_field_values_80" class="user_cf">'
-                             + '</select></p>'
+            var enquiry_field = '<p class="custom_field" data-error-key="Type of Enquiry" data-require="false">'
+                              + '<label for="issue_custom_field_values_80">'
+                              + '<span>Type of Enquiry</span></label>'
+                              + '<select name="issue[custom_field_values][80]" id="issue_custom_field_values_80" class="user_cf">'
+                              + '</select></p>'
             var enquiry_values = ['Test Value 1', 'Citizen', 'Test Value 2', 'Other'];
 
             $(enquiry_field).insertAfter($('#helpdesk_ticket_container').contents().find('#tracker_id'))
@@ -222,9 +222,9 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
             });
 
             // Enquiry Topics custom field
-            enquiry_field = '<p class="custom_field" data-error-key="Enquiry Topics List" data-require="false">'
+            enquiry_field = '<p class="custom_field" data-error-key="Enquiry Topics" data-require="false">'
                           + '<label for="issue_custom_field_values_81">'
-                          + '<span>Enquiry Topics List</span></label>'
+                          + '<span>Enquiry Topics</span></label>'
                           + '<select name="issue[custom_field_values][81]" id="issue_custom_field_values_81" class="user_cf">'
                           + '</select></p>'
             enquiry_values = ['Agriculture', 'Air', 'Biodiversity and ecosystems', 'Chemicals', 
