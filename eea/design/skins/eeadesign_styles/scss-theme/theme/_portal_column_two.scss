@@ -1,7 +1,7 @@
 #portal-column-two-wrapper {
   top: 1.5rem;
   position: absolute;
-  right: -360px;
+  right: -387px;
   width: 100%;
   max-width: 300px;
   z-index: 2;
@@ -106,13 +106,6 @@
   }
   #portal-column-two-wrapper::-webkit-scrollbar-thumb {
     background-color: #CCC;
-  }
-}
-
-
-.mini-header #portal-column-two {
-  .portlet {
-    background-color: $corporateGrey;
   }
 }
 
