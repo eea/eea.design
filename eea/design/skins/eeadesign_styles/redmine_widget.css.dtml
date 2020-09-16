@@ -12,6 +12,7 @@
     left: 0 !important;
     max-width: 100% !important;
     width: 70%;
+    padding-top: 0 !important;
 }
 
 @media (min-width: 540px) and (max-width: 1250px){
