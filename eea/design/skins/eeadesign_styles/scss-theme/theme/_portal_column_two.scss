@@ -13,6 +13,9 @@
 .portlet .navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
 }
+.portletNavigationTree a:visited {
+  color: $corporateBlue;
+}
 
 #firstHeader {
   margin: 0 0 5px 0;
