@@ -362,6 +362,10 @@
       border-color: $text-primary;
     }
 
+    &.mini-header-light .width-full .documentByLine:before {
+      max-width: 98vw !important;
+    }
+
     .content-header-body:before {
       height: calc(100% + #{$spacer-hero});
     }
@@ -470,6 +474,12 @@
       margin-top: 0;
       overflow: hidden;
     }
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .mini-header.mini-header-light .width-full .documentByLine::before {
+    max-width: 1370px !important;
   }
 }
 

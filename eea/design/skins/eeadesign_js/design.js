@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
       $el.hide();
     }
   };
-  hide_empty_container($("#plone-document-byline"), 1);
+  // hide_empty_container($("#plone-document-byline"), 1);
   hide_empty_container($viewlet_below_content, 0);
   var $whatsnew_listing = $(".whatsnew-listing");
   var $body_content = $(".body-content");
