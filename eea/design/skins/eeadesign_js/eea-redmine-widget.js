@@ -8,18 +8,18 @@ jQuery('.helpdesk-button').parent().append(widget);
 jQuery('.helpdesk-button').parent().append(captcha);
 
 // load widget + captcha js
-jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk_widget/widget.js"), jQuery.getScript("https://unpkg.com/friendly-challenge@0.5.1/widget.min.js")).done(function( data1, data2 ) {
+jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk_widget/widget.js")).done(function( data ) {
     RedmineHelpdeskWidget.config({
         color: '#004B87',
         translation: {
           nameLabel: 'Enter your name here (Optional)',
           emailLabel: 'Please put your email here',
           descriptionLabel: 'What question do you have?',
-          createButtonLabel: 'Ask question',
+          createButtonLabel: 'Submit question',
           createSuccessDescription: 'Thank you for your question!',
-          createErrorLabel: 'Something goes wrong :(...',
+          createErrorLabel: 'Something went wrong :(...',
           subjectLabel: 'Subject',
-          createSuccessLabel: 'Your question successfully created'
+          createSuccessLabel: 'Your question was successfully created'
         },
         identify: {
         //   nameValue: 'User',
@@ -28,7 +28,7 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
         //   trackerValue: 'Bug',
         //   projectValue: 'Support',
           customFieldValues: {
-            // this is how you set keywords
+            //  this is how you set keywords
             // 'Keywords': 'test',
             // 'MPS Year': 2020
           }
@@ -40,7 +40,6 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
 
     jQuery(document).ready(function($) {
         var once = true;
-
         // reload widget on button click
         // $("#widget_button").click(function(event) {
         //     event.preventDefault();
@@ -48,16 +47,6 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
         //     RedmineHelpdeskWidget.reload = true;
         //     RedmineHelpdeskWidget.reload_form();
         //     $('#helpdesk_widget iframe').insertBefore('.frc-captcha');
-
-        //     // reinitialize event listener
-        //     once = true;
-        //     if(document.addEventListener){
-        //         $('#helpdesk_ticket_container')[0].contentWindow.document.addEventListener('keyup', formatForm, false);
-        //     }
-        //     else{
-        //         //for IE8
-        //         $('#helpdesk_ticket_container')[0].contentWindow.document.attachEvent('onkeyup', formatForm);
-        //     }
         // });
         $('#helpdesk_widget iframe').insertBefore('.frc-captcha');
 
@@ -70,11 +59,14 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
         }
 
         function formatForm() {
-            // remove onSubmit from form
-            $('#helpdesk_ticket_container').contents().find('form').attr('onsubmit', '');
-
             $('#helpdesk_ticket_container').contents().find('form').on("input", function() {
                 if (once) {
+                    // remove onSubmit from form
+                    $('#helpdesk_ticket_container').contents().find('form').attr('onsubmit', '');
+
+                    $('#helpdesk_ticket_container').contents().find('input#username')[0].classList = ['form-control'];
+                    $('#helpdesk_ticket_container').contents().find('input#username')[0].required = false;
+
                     $(this).submit(function(event){
                         event.preventDefault();
     
@@ -123,19 +115,19 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
                                    }
                             });
                             // added form submit message
-                            $('.widget-submit-message').remove();
-                            $('.captcha-invalid-message').remove();
+                            $("#helpdesk_ticket_container").contents().find('.widget-submit-message').remove();
+                            $("#helpdesk_ticket_container").contents().find('.captcha-invalid-message').remove();
                             var message = "<div class='portalMessage info widget-submit-message' i18n:translate=''>"
                                         + "Question submitted</div>";
-                            $(message).insertBefore("#helpdesk_ticket_container");
+                            $(message).insertAfter($("#helpdesk_ticket_container").contents().find('#submit_button'));
                         }
                         else {
                             // stop submit until captcha is verified
-                            $('.widget-submit-message').remove();
-                            $('.captcha-invalid-message').remove();
+                            $("#helpdesk_ticket_container").contents().find('.widget-submit-message').remove();
+                            $("#helpdesk_ticket_container").contents().find('.captcha-invalid-message').remove();
                             var message = "<div class='portalMessage error captcha-invalid-message' i18n:translate=''>"
                                         + "Captcha is invalid</div>";
-                            $(message).insertBefore("#helpdesk_ticket_container");
+                            $(message).insertAfter($("#helpdesk_ticket_container").contents().find('#submit_button'));
                             return false;
                         }
                     });
@@ -200,7 +192,7 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
             $('#helpdesk_ticket_container').contents()[0].head.appendChild(styleSheet);
 
             // add additional styles for form inputs
-            css = "span.asterisk{vertical-align:super}span.asterisk:after{content:'*';display:inline;vertical-align:super}#widget_form .custom_fields input,#widget_form .custom_fields select,#widget_form .custom_fields textarea,#widget_form .form-control{width:90%!important;display:inline-block}.custom_field label{display:block}#submit_button{padding:10px 50px 0 10px}.discreet.note{margin-bottom:2em}";
+            css = "span.asterisk{vertical-align:super}span.asterisk:after{content:'*';display:inline;vertical-align:super}#widget_form .custom_fields input,#widget_form .custom_fields select,#widget_form .custom_fields textarea,#widget_form .form-control{width:90%!important;display:inline-block}.custom_field label{display:block}#submit_button{padding:10px 50px 0 10px}.discreet.note{margin-bottom:2em}.portalMessage{color:#333;font-size:120%;margin:1em 0;padding:1em 1.5em 1em 4.5em;vertical-align:middle;border:none;background-color:#f3f3f3}.portalMessage.error{color:red}";
             styleSheet = $('#helpdesk_ticket_container').contents()[0].createElement("style");
             styleSheet.type = "text/css";
             styleSheet.id = "form-style";
@@ -209,42 +201,51 @@ jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk
 
             // Type of Enquirier custom field
             var enquiry_field = '<p class="custom_field" data-error-key="Type of Enquiry" data-require="false">'
-                              + '<label for="issue_custom_field_values_80">'
-                              + '<span>Type of Enquiry</span></label>'
-                              + '<select name="issue[custom_field_values][80]" id="issue_custom_field_values_80" class="user_cf">'
+                              + '<label for="issue_custom_field_values_83">'
+                              + '<span>Select what best describe your field of work</span></label>'
+                              + '<select name="issue[custom_field_values][83]" id="issue_custom_field_values_83" class="user_cf">'
                               + '</select></p>'
-            var enquiry_values = ['Test Value 1', 'Citizen', 'Test Value 2', 'Other'];
+            var enquiry_values = ['', 'Research and scientific representatives', 'Students', 'Citizens', 'Media representatives, publishing houses and portals',
+                                  'Industry and private sector representatives', 'Civil society representatives (NGOs and interest groups)',
+                                  'Governmental representatives National politicians, diplomats','Representatives of EU bodies and agencies',
+                                  'Representatives of inter-governmental organisations'];
 
             $(enquiry_field).insertAfter($('#helpdesk_ticket_container').contents().find('#tracker_id'))
             $.each(enquiry_values, function (idx, item) {
                 var option = '<option value="' + item + '">' + item + '</option>';
-                $('#helpdesk_ticket_container').contents().find('#issue_custom_field_values_80').append(option);
+                $('#helpdesk_ticket_container').contents().find('#issue_custom_field_values_83').append(option);
             });
 
             // Enquiry Topics custom field
             enquiry_field = '<p class="custom_field" data-error-key="Enquiry Topics" data-require="false">'
-                          + '<label for="issue_custom_field_values_81">'
-                          + '<span>Enquiry Topics</span></label>'
-                          + '<select name="issue[custom_field_values][81]" id="issue_custom_field_values_81" class="user_cf">'
+                          + '<label for="issue_custom_field_values_82">'
+                          + '<span>Select what best describe the topic of your question</span></label>'
+                          + '<select name="issue[custom_field_values][82]" id="issue_custom_field_values_82" class="user_cf">'
                           + '</select></p>'
-            enquiry_values = ['Agriculture', 'Air', 'Biodiversity and ecosystems', 'Chemicals', 
-                              'Climate change adaptation', 'Energy', 'Forests', 'Environment and health',
-                              'Industry', 'Land use and Soil', 'Water and marine environment', 'Noise',
+            enquiry_values = ['', 'Agriculture', 'Air', 'Biodiversity and ecosystems', 'Chemicals',
+                              'Climate change adaptation', 'Climate change mitigation', 'Energy', 'Forests', 'Environment and health',
+                              'Industry', 'Land use and soil', 'Water and marine environment', 'Noise',
                               'Sustainable production and consumption', 'Transport', 'Urban environment',
                               'Resource efficiency and waste', 'EMAS', 'Copernicus']
 
             $(enquiry_field).insertAfter($('#helpdesk_ticket_container').contents().find('#tracker_id'))
             $.each(enquiry_values, function (idx, item) {
                 var option = '<option value="' + item + '">' + item + '</option>';
-                $('#helpdesk_ticket_container').contents().find('#issue_custom_field_values_81').append(option);
+                $('#helpdesk_ticket_container').contents().find('#issue_custom_field_values_82').append(option);
             });
 
-
+            if(document.addEventListener) {
+                $('#helpdesk_ticket_container')[0].contentWindow.document.addEventListener('keyup', formatForm, false);
+            }
+            else {
+                //for IE8
+                $('#helpdesk_ticket_container')[0].contentWindow.document.attachEvent('onkeyup', formatForm);
+            }
         });
     });
 });
 
-// API KEY A1RNAEPKC7VFTMCLNC2265OAIU7JQHEQ9KB9LQ6N6438BGK80HL50M86PJ
+
 function verifyCaptcha() {
     var url = "https://friendlycaptcha.com/api/v1/siteverify";
     var sitekey = "FCMR3DVP81RFD3ML";
