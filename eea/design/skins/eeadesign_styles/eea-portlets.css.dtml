@@ -426,9 +426,6 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     top: 0;
     left: -16px;
 }
-.mini-header-navigation .navTree a:not(.navTreeCurrentItem):hover:after {
-    border-left: 5px solid &dtml-linkVisitedColor;;
-}
 
 .portlet .navTree li .navTreeCurrentItem {
     font-weight: bold;

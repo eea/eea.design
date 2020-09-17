@@ -359,7 +359,7 @@
     &.mini-header-light .documentByLine:before {
       max-width: 800px !important;
       left: 0;
-      border-color: $text-primary;
+      border-top: 1px solid $border-extra-light;
     }
 
     &.mini-header-light .width-full .documentByLine:before {
