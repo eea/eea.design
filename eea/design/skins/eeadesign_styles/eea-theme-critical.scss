@@ -250,9 +250,10 @@
     color: inherit;
   }
   &.mini-header-light .documentDescription {
-    color: $text-gray-primary;
+    color: $text-primary;
     line-height: 1.6;
     font-size: $p-font-size;
+    font-weight: bold;
   }
 
   #themes-tags .listHead {
@@ -355,6 +356,15 @@
     .content-header #article-language + .documentByLine::before {
       max-width: 990px; // was 977
     }
+    &.mini-header-light .documentByLine:before {
+      max-width: 800px !important;
+      left: 0;
+      border-top: 1px solid $border-extra-light;
+    }
+
+    &.mini-header-light .width-full .documentByLine:before {
+      max-width: 98vw !important;
+    }
 
     .content-header-body:before {
       height: calc(100% + #{$spacer-hero});
@@ -384,7 +394,7 @@
       padding: 0;
     }
 
-    .mini-portal-type {
+   .width-3\:4 .mini-portal-type {
       left: -11%;
     }
   }
@@ -464,6 +474,12 @@
       margin-top: 0;
       overflow: hidden;
     }
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .mini-header.mini-header-light .width-full .documentByLine::before {
+    max-width: 1370px !important;
   }
 }
 

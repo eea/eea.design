@@ -41,10 +41,17 @@
 .box--left.box-tertiary {
   margin-top: -$box-border-size; /* align left and right boxes to content area */
 }
+
+.box h1,
+.box h2,
+.box h3,
+.box h4 {
+  font-weight: normal;
+}
+
 .box-tertiary h2,
 .box-tertiary h3 {
   color: $corporateGreen;
-  font-weight: normal;
 }
 
 .box :last-child {

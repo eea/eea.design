@@ -1,7 +1,7 @@
 #portal-column-two-wrapper {
   top: 1.5rem;
   position: absolute;
-  right: -360px;
+  right: -387px;
   width: 100%;
   max-width: 300px;
   z-index: 2;
@@ -12,6 +12,9 @@
 
 .portlet .navTreeLevel0 > li:first-child > a {
   border-top: 0; /* no top border on the first link of the navigation menu */
+}
+.portletNavigationTree a:visited {
+  color: $corporateBlue;
 }
 
 #firstHeader {
@@ -106,13 +109,6 @@
   }
   #portal-column-two-wrapper::-webkit-scrollbar-thumb {
     background-color: #CCC;
-  }
-}
-
-
-.mini-header #portal-column-two {
-  .portlet {
-    background-color: $corporateGrey;
   }
 }
 

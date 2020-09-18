@@ -396,7 +396,7 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 .portletNavigationTree .eea-icon-left:after,
 .portletHeader .eea-icon-left:after
 {
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: &dtml-corporateBlue;;
 }
 
@@ -426,9 +426,6 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
     top: 0;
     left: -16px;
 }
-.mini-header-navigation .navTree a:not(.navTreeCurrentItem):hover:after {
-    border-left: 5px solid &dtml-linkVisitedColor;;
-}
 
 .portlet .navTree li .navTreeCurrentItem {
     font-weight: bold;
@@ -436,9 +433,10 @@ dl.portletNavigationTree dt.portletSubMenuHeader span.title {
 .navTree .navTreeCurrentItem:hover {
     color: &dtml-corporateBlue; !important;
 }
-.navTree a:hover {
-    color: &dtml-linkVisitedColor; !important;
-}
+/* 120363 disabled purple link color on hover */
+/*.navTree a:hover {*/
+/*    color: &dtml-linkVisitedColor; !important;*/
+/*}*/
 
 .navTreeLevel0 .navTreeCurrentItem:after {
     left: -16px;

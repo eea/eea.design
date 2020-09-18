@@ -12,6 +12,7 @@
     left: 0 !important;
     max-width: 100% !important;
     width: 70%;
+    padding-top: 0 !important;
 }
 
 @media (min-width: 540px) and (max-width: 1250px){
@@ -52,4 +53,18 @@ span.asterisk:after {
 
 .discreet.note {
     margin-bottom: 2em;
+}
+
+.portalMessage {
+    color: #333333;
+    font-size: 120%;
+    margin: 1em 0;
+    padding: 1em 1.5em 1em 4.5em;
+    vertical-align: middle;
+    border: none;
+    background-color: #f3f3f3;
+}
+
+.portalMessage.error {
+    color: red;
 }

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+27.3 - (2020-09-16)
+---------------------------
+* Change: Added friendly captcha js file to portal javascript (upgrade step) +
+  widget improvements
+  [iulianpetchesi refs #119268]
+
 27.2 - (2020-09-11)
 ---------------------------
 * Feature: Added redmine helpdesk widget + upgrade step to add 1 js/css file
