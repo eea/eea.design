@@ -3,6 +3,8 @@ Changelog
 
 27.4-dev0 - (unreleased)
 ---------------------------
+* Bug Fix: Fix faulty upgrade profile name
+  [iulianpetchesi refs #119268]
 
 27.3 - (2020-09-16)
 ---------------------------
