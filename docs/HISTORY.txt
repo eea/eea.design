@@ -1,6 +1,11 @@
 Changelog
 =========
 
+27.4 - (2020-09-21)
+---------------------------
+* Bug Fix: Fix faulty upgrade profile name
+  [iulianpetchesi refs #119268]
+
 27.3 - (2020-09-16)
 ---------------------------
 * Change: Added friendly captcha js file to portal javascript (upgrade step) +
