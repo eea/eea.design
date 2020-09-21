@@ -1,6 +1,9 @@
 Changelog
 =========
 
+27.5-dev0 - (unreleased)
+---------------------------
+
 27.4 - (2020-09-21)
 ---------------------------
 * Bug Fix: Fix faulty upgrade profile name
