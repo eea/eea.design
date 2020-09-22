@@ -37,7 +37,7 @@
     color: #666;
 }
 #contentActionMenus dl.actionMenu a:hover span {
-    color: black;
+    color: #FFF;
 }
 
 .state-expired 
