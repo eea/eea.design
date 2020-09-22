@@ -460,8 +460,11 @@
       width: 105% !important;
       left: -2.5% !important;
     }
+    #plone-document-byline:before {
+      max-width: 830px !important;
+    }
     .content-header-body::before {
-      width: 1605px;
+      width: 1615px;
     }
   }
 
