@@ -5,6 +5,7 @@
 @import "scss-theme/variables";
 @import "scss-theme/mixins";
 @import "scss-theme/type";
+@import "scss-theme/theme/content_core";
 
 .indicator-figure-plus-container .warningMessage {display:none;}
 .mini-header:not(.expired-content) .wf-state-published #content-core {
@@ -18,10 +19,6 @@
   .annotator-wrapper {
     position: inherit;
   }
-
-  //&[class*="_view"] #portal-column-two {
-  //  display: none;
-  //}
 
   //h2 {
   //  font-size: 1.9em;
@@ -44,19 +41,6 @@
     applied and within a text fieldname
    */
   //div[id*="parent-fieldname-text"] > p:not([class]) {
-  //  margin-bottom: 40px;
-  //}
-
-  //@import "scss-theme/theme/content_core";
-
-  //.figureHeading {
-  //  margin-top: 50px;
-  //  margin-bottom: 40px;
-  //  font-size: 1.125rem;
-  //  line-height: 1.666;
-  //  color: #000;
-  //}
-  //iframe, img {
   //  margin-bottom: 40px;
   //}
 
