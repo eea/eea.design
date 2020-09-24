@@ -33,7 +33,6 @@ p {
   margin-bottom: $spacer-4;
   line-height: $p-line-height;
 }
-
 p:last-child {
   margin-bottom: 0;
 }
@@ -57,12 +56,21 @@ small,
 //
 // Lists
 //
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: $spacer-4;
+//ol,
+//ul,
+//dl {
+//  margin-top: 0;
+//  margin-bottom: $spacer-4;
+//}
+
+ul, ol {
+  margin: 0 0 $spacer-4 $spacer-4;
+  line-height: $p-line-height;
 }
+//
+//li:last-child {
+//  margin-bottom: 0;
+//}
 
 //.list-unstyled {
 //  @include list-unstyled();

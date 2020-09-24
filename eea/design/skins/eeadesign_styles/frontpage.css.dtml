@@ -133,9 +133,6 @@
 #news-header {
     margin-bottom: 0;
 }
-#topic-selector {
-     margin-top: 2em;
-}
 
 /* style for featured boxes */
 
@@ -236,7 +233,8 @@
 .filter-topic {
     float: left;
     text-align: left;
-    padding-top: 6px;
+    padding-top: 11px;
+    font-size: 1rem !important;
 }
 /* </dtml-let> */
 /* </dtml-with> */
