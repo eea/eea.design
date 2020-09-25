@@ -8,7 +8,7 @@ jQuery('.helpdesk-button').parent().append(widget);
 jQuery('.helpdesk-button').parent().append(captcha);
 
 // load widget + captcha js
-jQuery.when( jQuery.getScript( "https://taskman.devel4cph.eea.europa.eu/helpdesk_widget/widget.js")).done(function( data ) {
+jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget/widget.js")).done(function( data ) {
     RedmineHelpdeskWidget.config({
         color: '#004B87',
         translation: {
