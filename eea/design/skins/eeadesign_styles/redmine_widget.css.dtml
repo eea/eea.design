@@ -6,7 +6,6 @@
 
 [name=helpdesk_widget_iframe] {
     position: relative !important;
-    min-height: 880px !important;
     min-width: 300px !important;
     top: 0 !important;
     left: 0 !important;
@@ -14,26 +13,6 @@
     width: 70%;
     padding-top: 0 !important;
 }
-
-@media (min-width: 830px) and (max-width: 1287px){
-    #helpdesk_ticket_container {
-        min-height: 900px !important;
-    }
-}
-
-@media (max-width: 660px){
-    #helpdesk_ticket_container {
-        min-height: 950px !important;
-    }
-}
-
-@media (max-width: 450px){
-    #helpdesk_ticket_container {
-        min-height: 1000px !important;
-    }
-}
-
-
 
 /* used in js */
 span.asterisk {

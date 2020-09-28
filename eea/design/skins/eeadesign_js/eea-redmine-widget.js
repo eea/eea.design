@@ -40,6 +40,7 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
 
     jQuery(document).ready(function($) {
         var once = true;
+        var offset_height = 0;
         // reload widget on button click
         // $("#widget_button").click(function(event) {
         //     event.preventDefault();
@@ -95,6 +96,15 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
                                 var message = "<div class='portalMessage error captcha-invalid-message' i18n:translate=''>"
                                             + "Email is invalid</div>";
                                 $(message).insertAfter($("#helpdesk_ticket_container").contents().find('#submit_button'));
+
+                                // change iframe height
+                                var iframe_height = parseInt($("#helpdesk_ticket_container").css('min-height'));
+                                iframe_height -= offset_height;
+
+                                offset_height = $("#helpdesk_ticket_container").contents().find('.captcha-invalid-message')[0].offsetHeight;
+                                iframe_height += offset_height;
+                                $("#helpdesk_ticket_container").css('min-height', iframe_height.toString() + 'px');
+
                                 return false;
                             }
 
@@ -128,6 +138,15 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
                             var message = "<div class='portalMessage info widget-submit-message' i18n:translate=''>"
                                         + "Your question has been submitted. You will shortly receive an acknowledgement of receipt to your provided email.</div>";
                             $(message).insertAfter($("#helpdesk_ticket_container").contents().find('#submit_button'));
+
+                            // change iframe height
+                            var iframe_height = parseInt($("#helpdesk_ticket_container").css('min-height'));
+                            iframe_height -= offset_height;
+
+                            offset_height = $("#helpdesk_ticket_container").contents().find('.widget-submit-message')[0].offsetHeight;
+                            iframe_height += offset_height;
+                            $("#helpdesk_ticket_container").css('min-height', iframe_height.toString() + 'px');
+
                         }
                         else {
                             // stop submit until captcha is verified
@@ -136,6 +155,15 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
                             var message = "<div class='portalMessage error captcha-invalid-message' i18n:translate=''>"
                                         + "Captcha is invalid</div>";
                             $(message).insertAfter($("#helpdesk_ticket_container").contents().find('#submit_button'));
+
+                            // change iframe height
+                            var iframe_height = parseInt($("#helpdesk_ticket_container").css('min-height'));
+                            iframe_height -= offset_height;
+
+                            offset_height = $("#helpdesk_ticket_container").contents().find('.captcha-invalid-message')[0].offsetHeight;
+                            iframe_height += offset_height;
+                            $("#helpdesk_ticket_container").css('min-height', iframe_height.toString() + 'px');
+
                             return false;
                         }
                     });
@@ -150,6 +178,7 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
 
         $('.helpdesk-button').click(function(event){
             event.preventDefault();
+            $('#helpdesk_ticket_container').css('min-height', '900px');
             $('#helpdesk_ticket_container').show();
             $('.helpdesk-button').hide();
             $('.frc-captcha').show();
