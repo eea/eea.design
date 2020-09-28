@@ -70,7 +70,6 @@
 .featured-highlights .figure-left{
     position: relative;
     z-index: 3;
-    max-width: 160px;
 }
 .featured-highlights .photoAlbumEntryWrapper {
     height: 105px;
@@ -110,6 +109,15 @@
 .frontpage #portal-columns {
     padding: 0 !important;
 }
+
+.featured-highlight-title {
+    display: table-cell;
+}
+#portal-column-two .featured-highlight-title {
+    display: block;
+    width: 100%;
+}
+
 
 .featured-highlight-description {
     font-size: 1rem;
