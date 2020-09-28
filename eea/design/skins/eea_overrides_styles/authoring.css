@@ -99,7 +99,6 @@ div.field span.required:after {
 
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
-    background-color: #75ad0a;
     color: White;
     z-index: 5;
 }
@@ -110,7 +109,7 @@ div.field span.required:after {
 #contentActionMenus dl.actionMenu.activated dd a:hover,
 #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
     background-color: White !important;
-    color: #666;
+    color: #000;
 }
 #contentActionMenus dl.actionMenu {
     line-height: 2em;
@@ -127,7 +126,6 @@ div.field span.required:after {
 
 #contentActionMenus {
     float: right;
-    background: #75ad0a;
     margin: 0;
     position: relative;
     top: -0.23em;

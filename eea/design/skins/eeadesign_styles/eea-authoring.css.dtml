@@ -28,23 +28,23 @@
 /* @group Content pulldowns @parent Pulldown menus */
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
-    background-color: &dtml-corporateGreen;;
+    background-color: &dtml-corporateBlueOld;;
     z-index: 900;
 }
 
 #contentActionMenus dl.actionMenu.activated dd {
-    border-bottom: 0.5em solid &dtml-corporateGreen;;
+    border-bottom: 0.5em solid &dtml-corporateBlueOld;;
     right: 0;
 }
 /* @end @group Content pulldowns @parent Pulldown menus */
 
 #contentActionMenus {
-    background: &dtml-corporateGreen;;
+    background: &dtml-corporateBlueOld;;
     padding: 0.1em 0.24em 0 0 !important;
 }
 
 #edit-bar, .actionMenuContent  {
-    background-color: &dtml-corporateGreen;;
+    background-color: &dtml-corporateBlueOld;;
 }
 
 .panel .actionMenuContent {
