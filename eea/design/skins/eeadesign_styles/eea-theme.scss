@@ -239,9 +239,16 @@ div.eea-pdf-overlay {
 }*/
 
 /* 70523 set callout to a base of 12px in order to normalize googlechart notes size  */
+
 #content .callout {
   font-size: 12px;
-  }
+}
+/* avoid 9px font size on figure static charts with a discreet within callout
+* themes/climate/trends-and-projections-in-europe/trends-and-projections-in-europe-2019/the-eu-emissions-trading-system
+*/
+#content .callout .discreet {
+  font-size: 12px !important;
+}
 
 /*.template-facetednavigation_view #socialmedia-viewlet,*/
 /*.template-facetednavigation_view #relatedItems {*/
