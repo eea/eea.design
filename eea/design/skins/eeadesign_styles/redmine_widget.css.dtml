@@ -6,7 +6,7 @@
 
 [name=helpdesk_widget_iframe] {
     position: relative !important;
-    min-height: 800px !important;
+    min-height: 880px !important;
     min-width: 300px !important;
     top: 0 !important;
     left: 0 !important;
@@ -15,17 +15,25 @@
     padding-top: 0 !important;
 }
 
-@media (min-width: 540px) and (max-width: 1250px){
-    #helpdesk_ticket_container {
-        min-height: 850px !important;
-    }
-}
-
-@media (max-width: 539px){
+@media (min-width: 830px) and (max-width: 1287px){
     #helpdesk_ticket_container {
         min-height: 900px !important;
     }
 }
+
+@media (max-width: 660px){
+    #helpdesk_ticket_container {
+        min-height: 950px !important;
+    }
+}
+
+@media (max-width: 450px){
+    #helpdesk_ticket_container {
+        min-height: 1000px !important;
+    }
+}
+
+
 
 /* used in js */
 span.asterisk {
@@ -35,7 +43,7 @@ span.asterisk {
 span.asterisk:after {
     content: '*';
     display: inline;
-    vertical-align: super;
+    vertical-align: top;
 }
 
 #widget_form .form-control, #widget_form .custom_fields input, #widget_form .custom_fields select, #widget_form .custom_fields textarea {
@@ -67,4 +75,14 @@ span.asterisk:after {
 
 .portalMessage.error {
     color: red;
+}
+
+#submit_button {
+    display: inline-block;
+}
+
+@media (max-width: 400px){
+    .portalMessage {
+        padding: 1em;
+    }
 }
