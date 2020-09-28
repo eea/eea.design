@@ -70,6 +70,7 @@
 .featured-highlights .figure-left{
     position: relative;
     z-index: 3;
+    max-width: 160px;
 }
 .featured-highlights .photoAlbumEntryWrapper {
     height: 105px;
@@ -110,9 +111,6 @@
     padding: 0 !important;
 }
 
-.featured-highlight-title {
-    display: table-cell;
-}
 .featured-highlight-description {
     font-size: 1rem;
 }
@@ -223,6 +221,7 @@
     color: #888;
     cursor: pointer;
     margin-right: 10px;
+    padding-left: 0 !important;
 }
 .active-album, .album-layout:hover,
 .active-list, .list-layout:hover

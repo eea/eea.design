@@ -142,10 +142,10 @@ $input-color: #f3f3f3;
   }
 }
 
-@media screen and (min-width: 481px) {
-  .featured-highlight-title {
-    width: 45%;
-  }
+//@media screen and (min-width: 481px) {
+  //.featured-highlight-title {
+  //  width: 45%;
+  //}
 
   //.faceted-widget .searchButton {
   //  margin-right: 5em;
@@ -154,7 +154,7 @@ $input-color: #f3f3f3;
   //#promo-gallery-content {
   //  min-height: 365px;
   //}
-}
+//}
 @media screen and (min-width: 410px) and (max-width: 549px) {
   .photoAlbumEntry {
     width: 49%;
