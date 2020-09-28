@@ -1,6 +1,9 @@
 Changelog
 =========
 
+27.6-dev0 - (unreleased)
+---------------------------
+
 27.5 - (2020-09-28)
 ---------------------------
 * Change: Added email validation to redmine widget + style modifications
