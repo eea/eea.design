@@ -137,7 +137,7 @@
 }
 
 #news-header {
-    margin-bottom: 0;
+    margin-bottom: -3rem;
 }
 
 /* style for featured boxes */

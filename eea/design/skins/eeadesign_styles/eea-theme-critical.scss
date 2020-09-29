@@ -319,6 +319,12 @@
   html {
     font-size: 0.875rem;
   }
+  .mini-header {
+    .content-header:before {
+      width: 101%;
+      left: -1.1rem;
+    }
+  }
 }
 
 @media (min-width:$breakpoint-md) and (max-width: $breakpoint-lg - 1) {
