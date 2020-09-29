@@ -132,11 +132,12 @@
     background: #E2E2E2 none;
     border: 1px solid #E0E0E0;
     margin: 0;
-    font-size: 115%;
+    font-size: &dtml-fontBaseSize;;
     color: #00446A;
-    line-height: 3em;
+    line-height: 3;
     padding: 0 0.5em;
-    font-weight: bold;
+    font-weight: normal;
+    cursor: pointer;
 }
 .eea-accordion-panels-bordered-primary {
     border-top: 3px solid #000;
