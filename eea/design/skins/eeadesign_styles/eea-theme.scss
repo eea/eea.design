@@ -20,6 +20,10 @@ hr {
   display: inline-block !important;
   position: absolute;
   color: inherit;
+  line-height: inherit !important;
+  /* #121911 keep anchor in same line as text, line-height 1 set by the js
+   * will not work for content that has higher line-height and even the js has
+   * inherit when placement is left */
   }
 
 
