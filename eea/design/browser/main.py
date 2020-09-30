@@ -92,11 +92,12 @@ class MiniHeaderContentTypes(BrowserView):
     def get_light_header_image(self):
         """ return header image path
         """
-        image_field = self.context.getField('image')
-        if image_field:
-            image_size = image_field.getSize(self.context)
-            if image_size[0] != 0:
-                return self.context.absolute_url()
+        if self.context.portal_type == "Document":
+            image_field = self.context.getField('image')
+            if image_field:
+                image_size = image_field.getSize(self.context)
+                if image_size[0] != 0:
+                    return self.context.absolute_url()
         portal_url = getToolByName(self.context, 'portal_url')
         portal = portal_url.getPortalObject()
         tool = getToolByName(portal, 'portal_depiction')
