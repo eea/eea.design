@@ -69,6 +69,7 @@ class MiniHeaderContentTypes(BrowserView):
         super(MiniHeaderContentTypes, self).__init__(context, request)
         self.context = context
         self.request = request
+        self.registry = self.context.portal_properties.site_properties
 
     def __call__(self):
         """ boolean if miniheader class should be enabled for given content-type
@@ -84,7 +85,7 @@ class MiniHeaderContentTypes(BrowserView):
     def get_mini_registry(self):
         """ content registry cache
         """
-        registry = self.context.portal_properties.site_properties
+        registry = self.registry
         data = registry.getProperty('mini_header_for', None)
         return data
 
@@ -92,7 +93,7 @@ class MiniHeaderContentTypes(BrowserView):
     def get_light_header_image(self):
         """ return header image path
         """
-        if self.context.portal_type == "Document":
+        if self.show_light_header_context_image():
             image_field = self.context.getField('image')
             if image_field:
                 image_size = image_field.getSize(self.context)
@@ -111,7 +112,7 @@ class MiniHeaderContentTypes(BrowserView):
     def show_right_column(self):
         """ content registry cache
         """
-        registry = self.context.portal_properties.site_properties
+        registry = self.registry
         ptypes = registry.getProperty('mini_header_right_column_for', [])
         return self.context.portal_type in ptypes
 
@@ -119,8 +120,16 @@ class MiniHeaderContentTypes(BrowserView):
     def show_light_header(self):
         """ content registry cache
         """
-        registry = self.context.portal_properties.site_properties
+        registry = self.registry
         ptypes = registry.getProperty('mini_header_light_for', [])
+        return self.context.portal_type in ptypes
+
+    @memoize
+    def show_light_header_context_image(self):
+        """ content registry cache
+        """
+        registry = self.registry
+        ptypes = registry.getProperty('mini_header_light_header_image_for', [])
         return self.context.portal_type in ptypes
 
     @memoize
