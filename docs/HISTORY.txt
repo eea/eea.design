@@ -1,8 +1,15 @@
 Changelog
 =========
 
-27.5-dev0 - (unreleased)
+27.6-dev0 - (unreleased)
 ---------------------------
+
+27.5 - (2020-09-28)
+---------------------------
+* Change: Added email validation to redmine widget + style modifications
+  [iulianpetchesi refs #122065]
+* Bug fix: changed to production Taskman
+  [alecghica refs #119268]
 
 27.4 - (2020-09-21)
 ---------------------------
