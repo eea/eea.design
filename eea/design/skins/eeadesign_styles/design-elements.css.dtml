@@ -257,7 +257,7 @@ body {
     z-index: 600;
 }
 
-.go-top a, .go-top a:visited {
+.back-to-top-link, .back-to-top-link:visited {
     border: 0 none;
     display: block;
     height: 60px;
@@ -267,8 +267,11 @@ body {
     background-color: #027572;
     color: rgba(255, 255, 255, 0.5);
 }
+.back-to-top-link-icon {
+    color: rgba(255, 255, 255, 0.5);
+}
 
-.go-top a:hover, .go-top a:focus{
+.back-to-top-link:hover, .back-to-top-link:focus{
     color: #fff;
 }
 
