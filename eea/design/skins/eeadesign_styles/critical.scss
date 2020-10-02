@@ -888,8 +888,8 @@ p,
 @media screen and (min-width: 1250px) {
   .navbar-collapse {
     display: block;
-    height: auto;
-    overflow: visible;
+    height: auto !important; /* important because of daviz edit bootstrap 2.1 loading */
+    overflow: visible !important; /* likewise as above */
     visibility: visible;
     }
 
