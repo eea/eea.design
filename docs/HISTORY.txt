@@ -3,6 +3,9 @@ Changelog
 
 27.6-dev0 - (unreleased)
 ---------------------------
+* Bug fix: various css fixes for mobile resolution after latest
+  round of design changes
+  [ichim-david refs #121911]
 
 27.5 - (2020-09-28)
 ---------------------------
