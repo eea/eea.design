@@ -122,7 +122,7 @@
         <div class="section-centered">
 
             <h2 class="section-header no-anchor" i18n:translate="">Contact us</h2>
-            <div class="media my-2">
+            <div class="media mx-2">
                 <span class="eea-icon eea-icon-4x eea-icon-map-marker"><!-- --></span>
                 <div class="media-body" i18n:translate="">
                     Kongens Nytorv 6
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="media my-2">
+            <div class="media mx-2">
                 <span class="eea-icon eea-icon-4x eea-icon-phone"><!-- --></span>
                 <div class="media-body">
                     <span i18n:translate="">Phone number:</span>
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="media my-2">
+            <div class="media mx-2">
                 <span class="eea-icon eea-icon-4x eea-icon-comment"><!-- --></span>
                 <div class="media-body media-body-enquiries">
                     <a href="//community.eea.europa.eu/" i18n:translate="" class="block">Ask your question via the EEA Forum</a>

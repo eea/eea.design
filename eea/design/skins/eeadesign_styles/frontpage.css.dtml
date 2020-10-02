@@ -110,6 +110,9 @@
     padding: 0 !important;
 }
 
+.highlights-title {
+    margin-bottom: 1rem;
+}
 .featured-highlight-title {
     display: table-cell;
 }
