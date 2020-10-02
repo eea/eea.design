@@ -106,6 +106,10 @@
      max-width: $breakpoint-full;
   }
 
+  &.mini-header-light .documentByLine:before {
+    border-top: 1px solid $border-extra-light;
+  }
+
   .documentExportActions {
     margin: 0 0 $spacer-half $spacer;
     order: 5;
@@ -151,7 +155,6 @@
     justify-content: space-between;
     position: relative;
     z-index: 1;
-    margin-top: 200px;
 
     .documentFirstHeading {
       padding-right: 0;
@@ -279,7 +282,10 @@
   }
 }
 
-
+/* 121911 bring disclaimer closer to below content area accordions */
+.mini-header-below-content-container > .disclaimer {
+  margin-bottom: -2rem;
+}
 
 @media (max-width: 660px) {
   .mini-header {
@@ -334,20 +340,21 @@
   }
   .mini-header {
     .content-header .documentByLine::before {
-      left: -15.5%;
+      left: -14.3%; /* /soer line was ending too soon with previous 15.5% value */
       max-width: 1001px;
     }
 
     .content-header #article-language + .documentByLine::before {
       max-width: 990px; // was 977
     }
+
     &.mini-header-light .documentByLine:before {
       max-width: 800px !important;
       left: 0;
-      border-top: 1px solid $border-extra-light;
     }
-
-    &.mini-header-light .width-full .documentByLine:before {
+    &.mini-header-light .width-full .documentByLine:before,
+    &.mini-header-light.portaltype-topic .width-3\:4 .documentByLine:before,
+    &.mini-header-light.portaltype-folder .width-3\:4 .documentByLine:before {
       max-width: 98vw !important;
     }
 
@@ -402,6 +409,12 @@
 }
 
 @media (min-width: $breakpoint-xl)  {
+  .mini-header {
+    .content-header {
+      margin-top: 200px;
+    }
+  }
+
   .mini-header-navigation {
 
     .content-header,
@@ -466,6 +479,8 @@
 }
 
 @media (min-width: $breakpoint-xxl) {
+  .mini-header.mini-header-light.portaltype-topic .width-3\:4 .documentByLine::before,
+  .mini-header.mini-header-light.portaltype-folder .width-3\:4 .documentByLine::before,
   .mini-header.mini-header-light .width-full .documentByLine::before {
     max-width: 1370px !important;
   }
