@@ -20,6 +20,10 @@ hr {
   display: inline-block !important;
   position: absolute;
   color: inherit;
+  line-height: inherit !important;
+  /* #121911 keep anchor in same line as text, line-height 1 set by the js
+   * will not work for content that has higher line-height and even the js has
+   * inherit when placement is left */
   }
 
 
@@ -108,10 +112,6 @@ a.downloading img {
   list-style: none;
   padding: 0;
   margin: 0;
-  }
-
-.content-core ul {
-  list-style: square inside url(//www.eea.europa.eu/bullet.gif);
   }
 
 .documentExportActions li {
@@ -243,9 +243,16 @@ div.eea-pdf-overlay {
 }*/
 
 /* 70523 set callout to a base of 12px in order to normalize googlechart notes size  */
+
 #content .callout {
   font-size: 12px;
-  }
+}
+/* avoid 9px font size on figure static charts with a discreet within callout
+* themes/climate/trends-and-projections-in-europe/trends-and-projections-in-europe-2019/the-eu-emissions-trading-system
+*/
+#content .callout .discreet {
+  font-size: 12px !important;
+}
 
 /*.template-facetednavigation_view #socialmedia-viewlet,*/
 /*.template-facetednavigation_view #relatedItems {*/

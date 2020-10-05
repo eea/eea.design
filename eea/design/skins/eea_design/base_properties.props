@@ -5,7 +5,7 @@ plone_skin:string=EEADesign2006
 logoName:string=logo.gif
 
 fontFamily:string='Open Sans', Verdana, Helvetica, Arial, sans-serif
-fontBaseSize:string=69%
+fontBaseSize:string=1.25rem
 fontColor:string=#333333
 fontSmallSize:string=12px
 fontDarkColor:string=#000

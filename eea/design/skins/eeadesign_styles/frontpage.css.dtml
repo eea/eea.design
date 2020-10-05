@@ -110,9 +110,18 @@
     padding: 0 !important;
 }
 
+.highlights-title {
+    margin-bottom: 1rem;
+}
 .featured-highlight-title {
     display: table-cell;
 }
+#portal-column-two .featured-highlight-title {
+    display: block;
+    width: 100%;
+}
+
+
 .featured-highlight-description {
     font-size: 1rem;
 }
@@ -131,10 +140,7 @@
 }
 
 #news-header {
-    margin-bottom: 0;
-}
-#topic-selector {
-     margin-top: 2em;
+    margin-bottom: -3rem;
 }
 
 /* style for featured boxes */
@@ -226,6 +232,7 @@
     color: #888;
     cursor: pointer;
     margin-right: 10px;
+    padding-left: 0 !important;
 }
 .active-album, .album-layout:hover,
 .active-list, .list-layout:hover
@@ -236,7 +243,8 @@
 .filter-topic {
     float: left;
     text-align: left;
-    padding-top: 6px;
+    padding-top: 11px;
+    font-size: 1rem !important;
 }
 /* </dtml-let> */
 /* </dtml-with> */

@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
         : css;
       $tabs_panel.attr("class", css);
     }
-    $tabs_panel.addClass("collapsed-by-default eea-tabs-transformed");
+    $tabs_panel.addClass("eea-accordion-panels-plain collapsed-by-default eea-tabs-transformed");
     var $tabs_panels = $tabs_panel.find(".eea-tabs-panel");
 
     var $tabs_tabs = $tab.find("li");
@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
         id: link ? link.id + "-accordion" : "",
         html: link.innerHTML || el.innerHTML
       });
-      $result.append('<span class="eea-icon eea-icon-right"></span>');
+      $result.append('<span class="eea-icon eea-icon-left"></span>');
       $result.prependTo($panel);
     });
     $tab.addClass("js-eea-tabs-to-hide hidden");
@@ -303,7 +303,7 @@ jQuery(document).ready(function ($) {
       var $legend = $children.find("legend");
       var $h2 = $("<h2 />", {
         html: $legend.text(),
-        class: "eea-accordion-title eea-icon-right-container no-anchor"
+        class: "eea-accordion-title eea-icon-left-container no-anchor"
       });
       $h2.prependTo($el);
     });
