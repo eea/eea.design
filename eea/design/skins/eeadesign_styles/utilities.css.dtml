@@ -59,9 +59,18 @@
 }
 
 /* spacing utilities */
-.my-2 {
+.mx-2 {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
+}
+
+.my-1 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+.my-2 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .mb-half {

@@ -173,6 +173,18 @@ class IMiniHeaderForm(Interface):
         required=True
     )
 
+    mini_header_light_header_image_for = schema.List(
+        title=_(u'Portal types to enable light mini header context image'),
+        description=_(
+            u'Context image is displayed in the header for the following '
+            u'portal types'),
+        missing_value=tuple(),
+        value_type=schema.Choice(
+            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
+        ),
+        required=True
+    )
+
     mini_header_type_for = schema.List(
         title=_(u'Portal types to enable mini header portal type info'),
         description=_(
@@ -258,6 +270,19 @@ class MiniHeaderControlPanelAdapter(SchemaAdapterBase):
         else:
             self.site_props.mini_header_light_for = tuple(types)
 
+    def get_mini_header_light_header_image_for(self):
+        """ get mini header light header image from site_props """
+        return self.site_props.getProperty('mini_header_light_header_image_for',
+                                           ())
+
+    def set_mini_header_light_header_image_for(self, types):
+        """ set mini header light header image to site_props """
+        if not self.get_mini_header_light_header_image_for():
+            self.site_props.manage_addProperty('mini_header_light_header_'
+                                               'image_for', types, type='lines')
+        else:
+            self.site_props.mini_header_light_header_image_for = tuple(types)
+
     def get_mini_header_right_column_for(self):
         """ get mini header right column from site_props """
         return self.site_props.getProperty('mini_header_right_column_for', ())
@@ -270,11 +295,16 @@ class MiniHeaderControlPanelAdapter(SchemaAdapterBase):
         else:
             self.site_props.mini_header_right_column_for = tuple(types)
 
+
     mini_header_right_column_for = property(
         get_mini_header_right_column_for, set_mini_header_right_column_for)
 
     mini_header_light_for = property(
         get_mini_header_light_for, set_mini_header_light_for)
+
+    mini_header_light_header_image_for = property(
+        get_mini_header_light_header_image_for,
+        set_mini_header_light_header_image_for)
 
     mini_header_type_for = property(
         get_mini_header_type_for, set_mini_header_type_for)

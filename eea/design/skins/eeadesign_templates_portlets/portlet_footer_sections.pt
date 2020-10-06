@@ -3,7 +3,7 @@
     <!--? eionet -->
     <div class="colophon-section section-dark section-top">
         <div class="section-centered">
-        <h2 class="section-header h1 no-anchor" i18n:translate="">Eionet</h2>
+        <h2 class="section-header no-anchor" i18n:translate="">Eionet</h2>
         <a href="https://www.eionet.europa.eu/" i18n:translate="" class="text-center">European Environment Information and Observation Network (Eionet)</a>
         </div>
     </div>
@@ -14,7 +14,7 @@
     <div class="colophon-section section-dark section-bordered">
         <div class="section-centered space-around">
 
-            <h2 class="section-header h1 no-anchor"><span i18n:translate="">The EEA also contributes to</span></h2>
+            <h2 class="section-header no-anchor"><span i18n:translate="">The EEA also contributes to</span></h2>
 
             <table class="left-table">
                 <tr><td class="table-link-title"><a href="https://biodiversity.europa.eu/" target="_blank" i18n:translate="">BISE</a></td>
@@ -86,7 +86,7 @@
      <!--? follow us -->
     <div class="colophon-section section-dark section-bordered">
 
-        <h2 class="section-header h1 no-anchor" i18n:translate="">Follow us</h2>
+        <h2 class="section-header no-anchor" i18n:translate="">Follow us</h2>
 
         <div class="section-centered">
 
@@ -121,8 +121,8 @@
     <div class="colophon-section section-dark section-bordered section-contact-us">
         <div class="section-centered">
 
-            <h2 class="section-header h1 no-anchor" i18n:translate="">Contact us</h2>
-            <div class="media my-2">
+            <h2 class="section-header no-anchor" i18n:translate="">Contact us</h2>
+            <div class="media mx-2">
                 <span class="eea-icon eea-icon-4x eea-icon-map-marker"><!-- --></span>
                 <div class="media-body" i18n:translate="">
                     Kongens Nytorv 6
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="media my-2">
+            <div class="media mx-2">
                 <span class="eea-icon eea-icon-4x eea-icon-phone"><!-- --></span>
                 <div class="media-body">
                     <span i18n:translate="">Phone number:</span>
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="media my-2">
+            <div class="media mx-2">
                 <span class="eea-icon eea-icon-4x eea-icon-comment"><!-- --></span>
                 <div class="media-body media-body-enquiries">
                     <a href="//community.eea.europa.eu/" i18n:translate="" class="block">Ask your question via the EEA Forum</a>

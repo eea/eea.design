@@ -132,11 +132,12 @@
     background: #E2E2E2 none;
     border: 1px solid #E0E0E0;
     margin: 0;
-    font-size: 115%;
+    font-size: &dtml-fontBaseSize;;
     color: #00446A;
-    line-height: 3em;
+    line-height: 3;
     padding: 0 0.5em;
-    font-weight: bold;
+    font-weight: normal;
+    cursor: pointer;
 }
 .eea-accordion-panels-bordered-primary {
     border-top: 3px solid #000;
@@ -168,9 +169,6 @@
     border-width: 1px 0;
     margin-top: -1px;
 }
-.eea-accordion-panels-plain .eea-accordion-title .anchorjs-link {
-    line-height: 3 !important;
-}
 
 .eea-accordion-panels-plain .eea-accordion-panel .current {
     background-color: transparent;
@@ -189,6 +187,7 @@
     content: "&dtml-eea-icon-chevron-left;";
 }
 
+.eea-accordion-panel > h2 .eea-icon-left:before,
 .eea-accordion-title > .eea-icon-left:before {
     content: "&dtml-eea-icon-chevron-right;";
 }
@@ -258,7 +257,7 @@ body {
     z-index: 600;
 }
 
-.go-top a, .go-top a:visited {
+.back-to-top-link, .back-to-top-link:visited {
     border: 0 none;
     display: block;
     height: 60px;
@@ -268,8 +267,11 @@ body {
     background-color: #027572;
     color: rgba(255, 255, 255, 0.5);
 }
+.back-to-top-link-icon {
+    color: rgba(255, 255, 255, 0.5);
+}
 
-.go-top a:hover, .go-top a:focus{
+.back-to-top-link:hover, .back-to-top-link:focus{
     color: #fff;
 }
 

@@ -27,11 +27,7 @@
   p:last-child {
     margin-bottom: 0;
   }
-  ul, ol {
-    margin: 0 0 $spacer-4 $spacer-4;
-    line-height: $p-line-height;
-  }
-  // add svg bullet in order to be easily overriden and affected by
+  // add svg bullet in order to be easily overridden and affected by
   // margin and padding
   ul {
     //list-style: disc outside url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-1 -1 2 2'><circle r='0.5' /></svg>")

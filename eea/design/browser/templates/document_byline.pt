@@ -2,6 +2,8 @@
     <div class="documentByLine"
          id="plone-document-byline"
          tal:define="isAnon context/@@plone_portal_state/anonymous;
+                     time_estimate view/time_estimate;
+                     image_copyright here/getImageCopyright|nothing;
                      plone_view context/@@plone;
                      siteprops context/portal_properties/site_properties;
                      friendly_type context/Type|nothing;"
@@ -45,34 +47,40 @@
             </tal:indicator-codes>
 
             <span class="docDate creationDate" tal:condition="allow_showcredate">
-                <span class="byline-separator"></span>
                 <tal:published i18n:translate="">
                     Created
                 </tal:published><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.CreationDate())"> August 16, 2001 at 23:35:59</span>
+                <span class="byline-separator"></span>
             </span>
             <span class="docDate publishDate" tal:condition="python:allow_showpubdate and here.getEffectiveDate()">
-                <span class="byline-separator" tal:condition="allow_showcredate"></span>
                 <tal:published i18n:translate="">
                     Published
                 </tal:published><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.getEffectiveDate())"> August 16, 2001 at 23:35:59</span>
+                <span class="byline-separator"></span>
             </span>
             <span class="docDate modificationDate" tal:condition="python:isAnon and allow_showmoddate">
-                   <span class="byline-separator"></span>
                    <tal:modified i18n:translate="">
                     Last modified
                    </tal:modified><span tal:replace="python:' %s' % plone_view.toLocalizedTime(here.ModificationDate(),long_format=0)"> August 16, 2001 at 23:35:59</span>
+                   <span class="byline-separator"></span>
             </span>
         </tal:dates>
 
-        <tal:reading_estimate tal:condition="time_estimate" tal:define="time_estimate view/time_estimate">
-            <div class="documentByLineReadingStats inline-block">
-                <span class="byline-separator"></span>
-                <span class="documentByLineReadingTime" tal:content="time_estimate">0</span>
-                <span i18n:translate="">min read</span>
-            </div>
-        </tal:reading_estimate>
 
         <tal:loggedin tal:condition="not: isAnon">
+          <div class="documentByLineModified">
+            <span i18n:translate="">Last modified:</span>
+            <span tal:replace="python:view.toLocalizedTime(context.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59 </span>
+
+            <span class="contentHistory"
+                 tal:condition="view/show_history"
+                  id="content-history">
+                      <a href="#"
+                           tal:attributes="href string:${here/absolute_url}/@@historyview"
+                           i18n:translate="">History</a>
+                </span>
+            <span class="byline-separator"></span>
+          </div>
             <span id="lock-icon"
                 title="This document is locked."
                 i18n:attributes="title"
@@ -82,7 +90,6 @@
 
 
             <div tal:define="creators python:view.creators(skipCreator=False);" tal:condition="creators" class="documentByLineAuthors">
-              <span class="byline-separator"></span>
                 <tal:name>
                     <span i18n:translate="" class="documentByLineLabel">
                       Authors:
@@ -99,10 +106,10 @@
                         </tal:i18n>
                     </span>
                 </tal:name>
+                <span class="byline-separator"></span>
             </div>
 
             <div tal:define="contributors context/Contributors;" tal:condition="contributors" class="documentByLineContributors">
-                <span class="byline-separator"></span>
                 <tal:name>
                     <span i18n:translate="" class="documentByLineLabel">
                       Contributors:
@@ -117,36 +124,30 @@
                         </tal:i18n>
                     </span>
                 </tal:name>
-            </div>
-
-            <div class="documentByLineModified">
                 <span class="byline-separator"></span>
-                <span i18n:translate="">Last modified:</span>
-                <span tal:replace="python:view.toLocalizedTime(context.ModificationDate(),long_format=1)"> August 16, 2001 at 23:35:59 </span>
-
-                <span class="contentHistory"
-                      tal:condition="view/show_history"
-                      id="content-history">
-                      <a href="#"
-                         tal:attributes="href string:${here/absolute_url}/@@historyview"
-                         i18n:translate="">History</a>
-                </span>
             </div>
+
 
         </tal:loggedin>
         <div tal:define="rights context/Rights|nothing;
                          show_rights view/showRights|nothing"
              class="documentByLineRights" tal:condition="python: show_rights and rights">
-          <span class="byline-separator"></span>
             <div tal:replace="rights">
                 Copyleft NiceCorp Inc.
             </div>
+          <span class="byline-separator"></span>
         </div>
 
+      <tal:reading_estimate tal:condition="time_estimate">
+        <div class="documentByLineReadingStats inline-block">
+          <span class="documentByLineReadingTime" tal:content="time_estimate">0</span>
+          <span i18n:translate="">min read</span>
+          <span class="byline-separator" tal:condition="image_copyright"></span>
+        </div>
+      </tal:reading_estimate>
 
-      <div tal:define="image_copyright here/getImageCopyright|nothing;"
+      <div
           class="documentByLineImageCopyright" tal:condition="python: image_copyright">
-        <span class="byline-separator"></span>
         <span i18n:translate="">Photo: &copy; </span>
         <div tal:replace="image_copyright">
           Copyleft NiceCorp Inc.

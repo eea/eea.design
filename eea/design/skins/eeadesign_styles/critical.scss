@@ -224,7 +224,11 @@ ul {
   //align-items: baseline;
   flex-wrap: wrap;
   }
-
+//.text-truncate {
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+//    white-space: nowrap;
+//}
 .eea-container {
   margin: 0 auto;
   padding: 0 unquote("&dtml-padding-base;");
@@ -467,7 +471,7 @@ ul {
 
 .eea-btn.moreLink:before {
   color: inherit;
-  top: auto;
+  top: 23.5%; /* /themes/air read more arrow centering */
   }
 /* End links */
 /* end header area */
@@ -685,6 +689,7 @@ p,
 .content-core li {
   font-size: 1rem;
   }
+
 .content-core li, .portlet li, .portletStaticText li {
   margin-bottom: 0.25em;
   display: list-item;
@@ -883,8 +888,8 @@ p,
 @media screen and (min-width: 1250px) {
   .navbar-collapse {
     display: block;
-    height: auto;
-    overflow: visible;
+    height: auto !important; /* important because of daviz edit bootstrap 2.1 loading */
+    overflow: visible !important; /* likewise as above */
     visibility: visible;
     }
 
