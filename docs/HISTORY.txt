@@ -3,6 +3,8 @@ Changelog
 
 27.7-dev0 - (unreleased)
 ---------------------------
+* Change: ensure @@crop overlay display image and crop button without overflow
+  [ichim-david refs #121137]
 
 27.6 - (2020-10-06)
 ---------------------------
