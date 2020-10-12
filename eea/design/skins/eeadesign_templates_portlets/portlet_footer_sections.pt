@@ -77,6 +77,11 @@
                         <a href="https://water.europa.eu/freshwater" target="_blank" i18n:translate="">WISE-FreshWater</a>
                     </td>
                 </tr>
+              <tr><td class="table-link-description"><a href="https://forest.eea.europa.eu" target="_blank" i18n:translate="">Forest Information System for Europe</a></td>
+                <td class="table-link-title">
+                  <a href="https://water.europa.eu/freshwater" target="_blank" i18n:translate="">FISE</a>
+                </td>
+              </tr>
             </table>
 
         </div>
