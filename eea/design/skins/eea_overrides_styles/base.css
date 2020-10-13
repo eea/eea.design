@@ -1,13 +1,6 @@
 /* @group Content Area */
 
 /* Editor styles */
-#content .discreet,
-#sidebar .discreet,
-.portletStaticText .discreet {
-    color: #666;
-    font-size: 85%;
-    font-weight: normal;
-}
 
 #content .visualHighlight,
 .portletStaticText .visualHighlight {

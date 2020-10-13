@@ -28,51 +28,21 @@ developers, UX/UI experts.
     </div>
 
 
-    <h2 i18n:translate="">Basic text styles</h2>
-    <h1 i18n:translate="">This is a h1</h1>
-    <h2 i18n:translate="">This is a h2</h2>
-    <h3 i18n:translate="">This is a h3</h3>
-    <h4 i18n:translate="">This is a h4</h4>
-    <p>
-        <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;
-    <a href="#" class="moreLink" i18n:translate="">This is a moreLink</a></p>
-
-    <h2>Lists</h2>
-    <h3>Unordered lists:</h3>
-    <ul><li>Item 1</li><li>Item 2</li></ul>
-    <h3>Definition lists:</h3>
-    <dt>Term item 1</dt><dd>Description 1</dd><dt>Term item 2</dt><dd>Description 2</dd>
-
-    <h2 i18n:translate="">Quotations</h2>
-    <blockquote>
-    <p i18n:translate="">
-        Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
-    </p>
-    <p class="source" i18n:translate="">Stavros Dimas, Commissioner for Environment</p>
-    </blockquote>
-
     <h2 i18n:translate="">Gallery view</h2>
     <p i18n:translate="">
         You need to enter an image scale after the image src otherwise the gallery
         will load the full-resolution images which could dramatically slow the page
     </p>
-    <ul id="galleryView">
-        <li>
+
+      <div data-xrayhtml>
+        <ul id="galleryView">
+          <li>
             <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
             <img class="skip_lazy" src="monkey-with-makeup/image_large" />
-        </li>
-        <li><img class="skip_lazy" src="mr-monkey/image_large" /></li>
-    </ul>
-    <pre tal:content="string:
-        &lt;ul id=&quot;galleryView&quot;&gt;
-            &lt;li&gt;
-                &lt;span class=&quot;panel-overlay&quot;&gt;Overlay text goes here&lt;/span&gt;
-                &lt;img src=&quot;mr-monkey/image_large&quot; /&gt;
-            &lt;/li&gt;
-            &lt;li&gt;&lt;img src=&quot;monkey-with-makeup/image_large&quot; /&gt;&lt;/li&gt;
-        &lt;/ul&gt;">
-    </pre>
-
+          </li>
+          <li><img class="skip_lazy" src="mr-monkey/image_large" /></li>
+        </ul>
+      </div>
     <p i18n:translate="">
         You can now use more than you galleryView on the page if needed by using the
         gallery class.

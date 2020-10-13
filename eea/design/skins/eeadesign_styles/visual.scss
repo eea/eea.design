@@ -32,8 +32,9 @@ sup, sub {
 }
 
 .discreet {
-    color: unquote("&dtml-discreetColor;");
-    font-size: unquote("&dtml-fontSmallSize;");
+    color: inherit;
+    font-size: unquote("&dtml-fontDiscreetSize;");
+    filter: contrast(85%);
     font-weight: normal;
 }
 
