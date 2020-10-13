@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+<metal:css metal:fill-slot="style_slot">
+  <link rel="stylesheet" type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+</metal:javascriptslot>
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h1 i18n:translate="">
+      Welcome to EEA Web design typograhy elements
+    </h1>
+    <div class="documentDescription" i18n:translate="">
+      This page shows common html markup, css classes and javascripts we use across the EEA website.
+    </div>
+
+
+    <h2>Headers</h2>
+    <div data-xrayhtml>
+      <h1 i18n:translate="">This is a h1</h1>
+      <h2 i18n:translate="">This is a h2</h2>
+      <h3 i18n:translate="">This is a h3</h3>
+      <h4 i18n:translate="">This is a h4</h4>
+    </div>
+
+    <h2>Basic text styles</h2>
+    <div data-xrayhtml>
+    <p>
+      <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;
+    </p>
+    </div>
+
+    <div data-xrayhtml>
+      <a href="#" class="moreLink" i18n:translate="">This is a moreLink</a>
+    </div>
+
+    <h2>Lists</h2>
+    <h3>Unordered lists:</h3>
+    <div data-xrayhtml>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+    <h3>Definition lists:</h3>
+    <div data-xrayhtml>
+      <dt>Term item 1</dt>
+      <dd>Description 1</dd>
+      <dt>Term item 2</dt>
+      <dd>Description 2</dd>
+    </div>
+
+    <h2 i18n:translate="">Quotations</h2>
+    <div data-xrayhtml>
+      <blockquote>
+        <p i18n:translate="">
+          Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
+        </p>
+        <p class="source" i18n:translate="">Stavros Dimas, Commissioner for Environment</p>
+      </blockquote>
+    </div>
+
+  </metal:main-macro>
+</div>
+
+</body>
+</html>
