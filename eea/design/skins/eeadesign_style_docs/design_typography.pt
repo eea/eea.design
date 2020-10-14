@@ -3,13 +3,9 @@
      metal:use-macro="here/main_template/macros/master"
      i18n:domain="eea.notranslation"
      tal:define="portal_url context/@@plone_portal_state/portal_url">
-<metal:css metal:fill-slot="style_slot">
-  <link rel="stylesheet" type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
-</metal:css>
-
-<metal:javascriptslot fill-slot="javascript_head_slot">
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
-</metal:javascriptslot>
+<div metal:use-macro="here/design_docs_macros/macros/head_resources">
+  custom resources
+</div>
 <body>
 <div metal:fill-slot="content-core">
   <metal:main-macro define-macro="content-core">

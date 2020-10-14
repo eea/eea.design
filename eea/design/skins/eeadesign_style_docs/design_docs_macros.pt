@@ -1,0 +1,11 @@
+<metal:resources metal:define-macro="head_resources">
+  <metal:css metal:fill-slot="style_slot">
+    <link rel="stylesheet"
+          type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+  </metal:css>
+
+  <metal:javascriptslot fill-slot="javascript_critical_slot">
+    <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
+    <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+  </metal:javascriptslot>
+</metal:resources>
