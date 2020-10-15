@@ -7,8 +7,6 @@
 * Licensed under the MIT, GPL licenses.
  */
 
-window.jQuery = window.jQuery || window.shoestring;
-
 (function( $ ) {
   var xrayiframeid = 0;
   var pluginName = "xrayhtml",
@@ -16,7 +14,7 @@ window.jQuery = window.jQuery || window.shoestring;
 		text: {
 			open: "View Source",
 			close: "View Demo",
-			titlePrefix: "Example",
+			titlePrefix: "",
 			antipattern: "Do Not Use"
 		},
 		classes: {
@@ -27,7 +25,7 @@ window.jQuery = window.jQuery || window.shoestring;
 			antipattern: "antipattern"
 		},
 		initSelector: "[data-" + pluginName + "]",
-		defaultReveal: "flip"
+		defaultReveal: "none"
 	},
 	methods = {
 		_create: function() {
@@ -220,4 +218,4 @@ window.jQuery = window.jQuery || window.shoestring;
 	$( init );
 
 
-}( jQuery ));
+}( window.shoestring ));

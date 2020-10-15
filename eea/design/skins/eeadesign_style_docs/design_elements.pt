@@ -4,9 +4,15 @@
      i18n:domain="eea.notranslation"
      tal:define="portal_url context/@@plone_portal_state/portal_url">
 
-<div metal:use-macro="here/design_docs_macros/macros/head_resources">
- custom resources
-</div>
+<metal:css metal:fill-slot="style_slot">
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+</metal:javascriptslot>
 
 <body>
 <div metal:fill-slot="content-core">
@@ -27,6 +33,18 @@
       developers, UX/UI experts.
     </div>
 
+
+    <h2>Buttons</h2>
+    <div data-xrayhtml>
+      <p>Below the standard button style applied to<br><code>&lt;input
+        type="submit" ...</code>:
+
+        <br><input type="submit" value="Submit"></p>
+      <p>You can also give a standard link the button style by adding<br><code>&lt;a
+        class="standardButton" ...
+      </code>:
+        <br><a href="#" class="standardButton">Link (button style)</a></p>
+    </div>
 
     <h2 i18n:translate="">Gallery view</h2>
     <p i18n:translate="">
@@ -296,6 +314,8 @@
     </div>
 
     <h2 i18n:translate="">Fancybox pop-ups</h2>
+    <h4 i18n:translate="">Arbitrary HTML</h4>
+    <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
     <div data-xrayhtml>
       <div style="display:none">
         <div id="hidden-popup"
@@ -303,11 +323,6 @@
           Hello World!
         </div>
       </div>
-    </div>
-
-    <h4 i18n:translate="">Arbitrary HTML</h4>
-    <div data-xrayhtml>
-      <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
       <p>
         <a class="fancybox" href="#hidden-popup" i18n:translate="">
           Click me!
@@ -315,27 +330,6 @@
       </p>
     </div>
 
-    <h4 i18n:translate="">Image pop-ups</h4>
-    <p i18n:translate="">
-      If the a-tag hrefs to an image, it will be displayed in the popup.
-      Be careful though, if the URL does not end with an image extension,
-      fancybox will hang.
-      If the URL doesn't end with an image extension, you can still force it
-      to display the popup, by adding an extra class: fancybox.image
-    </p>
-    <div data-xrayhtml>
-      <a class="fancybox"
-         href="http://farm3.static.flickr.com/2181/2168980899_1508c84aac.jpg">
-        <img src="https://farm3.static.flickr.com/2181/2168980899_1508c84aac_t.jpg"/>
-      </a>
-    </div>
-
-    <h2 i18n:translate="">Video pop-ups</h2>
-    <div data-xrayhtml>
-      <a href="https://www.eea.europa.eu/multimedia/electric-car" class="video-fancybox">
-        <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide"/>
-      </a>
-    </div>
 
     <h2 i18n:translate="">Tooltips</h2>
     <h3 i18n:translate="">Fixed size</h3>
@@ -374,74 +368,9 @@
            i18n:attributes="title" />
     </div>
 
-    <h2 i18n:translate="">Tables - sortable and no sortable</h2>
-    <div data-xrayhtml>
-      <table class="listing">
-        <thead>
-        <tr>
-          <th i18n:translate="" class="nosort">Product - not sortable</th>
-          <th i18n:translate="">Price - sortable</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td i18n:translate="">Ice cream</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td i18n:translate="">Pony</td>
-          <td>75</td>
-        </tr>
-        <tr>
-          <td i18n:translate="">Car</td>
-          <td>9999999</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2>Buttons</h2>
-    <div data-xrayhtml>
-      <p>Below the standard button style applied to<br><code>&lt;input
-        type="submit" ...</code>:
-
-        <br><input type="submit" value="Submit"></p>
-      <p>You can also give a standard link the button style by adding<br><code>&lt;a
-        class="standardButton" ...
-      </code>:
-        <br><a href="#" class="standardButton">Link (button style)</a></p>
-    </div>
 
 
-    <h2 i18n:translate="">Image scales</h2>
-    <div data-xrayhtml>
-      <p>
-        <tal:block i18n:translate="">image_large</tal:block>
-        <br/><img src="giraffe/image_large"/></p>
-      <p>
-        <tal:block i18n:translate="">image_preview</tal:block>
-        <br/><img src="giraffe/image_preview"/></p>
-      <p>
-        <tal:block i18n:translate="">image_mini</tal:block>
-        <br/><img src="giraffe/image_mini"/></p>
-      <p>
-        <tal:block i18n:translate="">image_thumb</tal:block>
-        <br/><img src="giraffe/image_thumb"/></p>
-      <p>
-        <tal:block i18n:translate="">image_tile</tal:block>
-        <br/><img src="giraffe/image_tile"/></p>
-      <p>
-        <tal:block i18n:translate="">image_icon</tal:block>
-        <br/><img src="giraffe/image_icon"/></p>
-      <p>
-        <tal:block i18n:translate="">image_listing</tal:block>
-        <br/><img src="giraffe/image_listing"/></p>
-      <p>
-        <tal:block i18n:translate="">image_wide (only available for videos)
-        </tal:block>
-        <br/><img
-          src="resolveuid/af79241214c3088375297823b3ccf560/image_wide"/></p>
-    </div>
+
 
     <h2 i18n:translate="">Portal messages and callouts</h2>
     <p i18n:translate="">Portal messages (aka callout / text boxes) are

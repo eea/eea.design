@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h1 i18n:translate="">
+      Welcome to EEA Web design elements
+    </h1>
+    <div class="documentDescription" i18n:translate="">
+      This page shows common html markup, css classes and javascripts we use
+      across the EEA website. See
+      example code and use Firefox Firebug plugin to inspect elements code.
+      Intended audience: web designers, web
+      developers, UX/UI experts.
+    </div>
+
+    <h2 i18n:translate="">Tables - sortable and no sortable</h2>
+    <div data-xrayhtml>
+      <table class="listing">
+        <thead>
+        <tr>
+          <th i18n:translate="" class="nosort">Product - not sortable</th>
+          <th i18n:translate="">Price - sortable</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td i18n:translate="">Ice cream</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Pony</td>
+          <td>75</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Car</td>
+          <td>9999999</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </metal:main-macro>
+</div>

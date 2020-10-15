@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h1 i18n:translate="">
+      Welcome to EEA Web design elements
+    </h1>
+    <div class="documentDescription" i18n:translate="">
+      This page shows common html markup, css classes and javascripts we use
+      across the EEA website. See
+      example code and use Firefox Firebug plugin to inspect elements code.
+      Intended audience: web designers, web
+      developers, UX/UI experts.
+    </div>
+
+    <h4 i18n:translate="">Image pop-ups</h4>
+    <p i18n:translate="">
+      If the a-tag hrefs to an image, it will be displayed in the popup.
+      Be careful though, if the URL does not end with an image extension,
+      fancybox will hang.
+      If the URL doesn't end with an image extension, you can still force it
+      to display the popup, by adding an extra class: fancybox.image
+    </p>
+    <div data-xrayhtml>
+      <a class="fancybox"
+         href="http://farm3.static.flickr.com/2181/2168980899_1508c84aac.jpg">
+        <img src="https://farm3.static.flickr.com/2181/2168980899_1508c84aac_t.jpg"/>
+      </a>
+    </div>
+
+    <h2 i18n:translate="">Video pop-ups</h2>
+    <div data-xrayhtml>
+      <a href="https://www.eea.europa.eu/multimedia/electric-car" class="video-fancybox">
+        <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide"/>
+      </a>
+    </div>
+
+    <h2 i18n:translate="">Image scales</h2>
+    <div data-xrayhtml>
+      <p>
+        <tal:block i18n:translate="">image_large</tal:block>
+        <br/><img src="giraffe/image_large"/></p>
+      <p>
+        <tal:block i18n:translate="">image_preview</tal:block>
+        <br/><img src="giraffe/image_preview"/></p>
+      <p>
+        <tal:block i18n:translate="">image_mini</tal:block>
+        <br/><img src="giraffe/image_mini"/></p>
+      <p>
+        <tal:block i18n:translate="">image_thumb</tal:block>
+        <br/><img src="giraffe/image_thumb"/></p>
+      <p>
+        <tal:block i18n:translate="">image_tile</tal:block>
+        <br/><img src="giraffe/image_tile"/></p>
+      <p>
+        <tal:block i18n:translate="">image_icon</tal:block>
+        <br/><img src="giraffe/image_icon"/></p>
+      <p>
+        <tal:block i18n:translate="">image_listing</tal:block>
+        <br/><img src="giraffe/image_listing"/></p>
+      <p>
+        <tal:block i18n:translate="">image_wide (only available for videos)
+        </tal:block>
+        <br/><img
+          src="resolveuid/af79241214c3088375297823b3ccf560/image_wide"/></p>
+    </div>
+  </metal:main-macro>
+</div>
