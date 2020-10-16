@@ -33,499 +33,481 @@
       developers, UX/UI experts.
     </div>
 
-
     <h2>Buttons</h2>
+    <p>Below the standard button style applied to inputs and to links</p>
     <div data-xrayhtml>
-      <p>Below the standard button style applied to<br><code>&lt;input
-        type="submit" ...</code>:
-
-        <br><input type="submit" value="Submit"></p>
-      <p>You can also give a standard link the button style by adding<br><code>&lt;a
-        class="standardButton" ...
-      </code>:
-        <br><a href="#" class="standardButton">Link (button style)</a></p>
-    </div>
-
-    <h2 i18n:translate="">Gallery view</h2>
-    <p i18n:translate="">
-      You need to enter an image scale after the image src otherwise the gallery
-      will load the full-resolution images which could dramatically slow the
-      page
-    </p>
-
-    <div data-xrayhtml>
-      <ul id="galleryView">
-        <li>
-          <span
-              class="panel-overlay" i18n:translate="">Overlay text goes here</span>
-          <img class="skip_lazy" src="monkey-with-makeup/image_large"/>
-        </li>
-        <li><img class="skip_lazy" src="mr-monkey/image_large"/></li>
-      </ul>
-    </div>
-    <p i18n:translate="">
-      You can now use more than you galleryView on the page if needed by using
-      the
-      gallery class.
-      Also you can disable the filmstrip by assigning the
-      <strong>js-noFilmstrip</strong> class to the gallery
-      as you can see in the example below.
-    </p>
-
-    <p i18n:translate="">
-      Make sure that this gallery has also an id thou as the gallery makes use
-      of an id selector
-    </p>
-    <p i18n:translate="">
-      Also if you add a width and height as an inline style the gallery will
-      match these sizes instead
-      of growing to the size of it's parent as it does by default.
-    </p>
-
-    <div data-xrayhtml>
-      <ul id="galleryView2" class="galleryView js-noFilmstrip">
-        <li>
-          <span
-              class="panel-overlay" i18n:translate="">Overlay text goes here</span>
-          <img class="skip_lazy" src="monkey-with-makeup/image_large"/>
-        </li>
-        <li><img class="skip_lazy" src="mr-monkey/image_large"/></li>
-      </ul>
-    </div>
-
-    <h2 i18n:translate="">Tabs</h2>
-    <h3 i18n:translate="">Server side tabs</h3>
-    <p>Clicking on the tab which will take you to the page that the links points
-      to</p>
-    <p>As template logic you have to supply the current class on the tab that
-      should be activated given the page visited</p>
-
-    <div data-xrayhtml>
-      <div class="tabbedmenu">
-        <ul>
-          <li i18n:translate=""><a href="#first" class="first-tab">First tab</a>
-          </li>
-          <li i18n:translate=""><a href="#second" class="current">Second tab</a>
-          </li>
-          <li i18n:translate=""><a href="#third">Third tab</a></li>
-        </ul>
-      </div>
-      <div class="tabbedmenu-panel">
-        <div class="eea-tabs-panel" style="display: none"
-             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
-        </div>
-        <div class="eea-tabs-panel" style="display: none"
-             tal:content="string:Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
-        </div>
-      </div>
-    </div>
-
-    <h3 i18n:translate="">jQuerytools tabs</h3>
-    <div data-xrayhtml>
-      <ul class="eea-tabs">
-        <li i18n:translate="">First tab</li>
-        <li i18n:translate="">Second tab</li>
-        <li i18n:translate="">Third tab</li>
-      </ul>
-
-      <div class="eea-tabs-panels">
-        <div class="eea-tabs-panel"
-             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.">
-        </div>
-      </div>
-    </div>
-
-    <h3 i18n:translate="">jQuerytools tabs two rows title</h3>
-    <p i18n:translate="">
-      If you have tabs that have longer titles consider using the extra
-      'two-rows' class for the tabs which makes the tabs larger in height and
-      better styled to accommodate larger titles.
-    </p>
-
-    <div data-xrayhtml>
-      <ul class="eea-tabs two-rows">
-        <li i18n:translate="">First tab</li>
-        <li i18n:translate="">Second tab with a long title that spans across two
-          rows
-        </li>
-        <li i18n:translate="">Third tab</li>
-      </ul>
-
-      <div class="eea-tabs-panels">
-        <div class="eea-tabs-panel"
-             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris.">
-        </div>
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Arrows TAB</h3>
-    <div data-xrayhtml>
-      <ul class="eea-tabs eea-tabs-arrows" style="display: block;">
-        <li><a id="tab-synthesis-report" href="#tab-synthesis-report"><span
-            class="eea-icon eea-icon-clipboard eea-icon-2x"></span>TAB 1</a>
-        </li>
-        <li><a id="tab-global-megatrends" href="#tab-global-megatrends"><span
-            class="eea-icon eea-icon-globe eea-icon-2x"></span>TAB 2</a></li>
-        <li><a id="tab-thematic-briefing" href="#tab-thematic-briefing"><span
-            class="eea-icon eea-icon-leaf eea-icon-2x"></span>TAB 3</a></li>
-        <li><a id="tab-cross-country-comparisons"
-               href="#tab-cross-country-comparisons"><span
-            class="eea-icon eea-icon-bar-chart-o eea-icon-2x"></span>TAB 4</a>
-        </li>
-      </ul>
-
-      <div class="eea-tabs-panels eea-tabs-panels-arrows">
-        <div class="eea-tabs-panel">
-          <p>The synthesis report informs future European environmental policy
-            in general and its implementation between 2015 and 2020 in
-            particular. It includes a reflection on the European environment in
-            a global context, as well as chapters summarising the state of,
-            trends in, and prospects for the environment in Europe.</p>
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
-        </div>
-        <div class="eea-tabs-panel"
-             tal:content="string:Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.">
-        </div>
-      </div>
-    </div>
-
-    <h2 i18n:translate="">jQuerytools accordions</h2>
-    <h3>jQuerytools accordion (standard)</h3>
-    <div data-xrayhtml>
-      <div class="eea-accordion-panels">
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">First panel title</h2>
-          <div class="pane">Lorem ipsum dolor sit amet...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container current">Second panel
-            title</h2>
-          <div class="pane">Claritas est etiam processus dynamicus...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
-          <div class="pane">Suspendisse tristique sapien non ipsum...
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <h3>jQuerytools accordion (collapsed-by-default)</h3>
-    <div data-xrayhtml>
-      <div class="eea-accordion-panels collapsed-by-default">
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">First panel title</h2>
-          <div class="pane">Lorem ipsum dolor sit amet...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-          <div class="pane">Claritas est etiam processus dynamicus...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
-          <div class="pane">Suspendisse tristique sapien non ipsum...
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <h3>jQuerytools accordion (collapsed-by-default and non-exclusive)</h3>
-    <div data-xrayhtml>
-      <div class="eea-accordion-panels collapsed-by-default non-exclusive">
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">First panel title</h2>
-          <div class="pane">Lorem ipsum dolor sit amet...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">Second panel title</h2>
-          <div class="pane">Claritas est etiam processus dynamicus...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
-          <div class="pane">Suspendisse tristique sapien non ipsum...
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <h3>jQuerytools accordion (non-exclusive)</h3>
-    <div data-xrayhtml>
-      <div class="eea-accordion-panels non-exclusive">
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container">First panel title</h2>
-          <div class="pane">Lorem ipsum dolor sit amet...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container current">Second panel
-            title</h2>
-          <div class="pane">Claritas est etiam processus dynamicus...
-          </div>
-        </div>
-
-        <div class="eea-accordion-panel">
-          <h2 class="notoc eea-icon-right-container current">Third panel
-            title</h2>
-          <div class="pane">Suspendisse tristique sapien non ipsum...
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <h2 i18n:translate="">Fancybox pop-ups</h2>
-    <h4 i18n:translate="">Arbitrary HTML</h4>
-    <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
-    <div data-xrayhtml>
-      <div style="display:none">
-        <div id="hidden-popup"
-             style="width:250px;height:150px" i18n:translate="">
-          Hello World!
-        </div>
-      </div>
       <p>
-        <a class="fancybox" href="#hidden-popup" i18n:translate="">
-          Click me!
-        </a>
+        <input type="submit" value="Submit">
+      </p>
+      <p>
+        <a href="#" class="standardButton">Link (button style)</a>
       </p>
     </div>
 
-
-    <h2 i18n:translate="">Tooltips</h2>
-    <h3 i18n:translate="">Fixed size</h3>
-    <p>The following tooltips have fixed width and height.</p>
-    <div data-xrayhtml>
-      <img src="fish" title="Tooltips can go right" i18n:attributes="title"
-           class="eea-tooltip-left"/>
-      <img src="fish" title="Tooltips can go up" i18n:attributes="title"
-           class="eea-tooltip-top"/>
-      <img src="fish" title="Tooltips can go down" i18n:attributes="title"
-           class="eea-tooltip-bottom"/>
-      <img src="fish" title="Tooltips can go left" i18n:attributes="title"
-           class="eea-tooltip-right"/>
-    </div>
-
-    <h3 i18n:translate="">Flexible size</h3>
-    <p>The following tooltips have a dynamic height which is automatically
-      adjusted depending
-      on the amount of text used.</p>
-    <div data-xrayhtml>
-      <img src="fish"
-           class="eea-flexible-tooltip-left"
-           title="The name given to the resource. Typically, a title will be a name by which the resource is formally known"
-           i18n:attributes="title" />
-      <img src="fish"
-           class="eea-flexible-tooltip-top"
-           title="The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content"
-           i18n:attributes="title" />
-      <img src="fish"
-           class="eea-flexible-tooltip-bottom"
-           title="Short description of the data resource"
-           i18n:attributes="title" />
-      <img src="fish"
-           class="eea-flexible-tooltip-right"
-           title="Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights"
-           i18n:attributes="title" />
-    </div>
-
-
-
-
-
-    <h2 i18n:translate="">Portal messages and callouts</h2>
-    <p i18n:translate="">Portal messages (aka callout / text boxes) are
-      "in publishing ... a short piece of text set in larger type than the rest
-      of the page
-      and intended to attract attention ... in word processing is a special text
-      box with or without
-      a small 'tail' that can be pointed to different locations
-      on a document..." (definition source: <a
-          href="http://en.wikipedia.org/wiki/Callout">Wikipedia</a>)</p>
-
-    <p i18n:translate="">These styles can be added manually in HTML by a
-      developer or
-      they can be added on text fields by content authors using the WYSIWYG
-      editor (TinyMCE Styles
-      DropDown)
+    <!-- Client Side Pagination -->
+    <h2 i18n:translate="">Client side pagination</h2>
+    <p i18n:translate="client-side-description">
+      All that you need is a block element like a div with class paginate
+      and children as content inside of it.
     </p>
 
-    <h3 i18n:translate="">Standard call-out</h3>
+    <p i18n:translate="client-side-children">
+      By default after 12 children the content will be paginated.
+    </p>
+
+    <p i18n:translate="client-side-paginate">
+      This example has a couple of divs but the div with class paginate
+      could contain anything.
+    </p>
 
     <div data-xrayhtml>
-      <p class="callout">This is a callout: a piece of text set in a special
-        layout intended to attract
-        attention.</p>
+      <div class="paginate">
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+            </span>
+          </a>
+        </div>
+
+      </div>
     </div>
+    <!-- End Client Side Pagination -->
 
-    <h3>Key Facts call-out</h3>
-    <p>We have a specific css class "keyFact" which we have given a call-out
-      style. This helps us to
-      systematically identify key facts / key messages added by content authors
-      on webpages, extract them and create
-      distinct list about them.</p>
+    <!-- Client Side Pagination with tabs -->
+    <h2 i18n:translate="">Client side pagination with tabs</h2>
+    <p i18n:translate="">
+      This example demonstrates the pagination with
+      headers as tabs.
+    </p>
+    <p i18n:translate="">
+      We need some extra markup besides the parent div with class
+      paginate as found in the previous example.
+    </p>
+    <p i18n:translate="">
+      First extra element is an h3 which contains the title of the tab.
+    </p>
+    <p i18n:translate="">
+      Second extra element is a simple div that wraps the content that
+      you would like to have paginated.
+    </p>
+
 
     <div data-xrayhtml>
-      <div class="keyFact">
-        <strong>Key messages</strong>
-        <ul>
-          <li>Key message 1</li>
-          <li>Key message 2</li>
-          <li>...</li>
-          <li>Key message n</li>
-        </ul>
+      <div class="paginate">
+        <h3 i18n:translate="">Tab number 1</h3>
+        <div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+              </span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- pagination part 2 -->
+
+        <h3 i18n:translate="">Tab number 2</h3>
+        <div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="fish"/>
+              </span>
+              <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+              </span>
+            </a>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <h3 i18n:translate="">Standard Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage">
-        Settings have been applied
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Information Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage informationMessage">
-        Your screensaver has been upgraded, please consider to restart your
-        computer ... Have a good day
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Error Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage errorMessage">
-        This is an example of an error message
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Warning Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage warningMessage">
-        Warning! Core meltdown at EEA HQ, code super-duper-red
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Attention Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage attentionMessage">
-        This is an example of an message that requires your attention
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Thumbs Up Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage thumbsUpMessage">
-        Thumbs up for the content on this site
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Yes Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage yesMessage">
-        Message which could indicate an agreement or something done
-      </div>
-    </div>
-
-    <h3 i18n:translate="">No Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage noMessage">
-        Message which could indicate a disagreement or something not done
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Rosette Translation Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage rosetteMessage">
-        Message which could indicate a translation message
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Idea Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage ideaMessage">
-        Message which could indicate a call to action message
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Smiley Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage smileyMessage">
-        Smiley Message type
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Note Portal Message</h3>
-    <div data-xrayhtml>
-      <div class="portalMessage noteMessage">
-        Note Message
-      </div>
-    </div>
-
-    <h3 i18n:translate="">Custom Portal Message</h3>
-    <p>By using the &lt;span&gt;-tag icon syntax, you can create custom portal
-      messages. See section "EEA Icons"
-      for all available icons.</p>
-    <div data-xrayhtml>
-      <div class="portalMessage">
-        <span class="eea-icon eea-icon-eye"></span>
-        Message with custom Icon.
-      </div>
-    </div>
+    <!-- End Client Side Pagination with tabs -->
 
 
-    <h2 i18n:translate="">EEA Icons (scalable vector icons)</h2>
+        <!--? end @icons  -->
+    <h2 i18n:translate="">EEA icons (scalable vector icons)</h2>
     <p i18n:translate="">Simply use the <strong>&lt;span&gt;</strong> tag with
       specific classes
       as following:</p>
     <span class="eea-icon eea-icon-camera-retro"></span> eea-icon-camera-retro
-    <pre>&lt;span class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/span&gt;
-eea-icon-camera-retro</pre>
-    <p i18n:translate="">You can use the entire set of <a rel="external"
-                                                          href="https://fontawesome.com/v4.7.0/icons/">Font
+    <pre>&lt;span class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/span&gt;eea-icon-camera-retro</pre>
+    <p i18n:translate="">You can use the entire set of
+      <a rel="external" href="https://fontawesome.com/v4.7.0/icons/">Font
       Awesome v4.7.0 icons</a> as part of the EEA web design. Font Awesome gives
       you scalable vector icons that can instantly be customized - size, color,
-      drop
-      shadow, and anything that can be done with the power of CSS.</p>
+      drop shadow, and anything that can be done with the power of CSS.
+    </p>
     <h4 i18n:translate="">More icons</h4>
     <div data-xrayhtml>
       <p>
@@ -544,21 +526,22 @@ eea-icon-camera-retro</pre>
     </div>
 
     <p class="callout" i18n:translate="">There are many ways to customise the
-      icons display. See the <a
-          href="http://fontawesome.io/examples/">practical examples</a> and just
-      replace the generic <strong>fa</strong> classname with our <strong>eea-icon</strong>
-      class prefix</p>
-    <h4 i18n:translate="">Floated Icons</h4>
+      icons display. See the <a href="http://fontawesome.io/examples/">practical examples</a>
+      and just replace the generic <strong>fa</strong> classname with our
+      <strong>eea-icon</strong> class prefix
+    </p>
+
+    <h4 i18n:translate="">Floated icons</h4>
     <p i18n:translate="">You can float icons right or left by using
       <strong>eea-icon-right</strong> or
       <strong>eea-icon-left</strong> class, instead of font awesome .pull-left
       and .pull-right:</p>
-    <pre>&lt;p&gt;&lt;span class="eea-icon eea-icon-right eea-icon-comment"&gt;&lt;/span&gt;&lt;/a&gt;Right
-floated comment icon&lt;/p&gt;</pre>
-    <p i18n:translate=""><span
-        class="eea-icon eea-icon-right eea-icon-comment"></span>We can float
-      the icon to the right of the
-      text as we can see from this example.</p>
+    <pre>&lt;p&gt;&lt;span class="eea-icon eea-icon-right eea-icon-comment"&gt;&lt;/span&gt;&lt;/a&gt;Right floated comment icon&lt;/p&gt;
+    </pre>
+    <p i18n:translate="">
+      <span class="eea-icon eea-icon-right eea-icon-comment"></span>We can float
+      the icon to the right of the text as we can see from this example.
+    </p>
 
     <h4 i18n:translate="">Animated icons</h4>
     <p i18n:translate="">
@@ -570,7 +553,8 @@ floated comment icon&lt;/p&gt;</pre>
     <span class="eea-icon eea-icon-heart eea-icon-anim-burst animated"></span>eea-icon-anim-burst
     animated
     <pre>&lt;span class="eea-icon eea-icon-heart eea-icon-anim-burst animated"&gt;&lt;/span&gt;
-eea-icon-heart eea-icon-anim-burst animated</pre>
+             eea-icon-heart eea-icon-anim-burst animated
+    </pre>
 
     <h4 i18n:translate="">
       More animated icons
@@ -606,454 +590,568 @@ eea-icon-heart eea-icon-anim-burst animated</pre>
             class="eea-icon eea-icon-circle-o eea-icon-2x eea-icon-anim-burst animated"></span>
       </p>
     </div>
+    <!--? end @icons  -->
 
-    <!-- Client Side Pagination -->
-    <h2 i18n:translate="">Client Side Pagination</h2>
-    <p i18n:translate="client-side-description">
-      All that you need is a block element like a div with class paginate
-      and children as content inside of it.
-    </p>
+        <!--?  Fancybox -->
+    <h2 i18n:translate="">Fancybox pop-ups</h2>
+    <h4 i18n:translate="">Arbitrary HTML</h4>
+    <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
+    <div data-xrayhtml>
+      <div style="display:none">
+        <div id="hidden-popup"
+             style="width:250px;height:150px" i18n:translate="">
+          Hello World!
+        </div>
+      </div>
 
-    <p i18n:translate="client-side-children">
-      By default after 12 children the content will be paginated.
-    </p>
+      <p>
+        <a class="fancybox" href="#hidden-popup" i18n:translate="">
+          Click me!
+        </a>
+      </p>
 
-    <p i18n:translate="client-side-paginate">
-      This example has a couple of divs but the div with class paginate
-      could contain anything.
+    </div>
+    <!--? end Fancybox -->
+
+    <!--? Gallery view   -->
+    <h2 i18n:translate="">Gallery view</h2>
+    <p i18n:translate="">
+      You need to enter an image scale after the image src otherwise the gallery
+      will load the full-resolution images which could dramatically slow the
+      page
     </p>
 
     <div data-xrayhtml>
-      <div class="paginate">
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </span>
-          </a>
-        </div>
-        <div class="photoAlbumEntry">
-          <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
-                    </span>
-          </a>
-        </div>
-      </div>
+      <ul id="galleryView">
+
+        <li>
+          <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
+          <img class="skip_lazy" src="monkey-with-makeup/image_large"/>
+        </li>
+
+        <li>
+          <img class="skip_lazy" src="mr-monkey/image_large"/>
+        </li>
+
+      </ul>
     </div>
-    <!-- End Client Side Pagination -->
-
-    <!-- Client Side Pagination with tabs -->
-    <h2 i18n:translate="">Client Side Pagination with Tabs</h2>
     <p i18n:translate="">
-      This example demonstrates the pagination with
-      headers as tabs.
-    </p>
-    <p i18n:translate="">
-      We need some extra markup besides the parent div with class
-      paginate as found in the previous example.
-    </p>
-    <p i18n:translate="">
-      First extra element is an h3 which contains the title of the tab.
-    </p>
-    <p i18n:translate="">
-      Second extra element is a simple div that wraps the content that
-      you would like to have paginated.
+      You can now use more than you galleryView on the page if needed by using
+      the
+      gallery class.
+      Also you can disable the filmstrip by assigning the
+      <strong>js-noFilmstrip</strong> class to the gallery
+      as you can see in the example below.
     </p>
 
+    <p i18n:translate="">
+      Make sure that this gallery has also an id thou as the gallery makes use
+      of an id selector
+    </p>
+    <p i18n:translate="">
+      Also if you add a width and height as an inline style the gallery will
+      match these sizes instead
+      of growing to the size of it's parent as it does by default.
+    </p>
 
     <div data-xrayhtml>
-      <div class="paginate">
-        <h3 i18n:translate="">Tab number 1</h3>
-        <div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
-                        </span>
-            </a>
-          </div>
+      <ul id="galleryView2" class="galleryView js-noFilmstrip">
+
+        <li>
+          <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
+          <img class="skip_lazy" src="monkey-with-makeup/image_large"/>
+        </li>
+
+        <li>
+          <img class="skip_lazy" src="mr-monkey/image_large"/>
+        </li>
+
+      </ul>
+    </div>
+    <!--? end Gallery view   -->
+
+    <!--?  jQuerytools accordions -->
+    <h2 i18n:translate="">jQuerytools accordions</h2>
+    <h3>jQuerytools accordion (standard)</h3>
+    <div data-xrayhtml>
+      <div class="eea-accordion-panels">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
         </div>
 
-        <!-- pagination part 2 -->
-
-        <h3 i18n:translate="">Tab number 2</h3>
-
-        <div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </span>
-            </a>
-          </div>
-          <div class="photoAlbumEntry">
-            <a href="#">
-                        <span class="photoAlbumEntryWrapper">
-                            <img src="fish"/>
-                        </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
-                        </span>
-            </a>
-          </div>
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container current">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
         </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
       </div>
     </div>
 
-    <!-- End Client Side Pagination with tabs -->
+    <h3>jQuerytools accordion (collapsed-by-default)</h3>
+    <div data-xrayhtml>
+      <div class="eea-accordion-panels collapsed-by-default">
 
-    <!-- Ribbon design ?-->
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
+      </div>
+    </div>
+
+    <h3>jQuerytools accordion (collapsed-by-default and non-exclusive)</h3>
+    <div data-xrayhtml>
+      <div class="eea-accordion-panels collapsed-by-default non-exclusive">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <h3>jQuerytools accordion (non-exclusive)</h3>
+    <div data-xrayhtml>
+      <div class="eea-accordion-panels non-exclusive">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container current">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container current">Third panel
+            title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools accordions -->
+
+    <!--?  @jQuerytools tabs -->
+    <h2 i18n:translate="">jQuerytools tabs</h2>
+    <h3 i18n:translate="">Server side tabs</h3>
+    <p>Clicking on the tab which will take you to the page that the links points
+      to</p>
+    <p>As template logic you have to supply the current class on the tab that
+      should be activated given the page visited</p>
+
+    <div data-xrayhtml>
+      <div class="tabbedmenu">
+        <ul>
+
+          <li i18n:translate="">
+            <a href="#first" class="first-tab">First tab</a>
+          </li>
+
+          <li i18n:translate="">
+            <a href="#second" class="current">Second tab</a>
+          </li>
+
+          <li i18n:translate="">
+            <a href="#third">Third tab</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="tabbedmenu-panel">
+
+        <div class="eea-tabs-panel" style="display: none"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        </div>
+
+        <div class="eea-tabs-panel" style="display: none"
+             tal:content="string:Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        </div>
+
+      </div>
+    </div>
+
+    <h3 i18n:translate="">jQuerytools tabs</h3>
+    <div data-xrayhtml>
+      <ul class="eea-tabs">
+        <li i18n:translate="">First tab</li>
+        <li i18n:translate="">Second tab</li>
+        <li i18n:translate="">Third tab</li>
+      </ul>
+
+      <div class="eea-tabs-panels">
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.">
+        </div>
+
+      </div>
+    </div>
+
+    <h3 i18n:translate="">jQuerytools tabs two rows title</h3>
+    <p i18n:translate="">
+      If you have tabs that have longer titles consider using the extra
+      'two-rows' class for the tabs which makes the tabs larger in height and
+      better styled to accommodate larger titles.
+    </p>
+
+    <div data-xrayhtml>
+      <ul class="eea-tabs two-rows">
+        <li i18n:translate="">First tab</li>
+        <li i18n:translate="">Second tab with a long title that spans across two rows</li>
+        <li i18n:translate="">Third tab</li>
+      </ul>
+
+      <div class="eea-tabs-panels">
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris.">
+        </div>
+
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Arrows tabs</h3>
+    <div data-xrayhtml>
+      <ul class="eea-tabs eea-tabs-arrows" style="display: block;">
+
+        <li>
+          <a id="tab-synthesis-report" href="#tab-synthesis-report">
+            <span class="eea-icon eea-icon-clipboard eea-icon-2x"></span>
+            TAB 1
+          </a>
+        </li>
+
+        <li>
+          <a id="tab-global-megatrends" href="#tab-global-megatrends">
+            <span class="eea-icon eea-icon-globe eea-icon-2x"></span>
+            TAB 2
+          </a>
+        </li>
+
+        <li>
+          <a id="tab-thematic-briefing" href="#tab-thematic-briefing">
+            <span class="eea-icon eea-icon-leaf eea-icon-2x"></span>
+            TAB 3
+          </a>
+        </li>
+
+        <li>
+          <a id="tab-cross-country-comparisons" href="#tab-cross-country-comparisons">
+            <span class="eea-icon eea-icon-bar-chart-o eea-icon-2x"></span>
+            TAB 4
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="eea-tabs-panels eea-tabs-panels-arrows">
+
+        <div class="eea-tabs-panel">
+          <p>The synthesis report informs future European environmental policy
+            in general and its implementation between 2015 and 2020 in
+            particular. It includes a reflection on the European environment in
+            a global context, as well as chapters summarising the state of,
+            trends in, and prospects for the environment in Europe.</p>
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.">
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools tabs -->
+
+
+    <!--? @messages  -->
+    <h2 i18n:translate="">Portal messages and callouts</h2>
+    <p i18n:translate="">Portal messages (aka callout / text boxes) are
+      "in publishing ... a short piece of text set in larger type than the rest
+      of the page
+      and intended to attract attention ... in word processing is a special text
+      box with or without
+      a small 'tail' that can be pointed to different locations
+      on a document..." (definition source: <a
+          href="http://en.wikipedia.org/wiki/Callout">Wikipedia</a>)</p>
+
+    <p i18n:translate="">These styles can be added manually in HTML by a
+      developer or
+      they can be added on text fields by content authors using the WYSIWYG
+      editor (TinyMCE Styles
+      DropDown)
+    </p>
+
+    <h3 i18n:translate="">Standard call-out</h3>
+    <div data-xrayhtml>
+      <p class="callout">This is a callout: a piece of text set in a special
+        layout intended to attract attention.</p>
+    </div>
+
+    <h3>Key Facts call-out</h3>
+    <p>We have a specific css class "keyFact" which we have given a call-out
+      style. This helps us to
+      systematically identify key facts / key messages added by content authors
+      on webpages, extract them and create
+      distinct list about them.</p>
+
+    <div data-xrayhtml>
+      <div class="keyFact">
+        <strong>Key messages</strong>
+
+        <ul>
+          <li>Key message 1</li>
+          <li>Key message 2</li>
+          <li>...</li>
+          <li>Key message n</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Standard portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage">
+        Settings have been applied
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Information portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage informationMessage">
+        Your screensaver has been upgraded, please consider to restart your
+        computer ... Have a good day
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Error portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage errorMessage">
+        This is an example of an error message
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Warning portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage warningMessage">
+        Warning! Core meltdown at EEA HQ, code super-duper-red
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Attention portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage attentionMessage">
+        This is an example of an message that requires your attention
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Thumbs up portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage thumbsUpMessage">
+        Thumbs up for the content on this site
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Yes portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage yesMessage">
+        Message which could indicate an agreement or something done
+      </div>
+    </div>
+
+    <h3 i18n:translate="">No portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage noMessage">
+        Message which could indicate a disagreement or something not done
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Rosette translation portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage rosetteMessage">
+        Message which could indicate a translation message
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Idea portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage ideaMessage">
+        Message which could indicate a call to action message
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Smiley portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage smileyMessage">
+        Smiley Message type
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Note portal message</h3>
+    <div data-xrayhtml>
+      <div class="portalMessage noteMessage">
+        Note Message
+      </div>
+    </div>
+
+    <h3 i18n:translate="">Custom portal message</h3>
+    <p>By using the &lt;span&gt;-tag icon syntax, you can create custom portal
+      messages. See section "EEA Icons"
+      for all available icons.</p>
+    <div data-xrayhtml>
+      <div class="portalMessage">
+        <span class="eea-icon eea-icon-eye"></span>
+        Message with custom Icon.
+      </div>
+    </div>
+    <!--? end @messages  -->
+
+
+    <!-- @Ribbon design ?-->
     <h2 i18n:translate="">Ribbon albums</h2>
     <p>Photo album thumbnails can make use of a ribbon text.</p>
     <p>The markup for this ribbon is:</p>
     <pre>
-            &lt;div class="ribbon-wrapper"&gt;&lt;div class="ribbon"&gt;Recent&lt;/div&gt;&lt;/div&gt;
-        </pre>
+          &lt;div class="ribbon-wrapper"&gt;&lt;div class="ribbon"&gt;Recent&lt;/div&gt;&lt;/div&gt;
+    </pre>
     <p>This can be styled different by adding <strong>recent</strong> or
       <strong>expired</strong> classes to the <strong>photoAlbumEntry</strong>
       parent div</p>
 
     <div data-xrayhtml>
       <div class="ribbon-example">
+
         <div class="photoAlbumEntry recent">
           <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
             <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nun</span>
           </a>
           <div class="ribbon-wrapper">
             <div class="ribbon">Recent</div>
           </div>
         </div>
+
         <div class="photoAlbumEntry expired">
           <a href="#">
-                    <span class="photoAlbumEntryWrapper">
-                        <img src="fish"/>
-                    </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nun</span>
+            <span class="photoAlbumEntryWrapper">
+                <img src="fish"/>
+            </span>
+            <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nun
+            </span>
           </a>
           <div class="ribbon-wrapper">
             <div class="ribbon">Expired</div>
           </div>
         </div>
+
       </div>
     </div>
-    <!-- /Ribbon design ?-->
+    <!-- end @Ribbon design ?-->
+
+
+    <!--? @tooltips  -->
+    <h2 i18n:translate="">Tooltips</h2>
+    <h3 i18n:translate="">Fixed size</h3>
+    <p>The following tooltips have fixed width and height.</p>
+    <div data-xrayhtml>
+      <img src="fish" title="Tooltips can go right" i18n:attributes="title" class="eea-tooltip-left" />
+
+      <img src="fish" title="Tooltips can go up" i18n:attributes="title" class="eea-tooltip-top" />
+
+      <img src="fish" title="Tooltips can go down" i18n:attributes="title" class="eea-tooltip-bottom" />
+
+      <img src="fish" title="Tooltips can go left" i18n:attributes="title" class="eea-tooltip-right" />
+    </div>
+
+    <h3 i18n:translate="">Flexible size</h3>
+    <p>The following tooltips have a dynamic height which is automatically
+      adjusted depending
+      on the amount of text used.</p>
+    <div data-xrayhtml>
+      <img src="fish"
+           class="eea-flexible-tooltip-left"
+           title="The name given to the resource. Typically, a title will be a name by which the resource is formally known"
+           i18n:attributes="title" />
+
+      <img src="fish"
+           class="eea-flexible-tooltip-top"
+           title="The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content"
+           i18n:attributes="title" />
+
+      <img src="fish"
+           class="eea-flexible-tooltip-bottom"
+           title="Short description of the data resource"
+           i18n:attributes="title" />
+
+      <img src="fish"
+           class="eea-flexible-tooltip-right"
+           title="Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights"
+           i18n:attributes="title" />
+    </div>
+    <!--? end @tooltips  -->
+
   </metal:main-macro>
 </div>
 
