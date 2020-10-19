@@ -210,15 +210,35 @@
       <div class="fullwidth-bg eea-block bg-primary">
         <blockquote>
           <p>Besides the simple styles, you can also nest several styles
-        for a combined effect in case it fit's the page design.
+            for a combined effect in case it fit's the page design.
           </p>
         </blockquote>
         <p>This way you can nest a <strong>Inline quote</strong> within a
           <strong>Fullwidth background section</strong>
         </p>
       </div>
+    </div>
 
-
+    <h2>TinyMCE templates</h2>
+    <p>Besides the styles that you can select from the style dropdown we also
+    have several templates that wrap several html tags in order to have more
+    complex styles</p>
+    <p>Here we list the following templates:</p>
+    <h3>Tiles</h3>
+    <p>Tiles are templates used to write a large impact text
+      or a title followed by a video</p>
+    <p>Within tiles we have the following variations</p>
+    <h4>One tile</h4>
+    <div data-xrayhtml>
+      <div class="tiles tiles--1">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </metal:main-macro>
 </div>
