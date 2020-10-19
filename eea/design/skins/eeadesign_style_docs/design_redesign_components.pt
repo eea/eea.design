@@ -1,0 +1,197 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  lang="en"
+ metal:use-macro="here/main_template/macros/master"
+ i18n:domain="eea.notranslation"
+ tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h1 i18n:translate="">
+      Welcome to EEA Web design redesigned component elements
+    </h1>
+    <div class="documentDescription" i18n:translate="">
+      This page shows common html markup, css classes and javascripts we use across the EEA website.
+    </div>
+
+
+    <h2>Quotes</h2>
+    <h3>Inline quote</h3>
+    <div data-xrayhtml>
+      <blockquote>
+        <p>Non diam phasellus vestibulum lorem sed risus ultricies tristique nulla.
+          Elementum nibh tellus molestie nunc non blandit.
+          Et malesuada fames ac turpis egestas maecenas pharetra.
+        </p>
+      </blockquote>
+    </div>
+
+    <h3>Pullquote left</h3>
+    <div data-xrayhtml>
+      <blockquote class="pullquote-left">
+        <p>Donec enim diam vulputate ut pharetrasit amet aliquam id.
+          Euismod lacinia at quis risus sed vulputate odio ut.
+        </p>
+      </blockquote>
+
+      <!--?  content that wraps the left pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. </p>
+    </div>
+
+    <h3>Pullquote right</h3>
+    <div data-xrayhtml>
+      <blockquote class="pullquote-right">
+        <p>Donec enim diam vulputate ut pharetrasit amet aliquam id.
+          Euismod lacinia at quis risus sed vulputate odio ut.
+        </p>
+      </blockquote>
+
+      <!--?  content that wraps the right pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.</p>
+    </div>
+
+    <h2>Box Styles</h2>
+    <p>Just like pull quote styles, box styles can be used to add emphasis to a section
+      of content wrapping the selected content just like the pull quotes with a given box background color</p>
+
+    <h3>Fullwidth box</h3>
+    <div data-xrayhtml>
+      <div class="box box--full box-primary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+    </div>
+
+    <h3>Left box</h3>
+    <div data-xrayhtml>
+      <div class="box box--left box-secondary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+      
+      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+        tempor id. Sed viverra tellus in hac habitasse platea dictumst
+        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+        phasellus. Consequat id porta nibh venenatis.
+      </p>
+    </div>
+
+    <h3>Right box</h3>
+    <div data-xrayhtml>
+      <div class="box box--right box-tertiary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+
+      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+        tempor id. Sed viverra tellus in hac habitasse platea dictumst
+        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+        phasellus. Consequat id porta nibh venenatis.
+      </p>
+    </div>
+
+    <h3>Boxes options</h3>
+        <p>Each box has the following options:
+        </p>
+        <ol>
+          <li>Color options:
+           <ol>
+             <li>box-primary</li>
+             <li>box-secondary</li>
+             <li>box-tertiary</li>
+           </ol>
+          </li>
+          <li>Size options:
+            <ol>
+              <li>box--full</li>
+              <li>box--left</li>
+              <li>box--right</li>
+            </ol>
+          </li>
+        </ol>
+        <p class="portalMessage informationMessage">All of these box variants are selectable
+          from the editor style dropdown
+        </p>
+    <p><strong>Example:</strong></p>
+    <div data-xrayhtml>
+      <div class="box box--full box-tertiary">
+        Box with box--full size and box-tertiary background color
+      </div>
+    </div>
+
+    <h2>Fullwidth background sections</h2>
+    <p>Just like <em>boxes</em> we can also make use of <em>fullwidth background sections</em>
+    to add emphasis to the given area</p>
+    <p>Also like the boxes we have 3 color options:</p>
+    <div data-xrayhtml>
+      <div class="fullwidth-bg eea-block bg-primary">
+        <p>Full width background section with primary background color</p>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-secondary">
+        <p>Full width background section with secondary background color</p>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-tertiary">
+        <p>Full width background section with tertiary background color</p>
+      </div>
+    </div>
+
+    <h3>Fullwidth background section with other elements</h3>
+    <div data-xrayhtml>
+      <div class="fullwidth-bg eea-block bg-primary">
+        <blockquote>
+          <p>Besides the simple styles, you can also nest several styles
+        for a combined effect in case it fit's the page design.
+          </p>
+        </blockquote>
+        <p>This way you can nest a <strong>Inline quote</strong> within a
+          <strong>Fullwidth background section</strong>
+        </p>
+      </div>
+
+
+
+  </metal:main-macro>
+</div>
+
+</body>
+</html>

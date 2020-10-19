@@ -110,6 +110,10 @@
 .snippet, .ribbon-example {
     overflow: hidden;
 }
+
+.xrayhtml .snippet {
+    overflow: visible;
+}
 /* @end css3 ribbon effect */
 
 /* eea accordion styles */
