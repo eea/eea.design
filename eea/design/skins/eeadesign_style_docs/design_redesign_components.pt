@@ -30,6 +30,124 @@
       This page shows common html markup, css classes and javascripts we use across the EEA website.
     </div>
 
+    <h2>Box Styles</h2>
+    <p>Just like pull quote styles, box styles can be used to add emphasis to a section
+      of content wrapping the selected content just like the pull quotes with a given box background color</p>
+
+    <h3>Note</h3>
+    <p>Note style is used for info message mimicking those found within charts</p>
+    <p class="portalMessage informationMessage">Due to compatibility reasons
+      the font size for this style is fixed to <em>12px</em></p>
+    <div data-xrayhtml>
+      <p class="callout">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquid eaque inventore ipsum, iure quidem quisquam.
+        A autem deserunt dicta ducimus eos expedita facilis hic
+        illo perferendis possimus quo voluptate, voluptatum?
+      </p>
+    </div>
+
+    <h3>KeyFacts box</h3>
+    <div data-xrayhtml>
+      <ul class="keyFact">
+        <li>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </li>
+        <li>
+          Architecto cumque dignissimos dolor exercitationem fugiat,
+          harum laborum, officiis optio reiciendis sed similique totam vero.
+        </li>
+        <li>
+          Esse eum laborum qui quibusdam sint tempore.
+        </li>
+      </ul>
+    </div>
+
+      <h3>Fullwidth box</h3>
+      <div data-xrayhtml>
+        <div class="box box--full box-primary">
+          <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+            mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+            Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+            A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+            platea dictumst vestibulum rhoncus.
+          </p>
+        </div>
+      </div>
+
+      <h3>Left box</h3>
+      <div data-xrayhtml>
+        <div class="box box--left box-secondary">
+          <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+            mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+            Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+            A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+            platea dictumst vestibulum rhoncus.
+          </p>
+        </div>
+
+        <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+          aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+          tempor id. Sed viverra tellus in hac habitasse platea dictumst
+          vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+          habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+          nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+          tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+          phasellus. Consequat id porta nibh venenatis.
+        </p>
+      </div>
+
+      <h3>Right box</h3>
+      <div data-xrayhtml>
+        <div class="box box--right box-tertiary">
+          <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+            mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+            Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+            A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+            platea dictumst vestibulum rhoncus.
+          </p>
+        </div>
+
+        <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+          aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+          tempor id. Sed viverra tellus in hac habitasse platea dictumst
+          vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+          habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+          nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+          tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+          phasellus. Consequat id porta nibh venenatis.
+        </p>
+      </div>
+
+      <h3>Boxes options</h3>
+      <p>Each box has the following options:
+      </p>
+      <ol>
+        <li>Color options:
+          <ol>
+            <li>box-primary</li>
+            <li>box-secondary</li>
+            <li>box-tertiary</li>
+          </ol>
+        </li>
+        <li>Size options:
+          <ol>
+            <li>box--full</li>
+            <li>box--left</li>
+            <li>box--right</li>
+          </ol>
+        </li>
+      </ol>
+      <p class="portalMessage informationMessage">All of these box variants are selectable
+        from the editor style dropdown
+      </p>
+      <p><strong>Example:</strong></p>
+      <div data-xrayhtml>
+        <div class="box box--full box-tertiary">
+          Box with box--full size and box-tertiary background color
+        </div>
+      </div>
+
 
     <h2>Quotes</h2>
     <h3>Inline quote</h3>
@@ -68,94 +186,6 @@
       <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.</p>
     </div>
 
-    <h2>Box Styles</h2>
-    <p>Just like pull quote styles, box styles can be used to add emphasis to a section
-      of content wrapping the selected content just like the pull quotes with a given box background color</p>
-
-    <h3>Fullwidth box</h3>
-    <div data-xrayhtml>
-      <div class="box box--full box-primary">
-        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
-          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
-          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
-          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
-          platea dictumst vestibulum rhoncus.
-        </p>
-      </div>
-    </div>
-
-    <h3>Left box</h3>
-    <div data-xrayhtml>
-      <div class="box box--left box-secondary">
-        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
-          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
-          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
-          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
-          platea dictumst vestibulum rhoncus.
-        </p>
-      </div>
-      
-      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
-        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
-        tempor id. Sed viverra tellus in hac habitasse platea dictumst
-        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
-        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
-        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
-        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
-        phasellus. Consequat id porta nibh venenatis.
-      </p>
-    </div>
-
-    <h3>Right box</h3>
-    <div data-xrayhtml>
-      <div class="box box--right box-tertiary">
-        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
-          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
-          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
-          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
-          platea dictumst vestibulum rhoncus.
-        </p>
-      </div>
-
-      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
-        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
-        tempor id. Sed viverra tellus in hac habitasse platea dictumst
-        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
-        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
-        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
-        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
-        phasellus. Consequat id porta nibh venenatis.
-      </p>
-    </div>
-
-    <h3>Boxes options</h3>
-        <p>Each box has the following options:
-        </p>
-        <ol>
-          <li>Color options:
-           <ol>
-             <li>box-primary</li>
-             <li>box-secondary</li>
-             <li>box-tertiary</li>
-           </ol>
-          </li>
-          <li>Size options:
-            <ol>
-              <li>box--full</li>
-              <li>box--left</li>
-              <li>box--right</li>
-            </ol>
-          </li>
-        </ol>
-        <p class="portalMessage informationMessage">All of these box variants are selectable
-          from the editor style dropdown
-        </p>
-    <p><strong>Example:</strong></p>
-    <div data-xrayhtml>
-      <div class="box box--full box-tertiary">
-        Box with box--full size and box-tertiary background color
-      </div>
-    </div>
 
     <h2>Fullwidth background sections</h2>
     <p>Just like <em>boxes</em> we can also make use of <em>fullwidth background sections</em>
