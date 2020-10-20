@@ -233,12 +233,144 @@
       <div class="tiles tiles--1">
         <div class="tile tile--bordered">
           <div class="tile-item">
-            <h3 class="tile-item-header" id="10-years">10 years</h3>
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
             <div class="tile-item-body">of tracking industrial emissions</div>
           </div>
         </div>
       </div>
     </div>
+
+    <h4>Two tiles</h4>
+    <div data-xrayhtml>
+      <div class="tiles tiles--2">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Three tiles</h4>
+    <div data-xrayhtml>
+      <div class="tiles tiles--3">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <h4>Four tiles</h4>
+    <div data-xrayhtml>
+      <div class="tiles tiles--4">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <h4>Tiles options</h4>
+    <p>Tiles have a <em>tile--bordered</em> modifier which if applied
+      adds a top and bottom grey border to the tile section</p>
+    <div data-xrayhtml>
+      <div class="tiles tiles--1">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">bordered tile</h3>
+            <div class="tile-item-body">this section is bordered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>They can also be wrapped with <em>fullwidth background sections</em>
+      in case we need to provide such a focus area for the tiles
+    </p>
+    <div data-xrayhtml>
+      <div class="fullwidth-bg eea-block bg-secondary">
+        <div class="tiles tiles--1">
+          <div class="tile">
+            <div class="tile-item">
+              <h3 class="tile-item-header notoc" id="10-years">tile header</h3>
+              <div class="tile-item-body">background wrapped tile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3>Fullwidth image section</h3>
+    <p>Used by Briefings where there is a need for an emphasis area callout</p>
+    <div data-xrayhtml>
+      <div class="fullwidth-container-centered eea-block">
+        <img class="fullwidth" src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <div class="absolute-centered emphasis-area">
+          The study concluded that a significant part of the reductions
+          for combustion activities took place due to requirements
+          set out in EU environmental legislation on industrial pollution.
+        </div>
+      </div>
+      <p class="image-credit-container">
+        <span class="discreet">
+          Image copyright belongs to: attribution here
+        </span>
+      </p>
+
+    </div>
+
 
   </metal:main-macro>
 </div>

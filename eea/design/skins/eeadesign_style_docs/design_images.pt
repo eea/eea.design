@@ -1,3 +1,4 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
      metal:use-macro="here/main_template/macros/master"
@@ -22,6 +23,10 @@
       table of contents
     </div>
 
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
     <h1 i18n:translate="">
       Welcome to EEA Web design elements
     </h1>
@@ -31,6 +36,20 @@
       example code and use Firefox Firebug plugin to inspect elements code.
       Intended audience: web designers, web
       developers, UX/UI experts.
+    </div>
+
+    <h2 i18n:translate="">Image containers</h2>
+    <h3 i18n:translate="">Container-xxl</h3>
+    <p>Sometimes we need to enlarge an image or iframe beyond the center column
+      that we have which is 830px</p>
+    <p>For this reason we have <strong>max-container-centered</strong> class which
+    when applied it allows us to scale the image while maintaining the text values
+    within the center column position</p>
+    <div data-xrayhtml>
+      <div class="max-container-centered eea-block">
+        <img class="fullwidth" src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <p>This is a text that doesn't span as large as the image</p>
+      </div>
     </div>
 
     <h4 i18n:translate="">Image pop-ups</h4>
@@ -86,3 +105,6 @@
     </div>
   </metal:main-macro>
 </div>
+
+</body>
+</html>

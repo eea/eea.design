@@ -388,12 +388,13 @@
        tal:content="structure context/critical.js"
        tal:condition="python:not isPrint">
   </script>
+  <metal:javascriptslot define-slot="javascript_critical_slot" />
+
     <script type="text/javascript"
             tal:content="structure context/lazy_load_init.js"
             tal:condition="python:not isPrint">
     </script>
 
-    <metal:javascriptslot define-slot="javascript_critical_slot" />
     <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
     <metal:javascriptslot define-slot="javascript_head_slot" />
 

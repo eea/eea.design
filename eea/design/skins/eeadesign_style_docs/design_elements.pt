@@ -66,7 +66,7 @@
         <div class="photoAlbumEntry">
           <a href="#">
             <span class="photoAlbumEntryWrapper">
-                <img src="fish"/>
+                <img src="fish" />
             </span>
             <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
             </span>
@@ -76,7 +76,7 @@
         <div class="photoAlbumEntry">
           <a href="#">
             <span class="photoAlbumEntryWrapper">
-                <img src="fish"/>
+                <img src="fish" />
             </span>
             <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
             </span>
@@ -594,7 +594,7 @@
 
         <!--?  Fancybox -->
     <h2 i18n:translate="">Fancybox pop-ups</h2>
-    <h4 i18n:translate="">Arbitrary HTML</h4>
+    <h3 i18n:translate="">Arbitrary HTML</h3>
     <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
     <div data-xrayhtml>
       <div style="display:none">
@@ -626,11 +626,11 @@
 
         <li>
           <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
-          <img class="skip_lazy" src="monkey-with-makeup/image_large"/>
+          <img src="monkey-with-makeup/image_large"/>
         </li>
 
         <li>
-          <img class="skip_lazy" src="mr-monkey/image_large"/>
+          <img src="mr-monkey/image_large"/>
         </li>
 
       </ul>
@@ -659,11 +659,11 @@
 
         <li>
           <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
-          <img class="skip_lazy" src="monkey-with-makeup/image_large"/>
+          <img  src="monkey-with-makeup/image_large"/>
         </li>
 
         <li>
-          <img class="skip_lazy" src="mr-monkey/image_large"/>
+          <img  src="mr-monkey/image_large"/>
         </li>
 
       </ul>
