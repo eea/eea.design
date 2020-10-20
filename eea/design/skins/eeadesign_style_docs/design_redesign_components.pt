@@ -352,24 +352,6 @@
     </div>
 
 
-    <h3>Fullwidth image section</h3>
-    <p>Used by Briefings where there is a need for an emphasis area callout</p>
-    <div data-xrayhtml>
-      <div class="fullwidth-container-centered eea-block">
-        <img class="fullwidth" src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
-        <div class="absolute-centered emphasis-area">
-          The study concluded that a significant part of the reductions
-          for combustion activities took place due to requirements
-          set out in EU environmental legislation on industrial pollution.
-        </div>
-      </div>
-      <p class="image-credit-container">
-        <span class="discreet">
-          Image copyright belongs to: attribution here
-        </span>
-      </p>
-
-    </div>
 
 
   </metal:main-macro>
