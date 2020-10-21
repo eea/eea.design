@@ -36,6 +36,10 @@ dl.error,
     background-color: &dtml-greyBackgroundColor;;
 
 }
+.portalMessage strong {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
 .extra .attention,
 .extra .caution,

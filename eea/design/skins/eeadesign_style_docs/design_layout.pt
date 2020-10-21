@@ -1,0 +1,166 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h1 i18n:translate="">
+      Welcome to EEA Web design typograhy elements
+    </h1>
+    <div class="documentDescription" i18n:translate="">
+      This page shows common html markup, css classes and javascripts we use across the EEA website.
+    </div>
+
+
+    <h2>Containers</h2>
+    <p>EEA Website uses a mix of containers from Plone 4 deco system and some
+      custom containers inspired from css frameworks such as <strong>Bootstrap</strong>
+      and <strong>Bulma</strong>
+    </p>
+
+    <h3>Content container</h3>
+    <p>As part of News style content types redesign our main content column is now
+       maximum 830px (800px width with 15px left and right padding) and centered in view.
+    </p>
+    <p>This design decision was made in order to remove the right column area and
+       put focus on the content area which has larger fonts making it easier to
+       read both on mobile and desktop resolutions.
+    </p>
+    <div data-xrayhtml>
+    <div class="width-3:4">
+      <p>Default main content container class</p>
+    </div>
+    </div>
+
+    <h3>Flex container</h3>
+
+    <p>Acting like Bulma <a href="https://bulma.io/documentation/layout/level/">level container</a> <strong>flex-container</strong>
+      is used in sections where we want content to be vertically centered and of same size.
+    </p>
+    <p>In our website we use this container to force the left and right boxes construct to
+       be of same size and fit next to each other as floated left and right items would
+    </p>
+
+    <div data-xrayhtml>
+      <div class="flex-container">
+
+          <div class="box box--left  box-secondary">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Alias, cum cumque cupiditate, deserunt dignissimos enim error
+              fuga in inventore libero minima,
+              minus molestias nesciunt nulla numquam porro sit ullam voluptatem.
+            </p>
+          </div>
+
+          <div class="box box--right box-primary">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Alias, cum cumque cupiditate, deserunt dignissimos enim error
+              fuga in inventore libero minima,
+              minus molestias nesciunt nulla numquam porro sit ullam voluptatem.
+            </p>
+          </div>
+        
+      </div>
+    </div>
+
+    <h3>Fullwidth container</h3>
+    <p>Acting like Bootstrap <a href="https://getbootstrap.com/docs/4.5/layout/overview/#fluid">container-fluid</a> <strong>fullwidth-container</strong>
+      is used in sections where we want content to break out of the content area
+      and fill up the entire browser width.
+    </p>
+    <p>Common sections where this is used within our website are for <strong>Dashboard</strong>
+    and <strong>GIS Map Application</strong> content types where we have external
+      maps and graphs that benefit from spanning over a large area.
+    </p>
+    <p class="portalMessage informationMessage">
+      The only difference between <strong>fullwidth-container</strong> and
+      <strong>fullwidth-container-centered</strong>
+      is the fact that the latter restricts the non image content to 800px,
+      useful for content that needs to be spaced apart such as pictures
+      with an emphasis area section, hence the content is centered and kept
+      on the content area
+    </p>
+    <div data-xrayhtml>
+      <div class="fullwidth-container">
+        <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <p>This container is used best for chart applications such as Tableau rather than text,
+           based content
+        </p>
+      </div>
+    </div>
+
+
+    <h3>Widescreen container</h3>
+    <p>Acting like Bulma's <a href="https://bulma.io/documentation/layout/container/#overview">is-widescreen</a> container <strong>widescreen-container</strong>
+      is used in sections where we want content to break out of the content area
+      and fill up 100% of width up to 1400px, without any top and bottom margin
+      and without centering any of the children.
+    </p>
+    <p>Common sections where this is used within our website are for
+      <strong>Indicator Assessment</strong>
+      and <strong>Infographic</strong> content types where we have external
+      maps and graphs that benefit from spanning over a large area and description
+      and title needs to be left aligned instead of centered.
+    </p>
+    <div data-xrayhtml>
+      <div class="widescreen-container">
+        <p><strong>Widescreen container title</strong></p>
+        <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <p>This container is best used for content that needs to span to full
+           content area, without any top or bottom margin added to the container
+        </p>
+      </div>
+    </div>
+
+    <h2>Utilities</h2>
+    <h3>eea-block</h3>
+    <p>Sometimes we want compose several design components together such
+    as a box container with a blockquote.</p>
+    <p>In this case all of the components selectable from TinyMCE have the
+      <strong>eea-block</strong> class applied such that if we stack them the
+      second block removes the top and bottom margin.
+    </p>
+    <p>This is useful when the spacing is coming from the padding of the first
+      block and having the extra margin is unnecessary.
+    </p>
+    <div data-xrayhtml>
+      <div class="box eea-block box--full box-primary">
+        <div class="emphasis-area eea-block">
+          <p>This is an <em>emphasis-area</em> div with eea-block class</p>
+        </div>
+        <p>Another text here</p>
+      </div>
+
+      <div class="box eea-block box--full box-primary">
+        <div class="emphasis-area">
+          <p>This is an <em>emphasis-area</em> div without eea-block class</p>
+        </div>
+        <p>Another text here</p>
+      </div>
+    </div>
+
+
+
+  </metal:main-macro>
+</div>
+
+</body>
+</html>

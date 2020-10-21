@@ -23,10 +23,6 @@
       table of contents
     </div>
 
-    <div metal:use-macro="here/portlet_toc/macros/portlet">
-      table of contents
-    </div>
-
     <h1 i18n:translate="">
       Welcome to EEA Web design elements
     </h1>
@@ -52,9 +48,11 @@
     </div>
     <p>Used by <strong>Briefings</strong> where there is a need for an emphasis area callout, this
     style combines the fullwidth image container with a div with class
-      <strong>absolute-centered emphasis-area</strong> to show text centered on top
+      <strong>emphasis-area</strong> to show text centered on top
       of the large full width image in an area not larger then the main content column.
     </p>
+    <p>Here we also add <strong>fullwidth</strong> class to the image
+      in order to make it absolute and allow the emphasis area to go over the image</p>
     <p class="portalMessage informationMessage">If we need some text to act
       as a copyright info found right below the image
       we can also add a paragraph with class <strong>image-credit-container</strong>
@@ -62,7 +60,7 @@
     <div data-xrayhtml>
       <div class="fullwidth-container-centered eea-block">
         <img class="fullwidth" src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
-        <div class="absolute-centered emphasis-area">
+        <div class="emphasis-area">
           The study concluded that a significant part of the reductions
           for combustion activities took place due to requirements
           set out in EU environmental legislation on industrial pollution.
