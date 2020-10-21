@@ -306,7 +306,7 @@
                                 </tal:block>
 
                                 <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-                                   <div class="max-container-centered" tal:attributes="class python: 'mini-header-below-content-container' if 'Indicator Assessment' != friendly_type else 'max-container-centered'">
+                                   <div class="max-container-centered" tal:attributes="class python: 'mini-header-below-content-wrapper' if 'Indicator Assessment' != friendly_type else 'mini-header-below-content-wrapper widescreen-container eea-section-md'">
                                   <div class="mini-header-below-content eea-accordion-panels
                                   eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive collapsed-by-default">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />

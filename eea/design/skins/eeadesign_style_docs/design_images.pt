@@ -74,7 +74,7 @@
 
     </div>
 
-    <h3 i18n:translate="">XXL container</h3>
+    <h3 i18n:translate="">Max container centered</h3>
     <p>Sometimes we need to enlarge an image or iframe beyond the center column
       that we have which is 830px.</p>
     <p>For this reason we have <strong>max-container-centered</strong> class which
