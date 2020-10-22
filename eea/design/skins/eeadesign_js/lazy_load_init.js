@@ -24,7 +24,7 @@ window.lazyElements = [];
 var imgs = document.querySelectorAll('img');
 /* #119674 skip lazy loading for design_ urls as it makes it easier to have
 * code display without any url modifications done by the lazy loading */
-if (window.location.href.indexOf('/design_') !== -1) {
+if (window.location.href.indexOf('/code') !== -1) {
     imgs = [];
 }
 Array.prototype.forEach.call(imgs, function(el) {

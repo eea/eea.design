@@ -7,11 +7,20 @@
 <metal:css metal:fill-slot="style_slot">
   <link rel="stylesheet"
         type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/daviz-view.css" />
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
   <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
   <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++eea.daviz.view.js"></script>
+
 </metal:javascriptslot>
 
 <body>
@@ -848,7 +857,64 @@
     <!--? end @jQuerytools accordions -->
 
     <!--?  @jQuerytools tabs -->
-    <h2 i18n:translate="">jQuerytools tabs</h2>
+    <h2 i18n:translate="">Tabs</h2>
+    <h3 i18n:translate="">Daviz tabs</h3>
+    <p>Used by <strong>Daviz</strong> this tab resembles the jquerytools tab
+      variant that also uses icons in the title.
+    </p>
+    <p>It assumes the following structure:</p>
+    <div data-xrayhtml>
+      <div id="daviz-view"> <!-- div with id needed because of tab link styling ?-->
+
+        <ul class="chart-tabs">
+          <li>
+            <a class="googlechart_class_LineChart" href="#tab-chart_1">
+              <span>Chart</span>
+            </a>
+          </li>
+          <li>
+            <a class="googlechart_class_Table" href="#tab-chart_2">
+              <span>Table</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="chart-panes">
+        <div id="tab-chart_1" class="daviz-tab-view">
+          Chart content panel, pay attention to classname of tab link for proper
+          tab image
+        </div>
+
+        <div id="tab-chart_2" class="daviz-tab-view">
+          Table content panel, pay attention to classname of tab link for proper
+          tab image
+        </div>
+      </div>
+
+    </div>
+    <h3 i18n:translate="">FormTab tabs</h3>
+    <p>Used by <strong>Indicator Assessment</strong> figure tabs,
+      these elements make use of default Plone 4 form_tabbing.js logic to
+      create tabs out of <em>dl</em>, <em>dt</em> and <em>dd</em> html tags.
+    </p>
+    <p>It assumes the following structure:</p>
+    <div data-xrayhtml>
+       <dl class="enableFormTabbing">
+         <dt id="fieldsetlegend-[unique-id]">Tab title</dt>
+         <dd id="fieldset-[same-id-as-above]">
+            Tab content is here
+         </dd>
+
+         <dt id="fieldsetlegend-2">Tab title 2</dt>
+         <dd id="fieldset-2">
+           Tab 2 content is here
+         </dd>
+         
+       </dl>
+    </div>
+
     <h3 i18n:translate="">Server side tabs</h3>
     <p>Clicking on the tab which will take you to the page that the links points
       to</p>

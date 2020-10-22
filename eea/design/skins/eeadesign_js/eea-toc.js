@@ -29,7 +29,7 @@ function build_toc(toc) {
         }
     }
 
-    $('#content').find(queryString).each(function(i, el) {
+    $('#content-core').find(queryString).each(function(i, el) {
         var newLevel = parseInt(el.tagName.charAt(1), 10);
         hLevel = hLevel || newLevel;
         if(el.className.indexOf("notoc") !== -1) {
