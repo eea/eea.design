@@ -152,7 +152,7 @@
 }
 
 .eea-accordion-panels-bordered-secondary {
-    border-top: 5px solid &dtml-corporateGreen;;
+    border-top: 3px solid &dtml-corporateGreen;;
 }
 .eea-accordion-panels-bordered-secondary  .eea-accordion-title {
     font-weight: bold;

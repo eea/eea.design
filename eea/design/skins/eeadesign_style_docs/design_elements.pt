@@ -761,6 +761,90 @@
 
       </div>
     </div>
+
+    <h3>jQuerytools accordion redesign</h3>
+    <p>After briefing redesign some new classes were created in order to simplify
+      the design of the accordions
+    </p>
+    <h4>jQuerytools accordion plain design</h4>
+    <p>By applying the <strong>eea-accordion-panels-plain</strong> class to
+      the accordion construct we change the design of the headers and panels
+      to a more discreet look and feel
+    </p>
+    <p class="portalMessage informationMessage">Besides the lack of background
+      color of the accordion panels these headers also use
+      <strong>eea-icon-left-container</strong> class in order to move the
+      accordion arrow to the left of the title instead of the right found in
+      classical accordion design
+    </p>
+    <div data-xrayhtml>
+      <div class="eea-accordion-panels eea-accordion-panels-plain">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Third panel
+            title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
+      </div>
+    </div>
+
+    <h4>jQuerytools accordion plain design with top border</h4>
+    <p>With the plain design we also have a border modifier which if applied
+      adds a larger top border to the start of the accordion panels.
+    </p>
+    <p>We can either choose to use
+      <strong>eea-accordion-panels-bordered-primary</strong>
+      which is used now on our website for the metadata info below the related
+      content area,
+    </p>
+    <div data-xrayhtml>
+      <div class="eea-accordion-panels eea-accordion-panels-plain eea-accordion-panels-bordered-primary">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+      </div>
+    </div>
+
+    <p>or <strong>eea-accordion-panels-bordered-secondary</strong> meant to be
+    added manually to the Briefing <em>Identifiers, Referencies and footnotes</em>
+      section
+    </p>
+    <div data-xrayhtml>
+      <div class="eea-accordion-panels eea-accordion-panels-plain eea-accordion-panels-bordered-secondary">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+      </div>
+    </div>
+
+
     <!--? end @jQuerytools accordions -->
 
     <!--?  @jQuerytools tabs -->

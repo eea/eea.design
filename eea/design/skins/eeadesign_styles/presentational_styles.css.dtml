@@ -25,9 +25,6 @@ dl.error,
     font-size: 120%;
     margin: 1em 0;
     padding: 1em 1.5em 1em 4.5em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     border: none;
 }
 
@@ -35,10 +32,6 @@ dl.error,
 .portalMessage {
     background-color: &dtml-greyBackgroundColor;;
 
-}
-.portalMessage strong {
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .extra .attention,
@@ -58,7 +51,7 @@ dl.error,
     font-family: 'FontAwesome';
     font-weight: normal;
     font-style: normal;
-    line-height: inherit;
+    line-height: 1;
     text-decoration: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
