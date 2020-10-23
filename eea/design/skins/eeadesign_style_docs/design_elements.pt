@@ -7,6 +7,8 @@
 <metal:css metal:fill-slot="style_slot">
   <link rel="stylesheet"
         type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/prism.css" />
 
   <link rel="stylesheet"
         type="text/css" tal:attributes="href string:${portal_url}/daviz-view.css" />
@@ -14,7 +16,58 @@
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
   <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/clipboard.min.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/prism.js"></script>
   <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+  <script type="text/javascript">
+		$( window ).bind( "create.xrayhtml", function( e ) {
+      var target = e.target;
+      var target_class = target.getAttribute( "class" );
+      var prism = !!~target_class.indexOf( "prism" );
+
+			if( prism && "Prism" in window ) {
+				$( target ).find( "code" ).addClass( "language-markup" );
+			}
+		});
+
+    Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
+      var linkCopy = document.createElement('button');
+      linkCopy.textContent = 'Copy';
+      linkCopy.setAttribute('type', 'button');
+
+      var element = env.element;
+
+      registerClipboard();
+
+      return linkCopy;
+
+      function registerClipboard() {
+        var clip = new ClipboardJS(linkCopy, {
+          'text': function () {
+            return element.textContent;
+          }
+        });
+
+        clip.on('success', function() {
+          linkCopy.textContent = 'Copied!';
+
+          resetText();
+        });
+        clip.on('error', function () {
+          linkCopy.textContent = 'Press Ctrl+C to copy';
+
+          resetText();
+        });
+      }
+
+      function resetText() {
+        setTimeout(function () {
+          linkCopy.textContent = 'Copy';
+        }, 5000);
+      }
+    });
+
+	</script>
 </metal:javascriptslot>
 
 <metal:javascriptslot fill-slot="javascript_head_slot">
@@ -44,7 +97,7 @@
 
     <h2>Buttons</h2>
     <p>Below the standard button style applied to inputs and to links</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <p>
         <input type="submit" value="Submit">
       </p>
@@ -69,7 +122,7 @@
       could contain anything.
     </p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="paginate">
 
         <div class="photoAlbumEntry">
@@ -207,7 +260,7 @@
     <!-- End Client Side Pagination -->
 
     <!-- Client Side Pagination with tabs -->
-    <h2 i18n:translate="">Client side pagination with tabs</h2>
+    <h3 i18n:translate="">Client side pagination with tabs</h3>
     <p i18n:translate="">
       This example demonstrates the pagination with
       headers as tabs.
@@ -225,7 +278,7 @@
     </p>
 
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="paginate">
         <h3 i18n:translate="">Tab number 1</h3>
         <div>
@@ -518,7 +571,7 @@
       drop shadow, and anything that can be done with the power of CSS.
     </p>
     <h4 i18n:translate="">More icons</h4>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <p>
         <span class="eea-icon eea-icon-flag eea-icon-2x"></span>
         <span class="eea-icon eea-icon-ban eea-icon-2x"></span>
@@ -569,7 +622,7 @@
       More animated icons
     </h4>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <p>
         <span
             class="eea-icon eea-icon-wrench eea-icon-2x eea-icon-anim-wrench animated"></span>
@@ -605,7 +658,7 @@
     <h2 i18n:translate="">Fancybox pop-ups</h2>
     <h3 i18n:translate="">Arbitrary HTML</h3>
     <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div style="display:none">
         <div id="hidden-popup"
              style="width:250px;height:150px" i18n:translate="">
@@ -630,7 +683,7 @@
       page
     </p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <ul id="galleryView">
 
         <li>
@@ -663,7 +716,7 @@
       of growing to the size of it's parent as it does by default.
     </p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <ul id="galleryView2" class="galleryView js-noFilmstrip">
 
         <li>
@@ -682,7 +735,7 @@
     <!--?  jQuerytools accordions -->
     <h2 i18n:translate="">jQuerytools accordions</h2>
     <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels">
 
         <div class="eea-accordion-panel">
@@ -704,7 +757,7 @@
     </div>
 
     <h3>jQuerytools accordion (collapsed-by-default)</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels collapsed-by-default">
 
         <div class="eea-accordion-panel">
@@ -726,7 +779,7 @@
     </div>
 
     <h3>jQuerytools accordion (collapsed-by-default and non-exclusive)</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels collapsed-by-default non-exclusive">
 
         <div class="eea-accordion-panel">
@@ -749,7 +802,7 @@
     </div>
 
     <h3>jQuerytools accordion (non-exclusive)</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels non-exclusive">
 
         <div class="eea-accordion-panel">
@@ -786,7 +839,7 @@
       accordion arrow to the left of the title instead of the right found in
       classical accordion design
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels eea-accordion-panels-plain">
 
         <div class="eea-accordion-panel">
@@ -817,7 +870,7 @@
       which is used now on our website for the metadata info below the related
       content area,
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels eea-accordion-panels-plain eea-accordion-panels-bordered-primary">
 
         <div class="eea-accordion-panel">
@@ -837,7 +890,7 @@
     added manually to the Briefing <em>Identifiers, Referencies and footnotes</em>
       section
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels eea-accordion-panels-plain eea-accordion-panels-bordered-secondary">
 
         <div class="eea-accordion-panel">
@@ -863,7 +916,7 @@
       variant that also uses icons in the title.
     </p>
     <p>It assumes the following structure:</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div id="daviz-view"> <!-- div with id needed because of tab link styling ?-->
 
         <ul class="chart-tabs">
@@ -900,7 +953,7 @@
       create tabs out of <em>dl</em>, <em>dt</em> and <em>dd</em> html tags.
     </p>
     <p>It assumes the following structure:</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
        <dl class="enableFormTabbing">
          <dt id="fieldsetlegend-[unique-id]">Tab title</dt>
          <dd id="fieldset-[same-id-as-above]">
@@ -921,7 +974,7 @@
     <p>As template logic you have to supply the current class on the tab that
       should be activated given the page visited</p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="tabbedmenu">
         <ul>
 
@@ -958,7 +1011,7 @@
     </div>
 
     <h3 i18n:translate="">jQuerytools tabs</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
         <li i18n:translate="">First tab</li>
         <li i18n:translate="">Second tab</li>
@@ -982,7 +1035,7 @@
       </div>
     </div>
 
-    <h3 i18n:translate="">jQuerytools tabs accordion transformation</h3>
+    <h4 i18n:translate="">jQuerytools tabs accordion transformation</h4>
     <p i18n:translate="">
       Previously we had an extra modifier class to eea-tabs named
       <strong>two-rows</strong> which added a max width to the tabs breaking
@@ -999,7 +1052,7 @@
     <p>You can check this behavior by resizing the browser window and checking
       the example below as it transforms from a tab into an accordion and back.</p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
         <li i18n:translate="">First tab</li>
         <li i18n:translate="">Second tab that will trigger accordion transformation on browser resize</li>
@@ -1023,8 +1076,8 @@
       </div>
     </div>
 
-    <h3 i18n:translate="">Arrows tabs</h3>
-    <div data-xrayhtml>
+    <h4 i18n:translate="">jQuerytools arrows tabs</h4>
+    <div data-xrayhtml class="prism">
       <ul class="eea-tabs eea-tabs-arrows" style="display: block;">
 
         <li>
@@ -1103,7 +1156,7 @@
     </p>
 
     <h3 i18n:translate="">Standard call-out</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <p class="callout">This is a callout: a piece of text set in a special
         layout intended to attract attention.</p>
     </div>
@@ -1115,7 +1168,7 @@
       on webpages, extract them and create
       distinct list about them.</p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="keyFact">
         <strong>Key messages</strong>
 
@@ -1130,14 +1183,14 @@
     </div>
 
     <h3 i18n:translate="">Standard portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage">
         Settings have been applied
       </div>
     </div>
 
     <h3 i18n:translate="">Information portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage informationMessage">
         Your screensaver has been upgraded, please consider to restart your
         computer ... Have a good day
@@ -1145,70 +1198,70 @@
     </div>
 
     <h3 i18n:translate="">Error portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage errorMessage">
         This is an example of an error message
       </div>
     </div>
 
     <h3 i18n:translate="">Warning portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage warningMessage">
         Warning! Core meltdown at EEA HQ, code super-duper-red
       </div>
     </div>
 
     <h3 i18n:translate="">Attention portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage attentionMessage">
         This is an example of an message that requires your attention
       </div>
     </div>
 
     <h3 i18n:translate="">Thumbs up portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage thumbsUpMessage">
         Thumbs up for the content on this site
       </div>
     </div>
 
     <h3 i18n:translate="">Yes portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage yesMessage">
         Message which could indicate an agreement or something done
       </div>
     </div>
 
     <h3 i18n:translate="">No portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage noMessage">
         Message which could indicate a disagreement or something not done
       </div>
     </div>
 
     <h3 i18n:translate="">Rosette translation portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage rosetteMessage">
         Message which could indicate a translation message
       </div>
     </div>
 
     <h3 i18n:translate="">Idea portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage ideaMessage">
         Message which could indicate a call to action message
       </div>
     </div>
 
     <h3 i18n:translate="">Smiley portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage smileyMessage">
         Smiley Message type
       </div>
     </div>
 
     <h3 i18n:translate="">Note portal message</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage noteMessage">
         Note Message
       </div>
@@ -1218,7 +1271,7 @@
     <p>By using the &lt;span&gt;-tag icon syntax, you can create custom portal
       messages. See section "EEA Icons"
       for all available icons.</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="portalMessage">
         <span class="eea-icon eea-icon-eye"></span>
         Message with custom Icon.
@@ -1238,7 +1291,7 @@
       <strong>expired</strong> classes to the <strong>photoAlbumEntry</strong>
       parent div</p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="ribbon-example">
 
         <div class="photoAlbumEntry recent">
@@ -1275,7 +1328,7 @@
     <h2 i18n:translate="">Tooltips</h2>
     <h3 i18n:translate="">Fixed size</h3>
     <p>The following tooltips have fixed width and height.</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <img src="fish" title="Tooltips can go right" i18n:attributes="title" class="eea-tooltip-left" />
 
       <img src="fish" title="Tooltips can go up" i18n:attributes="title" class="eea-tooltip-top" />
@@ -1289,7 +1342,7 @@
     <p>The following tooltips have a dynamic height which is automatically
       adjusted depending
       on the amount of text used.</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <img src="fish"
            class="eea-flexible-tooltip-left"
            title="The name given to the resource. Typically, a title will be a name by which the resource is formally known"
