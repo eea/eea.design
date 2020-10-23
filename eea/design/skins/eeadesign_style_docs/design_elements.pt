@@ -681,7 +681,7 @@
 
     <!--?  jQuerytools accordions -->
     <h2 i18n:translate="">jQuerytools accordions</h2>
-    <h3>jQuerytools accordion (standard)</h3>
+    <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
     <div data-xrayhtml>
       <div class="eea-accordion-panels">
 
@@ -982,17 +982,27 @@
       </div>
     </div>
 
-    <h3 i18n:translate="">jQuerytools tabs two rows title</h3>
+    <h3 i18n:translate="">jQuerytools tabs accordion transformation</h3>
     <p i18n:translate="">
-      If you have tabs that have longer titles consider using the extra
-      'two-rows' class for the tabs which makes the tabs larger in height and
-      better styled to accommodate larger titles.
+      Previously we had an extra modifier class to eea-tabs named
+      <strong>two-rows</strong> which added a max width to the tabs breaking
+      some extra long titles into two rows in order to fit extra titles on one row.
     </p>
+    <p>Now with the current behavior eea-tabs transform into an
+      <a tal:attributes="href string:${here_url}#eea-accordion-standard">accordion</a> when any of the tab lists
+        span over more than one line by checking the size of every element on
+        window resize.
+    </p>
+    <p>Upon another resize event, as soon as there is enough space to show
+       every tab title on one line the accordion will transform back into a tab.
+    </p>
+    <p>You can check this behavior by resizing the browser window and checking
+      the example below as it transforms from a tab into an accordion and back.</p>
 
     <div data-xrayhtml>
-      <ul class="eea-tabs two-rows">
+      <ul class="eea-tabs">
         <li i18n:translate="">First tab</li>
-        <li i18n:translate="">Second tab with a long title that spans across two rows</li>
+        <li i18n:translate="">Second tab that will trigger accordion transformation on browser resize</li>
         <li i18n:translate="">Third tab</li>
       </ul>
 
