@@ -5,75 +5,15 @@
      tal:define="portal_url context/@@plone_portal_state/portal_url">
 
 <metal:css metal:fill-slot="style_slot">
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/prism.css" />
-
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/daviz-view.css" />
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/clipboard.min.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/prism.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
-  <script type="text/javascript">
-		$( window ).bind( "create.xrayhtml", function( e ) {
-      var target = e.target;
-      var target_class = target.getAttribute( "class" );
-      var prism = !!~target_class.indexOf( "prism" );
-
-			if( prism && "Prism" in window ) {
-				$( target ).find( "code" ).addClass( "language-markup" );
-			}
-		});
-
-    Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-      var linkCopy = document.createElement('button');
-      linkCopy.textContent = 'Copy';
-      linkCopy.setAttribute('type', 'button');
-
-      var element = env.element;
-
-      registerClipboard();
-
-      return linkCopy;
-
-      function registerClipboard() {
-        var clip = new ClipboardJS(linkCopy, {
-          'text': function () {
-            return element.textContent;
-          }
-        });
-
-        clip.on('success', function() {
-          linkCopy.textContent = 'Copied!';
-
-          resetText();
-        });
-        clip.on('error', function () {
-          linkCopy.textContent = 'Press Ctrl+C to copy';
-
-          resetText();
-        });
-      }
-
-      function resetText() {
-        setTimeout(function () {
-          linkCopy.textContent = 'Copy';
-        }, 5000);
-      }
-    });
-
-	</script>
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
 </metal:javascriptslot>
 
 <metal:javascriptslot fill-slot="javascript_head_slot">
-
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++eea.daviz.view.js"></script>
-
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
 </metal:javascriptslot>
 
 <body>

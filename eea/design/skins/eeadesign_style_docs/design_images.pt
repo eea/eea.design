@@ -6,13 +6,15 @@
      tal:define="portal_url context/@@plone_portal_state/portal_url">
 
 <metal:css metal:fill-slot="style_slot">
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
 </metal:javascriptslot>
 
 <body>
@@ -24,7 +26,7 @@
     </div>
 
     <h1 i18n:translate="">
-      Welcome to EEA Web design elements
+      Welcome to EEA Web design images elements
     </h1>
     <div class="documentDescription" i18n:translate="">
       This page shows common html markup, css classes and javascripts we use
@@ -40,7 +42,7 @@
     <p>We have <strong>fullwidth-container-centered</strong> class which
       when applied it allows us to scale the image while maintaining the text values
       within the center column position.</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="fullwidth-container-centered eea-block">
         <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
         <p>This is a text that doesn't span as large as the image and is centered</p>
@@ -57,7 +59,7 @@
       as a copyright info found right below the image
       we can also add a paragraph with class <strong>image-credit-container</strong>
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="fullwidth-container-centered eea-block">
         <img class="fullwidth" src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
         <div class="emphasis-area">
@@ -84,7 +86,7 @@
       dashboards or within Indicator Assessments to show charts alongside
       title and description.
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="max-container-centered eea-block">
         <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
         <p>This is a text that doesn't span as large as the image and it
@@ -101,7 +103,7 @@
       If the URL doesn't end with an image extension, you can still force it
       to display the popup, by adding an extra class: fancybox.image
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <a class="fancybox"
          href="http://farm3.static.flickr.com/2181/2168980899_1508c84aac.jpg">
         <img src="https://farm3.static.flickr.com/2181/2168980899_1508c84aac_t.jpg"/>
@@ -109,14 +111,14 @@
     </div>
 
     <h2 i18n:translate="">Video pop-ups</h2>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <a href="https://www.eea.europa.eu/multimedia/electric-car" class="video-fancybox">
         <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide"/>
       </a>
     </div>
 
     <h2 i18n:translate="">Image scales</h2>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <p>
         <tal:block i18n:translate="">image_large</tal:block>
         <br/><img src="giraffe/image_large"/></p>

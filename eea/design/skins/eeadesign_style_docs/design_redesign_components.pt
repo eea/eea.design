@@ -6,13 +6,15 @@
  tal:define="portal_url context/@@plone_portal_state/portal_url">
 
 <metal:css metal:fill-slot="style_slot">
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
 </metal:javascriptslot>
 
 <body>
@@ -38,7 +40,7 @@
     <p>Note style is used for info message mimicking those found within charts</p>
     <p class="portalMessage informationMessage">Due to compatibility reasons
       the font size for this style is fixed to <em>12px</em></p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <p class="callout">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Aliquid eaque inventore ipsum, iure quidem quisquam.
@@ -48,7 +50,7 @@
     </div>
 
     <h3>KeyFacts box</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <ul class="keyFact">
         <li>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -64,7 +66,7 @@
     </div>
 
       <h3>Fullwidth box</h3>
-      <div data-xrayhtml>
+      <div data-xrayhtml class="prism">
         <div class="box box--full box-primary">
           <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
             mollis nunc. Quisque non tellus orci ac auctor augue mauris.
@@ -76,7 +78,7 @@
       </div>
 
       <h3>Left box</h3>
-      <div data-xrayhtml>
+      <div data-xrayhtml class="prism">
         <div class="box box--left box-secondary">
           <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
             mollis nunc. Quisque non tellus orci ac auctor augue mauris.
@@ -98,7 +100,7 @@
       </div>
 
       <h3>Right box</h3>
-      <div data-xrayhtml>
+      <div data-xrayhtml class="prism">
         <div class="box box--right box-tertiary">
           <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
             mollis nunc. Quisque non tellus orci ac auctor augue mauris.
@@ -142,7 +144,7 @@
         from the editor style dropdown
       </p>
       <p><strong>Example:</strong></p>
-      <div data-xrayhtml>
+      <div data-xrayhtml class="prism">
         <div class="box box--full box-tertiary">
           Box with box--full size and box-tertiary background color
         </div>
@@ -151,7 +153,7 @@
 
     <h2>Quotes</h2>
     <h3>Inline quote</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <blockquote>
         <p>Non diam phasellus vestibulum lorem sed risus ultricies tristique nulla.
           Elementum nibh tellus molestie nunc non blandit.
@@ -161,7 +163,7 @@
     </div>
 
     <h3>Pullquote left</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <blockquote class="pullquote-left">
         <p>Donec enim diam vulputate ut pharetrasit amet aliquam id.
           Euismod lacinia at quis risus sed vulputate odio ut.
@@ -174,7 +176,7 @@
     </div>
 
     <h3>Pullquote right</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <blockquote class="pullquote-right">
         <p>Donec enim diam vulputate ut pharetrasit amet aliquam id.
           Euismod lacinia at quis risus sed vulputate odio ut.
@@ -191,7 +193,7 @@
     <p>Just like <em>boxes</em> we can also make use of <em>fullwidth background sections</em>
     to add emphasis to the given area</p>
     <p>Also like the boxes we have 3 color options:</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="fullwidth-bg eea-block bg-primary">
         <p>Full width background section with primary background color</p>
       </div>
@@ -206,7 +208,7 @@
     </div>
 
     <h3>Fullwidth background section with other elements</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="fullwidth-bg eea-block bg-primary">
         <blockquote>
           <p>Besides the simple styles, you can also nest several styles
@@ -229,7 +231,7 @@
       or a title followed by a video</p>
     <p>Within tiles we have the following variations</p>
     <h4>One tile</h4>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="tiles tiles--1">
         <div class="tile tile--bordered">
           <div class="tile-item">
@@ -241,7 +243,7 @@
     </div>
 
     <h4>Two tiles</h4>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="tiles tiles--2">
         <div class="tile tile--bordered">
           <div class="tile-item">
@@ -260,7 +262,7 @@
     </div>
 
     <h4>Three tiles</h4>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="tiles tiles--3">
         <div class="tile tile--bordered">
           <div class="tile-item">
@@ -288,7 +290,7 @@
 
 
     <h4>Four tiles</h4>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="tiles tiles--4">
         <div class="tile tile--bordered">
           <div class="tile-item">
@@ -324,7 +326,7 @@
     <h4>Tiles options</h4>
     <p>Tiles have a <em>tile--bordered</em> modifier which if applied
       adds a top and bottom grey border to the tile section</p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="tiles tiles--1">
         <div class="tile tile--bordered">
           <div class="tile-item">
@@ -338,7 +340,7 @@
     <p>They can also be wrapped with <em>fullwidth background sections</em>
       in case we need to provide such a focus area for the tiles
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="fullwidth-bg eea-block bg-secondary">
         <div class="tiles tiles--1">
           <div class="tile">

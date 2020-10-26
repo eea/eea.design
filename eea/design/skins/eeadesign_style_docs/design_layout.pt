@@ -5,14 +5,17 @@
      tal:define="portal_url context/@@plone_portal_state/portal_url">
 
 <metal:css metal:fill-slot="style_slot">
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
 </metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+</metal:javascriptslot>
+
 
 <body>
 <div metal:fill-slot="content-core">
@@ -23,7 +26,7 @@
     </div>
 
     <h1 i18n:translate="">
-      Welcome to EEA Web design typograhy elements
+      Welcome to EEA Web design layout elements
     </h1>
     <div class="documentDescription" i18n:translate="">
       This page shows common html markup, css classes and javascripts we use across the EEA website.
@@ -44,7 +47,7 @@
        put focus on the content area which has larger fonts making it easier to
        read both on mobile and desktop resolutions.
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
     <div class="width-3:4">
       <p>Default main content container class</p>
     </div>
@@ -59,7 +62,7 @@
        be of same size and fit next to each other as floated left and right items would
     </p>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="flex-container">
 
           <div class="box box--left  box-secondary">
@@ -98,7 +101,7 @@
       with an emphasis area section, hence the content is centered and kept
       on the content area
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="fullwidth-container">
         <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
         <p>This container is used best for chart applications such as Tableau rather than text,
@@ -120,7 +123,7 @@
       maps and graphs that benefit from spanning over a large area and description
       and title needs to be left aligned instead of centered.
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="widescreen-container">
         <p><strong>Widescreen container title</strong></p>
         <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
@@ -141,7 +144,7 @@
     <p>This is useful when the spacing is coming from the padding of the first
       block and having the extra margin is unnecessary.
     </p>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <div class="box eea-block box--full box-primary">
         <div class="emphasis-area eea-block">
           <p>This is an <em>emphasis-area</em> div with eea-block class</p>

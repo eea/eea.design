@@ -5,13 +5,15 @@
      tal:define="portal_url context/@@plone_portal_state/portal_url">
 
 <metal:css metal:fill-slot="style_slot">
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
 </metal:javascriptslot>
 
 <body>
@@ -23,7 +25,7 @@
     </div>
 
     <h1 i18n:translate="">
-      Welcome to EEA Web design typograhy elements
+      Welcome to EEA Web design typography elements
     </h1>
     <div class="documentDescription" i18n:translate="">
       This page shows common html markup, css classes and javascripts we use across the EEA website.
@@ -31,7 +33,7 @@
 
 
     <h2>Headers</h2>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <h1 i18n:translate="">This is a h1</h1>
       <h2 i18n:translate="">This is a h2</h2>
       <h3 i18n:translate="">This is a h3</h3>
@@ -39,26 +41,26 @@
     </div>
 
     <h2>Basic text styles</h2>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
     <p>
       <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;
     </p>
     </div>
 
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <a href="#" class="moreLink" i18n:translate="">This is a moreLink</a>
     </div>
 
     <h2>Lists</h2>
     <h3>Unordered lists:</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>
       </ul>
     </div>
     <h3>Definition lists:</h3>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <dt>Term item 1</dt>
       <dd>Description 1</dd>
       <dt>Term item 2</dt>
@@ -66,7 +68,7 @@
     </div>
 
     <h2 i18n:translate="">Quotations</h2>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <blockquote>
         <p i18n:translate="">
           Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.

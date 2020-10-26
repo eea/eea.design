@@ -5,13 +5,15 @@
      tal:define="portal_url context/@@plone_portal_state/portal_url">
 
 <metal:css metal:fill-slot="style_slot">
-  <link rel="stylesheet"
-        type="text/css" tal:attributes="href string:${portal_url}/X-rayHTML.css" />
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/shoestring.js"></script>
-  <script type="text/javascript" tal:attributes="src string:${portal_url}/X-rayHTML.js"></script>
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
 </metal:javascriptslot>
 
 <body>
@@ -23,7 +25,7 @@
     </div>
 
     <h1 i18n:translate="">
-      Welcome to EEA Web design elements
+      Welcome to EEA Web design table elements
     </h1>
     <div class="documentDescription" i18n:translate="">
       This page shows common html markup, css classes and javascripts we use
@@ -34,7 +36,7 @@
     </div>
 
     <h2 i18n:translate="">Tables - sortable and no sortable</h2>
-    <div data-xrayhtml>
+    <div data-xrayhtml class="prism">
       <table class="listing">
         <thead>
         <tr>
@@ -62,3 +64,6 @@
 
   </metal:main-macro>
 </div>
+
+</body>
+</html>
