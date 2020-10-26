@@ -25,12 +25,12 @@
       table of contents
     </div>
 
-    <h1 i18n:translate="">
-      Welcome to EEA Web design redesigned component elements
-    </h1>
-    <div class="documentDescription" i18n:translate="">
-      This page shows common html markup, css classes and javascripts we use across the EEA website.
-    </div>
+<!--?    <h1 i18n:translate="">-->
+<!--?      Welcome to EEA Web design redesigned component elements-->
+<!--?    </h1>-->
+<!--?    <div class="documentDescription" i18n:translate="">-->
+<!--?      This page shows common html markup, css classes and javascripts we use across the EEA website.-->
+<!--?    </div>-->
 
     <h2>Box Styles</h2>
     <p>Just like pull quote styles, box styles can be used to add emphasis to a section

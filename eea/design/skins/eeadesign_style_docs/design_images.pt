@@ -25,16 +25,16 @@
       table of contents
     </div>
 
-    <h1 i18n:translate="">
-      Welcome to EEA Web design images elements
-    </h1>
-    <div class="documentDescription" i18n:translate="">
-      This page shows common html markup, css classes and javascripts we use
-      across the EEA website. See
-      example code and use Firefox Firebug plugin to inspect elements code.
-      Intended audience: web designers, web
-      developers, UX/UI experts.
-    </div>
+<!--?    <h1 i18n:translate="">-->
+<!--?      Welcome to EEA Web design images elements-->
+<!--?    </h1>-->
+<!--?    <div class="documentDescription" i18n:translate="">-->
+<!--?      This page shows common html markup, css classes and javascripts we use-->
+<!--?      across the EEA website. See-->
+<!--?      example code and use Firefox Firebug plugin to inspect elements code.-->
+<!--?      Intended audience: web designers, web-->
+<!--?      developers, UX/UI experts.-->
+<!--?    </div>-->
 
 
     <h2 i18n:translate="">Image containers</h2>
@@ -57,7 +57,7 @@
       in order to make it absolute and allow the emphasis area to go over the image</p>
     <p class="portalMessage informationMessage">If we need some text to act
       as a copyright info found right below the image
-      we can also add a paragraph with class <strong>image-credit-container</strong>
+      we can also add a paragraph with class <strong>eea-image-credit</strong>
     </p>
     <div data-xrayhtml class="prism">
       <div class="fullwidth-container-centered eea-block">
@@ -68,7 +68,7 @@
           set out in EU environmental legislation on industrial pollution.
         </div>
       </div>
-      <p class="image-credit-container">
+      <p class="eea-image-credit">
         <span class="discreet">
           Image copyright belongs to: attribution here
         </span>
@@ -89,7 +89,7 @@
     <div data-xrayhtml class="prism">
       <div class="max-container-centered eea-block">
         <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
-        <p>This is a text that doesn't span as large as the image and it
+        <p>This is a text that spans as large as the image and it
            follows the image size from left to right.
         </p>
       </div>

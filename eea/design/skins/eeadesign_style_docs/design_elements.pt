@@ -24,16 +24,16 @@
       table of contents
     </div>
 
-    <h1 i18n:translate="">
-      Welcome to EEA Web design elements
-    </h1>
-    <div class="documentDescription" i18n:translate="">
-      This page shows common html markup, css classes and javascripts we use
-      across the EEA website. See
-      example code and use Firefox Firebug plugin to inspect elements code.
-      Intended audience: web designers, web
-      developers, UX/UI experts.
-    </div>
+<!--?    <h1 i18n:translate="">-->
+<!--?      Welcome to EEA Web design elements-->
+<!--?    </h1>-->
+<!--?    <div class="documentDescription" i18n:translate="">-->
+<!--?      This page shows common html markup, css classes and javascripts we use-->
+<!--?      across the EEA website. See-->
+<!--?      example code and use Firefox Firebug plugin to inspect elements code.-->
+<!--?      Intended audience: web designers, web-->
+<!--?      developers, UX/UI experts.-->
+<!--?    </div>-->
 
     <h2>Buttons</h2>
     <p>Below the standard button style applied to inputs and to links</p>
