@@ -356,7 +356,7 @@ video {
 .fullwidth-container {
     position: relative;
     left: 50%;
-    margin-left: -49.3vw;
+    margin-left: -50vw;
     width: 100vw;
 }
 //.fullwidth-container,
@@ -368,13 +368,18 @@ video {
 //    width: 98vw;
 //}
 
-.fullwidth-container > img,
 .fullwidth-container-centered > img,
 .max-container-centered > img,
 .widescreen-container > img {
   width: 100%;
     //margin-left: -15px;
     //margin-right: -15px;
+}
+
+.fullwidth-container > img {
+    width: 100vw;
+    //margin-left: -15px;
+    max-width: initial !important;
 }
 
 .fullwidth-container-centered .fullwidth {
@@ -426,6 +431,12 @@ video {
         min-height: 600px;
     }
 }
+@media (min-width: $breakpoint-xl) {
+    .fullwidth-container {
+        margin-left: calc(-50vw - -7px);
+    }
+}
+
 
 @media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl - 1) {
     .mini-header-navigation .fullwidth-container {
