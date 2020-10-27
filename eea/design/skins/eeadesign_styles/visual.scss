@@ -349,13 +349,32 @@ video {
 }
 .fullwidth-container-centered,
 .max-container-centered,
-.fullwidth-container,
 .widescreen-container {
   @include fullwidth-container-centered();
+
 }
-.fullwidth-container,
+.fullwidth-container {
+    position: relative;
+    left: 50%;
+    margin-left: -49.3vw;
+    width: 100vw;
+}
+//.fullwidth-container,
 .widescreen-container {
     padding: 0 15px;
+}
+
+//.fullwidth-container > * {
+//    width: 98vw;
+//}
+
+.fullwidth-container > img,
+.fullwidth-container-centered > img,
+.max-container-centered > img,
+.widescreen-container > img {
+  width: 100%;
+    //margin-left: -15px;
+    //margin-right: -15px;
 }
 
 .fullwidth-container-centered .fullwidth {
@@ -369,7 +388,7 @@ video {
 
 
 
-.image-credit-container {
+.eea-image-credit {
     margin-top: -2rem;
 }
 .widescreen-container {
@@ -383,9 +402,13 @@ video {
 }
 
 .max-container-centered  > img,
-.max-container-centered  > iframe {
+.max-container-centered  > iframe,
+.widescreen-container > img,
+.widescreen-container  > iframe
+{
   min-width: initial;
 }
+.widescreen-container table,
 .max-container-centered table {
     width: auto;
 }
@@ -404,9 +427,37 @@ video {
     }
 }
 
+@media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl - 1) {
+    .mini-header-navigation .fullwidth-container {
+        left: 31%;
+        margin-left: -40.3%;
+      //translateX(calc((89vw - 100vw)/2));
+    }
+}
+
+@media (min-width: $breakpoint-xxl) and (max-width: 1599px) {
+
+    .mini-header-navigation .fullwidth-container {
+        transform:translateX(calc((78.8em - 100vw)/2));
+        left: auto;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: 1599px) {
+    .mini-header-navigation .fullwidth-container-centered
+    {
+        margin: 2.5rem calc(23% - 50vw) 2.5rem calc(23% - 50vw);
+    }
+    .mini-header-navigation .max-container-centered,
+    .mini-header-navigation .widescreen-container {
+        margin: 2.5rem calc(-8.3% - 50vw) 2.5rem calc(50% - 50vw);
+    }
+}
 @media (max-width: $breakpoint-xxl) {
     .fullwidth-container-centered,
-    .max-container-centered {
+    .max-container-centered,
+    .widescreen-container {
         padding: 0 $spacer;
     }
 }
