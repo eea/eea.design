@@ -185,6 +185,10 @@ th a, th a:link, th a:visited {
     border-collapse: collapse;
     color: #666666;
     margin: 1em 0.5em;
+    display: table;
+}
+.datatable tbody {
+    display: table-row-group;
 }
 .datatable th {
     text-align: center;

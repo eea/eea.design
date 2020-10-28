@@ -61,6 +61,141 @@
       </table>
     </div>
 
+    <h2>Table with form elements</h2>
+    <div data-xrayhtml class="prism">
+      <form>
+        <table id="sortable" class="listing" summary="Content listing" cellspacing="0" cellpadding="0">
+          <thead>
+          <tr>
+            <th class="nosort">
+              <input class="noborder" type="checkbox" src="http://david.dev2aws.eea.europa.eu/select_all_icon.png" name="selectButton" title="Select all items" onclick="toggleSelect(this,'paths:list');" alt="Select all items">
+            </th>
+            <th>Title</th>
+            <th>Stuff</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="odd">
+            <td>
+              <input type="checkbox" class="noborder" name="paths:list" id="#" value="#">
+            </td>
+            <td><a href="#">Title</a></td>
+            <td>with class noborder</td>
+          </tr>
+          <tr class="even">
+            <td>
+              <input type="checkbox" class="noborder" name="paths:list" id="#" value="#">
+            </td>
+            <td><a href="#">Title</a></td>
+            <td>with class noborder</td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+    <h2>Vertical listing table</h2>
+    <div data-xrayhtml class="prism">
+      <p>Add <strong>vertical listing</strong> classes to table in order to
+        make the table vertical
+      </p>
+      <table class="vertical listing" summary="Vertical listing example">
+        <tbody>
+        <tr class="odd">
+          <th>Table heading</th>
+          <td>Odd table item</td>
+        </tr>
+        <tr class="even">
+          <th>Another heading</th>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Striped table</h2>
+    <p>Add <strong>odd</strong> and <strong>even</strong> classes to each
+      <strong>tr tag</strong> in order to add a stripe effect to table rows
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="listing" id="someid" summary="Sortable striped table example">
+        <thead>
+        <tr>
+          <th>Table heading</th>
+          <th>Another heading (sortable, click to sort)</th>
+          <th class="nosort">Fixed column (not sortable)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="odd">
+          <td>Odd table item</td>
+          <td>Item 1</td>
+          <td>Another item</td>
+        </tr>
+        <tr class="even">
+          <td>Even table item</td>
+          <td>Item 2</td>
+          <td>Yet another item</td>
+        </tr>
+        <tr class="odd">
+          <td>Odd table item</td>
+          <td>Item 3</td>
+          <td>And one more item</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h2>Datatable styled table</h2>
+    <p>This legacy table style is not currently used anywhere however for
+      completion sake we also document this style as well.
+    </p>
+    <div data-xrayhtml class="prism">
+      <table id="your-zebra-content-id" class="datatable">
+        <caption class="hiddenStructure">Static Content listing</caption>
+        <thead>
+        <tr>
+          <th>&nbsp;Title&nbsp;</th>
+          <th>&nbsp;Size&nbsp;</th>
+          <th>&nbsp;Modified&nbsp;</th>
+          <th>&nbsp;State&nbsp;</th>
+          <th>&nbsp;Other&nbsp;</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>Title 1</td>
+          <td>10 kB</td>
+          <td>2006-01-10 10:20</td>
+          <td>Published</td>
+          <td>Other info</td>
+        </tr>
+        <tr class="zebraeven">
+          <td>Title 2</td>
+          <td>20 kB</td>
+          <td>2006-03-13 10:20</td>
+          <td>Unpublished</td>
+          <td>Other info</td>
+        </tr>
+        <tr>
+          <td>Title 3</td>
+          <td>50 kB</td>
+          <td>2006-02-10 10:20</td>
+          <td>Unpublished</td>
+          <td>Other info</td>
+        </tr>
+        <tr class="zebraeven">
+          <td>Title 4</td>
+          <td>20 kB</td>
+          <td>2006-03-13 10:20</td>
+          <td>Unpublished</td>
+          <td>Other info</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
 
   </metal:main-macro>
 </div>
