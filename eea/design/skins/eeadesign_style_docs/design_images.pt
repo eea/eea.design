@@ -95,7 +95,8 @@
       </div>
     </div>
 
-    <h4 i18n:translate="">Image pop-ups</h4>
+    <h2>Pop-ups</h2>
+    <h3 i18n:translate="">Image pop-ups</h3>
     <p i18n:translate="">
       If the a-tag hrefs to an image, it will be displayed in the popup.
       Be careful though, if the URL does not end with an image extension,
@@ -110,7 +111,7 @@
       </a>
     </div>
 
-    <h2 i18n:translate="">Video pop-ups</h2>
+    <h3 i18n:translate="">Video pop-ups</h3>
     <div data-xrayhtml class="prism">
       <a href="https://www.eea.europa.eu/multimedia/electric-car" class="video-fancybox">
         <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide"/>

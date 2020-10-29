@@ -34,10 +34,10 @@
 
     <h2>Headers</h2>
     <div data-xrayhtml class="prism">
-      <h1 i18n:translate="">This is a h1</h1>
-      <h2 i18n:translate="">This is a h2</h2>
-      <h3 i18n:translate="">This is a h3</h3>
-      <h4 i18n:translate="">This is a h4</h4>
+      <h1 i18n:translate="" class="notoc">This is a h1</h1>
+      <h2 i18n:translate="" class="notoc">This is a h2</h2>
+      <h3 i18n:translate="" class="notoc">This is a h3</h3>
+      <h4 i18n:translate="" class="notoc">This is a h4</h4>
     </div>
 
     <h2>Basic text styles</h2>
@@ -145,7 +145,7 @@
       </ol>
     </div>
 
-    <h3>Definition lists:</h3>
+    <h3>Definition lists</h3>
     <div data-xrayhtml class="prism">
       <dt>Term item 1</dt>
       <dd>Description 1</dd>
