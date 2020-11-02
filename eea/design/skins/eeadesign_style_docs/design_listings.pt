@@ -27,61 +27,75 @@
     </div>
 
     <h2>Folder accordion view</h2>
+    <p>This view is making use of EEA accordion markup to show folder contents
+      grouped into 2 sections:
+    </p>
+    <ol>
+      <li>Folderish content types with accordion title set to first element title.</li>
+      <li>Non Folder content types with accordion title set to <em>Other resources</em>.</li>
+    </ol>
 
     <div data-xrayhtml class="prism">
     <div class="eea-accordion-panels">
 
       <div class="eea-accordion-panel">
-        <h2 class="eea-icon-right-container current" id="getting-started
-"><a href="http://david.dev2aws.eea.europa.eu/code/design-elements/getting-started">Getting started</a>
-          <span class="eea-icon eea-icon-right"></span></h2>
-        <div class="pane" style="">
+        <h2 class="eea-icon-right-container current notoc">
+          <a tal:attributes="href string:${portal_url}/code/design-elements/getting-started">Getting started</a>
+          <span class="eea-icon eea-icon-right"></span>
+        </h2>
+        <div class="pane">
           <p class="subfolder-description">EEA webdesign guide broken into individual sections.</p>
           <div class="subfolder-contents">
+
             <div class="photoAlbumEntry">
-              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/typography" title="Typography" class="">
-                                        <span class="photoAlbumEntryWrapper">
-                                            <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/typography/image_mini&quot;);"><!----></span>
-                                        </span>
+              <a tal:attributes="href string:${portal_url}/code/design-elements/typography">
+                <span class="photoAlbumEntryWrapper">
+                  <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/typography/image_mini&quot;);"><!----></span>
+                </span>
                 <span class="photoAlbumEntryTitle">Typography</span>
               </a>
             </div>
+
             <div class="photoAlbumEntry">
-              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/images" title="Images" class="">
-                                        <span class="photoAlbumEntryWrapper">
-                                            <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/images/image_mini&quot;);"><!----></span>
-                                        </span>
+              <a tal:attributes="href string:${portal_url}/code/design-elements/images">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/images/image_mini&quot;);"><!----></span>
+                </span>
                 <span class="photoAlbumEntryTitle">Images</span>
               </a>
             </div>
-
-            <span class="photoAlbumEntryTitle">Search and catalogs</span>
 
           </div>
         </div>
       </div>
 
-
       <div class="eea-accordion-panel">
-        <h2 class="eea-icon-right-container" id="other-resources"><a href="#">Other resources</a><span class="eea-icon eea-icon-right"></span></h2>
+        <h2 class="eea-icon-right-container notoc">
+          <a href="#">Other resources</a>
+          <span class="eea-icon eea-icon-right"></span>
+        </h2>
+
         <div class="pane" style="display: none;">
           <div class="subfolder-contents">
+
             <div class="photoAlbumEntry">
-              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/giraffe/view" title="Demo image." class="">
-                                    <span class="photoAlbumEntryWrapper">
-                                        <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/giraffe/image_mini&quot;);"><!----></span>
-                                    </span>
+              <a tal:attributes="href string:${portal_url}/code/design-elements/giraffe/view">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/giraffe/image_mini&quot;);"><!----></span>
+                </span>
                 <span class="photoAlbumEntryTitle">giraffe</span>
               </a>
             </div>
+
             <div class="photoAlbumEntry">
-              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/monkey-with-makeup/view" title="This monkey tries to impress with makeup." class="">
-                                    <span class="photoAlbumEntryWrapper">
-                                        <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/monkey-with-makeup/image_mini&quot;);"><!----></span>
-                                    </span>
+              <a tal:attributes="href string:${portal_url}/code/design-elements/monkey-with-makeup/view">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/monkey-with-makeup/image_mini&quot;);"><!----></span>
+                </span>
                 <span class="photoAlbumEntryTitle">Monkey with makeup</span>
               </a>
             </div>
+
           </div>
         </div>
       </div>

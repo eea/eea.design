@@ -77,7 +77,7 @@
       <li>The new style header and navigation needs to be enabled for the particular content type.</li>
       <li>Right column navigation portlet needs to be present on page,
        not blocked on the page or it's parent.</li>
-      <li>Mobile header needs to be visible which is on resolutions of 1279px or lower.</li>
+      <li>Mobile header needs to be visible which is on resolutions of <strong>1279px</strong> or lower.</li>
     </ol>
     <p>An example of this navigation in action is found on the <a tal:attributes="href string:${portal_url}/about-us">About us</a> page.</p>
     <p>It requires the following markup in order to be styled as seen in the screenshot found below:</p>
