@@ -27,7 +27,7 @@
     </div>
 
     <h2>Folder accordion view</h2>
-    <p>This view is making use of EEA accordion markup to show folder contents
+    <p>This view is making use of <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-accordions">EEA accordion markup</a> to show folder contents
       grouped into 2 sections:
     </p>
     <ol>

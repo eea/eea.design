@@ -556,7 +556,7 @@
 
 
     <!--?  jQuerytools accordions -->
-    <h2 i18n:translate="">jQuerytools accordions</h2>
+    <h2 i18n:translate="" id="jquerytools-accordions">jQuerytools accordions</h2>
     <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels">
