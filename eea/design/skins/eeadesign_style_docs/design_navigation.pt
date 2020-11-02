@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h2 id="right-column-navigation">Right column navigation</h2>
+    <p>Right column navigation is using the default Plone 4 portlet navigation markup.
+      On content types that are not using the redesigned header area
+      it is always visible on the right column area until it collapses
+      to the content area for resolutions lower than <strong>1024px</strong>.
+    </p>
+    <div data-xrayhtml class="prism">
+      <dl class="portlet portletNavigationTree">
+
+        <dt class="portletHeader" id="firstHeader">
+          <a href="#">Portlet nav header</a>
+        </dt>
+
+        <dt class="portletSubMenuHeader current" style="display: none;">
+          <span class="title eea-icon-left-container"><span class="eea-icon eea-icon-left"></span>Subsection Menu</span>
+        </dt>
+
+        <dd class="portletItem lastItem" style="">
+          <ul class="navTree navTreeLevel0">
+            <li class="navTreeItem visualNoMarker navTreeCurrentNode navTreeFolderish">
+              <a href="#" class="state-published navTreeCurrentItem navTreeCurrentNode navTreeFolderish contenttype-folder">
+                <span>First menu item</span>
+              </a>
+              <ul class="navTree navTreeLevel1">
+                <li class="navTreeItem visualNoMarker navTreeFolderish">
+                  <a href="#" class="state-published navTreeFolderish contenttype-topic">
+                    <span>Sub menu 1</span>
+                  </a>
+                </li>
+
+                <li class="navTreeItem visualNoMarker">
+                  <a href="#" class="state-published contenttype-document">
+                    <span>Sub menu 2</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+
+      </dl>
+    </div>
+
+    <h2>Mobile navigation</h2>
+    <p>Mobile navigation is constructed from <a tal:attributes="href string:${portal_url}#right-column-navigation">Right column navigation</a> portlet and is visible for resolutions lower than <strong>1280px</strong>.</p>
+    <p>It is appended to the global navigation which itself it's transformed to fit mobile resolutions with a maximum width of <strong>400px</strong></p>
+    <p>In order for this navigation to show the following conditions need to be met:</p>
+    <ol>
+      <li>The new style header and navigation needs to be enabled for the particular content type.</li>
+      <li>Right column navigation portlet needs to be present on page,
+       not blocked on the page or it's parent.</li>
+      <li>Mobile header needs to be visible which is on resolutions of 1279px or lower.</li>
+    </ol>
+    <p>An example of this navigation in action is found on the <a tal:attributes="href string:${portal_url}/about-us">About us</a> page.</p>
+    <p>It requires the following markup in order to be styled as seen in the screenshot found below:</p>
+
+    <pre>
+      &lt;div id=&quot;header-holder&quot;&gt;
+       &lt;div class=&quot;navbar-collapse&quot;&gt;
+          &lt;div id=&quot;portal-top&quot;&gt;
+            &lt;div id=&quot;portal-header&quot;&gt;
+              &lt;div id=&quot;globalnav-holder&quot;&gt;
+                &lt;ul id=&quot;portal-globalnav&quot;&gt;
+                  &lt;li&gt;Global menu links&lt;/li&gt;
+                  &lt;!--? here is the mobile only navigation portlet --&gt;
+                  &lt;li class=&quot;mobile-only&quot;&gt;
+                    &lt;dl class=&quot;portlet portletNavigationTree&quot;&gt;
+                      Start of navigation portlet
+                    &lt;/dl&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/div&gt;
+      </pre>
+      <img tal:attributes="src string:${portal_url}/mobile-navigation-example.png" />
+<!--?    </div>-->
+  </metal:main-macro>
+</div>
+</body>
+</html>

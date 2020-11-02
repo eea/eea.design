@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h2>Folder accordion view</h2>
+
+    <div data-xrayhtml class="prism">
+    <div class="eea-accordion-panels">
+
+      <div class="eea-accordion-panel">
+        <h2 class="eea-icon-right-container current" id="getting-started
+"><a href="http://david.dev2aws.eea.europa.eu/code/design-elements/getting-started">Getting started</a>
+          <span class="eea-icon eea-icon-right"></span></h2>
+        <div class="pane" style="">
+          <p class="subfolder-description">EEA webdesign guide broken into individual sections.</p>
+          <div class="subfolder-contents">
+            <div class="photoAlbumEntry">
+              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/typography" title="Typography" class="">
+                                        <span class="photoAlbumEntryWrapper">
+                                            <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/typography/image_mini&quot;);"><!----></span>
+                                        </span>
+                <span class="photoAlbumEntryTitle">Typography</span>
+              </a>
+            </div>
+            <div class="photoAlbumEntry">
+              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/images" title="Images" class="">
+                                        <span class="photoAlbumEntryWrapper">
+                                            <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/images/image_mini&quot;);"><!----></span>
+                                        </span>
+                <span class="photoAlbumEntryTitle">Images</span>
+              </a>
+            </div>
+
+            <span class="photoAlbumEntryTitle">Search and catalogs</span>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="eea-accordion-panel">
+        <h2 class="eea-icon-right-container" id="other-resources"><a href="#">Other resources</a><span class="eea-icon eea-icon-right"></span></h2>
+        <div class="pane" style="display: none;">
+          <div class="subfolder-contents">
+            <div class="photoAlbumEntry">
+              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/giraffe/view" title="Demo image." class="">
+                                    <span class="photoAlbumEntryWrapper">
+                                        <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/giraffe/image_mini&quot;);"><!----></span>
+                                    </span>
+                <span class="photoAlbumEntryTitle">giraffe</span>
+              </a>
+            </div>
+            <div class="photoAlbumEntry">
+              <a href="http://david.dev2aws.eea.europa.eu/code/design-elements/monkey-with-makeup/view" title="This monkey tries to impress with makeup." class="">
+                                    <span class="photoAlbumEntryWrapper">
+                                        <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;http://david.dev2aws.eea.europa.eu/code/design-elements/monkey-with-makeup/image_mini&quot;);"><!----></span>
+                                    </span>
+                <span class="photoAlbumEntryTitle">Monkey with makeup</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </metal:main-macro>
+</div>
+</body>
+</html>
