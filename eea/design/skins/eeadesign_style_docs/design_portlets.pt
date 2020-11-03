@@ -63,6 +63,52 @@
       </div>
     </div>
 
+    <h3>Megatopic portlet</h3>
+    <p>Used on the <a tal:attributes="href string:${portal_url}#megatopics-area">frontpage</a> of the EEA website these portlets follow a typical card design with a header and a body area.
+    </p>
+    <p class="portalMessage informationMessage">Wrap the <strong>portlet-megatopic</strong>
+      divs with a <strong>megatopics-area</strong> parent div if you want to use more than 1 portlet
+    on the same line.</p>
+    <div data-xrayhtml class="prism">
+      <div id="megatopics-area" class="megatopics-area">
+
+        <div class="portlet-megatopic">
+          <div class="portlet promo-nav-portlet" id="air-and-climate-megatopic">
+            <div class="portlet-megatopic-header" title="Visit our biodiversity website" style="background-image:url(/themes/biodiversity/theme_image/image_preview)">
+              <div class="portletHeader notoc">Nature</div>
+            </div>
+            <div class="portlet-megatopic-body">
+              <ul class="list-items">
+                <li><a href="/themes/biodiversity">Biodiversity — Ecosystems</a></li>
+                <li><a href="/themes/landuse">Land use</a></li>
+                <li><a href="/themes/soil">Soil</a>
+                </li>
+                <li><a href="/themes/water">Water and marine environment</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="portlet-megatopic">
+          <div class="portlet promo-nav-portlet" id="air-and-climate-megatopic">
+            <div class="portlet-megatopic-header" title="Visit our biodiversity website" style="background-image:url(/themes/biodiversity/theme_image/image_preview)">
+              <div class="portletHeader notoc">Nature</div>
+            </div>
+            <div class="portlet-megatopic-body">
+              <ul class="list-items">
+                <li><a href="/themes/biodiversity">Biodiversity — Ecosystems</a></li>
+                <li><a href="/themes/landuse">Land use</a></li>
+                <li><a href="/themes/soil">Soil</a>
+                </li>
+                <li><a href="/themes/water">Water and marine environment</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <h2>Portlet like classes</h2>
     <h3>Featured class</h3>
     <div data-xrayhtml class="prism">
@@ -72,18 +118,18 @@
         <div class="featured-highlights">
           <div class="figure-left">
             <a href="#" class="figure-image-block">
-              <img alt="Shaping the post-Corona planet: knowledge on Europe's environment and climate" src="http://david.dev2aws.eea.europa.eu/post-corona-planet/index/image_mini" title="Shaping the post-Corona planet: knowledge on Europe's environment and climate" class="lazy" style="" width="125" height="70">
+              <img alt="Shaping the post-Corona planet: knowledge on Europe's environment and climate" src="/post-corona-planet/index/image_mini" title="Shaping the post-Corona planet: knowledge on Europe's environment and climate" class="lazy"  width="125" height="70">
             </a>
           </div>
 
           <div class="featured-highlight-title">
             <h3 class="highlight notoc">
-              <a href="http://david.dev2aws.eea.europa.eu/post-corona-planet/index" class="noPrint">Shaping the post-Corona planet: knowledge on Europe's environment and climate</a></h3>
+              <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="noPrint">Shaping the post-Corona planet: knowledge on Europe's environment and climate</a></h3>
           </div>
 
           <div class="featured-highlight-description">
             <p>What should a post-corona planet look like? How have corona measures impacted the environment and climate? Can we rebuild our economy on sustainable and fair foundations? As we take steps towards ...</p>
-            <p><a href="http://david.dev2aws.eea.europa.eu/post-corona-planet/index" class="moreLink">Read more</a></p>
+            <p><a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="moreLink">Read more</a></p>
           </div>
 
         </div>
@@ -96,7 +142,7 @@
       <div id="test-disclaimer" class="shortcut-default">
           <div class="figure-left">
             <a href="https://www.eea.europa.eu/about-us/who/meetings-and-travel" class="figure-image-block">
-              <img alt="COVID-19 virus outbreak - Meeting and travel guidelines" src="https://www.eea.europa.eu/sick-woman-sneezing_H.png" title="COVID-19 virus outbreak - Meeting and travel guidelines" class="lazy" style="" width="180" height="100">
+              <img alt="COVID-19 virus outbreak - Meeting and travel guidelines" src="https://www.eea.europa.eu/sick-woman-sneezing_H.png" title="COVID-19 virus outbreak - Meeting and travel guidelines" class="lazy" width="180" height="100">
             </a>
           </div>
           <h3 class="notoc"><a href="https://www.eea.europa.eu/about-us/who/meetings-and-travel">COVID-19 virus outbreak</a><span class="eea-icon eea-icon-warning eea-icon-anim-pulse animated"></span></h3>
