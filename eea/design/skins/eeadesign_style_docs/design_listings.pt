@@ -6,6 +6,10 @@
 
 <metal:css metal:fill-slot="style_slot">
   <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/themecentre_critical.css" />
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/themecentre.css" />
 
 </metal:css>
 
@@ -100,6 +104,225 @@
         </div>
       </div>
     </div>
+    </div>
+
+    <h2>Card layouts</h2>
+    <h3>Related items photo album cards</h3>
+    <div data-xrayhtml class="prism">
+      <div class="relatedItems">
+        <div class="page" data-count="2">
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Album views photo album cards</h3>
+    <div data-xrayhtml class="prism">
+      <div class="clearfix">
+        <div class="photoAlbumEntry">
+          <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+            <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+            <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <h3>Themes tile card</h3>
+    <div data-xrayhtml class="prism">
+      <div class="eea-tile">
+        <div class="eea-tileInner">
+          <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="eea-tileLink eea-tileHeadLink">
+            <div class="eea-tileHead">
+              <div class="eea-tileThumb lazy" style="background-image: url(&quot;/post-corona-planet/index/image_preview&quot;);">
+              </div>
+            </div>
+          </a>
+          <div class="eea-tileBody">
+            <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="eea-tileLink eea-tileLinkBody">
+              <h2 class="eea-tileTitle notoc no-anchor">Shaping the post-Corona planet: knowledge on Europe's environment and climate</h2>
+              <div class="eea-tileDescription">What should a post-corona planet look like? How have corona measures impacted the environment and climate? Can we rebuild our economy on sustainable and fair foundations? As we take steps towards rebuilding society opening the economy, we are faced with fundamental choices that will shape the future. This portal aims to bring together knowledge and reflections from across Europe and beyond, and to facilitate an informed debate towards a sustainable planet.</div>
+            </a>
+            <div class="eea-tileMetadata">
+              <div class="eea-tileTopic">
+
+              </div>
+
+              <time class="eea-tileIssued" datetime="2020-06-15T09:35:00+02:00">15 Jun 2020</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <h3>Search app tile card</h3>
+    <p>The search app tile design is added to the EEA website as well although
+      there are the following styles and behavior differences:
+    </p>
+    <ol>
+      <li>There are extra styles for object type, type thumbnail, tags and url</li>
+      <li>On hover there is an animation effect and description slide in view action</li>
+    </ol>
+    <p>Because of the missing styles currently the tile will look worse than it
+      does on the search app as such we also show 2 screenshots of how the tile looks
+      normally and on hover.
+    </p>
+    <img tal:attributes="src string:${portal_url}/search-app-card-design.png" />
+    <img tal:attributes="src string:${portal_url}/search-app-card-design-hover.png" />
+    <div data-xrayhtml class="prism">
+      <div class="eea-tile">
+        <a class="eea-tileInner recent ribbon-parent" title="Latest evaluation shows Europe's nature in serious, continuing decline" href="http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature">
+          <div class="eea-tileHead">
+            <div class="eea-tileThumb lazyLoad" style="display: block; background-image: url(&quot;http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature/image_preview&quot;);">
+            </div>
+            <span class="eea-tileTypeHead pull-left" title="News, News">News, News</span>
+          </div>
+          <div class="eea-tileBody">
+            <div class="eea-tileHeadMetadata">
+              <span class="eea-tileType pull-right hidden" title="News">19 Oct 2020</span>
+            </div>
+            <p class="eea-tileUrl">http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature</p>
+            <h4 class="eea-tileTitle notoc">Latest evaluation shows Europe's nature in serious, continuing decline</h4>
+            <div class="eea-tileMetadata">
+              <span class="eea-tileTopic" title="Agriculture">
+                <em>Agriculture</em>
+              </span>
+              <time class="eea-tileIssued" datetime="19 Oct 2020">19 Oct 2020</time>
+              <div class="eea-tileType" title="News" style="background-image: url(https://www.eea.europa.eu/portal_depiction/highlight/image_thumb)">
+                <span class="eea-tileTypeIcon, eea-tileType-news" title="News">News</span>
+              </div>
+            </div>
+          </div>
+          <div class="ribbon-wrapper">
+            <div class="ribbon">NEW</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <h3>Themes card layout</h3>
+    <h4>Simple card</h4>
+    <div data-xrayhtml class="prism">
+      <div class="eea-card eea-card--bg-light direction-column">
+        <div class="eea-card-header">
+          <div class="eea-card-title-wrapper">
+            <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-link">
+              <h2 class="notoc no-anchor">Citizen science projects on air quality produce useful information and raise public awareness</h2>
+            </a>
+          </div>
+          <p class="eea-card-link">
+            <strong>Published</strong>: 12 Mar 2020
+          </p>
+
+          <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-image-link">
+            <div class="eea-card-image-bg-wrapper lazy" style="background-image: url(&quot;/highlights/citizen-science-on-air-quality/image_preview&quot;);">
+            </div>
+          </a>
+        </div>
+        <div class="eea-card-body">
+          <p>Air pollution is the biggest environmental health threat in Europe and more and more people are taking action to claim their right to clean air. A new European Environment Agency (EEA) report provides an overview of low-cost devices that citizens and NGOs can use to measure local air quality.</p>
+        </div>
+        <div class="eea-card-footer text-right mt-a">
+          <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-btn moreLink eea-btn-md eea-btn-news">Read more</a>
+        </div>
+      </div>
+    </div>
+
+
+    <h4>Double card</h4>
+    <div data-xrayhtml class="prism">
+      
+      <div class="eea-card eea-card--double eea-card--portrait direction-column">
+
+        <div class="eea-card-header">
+          <div class="eea-card-title-wrapper">
+            <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-link">
+              <h2 class="notoc no-anchor">National Emission reduction Commitments Directive reporting status 2020</h2>
+            </a>
+          </div>
+        </div>
+        <div class="eea-card-body">
+          <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-image-link  eea-card-image--pull eea-card-image-bordered eea-card-with-text">
+            <img alt="" class="eea-card-image lazy" src="/publications/national-emission-reduction-commitments-directive/image_large" style="">
+          </a>
+
+          <div class="eea-card-body-text">
+            <strong>Published</strong>: 30 Jun 2020
+            <p>This briefing presents progress made by the EU and its Member States1 towards meeting the 2010 emission ceilings that were applicable until the end of 2019 under Directive 2016/2284/EU — the National Emission reduction Commitments (NEC) Directive — on the reduction of national emissions of certain atmospheric pollutants. In addition, it assesses the emission reduction effort — compared with 2018 emissions levels — required by each country to comply with the 2020 and 2030 reduction commitments set out in the Directive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Fullwidth card</h4>
+    <div data-xrayhtml class="prism">
+      <div class="eea-card eea-card--fullwidth eea-card--landscape">
+        <div class="eea-card-header">
+          <div class="eea-card-title-wrapper">
+            <div class="eea-card-title">
+              <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-link link-plain">
+                <h2 class="notoc no-anchor">The way urban policies influence the air we breathe</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="eea-card-body">
+          <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-image-link  link-plain eea-card-with-text">
+            <img alt="" src="/publications/europes-urban-air-quality/image_large" class="skip_lazy eea-card-image  eea-card-image-bordered  eea-card-image--portrait" width="543" height="768">
+          </a>
+          <div class="eea-card-body-text eea-card-link">
+            <p>Given their proximity to citizens and knowledge of local concerns, local authorities are best placed to ensure we make an effective transition to more liveable and breathable cities.</p>
+            <p>Many city-specific measures have proved to be efficient but there is still much to do to empower citizens further and deliver coordinated actions across all governance levels.</p>
+          </div>
+        </div>
+
+        <div class="eea-card-footer">
+          <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="moreLink link-plain">&nbsp;</a>
+        </div>
+
+      </div>
     </div>
 
   </metal:main-macro>

@@ -71,7 +71,7 @@
 
     <h2>Mobile navigation</h2>
     <p>Mobile navigation is constructed from <a tal:attributes="href string:${portal_url}#right-column-navigation">Right column navigation</a> portlet and is visible for resolutions lower than <strong>1280px</strong>.</p>
-    <p>It is appended to the global navigation which itself it's transformed to fit mobile resolutions with a maximum width of <strong>400px</strong></p>
+    <p>It is appended to the global navigation which itself it's transformed to fit mobile resolutions with a maximum width of <strong>400px</strong>.</p>
     <p>In order for this navigation to show the following conditions need to be met:</p>
     <ol>
       <li>The new style header and navigation needs to be enabled for the particular content type.</li>
