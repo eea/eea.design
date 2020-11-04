@@ -151,7 +151,7 @@
     </div>
 
     <h4>Shortcut light class</h4>
-    <p>Used only in <a tal:attributes="href string:${portal_url}/themes/air/dc">dc themes</a> pages the only difference from the default and light class is the extra padding on the default</p>
+    <p>Used only in <a tal:attributes="href string:${portal_url}/themes/air/dc">dc themes</a> pages the only difference from the default and light class is the extra padding on the default variant.</p>
     <div data-xrayhtml class="prism">
       <div id="semantic-ds-links" class="shortcut-light">
         <div id="semantic-content">

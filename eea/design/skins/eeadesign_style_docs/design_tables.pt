@@ -35,7 +35,7 @@
 <!--?      developers, UX/UI experts.-->
 <!--?    </div>-->
 
-    <h2 i18n:translate="">Tables - sortable and no sortable</h2>
+    <h2 i18n:translate="" id="listing">Tables - sortable and no sortable</h2>
     <div data-xrayhtml class="prism">
       <table class="listing">
         <thead>
