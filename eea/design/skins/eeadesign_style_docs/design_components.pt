@@ -6,6 +6,11 @@
 
 <metal:css metal:fill-slot="style_slot">
   <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/themecentre_critical.css" />
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/themecentre.css" />
 </metal:css>
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
@@ -497,8 +502,7 @@
     <!--? end @Fancybox -->
 
 
-    <!--? @Gallery view   -->
-    <h2 i18n:translate="">Gallery view</h2>
+    <h2 id="image-gallery">Image gallery</h2>
     <p i18n:translate="">
       You need to enter an image scale after the image src otherwise the gallery
       will load the full-resolution images which could dramatically slow the
@@ -710,7 +714,7 @@
     </div>
 
     <p>or <strong>eea-accordion-panels-bordered-secondary</strong> meant to be
-      added manually to the Briefing <em>Identifiers, Referencies and footnotes</em>
+      added manually to the Briefing <em>Identifiers, References and footnotes</em>
       section
     </p>
     <div data-xrayhtml class="prism">
@@ -833,7 +837,7 @@
       </div>
     </div>
 
-    <h3 i18n:translate="">jQuerytools tabs</h3>
+    <h3 i18n:translate="" id="jquerytools-tabs">jQuerytools tabs</h3>
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
         <li i18n:translate="">First tab</li>
@@ -959,6 +963,338 @@
     </div>
     <!--? end @jQuerytools tabs -->
 
+    <h2>Photo Album cards</h2>
+    <h3 id="album-view-photo-album">Album views photo album cards</h3>
+    <p>Used on <a tal:attributes="href string:${portal_url}/code/design-elements/views#atct_album_view"> atct_album_view</a> template as well as other listings where we need to layout
+      objects as part of an photo gallery album listing.
+    </p>
+    <p>Other components that make use of this component are:</p>
+    <ul>
+      <li>Tab panels</li>
+      <li>Accordion panels</li>
+    </ul>
+    <div data-xrayhtml class="prism">
+      <div class="clearfix">
+        <div class="photoAlbumEntry">
+          <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+            <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+            <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <h3>Related items photo album cards</h3>
+    <p>Styled for the latest Briefing redesign the photoAlbum component has the
+      following look when it's part of the <strong>relatedItems</strong> section.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="relatedItems">
+        <div class="page" data-count="2">
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Tiles</h2>
+    <h3 id="plone-tile-component">Plone tiles</h3>
+    <p>Used by the <a tal:attributes="href string:${portal_url}/code/design-elements/views#folder_summary_view">folder_summary_view</a>
+      template and in listings such as the <a tal:attributes="href string:${portal_url}#news-header">what's new tab section</a> on EEA frontpage,
+      this tile's design and markup resembles <a href="https://getbootstrap.com/docs/4.5/components/media-object">Bootstrap's media object component</a>.
+    </p>
+    <p class="portalMessage informationMessage">Search app is also using this component as
+      part of the <strong>list</strong> layout.
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <div class="tileItem visualIEFloatFix">
+        <a class="tileImage " tal:attributes="href string:${portal_url}/code/design-elements/typography" title="Typography">
+          <img class="lazy" src="/code/design-elements/typography/image_mini" title="Typography" alt="Typography">
+        </a>
+
+        <div class="tileContent">
+          <h2 class="tileHeadline notoc no-anchor">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/typography">Typography</a>
+          </h2>
+          <span class="date">
+              26 Oct 2020
+            </span>
+        </div>
+
+        <p class="tileBody">
+          <span class="description">Site typography, including global settings, headings, body text, lists.</span>
+        </p>
+
+        <p class="tileFooter">
+          <a tal:attributes="href string:${portal_url}/code/design-elements/typography" class="moreLink">Read more</a>
+        </p>
+      </div>
+    </div>
+
+    <h3>Themes tile card</h3>
+        <p>Originally created for the elastic search apps, <strong>eea-tile</strong> components resemble
+        the <a href="https://getbootstrap.com/docs/4.5/components/card/">Bootstrap card component</a>
+          and they are used in places where there is a need to feature certain titles by using a traditional card component design.
+        </p>
+    <p>Used on the <a tal:attributes="href string:${portal_url}/themes#editors-choice-header">themes page</a>
+      these tiles are used to promote featured content for the themes listing section.
+    </p>
+    
+    <div data-xrayhtml class="prism">
+      <div class="eea-tile">
+        <div class="eea-tileInner">
+          <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="eea-tileLink eea-tileHeadLink">
+            <div class="eea-tileHead">
+              <div class="eea-tileThumb lazy" style="background-image: url(&quot;/post-corona-planet/index/image_preview&quot;);">
+              </div>
+            </div>
+          </a>
+          <div class="eea-tileBody">
+            <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="eea-tileLink eea-tileLinkBody">
+              <h2 class="eea-tileTitle notoc no-anchor">Shaping the post-Corona planet: knowledge on Europe's environment and climate</h2>
+              <div class="eea-tileDescription">What should a post-corona planet look like? How have corona measures impacted the environment and climate? Can we rebuild our economy on sustainable and fair foundations? As we take steps towards rebuilding society opening the economy, we are faced with fundamental choices that will shape the future. This portal aims to bring together knowledge and reflections from across Europe and beyond, and to facilitate an informed debate towards a sustainable planet.</div>
+            </a>
+            <div class="eea-tileMetadata">
+              <time class="eea-tileIssued" datetime="2020-06-15T09:35:00+02:00">15 Jun 2020</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <h3>Search app tiles</h3>
+    <h4>Colored tiles</h4>
+    <p>Used on the <a tal:attributes="href string:http://search.apps.eea.europa.eu#landing">search app frontpage</a>
+      these tiles are used to promote the ranges of values found for the right side facets.
+    </p>
+    <p>These tiles components resemble
+      <a href="https://bulma.io/documentation/layout/tiles/">Bulma's tile layout component</a>
+    </p>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-topic-tile-design.png" />
+      <div class="visualHidden">
+        <!--?  tile markup demo  -->
+        <div class="eea_tile topics grid-item">
+          <h2 class="i18n notoc no-anchor">Topics</h2>
+          <span class="topics_count eea_tile_count">20</span>
+        </div>
+
+      </div>
+    </div>
+
+    <h4>Card tiles</h4>
+    <p>Used on the card layout of the <a tal:attributes="href string:http://search.apps.eea.europa.eu">search app</a>,
+      these tiles are used to list result objects arranged as cards.
+    </p>
+    <p>The search app card tile design is added to the EEA website as well and
+      they are documented in this page as well, however
+      there are the following styles and behavior differences between these two:
+    </p>
+    <ol>
+      <li>There are extra styles for object type, type thumbnail, tags and url</li>
+      <li>On hover there is an animation effect and description slide in view action</li>
+    </ol>
+    <p class="portalMessage informationMessage">Because of the missing styles currently the tile will look worse than it
+      does on the search app as such we also show 2 screenshots of how a tile looks
+      normally and on hover.
+    </p>
+    <img tal:attributes="src string:${portal_url}/search-app-card-design.png" />
+    <img tal:attributes="src string:${portal_url}/search-app-card-design-hover.png" />
+    <div data-xrayhtml class="prism">
+      <div class="eea-tile">
+        <a class="eea-tileInner recent ribbon-parent" title="Latest evaluation shows Europe's nature in serious, continuing decline" href="http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature">
+          <div class="eea-tileHead">
+            <div class="eea-tileThumb lazyLoad" style="display: block; background-image: url(&quot;http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature/image_preview&quot;);">
+            </div>
+            <span class="eea-tileTypeHead pull-left" title="News, News">News, News</span>
+          </div>
+          <div class="eea-tileBody">
+            <div class="eea-tileHeadMetadata">
+              <span class="eea-tileType pull-right hidden" title="News">19 Oct 2020</span>
+            </div>
+            <p class="eea-tileUrl">http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature</p>
+            <h4 class="eea-tileTitle notoc">Latest evaluation shows Europe's nature in serious, continuing decline</h4>
+            <div class="eea-tileMetadata">
+              <span class="eea-tileTopic" title="Agriculture">
+                <em>Agriculture</em>
+              </span>
+              <time class="eea-tileIssued" datetime="19 Oct 2020">19 Oct 2020</time>
+              <div class="eea-tileType" title="News" style="background-image: url(https://www.eea.europa.eu/portal_depiction/highlight/image_thumb)">
+                <span class="eea-tileTypeIcon, eea-tileType-news" title="News">News</span>
+              </div>
+            </div>
+          </div>
+          <div class="ribbon-wrapper">
+            <div class="ribbon">NEW</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <h2>Cards</h2>
+    <p>Used on <a tal:attributes="href string:${portal_url}/themes/air">themecentre pages</a>,
+      these cards are used to promote featured content for the themecentre section.
+    </p>
+    <h4>Simple card</h4>
+    <div data-xrayhtml class="prism">
+      <div class="eea-card eea-card--bg-light direction-column">
+        <div class="eea-card-header">
+          <div class="eea-card-title-wrapper">
+            <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-link">
+              <h2 class="notoc no-anchor">Citizen science projects on air quality produce useful information and raise public awareness</h2>
+            </a>
+          </div>
+          <p class="eea-card-link">
+            <strong>Published</strong>: 12 Mar 2020
+          </p>
+
+          <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-image-link">
+            <div class="eea-card-image-bg-wrapper lazy" style="background-image: url(&quot;/highlights/citizen-science-on-air-quality/image_preview&quot;);">
+            </div>
+          </a>
+        </div>
+        <div class="eea-card-body">
+          <p>Air pollution is the biggest environmental health threat in Europe and more and more people are taking action to claim their right to clean air. A new European Environment Agency (EEA) report provides an overview of low-cost devices that citizens and NGOs can use to measure local air quality.</p>
+        </div>
+        <div class="eea-card-footer text-right mt-a">
+          <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-btn moreLink eea-btn-md eea-btn-news">Read more</a>
+        </div>
+      </div>
+    </div>
+
+    <h4>Double card</h4>
+    <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
+      these cards are used to promote two featured content side by side.
+    <div data-xrayhtml class="prism">
+
+      <div class="eea-card eea-card--double eea-card--portrait direction-column">
+
+        <div class="eea-card-header">
+          <div class="eea-card-title-wrapper">
+            <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-link">
+              <h2 class="notoc no-anchor">National Emission reduction Commitments Directive reporting status 2020</h2>
+            </a>
+          </div>
+        </div>
+
+        <div class="eea-card-body">
+          <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-image-link  eea-card-image--pull eea-card-image-bordered eea-card-with-text">
+            <img alt="" class="eea-card-image lazy" src="/publications/national-emission-reduction-commitments-directive/image_large" />
+          </a>
+
+          <div class="eea-card-body-text">
+            <strong>Published</strong>: 30 Jun 2020
+            <p>This briefing presents progress made by the EU and its Member States1 towards meeting the 2010 emission ceilings that were applicable until the end of 2019 under Directive 2016/2284/EU — the National Emission reduction Commitments (NEC) Directive — on the reduction of national emissions of certain atmospheric pollutants. In addition, it assesses the emission reduction effort — compared with 2018 emissions levels — required by each country to comply with the 2020 and 2030 reduction commitments set out in the Directive.</p>
+          </div>
+      </div>
+    </div>
+    </div>
+
+
+    <h4>Fullwidth card</h4>
+    <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
+      these cards are used to promote one featured content predominantly.
+    <div data-xrayhtml class="prism">
+      <div class="eea-card eea-card--fullwidth eea-card--landscape">
+        <div class="eea-card-header">
+          <div class="eea-card-title-wrapper">
+            <div class="eea-card-title">
+              <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-link link-plain">
+                <h2 class="notoc no-anchor">The way urban policies influence the air we breathe</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="eea-card-body">
+          <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-image-link  link-plain eea-card-with-text">
+            <img alt="" src="/publications/europes-urban-air-quality/image_large" class="skip_lazy eea-card-image  eea-card-image-bordered  eea-card-image--portrait" width="543" height="768">
+          </a>
+          <div class="eea-card-body-text eea-card-link">
+            <p>Given their proximity to citizens and knowledge of local concerns, local authorities are best placed to ensure we make an effective transition to more liveable and breathable cities.</p>
+            <p>Many city-specific measures have proved to be efficient but there is still much to do to empower citizens further and deliver coordinated actions across all governance levels.</p>
+          </div>
+        </div>
+
+        <div class="eea-card-footer">
+          <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="moreLink link-plain">&nbsp;</a>
+        </div>
+
+      </div>
+    </div>
+
+    <h4>Card options (variables)</h4>
+    <p>The following modifier classess can be added to the eea-card component:</p>
+    <table class="listing">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>eea-card--double</strong></td>
+        <td>Add whenever you want to use two cards on the same row</td>
+      </tr>
+      <tr>
+        <td><strong>eea-card--fullwidth</strong></td>
+        <td>Add whenever you want card to span full width of parent</td>
+      </tr>
+      <tr>
+        <td><strong>eea-card--bg-light</strong></td>
+        <td>Add whenever you want background color of body description to be white</td>
+      </tr>
+      <tr>
+        <td><strong>eea-card--landscape</strong></td>
+        <td>Add whenever you want to use a landscape image</td>
+      </tr>
+      <tr>
+        <td><strong>eea-card--portrait</strong></td>
+        <td>Add whenever you want to use a portrait image</td>
+      </tr>
+      </tbody>
+    </table>
 
 
   </metal:main-macro>
