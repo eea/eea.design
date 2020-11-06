@@ -25,21 +25,14 @@
       table of contents
     </div>
 
-<!--?    <h1 i18n:translate="">-->
-<!--?      Welcome to EEA Web design redesigned component elements-->
-<!--?    </h1>-->
-<!--?    <div class="documentDescription" i18n:translate="">-->
-<!--?      This page shows common html markup, css classes and javascripts we use across the EEA website.-->
-<!--?    </div>-->
-
     <h2>Box Styles</h2>
     <p>Just like pull quote styles, box styles can be used to add emphasis to a section
-      of content wrapping the selected content just like the pull quotes with a given box background color</p>
+      of content wrapping the selected content with a given box background color.</p>
 
     <h3>Note</h3>
-    <p>Note style is used for info message mimicking those found within charts</p>
+    <p>Note style is used for info message mimicking those found within charts.</p>
     <p class="portalMessage informationMessage">Due to compatibility reasons
-      the font size for this style is fixed to <em>12px</em></p>
+      the font size for this style is fixed to <em>12px</em>.</p>
     <div data-xrayhtml class="prism">
       <p class="callout">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -141,7 +134,7 @@
         </li>
       </ol>
       <p class="portalMessage informationMessage">All of these box variants are selectable
-        from the editor style dropdown
+        from the editor style dropdown.
       </p>
       <p><strong>Example:</strong></p>
       <div data-xrayhtml class="prism">
@@ -190,8 +183,8 @@
 
 
     <h2>Fullwidth background sections</h2>
-    <p>Just like <em>boxes</em> we can also make use of <em>fullwidth background sections</em>
-    to add emphasis to the given area</p>
+    <p>Just like <a tal:attributes="href string:${here_url}#boxes">boxes</a> we can also make use of <em>fullwidth background sections</em>
+    to add emphasis to the given area.</p>
     <p>Also like the boxes we have 3 color options:</p>
     <div data-xrayhtml class="prism">
       <div class="fullwidth-bg eea-block bg-primary">
@@ -221,15 +214,17 @@
       </div>
     </div>
 
+
     <h2>TinyMCE templates</h2>
     <p>Besides the styles that you can select from the style dropdown we also
     have several templates that wrap several html tags in order to have more
-    complex styles</p>
+    complex styles.</p>
     <p>Here we list the following templates:</p>
     <h3>Tiles</h3>
     <p>Tiles are templates used to write a large impact text
-      or a title followed by a video</p>
-    <p>Within tiles we have the following variations</p>
+      or a title followed by a video.</p>
+    <p>Within tiles we have the following variations:</p>
+
     <h4>One tile</h4>
     <div data-xrayhtml class="prism">
       <div class="tiles tiles--1">
@@ -288,7 +283,6 @@
       </div>
     </div>
 
-
     <h4>Four tiles</h4>
     <div data-xrayhtml class="prism">
       <div class="tiles tiles--4">
@@ -324,8 +318,8 @@
     </div>
 
     <h4>Tiles options</h4>
-    <p>Tiles have a <em>tile--bordered</em> modifier which if applied
-      adds a top and bottom grey border to the tile section</p>
+    <p>Tiles have a <strong>tile--bordered</strong> modifier which if applied
+      adds a top and bottom grey border to the tile section.</p>
     <div data-xrayhtml class="prism">
       <div class="tiles tiles--1">
         <div class="tile tile--bordered">
@@ -337,8 +331,8 @@
       </div>
     </div>
 
-    <p>They can also be wrapped with <em>fullwidth background sections</em>
-      in case we need to provide such a focus area for the tiles
+    <p>They can also be wrapped with <strong>fullwidth background sections</strong>
+      in case we need to provide such a focus area for the tiles.
     </p>
     <div data-xrayhtml class="prism">
       <div class="fullwidth-bg eea-block bg-secondary">
@@ -352,8 +346,6 @@
         </div>
       </div>
     </div>
-
-
 
 
   </metal:main-macro>

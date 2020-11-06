@@ -34,10 +34,13 @@
       <li>Topics</li>
     </ul>
     <p>All of the children will be visible on these views with differences in
-      the presentation and amount of attributes and information displayed.
+      the presentation and the amount of attributes and information displayed.
     </p>
+
+
+    <!--? @folder_accordion_view  -->
     <h3>Folder accordion view</h3>
-    <p>This view is making use of <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-accordions">EEA accordion component</a> to show folder contents
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-accordions">accordion component</a> to show folder contents
       grouped into 2 sections:
     </p>
     <ol>
@@ -111,11 +114,15 @@
       </div>
     </div>
     </div>
+    <!--? end @folder_accordion_view  -->
 
+
+    <!--? @atct_album_view  -->
     <h3 id="atct_album_view">Folder atct album view</h3>
     <p>This view lists every child with the
-      <a tal:attributes="href string:${portal_url}/code/design-elements/components#album-view-photo-album">photo album component</a>
+      <a tal:attributes="href string:${portal_url}/code/design-elements/components#album-view-photo-album">photo album component.</a>
     </p>
+
     <div data-xrayhtml class="prism">
       <!--?  added extra clearfix div as photoAlbumEntry classes are floated -->
       <div class="clearfix">
@@ -138,10 +145,12 @@
         </div>
       </div>
     </div>
+    <!--? end @atct_album_view  -->
+
 
     <!--? @Gallery view  -->
     <h3 i18n:translate="">Folder gallery view</h3>
-    <p>This view is making use of <a tal:attributes="href string:${portal_url}/code/design-elements/components#image-gallery">Gallery component</a> to show folder contents that have images as fields which can then be used in this presentational view.
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#image-gallery">gallery component</a> to show folder contents that have images as fields which can then be used in this presentational view.
     </p>
     <div data-xrayhtml class="prism">
       <ul id="galleryView">
@@ -197,10 +206,13 @@
 
       </div>
     </div>
+    <!--? end @Gallery view  -->
 
+
+    <!--? @folder_summary_view  -->
     <h3 id="folder_summary_view">Folder summary view</h3>
     <p>This view is used on folderish content types
-      making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#plone-tile-component">Plone tile component</a>
+      making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#plone-tile-component">Plone tile component</a> to show children as media objects.
     </p>
     <div data-xrayhtml class="prism">
       <div class="entries">
@@ -229,36 +241,36 @@
         </div>
 
 
-      <div class="tileItem visualIEFloatFix">
-        <a class="tileImage " tal:attributes="href string:${portal_url}/code/design-elements/typography" title="Typography">
-          <img class="lazy" src="/code/design-elements/typography/image_mini" title="Typography" alt="Typography">
-        </a>
+        <div class="tileItem visualIEFloatFix">
+          <a class="tileImage " tal:attributes="href string:${portal_url}/code/design-elements/typography" title="Typography">
+            <img class="lazy" src="/code/design-elements/typography/image_mini" title="Typography" alt="Typography">
+          </a>
 
-        <div class="tileContent">
-          <h2 class="tileHeadline notoc no-anchor">
-            <a tal:attributes="href string:${portal_url}/code/design-elements/typography">Typography</a>
-          </h2>
-          <span class="date">
+          <div class="tileContent">
+            <h2 class="tileHeadline notoc no-anchor">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/typography">Typography</a>
+            </h2>
+            <span class="date">
               26 Oct 2020
             </span>
+          </div>
+
+          <p class="tileBody">
+            <span class="description">Site typography, including global settings, headings, body text, lists.</span>
+          </p>
+
+          <p class="tileFooter">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/typography" class="moreLink">Read more</a>
+          </p>
         </div>
 
-        <p class="tileBody">
-          <span class="description">Site typography, including global settings, headings, body text, lists.</span>
-        </p>
-
-        <p class="tileFooter">
-          <a tal:attributes="href string:${portal_url}/code/design-elements/typography" class="moreLink">Read more</a>
-        </p>
       </div>
-
     </div>
+    <!--? end @folder_summary_view  -->
 
-  </div>
-
-
+    <!--? @folder_tabs_view  -->
     <h3>Folder tabs view</h3>
-    <p>This view is making use of <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-tabs">EEA tabs component</a> and it behaves just like the accordion view, with the only difference being
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-tabs">tabs component</a> behaving just like the accordion view, with the only difference being
       the use of tabs instead of accordions for headers.</p>
 
     <div data-xrayhtml class="prism">
@@ -311,9 +323,12 @@
         </div>
       </div>
     </div>
+    <!--? end @folder_tabs_view  -->
 
+
+    <!--? @folder_tabs_view  -->
     <h3 i18n:translate="">Folder tabular view</h3>
-    <p>This view is making use of <a tal:attributes="href string:${portal_url}/code/design-elements/tables#listing">listing table markup</a> to show folder content's following attributes:
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/tables#listing">listing table markup</a> to show folder content's following attributes:
     </p>
     <ol>
       <li>Title</li>
@@ -366,6 +381,7 @@
         </table>
       </div>
     </div>
+    <!--? end @folder_tabs_view  -->
 
 
   </metal:main-macro>

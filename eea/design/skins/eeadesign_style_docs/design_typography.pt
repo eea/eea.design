@@ -24,14 +24,6 @@
       table of contents
     </div>
 
-<!--?    <h1 i18n:translate="">-->
-<!--?      Welcome to EEA Web design typography elements-->
-<!--?    </h1>-->
-<!--?    <div class="documentDescription" i18n:translate="">-->
-<!--?      This page shows common html markup, css classes and javascripts we use across the EEA website.-->
-<!--?    </div>-->
-
-
     <h2>Headers</h2>
     <div data-xrayhtml class="prism">
       <h1 i18n:translate="" class="notoc">This is a h1</h1>
@@ -92,10 +84,10 @@
 
     <h3>Unordered lists</h3>
     <p>This square style is default for lists found within content area,
-    added as simple ul by the TinyMCE editor.
+    added as a simple ul tag by the TinyMCE editor.
     </p>
     <p class="portalMessage informationMessage">Consider using <strong>list-items</strong>
-      class on the ul if you want to preseve this style outside of content-core area.
+      class on the ul if you want to preserve this style outside of content-core area.
     </p>
     <div data-xrayhtml class="prism">
       <ul>
@@ -125,6 +117,7 @@
         <li tal:content="string:Milk"></li>
       </ol>
     </div>
+
     <h4>Ordered lists nested</h4>
     <div data-xrayhtml class="prism">
       <ol>
@@ -153,6 +146,7 @@
       <dd>Description 2</dd>
     </div>
 
+
     <h2 i18n:translate="">Quotations</h2>
     <div data-xrayhtml class="prism">
       <blockquote>
@@ -162,6 +156,7 @@
         <p class="source" i18n:translate="">Stavros Dimas, Commissioner for Environment</p>
       </blockquote>
     </div>
+
 
   </metal:main-macro>
 </div>

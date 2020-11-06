@@ -24,17 +24,6 @@
       table of contents
     </div>
 
-<!--?    <h1 i18n:translate="">-->
-<!--?      Welcome to EEA Web design table elements-->
-<!--?    </h1>-->
-<!--?    <div class="documentDescription" i18n:translate="">-->
-<!--?      This page shows common html markup, css classes and javascripts we use-->
-<!--?      across the EEA website. See-->
-<!--?      example code and use Firefox Firebug plugin to inspect elements code.-->
-<!--?      Intended audience: web designers, web-->
-<!--?      developers, UX/UI experts.-->
-<!--?    </div>-->
-
     <h2 i18n:translate="" id="listing">Tables - sortable and no sortable</h2>
     <div data-xrayhtml class="prism">
       <table class="listing">

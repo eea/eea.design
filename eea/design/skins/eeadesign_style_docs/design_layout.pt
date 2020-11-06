@@ -25,14 +25,6 @@
       table of contents
     </div>
 
-<!--?    <h1 i18n:translate="">-->
-<!--?      Welcome to EEA Web design layout elements-->
-<!--?    </h1>-->
-<!--?    <div class="documentDescription" i18n:translate="">-->
-<!--?      This page shows common html markup, css classes and javascripts we use across the EEA website.-->
-<!--?    </div>-->
-
-
     <h2>Containers</h2>
     <p>EEA Website uses a mix of containers from Plone 4 deco system and some
       custom containers inspired from css frameworks such as <strong>Bootstrap</strong>
@@ -54,12 +46,11 @@
     </div>
 
     <h3>Flex container</h3>
-
     <p>Acting like Bulma <a href="https://bulma.io/documentation/layout/level/">level container</a> <strong>flex-container</strong>
       is used in sections where we want content to be vertically centered and of same size.
     </p>
     <p>In our website we use this container to force the left and right boxes construct to
-       be of same size and fit next to each other as floated left and right items would
+       be of same size and fit next to each other as floated left and right items would.
     </p>
 
     <div data-xrayhtml class="prism">
@@ -99,13 +90,13 @@
       is the fact that the latter restricts the non image content to 800px,
       useful for content that needs to be spaced apart such as pictures
       with an emphasis area section, hence the content is centered and kept
-      on the content area
+      on the content area.
     </p>
     <div data-xrayhtml class="prism">
       <div class="fullwidth-container">
         <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
         <p>This container is used best for chart applications such as Tableau rather than text,
-           based content
+           based content.
         </p>
       </div>
     </div>
@@ -159,7 +150,6 @@
         <p>Another text here</p>
       </div>
     </div>
-
 
 
   </metal:main-macro>

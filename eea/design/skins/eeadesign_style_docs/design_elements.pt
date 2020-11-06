@@ -24,19 +24,8 @@
       table of contents
     </div>
 
-<!--?    <h1 i18n:translate="">-->
-<!--?      Welcome to EEA Web design elements-->
-<!--?    </h1>-->
-<!--?    <div class="documentDescription" i18n:translate="">-->
-<!--?      This page shows common html markup, css classes and javascripts we use-->
-<!--?      across the EEA website. See-->
-<!--?      example code and use Firefox Firebug plugin to inspect elements code.-->
-<!--?      Intended audience: web designers, web-->
-<!--?      developers, UX/UI experts.-->
-<!--?    </div>-->
-
     <h2>Buttons</h2>
-    <p>Below we have the standard button style applied to inputs and links</p>
+    <p>Below we have the standard button style applied to inputs and links.</p>
     <div data-xrayhtml class="prism">
       <p>
         <input type="submit" value="Submit">
@@ -79,7 +68,7 @@
     <p class="callout" i18n:translate="">There are many ways to customise the
       icons display. See the <a href="http://fontawesome.io/examples/">practical examples</a>
       and just replace the generic <strong>fa</strong> classname with our
-      <strong>eea-icon</strong> class prefix
+      <strong>eea-icon</strong> class prefix.
     </p>
 
     <h4 i18n:translate="">Floated icons</h4>
@@ -152,13 +141,13 @@
       box with or without
       a small 'tail' that can be pointed to different locations
       on a document..." (definition source: <a
-          href="http://en.wikipedia.org/wiki/Callout">Wikipedia</a>)</p>
+          href="http://en.wikipedia.org/wiki/Callout">Wikipedia</a>).</p>
 
     <p i18n:translate="">These styles can be added manually in HTML by a
       developer or
       they can be added on text fields by content authors using the WYSIWYG
       editor (TinyMCE Styles
-      DropDown)
+      DropDown).
     </p>
 
     <h3 i18n:translate="">Standard call-out</h3>
@@ -295,7 +284,7 @@
     </pre>
     <p>This can be styled different by adding <strong>recent</strong> or
       <strong>expired</strong> classes to the <strong>photoAlbumEntry</strong>
-      parent div</p>
+      parent div.</p>
 
     <div data-xrayhtml class="prism">
       <div class="ribbon-example">

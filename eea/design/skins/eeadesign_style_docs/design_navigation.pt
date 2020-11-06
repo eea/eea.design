@@ -70,14 +70,14 @@
     </div>
 
     <h2>Mobile navigation</h2>
-    <p>Mobile navigation is constructed from <a tal:attributes="href string:${portal_url}#right-column-navigation">Right column navigation</a> portlet and is visible for resolutions lower than <strong>1280px</strong>.</p>
+    <p>Mobile navigation is constructed from <a tal:attributes="href string:${here_url}#right-column-navigation">Right column navigation</a> portlet and is visible for resolutions lower than <strong>1280px</strong>.</p>
     <p>It is appended to the global navigation which itself it's transformed to fit mobile resolutions with a maximum width of <strong>400px</strong>.</p>
     <p>In order for this navigation to show the following conditions need to be met:</p>
     <ol>
-      <li>The new style header and navigation needs to be enabled for the particular content type.</li>
+      <li>The new style header and navigation needs to be enabled for the particular content type</li>
       <li>Right column navigation portlet needs to be present on page,
-       not blocked on the page or it's parent.</li>
-      <li>Mobile header needs to be visible which is on resolutions of <strong>1279px</strong> or lower.</li>
+       not blocked on the page or it's parent</li>
+      <li>Mobile header needs to be visible which is on resolutions of <strong>1279px</strong> or lower</li>
     </ol>
     <p>An example of this navigation in action is found on the <a tal:attributes="href string:${portal_url}/about-us">About us</a> page.</p>
     <p>It requires the following markup in order to be styled as seen in the screenshot found below:</p>
@@ -104,7 +104,8 @@
       &lt;/div&gt;
       </pre>
       <img tal:attributes="src string:${portal_url}/mobile-navigation-example.png" />
-<!--?    </div>-->
+
+
   </metal:main-macro>
 </div>
 </body>

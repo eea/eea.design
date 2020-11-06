@@ -50,6 +50,7 @@
     or <a tal:attributes="href string:${portal_url}/media/audiovisuals">Audiovisuals</a>
     pages.
   </p>
+
   <h3>Checkbox widget</h3>
   <div data-xrayhtml class="prism">
     <div id="faceted-form">
@@ -77,6 +78,7 @@
       <!--? end faceted checkbox widget -->
     </div>
   </div>
+
   <h3>Criteria widget</h3>
   <div data-xrayhtml class="prism">
     <div id="faceted-form">

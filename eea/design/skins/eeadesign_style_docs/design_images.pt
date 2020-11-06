@@ -25,18 +25,6 @@
       table of contents
     </div>
 
-<!--?    <h1 i18n:translate="">-->
-<!--?      Welcome to EEA Web design images elements-->
-<!--?    </h1>-->
-<!--?    <div class="documentDescription" i18n:translate="">-->
-<!--?      This page shows common html markup, css classes and javascripts we use-->
-<!--?      across the EEA website. See-->
-<!--?      example code and use Firefox Firebug plugin to inspect elements code.-->
-<!--?      Intended audience: web designers, web-->
-<!--?      developers, UX/UI experts.-->
-<!--?    </div>-->
-
-
     <h2 i18n:translate="">Image containers</h2>
     <h3 i18n:translate="">Fullwidth image container</h3>
     <p>We have <strong>fullwidth-container-centered</strong> class which
@@ -57,7 +45,7 @@
       in order to make it absolute and allow the emphasis area to go over the image</p>
     <p class="portalMessage informationMessage">If we need some text to act
       as a copyright info found right below the image
-      we can also add a paragraph with class <strong>eea-image-credit</strong>
+      we can also add a paragraph with class <strong>eea-image-credit</strong>.
     </p>
     <div data-xrayhtml class="prism">
       <div class="fullwidth-container-centered eea-block">

@@ -34,7 +34,6 @@
       table of contents
     </div>
 
-
     <h2 i18n:translate="">Inputs</h2>
     <h3>Submit inputs</h3>
     <div data-xrayhtml class="prism">
@@ -74,8 +73,8 @@
     </div>
 
     <h4>Data and maps search text input</h4>
-    <p class="portalMessage informationMessage">Note that this input style is loaded only on <a href="#" tal:attributes="href string:${portal_url}/data-and-maps">data-and-maps</a> page</p>
-    <p>Besides the data-and-maps condition for the loading of the custom styles, currently the css is scoped also to a parent with id <strong>faceted-text-search</strong> as seen in the code example
+    <p class="portalMessage informationMessage">Note that this input style is loaded only on <a href="#" tal:attributes="href string:${portal_url}/data-and-maps">data-and-maps</a> page.</p>
+    <p>Besides the data-and-maps condition for the loading of the custom styles, currently the css is scoped also to a parent with id <strong>faceted-text-search</strong> as seen in the code example.
     </p>
     <div data-xrayhtml class="prism">
       <form method="get" id="faceted-text-search" class="searchforms faceted-external-search">
@@ -84,8 +83,8 @@
     </div>
 
     <h4>Faceted navigation search text input</h4>
-    <p class="portalMessage informationMessage">Note that this input style is loaded only on faceted navigation page</p>
-    <p>Besides the data-and-maps condition for the loading of the custom styles, currently the css is scoped also to a parent with class <strong>faceted-text-widget</strong> as seen in the code example
+    <p class="portalMessage informationMessage">Note that this input style is loaded only on faceted navigation page.</p>
+    <p>Besides the data-and-maps condition for the loading of the custom styles, currently the css is scoped also to a parent with class <strong>faceted-text-widget</strong> as seen in the code example.
     </p>
     <div data-xrayhtml class="prism">
       <div id="faceted-form">
@@ -102,7 +101,6 @@
        hide the actual markup and instead show an image of how it looks on site
        now.</p>
 
-
     <div data-xrayhtml class="prism">
       <img tal:attributes="src string:${portal_url}/search-app-input.png" />
       <div class="facetedview_search" style="display:none">
@@ -115,7 +113,6 @@
                i18n-change="placeholder" autocomplete="off">
       </div>
     </div>
-
 
 
   </metal:main-macro>

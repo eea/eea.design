@@ -30,11 +30,11 @@
     </div>
 
 
-    <!-- Client Side Pagination -->
+    <!-- @Client Side Pagination -->
     <h2 i18n:translate="">Client side pagination</h2>
     <p i18n:translate="client-side-description">
-      All that you need is a block element like a div with class paginate
-      and children as content inside of it.
+      All that you need is a block element like a div with the class
+      <strong>paginate</strong> and children as content inside of it.
     </p>
 
     <p i18n:translate="client-side-children">
@@ -181,9 +181,9 @@
 
       </div>
     </div>
-    <!-- End Client Side Pagination -->
+    <!-- End @Client Side Pagination -->
 
-    <!-- Client Side Pagination with tabs -->
+    <!-- @Client Side Pagination with tabs -->
     <h3 i18n:translate="">Client side pagination with tabs</h3>
     <p i18n:translate="">
       This example demonstrates the pagination with
@@ -200,7 +200,6 @@
       Second extra element is a simple div that wraps the content that
       you would like to have paginated.
     </p>
-
 
     <div data-xrayhtml class="prism">
       <div class="paginate">
@@ -477,12 +476,15 @@
         </div>
       </div>
     </div>
-    <!-- End Client Side Pagination with tabs -->
+    <!-- @End Client Side Pagination with tabs -->
 
 
     <!--?  @Fancybox -->
     <h2 i18n:translate="">Fancybox pop-ups</h2>
     <h3 i18n:translate="">Arbitrary HTML</h3>
+    <p>Fancybox is a popup component where content is visible in a box upon
+      clicking on a link.
+    </p>
     <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
     <div data-xrayhtml class="prism">
       <div style="display:none">
@@ -502,11 +504,15 @@
     <!--? end @Fancybox -->
 
 
+    <!--?  @Image gallery -->
     <h2 id="image-gallery">Image gallery</h2>
-    <p i18n:translate="">
+    <p>This component takes a bunch of images and displays them in a carousel
+      image gallery.
+    </p>
+    <p i18n:translate="" class="portalMessage informationMessage">
       You need to enter an image scale after the image src otherwise the gallery
       will load the full-resolution images which could dramatically slow the
-      page
+      page.
     </p>
 
     <div data-xrayhtml class="prism">
@@ -524,7 +530,7 @@
       </ul>
     </div>
     <p i18n:translate="">
-      You can now use more than you galleryView on the page if needed by using
+      You can now use more than one galleryView on the page if needed by using
       the
       gallery class.
       Also you can disable the filmstrip by assigning the
@@ -533,8 +539,8 @@
     </p>
 
     <p i18n:translate="">
-      Make sure that this gallery has also an id thou as the gallery makes use
-      of an id selector
+      Make sure that this gallery also has an id thou as the gallery makes use
+      of it.
     </p>
     <p i18n:translate="">
       Also if you add a width and height as an inline style the gallery will
@@ -559,8 +565,9 @@
     <!--? end @Gallery view   -->
 
 
-    <!--?  jQuerytools accordions -->
+    <!--?  @jQuerytools accordion -->
     <h2 i18n:translate="" id="jquerytools-accordions">jQuerytools accordions</h2>
+    <!--?  @jQuerytools accordion standard -->
     <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels">
@@ -582,7 +589,9 @@
 
       </div>
     </div>
+    <!--? end @jQuerytools accordion standard  -->
 
+    <!--? @jQuerytools accordion collapsed  -->
     <h3>jQuerytools accordion (collapsed-by-default)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels collapsed-by-default">
@@ -604,7 +613,9 @@
 
       </div>
     </div>
+    <!--? end @jQuerytools accordion collapsed -->
 
+    <!--? @jQuerytools accordion collapsed non-exclusive -->
     <h3>jQuerytools accordion (collapsed-by-default and non-exclusive)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels collapsed-by-default non-exclusive">
@@ -627,7 +638,9 @@
 
       </div>
     </div>
+    <!--? end @jQuerytools accordion collapsed non-exclusive -->
 
+    <!--? @jQuerytools accordion non-exclusive -->
     <h3>jQuerytools accordion (non-exclusive)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels non-exclusive">
@@ -650,21 +663,25 @@
 
       </div>
     </div>
+    <!--? end @jQuerytools accordion non-exclusive -->
 
+    <!--? @jQuerytools accordion redesign -->
     <h3>jQuerytools accordion redesign</h3>
     <p>After briefing redesign some new classes were created in order to simplify
-      the design of the accordions
+      the design of the accordions.
     </p>
+
+    <!--? @jQuerytools accordion redesign plain -->
     <h4>jQuerytools accordion plain design</h4>
     <p>By applying the <strong>eea-accordion-panels-plain</strong> class to
       the accordion construct we change the design of the headers and panels
-      to a more discreet look and feel
+      to a more discreet look and feel.
     </p>
     <p class="portalMessage informationMessage">Besides the lack of background
       color of the accordion panels these headers also use
       <strong>eea-icon-left-container</strong> class in order to move the
       accordion arrow to the left of the title instead of the right found in
-      classical accordion design
+      classical accordion design.
     </p>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels eea-accordion-panels-plain">
@@ -687,7 +704,9 @@
 
       </div>
     </div>
+    <!--? end @jQuerytools accordion redesign plain -->
 
+    <!--? @jQuerytools accordion redesign plain bordered -->
     <h4>jQuerytools accordion plain design with top border</h4>
     <p>With the plain design we also have a border modifier which if applied
       adds a larger top border to the start of the accordion panels.
@@ -715,7 +734,7 @@
 
     <p>or <strong>eea-accordion-panels-bordered-secondary</strong> meant to be
       added manually to the Briefing <em>Identifiers, References and footnotes</em>
-      section
+      section.
     </p>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels eea-accordion-panels-plain eea-accordion-panels-bordered-secondary">
@@ -732,15 +751,17 @@
 
       </div>
     </div>
+    <!--? end @jQuerytools accordion redesign plain bordered -->
+    <!--? end @jQuerytools accordion -->
 
 
-    <!--? end @jQuerytools accordions -->
-
-    <!--?  @jQuerytools tabs -->
+    <!--?  @Tabs -->
     <h2 i18n:translate="">Tabs</h2>
+
+    <!--?  @Tabs @daviz -->
     <h3 i18n:translate="">Daviz tabs</h3>
-    <p>Used by <strong>Daviz</strong> this tab resembles the jquerytools tab
-      variant that also uses icons in the title.
+    <p>Used by <a tal:attributes="href string:${portal_url}/data-and-maps/daviz">Daviz content types</a> this tab resembles the jquerytools tab
+      variant that also uses icons in the tabs.
     </p>
     <p>It assumes the following structure:</p>
     <div data-xrayhtml class="prism">
@@ -774,8 +795,11 @@
       </div>
 
     </div>
+    <!--? end @Tabs @daviz -->
+
+    <!--?  @Tabs @formtab -->
     <h3 i18n:translate="">FormTab tabs</h3>
-    <p>Used by <strong>Indicator Assessment</strong> figure tabs,
+    <p>Used by <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessment</a> figure tabs,
       these elements make use of default Plone 4 form_tabbing.js logic to
       create tabs out of <em>dl</em>, <em>dt</em> and <em>dd</em> html tags.
     </p>
@@ -794,12 +818,14 @@
 
       </dl>
     </div>
+    <!--? end @Tabs @formtab -->
 
+    <!--? @Tabs @serverside -->
     <h3 i18n:translate="">Server side tabs</h3>
     <p>Clicking on the tab which will take you to the page that the links points
-      to</p>
+      to.</p>
     <p>As template logic you have to supply the current class on the tab that
-      should be activated given the page visited</p>
+      should be activated given the page visited.</p>
 
     <div data-xrayhtml class="prism">
       <div class="tabbedmenu">
@@ -836,7 +862,9 @@
 
       </div>
     </div>
+    <!--? end @Tabs @serverside -->
 
+    <!--? @Tabs @jquerytools -->
     <h3 i18n:translate="" id="jquerytools-tabs">jQuerytools tabs</h3>
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
@@ -861,14 +889,16 @@
 
       </div>
     </div>
+    <!--? end @jquerytools @tabs -->
 
+    <!--? @Tabs @jquerytools @transformed -->
     <h4 i18n:translate="">jQuerytools tabs accordion transformation</h4>
     <p i18n:translate="">
       Previously we had an extra modifier class to eea-tabs named
       <strong>two-rows</strong> which added a max width to the tabs breaking
       some extra long titles into two rows in order to fit extra titles on one row.
     </p>
-    <p>Now with the current behavior eea-tabs transform into an
+    <p>Now with the current behavior <strong>eea-tabs</strong> transform into an
       <a tal:attributes="href string:${here_url}#eea-accordion-standard">accordion</a> when any of the tab lists
       span over more than one line by checking the size of every element on
       window resize.
@@ -902,7 +932,9 @@
 
       </div>
     </div>
+    <!--? end @Tabs @jquerytools @transformed -->
 
+    <!--? @Tabs @jquerytools @arrows -->
     <h4 i18n:translate="">jQuerytools arrows tabs</h4>
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs eea-tabs-arrows" style="display: block;">
@@ -961,9 +993,13 @@
 
       </div>
     </div>
-    <!--? end @jQuerytools tabs -->
+    <!--? end @Tabs @jquerytools @arrows -->
+    <!--? end @Tabs @jquerytools -->
+    <!--? end @Tabs -->
 
+    <!--? @PhotoAlbumCards -->
     <h2>Photo Album cards</h2>
+    <!--? @PhotoAlbumCards @album -->
     <h3 id="album-view-photo-album">Album views photo album cards</h3>
     <p>Used on <a tal:attributes="href string:${portal_url}/code/design-elements/views#atct_album_view"> atct_album_view</a> template as well as other listings where we need to layout
       objects as part of an photo gallery album listing.
@@ -1001,7 +1037,9 @@
       </div>
 
     </div>
+    <!--? end @PhotoAlbumCards @album -->
 
+    <!--? @PhotoAlbumCards @related -->
     <h3>Related items photo album cards</h3>
     <p>Styled for the latest Briefing redesign the photoAlbum component has the
       following look when it's part of the <strong>relatedItems</strong> section.
@@ -1033,8 +1071,13 @@
         </div>
       </div>
     </div>
+    <!--? end @PhotoAlbumCards @related -->
+    <!--? end @PhotoAlbumCards -->
 
+
+    <!--? @Tiles  -->
     <h2>Tiles</h2>
+    <!--? @Tiles @plone -->
     <h3 id="plone-tile-component">Plone tiles</h3>
     <p>Used by the <a tal:attributes="href string:${portal_url}/code/design-elements/views#folder_summary_view">folder_summary_view</a>
       template and in listings such as the <a tal:attributes="href string:${portal_url}#news-header">what's new tab section</a> on EEA frontpage,
@@ -1068,7 +1111,9 @@
         </p>
       </div>
     </div>
+    <!--? end @Tiles @plone -->
 
+    <!--? @Tiles @themes -->
     <h3>Themes tile card</h3>
         <p>Originally created for the elastic search apps, <strong>eea-tile</strong> components resemble
         the <a href="https://getbootstrap.com/docs/4.5/components/card/">Bootstrap card component</a>
@@ -1100,14 +1145,17 @@
         </div>
       </div>
     </div>
+    <!--? end @Tiles @themes -->
 
+    <!--? @Tiles @search -->
     <h3>Search app tiles</h3>
+    <!--? @Tiles @search @colored -->
     <h4>Colored tiles</h4>
     <p>Used on the <a tal:attributes="href string:http://search.apps.eea.europa.eu#landing">search app frontpage</a>
       these tiles are used to promote the ranges of values found for the right side facets.
     </p>
     <p>These tiles components resemble
-      <a href="https://bulma.io/documentation/layout/tiles/">Bulma's tile layout component</a>
+      <a href="https://bulma.io/documentation/layout/tiles/">Bulma's tile layout component</a>.
     </p>
     <div data-xrayhtml class="prism">
       <img tal:attributes="src string:${portal_url}/search-app-topic-tile-design.png" />
@@ -1120,12 +1168,14 @@
 
       </div>
     </div>
+    <!--? end @Tiles @search @colored -->
 
+    <!--? @Tiles @search @card -->
     <h4>Card tiles</h4>
     <p>Used on the card layout of the <a tal:attributes="href string:http://search.apps.eea.europa.eu">search app</a>,
       these tiles are used to list result objects arranged as cards.
     </p>
-    <p>The search app card tile design is added to the EEA website as well and
+    <p>The search app card tile design is added to the EEA website and
       they are documented in this page as well, however
       there are the following styles and behavior differences between these two:
     </p>
@@ -1169,13 +1219,18 @@
         </a>
       </div>
     </div>
+    <!--? end @Tiles @search @card -->
+    <!--? end @Tiles @search-->
+    <!--? end @Tiles -->
 
 
+    <!--?  @Cards  -->
     <h2>Cards</h2>
     <p>Used on <a tal:attributes="href string:${portal_url}/themes/air">themecentre pages</a>,
       these cards are used to promote featured content for the themecentre section.
     </p>
-    <h4>Simple card</h4>
+    <!--?  @Cards @simple  -->
+    <h3>Simple card</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-card eea-card--bg-light direction-column">
         <div class="eea-card-header">
@@ -1201,8 +1256,10 @@
         </div>
       </div>
     </div>
+    <!--? end @Cards @simple  -->
 
-    <h4>Double card</h4>
+    <!--? @Cards @double  -->
+    <h3>Double card</h3>
     <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
       these cards are used to promote two featured content side by side.
     <div data-xrayhtml class="prism">
@@ -1229,8 +1286,9 @@
       </div>
     </div>
     </div>
+    <!--? end @Cards @double  -->
 
-
+    <!--? @Cards @fullwidth  -->
     <h4>Fullwidth card</h4>
     <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
       these cards are used to promote one featured content predominantly.
@@ -1262,9 +1320,11 @@
 
       </div>
     </div>
+    <!--? end @Cards @fullwidth  -->
 
+    <!--? @Cards @options  -->
     <h4>Card options (variables)</h4>
-    <p>The following modifier classess can be added to the eea-card component:</p>
+    <p>The following modifier classes can be added to the eea-card component:</p>
     <table class="listing">
       <thead>
       <tr>
@@ -1295,6 +1355,8 @@
       </tr>
       </tbody>
     </table>
+    <!--? end @Cards @options  -->
+    <!--? end @Cards -->
 
 
   </metal:main-macro>
