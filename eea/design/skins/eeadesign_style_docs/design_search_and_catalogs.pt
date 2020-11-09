@@ -54,7 +54,8 @@
   <h3>Checkbox widget</h3>
   <div data-xrayhtml class="prism">
     <div id="faceted-form">
-      <!--? faceted checkbox widget -->
+
+      <!--? faceted checkbox widget markup -->
       <div class="faceted-widget faceted-checkboxes-widget faceted-checkbox-widget section-available-topics faceted-count faceted-zero-count-hidden widget-fieldset" data-more="More" data-less="Less" id="c5_widget" data-operator="or">
         <fieldset class="widget-fieldset">
           <legend>Available topics</legend>
@@ -75,14 +76,16 @@
           </div>
         </fieldset>
       </div>
-      <!--? end faceted checkbox widget -->
+      <!--? end faceted checkbox widget markup -->
+
     </div>
   </div>
 
   <h3>Criteria widget</h3>
   <div data-xrayhtml class="prism">
     <div id="faceted-form">
-      <!--?  Faceted criteria widget  -->
+
+      <!--?  Faceted criteria widget markup -->
       <div class="faceted-widget faceted-criteria-widget section-current-search widget-fieldset">
         <fieldset class="widget-fieldset faceted-criteria">
           <legend>Current search</legend>
@@ -120,7 +123,7 @@
           </div>
         </fieldset>
       </div>
-      <!--? end Faceted criteria widget  -->
+      <!--? end Faceted criteria widget markup -->
 
     </div>
   </div>
@@ -160,6 +163,8 @@
   <h3>Radio widget</h3>
   <div data-xrayhtml class="prism">
     <div id="faceted-form">
+
+      <!--?  faceted radio widget markup  -->
       <div class="faceted-widget faceted-radio-widget section-themes faceted-count faceted-zero-count-hidden widget-fieldset eea-accordion-panel faceted-widget-active" style="" data-more="More" data-less="Less" id="c3_widget"><h2 class="eea-accordion-title eea-icon-left-container no-anchor notoc"><span class="eea-icon eea-icon-left"></span>Themes</h2>
 
         <fieldset class="widget-fieldset">
@@ -182,6 +187,8 @@
           </form>
         </fieldset>
       </div>
+      <!--?  end faceted radio widget markup  -->
+
     </div>
   </div>
 
@@ -189,7 +196,7 @@
   <div data-xrayhtml class="prism">
     <div id="faceted-form">
 
-      <!--? faceted results-per-page widget -->
+      <!--? faceted results-per-page widget markup -->
       <div class="faceted-widget faceted-resultsperpage-widget section-results-per-page faceted-widget-active" style="" id="c11_widget">
         <fieldset class="widget-fieldset">
           <legend>Results per page</legend>
@@ -201,7 +208,7 @@
           </form>
         </fieldset>
       </div>
-      <!--? endfaceted results-per-page widget -->
+      <!--? end faceted results-per-page widget markup -->
 
     </div>
   </div>
@@ -259,7 +266,8 @@
   <h3>Text widget</h3>
   <div data-xrayhtml class="prism">
     <div id="faceted-form">
-      <!--?   Faceted text search widget  -->
+
+      <!--?   faceted text search widget markup  -->
       <div class="faceted-widget faceted-text-widget section-search-videos" style="" id="c7_widget">
         <fieldset class="widget-fieldset">
           <legend>Search videos</legend>
@@ -277,7 +285,7 @@
           </form>
         </fieldset>
       </div>
-      <!--?  end Faceted text search widget  -->
+      <!--?  end faceted text search widget markup  -->
 
     </div>
   </div>

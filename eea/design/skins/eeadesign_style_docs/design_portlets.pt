@@ -111,6 +111,8 @@
 
     <h2>Portlet like classes</h2>
     <h3>Featured class</h3>
+    <p>Used on the <a tal:attributes="href string:${portal_url}#articles-area">frontpage</a> of the EEA website these portlets follow a tile design with a floated image followed by a header and description.
+    </p>
     <div data-xrayhtml class="prism">
       <div class="featured">
         <h2 class="column-title notoc"><span>In the spotlight</span></h2>
@@ -137,6 +139,8 @@
     </div>
 
     <h3>Shortcut classes</h3>
+    <p>Used on the <a tal:attributes="href string:${portal_url}#enquiry-service-shortcut">frontpage</a> of the EEA website these portlets follow a tile design with a floated image followed by a header and description.
+    </p>
     <h4>Shortcut default class</h4>
     <div data-xrayhtml class="prism">
       <div id="test-disclaimer" class="shortcut-default">
