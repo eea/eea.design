@@ -32,8 +32,11 @@
 
     <!-- @Client Side Pagination -->
     <h2 i18n:translate="">Client side pagination</h2>
+    <p>Used on <a tal:attributes="href string:${portal_url}/soer/2020/intro#tab-see-also">Soer 2020 intro page</a> to paginate related items photoAlbum entries.
+    </p>
     <p i18n:translate="client-side-description">
-      All that you need is a block element like a div with the class
+      In order to add on other pages all that you need is a block element
+      like a div with the class
       <strong>paginate</strong> and children as content inside of it.
     </p>
 
@@ -42,7 +45,7 @@
     </p>
 
     <p i18n:translate="client-side-paginate">
-      This example has a couple of divs but the div with class paginate
+      This example has a couple of divs but the div with class <strong>paginate</strong>
       could contain anything.
     </p>
 
@@ -567,6 +570,10 @@
 
     <!--?  @jQuerytools accordion -->
     <h2 i18n:translate="" id="jquerytools-accordions">jQuerytools accordions</h2>
+    <p>Used on our site usually when we want to group similar content which
+      can be hidden by default unless clicked upon, accordions can also be used
+      as replacement for tabs when there are many headers or on mobile resolutions.
+    </p>
     <!--?  @jQuerytools accordion standard -->
     <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
     <div data-xrayhtml class="prism">
@@ -667,8 +674,8 @@
 
     <!--? @jQuerytools accordion redesign -->
     <h3>jQuerytools accordion redesign</h3>
-    <p>After briefing redesign some new classes were created in order to simplify
-      the design of the accordions.
+    <p>After Briefing content type redesign some new classes were created
+      in order to simplify the design of the accordions.
     </p>
 
     <!--? @jQuerytools accordion redesign plain -->
@@ -760,8 +767,9 @@
 
     <!--?  @Tabs @daviz -->
     <h3 i18n:translate="">Daviz tabs</h3>
-    <p>Used by <a tal:attributes="href string:${portal_url}/data-and-maps/daviz">Daviz content types</a> this tab resembles the jquerytools tab
-      variant that also uses icons in the tabs.
+    <p>Used by
+      <a tal:attributes="href string:${portal_url}/data-and-maps/daviz">Daviz content types</a>
+      this tab resembles the jquerytools tab variant that also uses icons in the tabs.
     </p>
     <p>It assumes the following structure:</p>
     <div data-xrayhtml class="prism">
@@ -799,8 +807,9 @@
 
     <!--?  @Tabs @formtab -->
     <h3 i18n:translate="">FormTab tabs</h3>
-    <p>Used by <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessment</a> figure tabs,
-      these elements make use of default Plone 4 form_tabbing.js logic to
+    <p>Used by
+      <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessment</a>
+      figure tabs, these elements make use of default Plone 4 form_tabbing.js logic to
       create tabs out of <em>dl</em>, <em>dt</em> and <em>dd</em> html tags.
     </p>
     <p>It assumes the following structure:</p>
@@ -866,6 +875,14 @@
 
     <!--? @Tabs @jquerytools -->
     <h3 i18n:translate="" id="jquerytools-tabs">jQuerytools tabs</h3>
+    <p>These tabs are the most common type of tabs that we have on the site,
+      used on several sections such as:
+    </p>
+    <ul>
+      <li>Frontpage what's new gallery area</li>
+      <li>Data and maps page</li>
+      <li>Related contents area of each content type</li>
+    </ul>
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
         <li i18n:translate="">First tab</li>
@@ -899,9 +916,9 @@
       some extra long titles into two rows in order to fit extra titles on one row.
     </p>
     <p>Now with the current behavior <strong>eea-tabs</strong> transform into an
-      <a tal:attributes="href string:${here_url}#eea-accordion-standard">accordion</a> when any of the tab lists
-      span over more than one line by checking the size of every element on
-      window resize.
+      <a tal:attributes="href string:${here_url}#eea-accordion-standard">accordion</a>
+      when any of the tab lists span over more than one line by checking the size
+      of every element on window resize.
     </p>
     <p>Upon another resize event, as soon as there is enough space to show
       every tab title on one line the accordion will transform back into a tab.
@@ -937,8 +954,8 @@
     <!--? @Tabs @jquerytools @arrows -->
     <h4 i18n:translate="">jQuerytools arrows tabs</h4>
     <div data-xrayhtml class="prism">
-      <ul class="eea-tabs eea-tabs-arrows" style="display: block;">
-
+      <ul class="eea-tabs eea-tabs-arrows">
+        
         <li>
           <a id="tab-synthesis-report" href="#tab-synthesis-report">
             <span class="eea-icon eea-icon-clipboard eea-icon-2x"></span>

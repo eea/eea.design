@@ -42,7 +42,7 @@
       of the large full width image in an area not larger then the main content column.
     </p>
     <p>Here we also add <strong>fullwidth</strong> class to the image
-      in order to make it absolute and allow the emphasis area to go over the image</p>
+      in order to make it absolute and allow the emphasis area to go over the image.</p>
     <p class="portalMessage informationMessage">If we need some text to act
       as a copyright info found right below the image
       we can also add a paragraph with class <strong>eea-image-credit</strong>.
@@ -70,9 +70,9 @@
     <p>For this reason we have <strong>max-container-centered</strong> class which
     when applied it allows us to scale the content outside of the content container,
     up to 1400px.</p>
-    <p>We use this style within Dashboard content types to enlarge Tableau
-      dashboards or within Indicator Assessments to show charts alongside
-      title and description.
+    <p>We use this style within <a tal:attributes="href string:${portal_url}/data-and-maps/dashbords">Dashboard content types</a>
+      to enlarge Tableau dashboards or within <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessments</a>
+      to show charts alongside title and description.
     </p>
     <div data-xrayhtml class="prism">
       <div class="max-container-centered eea-block">
@@ -90,7 +90,7 @@
       Be careful though, if the URL does not end with an image extension,
       fancybox will hang.
       If the URL doesn't end with an image extension, you can still force it
-      to display the popup, by adding an extra class: fancybox.image
+      to display the popup, by adding an extra class: <strong>fancybox.image</strong>.
     </p>
     <div data-xrayhtml class="prism">
       <a class="fancybox"
@@ -100,6 +100,7 @@
     </div>
 
     <h3 i18n:translate="">Video pop-ups</h3>
+    <p>Used on <a tal:attributes="href string:${portal_url}/media/audiovisuals">audiovisuals faceted listing</a> to play videos in a fancybox.
     <div data-xrayhtml class="prism">
       <a href="https://www.eea.europa.eu/multimedia/electric-car" class="video-fancybox">
         <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide"/>
@@ -107,6 +108,9 @@
     </div>
 
     <h2 i18n:translate="">Image scales</h2>
+    <p>When loading images consider using image scales instead of original images
+      in order to save page loading times for high resolution images.
+    </p>
     <div data-xrayhtml class="prism">
       <p>
         <tal:block i18n:translate="">image_large</tal:block>
