@@ -43,7 +43,8 @@ jQuery(document).ready(function ($) {
   var $tabbed_menu;
   var tabbed_menu_found = false;
   var $eea_tabs_with_arrows = $(".eea-tabs-arrows"),
-    eea_tabs_with_arrows_found = $eea_tabs_with_arrows.length;
+      eea_tabs_with_arrows_found = $eea_tabs_with_arrows.length,
+      no_transform_pattern = ".eea-tabs-soer";
   function escapeRegExp(string) {
     return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   }
@@ -53,7 +54,7 @@ jQuery(document).ready(function ($) {
   }
 
   function make_tabs_into_accordions($tab, $tabs_panel) {
-    if (!$tabs_panel.length) {
+    if (!$tabs_panel.length || !$tab.not(no_transform_pattern).length) {
       return;
     }
     var css = $tabs_panel.attr("class");
@@ -118,7 +119,7 @@ jQuery(document).ready(function ($) {
 
   function make_accordions_into_tabs($tab) {
     var $tabs_accordion = $tab.parent().find(".eea-tabs-transformed");
-    if (!$tabs_accordion.length) {
+    if (!$tabs_accordion.length || !$tab.not(no_transform_pattern).length) {
       return;
     }
     $tabs_accordion.each(function (idx, item) {
@@ -156,19 +157,19 @@ jQuery(document).ready(function ($) {
         }
       });
     });
-    $(".js-eea-tabs-to-hide").removeClass("hidden");
+   $tabs_accordion.prev().removeClass("hidden");
   }
 
   var $buttonnavbar = $("button.navbar-toggle");
   var $soer_tabs = $(".eea-tabs-soer"),
     soer_tabs_found = $soer_tabs.length;
-  var $notransform = ".eea-tabs-arrows, .eea-tabs-soer";
   if (underscore && underscore.debounce) {
     $(window).resize(
       _.debounce(function () {
-        var $tabs = $(".eea-tabs").not($notransform);
+        var $tabs = $(".eea-tabs").not(no_transform_pattern);
         var tabs_found = $tabs.length;
         $(window).trigger("eea_debounced_resize");
+        debugger;
         if ($buttonnavbar.css("display") !== "none") {
           if (tabs_found) {
             $tabs.each(function (idx, tab) {

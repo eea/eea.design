@@ -15,10 +15,15 @@
 
 <metal:javascriptslot fill-slot="javascript_critical_slot">
   <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+
+
+
 </metal:javascriptslot>
 
 <metal:javascriptslot fill-slot="javascript_head_slot">
   <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++jquery.galleryview.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/eea-galleryview.js"></script>
 </metal:javascriptslot>
 
 <body>
