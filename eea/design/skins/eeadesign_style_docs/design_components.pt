@@ -36,20 +36,20 @@
 
 
     <!-- @Client Side Pagination -->
-    <h2 i18n:translate="">Client side pagination</h2>
+    <h2 id="client-side-pagination">Client side pagination</h2>
     <p>Used on <a tal:attributes="href string:${portal_url}/soer/2020/intro#tab-see-also">Soer 2020 intro page</a> to paginate related items photoAlbum entries.
     </p>
-    <p i18n:translate="client-side-description">
+    <p>
       In order to add on other pages all that you need is a block element
       like a div with the class
       <strong>paginate</strong> and children as content inside of it.
     </p>
 
-    <p i18n:translate="client-side-children">
+    <p>
       By default after 12 children the content will be paginated.
     </p>
 
-    <p i18n:translate="client-side-paginate">
+    <p>
       This example has a couple of divs but the div with class <strong>paginate</strong>
       could contain anything.
     </p>
@@ -62,7 +62,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish" />
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+            <span class="photoAlbumEntryTitle" >Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
             </span>
           </a>
         </div>
@@ -72,7 +72,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish" />
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+            <span class="photoAlbumEntryTitle" >Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
             </span>
           </a>
         </div>
@@ -82,7 +82,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+            <span class="photoAlbumEntryTitle" >Donec consectetur posuere enim, et cursus sapien aliquet sed.
             </span>
           </a>
         </div>
@@ -92,7 +92,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
+            <span class="photoAlbumEntryTitle" >Quisque scelerisque nisi quis nulla sagittis dignissim.
             </span>
           </a>
         </div>
@@ -102,7 +102,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
+            <span class="photoAlbumEntryTitle" >Fusce imperdiet risus et leo mattis condimentum.
             </span>
           </a>
         </div>
@@ -112,7 +112,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+            <span class="photoAlbumEntryTitle" >Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
             </span>
           </a>
         </div>
@@ -122,7 +122,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
+            <span class="photoAlbumEntryTitle" >Quisque elementum lacus a tortor vehicula porttitor.
             </span>
           </a>
         </div>
@@ -132,7 +132,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+            <span class="photoAlbumEntryTitle" >Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
             </span>
           </a>
         </div>
@@ -142,7 +142,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
+            <span class="photoAlbumEntryTitle" >Cras non lectus ante, quis cursus nunc.
             </span>
           </a>
         </div>
@@ -152,7 +152,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+            <span class="photoAlbumEntryTitle" >Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
             </span>
           </a>
         </div>
@@ -162,7 +162,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
+            <span class="photoAlbumEntryTitle" >Morbi accumsan nulla eget elit vestibulum euismod.
             </span>
           </a>
         </div>
@@ -172,7 +172,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <span class="photoAlbumEntryTitle" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </span>
           </a>
         </div>
@@ -182,7 +182,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+            <span class="photoAlbumEntryTitle" >Aenean congue posuere lectus, eget mollis orci scelerisque nec.
             </span>
           </a>
         </div>
@@ -192,26 +192,28 @@
     <!-- End @Client Side Pagination -->
 
     <!-- @Client Side Pagination with tabs -->
-    <h3 i18n:translate="">Client side pagination with tabs</h3>
-    <p i18n:translate="">
+    <h3 id="client-side-pagination-with-tabs">
+      Client side pagination with tabs
+    </h3>
+    <p >
       This example demonstrates the pagination with
       headers as tabs.
     </p>
-    <p i18n:translate="">
+    <p >
       We need some extra markup besides the parent div with class
       paginate as found in the previous example.
     </p>
-    <p i18n:translate="">
+    <p >
       First extra element is an h3 which contains the title of the tab.
     </p>
-    <p i18n:translate="">
+    <p >
       Second extra element is a simple div that wraps the content that
       you would like to have paginated.
     </p>
 
     <div data-xrayhtml class="prism">
       <div class="paginate">
-        <h3 i18n:translate="">Tab number 1</h3>
+        <h3 class="notoc">Tab number 1</h3>
         <div>
 
           <div class="photoAlbumEntry">
@@ -219,7 +221,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+              <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
               </span>
             </a>
           </div>
@@ -229,7 +231,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+              <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
               </span>
             </a>
           </div>
@@ -239,7 +241,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+              <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
               </span>
             </a>
           </div>
@@ -249,7 +251,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
+              <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
               </span>
             </a>
           </div>
@@ -259,7 +261,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
+              <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
               </span>
             </a>
           </div>
@@ -269,7 +271,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+              <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
               </span>
             </a>
           </div>
@@ -279,7 +281,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
+              <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
               </span>
             </a>
           </div>
@@ -289,7 +291,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+              <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
               </span>
             </a>
           </div>
@@ -299,7 +301,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
+              <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
               </span>
             </a>
           </div>
@@ -309,7 +311,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+              <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
               </span>
             </a>
           </div>
@@ -319,7 +321,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
+              <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
               </span>
             </a>
           </div>
@@ -329,7 +331,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <span class="photoAlbumEntryTitle" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </a>
           </div>
@@ -339,7 +341,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+              <span class="photoAlbumEntryTitle" >Aenean congue posuere lectus, eget mollis orci scelerisque nec.
               </span>
             </a>
           </div>
@@ -348,7 +350,7 @@
 
         <!-- pagination part 2 -->
 
-        <h3 i18n:translate="">Tab number 2</h3>
+        <h3 class="notoc">Tab number 2</h3>
         <div>
 
           <div class="photoAlbumEntry">
@@ -356,7 +358,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+              <span class="photoAlbumEntryTitle" >Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
               </span>
             </a>
           </div>
@@ -366,7 +368,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+              <span class="photoAlbumEntryTitle" >Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
               </span>
             </a>
           </div>
@@ -376,7 +378,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+              <span class="photoAlbumEntryTitle" >Donec consectetur posuere enim, et cursus sapien aliquet sed.
               </span>
             </a>
           </div>
@@ -386,7 +388,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque scelerisque nisi quis nulla sagittis dignissim.
+              <span class="photoAlbumEntryTitle" >Quisque scelerisque nisi quis nulla sagittis dignissim.
               </span>
             </a>
           </div>
@@ -396,7 +398,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Fusce imperdiet risus et leo mattis condimentum.
+              <span class="photoAlbumEntryTitle" >Fusce imperdiet risus et leo mattis condimentum.
               </span>
             </a>
           </div>
@@ -406,7 +408,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+              <span class="photoAlbumEntryTitle" >Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
               </span>
             </a>
           </div>
@@ -416,7 +418,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Quisque elementum lacus a tortor vehicula porttitor.
+              <span class="photoAlbumEntryTitle" >Quisque elementum lacus a tortor vehicula porttitor.
               </span>
             </a>
           </div>
@@ -426,7 +428,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+              <span class="photoAlbumEntryTitle" >Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
               </span>
             </a>
           </div>
@@ -436,7 +438,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nunc.
+              <span class="photoAlbumEntryTitle" >Cras non lectus ante, quis cursus nunc.
               </span>
             </a>
           </div>
@@ -446,7 +448,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+              <span class="photoAlbumEntryTitle" >Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
               </span>
             </a>
           </div>
@@ -456,7 +458,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Morbi accumsan nulla eget elit vestibulum euismod.
+              <span class="photoAlbumEntryTitle" >Morbi accumsan nulla eget elit vestibulum euismod.
               </span>
             </a>
           </div>
@@ -466,7 +468,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <span class="photoAlbumEntryTitle" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </a>
           </div>
@@ -476,7 +478,7 @@
               <span class="photoAlbumEntryWrapper">
                   <img src="fish"/>
               </span>
-              <span class="photoAlbumEntryTitle" i18n:translate="">Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+              <span class="photoAlbumEntryTitle" >Aenean congue posuere lectus, eget mollis orci scelerisque nec.
               </span>
             </a>
           </div>
@@ -488,22 +490,22 @@
 
 
     <!--?  @Fancybox -->
-    <h2 i18n:translate="">Fancybox pop-ups</h2>
-    <h3 i18n:translate="">Arbitrary HTML</h3>
+    <h2 id="fancybox-popups">Fancybox pop-ups</h2>
+    <h3 id="fancybox-popups-arbitrary-html">Arbitrary HTML</h3>
     <p>Fancybox is a popup component where content is visible in a box upon
       clicking on a link.
     </p>
-    <p i18n:translate="">You can have arbitrary HTML in the pop-ups:</p>
+    <p >You can have arbitrary HTML in the pop-ups:</p>
     <div data-xrayhtml class="prism">
       <div style="display:none">
         <div id="hidden-popup"
-             style="width:250px;height:150px" i18n:translate="">
+             style="width:250px;height:150px" >
           Hello World!
         </div>
       </div>
 
       <p>
-        <a class="fancybox" href="#hidden-popup" i18n:translate="">
+        <a class="fancybox" href="#hidden-popup" >
           Click me!
         </a>
       </p>
@@ -517,7 +519,7 @@
     <p>This component takes a bunch of images and displays them in a carousel
       image gallery.
     </p>
-    <p i18n:translate="" class="portalMessage informationMessage">
+    <p  class="portalMessage informationMessage">
       You need to enter an image scale after the image src otherwise the gallery
       will load the full-resolution images which could dramatically slow the
       page.
@@ -527,7 +529,7 @@
       <ul id="galleryView">
 
         <li>
-          <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
+          <span class="panel-overlay" >Overlay text goes here</span>
           <img src="monkey-with-makeup/image_large"/>
         </li>
 
@@ -537,7 +539,7 @@
 
       </ul>
     </div>
-    <p i18n:translate="">
+    <p >
       You can now use more than one galleryView on the page if needed by using
       the
       gallery class.
@@ -546,11 +548,11 @@
       as you can see in the example below.
     </p>
 
-    <p i18n:translate="">
+    <p >
       Make sure that this gallery also has an id thou as the gallery makes use
       of it.
     </p>
-    <p i18n:translate="">
+    <p >
       Also if you add a width and height as an inline style the gallery will
       match these sizes instead
       of growing to the size of it's parent as it does by default.
@@ -560,7 +562,7 @@
       <ul id="galleryView2" class="galleryView js-noFilmstrip">
 
         <li>
-          <span class="panel-overlay" i18n:translate="">Overlay text goes here</span>
+          <span class="panel-overlay" >Overlay text goes here</span>
           <img  src="monkey-with-makeup/image_large"/>
         </li>
 
@@ -574,7 +576,7 @@
 
 
     <!--?  @jQuerytools accordion -->
-    <h2 i18n:translate="" id="jquerytools-accordions">jQuerytools accordions</h2>
+    <h2 id="jquerytools-accordions">jQuerytools accordions</h2>
     <p>Used on our site usually when we want to group similar content which
       can be hidden by default unless clicked upon, accordions can also be used
       as replacement for tabs when there are many headers or on mobile resolutions.
@@ -604,7 +606,7 @@
     <!--? end @jQuerytools accordion standard  -->
 
     <!--? @jQuerytools accordion collapsed  -->
-    <h3>jQuerytools accordion (collapsed-by-default)</h3>
+    <h3 id="jquerytools-accordion-collapsed">jQuerytools accordion (collapsed-by-default)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels collapsed-by-default">
 
@@ -628,7 +630,7 @@
     <!--? end @jQuerytools accordion collapsed -->
 
     <!--? @jQuerytools accordion collapsed non-exclusive -->
-    <h3>jQuerytools accordion (collapsed-by-default and non-exclusive)</h3>
+    <h3 id="jquerytools-accordion-collapsed-non-exclusive">jQuerytools accordion (collapsed-by-default and non-exclusive)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels collapsed-by-default non-exclusive">
 
@@ -653,7 +655,7 @@
     <!--? end @jQuerytools accordion collapsed non-exclusive -->
 
     <!--? @jQuerytools accordion non-exclusive -->
-    <h3>jQuerytools accordion (non-exclusive)</h3>
+    <h3 id="jquerytools-accordion-non-exclusive">jQuerytools accordion (non-exclusive)</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels non-exclusive">
 
@@ -678,13 +680,13 @@
     <!--? end @jQuerytools accordion non-exclusive -->
 
     <!--? @jQuerytools accordion redesign -->
-    <h3>jQuerytools accordion redesign</h3>
+    <h3 id="jquerytools-accordion-redesign">jQuerytools accordion redesign</h3>
     <p>After Briefing content type redesign some new classes were created
       in order to simplify the design of the accordions.
     </p>
 
     <!--? @jQuerytools accordion redesign plain -->
-    <h4>jQuerytools accordion plain design</h4>
+    <h4 id="jquerytools-accordion-plain">jQuerytools accordion plain design</h4>
     <p>By applying the <strong>eea-accordion-panels-plain</strong> class to
       the accordion construct we change the design of the headers and panels
       to a more discreet look and feel.
@@ -719,7 +721,9 @@
     <!--? end @jQuerytools accordion redesign plain -->
 
     <!--? @jQuerytools accordion redesign plain bordered -->
-    <h4>jQuerytools accordion plain design with top border</h4>
+    <h4 id="jquerytools-accordion-plain-top-border">jQuerytools accordion plain
+      design with top border
+    </h4>
     <p>With the plain design we also have a border modifier which if applied
       adds a larger top border to the start of the accordion panels.
     </p>
@@ -768,10 +772,10 @@
 
 
     <!--?  @Tabs -->
-    <h2 i18n:translate="">Tabs</h2>
+    <h2 id="tabs">Tabs</h2>
 
     <!--?  @Tabs @daviz -->
-    <h3 i18n:translate="">Daviz tabs</h3>
+    <h3 id="daviz-tabs">Daviz tabs</h3>
     <p>Used by
       <a tal:attributes="href string:${portal_url}/data-and-maps/daviz">Daviz content types</a>
       this tab resembles the jquerytools tab variant that also uses icons in the tabs.
@@ -811,7 +815,7 @@
     <!--? end @Tabs @daviz -->
 
     <!--?  @Tabs @formtab -->
-    <h3 i18n:translate="">FormTab tabs</h3>
+    <h3 id="form-tabs">FormTab tabs</h3>
     <p>Used by
       <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessment</a>
       figure tabs, these elements make use of default Plone 4 form_tabbing.js logic to
@@ -835,7 +839,7 @@
     <!--? end @Tabs @formtab -->
 
     <!--? @Tabs @serverside -->
-    <h3 i18n:translate="">Server side tabs</h3>
+    <h3 id="server-tabs">Server side tabs</h3>
     <p>Clicking on the tab which will take you to the page that the links points
       to.</p>
     <p>As template logic you have to supply the current class on the tab that
@@ -845,15 +849,15 @@
       <div class="tabbedmenu">
         <ul>
 
-          <li i18n:translate="">
+          <li >
             <a href="#first" class="first-tab">First tab</a>
           </li>
 
-          <li i18n:translate="">
+          <li >
             <a href="#second" class="current">Second tab</a>
           </li>
 
-          <li i18n:translate="">
+          <li >
             <a href="#third">Third tab</a>
           </li>
 
@@ -879,7 +883,7 @@
     <!--? end @Tabs @serverside -->
 
     <!--? @Tabs @jquerytools -->
-    <h3 i18n:translate="" id="jquerytools-tabs">jQuerytools tabs</h3>
+    <h3 id="jquerytools-tabs">jQuerytools tabs</h3>
     <p>These tabs are the most common type of tabs that we have on the site,
       used on several sections such as:
     </p>
@@ -890,9 +894,9 @@
     </ul>
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
-        <li i18n:translate="">First tab</li>
-        <li i18n:translate="">Second tab</li>
-        <li i18n:translate="">Third tab</li>
+        <li >First tab</li>
+        <li >Second tab</li>
+        <li >Third tab</li>
       </ul>
 
       <div class="eea-tabs-panels">
@@ -914,8 +918,10 @@
     <!--? end @jquerytools @tabs -->
 
     <!--? @Tabs @jquerytools @transformed -->
-    <h4 i18n:translate="">jQuerytools tabs accordion transformation</h4>
-    <p i18n:translate="">
+    <h4 id="jquerytools-tabs-accordion-transform">
+      jQuerytools tabs accordion transformation
+    </h4>
+    <p >
       Previously we had an extra modifier class to eea-tabs named
       <strong>two-rows</strong> which added a max width to the tabs breaking
       some extra long titles into two rows in order to fit extra titles on one row.
@@ -933,9 +939,9 @@
 
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
-        <li i18n:translate="">First tab</li>
-        <li i18n:translate="">Second tab that will trigger accordion transformation on browser resize</li>
-        <li i18n:translate="">Third tab</li>
+        <li >First tab</li>
+        <li >Second tab that will trigger accordion transformation on browser resize</li>
+        <li >Third tab</li>
       </ul>
 
       <div class="eea-tabs-panels">
@@ -957,7 +963,7 @@
     <!--? end @Tabs @jquerytools @transformed -->
 
     <!--? @Tabs @jquerytools @arrows -->
-    <h4 i18n:translate="">jQuerytools arrows tabs</h4>
+    <h4 id="jquerytools-arrow-tabs">jQuerytools arrows tabs</h4>
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs eea-tabs-arrows">
         
@@ -1020,7 +1026,7 @@
     <!--? end @Tabs -->
 
     <!--? @PhotoAlbumCards -->
-    <h2>Photo Album cards</h2>
+    <h2 id="photo-album-cards">Photo Album cards</h2>
     <!--? @PhotoAlbumCards @album -->
     <h3 id="album-view-photo-album">Album views photo album cards</h3>
     <p>Used on <a tal:attributes="href string:${portal_url}/code/design-elements/views#atct_album_view"> atct_album_view</a> template as well as other listings where we need to layout
@@ -1062,7 +1068,7 @@
     <!--? end @PhotoAlbumCards @album -->
 
     <!--? @PhotoAlbumCards @related -->
-    <h3>Related items photo album cards</h3>
+    <h3 id="related-photo-album-cards">Related items photo album cards</h3>
     <p>Styled for the latest Briefing redesign the photoAlbum component has the
       following look when it's part of the <strong>relatedItems</strong> section.
     </p>
@@ -1098,7 +1104,7 @@
 
 
     <!--? @Tiles  -->
-    <h2>Tiles</h2>
+    <h2 id="tiles">Tiles</h2>
     <!--? @Tiles @plone -->
     <h3 id="plone-tile-component">Plone tiles</h3>
     <p>Used by the <a tal:attributes="href string:${portal_url}/code/design-elements/views#folder_summary_view">folder_summary_view</a>
@@ -1136,7 +1142,7 @@
     <!--? end @Tiles @plone -->
 
     <!--? @Tiles @themes -->
-    <h3>Themes tile card</h3>
+    <h3 id="themes-tile-card">Themes tile card</h3>
         <p>Originally created for the elastic search apps, <strong>eea-tile</strong> components resemble
         the <a href="https://getbootstrap.com/docs/4.5/components/card/">Bootstrap card component</a>
           and they are used in places where there is a need to feature certain titles by using a traditional card component design.
@@ -1170,9 +1176,9 @@
     <!--? end @Tiles @themes -->
 
     <!--? @Tiles @search -->
-    <h3>Search app tiles</h3>
+    <h3 id="search-app-tiles">Search app tiles</h3>
     <!--? @Tiles @search @colored -->
-    <h4>Colored tiles</h4>
+    <h4 id="colored-tiles">Colored tiles</h4>
     <p>Used on the <a tal:attributes="href string:http://search.apps.eea.europa.eu#landing">search app frontpage</a>
       these tiles are used to promote the ranges of values found for the right side facets.
     </p>
@@ -1193,7 +1199,7 @@
     <!--? end @Tiles @search @colored -->
 
     <!--? @Tiles @search @card -->
-    <h4>Card tiles</h4>
+    <h4 id="card-tiles">Card tiles</h4>
     <p>Used on the card layout of the <a tal:attributes="href string:http://search.apps.eea.europa.eu">search app</a>,
       these tiles are used to list result objects arranged as cards.
     </p>
@@ -1247,12 +1253,12 @@
 
 
     <!--?  @Cards  -->
-    <h2>Cards</h2>
+    <h2 id="cards">Cards</h2>
     <p>Used on <a tal:attributes="href string:${portal_url}/themes/air">themecentre pages</a>,
       these cards are used to promote featured content for the themecentre section.
     </p>
     <!--?  @Cards @simple  -->
-    <h3>Simple card</h3>
+    <h3 id="simple-card">Simple card</h3>
     <div data-xrayhtml class="prism">
       <div class="eea-card eea-card--bg-light direction-column">
         <div class="eea-card-header">
@@ -1281,7 +1287,7 @@
     <!--? end @Cards @simple  -->
 
     <!--? @Cards @double  -->
-    <h3>Double card</h3>
+    <h3 id="double-card">Double card</h3>
     <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
       these cards are used to promote two featured content side by side.
     <div data-xrayhtml class="prism">
@@ -1311,7 +1317,7 @@
     <!--? end @Cards @double  -->
 
     <!--? @Cards @fullwidth  -->
-    <h4>Fullwidth card</h4>
+    <h4 id="fullwidth-card">Fullwidth card</h4>
     <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
       these cards are used to promote one featured content predominantly.
     <div data-xrayhtml class="prism">
@@ -1345,7 +1351,7 @@
     <!--? end @Cards @fullwidth  -->
 
     <!--? @Cards @options  -->
-    <h4>Card options (variables)</h4>
+    <h4 id="card-options">Card options (variables)</h4>
     <p>The following modifier classes can be added to the eea-card component:</p>
     <table class="listing">
       <thead>

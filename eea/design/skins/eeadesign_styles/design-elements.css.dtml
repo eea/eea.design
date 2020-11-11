@@ -152,6 +152,10 @@
 .eea-accordion-title > .eea-icon-right {
     order: 10;
 }
+/* ensure that eea-icon-right acts as floated right now that h2 is flexed */
+.eea-accordion-panel > h2 > .eea-icon-right {
+    margin-left: auto;
+}
 .eea-accordion-panels-bordered-primary {
     border-top: 3px solid #000;
 }
