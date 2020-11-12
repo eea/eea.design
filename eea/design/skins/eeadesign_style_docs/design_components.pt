@@ -940,9 +940,9 @@
 
     <div data-xrayhtml class="prism">
       <ul class="eea-tabs">
-        <li >First tab</li>
-        <li >Second tab that will trigger accordion transformation on browser resize</li>
-        <li >Third tab</li>
+        <li>First tab</li>
+        <li>Tab that will trigger accordion transformation on browser resize</li>
+        <li>Third tab</li>
       </ul>
 
       <div class="eea-tabs-panels">
@@ -1157,7 +1157,7 @@
         <div class="eea-tileInner">
           <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="eea-tileLink eea-tileHeadLink">
             <div class="eea-tileHead">
-              <div class="eea-tileThumb lazy" style="background-image: url(&quot;/post-corona-planet/index/image_preview&quot;);">
+              <div class="eea-tileThumb lazy" style="background-image: url(&quot;//www.eea.europa.eu/post-corona-planet/index/image_preview&quot;);">
               </div>
             </div>
           </a>
@@ -1305,7 +1305,7 @@
 
         <div class="eea-card-body">
           <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-image-link  eea-card-image--pull eea-card-image-bordered eea-card-with-text">
-            <img alt="" class="eea-card-image lazy" src="/publications/national-emission-reduction-commitments-directive/image_large" />
+            <img alt="" class="eea-card-image lazy" src="/publications/assessing-air-quality-through-citizen-science/image_large" />
           </a>
 
           <div class="eea-card-body-text">

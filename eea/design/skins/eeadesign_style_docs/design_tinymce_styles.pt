@@ -25,8 +25,8 @@
       table of contents
     </div>
 
-    <h2>Box Styles</h2>
-    <p>Just like pull quote styles, box styles can be used to add emphasis to a section
+    <h2 id="box-styles">Box Styles</h2>
+    <p>Just like <a tal:attributes="href string:${here_url}#pullquotes">pullquote styles</a>, box styles can be used to add emphasis to a section
       of content wrapping the selected content with a given box background color.</p>
 
     <h3>Note</h3>
@@ -133,8 +133,8 @@
           </ol>
         </li>
       </ol>
-      <p class="portalMessage informationMessage">All of these box variants are selectable
-        from the editor style dropdown.
+      <p class="portalMessage informationMessage">All of these box variants are
+        selectable from the editor style dropdown.
       </p>
       <p><strong>Example:</strong></p>
       <div data-xrayhtml class="prism">
@@ -144,7 +144,7 @@
       </div>
 
 
-    <h2>Quotes</h2>
+    <h2 id="pullquotes">Quotes</h2>
     <h3>Inline quote</h3>
     <div data-xrayhtml class="prism">
       <blockquote>
@@ -183,8 +183,9 @@
 
 
     <h2>Fullwidth background sections</h2>
-    <p>Just like <a tal:attributes="href string:${here_url}#boxes">boxes</a> we can also make use of <em>fullwidth background sections</em>
-    to add emphasis to the given area.</p>
+    <p>Just like <a tal:attributes="href string:${here_url}#boxes">boxes</a>
+      we can also make use of <em>fullwidth background sections</em>
+      to add emphasis to the given area.</p>
     <p>Also like the boxes we have 3 color options:</p>
     <div data-xrayhtml class="prism">
       <div class="fullwidth-bg eea-block bg-primary">
@@ -209,7 +210,7 @@
           </p>
         </blockquote>
         <p>This way you can nest a <strong>Inline quote</strong> within a
-          <strong>Fullwidth background section</strong>
+          <strong>Fullwidth background section</strong>.
         </p>
       </div>
     </div>
@@ -237,22 +238,26 @@
       </div>
     </div>
 
-    <h4>Two tiles</h4>
+    <h4>Two tiles with video content</h4>
     <div data-xrayhtml class="prism">
       <div class="tiles tiles--2">
-        <div class="tile tile--bordered">
+
+        <div class="tile">
           <div class="tile-item">
-            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
-            <div class="tile-item-body">of tracking industrial emissions</div>
+            <h3 class="tile-item-header h1 notoc" id="10-years">What &amp; how?</h3>
+            <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Tobias" controls="controls" preload="auto" poster="resolveuid/05f995b884f94542929de52b451baeb8" src="https://cmshare.eea.europa.eu/s/M3AExbKXxJ6W6yt/download" type="video/mp4" width="320" height="180"> </video>
+            </div>
           </div>
         </div>
 
-        <div class="tile tile--bordered">
+        <div class="tile">
           <div class="tile-item">
-            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
-            <div class="tile-item-body">of tracking industrial emissions</div>
+            <h3 class="tile-item-header h1 notoc" id="10-years">Key messages</h3>
+            <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Key messages_Hans_short version" controls="controls" preload="auto" poster="resolveuid/fa8f4918d59f4f64928593140aadc328" src="https://cmshare.eea.europa.eu/s/28eMmEAnkpn2NaP/download" type="video/mp4" width="320" height="180"> </video>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
 

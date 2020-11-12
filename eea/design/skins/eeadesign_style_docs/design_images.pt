@@ -28,7 +28,7 @@
     <h2>Image containers</h2>
     <h3>Fullwidth image container</h3>
     <p>We have <strong>fullwidth-container-centered</strong> class which
-      when applied it allows us to scale the image while maintaining the text values
+      when applied on a parent div it allows us to scale the child image while maintaining the children text values
       within the center column position.</p>
     <div data-xrayhtml class="prism">
       <div class="fullwidth-container-centered eea-block">
@@ -86,7 +86,7 @@
     <h2>Pop-ups</h2>
     <h3>Image pop-ups</h3>
     <p>
-      If the a-tag hrefs to an image, it will be displayed in the popup.
+      If the a-tag href links to an image, it will be displayed in the popup.
       Be careful though, if the URL does not end with an image extension,
       fancybox will hang.
       If the URL doesn't end with an image extension, you can still force it
@@ -109,7 +109,7 @@
 
     <h2>Image scales</h2>
     <p>When loading images consider using image scales instead of original images
-      in order to save page loading times for high resolution images.
+      in order to improve page loading times for high resolution images.
     </p>
     <div data-xrayhtml class="prism">
       <p>

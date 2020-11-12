@@ -65,7 +65,7 @@
 
     <h3>Bullet lists</h3>
     <p>This bullet style is used within themes section where the bullet is inside
-      the ul and not outside as regular unordered lists behave
+      the ul and not outside as regular unordered lists behave.
     </p>
     <div data-xrayhtml class="prism">
       <ul class="bullet-list">

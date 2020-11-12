@@ -15,6 +15,9 @@
 <metal:javascriptslot fill-slot="javascript_head_slot">
   <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
 
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++jquery.galleryview.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/eea-galleryview.js"></script>
+
 </metal:javascriptslot>
 
 <body>
@@ -34,14 +37,14 @@
       <li>Topics</li>
     </ul>
     <p>All of the children will be visible on these views with differences in
-      the presentation and the amount of attributes and information displayed.
+      the amount and the presentation of attributes and information displayed.
     </p>
 
 
     <!--? @folder_accordion_view  -->
     <h3>Folder accordion view</h3>
-    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-accordions">accordion component</a> to show folder contents
-      grouped into 2 sections:
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-accordions">Accordion component</a>
+      to show folder contents grouped into 2 sections:
     </p>
     <ol>
       <li>Folderish content types with accordion title set to first element title.</li>
@@ -120,7 +123,7 @@
     <!--? @atct_album_view  -->
     <h3 id="atct_album_view">Folder atct album view</h3>
     <p>This view lists every child with the
-      <a tal:attributes="href string:${portal_url}/code/design-elements/components#album-view-photo-album">photo album component.</a>
+      <a tal:attributes="href string:${portal_url}/code/design-elements/components#album-view-photo-album">Photo album component.</a>
     </p>
 
     <div data-xrayhtml class="prism">
@@ -150,7 +153,7 @@
 
     <!--? @Gallery view  -->
     <h3>Folder gallery view</h3>
-    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#image-gallery">gallery component</a> to show folder contents that have images as fields which can then be used in this presentational view.
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#image-gallery">Gallery component</a> to show folder contents that have images as fields which can then be used in this presentational view.
     </p>
     <div data-xrayhtml class="prism">
       <ul id="galleryView">
@@ -270,7 +273,7 @@
 
     <!--? @folder_tabs_view  -->
     <h3>Folder tabs view</h3>
-    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-tabs">tabs component</a> behaving just like the accordion view, with the only difference being
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-tabs">Tabs component</a> behaving just like the accordion view, with the only difference being
       the use of tabs instead of accordions for headers.</p>
 
     <div data-xrayhtml class="prism">
@@ -328,7 +331,7 @@
 
     <!--? @folder_tabs_view  -->
     <h3>Folder tabular view</h3>
-    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/tables#listing">listing table markup</a> to show folder content's following attributes:
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/tables#listing">Listing table markup</a> to show folder content's following attributes:
     </p>
     <ol>
       <li>Title</li>

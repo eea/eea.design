@@ -44,7 +44,8 @@
 
   <h2>Faceted navigation widgets</h2>
   <p>In this document we show the most commonly used widgets from
-    eea.facetednavigation alongside a simplified markup.
+    <a href="https://github.com/eea/eea.facetednavigation">eea.facetednavigation</a>
+    alongside a simplified markup.
     Checkout some sections of the site that make use of faceted navigation
     view such as <a tal:attributes="href string:${portal_url}/articles">Articles</a>
     or <a tal:attributes="href string:${portal_url}/media/audiovisuals">Audiovisuals</a>
@@ -294,7 +295,7 @@
   <h2>Search apps widgets</h2>
     <p>All of the widgets described in this section are demoed with a static image
       representing the final look as it is found now at
-      <a href=http://search.apps.eea.europa.eu">EEA Search app</a>.
+      <a href=http://search.apps.eea.europa.eu">EEA Search</a> website.
     </p>
 
     <h3>Checkbox widget</h3>
