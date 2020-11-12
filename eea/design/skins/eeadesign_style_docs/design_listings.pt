@@ -149,7 +149,7 @@
 
 
     <!--? @Gallery view  -->
-    <h3 i18n:translate="">Folder gallery view</h3>
+    <h3>Folder gallery view</h3>
     <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#image-gallery">gallery component</a> to show folder contents that have images as fields which can then be used in this presentational view.
     </p>
     <div data-xrayhtml class="prism">
@@ -327,7 +327,7 @@
 
 
     <!--? @folder_tabs_view  -->
-    <h3 i18n:translate="">Folder tabular view</h3>
+    <h3>Folder tabular view</h3>
     <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/tables#listing">listing table markup</a> to show folder content's following attributes:
     </p>
     <ol>

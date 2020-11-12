@@ -34,7 +34,7 @@
       table of contents
     </div>
 
-    <h2 i18n:translate="">Inputs</h2>
+    <h2>Inputs</h2>
     <h3>Submit inputs</h3>
     <div data-xrayhtml class="prism">
     <div class="formControls">
@@ -67,7 +67,7 @@
     </div>
 
     <h4>Themes search text input</h4>
-    <p class="portalMessage informationMessage">Note that this input style  is loaded only on <a href="#" tal:attributes="href string:${portal_url}/themes">themes</a> page</p>
+    <p class="portalMessage informationMessage">Note that this input style  is loaded only on <a href="#" tal:attributes="href string:${portal_url}/themes">themes</a> page.</p>
     <div data-xrayhtml class="prism">
       <input type="text" name="themes_query" class="js-gsc-input-query eea-input-query" placeholder="Search topics">
     </div>
@@ -96,10 +96,9 @@
 
 
     <h4>Search app text input</h4>
-    <p>Style found only on <a href="http://search.apps.eea.europa.eu">Search app website</a></p>
+    <p>Style found only on <a href="http://search.apps.eea.europa.eu">Search app</a> website.</p>
     <p class="portalMessage informationMessage">Given the fact that the styles are not loaded on this site, we
-       hide the actual markup and instead show an image of how it looks on site
-       now.</p>
+       hide the actual markup and instead show an image of how it currently looks on the search site.</p>
 
     <div data-xrayhtml class="prism">
       <img tal:attributes="src string:${portal_url}/search-app-input.png" />

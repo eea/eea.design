@@ -36,19 +36,19 @@
     </div>
 
     <!--? @icons  -->
-    <h2 i18n:translate="">EEA icons (scalable vector icons)</h2>
-    <p i18n:translate="">Simply use the <strong>&lt;span&gt;</strong> tag with
+    <h2>EEA icons (scalable vector icons)</h2>
+    <p>Simply use the <strong>&lt;span&gt;</strong> tag with
       specific classes
       as following:</p>
     <span class="eea-icon eea-icon-camera-retro"></span> eea-icon-camera-retro
     <pre>&lt;span class=&quot;eea-icon eea-icon-camera-retro&quot;&gt;&lt;/span&gt;eea-icon-camera-retro</pre>
-    <p i18n:translate="">You can use the entire set of
+    <p>You can use the entire set of
       <a rel="external" href="https://fontawesome.com/v4.7.0/icons/">Font
       Awesome v4.7.0 icons</a> as part of the EEA web design. Font Awesome gives
       you scalable vector icons that can instantly be customized - size, color,
       drop shadow, and anything that can be done with the power of CSS.
     </p>
-    <h4 i18n:translate="">More icons</h4>
+    <h4>More icons</h4>
     <div data-xrayhtml class="prism">
       <p>
         <span class="eea-icon eea-icon-flag eea-icon-2x"></span>
@@ -65,28 +65,28 @@
       </p>
     </div>
 
-    <p class="callout" i18n:translate="">There are many ways to customise the
+    <p class="portalMessage informationMessage">There are many ways to customise the
       icons display. See the <a href="http://fontawesome.io/examples/">practical examples</a>
       and just replace the generic <strong>fa</strong> classname with our
       <strong>eea-icon</strong> class prefix.
     </p>
 
-    <h4 i18n:translate="">Floated icons</h4>
-    <p i18n:translate="">You can float icons right or left by using
+    <h4>Floated icons</h4>
+    <p>You can float icons right or left by using
       <strong>eea-icon-right</strong> or
-      <strong>eea-icon-left</strong> class, instead of font awesome .pull-left
-      and .pull-right:</p>
+      <strong>eea-icon-left</strong> class, instead of font awesome <strong>pull-left</strong>
+      and <strong>pull-right</strong>:</p>
     <pre>&lt;p&gt;&lt;span class="eea-icon eea-icon-right eea-icon-comment"&gt;&lt;/span&gt;&lt;/a&gt;Right floated comment icon&lt;/p&gt;
     </pre>
-    <p i18n:translate="">
+    <p>
       <span class="eea-icon eea-icon-right eea-icon-comment"></span>We can float
       the icon to the right of the text as we can see from this example.
     </p>
 
-    <h4 i18n:translate="">Animated icons</h4>
-    <p i18n:translate="">
+    <h4>Animated icons</h4>
+    <p>
       You can animate icons using
-      <a href="http://l-lin.github.io/font-awesome-animation/" i18n:name="link">Font
+      <a href="http://l-lin.github.io/font-awesome-animation/">Font
         Awesome Animation</a>
       classes together with font awesome icons as following:
     </p>
@@ -96,7 +96,7 @@
              eea-icon-heart eea-icon-anim-burst animated
     </pre>
 
-    <h4 i18n:translate="">
+    <h4>
       More animated icons
     </h4>
 
@@ -133,8 +133,8 @@
     <!--? end @icons  -->
 
     <!--? @messages  -->
-    <h2 i18n:translate="">Portal messages and callouts</h2>
-    <p i18n:translate="">Portal messages (aka callout / text boxes) are
+    <h2>Portal messages and callouts</h2>
+    <p>Portal messages (aka callout / text boxes) are
       "in publishing ... a short piece of text set in larger type than the rest
       of the page
       and intended to attract attention ... in word processing is a special text
@@ -143,14 +143,14 @@
       on a document..." (definition source: <a
           href="http://en.wikipedia.org/wiki/Callout">Wikipedia</a>).</p>
 
-    <p i18n:translate="">These styles can be added manually in HTML by a
+    <p>These styles can be added manually in HTML by a
       developer or
       they can be added on text fields by content authors using the WYSIWYG
       editor (TinyMCE Styles
       DropDown).
     </p>
 
-    <h3 i18n:translate="">Standard call-out</h3>
+    <h3>Standard call-out</h3>
     <div data-xrayhtml class="prism">
       <p class="callout">This is a callout: a piece of text set in a special
         layout intended to attract attention.</p>
@@ -177,14 +177,14 @@
       </div>
     </div>
 
-    <h3 i18n:translate="">Standard portal message</h3>
+    <h3>Standard portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage">
         Settings have been applied
       </div>
     </div>
 
-    <h3 i18n:translate="">Information portal message</h3>
+    <h3>Information portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage informationMessage">
         Your screensaver has been upgraded, please consider to restart your
@@ -192,77 +192,77 @@
       </div>
     </div>
 
-    <h3 i18n:translate="">Error portal message</h3>
+    <h3>Error portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage errorMessage">
         This is an example of an error message
       </div>
     </div>
 
-    <h3 i18n:translate="">Warning portal message</h3>
+    <h3>Warning portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage warningMessage">
         Warning! Core meltdown at EEA HQ, code super-duper-red
       </div>
     </div>
 
-    <h3 i18n:translate="">Attention portal message</h3>
+    <h3>Attention portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage attentionMessage">
         This is an example of an message that requires your attention
       </div>
     </div>
 
-    <h3 i18n:translate="">Thumbs up portal message</h3>
+    <h3>Thumbs up portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage thumbsUpMessage">
         Thumbs up for the content on this site
       </div>
     </div>
 
-    <h3 i18n:translate="">Yes portal message</h3>
+    <h3>Yes portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage yesMessage">
         Message which could indicate an agreement or something done
       </div>
     </div>
 
-    <h3 i18n:translate="">No portal message</h3>
+    <h3>No portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage noMessage">
         Message which could indicate a disagreement or something not done
       </div>
     </div>
 
-    <h3 i18n:translate="">Rosette translation portal message</h3>
+    <h3>Rosette translation portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage rosetteMessage">
         Message which could indicate a translation message
       </div>
     </div>
 
-    <h3 i18n:translate="">Idea portal message</h3>
+    <h3>Idea portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage ideaMessage">
         Message which could indicate a call to action message
       </div>
     </div>
 
-    <h3 i18n:translate="">Smiley portal message</h3>
+    <h3>Smiley portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage smileyMessage">
         Smiley Message type
       </div>
     </div>
 
-    <h3 i18n:translate="">Note portal message</h3>
+    <h3>Note portal message</h3>
     <div data-xrayhtml class="prism">
       <div class="portalMessage noteMessage">
         Note Message
       </div>
     </div>
 
-    <h3 i18n:translate="">Custom portal message</h3>
+    <h3>Custom portal message</h3>
     <p>By using the &lt;span&gt;-tag icon syntax, you can create custom portal
       messages. See section "EEA Icons"
       for all available icons.</p>
@@ -276,7 +276,7 @@
 
 
     <!-- @Ribbon design ?-->
-    <h2 i18n:translate="">Ribbon albums</h2>
+    <h2>Ribbon albums</h2>
     <p>Photo album thumbnails can make use of a ribbon text.</p>
     <p>The markup for this ribbon is:</p>
     <pre>
@@ -294,7 +294,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nun</span>
+            <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nun</span>
           </a>
           <div class="ribbon-wrapper">
             <div class="ribbon">Recent</div>
@@ -306,7 +306,7 @@
             <span class="photoAlbumEntryWrapper">
                 <img src="fish"/>
             </span>
-            <span class="photoAlbumEntryTitle" i18n:translate="">Cras non lectus ante, quis cursus nun
+            <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nun
             </span>
           </a>
           <div class="ribbon-wrapper">
@@ -320,20 +320,20 @@
 
 
     <!--? @tooltips  -->
-    <h2 i18n:translate="">Tooltips</h2>
-    <h3 i18n:translate="">Fixed size</h3>
+    <h2>Tooltips</h2>
+    <h3>Fixed size</h3>
     <p>The following tooltips have fixed width and height.</p>
     <div data-xrayhtml class="prism">
-      <img src="fish" title="Tooltips can go right" i18n:attributes="title" class="eea-tooltip-left" />
+      <img src="fish" title="Tooltips can go right" class="eea-tooltip-left" />
 
-      <img src="fish" title="Tooltips can go up" i18n:attributes="title" class="eea-tooltip-top" />
+      <img src="fish" title="Tooltips can go up" class="eea-tooltip-top" />
 
-      <img src="fish" title="Tooltips can go down" i18n:attributes="title" class="eea-tooltip-bottom" />
+      <img src="fish" title="Tooltips can go down" class="eea-tooltip-bottom" />
 
-      <img src="fish" title="Tooltips can go left" i18n:attributes="title" class="eea-tooltip-right" />
+      <img src="fish" title="Tooltips can go left" class="eea-tooltip-right" />
     </div>
 
-    <h3 i18n:translate="">Flexible size</h3>
+    <h3>Flexible size</h3>
     <p>The following tooltips have a dynamic height which is automatically
       adjusted depending
       on the amount of text used.</p>
@@ -341,22 +341,22 @@
       <img src="fish"
            class="eea-flexible-tooltip-left"
            title="The name given to the resource. Typically, a title will be a name by which the resource is formally known"
-           i18n:attributes="title" />
+            />
 
       <img src="fish"
            class="eea-flexible-tooltip-top"
            title="The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content"
-           i18n:attributes="title" />
+            />
 
       <img src="fish"
            class="eea-flexible-tooltip-bottom"
            title="Short description of the data resource"
-           i18n:attributes="title" />
+            />
 
       <img src="fish"
            class="eea-flexible-tooltip-right"
            title="Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights"
-           i18n:attributes="title" />
+            />
     </div>
     <!--? end @tooltips  -->
 

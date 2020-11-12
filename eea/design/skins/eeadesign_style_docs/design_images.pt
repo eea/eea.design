@@ -25,8 +25,8 @@
       table of contents
     </div>
 
-    <h2 i18n:translate="">Image containers</h2>
-    <h3 i18n:translate="">Fullwidth image container</h3>
+    <h2>Image containers</h2>
+    <h3>Fullwidth image container</h3>
     <p>We have <strong>fullwidth-container-centered</strong> class which
       when applied it allows us to scale the image while maintaining the text values
       within the center column position.</p>
@@ -64,7 +64,7 @@
 
     </div>
 
-    <h3 i18n:translate="">Max container centered</h3>
+    <h3>Max container centered</h3>
     <p>Sometimes we need to enlarge an image or iframe beyond the center column
       that we have which is 830px.</p>
     <p>For this reason we have <strong>max-container-centered</strong> class which
@@ -84,8 +84,8 @@
     </div>
 
     <h2>Pop-ups</h2>
-    <h3 i18n:translate="">Image pop-ups</h3>
-    <p i18n:translate="">
+    <h3>Image pop-ups</h3>
+    <p>
       If the a-tag hrefs to an image, it will be displayed in the popup.
       Be careful though, if the URL does not end with an image extension,
       fancybox will hang.
@@ -99,7 +99,7 @@
       </a>
     </div>
 
-    <h3 i18n:translate="">Video pop-ups</h3>
+    <h3>Video pop-ups</h3>
     <p>Used on <a tal:attributes="href string:${portal_url}/media/audiovisuals">audiovisuals faceted listing</a> to play videos in a fancybox.
     <div data-xrayhtml class="prism">
       <a href="https://www.eea.europa.eu/multimedia/electric-car" class="video-fancybox">
@@ -107,34 +107,34 @@
       </a>
     </div>
 
-    <h2 i18n:translate="">Image scales</h2>
+    <h2>Image scales</h2>
     <p>When loading images consider using image scales instead of original images
       in order to save page loading times for high resolution images.
     </p>
     <div data-xrayhtml class="prism">
       <p>
-        <tal:block i18n:translate="">image_large</tal:block>
+        <tal:block>image_large</tal:block>
         <br/><img src="giraffe/image_large"/></p>
       <p>
-        <tal:block i18n:translate="">image_preview</tal:block>
+        <tal:block>image_preview</tal:block>
         <br/><img src="giraffe/image_preview"/></p>
       <p>
-        <tal:block i18n:translate="">image_mini</tal:block>
+        <tal:block>image_mini</tal:block>
         <br/><img src="giraffe/image_mini"/></p>
       <p>
-        <tal:block i18n:translate="">image_thumb</tal:block>
+        <tal:block>image_thumb</tal:block>
         <br/><img src="giraffe/image_thumb"/></p>
       <p>
-        <tal:block i18n:translate="">image_tile</tal:block>
+        <tal:block>image_tile</tal:block>
         <br/><img src="giraffe/image_tile"/></p>
       <p>
-        <tal:block i18n:translate="">image_icon</tal:block>
+        <tal:block>image_icon</tal:block>
         <br/><img src="giraffe/image_icon"/></p>
       <p>
-        <tal:block i18n:translate="">image_listing</tal:block>
+        <tal:block>image_listing</tal:block>
         <br/><img src="giraffe/image_listing"/></p>
       <p>
-        <tal:block i18n:translate="">image_wide (only available for videos)
+        <tal:block>image_wide (only available for videos)
         </tal:block>
         <br/><img
           src="resolveuid/af79241214c3088375297823b3ccf560/image_wide"/></p>

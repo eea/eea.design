@@ -24,26 +24,26 @@
       table of contents
     </div>
 
-    <h2 i18n:translate="" id="listing">Tables - sortable and no sortable</h2>
+    <h2 id="listing">Tables - sortable and not sortable</h2>
     <div data-xrayhtml class="prism">
       <table class="listing">
         <thead>
         <tr>
-          <th i18n:translate="" class="nosort">Product - not sortable</th>
-          <th i18n:translate="">Price - sortable</th>
+          <th class="nosort">Product - not sortable</th>
+          <th>Price - sortable</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td i18n:translate="">Ice cream</td>
+          <td>Ice cream</td>
           <td>50</td>
         </tr>
         <tr>
-          <td i18n:translate="">Pony</td>
+          <td>Pony</td>
           <td>75</td>
         </tr>
         <tr>
-          <td i18n:translate="">Car</td>
+          <td>Car</td>
           <td>9999999</td>
         </tr>
         </tbody>
@@ -64,14 +64,14 @@
           </tr>
           </thead>
           <tbody>
-          <tr class="odd">
+          <tr>
             <td>
               <input type="checkbox" class="noborder" name="paths:list" id="#" value="#">
             </td>
             <td><a href="#">Title</a></td>
             <td>with class noborder</td>
           </tr>
-          <tr class="even">
+          <tr>
             <td>
               <input type="checkbox" class="noborder" name="paths:list" id="#" value="#">
             </td>
@@ -85,16 +85,16 @@
 
     <h2>Vertical listing table</h2>
     <div data-xrayhtml class="prism">
-      <p>Add <strong>vertical listing</strong> classes to table in order to
-        make the table vertical
+      <p>Add <strong>vertical listing</strong> classes to the table tag in order to
+        make the table vertical.
       </p>
       <table class="vertical listing" summary="Vertical listing example">
         <tbody>
-        <tr class="odd">
+        <tr>
           <th>Table heading</th>
           <td>Odd table item</td>
         </tr>
-        <tr class="even">
+        <tr>
           <th>Another heading</th>
           <td>Even table item</td>
         </tr>
@@ -105,6 +105,8 @@
     <h2>Striped table</h2>
     <p>Add <strong>odd</strong> and <strong>even</strong> classes to each
       <strong>tr tag</strong> in order to add a stripe effect to table rows
+      or add <strong>listing</strong> class to the table and these classes will
+      be added by javascript.
     </p>
     <div data-xrayhtml class="prism">
       <table class="listing" id="someid" summary="Sortable striped table example">

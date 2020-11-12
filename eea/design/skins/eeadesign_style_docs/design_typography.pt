@@ -26,21 +26,21 @@
 
     <h2>Headers</h2>
     <div data-xrayhtml class="prism">
-      <h1 i18n:translate="" class="notoc">This is a h1</h1>
-      <h2 i18n:translate="" class="notoc">This is a h2</h2>
-      <h3 i18n:translate="" class="notoc">This is a h3</h3>
-      <h4 i18n:translate="" class="notoc">This is a h4</h4>
+      <h1 class="notoc">This is a h1</h1>
+      <h2 class="notoc">This is a h2</h2>
+      <h3 class="notoc">This is a h3</h3>
+      <h4 class="notoc">This is a h4</h4>
     </div>
 
     <h2>Basic text styles</h2>
     <div data-xrayhtml class="prism">
     <p>
-      <tal:block i18n:translate="">This is a paragraph.</tal:block>&nbsp;
+      This is a paragraph.
     </p>
     </div>
 
     <div data-xrayhtml class="prism">
-      <a href="#" class="moreLink" i18n:translate="">This is a moreLink</a>
+      <a href="#" class="moreLink">This is a moreLink</a>
     </div>
 
     <h2>Lists</h2>
@@ -147,13 +147,13 @@
     </div>
 
 
-    <h2 i18n:translate="">Quotations</h2>
+    <h2>Quotations</h2>
     <div data-xrayhtml class="prism">
       <blockquote>
-        <p i18n:translate="">
+        <p>
           Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
         </p>
-        <p class="source" i18n:translate="">Stavros Dimas, Commissioner for Environment</p>
+        <p class="source">Stavros Dimas, Commissioner for Environment</p>
       </blockquote>
     </div>
 

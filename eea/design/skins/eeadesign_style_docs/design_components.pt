@@ -195,18 +195,18 @@
     <h3 id="client-side-pagination-with-tabs">
       Client side pagination with tabs
     </h3>
-    <p >
+    <p>
       This example demonstrates the pagination with
       headers as tabs.
     </p>
-    <p >
+    <p>
       We need some extra markup besides the parent div with class
       paginate as found in the previous example.
     </p>
     <p >
       First extra element is an h3 which contains the title of the tab.
     </p>
-    <p >
+    <p>
       Second extra element is a simple div that wraps the content that
       you would like to have paginated.
     </p>
@@ -505,7 +505,7 @@
       </div>
 
       <p>
-        <a class="fancybox" href="#hidden-popup" >
+        <a class="fancybox" href="#hidden-popup">
           Click me!
         </a>
       </p>
@@ -521,7 +521,7 @@
     </p>
     <p  class="portalMessage informationMessage">
       You need to enter an image scale after the image src otherwise the gallery
-      will load the full-resolution images which could dramatically slow the
+      will load the full-resolution images which could drastically slow the
       page.
     </p>
 
@@ -539,7 +539,7 @@
 
       </ul>
     </div>
-    <p >
+    <p>
       You can now use more than one galleryView on the page if needed by using
       the
       gallery class.
@@ -548,11 +548,11 @@
       as you can see in the example below.
     </p>
 
-    <p >
+    <p>
       Make sure that this gallery also has an id thou as the gallery makes use
       of it.
     </p>
-    <p >
+    <p>
       Also if you add a width and height as an inline style the gallery will
       match these sizes instead
       of growing to the size of it's parent as it does by default.
@@ -579,7 +579,8 @@
     <h2 id="jquerytools-accordions">jQuerytools accordions</h2>
     <p>Used on our site usually when we want to group similar content which
       can be hidden by default unless clicked upon, accordions can also be used
-      as replacement for tabs when there are many headers or on mobile resolutions.
+      as replacement for tabs when there are many headers or on mobile resolutions
+      where there isn't enough space to list all of the tab lists on one line.
     </p>
     <!--?  @jQuerytools accordion standard -->
     <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
@@ -695,7 +696,7 @@
       color of the accordion panels these headers also use
       <strong>eea-icon-left-container</strong> class in order to move the
       accordion arrow to the left of the title instead of the right found in
-      classical accordion design.
+      the classic accordion design.
     </p>
     <div data-xrayhtml class="prism">
       <div class="eea-accordion-panels eea-accordion-panels-plain">
@@ -921,7 +922,7 @@
     <h4 id="jquerytools-tabs-accordion-transform">
       jQuerytools tabs accordion transformation
     </h4>
-    <p >
+    <p>
       Previously we had an extra modifier class to eea-tabs named
       <strong>two-rows</strong> which added a max width to the tabs breaking
       some extra long titles into two rows in order to fit extra titles on one row.
@@ -1213,7 +1214,7 @@
     </ol>
     <p class="portalMessage informationMessage">Because of the missing styles currently the tile will look worse than it
       does on the search app as such we also show 2 screenshots of how a tile looks
-      normally and on hover.
+      normally and when hovered.
     </p>
     <img tal:attributes="src string:${portal_url}/search-app-card-design.png" />
     <img tal:attributes="src string:${portal_url}/search-app-card-design-hover.png" />
