@@ -292,7 +292,7 @@
         <div class="photoAlbumEntry recent">
           <a href="#">
             <span class="photoAlbumEntryWrapper">
-                <img src="fish"/>
+                <img src="/portal_depiction/generic/image_preview"/>
             </span>
             <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nun</span>
           </a>
@@ -304,7 +304,7 @@
         <div class="photoAlbumEntry expired">
           <a href="#">
             <span class="photoAlbumEntryWrapper">
-                <img src="fish"/>
+                <img src="/portal_depiction/generic/image_preview"/>
             </span>
             <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nun
             </span>
@@ -338,22 +338,22 @@
       adjusted depending
       on the amount of text used.</p>
     <div data-xrayhtml class="prism">
-      <img src="fish"
+      <img src="/portal_depiction/generic/image_preview"
            class="eea-flexible-tooltip-left"
            title="The name given to the resource. Typically, a title will be a name by which the resource is formally known"
             />
 
-      <img src="fish"
+      <img src="/portal_depiction/generic/image_preview"
            class="eea-flexible-tooltip-top"
            title="The nature or genre of the content of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content"
             />
 
-      <img src="fish"
+      <img src="/portal_depiction/generic/image_preview"
            class="eea-flexible-tooltip-bottom"
            title="Short description of the data resource"
             />
 
-      <img src="fish"
+      <img src="/portal_depiction/generic/image_preview"
            class="eea-flexible-tooltip-right"
            title="Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights"
             />
