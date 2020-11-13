@@ -4,7 +4,7 @@
  * - The script works with headers with nested <a> tags
  */
 function build_toc(toc) {
-    // add collapsabl-portlet class to get the arrows to minimize the panel
+    // add collapsible-portlet class to get the arrows to minimize the panel
     if (!toc.hasClass("collapsable-portlet")) {
         toc.addClass("collapsable-portlet");
     }
@@ -68,6 +68,11 @@ function build_toc(toc) {
     // reatach portlet item and show toc since it is hidden by default
     lists.root.appendTo(toc);
     toc.show();
+    /* #123625 scroll into view if hash is present after we finish the addition of ids on headers */
+    var hash = window.location.hash;
+    if (hash.length) {
+        document.getElementById(hash).scrollIntoView();
+    }
     // The collapsable-portlet functionality should probably be moved to it's
     // own file, but I'm thinking maybe we should merge it with eea-accordion
     // in the future.
