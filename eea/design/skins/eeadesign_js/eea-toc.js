@@ -70,8 +70,11 @@ function build_toc(toc) {
     toc.show();
     /* #123625 scroll into view if hash is present after we finish the addition of ids on headers */
     var hash = window.location.hash;
+    var toc_element = document.getElementById(hash);
     if (hash.length) {
-        document.getElementById(hash).scrollIntoView();
+        if (toc_element) {
+            toc_element.scrollIntoView();
+        }
     }
     // The collapsable-portlet functionality should probably be moved to it's
     // own file, but I'm thinking maybe we should merge it with eea-accordion
