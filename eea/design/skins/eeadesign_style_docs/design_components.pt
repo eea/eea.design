@@ -34,6 +34,242 @@
       table of contents
     </div>
 
+    <h2 id="boxes">Boxes</h2>
+    <p>Just like <a tal:attributes="href string:${portal_url}/code/design-elements/typography#pullquotes">pullquote styles</a>, box components can be used to add emphasis to a section
+      of content wrapping the selected content with a given box background color.</p>
+
+    <h3>Note</h3>
+    <p>Note style is used for info message mimicking those found within charts.</p>
+    <p class="portalMessage informationMessage">Due to compatibility reasons
+      the font size for this style is fixed to <em>12px</em>.</p>
+    <div data-xrayhtml class="prism">
+      <p class="callout">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquid eaque inventore ipsum, iure quidem quisquam.
+        A autem deserunt dicta ducimus eos expedita facilis hic
+        illo perferendis possimus quo voluptate, voluptatum?
+      </p>
+    </div>
+
+    <h3>KeyFacts box</h3>
+    <div data-xrayhtml class="prism">
+      <ul class="keyFact">
+        <li>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </li>
+        <li>
+          Architecto cumque dignissimos dolor exercitationem fugiat,
+          harum laborum, officiis optio reiciendis sed similique totam vero.
+        </li>
+        <li>
+          Esse eum laborum qui quibusdam sint tempore.
+        </li>
+      </ul>
+    </div>
+    <h3>Fullwidth box</h3>
+    <div data-xrayhtml class="prism">
+      <div class="box box--full box-primary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+    </div>
+
+    <h3>Left box</h3>
+    <div data-xrayhtml class="prism">
+      <div class="box box--left box-secondary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+
+      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+        tempor id. Sed viverra tellus in hac habitasse platea dictumst
+        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+        phasellus. Consequat id porta nibh venenatis.
+      </p>
+    </div>
+
+    <h3>Right box</h3>
+    <div data-xrayhtml class="prism">
+      <div class="box box--right box-tertiary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+
+      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+        tempor id. Sed viverra tellus in hac habitasse platea dictumst
+        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+        phasellus. Consequat id porta nibh venenatis.
+      </p>
+    </div>
+
+    <h3>Boxes options</h3>
+    <p>Each box has the following options:
+    </p>
+    <ol>
+      <li>Color options:
+        <ol>
+          <li>box-primary</li>
+          <li>box-secondary</li>
+          <li>box-tertiary</li>
+        </ol>
+      </li>
+      <li>Size options:
+        <ol>
+          <li>box--full</li>
+          <li>box--left</li>
+          <li>box--right</li>
+        </ol>
+      </li>
+    </ol>
+    <p class="portalMessage informationMessage">All of these box variants are
+      selectable from the editor style dropdown.
+    </p>
+    <p><strong>Examples of box-full:</strong></p>
+    <div data-xrayhtml class="prism">
+      <div class="box box--full box-primary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Notice that this is demo text at full size</p>
+        <p class="discreet">Thank you for your contact</p>
+      </div>
+
+      <div class="box box--full box-secondary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Notice that this is demo text at full size</p>
+        <p class="discreet">Thank you for your contact</p>
+      </div>
+
+      <div class="box box--full box-tertiary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Notice that this is demo text at full size</p>
+        <p class="discreet">Thank you for your contact</p>
+      </div>
+    </div>
+
+    <p><strong>Examples of box--left:</strong></p>
+    <p>Example is wrapped in <strong>clearfix</strong> div since box left is
+      floated left.</p>
+    <div data-xrayhtml class="prism">
+      <div class="clearfix">
+        <div class="box box--left box-primary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--left box-secondary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--left box-tertiary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+      </div>
+    </div>
+
+
+    <p><strong>Examples of box--right:</strong></p>
+    <p>Example is wrapped in <strong>clearfix</strong> div since box right is
+      floated right.</p>
+    <div data-xrayhtml class="prism">
+      <div class="clearfix">
+        <div class="box box--right box-primary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--right box-secondary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--right box-tertiary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+      </div>
+    </div>
+
 
     <!-- @Client Side Pagination -->
     <h2 id="client-side-pagination">Client side pagination</h2>
@@ -1101,6 +1337,41 @@
       </div>
     </div>
     <!--? end @PhotoAlbumCards @related -->
+
+
+    <!--? @PhotoAlbumCards @related @floated -->
+    <h3 id="related-photo-album-cards">Related items photo album floated left cards</h3>
+    <p>Styled for the latest Briefing redesign the photoAlbum component has the
+      following look when it's part of the <strong>relatedItems</strong> section.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+    <span class="floated-photo-album-container floated-left relatedItems">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
+            </a>
+    </span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+        </div>
+    </div>
+
+    <h3 id="related-photo-album-cards">Related items photo album floated right cards</h3>
+    <p>Styled for the latest Briefing redesign the photoAlbum component has the
+      following look when it's part of the <strong>relatedItems</strong> section.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+        <span class="floated-photo-album-container floated-right relatedItems">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
+            </a>
+    </span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+      </div>
+    </div>
+    <!--? end @PhotoAlbumCards @related -->
     <!--? end @PhotoAlbumCards -->
 
 
@@ -1387,6 +1658,142 @@
     <!--? end @Cards @options  -->
     <!--? end @Cards -->
 
+
+  <h2>TinyMCE templates</h2>
+  <p>Besides the styles that you can select from the style dropdown we also
+    have several templates that wrap several html tags in order to have more
+    complex styles.</p>
+  <p>Here we list the following templates:</p>
+  <h3>Tiles</h3>
+  <p>Tiles are templates used to write a large impact text
+    or a title followed by a video.</p>
+  <p>Within tiles we have the following variations:</p>
+
+  <h4>One tile</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--1">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4>Two tiles with video content</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--2">
+
+      <div class="tile">
+        <div class="tile-item">
+          <h3 class="tile-item-header h1 notoc" id="10-years">What &amp; how?</h3>
+          <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Tobias" controls="controls" preload="auto" poster="resolveuid/05f995b884f94542929de52b451baeb8" src="https://cmshare.eea.europa.eu/s/M3AExbKXxJ6W6yt/download" type="video/mp4" width="320" height="180"> </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-item">
+          <h3 class="tile-item-header h1 notoc" id="10-years">Key messages</h3>
+          <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Key messages_Hans_short version" controls="controls" preload="auto" poster="resolveuid/fa8f4918d59f4f64928593140aadc328" src="https://cmshare.eea.europa.eu/s/28eMmEAnkpn2NaP/download" type="video/mp4" width="320" height="180"> </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h4>Three tiles</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--3">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h4>Four tiles</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--4">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h4>Tiles options</h4>
+  <p>Tiles have a <strong>tile--bordered</strong> modifier which if applied
+    adds a top and bottom grey border to the tile section.</p>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--1">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">bordered tile</h3>
+          <div class="tile-item-body">this section is bordered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>They can also be wrapped with <strong>fullwidth background sections</strong>
+    in case we need to provide such a focus area for the tiles.
+  </p>
+  <div data-xrayhtml class="prism">
+    <div class="fullwidth-bg eea-block bg-secondary">
+      <div class="tiles tiles--1">
+        <div class="tile">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">tile header</h3>
+            <div class="tile-item-body">background wrapped tile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   </metal:main-macro>
 </div>

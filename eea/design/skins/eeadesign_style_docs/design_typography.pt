@@ -183,6 +183,7 @@
 
 
     <h2>Quotations</h2>
+    <h3>Inline quote</h3>
     <div data-xrayhtml class="prism">
       <blockquote>
         <p>
@@ -192,6 +193,33 @@
       </blockquote>
     </div>
 
+    <h3>Pullquote left</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote class="pullquote-left">
+        <p>
+          Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
+        </p>
+        <p class="source">Stavros Dimas, Commissioner for Environment</p>
+      </blockquote>
+
+      <!--?  content that wraps the left pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. </p>
+    </div>
+
+    <h3>Pullquote right</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote class="pullquote-right">
+        <p>
+          Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
+        </p>
+        <p class="source">Stavros Dimas, Commissioner for Environment</p>
+      </blockquote>
+
+      <!--?  content that wraps the right pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.</p>
+    </div>
 
   </metal:main-macro>
 </div>

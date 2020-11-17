@@ -153,6 +153,62 @@
     </div>
 
 
+    <h2>Fullwidth background sections</h2>
+    <p>Just like <a tal:attributes="href string:${here_url}#boxes">boxes</a>
+      we can also make use of <em>fullwidth background sections</em>
+      to add emphasis to the given area.</p>
+    <p>Also like the boxes we have 3 color options:</p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-block bg-primary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Full width background section with primary background color</p>
+        <p class="discreet">Thank you for your contact</p>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-secondary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Full width background section with secondary background color</p>
+        <p class="discreet">Thank you for your contact</p>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-tertiary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Full width background section with tertiary background color</p>
+        <p class="discreet">Thank you for your contact</p>
+      </div>
+    </div>
+
+    <h3>Fullwidth background section with other elements</h3>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-block bg-primary">
+        <blockquote>
+          <p>Besides the simple styles, you can also nest several styles
+            for a combined effect in case it fit's the page design.
+          </p>
+        </blockquote>
+        <p>This way you can nest a <strong>Inline quote</strong> within a
+          <strong>Fullwidth background section</strong>.
+        </p>
+      </div>
+    </div>
   </metal:main-macro>
 </div>
 
