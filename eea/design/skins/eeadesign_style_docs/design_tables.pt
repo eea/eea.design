@@ -83,6 +83,87 @@
       </form>
     </div>
 
+    <h2>Invisible table</h2>
+    <p>Add <strong>invisible</strong> class to the table tag in order to
+      make the table discreet without any visible borders.
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="invisible" summary="Invisible table example">
+        <thead>
+        <tr>
+          <th>Even table header</th>
+          <th>Odd table header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Even table item</td>
+          <td>Odd table item</td>
+        </tr>
+        <tr>
+          <td>Odd table item</td>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <h2>Muted table</h2>
+    <p>Add <strong>invisible</strong> class to the table tag in order to
+      make the table discreet without any visible borders.
+    </p>
+    <p>Add <strong>even</strong> class to each tr in order to add back a muted
+      border color
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="invisible" summary="Muted table example">
+        <thead>
+        <tr class="even">
+          <th>Even table header</th>
+          <th>Odd table header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="even">
+          <td>Even table item</td>
+          <td>Odd table item</td>
+        </tr>
+        <tr class="even">
+          <td>Odd table item</td>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <h2>Plain table</h2>
+    <p>Add <strong>plain</strong> class to the table tag in order to
+      make the table look like a spreadsheet table.
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="plain" summary="Plain table example">
+        <thead>
+        <tr>
+          <th>Even table header</th>
+          <th>Odd table header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Even table item</td>
+          <td>Odd table item</td>
+        </tr>
+        <tr>
+          <td>Odd table item</td>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
     <h2>Vertical listing table</h2>
     <div data-xrayhtml class="prism">
       <p>Add <strong>vertical listing</strong> classes to the table tag in order to

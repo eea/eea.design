@@ -32,7 +32,8 @@
       <h4 class="notoc">This is a h4</h4>
     </div>
 
-    <h2>Basic text styles</h2>
+    <h2>Text styles</h2>
+    <h3>Paragraph text styles</h3>
     <div data-xrayhtml class="prism">
     <p>
       This is a paragraph.
@@ -41,6 +42,29 @@
 
     <div data-xrayhtml class="prism">
       <a href="#" class="moreLink">This is a moreLink</a>
+    </div>
+    <h3>Discreet text style</h3>
+    <p>Added by editors when selecting the <strong>Discreet</strong> style from
+      the TinyMCE style dropdown, this class allows us to have a text that is
+      discreet with a size of <strong>85%</strong> of the normal size for which
+      this class is applied.
+    </p>
+    <p>Besides the font decrease there is also a <strong>contrast filter</strong>
+      which dims the color regardless if the primary color is black or white.
+    </p>
+    <div data-xrayhtml class="prism">
+      <p class="discreet">
+        This is an example of a paragraph that is discreet.
+      </p>
+
+      <p class="text-secondary discreet">
+        This is an example of a paragraph that is discreet out of the secondary color.
+      </p>
+
+      <p class="text-secondary">
+        This is an example of a paragraph that is using the secondary color.
+        Check out the difference in color between this paragraph and the one above it.
+      </p>
     </div>
 
     <h2>Lists</h2>
@@ -144,6 +168,17 @@
       <dd>Description 1</dd>
       <dt>Term item 2</dt>
       <dd>Description 2</dd>
+    </div>
+
+
+    <h2>Abbreviations</h2>
+    <p>Stylized implementation of the HTML <strong>abbr</strong> tag for abbreviations
+      and acronyms, showing an expanded version on hover.
+      Abbreviations have a default underline and gain a help cursor to provide
+      additional context on hover.
+    </p>
+    <div data-xrayhtml class="prism">
+      <abbr title="European Environment Agency">EEA acronym</abbr>
     </div>
 
 
