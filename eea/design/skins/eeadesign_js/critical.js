@@ -1,8 +1,9 @@
 var body = document.getElementsByTagName("body")[0];
-var enable_nav_blend = body.className.indexOf("mini-header-navigation") !== -1;
 var portal_column_two_wrapper = document.getElementById(
   "portal-column-two-wrapper"
 );
+
+var enable_nav_blend = body.className.indexOf("mini-header-navigation") !== -1 && portal_column_two_wrapper;
 var content_core = document.getElementById("content-core");
 var qs = document.querySelector.bind(document);
 
