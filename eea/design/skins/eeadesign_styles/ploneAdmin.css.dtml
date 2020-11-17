@@ -130,9 +130,23 @@ div.managePortletsLink:hover {
 .mceText[title*="Tertiary"] {
     color: &dtml-corporateGreen; !important;
 }
+
+/* #124543 ensure action button is aligned with details_panel */
 #footer #action-button {
     margin-bottom: 0 !important;
+    left: 87.5%;
 }
+/* #124543 ensure footer no longer overlaps last list element */
+.dialog-wrapper #footer {
+    top: 100%;
+}
+
+/* #124543 ensure details_panel fill available room and is placed correctly */
+#details_panel {
+    left: 90%;
+    width: 35%;
+}
+
 
 .plonebutton,
 .ploneButton,

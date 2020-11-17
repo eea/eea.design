@@ -3,6 +3,8 @@ Changelog
 
 27.7-dev0 - (unreleased)
 ---------------------------
+* Bug fix: Fixed tinymce popup right panel and action buttons
+  [ichim-david refs #124543]
 * Bug fix: scroll into view if hash is present after we finish the
   addition of ids on headers
   [ichim-david refs #123625]
