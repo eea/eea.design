@@ -1,7 +1,7 @@
 Changelog
 =========
 
-27.7-dev0 - (unreleased)
+27.7 - (2020-11-17)
 ---------------------------
 * Change: Modified the helpdesk widget disclaimer
   [iulianpetchesi refs #124181]
