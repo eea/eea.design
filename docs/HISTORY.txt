@@ -3,6 +3,8 @@ Changelog
 
 27.7-dev0 - (unreleased)
 ---------------------------
+* Change: Modified the helpdesk widget disclaimer
+  [iulianpetchesi refs #124181]
 * Change: add fise website to the footer portlets
   [ichim-david refs #121232]
 * Change: ensure @@crop overlay display image and crop button without overflow
