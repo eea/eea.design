@@ -169,6 +169,24 @@
         </ul>
         <p>Full width background section with primary background color</p>
         <p class="discreet">Thank you for your contact</p>
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="fullwidth-bg eea-block bg-secondary">
@@ -181,6 +199,24 @@
         </ul>
         <p>Full width background section with secondary background color</p>
         <p class="discreet">Thank you for your contact</p>
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="fullwidth-bg eea-block bg-tertiary">
@@ -193,6 +229,24 @@
         </ul>
         <p>Full width background section with tertiary background color</p>
         <p class="discreet">Thank you for your contact</p>
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 

@@ -156,6 +156,25 @@
         </ul>
         <p>Notice that this is demo text at full size</p>
         <p class="discreet">Thank you for your contact</p>
+
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="box box--full box-secondary">
@@ -168,6 +187,25 @@
         </ul>
         <p>Notice that this is demo text at full size</p>
         <p class="discreet">Thank you for your contact</p>
+
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="box box--full box-tertiary">
@@ -180,6 +218,25 @@
         </ul>
         <p>Notice that this is demo text at full size</p>
         <p class="discreet">Thank you for your contact</p>
+
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -1351,6 +1408,17 @@
             <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
             </a>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
     </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
         </div>
@@ -1367,6 +1435,17 @@
             <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
             </a>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
     </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
       </div>
