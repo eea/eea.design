@@ -26,6 +26,8 @@
       table of contents
     </div>
 
+
+    <div id="right-column-navigation-elements">
     <h2 id="right-column-navigation">Right column navigation</h2>
     <p>Right column navigation is using the default Plone 4 portlet navigation markup.
       On content types that are not using the redesigned header area
@@ -68,7 +70,10 @@
 
       </dl>
     </div>
+    </div>
 
+
+    <div id="mobile-navigation-elements">
     <h2>Mobile navigation</h2>
     <p>Mobile navigation is constructed from <a tal:attributes="href string:${here_url}#right-column-navigation">Right column navigation</a> portlet and is visible for resolutions lower than <strong>1280px</strong>.</p>
     <p>It is appended to the global navigation which itself it's transformed to fit mobile resolutions with a maximum width of <strong>400px</strong>.</p>
@@ -104,6 +109,7 @@
       &lt;/div&gt;
       </pre>
       <img tal:attributes="src string:${portal_url}/mobile-navigation-example.png" />
+    </div>
 
 
   </metal:main-macro>

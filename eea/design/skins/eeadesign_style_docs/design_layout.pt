@@ -25,6 +25,8 @@
       table of contents
     </div>
 
+
+    <div id="containers-elements">
     <h2>Containers</h2>
     <p>EEA Website uses a mix of containers from Plone 4 deco system and some
       custom containers inspired from css frameworks such as <a href="https://getbootstrap.com">Bootstrap</a>
@@ -101,7 +103,6 @@
       </div>
     </div>
 
-
     <h3>Widescreen container</h3>
     <p>Acting like Bulma's <a href="https://bulma.io/documentation/layout/container/#overview">is-widescreen</a> container <strong>widescreen-container</strong>
       is used in sections where we want content to break out of the content area
@@ -124,7 +125,10 @@
         </p>
       </div>
     </div>
+    </div>
 
+
+    <div id="utilities-elements">
     <h2>Utilities</h2>
     <h3>eea-block</h3>
     <p>Sometimes we want compose several design components together such
@@ -151,8 +155,10 @@
         <p>Another text here</p>
       </div>
     </div>
+    </div>
 
 
+    <div id="fullwidth-background-elements">
     <h2>Fullwidth background sections</h2>
     <p>Just like <a tal:attributes="href string:${here_url}#boxes">boxes</a>
       we can also make use of <em>fullwidth background sections</em>
@@ -263,6 +269,9 @@
         </p>
       </div>
     </div>
+    </div>
+
+
   </metal:main-macro>
 </div>
 

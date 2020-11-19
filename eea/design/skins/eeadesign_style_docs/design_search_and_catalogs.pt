@@ -42,6 +42,8 @@
     table of contents
   </div>
 
+
+  <div id="faceted-navigation-elements">
   <h2>Faceted navigation widgets</h2>
   <p>In this document we show the most commonly used widgets from
     <a href="https://github.com/eea/eea.facetednavigation">eea.facetednavigation</a>
@@ -290,8 +292,10 @@
 
     </div>
   </div>
+  </div>
 
 
+  <div id="search-app-elements">
   <h2>Search apps widgets</h2>
     <p>All of the widgets described in this section are demoed with a static image
       representing the final look as it is found now at
@@ -327,6 +331,8 @@
     <div data-xrayhtml class="prism">
       <img tal:attributes="src string:${portal_url}/search-app-input.png" />
     </div>
+    </div>
+
 
 </metal:main-macro>
 </div>

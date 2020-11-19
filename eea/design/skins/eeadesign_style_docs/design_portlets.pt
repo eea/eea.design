@@ -26,6 +26,7 @@
       table of contents
     </div>
 
+    <div id="portlet-elements">
     <h2>Portlets</h2>
     <h3>Default Plone portlets markup</h3>
     <p>By default in Plone 4 the portlet markup is using definition lists
@@ -108,7 +109,10 @@
 
       </div>
     </div>
+    </div>
 
+
+    <div id="portlet-like-elements">
     <h2>Portlet like classes</h2>
     <h3>Featured class</h3>
     <p>Used on the <a tal:attributes="href string:${portal_url}#articles-area">frontpage</a> of the EEA website these portlets follow a tile design with a floated image followed by a header and description.
@@ -137,7 +141,10 @@
         </div>
       </div>
     </div>
+    </div>
 
+
+    <div id="shortcut-elements">
     <h3>Shortcut classes</h3>
     <p>Used on the <a tal:attributes="href string:${portal_url}#enquiry-service-shortcut">frontpage</a> of the EEA website these portlets follow a tile design with a floated image followed by a header and description.
     </p>
@@ -165,6 +172,7 @@
           </a>
         </div>
       </div>
+    </div>
     </div>
 
 

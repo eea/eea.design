@@ -34,10 +34,13 @@
       table of contents
     </div>
 
+    <!--? @Box -->
+    <div id="box-components">
     <h2 id="boxes">Boxes</h2>
     <p>Just like <a tal:attributes="href string:${portal_url}/code/design-elements/typography#pullquotes">pullquote styles</a>, box components can be used to add emphasis to a section
       of content wrapping the selected content with a given box background color.</p>
 
+    <!--? @Box @note -->
     <h3>Note</h3>
     <p>Note style is used for info message mimicking those found within charts.</p>
     <p class="portalMessage informationMessage">Due to compatibility reasons
@@ -50,7 +53,9 @@
         illo perferendis possimus quo voluptate, voluptatum?
       </p>
     </div>
+    <!--? end @Box @note -->
 
+    <!--? @Box @keyfact -->
     <h3>KeyFacts box</h3>
     <div data-xrayhtml class="prism">
       <ul class="keyFact">
@@ -66,6 +71,10 @@
         </li>
       </ul>
     </div>
+    <!--? end @Box @keyfact -->
+
+
+    <!--? @Box @fullwidth -->
     <h3>Fullwidth box</h3>
     <div data-xrayhtml class="prism">
       <div class="box box--full box-primary">
@@ -77,7 +86,9 @@
         </p>
       </div>
     </div>
+    <!--? end @Box @fullwidth -->
 
+    <!--? @Box @left -->
     <h3>Left box</h3>
     <div data-xrayhtml class="prism">
       <div class="box box--left box-secondary">
@@ -99,7 +110,9 @@
         phasellus. Consequat id porta nibh venenatis.
       </p>
     </div>
+    <!--? end @Box @left -->
 
+    <!--? @Box @right -->
     <h3>Right box</h3>
     <div data-xrayhtml class="prism">
       <div class="box box--right box-tertiary">
@@ -121,7 +134,9 @@
         phasellus. Consequat id porta nibh venenatis.
       </p>
     </div>
+    <!--? end @Box @right -->
 
+    <!--? @Box @options -->
     <h3>Boxes options</h3>
     <p>Each box has the following options:
     </p>
@@ -326,9 +341,153 @@
         </div>
       </div>
     </div>
+    <!--? end @Box @options -->
+    </div>
+    <!--? end @Box -->
+
+
+    <!--?  @Cards  -->
+    <div id="cards-components">
+      <h2 id="cards">Cards</h2>
+      <p>Used on <a tal:attributes="href string:${portal_url}/themes/air">themecentre pages</a>,
+        these cards are used to promote featured content for the themecentre section.
+      </p>
+      <!--?  @Cards @simple  -->
+      <h3 id="simple-card">Simple card</h3>
+      <div data-xrayhtml class="prism">
+        <div class="eea-card eea-card--bg-light direction-column">
+          <div class="eea-card-header">
+            <div class="eea-card-title-wrapper">
+              <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-link">
+                <h2 class="notoc no-anchor">Citizen science projects on air quality produce useful information and raise public awareness</h2>
+              </a>
+            </div>
+            <p class="eea-card-link">
+              <strong>Published</strong>: 12 Mar 2020
+            </p>
+
+            <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-image-link">
+              <div class="eea-card-image-bg-wrapper lazy" style="background-image: url(&quot;/highlights/citizen-science-on-air-quality/image_preview&quot;);">
+              </div>
+            </a>
+          </div>
+          <div class="eea-card-body">
+            <p>Air pollution is the biggest environmental health threat in Europe and more and more people are taking action to claim their right to clean air. A new European Environment Agency (EEA) report provides an overview of low-cost devices that citizens and NGOs can use to measure local air quality.</p>
+          </div>
+          <div class="eea-card-footer text-right mt-a">
+            <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-btn moreLink eea-btn-md eea-btn-news">Read more</a>
+          </div>
+        </div>
+      </div>
+      <!--? end @Cards @simple  -->
+
+      <!--? @Cards @double  -->
+      <h3 id="double-card">Double card</h3>
+      <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
+        these cards are used to promote two featured content side by side.
+      </p>
+      <div data-xrayhtml class="prism">
+
+        <div class="eea-card eea-card--double eea-card--portrait direction-column">
+
+          <div class="eea-card-header">
+            <div class="eea-card-title-wrapper">
+              <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-link">
+                <h2 class="notoc no-anchor">National Emission reduction Commitments Directive reporting status 2020</h2>
+              </a>
+            </div>
+          </div>
+
+          <div class="eea-card-body">
+            <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-image-link  eea-card-image--pull eea-card-image-bordered eea-card-with-text">
+              <img alt="" class="eea-card-image lazy" src="/publications/assessing-air-quality-through-citizen-science/image_large" />
+            </a>
+
+            <div class="eea-card-body-text">
+              <strong>Published</strong>: 30 Jun 2020
+              <p>This briefing presents progress made by the EU and its Member States1 towards meeting the 2010 emission ceilings that were applicable until the end of 2019 under Directive 2016/2284/EU — the National Emission reduction Commitments (NEC) Directive — on the reduction of national emissions of certain atmospheric pollutants. In addition, it assesses the emission reduction effort — compared with 2018 emissions levels — required by each country to comply with the 2020 and 2030 reduction commitments set out in the Directive.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--? end @Cards @double  -->
+
+      <!--? @Cards @fullwidth  -->
+      <h4 id="fullwidth-card">Fullwidth card</h4>
+      <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
+        these cards are used to promote one featured content predominantly.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div class="eea-card eea-card--fullwidth eea-card--landscape">
+          <div class="eea-card-header">
+            <div class="eea-card-title-wrapper">
+              <div class="eea-card-title">
+                <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-link link-plain">
+                  <h2 class="notoc no-anchor">The way urban policies influence the air we breathe</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="eea-card-body">
+            <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-image-link  link-plain eea-card-with-text">
+              <img alt="" src="/publications/europes-urban-air-quality/image_large" class="skip_lazy eea-card-image  eea-card-image-bordered  eea-card-image--portrait" width="543" height="768">
+            </a>
+            <div class="eea-card-body-text eea-card-link">
+              <p>Given their proximity to citizens and knowledge of local concerns, local authorities are best placed to ensure we make an effective transition to more liveable and breathable cities.</p>
+              <p>Many city-specific measures have proved to be efficient but there is still much to do to empower citizens further and deliver coordinated actions across all governance levels.</p>
+            </div>
+          </div>
+
+          <div class="eea-card-footer">
+            <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="moreLink link-plain">&nbsp;</a>
+          </div>
+
+        </div>
+      </div>
+      <!--? end @Cards @fullwidth  -->
+
+      <!--? @Cards @options  -->
+      <h4 id="card-options">Card options (variables)</h4>
+      <p>The following modifier classes can be added to the eea-card component:</p>
+      <table class="listing">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>eea-card--double</strong></td>
+          <td>Add whenever you want to use two cards on the same row</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--fullwidth</strong></td>
+          <td>Add whenever you want card to span full width of parent</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--bg-light</strong></td>
+          <td>Add whenever you want background color of body description to be white</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--landscape</strong></td>
+          <td>Add whenever you want to use a landscape image</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--portrait</strong></td>
+          <td>Add whenever you want to use a portrait image</td>
+        </tr>
+        </tbody>
+      </table>
+      <!--? end @Cards @options  -->
+    </div>
+    <!--? end @Cards -->
 
 
     <!-- @Client Side Pagination -->
+    <div id="pagination-components">
     <h2 id="client-side-pagination">Client side pagination</h2>
     <p>Used on <a tal:attributes="href string:${portal_url}/soer/2020/intro#tab-see-also">Soer 2020 intro page</a> to paginate related items photoAlbum entries.
     </p>
@@ -779,10 +938,12 @@
         </div>
       </div>
     </div>
+    </div>
     <!-- @End Client Side Pagination with tabs -->
 
 
     <!--?  @Fancybox -->
+    <div id="fancybox-components">
     <h2 id="fancybox-popups">Fancybox pop-ups</h2>
     <h3 id="fancybox-popups-arbitrary-html">Arbitrary HTML</h3>
     <p>Fancybox is a popup component where content is visible in a box upon
@@ -802,12 +963,13 @@
           Click me!
         </a>
       </p>
-
+    </div>
     </div>
     <!--? end @Fancybox -->
 
 
     <!--?  @Image gallery -->
+    <div id="image-gallery-components">
     <h2 id="image-gallery">Image gallery</h2>
     <p>This component takes a bunch of images and displays them in a carousel
       image gallery.
@@ -865,16 +1027,19 @@
 
       </ul>
     </div>
-    <!--? end @Gallery view   -->
+    </div>
+    <!--? end @Image gallery   -->
 
 
     <!--?  @jQuerytools accordion -->
+    <div id="accordion-components">
     <h2 id="jquerytools-accordions">jQuerytools accordions</h2>
     <p>Used on our site usually when we want to group similar content which
       can be hidden by default unless clicked upon, accordions can also be used
       as replacement for tabs when there are many headers or on mobile resolutions
       where there isn't enough space to list all of the tab lists on one line.
     </p>
+    
     <!--?  @jQuerytools accordion standard -->
     <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
     <div data-xrayhtml class="prism">
@@ -1062,10 +1227,149 @@
       </div>
     </div>
     <!--? end @jQuerytools accordion redesign plain bordered -->
+    </div>
     <!--? end @jQuerytools accordion -->
 
 
+    <!--? @PhotoAlbumCards -->
+    <div id="photo-album-components">
+      <h2 id="photo-album-cards">Photo Album cards</h2>
+
+      <!--? @PhotoAlbumCards @album -->
+      <h3 id="album-view-photo-album">Album views photo album cards</h3>
+      <p>Used on <a tal:attributes="href string:${portal_url}/code/design-elements/views#atct_album_view"> atct_album_view</a> template as well as other listings where we need to layout
+        objects as part of an photo gallery album listing.
+      </p>
+      <p>Other components that make use of this component are:</p>
+      <ul>
+        <li>Tab panels</li>
+        <li>Accordion panels</li>
+      </ul>
+      <div data-xrayhtml class="prism">
+        <div class="clearfix">
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <!--? end @PhotoAlbumCards @album -->
+
+      <!--? @PhotoAlbumCards @related -->
+      <h3 id="related-photo-album-cards">Related items photo album cards</h3>
+      <p>Styled for the latest Briefing redesign the photoAlbum component has the
+        following look when it's part of the <strong>relatedItems</strong> section.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div class="relatedItems">
+          <div class="page" data-count="2">
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+                <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+              </a>
+            </div>
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+                <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--? end @PhotoAlbumCards @related -->
+
+      <!--? @PhotoAlbumCards @related @floated -->
+      <h3 id="related-photo-album-cards">Related items photo album floated left cards</h3>
+      <p>Styled for the latest Briefing redesign the photoAlbum component has the
+        following look when it's part of the <strong>relatedItems</strong> section.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+          <span class="floated-photo-album-container floated-left relatedItems">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
+            </a>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+    </span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+        </div>
+      </div>
+
+      <h3 id="related-photo-album-cards">Related items photo album floated right cards</h3>
+      <p>Styled for the latest Briefing redesign the photoAlbum component has the
+        following look when it's part of the <strong>relatedItems</strong> section.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+          <span class="floated-photo-album-container floated-right relatedItems">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
+            </a>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+    </span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+        </div>
+      </div>
+      <!--? end @PhotoAlbumCards @related -->
+    </div>
+    <!--? end @PhotoAlbumCards -->
+
+
     <!--?  @Tabs -->
+    <div id="tabs-components">
     <h2 id="tabs">Tabs</h2>
 
     <!--?  @Tabs @daviz -->
@@ -1317,144 +1621,12 @@
     </div>
     <!--? end @Tabs @jquerytools @arrows -->
     <!--? end @Tabs @jquerytools -->
+    </div>
     <!--? end @Tabs -->
-
-    <!--? @PhotoAlbumCards -->
-    <h2 id="photo-album-cards">Photo Album cards</h2>
-    <!--? @PhotoAlbumCards @album -->
-    <h3 id="album-view-photo-album">Album views photo album cards</h3>
-    <p>Used on <a tal:attributes="href string:${portal_url}/code/design-elements/views#atct_album_view"> atct_album_view</a> template as well as other listings where we need to layout
-      objects as part of an photo gallery album listing.
-    </p>
-    <p>Other components that make use of this component are:</p>
-    <ul>
-      <li>Tab panels</li>
-      <li>Accordion panels</li>
-    </ul>
-    <div data-xrayhtml class="prism">
-      <div class="clearfix">
-        <div class="photoAlbumEntry">
-          <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
-              <span class="photoAlbumEntryWrapper">
-                <span class="photoAlbumEntryWrapperImg lazy"
-                      style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
-              </span>
-            <span class="photoAlbumEntryTitleWrapper">
-               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
-              </span>
-          </a>
-        </div>
-
-        <div class="photoAlbumEntry">
-          <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
-              <span class="photoAlbumEntryWrapper">
-                <span class="photoAlbumEntryWrapperImg lazy"
-                      style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
-              </span>
-            <span class="photoAlbumEntryTitleWrapper">
-                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
-            </span>
-          </a>
-        </div>
-      </div>
-
-    </div>
-    <!--? end @PhotoAlbumCards @album -->
-
-    <!--? @PhotoAlbumCards @related -->
-    <h3 id="related-photo-album-cards">Related items photo album cards</h3>
-    <p>Styled for the latest Briefing redesign the photoAlbum component has the
-      following look when it's part of the <strong>relatedItems</strong> section.
-    </p>
-    <div data-xrayhtml class="prism">
-      <div class="relatedItems">
-        <div class="page" data-count="2">
-          <div class="photoAlbumEntry">
-            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
-              <span class="photoAlbumEntryWrapper">
-                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
-              </span>
-              <span class="photoAlbumEntryTitleWrapper">
-               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
-              </span>
-            </a>
-          </div>
-
-          <div class="photoAlbumEntry">
-            <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
-              <span class="photoAlbumEntryWrapper">
-                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
-              </span>
-              <span class="photoAlbumEntryTitleWrapper">
-                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--? end @PhotoAlbumCards @related -->
-
-
-    <!--? @PhotoAlbumCards @related @floated -->
-    <h3 id="related-photo-album-cards">Related items photo album floated left cards</h3>
-    <p>Styled for the latest Briefing redesign the photoAlbum component has the
-      following look when it's part of the <strong>relatedItems</strong> section.
-    </p>
-    <div data-xrayhtml class="prism">
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
-    <span class="floated-photo-album-container floated-left relatedItems">
-            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
-            </a>
-
-          <div class="photoAlbumEntry">
-            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
-              <span class="photoAlbumEntryWrapper">
-                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
-              </span>
-              <span class="photoAlbumEntryTitleWrapper">
-               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
-              </span>
-            </a>
-          </div>
-    </span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
-        </div>
-    </div>
-
-    <h3 id="related-photo-album-cards">Related items photo album floated right cards</h3>
-    <p>Styled for the latest Briefing redesign the photoAlbum component has the
-      following look when it's part of the <strong>relatedItems</strong> section.
-    </p>
-    <div data-xrayhtml class="prism">
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
-        <span class="floated-photo-album-container floated-right relatedItems">
-            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
-            </a>
-
-          <div class="photoAlbumEntry">
-            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
-              <span class="photoAlbumEntryWrapper">
-                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
-              </span>
-              <span class="photoAlbumEntryTitleWrapper">
-               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
-              </span>
-            </a>
-          </div>
-    </span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
-      </div>
-    </div>
-    <!--? end @PhotoAlbumCards @related -->
-    <!--? end @PhotoAlbumCards -->
 
 
     <!--? @Tiles  -->
+    <div id="tiles-components">
     <h2 id="tiles">Tiles</h2>
     <!--? @Tiles @plone -->
     <h3 id="plone-tile-component">Plone tiles</h3>
@@ -1600,154 +1772,25 @@
     </div>
     <!--? end @Tiles @search @card -->
     <!--? end @Tiles @search-->
+    </div>
     <!--? end @Tiles -->
 
 
-    <!--?  @Cards  -->
-    <h2 id="cards">Cards</h2>
-    <p>Used on <a tal:attributes="href string:${portal_url}/themes/air">themecentre pages</a>,
-      these cards are used to promote featured content for the themecentre section.
-    </p>
-    <!--?  @Cards @simple  -->
-    <h3 id="simple-card">Simple card</h3>
-    <div data-xrayhtml class="prism">
-      <div class="eea-card eea-card--bg-light direction-column">
-        <div class="eea-card-header">
-          <div class="eea-card-title-wrapper">
-            <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-link">
-              <h2 class="notoc no-anchor">Citizen science projects on air quality produce useful information and raise public awareness</h2>
-            </a>
-          </div>
-          <p class="eea-card-link">
-            <strong>Published</strong>: 12 Mar 2020
-          </p>
-
-          <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-image-link">
-            <div class="eea-card-image-bg-wrapper lazy" style="background-image: url(&quot;/highlights/citizen-science-on-air-quality/image_preview&quot;);">
-            </div>
-          </a>
-        </div>
-        <div class="eea-card-body">
-          <p>Air pollution is the biggest environmental health threat in Europe and more and more people are taking action to claim their right to clean air. A new European Environment Agency (EEA) report provides an overview of low-cost devices that citizens and NGOs can use to measure local air quality.</p>
-        </div>
-        <div class="eea-card-footer text-right mt-a">
-          <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-btn moreLink eea-btn-md eea-btn-news">Read more</a>
-        </div>
-      </div>
-    </div>
-    <!--? end @Cards @simple  -->
-
-    <!--? @Cards @double  -->
-    <h3 id="double-card">Double card</h3>
-    <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
-      these cards are used to promote two featured content side by side.
-    <div data-xrayhtml class="prism">
-
-      <div class="eea-card eea-card--double eea-card--portrait direction-column">
-
-        <div class="eea-card-header">
-          <div class="eea-card-title-wrapper">
-            <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-link">
-              <h2 class="notoc no-anchor">National Emission reduction Commitments Directive reporting status 2020</h2>
-            </a>
-          </div>
-        </div>
-
-        <div class="eea-card-body">
-          <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-image-link  eea-card-image--pull eea-card-image-bordered eea-card-with-text">
-            <img alt="" class="eea-card-image lazy" src="/publications/assessing-air-quality-through-citizen-science/image_large" />
-          </a>
-
-          <div class="eea-card-body-text">
-            <strong>Published</strong>: 30 Jun 2020
-            <p>This briefing presents progress made by the EU and its Member States1 towards meeting the 2010 emission ceilings that were applicable until the end of 2019 under Directive 2016/2284/EU — the National Emission reduction Commitments (NEC) Directive — on the reduction of national emissions of certain atmospheric pollutants. In addition, it assesses the emission reduction effort — compared with 2018 emissions levels — required by each country to comply with the 2020 and 2030 reduction commitments set out in the Directive.</p>
-          </div>
-      </div>
-    </div>
-    </div>
-    <!--? end @Cards @double  -->
-
-    <!--? @Cards @fullwidth  -->
-    <h4 id="fullwidth-card">Fullwidth card</h4>
-    <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
-      these cards are used to promote one featured content predominantly.
-    <div data-xrayhtml class="prism">
-      <div class="eea-card eea-card--fullwidth eea-card--landscape">
-        <div class="eea-card-header">
-          <div class="eea-card-title-wrapper">
-            <div class="eea-card-title">
-              <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-link link-plain">
-                <h2 class="notoc no-anchor">The way urban policies influence the air we breathe</h2>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="eea-card-body">
-          <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-image-link  link-plain eea-card-with-text">
-            <img alt="" src="/publications/europes-urban-air-quality/image_large" class="skip_lazy eea-card-image  eea-card-image-bordered  eea-card-image--portrait" width="543" height="768">
-          </a>
-          <div class="eea-card-body-text eea-card-link">
-            <p>Given their proximity to citizens and knowledge of local concerns, local authorities are best placed to ensure we make an effective transition to more liveable and breathable cities.</p>
-            <p>Many city-specific measures have proved to be efficient but there is still much to do to empower citizens further and deliver coordinated actions across all governance levels.</p>
-          </div>
-        </div>
-
-        <div class="eea-card-footer">
-          <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="moreLink link-plain">&nbsp;</a>
-        </div>
-
-      </div>
-    </div>
-    <!--? end @Cards @fullwidth  -->
-
-    <!--? @Cards @options  -->
-    <h4 id="card-options">Card options (variables)</h4>
-    <p>The following modifier classes can be added to the eea-card component:</p>
-    <table class="listing">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><strong>eea-card--double</strong></td>
-        <td>Add whenever you want to use two cards on the same row</td>
-      </tr>
-      <tr>
-        <td><strong>eea-card--fullwidth</strong></td>
-        <td>Add whenever you want card to span full width of parent</td>
-      </tr>
-      <tr>
-        <td><strong>eea-card--bg-light</strong></td>
-        <td>Add whenever you want background color of body description to be white</td>
-      </tr>
-      <tr>
-        <td><strong>eea-card--landscape</strong></td>
-        <td>Add whenever you want to use a landscape image</td>
-      </tr>
-      <tr>
-        <td><strong>eea-card--portrait</strong></td>
-        <td>Add whenever you want to use a portrait image</td>
-      </tr>
-      </tbody>
-    </table>
-    <!--? end @Cards @options  -->
-    <!--? end @Cards -->
-
-
+   <!--? @TinyMCE-templates   -->
+  <div id="tinymce-template-components">
   <h2>TinyMCE templates</h2>
   <p>Besides the styles that you can select from the style dropdown we also
     have several templates that wrap several html tags in order to have more
     complex styles.</p>
   <p>Here we list the following templates:</p>
+
+  <!--? @TinyMCE-templates @tiles -->
   <h3>Tiles</h3>
   <p>Tiles are templates used to write a large impact text
     or a title followed by a video.</p>
   <p>Within tiles we have the following variations:</p>
 
+  <!--? @TinyMCE-templates @tiles @one -->
   <h4>One tile</h4>
   <div data-xrayhtml class="prism">
     <div class="tiles tiles--1">
@@ -1759,7 +1802,9 @@
       </div>
     </div>
   </div>
+  <!--? end @TinyMCE-templates @tiles @one -->
 
+  <!--? @TinyMCE-templates @tiles @two -->
   <h4>Two tiles with video content</h4>
   <div data-xrayhtml class="prism">
     <div class="tiles tiles--2">
@@ -1782,7 +1827,9 @@
 
     </div>
   </div>
+  <!--? end @TinyMCE-templates @tiles @two -->
 
+  <!--? @TinyMCE-templates @tiles @three -->
   <h4>Three tiles</h4>
   <div data-xrayhtml class="prism">
     <div class="tiles tiles--3">
@@ -1809,7 +1856,9 @@
 
     </div>
   </div>
+  <!--? end @TinyMCE-templates @tiles @three -->
 
+  <!--? @TinyMCE-templates @tiles @four -->
   <h4>Four tiles</h4>
   <div data-xrayhtml class="prism">
     <div class="tiles tiles--4">
@@ -1843,7 +1892,9 @@
 
     </div>
   </div>
+  <!--? end @TinyMCE-templates @tiles @four -->
 
+  <!--? @TinyMCE-templates @tiles @options -->
   <h4>Tiles options</h4>
   <p>Tiles have a <strong>tile--bordered</strong> modifier which if applied
     adds a top and bottom grey border to the tile section.</p>
@@ -1873,6 +1924,11 @@
       </div>
     </div>
   </div>
+  <!--? end @TinyMCE-templates @tiles @options -->
+  <!--? end @TinyMCE-templates @tiles-->
+  </div>
+  <!--? end @TinyMCE-templates-->
+
 
   </metal:main-macro>
 </div>

@@ -25,6 +25,8 @@
       table of contents
     </div>
 
+
+    <div id="image-container-elements">
     <h2>Image containers</h2>
     <h3>Fullwidth image container</h3>
     <p>We have <strong>fullwidth-container-centered</strong> class which
@@ -82,7 +84,10 @@
         </p>
       </div>
     </div>
+    </div>
 
+
+    <div id="popups-elements">
     <h2>Pop-ups</h2>
     <h3>Image pop-ups</h3>
     <p>
@@ -106,7 +111,10 @@
         <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide"/>
       </a>
     </div>
+    </div>
 
+
+    <div id="image-scales-elements">
     <h2>Image scales</h2>
     <p>When loading images consider using image scales instead of original images
       in order to improve page loading times for high resolution images.
@@ -139,6 +147,9 @@
         <br/><img
           src="resolveuid/af79241214c3088375297823b3ccf560/image_wide"/></p>
     </div>
+    </div>
+
+
   </metal:main-macro>
 </div>
 

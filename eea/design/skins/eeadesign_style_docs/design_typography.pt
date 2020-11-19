@@ -24,6 +24,8 @@
       table of contents
     </div>
 
+
+    <div id="headers-elements">
     <h2>Headers</h2>
     <div data-xrayhtml class="prism">
       <h1 class="notoc">This is a h1</h1>
@@ -66,7 +68,10 @@
         Check out the difference in color between this paragraph and the one above it.
       </p>
     </div>
+    </div>
 
+
+    <div id="lists-elements">
     <h2>Lists</h2>
     <h3>Unstyled lists</h3>
     <div data-xrayhtml class="prism">
@@ -169,8 +174,10 @@
       <dt>Term item 2</dt>
       <dd>Description 2</dd>
     </div>
+    </div>
 
 
+    <div id="abbreviation-elements">
     <h2>Abbreviations</h2>
     <p>Stylized implementation of the HTML <strong>abbr</strong> tag for abbreviations
       and acronyms, showing an expanded version on hover.
@@ -180,8 +187,10 @@
     <div data-xrayhtml class="prism">
       <abbr title="European Environment Agency">EEA acronym</abbr>
     </div>
+    </div>
 
 
+    <div id="quotations">
     <h2>Quotations</h2>
     <h3>Inline quote</h3>
     <div data-xrayhtml class="prism">
@@ -219,6 +228,7 @@
       <!--?  content that wraps the right pullquote  -->
       <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
       <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.</p>
+    </div>
     </div>
 
   </metal:main-macro>

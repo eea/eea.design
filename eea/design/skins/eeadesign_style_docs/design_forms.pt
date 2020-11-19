@@ -34,6 +34,7 @@
       table of contents
     </div>
 
+    <div id="inputs-elements">
     <h2>Inputs</h2>
     <h3>Submit inputs</h3>
     <div data-xrayhtml class="prism">
@@ -94,7 +95,6 @@
       </div>
     </div>
 
-
     <h4>Search app text input</h4>
     <p>Style found only on <a href="http://search.apps.eea.europa.eu">Search app</a> website.</p>
     <p class="portalMessage informationMessage">Given the fact that the styles are not loaded on this site, we
@@ -111,6 +111,7 @@
                placeholder="Search term" i18n-variable="App_Search_Placeholder"
                i18n-change="placeholder" autocomplete="off">
       </div>
+    </div>
     </div>
 
 

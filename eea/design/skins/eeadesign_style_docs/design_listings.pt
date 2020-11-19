@@ -28,6 +28,7 @@
       table of contents
     </div>
 
+    <div id="folderish-elements">
     <h2>Folderish content types views</h2>
     <p>These views are available for content types that can house other content types
     as children such as:</p>
@@ -39,7 +40,6 @@
     <p>All of the children will be visible on these views with differences in
       the amount and the presentation of attributes and information displayed.
     </p>
-
 
     <!--? @folder_accordion_view  -->
     <h3>Folder accordion view</h3>
@@ -119,7 +119,6 @@
     </div>
     <!--? end @folder_accordion_view  -->
 
-
     <!--? @atct_album_view  -->
     <h3 id="atct_album_view">Folder atct album view</h3>
     <p>This view lists every child with the
@@ -150,7 +149,6 @@
     </div>
     <!--? end @atct_album_view  -->
 
-
     <!--? @Gallery view  -->
     <h3>Folder gallery view</h3>
     <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#image-gallery">Gallery component</a> to show folder contents that have images as fields which can then be used in this presentational view.
@@ -175,6 +173,7 @@
         </li>
       </ul>
     </div>
+    <!--? end @Gallery view  -->
 
     <h3>Folder listing view</h3>
     <p>This view is a simple Plone view used only when there is a need to have a
@@ -209,8 +208,6 @@
 
       </div>
     </div>
-    <!--? end @Gallery view  -->
-
 
     <!--? @folder_summary_view  -->
     <h3 id="folder_summary_view">Folder summary view</h3>
@@ -328,7 +325,6 @@
     </div>
     <!--? end @folder_tabs_view  -->
 
-
     <!--? @folder_tabs_view  -->
     <h3>Folder tabular view</h3>
     <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/tables#listing">Listing table markup</a> to show folder content's following attributes:
@@ -385,6 +381,7 @@
       </div>
     </div>
     <!--? end @folder_tabs_view  -->
+    </div>
 
 
   </metal:main-macro>

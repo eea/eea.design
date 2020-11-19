@@ -24,6 +24,7 @@
       table of contents
     </div>
 
+    <div id="buttons-elements">
     <h2>Buttons</h2>
     <p>Below we have the standard button style applied to inputs and links.</p>
     <div data-xrayhtml class="prism">
@@ -34,8 +35,11 @@
         <a href="#" class="standardButton">Link (button style)</a>
       </p>
     </div>
+    </div>
+
 
     <!--? @icons  -->
+    <div id="icons-elements">
     <h2>EEA icons (scalable vector icons)</h2>
     <p>Simply use the <strong>&lt;span&gt;</strong> tag with
       specific classes
@@ -130,9 +134,12 @@
             class="eea-icon eea-icon-circle-o eea-icon-2x eea-icon-anim-burst animated"></span>
       </p>
     </div>
+    </div>
     <!--? end @icons  -->
 
+
     <!--? @messages  -->
+    <div id="messages-elements">
     <h2>Portal messages and callouts</h2>
     <p>Portal messages (aka callout / text boxes) are
       "in publishing ... a short piece of text set in larger type than the rest
@@ -272,10 +279,12 @@
         Message with custom Icon.
       </div>
     </div>
+    </div>
     <!--? end @messages  -->
 
 
     <!-- @Ribbon design ?-->
+    <div id="ribbon-elements">
     <h2>Ribbon albums</h2>
     <p>Photo album thumbnails can make use of a ribbon text.</p>
     <p>The markup for this ribbon is:</p>
@@ -316,10 +325,12 @@
 
       </div>
     </div>
+    </div>
     <!-- end @Ribbon design ?-->
 
 
     <!--? @tooltips  -->
+    <div id="tooltips-elements">
     <h2>Tooltips</h2>
     <h3>Fixed size</h3>
     <p>The following tooltips have fixed width and height.</p>
@@ -357,6 +368,7 @@
            class="eea-flexible-tooltip-right"
            title="Information about rights held in and over the resource. Typically a rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses intellectual property rights (IPR), copyright and various property rights"
             />
+    </div>
     </div>
     <!--? end @tooltips  -->
 

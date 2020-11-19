@@ -24,6 +24,8 @@
       table of contents
     </div>
 
+
+    <div id="table-listing-elements">
     <h2 id="listing">Tables - sortable and not sortable</h2>
     <div data-xrayhtml class="prism">
       <table class="listing">
@@ -49,7 +51,10 @@
         </tbody>
       </table>
     </div>
+    </div>
 
+
+    <div id="table-form-elements">
     <h2>Table with form elements</h2>
     <div data-xrayhtml class="prism">
       <form>
@@ -82,7 +87,10 @@
         </table>
       </form>
     </div>
+    </div>
 
+
+    <div id="table-invisible-elements">
     <h2>Invisible table</h2>
     <p>Add <strong>invisible</strong> class to the table tag in order to
       make the table discreet without any visible borders.
@@ -108,7 +116,10 @@
       </table>
 
     </div>
+    </div>
 
+
+    <div id="table-muted-elements">
     <h2>Muted table</h2>
     <p>Add <strong>invisible</strong> class to the table tag in order to
       make the table discreet without any visible borders.
@@ -152,7 +163,10 @@
       </table>
 
     </div>
+    </div>
 
+
+    <div id="table-plain-elements">
     <h2>Plain table</h2>
     <p>Add <strong>plain</strong> class to the table tag in order to
       make the table look like a spreadsheet table.
@@ -178,7 +192,10 @@
       </table>
 
     </div>
+    </div>
 
+
+    <div id="table-vertical-elements">
     <h2>Vertical listing table</h2>
     <div data-xrayhtml class="prism">
       <p>Add <strong>vertical listing</strong> classes to the table tag in order to
@@ -197,7 +214,10 @@
         </tbody>
       </table>
     </div>
+    </div>
 
+
+    <div id="table-striped-elements">
     <h2>Striped table</h2>
     <p>Add <strong>odd</strong> and <strong>even</strong> classes to each
       <strong>tr tag</strong> in order to add a stripe effect to table rows
@@ -232,8 +252,10 @@
         </tbody>
       </table>
     </div>
+    </div>
 
 
+    <div id="table-datatable-elements">
     <h2>Datatable styled table</h2>
     <p>This legacy table style is not currently used anywhere however for
       completion sake we also document this style as well.
@@ -282,6 +304,7 @@
         </tr>
         </tbody>
       </table>
+    </div>
     </div>
 
   </metal:main-macro>
