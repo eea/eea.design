@@ -1,6 +1,15 @@
 Changelog
 =========
 
+27.7 - (2020-11-17)
+---------------------------
+* Change: Modified the helpdesk widget disclaimer
+  [iulianpetchesi refs #124181]
+* Change: add fise website to the footer portlets
+  [ichim-david refs #121232]
+* Change: ensure @@crop overlay display image and crop button without overflow
+  [ichim-david refs #121137]
+
 27.6 - (2020-10-06)
 ---------------------------
 * Bug fix: various css fixes for mobile resolution after latest

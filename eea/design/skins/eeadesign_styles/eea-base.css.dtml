@@ -495,6 +495,12 @@ div.overlay div.close {
     box-shadow: 0 0 3em 0.5em #666;
 }
 
+/* 121137 ensure @@crop overlay display image and crop button without overflow */
+.pb-ajax {
+    min-width: 825px;
+    max-height: initial !important;
+}
+
 div.overlay a:hover {
     color: &dtml-corporateGreen;;
 }
