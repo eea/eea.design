@@ -6,6 +6,9 @@
   margin: $spacer-2 0;
   font-size: $p-font-size;
   line-height: $p-line-height;
+  max-width: 848px;
+  position: relative;
+  z-index: 10;
 }
 /* normalize blockquote in case we add it inside emphasis area */
 .emphasis-area blockquote {

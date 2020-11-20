@@ -1,0 +1,238 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+
+    <div id="headers-elements">
+    <h2>Headers</h2>
+    <div data-xrayhtml class="prism">
+      <h1 class="notoc">This is a h1</h1>
+      <h2 class="notoc">This is a h2</h2>
+      <h3 class="notoc">This is a h3</h3>
+      <h4 class="notoc">This is a h4</h4>
+    </div>
+
+    <h2>Text styles</h2>
+    <h3>Paragraph text styles</h3>
+    <div data-xrayhtml class="prism">
+    <p>
+      This is a paragraph.
+    </p>
+    </div>
+
+    <div data-xrayhtml class="prism">
+      <a href="#" class="moreLink">This is a moreLink</a>
+    </div>
+    <h3>Discreet text style</h3>
+    <p>Added by editors when selecting the <strong>Discreet</strong> style from
+      the TinyMCE style dropdown, this class allows us to have a text that is
+      discreet with a size of <strong>85%</strong> of the normal size for which
+      this class is applied.
+    </p>
+    <p>Besides the font decrease there is also a <strong>contrast filter</strong>
+      which dims the color regardless if the primary color is black or white.
+    </p>
+    <div data-xrayhtml class="prism">
+      <p class="discreet">
+        This is an example of a paragraph that is discreet.
+      </p>
+
+      <p class="text-secondary discreet">
+        This is an example of a paragraph that is discreet out of the secondary color.
+      </p>
+
+      <p class="text-secondary">
+        This is an example of a paragraph that is using the secondary color.
+        Check out the difference in color between this paragraph and the one above it.
+      </p>
+    </div>
+    </div>
+
+
+    <div id="lists-elements">
+    <h2>Lists</h2>
+    <h3>Unstyled lists</h3>
+    <div data-xrayhtml class="prism">
+      <ul class="list-unstyled">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+
+    <h3>Styled lists</h3>
+    <p>Outside of <strong>content-core</strong> column add <strong>list-items</strong>
+      class to ul element if you want them to look like those found within content-core.
+    </p>
+    <div data-xrayhtml class="prism">
+      <ul class="list-items">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+
+    <h3>Bullet lists</h3>
+    <p>This bullet style is used within themes section where the bullet is inside
+      the ul and not outside as regular unordered lists behave.
+    </p>
+    <div data-xrayhtml class="prism">
+      <ul class="bullet-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+
+    <h3>Inline lists</h3>
+    <div data-xrayhtml class="prism">
+      <ul class="list-inline">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+
+    <h3>Unordered lists</h3>
+    <p>This square style is default for lists found within content area,
+    added as a simple ul tag by the TinyMCE editor.
+    </p>
+    <p class="portalMessage informationMessage">Consider using <strong>list-items</strong>
+      class on the ul if you want to preserve this style outside of content-core area.
+    </p>
+    <div data-xrayhtml class="prism">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+
+    <h4>Unordered lists nested</h4>
+    <div data-xrayhtml class="prism">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2
+          <ul>
+            <li>Item 2.1</li>
+            <li>Item 2.2</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h3>Ordered lists</h3>
+    <div data-xrayhtml class="prism">
+      <ol>
+        <li tal:content="string:Coffee"></li>
+        <li tal:content="string:Tea"></li>
+        <li tal:content="string:Milk"></li>
+      </ol>
+    </div>
+
+    <h4>Ordered lists nested</h4>
+    <div data-xrayhtml class="prism">
+      <ol>
+        <li tal:content="string:Coffee"></li>
+        <li>
+          Tea
+          <ol>
+            <li tal:content="string:Black tea"></li>
+            <li tal:content="string:Green tea">
+              <ol>
+                <li tal:content="string:China"></li>
+                <li tal:content="string:Africa"></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li tal:content="string:Milk"></li>
+      </ol>
+    </div>
+
+    <h3>Definition lists</h3>
+    <div data-xrayhtml class="prism">
+      <dt>Term item 1</dt>
+      <dd>Description 1</dd>
+      <dt>Term item 2</dt>
+      <dd>Description 2</dd>
+    </div>
+    </div>
+
+
+    <div id="abbreviation-elements">
+    <h2>Abbreviations</h2>
+    <p>Stylized implementation of the HTML <strong>abbr</strong> tag for abbreviations
+      and acronyms, showing an expanded version on hover.
+      Abbreviations have a default underline and gain a help cursor to provide
+      additional context on hover.
+    </p>
+    <div data-xrayhtml class="prism">
+      <abbr title="European Environment Agency">EEA acronym</abbr>
+    </div>
+    </div>
+
+
+    <div id="quotations">
+    <h2>Quotations</h2>
+    <h3>Inline quote</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote>
+        <p>
+          Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
+        </p>
+        <p class="source">Stavros Dimas, Commissioner for Environment</p>
+      </blockquote>
+    </div>
+
+    <h3>Pullquote left</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote class="pullquote-left">
+        <p>
+          Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
+        </p>
+        <p class="source">Stavros Dimas, Commissioner for Environment</p>
+      </blockquote>
+
+      <!--?  content that wraps the left pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. </p>
+    </div>
+
+    <h3>Pullquote right</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote class="pullquote-right">
+        <p>
+          Europe has made considerable progress over recent decades in cleaning the air that we breathe, but air pollution remains a serious problem and continues to damage our health and the environment.
+        </p>
+        <p class="source">Stavros Dimas, Commissioner for Environment</p>
+      </blockquote>
+
+      <!--?  content that wraps the right pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.</p>
+    </div>
+    </div>
+
+  </metal:main-macro>
+</div>
+
+</body>
+</html>

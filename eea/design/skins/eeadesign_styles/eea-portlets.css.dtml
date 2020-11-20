@@ -97,6 +97,7 @@ a.managePortletsFallback {
     clear: both;
     color: #333;
     padding: 0.5em 1em 1em 1em;
+    order: 4;
 }
 
 .collapsable-portlet .portletHeader {

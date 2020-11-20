@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+
+    <div id="corporate-colors-elements">
+      <h2>EEA corporate colors</h2>
+      <p>EEA website always had 3 primary colors:</p>
+      <ul>
+        <li>Corporate Blue</li>
+        <li>Corporate Green</li>
+        <li>Corporate Grey</li>
+      </ul>
+      <p>As part of the latest Briefing redesign these colors now have the following values:</p>
+      <div data-xrayhtml class="prism">
+        <div class="flex-container">
+          <div class="eea-tile">
+            <div class="eea-tileInner">
+              <div class="eea-tileHead">
+                <div class="eea-tileThumb lazy" style="background-color: #00888A;">
+                </div>
+              </div>
+              <div class="eea-tileBody">
+                <h2 class="eea-tileTitle notoc no-anchor">Corporate green</h2>
+                <p>Used by headers, backgrounds and boxes</p>
+                <p>Hex color value: <strong>#00888A</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="eea-tile">
+            <div class="eea-tileInner">
+              <div class="eea-tileHead">
+                <div class="eea-tileThumb lazy" style="background-color: #f3f3f3;">
+                </div>
+              </div>
+              <div class="eea-tileBody">
+                <h2 class="eea-tileTitle notoc no-anchor">Corporate grey</h2>
+                <p>Used by portlets, backgrounds and boxes</p>
+                <p>Hex color value: <strong>#f3f3f3</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="eea-tile">
+            <div class="eea-tileInner">
+              <div class="eea-tileHead">
+                <div class="eea-tileThumb lazy" style="background-color: #274357;">
+                </div>
+              </div>
+              <div class="eea-tileBody">
+                <h2 class="eea-tileTitle notoc no-anchor">Corporate blue</h2>
+                <p>Used by Primary buttons, links, notifications</p>
+                <p>Hex color value: <strong>#274357</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </metal:main-macro>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/++resource++eea.faceted-navigation.css" />
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/eea-faceted-custom.css" />
+  
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/++resource++eea.facetednavigation.widgets.criteria.view.css" />
+
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/++resource++eea.facetednavigation.widgets.daterange.view.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+
+<!--?  <script type="text/javascript" tal:attributes="src string:${portal_url}/collective.js.jqueryui.custom.min.eea.js"></script>-->
+
+<!--?  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++eea.faceted-navigation.js"></script>-->
+
+<!--?  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++eea.facetednavigation.widgets.daterange.view.js"></script>-->
+
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+<metal:main-macro define-macro="content-core">
+
+  <div metal:use-macro="here/portlet_toc/macros/portlet">
+    table of contents
+  </div>
+
+
+  <div id="faceted-navigation-elements">
+  <h2>Faceted navigation widgets</h2>
+  <p>In this document we show the most commonly used widgets from
+    <a href="https://github.com/eea/eea.facetednavigation">eea.facetednavigation</a>
+    alongside a simplified markup.
+    Checkout some sections of the site that make use of faceted navigation
+    view such as <a tal:attributes="href string:${portal_url}/articles">Articles</a>
+    or <a tal:attributes="href string:${portal_url}/media/audiovisuals">Audiovisuals</a>
+    pages.
+  </p>
+
+  <h3>Checkbox widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--? faceted checkbox widget markup -->
+      <div class="faceted-widget faceted-checkboxes-widget faceted-checkbox-widget section-available-topics faceted-count faceted-zero-count-hidden widget-fieldset" data-more="More" data-less="Less" id="c5_widget" data-operator="or">
+        <fieldset class="widget-fieldset">
+          <legend>Available topics</legend>
+          <form action="." method="get">
+            <ul>
+              <li id="c5_option_c5_agriculture">
+                <input type="checkbox" class="faceted-noborder" name="c5" id="c5_agriculture" title="Agriculture" value="agriculture">
+                <label for="c5_agriculture" title="Agriculture">Agriculture <span>(25)</span></label>
+              </li>
+              <li id="c5_option_c5_air">
+                <input type="checkbox" class="faceted-noborder" name="c5" id="c5_air" title="Air pollution" value="air">
+                <label for="c5_air" title="Air pollution">Air pollution <span>(207)</span></label>
+              </li>
+            </ul>
+          </form>
+          <div class="faceted-checkbox-more">
+            <a href="#">More</a>
+          </div>
+        </fieldset>
+      </div>
+      <!--? end faceted checkbox widget markup -->
+
+    </div>
+  </div>
+
+  <h3>Criteria widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--?  Faceted criteria widget markup -->
+      <div class="faceted-widget faceted-criteria-widget section-current-search widget-fieldset">
+        <fieldset class="widget-fieldset faceted-criteria">
+          <legend>Current search</legend>
+          <div class="widget-body">
+
+            <dl id="c6">
+              <dt id="criteria_c3_label">
+                <a href="#" class="faceted-remove" id="criteria_c3" title="Remove Themes filters">remove</a>
+                <span>Themes</span>
+              </dt>
+              <dd id="criteria_c3_entries">
+                <span class="facted-radio-criterion">
+                  <a href="#" class="faceted-remove" id="criteria_c3_all" title="Remove All filter">remove</a>
+                  <span>All (79)</span>
+                </span>
+              </dd>
+            </dl>
+
+            <div class="faceted-criteria-hide-show">
+              <a href="#" class="faceted-criteria-hide">
+                Hide filters
+              </a>
+              <a href="#" class="faceted-criteria-show">
+                Show filters
+              </a>
+              <span class="faceted-criteria-count">(2)</span>
+            </div>
+
+            <div class="faceted-criteria-reset">
+              <a href="#" title="Remove all filters" id="c6_reset">
+                Remove all
+              </a>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+      <!--? end Faceted criteria widget markup -->
+
+    </div>
+  </div>
+
+  <h3>Date range widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--?  faceted date range widget markup  -->
+      <div class="faceted-widget faceted-daterange-widget section-published-on widget-fieldset" id="c1_widget">
+        <fieldset class="widget-fieldset">
+          <legend>Published on</legend>
+
+          <form action="." method="get" class="faceted-daterange-widget-form">
+            <div id="c1_start">
+              <label for="c1-start-input">Start date</label>
+              <input type="text" name="start" title="Start date" id="c1-start-input" placeholder="" value="" class="hasDatepicker">
+            </div>
+            <div id="c1_end">
+              <label for="c1-end-input">End date</label>
+              <input type="text" name="end" title="End date" id="c1-end-input" placeholder="" value="" class="hasDatepicker">
+            </div>
+            <div id="c1_errors"></div>
+            <input type="hidden" name="calYearRange" id="c1_calYearRange" value="c-10:c+10">
+            <input type="hidden" name="usePloneFormat" id="c1_usePloneFormat" value="False">
+            <input type="hidden" name="dateFormat" id="c1_dateFormat" value="yy-mm-dd">
+            <input type="hidden" name="language" id="c1_language" value="">
+          </form>
+
+        </fieldset>
+      </div>
+      <!--? end faceted date range widget markup  -->
+
+    </div>
+  </div>
+
+  <h3>Radio widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--?  faceted radio widget markup  -->
+      <div class="faceted-widget faceted-radio-widget section-themes faceted-count faceted-zero-count-hidden widget-fieldset eea-accordion-panel faceted-widget-active" style="" data-more="More" data-less="Less" id="c3_widget"><h2 class="eea-accordion-title eea-icon-left-container no-anchor notoc"><span class="eea-icon eea-icon-left"></span>Themes</h2>
+
+        <fieldset class="widget-fieldset">
+          <legend>Themes</legend>
+          <form action="." method="get">
+            <ul>
+              <li>
+
+                <input type="radio" class="faceted-noborder" checked="checked" name="c3" id="c3_all" value="">
+                <label title="All" for="c3_all">All <span>(79)</span></label>
+
+              </li><li>
+              <input type="radio" class="faceted-noborder" name="c3" id="c3_agriculture" title="Agriculture" value="agriculture">
+              <label for="c3_agriculture" title="Agriculture">Agriculture <span>(1)</span></label>
+            </li><li>
+              <input type="radio" class="faceted-noborder" name="c3" id="c3_air" title="Air pollution" value="air">
+              <label for="c3_air" title="Air pollution">Air pollution <span>(3)</span></label>
+            </li>
+            </ul>
+          </form>
+        </fieldset>
+      </div>
+      <!--?  end faceted radio widget markup  -->
+
+    </div>
+  </div>
+
+  <h3>Results per page widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--? faceted results-per-page widget markup -->
+      <div class="faceted-widget faceted-resultsperpage-widget section-results-per-page faceted-widget-active" style="" id="c11_widget">
+        <fieldset class="widget-fieldset">
+          <legend>Results per page</legend>
+          <form action="." method="get">
+            <select class="faceted_select" name="c11" id="c11">
+              <option selected="selected" value="5" title="5">5</option>
+              <option value="10" title="10">10</option>
+            </select>
+          </form>
+        </fieldset>
+      </div>
+      <!--? end faceted results-per-page widget markup -->
+
+    </div>
+  </div>
+
+  <h3>Select widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--? faceted-select-widget markup -->
+      <div class="faceted-widget faceted-select-widget section-language faceted-count widget-fieldset faceted-widget-active" style="" id="c7_widget">
+        <fieldset class="widget-fieldset">
+          <legend>Language</legend>
+          <form action="." method="get">
+            <label class="select-field" for="c7">Language</label>
+            <select class="faceted_select" name="c7" id="c7">
+              <option title="All" value="">All (2321)</option>
+              <option value="sq" title="Albanian">Albanian (2)</option>
+            </select>
+          </form>
+        </fieldset>
+      </div>
+      <!--? end faceted-select-widget markup -->
+
+    </div>
+  </div>
+
+  <h3>Tagcloud widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--?   tagcloud widget markup   -->
+      <div class="faceted-widget faceted-tagscloud-widget section-popular-tags faceted-zero-count-hidden" style="" id="c8_widget"><fieldset class="widget-fieldset">
+        <legend>Popular tags</legend>
+        <ul class="tags-cloud list-inline" id="c8">
+          <li class="faceted-tag-selected" title="All" id="c8all" style="font-size: 20px;" value="2">All</li>
+          <li title="biofuels" id="c8biofuels" style="font-size: 30px;" value="3">biofuels</li>
+          <li title="arctic region" id="c8arctic_-_region" style="font-size: 40px;" value="4">arctic region</li>
+        </ul>
+
+        <div style="display:none">
+          <span id="c8-cloud">list</span>
+          <span id="c8-sizemin">10</span>
+          <span id="c8-sizemax">20</span>
+          <span id="c8-colormin">A1BE7E</span>
+          <span id="c8-colormax">95B229</span>
+          <span id="c8-height">200</span>
+        </div>
+      </fieldset>
+      </div>
+      <!--?   end tagcloud widget markup   -->
+
+    </div>
+  </div>
+
+  <h3>Text widget</h3>
+  <div data-xrayhtml class="prism">
+    <div id="faceted-form">
+
+      <!--?   faceted text search widget markup  -->
+      <div class="faceted-widget faceted-text-widget section-search-videos" style="" id="c7_widget">
+        <fieldset class="widget-fieldset">
+          <legend>Search videos</legend>
+          <form action="." method="get" >
+            <input type="text" name="c7" id="c7" placeholder="" value="">
+            <input type="submit" class="searchButton" value="Search" name="c7_button" id="c7_button">
+            <div class="faceted-textwidget-place-all">
+              <input type="radio" checked="checked" name="c7_place" id="c7_place_all" value="all">
+              <label for="c7_place_all">all items</label>
+            </div>
+            <div class="faceted-textwidget-place-current">
+              <input type="radio" name="c7_place" id="c7_place_current" value="current">
+              <label for="c7_place_current">in current results</label>
+            </div>
+          </form>
+        </fieldset>
+      </div>
+      <!--?  end faceted text search widget markup  -->
+
+    </div>
+  </div>
+  </div>
+
+
+  <div id="search-app-elements">
+  <h2>Search apps widgets</h2>
+    <p>All of the widgets described in this section are demoed with a static image
+      representing the final look as it is found now at
+      <a href=http://search.apps.eea.europa.eu">EEA Search</a> website.
+    </p>
+
+    <h3>Checkbox widget</h3>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-checkbox-facet.png" />
+    </div>
+
+    <h3>Current filters widget</h3>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-current-filters-facet.png" />
+    </div>
+
+    <h3>Filter choice widget</h3>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-filter-choice-facet.png" />
+    </div>
+
+    <h3>Range filter widget</h3>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-range-facet.png" />
+    </div>
+
+    <h3>Range histogram filter widget</h3>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-range-histogram-facet.png" />
+    </div>
+
+    <h3>Search filter widget</h3>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-input.png" />
+    </div>
+    </div>
+
+
+</metal:main-macro>
+</div>
+</body>
+</html>

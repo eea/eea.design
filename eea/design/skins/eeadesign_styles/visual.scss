@@ -32,8 +32,9 @@ sup, sub {
 }
 
 .discreet {
-    color: unquote("&dtml-discreetColor;");
-    font-size: unquote("&dtml-fontSmallSize;");
+    color: inherit;
+    font-size: unquote("&dtml-fontDiscreetSize;");
+    filter: contrast(85%);
     font-weight: normal;
 }
 
@@ -184,9 +185,13 @@ th a, th a:link, th a:visited {
     border-collapse: collapse;
     color: #666666;
     margin: 1em 0.5em;
+    display: table;
+}
+.datatable tbody {
+    display: table-row-group;
 }
 .datatable th {
-    text-align: center;
+    text-align: left;
     background-color: #f6f6f6;
     font-weight: bold;
 }
@@ -328,40 +333,71 @@ video {
     object-position: top;
 }
 
+/* section construct used to be added on containers when we want standardized
+  top and bottom margin */
+.eea-section-sm {
+    margin-top: $spacer-4 !important;
+    margin-bottom: $spacer-4 !important;
+}
+.eea-section-md {
+    margin-top: $spacer-1 !important;
+    margin-bottom: $spacer-1 !important;
+}
+.eea-section-lg {
+    margin-top: $spacer-0 !important;
+    margin-bottom: $spacer-0 !important;
+}
+
 .fullwidth {
     width: 100%;
 }
+.fullwidth-container-centered,
 .max-container-centered,
-.fullwidth-container,
-.widescreen-container,
-.fullwidth-container-centered {
+.widescreen-container {
   @include fullwidth-container-centered();
+
+}
+.fullwidth-container {
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+}
+//.fullwidth-container,
+.widescreen-container {
+    padding: 0 15px;
 }
 
-.widescreen-container,
-.fullwidth-container {
-    padding: 0 15px;
+//.fullwidth-container > * {
+//    width: 98vw;
+//}
+
+.fullwidth-container-centered > img,
+.max-container-centered > img,
+.widescreen-container > img {
+  width: 100%;
+    //margin-left: -15px;
+    //margin-right: -15px;
+}
+
+.fullwidth-container > img {
+    width: 100vw;
+    //margin-left: -15px;
+    max-width: initial !important;
 }
 
 .fullwidth-container-centered .fullwidth {
     position: absolute;
-}
-
-.max-container-centered  > img,
-.max-container-centered  > iframe {
-    min-width: initial;
-    width: 100%;
-}
-.fullwidth-container-centered .fullwidth {
     padding: 0;
 }
-
 .fullwidth-container-centered > * {
-  width: 100%;
-  max-width: 800px;
+    width: 100%;
+    max-width: 800px;
 }
 
-.image-credit-container {
+
+
+.eea-image-credit {
     margin-top: -2rem;
 }
 .widescreen-container {
@@ -373,16 +409,18 @@ video {
     width: 100%;
     max-width: 1400px !important;
 }
+
+.max-container-centered  > img,
+.max-container-centered  > iframe,
+.widescreen-container > img,
+.widescreen-container  > iframe
+{
+  min-width: initial;
+}
+.widescreen-container table,
 .max-container-centered table {
     width: auto;
 }
-
-.absolute-centered {
-    max-width: 848px;
-    position: relative;
-    z-index: 10;
-}
-
 
 @media (min-width: $breakpoint-full) {
     .fullwidth-bg {
@@ -397,10 +435,44 @@ video {
         min-height: 600px;
     }
 }
+@media (min-width: $breakpoint-xl) {
+    .fullwidth-container {
+        margin-left: calc(-50vw - -7px);
+    }
+}
 
+
+@media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl - 1) {
+    .mini-header-navigation .fullwidth-container {
+        left: 31%;
+        margin-left: -40.3%;
+      //translateX(calc((89vw - 100vw)/2));
+    }
+}
+
+@media (min-width: $breakpoint-xxl) and (max-width: 1599px) {
+
+    .mini-header-navigation .fullwidth-container {
+        transform:translateX(calc((78.8em - 100vw)/2));
+        left: auto;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: 1599px) {
+    .mini-header-navigation .fullwidth-container-centered
+    {
+        margin: 2.5rem calc(23% - 50vw) 2.5rem calc(23% - 50vw);
+    }
+    .mini-header-navigation .max-container-centered,
+    .mini-header-navigation .widescreen-container {
+        margin: 2.5rem calc(-8.3% - 50vw) 2.5rem calc(50% - 50vw);
+    }
+}
 @media (max-width: $breakpoint-xxl) {
     .fullwidth-container-centered,
-    .max-container-centered {
+    .max-container-centered,
+    .widescreen-container {
         padding: 0 $spacer;
     }
 }

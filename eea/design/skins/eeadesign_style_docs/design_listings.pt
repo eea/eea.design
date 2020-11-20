@@ -1,0 +1,390 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++jquery.galleryview.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/eea-galleryview.js"></script>
+
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <div id="folderish-elements">
+    <h2>Folderish content types views</h2>
+    <p>These views are available for content types that can house other content types
+    as children such as:</p>
+    <ul>
+      <li>Collections</li>
+      <li>Folders</li>
+      <li>Topics</li>
+    </ul>
+    <p>All of the children will be visible on these views with differences in
+      the amount and the presentation of attributes and information displayed.
+    </p>
+
+    <!--? @folder_accordion_view  -->
+    <h3>Folder accordion view</h3>
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-accordions">Accordion component</a>
+      to show folder contents grouped into 2 sections:
+    </p>
+    <ol>
+      <li>Folderish content types with accordion title set to first element title.</li>
+      <li>Non Folder content types with accordion title set to <em>Other resources</em>.</li>
+    </ol>
+
+    <div data-xrayhtml class="prism">
+    <div class="eea-accordion-panels">
+
+      <div class="eea-accordion-panel">
+        <h2 class="eea-icon-right-container current notoc">
+          <a tal:attributes="href string:${portal_url}/code/design-elements/getting-started">Getting started</a>
+          <span class="eea-icon eea-icon-right"></span>
+        </h2>
+        <div class="pane">
+          <p class="subfolder-description">EEA webdesign guide broken into individual sections.</p>
+          <div class="subfolder-contents">
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/typography">
+                <span class="photoAlbumEntryWrapper">
+                  <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/typography/image_mini&quot;);"><!----></span>
+                </span>
+                <span class="photoAlbumEntryTitle">Typography</span>
+              </a>
+            </div>
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/images">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/images/image_mini&quot;);"><!----></span>
+                </span>
+                <span class="photoAlbumEntryTitle">Images</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="eea-accordion-panel">
+        <h2 class="eea-icon-right-container notoc">
+          <a href="#">Other resources</a>
+          <span class="eea-icon eea-icon-right"></span>
+        </h2>
+
+        <div class="pane" style="display: none;">
+          <div class="subfolder-contents">
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/giraffe/view">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/giraffe/image_mini&quot;);"><!----></span>
+                </span>
+                <span class="photoAlbumEntryTitle">giraffe</span>
+              </a>
+            </div>
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/monkey-with-makeup/view">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/monkey-with-makeup/image_mini&quot;);"><!----></span>
+                </span>
+                <span class="photoAlbumEntryTitle">Monkey with makeup</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--? end @folder_accordion_view  -->
+
+    <!--? @atct_album_view  -->
+    <h3 id="atct_album_view">Folder atct album view</h3>
+    <p>This view lists every child with the
+      <a tal:attributes="href string:${portal_url}/code/design-elements/components#album-view-photo-album">Photo album component.</a>
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <!--?  added extra clearfix div as photoAlbumEntry classes are floated -->
+      <div class="clearfix">
+        <div class="photoAlbumEntry">
+          <a tal:attributes="href string:${portal_url}/code/design-elements/giraffe/view">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/giraffe/image_mini&quot;);"><!----></span>
+                </span>
+            <span class="photoAlbumEntryTitle">giraffe</span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a tal:attributes="href string:${portal_url}/code/design-elements/monkey-with-makeup/view">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/monkey-with-makeup/image_mini&quot;);"><!----></span>
+                </span>
+            <span class="photoAlbumEntryTitle">Monkey with makeup</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--? end @atct_album_view  -->
+
+    <!--? @Gallery view  -->
+    <h3>Folder gallery view</h3>
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#image-gallery">Gallery component</a> to show folder contents that have images as fields which can then be used in this presentational view.
+    </p>
+    <div data-xrayhtml class="prism">
+      <ul id="galleryView">
+
+        <li>
+          <span class="panel-overlay">
+              Demo image.
+              <a target="_blank" tal:attributes="href string:${portal_url}/code/design-elements/giraffe/image_view_fullscreen">Click to view full-size image… <span>402.4 KB</span></a>
+          </span>
+          <img class="skip_lazy" src="/code/design-elements/giraffe/image_large">
+        </li>
+
+        <li>
+          <span class="panel-overlay">
+              This monkey tries to impress with makeup.
+              <a target="_blank" tal:attributes="href string:${portal_url}/code/design-elements/monkey-with-makeup/image_view_fullscreen">Click to view full-size image… <span>91.3 KB</span></a>
+          </span>
+          <img class="skip_lazy" src="/code/design-elements/monkey-with-makeup/image_large">
+        </li>
+      </ul>
+    </div>
+    <!--? end @Gallery view  -->
+
+    <h3>Folder listing view</h3>
+    <p>This view is a simple Plone view used only when there is a need to have a
+      brief list of children information such as title and description.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="entries">
+        <dt>
+          <span class="summary">
+            <img src="/image.png" alt="Image" width="16" height="16">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/giraffe/view" class="contenttype-image state-visible url">giraffe</a>
+          </span>
+
+          <span class="documentByLine">- 17 Feb 2010 —
+            <span>by <a tal:attributes="href string:${portal_url}/author/alec">alec</a>
+            </span>
+              — last modified 26 Oct 2020, 05:09 PM
+          </span>
+        </dt>
+
+        <dt>
+          <span class="summary">
+            <img src="/image.png" alt="Image Pascal source code" width="16" height="16">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/monkey-with-makeup/view" class="contenttype-image state-published url">Monkey with makeup</a>
+          </span>
+          <span class="documentByLine">— 18 Feb 2010 —
+            <span>by <a tal:attributes="href string:${portal_url}/author/alec">alec</a></span>
+              — last modified 22 Oct 2020, 05:56 PM
+          </span>
+        </dt>
+        <dd>This monkey tries to impress with makeup.</dd>
+
+      </div>
+    </div>
+
+    <!--? @folder_summary_view  -->
+    <h3 id="folder_summary_view">Folder summary view</h3>
+    <p>This view is used on folderish content types
+      making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#plone-tile-component">Plone tile component</a> to show children as media objects.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="entries">
+
+        <div class="tileItem visualIEFloatFix">
+          <a class="tileImage " tal:attributes="href string:${portal_url}/code/design-elements/typography" title="Typography">
+            <img class="lazy" src="/code/design-elements/typography/image_mini" title="Typography" alt="Typography">
+          </a>
+
+          <div class="tileContent">
+            <h2 class="tileHeadline notoc no-anchor">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/typography">Typography</a>
+            </h2>
+            <span class="date">
+              26 Oct 2020
+            </span>
+          </div>
+
+          <p class="tileBody">
+            <span class="description">Site typography, including global settings, headings, body text, lists.</span>
+          </p>
+
+          <p class="tileFooter">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/typography" class="moreLink">Read more</a>
+          </p>
+        </div>
+
+
+        <div class="tileItem visualIEFloatFix">
+          <a class="tileImage " tal:attributes="href string:${portal_url}/code/design-elements/typography" title="Typography">
+            <img class="lazy" src="/code/design-elements/typography/image_mini" title="Typography" alt="Typography">
+          </a>
+
+          <div class="tileContent">
+            <h2 class="tileHeadline notoc no-anchor">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/typography">Typography</a>
+            </h2>
+            <span class="date">
+              26 Oct 2020
+            </span>
+          </div>
+
+          <p class="tileBody">
+            <span class="description">Site typography, including global settings, headings, body text, lists.</span>
+          </p>
+
+          <p class="tileFooter">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/typography" class="moreLink">Read more</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @folder_summary_view  -->
+
+    <!--? @folder_tabs_view  -->
+    <h3>Folder tabs view</h3>
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/components#jquerytools-tabs">Tabs component</a> behaving just like the accordion view, with the only difference being
+      the use of tabs instead of accordions for headers.</p>
+
+    <div data-xrayhtml class="prism">
+      <ul class="eea-tabs two-rows">
+        <li>
+          <a tal:attributes="href string:${portal_url}/code/design-elements/getting-started" id="tab-getting-started" class="current">Getting started</a>
+        </li>
+        <li>
+          <a tal:attributes="href string:${portal_url}/code/design-elements" class="">Other resources</a>
+        </li>
+      </ul>
+
+      <div class="eea-tabs-panels">
+        <div class="eea-tabs-panel">
+          <p class="eea-tabs-description">EEA webdesign guide broken into individual sections.</p>
+          <div class="eea-tabs-contents">
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/typography">
+                <span class="photoAlbumEntryWrapper">
+                  <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/typography/image_mini&quot;);"><!----></span>
+                </span>
+                <span class="photoAlbumEntryTitle">Typography</span>
+              </a>
+            </div>
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/images">
+                <span class="photoAlbumEntryWrapper">
+                    <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/images/image_mini&quot;);"><!----></span>
+                </span>
+                <span class="photoAlbumEntryTitle">Images</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="portletFooter">
+            <a class="standardButton" tal:attributes="href string:${portal_url}/code/design-elements/getting-started">All Items</a>
+          </div>
+        </div>
+        <div class="eea-tabs-panel">
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/giraffe/view">
+                <span class="photoAlbumEntryWrapper">
+                        <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/code/design-elements/giraffe/image_mini&quot;);"><!----></span>
+                </span>
+              <span class="photoAlbumEntryTitle">giraffe</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--? end @folder_tabs_view  -->
+
+    <!--? @folder_tabs_view  -->
+    <h3>Folder tabular view</h3>
+    <p>This view is making use of the <a tal:attributes="href string:${portal_url}/code/design-elements/tables#listing">Listing table markup</a> to show folder content's following attributes:
+    </p>
+    <ol>
+      <li>Title</li>
+      <li>Author</li>
+      <li>Portal type</li>
+      <li>Last modification date</li>
+    </ol>
+    <div data-xrayhtml class="prism">
+      <div class="entries">
+        <table class="listing">
+          <caption class="hiddenStructure">Content listing</caption>
+
+          <thead>
+          <tr>
+            <th class="nosort">&nbsp;Title&nbsp;</th>
+            <th class="nosort">&nbsp;Author&nbsp;</th>
+            <th class="nosort">&nbsp;Type&nbsp;</th>
+            <th class="nosort">&nbsp;Modified&nbsp;</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr class="odd">
+            <td>
+              <img src="/image.png" alt="Image" width="16" height="16">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/giraffe/view" class="contenttype-image" title="Demo image.">giraffe</a>
+            </td>
+
+            <td>
+              <a tal:attributes="href string:${portal_url}/author/alec">alec</a>
+            </td>
+            <td>Image</td>
+            <td>26 Oct 2020, 05:09 PM</td>
+          </tr>
+
+          <tr class="even">
+            <td>
+              <img src="/image.png" alt="Image Pascal source code" width="16" height="16">
+              <a tal:attributes="href string:${portal_url}/code/design-elements/monkey-with-makeup/view" class="contenttype-image">Monkey with makeup</a>
+            </td>
+
+            <td>
+              <a tal:attributes="href string:${portal_url}/author/alec">alec</a>
+            </td>
+            <td>Image</td>
+            <td>22 Oct 2020, 05:56 PM</td>
+          </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+    <!--? end @folder_tabs_view  -->
+    </div>
+
+
+  </metal:main-macro>
+</div>
+</body>
+</html>

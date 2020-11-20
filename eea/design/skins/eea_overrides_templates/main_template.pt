@@ -28,6 +28,7 @@
                         wtool context/portal_workflow;
                         default_language portal_state/default_language;
                         isContextDefaultPage context_state/is_default_page;
+                        isViewTemplate context_state/is_view_template;
                         object_title context_state/object_title|string:;
                         putils context/plone_utils;
                         ztu modules/ZTUtils;
@@ -126,6 +127,7 @@
                   is_editable context_state/is_editable|python:False;
                   body_class python:plone_view.bodyClass(template, view);
                   body_class python: body_class + ' body-print' if isPrint else body_class;
+                  body_class python: body_class + ' is_view_template' if isViewTemplate else body_class;
                   body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() or request.get('body.fullwidth') else body_class;
                   body_class python: body_class + mini_header if mini_header else body_class;
                   body_class python: body_class + mini_header_light if mini_header_light else body_class;
@@ -254,7 +256,6 @@
                                         </div>
                                     </metal:description>
 
-                                    <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
 
                                     <tal:notajax tal:condition="python: not ajax_load and mini_header">
                                       <metal:right_column  tal:condition="python:sr and mini_header_right_column">
@@ -278,6 +279,7 @@
                                 </div>
 
                               <div class="content-core-wrapper">
+                                <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
                                 <div id="content-core" class="content-core"
                                      tal:define="content_class python: 'content-core';
                                         content_class python: wf_state and ('content-core wf-state-' + str(wf_state)) or content_class;
@@ -304,7 +306,7 @@
                                 </tal:block>
 
                                 <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-                                   <div class="max-container-centered" tal:attributes="class python: 'mini-header-below-content-container' if 'Indicator Assessment' != friendly_type else 'max-container-centered'">
+                                   <div tal:attributes="class python: 'mini-header-below-content-wrapper' if 'Indicator Assessment' != friendly_type else 'mini-header-below-content-wrapper widescreen-container eea-section-md'">
                                   <div class="mini-header-below-content eea-accordion-panels
                                   eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive collapsed-by-default">
                                     <div tal:replace="structure provider:plone.belowcontentbody" />
@@ -386,6 +388,8 @@
        tal:content="structure context/critical.js"
        tal:condition="python:not isPrint">
   </script>
+  <metal:javascriptslot define-slot="javascript_critical_slot" />
+
     <script type="text/javascript"
             tal:content="structure context/lazy_load_init.js"
             tal:condition="python:not isPrint">

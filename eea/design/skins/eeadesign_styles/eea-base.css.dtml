@@ -106,7 +106,8 @@ q {
 
 code {
     font-family: Monaco, "Courier New", Courier, monospace;
-    font-size: 120%;
+    font-size: 110%;
+    line-height: 1.2;
     color: Black;
     background-color: &dtml-globalBackgroundColor;;
     padding: 0 0.1em;
@@ -265,15 +266,25 @@ div.geotags {
 /* #106884 span tables 100% width while also making the overflow when area is
  * too small for the table data to fit
  */
+/* #124597 keep tables as table display */
+/*table {*/
+/*    max-width: 100%;*/
+/*    display: block;*/
+/*    overflow: auto;*/
+/*}*/
+
 table {
     max-width: 100%;
-    display: block;
-    overflow: auto;
-}
-tbody {
     display: table;
     width: 100%;
+    overflow: auto;
 }
+/* 124597 keep tables as table display */
+/*thead,*/
+/*tbody {*/
+/*    display: table;*/
+/*    width: 100%;*/
+/*}*/
 /* #106884 SITE/soer/folder_contents tbody will not span 100% without this override */
 .listing tbody,
 .google-visualization-table-table > tbody
@@ -302,10 +313,10 @@ tbody {
 /* @group Data tables */
 
 table.listing {
-    display: block;
+    /*display: block;*/ /* 124597 keep tables as table display */
     max-width: 100%;
     overflow: auto;
-    border-width: 0px 0px 0px 1px;
+    border-width: 0 0 0 1px;
     border-style: dotted;
 }
 
@@ -319,7 +330,7 @@ div.listingBar a:hover {
     color: #8E004D;
 }
 div.listingBar a {
-    border: 0px;
+    border: 0;
 }
 /* @end @group Data tables */
 

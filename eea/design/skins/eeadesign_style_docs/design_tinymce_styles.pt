@@ -1,0 +1,360 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  lang="en"
+ metal:use-macro="here/main_template/macros/master"
+ i18n:domain="eea.notranslation"
+ tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+</metal:javascriptslot>
+
+<body>
+<div metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <h2 id="box-styles">Box Styles</h2>
+    <p>Just like <a tal:attributes="href string:${here_url}#pullquotes">pullquote styles</a>, box styles can be used to add emphasis to a section
+      of content wrapping the selected content with a given box background color.</p>
+
+    <h3>Note</h3>
+    <p>Note style is used for info message mimicking those found within charts.</p>
+    <p class="portalMessage informationMessage">Due to compatibility reasons
+      the font size for this style is fixed to <em>12px</em>.</p>
+    <div data-xrayhtml class="prism">
+      <p class="callout">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquid eaque inventore ipsum, iure quidem quisquam.
+        A autem deserunt dicta ducimus eos expedita facilis hic
+        illo perferendis possimus quo voluptate, voluptatum?
+      </p>
+    </div>
+    
+    <h3>KeyFacts box</h3>
+    <div data-xrayhtml class="prism">
+      <ul class="keyFact">
+        <li>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </li>
+        <li>
+          Architecto cumque dignissimos dolor exercitationem fugiat,
+          harum laborum, officiis optio reiciendis sed similique totam vero.
+        </li>
+        <li>
+          Esse eum laborum qui quibusdam sint tempore.
+        </li>
+      </ul>
+    </div>
+
+      <h3>Fullwidth box</h3>
+      <div data-xrayhtml class="prism">
+        <div class="box box--full box-primary">
+          <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+            mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+            Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+            A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+            platea dictumst vestibulum rhoncus.
+          </p>
+        </div>
+      </div>
+
+      <h3>Left box</h3>
+      <div data-xrayhtml class="prism">
+        <div class="box box--left box-secondary">
+          <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+            mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+            Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+            A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+            platea dictumst vestibulum rhoncus.
+          </p>
+        </div>
+
+        <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+          aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+          tempor id. Sed viverra tellus in hac habitasse platea dictumst
+          vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+          habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+          nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+          tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+          phasellus. Consequat id porta nibh venenatis.
+        </p>
+      </div>
+
+      <h3>Right box</h3>
+      <div data-xrayhtml class="prism">
+        <div class="box box--right box-tertiary">
+          <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+            mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+            Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+            A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+            platea dictumst vestibulum rhoncus.
+          </p>
+        </div>
+
+        <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+          aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+          tempor id. Sed viverra tellus in hac habitasse platea dictumst
+          vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+          habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+          nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+          tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+          phasellus. Consequat id porta nibh venenatis.
+        </p>
+      </div>
+
+      <h3>Boxes options</h3>
+      <p>Each box has the following options:
+      </p>
+      <ol>
+        <li>Color options:
+          <ol>
+            <li>box-primary</li>
+            <li>box-secondary</li>
+            <li>box-tertiary</li>
+          </ol>
+        </li>
+        <li>Size options:
+          <ol>
+            <li>box--full</li>
+            <li>box--left</li>
+            <li>box--right</li>
+          </ol>
+        </li>
+      </ol>
+      <p class="portalMessage informationMessage">All of these box variants are
+        selectable from the editor style dropdown.
+      </p>
+      <p><strong>Example:</strong></p>
+      <div data-xrayhtml class="prism">
+        <div class="box box--full box-tertiary">
+          Box with box--full size and box-tertiary background color
+        </div>
+      </div>
+
+
+    <h2 id="pullquotes">Quotes</h2>
+    <h3>Inline quote</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote>
+        <p>Non diam phasellus vestibulum lorem sed risus ultricies tristique nulla.
+          Elementum nibh tellus molestie nunc non blandit.
+          Et malesuada fames ac turpis egestas maecenas pharetra.
+        </p>
+      </blockquote>
+    </div>
+
+    <h3>Pullquote left</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote class="pullquote-left">
+        <p>Donec enim diam vulputate ut pharetrasit amet aliquam id.
+          Euismod lacinia at quis risus sed vulputate odio ut.
+        </p>
+      </blockquote>
+
+      <!--?  content that wraps the left pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. </p>
+    </div>
+
+    <h3>Pullquote right</h3>
+    <div data-xrayhtml class="prism">
+      <blockquote class="pullquote-right">
+        <p>Donec enim diam vulputate ut pharetrasit amet aliquam id.
+          Euismod lacinia at quis risus sed vulputate odio ut.
+        </p>
+      </blockquote>
+
+      <!--?  content that wraps the right pullquote  -->
+      <p>Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Venenatis tellus in metus vulputate eu. Sagittis id consectetur purus ut. Ultricies mi eget mauris pharetra et ultrices. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p>
+      <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in mollis nunc. Quisque non tellus orci ac auctor augue mauris. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.</p>
+    </div>
+
+
+    <h2>Fullwidth background sections</h2>
+    <p>Just like <a tal:attributes="href string:${here_url}#boxes">boxes</a>
+      we can also make use of <em>fullwidth background sections</em>
+      to add emphasis to the given area.</p>
+    <p>Also like the boxes we have 3 color options:</p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-block bg-primary">
+        <p>Full width background section with primary background color</p>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-secondary">
+        <p>Full width background section with secondary background color</p>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-tertiary">
+        <p>Full width background section with tertiary background color</p>
+      </div>
+    </div>
+
+    <h3>Fullwidth background section with other elements</h3>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-block bg-primary">
+        <blockquote>
+          <p>Besides the simple styles, you can also nest several styles
+            for a combined effect in case it fit's the page design.
+          </p>
+        </blockquote>
+        <p>This way you can nest a <strong>Inline quote</strong> within a
+          <strong>Fullwidth background section</strong>.
+        </p>
+      </div>
+    </div>
+
+
+    <h2>TinyMCE templates</h2>
+    <p>Besides the styles that you can select from the style dropdown we also
+    have several templates that wrap several html tags in order to have more
+    complex styles.</p>
+    <p>Here we list the following templates:</p>
+    <h3>Tiles</h3>
+    <p>Tiles are templates used to write a large impact text
+      or a title followed by a video.</p>
+    <p>Within tiles we have the following variations:</p>
+
+    <h4>One tile</h4>
+    <div data-xrayhtml class="prism">
+      <div class="tiles tiles--1">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Two tiles with video content</h4>
+    <div data-xrayhtml class="prism">
+      <div class="tiles tiles--2">
+
+        <div class="tile">
+          <div class="tile-item">
+            <h3 class="tile-item-header h1 notoc" id="10-years">What &amp; how?</h3>
+            <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Tobias" controls="controls" preload="auto" poster="resolveuid/05f995b884f94542929de52b451baeb8" src="https://cmshare.eea.europa.eu/s/M3AExbKXxJ6W6yt/download" type="video/mp4" width="320" height="180"> </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile-item">
+            <h3 class="tile-item-header h1 notoc" id="10-years">Key messages</h3>
+            <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Key messages_Hans_short version" controls="controls" preload="auto" poster="resolveuid/fa8f4918d59f4f64928593140aadc328" src="https://cmshare.eea.europa.eu/s/28eMmEAnkpn2NaP/download" type="video/mp4" width="320" height="180"> </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <h4>Three tiles</h4>
+    <div data-xrayhtml class="prism">
+      <div class="tiles tiles--3">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <h4>Four tiles</h4>
+    <div data-xrayhtml class="prism">
+      <div class="tiles tiles--4">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+            <div class="tile-item-body">of tracking industrial emissions</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <h4>Tiles options</h4>
+    <p>Tiles have a <strong>tile--bordered</strong> modifier which if applied
+      adds a top and bottom grey border to the tile section.</p>
+    <div data-xrayhtml class="prism">
+      <div class="tiles tiles--1">
+        <div class="tile tile--bordered">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">bordered tile</h3>
+            <div class="tile-item-body">this section is bordered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>They can also be wrapped with <strong>fullwidth background sections</strong>
+      in case we need to provide such a focus area for the tiles.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-block bg-secondary">
+        <div class="tiles tiles--1">
+          <div class="tile">
+            <div class="tile-item">
+              <h3 class="tile-item-header notoc" id="10-years">tile header</h3>
+              <div class="tile-item-body">background wrapped tile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </metal:main-macro>
+</div>
+
+</body>
+</html>

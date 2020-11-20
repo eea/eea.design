@@ -291,7 +291,8 @@ sea takimata sanctus est Lorem ipsum dolor sit amet.">
 <h3 tal:content="string:A nested ordered list:"></h3>
 <ol>
   <li tal:content="string:Coffee"></li>
-  <li tal:content="string:Tea">
+  <li>
+    Tea
     <ol>
     <li tal:content="string:Black tea"></li>
     <li tal:content="string:Green tea">
