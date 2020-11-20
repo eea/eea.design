@@ -197,16 +197,16 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
             $('#helpdesk_ticket_container').contents().find('.close-button').hide();
 
             var message = "<span class='discreet note'><strong>Note</strong>: "
-            + "Our expected response time is 15 working days. However, we are committed "
-            + "to replying to your enquiry thoroughly and in the briefest time "
-            + "possible. Note that the EEA working language is English and that "
-            + "most of our information and content is in English. Nevertheless, you "
-            + "may address us in one of the 24 EU official languages. Kindly note that "
-            + "the time to process your enquiry might be slightly longer.</span>";
+            + "Our online form is currently displayed in English since the EEA working "
+            + "language is English and that most of our information and content is in "
+            + "English. You may nevertheless address us in one of the 24 EU official "
+            + "languages but kindly note that the time to process your enquiry might "
+            + "be slightly longer. Our expected response time is 15 working days.</span>";
+
+            var flash = $('#helpdesk_ticket_container').contents().find('#flash')[0];
+            $(message).insertBefore(flash);
 
             var policy = $('#helpdesk_ticket_container').contents().find('#privacy_policy_fields')[0];
-            $(message).insertAfter(policy);
-
             message = "<p><span class='discreet'>* mandatory fields</span></p>";
             $(message).insertBefore(policy);
 
@@ -218,7 +218,7 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
             // insert captcha in form + style
             // taken from https://github.com/gzuidhof/friendly-challenge/blob/master/src/styles.css
             var css = ".frc-captcha *{margin:0;padding:0;border:0;text-align:initial;border-radius:4px;filter:none!important;transition:none!important;font-weight:400;font-size:14px;line-height:1.35;text-decoration:none;background-color:initial;color:#222}.frc-captcha{position:relative;display:inline-block;width:280px;border:1px solid #ddd;padding-bottom:12px;background-color:#fff}.frc-container{display:flex;align-items:center;min-height:52px}.frc-icon{fill:#222;stroke:#222;flex-shrink:0;margin:8px 8px 0 8px}.frc-icon.frc-warning{fill:#c00}.frc-content{white-space:nowrap;display:flex;flex-direction:column;margin:4px 6px 0 0;overflow-x:auto;flex-grow:1}.frc-banner{position:absolute;bottom:0;right:6px}.frc-banner *{font-size:10px;opacity:.8}.frc-banner b{font-weight:700}.frc-progress{-webkit-appearance:none;-moz-appearance:none;appearance:none;margin:3px 0;height:4px;border:none;background-color:#eee;color:#222;width:100%;transition:all .5s linear}.frc-progress::-webkit-progress-bar{background:#eee}.frc-progress::-webkit-progress-value{background:#222}.frc-progress::-moz-progress-bar{background:#222}.frc-button{cursor:pointer;padding:2px 6px;background-color:#f1f1f1;border:1px solid transparent;text-align:center;font-weight:600}.frc-button:focus{border:1px solid #333}.frc-button:hover{background-color:#ddd}.dark.frc-captcha{color:#fff;background-color:#222}.dark.frc-captcha *{color:#fff}.dark .frc-icon{fill:#fff;stroke:#fff}.dark .frc-progress{background-color:#444}.dark .frc-progress::-webkit-progress-bar{background:#444}.dark .frc-progress::-webkit-progress-value{background:#ddd}.dark .frc-progress::-moz-progress-bar{background:#ddd}";
-            $('.frc-captcha').insertAfter($('#helpdesk_ticket_container').contents().find('span.discreet.note'));
+            $('.frc-captcha').insertAfter(policy);
 
             var styleSheet = $('#helpdesk_ticket_container').contents()[0].createElement("style");
             styleSheet.type = "text/css";

@@ -1,7 +1,7 @@
 Changelog
 =========
 
-27.7-dev0 - (unreleased)
+27.7 - (2020-11-17)
 ---------------------------
 * Bug fix: Fixed tinymce popup right panel and action buttons
   [ichim-david refs #124543]
@@ -12,6 +12,8 @@ Changelog
   the content-core area in order to get toc viewlet again to show
   up in the content area and not the header area
   [ichim-david refs #122968]
+* Change: Modified the helpdesk widget disclaimer
+  [iulianpetchesi refs #124181]
 * Change: add fise website to the footer portlets
   [ichim-david refs #121232]
 * Change: ensure @@crop overlay display image and crop button without overflow
