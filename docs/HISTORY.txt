@@ -1,6 +1,9 @@
 Changelog
 =========
 
+27.8-dev0 - (unreleased)
+---------------------------
+
 27.7 - (2020-11-17)
 ---------------------------
 * Bug fix: Fixed tinymce popup right panel and action buttons
