@@ -27,7 +27,7 @@
 </metal:javascriptslot>
 
 <body>
-<div metal:fill-slot="content-core">
+<metal:body metal:fill-slot="content-core">
   <metal:main-macro define-macro="content-core">
 
     <div metal:use-macro="here/portlet_toc/macros/portlet">
@@ -116,7 +116,7 @@
 
 
   </metal:main-macro>
-</div>
+</metal:body>
 
 </body>
 </html>

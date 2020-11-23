@@ -1,0 +1,35 @@
+@import "../../variables";
+@import "../../mixins";
+
+.max-container-centered {
+  @include fullwidth-container-centered();
+}
+.max-container-centered > img {
+  width: 100%;
+}
+
+.max-container-centered > * {
+  width: 100%;
+  max-width: 1400px !important;
+}
+
+.max-container-centered  > img,
+.max-container-centered  > iframe
+{
+  min-width: initial;
+}
+.max-container-centered table {
+  width: auto;
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: 1599px) {
+  .mini-header-navigation .max-container-centered {
+    margin: 2.5rem calc(-8.3% - 50vw) 2.5rem calc(50% - 50vw);
+  }
+}
+
+@media (max-width: $breakpoint-xxl) {
+  .max-container-centered {
+    padding: 0 $spacer;
+  }
+}

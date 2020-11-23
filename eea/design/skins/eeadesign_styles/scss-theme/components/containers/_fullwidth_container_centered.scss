@@ -1,0 +1,31 @@
+@import "../../variables";
+@import "../../mixins";
+
+.fullwidth-container-centered {
+  @include fullwidth-container-centered();
+}
+
+.fullwidth-container-centered > img {
+  width: 100%;
+}
+.fullwidth-container-centered > * {
+  width: 100%;
+  max-width: 800px;
+}
+
+.fullwidth-container-centered .fullwidth {
+  position: absolute;
+  padding: 0;
+}
+@media (min-width: $breakpoint-xl) and (max-width: 1599px) {
+  .mini-header-navigation .fullwidth-container-centered
+  {
+    margin: 2.5rem calc(23% - 50vw) 2.5rem calc(23% - 50vw);
+  }
+}
+
+@media (max-width: $breakpoint-xxl) {
+  .fullwidth-container-centered {
+    padding: 0 $spacer;
+  }
+}

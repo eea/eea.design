@@ -1,0 +1,35 @@
+@import "../../variables";
+@import "../../mixins";
+
+.fullwidth-bg {
+  @include fullwidth-bg;
+}
+.fullwidth-bg:before {
+  @include fullwidth-bg-before;
+}
+
+@media (min-width: $breakpoint-full) {
+  .fullwidth-bg {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl - 1) {
+  .mini-header-navigation .fullwidth-bg:before {
+    left: 31%;
+    margin-left: -40.3%;
+    width: 100.5vw;
+  }
+}
+
+@media (min-width: $breakpoint-xxl) and (max-width: 1599px) {
+
+  .mini-header-navigation .fullwidth-bg:before {
+    left: 0;
+    width: 100vw;
+    margin-left: initial;
+    transform: translateX(calc((62.6em - 100vw)/2));
+  }
+}
+

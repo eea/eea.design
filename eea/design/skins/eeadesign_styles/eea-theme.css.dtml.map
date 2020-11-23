@@ -5,6 +5,7 @@
 		"eea-theme.scss",
 		"scss-theme/_mixins.scss",
 		"scss-theme/mixins/_backgrounds.scss",
+		"scss-theme/mixins/_containers.scss",
 		"scss-theme/mixins/_borders.scss",
 		"scss-theme/mixins/_lists.scss"
 	],

@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../mixins";
+@import "containers/fullwidth_bg";
+@import "containers/fullwidth_container";
+@import "containers/fullwidth_container_centered";
+@import "containers/max_container_centered";
+@import "containers/widescreen_container";
+
+.eea-image-credit {
+  margin-top: -2rem;
+}
+
+
