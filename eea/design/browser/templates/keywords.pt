@@ -4,7 +4,7 @@
      tal:define="categories context/Subject|nothing;
                  url_quote  nocall:modules/Products.PythonScripts.standard/url_quote;"
      tal:condition="categories">
-  <h2 class="eea-accordion-title eea-icon-left-container" i18n:translate="">Tags</h2>
+  <h2 class="notoc eea-accordion-title eea-icon-left-container" i18n:translate="">Tags</h2>
   <div class="pane">
   <tal:filedunder i18n:translate="label_filed_under">Filed under:</tal:filedunder>
   <span tal:repeat="category categories">

@@ -7,6 +7,7 @@
 @import "scss-theme/type";
 @import "scss-theme/theme/content_core";
 
+
 .indicator-figure-plus-container .warningMessage {display:none;}
 .mini-header:not(.expired-content) .wf-state-published #content-core {
   background-color: #FFF;
@@ -283,7 +284,7 @@
 }
 
 /* 121911 bring disclaimer closer to below content area accordions */
-.mini-header-below-content-container > .disclaimer {
+.mini-header-below-content-wrapper > .disclaimer {
   margin-bottom: -2rem;
 }
 

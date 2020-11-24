@@ -248,7 +248,7 @@
                 listing_not_available python: isAnon and context_wf_state not in ['published', '', None]">
         <tal:cond tal:condition="listing_not_available">
             <tal:comment tal:replace="nothing" i18n:translate="">
-                If folder isn't public and user is anonymous, redirect to a standared message page
+                If folder isn't public and user is anonymous, redirect to a standard message page
             </tal:comment>
             <tal:redirect tal:define="dummy python:
                  request.RESPONSE.redirect(context.absolute_url() + '/listing_not_available',

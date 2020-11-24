@@ -1,0 +1,314 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+</metal:javascriptslot>
+
+<body>
+<metal:body metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+
+    <div id="table-listing-elements">
+    <h2 id="listing">Tables - sortable and not sortable</h2>
+    <div data-xrayhtml class="prism">
+      <table class="listing">
+        <thead>
+        <tr>
+          <th class="nosort">Product - not sortable</th>
+          <th>Price - sortable</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Ice cream</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Pony</td>
+          <td>75</td>
+        </tr>
+        <tr>
+          <td>Car</td>
+          <td>9999999</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+
+    <div id="table-form-elements">
+    <h2>Table with form elements</h2>
+    <div data-xrayhtml class="prism">
+      <form>
+        <table id="sortable" class="listing" summary="Content listing" cellspacing="0" cellpadding="0">
+          <thead>
+          <tr>
+            <th class="nosort">
+              <input class="noborder" type="checkbox" src="http://david.dev2aws.eea.europa.eu/select_all_icon.png" name="selectButton" title="Select all items" onclick="toggleSelect(this,'paths:list');" alt="Select all items">
+            </th>
+            <th>Title</th>
+            <th>Stuff</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <input type="checkbox" class="noborder" name="paths:list" id="#" value="#">
+            </td>
+            <td><a href="#">Title</a></td>
+            <td>with class noborder</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" class="noborder" name="paths:list" id="#" value="#">
+            </td>
+            <td><a href="#">Title</a></td>
+            <td>with class noborder</td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    </div>
+
+
+    <div id="table-invisible-elements">
+    <h2>Invisible table</h2>
+    <p>Add <strong>invisible</strong> class to the table tag in order to
+      make the table discreet without any visible borders.
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="invisible" summary="Invisible table example">
+        <thead>
+        <tr>
+          <th>Even table header</th>
+          <th>Odd table header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Even table item</td>
+          <td>Odd table item</td>
+        </tr>
+        <tr>
+          <td>Odd table item</td>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+    </div>
+
+
+    <div id="table-muted-elements">
+    <h2>Muted table</h2>
+    <p>Add <strong>invisible</strong> class to the table tag in order to
+      make the table discreet without any visible borders.
+    </p>
+    <p>Add <strong>even</strong> class to each tr in order to add back a muted
+      border color
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="invisible" summary="Muted table example with table headers">
+        <thead>
+        <tr class="even">
+          <th>Even table header</th>
+          <th>Odd table header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="even">
+          <td>Even table item</td>
+          <td>Odd table item</td>
+        </tr>
+        <tr class="even">
+          <td>Odd table item</td>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <p>Next table without thead tags</p>
+
+      <table class="invisible" summary="Muted table example without table headers">
+        <tbody>
+        <tr class="even">
+          <td>Even table item</td>
+          <td>Odd table item</td>
+        </tr>
+        <tr class="even">
+          <td>Odd table item</td>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+    </div>
+
+
+    <div id="table-plain-elements">
+    <h2>Plain table</h2>
+    <p>Add <strong>plain</strong> class to the table tag in order to
+      make the table look like a spreadsheet table.
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="plain" summary="Plain table example">
+        <thead>
+        <tr>
+          <th>Even table header</th>
+          <th>Odd table header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Even table item</td>
+          <td>Odd table item</td>
+        </tr>
+        <tr>
+          <td>Odd table item</td>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+    </div>
+
+
+    <div id="table-vertical-elements">
+    <h2>Vertical listing table</h2>
+    <div data-xrayhtml class="prism">
+      <p>Add <strong>vertical listing</strong> classes to the table tag in order to
+        make the table vertical.
+      </p>
+      <table class="vertical listing" summary="Vertical listing example">
+        <tbody>
+        <tr>
+          <th>Table heading</th>
+          <td>Odd table item</td>
+        </tr>
+        <tr>
+          <th>Another heading</th>
+          <td>Even table item</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+
+    <div id="table-striped-elements">
+    <h2>Striped table</h2>
+    <p>Add <strong>odd</strong> and <strong>even</strong> classes to each
+      <strong>tr tag</strong> in order to add a stripe effect to table rows
+      or add <strong>listing</strong> class to the table and these classes will
+      be added by javascript.
+    </p>
+    <div data-xrayhtml class="prism">
+      <table class="listing" id="someid" summary="Sortable striped table example">
+        <thead>
+        <tr>
+          <th>Table heading</th>
+          <th>Another heading (sortable, click to sort)</th>
+          <th class="nosort">Fixed column (not sortable)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="odd">
+          <td>Odd table item</td>
+          <td>Item 1</td>
+          <td>Another item</td>
+        </tr>
+        <tr class="even">
+          <td>Even table item</td>
+          <td>Item 2</td>
+          <td>Yet another item</td>
+        </tr>
+        <tr class="odd">
+          <td>Odd table item</td>
+          <td>Item 3</td>
+          <td>And one more item</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+
+    <div id="table-datatable-elements">
+    <h2>Datatable styled table</h2>
+    <p>This legacy table style is not currently used anywhere however for
+      completion sake we also document this style as well.
+    </p>
+    <div data-xrayhtml class="prism">
+      <table id="your-zebra-content-id" class="datatable">
+        <caption class="hiddenStructure">Static Content listing</caption>
+        <thead>
+        <tr>
+          <th>&nbsp;Title&nbsp;</th>
+          <th>&nbsp;Size&nbsp;</th>
+          <th>&nbsp;Modified&nbsp;</th>
+          <th>&nbsp;State&nbsp;</th>
+          <th>&nbsp;Other&nbsp;</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>Title 1</td>
+          <td>10 kB</td>
+          <td>2006-01-10 10:20</td>
+          <td>Published</td>
+          <td>Other info</td>
+        </tr>
+        <tr class="zebraeven">
+          <td>Title 2</td>
+          <td>20 kB</td>
+          <td>2006-03-13 10:20</td>
+          <td>Unpublished</td>
+          <td>Other info</td>
+        </tr>
+        <tr>
+          <td>Title 3</td>
+          <td>50 kB</td>
+          <td>2006-02-10 10:20</td>
+          <td>Unpublished</td>
+          <td>Other info</td>
+        </tr>
+        <tr class="zebraeven">
+          <td>Title 4</td>
+          <td>20 kB</td>
+          <td>2006-03-13 10:20</td>
+          <td>Unpublished</td>
+          <td>Other info</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+  </metal:main-macro>
+</metal:body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.fullwidth-container {
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
+}
+.fullwidth-container > img {
+  width: 100vw;
+  max-width: initial !important;
+}
+
+//@media (min-width: $breakpoint-lg) {
+//  .fullwidth-container-centered  {
+//    min-height: 600px;
+//  }
+//}
+
+@media (min-width: $breakpoint-lg) {
+  .fullwidth-container-centered {
+    .emphasis-area {
+      margin: $spacer-hero * 2 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .fullwidth-container {
+    margin-left: calc(-50vw - -7px);
+  }
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl - 1) {
+  .mini-header-navigation .fullwidth-container {
+    left: 31%;
+    margin-left: -40.3%;
+    //translateX(calc((89vw - 100vw)/2));
+  }
+}
+
+
+@media (min-width: $breakpoint-xxl) and (max-width: 1599px) {
+  .mini-header-navigation .fullwidth-container {
+    transform:translateX(calc((78.8em - 100vw)/2));
+    left: auto;
+    margin-left: auto;
+  }
+}

@@ -110,6 +110,10 @@
 .snippet, .ribbon-example {
     overflow: hidden;
 }
+
+.xrayhtml .snippet {
+    overflow: visible;
+}
 /* @end css3 ribbon effect */
 
 /* eea accordion styles */
@@ -134,10 +138,23 @@
     margin: 0;
     font-size: &dtml-fontBaseSize;;
     color: #00446A;
-    line-height: 3;
-    padding: 0 0.5em;
+    line-height: 1.2;
+    padding: 1.5rem 0.5em;
     font-weight: normal;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.eea-accordion-title > .eea-icon-left {
+    order: -1;
+}
+
+.eea-accordion-title > .eea-icon-right {
+    order: 10;
+}
+/* ensure that eea-icon-right acts as floated right now that h2 is flexed */
+.eea-accordion-panel > h2 > .eea-icon-right {
+    margin-left: auto;
 }
 .eea-accordion-panels-bordered-primary {
     border-top: 3px solid #000;
@@ -148,7 +165,7 @@
 }
 
 .eea-accordion-panels-bordered-secondary {
-    border-top: 5px solid &dtml-corporateGreen;;
+    border-top: 3px solid &dtml-corporateGreen;;
 }
 .eea-accordion-panels-bordered-secondary  .eea-accordion-title {
     font-weight: bold;

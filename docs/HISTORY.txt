@@ -1,8 +1,22 @@
 Changelog
 =========
 
+27.8 - (2020-11-24)
+---------------------------
+* Change: Refs #119674 and #124597 docs and design documentation
+  [ichim-david]
+
 27.7 - (2020-11-17)
 ---------------------------
+* Bug fix: Fixed tinymce popup right panel and action buttons
+  [ichim-david refs #124543]
+* Bug fix: scroll into view if hash is present after we finish the
+  addition of ids on headers
+  [ichim-david refs #123625]
+* Change: moved plone.abovecontentbody viewlet manager right above
+  the content-core area in order to get toc viewlet again to show
+  up in the content area and not the header area
+  [ichim-david refs #122968]
 * Change: Modified the helpdesk widget disclaimer
   [iulianpetchesi refs #124181]
 * Change: add fise website to the footer portlets

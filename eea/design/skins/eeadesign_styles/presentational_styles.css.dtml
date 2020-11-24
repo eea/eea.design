@@ -25,7 +25,6 @@ dl.error,
     font-size: 120%;
     margin: 1em 0;
     padding: 1em 1.5em 1em 4.5em;
-    vertical-align: middle;
     border: none;
 }
 
@@ -48,18 +47,22 @@ dl.error,
 }
 
 .system-message:before, .portalMessage:before, .portalMessage .eea-icon:before {
-    float: left;
     display: block;
     font-family: 'FontAwesome';
     font-weight: normal;
     font-style: normal;
-    line-height: inherit;
+    line-height: 1;
     text-decoration: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: absolute;
     speak: none;
     margin-left: -2.3em;
+    margin-right: 1rem;
     font-size: 150%;
+}
+.portalMessage .eea-icon:before {
+    position: relative;
 }
 
 /* portal-admin-msg is a portalMessage which uses an eea-icon instead of using

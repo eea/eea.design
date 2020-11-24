@@ -1,0 +1,1937 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/themecentre_critical.css" />
+  <link rel="stylesheet"
+        type="text/css" tal:attributes="href string:${portal_url}/themecentre.css" />
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+
+
+
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/++resource++jquery.galleryview.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${portal_url}/eea-galleryview.js"></script>
+</metal:javascriptslot>
+
+<body>
+<metal:body metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+    <!--? @Box -->
+    <div id="box-components">
+    <h2 id="boxes">Boxes</h2>
+    <p>Just like <a tal:attributes="href string:${portal_url}/code/design-elements/typography#pullquotes">pullquote styles</a>, box components can be used to add emphasis to a section
+      of content wrapping the selected content with a given box background color.</p>
+
+    <!--? @Box @note -->
+    <h3>Note</h3>
+    <p>Note style is used for info message mimicking those found within charts.</p>
+    <p class="portalMessage informationMessage">Due to compatibility reasons
+      the font size for this style is fixed to <em>12px</em>.</p>
+    <div data-xrayhtml class="prism">
+      <p class="callout">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquid eaque inventore ipsum, iure quidem quisquam.
+        A autem deserunt dicta ducimus eos expedita facilis hic
+        illo perferendis possimus quo voluptate, voluptatum?
+      </p>
+    </div>
+    <!--? end @Box @note -->
+
+    <!--? @Box @keyfact -->
+    <h3>KeyFacts box</h3>
+    <div data-xrayhtml class="prism">
+      <ul class="keyFact">
+        <li>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </li>
+        <li>
+          Architecto cumque dignissimos dolor exercitationem fugiat,
+          harum laborum, officiis optio reiciendis sed similique totam vero.
+        </li>
+        <li>
+          Esse eum laborum qui quibusdam sint tempore.
+        </li>
+      </ul>
+    </div>
+    <!--? end @Box @keyfact -->
+
+
+    <!--? @Box @fullwidth -->
+    <h3>Fullwidth box</h3>
+    <div data-xrayhtml class="prism">
+      <div class="box box--full box-primary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+    </div>
+    <!--? end @Box @fullwidth -->
+
+    <!--? @Box @left -->
+    <h3>Left box</h3>
+    <div data-xrayhtml class="prism">
+      <div class="box box--left box-secondary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+
+      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+        tempor id. Sed viverra tellus in hac habitasse platea dictumst
+        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+        phasellus. Consequat id porta nibh venenatis.
+      </p>
+    </div>
+    <!--? end @Box @left -->
+
+    <!--? @Box @right -->
+    <h3>Right box</h3>
+    <div data-xrayhtml class="prism">
+      <div class="box box--right box-tertiary">
+        <p>Mattis pellentesque id nibh tortor id aliquet. Amet nisl purus in
+          mollis nunc. Quisque non tellus orci ac auctor augue mauris.
+          Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+          A diam sollicitudin tempor id. Sed viverra tellus in hac habitasse
+          platea dictumst vestibulum rhoncus.
+        </p>
+      </div>
+
+      <p>Quisque non tellus orci ac auctor augue mauris. Faucibus vitae
+        aliquet nec ullamcorper sit amet risus nullam eget. A diam sollicitudin
+        tempor id. Sed viverra tellus in hac habitasse platea dictumst
+        vestibulum rhoncus. Amet consectetur adipiscing elit pellentesque
+        habitant. Fermentum odio eu feugiat pretium nibh ipsum consequat
+        nisl vel. Viverra mauris in aliquam sem. Turpis massa sed elementum
+        tempus egestas sed sed risus pretium. Fermentum iaculis eu non diam
+        phasellus. Consequat id porta nibh venenatis.
+      </p>
+    </div>
+    <!--? end @Box @right -->
+
+    <!--? @Box @options -->
+    <h3>Boxes options</h3>
+    <p>Each box has the following options:
+    </p>
+    <ol>
+      <li>Color options:
+        <ol>
+          <li>box-primary</li>
+          <li>box-secondary</li>
+          <li>box-tertiary</li>
+        </ol>
+      </li>
+      <li>Size options:
+        <ol>
+          <li>box--full</li>
+          <li>box--left</li>
+          <li>box--right</li>
+        </ol>
+      </li>
+    </ol>
+    <p class="portalMessage informationMessage">All of these box variants are
+      selectable from the editor style dropdown.
+    </p>
+    <p><strong>Examples of box-full:</strong></p>
+    <div data-xrayhtml class="prism">
+      <div class="box box--full box-primary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Notice that this is demo text at full size</p>
+        <p class="discreet">Thank you for your contact</p>
+
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box box--full box-secondary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Notice that this is demo text at full size</p>
+        <p class="discreet">Thank you for your contact</p>
+
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box box--full box-tertiary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Notice that this is demo text at full size</p>
+        <p class="discreet">Thank you for your contact</p>
+
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p><strong>Examples of box--left:</strong></p>
+    <p>Example is wrapped in <strong>clearfix</strong> div since box left is
+      floated left.</p>
+    <div data-xrayhtml class="prism">
+      <div class="clearfix">
+        <div class="box box--left box-primary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--left box-secondary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--left box-tertiary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+      </div>
+    </div>
+
+
+    <p><strong>Examples of box--right:</strong></p>
+    <p>Example is wrapped in <strong>clearfix</strong> div since box right is
+      floated right.</p>
+    <div data-xrayhtml class="prism">
+      <div class="clearfix">
+        <div class="box box--right box-primary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--right box-secondary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+
+        <div class="box box--right box-tertiary">
+          <h2 class="notoc">Are you a journalist?</h2>
+          <h3 class="notoc">Contact our press team</h3>
+          <h4 class="figureHeading notoc">Write to the following:</h4>
+          <ul>
+            <li><a href="#">EEA</a> Press officer</li>
+            <li><a href="#">EEA</a>&nbsp;Press officer</li>
+          </ul>
+          <p>Notice that this is demo text at full size</p>
+          <p class="discreet">Thank you for your contact</p>
+        </div>
+      </div>
+    </div>
+    <!--? end @Box @options -->
+    </div>
+    <!--? end @Box -->
+
+
+    <!--?  @Cards  -->
+    <div id="cards-components">
+      <h2 id="cards">Cards</h2>
+      <p>Used on <a tal:attributes="href string:${portal_url}/themes/air">themecentre pages</a>,
+        these cards are used to promote featured content for the themecentre section.
+      </p>
+      <!--?  @Cards @simple  -->
+      <h3 id="simple-card">Simple card</h3>
+      <div data-xrayhtml class="prism">
+        <div class="eea-card eea-card--bg-light direction-column">
+          <div class="eea-card-header">
+            <div class="eea-card-title-wrapper">
+              <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-link">
+                <h2 class="notoc no-anchor">Citizen science projects on air quality produce useful information and raise public awareness</h2>
+              </a>
+            </div>
+            <p class="eea-card-link">
+              <strong>Published</strong>: 12 Mar 2020
+            </p>
+
+            <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-card-image-link">
+              <div class="eea-card-image-bg-wrapper lazy" style="background-image: url(&quot;/highlights/citizen-science-on-air-quality/image_preview&quot;);">
+              </div>
+            </a>
+          </div>
+          <div class="eea-card-body">
+            <p>Air pollution is the biggest environmental health threat in Europe and more and more people are taking action to claim their right to clean air. A new European Environment Agency (EEA) report provides an overview of low-cost devices that citizens and NGOs can use to measure local air quality.</p>
+          </div>
+          <div class="eea-card-footer text-right mt-a">
+            <a tal:attributes="href string:${portal_url}/highlights/citizen-science-on-air-quality" class="eea-btn moreLink eea-btn-md eea-btn-news">Read more</a>
+          </div>
+        </div>
+      </div>
+      <!--? end @Cards @simple  -->
+
+      <!--? @Cards @double  -->
+      <h3 id="double-card">Double card</h3>
+      <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
+        these cards are used to promote two featured content side by side.
+      </p>
+      <div data-xrayhtml class="prism">
+
+        <div class="eea-card eea-card--double eea-card--portrait direction-column">
+
+          <div class="eea-card-header">
+            <div class="eea-card-title-wrapper">
+              <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-link">
+                <h2 class="notoc no-anchor">National Emission reduction Commitments Directive reporting status 2020</h2>
+              </a>
+            </div>
+          </div>
+
+          <div class="eea-card-body">
+            <a tal:attributes="href string:${portal_url}/publications/national-emission-reduction-commitments-directive" class="eea-card-image-link  eea-card-image--pull eea-card-image-bordered eea-card-with-text">
+              <img alt="" class="eea-card-image lazy" src="/publications/assessing-air-quality-through-citizen-science/image_large" />
+            </a>
+
+            <div class="eea-card-body-text">
+              <strong>Published</strong>: 30 Jun 2020
+              <p>This briefing presents progress made by the EU and its Member States1 towards meeting the 2010 emission ceilings that were applicable until the end of 2019 under Directive 2016/2284/EU — the National Emission reduction Commitments (NEC) Directive — on the reduction of national emissions of certain atmospheric pollutants. In addition, it assesses the emission reduction effort — compared with 2018 emissions levels — required by each country to comply with the 2020 and 2030 reduction commitments set out in the Directive.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--? end @Cards @double  -->
+
+      <!--? @Cards @fullwidth  -->
+      <h4 id="fullwidth-card">Fullwidth card</h4>
+      <p>Used on <a tal:attributes="href string:${portal_url}/themes/air#section-publication">themecentre pages sections</a>,
+        these cards are used to promote one featured content predominantly.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div class="eea-card eea-card--fullwidth eea-card--landscape">
+          <div class="eea-card-header">
+            <div class="eea-card-title-wrapper">
+              <div class="eea-card-title">
+                <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-link link-plain">
+                  <h2 class="notoc no-anchor">The way urban policies influence the air we breathe</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="eea-card-body">
+            <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="eea-card-image-link  link-plain eea-card-with-text">
+              <img alt="" src="/publications/europes-urban-air-quality/image_large" class="skip_lazy eea-card-image  eea-card-image-bordered  eea-card-image--portrait" width="543" height="768">
+            </a>
+            <div class="eea-card-body-text eea-card-link">
+              <p>Given their proximity to citizens and knowledge of local concerns, local authorities are best placed to ensure we make an effective transition to more liveable and breathable cities.</p>
+              <p>Many city-specific measures have proved to be efficient but there is still much to do to empower citizens further and deliver coordinated actions across all governance levels.</p>
+            </div>
+          </div>
+
+          <div class="eea-card-footer">
+            <a tal:attributes="href string:${portal_url}/publications/europes-urban-air-quality" class="moreLink link-plain">&nbsp;</a>
+          </div>
+
+        </div>
+      </div>
+      <!--? end @Cards @fullwidth  -->
+
+      <!--? @Cards @options  -->
+      <h4 id="card-options">Card options (variables)</h4>
+      <p>The following modifier classes can be added to the eea-card component:</p>
+      <table class="listing">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>eea-card--double</strong></td>
+          <td>Add whenever you want to use two cards on the same row</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--fullwidth</strong></td>
+          <td>Add whenever you want card to span full width of parent</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--bg-light</strong></td>
+          <td>Add whenever you want background color of body description to be white</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--landscape</strong></td>
+          <td>Add whenever you want to use a landscape image</td>
+        </tr>
+        <tr>
+          <td><strong>eea-card--portrait</strong></td>
+          <td>Add whenever you want to use a portrait image</td>
+        </tr>
+        </tbody>
+      </table>
+      <!--? end @Cards @options  -->
+    </div>
+    <!--? end @Cards -->
+
+
+    <!-- @Client Side Pagination -->
+    <div id="pagination-components">
+    <h2 id="client-side-pagination">Client side pagination</h2>
+    <p>Used on <a tal:attributes="href string:${portal_url}/soer/2020/intro#tab-see-also">Soer 2020 intro page</a> to paginate related items photoAlbum entries.
+    </p>
+    <p>
+      In order to add on other pages all that you need is a block element
+      like a div with the class
+      <strong>paginate</strong> and children as content inside of it.
+    </p>
+
+    <p>
+      By default after 12 children the content will be paginated.
+    </p>
+
+    <p>
+      This example has a couple of divs but the div with class <strong>paginate</strong>
+      could contain anything.
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <div class="paginate">
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview" />
+            </span>
+            <span class="photoAlbumEntryTitle" >Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview" />
+            </span>
+            <span class="photoAlbumEntryTitle" >Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Donec consectetur posuere enim, et cursus sapien aliquet sed.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Quisque scelerisque nisi quis nulla sagittis dignissim.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Fusce imperdiet risus et leo mattis condimentum.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Quisque elementum lacus a tortor vehicula porttitor.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Cras non lectus ante, quis cursus nunc.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Morbi accumsan nulla eget elit vestibulum euismod.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </span>
+          </a>
+        </div>
+
+        <div class="photoAlbumEntry">
+          <a href="#">
+            <span class="photoAlbumEntryWrapper">
+                <img src="/portal_depiction/generic/image_preview"/>
+            </span>
+            <span class="photoAlbumEntryTitle" >Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!-- End @Client Side Pagination -->
+
+    <!-- @Client Side Pagination with tabs -->
+    <h3 id="client-side-pagination-with-tabs">
+      Client side pagination with tabs
+    </h3>
+    <p>
+      This example demonstrates the pagination with
+      headers as tabs.
+    </p>
+    <p>
+      We need some extra markup besides the parent div with class
+      paginate as found in the previous example.
+    </p>
+    <p >
+      First extra element is an h3 which contains the title of the tab.
+    </p>
+    <p>
+      Second extra element is a simple div that wraps the content that
+      you would like to have paginated.
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <div class="paginate">
+        <h3 class="notoc">Tab number 1</h3>
+        <div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Donec consectetur posuere enim, et cursus sapien aliquet sed.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Quisque scelerisque nisi quis nulla sagittis dignissim.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Fusce imperdiet risus et leo mattis condimentum.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Quisque elementum lacus a tortor vehicula porttitor.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Cras non lectus ante, quis cursus nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle">Morbi accumsan nulla eget elit vestibulum euismod.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+              </span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- pagination part 2 -->
+
+        <h3 class="notoc">Tab number 2</h3>
+        <div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Maecenas scelerisque laoreet eros, ac faucibus massa ultricies ut.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Fusce fermentum diam eget nunc facilisis porttitor tristique justo posuere.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Donec consectetur posuere enim, et cursus sapien aliquet sed.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Quisque scelerisque nisi quis nulla sagittis dignissim.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Fusce imperdiet risus et leo mattis condimentum.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Nullam sed velit id felis lacinia pulvinar vitae dictum nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Quisque elementum lacus a tortor vehicula porttitor.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Phasellus dictum ante sit amet mauris luctus nec aliquam risus pulvinar.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Cras non lectus ante, quis cursus nunc.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Sed bibendum velit eu lectus tristique in condimentum nunc ornare.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Morbi accumsan nulla eget elit vestibulum euismod.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a href="#">
+              <span class="photoAlbumEntryWrapper">
+                  <img src="/portal_depiction/generic/image_preview"/>
+              </span>
+              <span class="photoAlbumEntryTitle" >Aenean congue posuere lectus, eget mollis orci scelerisque nec.
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- @End Client Side Pagination with tabs -->
+
+
+    <!--?  @Fancybox -->
+    <div id="fancybox-components">
+    <h2 id="fancybox-popups">Fancybox pop-ups</h2>
+    <h3 id="fancybox-popups-arbitrary-html">Arbitrary HTML</h3>
+    <p>Fancybox is a popup component where content is visible in a box upon
+      clicking on a link.
+    </p>
+    <p >You can have arbitrary HTML in the pop-ups:</p>
+    <div data-xrayhtml class="prism">
+      <div style="display:none">
+        <div id="hidden-popup"
+             style="width:250px;height:150px" >
+          Hello World!
+        </div>
+      </div>
+
+      <p>
+        <a class="fancybox" href="#hidden-popup">
+          Click me!
+        </a>
+      </p>
+    </div>
+    </div>
+    <!--? end @Fancybox -->
+
+
+    <!--?  @Image gallery -->
+    <div id="image-gallery-components">
+    <h2 id="image-gallery">Image gallery</h2>
+    <p>This component takes a bunch of images and displays them in a carousel
+      image gallery.
+    </p>
+    <p  class="portalMessage informationMessage">
+      You need to enter an image scale after the image src otherwise the gallery
+      will load the full-resolution images which could drastically slow the
+      page.
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <ul id="galleryView">
+
+        <li>
+          <span class="panel-overlay" >Overlay text goes here</span>
+          <img src="monkey-with-makeup/image_large"/>
+        </li>
+
+        <li>
+          <img src="mr-monkey/image_large"/>
+        </li>
+
+      </ul>
+    </div>
+    <p>
+      You can now use more than one galleryView on the page if needed by using
+      the
+      gallery class.
+      Also you can disable the filmstrip by assigning the
+      <strong>js-noFilmstrip</strong> class to the gallery
+      as you can see in the example below.
+    </p>
+
+    <p>
+      Make sure that this gallery also has an id thou as the gallery makes use
+      of it.
+    </p>
+    <p>
+      Also if you add a width and height as an inline style the gallery will
+      match these sizes instead
+      of growing to the size of it's parent as it does by default.
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <ul id="galleryView2" class="galleryView js-noFilmstrip">
+
+        <li>
+          <span class="panel-overlay" >Overlay text goes here</span>
+          <img  src="monkey-with-makeup/image_large"/>
+        </li>
+
+        <li>
+          <img  src="mr-monkey/image_large"/>
+        </li>
+
+      </ul>
+    </div>
+    </div>
+    <!--? end @Image gallery   -->
+
+
+    <!--?  @jQuerytools accordion -->
+    <div id="accordion-components">
+    <h2 id="jquerytools-accordions">jQuerytools accordions</h2>
+    <p>Used on our site usually when we want to group similar content which
+      can be hidden by default unless clicked upon, accordions can also be used
+      as replacement for tabs when there are many headers or on mobile resolutions
+      where there isn't enough space to list all of the tab lists on one line.
+    </p>
+    
+    <!--?  @jQuerytools accordion standard -->
+    <h3 id="eea-accordion-standard">jQuerytools accordion (standard)</h3>
+    <div data-xrayhtml class="prism">
+      <div class="eea-accordion-panels">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container current">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools accordion standard  -->
+
+    <!--? @jQuerytools accordion collapsed  -->
+    <h3 id="jquerytools-accordion-collapsed">jQuerytools accordion (collapsed-by-default)</h3>
+    <div data-xrayhtml class="prism">
+      <div class="eea-accordion-panels collapsed-by-default">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools accordion collapsed -->
+
+    <!--? @jQuerytools accordion collapsed non-exclusive -->
+    <h3 id="jquerytools-accordion-collapsed-non-exclusive">jQuerytools accordion (collapsed-by-default and non-exclusive)</h3>
+    <div data-xrayhtml class="prism">
+      <div class="eea-accordion-panels collapsed-by-default non-exclusive">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">Third panel title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools accordion collapsed non-exclusive -->
+
+    <!--? @jQuerytools accordion non-exclusive -->
+    <h3 id="jquerytools-accordion-non-exclusive">jQuerytools accordion (non-exclusive)</h3>
+    <div data-xrayhtml class="prism">
+      <div class="eea-accordion-panels non-exclusive">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container current">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-icon-right-container current">Third panel
+            title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools accordion non-exclusive -->
+
+    <!--? @jQuerytools accordion redesign -->
+    <h3 id="jquerytools-accordion-redesign">jQuerytools accordion redesign</h3>
+    <p>After Briefing content type redesign some new classes were created
+      in order to simplify the design of the accordions.
+    </p>
+
+    <!--? @jQuerytools accordion redesign plain -->
+    <h4 id="jquerytools-accordion-plain">jQuerytools accordion plain design</h4>
+    <p>By applying the <strong>eea-accordion-panels-plain</strong> class to
+      the accordion construct we change the design of the headers and panels
+      to a more discreet look and feel.
+    </p>
+    <p class="portalMessage informationMessage">Besides the lack of background
+      color of the accordion panels these headers also use
+      <strong>eea-icon-left-container</strong> class in order to move the
+      accordion arrow to the left of the title instead of the right found in
+      the classic accordion design.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="eea-accordion-panels eea-accordion-panels-plain">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Third panel
+            title</h2>
+          <div class="pane">Suspendisse tristique sapien non ipsum...</div>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools accordion redesign plain -->
+
+    <!--? @jQuerytools accordion redesign plain bordered -->
+    <h4 id="jquerytools-accordion-plain-top-border">jQuerytools accordion plain
+      design with top border
+    </h4>
+    <p>With the plain design we also have a border modifier which if applied
+      adds a larger top border to the start of the accordion panels.
+    </p>
+    <p>We can either choose to use
+      <strong>eea-accordion-panels-bordered-primary</strong>
+      which is used now on our website for the metadata info below the related
+      content area,
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="eea-accordion-panels eea-accordion-panels-plain eea-accordion-panels-bordered-primary">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+      </div>
+    </div>
+
+    <p>or <strong>eea-accordion-panels-bordered-secondary</strong> meant to be
+      added manually to the Briefing <em>Identifiers, References and footnotes</em>
+      section.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="eea-accordion-panels eea-accordion-panels-plain eea-accordion-panels-bordered-secondary">
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">First panel title</h2>
+          <div class="pane">Lorem ipsum dolor sit amet...</div>
+        </div>
+
+        <div class="eea-accordion-panel">
+          <h2 class="notoc eea-accordion-title eea-icon-left-container">Second panel title</h2>
+          <div class="pane">Claritas est etiam processus dynamicus...</div>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jQuerytools accordion redesign plain bordered -->
+    </div>
+    <!--? end @jQuerytools accordion -->
+
+
+    <!--? @PhotoAlbumCards -->
+    <div id="photo-album-components">
+      <h2 id="photo-album-cards">Photo Album cards</h2>
+
+      <!--? @PhotoAlbumCards @album -->
+      <h3 id="album-view-photo-album">Album views photo album cards</h3>
+      <p>Used on <a tal:attributes="href string:${portal_url}/code/design-elements/views#atct_album_view"> atct_album_view</a> template as well as other listings where we need to layout
+        objects as part of an photo gallery album listing.
+      </p>
+      <p>Other components that make use of this component are:</p>
+      <ul>
+        <li>Tab panels</li>
+        <li>Accordion panels</li>
+      </ul>
+      <div data-xrayhtml class="prism">
+        <div class="clearfix">
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy"
+                      style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <!--? end @PhotoAlbumCards @album -->
+
+      <!--? @PhotoAlbumCards @related -->
+      <h3 id="related-photo-album-cards">Related items photo album cards</h3>
+      <p>Styled for the latest Briefing redesign the photoAlbum component has the
+        following look when it's part of the <strong>relatedItems</strong> section.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div class="relatedItems">
+          <div class="page" data-count="2">
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+                <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+              </a>
+            </div>
+
+            <div class="photoAlbumEntry">
+              <a tal:attributes="href string:${portal_url}/highlights/soer2020-europes-environment-state-and-outlook-report">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/highlights/soer2020-europes-environment-state-and-outlook-report/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+                <span class="photoAlbumEntryTitleWrapper">
+                <span class="photoAlbumEntryTitle">Europe’s state of the environment 2020: change of direction urgently needed to face climate change challenges, reverse degradation and ensure future prosperity</span>
+            </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--? end @PhotoAlbumCards @related -->
+
+      <!--? @PhotoAlbumCards @related @floated -->
+      <h3 id="related-photo-album-cards">Related items photo album floated left cards</h3>
+      <p>Styled for the latest Briefing redesign the photoAlbum component has the
+        following look when it's part of the <strong>relatedItems</strong> section.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+          <span class="floated-photo-album-container floated-left relatedItems">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
+            </a>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+    </span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+        </div>
+      </div>
+
+      <h3 id="related-photo-album-cards">Related items photo album floated right cards</h3>
+      <p>Styled for the latest Briefing redesign the photoAlbum component has the
+        following look when it's part of the <strong>relatedItems</strong> section.
+      </p>
+      <div data-xrayhtml class="prism">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+          <span class="floated-photo-album-container floated-right relatedItems">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto distinctio doloremque doloribus excepturi exercitationem facilis in laboriosam laudantium magni, omnis optio porro quisquam quos repellat sit suscipit ullam voluptas.
+            </a>
+
+          <div class="photoAlbumEntry">
+            <a tal:attributes="href string:${portal_url}/soer/2020/at-a-glance">
+              <span class="photoAlbumEntryWrapper">
+                <span class="photoAlbumEntryWrapperImg lazy" style="background-image: url(&quot;/soer/2020/at-a-glance/image_mini&quot;);"><!-- comment ?--></span>
+              </span>
+              <span class="photoAlbumEntryTitleWrapper">
+               <span class="photoAlbumEntryTitle">SOER 2020 - At a glance</span>
+              </span>
+            </a>
+          </div>
+    </span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores autem dicta dolorem ea ipsa odio officiis quia quo repellat sed sit, unde ut! Beatae distinctio eius officia qui ut.</p>
+        </div>
+      </div>
+      <!--? end @PhotoAlbumCards @related -->
+    </div>
+    <!--? end @PhotoAlbumCards -->
+
+
+    <!--?  @Tabs -->
+    <div id="tabs-components">
+    <h2 id="tabs">Tabs</h2>
+
+    <!--?  @Tabs @daviz -->
+    <h3 id="daviz-tabs">Daviz tabs</h3>
+    <p>Used by
+      <a tal:attributes="href string:${portal_url}/data-and-maps/daviz">Daviz content types</a>
+      this tab resembles the jquerytools tab variant that also uses icons in the tabs.
+    </p>
+    <p>It assumes the following structure:</p>
+    <div data-xrayhtml class="prism">
+      <div id="daviz-view"> <!-- div with id needed because of tab link styling ?-->
+
+        <ul class="chart-tabs">
+          <li>
+            <a class="googlechart_class_LineChart" href="#tab-chart_1">
+              <span>Chart</span>
+            </a>
+          </li>
+          <li>
+            <a class="googlechart_class_Table" href="#tab-chart_2">
+              <span>Table</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="chart-panes">
+        <div id="tab-chart_1" class="daviz-tab-view">
+          Chart content panel, pay attention to classname of tab link for proper
+          tab image
+        </div>
+
+        <div id="tab-chart_2" class="daviz-tab-view">
+          Table content panel, pay attention to classname of tab link for proper
+          tab image
+        </div>
+      </div>
+
+    </div>
+    <!--? end @Tabs @daviz -->
+
+    <!--?  @Tabs @formtab -->
+    <h3 id="form-tabs">FormTab tabs</h3>
+    <p>Used by
+      <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessment</a>
+      figure tabs, these elements make use of default Plone 4 form_tabbing.js logic to
+      create tabs out of <em>dl</em>, <em>dt</em> and <em>dd</em> html tags.
+    </p>
+    <p>It assumes the following structure:</p>
+    <div data-xrayhtml class="prism">
+      <dl class="enableFormTabbing">
+        <dt id="fieldsetlegend-[unique-id]">Tab title</dt>
+        <dd id="fieldset-[same-id-as-above]">
+          Tab content is here
+        </dd>
+
+        <dt id="fieldsetlegend-2">Tab title 2</dt>
+        <dd id="fieldset-2">
+          Tab 2 content is here
+        </dd>
+
+      </dl>
+    </div>
+    <!--? end @Tabs @formtab -->
+
+    <!--? @Tabs @serverside -->
+    <h3 id="server-tabs">Server side tabs</h3>
+    <p>Clicking on the tab which will take you to the page that the links points
+      to.</p>
+    <p>As template logic you have to supply the current class on the tab that
+      should be activated given the page visited.</p>
+
+    <div data-xrayhtml class="prism">
+      <div class="tabbedmenu">
+        <ul>
+
+          <li >
+            <a href="#first" class="first-tab">First tab</a>
+          </li>
+
+          <li >
+            <a href="#second" class="current">Second tab</a>
+          </li>
+
+          <li >
+            <a href="#third">Third tab</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="tabbedmenu-panel">
+
+        <div class="eea-tabs-panel" style="display: none"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        </div>
+
+        <div class="eea-tabs-panel" style="display: none"
+             tal:content="string:Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        </div>
+
+      </div>
+    </div>
+    <!--? end @Tabs @serverside -->
+
+    <!--? @Tabs @jquerytools -->
+    <h3 id="jquerytools-tabs">jQuerytools tabs</h3>
+    <p>These tabs are the most common type of tabs that we have on the site,
+      used on several sections such as:
+    </p>
+    <ul>
+      <li>Frontpage what's new gallery area</li>
+      <li>Data and maps page</li>
+      <li>Related contents area of each content type</li>
+    </ul>
+    <div data-xrayhtml class="prism">
+      <ul class="eea-tabs">
+        <li >First tab</li>
+        <li >Second tab</li>
+        <li >Third tab</li>
+      </ul>
+
+      <div class="eea-tabs-panels">
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.">
+        </div>
+
+      </div>
+    </div>
+    <!--? end @jquerytools @tabs -->
+
+    <!--? @Tabs @jquerytools @transformed -->
+    <h4 id="jquerytools-tabs-accordion-transform">
+      jQuerytools tabs accordion transformation
+    </h4>
+    <p>
+      Previously we had an extra modifier class to eea-tabs named
+      <strong>two-rows</strong> which added a max width to the tabs breaking
+      some extra long titles into two rows in order to fit extra titles on one row.
+    </p>
+    <p>Now with the current behavior <strong>eea-tabs</strong> transform into an
+      <a tal:attributes="href string:${here_url}#eea-accordion-standard">accordion</a>
+      when any of the tab lists span over more than one line by checking the size
+      of every element on window resize.
+    </p>
+    <p>Upon another resize event, as soon as there is enough space to show
+      every tab title on one line the accordion will transform back into a tab.
+    </p>
+    <p>You can check this behavior by resizing the browser window and checking
+      the example below as it transforms from a tab into an accordion and back.</p>
+
+    <div data-xrayhtml class="prism">
+      <ul class="eea-tabs">
+        <li>First tab</li>
+        <li>Tab that will trigger accordion transformation on browser resize</li>
+        <li>Third tab</li>
+      </ul>
+
+      <div class="eea-tabs-panels">
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Suspendisse tristique sapien non ipsum rutrum quis blandit nulla laoreet. Aliquam erat volutpat. Proin elementum pretium diam varius consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget tincidunt mauris.">
+        </div>
+
+      </div>
+    </div>
+    <!--? end @Tabs @jquerytools @transformed -->
+
+    <!--? @Tabs @jquerytools @arrows -->
+    <h4 id="jquerytools-arrow-tabs">jQuerytools arrows tabs</h4>
+    <div data-xrayhtml class="prism">
+      <ul class="eea-tabs eea-tabs-arrows">
+        
+        <li>
+          <a id="tab-synthesis-report" href="#tab-synthesis-report">
+            <span class="eea-icon eea-icon-clipboard eea-icon-2x"></span>
+            TAB 1
+          </a>
+        </li>
+
+        <li>
+          <a id="tab-global-megatrends" href="#tab-global-megatrends">
+            <span class="eea-icon eea-icon-globe eea-icon-2x"></span>
+            TAB 2
+          </a>
+        </li>
+
+        <li>
+          <a id="tab-thematic-briefing" href="#tab-thematic-briefing">
+            <span class="eea-icon eea-icon-leaf eea-icon-2x"></span>
+            TAB 3
+          </a>
+        </li>
+
+        <li>
+          <a id="tab-cross-country-comparisons" href="#tab-cross-country-comparisons">
+            <span class="eea-icon eea-icon-bar-chart-o eea-icon-2x"></span>
+            TAB 4
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="eea-tabs-panels eea-tabs-panels-arrows">
+
+        <div class="eea-tabs-panel">
+          <p>The synthesis report informs future European environmental policy
+            in general and its implementation between 2015 and 2020 in
+            particular. It includes a reflection on the European environment in
+            a global context, as well as chapters summarising the state of,
+            trends in, and prospects for the environment in Europe.</p>
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        </div>
+
+        <div class="eea-tabs-panel"
+             tal:content="string:Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.">
+        </div>
+
+      </div>
+    </div>
+    <!--? end @Tabs @jquerytools @arrows -->
+    <!--? end @Tabs @jquerytools -->
+    </div>
+    <!--? end @Tabs -->
+
+
+    <!--? @Tiles  -->
+    <div id="tiles-components">
+    <h2 id="tiles">Tiles</h2>
+    <!--? @Tiles @plone -->
+    <h3 id="plone-tile-component">Plone tiles</h3>
+    <p>Used by the <a tal:attributes="href string:${portal_url}/code/design-elements/views#folder_summary_view">folder_summary_view</a>
+      template and in listings such as the <a tal:attributes="href string:${portal_url}#news-header">what's new tab section</a> on EEA frontpage,
+      this tile's design and markup resembles <a href="https://getbootstrap.com/docs/4.5/components/media-object">Bootstrap's media object component</a>.
+    </p>
+    <p class="portalMessage informationMessage">Search app is also using this component as
+      part of the <strong>list</strong> layout.
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <div class="tileItem visualIEFloatFix">
+        <a class="tileImage " tal:attributes="href string:${portal_url}/code/design-elements/typography" title="Typography">
+          <img class="lazy" src="/code/design-elements/typography/image_mini" title="Typography" alt="Typography">
+        </a>
+
+        <div class="tileContent">
+          <h2 class="tileHeadline notoc no-anchor">
+            <a tal:attributes="href string:${portal_url}/code/design-elements/typography">Typography</a>
+          </h2>
+          <span class="date">
+              26 Oct 2020
+            </span>
+        </div>
+
+        <p class="tileBody">
+          <span class="description">Site typography, including global settings, headings, body text, lists.</span>
+        </p>
+
+        <p class="tileFooter">
+          <a tal:attributes="href string:${portal_url}/code/design-elements/typography" class="moreLink">Read more</a>
+        </p>
+      </div>
+    </div>
+    <!--? end @Tiles @plone -->
+
+    <!--? @Tiles @themes -->
+    <h3 id="themes-tile-card">Themes tile card</h3>
+        <p>Originally created for the elastic search apps, <strong>eea-tile</strong> components resemble
+        the <a href="https://getbootstrap.com/docs/4.5/components/card/">Bootstrap card component</a>
+          and they are used in places where there is a need to feature certain titles by using a traditional card component design.
+        </p>
+    <p>Used on the <a tal:attributes="href string:${portal_url}/themes#editors-choice-header">themes page</a>
+      these tiles are used to promote featured content for the themes listing section.
+    </p>
+    
+    <div data-xrayhtml class="prism">
+      <div class="eea-tile">
+        <div class="eea-tileInner">
+          <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="eea-tileLink eea-tileHeadLink">
+            <div class="eea-tileHead">
+              <div class="eea-tileThumb lazy" style="background-image: url(&quot;//www.eea.europa.eu/post-corona-planet/index/image_preview&quot;);">
+              </div>
+            </div>
+          </a>
+          <div class="eea-tileBody">
+            <a tal:attributes="href string:${portal_url}/post-corona-planet/index" class="eea-tileLink eea-tileLinkBody">
+              <h2 class="eea-tileTitle notoc no-anchor">Shaping the post-Corona planet: knowledge on Europe's environment and climate</h2>
+              <div class="eea-tileDescription">What should a post-corona planet look like? How have corona measures impacted the environment and climate? Can we rebuild our economy on sustainable and fair foundations? As we take steps towards rebuilding society opening the economy, we are faced with fundamental choices that will shape the future. This portal aims to bring together knowledge and reflections from across Europe and beyond, and to facilitate an informed debate towards a sustainable planet.</div>
+            </a>
+            <div class="eea-tileMetadata">
+              <time class="eea-tileIssued" datetime="2020-06-15T09:35:00+02:00">15 Jun 2020</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--? end @Tiles @themes -->
+
+    <!--? @Tiles @search -->
+    <h3 id="search-app-tiles">Search app tiles</h3>
+    <!--? @Tiles @search @colored -->
+    <h4 id="colored-tiles">Colored tiles</h4>
+    <p>Used on the <a tal:attributes="href string:http://search.apps.eea.europa.eu#landing">search app frontpage</a>
+      these tiles are used to promote the ranges of values found for the right side facets.
+    </p>
+    <p>These tiles components resemble
+      <a href="https://bulma.io/documentation/layout/tiles/">Bulma's tile layout component</a>.
+    </p>
+    <div data-xrayhtml class="prism">
+      <img tal:attributes="src string:${portal_url}/search-app-topic-tile-design.png" />
+      <div class="visualHidden">
+        <!--?  tile markup demo  -->
+        <div class="eea_tile topics grid-item">
+          <h2 class="i18n notoc no-anchor">Topics</h2>
+          <span class="topics_count eea_tile_count">20</span>
+        </div>
+
+      </div>
+    </div>
+    <!--? end @Tiles @search @colored -->
+
+    <!--? @Tiles @search @card -->
+    <h4 id="card-tiles">Card tiles</h4>
+    <p>Used on the card layout of the <a tal:attributes="href string:http://search.apps.eea.europa.eu">search app</a>,
+      these tiles are used to list result objects arranged as cards.
+    </p>
+    <p>The search app card tile design is added to the EEA website and
+      they are documented in this page as well, however
+      there are the following styles and behavior differences between these two:
+    </p>
+    <ol>
+      <li>There are extra styles for object type, type thumbnail, tags and url</li>
+      <li>On hover there is an animation effect and description slide in view action</li>
+    </ol>
+    <p class="portalMessage informationMessage">Because of the missing styles currently the tile will look worse than it
+      does on the search app as such we also show 2 screenshots of how a tile looks
+      normally and when hovered.
+    </p>
+    <img tal:attributes="src string:${portal_url}/search-app-card-design.png" />
+    <img tal:attributes="src string:${portal_url}/search-app-card-design-hover.png" />
+    <div data-xrayhtml class="prism">
+      <div class="eea-tile">
+        <a class="eea-tileInner recent ribbon-parent" title="Latest evaluation shows Europe's nature in serious, continuing decline" href="http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature">
+          <div class="eea-tileHead">
+            <div class="eea-tileThumb lazyLoad" style="display: block; background-image: url(&quot;http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature/image_preview&quot;);">
+            </div>
+            <span class="eea-tileTypeHead pull-left" title="News, News">News, News</span>
+          </div>
+          <div class="eea-tileBody">
+            <div class="eea-tileHeadMetadata">
+              <span class="eea-tileType pull-right hidden" title="News">19 Oct 2020</span>
+            </div>
+            <p class="eea-tileUrl">http://www.eea.europa.eu/highlights/latest-evaluation-shows-europes-nature</p>
+            <h4 class="eea-tileTitle notoc">Latest evaluation shows Europe's nature in serious, continuing decline</h4>
+            <div class="eea-tileMetadata">
+              <span class="eea-tileTopic" title="Agriculture">
+                <em>Agriculture</em>
+              </span>
+              <time class="eea-tileIssued" datetime="19 Oct 2020">19 Oct 2020</time>
+              <div class="eea-tileType" title="News" style="background-image: url(https://www.eea.europa.eu/portal_depiction/highlight/image_thumb)">
+                <span class="eea-tileTypeIcon, eea-tileType-news" title="News">News</span>
+              </div>
+            </div>
+          </div>
+          <div class="ribbon-wrapper">
+            <div class="ribbon">NEW</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--? end @Tiles @search @card -->
+    <!--? end @Tiles @search-->
+    </div>
+    <!--? end @Tiles -->
+
+
+   <!--? @TinyMCE-templates   -->
+  <div id="tinymce-template-components">
+  <h2>TinyMCE templates</h2>
+  <p>Besides the styles that you can select from the style dropdown we also
+    have several templates that wrap several html tags in order to have more
+    complex styles.</p>
+  <p>Here we list the following templates:</p>
+
+  <!--? @TinyMCE-templates @tiles -->
+  <h3>Tiles</h3>
+  <p>Tiles are templates used to write a large impact text
+    or a title followed by a video.</p>
+  <p>Within tiles we have the following variations:</p>
+
+  <!--? @TinyMCE-templates @tiles @one -->
+  <h4>One tile</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--1">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--? end @TinyMCE-templates @tiles @one -->
+
+  <!--? @TinyMCE-templates @tiles @two -->
+  <h4>Two tiles with video content</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--2">
+
+      <div class="tile">
+        <div class="tile-item">
+          <h3 class="tile-item-header h1 notoc" id="10-years">What &amp; how?</h3>
+          <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Tobias" controls="controls" preload="auto" poster="resolveuid/05f995b884f94542929de52b451baeb8" src="https://cmshare.eea.europa.eu/s/M3AExbKXxJ6W6yt/download" type="video/mp4" width="320" height="180"> </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-item">
+          <h3 class="tile-item-header h1 notoc" id="10-years">Key messages</h3>
+          <div class="tile-item-body"><video style="" data-matomo-title="SOER 2020 - Key messages_Hans_short version" controls="controls" preload="auto" poster="resolveuid/fa8f4918d59f4f64928593140aadc328" src="https://cmshare.eea.europa.eu/s/28eMmEAnkpn2NaP/download" type="video/mp4" width="320" height="180"> </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--? end @TinyMCE-templates @tiles @two -->
+
+  <!--? @TinyMCE-templates @tiles @three -->
+  <h4>Three tiles</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--3">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--? end @TinyMCE-templates @tiles @three -->
+
+  <!--? @TinyMCE-templates @tiles @four -->
+  <h4>Four tiles</h4>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--4">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">10 years</h3>
+          <div class="tile-item-body">of tracking industrial emissions</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--? end @TinyMCE-templates @tiles @four -->
+
+  <!--? @TinyMCE-templates @tiles @options -->
+  <h4>Tiles options</h4>
+  <p>Tiles have a <strong>tile--bordered</strong> modifier which if applied
+    adds a top and bottom grey border to the tile section.</p>
+  <div data-xrayhtml class="prism">
+    <div class="tiles tiles--1">
+      <div class="tile tile--bordered">
+        <div class="tile-item">
+          <h3 class="tile-item-header notoc" id="10-years">bordered tile</h3>
+          <div class="tile-item-body">this section is bordered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>They can also be wrapped with <strong>fullwidth background sections</strong>
+    in case we need to provide such a focus area for the tiles.
+  </p>
+  <div data-xrayhtml class="prism">
+    <div class="fullwidth-bg eea-block bg-secondary">
+      <div class="tiles tiles--1">
+        <div class="tile">
+          <div class="tile-item">
+            <h3 class="tile-item-header notoc" id="10-years">tile header</h3>
+            <div class="tile-item-body">background wrapped tile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--? end @TinyMCE-templates @tiles @options -->
+  <!--? end @TinyMCE-templates @tiles-->
+  </div>
+  <!--? end @TinyMCE-templates-->
+
+
+  </metal:main-macro>
+</metal:body>
+
+</body>
+</html>

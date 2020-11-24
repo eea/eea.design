@@ -32,8 +32,9 @@ sup, sub {
 }
 
 .discreet {
-    color: unquote("&dtml-discreetColor;");
-    font-size: unquote("&dtml-fontSmallSize;");
+    color: inherit;
+    font-size: unquote("&dtml-fontDiscreetSize;");
+    filter: contrast(85%);
     font-weight: normal;
 }
 
@@ -184,9 +185,13 @@ th a, th a:link, th a:visited {
     border-collapse: collapse;
     color: #666666;
     margin: 1em 0.5em;
+    display: table;
+}
+.datatable tbody {
+    display: table-row-group;
 }
 .datatable th {
-    text-align: center;
+    text-align: left;
     background-color: #f6f6f6;
     font-weight: bold;
 }
@@ -295,6 +300,7 @@ th a, th a:link, th a:visited {
 }
 
 
+@import "scss-theme/components/containers";
 /* fullwidth background image */
 .fullwidth-img-bg {
     background-repeat: no-repeat;
@@ -315,94 +321,15 @@ th a, th a:link, th a:visited {
     max-height: 350px;
 }
 
-.fullwidth-bg {
-    @include fullwidth-bg;
-}
-.fullwidth-bg:before {
-    @include fullwidth-bg-before;
-}
-
 video {
     max-width: 100%;
     min-height: 210px;
     object-position: top;
 }
 
+
 .fullwidth {
     width: 100%;
-}
-.max-container-centered,
-.fullwidth-container,
-.widescreen-container,
-.fullwidth-container-centered {
-  @include fullwidth-container-centered();
-}
-
-.widescreen-container,
-.fullwidth-container {
-    padding: 0 15px;
-}
-
-.fullwidth-container-centered .fullwidth {
-    position: absolute;
-}
-
-.max-container-centered  > img,
-.max-container-centered  > iframe {
-    min-width: initial;
-    width: 100%;
-}
-.fullwidth-container-centered .fullwidth {
-    padding: 0;
-}
-
-.fullwidth-container-centered > * {
-  width: 100%;
-  max-width: 800px;
-}
-
-.image-credit-container {
-    margin-top: -2rem;
-}
-.widescreen-container {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.widescreen-container > *,
-.max-container-centered > * {
-    width: 100%;
-    max-width: 1400px !important;
-}
-.max-container-centered table {
-    width: auto;
-}
-
-.absolute-centered {
-    max-width: 848px;
-    position: relative;
-    z-index: 10;
-}
-
-
-@media (min-width: $breakpoint-full) {
-    .fullwidth-bg {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-}
-
-@media (min-width: $breakpoint-lg) {
-    .fullwidth-container-centered {
-        min-height: 600px;
-    }
-}
-
-@media (max-width: $breakpoint-xxl) {
-    .fullwidth-container-centered,
-    .max-container-centered {
-        padding: 0 $spacer;
-    }
 }
 /* standard figure, used for articles and pages.
 can be floated left or right with additional
@@ -623,6 +550,7 @@ span.figure-left {
 #languageCodes li {
     display: inline-block;
 }
+
 
 /* relatedLinks */
 #relatedItems {
@@ -1027,7 +955,7 @@ ul.action-buttons > li {
 }
 
 #content .table-document-actions {
-    margin: 0px;
+    margin: 0;
     width: 100%;
     display: table;
 }

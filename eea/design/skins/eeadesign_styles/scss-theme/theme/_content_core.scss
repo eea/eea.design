@@ -14,9 +14,6 @@
     margin-top: 0 !important;
   }
 
-  p {
-    font-size: $p-font-size;
-  }
   li {
     font-size: $p-font-size;
     padding-left: $spacer;
@@ -39,11 +36,6 @@
   //  margin-top: -$h1-font-size;
   //}
 
-  /* remove top and bottom margin when we have a block within a block */
-  .eea-block > .eea-block {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
 
   @media print {
     ol {

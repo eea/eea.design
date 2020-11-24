@@ -6,6 +6,8 @@ jQuery(document).ready(function($){
     if (!$body.hasClass('body-print')) {
         anchors.options.visible = 'hover';
         anchors.options.placement = 'right';
-        anchors.add('h1, h2, h3, h4');
+        if ($body.attr('class').indexOf('template-design_') === -1) {
+            anchors.add('h1, h2, h3, h4');
+        }
     }
 });

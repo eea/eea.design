@@ -1,0 +1,39 @@
+@import "../../variables";
+@import "../../mixins";
+
+.widescreen-container {
+  @include fullwidth-container-centered();
+  //padding: 0 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.widescreen-container > img {
+  width: 100%;
+}
+
+.widescreen-container > * {
+  width: 100%;
+  max-width: 1400px !important;
+}
+
+.widescreen-container > img,
+.widescreen-container > iframe
+{
+  min-width: initial;
+}
+.widescreen-container table {
+  width: auto;
+}
+
+@media (min-width: $breakpoint-xl) and (max-width: 1599px) {
+  .mini-header-navigation .widescreen-container {
+    margin: 2.5rem calc(-8.3% - 50vw) 2.5rem calc(50% - 50vw);
+  }
+}
+
+@media (max-width: $breakpoint-xxl) {
+  .widescreen-container {
+    padding: 0 $spacer;
+  }
+}

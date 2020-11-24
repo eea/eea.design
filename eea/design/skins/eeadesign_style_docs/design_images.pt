@@ -1,0 +1,157 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+</metal:javascriptslot>
+
+<body>
+<metal:body metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+
+    <div id="image-container-elements">
+    <h2>Image containers</h2>
+    <h3>Fullwidth image container</h3>
+    <p>We have <strong>fullwidth-container-centered</strong> class which
+      when applied on a parent div it allows us to scale the child image while maintaining the children text values
+      within the center column position.</p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-container-centered eea-block">
+        <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <p>This is a text that doesn't span as large as the image and is centered</p>
+      </div>
+    </div>
+    <p>Used by <strong>Briefings</strong> where there is a need for an emphasis area callout, this
+    style combines the fullwidth image container with a div with class
+      <strong>emphasis-area</strong> to show text centered on top
+      of the large full width image in an area not larger then the main content column.
+    </p>
+    <p>Here we also add <strong>fullwidth</strong> class to the image
+      in order to make it absolute and allow the emphasis area to go over the image.</p>
+    <p class="portalMessage informationMessage">If we need some text to act
+      as a copyright info found right below the image
+      we can also add a paragraph with class <strong>eea-image-credit</strong>.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-container-centered eea-block">
+        <img class="fullwidth" src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <div class="emphasis-area">
+          The study concluded that a significant part of the reductions
+          for combustion activities took place due to requirements
+          set out in EU environmental legislation on industrial pollution.
+        </div>
+      </div>
+      <p class="eea-image-credit">
+        <span class="discreet">
+          Image copyright belongs to: attribution here
+        </span>
+      </p>
+
+    </div>
+
+    <h3>Max container centered</h3>
+    <p>Sometimes we need to enlarge an image or iframe beyond the center column
+      that we have which is 830px.</p>
+    <p>For this reason we have <strong>max-container-centered</strong> class which
+    when applied it allows us to scale the content outside of the content container,
+    up to 1400px.</p>
+    <p>We use this style within <a tal:attributes="href string:${portal_url}/data-and-maps/dashbords">Dashboard content types</a>
+      to enlarge Tableau dashboards or within <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessments</a>
+      to show charts alongside title and description.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="max-container-centered eea-block">
+        <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <p>This is a text that spans as large as the image and it
+           follows the image size from left to right.
+        </p>
+      </div>
+    </div>
+    </div>
+
+
+    <div id="popups-elements">
+    <h2>Pop-ups</h2>
+    <h3>Image pop-ups</h3>
+    <p>
+      If the a-tag href links to an image, it will be displayed in the popup.
+      Be careful though, if the URL does not end with an image extension,
+      fancybox will hang.
+      If the URL doesn't end with an image extension, you can still force it
+      to display the popup, by adding an extra class: <strong>fancybox.image</strong>.
+    </p>
+    <div data-xrayhtml class="prism">
+      <a class="fancybox"
+         href="http://farm3.static.flickr.com/2181/2168980899_1508c84aac.jpg">
+        <img src="https://farm3.static.flickr.com/2181/2168980899_1508c84aac_t.jpg"/>
+      </a>
+    </div>
+
+    <h3>Video pop-ups</h3>
+    <p>Used on <a tal:attributes="href string:${portal_url}/media/audiovisuals">audiovisuals faceted listing</a> to play videos in a fancybox.
+    <div data-xrayhtml class="prism">
+      <a href="https://www.eea.europa.eu/multimedia/electric-car" class="video-fancybox">
+        <img src="resolveuid/63f587019bce79514be89ca476f7cf2f/image_wide"/>
+      </a>
+    </div>
+    </div>
+
+
+    <div id="image-scales-elements">
+    <h2>Image scales</h2>
+    <p>When loading images consider using image scales instead of original images
+      in order to improve page loading times for high resolution images.
+    </p>
+    <div data-xrayhtml class="prism">
+      <p>
+        <tal:block>image_large</tal:block>
+        <br/><img src="giraffe/image_large"/></p>
+      <p>
+        <tal:block>image_preview</tal:block>
+        <br/><img src="giraffe/image_preview"/></p>
+      <p>
+        <tal:block>image_mini</tal:block>
+        <br/><img src="giraffe/image_mini"/></p>
+      <p>
+        <tal:block>image_thumb</tal:block>
+        <br/><img src="giraffe/image_thumb"/></p>
+      <p>
+        <tal:block>image_tile</tal:block>
+        <br/><img src="giraffe/image_tile"/></p>
+      <p>
+        <tal:block>image_icon</tal:block>
+        <br/><img src="giraffe/image_icon"/></p>
+      <p>
+        <tal:block>image_listing</tal:block>
+        <br/><img src="giraffe/image_listing"/></p>
+      <p>
+        <tal:block>image_wide (only available for videos)
+        </tal:block>
+        <br/><img
+          src="resolveuid/af79241214c3088375297823b3ccf560/image_wide"/></p>
+    </div>
+    </div>
+
+
+  </metal:main-macro>
+</metal:body>
+
+</body>
+</html>

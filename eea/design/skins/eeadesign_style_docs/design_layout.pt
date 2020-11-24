@@ -1,0 +1,340 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+     metal:use-macro="here/main_template/macros/master"
+     i18n:domain="eea.notranslation"
+     tal:define="portal_url context/@@plone_portal_state/portal_url">
+
+<metal:css metal:fill-slot="style_slot">
+  <metal:css metal:use-macro="here/design_docs_macros/macros/style_slot"></metal:css>
+</metal:css>
+
+<metal:javascriptslot fill-slot="javascript_critical_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_critical_slot"></metal:js>
+</metal:javascriptslot>
+
+<metal:javascriptslot fill-slot="javascript_head_slot">
+  <metal:js metal:use-macro="here/design_docs_macros/macros/javascript_head_slot"></metal:js>
+</metal:javascriptslot>
+
+
+<body>
+<metal:body metal:fill-slot="content-core">
+  <metal:main-macro define-macro="content-core">
+
+    <div metal:use-macro="here/portlet_toc/macros/portlet">
+      table of contents
+    </div>
+
+
+    <div id="containers-elements">
+    <h2>Containers</h2>
+    <p>EEA Website uses a mix of containers from Plone 4 deco system and some
+      custom containers inspired from css frameworks such as <a href="https://getbootstrap.com">Bootstrap</a>
+      and <a href="https://bulma.io">Bulma</a>.
+    </p>
+
+    <h3>Content container</h3>
+    <p>As part of News style content types redesign our main content column is now
+       maximum 830px (800px width with 15px left and right padding) and centered in view.
+    </p>
+    <p>This design decision was made in order to remove the right column area and
+       put focus on the content area which has larger fonts making it easier to
+       read both on mobile and desktop resolutions.
+    </p>
+    <div data-xrayhtml class="prism">
+    <div class="width-3:4">
+      <p>Default main content container class</p>
+    </div>
+    </div>
+
+    <h3>Flex container</h3>
+    <p>Acting like Bulma's <a href="https://bulma.io/documentation/layout/level/">level container</a> <strong>flex-container</strong>
+      is used in sections where we want content to be vertically centered and of the same size.
+    </p>
+    <p>In our website we use this container to force the left and right boxes construct to
+       be of the same size and fit next to each other as floated left and right items would.
+    </p>
+
+    <div data-xrayhtml class="prism">
+      <div class="flex-container">
+
+          <div class="box box--left  box-secondary">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Alias, cum cumque cupiditate, deserunt dignissimos enim error
+              fuga in inventore libero minima,
+              minus molestias nesciunt nulla numquam porro sit ullam voluptatem.
+            </p>
+          </div>
+
+          <div class="box box--right box-primary">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Alias, cum cumque cupiditate, deserunt dignissimos enim error
+              fuga in inventore libero minima,
+              minus molestias nesciunt nulla numquam porro sit ullam voluptatem.
+            </p>
+          </div>
+        
+      </div>
+    </div>
+
+    <h3>Fullwidth container</h3>
+    <p>Acting like Bootstrap's <a href="https://getbootstrap.com/docs/4.5/layout/overview/#fluid">container-fluid</a> <strong>fullwidth-container</strong>
+      is used in sections where we want content to break out of the content area
+      and fill up the entire browser width.
+    </p>
+    <p>Common sections where this is used within our website are for <a tal:attributes="href string:${portal_url}/data-and-maps/dashbords">Dashboard</a>
+      and <a tal:attributes="href string:${portal_url}/data-and-maps/explore-interactive-maps">GIS Map Application</a> content types where we have external
+      maps and graphs that benefit from spanning over a large area.
+    </p>
+    <p class="portalMessage informationMessage">
+      The only difference between <strong>fullwidth-container</strong> and
+      <strong>fullwidth-container-centered</strong>
+      is the fact that the latter restricts the non image content to 800px,
+      useful for content that needs to be spaced apart such as pictures
+      with an emphasis area section, hence the content is centered and kept
+      on the content area.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-container">
+        <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <p>This container is used best for chart applications such as <strong>Tableau</strong>
+          rather than text, based content.
+        </p>
+      </div>
+    </div>
+
+    <h3>Widescreen container</h3>
+    <p>Acting like Bulma's <a href="https://bulma.io/documentation/layout/container/#overview">is-widescreen</a> container <strong>widescreen-container</strong>
+      is used in sections where we want content to break out of the content area
+      and fill up 100% of width up to 1400px, without any top and bottom margin
+      and without centering any of the children.
+    </p>
+    <p>Common sections where this is used within our website are for
+      <a tal:attributes="href string:${portal_url}/data-and-maps/indicators">Indicator Assessments</a>
+      and <a tal:attributes="href string:${portal_url}/media/infographics">Infographic</a>
+      content types where we have external maps and graphs that benefit from
+      spanning over a large area and description and title needs to be left aligned
+      instead of centered.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="widescreen-container">
+        <p><strong>Widescreen container title</strong></p>
+        <img src="https://www.eea.europa.eu/highlights/new-challenges-facing-europe2019s-wastewater/image_panoramic" />
+        <p>This container is best used for content that needs to span to full
+           content area, without any top or bottom margin added to the container.
+        </p>
+      </div>
+    </div>
+    </div>
+
+
+    <div id="utilities-elements">
+    <h2>Utilities</h2>
+    <h3>eea-block</h3>
+    <p>Sometimes we want compose several design components together such
+    as a box container with a blockquote.</p>
+    <p>In this case all of the components selectable from TinyMCE have the
+      <strong>eea-block</strong> class applied such that if we stack them the
+      second block removes the top and bottom margin.
+    </p>
+    <p>This is useful when the spacing is coming from the padding of the first
+      block and having the extra margin is unnecessary.
+    </p>
+    <div data-xrayhtml class="prism">
+      <div class="box eea-block box--full box-primary">
+        <div class="emphasis-area eea-block">
+          <p>This is an <em>emphasis-area</em> div with eea-block class</p>
+        </div>
+        <p>Another text here</p>
+      </div>
+
+      <div class="box eea-block box--full box-primary">
+        <div class="emphasis-area">
+          <p>This is an <em>emphasis-area</em> div without eea-block class</p>
+        </div>
+        <p>Another text here</p>
+      </div>
+    </div>
+    </div>
+
+    <h3>eea-section-* wrapper classes</h3>
+    <p>These classes are useful when we want to have normalized top and bottom
+      margin, to be used with any components or elements that need to be consistently
+      spaced apart, they being especially useful for container classes in order
+      to avoid having any top and bottom margins values on the containers.
+    </p>
+    <p>The following classes are available with the following values:</p>
+
+    <table class="listing">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Margin top and bottom values</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>eea-section-sm</strong></td>
+        <td>1.5rem (24px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-md</strong></td>
+        <td>2rem (32px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-lg</strong></td>
+        <td>2.5rem (40px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-xl</strong></td>
+        <td>3.75rem (60px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-hero</strong></td>
+        <td>6.25rem (100px)</td>
+      </tr>
+      </tbody>
+    </table>
+    <p>Examples of these classes in action:</p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-section-sm bg-primary">
+        <h2 class="notoc">EEA Section Small margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-md bg-primary">
+        <h2 class="notoc">EEA Section Medium margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-lg bg-primary">
+        <h2 class="notoc">EEA Section Large margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-xl bg-primary">
+        <h2 class="notoc">EEA Section Extra Large margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-xl bg-primary">
+        <h2 class="notoc">EEA Section Hero margin top and bottom</h2>
+      </div>
+    </div>
+
+
+    <div id="fullwidth-background-elements">
+    <h2>Fullwidth background sections</h2>
+    <p>Just like <a tal:attributes="href string:${here_url}#boxes">boxes</a>
+      we can also make use of <em>fullwidth background sections</em>
+      to add emphasis to the given area.</p>
+    <p>Also like the boxes we have 3 color options:</p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-block bg-primary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Full width background section with primary background color</p>
+        <p class="discreet">Thank you for your contact</p>
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-secondary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Full width background section with secondary background color</p>
+        <p class="discreet">Thank you for your contact</p>
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fullwidth-bg eea-block bg-tertiary">
+        <h2 class="notoc">Are you a journalist?</h2>
+        <h3 class="notoc">Contact our press team</h3>
+        <h4 class="figureHeading notoc">Write to the following:</h4>
+        <ul>
+          <li><a href="#">EEA</a> Press officer</li>
+          <li><a href="#">EEA</a>&nbsp;Press officer</li>
+        </ul>
+        <p>Full width background section with tertiary background color</p>
+        <p class="discreet">Thank you for your contact</p>
+        <table class="invisible" summary="Muted table example within boxes">
+          <thead>
+          <tr class="even">
+            <th>Even table header</th>
+            <th>Odd table header</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="even">
+            <td>Even table item</td>
+            <td>Odd table item</td>
+          </tr>
+          <tr class="even">
+            <td>Odd table item</td>
+            <td>Even table item</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Fullwidth background section with other elements</h3>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-block bg-primary">
+        <blockquote>
+          <p>Besides the simple styles, you can also nest several styles
+            for a combined effect in case it fit's the page design.
+          </p>
+        </blockquote>
+        <p>This way you can nest a <strong>Inline quote</strong> within a
+          <strong>Fullwidth background section</strong>.
+        </p>
+      </div>
+    </div>
+    </div>
+
+
+  </metal:main-macro>
+</metal:body>
+
+</body>
+</html>

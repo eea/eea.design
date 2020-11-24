@@ -21,15 +21,12 @@ h3 {
 
 h4 {
     font-size: 110%;
-    color: #000;
 }
 h5 {
     font-size: 100%;
-    color: #000;
 }
 h6 {
     font-size: 85%;
-    color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
