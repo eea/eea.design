@@ -3,7 +3,7 @@
 
 .widescreen-container {
   @include fullwidth-container-centered();
-  padding: 0 15px;
+  //padding: 0 15px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -32,10 +32,8 @@
   }
 }
 
-
 @media (max-width: $breakpoint-xxl) {
   .widescreen-container {
     padding: 0 $spacer;
   }
 }
-

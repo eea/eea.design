@@ -1,23 +1,29 @@
+/* remove top and bottom margin when we have a block within a block */
+.eea-block > .eea-block {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 
-// Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
-@each $size, $length in $spacers {
-  @if $size != 0 {
-    .m#{$infix}-n#{$size} { margin: -$length !important; }
-    .mt#{$infix}-n#{$size},
-    .my#{$infix}-n#{$size} {
-      margin-top: -$length !important;
-    }
-    .mr#{$infix}-n#{$size},
-    .mx#{$infix}-n#{$size} {
-      margin-right: -$length !important;
-    }
-    .mb#{$infix}-n#{$size},
-    .my#{$infix}-n#{$size} {
-      margin-bottom: -$length !important;
-    }
-    .ml#{$infix}-n#{$size},
-    .mx#{$infix}-n#{$size} {
-      margin-left: -$length !important;
-    }
-  }
+/* section construct used to be added on containers when we want standardized
+  top and bottom margin */
+.eea-section-sm {
+  margin-top: $spacer-4 !important;
+  margin-bottom: $spacer-4 !important;
+}
+.eea-section-md {
+  margin-top: $spacer-2 !important;
+  margin-bottom: $spacer-2 !important;
+}
+.eea-section-lg {
+  margin-top: $spacer-1 !important;
+  margin-bottom: $spacer-1 !important;
+}
+.eea-section-xl {
+  margin-top: $spacer-0 !important;
+  margin-bottom: $spacer-0 !important;
+}
+
+.eea-section-hero {
+  margin-top: $spacer-hero !important;
+  margin-bottom: $spacer-hero !important;
 }

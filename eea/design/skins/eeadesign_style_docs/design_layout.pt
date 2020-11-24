@@ -157,6 +157,67 @@
     </div>
     </div>
 
+    <h3>eea-section-* wrapper classes</h3>
+    <p>These classes are useful when we want to have normalized top and bottom
+      margin, to be used with any components or elements that need to be consistently
+      spaced apart, they being especially useful for container classes in order
+      to avoid having any top and bottom margins values on the containers.
+    </p>
+    <p>The following classes are available with the following values:</p>
+
+    <table class="listing">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Margin top and bottom values</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>eea-section-sm</strong></td>
+        <td>1.5rem (24px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-md</strong></td>
+        <td>2rem (32px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-lg</strong></td>
+        <td>2.5rem (40px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-xl</strong></td>
+        <td>3.75rem (60px)</td>
+      </tr>
+      <tr>
+        <td><strong>eea-section-hero</strong></td>
+        <td>6.25rem (100px)</td>
+      </tr>
+      </tbody>
+    </table>
+    <p>Examples of these classes in action:</p>
+    <div data-xrayhtml class="prism">
+      <div class="fullwidth-bg eea-section-sm bg-primary">
+        <h2 class="notoc">EEA Section Small margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-md bg-primary">
+        <h2 class="notoc">EEA Section Medium margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-lg bg-primary">
+        <h2 class="notoc">EEA Section Large margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-xl bg-primary">
+        <h2 class="notoc">EEA Section Extra Large margin top and bottom</h2>
+      </div>
+
+      <div class="fullwidth-bg eea-section-xl bg-primary">
+        <h2 class="notoc">EEA Section Hero margin top and bottom</h2>
+      </div>
+    </div>
+
 
     <div id="fullwidth-background-elements">
     <h2>Fullwidth background sections</h2>
