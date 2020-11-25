@@ -1,6 +1,9 @@
 Changelog
 =========
 
+28.0-dev0 - (unreleased)
+---------------------------
+
 27.9 - (2020-11-25)
 ---------------------------
 * Change: Customized content_status_modify plone script so that effective
