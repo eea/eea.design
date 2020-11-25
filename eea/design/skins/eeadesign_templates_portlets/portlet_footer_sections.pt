@@ -127,11 +127,15 @@
     <!--? end follow us -->
 
     <!--? contact us section -->
-    <div class="colophon-section section-dark section-bordered section-contact-us">
+    <div class="colophon-section section-dark section-bordered section-contact-us"
+       tal:define="language_code context/@@plone_portal_state/language;
+        contact_us_translations_url string:/${language_code}/address.html;
+        contact_us_url python: contact_us_translations_url if language_code != 'en' else '/contact-us';">
+
         <div class="section-centered">
 
             <h2 class="section-header no-anchor" i18n:translate="">
-              <a href="https://www.eea.europa.eu/contact-us">
+              <a tal:attributes="href contact_us_url">
                 Contact us
               </a>
             </h2>
@@ -154,11 +158,11 @@
             </div>
 
             <div class="media mx-2">
-              <a href="https://www.eea.europa.eu/contact-us">
+              <a tal:attributes="href contact_us_url">
                 <span class="eea-icon eea-icon-4x eea-icon-comment"><!-- --></span>
               </a>
               <div class="media-body media-body-enquiries">
-                <a href="https://www.eea.europa.eu/contact-us" i18n:translate="" class="block">Ask your question</a>
+                <a tal:attributes="href contact_us_url" i18n:translate="" class="block">Ask your question</a>
                 <a href="https://www.eea.europa.eu/media/" i18n:translate="">Media enquiries</a>
               </div>
             </div>

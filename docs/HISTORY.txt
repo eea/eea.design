@@ -3,6 +3,10 @@ Changelog
 
 28.0-dev0 - (unreleased)
 ---------------------------
+* Change: modified footer links to point to address.html when
+  not on en language otherwise we point to contact-us page on
+  footer
+  [ichim-david refs #123558]
 
 27.9 - (2020-11-25)
 ---------------------------
