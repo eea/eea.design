@@ -1,6 +1,14 @@
 Changelog
 =========
 
+27.9 - (2020-11-25)
+---------------------------
+* Change: Customized content_status_modify plone script so that effective
+  date is not set when the transition is 'show'
+  [iulianpetchesi #122818]
+* Bug fix: fixed sub and sup position by removing css override
+  [ichim-david refs #100730]
+
 27.8 - (2020-11-24)
 ---------------------------
 * Change: Refs #119674 and #124597 docs and design documentation
