@@ -3,6 +3,8 @@ Changelog
 
 27.9-dev0 - (unreleased)
 ---------------------------
+* Bug fix: fixed sub and sup position by removing css override
+  [ichim-david refs #100730]
 
 27.8 - (2020-11-24)
 ---------------------------
