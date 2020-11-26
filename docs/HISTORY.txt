@@ -1,6 +1,13 @@
 Changelog
 =========
 
+28.0 - (2020-11-25)
+---------------------------
+* Change: modified footer links to point to address.html when
+  not on en language otherwise we point to contact-us page on
+  footer
+  [ichim-david refs #123558]
+
 27.9 - (2020-11-25)
 ---------------------------
 * Change: Customized content_status_modify plone script so that effective
