@@ -49,7 +49,7 @@ jQuery.tools.overlay.conf.oneInstance = false;
 
 
 
-jQuery(function ($) {
+(function($) {
     if(!$.buildFragment) {
         $.buildFragment = function ( elems, context, scripts, selection, ignored ) {
             // if ((!scripts.push) || selection || ignored) {
@@ -652,6 +652,5 @@ jQuery(function ($) {
     //          urlmatch: '/image_view_fullscreen$',
     //          urlreplace: '_preview'
     //         });
-
-});
+}) (jQuery);
 
