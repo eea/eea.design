@@ -1,7 +1,7 @@
 Changelog
 =========
 
-28.1-dev0 - (unreleased)
+28.1 - (2020-12-21)
 ---------------------------
 * Bug fix: ensure that prepOverlay from overlayhelpers.js loads on dom load
   ensuring that calls to it don't throw a js error such as in the case of
