@@ -7,6 +7,8 @@ Changelog
   ensuring that calls to it don't throw a js error such as in the case of
   comments.js
   [ichim-david refs #125298]
+* Bug fix: fixed more use-cases where effective date was set before publish.
+  [alecghica refs #125441]
 
 28.0 - (2020-11-25)
 ---------------------------

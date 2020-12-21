@@ -24,7 +24,7 @@ transitions = portal_workflow.getTransitionsFor(new_context)
 transition_ids = [t['id'] for t in transitions]
 
 # 122818 - dont set effective date if the new state is Public draft
-if workflow_action != 'show':
+if not workflow_action in ['show', 'showPublicDraft', 'hide', 'retract', 'signoffForEionetReview', 'reject', 'reviewForEionet', 'publishInternally']:
     if workflow_action in transition_ids \
             and not effective_date \
             and context.EffectiveDate() =='None':
