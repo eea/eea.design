@@ -3,6 +3,11 @@ Changelog
 
 28.2-dev0 - (unreleased)
 ---------------------------
+* Bug fix: fixed footer layout for contributed to tables
+  [ichim-david]
+* Feature: added style for documentParentHeader used by children of Report
+  to join parent title with context title
+  [ichim-david refs #125423]
 
 28.1 - (2020-12-21)
 ---------------------------

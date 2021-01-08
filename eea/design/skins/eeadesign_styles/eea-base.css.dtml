@@ -167,7 +167,10 @@ select {
 }
 
 /* @group Content Area */
-
+.documentParentHeader {
+    margin-bottom: -1rem; /* used in children of Reports to join headers
+    * eea.europa.eu/publications/environmental-indicator-report-2012/environmental-indicator-report-2012-ecosystem/executive_summary.xhtml/ */
+}
 .userrole-anonymous .documentFirstHeading {
     padding-right: 5em; /* to avoid overlapping with language switcher which appears only for anonymous users */
 }
