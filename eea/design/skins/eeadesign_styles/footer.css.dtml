@@ -103,6 +103,8 @@
 .colophon-section table {
     font-size: 1em;
     margin: 0;
+    display: block; /* ensure footer tables are side by side with flex parent */
+    width: auto;
 }
 .section-header {
     text-decoration: none;

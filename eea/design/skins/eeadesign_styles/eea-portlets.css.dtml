@@ -126,6 +126,7 @@ a.managePortletsFallback {
     line-height: 1.4;
     padding: 0;
     margin: 0 0 1em 0;
+    width: 100%;
 }
 
 /*.mini-header-navigation #firstHeader {*/
