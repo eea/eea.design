@@ -97,7 +97,6 @@ Changelog
 * Feature: added **disable_eea.miniheader** request variable which if set on
   template will disable mini header even if enabled per content type
   [ichim-david refs #120363]
-http://david.dev2aws.eea.europa.eu/themes/biodiversity/dc
 * Feature: added scroll to the top button
   [madelaines refs #119305]
 
