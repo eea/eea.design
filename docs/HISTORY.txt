@@ -3,6 +3,8 @@ Changelog
 
 28.3-dev0 - (unreleased)
 ---------------------------
+* Bug fix: effective date is now set in automatic only on publish.
+  [alecghica refs #127760]
 
 28.2 - (2021-01-08)
 ---------------------------
