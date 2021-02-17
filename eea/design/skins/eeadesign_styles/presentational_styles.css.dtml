@@ -302,5 +302,36 @@ pre {
     clear: both;
 }
 
+
+dl.publicationMessage {
+    background-color: #f3f3f3;
+    margin-top: 25px;
+}
+
+dl.publicationMessage dt.portletHeader {
+    background-image: none;
+}
+
+dl.publicationMessage dd {
+    clear: both;
+}
+
+dl.publicationDocument li {
+    margin-bottom: 0.25em;
+    line-height: 1.25em;
+}
+
+dl.publicationDocument ul {
+    margin-bottom: 0;
+    list-style-type: disc;
+}
+
+dl.publicationDocument dt {
+    font-weight: bold;
+}
+
+h2.publicationDocument {
+    font-size: 175%;
+}
 /* </dtml-let> */
 /* </dtml-with> */
