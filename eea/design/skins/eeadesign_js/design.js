@@ -548,6 +548,9 @@ jQuery(document).ready(function ($) {
             .querySelectorAll('.floated-photo-album-container')
             .forEach(function (el) {
               var album = el.querySelector('.photoAlbumEntry');
+              if (!album) {
+                return;
+              }
               var el_coords = el.querySelector('a').getBoundingClientRect();
               if (el.className.indexOf('floated-right') !== -1) {
                 album.style.right =
@@ -583,9 +586,9 @@ jQuery(document).ready(function ($) {
     });
     var $photo_album = found.parent().clone();
     if (found) {
+      $photo_album.appendTo($this);
       window.setTimeout(function () {
         // $photo_album.css('top', $this.position().top - 40).appendTo($this);
-        $photo_album.appendTo($this);
         if (window.forceImageLoad) {
           window.forceImageLoad($photo_album.find('.lazy'));
           window.fix_floated_album_positions();
