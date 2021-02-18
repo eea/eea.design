@@ -167,7 +167,7 @@ jQuery(document).ready(function ($) {
     $('<a />', {
       class: 'video_iframe_for_print visible-print',
       href: $video_iframe_src,
-      html: 'Video link: [' + $video_iframe_src + ']',
+      html: 'Video link: [' + $video_iframe_src + ']'
     }).insertBefore($video_iframe);
   }
 
@@ -204,7 +204,7 @@ jQuery(document).ready(function ($) {
       start: function () {
         var display = this.getAttribute('data-display') || 'block';
         jQuery(this).css('display', display);
-      },
+      }
     });
   });
 
@@ -255,7 +255,7 @@ jQuery(document).ready(function ($) {
   });
   // #17633 add eea-icon class to the plone message classes
   $(
-    '.attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning',
+    '.attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning'
   ).addClass('eea-icon');
 
   // #5454 remove background for required fields that have the red square
@@ -318,7 +318,7 @@ jQuery(document).ready(function ($) {
       timeout: 3000,
       linkSelector: 'a',
       linkCSS: 'downloading',
-      lockCSS: 'downloading-lock',
+      lockCSS: 'downloading-lock'
     };
 
     if (options) {
@@ -349,7 +349,7 @@ jQuery(document).ready(function ($) {
   $('.documentActions .action-items').avoidMultipleClicks();
   $document_actions.avoidMultipleClicks({
     linkSelector: '.eea-icon',
-    linkCSS: ' eea-icon-download eea-icon-anim-burst animated',
+    linkCSS: ' eea-icon-download eea-icon-anim-burst animated'
   });
 
   // #23277 track download of PDF and EPUBS #18753 as well as other downloads
@@ -368,7 +368,7 @@ jQuery(document).ready(function ($) {
     'doc',
     'docx',
     'xlsx',
-    'table',
+    'table'
   ];
 
   function check_file_type(tokens) {
@@ -500,7 +500,7 @@ jQuery(document).ready(function ($) {
               'event',
               'Print Action',
               window.location.host,
-              window.location.href,
+              window.location.href
             );
           }
           _paq.push(['trackEvent', 'Reading', 'print', portal_type, 1]);
@@ -646,9 +646,9 @@ jQuery(document).ready(function ($) {
         window.fix_floated_album_positions();
         window.enlarge_content_area();
         normalize_siblings_height(
-          document.querySelector('.relatedItems .eea-tabs'),
+          document.querySelector('.relatedItems .eea-tabs')
         );
-      }, 100),
+      }, 100)
     );
   }
 
