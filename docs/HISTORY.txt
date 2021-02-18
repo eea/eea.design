@@ -3,6 +3,9 @@ Changelog
 
 28.3 - (2021-02-03)
 ---------------------------
+* Bug fix: use javascript to compute position of floated right and left
+  relations
+  [ichim-david refs #126353]
 * Bug fix: effective date is now set in automatic only on publish.
   [alecghica refs #127760]
 

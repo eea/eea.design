@@ -62,9 +62,9 @@ jQuery(document).ready(function ($) {
   var $whatsnew_listing = $('.whatsnew-listing');
   var $body_content = $('.body-content');
   hide_empty_container(
-      $whatsnew_listing,
-      0,
-      $whatsnew_listing.find('.eea-tabs-panels'),
+    $whatsnew_listing,
+    0,
+    $whatsnew_listing.find('.eea-tabs-panels'),
   );
   hide_empty_container($body_content, 1, $body_content.find('p'));
 
@@ -97,13 +97,13 @@ jQuery(document).ready(function ($) {
             var el = idx.target;
             var src = el.src;
             if (
-                src.indexOf('embed-chart') !== -1 ||
-                src.indexOf('embed-dashboard') !== -1
+              src.indexOf('embed-chart') !== -1 ||
+              src.indexOf('embed-dashboard') !== -1
             ) {
               $(el)
-                  .contents()
-                  .find('html')
-                  .addClass('portaltype-fiche section-airs');
+                .contents()
+                .find('html')
+                .addClass('portaltype-fiche section-airs');
               el.width = '100%';
             }
           });
@@ -137,12 +137,12 @@ jQuery(document).ready(function ($) {
   });
 
   $('#themes-megatopics-area')
-      .find('.promoHeader')
-      .click(function (ev) {
-        if (window.innerWidth > 480) {
-          ev.stopImmediatePropagation();
-        }
-      });
+    .find('.promoHeader')
+    .click(function (ev) {
+      if (window.innerWidth > 480) {
+        ev.stopImmediatePropagation();
+      }
+    });
 
   /* #28278 prevent figures from printing charts without the figure title on the same line
    * data-and-maps/indicators/eea32-persistent-organic-pollutant-pop-emissions-1/assessment-4/pdf.body
@@ -161,7 +161,7 @@ jQuery(document).ready(function ($) {
    * the video tag and there is no image placeholder */
   var $iframes = $('iframe');
   var $video_iframe = $iframes.filter('[src*="video"]'),
-      $video_iframe_src;
+    $video_iframe_src;
   if ($video_iframe) {
     $video_iframe_src = $video_iframe.attr('src');
     $('<a />', {
@@ -255,7 +255,7 @@ jQuery(document).ready(function ($) {
   });
   // #17633 add eea-icon class to the plone message classes
   $(
-      '.attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning',
+    '.attention, .caution, .danger, .error, .hint, .important, .note, .tip, .warning',
   ).addClass('eea-icon');
 
   // #5454 remove background for required fields that have the red square
@@ -276,13 +276,13 @@ jQuery(document).ready(function ($) {
   // #4157 move the non embedded links out of the enumeration of the embedded
   // links in order to preserve the design
   var $auto_related = $('#auto-related'),
-      $prev = $auto_related.prev(),
-      $dls = $auto_related.find('dl');
+    $prev = $auto_related.prev(),
+    $dls = $auto_related.find('dl');
   if ($dls.length) {
     $auto_related.detach();
     $dls.each(function (idx, item) {
       var $item = $(item),
-          $dt = $item.find('dt');
+        $dt = $item.find('dt');
       $item.find('.portletItem').each(function (idx, item) {
         if (item.className.indexOf('embedded') === -1) {
           $(item).insertAfter($dt);
@@ -295,7 +295,7 @@ jQuery(document).ready(function ($) {
   function themePromotionPortlets(top_news) {
     var top_news_width = top_news.width();
     var margin = top_news_width * 0.012,
-        w = Math.floor((top_news_width - 5 * margin) / 5);
+      w = Math.floor((top_news_width - 5 * margin) / 5);
     var promotions = top_news.find('.portlet-promotions');
     promotions.width(w);
     var last = promotions.last();
@@ -331,7 +331,7 @@ jQuery(document).ready(function ($) {
         var context = $(this);
         var oldCSS = context.attr('class') || '';
         settings.linkCSS =
-            oldCSS.split(' ').slice(0, 2).join(' ') + settings.linkCSS;
+          oldCSS.split(' ').slice(0, 2).join(' ') + settings.linkCSS;
         context.removeClass();
         context.addClass(settings.linkCSS);
 
@@ -406,7 +406,7 @@ jQuery(document).ready(function ($) {
       ptype = ptype.match('portaltype-[a-z-]*');
       ptype = ptype[0].split('-');
       ptype =
-          ptype.length === 2 ? c(ptype[1]) : c(ptype[1]) + ' ' + c(ptype[2]);
+        ptype.length === 2 ? c(ptype[1]) : c(ptype[1]) + ' ' + c(ptype[2]);
     } else {
       ptype = 'Unknown';
     }
@@ -429,10 +429,10 @@ jQuery(document).ready(function ($) {
           continue;
         }
         if (
-            link_href.match('/download[.a-zA-Z]*') ||
-            link_href.match('at_download') ||
-            link_href.match('/download$') ||
-            link_href.match('ftp.eea.europa')
+          link_href.match('/download[.a-zA-Z]*') ||
+          link_href.match('at_download') ||
+          link_href.match('/download$') ||
+          link_href.match('ftp.eea.europa')
         ) {
           list.push(link);
         }
@@ -471,16 +471,16 @@ jQuery(document).ready(function ($) {
 
   $('#globalstatusmessage').each(function (idx, el) {
     $(el)
-        .find("dl:not([class*='eea-icon'])")
-        .addClass('eea-icon eea-icon-magic');
+      .find("dl:not([class*='eea-icon'])")
+      .addClass('eea-icon eea-icon-magic');
     $(el)
-        .fadeIn(200)
-        .fadeOut(200)
-        .fadeIn(200)
-        .fadeOut(200)
-        .fadeIn(200)
-        .fadeOut(200)
-        .fadeIn(200);
+      .fadeIn(200)
+      .fadeOut(200)
+      .fadeIn(200)
+      .fadeOut(200)
+      .fadeIn(200)
+      .fadeOut(200)
+      .fadeIn(200);
   });
 
   var scroll_analytics_enabled = $body.hasClass('scroll-analytics');
@@ -496,11 +496,11 @@ jQuery(document).ready(function ($) {
           runOnce = true;
           if (window.ga) {
             window.ga(
-                'send',
-                'event',
-                'Print Action',
-                window.location.host,
-                window.location.href,
+              'send',
+              'event',
+              'Print Action',
+              window.location.host,
+              window.location.href,
             );
           }
           _paq.push(['trackEvent', 'Reading', 'print', portal_type, 1]);
@@ -510,8 +510,8 @@ jQuery(document).ready(function ($) {
       $(document).keydown(function (allBrowsers) {
         // Track printing using Ctrl/Cmd+P.
         if (
-            allBrowsers.keyCode === 80 &&
-            (allBrowsers.ctrlKey || allBrowsers.metaKey)
+          allBrowsers.keyCode === 80 &&
+          (allBrowsers.ctrlKey || allBrowsers.metaKey)
         ) {
           afterPrint();
         }
@@ -545,29 +545,33 @@ jQuery(document).ready(function ($) {
         var header_extra_width = 88;
         var content_coords = content.getBoundingClientRect();
         document
-            .querySelectorAll('.floated-photo-album-container')
-            .forEach(function (el) {
-              var album = el.querySelector('.photoAlbumEntry');
-              if (!album) {
-                return;
-              }
-              var el_coords = el.querySelector('a').getBoundingClientRect();
-              if (el.className.indexOf('floated-right') !== -1) {
-                album.style.right =
-                    -(
-                        Math.round(content_coords.right - el_coords.right) +
-                        photo_album_width +
-                        header_extra_width
-                    ) + 'px';
-              } else {
-                album.style.left =
-                    -(
-                        Math.round(el_coords.left - content_coords.left) +
-                        photo_album_width +
-                        header_extra_width
-                    ) + 'px';
-              }
-            });
+          .querySelectorAll('.floated-photo-album-container')
+          .forEach(function (el) {
+            var album = el.querySelector('.photoAlbumEntry');
+            if (!album) {
+              return;
+            }
+            var el_coords;
+            if (el.className.indexOf('floated-right') !== -1) {
+              el_coords = el.getBoundingClientRect();
+              album.style.right =
+                -(
+                  Math.round(content_coords.right - el_coords.right) +
+                  photo_album_width +
+                  header_extra_width
+                ) + 'px';
+            } else {
+              // left side needs to compare with link while right side with
+              // the relative parent
+              el_coords = el.querySelector('a').getBoundingClientRect();
+              album.style.left =
+                -(
+                  Math.round(el_coords.left - content_coords.left) +
+                  photo_album_width +
+                  header_extra_width
+                ) + 'px';
+            }
+          });
         floated_albums_position_fixed = true;
       })();
     }
@@ -609,8 +613,8 @@ jQuery(document).ready(function ($) {
   }
   if (children_length === 2) {
     if (
-        $below_content_children[0].className.indexOf('qrbox') !== -1 &&
-        $below_content_children[1].className.indexOf('eea-pdf-viewlet') !== -1
+      $below_content_children[0].className.indexOf('qrbox') !== -1 &&
+      $below_content_children[1].className.indexOf('eea-pdf-viewlet') !== -1
     ) {
       $redesign_below_content.hide();
     }
@@ -638,30 +642,30 @@ jQuery(document).ready(function ($) {
 
   if (underscore && underscore.debounce) {
     $(window).resize(
-        underscore.debounce(function () {
-          window.fix_floated_album_positions();
-          window.enlarge_content_area();
-          normalize_siblings_height(
-              document.querySelector('.relatedItems .eea-tabs'),
-          );
-        }, 100),
+      underscore.debounce(function () {
+        window.fix_floated_album_positions();
+        window.enlarge_content_area();
+        normalize_siblings_height(
+          document.querySelector('.relatedItems .eea-tabs'),
+        );
+      }, 100),
     );
   }
 
   // #119305 - scroll to the top button
   var throttle = underscore
-      ? underscore.throttle
-      : function (el) {
+    ? underscore.throttle
+    : function (el) {
         return el;
       };
 
   function navScroll() {
     var pxShow = 150, // height on which the button will show
-        pxHide = 100,
-        fadeInTime = 20, // how slow/fast you want the button to show
-        fadeOutTime = 20, // how slow/fast you want the button to hide
-        window_scroll_top = $(window).scrollTop(),
-        goTopButton = $('.go-top');
+      pxHide = 100,
+      fadeInTime = 20, // how slow/fast you want the button to show
+      fadeOutTime = 20, // how slow/fast you want the button to hide
+      window_scroll_top = $(window).scrollTop(),
+      goTopButton = $('.go-top');
 
     if (window_scroll_top >= pxShow) {
       goTopButton.fadeIn(fadeInTime);
