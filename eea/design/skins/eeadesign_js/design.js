@@ -165,7 +165,7 @@ jQuery(document).ready(function ($) {
   if ($video_iframe) {
     $video_iframe_src = $video_iframe.attr('src');
     $('<a />', {
-      class: 'video_iframe_for_print visible-print',
+      'class': 'video_iframe_for_print visible-print',
       href: $video_iframe_src,
       html: 'Video link: [' + $video_iframe_src + ']'
     }).insertBefore($video_iframe);
@@ -653,11 +653,9 @@ jQuery(document).ready(function ($) {
   }
 
   // #119305 - scroll to the top button
-  var throttle = underscore
-    ? underscore.throttle
-    : function (el) {
-        return el;
-      };
+  var throttle = underscore ? underscore.throttle : function (el) {
+    return el;
+  };
 
   function navScroll() {
     var pxShow = 150, // height on which the button will show
