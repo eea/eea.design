@@ -324,7 +324,7 @@ span.next {
   position: relative;
   .photoAlbumEntry {
    will-change: transform;
-   transition: all 250ms;
+   transition: transform 250ms;
    overflow: visible;
    display: block;
    position: absolute;
@@ -355,9 +355,6 @@ span.next {
  }
 
  .floated-left {
-  .photoAlbumEntry {
-   left: -350px;
-  }
   .photoAlbumEntry:after {
    border-left-color: $corporateBlue;
    left: 100%;
@@ -365,9 +362,6 @@ span.next {
  }
 
  .floated-right {
-  .photoAlbumEntry {
-   right: -350px;
-  }
   .photoAlbumEntry:after {
    border-right-color: $corporateBlue;
    left: -16px;

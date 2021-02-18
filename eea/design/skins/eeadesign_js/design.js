@@ -541,8 +541,8 @@ jQuery(document).ready(function ($) {
         // 224 = 217px + 7px for padding
         // 88 = current design has 88px to the left and right of content area
         // 800px width
-        var photo_album_width = 224;
-        var header_extra_width = 88;
+        var photo_album_width = 312;
+        var header_extra_width = 888;
         var content_coords = content.getBoundingClientRect();
         document
           .querySelectorAll('.floated-photo-album-container')
@@ -551,25 +551,19 @@ jQuery(document).ready(function ($) {
             if (!album) {
               return;
             }
-            var el_coords;
+            var el_coords = album.getBoundingClientRect();
             if (el.className.indexOf('floated-right') !== -1) {
-              el_coords = el.getBoundingClientRect();
-              album.style.right =
-                -(
-                  Math.round(content_coords.right - el_coords.right) +
-                  photo_album_width +
-                  header_extra_width
-                ) + 'px';
+              album.style.transform = 'translateX(' +
+                (header_extra_width -
+                  Math.round(el_coords.left - content_coords.left)
+                ) + 'px)';
             } else {
               // left side needs to compare with link while right side with
               // the relative parent
-              el_coords = el.querySelector('a').getBoundingClientRect();
-              album.style.left =
-                -(
-                  Math.round(el_coords.left - content_coords.left) +
-                  photo_album_width +
-                  header_extra_width
-                ) + 'px';
+              album.style.transform = 'translateX(' +
+                  (-(photo_album_width +
+                      Math.round(el_coords.left - content_coords.left)
+                  )) + 'px)';
             }
           });
         floated_albums_position_fixed = true;
