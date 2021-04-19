@@ -165,7 +165,7 @@ jQuery(document).ready(function ($) {
   if ($video_iframe) {
     $video_iframe_src = $video_iframe.attr('src');
     $('<a />', {
-      'class': 'video_iframe_for_print visible-print',
+      class: 'video_iframe_for_print visible-print',
       href: $video_iframe_src,
       html: 'Video link: [' + $video_iframe_src + ']'
     }).insertBefore($video_iframe);
@@ -551,19 +551,23 @@ jQuery(document).ready(function ($) {
             if (!album) {
               return;
             }
-            var el_coords = album.getBoundingClientRect();
+            var el_coords = el.getBoundingClientRect();
             if (el.className.indexOf('floated-right') !== -1) {
-              album.style.transform = 'translateX(' +
+              album.style.transform =
+                'translateX(' +
                 (header_extra_width -
-                  Math.round(el_coords.left - content_coords.left)
-                ) + 'px)';
+                  Math.round(el_coords.left - content_coords.left)) +
+                'px)';
             } else {
               // left side needs to compare with link while right side with
               // the relative parent
-              album.style.transform = 'translateX(' +
-                  (-(photo_album_width +
-                      Math.round(el_coords.left - content_coords.left)
-                  )) + 'px)';
+              album.style.transform =
+                'translateX(' +
+                -(
+                  photo_album_width +
+                  Math.round(el_coords.left - content_coords.left)
+                ) +
+                'px)';
             }
           });
         floated_albums_position_fixed = true;
@@ -647,9 +651,11 @@ jQuery(document).ready(function ($) {
   }
 
   // #119305 - scroll to the top button
-  var throttle = underscore ? underscore.throttle : function (el) {
-    return el;
-  };
+  var throttle = underscore
+    ? underscore.throttle
+    : function (el) {
+        return el;
+      };
 
   function navScroll() {
     var pxShow = 150, // height on which the button will show
