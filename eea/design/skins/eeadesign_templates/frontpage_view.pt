@@ -170,7 +170,8 @@
                                 </ul>
                             </tal:tabs>
                             <!-- end_tabs -->
-                            <select tal:define="items python:here.portal_vocabularies.getVocabularyByName('themes').getVocabularyLines()" id="topic-selector"
+                            <select tal:define="themecentre_view context/@@themecentre_utils;
+                                                items themecentre_view/get_vocabulary_lines" id="topic-selector"
                                     metal:define-macro="whatsnew-select-topic">
                                 <option value="" i18n:translate="">All topics</option>
                                 <tal:items tal:repeat="item items">
