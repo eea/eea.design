@@ -3,6 +3,9 @@ Changelog
 
 28.4-dev0 - (unreleased)
 ---------------------------
+* Change: Modified frontpage_view template so that it no longer uses
+  portal_vocabularies for themes retrieval
+  [iulianpetchesi #131802]
 
 28.3 - (2021-02-03)
 ---------------------------
