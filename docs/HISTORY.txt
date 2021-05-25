@@ -3,6 +3,9 @@ Changelog
 
 28.4-dev0 - (unreleased)
 ---------------------------
+* Change: tweak countries region css for header placement and background
+  size
+  [ichim-david]
 
 28.3 - (2021-02-03)
 ---------------------------

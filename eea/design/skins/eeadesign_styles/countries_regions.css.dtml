@@ -5,6 +5,11 @@
     background: #eef3f6 linear-gradient(180deg, #eef3f6 2%, #ffffff 50%);
 }
 
+/* add some right side padding by restricting max width */
+#regions-countries .pull-left {
+    width: 99%;
+}
+
 #portal-columns {
     min-width: 100%;
 }
@@ -62,7 +67,7 @@
     background-color: #f2f5f7;
     content: " ";
     margin: 0 -2%;
-    width: 101%;
+    width: 103%;
     height: 64%;
     box-shadow: 0 2px 2px #cecece;
     z-index: -1;
@@ -87,7 +92,7 @@
 
 .collaborating-countries-header {
     position: absolute;
-    margin-top: -57px;
+    margin-top: -54px;
 }
 
 
