@@ -1,6 +1,15 @@
 Changelog
 =========
 
+28.4 - (2021-05-20)
+---------------------------
+* Change: Modified frontpage_view template so that it no longer uses
+  portal_vocabularies for themes retrieval
+  [iulianpetchesi #131802]
+* Change: tweak countries region css for header placement and background
+  size
+  [ichim-david]
+
 28.3 - (2021-02-03)
 ---------------------------
 * Bug fix: use javascript to compute position of floated right and left
