@@ -1,6 +1,9 @@
 Changelog
 =========
 
+28.5-dev0 - (unreleased)
+---------------------------
+
 28.4 - (2021-05-20)
 ---------------------------
 * Change: Modified frontpage_view template so that it no longer uses
