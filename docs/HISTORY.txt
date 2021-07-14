@@ -1,6 +1,12 @@
 Changelog
 =========
 
+28.5 - (2021-07-14)
+---------------------------
+* Change: removed extra padding from content-header on
+  print in order for header to align within content body
+  [ichim-david refs #136489]
+
 28.4 - (2021-05-20)
 ---------------------------
 * Change: Modified frontpage_view template so that it no longer uses
