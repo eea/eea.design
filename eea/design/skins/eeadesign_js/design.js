@@ -643,7 +643,7 @@ jQuery(document).ready(function ($) {
     $(window).resize(
       underscore.debounce(function () {
         window.fix_floated_album_positions();
-        window.enlarge_content_area();
+        window.enlarge_content_area && window.enlarge_content_area();
         normalize_siblings_height(
           document.querySelector('.relatedItems .eea-tabs')
         );
