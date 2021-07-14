@@ -3,6 +3,9 @@ Changelog
 
 28.5-dev0 - (unreleased)
 ---------------------------
+* Change: removed extra padding from content-header on
+  print in order for header to align within content body
+  [ichim-david refs #136489]
 
 28.4 - (2021-05-20)
 ---------------------------
