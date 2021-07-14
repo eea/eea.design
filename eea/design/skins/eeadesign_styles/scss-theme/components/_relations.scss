@@ -369,3 +369,14 @@ span.next {
 
  }
 }
+
+@media print {
+ .relatedItems {
+  .photoAlbumEntryTitleWrapper,
+  .photoAlbumEntryTitle {
+   background-color: transparent;
+   color: #000;
+   height: auto;
+  }
+ }
+}
