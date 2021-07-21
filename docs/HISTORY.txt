@@ -3,13 +3,16 @@ Changelog
 
 28.7-dev0 - (unreleased)
 ---------------------------
+* Change: use on delegate jQuery selector in order to catch tabs after any
+  transforms
+  [ichim-david refs #136390]
 
 28.6 - (2021-07-21)
 ---------------------------
 * Change: added fix from custom regard crash of js when we are on pdf pages
   [ichim-david]
-* Change: #136390 - Tableau visualisation iframe refreshed on tab click for proper display
-  [MadelaineS]
+* Change: Tableau visualisation iframe refreshed on tab click for proper display
+  [MadelaineS refs #136390]
 
 28.5 - (2021-07-14)
 ---------------------------

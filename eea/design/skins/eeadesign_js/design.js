@@ -610,7 +610,6 @@ jQuery(document).ready(function ($) {
     }
   });
 
-
   // hide mini-header-below content in case we have only qrbox
   // or qrbox and eea-pdf-viewlet such as the case for assessments
   var $redesign_below_content = $(".mini-header-below-content");
@@ -687,7 +686,7 @@ jQuery(document).ready(function ($) {
   $(window).scroll(lazyNavScroll);
 
   //#136390 - Tableau visualisation iframe gets refreshed on tab click to ensure proper display on page
-  $(".eea-tabs > li > a").click(function () {
+  $(".eea-tabs").on("click", "a", function () {
     var $this = $(this);
     if (!$this.hasClass("iframes-refreshed")) {
       $this.addClass("iframes-refreshed");
