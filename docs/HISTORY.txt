@@ -1,6 +1,13 @@
 Changelog
 =========
 
+28.6 - (2021-07-21)
+---------------------------
+* Change: added fix from custom regard crash of js when we are on pdf pages
+  [ichim-david]
+* Change: #136390 - Tableau visualisation iframe refreshed on tab click for proper display
+  [MadelaineS]
+
 28.5 - (2021-07-14)
 ---------------------------
 * Change: removed extra padding from content-header on
