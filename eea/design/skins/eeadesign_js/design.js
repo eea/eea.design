@@ -676,29 +676,31 @@ jQuery(document).ready(function ($) {
 
   var lazyNavScroll = throttle(navScroll, 500);
   $(window).scroll(lazyNavScroll);
-});
 
 //#136390 - Tableau visualisation iframe gets refreshed on tab click to ensure proper display on page
-$(".eea-tabs > li > a").click(function () {
-  var $this = $(this);
-  if (!$this.hasClass("iframes-refreshed")) {
-    $this.addClass("iframes-refreshed");
-    // Get the tab panel index.
-    var tabIndex = $this.parent().index();
+  $(".eea-tabs > li > a").click(function () {
+    var $this = $(this);
+    if (!$this.hasClass("iframes-refreshed")) {
+      $this.addClass("iframes-refreshed");
+      // Get the tab panel index.
+      var tabIndex = $this.parent().index();
 
-    // When the panel becomes visible, refresh the iframes inside it.
-    if (tabIndex != 0) {
-      var $this = $(this);
-      $this
-        .closest(".eea-tabs")
-        .next(".eea-tabs-panels")
-        .find(".eea-tabs-panel")
-        .eq(tabIndex)
-        .find("iframe")
-        .each(function () {
-          var $this = $(this);
-          $this.attr("src", $this.attr("src"));
-        });
+      // When the panel becomes visible, refresh the iframes inside it.
+      if (tabIndex != 0) {
+        var $this = $(this);
+        $this
+          .closest(".eea-tabs")
+          .next(".eea-tabs-panels")
+          .find(".eea-tabs-panel")
+          .eq(tabIndex)
+          .find("iframe")
+          .each(function () {
+            var $this = $(this);
+            $this.attr("src", $this.attr("src"));
+          });
+      }
     }
-  }
+  });
+
 });
+
