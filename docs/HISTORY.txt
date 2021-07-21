@@ -1,8 +1,10 @@
 Changelog
 =========
 
-28.6-dev0 - (unreleased)
+28.6 - (2021-07-21)
 ---------------------------
+* Change: #136390 - Tableau visualisation iframe refreshed on tab click for proper display
+  [MadelaineS]
 
 28.5 - (2021-07-14)
 ---------------------------
