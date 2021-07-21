@@ -533,12 +533,22 @@ jQuery(document).ready(function ($) {
   }
 
   // 126353 calculate where to position left or right photo album relation
+  var floated_albums_position_fixed;
   window.fix_floated_album_positions = function () {
     if (window.innerWidth < 1600 || floated_albums_position_fixed) {
       return;
     } else {
       (function () {
+        var albums = document.querySelectorAll(
+          ".floated-photo-album-container"
+        );
+        if (!albums.length) {
+          return;
+        }
         var content = document.querySelector("#content");
+        if (!content) {
+          return;
+        }
         // 224 = 217px + 7px for padding
         // 88 = current design has 88px to the left and right of content area
         // 800px width
@@ -552,7 +562,7 @@ jQuery(document).ready(function ($) {
             if (!album) {
               return;
             }
-            var el_coords = el.getBoundingClientRect();
+            var el_coords = album.getBoundingClientRect();
             if (el.className.indexOf("floated-right") !== -1) {
               album.style.transform =
                 "translateX(" +
@@ -600,7 +610,6 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  var floated_albums_position_fixed = false;
 
   // hide mini-header-below content in case we have only qrbox
   // or qrbox and eea-pdf-viewlet such as the case for assessments
@@ -677,7 +686,7 @@ jQuery(document).ready(function ($) {
   var lazyNavScroll = throttle(navScroll, 500);
   $(window).scroll(lazyNavScroll);
 
-//#136390 - Tableau visualisation iframe gets refreshed on tab click to ensure proper display on page
+  //#136390 - Tableau visualisation iframe gets refreshed on tab click to ensure proper display on page
   $(".eea-tabs > li > a").click(function () {
     var $this = $(this);
     if (!$this.hasClass("iframes-refreshed")) {
@@ -701,6 +710,4 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-
 });
-
