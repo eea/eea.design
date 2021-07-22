@@ -16,6 +16,8 @@ from AccessControl import Unauthorized
 from Products.CMFCore.utils import getToolByName
 
 plone_utils = getToolByName(context, 'plone_utils')
+pprops = getToolByName(context, 'portal_properties')
+sprops = pprops.site_properties
 contentEditSuccess = 0
 plone_log = context.plone_log
 new_context = context.portal_factory.doCreate(context)
@@ -24,7 +26,8 @@ transitions = portal_workflow.getTransitionsFor(new_context)
 transition_ids = [t['id'] for t in transitions]
 
 # 122818 - dont set effective date if the new state is other then Published
-if workflow_action == 'publish':
+if workflow_action in sprops.getProperty(
+        'pub_date_set_on_workflow_transition_or_state', ['publish']):
     if workflow_action in transition_ids \
             and not effective_date \
             and context.EffectiveDate() == 'None':
