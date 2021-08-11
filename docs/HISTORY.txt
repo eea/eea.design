@@ -3,6 +3,9 @@ Changelog
 
 28.7-dev0 - (unreleased)
 ---------------------------
+* Change check in site_properties what transition or state we want to
+  check when we decide if EffectiveDate should be set if no date was set manually
+  [ichim-david refs #135801]
 * Change: use on delegate jQuery selector in order to catch tabs after any
   transforms
   [ichim-david refs #136390]
