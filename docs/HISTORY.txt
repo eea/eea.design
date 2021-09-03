@@ -1,8 +1,10 @@
 Changelog
 =========
 
-28.8-dev0 - (unreleased)
+28.8 - (2021-09-03)
 ---------------------------
+* Change: add language popup above pdf viewer
+  [MadelaineS]
 
 28.7 - (2021-08-11)
 ---------------------------
