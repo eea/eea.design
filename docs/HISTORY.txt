@@ -1,6 +1,9 @@
 Changelog
 =========
 
+28.8-dev0 - (unreleased)
+---------------------------
+
 28.7 - (2021-08-11)
 ---------------------------
 * Change check in site_properties what transition or state we want to
