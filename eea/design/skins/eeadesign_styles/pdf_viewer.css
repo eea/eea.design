@@ -181,6 +181,7 @@ canvas {
     height: 100%;
     position: relative;
     margin-bottom: 3em;
+    z-index: 0;
 }
 
 #content .pdfjs option{
@@ -377,7 +378,6 @@ canvas {
 #content .pdfjs #outerContainer.sidebarOpen>#mainContainer {
     left: 20%;
     width: 80% !important;
-    z-index: -1;
 }
 
 .pdfjs #outerContainer>#mainContainer {
