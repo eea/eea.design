@@ -97,7 +97,7 @@ canvas {
     background-image: url(pdf_images/texture.png), linear-gradient(hsla(0, 0%, 32%, .99), hsla(0, 0%, 27%, .95));
 }
 
-.pdfjs #errorWrapper #errorShowLess, 
+.pdfjs #errorWrapper #errorShowLess,
 .pdfjs #errorWrapper #errorShowMore {
     margin-left: 10px;
 }
@@ -181,6 +181,7 @@ canvas {
     height: 100%;
     position: relative;
     margin-bottom: 3em;
+    z-index: 0;
 }
 
 #content .pdfjs option{
@@ -489,7 +490,7 @@ canvas {
         margin-left: 3.8%;
         margin-right: 2%;
     }
-    
+
     #content .pdfjs #printContainer canvas,
     #content .pdfjs #printContainer img {
         display: block;
@@ -530,7 +531,7 @@ canvas {
         min-width: 800px;
         width: 100%;
     }
-    
+
     body {
         min-width: 12cm !important;
     }
@@ -2082,7 +2083,7 @@ canvas {
     }
 }
 @media screen and (max-width: 767px) {
-    .pdfjs { 
+    .pdfjs {
         display: none
     }
 }
