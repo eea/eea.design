@@ -4,6 +4,18 @@
         i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="27.3"
+    destination="28.9"
+    profile="eea.design:default">
+
+    <genericsetup:upgradeDepends
+      title="Import all steps from eea.design profile upgrade 28.9"
+      description="Modified faceted js/css load conditions"
+      import_profile="eea.design:upgrade289"
+    />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="27.2"
     destination="27.3"
     profile="eea.design:default">

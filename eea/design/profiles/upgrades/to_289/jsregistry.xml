@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.faceted-navigation.js" inline="False"
+    insert-after="++resource++plone.app.jquerytools.dateinput.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.text.view.js" inline="False"
+    insert-after="++resource++eea.faceted-navigation.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.tal.view.js" inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.text.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.tagscloud.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.tal.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.sorting.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.tagscloud.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.select.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.sorting.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.resultsperpage.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.select.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.resultsfilter.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.resultsperpage.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.range.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.resultsfilter.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.radio.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.range.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.portlet.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.radio.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.path.view.js" inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.portlet.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.path.tree.js" inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.path.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.multiselect.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.path.tree.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.etag.view.js" inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.multiselect.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.debug.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.etag.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.daterange.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.debug.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.date.view.js" inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.daterange.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.criteria.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.date.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.checkbox.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.criteria.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.autocomplete.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.checkbox.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.facetednavigation.widgets.alphabets.view.js"
+    inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.autocomplete.view.js"/>
+ <javascript authenticated="False" bundle="faceted-view" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.URL0"
+    id="++resource++eea.faceted-navigation-expand.js" inline="False"
+    insert-after="++resource++eea.facetednavigation.widgets.alphabets.view.js"/>
+
+ <javascript authenticated="False" bundle="default" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="python: (not here.restrictedTraverse('@@plone_portal_state').anonymous()) and 'edit' or '++add++' in request.ACTUAL_URL"
+    id="eeareferencebrowser.js" inline="False" insert-after="eea.geotags.js"/>
+
+</object>
