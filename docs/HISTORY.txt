@@ -6,6 +6,8 @@ Changelog
 * Upgrade step: Changed js/css conditions in order for related items widget
   to work on ++add++
   [iulianpetchesi refs #120841]
+* Change: updated footer with Industry portal
+  [alecghica refs #135326]
 
 28.8 - (2021-09-03)
 ---------------------------
