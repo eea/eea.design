@@ -161,5 +161,11 @@
     id="eea-faceted-custom.css"
     insert-after="++resource++eea.facetednavigation.widgets.alphabets.view.css"
     media="screen" rel="stylesheet" rendering="link"/>
-
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="faceted-view" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on"
+    expression="python: object.restrictedTraverse('@@plone_interface_info').provides('eea.facetednavigation.subtypes.interfaces.IFacetedNavigable') or 'edit' or '++add++' in request.ACTUAL_URL"
+    id="++resource++jquery.select2uislider.css"
+    insert-after="++resource++eea.sparql.css" media="screen" rel="stylesheet"
+    rendering="link"/>
 </object>
