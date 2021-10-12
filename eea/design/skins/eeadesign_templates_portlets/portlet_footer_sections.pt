@@ -56,11 +56,11 @@
             <table class="right-table">
                 <tr>
                     <td class="table-link-description">
-                        <a href="https://prtr.eea.europa.eu/" target="_blank" i18n:translate="">European Pollutant Release and Transfer Register
+                        <a href="https://industry.eea.europa.eu/" target="_blank" i18n:translate="">European Industrial Emissions Portal
                         </a>
                     </td>
                     <td class="table-link-title">
-                        <a href="https://prtr.eea.europa.eu/" target="_blank" i18n:translate="">E-PRTR</a>
+                        <a href="https://industry.eea.europa.eu/" target="_blank" i18n:translate="">EIEP</a>
                     </td>
                 </tr>
               <tr><td class="table-link-description"><a href="https://forest.eea.europa.eu" target="_blank" i18n:translate="">Forest Information System for Europe</a></td>
