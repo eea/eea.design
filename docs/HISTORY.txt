@@ -3,6 +3,10 @@ Changelog
 
 29.0-dev0 - (unreleased)
 ---------------------------
+* Change: introduced *type_label_override* property which if added in
+  properties form will override the portal type displayed in the content
+  header area for special context that need different titles
+  [ichim-david]
 
 28.9 - (2021-10-06)
 ---------------------------
