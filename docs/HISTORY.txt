@@ -1,8 +1,10 @@
 Changelog
 =========
 
-29.1-dev0 - (unreleased)
+29.1 - (2021-11-10)
 ---------------------------
+* Change: #141551 - fix iframe tableau visualisations for accordions
+  [MadelaineS]
 
 29.0 - (2021-10-14)
 ---------------------------
