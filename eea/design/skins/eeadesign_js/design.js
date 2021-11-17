@@ -704,7 +704,11 @@ jQuery(document).ready(function ($) {
           .find("iframe")
           .each(function () {
             var $this = $(this);
-            $this.attr("src", $this.attr("src"));
+            var src = $this.attr("src");
+            $this.attr("src", null);
+            setTimeout(function () {
+               $this.attr("src", src + ' ');
+            }, 0);
           });
       }
     }
