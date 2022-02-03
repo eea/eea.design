@@ -704,9 +704,30 @@ jQuery(document).ready(function ($) {
           .find("iframe")
           .each(function () {
             var $this = $(this);
-            $this.attr("src", $this.attr("src"));
+            var src = $this.attr("src");
+            $this.attr("src", null);
+            setTimeout(function () {
+               $this.attr("src", src + ' ');
+            }, 0);
           });
       }
     }
   });
+
+  //#141551 - Tableau visualisation embedded on accordion - iframe gets refreshed on tab click to ensure proper display on page
+  $(".eea-accordion-panel").on("click", "h2", function () {
+   var $this = $(this);
+   if (!$this.hasClass("iframes-refreshed")) {
+     $this.addClass("iframes-refreshed");
+
+     // When the panel becomes visible, refresh the iframes inside it.
+     $this
+         .closest(".eea-accordion-panel")
+         .find(".pane iframe")
+         .each(function () {
+           var $this = $(this);
+           $this.attr("src", $this.attr("src"));
+         });
+   }
+ });
 });
