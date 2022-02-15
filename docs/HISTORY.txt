@@ -3,6 +3,8 @@ Changelog
 
 29.2-dev0 - (unreleased)
 ---------------------------
+* Feature: added Climate-Energy portal to the EEA website footer.
+  [alecghica refs #143320]
 
 29.1 - (2021-11-10)
 ---------------------------

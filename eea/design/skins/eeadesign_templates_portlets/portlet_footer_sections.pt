@@ -34,7 +34,14 @@
                         <a href="https://climate-adapt.eea.europa.eu/" target="_blank" i18n:translate="">Climate Adaptation Platform</a>
                     </td>
                 </tr>
-
+                <tr>
+                    <td class="table-link-title">
+                        <a href="https://climate-energy.eea.europa.eu/" target="_blank" i18n:translate="">Climate-Energy</a>
+                    </td>
+                    <td class="table-link-description">
+                        <a href="https://climate-energy.eea.europa.eu/" target="_blank" i18n:translate="">Climate and Energy in the EU</a>
+                    </td>
+                </tr>
                 <tr>
                     <td class="table-link-title">
                         <a href="https://insitu.copernicus.eu/" target="_blank" i18n:translate="">Copernicus In Situ</a>
