@@ -1,6 +1,11 @@
 Changelog
 =========
 
+29.2 - (2022-02-15)
+---------------------------
+* Feature: added Climate-Energy portal to the EEA website footer.
+  [alecghica refs #143320]
+
 29.1 - (2021-11-10)
 ---------------------------
 * Change: #141551 - fix iframe tableau visualisations for accordions
