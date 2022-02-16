@@ -1,6 +1,9 @@
 Changelog
 =========
 
+29.3-dev0 - (unreleased)
+---------------------------
+
 29.2 - (2022-02-15)
 ---------------------------
 * Feature: added Climate-Energy portal to the EEA website footer.
