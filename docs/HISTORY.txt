@@ -6,7 +6,9 @@ Changelog
 * Upgrade Step: within "Plone > Site setup > Add-ons" click on upgrade button
   available for eea.design
   [avoinea refs #146428]
-* Feature: Add controlpanel for captcha key / secret
+* Upgrade Step: within "Plone > Site setup > Captcha" configure Captcha `KEY / SECRET`
+  [avoinea refs #146428]
+* Feature: Add control panel for captcha `KEY / SECRET`
   [avoinea refs #146428]
 * Bug fix: Add `captcha-verify` browser view to be used with Captcha checks
   in order to avoid CORS policy: No 'Access-Control-Allow-Origin' header
