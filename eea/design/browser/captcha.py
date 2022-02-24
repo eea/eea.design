@@ -2,15 +2,16 @@
 """
 import json
 import logging
-from plone import api
-from urllib import urlencode
 from contextlib import closing
+from urllib import urlencode
 from six.moves import urllib
-from Products.Five.browser import BrowserView
+from plone import api
 from plone.app.registry.browser import controlpanel
-from zope.interface import Interface
+from Products.Five.browser import BrowserView
 from zope import schema
+from zope.interface import Interface
 from eea.design import EEAMessageFactory as _
+
 logger = logging.getLogger("eea.design")
 
 
@@ -61,23 +62,29 @@ class Captcha(BrowserView):
     """
     @property
     def password(self):
-        """ Captcha password
+        """ Captcha secret
         """
         return api.portal.get_registry_record(
             "password", interface=ICaptchaSettings, default="")
 
     @property
     def username(self):
+        """ Captcha key
+        """
         return api.portal.get_registry_record(
             "username", interface=ICaptchaSettings, default="")
 
     @property
     def server(self):
+        """ Captcha serververify link
+        """
         return api.portal.get_registry_record(
             "server", interface=ICaptchaSettings, default="")
 
     @property
     def timeout(self):
+        """ Timeout
+        """
         return api.portal.get_registry_record(
             "timeout", interface=ICaptchaSettings, default=15)
 
