@@ -5,6 +5,18 @@
 
   <genericsetup:upgradeSteps
     source="27.3"
+    destination="29.3"
+    profile="eea.design:default">
+
+    <genericsetup:upgradeDepends
+      title="Import all steps from eea.design profile upgrade 29.3"
+      description="Captcha registry and controlpanel"
+      import_profile="eea.design:upgrade293"
+    />
+  </genericsetup:upgradeSteps>
+
+  <!--DISABLED genericsetup:upgradeSteps
+    source="27.3"
     destination="28.9"
     profile="eea.design:default">
 
@@ -13,7 +25,7 @@
       description="Modified faceted js/css load conditions"
       import_profile="eea.design:upgrade289"
     />
-  </genericsetup:upgradeSteps>
+  </genericsetup:upgradeSteps-->
 
   <genericsetup:upgradeSteps
     source="27.2"

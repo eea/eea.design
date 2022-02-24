@@ -120,7 +120,7 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
                                         data[idx].value = firstname + secondname;
                                     }
                                 }
-                            });                    
+                            });
 
                             // create ticket
                             $.ajax({
@@ -132,6 +132,7 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
                                        console.log(data);
                                    }
                             });
+
                             // added form submit message
                             $("#helpdesk_ticket_container").contents().find('.widget-submit-message').remove();
                             $("#helpdesk_ticket_container").contents().find('.captcha-invalid-message').remove();
@@ -282,22 +283,14 @@ jQuery.when( jQuery.getScript( "https://taskman.eionet.europa.eu/helpdesk_widget
 
 
 function verifyCaptcha() {
-    var url = "https://friendlycaptcha.com/api/v1/siteverify";
-    var sitekey = "FCMR3DVP81RFD3ML";
-    var secret = "A1RNAEPKC7VFTMCLNC2265OAIU7JQHEQ9KB9LQ6N6438BGK80HL50M86PJ";
-    var solution = jQuery('#helpdesk_ticket_container').contents().find('.frc-captcha-solution')[0].value;
-
-    var captchaData = {
-        'secret': secret,
-        'solution': solution,
-        'sitekey': sitekey
-    }
-
+    var url = "captcha-verify";
+    var solution = jQuery('#helpdesk_ticket_container').contents().find('.frc-captcha-solution').val() || '.NOTFOUND';
     var result = jQuery.ajax({
         type: "POST",
         url: url,
         async: false,
-        data: captchaData,
+        data: { 'solution': solution },
+        dataType: "json",
         success: function(data) {
             if (data.success === false) {
                 // captcha failed

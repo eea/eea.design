@@ -3,6 +3,14 @@ Changelog
 
 29.3-dev0 - (unreleased)
 ---------------------------
+* Upgrade Step: within "Plone > Site setup > Add-ons" click on upgrade button
+  available for eea.design
+  [avoinea refs #146428]
+* Feature: Add controlpanel for captcha key / secret
+  [avoinea refs #146428]
+* Bug fix: Add `captcha-verify` browser view to be used with Captcha checks
+  in order to avoid CORS policy: No 'Access-Control-Allow-Origin' header
+  [avoinea refs #146428]
 
 29.2 - (2022-02-15)
 ---------------------------
@@ -196,7 +204,7 @@ Changelog
 26.8 - (2020-06-25)
 ---------------------------
 * Feature: Float related content besides content area links when that link has
-  the special style class applied 
+  the special style class applied
   [ichim-david refs #117296]
 
 26.7 - (2020-06-23)
