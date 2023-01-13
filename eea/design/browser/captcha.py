@@ -21,7 +21,7 @@ class ICaptchaSettings(Interface):
     server = schema.TextLine(
         title=_(u"Captcha URL"),
         description=_(u"Captcha siteverify URL"),
-        default=u"https://friendlycaptcha.com/api/v1/siteverify"
+        default=u"https://api.friendlycaptcha.com/api/v1/siteverify"
     )
 
     username = schema.TextLine(

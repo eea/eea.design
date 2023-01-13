@@ -1,6 +1,11 @@
 Changelog
 =========
 
+29.4 - (2023-01-13)
+---------------------------
+* Change: Update friendlycaptcha url to new endpoint
+  [iulianpetchesi #157143]
+
 29.3 - (2022-02-24)
 ---------------------------
 * Upgrade Step: within "Plone > Site setup > Add-ons" click on upgrade button
