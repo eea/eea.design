@@ -1,7 +1,7 @@
 Changelog
 =========
 
-29.4-dev0 - (unreleased)
+29.4 - (2023-01-13)
 ---------------------------
 * Change: Update friendlycaptcha url to new endpoint
   [iulianpetchesi #157143]
