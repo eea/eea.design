@@ -1,6 +1,9 @@
 Changelog
 =========
 
+29.6-dev0 - (unreleased)
+---------------------------
+
 29.5 - (2023-01-26)
 ---------------------------
 * Change: Update friendlycaptcha widget url endpoint
