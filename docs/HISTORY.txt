@@ -1,6 +1,11 @@
 Changelog
 =========
 
+29.6 - (2023-03-23)
+---------------------------
+* Change: Add robots noindex to archived pages on old Plone4 site
+  [alecghica]
+
 29.5 - (2023-01-26)
 ---------------------------
 * Change: Update friendlycaptcha widget url endpoint

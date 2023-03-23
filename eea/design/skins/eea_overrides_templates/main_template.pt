@@ -1,69 +1,72 @@
 <metal:page define-macro="master"
-            tal:define="portal_state context/@@plone_portal_state;
-                        context_state context/@@plone_context_state;
-                        plone_view context/@@plone;
-                        language portal_state/language;
-                        view nocall:view | nocall: plone_view;
-                        dummy python: plone_view.mark_view(view);
-                        portal_url portal_state/portal_url;
-                        checkPermission nocall: context/portal_membership/checkPermission;
-                        site_properties context/portal_properties/site_properties;
-                        ajax_load request/ajax_load | nothing;
-                        content_core_only request/content_core_only | nothing;
-                        skip_relations request/skipRelations | nothing;
-                        ajax_include_head request/ajax_include_head | nothing;
-                        dummy python:request.RESPONSE.setHeader('X-UA-Compatible', 'IE=edge');
-                        xssDisable python:request.RESPONSE.setHeader('X-XSS-Protection', '0');
-                        template_id template/getId|string:;
-                        normalizeString nocall:plone_view/normalizeString;
-                        toLocalizedTime nocall:plone_view/toLocalizedTime;
-                        portal_properties context/portal_properties;
-                        site_properties portal_properties/site_properties;
-                        here_url context_state/object_url;
-                        portal portal_state/portal;
-                        isAnon portal_state/anonymous;
-                        member portal_state/member;
-                        actions python:not isAnon and context.portal_actions.listFilteredActionsFor(context);
-                        mtool context/portal_membership;
-                        wtool context/portal_workflow;
-                        default_language portal_state/default_language;
-                        isContextDefaultPage context_state/is_default_page;
-                        isViewTemplate context_state/is_view_template;
-                        object_title context_state/object_title|string:;
-                        putils context/plone_utils;
-                        ztu modules/ZTUtils;
-                        acl_users nocall: context/acl_users;
-                        ifacetool context/portal_interface;
-                        isPrint python:1 if 'pdf.' in request['URL0'] else 0;
-                        friendly_type context/Type|nothing;
-                        wf_state context_state/workflow_state|string:;
-                        sr python:plone_view.have_portlets('plone.rightcolumn', view);
-                        mini_header_bv nocall: context/@@miniheader_content_types;
-                        mini_header python:' mini-header' if mini_header_bv() else False;
-                        mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() and sr else False;
-                        mini_header_navigation python:' mini-header-navigation' if mini_header_right_column else False;
-                        mini_header_type python: True if mini_header and mini_header_bv.show_mini_type() else False;
-                        mini_header_type_override context/type_label_override|nothing;
-                        mini_header_light python:' mini-header-light' if mini_header and mini_header_bv.show_light_header() else False;
-                        ">
+   tal:define="portal_state context/@@plone_portal_state;
+  context_state context/@@plone_context_state;
+  plone_view context/@@plone;
+  language portal_state/language;
+  view nocall:view | nocall: plone_view;
+  dummy python: plone_view.mark_view(view);
+  portal_url portal_state/portal_url;
+  checkPermission nocall: context/portal_membership/checkPermission;
+  site_properties context/portal_properties/site_properties;
+  ajax_load request/ajax_load | nothing;
+  content_core_only request/content_core_only | nothing;
+  skip_relations request/skipRelations | nothing;
+  ajax_include_head request/ajax_include_head | nothing;
+  dummy python:request.RESPONSE.setHeader('X-UA-Compatible', 'IE=edge');
+  xssDisable python:request.RESPONSE.setHeader('X-XSS-Protection', '0');
+  template_id template/getId|string:;
+  normalizeString nocall:plone_view/normalizeString;
+  toLocalizedTime nocall:plone_view/toLocalizedTime;
+  portal_properties context/portal_properties;
+  site_properties portal_properties/site_properties;
+  here_url context_state/object_url;
+  portal portal_state/portal;
+  isAnon portal_state/anonymous;
+  is_expired context/isExpired|python:False;
+  member portal_state/member;
+  actions python:not isAnon and context.portal_actions.listFilteredActionsFor(context);
+  mtool context/portal_membership;
+  wtool context/portal_workflow;
+  default_language portal_state/default_language;
+  isContextDefaultPage context_state/is_default_page;
+  isViewTemplate context_state/is_view_template;
+  object_title context_state/object_title|string:;
+  putils context/plone_utils;
+  ztu modules/ZTUtils;
+  acl_users nocall: context/acl_users;
+  ifacetool context/portal_interface;
+  isPrint python:1 if 'pdf.' in request['URL0'] else 0;
+  friendly_type context/Type|nothing;
+  wf_state context_state/workflow_state|string:;
+  sr python:plone_view.have_portlets('plone.rightcolumn', view);
+  mini_header_bv nocall: context/@@miniheader_content_types;
+  mini_header python:' mini-header' if mini_header_bv() else False;
+  mini_header_right_column python: True if mini_header and mini_header_bv.show_right_column() and sr else False;
+  mini_header_navigation python:' mini-header-navigation' if mini_header_right_column else False;
+  mini_header_type python: True if mini_header and mini_header_bv.show_mini_type() else False;
+  mini_header_type_override context/type_label_override|nothing;
+  mini_header_light python:' mini-header-light' if mini_header and mini_header_bv.show_light_header() else False;
+  ">
 
-<tal:notContentCoreOnly tal:condition="python: not content_core_only">
-<tal:comment replace="nothing">xssDisable was added in order to fix the chrome issue from ticket #15231</tal:comment>
+  <tal:notContentCoreOnly tal:condition="python: not content_core_only">
+    <tal:comment replace="nothing">xssDisable was added in order to fix the chrome issue from ticket #15231
+    </tal:comment>
 
-<tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" tal:condition="python: not isPrint"/>
+    <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" tal:condition="python: not isPrint"/>
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js ie6 oldie"><![endif]-->
-<!--[if IE 7]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js ie7 oldie"><![endif]-->
-<!--[if IE 8]><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js ie8 oldie"><![endif]-->
-<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js"><!--<![endif]-->
+    <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+    <!--[if lt IE 7]><html xmlns='http://www.w3.org/1999/xhtml' tal:attributes="lang language;" class='no-js ie6 oldie'><![endif]-->
+    <!--[if IE 7]><html xmlns='http://www.w3.org/1999/xhtml' tal:attributes="lang language;" class='no-js ie7 oldie'><![endif]-->
+    <!--[if IE 8]><html xmlns='http://www.w3.org/1999/xhtml' tal:attributes="lang language;" class='no-js ie8 oldie'><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html xmlns="http://www.w3.org/1999/xhtml" tal:attributes="lang language;" class="no-js"><!--<![endif]-->
 
-    <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">
-        Get the global cache headers located in global_cache_settings.
-    </metal:cache>
+  <metal:cache use-macro="context/global_cache_settings/macros/cacheheaders">
+    Get the global cache headers located in global_cache_settings.
+  </metal:cache>
 
-<head>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- viewport meta needed for proper view on an ipad -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -72,90 +75,104 @@
     <meta name="description" content="Information on the environment for those
       involved in developing, adopting, implementing and evaluating environmental
       policy, and also the general public" />
-    <link tal:attributes="href python:portal_url + '/googlefonts-opensans.css'" href="" rel="stylesheet" type="text/css" tal:condition="isPrint" />
-
-<tal:comment replace="nothing">
-        Prevent public draft content to be indexed and cached by search engines.
-</tal:comment>
-<meta tal:condition="python: wf_state in ['visible']" name="robots" content="noindex" />
-<meta tal:condition="python: wf_state in ['visible']" name="robots" content="noarchive" />
-
-<tal:notajax tal:condition="python:not ajax_load or ajax_include_head">
-    <metal:topslot define-slot="top_slot" />
-    <div tal:replace="structure provider:plone.htmlhead" />
+    <link tal:attributes="href python:portal_url + '/googlefonts-opensans.css'" href="" rel="stylesheet"
+                                                                                type="text/css" tal:condition="isPrint" />
 
     <tal:comment replace="nothing">
-        Various slots where you can insert elements in the header from a template.
+      Prevent public draft content to be indexed and cached by search engines.
     </tal:comment>
+    <meta tal:condition="python: wf_state in ['visible']" name="robots" content="noindex" />
+    <meta tal:condition="python: wf_state in ['visible']" name="robots" content="noarchive" />
+
+    <tal:comment replace="nothing">
+        Prevent expired/archived content to be indexed by search engines.
+    </tal:comment>
+    <meta tal:condition="is_expired" name="robots" content="noindex" />
+
+    <tal:notajax tal:condition="python:not ajax_load or ajax_include_head">
+      <metal:topslot define-slot="top_slot" />
+      <div tal:replace="structure provider:plone.htmlhead" />
+
+      <tal:comment replace="nothing">
+        Various slots where you can insert elements in the header from a template.
+      </tal:comment>
 
 
-    <metal:headslot define-slot="head_slot"
-        tal:define="charset site_properties/default_charset|string:utf-8">
+      <metal:headslot define-slot="head_slot"
+         tal:define="charset site_properties/default_charset|string:utf-8">
         <tal:anonymousNoBorder condition="isAnon|nothing">
-            <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
+          <metal:noborder  tal:define="dummy python:request.set('disable_border',1)" />
         </tal:anonymousNoBorder>
-    </metal:headslot>
+      </metal:headslot>
 
-    <metal:styleslot define-slot="style_slot" />
+      <metal:styleslot define-slot="style_slot" />
 
-    <metal:pagedesign use-macro="context/page_design_macros/macros/pagedesign" />
+      <metal:pagedesign use-macro="context/page_design_macros/macros/pagedesign" />
 
-    <tal:comment replace="nothing"> This is deprecated, please use style_slot instead. </tal:comment>
-    <metal:cssslot define-slot="css_slot" />
+      <tal:comment replace="nothing"> This is deprecated, please use style_slot instead.</tal:comment>
+      <metal:cssslot define-slot="css_slot" />
 
 
+      <meta name="generator" content="Plone - http://plone.org" />
 
-    <meta name="generator" content="Plone - http://plone.org" />
+      <div class="eea-i18n-js hiddenElem" i18n:domain="eea">
+        <div id="eeaPaginationNext" i18n:translate="">next</div>
+        <div id="eeaPaginationPrev" i18n:translate="">previous</div>
+        <div id="eeaPaginationItems" i18n:translate="">items</div>
+      </div>
 
-  <div class="eea-i18n-js hiddenElem" i18n:domain="eea">
-    <div id="eeaPaginationNext" i18n:translate="">next</div>
-    <div id="eeaPaginationPrev" i18n:translate="">previous</div>
-    <div id="eeaPaginationItems" i18n:translate="">items</div>
-  </div>
+      <script type="text/javascript" tal:content="structure context/ready.min.js">
+      </script>
 
-    <script type="text/javascript" tal:content="structure context/ready.min.js">
-        </script>
-
-        <script type="text/javascript" tal:content="string: context_url='${context/absolute_url}';">
-        </script>
+      <script type="text/javascript" tal:content="string: context_url='${context/absolute_url}';">
+      </script>
     </tal:notajax>
     <link tal:replace="structure provider:plone.htmlhead.links" />
-</head>
+  </head>
 
-<body tal:define="isRTL portal_state/is_rtl;
-                  wf_state context_state/workflow_state|string:;
-                  is_expired context/isExpired|python:False;
-                  is_editable context_state/is_editable|python:False;
-                  body_class python:plone_view.bodyClass(template, view);
-                  body_class python: body_class + ' body-print' if isPrint else body_class;
-                  body_class python: body_class + ' is_view_template' if isViewTemplate else body_class;
-                  body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() or request.get('body.fullwidth') else body_class;
-                  body_class python: body_class + mini_header if mini_header else body_class;
-                  body_class python: body_class + mini_header_light if mini_header_light else body_class;
-                  body_class python: body_class + mini_header_navigation if mini_header_right_column else body_class;
-                  body_class python: body_class + ' scroll-analytics' if context.restrictedTraverse('@@scroll_analytics_content_types')() else body_class;
-                  body_class python: body_class + ' expired-content' if is_expired else body_class;
-                  frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
-                  sunburst_view python:context.restrictedTraverse('@@sunburstview');"
-      tal:attributes="class python:body_class + ' ' + language + frontpage;
-                      dir python:isRTL and 'rtl' or 'ltr';
-                      data-portal-url portal_url;
-                      data-base-url context/absolute_url;"
-      id="top">
+  <body tal:define="isRTL portal_state/is_rtl;
+    wf_state context_state/workflow_state|string:;
+    is_expired context/isExpired|python:False;
+    is_editable context_state/is_editable|python:False;
+    body_class python:plone_view.bodyClass(template, view);
+    body_class python: body_class + ' body-print' if isPrint else body_class;
+    body_class python: body_class + ' is_view_template' if isViewTemplate else body_class;
+    body_class python: body_class + ' fullwidth' if context.restrictedTraverse('@@fullwidth_content_types')() or request.get('body.fullwidth') else body_class;
+    body_class python: body_class + mini_header if mini_header else body_class;
+    body_class python: body_class + mini_header_light if mini_header_light else body_class;
+    body_class python: body_class + mini_header_navigation if mini_header_right_column else body_class;
+    body_class python: body_class + ' scroll-analytics' if context.restrictedTraverse('@@scroll_analytics_content_types')() else body_class;
+    body_class python: body_class + ' expired-content' if is_expired else body_class;
+    frontpage python: ' frontpage' if ('frontpage_view' or 'localfrontpage_view') in body_class else '';
+    sunburst_view python:context.restrictedTraverse('@@sunburstview');"
+     tal:attributes="class python:body_class + ' ' + language + frontpage;
+      dir python:isRTL and 'rtl' or 'ltr';
+    data-portal-url portal_url;
+    data-base-url context/absolute_url;"
+    id="top">
 
-    <div id="print-warning" i18n:domain="eea">
-        <p i18n:translate="">
-            Do something for our planet, print this page only if needed. Even a small action can make an enormous difference when millions of people do it!
-        </p>
-    </div>
+  <div id="print-warning" i18n:domain="eea">
+    <p i18n:translate="">
+      Do something for our planet, print this page only if needed. Even a small action can make an enormous difference
+      when millions of people do it!
+    </p>
+  </div>
 
-    <a class="eea-template back-to-toc-button link-without-style" href="#document-toc" title="Back to table of contents" i18n:attributes="title"></a>
+  <a class="eea-template back-to-toc-button link-without-style" href="#document-toc"
+     title="Back to table of contents" i18n:attributes="title"></a>
 
+  <metal:comment tal:content="nothing">
     <div id="header-holder">
       <div class="navbar navbar-default navbar-fixed-top">
         <div class="eea-container">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="search-action collapsed mobile-only" data-toggle="collapse"
+                    data-target="#mobile-portal-searchbox" aria-expanded="false" role="none" id="search-action">
+              <span class="eea-icon eea-icon-lg eea-icon-search eea-icon-marginless"><!-- --></span>
+            </button>
+
+            <button type="button" class="navbar-toggle collapsed mobile-only" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only" i18n:translate="">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -163,253 +180,273 @@
             </button>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <div id="portal-top"
-                   tal:condition="python: not ajax_load">
+                 tal:condition="python: not ajax_load">
                 <tal:not4Print tal:condition="python:not isPrint">
                   <div tal:replace="structure provider:plone.portaltop" />
                 </tal:not4Print>
               </div>
             </div>
+
           </div>
+
+          <div class="portal-searchbox collapse" id="mobile-portal-searchbox">
+            <metal:macro metal:use-macro="context/newheader/eea_searchbox/macros/quick_search" />
+          </div>
+
         </div>
       </div>
     </div>
 
-    <div id="eea-above-columns" tal:content="structure provider:eea.abovecolumns" />
+  </metal:comment>
 
-<div id="visual-portal-wrapper">
+  <metal:macro metal:use-macro="context/newheader/eea_new_header/macros/content" />
 
-        <div id="portal-columns" class="row">
+  <div id="eea-above-columns" tal:content="structure provider:eea.abovecolumns" />
 
-        <!-- start of the main and left columns -->
-        <div id="visual-column-wrapper">
+  <div id="visual-portal-wrapper">
+
+    <div id="portal-columns" class="row">
+
+      <!-- start of the main and left columns -->
+      <div id="visual-column-wrapper">
 
         <div id="portal-column-content" class="cell" tal:attributes="class python:sunburst_view.getColumnsClass(view)">
 
-            <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-                <tal:not4Print tal:condition="python:not isPrint">
-                    <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent"  />
-                </tal:not4Print>
-            </tal:not4AjaxLoad>
+          <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+            <tal:not4Print tal:condition="python:not isPrint">
+              <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent"  />
+            </tal:not4Print>
+          </tal:not4AjaxLoad>
 
-            <metal:block define-slot="content">
-                <div metal:define-macro="content"
-                    tal:define="show_border context/@@plone/showEditableBorder; ajax_load ajax_load|python:False; show_border python:show_border and not ajax_load;
-                        isPrint isPrint|python:False;"
-                    tal:attributes="class python:show_border and 'documentEditable' or ''"
-                    id="region-content">
+          <metal:block define-slot="content">
+            <div metal:define-macro="content"
+               tal:define="show_border context/@@plone/showEditableBorder; ajax_load ajax_load|python:False; show_border python:show_border and not ajax_load;
+              isPrint isPrint|python:False;"
+               tal:attributes="class python:show_border and 'documentEditable' or ''"
+              id="region-content">
 
-                    <tal:not4Print tal:condition="python:not isPrint">
-                        <div id="edit-bar"
-                            tal:condition="show_border"
-                            tal:content="structure provider:plone.contentviews" />
+              <tal:not4Print tal:condition="python:not isPrint">
+                <div id="edit-bar"
+                   tal:condition="show_border"
+                   tal:content="structure provider:plone.contentviews" />
 
-                        <div metal:use-macro="context/global_statusmessage/macros/portal_message">
-                         Status message
-                        </div>
-                    </tal:not4Print>
-
-                    <metal:slot define-slot="body">
-                        <div id="content"  class="documentContent panels"
-                                            tal:define="content_class python: 'documentContent panels';"
-                                            tal:attributes="class python:content_class">
-
-                            <metal:header define-slot="header" tal:content="nothing">
-
-                            </metal:header>
-
-                            <metal:bodytext define-slot="main">
-                              <div class="fullwidth-img-container" tal:condition="mini_header" metal:define-slot="content-header-image">
-                                  <div class="fullwidth-img-bg"
-                                  tal:define="image_url python: here_url  if not mini_header_light else mini_header_bv.get_light_header_image()"
-                                  tal:attributes="style python:'background-image:url(' + image_url + '/image_panoramic' + ')'; title here/getImageCopyright|nothing;"></div>
-                              </div>
-
-                                <div class="content-header">
-                                  <p class="mini-portal-type"  tal:content="python: mini_header_type_override or friendly_type" tal:condition="python:mini_header_type"></p>
-                                    <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
-                                    <metal:title define-slot="content-title">
-                                        <metal:comment tal:content="nothing">
-                                            <tal:comment replace="nothing">
-                                                If you write a custom title always use
-                                                <h1 class="documentFirstHeading"></h1> for it
-                                            </tal:comment>
-                                        </metal:comment>
-                                        <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">
-                                            Generic KSS Title. Is rendered with class="documentFirstHeading".
-                                        </h1>
-                                    </metal:title>
-                                  <div class="content-header-body">
-                                    <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-                                        <tal:not4Print tal:condition="python:not isPrint">
-                                            <div tal:replace="structure provider:plone.belowcontenttitle" />
-                                        </tal:not4Print>
-                                    </tal:not4AjaxLoad>
-
-                                    <metal:description define-slot="content-description">
-                                        <metal:comment tal:content="nothing">
-                                            <tal:comment replace="nothing">
-                                                If you write a custom description always use
-                                                <div class="documentDescription"></div> for it
-                                            </tal:comment>
-                                        </metal:comment>
-                                        <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
-                                            Generic KSS Description. Is rendered with class="documentDescription".
-                                        </div>
-                                    </metal:description>
-
-
-                                    <tal:notajax tal:condition="python: not ajax_load and mini_header">
-                                      <metal:right_column  tal:condition="python:sr and mini_header_right_column">
-                                        <div id="portal-column-two-wrapper" class="eea-sliding-section eea-sliding-section--hidden-lg"
-                                             tal:condition="sr">
-                                          <div id="portal-column-two"
-                                               class="portal-column-two"
-                                               metal:define-slot="column_two_slot">
-                                            <metal:portlets define-slot="portlets_two_slot">
-
-                                              <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
-                                                <tal:block replace="structure provider:plone.rightcolumn" />
-                                              </tal:soer>
-                                            </metal:portlets>
-                                          </div>
-                                        </div>
-                                      </metal:right_column>
-                                    </tal:notajax>
-                                    </div>
-
-                                </div>
-
-                              <div class="content-core-wrapper">
-                                <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
-                                <div id="content-core" class="content-core"
-                                     tal:define="content_class python: 'content-core';
-                                        content_class python: wf_state and ('content-core wf-state-' + str(wf_state)) or content_class;
-                                    content_class python: content_class + ' archived-content' if is_expired else content_class;"
-                                tal:attributes="class content_class">
-                                    <metal:text define-slot="content-core" tal:content="nothing">
-                                        <tal:comment replace="nothing">
-                                            text body page
-                                        </tal:comment>
-                                    </metal:text>
-                                </div>
-
-                                <metal:comment tal:content="nothing">
-                                    <tal:comment replace="nothing">
-                                        possible relation labels. can be made as viewlet.
-                                    </tal:comment>
-                                </metal:comment>
-
-                                <tal:block define="thumb_scale thumb_scale | string:image_mini; skip_relations skip_relations|python: False"
-                                           tal:condition="python:not skip_relations">
-                                    <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
-                                        <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
-                                    </tal:soer>
-                                </tal:block>
-
-                                <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-                                   <div tal:attributes="class python: 'mini-header-below-content-wrapper' if 'Indicator Assessment' != friendly_type else 'mini-header-below-content-wrapper widescreen-container eea-section-md'">
-                                  <div class="mini-header-below-content eea-accordion-panels
-                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive collapsed-by-default">
-                                    <div tal:replace="structure provider:plone.belowcontentbody" />
-
-                                  </div>
-                                     </div>
-                                </tal:not4AjaxLoad>
-
-                                <div metal:use-macro="context/eea_dates/macros/pdfPublishDate" tal:condition="python:'pdf.body' in request['URL0']">
-                                    pdf publish date
-                                </div>
-
-                              </div>
-                            </metal:bodytext>
-                        </div>
-                    </metal:slot>
-
-                    <metal:sub define-slot="sub" tal:content="nothing">
-                       <tal:comment replace="nothing">
-                           This slot is here for backwards compatibility only.
-                           Don't use it in your custom templates.
-                       </tal:comment>
-                    </metal:sub>
+                <div metal:use-macro="context/global_statusmessage/macros/portal_message">
+                  Status message
                 </div>
+              </tal:not4Print>
 
-            </metal:block>
+              <metal:slot define-slot="body">
+                <div id="content" class="documentContent panels"
+                   tal:define="content_class python: 'documentContent panels';"
+                   tal:attributes="class python:content_class">
 
-            <tal:not4AjaxLoad  tal:condition="not:ajax_load">
-                <tal:not4Print tal:condition="python:not isPrint">
-                    <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent"></div>
-                </tal:not4Print>
-            </tal:not4AjaxLoad>
+                  <metal:header define-slot="header" tal:content="nothing">
+
+                  </metal:header>
+
+                  <metal:bodytext define-slot="main">
+                  <div
+                    class="fullwidth-img-container" tal:condition="mini_header" metal:define-slot="content-header-image">
+                    <div class="fullwidth-img-bg"
+                     tal:define="image_url python: here_url  if not mini_header_light else mini_header_bv.get_light_header_image()"
+                     tal:attributes="style python:'background-image:url(' + image_url + '/image_panoramic' + ')'; title here/getImageCopyright|nothing;"></div>
+                    </div>
+
+                    <div class="content-header">
+                      <p
+                      class="mini-portal-type"  tal:content="python: mini_header_type_override or friendly_type" tal:condition="python:mini_header_type"></p>
+
+
+                    <div tal:replace="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
+                    <metal:title define-slot="content-title">
+                      <metal:comment tal:content="nothing">
+                        <tal:comment replace="nothing">
+                          If you write a custom title always use
+                          <h1 class="documentFirstHeading"></h1> for it
+                        </tal:comment>
+                      </metal:comment>
+                      <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">
+                        Generic KSS Title. Is rendered with class="documentFirstHeading".
+                      </h1>
+                    </metal:title>
+
+
+                    <div class="content-header-body">
+                      <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+                        <tal:not4Print tal:condition="python:not isPrint">
+                          <div tal:replace="structure provider:plone.belowcontenttitle" />
+                        </tal:not4Print>
+                      </tal:not4AjaxLoad>
+
+                      <metal:description define-slot="content-description">
+                        <metal:comment tal:content="nothing">
+                          <tal:comment replace="nothing">
+                            If you write a custom description always use
+                            <div class="documentDescription"></div>
+                            for it
+                          </tal:comment>
+                        </metal:comment>
+                        <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
+                          Generic KSS Description. Is rendered with class="documentDescription".
+                        </div>
+                      </metal:description>
+
+
+                      <tal:notajax tal:condition="python: not ajax_load and mini_header">
+                        <metal:right_column  tal:condition="python:sr and mini_header_right_column">
+                          <div id="portal-column-two-wrapper" class="eea-sliding-section eea-sliding-section--hidden-lg"
+                             tal:condition="sr">
+                            <div id="portal-column-two"
+                                 class="portal-column-two"
+                               metal:define-slot="column_two_slot">
+                              <metal:portlets define-slot="portlets_two_slot">
+
+                                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
+                                  <tal:block replace="structure provider:plone.rightcolumn" />
+                                </tal:soer>
+                              </metal:portlets>
+                            </div>
+                          </div>
+                        </metal:right_column>
+                      </tal:notajax>
+                    </div>
+
+                  </div>
+
+                    <div tal:replace="structure context/@@viewlets/eea.path_bar" />
+                    
+                    <div class="content-core-wrapper">
+                      <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
+                      <div id="content-core" class="content-core"
+                         tal:define="content_class python: 'content-core';
+                        content_class python: wf_state and ('content-core wf-state-' + str(wf_state)) or content_class;
+                        content_class python: content_class + ' archived-content' if is_expired else content_class;"
+                         tal:attributes="class content_class">
+                        <metal:text define-slot="content-core" tal:content="nothing">
+                          <tal:comment replace="nothing">
+                            text body page
+                          </tal:comment>
+                        </metal:text>
+                      </div>
+
+                      <metal:comment tal:content="nothing">
+                        <tal:comment replace="nothing">
+                          possible relation labels. can be made as viewlet.
+                        </tal:comment>
+                      </metal:comment>
+
+                      <tal:block
+                        define="thumb_scale thumb_scale | string:image_mini; skip_relations skip_relations|python: False"
+                         tal:condition="python:not skip_relations">
+                        <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
+                          <metal:macro use-macro="context/eea_relateditems/macros/relatedItemsWithThumbs" />
+                        </tal:soer>
+                      </tal:block>
+
+                      <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+                        <div tal:attributes="class python: 'mini-header-below-content-wrapper' if 'Indicator Assessment' != friendly_type else 'mini-header-below-content-wrapper widescreen-container eea-section-md'">
+                          <div class="mini-header-below-content eea-accordion-panels
+                                  eea-accordion-panels-plain eea-accordion-panels-bordered-primary non-exclusive collapsed-by-default">
+                            <div tal:replace="structure provider:plone.belowcontentbody" />
+
+                          </div>
+                        </div>
+                      </tal:not4AjaxLoad>
+
+                      <div metal:use-macro="context/eea_dates/macros/pdfPublishDate" tal:condition="python:'pdf.body' in request['URL0']">
+                        pdf publish date
+                      </div>
+
+                    </div>
+                  </metal:bodytext>
+                </div>
+              </metal:slot>
+
+              <metal:sub define-slot="sub" tal:content="nothing">
+                <tal:comment replace="nothing">
+                  This slot is here for backwards compatibility only.
+                  Don't use it in your custom templates.
+                </tal:comment>
+              </metal:sub>
+            </div>
+
+          </metal:block>
+
+          <tal:not4AjaxLoad  tal:condition="not:ajax_load">
+            <tal:not4Print tal:condition="python:not isPrint">
+              <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent"></div>
+            </tal:not4Print>
+          </tal:not4AjaxLoad>
         </div>
-          <tal:notajax tal:condition="python: not ajax_load and not mini_header">
+        <tal:notajax tal:condition="python: not ajax_load and not mini_header">
 
-        <div id="portal-column-one"
-            metal:define-slot="column_one_slot">
-        </div>
+          <div id="portal-column-one"
+             metal:define-slot="column_one_slot">
+          </div>
 
-        <div id="portal-column-two"
-            class="cell width-1:4 position-3:4"
-            metal:define-slot="column_two_slot"
-            tal:condition="sr"
-            tal:attributes="class python:'cell width-1:4 position-3:4'">
+          <div id="portal-column-two"
+               class="cell width-1:4 position-3:4"
+             metal:define-slot="column_two_slot"
+             tal:condition="sr"
+             tal:attributes="class python:'cell width-1:4 position-3:4'">
             <metal:portlets define-slot="portlets_two_slot">
-                <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
-                    <tal:block replace="structure provider:plone.rightcolumn" />
-                </tal:soer>
+              <tal:soer tal:condition="python:False if isPrint == 1 and '/soer/2015' in here_url else True">
+                <tal:block replace="structure provider:plone.rightcolumn" />
+              </tal:soer>
             </metal:portlets>
-        </div>
+          </div>
         </tal:notajax>
 
+      </div>
+      <div class="visualClear"><!-- --></div>
     </div>
-    <div class="visualClear"><!-- --></div>
- </div>
     <!-- end column wrapper -->
 
-</div>
+  </div>
 
-<div class="go-top">
+  <div class="go-top">
     <a class="back-to-top-link" i18n:attributes="title" title="Back to Top"
        href="javascript:document.getElementsByTagName('body')[0].scrollIntoView()">
-        <span aria-hidden="true" class="eea-icon eea-icon-arrow-up eea-icon-2x back-to-top-link-icon"></span>
+      <span aria-hidden="true" class="eea-icon eea-icon-arrow-up eea-icon-2x back-to-top-link-icon"></span>
     </a>
-</div>
+  </div>
 
-<metal:block i18n:domain="eea" tal:condition="python:not ajax_load">
+  <metal:block i18n:domain="eea" tal:condition="python:not ajax_load">
     <tal:not4Print tal:condition="python:not isPrint">
-        <div tal:replace="structure provider:plone.portalfooter" />
+      <div tal:replace="structure provider:plone.portalfooter" />
     </tal:not4Print>
 
     <tal:comment tal:replace="nothing">
-        91577 add lazy_load_init.js inline instead of portal_javascripts
-        due to products.resourceregistry bug with inline javascript where
-        on anonymous there was a caching status AssertionError
+      91577 add lazy_load_init.js inline instead of portal_javascripts
+      due to products.resourceregistry bug with inline javascript where
+      on anonymous there was a caching status AssertionError
     </tal:comment>
 
-  <script type="text/javascript"
+    <script type="text/javascript"
        tal:content="structure context/critical.js"
        tal:condition="python:not isPrint">
-  </script>
-  <metal:javascriptslot define-slot="javascript_critical_slot" />
+    </script>
+    <metal:javascriptslot define-slot="javascript_critical_slot" />
 
     <script type="text/javascript"
-            tal:content="structure context/lazy_load_init.js"
-            tal:condition="python:not isPrint">
+       tal:content="structure context/lazy_load_init.js"
+       tal:condition="python:not isPrint">
     </script>
 
     <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
     <metal:javascriptslot define-slot="javascript_head_slot" />
 
-</metal:block>
-</body>
+  </metal:block>
+  </body>
 
-</html>
+  </html>
 
-</tal:notContentCoreOnly>
+  </tal:notContentCoreOnly>
 
-<tal:contentCoreOnly tal:condition="python: content_core_only">
-  <metal:content_core_only use-macro="context/content_core_only/macros/content_core_only">
-    Get the global cache headers located in global_cache_settings.
-  </metal:content_core_only>
-</tal:contentCoreOnly>
+  <tal:contentCoreOnly tal:condition="python: content_core_only">
+    <metal:content_core_only use-macro="context/content_core_only/macros/content_core_only">
+      Get the global cache headers located in global_cache_settings.
+    </metal:content_core_only>
+  </tal:contentCoreOnly>
 
 </metal:page>
